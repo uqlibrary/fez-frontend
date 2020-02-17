@@ -59,7 +59,7 @@ export default values => {
     const summary = locale.validationErrorsSummary;
     let errors = {
         bibliographicSection: {},
-        additionalInformationSection: {},
+        adminSection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
@@ -71,12 +71,12 @@ export default values => {
             rek_date_available: summary.rek_date_available,
         });
 
-    !((data.additionalInformationSection || {}).collections || []).length > 0 &&
-        (errors.additionalInformationSection.collections = summary.collections);
+    !((data.adminSection || {}).collections || []).length > 0 &&
+        (errors.adminSection.collections = summary.collections);
 
-    (data.additionalInformationSection || {}).hasOwnProperty('rek_subtype') &&
-        !data.additionalInformationSection.rek_subtype &&
-        (errors.additionalInformationSection.rek_subtype = summary.rek_subtype);
+    (data.adminSection || {}).hasOwnProperty('rek_subtype') &&
+        !data.adminSection.rek_subtype &&
+        (errors.adminSection.rek_subtype = summary.rek_subtype);
 
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_AUDIO_DOCUMENT:

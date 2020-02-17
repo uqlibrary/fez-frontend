@@ -21,7 +21,6 @@ export const mapStateToProps = (state, ownProps) => {
 
     let hasDefaultDocTypeSubType = false;
     let docTypeSubTypeCombo = null;
-    console.log(displayType, NEW_DOCTYPES_OPTIONS);
     if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
         hasDefaultDocTypeSubType = true;
         docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
@@ -33,6 +32,7 @@ export const mapStateToProps = (state, ownProps) => {
             </MenuItem>
         ))
         : [];
+
     return {
         disabled: ownProps.disabled,
         hasSubtypes: hasSubtypes,

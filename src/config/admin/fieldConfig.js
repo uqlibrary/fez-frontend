@@ -220,7 +220,7 @@ export default {
             componentProps: {
                 floatingLabelText: 'Member of collections',
                 hintText: 'Begin typing to select and add collection(s)',
-                name: 'additionalInformationSection.collections',
+                name: 'adminSection.collections',
                 required: true,
                 fullwidth: true,
                 validate: [validation.requiredList],
@@ -229,7 +229,7 @@ export default {
         rek_subtype: {
             component: PublicationSubtypeField,
             componentProps: {
-                name: 'additionalInformationSection.rek_subtype',
+                name: 'adminSection.rek_subtype',
                 label: 'Work sub-type',
                 required: true,
                 placeholder: '',
@@ -744,7 +744,7 @@ export default {
         contentIndicators: {
             component: ContentIndicatorsField,
             componentProps: {
-                name: 'additionalInformationSection.contentIndicators',
+                name: 'adminSection.contentIndicators',
                 label: locale.components.contentIndicators.label,
                 multiple: true,
                 fullWidth: true,
@@ -753,36 +753,35 @@ export default {
         fez_record_search_key_herdc_code: {
             component: HerdcCodeField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_herdc_code.rek_herdc_code',
+                name: 'adminSection.fez_record_search_key_herdc_code.rek_herdc_code',
                 label: 'Category code',
             },
         },
         fez_record_search_key_herdc_status: {
             component: HerdcStatusField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_herdc_status.rek_herdc_status',
+                name: 'adminSection.fez_record_search_key_herdc_status.rek_herdc_status',
                 label: 'Category code status',
             },
         },
         fez_record_search_key_institutional_status: {
             component: InstitutionalStatusField,
             componentProps: {
-                name:
-                    'additionalInformationSection.fez_record_search_key_institutional_status.rek_institutional_status',
+                name: 'adminSection.fez_record_search_key_institutional_status.rek_institutional_status',
                 label: 'Institutional status',
             },
         },
         fez_record_search_key_oa_status: {
             component: OAStatusField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_oa_status.rek_oa_status',
+                name: 'adminSection.fez_record_search_key_oa_status.rek_oa_status',
                 label: 'OA status',
             },
         },
         additionalNotes: {
             component: RichEditorField,
             componentProps: {
-                name: 'additionalInformationSection.additionalNotes',
+                name: 'adminSection.additionalNotes',
                 title: 'Additional notes',
                 titleProps: {
                     variant: 'caption',
@@ -973,7 +972,7 @@ export default {
         fez_record_search_key_license_additional: {
             component: LicenceSelectorField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_license_additional.rek_license',
+                name: 'adminSection.fez_record_search_key_license_additional.rek_license',
                 label: 'Licence',
                 isAdmin: true,
             },
@@ -1026,7 +1025,7 @@ export default {
         fez_record_search_key_access_conditions: {
             component: AccessSelectorField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_access_conditions.rek_access_conditions',
+                name: 'adminSection.fez_record_search_key_access_conditions.rek_access_conditions',
                 id: 'data-collection-access-selector',
                 required: true,
                 validate: [validation.required],
@@ -1108,7 +1107,7 @@ export default {
         contactName: {
             component: GenericTextField,
             componentProps: {
-                name: 'additionalInformationSection.contactName',
+                name: 'adminSection.contactName',
                 fullWidth: true,
                 required: true,
                 validate: [validation.required],
@@ -1118,7 +1117,7 @@ export default {
         contactNameId: {
             component: AuthorIdField,
             componentProps: {
-                name: 'additionalInformationSection.contactNameId',
+                name: 'adminSection.contactNameId',
                 fullWidth: true,
                 showClear: true,
                 ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
@@ -1127,7 +1126,7 @@ export default {
         contactEmail: {
             component: GenericTextField,
             componentProps: {
-                name: 'additionalInformationSection.contactEmail',
+                name: 'adminSection.contactEmail',
                 fullWidth: true,
                 required: true,
                 validate: [validation.required, validation.email],
@@ -1137,15 +1136,14 @@ export default {
         fez_record_search_key_ands_collection_type: {
             component: AndsCollectionTypesField,
             componentProps: {
-                name:
-                    'additionalInformationSection.fez_record_search_key_ands_collection_type.rek_ands_collection_type',
+                name: 'adminSection.fez_record_search_key_ands_collection_type.rek_ands_collection_type',
                 label: 'Collection type',
             },
         },
         fez_record_search_key_project_name: {
             component: GenericTextField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_project_name.rek_project_name',
+                name: 'adminSection.fez_record_search_key_project_name.rek_project_name',
                 fullWidth: true,
                 ...formLocale.addDataset.information.project.fieldLabels.projectName,
             },
@@ -1153,7 +1151,7 @@ export default {
         fez_record_search_key_project_id: {
             component: GenericTextField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_project_id.rek_project_id',
+                name: 'adminSection.fez_record_search_key_project_id.rek_project_id',
                 fullWidth: true,
                 ...formLocale.addDataset.information.project.fieldLabels.projectId,
             },
@@ -1161,7 +1159,7 @@ export default {
         fez_record_search_key_project_description: {
             component: GenericTextField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_project_description.rek_project_description',
+                name: 'adminSection.fez_record_search_key_project_description.rek_project_description',
                 fullWidth: true,
                 height: 100,
                 required: true,
@@ -1183,7 +1181,7 @@ export default {
         fez_record_search_key_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_start_date.rek_start_date',
+                name: 'adminSection.fez_record_search_key_start_date.rek_start_date',
                 label: 'Start date',
                 placeholder: 'Start date',
                 fullWidth: true,
@@ -1192,7 +1190,7 @@ export default {
         fez_record_search_key_end_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_end_date.rek_end_date',
+                name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
                 label: 'End date',
                 placeholder: 'End date',
                 fullWidth: true,
@@ -1201,8 +1199,7 @@ export default {
         fez_record_search_key_time_period_start_date: {
             component: DatePickerField,
             componentProps: {
-                name:
-                    'additionalInformationSection.fez_record_search_key_time_period_start_date.rek_time_period_start_date',
+                name: 'adminSection.fez_record_search_key_time_period_start_date.rek_time_period_start_date',
                 label: 'Time coverage start date',
                 placeholder: 'Time coverage start date',
                 fullWidth: true,
@@ -1211,8 +1208,7 @@ export default {
         fez_record_search_key_time_period_end_date: {
             component: DatePickerField,
             componentProps: {
-                name:
-                    'additionalInformationSection.fez_record_search_key_time_period_end_date.rek_time_period_end_date',
+                name: 'adminSection.fez_record_search_key_time_period_end_date.rek_time_period_end_date',
                 label: 'Time coverage end date',
                 placeholder: 'Time coverage end date',
                 fullWidth: true,
@@ -1543,7 +1539,7 @@ export default {
             fez_record_search_key_rights: () => ({
                 required: false,
                 validate: [],
-                name: 'additionalInformationSection.fez_record_search_key_rights.rek_rights',
+                name: 'adminSection.fez_record_search_key_rights.rek_rights',
             }),
             fez_record_search_key_start_date: () => ({
                 label: 'Collection start date',
