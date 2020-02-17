@@ -689,16 +689,6 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
-export const getAdminSectionSearchKeys = (data = {}) => {
-    const { internalNotes } = data;
-
-    return {
-        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
-            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
-            : {}),
-    };
-};
-
 export const getLinkSearchKey = links => ({
     fez_record_search_key_link: links.map(link => ({ rek_link: link.rek_value.key, rek_link_order: link.rek_order })),
 });
@@ -973,7 +963,7 @@ export const getOpenAccessStatusSearchKey = record => {
     };
 };
 
-export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
+export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
         additionalNotes,
@@ -981,6 +971,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         contactName,
         contactNameId,
         contactEmail,
+        internalNotes,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
@@ -1003,6 +994,9 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!licenseData ? renameLicense(licenseData) : {}),
+        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
+            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
+            : {}),
         ...rest,
     };
 };

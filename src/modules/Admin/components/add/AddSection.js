@@ -53,8 +53,8 @@ export const AddSection = ({
                                     <Field
                                         component={CollectionField}
                                         disabled={disabled}
-                                        name="additionalInformationSection.collections"
-                                        id="additionalInformationSectioncollections"
+                                        name="adminSection.collections"
+                                        id="adminSectioncollections"
                                         floatingLabelText={
                                             locale.pages.adminAdd.formLabels.ismemberof.floatingLabelText
                                         }
@@ -88,7 +88,7 @@ export const AddSection = ({
                                                 component={SelectField}
                                                 disabled={disabled}
                                                 id="rek-subtype"
-                                                name="additionalInformationSection.rek_subtype"
+                                                name="adminSection.rek_subtype"
                                                 value={publicationSubtype}
                                                 label={locale.pages.adminAdd.formLabels.rek_subtype.inputLabelText}
                                                 required

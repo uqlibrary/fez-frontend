@@ -139,11 +139,7 @@ const mapStateToProps = (state, props) => {
         const displayType = formValues && formValues.get('rek_display_type');
         const selectedSubType =
             formValues &&
-            (
-                (!!formValues.get('additionalInformationSection') &&
-                    formValues.get('additionalInformationSection').toJS()) ||
-                {}
-            ).rek_subtype;
+            ((!!formValues.get('adminSection') && formValues.get('adminSection').toJS()) || {}).rek_subtype;
         const recordType = RECORD_TYPE_RECORD;
 
         recordToView = {
