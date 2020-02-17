@@ -109,7 +109,7 @@ describe('AdminContainer component', () => {
                 },
             },
         });
-        expect(wrapper.find('Memo(AdminInterface)').props().tabs.admin.activated).toBe(false);
+        expect(wrapper.find('Memo(AdminInterface)').props().tabs.identifiers.activated).toBe(false);
     });
 
     it('should show Add form', () => {

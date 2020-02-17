@@ -813,17 +813,14 @@ export default {
                 bibliographic: {
                     title: 'Bibliographic',
                 },
-                admin: {
-                    title: 'Admin',
-                },
                 grantInformation: {
                     title: 'Grant information',
                 },
                 authorDetails: {
                     title: 'Author details',
                 },
-                additionalInformation: {
-                    title: 'Additional information',
+                admin: {
+                    title: 'Admin',
                 },
                 ntro: {
                     title: 'NTRO',

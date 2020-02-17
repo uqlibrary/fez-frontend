@@ -68,16 +68,6 @@ const getInitialFormValues = (recordToView, recordType) => {
             publication: recordToView,
             rek_display_type: recordToView.rek_display_type,
             rek_date: recordToView.rek_date || recordToView.rek_created_date,
-            adminSection: {
-                rek_herdc_notes: {
-                    plainText: (recordToView || {}).rek_herdc_notes,
-                    htmlText: (recordToView || {}).rek_herdc_notes,
-                },
-                internalNotes: {
-                    plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                    htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                },
-            },
             identifiersSection:
                 (recordType === RECORD_TYPE_RECORD &&
                     getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
@@ -107,8 +97,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                     getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
                 {},
             authorsSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors')) || {},
-            additionalInformationSection:
-                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'additionalInformation')) || {},
+            adminSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'admin')) || {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
             grantInformationSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
