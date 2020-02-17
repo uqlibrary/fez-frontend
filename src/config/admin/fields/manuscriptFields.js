@@ -48,7 +48,7 @@ export default {
             groups: [['editors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -56,6 +56,10 @@ export default {
         {
             title: 'Additional information',
             groups: [['fez_record_search_key_oa_status']],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

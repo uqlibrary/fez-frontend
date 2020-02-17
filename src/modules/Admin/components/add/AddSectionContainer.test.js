@@ -35,10 +35,10 @@ describe('AddSectionContainer component', () => {
     it('should map state to props', () => {
         const state = {
             form: {
-                Prototype: {
+                AdminWorkForm: {
                     values: {
                         rek_display_type: 177,
-                        additionalInformationSection: {
+                        adminSection: {
                             rek_subtype: 'Creative Work - Textual',
                             collections: [
                                 {
@@ -54,7 +54,7 @@ describe('AddSectionContainer component', () => {
         expect(mapStateToProps(state, { disabled: true })).toMatchSnapshot();
 
         // Use a doctype from NEW_DOCTYPES_OPTIONS
-        state.form.Prototype.values.rek_display_type = 1005;
+        state.form.AdminWorkForm.values.rek_display_type = 1005;
         expect(mapStateToProps(state, { disabled: true })).toMatchSnapshot();
     });
 });

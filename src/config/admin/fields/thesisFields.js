@@ -49,7 +49,7 @@ export default {
             groups: [['supervisors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -57,6 +57,10 @@ export default {
         {
             title: 'Additional information',
             groups: [['fez_record_search_key_oa_status'], ['additionalNotes']],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

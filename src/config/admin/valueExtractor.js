@@ -98,6 +98,18 @@ export default {
             htmlText: record.rek_formatted_abstract || record.rek_description,
         }),
     },
+    rek_herdc_notes: {
+        getValue: record => ({
+            plainText: (record || {}).rek_herdc_notes,
+            htmlText: (record || {}).rek_herdc_notes,
+        }),
+    },
+    internalNotes: {
+        getValue: record => ({
+            plainText: ((record || {}).fez_internal_notes || {}).ain_detail,
+            htmlText: ((record || {}).fez_internal_notes || {}).ain_detail,
+        }),
+    },
     rek_date: {
         getValue: record => record.rek_date,
     },
