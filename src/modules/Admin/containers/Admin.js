@@ -148,6 +148,13 @@ const mapStateToProps = (state, props) => {
             rek_subtype: selectedSubType,
             rek_object_type_lookup: recordType,
         };
+        initialFormValues = {
+            initialValues: {
+                bibliographicSection: {
+                    languages: ['eng'],
+                },
+            },
+        };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
