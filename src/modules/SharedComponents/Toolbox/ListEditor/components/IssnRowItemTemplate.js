@@ -13,6 +13,7 @@ export const IssnRowItemTemplate = ({ item }) => {
                     <ExternalLink
                         href={item.value.sherpaRomeo.link}
                         aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
+                        title={item.value.sherpaRomeo.title}
                     >
                         {globalLocale.global.sherpaRomeoLink.externalLinktext}
                     </ExternalLink>
@@ -23,8 +24,12 @@ export const IssnRowItemTemplate = ({ item }) => {
                     !!item.value.ulrichs &&
                     !!item.value.ulrichs.link && <span> or </span>}
                 {!!item.value && !!item.value.ulrichs.link && !!item.value.ulrichs.linkText && (
-                    <ExternalLink href={item.value.ulrichs.link} aria-label={globalLocale.global.ulrichsLink.ariaLabel}>
-                        <i>{item.value.ulrichs.linkText}</i> {globalLocale.global.ulrichsLink.labelSuffix}
+                    <ExternalLink
+                        href={item.value.ulrichs.link}
+                        aria-label={globalLocale.global.ulrichsLink.ariaLabel}
+                        title={item.value.ulrichs.title}
+                    >
+                        {globalLocale.global.ulrichsLink.externalLinktext}
                     </ExternalLink>
                 )}
             </Typography>

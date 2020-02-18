@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
-import { default as globalLocale } from 'locale/global';
+import { default as globalLocale, EXPROXY_URL_PREFIX } from 'locale/global';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -178,6 +178,9 @@ export default {
                     '';
                 const ulrichsLinkText =
                     (!!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title && issn.fez_ulrichs.ulr_title) || '';
+                const ulrichsMouseOver = globalLocale.global.ulrichsLink.linkMouseover
+                    .replace('[title]', ulrichsLinkText)
+                    .replace('[link]', ulrichsLink.replace(EXPROXY_URL_PREFIX, ''));
                 const sherpaRomeoLink =
                     (!!issn.fez_sherpa_romeo &&
                         !!issn.fez_sherpa_romeo.srm_issn &&
@@ -186,6 +189,14 @@ export default {
                             issn.fez_sherpa_romeo.srm_issn,
                         )) ||
                     '';
+                const sherpaRomeoLinkText =
+                    (!!issn.fez_sherpa_romeo &&
+                        !!issn.fez_sherpa_romeo.srm_journal_name &&
+                        issn.fez_sherpa_romeo.srm_journal_name) ||
+                    '';
+                const sherpaMouseOver = globalLocale.global.sherpaRomeoLink.linkMouseover
+                    .replace('[title]', sherpaRomeoLinkText)
+                    .replace('[link]', sherpaRomeoLink);
                 return {
                     rek_order: issn.rek_issn_order,
                     rek_value: {
@@ -194,9 +205,12 @@ export default {
                             ulrichs: {
                                 link: ulrichsLink,
                                 linkText: ulrichsLinkText,
+                                title: ulrichsMouseOver,
                             },
                             sherpaRomeo: {
                                 link: sherpaRomeoLink,
+                                linkText: sherpaRomeoLinkText,
+                                title: sherpaMouseOver,
                             },
                         },
                     },

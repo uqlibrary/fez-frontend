@@ -23,11 +23,7 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
       aria-label="View Ulrichs information in a new window"
       href="http://example.com/ulrichs?id=1234"
     >
-      <i>
-        Architectural Journal
-      </i>
-       
-       on Ulrichs
+      Ulrichs information
     </WithStyles(ExternalLink)>
   </WithStyles(Typography)>
 </Fragment>
