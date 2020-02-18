@@ -30,7 +30,6 @@ export default {
                 ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
-                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
@@ -64,7 +63,8 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                ['fez_record_search_key_institutional_status'],
+                ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

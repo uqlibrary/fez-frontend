@@ -31,7 +31,6 @@ export default {
                 ],
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
-                ['fez_record_search_key_refereed_source'],
                 ['fez_record_search_key_parent_publication'],
                 ['fez_record_search_key_report_number'],
             ],
@@ -68,8 +67,12 @@ export default {
             title: 'Additional information',
             groups: [
                 ['rek_subtype'],
-                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                [
+                    'fez_record_search_key_herdc_code',
+                    'fez_record_search_key_herdc_status',
+                    'fez_record_search_key_institutional_status',
+                ],
+                ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

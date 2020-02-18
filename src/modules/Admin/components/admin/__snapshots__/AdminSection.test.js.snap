@@ -20,9 +20,10 @@ exports[`AdminSection component should render default view 1`] = `
           Array [
             "fez_record_search_key_herdc_code",
             "fez_record_search_key_herdc_status",
+            "fez_record_search_key_institutional_status",
           ],
           Array [
-            "fez_record_search_key_institutional_status",
+            "fez_record_search_key_refereed_source",
             "fez_record_search_key_oa_status",
             "contentIndicators",
           ],
@@ -69,9 +70,16 @@ exports[`AdminSection component should render disabled view 1`] = `
           Array [
             "fez_record_search_key_herdc_code",
             "fez_record_search_key_herdc_status",
+<<<<<<< HEAD
           ],
           Array [
             "fez_record_search_key_institutional_status",
+=======
+            "fez_record_search_key_institutional_status",
+          ],
+          Array [
+            "fez_record_search_key_refereed_source",
+>>>>>>> feature-admin-interface
             "fez_record_search_key_oa_status",
             "contentIndicators",
           ],
