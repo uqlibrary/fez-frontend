@@ -154,6 +154,8 @@ exports[`BibliographicSection component should render design form fields 1`] = `
           ],
           Array [
             "rek_date",
+          ],
+          Array [
             "fez_record_search_key_date_available",
           ],
           Array [
