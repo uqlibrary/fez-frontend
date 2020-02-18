@@ -16,8 +16,8 @@ export const mapStateToProps = (state, ownProps) => {
     const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms })[displayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
     const subtypes = (hasSubtypes && selectedPublicationType.subtypes) || null;
-    const publicationSubtype = hasSubtypes ? selector(state, 'additionalInformationSection.rek_subtype') : null;
-    const collections = selector(state, 'additionalInformationSection.collections');
+    const publicationSubtype = hasSubtypes ? selector(state, 'adminSection.rek_subtype') : null;
+    const collections = selector(state, 'adminSection.collections');
 
     let hasDefaultDocTypeSubType = false;
     let docTypeSubTypeCombo = null;
@@ -32,6 +32,7 @@ export const mapStateToProps = (state, ownProps) => {
             </MenuItem>
         ))
         : [];
+
     return {
         disabled: ownProps.disabled,
         hasSubtypes: hasSubtypes,

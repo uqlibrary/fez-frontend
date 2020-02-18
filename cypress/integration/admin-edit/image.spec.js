@@ -52,10 +52,10 @@ context('Image admin edit', () => {
                             );
                         cy.get('#Source')
                             .should('have.value', record.fez_record_search_key_source.rek_source);
-                        cy.get('#Rights')
+                        cy.get('#Copyrightnotice')
                             .should('have.value', record.fez_record_search_key_rights.rek_rights);
 
-                        cy.get('label[id="License-label"]')
+                        cy.get('label[id="Licence-label"]')
                             .parent()
                             .find('input[type=hidden]')
                             .should('have.value', record.fez_record_search_key_license.rek_license)

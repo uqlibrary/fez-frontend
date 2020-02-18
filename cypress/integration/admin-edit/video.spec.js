@@ -35,7 +35,7 @@ context('Video admin edit', () => {
                             .should('contain', 'Bibliographic');
 
                         // Video record includes the owner's Rights
-                        cy.get('#Rights')
+                        cy.get('#Copyrightnotice')
                             .should('have.value', record.fez_record_search_key_rights.rek_rights);
                     });
             });

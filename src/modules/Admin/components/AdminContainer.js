@@ -20,7 +20,6 @@ import AdminSection from './admin/AdminSectionContainer';
 import AddSection from './add/AddSectionContainer';
 import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
 import FilesSection from './files/FilesSectionContainer';
-import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
 import NtroSection from './ntro/NtroSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
@@ -159,10 +158,6 @@ export const AdminContainer = ({
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
                             tabs={{
-                                admin: {
-                                    component: AdminSection,
-                                    activated: isActivated(),
-                                },
                                 identifiers: {
                                     component: IdentifiersSection,
                                     activated: isActivated(),
@@ -177,10 +172,10 @@ export const AdminContainer = ({
                                     activated: isActivated(),
                                     numberOfErrors: tabErrors.current.authorsSection || null,
                                 },
-                                additionalInformation: {
-                                    component: AdditionalInformationSection,
+                                admin: {
+                                    component: AdminSection,
                                     activated: isActivated(),
-                                    numberOfErrors: tabErrors.current.additionalInformationSection || null,
+                                    numberOfErrors: tabErrors.current.adminSection || null,
                                 },
                                 ntro: {
                                     component: NtroSection,

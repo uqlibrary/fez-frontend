@@ -23,6 +23,10 @@ export default {
             ],
         },
         {
+            title: 'Keyword(s)',
+            groups: [['fez_record_search_key_keywords']],
+        },
+        {
             title: 'Subject',
             groups: [['subjects']],
         },
@@ -37,7 +41,7 @@ export default {
             groups: [['editors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -45,9 +49,13 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

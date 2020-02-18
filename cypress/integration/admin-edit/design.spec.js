@@ -65,7 +65,7 @@ context('Design admin edit', () => {
             });
 
         cy.get('@bibliographicCard')
-            .find('#Rights')
+            .find('#Copyrightnotice')
             .clear()
             .parent()
             .parent()

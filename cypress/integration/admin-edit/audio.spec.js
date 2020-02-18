@@ -71,7 +71,7 @@ context('Audio admin edit', () => {
                     .should('have.value', record.fez_record_search_key_length.rek_length);
                 cy.get('#Type')
                     .should('have.value', record.rek_genre);
-                cy.get('label[id="License-label"]')
+                cy.get('label[id="Licence-label"]')
                     .parent()
                     .find('input[type=hidden]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
@@ -80,7 +80,7 @@ context('Audio admin edit', () => {
                     .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
                 cy.get('#Source')
                     .should('have.text', record.fez_record_search_key_source.rek_source);
-                cy.get('#Rights')
+                cy.get('#Copyrightnotice')
                     .should('have.text', record.fez_record_search_key_rights.rek_rights);
                 cy.get('div:nth-child(15) span span')
                     .eq(0)
@@ -133,7 +133,7 @@ context('Audio admin edit', () => {
             .as('filesTab')
             .find('.StandardCard')
             .within(() => {
-                cy.get('h3')
+                cy.get('h4')
                     .should('have.text', 'Attached files');
                 cy.get('.Alert .alert-text')
                     .should(

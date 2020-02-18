@@ -98,6 +98,18 @@ export default {
             htmlText: record.rek_formatted_abstract || record.rek_description,
         }),
     },
+    rek_herdc_notes: {
+        getValue: record => ({
+            plainText: (record || {}).rek_herdc_notes,
+            htmlText: (record || {}).rek_herdc_notes,
+        }),
+    },
+    internalNotes: {
+        getValue: record => ({
+            plainText: ((record || {}).fez_internal_notes || {}).ain_detail,
+            htmlText: ((record || {}).fez_internal_notes || {}).ain_detail,
+        }),
+    },
     rek_date: {
         getValue: record => record.rek_date,
     },
@@ -475,9 +487,6 @@ export default {
     },
     rek_copyright: {
         getValue: record => record.rek_copyright,
-    },
-    rek_herdc_notes: {
-        getValue: record => record.rek_herdc_notes,
     },
     fez_record_search_key_advisory_statement: {
         getValue: record => ({ ...record.fez_record_search_key_advisory_statement }),

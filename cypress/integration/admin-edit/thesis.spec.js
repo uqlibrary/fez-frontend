@@ -308,7 +308,7 @@ context('Thesis admin edit', () => {
 
                 cy.get('div:nth-child(1) > .StandardCard')
                     .within(() => {
-                        cy.get('h3')
+                        cy.get('h4')
                             .should(
                                 'have.text',
                                 `${record.rek_object_type_lookup} level security - ${record.rek_pid}`,
@@ -337,7 +337,7 @@ context('Thesis admin edit', () => {
                     });
                 cy.get('div:nth-child(2) > .StandardCard')
                     .within(() => {
-                        cy.get('h3')
+                        cy.get('h4')
                             .should('have.text', `Datastream level security - ${record.rek_pid}`);
                         cy.get('h6')
                             .eq(0)

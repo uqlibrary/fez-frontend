@@ -54,7 +54,7 @@ export default {
             groups: [['editors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -65,6 +65,10 @@ export default {
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
                 ['additionalNotes'],
             ],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],
