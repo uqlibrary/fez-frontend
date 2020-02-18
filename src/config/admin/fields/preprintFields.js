@@ -9,12 +9,7 @@ export default {
         },
         {
             title: 'Bibliographic',
-            groups: [
-                ['fez_record_search_key_publisher'],
-                ['rek_date'],
-                ['rek_description'],
-                ['fez_record_search_key_refereed_source'],
-            ],
+            groups: [['fez_record_search_key_publisher'], ['rek_date'], ['rek_description']],
         },
         {
             title: 'Keyword(s)',
@@ -35,7 +30,7 @@ export default {
             groups: [['editors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -43,10 +38,18 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                [
+                    'fez_record_search_key_herdc_code',
+                    'fez_record_search_key_herdc_status',
+                    'fez_record_search_key_institutional_status',
+                ],
+                ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

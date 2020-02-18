@@ -1,1 +1,1 @@
-export const FORM_NAME = 'Prototype';
+export const FORM_NAME = 'AdminWorkForm';

@@ -1,9 +1,4 @@
 export default {
-    admin: () => [
-        {
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
-    ],
     files: ({ isDataset, displayAdvisoryStatement } = { isDataset: false, displayAdvisoryStatement: false }) => [
         {
             groups: [['fez_datastream_info']],

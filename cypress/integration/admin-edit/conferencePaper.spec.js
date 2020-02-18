@@ -160,12 +160,18 @@ context('Conference Paper admin edit', () => {
                     });
 
                 cy.get('.AdminCard')
+                    .eq(5)
+                    .within(() => {
+                        cy.get('h4')
+                            .should('contain', 'Journal name');
+                        cy.get('#Series-input')
+                            .should('have.value', record.fez_record_search_key_series.rek_series);
+                    });
+                cy.get('.AdminCard')
                     .eq(8)
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
-                        cy.get('#Series-input')
-                            .should('have.value', record.fez_record_search_key_series.rek_series);
                         cy.get('#Articlenumber')
                             .should(
                                 'have.value',

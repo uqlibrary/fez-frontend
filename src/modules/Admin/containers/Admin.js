@@ -68,16 +68,6 @@ const getInitialFormValues = (recordToView, recordType) => {
             publication: recordToView,
             rek_display_type: recordToView.rek_display_type,
             rek_date: recordToView.rek_date || recordToView.rek_created_date,
-            adminSection: {
-                rek_herdc_notes: {
-                    plainText: (recordToView || {}).rek_herdc_notes,
-                    htmlText: (recordToView || {}).rek_herdc_notes,
-                },
-                internalNotes: {
-                    plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                    htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                },
-            },
             identifiersSection:
                 (recordType === RECORD_TYPE_RECORD &&
                     getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
@@ -107,8 +97,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                     getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
                 {},
             authorsSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors')) || {},
-            additionalInformationSection:
-                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'additionalInformation')) || {},
+            adminSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'admin')) || {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
             grantInformationSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
@@ -150,11 +139,7 @@ const mapStateToProps = (state, props) => {
         const displayType = formValues && formValues.get('rek_display_type');
         const selectedSubType =
             formValues &&
-            (
-                (!!formValues.get('additionalInformationSection') &&
-                    formValues.get('additionalInformationSection').toJS()) ||
-                {}
-            ).rek_subtype;
+            ((!!formValues.get('adminSection') && formValues.get('adminSection').toJS()) || {}).rek_subtype;
         const recordType = RECORD_TYPE_RECORD;
 
         recordToView = {
@@ -162,6 +147,13 @@ const mapStateToProps = (state, props) => {
             rek_display_type: displayType,
             rek_subtype: selectedSubType,
             rek_object_type_lookup: recordType,
+        };
+        initialFormValues = {
+            initialValues: {
+                bibliographicSection: {
+                    languages: ['eng'],
+                },
+            },
         };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;

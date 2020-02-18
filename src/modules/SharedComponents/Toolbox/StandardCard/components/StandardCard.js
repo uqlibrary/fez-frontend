@@ -49,10 +49,20 @@ export class Cards extends Component {
         customTitleBgColor: PropTypes.any,
         squareTop: PropTypes.bool,
         smallTitle: PropTypes.bool,
+        subCard: PropTypes.bool,
     };
 
     render() {
-        const { classes, title, help, children, primaryHeader, accentHeader, smallTitle = false } = this.props;
+        const {
+            classes,
+            title,
+            help,
+            children,
+            primaryHeader,
+            accentHeader,
+            smallTitle = false,
+            subCard = false,
+        } = this.props;
         const customBG = !!this.props.customBackgroundColor
             ? { backgroundColor: this.props.customBackgroundColor }
             : null;
@@ -68,19 +78,11 @@ export class Cards extends Component {
                     <CardHeader
                         style={{ ...squareTop, ...customTitleBG }}
                         title={title}
-                        titleTypographyProps={
-                            !smallTitle
-                                ? {
-                                    variant: 'h5',
-                                    component: 'h3',
-                                    color: 'inherit',
-                                }
-                                : {
-                                    variant: 'h6',
-                                    component: 'h3',
-                                    color: 'inherit',
-                                }
-                        }
+                        titleTypographyProps={{
+                            variant: smallTitle ? 'h6' : 'h5',
+                            component: subCard ? 'h4' : 'h3',
+                            color: 'inherit',
+                        }}
                         action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
                             root:

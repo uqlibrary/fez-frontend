@@ -6,7 +6,7 @@ Object {
   "disabled": true,
   "docTypeSubTypeCombo": null,
   "formValues": Object {
-    "additionalInformationSection": Object {
+    "adminSection": Object {
       "collections": Array [
         Object {
           "id": "UQ:3838",
@@ -97,7 +97,7 @@ Object {
     "subtype": "Creative Work - Textual",
   },
   "formValues": Object {
-    "additionalInformationSection": Object {
+    "adminSection": Object {
       "collections": Array [
         Object {
           "id": "UQ:3838",

@@ -270,7 +270,7 @@ export const AttachedFiles = ({
 
     return (
         <Grid item xs={12}>
-            <StandardCard title={locale.title}>
+            <StandardCard title={locale.title} subCard>
                 {!!record.fez_record_search_key_advisory_statement && !hideCulturalSensitivityStatement && (
                     <Alert
                         allowDismiss

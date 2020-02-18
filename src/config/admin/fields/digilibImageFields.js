@@ -14,7 +14,7 @@ export default {
                 ['rek_date'],
                 ['rek_description'],
                 ['fez_record_search_key_rights'],
-                ['fez_record_search_key_refereed_source', 'fez_record_search_key_construction_date'],
+                ['fez_record_search_key_construction_date'],
                 ['fez_record_search_key_date_photo_taken', 'fez_record_search_key_date_scanned'],
             ],
         },
@@ -81,7 +81,7 @@ export default {
             groups: [['editors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -89,9 +89,17 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
+                [
+                    'fez_record_search_key_institutional_status',
+                    'fez_record_search_key_refereed_source',
+                    'fez_record_search_key_oa_status',
+                ],
                 ['additionalNotes'],
             ],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

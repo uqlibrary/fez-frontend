@@ -60,7 +60,7 @@ export default {
             groups: [['authors']],
         },
     ],
-    additionalInformation: () => [
+    admin: () => [
         {
             title: 'Member of collections',
             groups: [['collections']],
@@ -92,12 +92,16 @@ export default {
                 ['fez_record_search_key_project_id'],
             ],
         },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
+        },
     ],
     ntro: () => [],
 };
 
 export const validateDataCollection = (
-    { bibliographicSection: bs, additionalInformationSection: ais, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, adminSection: ais, filesSection: fs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -108,7 +112,7 @@ export const validateDataCollection = (
         }) ||
             {}),
     },
-    additionalInformationSection: {
+    adminSection: {
         ...((!(ais || {}).contactName && {
             contactName: summary.contactName,
         }) ||
