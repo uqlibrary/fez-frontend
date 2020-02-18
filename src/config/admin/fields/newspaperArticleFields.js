@@ -25,7 +25,7 @@ export default {
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['rek_date', 'fez_record_search_key_refereed_source'],
+                ['rek_date'],
                 ['rek_description'],
                 ['fez_record_search_key_newspaper'],
                 ['fez_record_search_key_section'],
@@ -63,8 +63,12 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                [
+                    'fez_record_search_key_herdc_code',
+                    'fez_record_search_key_herdc_status',
+                    'fez_record_search_key_institutional_status',
+                ],
+                ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

@@ -23,7 +23,6 @@ export default {
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_license_biblio'],
-                ['fez_record_search_key_refereed_source'],
                 ['fez_record_search_key_acknowledgements'],
             ],
         },
@@ -62,7 +61,11 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
+                [
+                    'fez_record_search_key_institutional_status',
+                    'fez_record_search_key_refereed_source',
+                    'fez_record_search_key_oa_status',
+                ],
                 ['additionalNotes'],
             ],
         },
