@@ -52,7 +52,7 @@ var CKBUILDER_CONFIG = {
 		'tests'
 	],
 	plugins : {
-		'autogrow' : 1,
+		'autogrow' : 0,
 		'basicstyles' : 1,
 		'clipboard' : 1,
 		'enterkey' : 1,
