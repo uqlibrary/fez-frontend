@@ -587,7 +587,7 @@ export default {
         fez_record_search_key_refereed_source: {
             component: RefereedSourceField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_refereed_source.rek_refereed_source',
+                name: 'adminSection.fez_record_search_key_refereed_source.rek_refereed_source',
                 label: 'Refereed source',
             },
         },

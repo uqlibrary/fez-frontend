@@ -19,7 +19,7 @@ describe('AdminActions component', () => {
 
     it('should handle admin actions menu', async() => {
         global.window.open = jest.fn((url, target) => {
-            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?tab=security?navigatedFrom=');
+            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?tab=security&navigatedFrom=');
             expect(target).toBe('_self');
         });
 
