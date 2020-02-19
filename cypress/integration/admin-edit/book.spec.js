@@ -27,7 +27,8 @@ context('Book admin edit', () => {
         cy.log('Bibliographic tab');
         cy.get('.StandardPage form > div >div')
             .get('.StandardCard')
-            .eq(2)
+            .eq(1)
+            .as('bibliographicTab')
                 .within(() => {
                     cy.get('h4')
                         .should('contain', 'Title');
