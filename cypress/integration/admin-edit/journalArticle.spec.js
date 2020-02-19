@@ -169,7 +169,6 @@ context('Journal Article admin edit', () => {
                             .should('contain', 'ISSN');
                         const issns = record.fez_record_search_key_issn.map(item => item.rek_issn);
                         const ulrichsId = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title_id);
-                        const ulrichsTitle = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title);
 
                         cy.get('div.ISSNvalue')
                             .within(() => {
@@ -187,7 +186,7 @@ context('Journal Article admin edit', () => {
                                         );
                                     cy.get('.ListRow-ISSNvalue a')
                                         .eq(2 * index + 1)
-                                        .should('contain.text', ulrichsTitle[index] + '  on Ulrichs')
+                                        .should('contain.text', 'Ulrichs information')
                                         .should(
                                             'have.attr',
                                             'href',
