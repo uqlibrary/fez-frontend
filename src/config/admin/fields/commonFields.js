@@ -26,14 +26,22 @@ export default {
             groups: [['grants']],
         },
     ],
-    identifiers: ({ displayIdentifiers, displayLocation } = { displayIdentifiers: false, displayLocation: false }) => [
+    identifiers: (
+        { displayAll, displayIdentifiers, displayLocation } = {
+            displayAll: false,
+            displayIdentifiers: false,
+            displayLocation: false,
+        },
+    ) => [
         {
             title: 'Manage identifiers',
             groups: [
                 ['fez_record_search_key_doi'],
-                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
-                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                ...(displayAll && [
+                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                    ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                ]),
             ],
         },
         {
