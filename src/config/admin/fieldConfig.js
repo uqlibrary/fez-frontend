@@ -67,7 +67,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
-import { IssnUlrichLinkTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 export default {
     default: {
@@ -503,7 +503,7 @@ export default {
                     return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
                 canEdit: true,
-                rowItemTemplate: IssnUlrichLinkTemplate,
+                rowItemTemplate: IssnRowItemTemplate,
                 getItemSelectedToEdit: (list, index) =>
                     (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
             },
