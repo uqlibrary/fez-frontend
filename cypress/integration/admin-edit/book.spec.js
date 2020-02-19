@@ -29,33 +29,33 @@ context('Book admin edit', () => {
             .get('.StandardCard')
             .eq(1)
             .as('bibliographicTab')
-                .within(() => {
-                    cy.get('h4')
-                        .should('contain', 'Title');
-                    const langCodes = record.fez_record_search_key_language_of_title.map(
-                        lang => lang.rek_language_of_title,
+            .within(() => {
+                cy.get('h4')
+                    .should('contain', 'Title');
+                const langCodes = record.fez_record_search_key_language_of_title.map(
+                    lang => lang.rek_language_of_title,
+                );
+                cy.get('label[id="Language of title-label"]')
+                    .parent()
+                    .find('input[type=hidden]')
+                    .should('have.value', langCodes.join(','))
+                    .siblings('[role=button] span')
+                    .should('have.length', 0); // If no matching codes found, there is a span present
+                cy.get('#Nativescripttitle')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_native_script_title.rek_native_script_title,
                     );
-                    cy.get('label[id="Language of title-label"]')
-                        .parent()
-                        .find('input[type=hidden]')
-                        .should('have.value', langCodes.join(','))
-                        .siblings('[role=button] span')
-                        .should('have.length', 0); // If no matching codes found, there is a span present
-                    cy.get('#Nativescripttitle')
-                        .should(
-                            'have.value',
-                            record.fez_record_search_key_native_script_title.rek_native_script_title,
-                        );
-                    cy.get('#Romanscripttitle')
-                        .should(
-                            'have.value',
-                            record.fez_record_search_key_roman_script_title.rek_roman_script_title,
-                        );
-                    cy.get('#Translatedtitle')
-                        .should(
-                            'have.value',
-                            record.fez_record_search_key_translated_title.rek_translated_title,
-                        );
+                cy.get('#Romanscripttitle')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_roman_script_title.rek_roman_script_title,
+                    );
+                cy.get('#Translatedtitle')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_translated_title.rek_translated_title,
+                    );
             });
 
         cy.get('@bibliographicTab')

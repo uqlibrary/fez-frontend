@@ -30,14 +30,12 @@ context('Book Chapter admin edit', () => {
                 cy.get('#Chapternumber')
                     .should(
                         'have.value',
-                        record.fez_record_search_key_chapter_number.rek_chapter_number);
+                        record.fez_record_search_key_chapter_number.rek_chapter_number,
+                    );
                 cy.get('label')
                     .should('contain', 'Book title');
                 cy.get('#Booktitle')
-                    .should(
-                        'have.value',
-                        record.fez_record_search_key_book_title.rek_book_title,
-                    );
+                    .should('have.value', record.fez_record_search_key_book_title.rek_book_title);
                 const langCodes = record.fez_record_search_key_language_of_book_title.map(
                     lang => lang.rek_language_of_book_title,
                 );
@@ -79,7 +77,7 @@ context('Book Chapter admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.viewport(1000,2000);
+        cy.viewport(1000, 2000);
         cy.get('.StandardPage form > div > div')
             .get('.StandardCard')
             .eq(2)
@@ -94,7 +92,7 @@ context('Book Chapter admin edit', () => {
             .eq(1)
             .within(() => {
                 editors.forEach((editor, index) => {
-                        cy.get('p')
+                    cy.get('p')
                         .eq(index)
                         .should('have.text', editor);
                 });

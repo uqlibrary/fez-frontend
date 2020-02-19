@@ -73,7 +73,7 @@ context('Conference Proceedings admin edit', () => {
 
                         cy.get('input[name=fileDescription]')
                             .should('have.value', visibleFileDescription);
-                });
+                    });
             });
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
@@ -89,7 +89,7 @@ context('Conference Proceedings admin edit', () => {
                 cy.get('.StandardCard')
                     .eq(1)
                     .within(() => {
-                    cy.get('h6')
+                        cy.get('h6')
                             .eq(0)
                             .should('have.text', 'Inherited datastream security policy details');
                     });
@@ -106,14 +106,14 @@ context('Conference Proceedings admin edit', () => {
                         .should('have.text', `Public (${collection.parent.rek_security_policy})`);
                 });
                 cy.get('h6')
-                        .contains('Override datastream security policy details')
-                        .siblings('div')
-                        .as('dsiPolicyBlock')
-                        .find(`a[title="${visibleFilename}"]`)
-                        .should('have.text', visibleFilename);
+                    .contains('Override datastream security policy details')
+                    .siblings('div')
+                    .as('dsiPolicyBlock')
+                    .find(`a[title="${visibleFilename}"]`)
+                    .should('have.text', visibleFilename);
                 cy.get('@dsiPolicyBlock')
-                        .find(`input[name="${visibleFilename}"]`)
-                        .should('have.value', visibleFileSecurityPolicy.toString());
+                    .find(`input[name="${visibleFilename}"]`)
+                    .should('have.value', visibleFileSecurityPolicy.toString());
             });
     });
 });

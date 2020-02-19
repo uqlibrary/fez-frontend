@@ -103,10 +103,7 @@ context('Conference Paper admin edit', () => {
                             .rek_translated_proceedings_title,
                     );
                 cy.get('#Journalname')
-                    .should(
-                        'have.value',
-                        record.fez_record_search_key_journal_name.rek_journal_name,
-                    );
+                    .should('have.value', record.fez_record_search_key_journal_name.rek_journal_name);
                 cy.get('label[id="Language of journal name-label"]')
                     .parent()
                     .find('input[type=hidden]')
