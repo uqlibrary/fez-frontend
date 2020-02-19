@@ -12,7 +12,7 @@ context('Journal admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditVerifyAlerts(2, ['Journal name is required']);
 
         cy.adminEditTabbedView();

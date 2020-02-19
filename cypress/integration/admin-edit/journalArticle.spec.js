@@ -12,7 +12,7 @@ context('Journal Article admin edit', () => {
         cy.get('button[title="Learn about keyboard shortcuts"]')
             .should('exist');
 
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();

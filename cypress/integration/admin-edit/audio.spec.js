@@ -12,21 +12,20 @@ context('Audio admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditVerifyAlerts(1, ['Publication date is required']);
-
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(2);
+        cy.adminEditCheckTabErrorBadge(1);
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         cy.log('Identifiers tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(1)
-            .find('.AdminCard')
-            .eq(1)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(0)
+            .as('identifiersCard')
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Manage links');
@@ -48,10 +47,9 @@ context('Audio admin edit', () => {
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(2)
-            .find('.AdminCard')
-            .eq(4)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(1)
             .as('bibliographicCard')
             .within(() => {
                 cy.get('h4')
@@ -85,9 +83,9 @@ context('Audio admin edit', () => {
                 cy.get('div:nth-child(15) span span')
                     .eq(0)
                     .should('have.text', 'Transcript');
-                cy.get('#cke_editor5')
+                cy.get('#cke_editor3')
                     .should('exist');
-                cy.readCKEditor('editor5')
+                cy.readCKEditor('editor3')
                     .should(text => {
                         expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                     });
@@ -128,12 +126,13 @@ context('Audio admin edit', () => {
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         cy.log('Files tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(6)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(5)
             .as('filesTab')
-            .find('.StandardCard')
             .within(() => {
                 cy.get('h4')
+                    .eq(0)
                     .should('have.text', 'Attached files');
                 cy.get('.Alert .alert-text')
                     .should(

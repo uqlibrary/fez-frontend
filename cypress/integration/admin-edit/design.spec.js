@@ -12,7 +12,7 @@ context('Design admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditVerifyAlerts(3, ['Publisher is required', 'Work subtype is required']);
 
         cy.adminEditTabbedView();

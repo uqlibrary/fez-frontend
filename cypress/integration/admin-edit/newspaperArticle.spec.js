@@ -12,7 +12,7 @@ context('Newspaper Article admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();

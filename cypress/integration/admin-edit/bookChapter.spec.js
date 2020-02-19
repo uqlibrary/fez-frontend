@@ -12,7 +12,7 @@ context('Book Chapter admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
