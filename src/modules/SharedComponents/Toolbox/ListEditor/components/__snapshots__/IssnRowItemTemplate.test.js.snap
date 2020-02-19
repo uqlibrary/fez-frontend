@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
+exports[`IssnRowItemTemplate component should render a value 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
@@ -11,20 +11,25 @@ exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
     </span>
      
     <WithStyles(ExternalLink)
+      aria-label="View publisher's open access policy in an new window"
+      href="http://example.com/sherpa?issn=1234-1234"
+    >
+      Check publisher's open access policy
+    </WithStyles(ExternalLink)>
+    <span>
+       or 
+    </span>
+    <WithStyles(ExternalLink)
       aria-label="View Ulrichs information in a new window"
       href="http://example.com/ulrichs?id=1234"
     >
-      <i>
-        Architectural Journal
-      </i>
-       
-       on Ulrichs
+      Ulrichs information
     </WithStyles(ExternalLink)>
   </WithStyles(Typography)>
 </Fragment>
 `;
 
-exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
+exports[`IssnRowItemTemplate component should render default view 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
@@ -38,7 +43,7 @@ exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
 </Fragment>
 `;
 
-exports[`IssnUlrichLinkTemplate component should skip a missing ulrichs 1`] = `
+exports[`IssnRowItemTemplate component should skip missing ulrichs or sherparomeo 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
