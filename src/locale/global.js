@@ -178,12 +178,10 @@ export default {
             prefix: 'http://www.sherpa.ac.uk/romeo/',
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]',
             externalLinktext: "Check publisher's open access policy",
-            linkMouseover: 'Visit [title] at [link] in a new window',
         },
         ulrichsLink: {
             ariaLabel: 'View Ulrichs information in a new window',
             externalLinktext: 'Ulrichs information',
-            linkMouseover: 'Visit [title] at [link] in a new window',
             prefix: 'http://ulrichsweb.serialssolutions.com/',
             externalUrl: EXPROXY_URL_PREFIX + 'http://ulrichsweb.serialssolutions.com/title/[id]',
         },
