@@ -77,7 +77,6 @@ context('Book Chapter admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.viewport(1000, 2000);
         cy.get('.StandardPage form > div > div')
             .get('.StandardCard')
             .eq(2)
