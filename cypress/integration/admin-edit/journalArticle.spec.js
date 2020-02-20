@@ -237,12 +237,7 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.get('[placeholder="Publication date"]')
-                            .should(
-                                'have.value',
-                                Cypress.moment(record.rek_date)
-                                    .format('DD/MM/YYYY'),
-                            );
+                        cy.checkPartialDateFromRecordValue('Publication date', record.rek_date);
                         cy.get('#Yearavailable')
                             .should(
                                 'have.value',
@@ -260,15 +255,6 @@ context('Journal Article admin edit', () => {
                             .should(text => {
                                 expect(text).to.contain(record.rek_description);
                             });
-                        // cy.get('label[id="Refereed source-label"]')
-                        //     .parent()
-                        //     .find('input[type=hidden]')
-                        //     .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                        //     .siblings('[role=button]')
-                        //     .should(
-                        //         'have.text',
-                        //         record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
-                        //     );
                     });
 
                 cy.get('@cards')
@@ -319,14 +305,6 @@ context('Journal Article admin edit', () => {
             .type('Test');
 
         cy.adminEditNoAlerts();
-
-        // Skipped until bugfix for rek_date clearing via keyboard not triggering validation error
-        // https://www.pivotaltracker.com/story/show/168742188/comments/207811461
-
-        // cy.get('@bibliographicCard')
-        //     .get('[placeholder="Publication date"]')
-        //     .clear();
-        // cy.adminEditVerifyAlerts(1, 'Publication date is required');
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
@@ -595,16 +573,6 @@ context('Journal Article admin edit', () => {
                             .should('contain', 'Files');
                     });
             });
-        // cy.get('@cards')
-        //     .eq(2)
-        //     .within(() => {
-        //         cy.get('h4')
-        //             .should('contain', 'Advisory statement');
-        //         cy.get('span span')
-        //             .eq(0)
-        //             .should('have.text', 'Advisory statement');
-        //         // No advisory statement in mock
-        //     });
         cy.get('@cards')
             .eq(1)
             .within(() => {

@@ -11,14 +11,14 @@ context('Digilib Image admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    // it('should load with specifed elements', () => {
-    //     cy.adminEditCountCards(7);
-    //     cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
-    //     cy.adminEditTabbedView();
-    //     cy.adminEditCheckDefaultTab('Bibliographic');
-    //     cy.adminEditCheckTabErrorBadge(1);
-    //     cy.adminEditCheckTabErrorBadge(5);
-    // });
+    it('should load with specifed elements', () => {
+        cy.adminEditCountCards(7);
+        cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCheckTabErrorBadge(1);
+        cy.adminEditCheckTabErrorBadge(5);
+    });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
@@ -43,20 +43,15 @@ context('Digilib Image admin edit', () => {
                         record.fez_record_search_key_construction_date.rek_construction_date,
                     );
 
-                cy.get('[placeholder="Date photo taken"]')
-                    .should(
-                        'have.value',
-                        Cypress.moment(record.fez_record_search_key_date_photo_taken.rek_date_photo_taken)
-                            .format(
-                                'DD/MM/YYYY',
-                            ),
-                    );
-                cy.get('[placeholder="Date photo scanned"]')
-                    .should(
-                        'have.value',
-                        Cypress.moment(record.fez_record_search_key_date_scanned.rek_date_scanned)
-                            .format('DD/MM/YYYY'),
-                    );
+                cy.checkPartialDateFromRecordValue(
+                    'Date photo taken',
+                    record.fez_record_search_key_date_photo_taken.rek_date_photo_taken,
+                );
+
+                cy.checkPartialDateFromRecordValue(
+                    'Date photo scanned',
+                    record.fez_record_search_key_date_scanned.rek_date_scanned,
+                );
 
                 cy.get('@bibliographicTab')
                     .get('.AdminCard')

@@ -55,13 +55,6 @@ context('Journal admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_issue_number.rek_issue_number,
                             );
-                        // cy.get('input[aria-labelledby="Refereed source-label"]', { force: true })
-                        //     .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                        //     .siblings('[role=button]')
-                        //     .should(
-                        //         'have.text',
-                        //         record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
-                        //     );
                     });
             });
     });

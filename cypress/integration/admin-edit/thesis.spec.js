@@ -71,12 +71,7 @@ context('Thesis admin edit', () => {
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
 
-                        cy.get('[placeholder="Publication date"]')
-                            .should(
-                                'have.value',
-                                Cypress.moment(record.rek_date)
-                                    .format('DD/MM/YYYY'),
-                            );
+                        cy.checkPartialDateFromRecordValue('Publication date', record.rek_date);
 
                         cy.get('span span')
                             .eq(0)
@@ -269,16 +264,6 @@ context('Thesis admin edit', () => {
                             .should('contain', 'Files');
                         // No visible files in mock
                     });
-                // cy.get('.AdminCard')
-                //     .eq(1)
-                //     .within(() => {
-                //         cy.get('h3')
-                //             .should('have.text', 'Advisory statement');
-                //         cy.get('span span')
-                //             .eq(0)
-                //             .should('have.text', 'Advisory statement');
-                //         // No advisory statement in mock
-                //     });
                 cy.get('@cards')
                     .eq(1)
                     .within(() => {

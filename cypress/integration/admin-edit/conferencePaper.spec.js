@@ -11,13 +11,13 @@ context('Conference Paper admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    // it('should load expected tabs', () => {
-    //     cy.adminEditCountCards(7);
-    //     cy.adminEditNoAlerts();
-    //
-    //     cy.adminEditTabbedView();
-    //     cy.adminEditCheckDefaultTab('Bibliographic');
-    // });
+    it('should load expected tabs', () => {
+        cy.adminEditCountCards(7);
+        cy.adminEditNoAlerts();
+
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
+    });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
