@@ -12,7 +12,7 @@ context('Research Report admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.adminEditCountCards(9);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -23,7 +23,7 @@ context('Research Report admin edit', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+            .eq(1)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');
@@ -52,6 +52,28 @@ context('Research Report admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
+                        cy.get('#Reportnumber')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_report_number.rek_report_number,
+                            );
+                    });
+            });
+
+        // ------------------------------------------ ADMIN TAB ----------------------------------------------
+        cy.log('Admin tab');
+        cy.get('.StandardPage form .StandardCard')
+            .eq(3)
+            .within(() => {
+                cy.get('h3')
+                    .should('have.text', 'Admin');
+
+                cy.get('.AdminCard')
+                    .eq(1)
+                    .within(() => {
+                        cy.get('h4')
+                            .should('contain', 'Additional information');
+
                         cy.get('label[id="Refereed source-label"]')
                             .parent()
                             .find('input[type=hidden]')
@@ -61,18 +83,13 @@ context('Research Report admin edit', () => {
                                 'have.text',
                                 record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
                             );
-                        cy.get('#Reportnumber')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_report_number.rek_report_number,
-                            );
                     });
             });
 
         // ---------------------------------------- GRANT INFORMATION TAB --------------------------------------------
         cy.log('Grant Information tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(6)
+            .eq(5)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Grant information');

@@ -12,36 +12,31 @@ context('Design admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditVerifyAlerts(3, ['Publisher is required', 'Work subtype is required']);
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(2);
-        cy.adminEditCheckTabErrorBadge(4);
+        cy.adminEditCheckTabErrorBadge(1);
+        cy.adminEditCheckTabErrorBadge(3);
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(2)
-            .find('.AdminCard')
-            .eq(2)
+        cy.get('.StandardPage form >div >div')
+            .get('.StandardCard')
+            .eq(1)
             .as('bibliographicCard')
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Bibliographic');
                 cy.get('#Projectname')
                     .should('have.value', record.fez_record_search_key_project_name.rek_project_name);
-                cy.get('[placeholder="Project start date"]')
-                    .should(
-                        'have.value',
-                        Cypress.moment(record.fez_record_search_key_project_start_date.rek_project_start_date)
-                            .format(
-                                'DD/MM/YYYY',
-                            ),
-                    );
+                cy.checkPartialDateFromRecordValue(
+                    'Publication date',
+                    record.fez_record_search_key_project_start_date.rek_project_start_date,
+                );
                 cy.get('#Scale')
                     .should('have.value', record.fez_record_search_key_scale.rek_scale);
                 cy.get('#Jobnumber')
@@ -81,11 +76,10 @@ context('Design admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(3)
-            .find('.AdminCard')
-            .as('cards')
-            .eq(0)
+        cy.get('.StandardPage form >div >div')
+            .get('.StandardCard')
+            .eq(2)
+            .as('authorDetailsTab')
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Designers');
@@ -96,30 +90,36 @@ context('Design admin edit', () => {
                         .should('have.text', designer);
                 });
             });
-        cy.get('@cards')
-            .eq(1)
+        cy.get('@authorDetailsTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Consultants');
-                const consultants = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
-                consultants.forEach((consultant, index) => {
-                    cy.get('p')
-                        .eq(index)
-                        .should('have.text', consultant);
-                });
+                cy.get('.AdminCard')
+                    .eq(1)
+                    .within(() => {
+                        cy.get('h4')
+                            .should('contain', 'Consultants');
+                        const consultants = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
+                        consultants.forEach((consultant, index) => {
+                            cy.get('p')
+                                .eq(index)
+                                .should('have.text', consultant);
+                        });
+                    });
             });
 
-        cy.get('@cards')
-            .eq(2)
+        cy.get('@authorDetailsTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Creators');
-                const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
-                creators.forEach((creator, index) => {
-                    cy.get('p')
-                        .eq(index)
-                        .should('have.text', creator);
-                });
+                cy.get('.AdminCard')
+                    .eq(2)
+                    .within(() => {
+                        cy.get('h4')
+                            .should('contain', 'Creators');
+                        const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
+                        creators.forEach((creator, index) => {
+                            cy.get('p')
+                                .eq(index)
+                                .should('have.text', creator);
+                        });
+                    });
             });
     });
 });

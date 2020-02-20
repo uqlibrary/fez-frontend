@@ -12,7 +12,7 @@ context('Video admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -23,7 +23,7 @@ context('Video admin edit', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+            .eq(1)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');

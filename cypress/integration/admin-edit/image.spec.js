@@ -12,9 +12,8 @@ context('Image admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
-
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
     });
@@ -22,8 +21,10 @@ context('Image admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(1)
+            .as('bibliographicTab')
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');
@@ -40,15 +41,6 @@ context('Image admin edit', () => {
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_original_format.rek_original_format,
-                            );
-                        cy.get('label[id="Refereed source-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
-                            .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                            .siblings('[role=button]')
-                            .should(
-                                'have.text',
-                                record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
                             );
                         cy.get('#Source')
                             .should('have.value', record.fez_record_search_key_source.rek_source);

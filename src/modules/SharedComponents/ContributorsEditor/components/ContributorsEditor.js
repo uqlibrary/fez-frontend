@@ -274,7 +274,7 @@ export class ContributorsEditor extends PureComponent {
         }
 
         return (
-            <div>
+            <div className={'contributorEditor'}>
                 <Grid container spacing={8}>
                     {errorMessage && (
                         <Grid item xs={12}>

@@ -12,7 +12,7 @@ context('Working paper admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -22,8 +22,9 @@ context('Working paper admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(1)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');
@@ -37,9 +38,9 @@ context('Working paper admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.get('#cke_editor3')
+                        cy.get('#cke_editor1')
                             .should('exist');
-                        cy.readCKEditor('editor3')
+                        cy.readCKEditor('editor1')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
                             });
