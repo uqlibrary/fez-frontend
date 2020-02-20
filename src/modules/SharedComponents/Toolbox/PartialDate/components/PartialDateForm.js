@@ -48,6 +48,10 @@ export class PartialDateForm extends Component {
         required: PropTypes.bool,
         hasError: PropTypes.string,
         disableFuture: PropTypes.bool,
+        input: PropTypes.object,
+        meta: PropTypes.shape({
+            initial: PropTypes.object,
+        }),
     };
 
     static defaultProps = {
@@ -90,16 +94,21 @@ export class PartialDateForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            day: null,
-            month: null,
-            year: null,
-        };
+        const dateValue = (props.meta && props.meta.initial) || null;
+        if (dateValue && dateValue.isValid()) {
+            this.state = {
+                day: dateValue.date(),
+                month: dateValue.month(),
+                year: dateValue.year(),
+            };
+        } else {
+            this.state = {
+                day: '',
+                month: -1,
+                year: '',
+            };
+        }
         this.errors = { day: '', month: '', year: '' };
-    }
-
-    componentDidMount() {
-        this._setDate({ day: '', month: '', year: '' });
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -115,32 +124,22 @@ export class PartialDateForm extends Component {
      * @private
      */
     _validate = state => {
-        let validationStatus;
-        // const { day, month, year } = state;
-        const day = state.day;
-        const year = state.year;
-        let month = state.month;
-        if (state.month === MONTH_UNSELECTED) {
-            // moment validation doesnt recognise -1 as a valid date
-            month = null;
-        }
-
-        if (this.props.allowPartial) {
-            validationStatus = !!year && moment(state).isValid() ? STATUS_VALID : STATUS_INVALID;
-        } else {
-            validationStatus =
-                !!day && month !== null && !!year && moment(state).isValid() ? STATUS_VALID : STATUS_INVALID;
-        }
+        const { day, month: monthActual, year } = state;
+        // moment validation doesn't recognise -1 as a valid date
+        const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
+        const hasRequired = !!year && (this.props.allowPartial || (!!day && month !== null));
+        const momentDate = { ...state, month };
+        const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
 
         if (validationStatus === STATUS_VALID && !!this.props.disableFuture) {
             if (!!this.props.allowPartial) {
                 const yearNow = moment().year();
-                if (state.year > yearNow) {
+                if (year > yearNow) {
                     return STATUS_FUTURE_DATE;
                 }
             } else {
                 const dateNow = moment();
-                if (!moment(state).isSameOrBefore(dateNow)) {
+                if (!moment(momentDate).isSameOrBefore(dateNow)) {
                     return STATUS_FUTURE_DATE;
                 }
             }
@@ -188,7 +187,7 @@ export class PartialDateForm extends Component {
                 if (!!year && validMonthIndices.includes(month) && !!day) {
                     // date complete for non-partial-entry
                     this.errors.date = '';
-                } else if (allowPartialHere && !!year && this._isUnselected(month) && day === null) {
+                } else if (allowPartialHere && !!year && this._isUnselected(month) && !day) {
                     // partial entry means they can get away with just a year
                     this.errors.date = '';
                 } else {
@@ -213,11 +212,10 @@ export class PartialDateForm extends Component {
 
         this._displayErrors(date, validationStatus, this.props.allowPartial, this.props.required);
 
-        if (date.month === MONTH_UNSELECTED) {
-            // moment validation doesnt recognise -1 as a valid month number
-            date.month = null;
-        }
-        return validationStatus === STATUS_VALID ? moment(date).format(this.props.dateFormat) : '';
+        // moment validation doesn't recognise -1 as a valid date
+        const month = date.month === MONTH_UNSELECTED ? null : date.month;
+        const momentDate = { ...date, month };
+        return validationStatus === STATUS_VALID ? moment(momentDate).format(this.props.dateFormat) : '';
     };
 
     _isNumber = event => {
@@ -233,7 +231,7 @@ export class PartialDateForm extends Component {
         return (event, index, value) => {
             if (event.target.value === '') {
                 // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
-                this.setState({ [key]: null });
+                this.setState({ [key]: '' });
             } else {
                 this.setState({
                     [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10),
@@ -272,6 +270,7 @@ export class PartialDateForm extends Component {
                                 onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
                                 placeholder={locale.dayLabel}
                                 inputProps={{ label: 'day', maxLength: 2 }}
+                                value={this.state.day}
                             />
                             {isError && <FormHelperText error>{isError}</FormHelperText>}
                         </Grid>
@@ -306,6 +305,7 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('year')}
                                 onBlur={this._onDateChanged('year')}
                                 inputProps={{ label: 'year', maxLength: 4 }}
+                                value={this.state.year}
                             />
                         </Grid>
                     </Grid>

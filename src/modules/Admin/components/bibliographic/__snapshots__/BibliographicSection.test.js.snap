@@ -57,6 +57,8 @@ exports[`BibliographicSection component should render default view 1`] = `
           ],
           Array [
             "rek_date",
+          ],
+          Array [
             "fez_record_search_key_date_available",
           ],
           Array [
@@ -118,8 +120,29 @@ exports[`BibliographicSection component should render design form fields 1`] = `
       Object {
         "groups": Array [
           Array [
+            "fez_record_search_key_isbn",
+          ],
+        ],
+        "title": "ISBN",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "issnField",
+          ],
+        ],
+        "title": "ISSN",
+      },
+      Object {
+        "groups": Array [
+          Array [
             "fez_record_search_key_place_of_publication",
             "fez_record_search_key_publisher",
+          ],
+          Array [
+            "fez_record_search_key_edition",
+            "fez_record_search_key_volume_number",
+            "fez_record_search_key_issue_number",
           ],
           Array [
             "fez_record_search_key_series",
@@ -133,38 +156,16 @@ exports[`BibliographicSection component should render design form fields 1`] = `
             "rek_date",
           ],
           Array [
+            "fez_record_search_key_date_available",
+          ],
+          Array [
             "rek_description",
           ],
           Array [
             "fez_record_search_key_original_format",
           ],
-          Array [
-            "fez_record_search_key_source",
-          ],
-          Array [
-            "fez_record_search_key_rights",
-          ],
-          Array [
-            "fez_record_search_key_acknowledgements",
-          ],
-          Array [
-            "fez_record_search_key_project_name",
-            "fez_record_search_key_project_start_date",
-          ],
-          Array [
-            "fez_record_search_key_scale",
-            "fez_record_search_key_job_number",
-          ],
         ],
         "title": "Bibliographic",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "geoCoordinates",
-          ],
-        ],
-        "title": "Geographic area",
       },
       Object {
         "groups": Array [
@@ -181,6 +182,14 @@ exports[`BibliographicSection component should render design form fields 1`] = `
           ],
         ],
         "title": "Subject",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_isderivationof",
+          ],
+        ],
+        "title": "Related publications",
       },
     ]
   }
@@ -245,6 +254,8 @@ exports[`BibliographicSection component should render disabled view 1`] = `
           ],
           Array [
             "rek_date",
+          ],
+          Array [
             "fez_record_search_key_date_available",
           ],
           Array [

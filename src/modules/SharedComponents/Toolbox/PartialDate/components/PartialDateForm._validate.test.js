@@ -1,4 +1,4 @@
-import { PartialDateForm, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE } from './PartialDateForm';
+import { PartialDateForm, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
 
 const partialAllowedDateForm = new PartialDateForm({ allowPartial: true });
 const partialNotAllowedDateForm = new PartialDateForm({ allowPartial: false });
@@ -14,8 +14,10 @@ describe('PartialDateForm unit tests', () => {
         expect(partialAllowedDateForm._validate({ day: null, month: null, year: 2015 })).toEqual(STATUS_VALID);
     });
 
-    it('should not validate date on year supplied but invalid month value (-1) if allowed partial', () => {
-        expect(partialAllowedDateForm._validate({ day: null, month: -1, year: 2015 })).toEqual(STATUS_INVALID);
+    it('should validate date on year supplied with unselected month if allowed partial', () => {
+        expect(partialAllowedDateForm._validate({ day: null, month: MONTH_UNSELECTED, year: 2015 })).toEqual(
+            STATUS_VALID,
+        );
     });
 
     it('should not validate date on day supplied but year is null if allowed partial', () => {

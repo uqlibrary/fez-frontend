@@ -43,7 +43,7 @@ import {
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
-import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
@@ -67,7 +67,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
-import { IssnUlrichLinkTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 export default {
     default: {
@@ -205,14 +205,15 @@ export default {
             },
         },
         rek_date: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.rek_date',
                 label: 'Publication date',
-                placeholder: 'Publication date',
+                floatingTitle: 'Publication date',
                 required: true,
                 fullWidth: true,
                 validate: [validation.required],
+                allowPartial: true,
             },
         },
         collections: {
@@ -503,7 +504,7 @@ export default {
                     return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
                 canEdit: true,
-                rowItemTemplate: IssnUlrichLinkTemplate,
+                rowItemTemplate: IssnRowItemTemplate,
                 getItemSelectedToEdit: (list, index) =>
                     (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
             },
@@ -587,7 +588,7 @@ export default {
         fez_record_search_key_refereed_source: {
             component: RefereedSourceField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_refereed_source.rek_refereed_source',
+                name: 'adminSection.fez_record_search_key_refereed_source.rek_refereed_source',
                 label: 'Refereed source',
             },
         },
@@ -1170,48 +1171,53 @@ export default {
             },
         },
         fez_record_search_key_project_start_date: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_project_start_date.rek_project_start_date',
                 label: 'Project start date',
-                placeholder: 'Project start date',
+                floatingTitle: 'Project start date',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_start_date: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_start_date.rek_start_date',
                 label: 'Start date',
-                placeholder: 'Start date',
+                floatingTitle: 'Start date',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_end_date: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
                 label: 'End date',
-                placeholder: 'End date',
+                floatingTitle: 'End date',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_time_period_start_date: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_time_period_start_date.rek_time_period_start_date',
                 label: 'Time coverage start date',
-                placeholder: 'Time coverage start date',
+                floatingTitle: 'Time coverage start date',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_time_period_end_date: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_time_period_end_date.rek_time_period_end_date',
                 label: 'Time coverage end date',
-                placeholder: 'Time coverage end date',
+                floatingTitle: 'Time coverage end date',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_org_name: {
@@ -1371,21 +1377,23 @@ export default {
             },
         },
         fez_record_search_key_date_photo_taken: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_date_photo_taken.rek_date_photo_taken',
                 label: 'Date photo taken',
-                placeholder: 'Date photo taken',
+                floatingTitle: 'Date photo taken',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_date_scanned: {
-            component: DatePickerField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_date_scanned.rek_date_scanned',
                 label: 'Date photo scanned',
-                placeholder: 'Date photo scanned',
+                floatingTitle: 'Date photo scanned',
                 fullWidth: true,
+                allowPartial: true,
             },
         },
         fez_record_search_key_building_materials: {
