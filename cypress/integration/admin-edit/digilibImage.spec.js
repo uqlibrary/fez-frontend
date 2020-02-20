@@ -55,9 +55,7 @@ context('Digilib Image admin edit', () => {
                     .should(
                         'have.value',
                         Cypress.moment(record.fez_record_search_key_date_scanned.rek_date_scanned)
-                            .format(
-                                'DD/MM/YYYY',
-                            ),
+                            .format('DD/MM/YYYY'),
                     );
 
                 cy.get('@bibliographicTab')
