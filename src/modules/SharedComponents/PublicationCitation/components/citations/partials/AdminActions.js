@@ -6,7 +6,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 export const navigateToUrl = (url, target, navigatedFrom = '') => () => {
-    window.open(`${url}?navigatedFrom=${navigatedFrom}`, target);
+    if (url.indexOf('?') > 0) {
+        window.open(`${url}&navigatedFrom=${navigatedFrom}`, target);
+    } else {
+        window.open(`${url}?navigatedFrom=${navigatedFrom}`, target);
+    }
 };
 
 export const AdminActions = ({ pid, navigatedFrom, options }) => {
