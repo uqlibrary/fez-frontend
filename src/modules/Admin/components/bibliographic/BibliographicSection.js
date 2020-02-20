@@ -5,11 +5,11 @@ import { Section } from '../common/Section';
 
 import { useRecordContext, useFormValuesContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
-import {
-    PUBLICATION_TYPE_CREATIVE_WORK,
-    PUBLICATION_TYPE_DESIGN,
-    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-} from 'config/general';
+// import {
+//     PUBLICATION_TYPE_CREATIVE_WORK,
+//     PUBLICATION_TYPE_DESIGN,
+//     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+// } from 'config/general';
 
 export const BibliographicSection = ({ disabled = false }) => {
     const { record } = useRecordContext();

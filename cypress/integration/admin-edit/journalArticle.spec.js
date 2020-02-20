@@ -12,7 +12,7 @@ context('Journal Article admin edit', () => {
         cy.get('button[title="Learn about keyboard shortcuts"]')
             .should('exist');
 
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -24,37 +24,36 @@ context('Journal Article admin edit', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         // ---------------------------------------------- ADMIN TAB --------------------------------------------------
         cy.log('Admin tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(0)
+        cy.viewport(1000, 1000);
+        cy.get('.StandardPage form >div >div')
+            .get('.StandardCard')
+            .eq(3)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Admin');
-                cy.get(' > div > div > div > span > span')
-                    .as('ckeditorLabel')
-                    .eq(0)
-                    .should('have.text', 'Internal notes');
-                cy.get('@ckeditorLabel')
-                    .eq(1)
-                    .should('have.text', 'HERDC notes');
-                cy.get('#cke_editor1')
+                cy.get('#cke_editor3')
                     .should('exist');
-                cy.get('#cke_editor2')
+                cy.get('#cke_editor4')
+                    .should('exist');
+                cy.get('#cke_editor5')
                     .should('exist');
             });
 
-        cy.readCKEditor('editor1')
+        cy.readCKEditor('editor4')
             .should(text => {
-                expect(text).to.contain(record.fez_internal_notes.ain_detail);
+                expect(text).to.contain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13
             });
-        cy.readCKEditor('editor2')
+        cy.readCKEditor('editor5')
             .should(text => {
-                expect(text).to.contain(record.rek_herdc_notes);
+                expect(text).to.contain(record.rek_herdc_notes); // 12/1/12 Amended ID at author request #886821
             });
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         cy.log('Identifiers tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(1)
+        cy.get('.StandardPage form >div > div')
+            .get('.StandardCard')
+            .eq(0)
+            .as('indentifiesTab')
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Identifiers');
@@ -110,8 +109,10 @@ context('Journal Article admin edit', () => {
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+        cy.get('.StandardPage form >div >div')
+            .get('.StandardCard')
+            .eq(1)
+            .as('bibliographicTab')
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');
@@ -125,9 +126,9 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.get('#cke_editor3')
+                        cy.get('#cke_editor1')
                             .should('exist');
-                        cy.readCKEditor('editor3')
+                        cy.readCKEditor('editor1')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
@@ -236,12 +237,7 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.get('[placeholder="Publication date"]')
-                            .should(
-                                'have.value',
-                                Cypress.moment(record.rek_date)
-                                    .format('DD/MM/YYYY'),
-                            );
+                        cy.checkPartialDateFromRecordValue('Publication date', record.rek_date);
                         cy.get('#Yearavailable')
                             .should(
                                 'have.value',
@@ -253,21 +249,12 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Abstract / Description');
-                        cy.get('#cke_editor4')
+                        cy.get('#cke_editor2')
                             .should('exist');
-                        cy.readCKEditor('editor4')
+                        cy.readCKEditor('editor2')
                             .should(text => {
                                 expect(text).to.contain(record.rek_description);
                             });
-                        cy.get('label[id="Refereed source-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
-                            .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                            .siblings('[role=button]')
-                            .should(
-                                'have.text',
-                                record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
-                            );
                     });
 
                 cy.get('@cards')
@@ -319,18 +306,11 @@ context('Journal Article admin edit', () => {
 
         cy.adminEditNoAlerts();
 
-        // Skipped until bugfix for rek_date clearing via keyboard not triggering validation error
-        // https://www.pivotaltracker.com/story/show/168742188/comments/207811461
-
-        // cy.get('@bibliographicCard')
-        //     .get('[placeholder="Publication date"]')
-        //     .clear();
-        // cy.adminEditVerifyAlerts(1, 'Publication date is required');
-
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(3)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(2)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Author details');
@@ -388,14 +368,15 @@ context('Journal Article admin edit', () => {
 
         cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
 
-        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
-        cy.log('Additional information tab');
+        // -------------------------------------- ADMIN TAB -----------------------------------------
+        cy.log('Admin tab');
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
-        cy.get('.StandardPage form .StandardCard')
-            .eq(4)
+        cy.get('.StandardPage form >div > div')
+            .get('.StandardCard')
+            .eq(3)
             .within(() => {
                 cy.get('h3')
-                    .should('have.text', 'Additional information');
+                    .should('have.text', 'Admin');
 
                 cy.get('.AdminCard')
                     .as('cards')
@@ -462,9 +443,9 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Additional notes');
-                        cy.get('#cke_editor5')
+                        cy.get('#cke_editor3')
                             .should('exist');
-                        cy.readCKEditor('editor5')
+                        cy.readCKEditor('editor3')
                             .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });
@@ -487,8 +468,9 @@ context('Journal Article admin edit', () => {
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
         cy.log('Grant Information tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(5)
+        cy.get('.StandardPage form >div > div')
+            .get('.StandardCard')
+            .eq(4)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Grant information');
@@ -504,8 +486,9 @@ context('Journal Article admin edit', () => {
 
         // ---------------------------------------------- SECURITY TAB -----------------------------------------------
         cy.log('Security tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(8)
+        cy.get('.StandardPage form >div >div')
+            .get('.StandardCard')
+            .eq(7)
             .within(() => {
                 cy.root()
                     .children('div')
@@ -550,16 +533,15 @@ context('Journal Article admin edit', () => {
         const record = recordList.data[1];
         cy.loadRecordForAdminEdit(record.rek_pid);
 
-        cy.get('.StandardPage form .StandardCard')
-            .eq(6)
+        cy.log('Files Tab');
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(5)
             .within(() => {
-                cy.get('h3')
+                cy.get('.StandardCard')
                     .eq(0)
-                    .should('have.text', 'Files');
-
-                cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
                     .within(() => {
-                    // prettier-ignore
+                        // prettier-ignore
                         const fileSizeInMB = Math.round(
                             record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
                         ) / 100;
@@ -590,32 +572,21 @@ context('Journal Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Files');
                     });
-                // cy.get('@cards')
-                //     .eq(2)
-                //     .within(() => {
-                //         cy.get('h4')
-                //             .should('contain', 'Advisory statement');
-                //         cy.get('span span')
-                //             .eq(0)
-                //             .should('have.text', 'Advisory statement');
-                //         // No advisory statement in mock
-                //     });
-                cy.get('@cards')
-                    .eq(1)
-                    .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Copyright agreement');
-                        cy.get('#deposit-agreement')
-                            .should($checkbox => {
-                                if (record.rek_copyright === 'on') {
-                                    expect($checkbox).to.be.checked;
-                                } else {
-                                    expect($checkbox).not.to.be.checked;
-                                }
-                            });
+            });
+        cy.get('@cards')
+            .eq(1)
+            .within(() => {
+                cy.get('h4')
+                    .should('contain', 'Copyright agreement');
+                cy.get('#deposit-agreement')
+                    .should($checkbox => {
+                        if (record.rek_copyright === 'on') {
+                            expect($checkbox).to.be.checked;
+                        } else {
+                            expect($checkbox).not.to.be.checked;
+                        }
                     });
             });
-
         cy.get('#deposit-agreement')
             .click();
 

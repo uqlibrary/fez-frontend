@@ -12,9 +12,8 @@ context('Creative Work admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(9);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
-
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
     });
@@ -22,10 +21,10 @@ context('Creative Work admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(2)
-            .find('.AdminCard')
-            .eq(7)
+        cy.get('.StandardPage form > div >div')
+            .get('.StandardCard')
+            .eq(1)
+            .as('bibliographicTab')
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Related publications');
@@ -35,17 +34,17 @@ context('Creative Work admin edit', () => {
                 );
                 pubList.forEach((pub, index) => {
                     cy.get('p')
-                        .eq(index)
+                        .eq(index + 1)
                         .should('have.text', pub);
                 });
             });
 
         // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
         cy.log('Additional Information tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(4)
-            .find('.AdminCard')
-            .eq(1)
+        cy.get('.StandardPage form > div > div')
+            .get('.StandardCard')
+            .eq(3)
+            .as('additionalInformationTab')
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Additional information');
@@ -69,8 +68,9 @@ context('Creative Work admin edit', () => {
 
         // ---------------------------------------------- NTRO TAB ---------------------------------------------------
         cy.log('NTRO tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(5)
+        cy.get('.StandardPage form >div > div')
+            .get('.StandardCard')
+            .eq(4)
             .within(() => {
                 cy.get('h3')
                     .should('contain', 'NTRO');
