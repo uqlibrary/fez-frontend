@@ -108,20 +108,18 @@ context('Audio admin edit', () => {
             });
 
         cy.get('@bibliographicCard')
-            .find('[placeholder=Date]')
-            .as('pubDateField')
+            .contains('label', 'Publication date')
             .parent()
-            .parent()
-            .children('p')
+            .siblings('div')
+            .as('pubDateBlock')
+            .find('p')
             .should('exist')
-            .should('have.text', 'This field is required');
-        cy.get('@pubDateField')
-            .type('01/10/2019')
-            .blur()
-            .parent()
-            .parent()
-            .children('p')
+            .should('have.text', 'Year required');
+        cy.setPartialDate('@pubDateBlock', { day: 1, month: 1, year: 2020 });
+        cy.get('@pubDateBlock')
+            .find('p')
             .should('not.exist');
+
         cy.adminEditNoAlerts();
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------

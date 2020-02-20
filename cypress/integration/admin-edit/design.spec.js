@@ -33,14 +33,10 @@ context('Design admin edit', () => {
                     .should('contain', 'Bibliographic');
                 cy.get('#Projectname')
                     .should('have.value', record.fez_record_search_key_project_name.rek_project_name);
-                cy.get('[placeholder="Project start date"]')
-                    .should(
-                        'have.value',
-                        Cypress.moment(record.fez_record_search_key_project_start_date.rek_project_start_date)
-                            .format(
-                                'DD/MM/YYYY',
-                            ),
-                    );
+                cy.checkPartialDateFromRecordValue(
+                    'Publication date',
+                    record.fez_record_search_key_project_start_date.rek_project_start_date,
+                );
                 cy.get('#Scale')
                     .should('have.value', record.fez_record_search_key_scale.rek_scale);
                 cy.get('#Jobnumber')

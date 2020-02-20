@@ -237,12 +237,7 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.get('[placeholder="Publication date"]')
-                            .should(
-                                'have.value',
-                                Cypress.moment(record.rek_date)
-                                    .format('DD/MM/YYYY'),
-                            );
+                        cy.checkPartialDateFromRecordValue('Publication date', record.rek_date);
                         cy.get('#Yearavailable')
                             .should(
                                 'have.value',
@@ -319,14 +314,6 @@ context('Journal Article admin edit', () => {
             .type('Test');
 
         cy.adminEditNoAlerts();
-
-        // Skipped until bugfix for rek_date clearing via keyboard not triggering validation error
-        // https://www.pivotaltracker.com/story/show/168742188/comments/207811461
-
-        // cy.get('@bibliographicCard')
-        //     .get('[placeholder="Publication date"]')
-        //     .clear();
-        // cy.adminEditVerifyAlerts(1, 'Publication date is required');
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
