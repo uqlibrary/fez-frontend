@@ -977,6 +977,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
         fez_record_search_key_license_additional: licenseData,
+        rek_herdc_notes: herdcNotes,
         ...rest
     } = data;
 
@@ -997,6 +998,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
+        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
         ...rest,
     };
 };
