@@ -23,7 +23,7 @@ context('Newspaper Article admin edit', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+            .eq(1)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');
