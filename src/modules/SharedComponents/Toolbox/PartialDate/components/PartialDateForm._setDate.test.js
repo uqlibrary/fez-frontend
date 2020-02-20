@@ -29,7 +29,7 @@ const states = [
     { day: 32, month: 2, year: 2015 },
 ];
 
-const partialAllowedDateExpected = ['2015-01-01', '', '', '', '2015-01-01', '2015-03-10', ''];
+const partialAllowedDateExpected = ['2015-01-01', '2015-01-01', '', '', '2015-01-01', '2015-03-10', ''];
 
 const partialNotAllowedDateExpected = ['', '', '', '', '', '2015-03-10', ''];
 

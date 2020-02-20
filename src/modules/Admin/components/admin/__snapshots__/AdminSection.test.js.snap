@@ -73,6 +73,7 @@ exports[`AdminSection component should render design form fields 1`] = `
             "fez_record_search_key_institutional_status",
           ],
           Array [
+            "fez_record_search_key_refereed_source",
             "fez_record_search_key_oa_status",
             "contentIndicators",
           ],

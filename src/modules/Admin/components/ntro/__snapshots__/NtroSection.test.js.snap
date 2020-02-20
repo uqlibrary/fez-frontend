@@ -41,10 +41,26 @@ exports[`NtroSection component should render design form fields 1`] = `
       Object {
         "groups": Array [
           Array [
+            "fez_record_search_key_audience_size",
+          ],
+        ],
+        "title": "Audience size",
+      },
+      Object {
+        "groups": Array [
+          Array [
             "significanceAndContributionStatement",
           ],
         ],
         "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_ismn",
+          ],
+        ],
+        "title": "ISMN",
       },
       Object {
         "groups": Array [

@@ -2196,6 +2196,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_internal_notes: {
                 ain_detail: '<p>This is test internal note</p>',
             },
+            rek_herdc_notes: 'This is test herdc notes',
         };
 
         expect(
@@ -2203,6 +2204,10 @@ describe('getAdminSectionSearchKeys', () => {
                 internalNotes: {
                     htmlText: '<p>This is test internal note</p>',
                     plainText: 'This is test internal note',
+                },
+                rek_herdc_notes: {
+                    htmlText: 'This is test herdc notes',
+                    plainText: 'This is test herdc notes',
                 },
             }),
         ).toEqual(expected);
