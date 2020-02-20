@@ -17,13 +17,17 @@ export const BibliographicSection = ({ disabled = false }) => {
     const isLote =
         formValues.languages &&
         (formValues.languages.length > 1 || (formValues.languages.length === 1 && formValues.languages[0] !== 'eng'));
-    const displayType =
-        record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
-        !!record.rek_subtype &&
-        record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
-            ? PUBLICATION_TYPE_DESIGN
-            : record.rek_display_type;
-    const cards = adminInterfaceConfig[displayType].bibliographic(isLote);
+
+    /*
+     *  Disbale below line in favour of #171299373
+     */
+    // const displayType =
+    //     record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
+    //     !!record.rek_subtype &&
+    //     record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
+    //         ? PUBLICATION_TYPE_DESIGN
+    //         : record.rek_display_type;
+    const cards = adminInterfaceConfig[record.rek_display_type].bibliographic(isLote);
 
     return <Section cards={cards} disabled={disabled} />;
 };
