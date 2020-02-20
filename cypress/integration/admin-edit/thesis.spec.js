@@ -12,7 +12,7 @@ context('Thesis admin edit', () => {
     });
 
     it('should load the nav bar', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(6);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -23,7 +23,7 @@ context('Thesis admin edit', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(2)
+            .eq(1)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Bibliographic');
@@ -37,9 +37,9 @@ context('Thesis admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.get('#cke_editor3')
+                        cy.get('#cke_editor1')
                             .should('exist');
-                        cy.readCKEditor('editor3')
+                        cy.readCKEditor('editor1')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
@@ -156,7 +156,7 @@ context('Thesis admin edit', () => {
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(3)
+            .eq(2)
             .within(() => {
                 cy.get('h3')
                     .should('have.text', 'Author details');
@@ -202,13 +202,13 @@ context('Thesis admin edit', () => {
                     });
             });
 
-        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
-        cy.log('Additional information tab');
+        // ----------------------------------------------- ADMIN TAB -------------------------------------------------
+        cy.log('Admin tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(4)
+            .eq(3)
             .within(() => {
                 cy.get('h3')
-                    .should('have.text', 'Additional information');
+                    .should('have.text', 'Admin');
 
                 cy.get('.AdminCard')
                     .as('cards')
@@ -243,9 +243,9 @@ context('Thesis admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Additional notes');
-                        cy.get('#cke_editor5')
+                        cy.get('#cke_editor3')
                             .should('exist');
-                        cy.readCKEditor('editor5')
+                        cy.readCKEditor('editor3')
                             .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });
@@ -255,7 +255,7 @@ context('Thesis admin edit', () => {
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         cy.log('Files tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(5)
+            .eq(4)
             .within(() => {
                 cy.get('h3')
                     .eq(0)
@@ -298,7 +298,7 @@ context('Thesis admin edit', () => {
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
         cy.log('Security tab');
         cy.get('.StandardPage form .StandardCard')
-            .eq(7)
+            .eq(6)
             .within(() => {
                 cy.root()
                     .children('div')
