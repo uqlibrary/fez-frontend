@@ -22,13 +22,53 @@ describe('PartialDateForm component', () => {
         const wrapper = setup({
             floatingTitleRequired: true,
             allowPartial: true,
+            onChange: jest.fn(),
         });
         wrapper.setState({
             day: '',
             month: '',
-            year: NaN,
+            year: '',
         });
         wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should handle partial values', () => {
+        const wrapper = setup({
+            floatingTitleRequired: true,
+            allowPartial: true,
+            onChange: jest.fn(),
+        });
+        wrapper.setState({
+            day: 1,
+            month: null,
+            year: null,
+        });
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setState({
+            day: 1,
+            month: 2,
+            year: null,
+        });
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should load existing values', () => {
+        const wrapper = setup({
+            floatingTitleRequired: true,
+            allowPartial: true,
+            onChange: jest.fn(),
+            meta: {
+                initial: {
+                    date: () => 2,
+                    month: () => 1,
+                    year: () => 2020,
+                    isValid: () => true,
+                },
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
