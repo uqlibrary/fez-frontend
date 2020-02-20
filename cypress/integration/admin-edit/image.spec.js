@@ -42,15 +42,6 @@ context('Image admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_original_format.rek_original_format,
                             );
-                        // cy.get('label[id="Refereed source-label"]')
-                        //     .parent()
-                        //     .find('input[type=hidden]')
-                        //     .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                        //     .siblings('[role=button]')
-                        //     .should(
-                        //         'have.text',
-                        //         record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
-                        //     );
                         cy.get('#Source')
                             .should('have.value', record.fez_record_search_key_source.rek_source);
                         cy.get('#Copyrightnotice')

@@ -264,16 +264,6 @@ context('Thesis admin edit', () => {
                             .should('contain', 'Files');
                         // No visible files in mock
                     });
-                // cy.get('.AdminCard')
-                //     .eq(1)
-                //     .within(() => {
-                //         cy.get('h3')
-                //             .should('have.text', 'Advisory statement');
-                //         cy.get('span span')
-                //             .eq(0)
-                //             .should('have.text', 'Advisory statement');
-                //         // No advisory statement in mock
-                //     });
                 cy.get('@cards')
                     .eq(1)
                     .within(() => {

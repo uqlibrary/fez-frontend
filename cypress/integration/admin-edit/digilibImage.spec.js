@@ -11,14 +11,14 @@ context('Digilib Image admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    // it('should load with specifed elements', () => {
-    //     cy.adminEditCountCards(7);
-    //     cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
-    //     cy.adminEditTabbedView();
-    //     cy.adminEditCheckDefaultTab('Bibliographic');
-    //     cy.adminEditCheckTabErrorBadge(1);
-    //     cy.adminEditCheckTabErrorBadge(5);
-    // });
+    it('should load with specifed elements', () => {
+        cy.adminEditCountCards(7);
+        cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCheckTabErrorBadge(1);
+        cy.adminEditCheckTabErrorBadge(5);
+    });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------

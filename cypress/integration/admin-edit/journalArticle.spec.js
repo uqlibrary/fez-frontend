@@ -255,15 +255,6 @@ context('Journal Article admin edit', () => {
                             .should(text => {
                                 expect(text).to.contain(record.rek_description);
                             });
-                        // cy.get('label[id="Refereed source-label"]')
-                        //     .parent()
-                        //     .find('input[type=hidden]')
-                        //     .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                        //     .siblings('[role=button]')
-                        //     .should(
-                        //         'have.text',
-                        //         record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
-                        //     );
                     });
 
                 cy.get('@cards')
@@ -582,16 +573,6 @@ context('Journal Article admin edit', () => {
                             .should('contain', 'Files');
                     });
             });
-        // cy.get('@cards')
-        //     .eq(2)
-        //     .within(() => {
-        //         cy.get('h4')
-        //             .should('contain', 'Advisory statement');
-        //         cy.get('span span')
-        //             .eq(0)
-        //             .should('have.text', 'Advisory statement');
-        //         // No advisory statement in mock
-        //     });
         cy.get('@cards')
             .eq(1)
             .within(() => {

@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListConferenceProceedings';
-import _filterProps from '../../../src/modules/SharedComponents/Toolbox/helpers/_filterProps';
 
 context('Conference Proceedings admin edit', () => {
     const record = recordList.data[0];
@@ -8,7 +7,6 @@ context('Conference Proceedings admin edit', () => {
         dsi_label: visibleFileDescription,
         dsi_security_policy: visibleFileSecurityPolicy,
     } = record.fez_datastream_info[0];
-    // const { dsi_dsid: hiddenFilename } = record.fez_datastream_info[1];
 
     beforeEach(() => {
         cy.loadRecordForAdminEdit(record.rek_pid);
