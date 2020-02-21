@@ -58,7 +58,7 @@ export class LinksClass extends PureComponent {
     );
 
     getDOILink = (doi, openAccessStatus) => {
-        if(doi.indexOf('uql') === -1) {
+        if (doi.indexOf('uql') === -1) {
             return {
                 index: 'doi',
                 link: <DoiCitationView doi={doi} />,
@@ -126,10 +126,12 @@ export class LinksClass extends PureComponent {
         const pubmedCentralId =
             record.fez_record_search_key_pubmed_central_id &&
             record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
-        const doi = record.fez_record_search_key_doi &&
+        const doi =
+            record.fez_record_search_key_doi &&
             record.fez_record_search_key_doi.rek_doi &&
             this.getDOILink(record.fez_record_search_key_doi.rek_doi)
-            ? record.fez_record_search_key_doi.rek_doi : null;
+                ? record.fez_record_search_key_doi.rek_doi
+                : null;
         const openAccessStatusId =
             record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status;
         const hasLinks = record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0;
@@ -159,7 +161,7 @@ export class LinksClass extends PureComponent {
                 (record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi && !!doi) ||
                 (record.fez_record_search_key_oa_status &&
                     record.fez_record_search_key_oa_status.rek_oa_status ===
-                    openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI)
+                        openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI)
             )
         ) {
             return null;
