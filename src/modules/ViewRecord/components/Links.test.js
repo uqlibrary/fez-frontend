@@ -117,6 +117,15 @@ describe('Component Links ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('Will not render a UQ generated doi', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_doi: { rek_doi: '12345uql' },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('Rendering due to being open access link no doi', () => {
         const wrapper = setup({
             publication: {
