@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
@@ -50,6 +50,17 @@ export const DataStreamSecuritySelector = ({
         setDataStreamToChange(dataStream);
     }, []);
 
+    const isDerivative = filename => {
+        return filename.startsWith('thumbnail_') || filename.startsWith('preview_') || filename.startsWith('web_');
+    };
+
+    const isDisabled = dataStream => {
+        if (!!dataStream.disabled) {
+            return true;
+        }
+        return isDerivative(dataStream.dsi_dsid);
+    };
+
     useEffect(() => {
         if (dataStreamIndexToChange >= 0) {
             const newDataStreamSecurity = [
@@ -78,7 +89,7 @@ export const DataStreamSecuritySelector = ({
                         <DataStreamSecurityItem
                             classes={classes}
                             dataStream={dataStream}
-                            disabled={disabled}
+                            disabled={!!disabled || isDisabled(dataStream)}
                             index={index}
                             inheritedSecurity={mostSecureParentDatastreamSecurity}
                             initialDataStream={initialDataStreams[index]}

@@ -45,23 +45,28 @@ function setup(testProps = {}, args = { isShallow: false }) {
     return getElement(DataStreamSecuritySelector, props, args);
 }
 
+function contextSetup(testProps) {
+    return {
+        formValues: {
+            dataStreams: new List([
+                {
+                    dsi_dsid: 'test1.txt',
+                    dsi_security_policy: 1,
+                },
+            ]),
+            rek_security_inherited: 1,
+            rek_security_policy: 5,
+            rek_datastream_policy: 5,
+        },
+        ...testProps,
+    };
+}
+
 describe('DataStreamSecuritySelector component with mockContext', () => {
     afterEach(() => cleanup);
 
     it('should render with loaded file data', () => {
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                dataStreams: new List([
-                    {
-                        dsi_dsid: 'test1.txt',
-                        dsi_security_policy: 1,
-                    },
-                ]),
-                rek_security_inherited: 1,
-                rek_security_policy: 5,
-                rek_datastream_policy: 5,
-            },
-        }));
+        useFormValuesContext.mockImplementation(() => contextSetup());
 
         const wrapper = setup({
             meta: {
@@ -86,6 +91,79 @@ describe('DataStreamSecuritySelector component with mockContext', () => {
                 },
             ],
         });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+});
+
+describe('DataStreamSecuritySelector handling disabled component', () => {
+    it('should display datastreams correctly as disabled', () => {
+        useFormValuesContext.mockImplementation(() =>
+            contextSetup({
+                formValues: {
+                    dataStreams: new List([
+                        {
+                            dsi_dsid: 'test7.txt',
+                            disabled: true,
+                        },
+                    ]),
+                },
+            }),
+        );
+        const wrapper = setup();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should display datastreams correctly as disabled om derivative file', () => {
+        useFormValuesContext.mockImplementation(() =>
+            contextSetup({
+                formValues: {
+                    dataStreams: new List([
+                        {
+                            dsi_dsid: 'preview_test8.txt',
+                        },
+                    ]),
+                },
+            }),
+        );
+        const wrapper = setup();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should display datastreams correctly as disabled when props set to disabled', () => {
+        useFormValuesContext.mockImplementation(() =>
+            contextSetup({
+                formValues: {
+                    dataStreams: new List([
+                        {
+                            dsi_dsid: 'test9.txt',
+                        },
+                    ]),
+                },
+            }),
+        );
+        const wrapper = setup({
+            disabled: true,
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should display datastreams correctly as not disabled when nothing says to disable', () => {
+        useFormValuesContext.mockImplementation(() =>
+            contextSetup({
+                formValues: {
+                    dataStreams: new List([
+                        {
+                            dsi_dsid: 'test10.txt',
+                        },
+                    ]),
+                },
+            }),
+        );
+        const wrapper = setup();
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
