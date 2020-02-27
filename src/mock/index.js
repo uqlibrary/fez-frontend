@@ -291,9 +291,22 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, { data: { rek_pid: 'UQ:1111111' } }); // TODO: add actual record to data return!!!
-// .reply(500, {message: 'error - failed NEW_RECORD_API'});
-// .reply(403, {message: 'Session expired'});
+    .reply(200, { data: { rek_pid: 'UQ:1111111' } }) // TODO: add actual record to data return!!!
+    // .reply(500, {message: 'error - failed NEW_RECORD_API'})
+    // .reply(403, {message: 'Session expired'})
+    .onPost(routes.ISSN_LINKS_API({ type: 'sherpa' }).apiUrl)
+    .reply(config => {
+        const issn = JSON.parse(config.data).issn;
+        const data = [];
+        if (!issn.match(/^1111-1111|2222-2222$/)) {
+            data.push({
+                ...mockData.sherpaRomeo[0],
+                srm_issn: issn,
+            });
+        }
+        return [200, { data }];
+    });
+// .reply(200, { data: mockData.sherpaRomeo });
 
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })

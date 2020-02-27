@@ -4,30 +4,53 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnRowItemTemplate = ({ item }) => {
+export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
+    const [issn, setIssn] = React.useState(
+        !!item.key
+            ? item
+            : {
+                key: item,
+            },
+    );
+
+    React.useEffect(() => {
+        if (!issn.value) {
+            if (sherpaRomeo) {
+                setIssn({
+                    ...issn,
+                    value: {
+                        sherpaRomeo,
+                    },
+                });
+            } else {
+                actions.getSherpaFromIssn(issn.key);
+            }
+        }
+    }, [actions, issn, sherpaRomeo]);
+
     return (
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
-                <span>{!!item.key ? item.key : item}</span>{' '}
-                {!!item.value && !!item.value.sherpaRomeo && !!item.value.sherpaRomeo.link && (
+                <span>{issn.key}</span>{' '}
+                {!!issn.value && !!issn.value.sherpaRomeo && !!issn.value.sherpaRomeo.link && (
                     <ExternalLink
-                        href={item.value.sherpaRomeo.link}
+                        href={issn.value.sherpaRomeo.link}
                         aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
-                        title={item.value.sherpaRomeo.title}
+                        title={issn.value.sherpaRomeo.title}
                     >
                         {globalLocale.global.sherpaRomeoLink.externalLinktext}
                     </ExternalLink>
                 )}
-                {!!item.value &&
-                    !!item.value.sherpaRomeo &&
-                    !!item.value.sherpaRomeo.link &&
-                    !!item.value.ulrichs &&
-                    !!item.value.ulrichs.link && <span> or </span>}
-                {!!item.value && !!item.value.ulrichs.link && !!item.value.ulrichs.linkText && (
+                {!!issn.value &&
+                    !!issn.value.sherpaRomeo &&
+                    !!issn.value.sherpaRomeo.link &&
+                    !!issn.value.ulrichs &&
+                    !!issn.value.ulrichs.link && <span> or </span>}
+                {!!issn.value && !!issn.value.ulrichs && !!issn.value.ulrichs.link && !!issn.value.ulrichs.linkText && (
                     <ExternalLink
-                        href={item.value.ulrichs.link}
+                        href={issn.value.ulrichs.link}
                         aria-label={globalLocale.global.ulrichsLink.ariaLabel}
-                        title={item.value.ulrichs.title}
+                        title={issn.value.ulrichs.title}
                     >
                         {globalLocale.global.ulrichsLink.externalLinktext}
                     </ExternalLink>
@@ -39,4 +62,8 @@ export const IssnRowItemTemplate = ({ item }) => {
 
 IssnRowItemTemplate.propTypes = {
     item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    actions: PropTypes.object,
+    sherpaRomeo: PropTypes.object,
 };
+
+export default IssnRowItemTemplate;
