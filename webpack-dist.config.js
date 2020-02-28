@@ -221,7 +221,7 @@ const webpackConfig = {
         extensions: ['.jsx', '.js', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
         alias: {
-            '@material-ui/styles': path.resolve(__dirname, 'node_modules', '@material-ui/styles'),
+            '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
         },
     },
     performance: {
