@@ -10,7 +10,7 @@ fi
 
 if [[ ($CI_BRANCH == *"mui"*)]]; then
     printf "(Temporarily skipping unit test for feature branch \"$CI_BRANCH\"\n"
-    exit 1
+    exit 0
 fi
 
 case "$PIPE_NUM" in
