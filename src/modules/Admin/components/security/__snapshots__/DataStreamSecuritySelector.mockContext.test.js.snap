@@ -8401,7 +8401,7 @@ exports[`DataStreamSecuritySelector handling disabled component should display d
 </Provider>
 `;
 
-exports[`DataStreamSecuritySelector handling disabled component should display datastreams correctly as disabled om derivative file 1`] = `
+exports[`DataStreamSecuritySelector handling disabled component should display datastreams correctly as disabled on derivative file 1`] = `
 <Provider
   store={
     Object {

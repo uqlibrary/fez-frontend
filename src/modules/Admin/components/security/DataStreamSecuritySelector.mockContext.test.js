@@ -115,7 +115,7 @@ describe('DataStreamSecuritySelector handling disabled component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should display datastreams correctly as disabled om derivative file', () => {
+    it('should display datastreams correctly as disabled on derivative file', () => {
         useFormValuesContext.mockImplementation(() =>
             contextSetup({
                 formValues: {
