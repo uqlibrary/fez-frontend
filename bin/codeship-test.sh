@@ -8,6 +8,11 @@ if [[ -z $PIPE_NUM ]]; then
   PIPE_NUM=1
 fi
 
+if [[ ($CI_BRANCH == *"mui"*)]]; then
+    printf "(Temporarily skipping unit test for feature branch \"$CI_BRANCH\"\n"
+    exit 1
+fi
+
 case "$PIPE_NUM" in
 "1")
     set -e
