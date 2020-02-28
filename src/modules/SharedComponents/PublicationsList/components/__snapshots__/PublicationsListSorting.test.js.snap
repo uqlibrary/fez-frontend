@@ -3,7 +3,7 @@
 exports[`PublicationsListSorting renders  component will set state on receiving new props 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -164,7 +164,7 @@ exports[`PublicationsListSorting renders  component will set state on receiving 
 exports[`PublicationsListSorting renders  component will set state on receiving new props 2`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -331,7 +331,7 @@ exports[`PublicationsListSorting renders  component with empty paging data 1`] =
 exports[`PublicationsListSorting renders  component with export dropdown for admin or author 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -510,7 +510,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
 exports[`PublicationsListSorting renders  component with export dropdown hidden 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -665,7 +665,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
 exports[`PublicationsListSorting renders  component with non-empty paging data 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}

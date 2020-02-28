@@ -72,7 +72,7 @@ export class NewsFeed extends PureComponent {
                 {!this.props.loadingNewsFeedList &&
                     subNewsFeed.map((newsItem, index) => (
                         <div style={{ padding: '8px 0px' }} key={index}>
-                            <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
+                            <Grid key={`newsItem-${index}`} container spacing={2} className={classes.newsItem}>
                                 <Grid item xs={'auto'}>
                                     <Grid
                                         container

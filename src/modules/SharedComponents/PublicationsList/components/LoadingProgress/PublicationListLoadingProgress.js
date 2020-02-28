@@ -28,7 +28,7 @@ export class PublicationListLoadingProgressClass extends PureComponent {
             <React.Fragment>
                 <Hidden xsDown>
                     {txt.repositories.map((item, index) => (
-                        <Grid container spacing={8} key={index}>
+                        <Grid container spacing={1} key={index}>
                             <Grid item xs>
                                 <Typography variant={'body1'} className={classes.copy}>
                                     {item.title}

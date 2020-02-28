@@ -77,10 +77,10 @@ export const BatchImport = ({
     return (
         <StandardPage title={batchImportTxt.title}>
             <form>
-                <Grid container spacing={16}>
+                <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <StandardCard help={batchImportTxt.help}>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CommunitiesSelectField}
@@ -113,7 +113,7 @@ export const BatchImport = ({
                                 )}
                             </Grid>
 
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={DocumentTypeSingleField}
@@ -128,7 +128,7 @@ export const BatchImport = ({
                                 </Grid>
                             </Grid>
 
-                            <Grid container spacing={24}>
+                            <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={DirectorySelectField}

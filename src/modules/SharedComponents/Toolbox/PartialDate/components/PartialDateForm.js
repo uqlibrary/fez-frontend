@@ -256,7 +256,7 @@ export class PartialDateForm extends Component {
                     </InputLabel>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={16} style={{ marginTop: -12 }}>
+                    <Grid container spacing={2} style={{ marginTop: -12 }}>
                         <Grid item xs={4}>
                             <TextField
                                 name="day"

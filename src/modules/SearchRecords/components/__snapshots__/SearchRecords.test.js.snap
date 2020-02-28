@@ -6,7 +6,7 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -54,7 +54,7 @@ exports[`SearchRecords page renders loading screen while export publications loa
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -104,7 +104,7 @@ exports[`SearchRecords page should render advanced search component 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -141,7 +141,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -179,7 +179,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -243,7 +243,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -289,7 +289,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -353,7 +353,7 @@ exports[`SearchRecords page should render loading screen while loading search re
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -398,7 +398,7 @@ exports[`SearchRecords page should render no results 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -452,7 +452,7 @@ exports[`SearchRecords page should render placeholders 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -489,7 +489,7 @@ exports[`SearchRecords page should render when paging 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -527,14 +527,14 @@ exports[`SearchRecords page should render when paging 1`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
             xs={12}
           >
             <span>
-              Displaying works 10 to 20 of 100 total records. 
+              Displaying works 10 to 20 of 100 total records.
             </span>
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -639,7 +639,7 @@ exports[`SearchRecords page should show available filters or selected filters if
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -692,7 +692,7 @@ exports[`SearchRecords page should show available filters or selected filters if
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -747,7 +747,7 @@ exports[`SearchRecords page should show available filters or selected filters if
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -805,7 +805,7 @@ exports[`SearchRecords page should show available filters or selected filters if
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -920,7 +920,7 @@ exports[`SearchRecords page should show available filters or selected filters if
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}

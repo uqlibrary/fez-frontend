@@ -179,7 +179,7 @@ export class GrantListEditor extends PureComponent {
                         : {})}
                 />
                 {grants.length > 0 && (
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <List>
                                 <GrantListEditorHeader

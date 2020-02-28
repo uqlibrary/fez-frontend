@@ -284,7 +284,7 @@ export const AttachedFiles = ({
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 <div style={{ padding: 8 }}>
-                    <Grid container direction="row" alignItems="center" spacing={16} className={classes.header}>
+                    <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
                         <Grid item xs={1}>
                             &nbsp;
                         </Grid>
@@ -325,9 +325,9 @@ export const AttachedFiles = ({
                 {fileData.map((item, index) => (
                     <React.Fragment key={index}>
                         <div style={{ padding: 8 }} key={index}>
-                            <Grid container className={classes.header} spacing={24} key={`file-${index}`}>
+                            <Grid container className={classes.header} spacing={3} key={`file-${index}`}>
                                 <Grid item xs={12}>
-                                    <Grid container direction="row" alignItems="center" spacing={16} wrap={'nowrap'}>
+                                    <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                         <Grid item xs={1} className={classes.thumbIconCentered}>
                                             <FileIcon {...item.iconProps} showPreview={showPreview} />
                                         </Grid>
@@ -398,7 +398,7 @@ export const AttachedFiles = ({
                                         <React.Fragment>
                                             <Grid
                                                 container
-                                                spacing={8}
+                                                spacing={1}
                                                 alignContent={'flex-end'}
                                                 alignItems={'flex-end'}
                                                 justify={'flex-end'}

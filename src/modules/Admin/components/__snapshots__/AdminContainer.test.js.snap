@@ -5000,11 +5000,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           Page zoom
                                                                         </h3>
                                                                         <p>
-                                                                          Using 
+                                                                          Using
                                                                           <b>
                                                                             CTRL
                                                                           </b>
-                                                                           & 
+                                                                           &
                                                                           <b>
                                                                             +/-
                                                                           </b>
@@ -5041,11 +5041,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             Page zoom
                                                                           </h3>
                                                                           <p>
-                                                                            Using 
+                                                                            Using
                                                                             <b>
                                                                               CTRL
                                                                             </b>
-                                                                             & 
+                                                                             &
                                                                             <b>
                                                                               +/-
                                                                             </b>
@@ -5087,11 +5087,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               Page zoom
                                                                             </h3>
                                                                             <p>
-                                                                              Using 
+                                                                              Using
                                                                               <b>
                                                                                 CTRL
                                                                               </b>
-                                                                               & 
+                                                                               &
                                                                               <b>
                                                                                 +/-
                                                                               </b>
@@ -16029,7 +16029,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                   </WithStyles(Grid)>
                                   <WithStyles(Grid)
                                     container={true}
-                                    spacing={8}
+                                    spacing={1}
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -16143,7 +16143,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       lg={false}
                                       md={false}
                                       sm={false}
-                                      spacing={8}
+                                      spacing={1}
                                       wrap="wrap"
                                       xl={false}
                                       xs={false}
@@ -16279,7 +16279,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                             >
                                               <WithStyles(Grid)
                                                 container={true}
-                                                spacing={8}
+                                                spacing={1}
                                                 style={
                                                   Object {
                                                     "marginTop": 8,
@@ -16398,7 +16398,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={8}
+                                                  spacing={1}
                                                   style={
                                                     Object {
                                                       "marginTop": 8,
@@ -16956,7 +16956,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     <span
                                                                       className="MuiButton-label-197"
                                                                     >
-                                                                       Submit 
+                                                                       Submit
                                                                     </span>
                                                                     <NoSsr
                                                                       defer={false}

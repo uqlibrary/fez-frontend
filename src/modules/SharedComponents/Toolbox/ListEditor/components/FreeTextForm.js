@@ -66,7 +66,7 @@ export const FreeTextForm = ({
     const inputLengthText = item && item.length > maxInputLength && `Limited to ${maxInputLength} characters`;
     const validationErrorText = isValid(item) || errorText;
     return (
-        <Grid container spacing={16} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }}>
                 <TextField
                     fullWidth

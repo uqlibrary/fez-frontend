@@ -23,7 +23,7 @@ exports[`Cards component renders with custom colours and full height 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -69,7 +69,7 @@ exports[`Cards component renders with square top and accent header 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -115,7 +115,7 @@ exports[`Cards component renders with title and help button 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -161,7 +161,7 @@ exports[`Cards component renders with title and no help icon 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}

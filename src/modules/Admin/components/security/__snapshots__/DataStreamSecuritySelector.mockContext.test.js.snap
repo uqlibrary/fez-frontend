@@ -1138,7 +1138,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   alignItems="flex-start"
                   className="DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
                   container={true}
-                  spacing={32}
+                  spacing={4}
                 >
                   <Grid
                     alignContent="flex-end"
@@ -1253,7 +1253,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                     lg={false}
                     md={false}
                     sm={false}
-                    spacing={32}
+                    spacing={4}
                     wrap="wrap"
                     xl={false}
                     xs={false}

@@ -10,15 +10,15 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
     listItemGutters: {
-        paddingLeft: theme.spacing.unit,
-        paddingRight: theme.spacing.unit,
+        paddingLeft: theme.spacing(),
+        paddingRight: theme.spacing(),
     },
     listText: {
         ...theme.typography.body2,
     },
     inset: {
         '&:first-child': {
-            paddingLeft: theme.spacing.unit * 2,
+            paddingLeft: theme.spacing(2),
         },
     },
     selectedFacet: {

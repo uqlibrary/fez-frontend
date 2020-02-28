@@ -6,7 +6,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -104,7 +104,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
   />
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -149,7 +149,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
   />
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -363,7 +363,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   />
 </StandardPage>
 `;
@@ -393,7 +393,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   />
 </StandardPage>
 `;
@@ -404,7 +404,7 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}

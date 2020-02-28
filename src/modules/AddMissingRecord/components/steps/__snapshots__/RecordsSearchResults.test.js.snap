@@ -4,7 +4,7 @@ exports[`Search record results should render a single claimable item with no aut
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <Hidden
       implementation="js"
@@ -74,7 +74,7 @@ exports[`Search record results should render a single claimable item with no aut
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -409,7 +409,7 @@ exports[`Search record results should render a single claimable item with no aut
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
           style={
             Object {
               "marginTop": 12,
@@ -485,7 +485,7 @@ exports[`Search record results should render a single unclaimable item with no a
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <Hidden
       implementation="js"
@@ -555,7 +555,7 @@ exports[`Search record results should render a single unclaimable item with no a
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -663,7 +663,7 @@ exports[`Search record results should render a single unclaimable item with no a
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
           style={
             Object {
               "marginTop": 12,
@@ -1358,7 +1358,7 @@ exports[`Search record results should render a single unclaimable item with no a
           >
             <WithStyles(Grid)
               container={true}
-              spacing={24}
+              spacing={3}
             >
               <Grid
                 alignContent="stretch"
@@ -1472,7 +1472,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 lg={false}
                 md={false}
                 sm={false}
-                spacing={24}
+                spacing={3}
                 wrap="wrap"
                 xl={false}
                 xs={false}
@@ -3419,7 +3419,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   >
                                                     <WithStyles(Grid)
                                                       container={true}
-                                                      spacing={16}
+                                                      spacing={2}
                                                     >
                                                       <Grid
                                                         alignContent="stretch"
@@ -3533,7 +3533,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                         lg={false}
                                                         md={false}
                                                         sm={false}
-                                                        spacing={16}
+                                                        spacing={2}
                                                         wrap="wrap"
                                                         xl={false}
                                                         xs={false}
@@ -4113,7 +4113,7 @@ exports[`Search record results should render a single unclaimable item with no a
                             >
                               <WithStyles(Grid)
                                 container={true}
-                                spacing={16}
+                                spacing={2}
                                 style={
                                   Object {
                                     "marginTop": 12,
@@ -4232,7 +4232,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                   lg={false}
                                   md={false}
                                   sm={false}
-                                  spacing={16}
+                                  spacing={2}
                                   style={
                                     Object {
                                       "marginTop": 12,
@@ -7081,7 +7081,7 @@ exports[`Search record results should render publications list with one publicat
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <Hidden
       implementation="js"
@@ -7151,7 +7151,7 @@ exports[`Search record results should render publications list with one publicat
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -7239,7 +7239,7 @@ exports[`Search record results should render publications list with one publicat
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
           style={
             Object {
               "marginTop": 12,
@@ -7315,7 +7315,7 @@ exports[`Search record results should render spinner 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <Hidden
       implementation="js"
@@ -7384,7 +7384,7 @@ exports[`Search record results should render stepper and no results 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <Hidden
       implementation="js"
@@ -7431,7 +7431,7 @@ exports[`Search record results should render stepper and no results 1`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
           style={
             Object {
               "marginTop": 12,

@@ -216,7 +216,7 @@ export default class NtroFields extends React.PureComponent {
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
                     <Grid item xs={12}>
                         <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
-                            <Grid container spacing={8}>
+                            <Grid container spacing={1}>
                                 {// In theory, we should show them separately.
                                 // In practice, they are always incomplete together
                                     (this.props.showContributionStatement || this.props.showSignificance) && (
@@ -278,7 +278,7 @@ export default class NtroFields extends React.PureComponent {
                     !this.props.hideIsmn) && (
                     <Grid item xs={12}>
                         <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     {!this.props.hideAbstract && (
                                         <Field

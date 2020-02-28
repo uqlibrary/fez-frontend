@@ -149,7 +149,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -175,7 +175,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -218,7 +218,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -406,7 +406,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -432,7 +432,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -474,7 +474,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -633,7 +633,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -659,7 +659,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -701,7 +701,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -841,7 +841,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -849,7 +849,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -891,7 +891,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -1072,7 +1072,7 @@ exports[`AdminInterface component should render default view as a full form view
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -1080,7 +1080,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -1122,7 +1122,7 @@ exports[`AdminInterface component should render default view as a full form view
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -1286,7 +1286,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -1294,7 +1294,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -1336,7 +1336,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -1505,7 +1505,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -1513,7 +1513,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
           style={
             Object {
               "marginTop": 8,
@@ -1555,7 +1555,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(Button)>
           </WithStyles(Grid)>
         </WithStyles(Grid)>

@@ -231,7 +231,7 @@ export default class PossiblyMyRecords extends PureComponent {
                         locale={txt.hidePublicationConfirmation}
                     />
                 )}
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     {// no results to display
                         !this.props.loadingPossibleCounts &&
                         !this.props.loadingPossiblePublicationsList &&

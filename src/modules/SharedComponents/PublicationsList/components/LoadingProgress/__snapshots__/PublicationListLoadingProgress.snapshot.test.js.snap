@@ -1509,7 +1509,7 @@ exports[`Search Dashboard test Full render 1`] = `
                         <WithStyles(Grid)
                           container={true}
                           key="0"
-                          spacing={8}
+                          spacing={1}
                         >
                           <Grid
                             alignContent="stretch"
@@ -1623,7 +1623,7 @@ exports[`Search Dashboard test Full render 1`] = `
                             lg={false}
                             md={false}
                             sm={false}
-                            spacing={8}
+                            spacing={1}
                             wrap="wrap"
                             xl={false}
                             xs={false}
@@ -2466,7 +2466,7 @@ exports[`Search Dashboard test Full render 1`] = `
                         <WithStyles(Grid)
                           container={true}
                           key="1"
-                          spacing={8}
+                          spacing={1}
                         >
                           <Grid
                             alignContent="stretch"
@@ -2580,7 +2580,7 @@ exports[`Search Dashboard test Full render 1`] = `
                             lg={false}
                             md={false}
                             sm={false}
-                            spacing={8}
+                            spacing={1}
                             wrap="wrap"
                             xl={false}
                             xs={false}
@@ -3423,7 +3423,7 @@ exports[`Search Dashboard test Full render 1`] = `
                         <WithStyles(Grid)
                           container={true}
                           key="2"
-                          spacing={8}
+                          spacing={1}
                         >
                           <Grid
                             alignContent="stretch"
@@ -3537,7 +3537,7 @@ exports[`Search Dashboard test Full render 1`] = `
                             lg={false}
                             md={false}
                             sm={false}
-                            spacing={8}
+                            spacing={1}
                             wrap="wrap"
                             xl={false}
                             xs={false}
@@ -4380,7 +4380,7 @@ exports[`Search Dashboard test Full render 1`] = `
                         <WithStyles(Grid)
                           container={true}
                           key="3"
-                          spacing={8}
+                          spacing={1}
                         >
                           <Grid
                             alignContent="stretch"
@@ -4494,7 +4494,7 @@ exports[`Search Dashboard test Full render 1`] = `
                             lg={false}
                             md={false}
                             sm={false}
-                            spacing={8}
+                            spacing={1}
                             wrap="wrap"
                             xl={false}
                             xs={false}
@@ -5337,7 +5337,7 @@ exports[`Search Dashboard test Full render 1`] = `
                         <WithStyles(Grid)
                           container={true}
                           key="4"
-                          spacing={8}
+                          spacing={1}
                         >
                           <Grid
                             alignContent="stretch"
@@ -5451,7 +5451,7 @@ exports[`Search Dashboard test Full render 1`] = `
                             lg={false}
                             md={false}
                             sm={false}
-                            spacing={8}
+                            spacing={1}
                             wrap="wrap"
                             xl={false}
                             xs={false}
@@ -6818,7 +6818,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     <WithStyles(Grid)
       container={true}
       key="0"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -6844,7 +6844,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     <WithStyles(Grid)
       container={true}
       key="1"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -6863,7 +6863,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
           noWrap={true}
         >
           5
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -6871,7 +6871,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     <WithStyles(Grid)
       container={true}
       key="2"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -6890,7 +6890,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
           noWrap={true}
         >
           0
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -6898,7 +6898,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     <WithStyles(Grid)
       container={true}
       key="3"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -6917,7 +6917,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
           noWrap={true}
         >
           0
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -6925,7 +6925,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     <WithStyles(Grid)
       container={true}
       key="4"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -6944,7 +6944,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
           noWrap={true}
         >
           0
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -6992,7 +6992,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     <WithStyles(Grid)
       container={true}
       key="0"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7018,7 +7018,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     <WithStyles(Grid)
       container={true}
       key="1"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7044,7 +7044,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     <WithStyles(Grid)
       container={true}
       key="2"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7070,7 +7070,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     <WithStyles(Grid)
       container={true}
       key="3"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7096,7 +7096,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     <WithStyles(Grid)
       container={true}
       key="4"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7162,7 +7162,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     <WithStyles(Grid)
       container={true}
       key="0"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7188,7 +7188,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     <WithStyles(Grid)
       container={true}
       key="1"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7207,7 +7207,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
           noWrap={true}
         >
           5
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -7215,7 +7215,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     <WithStyles(Grid)
       container={true}
       key="2"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7234,7 +7234,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
           noWrap={true}
         >
           4
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -7242,7 +7242,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     <WithStyles(Grid)
       container={true}
       key="3"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -7261,7 +7261,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
           noWrap={true}
         >
           12
-           
+
            record(s)
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -7269,7 +7269,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     <WithStyles(Grid)
       container={true}
       key="4"
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}

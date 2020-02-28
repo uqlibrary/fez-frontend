@@ -6,7 +6,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <NavigationDialogBox
       txt={
@@ -29,7 +29,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
             "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click
-               
+
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -50,7 +50,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
       >
         <WithStyles(Grid)
           container={true}
-          spacing={8}
+          spacing={1}
         >
           <WithStyles(Grid)
             item={true}
@@ -260,7 +260,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}

@@ -75,11 +75,11 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   />
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -193,11 +193,11 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   />
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -346,14 +346,14 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
                 >
                   Step 1 of 2
                 </span>
-                - Please 
+                - Please
                 <b>
                   add to a list of contributors below
                 </b>
                 , in the format and order that they are published.
               </div>,
               "descriptionStep1NoStep2": <div>
-                Please 
+                Please
                 <b>
                   add to a list of contributors below
                 </b>
@@ -382,11 +382,11 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   />
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -500,11 +500,11 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   />
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -653,14 +653,14 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
                 >
                   Step 1 of 2
                 </span>
-                - Please 
+                - Please
                 <b>
                   add to a list of contributors below
                 </b>
                 , in the format and order that they are published.
               </div>,
               "descriptionStep1NoStep2": <div>
-                Please 
+                Please
                 <b>
                   add to a list of contributors below
                 </b>
@@ -689,7 +689,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -730,14 +730,14 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -758,7 +758,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -869,7 +869,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -910,14 +910,14 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -938,7 +938,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -1072,13 +1072,13 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    
+
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -1730,7 +1730,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             >
               <WithStyles(Grid)
                 container={true}
-                spacing={8}
+                spacing={1}
               >
                 <Grid
                   alignContent="stretch"
@@ -1844,7 +1844,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                   lg={false}
                   md={false}
                   sm={false}
-                  spacing={8}
+                  spacing={1}
                   wrap="wrap"
                   xl={false}
                   xs={false}
@@ -2012,14 +2012,14 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                   >
                                     Step 1 of 2
                                   </span>
-                                  - Please 
+                                  - Please
                                   <b>
                                     add to a list of contributors below
                                   </b>
                                   , in the format and order that they are published.
                                 </div>,
                                 "descriptionStep1NoStep2": <div>
-                                  Please 
+                                  Please
                                   <b>
                                     add to a list of contributors below
                                   </b>
@@ -2037,7 +2037,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             showRoleInput={false}
                           >
                             <div>
-                              Please 
+                              Please
                               <b>
                                 add to a list of contributors below
                               </b>
@@ -2046,7 +2046,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             <WithStyles(Grid)
                               container={true}
                               id="contributorForm"
-                              spacing={8}
+                              spacing={1}
                               style={
                                 Object {
                                   "marginTop": 8,
@@ -2166,7 +2166,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                 lg={false}
                                 md={false}
                                 sm={false}
-                                spacing={8}
+                                spacing={1}
                                 style={
                                   Object {
                                     "marginTop": 8,
@@ -2992,7 +2992,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                       alignContent="flex-end"
                                                       alignItems="flex-end"
                                                       container={true}
-                                                      spacing={16}
+                                                      spacing={2}
                                                     >
                                                       <Grid
                                                         alignContent="flex-end"
@@ -3106,7 +3106,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                         lg={false}
                                                         md={false}
                                                         sm={false}
-                                                        spacing={16}
+                                                        spacing={2}
                                                         wrap="wrap"
                                                         xl={false}
                                                         xs={false}
@@ -3796,7 +3796,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             </WithStyles(Grid)>
                             <WithStyles(Grid)
                               container={true}
-                              spacing={8}
+                              spacing={1}
                               style={
                                 Object {
                                   "marginTop": 8,
@@ -3915,7 +3915,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                 lg={false}
                                 md={false}
                                 sm={false}
-                                spacing={8}
+                                spacing={1}
                                 style={
                                   Object {
                                     "marginTop": 8,
@@ -5045,7 +5045,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             >
               <WithStyles(Grid)
                 container={true}
-                spacing={8}
+                spacing={1}
               >
                 <Grid
                   alignContent="stretch"
@@ -5159,7 +5159,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                   lg={false}
                   md={false}
                   sm={false}
-                  spacing={8}
+                  spacing={1}
                   wrap="wrap"
                   xl={false}
                   xs={false}
@@ -5327,14 +5327,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                   >
                                     Step 1 of 2
                                   </span>
-                                  - Please 
+                                  - Please
                                   <b>
                                     add to a list of contributors below
                                   </b>
                                   , in the format and order that they are published.
                                 </div>,
                                 "descriptionStep1NoStep2": <div>
-                                  Please 
+                                  Please
                                   <b>
                                     add to a list of contributors below
                                   </b>
@@ -5352,7 +5352,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             showRoleInput={false}
                           >
                             <div>
-                              Please 
+                              Please
                               <b>
                                 add to a list of contributors below
                               </b>
@@ -5361,7 +5361,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             <WithStyles(Grid)
                               container={true}
                               id="contributorForm"
-                              spacing={8}
+                              spacing={1}
                               style={
                                 Object {
                                   "marginTop": 8,
@@ -5481,7 +5481,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                 lg={false}
                                 md={false}
                                 sm={false}
-                                spacing={8}
+                                spacing={1}
                                 style={
                                   Object {
                                     "marginTop": 8,
@@ -7769,7 +7769,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       alignContent="flex-end"
                                                       alignItems="flex-end"
                                                       container={true}
-                                                      spacing={16}
+                                                      spacing={2}
                                                     >
                                                       <Grid
                                                         alignContent="flex-end"
@@ -7883,7 +7883,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         lg={false}
                                                         md={false}
                                                         sm={false}
-                                                        spacing={16}
+                                                        spacing={2}
                                                         wrap="wrap"
                                                         xl={false}
                                                         xs={false}
@@ -8573,7 +8573,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             </WithStyles(Grid)>
                             <WithStyles(Grid)
                               container={true}
-                              spacing={8}
+                              spacing={1}
                               style={
                                 Object {
                                   "marginTop": 8,
@@ -8692,7 +8692,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                 lg={false}
                                 md={false}
                                 sm={false}
-                                spacing={8}
+                                spacing={1}
                                 style={
                                   Object {
                                     "marginTop": 8,
@@ -8990,7 +8990,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9031,14 +9031,14 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9066,7 +9066,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9106,14 +9106,14 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9141,7 +9141,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9181,14 +9181,14 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9216,7 +9216,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9257,14 +9257,14 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9327,14 +9327,14 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
         >
           Step 1 of 2
         </span>
-        - Please 
+        - Please
         <b>
           add to a list of contributors below
         </b>
         , in the format and order that they are published.
       </div>,
       "descriptionStep1NoStep2": <div>
-        Please 
+        Please
         <b>
           add to a list of contributors below
         </b>
@@ -9409,7 +9409,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9462,14 +9462,14 @@ exports[`ContributorsEditor should get contributors from props and input value s
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9490,7 +9490,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9578,7 +9578,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9631,14 +9631,14 @@ exports[`ContributorsEditor should get contributors from props and input value s
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9659,7 +9659,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9762,7 +9762,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9802,14 +9802,14 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9837,7 +9837,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9877,14 +9877,14 @@ exports[`ContributorsEditor should render error as html 1`] = `
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -9931,7 +9931,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -9971,14 +9971,14 @@ exports[`ContributorsEditor should render error as one child 1`] = `
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>
@@ -10019,7 +10019,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -10060,14 +10060,14 @@ exports[`ContributorsEditor should show validation error 1`] = `
               >
                 Step 1 of 2
               </span>
-              - Please 
+              - Please
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please 
+              Please
               <b>
                 add to a list of contributors below
               </b>

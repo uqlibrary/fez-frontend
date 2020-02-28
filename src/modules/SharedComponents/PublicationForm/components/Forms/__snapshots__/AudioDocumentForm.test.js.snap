@@ -3,7 +3,7 @@
 exports[`AudioDocumentForm renders  component 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -34,7 +34,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -149,15 +149,15 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of creators below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of creators below
                   </b>
@@ -185,8 +185,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -254,15 +254,15 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of contributors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of contributors below
                   </b>
@@ -290,8 +290,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -338,7 +338,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -384,7 +384,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
 exports[`AudioDocumentForm renders  component should render contributor assignment 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -415,7 +415,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -530,15 +530,15 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of creators below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of creators below
                   </b>
@@ -566,8 +566,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -635,15 +635,15 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of contributors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of contributors below
                   </b>
@@ -671,8 +671,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -719,7 +719,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}

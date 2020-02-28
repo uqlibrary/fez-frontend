@@ -929,7 +929,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <Hidden
       implementation="js"
@@ -2875,7 +2875,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <Hidden
       implementation="js"
@@ -7476,7 +7476,7 @@ exports[`PublicationCitation  should render component with publication from mult
             gutterBottom={true}
             variant="caption"
           >
-            Found in: 
+            Found in:
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
@@ -8400,7 +8400,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-            Found in: 
+            Found in:
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
@@ -9834,7 +9834,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
 
 exports[`PublicationCitation  should return message indicating unavailability of citation display 1`] = `
 <div>
-  Citation display not available for 
+  Citation display not available for
 </div>
 `;
 

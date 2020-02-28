@@ -125,7 +125,7 @@ export default class RecordsSearchResults extends PureComponent {
 
         return (
             <React.Fragment>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Hidden smUp>
                         <Grid item xs>
                             <PublicationListLoadingProgress
@@ -139,7 +139,7 @@ export default class RecordsSearchResults extends PureComponent {
                         {this.props.publicationsList.length > 0 && (
                             <Grid item sm={12}>
                                 <StandardCard {...searchResultsTxt.searchResults}>
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {searchResultsTxt.searchResults.resultsText
                                                 .replace('[noOfResults]', this.props.publicationsList.length)
@@ -169,7 +169,7 @@ export default class RecordsSearchResults extends PureComponent {
                         )}
                         {!this.props.searchLoading && (
                             <Grid item sm={12}>
-                                <Grid container spacing={16} style={{ marginTop: 12 }}>
+                                <Grid container spacing={2} style={{ marginTop: 12 }}>
                                     <Grid item xs />
                                     <Grid item xs={12} sm="auto">
                                         <Button

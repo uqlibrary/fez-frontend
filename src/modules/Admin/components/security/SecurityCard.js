@@ -42,10 +42,10 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
     return (
-        <Grid container spacing={16}>
+        <Grid container spacing={2}>
             <Grid item xs={12}>
                 <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader subCard>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={2}>
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
                                 <Grid item xs={12}>
@@ -101,7 +101,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                 <React.Fragment>
                     <Grid item xs={12}>
                         <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader subCard>
-                            <Grid container spacing={8}>
+                            <Grid container spacing={1}>
                                 <Grid item xs={12}>
                                     <InheritedSecurityDetails
                                         title={text.inheritedPolicy.dataStream.title}

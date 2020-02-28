@@ -2052,7 +2052,7 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
                                       container={true}
                                       direction="row"
                                       justify="flex-end"
-                                      spacing={16}
+                                      spacing={2}
                                     >
                                       <Grid
                                         alignContent="stretch"
@@ -2166,7 +2166,7 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
                                         lg={false}
                                         md={false}
                                         sm={false}
-                                        spacing={16}
+                                        spacing={2}
                                         wrap="wrap"
                                         xl={false}
                                         xs={false}
@@ -3005,7 +3005,7 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
             </WithStyles(Grid)>
             <WithStyles(Grid)
               container={true}
-              spacing={32}
+              spacing={4}
             >
               <Grid
                 alignContent="stretch"
@@ -3119,7 +3119,7 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
                 lg={false}
                 md={false}
                 sm={false}
-                spacing={32}
+                spacing={4}
                 wrap="wrap"
                 xl={false}
                 xs={false}
@@ -5981,7 +5981,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                       container={true}
                                       direction="row"
                                       justify="flex-end"
-                                      spacing={16}
+                                      spacing={2}
                                     >
                                       <Grid
                                         alignContent="stretch"
@@ -6095,7 +6095,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                         lg={false}
                                         md={false}
                                         sm={false}
-                                        spacing={16}
+                                        spacing={2}
                                         wrap="wrap"
                                         xl={false}
                                         xs={false}
@@ -6934,7 +6934,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
             </WithStyles(Grid)>
             <WithStyles(Grid)
               container={true}
-              spacing={32}
+              spacing={4}
             >
               <Grid
                 alignContent="stretch"
@@ -7048,7 +7048,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                 lg={false}
                 md={false}
                 sm={false}
-                spacing={32}
+                spacing={4}
                 wrap="wrap"
                 xl={false}
                 xs={false}
@@ -9920,7 +9920,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                       container={true}
                                       direction="row"
                                       justify="flex-end"
-                                      spacing={16}
+                                      spacing={2}
                                     >
                                       <Grid
                                         alignContent="stretch"
@@ -10034,7 +10034,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                         lg={false}
                                         md={false}
                                         sm={false}
-                                        spacing={16}
+                                        spacing={2}
                                         wrap="wrap"
                                         xl={false}
                                         xs={false}
@@ -11378,7 +11378,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                       container={true}
                       direction="row"
                       justify="center"
-                      spacing={8}
+                      spacing={1}
                     >
                       <Grid
                         alignContent="center"
@@ -11492,7 +11492,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                         lg={false}
                         md={false}
                         sm={false}
-                        spacing={8}
+                        spacing={1}
                         wrap="wrap"
                         xl={false}
                         xs={false}

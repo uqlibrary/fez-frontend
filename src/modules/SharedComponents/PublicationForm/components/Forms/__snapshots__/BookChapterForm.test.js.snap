@@ -3,7 +3,7 @@
 exports[`BookChapterForm renders  component 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -14,7 +14,7 @@ exports[`BookChapterForm renders  component 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -132,7 +132,7 @@ exports[`BookChapterForm renders  component 1`] = `
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
-             
+
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -160,15 +160,15 @@ exports[`BookChapterForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of authors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of authors below
                   </b>
@@ -196,8 +196,8 @@ exports[`BookChapterForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -263,15 +263,15 @@ exports[`BookChapterForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of editors below
                   </b>
                   , in the format "John Smith".
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of editors below
                   </b>
@@ -299,8 +299,8 @@ exports[`BookChapterForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -364,11 +364,11 @@ exports[`BookChapterForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAddText": <span>
-                  Please press 
+                  Please press
                   <b>
                     ENTER
                   </b>
-                   or click 
+                   or click
                   <b>
                     ADD
                   </b>
@@ -444,11 +444,11 @@ exports[`BookChapterForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAddText": <span>
-                  Please press 
+                  Please press
                   <b>
                     ENTER
                   </b>
-                   or click 
+                   or click
                   <b>
                     ADD
                   </b>
@@ -506,7 +506,7 @@ exports[`BookChapterForm renders  component 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -568,7 +568,7 @@ exports[`BookChapterForm renders  component 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -611,7 +611,7 @@ exports[`BookChapterForm renders  component 1`] = `
 exports[`BookChapterForm renders  shows an error when end page is less than start page 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -622,7 +622,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -740,7 +740,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
-             
+
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -768,15 +768,15 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of authors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of authors below
                   </b>
@@ -804,8 +804,8 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -871,15 +871,15 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of editors below
                   </b>
                   , in the format "John Smith".
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of editors below
                   </b>
@@ -907,8 +907,8 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -972,11 +972,11 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAddText": <span>
-                  Please press 
+                  Please press
                   <b>
                     ENTER
                   </b>
-                   or click 
+                   or click
                   <b>
                     ADD
                   </b>
@@ -1052,11 +1052,11 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAddText": <span>
-                  Please press 
+                  Please press
                   <b>
                     ENTER
                   </b>
-                   or click 
+                   or click
                   <b>
                     ADD
                   </b>
@@ -1114,7 +1114,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1176,7 +1176,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
       </WithStyles(Grid)>
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}

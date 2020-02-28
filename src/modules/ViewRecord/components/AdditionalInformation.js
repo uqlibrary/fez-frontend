@@ -47,7 +47,7 @@ export class AdditionalInformationClass extends PureComponent {
             <div style={{ padding: 8 }} key={index}>
                 <Grid
                     container
-                    spacing={16}
+                    spacing={2}
                     key={`additional-info-${heading}`}
                     className={this.props.classes.gridRow}
                     alignItems="flex-start"

@@ -186,7 +186,7 @@ export class DashboardClass extends PureComponent {
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     {loading && (
                         <React.Fragment>
                             <Grid item xs />
@@ -319,7 +319,7 @@ export class DashboardClass extends PureComponent {
                                         />
                                     )}
                                 </Tabs>
-                                <Grid container spacing={24} style={{ marginTop: 24 }}>
+                                <Grid container spacing={3} style={{ marginTop: 24 }}>
                                     {this.props.showLatestPublicationsTab && (
                                         <Grid
                                             item

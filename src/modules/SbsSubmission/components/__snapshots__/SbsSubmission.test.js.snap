@@ -6,7 +6,7 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -32,7 +32,7 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -82,7 +82,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -93,7 +93,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -858,10 +858,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB. 
+                  Maximum file size is 8GB.
                   <br />
                   PDF files must be saved using the following naming structure
-                   
+
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -874,9 +874,9 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                       s1234567_pd_totalthesis.pdf
                     </li>
                   </ul>
-                  Supplementary audio files are to be in MP 3 format. 
+                  Supplementary audio files are to be in MP 3 format.
                   <br />
-                  Supplementary video files are to be in WMV or AVI format. 
+                  Supplementary video files are to be in WMV or AVI format.
                   <br />
                 </div>,
                 "instructions": "",
@@ -904,7 +904,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -974,7 +974,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -985,7 +985,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1750,10 +1750,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB. 
+                  Maximum file size is 8GB.
                   <br />
                   PDF files must be saved using the following naming structure
-                   
+
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -1766,9 +1766,9 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                       s1234567_pd_totalthesis.pdf
                     </li>
                   </ul>
-                  Supplementary audio files are to be in MP 3 format. 
+                  Supplementary audio files are to be in MP 3 format.
                   <br />
-                  Supplementary video files are to be in WMV or AVI format. 
+                  Supplementary video files are to be in WMV or AVI format.
                   <br />
                 </div>,
                 "instructions": "",
@@ -1796,7 +1796,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -1842,7 +1842,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 3`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}

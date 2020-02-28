@@ -9,7 +9,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -466,7 +466,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -498,7 +498,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -966,7 +966,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -998,7 +998,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -1501,7 +1501,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -1549,7 +1549,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -1570,7 +1570,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1623,7 +1623,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -1684,7 +1684,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2141,7 +2141,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2173,7 +2173,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2681,7 +2681,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -2729,7 +2729,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -2750,7 +2750,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -2803,7 +2803,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2848,7 +2848,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -3351,7 +3351,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -3399,7 +3399,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -3420,7 +3420,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3473,7 +3473,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -3518,7 +3518,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -4002,7 +4002,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}

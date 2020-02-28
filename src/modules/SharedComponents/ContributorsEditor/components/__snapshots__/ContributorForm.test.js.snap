@@ -5,7 +5,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -77,7 +77,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -111,7 +111,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -193,7 +193,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -227,7 +227,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -299,7 +299,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -333,7 +333,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -360,7 +360,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -394,7 +394,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -421,7 +421,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -455,7 +455,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -527,7 +527,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -561,7 +561,7 @@ exports[`Component ContributorForm should render display name field and identifi
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -605,7 +605,7 @@ exports[`Component ContributorForm should render display name field and identifi
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -639,7 +639,7 @@ exports[`Component ContributorForm should render display name field and role fie
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -684,7 +684,7 @@ exports[`Component ContributorForm should render display name field and role fie
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -718,7 +718,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -745,7 +745,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -780,7 +780,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -807,7 +807,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -841,7 +841,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -913,7 +913,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -947,7 +947,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
   <WithStyles(Grid)
     container={true}
     id="contributorForm"
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -974,7 +974,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,

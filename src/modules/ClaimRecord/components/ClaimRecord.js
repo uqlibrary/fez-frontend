@@ -200,7 +200,7 @@ export default class ClaimRecord extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                                 <PublicationCitation publication={publication} />
@@ -273,7 +273,7 @@ export default class ClaimRecord extends PureComponent {
                                 )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.comments.title} help={txt.comments.help}>
-                                        <Grid container spacing={16}>
+                                        <Grid container spacing={2}>
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
@@ -306,7 +306,7 @@ export default class ClaimRecord extends PureComponent {
                                             title={txt.contentIndicators.title}
                                             help={txt.contentIndicators.help}
                                         >
-                                            <Grid container spacing={24}>
+                                            <Grid container spacing={3}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                 </Grid>
@@ -344,7 +344,7 @@ export default class ClaimRecord extends PureComponent {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>

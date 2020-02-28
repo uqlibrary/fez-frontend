@@ -104,14 +104,14 @@ export default class PublicationForm extends Component {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
             <form onSubmit={this._handleDefaultSubmit}>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
                         txt={txt.cancelWorkflowConfirmation}
                     />
                     <Grid item xs={12}>
                         <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
-                            <Grid container spacing={8}>
+                            <Grid container spacing={1}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={SelectField}
@@ -166,7 +166,7 @@ export default class PublicationForm extends Component {
                             {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
-                                        <Grid container spacing={24}>
+                                        <Grid container spacing={3}>
                                             <Grid item xs={12}>
                                                 <Typography>{txt.contentIndicators.description}</Typography>
                                                 <Field
@@ -207,7 +207,7 @@ export default class PublicationForm extends Component {
                         </Grid>
                     )}
                 </Grid>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs />
                     <Grid item xs={12} sm="auto">
                         <Button

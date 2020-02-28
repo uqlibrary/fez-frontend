@@ -25,7 +25,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     alignItems="center"
     className=""
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -95,7 +95,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     alignItems="center"
     className=""
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -191,7 +191,7 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
     alignItems="center"
     className=""
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}

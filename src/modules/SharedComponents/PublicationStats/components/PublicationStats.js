@@ -57,7 +57,7 @@ export class PublicationStats extends Component {
                 {/* Header */}
 
                 {/* Total pubs */}
-                <Grid container spacing={16} className={classes.data}>
+                <Grid container spacing={2} className={classes.data}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle4}</Typography>
                     </Grid>
@@ -72,7 +72,7 @@ export class PublicationStats extends Component {
                 {/* Total pubs */}
 
                 {/* Range */}
-                <Grid container spacing={16} className={classes.data}>
+                <Grid container spacing={2} className={classes.data}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle5}</Typography>
                     </Grid>
@@ -87,7 +87,7 @@ export class PublicationStats extends Component {
                 {/* Range */}
 
                 {/* hindex */}
-                <Grid container spacing={16} className={classes.data}>
+                <Grid container spacing={2} className={classes.data}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle1}</Typography>
                     </Grid>
@@ -116,7 +116,7 @@ export class PublicationStats extends Component {
                 {/* hindex */}
 
                 {/* Average */}
-                <Grid container spacing={16} className={classes.data}>
+                <Grid container spacing={2} className={classes.data}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle2}</Typography>
                     </Grid>
@@ -135,7 +135,7 @@ export class PublicationStats extends Component {
                 {/* Average */}
 
                 {/* Total citations */}
-                <Grid container spacing={16} className={classes.data}>
+                <Grid container spacing={2} className={classes.data}>
                     <Grid item xs={6}>
                         <Typography variant={'body2'}>{txt.publicationStatsRowTitle3}</Typography>
                     </Grid>

@@ -11,7 +11,7 @@ exports[`Grant Information Component  renderGrantDetail() 1`] = `
   <WithStyles(Grid)
     alignItems="flex-start"
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -62,7 +62,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         alignItems="flex-start"
         container={true}
         key="1"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -102,7 +102,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         alignItems="flex-start"
         container={true}
         key="2"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -142,7 +142,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
         alignItems="flex-start"
         container={true}
         key="3"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -201,7 +201,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         alignItems="flex-start"
         container={true}
         key="1"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -241,7 +241,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         alignItems="flex-start"
         container={true}
         key="2"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -281,7 +281,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         alignItems="flex-start"
         container={true}
         key="3"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -342,7 +342,7 @@ exports[`Grant Information Component  should render component 1`] = `
         alignItems="flex-start"
         container={true}
         key="1"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -382,7 +382,7 @@ exports[`Grant Information Component  should render component 1`] = `
         alignItems="flex-start"
         container={true}
         key="2"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -422,7 +422,7 @@ exports[`Grant Information Component  should render component 1`] = `
         alignItems="flex-start"
         container={true}
         key="3"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -6418,7 +6418,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 className="GrantInformationClass-gridRow-1"
                                                 container={true}
                                                 key="1"
-                                                spacing={16}
+                                                spacing={2}
                                               >
                                                 <Grid
                                                   alignContent="stretch"
@@ -6533,7 +6533,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={16}
+                                                  spacing={2}
                                                   wrap="wrap"
                                                   xl={false}
                                                   xs={false}
@@ -10170,7 +10170,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 className="GrantInformationClass-gridRow-1"
                                                 container={true}
                                                 key="2"
-                                                spacing={16}
+                                                spacing={2}
                                               >
                                                 <Grid
                                                   alignContent="stretch"
@@ -10285,7 +10285,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={16}
+                                                  spacing={2}
                                                   wrap="wrap"
                                                   xl={false}
                                                   xs={false}
@@ -13922,7 +13922,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 className="GrantInformationClass-gridRow-1"
                                                 container={true}
                                                 key="3"
-                                                spacing={16}
+                                                spacing={2}
                                               >
                                                 <Grid
                                                   alignContent="stretch"
@@ -14037,7 +14037,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={16}
+                                                  spacing={2}
                                                   wrap="wrap"
                                                   xl={false}
                                                   xs={false}
@@ -17712,7 +17712,7 @@ exports[`Grant Information Component  should render with publication without gra
         alignItems="flex-start"
         container={true}
         key="1"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -17750,7 +17750,7 @@ exports[`Grant Information Component  should render with publication without gra
         alignItems="flex-start"
         container={true}
         key="2"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -17788,7 +17788,7 @@ exports[`Grant Information Component  should render with publication without gra
         alignItems="flex-start"
         container={true}
         key="3"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}

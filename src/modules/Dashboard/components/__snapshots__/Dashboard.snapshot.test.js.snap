@@ -1510,7 +1510,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                                 >
                                   <WithStyles(Grid)
                                     container={true}
-                                    spacing={24}
+                                    spacing={3}
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -1624,7 +1624,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                                       lg={false}
                                       md={false}
                                       sm={false}
-                                      spacing={24}
+                                      spacing={3}
                                       wrap="wrap"
                                       xl={false}
                                       xs={false}
@@ -1658,7 +1658,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -1811,7 +1811,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
         </WithStyles(Tabs)>
         <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
           style={
             Object {
               "marginTop": 24,
@@ -1849,7 +1849,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -2327,7 +2327,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
         </WithStyles(Tabs)>
         <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
           style={
             Object {
               "marginTop": 24,
@@ -2365,7 +2365,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -2718,7 +2718,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -2871,7 +2871,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
         </WithStyles(Tabs)>
         <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
           style={
             Object {
               "marginTop": 24,
@@ -2909,7 +2909,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -3033,7 +3033,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -3157,7 +3157,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -3287,7 +3287,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
         </WithStyles(Tabs)>
         <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
           style={
             Object {
               "marginTop": 24,
@@ -3325,7 +3325,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -3450,7 +3450,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
         </WithStyles(Tabs)>
         <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
           style={
             Object {
               "marginTop": 24,
@@ -3477,7 +3477,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -3909,7 +3909,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4034,7 +4034,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
         </WithStyles(Tabs)>
         <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
           style={
             Object {
               "marginTop": 24,
@@ -4063,7 +4063,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4153,7 +4153,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4260,7 +4260,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4350,7 +4350,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4457,7 +4457,7 @@ exports[`Dashboard test publicationStats should not render stats 2 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4482,7 +4482,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -4906,7 +4906,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -5005,7 +5005,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -5104,7 +5104,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -5180,7 +5180,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -5287,7 +5287,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
 <StandardPage>
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -6798,7 +6798,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             >
                               <WithStyles(Grid)
                                 container={true}
-                                spacing={24}
+                                spacing={3}
                               >
                                 <Grid
                                   alignContent="stretch"
@@ -6912,7 +6912,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                   lg={false}
                                   md={false}
                                   sm={false}
-                                  spacing={24}
+                                  spacing={3}
                                   wrap="wrap"
                                   xl={false}
                                   xs={false}
@@ -7634,7 +7634,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                           alignItems="center"
                                                           container={true}
                                                           justify="center"
-                                                          spacing={24}
+                                                          spacing={3}
                                                         >
                                                           <Grid
                                                             alignContent="center"
@@ -7748,7 +7748,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                             lg={false}
                                                             md={false}
                                                             sm={false}
-                                                            spacing={24}
+                                                            spacing={3}
                                                             wrap="wrap"
                                                             xl={false}
                                                             xs={false}
@@ -8582,7 +8582,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                   >
                                                                                     <WithStyles(Grid)
                                                                                       container={true}
-                                                                                      spacing={8}
+                                                                                      spacing={1}
                                                                                     >
                                                                                       <Grid
                                                                                         alignContent="stretch"
@@ -8696,7 +8696,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                         lg={false}
                                                                                         md={false}
                                                                                         sm={false}
-                                                                                        spacing={8}
+                                                                                        spacing={1}
                                                                                         wrap="wrap"
                                                                                         xl={false}
                                                                                         xs={false}
@@ -10116,7 +10116,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                       <WithStyles(Grid)
                                                                                         alignItems="center"
                                                                                         container={true}
-                                                                                        spacing={8}
+                                                                                        spacing={1}
                                                                                         style={
                                                                                           Object {
                                                                                             "marginTop": 12,
@@ -10235,7 +10235,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           lg={false}
                                                                                           md={false}
                                                                                           sm={false}
-                                                                                          spacing={8}
+                                                                                          spacing={1}
                                                                                           style={
                                                                                             Object {
                                                                                               "marginTop": 12,
@@ -16405,7 +16405,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   className="Alert-info_outline-182 Alert-common-170"
                                                   container={true}
                                                   justify="center"
-                                                  spacing={24}
+                                                  spacing={3}
                                                 >
                                                   <Grid
                                                     alignContent="center"
@@ -16520,7 +16520,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={24}
+                                                    spacing={3}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -17104,7 +17104,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                         onKeyDown={[Function]}
                                                                       >
                                                                         <b>
-                                                                          Add your work to eSpace - 
+                                                                          Add your work to eSpace -
                                                                         </b>
                                                                         We found nothing new for you to claim, but you may add a work any time.
                                                                       </div>

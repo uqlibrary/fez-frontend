@@ -148,7 +148,7 @@ export class GrantListEditorFormClass extends PureComponent {
         return (
             <React.Fragment>
                 {description}
-                <Grid container spacing={8} style={{ marginTop: 8 }}>
+                <Grid container spacing={1} style={{ marginTop: 8 }}>
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth

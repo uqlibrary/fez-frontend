@@ -81,7 +81,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -144,7 +144,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -196,7 +196,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -344,7 +344,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -407,7 +407,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -459,7 +459,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -607,7 +607,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -670,7 +670,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -716,7 +716,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -858,7 +858,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -921,7 +921,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -973,7 +973,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -1121,7 +1121,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -1185,7 +1185,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -1277,7 +1277,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -1420,7 +1420,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -1484,7 +1484,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -1530,7 +1530,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -1673,7 +1673,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -1737,7 +1737,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -1783,7 +1783,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,
@@ -1926,7 +1926,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -2006,7 +2006,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       container={true}
@@ -2070,7 +2070,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
@@ -2116,7 +2116,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
       style={
         Object {
           "marginTop": 24,

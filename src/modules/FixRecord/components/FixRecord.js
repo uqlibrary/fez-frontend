@@ -168,7 +168,7 @@ export default class FixRecord extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
                                 <PublicationCitation publication={this.props.recordToFix} />
@@ -202,7 +202,7 @@ export default class FixRecord extends PureComponent {
                                 />
                                 <Grid item xs={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                        <Grid container spacing={16}>
+                                        <Grid container spacing={2}>
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
@@ -235,7 +235,7 @@ export default class FixRecord extends PureComponent {
                                             title={txtFixForm.contentIndicators.title}
                                             help={txtFixForm.contentIndicators.help}
                                         >
-                                            <Grid container spacing={24}>
+                                            <Grid container spacing={3}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txtFixForm.contentIndicators.description}</Typography>
                                                 </Grid>
@@ -289,7 +289,7 @@ export default class FixRecord extends PureComponent {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs />
                         <Grid item>
                             <Button

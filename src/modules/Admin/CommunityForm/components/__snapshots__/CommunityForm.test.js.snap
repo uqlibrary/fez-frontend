@@ -10,7 +10,7 @@ exports[`Collection form test should display successfull submission screen 1`] =
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -26,7 +26,7 @@ exports[`Collection form test should display successfull submission screen 1`] =
           >
             <WithStyles(Grid)
               container={true}
-              spacing={24}
+              spacing={3}
             >
               <WithStyles(Grid)
                 item={true}
@@ -145,7 +145,7 @@ exports[`Collection form test should display successfull submission screen 1`] =
       </WithStyles(Grid)>
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -196,7 +196,7 @@ exports[`Collection form test should render form 1`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -212,7 +212,7 @@ exports[`Collection form test should render form 1`] = `
           >
             <WithStyles(Grid)
               container={true}
-              spacing={24}
+              spacing={3}
             >
               <WithStyles(Grid)
                 item={true}
@@ -321,7 +321,7 @@ exports[`Collection form test should render form 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -368,7 +368,7 @@ exports[`Collection form test should render success panel 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -385,7 +385,7 @@ exports[`Collection form test should render success panel 1`] = `
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}

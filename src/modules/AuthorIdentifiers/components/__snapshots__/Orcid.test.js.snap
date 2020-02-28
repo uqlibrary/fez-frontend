@@ -24,7 +24,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
   />
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -52,7 +52,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <Hidden
             implementation="js"
@@ -110,7 +110,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <Hidden
             implementation="js"
@@ -176,7 +176,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
   />
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -204,7 +204,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <Hidden
             implementation="js"
@@ -262,7 +262,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <Hidden
             implementation="js"
@@ -328,7 +328,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
   />
   <WithStyles(Grid)
     container={true}
-    spacing={24}
+    spacing={3}
   >
     <WithStyles(Grid)
       item={true}
@@ -349,7 +349,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <Hidden
             implementation="js"
@@ -407,7 +407,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <Hidden
             implementation="js"

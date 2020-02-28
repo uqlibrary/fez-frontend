@@ -7,7 +7,7 @@ exports[`AddSection component should render default view 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -18,7 +18,7 @@ exports[`AddSection component should render default view 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -589,7 +589,7 @@ exports[`AddSection component should render default view 1`] = `
             >
               <WithStyles(Grid)
                 container={true}
-                spacing={8}
+                spacing={1}
               >
                 <Hidden
                   implementation="js"
@@ -655,7 +655,7 @@ exports[`AddSection component should render with subtypes 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -666,7 +666,7 @@ exports[`AddSection component should render with subtypes 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1262,7 +1262,7 @@ exports[`AddSection component should render with subtypes 1`] = `
             >
               <WithStyles(Grid)
                 container={true}
-                spacing={8}
+                spacing={1}
               >
                 <Hidden
                   implementation="js"

@@ -20,7 +20,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
   <WithStyles(DialogActions)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
         implementation="js"
@@ -106,7 +106,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
   <WithStyles(DialogActions)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
         implementation="js"
@@ -165,7 +165,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
   <WithStyles(DialogActions)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
         implementation="js"
@@ -238,7 +238,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
   <WithStyles(DialogActions)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
         implementation="js"
@@ -360,7 +360,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
   <WithStyles(DialogActions)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
         implementation="js"
@@ -433,7 +433,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
   <WithStyles(DialogActions)>
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
         implementation="js"

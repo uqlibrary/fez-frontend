@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from 'material-ui-pickers/DatePicker';
+import { KeyboardDatePicker } from '@material-ui/pickers';
 import { withStyles } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
@@ -36,14 +36,13 @@ export class FileUploadEmbargoDate extends PureComponent {
         };
 
         return (
-            <DatePicker
+            <KeyboardDatePicker
                 format={GENERIC_DATE_FORMAT}
                 minDate={this.props.minDate}
                 value={this.props.value ? new Date(this.props.value) : null}
                 onChange={this._onChange}
                 disabled={this.props.disabled}
                 InputProps={inputProps}
-                keyboard
                 allowKeyboardControl
                 autoOk
                 leftArrowIcon={<KeyboardArrowLeft />}

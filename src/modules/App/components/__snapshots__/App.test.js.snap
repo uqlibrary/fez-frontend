@@ -68,7 +68,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -112,7 +112,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -170,7 +170,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -596,7 +596,7 @@ exports[`Application component should determine if it has incomplete works from 
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -640,7 +640,7 @@ exports[`Application component should determine if it has incomplete works from 
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -698,7 +698,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1307,7 +1307,7 @@ exports[`Application component should determine if it has incomplete works from 
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1351,7 +1351,7 @@ exports[`Application component should determine if it has incomplete works from 
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -1409,7 +1409,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1871,7 +1871,7 @@ exports[`Application component should not show orcid alert for a student without
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1915,7 +1915,7 @@ exports[`Application component should not show orcid alert for a student without
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -1973,7 +1973,7 @@ exports[`Application component should not show orcid alert for a student without
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2221,7 +2221,7 @@ exports[`Application component should redirect to login page with correct return
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2265,7 +2265,7 @@ exports[`Application component should redirect to login page with correct return
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -2323,7 +2323,7 @@ exports[`Application component should redirect to login page with correct return
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2745,7 +2745,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2789,7 +2789,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -2847,7 +2847,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3460,7 +3460,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -3504,7 +3504,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -3562,7 +3562,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4056,7 +4056,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -4100,7 +4100,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -4158,7 +4158,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4642,7 +4642,7 @@ exports[`Application component should render app for account with author account
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -4686,7 +4686,7 @@ exports[`Application component should render app for account with author account
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -4744,7 +4744,7 @@ exports[`Application component should render app for account with author account
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -5428,7 +5428,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -5472,7 +5472,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -5530,7 +5530,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6242,7 +6242,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -6286,7 +6286,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -6344,7 +6344,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -7120,7 +7120,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -7164,7 +7164,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -7222,7 +7222,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -7963,7 +7963,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -8007,7 +8007,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -8065,7 +8065,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -8960,7 +8960,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -9004,7 +9004,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -9062,7 +9062,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -9928,7 +9928,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -9972,7 +9972,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -10030,7 +10030,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -10835,7 +10835,7 @@ exports[`Application component should render app for account with fez author wit
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -10851,7 +10851,7 @@ exports[`Application component should render app for account with fez author wit
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -10909,7 +10909,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -11438,7 +11438,7 @@ exports[`Application component should render application with routing for the us
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -11482,7 +11482,7 @@ exports[`Application component should render application with routing for the us
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -11540,7 +11540,7 @@ exports[`Application component should render application with routing for the us
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -11733,7 +11733,7 @@ exports[`Application component should render for anon user 1`] = `
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -11777,7 +11777,7 @@ exports[`Application component should render for anon user 1`] = `
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -11835,7 +11835,7 @@ exports[`Application component should render for anon user 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -12103,7 +12103,7 @@ exports[`Application component should render thesis submission for HDR without m
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -12119,7 +12119,7 @@ exports[`Application component should render thesis submission for HDR without m
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -12177,7 +12177,7 @@ exports[`Application component should render thesis submission for HDR without m
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -12392,7 +12392,7 @@ exports[`Application component should show orcid alert for a student without an 
         container={true}
         direction="row"
         justify="flex-start"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -12436,7 +12436,7 @@ exports[`Application component should show orcid alert for a student without an 
             alignItems="center"
             container={true}
             justify="flex-start"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <Hidden
@@ -12494,7 +12494,7 @@ exports[`Application component should show orcid alert for a student without an 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -14457,7 +14457,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         container={true}
                                         direction="row"
                                         justify="flex-start"
-                                        spacing={8}
+                                        spacing={1}
                                         wrap="nowrap"
                                       >
                                         <Grid
@@ -14572,7 +14572,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                           lg={false}
                                           md={false}
                                           sm={false}
-                                          spacing={8}
+                                          spacing={1}
                                           wrap="nowrap"
                                           xl={false}
                                           xs={false}
@@ -15580,7 +15580,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     alignItems="center"
                                                     container={true}
                                                     justify="flex-start"
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="nowrap"
                                                   >
                                                     <Grid
@@ -15695,7 +15695,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       lg={false}
                                                       md={false}
                                                       sm={false}
-                                                      spacing={16}
+                                                      spacing={2}
                                                       wrap="nowrap"
                                                       xl={false}
                                                       xs={false}
@@ -17003,7 +17003,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       }
                                                                       title="Click to return to the eSpace home page"
                                                                     >
-                                                                      UQ eSpace 
+                                                                      UQ eSpace
                                                                     </a>
                                                                   </h1>
                                                                 </Typography>
@@ -18298,7 +18298,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         className="SimpleSearchComponent-inHeader-206"
                                                                         container={true}
                                                                         direction="row"
-                                                                        spacing={8}
+                                                                        spacing={1}
                                                                         wrap="nowrap"
                                                                       >
                                                                         <Grid
@@ -18414,7 +18414,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           lg={false}
                                                                           md={false}
                                                                           sm={false}
-                                                                          spacing={8}
+                                                                          spacing={1}
                                                                           wrap="nowrap"
                                                                           xl={false}
                                                                           xs={false}
@@ -24614,7 +24614,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   >
                                                     <WithStyles(Grid)
                                                       container={true}
-                                                      spacing={24}
+                                                      spacing={3}
                                                     >
                                                       <Grid
                                                         alignContent="stretch"
@@ -24728,7 +24728,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                         lg={false}
                                                         md={false}
                                                         sm={false}
-                                                        spacing={24}
+                                                        spacing={3}
                                                         wrap="wrap"
                                                         xl={false}
                                                         xs={false}
@@ -26313,7 +26313,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     className="Alert-error-331 Alert-common-325"
                                                                                     container={true}
                                                                                     justify="center"
-                                                                                    spacing={24}
+                                                                                    spacing={3}
                                                                                   >
                                                                                     <Grid
                                                                                       alignContent="center"
@@ -26428,7 +26428,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       lg={false}
                                                                                       md={false}
                                                                                       sm={false}
-                                                                                      spacing={24}
+                                                                                      spacing={3}
                                                                                       wrap="wrap"
                                                                                       xl={false}
                                                                                       xs={false}
@@ -26995,7 +26995,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-327 alert-text"
                                                                                                         >
                                                                                                           <b>
-                                                                                                            There has been an error - 
+                                                                                                            There has been an error -
                                                                                                           </b>
                                                                                                           Trending publications are temporarily unavailable
                                                                                                         </div>
@@ -27154,7 +27154,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               >
                                                                 <WithStyles(Grid)
                                                                   container={true}
-                                                                  spacing={24}
+                                                                  spacing={3}
                                                                 >
                                                                   <Grid
                                                                     alignContent="stretch"
@@ -27268,7 +27268,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     lg={false}
                                                                     md={false}
                                                                     sm={false}
-                                                                    spacing={24}
+                                                                    spacing={3}
                                                                     wrap="wrap"
                                                                     xl={false}
                                                                     xs={false}

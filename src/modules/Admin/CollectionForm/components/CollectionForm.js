@@ -59,14 +59,14 @@ export default class CollectionForm extends Component {
         if (this.props.submitSucceeded && this.props.newRecord) {
             return (
                 <StandardPage title={txt.title}>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.afterSubmitTitle}>
                                 <Typography>{txt.afterSubmitText}</Typography>
                             </StandardCard>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={2}>
                         <Grid item xs />
                         <Grid item>
                             <Button variant={'contained'} fullWidth onClick={this.reloadForm}>
@@ -102,10 +102,10 @@ export default class CollectionForm extends Component {
                         when={this.props.dirty && !this.props.submitSucceeded}
                         txt={txt.cancelWorkflowConfirmation}
                     />
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.title} help={txt.help}>
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={CommunitiesSelectField}
@@ -124,7 +124,7 @@ export default class CollectionForm extends Component {
                             this.props.formValues.get('fez_record_search_key_ismemberof').length > 0 && (
                             <Grid item xs={12}>
                                 <StandardCard title={txt.details.title} help={txt.details.help}>
-                                    <Grid container spacing={24}>
+                                    <Grid container spacing={3}>
                                         <Grid item xs={12}>
                                             <Field
                                                 component={TextField}
@@ -176,7 +176,7 @@ export default class CollectionForm extends Component {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={2}>
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm={'auto'}>
                             <Button

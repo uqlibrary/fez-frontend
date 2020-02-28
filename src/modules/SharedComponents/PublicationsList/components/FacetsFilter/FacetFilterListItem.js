@@ -11,8 +11,8 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
     listItemGutters: {
-        paddingLeft: theme.spacing.unit,
-        paddingRight: theme.spacing.unit,
+        paddingLeft: theme.spacing(),
+        paddingRight: theme.spacing(),
     },
     listText: {
         fontWeight: 400,

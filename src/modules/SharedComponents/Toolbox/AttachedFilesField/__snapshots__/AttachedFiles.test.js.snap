@@ -20,7 +20,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -129,7 +129,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-0"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -139,7 +139,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -336,7 +336,7 @@ exports[`AttachedFiles component should render default view 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -430,7 +430,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-0"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -440,7 +440,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -594,7 +594,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-1"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -604,7 +604,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -757,7 +757,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-2"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -767,7 +767,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -920,7 +920,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-3"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -930,7 +930,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -1083,7 +1083,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-4"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -1093,7 +1093,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -1246,7 +1246,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-5"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -1256,7 +1256,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -1409,7 +1409,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-6"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -1419,7 +1419,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)
@@ -1572,7 +1572,7 @@ exports[`AttachedFiles component should render default view 1`] = `
       <WithStyles(Grid)
         container={true}
         key="file-7"
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -1582,7 +1582,7 @@ exports[`AttachedFiles component should render default view 1`] = `
             alignItems="center"
             container={true}
             direction="row"
-            spacing={16}
+            spacing={2}
             wrap="nowrap"
           >
             <WithStyles(Grid)

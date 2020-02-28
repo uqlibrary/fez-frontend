@@ -275,7 +275,7 @@ export class ContributorsEditor extends PureComponent {
 
         return (
             <div className={'contributorEditor'}>
-                <Grid container spacing={8}>
+                <Grid container spacing={1}>
                     {errorMessage && (
                         <Grid item xs={12}>
                             <Alert title={this.props.locale.errorTitle} message={errorMessage} type="warning" />
@@ -288,7 +288,7 @@ export class ContributorsEditor extends PureComponent {
                     )}
                 </Grid>
                 {contributors.length > 0 && (
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <List style={{ marginBottom: 0 }}>
                                 <ContributorRowHeader

@@ -72,7 +72,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     alignContent="flex-end"
     alignItems="flex-end"
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -172,7 +172,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     alignContent="flex-end"
     alignItems="flex-end"
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -359,7 +359,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     alignContent="flex-end"
     alignItems="flex-end"
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -1219,7 +1219,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                     alignContent="flex-end"
                     alignItems="flex-end"
                     container={true}
-                    spacing={16}
+                    spacing={2}
                   >
                     <Grid
                       alignContent="flex-end"
@@ -1333,7 +1333,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={16}
+                      spacing={2}
                       wrap="wrap"
                       xl={false}
                       xs={false}
@@ -3157,7 +3157,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                     alignContent="flex-end"
                     alignItems="flex-end"
                     container={true}
-                    spacing={16}
+                    spacing={2}
                   >
                     <Grid
                       alignContent="flex-end"
@@ -3271,7 +3271,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={16}
+                      spacing={2}
                       wrap="wrap"
                       xl={false}
                       xs={false}
@@ -4748,7 +4748,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                     alignContent="flex-end"
                     alignItems="flex-end"
                     container={true}
-                    spacing={16}
+                    spacing={2}
                   >
                     <Grid
                       alignContent="flex-end"
@@ -4862,7 +4862,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={16}
+                      spacing={2}
                       wrap="wrap"
                       xl={false}
                       xs={false}
@@ -6077,7 +6077,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                     alignContent="flex-end"
                     alignItems="flex-end"
                     container={true}
-                    spacing={16}
+                    spacing={2}
                   >
                     <Grid
                       alignContent="flex-end"
@@ -6191,7 +6191,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={16}
+                      spacing={2}
                       wrap="wrap"
                       xl={false}
                       xs={false}
@@ -7368,7 +7368,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                     alignContent="flex-end"
                     alignItems="flex-end"
                     container={true}
-                    spacing={16}
+                    spacing={2}
                   >
                     <Grid
                       alignContent="flex-end"
@@ -7482,7 +7482,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                       lg={false}
                       md={false}
                       sm={false}
-                      spacing={16}
+                      spacing={2}
                       wrap="wrap"
                       xl={false}
                       xs={false}

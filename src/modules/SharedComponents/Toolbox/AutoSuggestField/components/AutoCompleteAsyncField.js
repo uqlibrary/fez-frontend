@@ -37,7 +37,7 @@ export const styles = theme => ({
         flexWrap: 'unset',
     },
     chip: {
-        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
+        margin: `${theme.spacing() / 2}px ${theme.spacing() / 4}px`,
     },
 });
 
@@ -283,7 +283,7 @@ export class AutoCompleteAsyncField extends Component {
                     }) => {
                         return (
                             <div className={classes.container}>
-                                <Grid container spacing={16} alignItems={'flex-end'} alignContent={'flex-end'}>
+                                <Grid container spacing={2} alignItems={'flex-end'} alignContent={'flex-end'}>
                                     <Grid item xs>
                                         {this.renderInput({
                                             fullWidth: true,
@@ -353,6 +353,8 @@ export class AutoCompleteAsyncField extends Component {
                                                 style={{
                                                     width: this.textInputRef ? this.textInputRef.clientWidth : null,
                                                 }}
+                                                variant="elevation"
+                                                elevation={1}
                                             >
                                                 {itemsList
                                                     .filter(suggestion =>

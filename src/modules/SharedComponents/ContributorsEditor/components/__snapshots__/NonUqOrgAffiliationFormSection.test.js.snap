@@ -3,7 +3,7 @@
 exports[`NonUqOrgAffiliationFormSection tests  should render component with both values 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}
@@ -102,7 +102,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
 exports[`NonUqOrgAffiliationFormSection tests  should render component with defaults 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}
@@ -201,7 +201,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
 exports[`NonUqOrgAffiliationFormSection tests  should render component with organisation affiliation type value 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}
@@ -300,7 +300,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
 exports[`NonUqOrgAffiliationFormSection tests  should render component with organisation affiliation value 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}

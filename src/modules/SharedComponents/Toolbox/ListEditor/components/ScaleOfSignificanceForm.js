@@ -65,7 +65,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
     } = locale;
 
     return (
-        <Grid container spacing={16} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center">
             <Grid item xs={12}>
                 <Alert {...authorOrderAlert} />
             </Grid>

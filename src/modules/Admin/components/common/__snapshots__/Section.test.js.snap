@@ -12,7 +12,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Memo()
         groups={
@@ -43,7 +43,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
 exports[`Section component should render default view 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <Memo()
     disabled={false}
@@ -56,7 +56,7 @@ exports[`Section component should render default view 1`] = `
 exports[`Section component should render default view 2`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <Memo()
     disabled={false}

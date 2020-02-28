@@ -185,8 +185,8 @@ export class AppClass extends PureComponent {
         const { classes } = this.props;
         if (this.props.accountLoading) {
             return (
-                <Grid container zeroMinWidth className={classes.layoutFill}>
-                    <Grid item xs={12}>
+                <Grid container className={classes.layoutFill}>
+                    <Grid zeroMinWidth item xs={12}>
                         <AppLoader
                             title={locale.global.title}
                             logoImage="largeLogo"
@@ -283,7 +283,7 @@ export class AppClass extends PureComponent {
                     <Toolbar style={{ height: '70px' }}>
                         <Grid
                             container
-                            spacing={8}
+                            spacing={1}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
@@ -307,7 +307,7 @@ export class AppClass extends PureComponent {
                                 </Grid>
                             )}
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
+                                <Grid container spacing={2} alignItems="center" justify="flex-start" wrap={'nowrap'}>
                                     {!this.state.docked && !this.state.menuDrawerOpen && (
                                         <Hidden xsDown>
                                             <Grid item>

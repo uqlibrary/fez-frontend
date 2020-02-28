@@ -102,7 +102,7 @@ export default class MediaPreview extends React.Component {
     MediaPreviewButtons = ({ openOriginal, openWeb, close }) => {
         return (
             <div style={{ padding: 8 }}>
-                <Grid container spacing={16} justify="flex-end" direction="row">
+                <Grid container spacing={2} justify="flex-end" direction="row">
                     {this.props.mediaUrl && (
                         <Grid item xs={12} sm="auto">
                             <Button variant="contained" onClick={this.openFileInNewWindow} color="primary" fullWidth>
@@ -192,7 +192,7 @@ export default class MediaPreview extends React.Component {
                     />
                 )}
                 {isPreviewable && !this.state.imageError && (
-                    <Grid container spacing={32}>
+                    <Grid container spacing={4}>
                         <Grid item xs />
                         <Grid item xs={'auto'}>
                             <img

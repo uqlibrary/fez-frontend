@@ -32,7 +32,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
             thisForm: this.props.formDisplay,
         };
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.thisForm.lookupLabel}>
                         <p>

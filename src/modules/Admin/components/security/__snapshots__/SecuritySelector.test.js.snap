@@ -3,7 +3,7 @@
 exports[`SecuritySelector component should render properly for collection 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}
@@ -37,7 +37,7 @@ exports[`SecuritySelector component should render properly for collection 1`] = 
 exports[`SecuritySelector component should render properly for community 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}
@@ -71,7 +71,7 @@ exports[`SecuritySelector component should render properly for community 1`] = `
 exports[`SecuritySelector component should render properly for record 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}

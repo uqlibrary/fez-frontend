@@ -23,7 +23,7 @@ exports[`InheritedSecurityDetails component should render collections correctly 
   </WithStyles(Typography)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -127,7 +127,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
   </WithStyles(Typography)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -231,7 +231,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
   </WithStyles(Typography)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -331,7 +331,7 @@ exports[`InheritedSecurityDetails component should render collections for record
   </WithStyles(Typography)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -431,7 +431,7 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
   </WithStyles(Typography)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,

@@ -138,15 +138,15 @@ export class MyIncompleteRecordClass extends PureComponent {
                         onAction={this._navigateToDashboard}
                         locale={saveConfirmationLocale}
                     />
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid container spacing={8} className={this.props.classes.GridType}>
+                                <Grid container spacing={1} className={this.props.classes.GridType}>
                                     {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                        <Grid container spacing={16} alignItems="flex-start">
+                                        <Grid container spacing={2} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
                                                 <Typography variant="body2">
                                                     {
@@ -163,9 +163,9 @@ export class MyIncompleteRecordClass extends PureComponent {
                                         </Grid>
                                     )}
                                 </Grid>
-                                <Grid container spacing={8} className={this.props.classes.GridSubType}>
+                                <Grid container spacing={1} className={this.props.classes.GridSubType}>
                                     {!!recordToFix && !!recordToFix.rek_subtype && (
-                                        <Grid container spacing={16} alignItems="flex-start">
+                                        <Grid container spacing={2} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
                                                 <Typography variant="body2">
                                                     {
@@ -252,7 +252,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Hidden smDown>
                             <Grid item xs />
                         </Hidden>

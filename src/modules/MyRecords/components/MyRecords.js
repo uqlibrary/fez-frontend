@@ -168,7 +168,7 @@ export default class MyRecords extends PureComponent {
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage title={txt.pageTitle}>
-                <Grid container spacing={16}>
+                <Grid container spacing={2}>
                     {// first time loading my publications - account hasn't been
                     // loaded or any my publications haven't been loaded
                         !this.state.hasPublications && this.props.loadingPublicationsList && (
@@ -197,7 +197,7 @@ export default class MyRecords extends PureComponent {
                                                 .replace('[recordsTo]', pagingData.to)}
                                         </span>
                                     )}
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {txt.text}
                                         </Grid>

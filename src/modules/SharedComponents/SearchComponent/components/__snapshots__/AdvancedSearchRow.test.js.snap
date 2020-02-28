@@ -4,7 +4,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -13,7 +13,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -262,7 +262,7 @@ exports[`AdvancedSearchRow should render default view 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -716,7 +716,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -725,7 +725,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -974,7 +974,7 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1043,7 +1043,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -1052,7 +1052,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1301,7 +1301,7 @@ exports[`AdvancedSearchRow should render search field row with select field and 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}

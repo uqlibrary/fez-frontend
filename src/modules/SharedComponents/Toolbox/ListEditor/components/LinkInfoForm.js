@@ -63,7 +63,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
     } = locale;
 
     return (
-        <Grid container spacing={16} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
                 <TextField
                     fullWidth

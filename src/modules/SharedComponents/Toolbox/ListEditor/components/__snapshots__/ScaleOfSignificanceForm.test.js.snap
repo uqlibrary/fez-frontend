@@ -5,7 +5,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   alignItems="center"
   container={true}
   display="row"
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}

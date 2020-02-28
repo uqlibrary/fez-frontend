@@ -27,10 +27,10 @@ export default class ConferencePaperForm extends Component {
     render() {
         const txt = formLocale.conferencePaper;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -184,7 +184,7 @@ export default class ConferencePaperForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}

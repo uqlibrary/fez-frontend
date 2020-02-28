@@ -3,7 +3,7 @@
 exports[`Component ThirdPartyLookupForm should display form in minimised view 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -14,7 +14,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -50,7 +50,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
 exports[`Component ThirdPartyLookupForm should display form without a secondary field 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -61,7 +61,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -129,7 +129,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
 exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -140,7 +140,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -208,7 +208,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
 exports[`Component ThirdPartyLookupForm should fire the lookup action when there is a secondary field 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -219,7 +219,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -305,7 +305,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
 exports[`Component ThirdPartyLookupForm should show form with non-minimised form 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -316,7 +316,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -400,7 +400,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
 exports[`Component ThirdPartyLookupForm should submit if fields are valid where no secondary field is required 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -411,7 +411,7 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -479,7 +479,7 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -490,7 +490,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -526,7 +526,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -537,7 +537,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -621,7 +621,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -632,7 +632,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -668,7 +668,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
 exports[`Component ThirdPartyLookupForm should use defaults when locale values are not provided 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -679,7 +679,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -765,7 +765,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
 exports[`Component ThirdPartyLookupForm should use locale values when provided 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -776,7 +776,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
     >
       <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}

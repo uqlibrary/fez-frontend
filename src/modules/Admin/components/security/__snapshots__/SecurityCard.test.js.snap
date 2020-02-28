@@ -3,7 +3,7 @@
 exports[`SecurityCard component should not render data stream security selector for the record if no datastreams found 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -17,14 +17,14 @@ exports[`SecurityCard component should not render data stream security selector 
           <strong>
             Record
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -73,7 +73,7 @@ exports[`SecurityCard component should not render data stream security selector 
 exports[`SecurityCard component should render security card correctly for collection with data stream selector for collection 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -87,14 +87,14 @@ exports[`SecurityCard component should render security card correctly for collec
           <strong>
             Collection
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -109,14 +109,14 @@ exports[`SecurityCard component should render security card correctly for collec
               Object {
                 "cardTitle": [Function],
                 "dataStreamFieldLabel": <span>
-                  Override datastream level policy to apply to the 
+                  Override datastream level policy to apply to the
                   <b>
                     datastream
                   </b>
                    of this PID
                 </span>,
                 "dataStreamSelectedTitle": <span>
-                  Current collection 
+                  Current collection
                   <b>
                     datastream
                   </b>
@@ -142,7 +142,7 @@ exports[`SecurityCard component should render security card correctly for collec
             text={
               Object {
                 "fieldLabel": <span>
-                  Override datastream level policy to apply to the 
+                  Override datastream level policy to apply to the
                   <b>
                     datastream
                   </b>
@@ -150,7 +150,7 @@ exports[`SecurityCard component should render security card correctly for collec
                 </span>,
                 "prompt": "Select a security policy to apply",
                 "selectedTitle": <span>
-                  Current collection 
+                  Current collection
                   <b>
                     datastream
                   </b>
@@ -169,7 +169,7 @@ exports[`SecurityCard component should render security card correctly for collec
 exports[`SecurityCard component should render security card correctly for community 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -183,14 +183,14 @@ exports[`SecurityCard component should render security card correctly for commun
           <strong>
             Community
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -221,7 +221,7 @@ exports[`SecurityCard component should render security card correctly for commun
 exports[`SecurityCard component should render security card correctly for record type 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -235,14 +235,14 @@ exports[`SecurityCard component should render security card correctly for record
           <strong>
             Record
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -297,14 +297,14 @@ exports[`SecurityCard component should render security card correctly for record
           <strong>
             Datastream
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -369,7 +369,7 @@ exports[`SecurityCard component should render security card correctly for record
 exports[`SecurityCard component should render security card correctly for record type if user checks override security 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -383,14 +383,14 @@ exports[`SecurityCard component should render security card correctly for record
           <strong>
             Record
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -480,14 +480,14 @@ exports[`SecurityCard component should render security card correctly for record
           <strong>
             Datastream
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -552,7 +552,7 @@ exports[`SecurityCard component should render security card correctly for record
 exports[`SecurityCard component should render security card with disabled inputs 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={2}
 >
   <WithStyles(Grid)
     item={true}
@@ -566,14 +566,14 @@ exports[`SecurityCard component should render security card with disabled inputs
           <strong>
             Record
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -663,14 +663,14 @@ exports[`SecurityCard component should render security card with disabled inputs
           <strong>
             Datastream
           </strong>
-           level security - 
+           level security -
           UQ:123456
         </span>
       }
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}

@@ -41,7 +41,7 @@ export class GrantInformationClass extends PureComponent {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
             <div style={{ padding: 8 }} key={index}>
-                <Grid container spacing={16} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
+                <Grid container spacing={2} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}>
                         <this.GrantInformationCell
                             grantAgencyName={txt.fez_record_search_key_grant_agency}

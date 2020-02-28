@@ -9,7 +9,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -1066,7 +1066,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -1114,7 +1114,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -1135,7 +1135,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1185,7 +1185,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -1248,7 +1248,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2013,7 +2013,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -2056,7 +2056,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           <label
             htmlFor="contributorLinking"
           >
-            We were unable to automatically detect who you are from the list of editors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of editors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -2092,7 +2092,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -2153,7 +2153,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -2216,7 +2216,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -3260,7 +3260,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -3301,7 +3301,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -3349,7 +3349,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -3370,7 +3370,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3420,7 +3420,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -3483,7 +3483,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -4241,7 +4241,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           <label
             htmlFor="contributorLinking"
           >
-            We were unable to automatically detect who you are from the list of editors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of editors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -4277,7 +4277,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -4338,7 +4338,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -4401,7 +4401,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -5548,7 +5548,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -5694,7 +5694,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -5742,7 +5742,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -5763,7 +5763,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -5813,7 +5813,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -5876,7 +5876,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -7023,7 +7023,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -7169,7 +7169,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -7217,7 +7217,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -7238,7 +7238,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -7288,7 +7288,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -7351,7 +7351,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -8498,7 +8498,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -8644,7 +8644,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -8692,7 +8692,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -8713,7 +8713,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -8763,7 +8763,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -8826,7 +8826,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -9973,7 +9973,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -10119,7 +10119,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -10167,7 +10167,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -10188,7 +10188,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -10238,7 +10238,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -10301,7 +10301,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -11302,7 +11302,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
         <WithStyles(Alert)
           message={
             <span>
-              This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+              This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at
               <a
                 href="mailto:espace@library.uq.edu.au"
               >
@@ -11318,7 +11318,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -11366,7 +11366,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -12528,7 +12528,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -12674,7 +12674,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -12722,7 +12722,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -12743,7 +12743,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -12793,7 +12793,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -12856,7 +12856,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -14003,7 +14003,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -14149,7 +14149,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -14197,7 +14197,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -14218,7 +14218,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -14268,7 +14268,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -14331,7 +14331,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -15478,7 +15478,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -15624,7 +15624,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -15672,7 +15672,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -15693,7 +15693,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -15755,7 +15755,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -15819,7 +15819,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -16966,7 +16966,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -17112,7 +17112,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -17160,7 +17160,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -17181,7 +17181,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -17242,7 +17242,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -17305,7 +17305,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -18452,7 +18452,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -18598,7 +18598,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -18646,7 +18646,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -18667,7 +18667,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -18729,7 +18729,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -18792,7 +18792,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -19939,7 +19939,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           <label
             htmlFor="authorLinking"
           >
-            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below: 
+            We were unable to automatically detect who you are from the list of authors on this work. Please select your name from the list below:
           </label>
           <Field
             authorList={
@@ -20085,7 +20085,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -20133,7 +20133,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -20154,7 +20154,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -20227,7 +20227,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -20290,7 +20290,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -20371,7 +20371,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -20419,7 +20419,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -20440,7 +20440,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -20502,7 +20502,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -20565,7 +20565,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -20642,7 +20642,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -20690,7 +20690,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -20711,7 +20711,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -20773,7 +20773,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -20821,7 +20821,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
   >
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -21919,7 +21919,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
         <WithStyles(Alert)
           message={
             <span>
-              This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+              This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at
               <a
                 href="mailto:espace@library.uq.edu.au"
               >
@@ -21935,7 +21935,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"

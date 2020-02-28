@@ -27,7 +27,7 @@ export default function NonUqOrgAffiliationFormSection({
     });
 
     return (
-        <Grid container spacing={8}>
+        <Grid container spacing={1}>
             <Grid item xs={6}>
                 <TextField
                     required

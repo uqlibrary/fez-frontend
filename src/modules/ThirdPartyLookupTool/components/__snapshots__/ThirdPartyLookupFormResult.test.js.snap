@@ -3,7 +3,7 @@
 exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -14,7 +14,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
     >
       <p>
         primary heading
-         - 
+         -
         dummy UT
       </p>
       <StandardCard
@@ -48,7 +48,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
 exports[`Component ThirdPartyLookupFormResult renders api data when no second field provided 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -59,7 +59,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
     >
       <p>
         pf heading 9
-         - 
+         -
         dummy UT
       </p>
       <StandardCard
@@ -93,7 +93,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
 exports[`Component ThirdPartyLookupFormResult should display a blank when the response is blank 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -104,7 +104,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
     >
       <p>
         primary heading
-         - 
+         -
         dummy UT
       </p>
       <StandardCard
@@ -139,7 +139,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
 exports[`Component ThirdPartyLookupFormResult should display the secondary field when required 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -150,12 +150,12 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
     >
       <p>
         pf heading 10
-         - 
+         -
         dummy UT
       </p>
       <p>
         sf heading 10
-         - 
+         -
         123456789
       </p>
       <StandardCard
@@ -189,7 +189,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
 exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -200,7 +200,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
     >
       <p>
         PF 8
-         - 
+         -
         dummy UT
       </p>
       <StandardCard
@@ -234,7 +234,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
 exports[`Component ThirdPartyLookupFormResult should show locale-defined message when no results 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -245,7 +245,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
     >
       <p>
         primary heading
-         - 
+         -
         dummy UT
       </p>
       <StandardCard
@@ -280,7 +280,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
 exports[`Component ThirdPartyLookupFormResult should use defaults when locale values are not provided 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -291,7 +291,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
     >
       <p>
         primary heading
-         - 
+         -
         dummy UT
       </p>
       <StandardCard

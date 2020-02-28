@@ -8,7 +8,7 @@ import { PolicyDropdown } from './PolicyDropdown';
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
 
 export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName }) => (
-    <Grid container spacing={8}>
+    <Grid container spacing={1}>
         {!!text.description && (
             <Grid item xs={12}>
                 <Typography variant="body2" component="p">

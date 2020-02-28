@@ -20,7 +20,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
     <WithStyles(Grid)
       container={true}
       key="newsItem-0"
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -80,7 +80,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
     <WithStyles(Grid)
       container={true}
       key="newsItem-1"
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -140,7 +140,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
     <WithStyles(Grid)
       container={true}
       key="newsItem-2"
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -208,7 +208,7 @@ exports[`Component NewsFeed should show new count if above set limit 1`] = `
     <WithStyles(Grid)
       container={true}
       key="newsItem-0"
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}

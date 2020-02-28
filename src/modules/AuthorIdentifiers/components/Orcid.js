@@ -232,7 +232,7 @@ export default class Orcid extends Component {
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDialogBox onRef={this._setAuthoriseConfirmation} locale={txt.grantAccessConfirmation} />
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12}>
                         {this.getAlert({
                             submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
@@ -248,7 +248,7 @@ export default class Orcid extends Component {
                             <Typography component={'span'} gutterBottom>
                                 {txt.linkOrcid.description}
                             </Typography>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Hidden xsDown>
                                     <Grid item xs />
                                 </Hidden>
@@ -270,7 +270,7 @@ export default class Orcid extends Component {
                             <Typography component={'span'} gutterBottom>
                                 {txt.createOrcid.description}
                             </Typography>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Hidden xsDown>
                                     <Grid item xs />
                                 </Hidden>

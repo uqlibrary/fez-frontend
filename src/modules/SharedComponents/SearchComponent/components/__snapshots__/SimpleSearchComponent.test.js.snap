@@ -62,7 +62,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
     <WithStyles(Grid)
       alignItems="center"
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -165,7 +165,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
     <WithStyles(Grid)
       alignItems="center"
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -257,7 +257,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
         className={Object {}}
         container={true}
         direction="row"
-        spacing={8}
+        spacing={1}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -340,7 +340,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
     <WithStyles(Grid)
       alignItems="center"
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}

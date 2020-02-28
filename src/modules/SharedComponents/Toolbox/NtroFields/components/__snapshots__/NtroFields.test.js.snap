@@ -38,7 +38,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -155,7 +155,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -264,7 +264,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click
-               
+
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -287,7 +287,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -302,7 +302,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             name="ntroAbstract"
             title={
               <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -343,11 +343,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -418,11 +418,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -1092,7 +1092,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -1201,7 +1201,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             </h3>
             <p>
               For more information about each quality indicator option, click
-               
+
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -1224,7 +1224,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1239,7 +1239,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             name="ntroAbstract"
             title={
               <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -1280,11 +1280,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -1355,11 +1355,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -2007,7 +2007,7 @@ exports[`Component NtroFields should render default view 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click
-               
+
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -2030,7 +2030,7 @@ exports[`Component NtroFields should render default view 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -2045,7 +2045,7 @@ exports[`Component NtroFields should render default view 1`] = `
             name="ntroAbstract"
             title={
               <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -2086,11 +2086,11 @@ exports[`Component NtroFields should render default view 1`] = `
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -2161,11 +2161,11 @@ exports[`Component NtroFields should render default view 1`] = `
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -2835,7 +2835,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -2944,7 +2944,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click
-               
+
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -2967,7 +2967,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -2982,7 +2982,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             name="ntroAbstract"
             title={
               <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -3023,11 +3023,11 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -3098,11 +3098,11 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -3752,7 +3752,7 @@ exports[`Component NtroFields should show significance field even if contributio
     >
       <WithStyles(Grid)
         container={true}
-        spacing={8}
+        spacing={1}
       >
         <WithStyles(Grid)
           item={true}
@@ -3822,7 +3822,7 @@ exports[`Component NtroFields should show significance field even if contributio
             </h3>
             <p>
               For more information about each quality indicator option, click
-               
+
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -3845,7 +3845,7 @@ exports[`Component NtroFields should show significance field even if contributio
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -3860,7 +3860,7 @@ exports[`Component NtroFields should show significance field even if contributio
             name="ntroAbstract"
             title={
               <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -3901,11 +3901,11 @@ exports[`Component NtroFields should show significance field even if contributio
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>
@@ -3976,11 +3976,11 @@ exports[`Component NtroFields should show significance field even if contributio
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAddText": <span>
-                      Please press 
+                      Please press
                       <b>
                         ENTER
                       </b>
-                       or click 
+                       or click
                       <b>
                         ADD
                       </b>

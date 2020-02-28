@@ -52,7 +52,7 @@ export class DashboardResearcherIdsClass extends React.Component {
         const txt = locale.pages.dashboard.header.dashboardResearcherIds;
         const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
         return (
-            <Grid container spacing={8} alignItems={'center'} style={{ marginTop: 12 }}>
+            <Grid container spacing={1} alignItems={'center'} style={{ marginTop: 12 }}>
                 {values &&
                     Object.keys(values).map((item, index) => (
                         <Grid item key={index}>

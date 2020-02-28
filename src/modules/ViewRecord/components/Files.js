@@ -373,7 +373,7 @@ export class FilesClass extends Component {
                             container
                             direction="row"
                             alignItems="center"
-                            spacing={16}
+                            spacing={2}
                             className={this.props.classes.header}
                         >
                             <Grid item xs={1}>
@@ -410,7 +410,7 @@ export class FilesClass extends Component {
                                 direction="row"
                                 alignItems="center"
                                 key={`file-${index}`}
-                                spacing={16}
+                                spacing={2}
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >

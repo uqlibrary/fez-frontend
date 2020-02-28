@@ -3,7 +3,7 @@
 exports[`CreativeWorkForm renders  component 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -14,7 +14,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -148,7 +148,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
-             
+
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -179,15 +179,15 @@ exports[`CreativeWorkForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of authors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of authors below
                   </b>
@@ -215,8 +215,8 @@ exports[`CreativeWorkForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -270,7 +270,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -328,7 +328,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
 exports[`CreativeWorkForm renders  should show architectural content correctly 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -339,7 +339,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -482,7 +482,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
-             
+
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -513,15 +513,15 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of designers below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of designers below
                   </b>
@@ -549,8 +549,8 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -679,7 +679,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
           "fields": Object {
             "abstract": Object {
               "label": <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -746,7 +746,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -804,7 +804,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
 exports[`CreativeWorkForm renders  should show content for a random (other) NTRO type correctly (base case) 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -815,7 +815,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -949,7 +949,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
-             
+
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -981,15 +981,15 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of authors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of authors below
                   </b>
@@ -1017,8 +1017,8 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -1148,7 +1148,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
           "fields": Object {
             "abstract": Object {
               "label": <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -1215,7 +1215,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1273,7 +1273,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
 exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -1284,7 +1284,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1398,7 +1398,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
-             
+
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -1430,15 +1430,15 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     add to a list of authors below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
-                  Please 
+                  Please
                   <b>
                     add to a list of authors below
                   </b>
@@ -1466,8 +1466,8 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+
+                  - Please
                   <b>
                     select your name
                   </b>
@@ -1597,7 +1597,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
           "fields": Object {
             "abstract": Object {
               "label": <span>
-                Abstract/Description* 
+                Abstract/Description*
                 <span
                   style={
                     Object {
@@ -1664,7 +1664,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
     >
       <WithStyles(Grid)
         container={true}
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}

@@ -10,7 +10,7 @@ import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, disabled }) => {
     return (
         <div style={{ padding: 8 }}>
-            <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
+            <Grid container spacing={2} wrap={'nowrap'} alignItems={'flex-end'}>
                 <Grid item xs={4}>
                     <TextField
                         type="number"

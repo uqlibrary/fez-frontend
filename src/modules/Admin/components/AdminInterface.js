@@ -20,7 +20,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import ScrollToSection from './ScrollToSection';
-import { useTabbedContext, useRecordContext /* , ScrollToSectionContext */ } from 'context';
+import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
@@ -204,8 +204,8 @@ export const AdminInterface = ({
                                         value={currentTabValue}
                                         variant="fullWidth"
                                         style={{
-                                            marginRight: -56,
-                                            marginLeft: -56,
+                                            marginRight: -40,
+                                            marginLeft: -40,
                                         }}
                                         classes={{
                                             indicator: classes.tabIndicator,
@@ -252,7 +252,7 @@ export const AdminInterface = ({
                                 .map(renderTabContainer)
                             : renderTabContainer(currentTabValue)}
                     </Grid>
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         {alertProps.current && (
                             <Grid item xs={12}>
                                 <div style={{ height: 16 }} />
@@ -260,7 +260,7 @@ export const AdminInterface = ({
                             </Grid>
                         )}
                         <Grid item xs={12}>
-                            <Grid container spacing={8} style={{ marginTop: 8 }}>
+                            <Grid container spacing={1} style={{ marginTop: 8 }}>
                                 <Grid item xs={12} sm={2}>
                                     <Button
                                         style={{ whiteSpace: 'nowrap' }}

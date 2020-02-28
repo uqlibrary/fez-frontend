@@ -13,7 +13,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     alignItems="center"
     container={true}
     direction="row"
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -59,7 +59,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     alignItems="center"
     container={true}
     direction="row"
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -129,7 +129,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     alignItems="center"
     container={true}
     direction="row"
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -225,7 +225,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     alignItems="center"
     container={true}
     direction="row"
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}

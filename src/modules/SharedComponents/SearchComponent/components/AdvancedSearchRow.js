@@ -91,10 +91,10 @@ export class AdvancedSearchRow extends PureComponent {
         const { classes } = this.props;
         return (
             <React.Fragment>
-                <Grid container spacing={16}>
+                <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                         {/* Select and combiner */}
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item className={classes.autoWidth} style={{ minWidth: 200 }}>
                                 <FormControl fullWidth>
                                     <Select
@@ -148,7 +148,7 @@ export class AdvancedSearchRow extends PureComponent {
                         {/* Select and combiner */}
                     </Grid>
                     <Grid item xs={12} md={6} className={classes.mobileInputRow}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item className={classes.autoWidth} zeroMinWidth>
                                 <AdvancedSearchRowInput
                                     {...this.props}

@@ -25,7 +25,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
   <WithStyles(Grid)
     alignItems="center"
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -96,7 +96,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
   <WithStyles(Grid)
     alignItems="center"
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -196,7 +196,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
   <WithStyles(Grid)
     alignItems="center"
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -255,7 +255,7 @@ exports[`ListRow renders  should move row down 1`] = `
   <WithStyles(Grid)
     alignItems="center"
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}
@@ -341,7 +341,7 @@ exports[`ListRow renders  should move row up 1`] = `
   <WithStyles(Grid)
     alignItems="center"
     container={true}
-    spacing={8}
+    spacing={1}
   >
     <WithStyles(Grid)
       item={true}

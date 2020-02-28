@@ -59,7 +59,7 @@ export class FileUploadRowHeader extends PureComponent {
                         container
                         direction="row"
                         alignItems="center"
-                        spacing={8}
+                        spacing={1}
                         className={classes.header}
                         gutter={8}
                     >

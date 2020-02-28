@@ -244,7 +244,7 @@ class SearchRecords extends PureComponent {
         };
         return (
             <StandardPage className="page-search-records">
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard className="searchComponent" noHeader>
                             <SearchComponent
@@ -286,7 +286,7 @@ class SearchRecords extends PureComponent {
                         (!!this.props.publicationsList && this.props.publicationsList.length > 0)) && (
                             <Grid item xs sm md={9}>
                                 <StandardCard noHeader>
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
                                                 <span>

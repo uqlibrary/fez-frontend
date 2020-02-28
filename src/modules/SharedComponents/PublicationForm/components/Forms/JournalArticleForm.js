@@ -30,10 +30,10 @@ export default class JournalArticleForm extends Component {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -80,7 +80,7 @@ export default class JournalArticleForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Typography>{txt.authors.description}</Typography>
                                 <Field
@@ -129,7 +129,7 @@ export default class JournalArticleForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={6} sm={3}>
                                 <Field
                                     component={TextField}

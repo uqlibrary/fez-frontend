@@ -46,7 +46,7 @@ exports[`Component FileUploadRowHeader should render with access condition and e
       container={true}
       direction="row"
       gutter={8}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -148,7 +148,7 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
       container={true}
       direction="row"
       gutter={8}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}
@@ -272,7 +272,7 @@ exports[`Component FileUploadRowHeader should render without access condition ev
       container={true}
       direction="row"
       gutter={8}
-      spacing={8}
+      spacing={1}
     >
       <WithStyles(Grid)
         item={true}

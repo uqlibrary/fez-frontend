@@ -176,8 +176,8 @@ export class AdvancedSearchComponent extends PureComponent {
 
         return (
             <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{ padding: 12 }}>
-                <Grid container spacing={24}>
-                    <Grid container spacing={40}>
+                <Grid container spacing={3}>
+                    <Grid container spacing={5}>
                         <Grid item style={{ flexGrow: 1, width: 1 }}>
                             <Typography variant="h5">{txt.advancedSearch.title}</Typography>
                         </Grid>
@@ -223,7 +223,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                         ))}
                                 </Grid>
                                 <Grid item xs={12} md={4} className={classes.sideBar}>
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <DocumentTypeMultipleField
                                                 docTypes={this.props.docTypes}
@@ -283,7 +283,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid container spacing={16} style={{ marginTop: 24 }}>
+                            <Grid container spacing={2} style={{ marginTop: 24 }}>
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
                                         variant={'contained'}

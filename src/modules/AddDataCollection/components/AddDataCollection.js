@@ -95,7 +95,7 @@ export default class AddDataCollection extends Component {
         });
         const saveConfirmationLocale = { ...locale.pages.addDataset.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     {this.props.newRecordFileUploadingOrIssueError && (
                         <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
@@ -113,10 +113,10 @@ export default class AddDataCollection extends Component {
                         onCancelAction={this._restartWorkflow}
                         locale={saveConfirmationLocale}
                     />
-                    <Grid container spacing={24} className={'DataCollection'}>
+                    <Grid container spacing={3} className={'DataCollection'}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.agreement.title}>
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={DepositAgreementField}
@@ -132,7 +132,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.dataset.title}>
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12} sm={12}>
                                         <Field
                                             component={TextField}
@@ -263,7 +263,7 @@ export default class AddDataCollection extends Component {
                                 title={txt.information.accessAndLicensing.title}
                                 help={txt.information.accessAndLicensing.help}
                             >
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={AccessSelectorField}
@@ -302,7 +302,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.project.title}>
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={TextField}
@@ -357,7 +357,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.optionalDatasetDetails.title}>
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
@@ -469,7 +469,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.additionalNotes.title}>
-                                <Grid container spacing={16}>
+                                <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={TextField}
@@ -514,7 +514,7 @@ export default class AddDataCollection extends Component {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={2}>
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm="auto">
                             <Button

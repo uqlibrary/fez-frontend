@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // MUI 1
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
-import HelpOutline from '@material-ui/icons/HelpOutline';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
 
@@ -26,12 +26,12 @@ export class HelpIcon extends Component {
         tooltip: PropTypes.string,
         onClick: PropTypes.func,
         classes: PropTypes.object,
-        IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
+        IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.Component]),
     };
 
     static defaultProps = {
         tooltip: 'Click for more information',
-        IconComponent: HelpOutline,
+        IconComponent: HelpOutlineIcon,
     };
 
     setDrawerContent = () => {

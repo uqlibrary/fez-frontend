@@ -4,7 +4,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -647,7 +647,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
               >
                 <WithStyles(Grid)
                   container={true}
-                  spacing={8}
+                  spacing={1}
                   style={
                     Object {
                       "marginTop": 8,
@@ -766,7 +766,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                     lg={false}
                     md={false}
                     sm={false}
-                    spacing={8}
+                    spacing={1}
                     style={
                       Object {
                         "marginTop": 8,
@@ -4076,7 +4076,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
           >
             <WithStyles(Grid)
               container={true}
-              spacing={8}
+              spacing={1}
               style={
                 Object {
                   "marginTop": 8,
@@ -4195,7 +4195,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                 lg={false}
                 md={false}
                 sm={false}
-                spacing={8}
+                spacing={1}
                 style={
                   Object {
                     "marginTop": 8,
@@ -6945,7 +6945,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -7086,7 +7086,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,
@@ -7232,7 +7232,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
 <Fragment>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,

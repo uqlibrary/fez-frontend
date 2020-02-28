@@ -52,7 +52,7 @@ export class ListRowHeader extends Component {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                <Grid container alignItems="center" spacing={16} className={classes.header}>
+                <Grid container alignItems="center" spacing={2} className={classes.header}>
                     <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
                         <Typography variant="caption">{nameColumn}</Typography>
                     </Grid>

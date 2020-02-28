@@ -25,7 +25,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
 <WithStyles(Grid)
   container={true}
   id="myTrendingPublications"
-  spacing={24}
+  spacing={3}
 >
   <WithStyles(Grid)
     item={true}
@@ -34,7 +34,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
     <WithStyles(Grid)
       container={true}
       key="0"
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -909,7 +909,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
     <WithStyles(Grid)
       container={true}
       key="1"
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -1865,7 +1865,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
     <WithStyles(Grid)
       container={true}
       key="2"
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}

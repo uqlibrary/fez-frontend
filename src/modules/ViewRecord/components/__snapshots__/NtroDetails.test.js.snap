@@ -2992,7 +2992,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -3107,7 +3107,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -4954,7 +4954,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -5069,7 +5069,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -6923,7 +6923,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -7038,7 +7038,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -8896,7 +8896,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -9011,7 +9011,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -10865,7 +10865,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -10980,7 +10980,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -12316,7 +12316,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -12431,7 +12431,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -13765,7 +13765,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -13880,7 +13880,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -15213,7 +15213,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -15328,7 +15328,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -16652,7 +16652,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -16767,7 +16767,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -18091,7 +18091,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -18206,7 +18206,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -19520,15 +19520,15 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                 Array [
                                                   <span>
                                                     English
-                                                    , 
+                                                    ,
                                                   </span>,
                                                   <span>
                                                     Elamite
-                                                    , 
+                                                    ,
                                                   </span>,
                                                   <span>
                                                     Egyptian (Ancient)
-                                                    , 
+                                                    ,
                                                   </span>,
                                                   <span>
                                                     Dutch
@@ -19548,7 +19548,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -19663,7 +19663,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -20964,19 +20964,19 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                     key="0"
                                                                   >
                                                                     English
-                                                                    , 
+                                                                    ,
                                                                   </span>
                                                                   <span
                                                                     key="1"
                                                                   >
                                                                     Elamite
-                                                                    , 
+                                                                    ,
                                                                   </span>
                                                                   <span
                                                                     key="2"
                                                                   >
                                                                     Egyptian (Ancient)
-                                                                    , 
+                                                                    ,
                                                                   </span>
                                                                   <span
                                                                     key="3"
@@ -21009,7 +21009,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -21124,7 +21124,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -22448,7 +22448,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   alignItems="flex-start"
                                                   className="NtroDetailsClass-gridRow-1"
                                                   container={true}
-                                                  spacing={16}
+                                                  spacing={2}
                                                 >
                                                   <Grid
                                                     alignContent="stretch"
@@ -22563,7 +22563,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                     lg={false}
                                                     md={false}
                                                     sm={false}
-                                                    spacing={16}
+                                                    spacing={2}
                                                     wrap="wrap"
                                                     xl={false}
                                                     xs={false}
@@ -23989,15 +23989,15 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24121,15 +24121,15 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24239,15 +24239,15 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24361,15 +24361,15 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24483,15 +24483,15 @@ exports[`NtroDetails  renders component as expected 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24595,15 +24595,15 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24701,15 +24701,15 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24819,15 +24819,15 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -24947,15 +24947,15 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -25061,15 +25061,15 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -25213,15 +25213,15 @@ exports[`NtroDetails  should render component with record 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch
@@ -25429,15 +25429,15 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
         Array [
           <span>
             English
-            , 
+            ,
           </span>,
           <span>
             Elamite
-            , 
+            ,
           </span>,
           <span>
             Egyptian (Ancient)
-            , 
+            ,
           </span>,
           <span>
             Dutch

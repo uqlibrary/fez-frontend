@@ -6,7 +6,7 @@ exports[`myDatasets test renders active filters 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -16,7 +16,7 @@ exports[`myDatasets test renders active filters 1`] = `
         text={
           <div>
             We were unable to find any results. You may be able to
-             
+
             <a
               href="/data-collections/add"
             >
@@ -29,7 +29,7 @@ exports[`myDatasets test renders active filters 1`] = `
       >
         <div>
           We were unable to find any results. You may be able to
-           
+
           <a
             href="/data-collections/add"
           >
@@ -49,7 +49,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -60,18 +60,18 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records. 
+          Displaying records 1 to 2 of 2 total records.
         </span>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
             xs={12}
           >
             <span>
-              Add to this list by 
+              Add to this list by
               <a
                 href="/data-collections/add"
               >
@@ -173,7 +173,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -184,18 +184,18 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records. 
+          Displaying records 1 to 2 of 2 total records.
         </span>
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
             xs={12}
           >
             <span>
-              Add to this list by 
+              Add to this list by
               <a
                 href="/data-collections/add"
               >
@@ -405,7 +405,7 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
 >
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -425,7 +425,7 @@ exports[`myDatasets test renders loading screen while loading publications while
 >
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -437,14 +437,14 @@ exports[`myDatasets test renders loading screen while loading publications while
       >
         <WithStyles(Grid)
           container={true}
-          spacing={16}
+          spacing={2}
         >
           <WithStyles(Grid)
             item={true}
             xs={12}
           >
             <span>
-              Add to this list by 
+              Add to this list by
               <a
                 href="/data-collections/add"
               >
@@ -516,7 +516,7 @@ exports[`myDatasets test renders no results 1`] = `
 >
   <WithStyles(Grid)
     container={true}
-    spacing={16}
+    spacing={2}
   >
     <WithStyles(Grid)
       item={true}
@@ -526,7 +526,7 @@ exports[`myDatasets test renders no results 1`] = `
         text={
           <div>
             We were unable to find any results. You may be able to
-             
+
             <a
               href="/data-collections/add"
             >
@@ -539,7 +539,7 @@ exports[`myDatasets test renders no results 1`] = `
       >
         <div>
           We were unable to find any results. You may be able to
-           
+
           <a
             href="/data-collections/add"
           >

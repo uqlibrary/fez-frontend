@@ -386,7 +386,7 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 </Grid>
                 {(this.props.showDefaultActions || this.props.customActions) && (
-                    <Grid container spacing={8} className={classes.buttonMargin}>
+                    <Grid container spacing={1} className={classes.buttonMargin}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>

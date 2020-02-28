@@ -49,7 +49,7 @@ export class DashboardAuthorDetails extends PureComponent {
         const { classes } = this.props;
         const areAllCasualPositions = this.areAllCasualPositions(this.props.positions);
         return (
-            <Grid container spacing={8}>
+            <Grid container spacing={1}>
                 <Grid item xs={12}>
                     <Typography variant={'h6'} className={classes.authorDetails}>
                         {this.props.title}&nbsp;{this.props.givenName}&nbsp;{this.props.familyName}

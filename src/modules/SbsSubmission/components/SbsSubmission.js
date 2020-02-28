@@ -88,7 +88,7 @@ export default class SbsSubmission extends Component {
         if (this.props.submitSucceeded) {
             return (
                 <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         {this.props.newRecordFileUploadingOrIssueError ? (
                             <Grid item xs={12}>
                                 <Alert
@@ -133,10 +133,10 @@ export default class SbsSubmission extends Component {
                         onAction={this.props.handleSubmit}
                         locale={formLocale.thesisSubmission.depositConfirmation}
                     />
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.title} help={txt.information.help}>
-                                <Grid container spacing={24}>
+                                <Grid container spacing={3}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={RichEditorField}
@@ -296,7 +296,7 @@ export default class SbsSubmission extends Component {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={2}>
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm={'auto'}>
                             <Button

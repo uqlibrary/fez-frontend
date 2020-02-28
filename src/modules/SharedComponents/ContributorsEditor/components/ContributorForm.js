@@ -272,7 +272,7 @@ export class ContributorForm extends PureComponent {
         return (
             <React.Fragment>
                 {description}
-                <Grid container spacing={8} style={{ marginTop: 8 }} id="contributorForm">
+                <Grid container spacing={1} style={{ marginTop: 8 }} id="contributorForm">
                     {isNtro && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
@@ -359,7 +359,7 @@ export class ContributorForm extends PureComponent {
                         </Grid>
                     )}
                 </Grid>
-                <Grid container spacing={8} style={{ marginTop: 8 }}>
+                <Grid container spacing={1} style={{ marginTop: 8 }}>
                     <Grid item xs={displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
                         <Button
                             variant="contained"

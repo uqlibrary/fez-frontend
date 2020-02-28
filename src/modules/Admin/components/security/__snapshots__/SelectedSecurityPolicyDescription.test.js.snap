@@ -24,7 +24,7 @@ exports[`SelectedSecurityPolicyDescription component should render properly 1`] 
   </WithStyles(Typography)>
   <WithStyles(Grid)
     container={true}
-    spacing={8}
+    spacing={1}
     style={
       Object {
         "marginTop": 8,

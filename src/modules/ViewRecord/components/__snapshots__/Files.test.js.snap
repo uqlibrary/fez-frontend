@@ -20,7 +20,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -123,7 +123,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -294,7 +294,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -397,7 +397,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -554,7 +554,7 @@ exports[`Files Component  should not render audio files with _xt in their filena
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -657,7 +657,7 @@ exports[`Files Component  should not render audio files with _xt in their filena
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -814,7 +814,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -917,7 +917,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1078,7 +1078,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1233,7 +1233,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1336,7 +1336,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1497,7 +1497,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1658,7 +1658,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -1761,7 +1761,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -1922,7 +1922,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2077,7 +2077,7 @@ exports[`Files Component  should render an image as the original filename with n
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -2180,7 +2180,7 @@ exports[`Files Component  should render an image as the original filename with n
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2335,7 +2335,7 @@ exports[`Files Component  should render component 1`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -2438,7 +2438,7 @@ exports[`Files Component  should render component 1`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -2599,7 +2599,7 @@ exports[`Files Component  should render component 1`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -7760,7 +7760,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                 className="FilesClass-header-1"
                                                 container={true}
                                                 direction="row"
-                                                spacing={16}
+                                                spacing={2}
                                               >
                                                 <Grid
                                                   alignContent="stretch"
@@ -7875,7 +7875,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={16}
+                                                  spacing={2}
                                                   wrap="wrap"
                                                   xl={false}
                                                   xs={false}
@@ -11563,7 +11563,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                 container={true}
                                                 direction="row"
                                                 key="file-0"
-                                                spacing={16}
+                                                spacing={2}
                                                 wrap="nowrap"
                                               >
                                                 <Grid
@@ -11679,7 +11679,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={16}
+                                                  spacing={2}
                                                   wrap="nowrap"
                                                   xl={false}
                                                   xs={false}
@@ -17415,7 +17415,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                 container={true}
                                                 direction="row"
                                                 key="file-1"
-                                                spacing={16}
+                                                spacing={2}
                                                 wrap="nowrap"
                                               >
                                                 <Grid
@@ -17531,7 +17531,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={16}
+                                                  spacing={2}
                                                   wrap="nowrap"
                                                   xl={false}
                                                   xs={false}
@@ -23231,7 +23231,7 @@ exports[`Files Component  should render cultural message 1`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -23334,7 +23334,7 @@ exports[`Files Component  should render cultural message 1`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -23495,7 +23495,7 @@ exports[`Files Component  should render cultural message 1`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -23650,7 +23650,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -23753,7 +23753,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -23914,7 +23914,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -24069,7 +24069,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -24172,7 +24172,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -24333,7 +24333,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -24488,7 +24488,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -24591,7 +24591,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -24752,7 +24752,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -24907,7 +24907,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -25010,7 +25010,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -25171,7 +25171,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -25326,7 +25326,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -25429,7 +25429,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -25590,7 +25590,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -25745,7 +25745,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -25848,7 +25848,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -26009,7 +26009,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -26164,7 +26164,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -26267,7 +26267,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -26422,7 +26422,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         className="header"
         container={true}
         direction="row"
-        spacing={16}
+        spacing={2}
       >
         <WithStyles(Grid)
           item={true}
@@ -26525,7 +26525,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         container={true}
         direction="row"
         key="file-0"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)
@@ -26687,7 +26687,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         container={true}
         direction="row"
         key="file-1"
-        spacing={16}
+        spacing={2}
         wrap="nowrap"
       >
         <WithStyles(Grid)

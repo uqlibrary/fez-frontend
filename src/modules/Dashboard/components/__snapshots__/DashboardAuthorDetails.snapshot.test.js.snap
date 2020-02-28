@@ -3,7 +3,7 @@
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={8}
+  spacing={1}
 >
   <WithStyles(Grid)
     item={true}

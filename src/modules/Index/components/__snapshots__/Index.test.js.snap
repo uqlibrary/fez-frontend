@@ -1725,7 +1725,7 @@ exports[`Index page should render placeholders 1`] = `
                                 >
                                   <WithStyles(Grid)
                                     container={true}
-                                    spacing={24}
+                                    spacing={3}
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -1839,7 +1839,7 @@ exports[`Index page should render placeholders 1`] = `
                                       lg={false}
                                       md={false}
                                       sm={false}
-                                      spacing={24}
+                                      spacing={3}
                                       wrap="wrap"
                                       xl={false}
                                       xs={false}
@@ -3424,7 +3424,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   className="Alert-error-186 Alert-common-180"
                                                                   container={true}
                                                                   justify="center"
-                                                                  spacing={24}
+                                                                  spacing={3}
                                                                 >
                                                                   <Grid
                                                                     alignContent="center"
@@ -3539,7 +3539,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     lg={false}
                                                                     md={false}
                                                                     sm={false}
-                                                                    spacing={24}
+                                                                    spacing={3}
                                                                     wrap="wrap"
                                                                     xl={false}
                                                                     xs={false}
@@ -4106,7 +4106,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                         className="MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-182 alert-text"
                                                                                       >
                                                                                         <b>
-                                                                                          There has been an error - 
+                                                                                          There has been an error -
                                                                                         </b>
                                                                                         Trending publications are temporarily unavailable
                                                                                       </div>
@@ -4265,7 +4265,7 @@ exports[`Index page should render placeholders 1`] = `
                                             >
                                               <WithStyles(Grid)
                                                 container={true}
-                                                spacing={24}
+                                                spacing={3}
                                               >
                                                 <Grid
                                                   alignContent="stretch"
@@ -4379,7 +4379,7 @@ exports[`Index page should render placeholders 1`] = `
                                                   lg={false}
                                                   md={false}
                                                   sm={false}
-                                                  spacing={24}
+                                                  spacing={3}
                                                   wrap="wrap"
                                                   xl={false}
                                                   xs={false}

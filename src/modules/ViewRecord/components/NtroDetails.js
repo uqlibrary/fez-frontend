@@ -38,7 +38,7 @@ export class NtroDetailsClass extends PureComponent {
 
     ViewNtroRow = ({ heading, subheading, className, data }) => (
         <div style={{ padding: 8 }}>
-            <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
                         {heading}

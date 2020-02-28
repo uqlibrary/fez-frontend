@@ -12,7 +12,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           "confirmButtonLabel": "Go to my datasets",
           "confirmationMessage": <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -46,7 +46,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
     <WithStyles(Grid)
       className="DataCollection"
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -57,7 +57,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -109,7 +109,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -355,15 +355,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         add to a list of creators below
                       </b>
                       , in the format and order that they are published.
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of creators below
                       </b>
@@ -391,8 +391,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         select your name
                       </b>
@@ -461,7 +461,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </h3>
                 <p>
                   View
-                   
+
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -477,7 +477,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -547,7 +547,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -715,7 +715,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1046,7 +1046,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -1200,7 +1200,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -1255,7 +1255,7 @@ exports[`AddDataCollection test should render component with a valid collection 
           "confirmButtonLabel": "Go to my datasets",
           "confirmationMessage": <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1283,7 +1283,7 @@ exports[`AddDataCollection test should render component with a valid collection 
     <WithStyles(Grid)
       className="DataCollection"
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -1294,7 +1294,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1346,7 +1346,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1592,15 +1592,15 @@ exports[`AddDataCollection test should render component with a valid collection 
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         add to a list of creators below
                       </b>
                       , in the format and order that they are published.
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of creators below
                       </b>
@@ -1628,8 +1628,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         select your name
                       </b>
@@ -1698,7 +1698,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 </h3>
                 <p>
                   View
-                   
+
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -1714,7 +1714,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1784,7 +1784,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -1952,7 +1952,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -2283,7 +2283,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -2437,7 +2437,7 @@ exports[`AddDataCollection test should render component with a valid collection 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -2492,7 +2492,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
           "confirmButtonLabel": "Go to my datasets",
           "confirmationMessage": <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -2520,7 +2520,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
     <WithStyles(Grid)
       className="DataCollection"
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2531,7 +2531,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -2583,7 +2583,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -2829,15 +2829,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         add to a list of creators below
                       </b>
                       , in the format and order that they are published.
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of creators below
                       </b>
@@ -2865,8 +2865,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         select your name
                       </b>
@@ -2935,7 +2935,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 </h3>
                 <p>
                   View
-                   
+
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -2951,7 +2951,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3021,7 +3021,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3189,7 +3189,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3520,7 +3520,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -3674,7 +3674,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}
@@ -3729,7 +3729,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           "confirmButtonLabel": "Go to my datasets",
           "confirmationMessage": <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3757,7 +3757,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
     <WithStyles(Grid)
       className="DataCollection"
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -3768,7 +3768,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -3820,7 +3820,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -4066,15 +4066,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         add to a list of creators below
                       </b>
                       , in the format and order that they are published.
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of creators below
                       </b>
@@ -4102,8 +4102,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - Please 
+
+                      - Please
                       <b>
                         select your name
                       </b>
@@ -4172,7 +4172,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 </h3>
                 <p>
                   View
-                   
+
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -4188,7 +4188,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -4258,7 +4258,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -4426,7 +4426,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={24}
+            spacing={3}
           >
             <WithStyles(Grid)
               item={true}
@@ -4757,7 +4757,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={16}
+            spacing={2}
           >
             <WithStyles(Grid)
               item={true}
@@ -4911,7 +4911,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(Grid)
         item={true}

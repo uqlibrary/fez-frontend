@@ -4,7 +4,7 @@ import { useTabbedContext } from 'context';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Switch from '@material-ui/core/Switch';
-import Keyboard from '@material-ui/icons/Keyboard';
+import KeyboardIcon from '@material-ui/icons/Keyboard';
 
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import txt from 'locale/pages';
@@ -19,7 +19,7 @@ export const FormViewToggler = React.memo(() => {
                 </Tooltip>
             </Grid>
             <Grid item>
-                <HelpIcon IconComponent={Keyboard} {...txt.pages.edit.help} />
+                <HelpIcon IconComponent={KeyboardIcon} {...txt.pages.edit.help} />
             </Grid>
         </Grid>
     );

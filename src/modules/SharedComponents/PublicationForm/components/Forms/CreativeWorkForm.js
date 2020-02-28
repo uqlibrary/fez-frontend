@@ -57,11 +57,11 @@ export default class CreativeWorkForm extends Component {
                 ? 'Date range is not valid'
                 : '';
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 {this.props.subtype !== NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK && (
                     <Grid item xs={12}>
                         <StandardCard title={txt.information.title} help={txt.information.help}>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={TextField}
@@ -151,7 +151,7 @@ export default class CreativeWorkForm extends Component {
                 {this.props.subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK && (
                     <Grid item xs={12}>
                         <StandardCard title={txt.information.title} help={txt.information.help}>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={TextField}
@@ -265,7 +265,7 @@ export default class CreativeWorkForm extends Component {
                 )}
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

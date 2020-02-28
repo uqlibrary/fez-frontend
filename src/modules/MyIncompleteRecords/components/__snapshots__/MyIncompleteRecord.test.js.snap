@@ -7,7 +7,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -468,7 +468,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -489,12 +489,12 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -522,12 +522,12 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -640,7 +640,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -708,7 +708,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -723,7 +723,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -734,7 +734,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -760,15 +760,15 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -796,8 +796,8 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -866,7 +866,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -927,7 +927,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -1388,7 +1388,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -1409,12 +1409,12 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -1442,12 +1442,12 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -1560,7 +1560,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -1628,7 +1628,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -1643,7 +1643,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -1654,7 +1654,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1680,15 +1680,15 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -1716,8 +1716,8 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -1797,7 +1797,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -1872,7 +1872,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -2333,7 +2333,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -2354,12 +2354,12 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -2387,12 +2387,12 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -2505,7 +2505,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -2573,7 +2573,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -2588,7 +2588,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -2599,7 +2599,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2625,15 +2625,15 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -2661,8 +2661,8 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -2815,7 +2815,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -2876,7 +2876,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -3337,7 +3337,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -3358,12 +3358,12 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -3391,12 +3391,12 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -3509,7 +3509,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -3577,7 +3577,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -3592,7 +3592,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -3603,7 +3603,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3629,15 +3629,15 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -3665,8 +3665,8 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -3735,7 +3735,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -3796,7 +3796,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -4257,7 +4257,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -4278,12 +4278,12 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -4311,12 +4311,12 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -4429,7 +4429,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -4497,7 +4497,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -4512,7 +4512,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -4523,7 +4523,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -4549,15 +4549,15 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -4585,8 +4585,8 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -4655,7 +4655,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -4716,7 +4716,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -5177,7 +5177,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -5198,12 +5198,12 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -5231,12 +5231,12 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -5349,7 +5349,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -5417,7 +5417,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -5432,7 +5432,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -5443,7 +5443,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5469,15 +5469,15 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -5505,8 +5505,8 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -5575,7 +5575,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -5636,7 +5636,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -6097,7 +6097,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -6118,12 +6118,12 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -6151,12 +6151,12 @@ exports[`Component MyIncompleteRecord should render significance and contributio
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -6269,7 +6269,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -6337,7 +6337,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -6352,7 +6352,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -6363,7 +6363,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6389,15 +6389,15 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -6425,8 +6425,8 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -6495,7 +6495,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -6556,7 +6556,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -7023,7 +7023,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -7044,12 +7044,12 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -7077,12 +7077,12 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -7195,7 +7195,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -7263,7 +7263,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -7278,7 +7278,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -7289,7 +7289,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -7315,15 +7315,15 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -7351,8 +7351,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -7421,7 +7421,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"
@@ -7482,7 +7482,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       "buttonLabel": "CLOSE",
       "text": <div>
         For help, click
-         
+
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -7943,7 +7943,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
     />
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <WithStyles(Grid)
         item={true}
@@ -7964,12 +7964,12 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -7997,12 +7997,12 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           </WithStyles(Grid)>
           <WithStyles(Grid)
             container={true}
-            spacing={8}
+            spacing={1}
           >
             <WithStyles(Grid)
               alignItems="flex-start"
               container={true}
-              spacing={16}
+              spacing={2}
             >
               <WithStyles(Grid)
                 item={true}
@@ -8115,7 +8115,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -8183,7 +8183,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about identification of author/creator/designer, click
-                 
+
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -8198,7 +8198,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -8209,7 +8209,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               >
                 red
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -8235,15 +8235,15 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 2 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -8271,8 +8271,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 1 of 2
                       </span>
-                       
-                      - 
+
+                      -
                       <b>
                         Select an author
                       </b>
@@ -8341,7 +8341,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
     </WithStyles(Grid)>
     <WithStyles(Grid)
       container={true}
-      spacing={24}
+      spacing={3}
     >
       <Hidden
         implementation="js"

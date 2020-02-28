@@ -624,7 +624,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                 <WithStyles(Grid)
                   alignItems="center"
                   container={true}
-                  spacing={8}
+                  spacing={1}
                   style={
                     Object {
                       "marginTop": 12,
@@ -743,7 +743,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                     lg={false}
                     md={false}
                     sm={false}
-                    spacing={8}
+                    spacing={1}
                     style={
                       Object {
                         "marginTop": 12,
@@ -6637,7 +6637,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
 <WithStyles(Grid)
   alignItems="center"
   container={true}
-  spacing={8}
+  spacing={1}
   style={
     Object {
       "marginTop": 12,
@@ -6785,7 +6785,7 @@ exports[`Dashboard Rsearcher IDs test Testing orcid caption 1`] = `
 <WithStyles(Grid)
   alignItems="center"
   container={true}
-  spacing={8}
+  spacing={1}
   style={
     Object {
       "marginTop": 12,
@@ -6933,7 +6933,7 @@ exports[`Dashboard Rsearcher IDs test Testing styles on auth internal links 1`] 
 <WithStyles(Grid)
   alignItems="center"
   container={true}
-  spacing={8}
+  spacing={1}
   style={
     Object {
       "marginTop": 12,
@@ -7056,7 +7056,7 @@ exports[`Dashboard Rsearcher IDs test Testing styles on unauth internal links 1`
 <WithStyles(Grid)
   alignItems="center"
   container={true}
-  spacing={8}
+  spacing={1}
   style={
     Object {
       "marginTop": 12,

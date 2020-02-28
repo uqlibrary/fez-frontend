@@ -14,7 +14,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
     container={true}
     direction="row"
     justify="center"
-    spacing={8}
+    spacing={1}
   >
     <Hidden
       implementation="js"

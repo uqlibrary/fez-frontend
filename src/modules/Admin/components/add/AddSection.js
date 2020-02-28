@@ -45,10 +45,10 @@ export const AddSection = ({
     return (
         <form>
             <StandardPage title={locale.pages.adminAdd.title}>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard title={locale.pages.adminAdd.step1} help={locale.pages.adminAdd.help}>
-                            <Grid container spacing={24}>
+                            <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CollectionField}
@@ -104,7 +104,7 @@ export const AddSection = ({
                                     )}
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Grid container spacing={8}>
+                                    <Grid container spacing={1}>
                                         <Hidden xsDown>
                                             <Grid item xs />
                                         </Hidden>

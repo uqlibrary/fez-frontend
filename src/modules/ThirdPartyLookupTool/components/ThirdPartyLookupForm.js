@@ -88,10 +88,10 @@ export class ThirdPartyLookupForm extends PureComponent {
         };
         const { primaryValue, secondaryValue } = this.state;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard noHeader>
-                        <Grid container spacing={24}>
+                        <Grid container spacing={3}>
                             <Grid item style={{ flexGrow: 1, width: 1 }}>
                                 <Typography variant="h5">{lookupLabel}</Typography>
                             </Grid>

@@ -48,10 +48,10 @@ export default class ResearchReportForm extends Component {
             this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT ||
             this.props.formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_OTHER;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -216,7 +216,7 @@ export default class ResearchReportForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             {!this.props.isNtro && (
                                 <Grid item xs={12}>
                                     <Field

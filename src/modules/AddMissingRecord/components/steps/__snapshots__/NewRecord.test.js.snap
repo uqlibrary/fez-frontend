@@ -12,7 +12,7 @@ exports[`Add new record should render alert about file uploading or issue error 
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
         >
           <WithStyles(Grid)
             item={true}
@@ -79,7 +79,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
         >
           <WithStyles(Grid)
             item={true}
@@ -139,7 +139,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
@@ -186,7 +186,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(Grid)
           container={true}
-          spacing={24}
+          spacing={3}
         >
           <WithStyles(Grid)
             item={true}
@@ -347,7 +347,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(Grid)
         container={true}
-        spacing={24}
+        spacing={3}
       >
         <WithStyles(Grid)
           item={true}
