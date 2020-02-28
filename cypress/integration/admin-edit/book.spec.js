@@ -59,6 +59,28 @@ context('Book admin edit', () => {
             });
 
         cy.get('@bibliographicTab')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .contains('h4', 'ISSN')
+                    .parents('.AdminCard')
+                    .as('issnBlock')
+                    .find('input')
+                    .as('issnInput')
+                    .type('11111111{enter}');
+                cy.get('@issnBlock')
+                    .should('contain', '1111-1111')
+                // Mock returns no sherpa data for issn 1111-1111 or 2222-2222.
+                    .should('not.contain', "Check publisher's open access policy");
+                cy.get('@issnInput')
+                    .type('12121212{enter}');
+                cy.get('@issnBlock')
+                    .should('contain', "1212-1212 Check publisher's open access policy")
+                    .contains('span', '1212-1212')
+                    .siblings('a')
+                    .should('have.attr', 'href', 'http://www.sherpa.ac.uk/romeo/search.php?issn=1212-1212');
+            });
+
+        cy.get('@bibliographicTab')
             .find('#Placeofpublication')
             .clear()
             .parent()
