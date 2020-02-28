@@ -778,4 +778,10 @@ describe('Backend routes method', () => {
             apiUrl: 'external/records/batch-import',
         });
     });
+
+    it('should construct url for ISSN_LINKS_API', () => {
+        expect(routes.ISSN_LINKS_API({ type: 'test' })).toEqual({
+            apiUrl: 'tool/lookup/test',
+        });
+    });
 });
