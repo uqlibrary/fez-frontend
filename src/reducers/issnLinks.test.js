@@ -5,14 +5,14 @@ import issnLinksReducer from './issnLinks';
 const initialState = {
     loadingSherpaFromIssn: false,
     sherpaLoadFromIssnError: false,
-    sherpaRomeo: [],
+    sherpaRomeo: {},
 };
 
 describe('issnLinksReducer reducer', () => {
     it('sets loading state', () => {
         const previousState = {
             ...initialState,
-            sherpaRomeo: ['test1'],
+            sherpaRomeo: { test1: { srm_issn: 'test1' } },
         };
         const expected = { ...previousState, loadingSherpaFromIssn: true };
         const test = issnLinksReducer(previousState, { type: ISSN_SHERPA_LOADING });
@@ -23,10 +23,10 @@ describe('issnLinksReducer reducer', () => {
         const previousState = {
             ...initialState,
         };
-        const expected = { ...previousState, sherpaRomeo: [{ test: 'test1' }] };
+        const expected = { ...previousState, sherpaRomeo: { test1: { srm_issn: 'test1' } } };
         const test = issnLinksReducer(previousState, {
             type: ISSN_SHERPA_LOADED,
-            payload: [{ test: 'test1' }],
+            payload: [{ srm_issn: 'test1' }],
         });
         expect(test).toEqual(expected);
     });
@@ -34,12 +34,15 @@ describe('issnLinksReducer reducer', () => {
     it('sets loaded state on subsequent load', () => {
         const previousState = {
             ...initialState,
-            sherpaRomeo: [{ test: 'test1' }],
+            sherpaRomeo: { test1: { srm_issn: 'test1' } },
         };
-        const expected = { ...previousState, sherpaRomeo: [{ test: 'test1' }, { test: 'test2' }] };
+        const expected = {
+            ...previousState,
+            sherpaRomeo: { test1: { srm_issn: 'test1' }, test2: { srm_issn: 'test2' } },
+        };
         const test = issnLinksReducer(previousState, {
             type: ISSN_SHERPA_LOADED,
-            payload: [{ test: 'test2' }],
+            payload: [{ srm_issn: 'test2' }],
         });
         expect(test).toEqual(expected);
     });

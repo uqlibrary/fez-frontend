@@ -51,19 +51,18 @@ describe('IssnRowItemTemplate component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should call action to load Sherpa Romeo data', () => {
+    it('should trigger React hooks as expected', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         mockUseEffect.mockImplementation(f => f());
 
-        const testFn = jest.fn();
+        const action = jest.fn();
         setup({
             item: '1234-1234',
             actions: {
-                getSherpaFromIssn: testFn,
+                getSherpaFromIssn: action,
             },
         });
-        expect(testFn).toHaveBeenCalledWith('1234-1234');
-        testFn.mockClear();
+        expect(action).toHaveBeenCalledWith('1234-1234');
 
         const wrapper = setup({
             item: {
@@ -90,7 +89,38 @@ describe('IssnRowItemTemplate component', () => {
             },
         });
 
-        mockUseEffect.mockReset();
-        mockUseState.mockReset();
+        mockUseEffect.mockRestore();
+        mockUseState.mockRestore();
+    });
+
+    it('should update internal state during edits', () => {
+        const mockUseEffect = jest.spyOn(React, 'useEffect');
+        mockUseEffect.mockImplementation(f => f());
+
+        let setIssn;
+        const action = jest.fn();
+        const useStateOriginal = React.useState;
+        const mockUseState = jest.spyOn(React, 'useState');
+        mockUseState.mockImplementation(initial => {
+            const [issnOriginal, setIssnOriginal] = useStateOriginal(initial);
+            setIssn = jest.fn(newIssn => setIssnOriginal(newIssn));
+            return [issnOriginal, setIssn];
+        });
+        const wrapper = setup({
+            item: '3456-3456',
+            sherpaRomeo: { issn: '3456-3456' },
+            actions: {
+                getSherpaFromIssn: action,
+            },
+        });
+        setIssn.mockClear();
+        wrapper.setProps({
+            item: '1212-1212',
+            sherpaRomeo: null,
+        });
+        expect(action).toHaveBeenCalledWith('1212-1212');
+
+        mockUseEffect.mockRestore();
+        mockUseState.mockRestore();
     });
 });
