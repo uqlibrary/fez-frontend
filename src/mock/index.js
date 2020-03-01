@@ -299,10 +299,17 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         const issn = JSON.parse(config.data).issn;
         const data = [];
         if (!issn.match(/^1111-1111|2222-2222$/)) {
-            data.push({
-                ...mockData.sherpaRomeo[0],
-                srm_issn: issn,
-            });
+            if (issn.match(/^0000-0000|1611-3349$/)) {
+                data.push({
+                    ...mockData.sherpaRomeo[1],
+                    srm_issn: issn,
+                });
+            } else {
+                data.push({
+                    ...mockData.sherpaRomeo[0],
+                    srm_issn: issn,
+                });
+            }
         }
         return [200, { data }];
     });

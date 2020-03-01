@@ -6,5 +6,13 @@ export const sherpaRomeo = [
         "srm_journal_name": "American Journal of Respiratory and Critical Care Medicine",
         "srm_colour": "blue",
         "srm_date_updated": "2017-09-30 18:41:17"
+    },
+    {
+        "srm_id": 69424,
+        "srm_issn": "1611-3349",
+        "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http:\/\/www.sherpa.ac.uk\/romeo\/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn<\/parametername>\n        <parametervalue>1611-3349<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"specified\">\n        <parametername>versions<\/parametername>\n        <parametervalue>all<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder<\/parametername>\n        <parametervalue>none<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum<\/parametername>\n        <parametervalue>|<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>la<\/parametername>\n        <parametervalue>en<\/parametervalue>\n      <\/parameter>\n    <\/parameters>\n    <numhits>0<\/numhits>\n    <apicontrol>journal<\/apicontrol>\n    <outcome>notFound<\/outcome>\n    <message \/>\n    <licence>SHERPA\/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl \/&gt;, and linked-to from the SHERPA\/RoMEO home page.<\/licence>\n    <licenceurl>http:\/\/www.sherpa.ac.uk\/romeoreuse.html<\/licenceurl>\n    <disclaimer>All SHERPA\/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.<\/disclaimer>\n    <timestamp>30-Sep-2017:20:12:05<\/timestamp>\n  <\/header>\n  <journals \/>\n  <publishers \/>\n<\/romeoapi>\n",
+        "srm_journal_name":"Not found in Sherpa Romeo",
+        "srm_colour":"Not found in Sherpa Romeo",
+        "srm_date_updated":"2017-09-30 19:12:05"
     }
 ];

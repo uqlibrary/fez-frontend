@@ -23,7 +23,7 @@ export class ListRow extends PureComponent {
         hideReorder: PropTypes.bool,
         index: PropTypes.number.isRequired,
         item: PropTypes.any.isRequired,
-        itemTemplate: PropTypes.func,
+        itemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
         locale: PropTypes.object,
         onDelete: PropTypes.func,
         onEdit: PropTypes.func,

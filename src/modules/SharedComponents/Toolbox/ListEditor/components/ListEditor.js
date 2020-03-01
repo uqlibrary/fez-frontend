@@ -26,7 +26,7 @@ export default class ListEditor extends Component {
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
-        rowItemTemplate: PropTypes.func,
+        rowItemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         required: PropTypes.bool,
         scrollList: PropTypes.bool,

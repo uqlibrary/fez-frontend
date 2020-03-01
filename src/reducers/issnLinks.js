@@ -2,7 +2,7 @@ import { ISSN_SHERPA_LOADING, ISSN_SHERPA_LOADED, ISSN_SHERPA_LOAD_FAILED } from
 export const initialState = {
     loadingSherpaFromIssn: false,
     sherpaLoadFromIssnError: false,
-    sherpaRomeo: [],
+    sherpaRomeo: {},
 };
 
 const handlers = {
@@ -12,11 +12,17 @@ const handlers = {
         loadingSherpaFromIssn: true,
     }),
 
-    [ISSN_SHERPA_LOADED]: (state, action) => ({
-        ...initialState,
-        loadingSherpaFromIssn: false,
-        sherpaRomeo: [...state.sherpaRomeo, ...action.payload],
-    }),
+    [ISSN_SHERPA_LOADED]: (state, action) => {
+        const data = { ...state.sherpaRomeo };
+        action.payload.map(item => {
+            data[item.srm_issn] = item;
+        });
+        return {
+            ...initialState,
+            loadingSherpaFromIssn: false,
+            sherpaRomeo: data,
+        };
+    },
 
     [ISSN_SHERPA_LOAD_FAILED]: (state, action) => ({
         ...initialState,

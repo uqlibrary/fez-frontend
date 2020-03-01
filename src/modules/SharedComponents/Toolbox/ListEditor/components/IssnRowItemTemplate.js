@@ -5,15 +5,20 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
 export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
-    const [issn, setIssn] = React.useState(
-        !!item.key
-            ? item
+    const convertItem = theItem =>
+        !!theItem.key
+            ? theItem
             : {
-                key: item,
-            },
-    );
+                key: theItem,
+            };
+
+    const [issn, setIssn] = React.useState(convertItem(item));
 
     React.useEffect(() => {
+        if ((item.key || item) !== issn.key) {
+            setIssn(convertItem(item));
+        }
+
         if (!issn.value) {
             if (sherpaRomeo) {
                 setIssn({
@@ -26,7 +31,7 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
                 actions.getSherpaFromIssn(issn.key);
             }
         }
-    }, [actions, issn, sherpaRomeo]);
+    }, [actions, issn, item, sherpaRomeo]);
 
     return (
         <React.Fragment>
@@ -36,7 +41,7 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
                     <ExternalLink
                         href={issn.value.sherpaRomeo.link}
                         aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
-                        title={issn.value.sherpaRomeo.title}
+                        title={globalLocale.global.sherpaRomeoLink.title}
                     >
                         {globalLocale.global.sherpaRomeoLink.externalLinktext}
                     </ExternalLink>
