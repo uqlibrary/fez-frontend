@@ -4,6 +4,9 @@ import React from 'react';
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         item: {},
+        actions: {
+            getSherpaFromIssn: jest.fn(),
+        },
         ...testProps,
     };
     return getElement(IssnRowItemTemplate, props, args);
@@ -86,6 +89,9 @@ describe('IssnRowItemTemplate component', () => {
             key: '3456-3456',
             value: {
                 sherpaRomeo: test,
+                ulrichs: {
+                    link: '',
+                },
             },
         });
 
@@ -108,7 +114,7 @@ describe('IssnRowItemTemplate component', () => {
         });
         const wrapper = setup({
             item: '3456-3456',
-            sherpaRomeo: { issn: '3456-3456' },
+            sherpaRomeo: { issn: '3456-3456', link: 'example' },
             actions: {
                 getSherpaFromIssn: action,
             },

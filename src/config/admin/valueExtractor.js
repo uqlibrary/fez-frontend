@@ -193,15 +193,11 @@ export default {
                 const sherpaRomeoLink =
                     (!!issn.fez_sherpa_romeo &&
                         !!issn.fez_sherpa_romeo.srm_issn &&
+                        issn.fez_sherpa_romeo.srm_journal_name !== 'Not found in Sherpa Romeo' &&
                         globalLocale.global.sherpaRomeoLink.externalUrl.replace(
                             '[issn]',
                             issn.fez_sherpa_romeo.srm_issn,
                         )) ||
-                    '';
-                const sherpaRomeoLinkText =
-                    (!!issn.fez_sherpa_romeo &&
-                        !!issn.fez_sherpa_romeo.srm_journal_name &&
-                        issn.fez_sherpa_romeo.srm_journal_name) ||
                     '';
                 return {
                     rek_order: issn.rek_issn_order,
@@ -215,8 +211,6 @@ export default {
                             },
                             sherpaRomeo: {
                                 link: sherpaRomeoLink,
-                                linkText: sherpaRomeoLinkText,
-                                title: sherpaRomeoLinkText,
                             },
                         },
                     },

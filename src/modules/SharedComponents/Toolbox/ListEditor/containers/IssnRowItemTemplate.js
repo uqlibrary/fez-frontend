@@ -5,7 +5,7 @@ import { default as globalLocale } from 'locale/global';
 
 import IssnRowItemTemplate from '../components/IssnRowItemTemplate';
 
-const checkValidSherpa = (sherpaArray, item) => {
+const getValidSherpa = (sherpaArray, item) => {
     const validSherpaKey = Object.keys(sherpaArray).find(
         issn =>
             sherpaArray[issn].srm_journal_name !== '' &&
@@ -18,7 +18,7 @@ const checkValidSherpa = (sherpaArray, item) => {
 const mapStateToProps = (state, props) => {
     const { loadingSherpaFromIssn, sherpaRomeo, sherpaLoadFromIssnError } = state.get('issnLinksReducer');
     const sherpaData =
-        !loadingSherpaFromIssn && !sherpaLoadFromIssnError && sherpaRomeo && checkValidSherpa(sherpaRomeo, props.item);
+        !loadingSherpaFromIssn && !sherpaLoadFromIssnError && sherpaRomeo && getValidSherpa(sherpaRomeo, props.item);
     return {
         sherpaRomeo:
             (sherpaData && {

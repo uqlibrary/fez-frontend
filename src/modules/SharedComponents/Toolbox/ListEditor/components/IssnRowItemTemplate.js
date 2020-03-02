@@ -10,6 +10,14 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
             ? theItem
             : {
                 key: theItem,
+                value: {
+                    sherpaRomeo: {
+                        link: '',
+                    },
+                    ulrichs: {
+                        link: '',
+                    },
+                },
             };
 
     const [issn, setIssn] = React.useState(convertItem(item));
@@ -19,11 +27,12 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
             setIssn(convertItem(item));
         }
 
-        if (!issn.value) {
+        if (!issn.value || !issn.value.sherpaRomeo || !issn.value.sherpaRomeo.link) {
             if (sherpaRomeo) {
                 setIssn({
                     ...issn,
                     value: {
+                        ...issn.value,
                         sherpaRomeo,
                     },
                 });
