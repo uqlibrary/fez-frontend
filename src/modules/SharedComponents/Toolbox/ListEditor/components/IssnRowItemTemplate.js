@@ -59,7 +59,7 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
                     !!issn.value.sherpaRomeo &&
                     !!issn.value.sherpaRomeo.link &&
                     !!issn.value.ulrichs &&
-                    !!issn.value.ulrichs.link && <span> or </span>}
+                    !!issn.value.ulrichs.link && <span> &nbsp;</span>}
                 {!!issn.value && !!issn.value.ulrichs && !!issn.value.ulrichs.link && !!issn.value.ulrichs.linkText && (
                     <ExternalLink
                         href={issn.value.ulrichs.link}

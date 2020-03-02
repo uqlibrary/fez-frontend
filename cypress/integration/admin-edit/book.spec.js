@@ -93,7 +93,8 @@ context('Book admin edit', () => {
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(1)
-                    .should('contain', '1611-3340 SHERPA/RoMEO or Ulrichs');
+                    .should('contain', '1611-3340 SHERPA/RoMEO')
+                    .should('contain', 'Ulrichs');
                 // Add a 3rd entry without match in API
                 cy.get('@issnBlock')
                     .find('input')

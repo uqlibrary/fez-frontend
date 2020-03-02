@@ -18,7 +18,7 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
       SHERPA/RoMEO
     </WithStyles(ExternalLink)>
     <span>
-       or 
+        
     </span>
     <WithStyles(ExternalLink)
       aria-label="View Ulrichs information in a new window"
