@@ -21,7 +21,7 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
         
     </span>
     <WithStyles(ExternalLink)
-      aria-label="View Ulrichs information in a new window"
+      aria-label="Source publisher name/place and alternate ISSNs in a new window"
       href="http://example.com/ulrichs?id=1234"
     >
       Ulrichs
@@ -57,5 +57,3 @@ exports[`IssnRowItemTemplate component should skip missing ulrichs or sherparome
   </WithStyles(Typography)>
 </Fragment>
 `;
-
-exports[`IssnRowItemTemplate component should trigger React hooks as expected 1`] = `ShallowWrapper {}`;

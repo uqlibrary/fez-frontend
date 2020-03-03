@@ -15,17 +15,41 @@ const getValidSherpa = (sherpaArray, item) => {
     return sherpaArray[validSherpaKey];
 };
 
+const getValidUlrichs = (ulrichsArray, item) => {
+    const validUlrichsKey = Object.keys(ulrichsArray).find(
+        issn => ulrichsArray[issn].ulr_title !== '' && ulrichsArray[issn].ulr_issn === (item && (item.key || item)),
+    );
+    return ulrichsArray[validUlrichsKey];
+};
+
 const mapStateToProps = (state, props) => {
-    const { loadingSherpaFromIssn, sherpaRomeo, sherpaLoadFromIssnError } = state.get('issnLinksReducer');
+    const { item } = props;
+    const {
+        loadingSherpaFromIssn,
+        loadingUlrichsFromIssn,
+        sherpaLoadFromIssnError,
+        sherpaRomeo,
+        ulrichs,
+        ulrichsLoadFromIssnError,
+    } = state.get('issnLinksReducer');
     const sherpaData =
-        !loadingSherpaFromIssn && !sherpaLoadFromIssnError && sherpaRomeo && getValidSherpa(sherpaRomeo, props.item);
+        !loadingSherpaFromIssn && !sherpaLoadFromIssnError && sherpaRomeo && getValidSherpa(sherpaRomeo, item);
+    const ulrichsData =
+        !loadingUlrichsFromIssn && !ulrichsLoadFromIssnError && ulrichs && getValidUlrichs(ulrichs, item);
     return {
         sherpaRomeo:
             (sherpaData && {
                 link:
                     sherpaData.srm_issn &&
                     globalLocale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaData.srm_issn),
-                issn: sherpaData.srm_issn || '',
+            }) ||
+            null,
+        ulrichs:
+            (ulrichsData && {
+                link:
+                    ulrichsData.ulr_issn &&
+                    globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsData.ulr_title_id),
+                title: ulrichsData.ulr_title || '',
             }) ||
             null,
     };

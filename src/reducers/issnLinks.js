@@ -1,13 +1,22 @@
-import { ISSN_SHERPA_LOADING, ISSN_SHERPA_LOADED, ISSN_SHERPA_LOAD_FAILED } from 'actions/actionTypes';
+import {
+    ISSN_SHERPA_LOADING,
+    ISSN_SHERPA_LOADED,
+    ISSN_SHERPA_LOAD_FAILED,
+    ISSN_ULRICHS_LOADING,
+    ISSN_ULRICHS_LOADED,
+    ISSN_ULRICHS_LOAD_FAILED,
+} from 'actions/actionTypes';
 export const initialState = {
     loadingSherpaFromIssn: false,
+    loadingUlrichsFromIssn: false,
     sherpaLoadFromIssnError: false,
     sherpaRomeo: {},
+    ulrichs: {},
+    ulrichsLoadFromIssnError: false,
 };
 
 const handlers = {
     [ISSN_SHERPA_LOADING]: state => ({
-        ...initialState,
         ...state,
         loadingSherpaFromIssn: true,
     }),
@@ -18,16 +27,39 @@ const handlers = {
             data[item.srm_issn] = item;
         });
         return {
-            ...initialState,
+            ...state,
             loadingSherpaFromIssn: false,
             sherpaRomeo: data,
         };
     },
 
     [ISSN_SHERPA_LOAD_FAILED]: (state, action) => ({
-        ...initialState,
+        ...state,
         loadingSherpaFromIssn: false,
         sherpaLoadFromIssnError: action.payload,
+    }),
+
+    [ISSN_ULRICHS_LOADING]: state => ({
+        ...state,
+        loadingUlrichsFromIssn: true,
+    }),
+
+    [ISSN_ULRICHS_LOADED]: (state, action) => {
+        const data = { ...state.ulrichs };
+        action.payload.map(item => {
+            data[item.ulr_issn] = item;
+        });
+        return {
+            ...state,
+            loadingUlrichsFromIssn: false,
+            ulrichs: data,
+        };
+    },
+
+    [ISSN_ULRICHS_LOAD_FAILED]: (state, action) => ({
+        ...state,
+        loadingUlrichsFromIssn: false,
+        ulrichsLoadFromIssnError: action.payload,
     }),
 };
 

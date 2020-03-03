@@ -6,6 +6,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         item: {},
         actions: {
             getSherpaFromIssn: jest.fn(),
+            getUlrichsFromIssn: jest.fn(),
         },
         ...testProps,
     };
@@ -25,7 +26,6 @@ describe('IssnRowItemTemplate component', () => {
                 value: {
                     ulrichs: {
                         link: 'http://example.com/ulrichs?id=1234',
-                        linkText: 'Architectural Journal',
                     },
                     sherpaRomeo: {
                         link: 'http://example.com/sherpa?issn=1234-1234',
@@ -43,7 +43,6 @@ describe('IssnRowItemTemplate component', () => {
                 value: {
                     ulrichs: {
                         link: '',
-                        linkText: '',
                     },
                     sherpaRomeo: {
                         link: '',
@@ -54,41 +53,40 @@ describe('IssnRowItemTemplate component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should trigger React hooks as expected', () => {
+    it('should call actions as expected', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         mockUseEffect.mockImplementation(f => f());
 
-        const action = jest.fn();
+        const actionSherpa = jest.fn();
+        const actionUlrichs = jest.fn();
         setup({
             item: '1234-1234',
             actions: {
-                getSherpaFromIssn: action,
+                getSherpaFromIssn: actionSherpa,
+                getUlrichsFromIssn: actionUlrichs,
             },
         });
-        expect(action).toHaveBeenCalledWith('1234-1234');
+        expect(actionSherpa).toHaveBeenCalledWith('1234-1234');
+        expect(actionUlrichs).toHaveBeenCalledWith('1234-1234');
 
-        const wrapper = setup({
-            item: {
-                key: '2345-2345',
-                value: {
-                    sherpaRomeo: {},
-                },
-            },
-        });
-        expect(wrapper).toMatchSnapshot();
+        mockUseEffect.mockRestore();
+    });
 
-        const testFn2 = jest.fn();
+    it('should init state as expected', () => {
+        const mockUseEffect = jest.spyOn(React, 'useEffect');
+        mockUseEffect.mockImplementation(f => f());
+
         const mockUseState = jest.spyOn(React, 'useState');
-        mockUseState.mockImplementation(initial => [initial, testFn2]);
-        const test = {};
+        mockUseState.mockImplementation(initial => [initial, jest.fn()]);
         setup({
-            item: '3456-3456',
-            sherpaRomeo: test,
+            item: '2345-2345',
         });
-        expect(testFn2).toHaveBeenCalledWith({
-            key: '3456-3456',
+        expect(mockUseState).toHaveBeenCalledWith({
+            key: '2345-2345',
             value: {
-                sherpaRomeo: test,
+                sherpaRomeo: {
+                    link: '',
+                },
                 ulrichs: {
                     link: '',
                 },
@@ -99,32 +97,39 @@ describe('IssnRowItemTemplate component', () => {
         mockUseState.mockRestore();
     });
 
-    it('should update internal state during edits', () => {
+    it('should set state as expected during edits', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         mockUseEffect.mockImplementation(f => f());
 
-        let setIssn;
-        const action = jest.fn();
         const useStateOriginal = React.useState;
         const mockUseState = jest.spyOn(React, 'useState');
         mockUseState.mockImplementation(initial => {
             const [issnOriginal, setIssnOriginal] = useStateOriginal(initial);
-            setIssn = jest.fn(newIssn => setIssnOriginal(newIssn));
+            const setIssn = jest.fn(newIssn => setIssnOriginal(newIssn));
             return [issnOriginal, setIssn];
         });
+
         const wrapper = setup({
-            item: '3456-3456',
-            sherpaRomeo: { issn: '3456-3456', link: 'example' },
-            actions: {
-                getSherpaFromIssn: action,
-            },
+            item: '1234-1234',
+            sherpaRomeo: { link: 'example' },
+            ulrichs: { link: 'example' },
         });
-        setIssn.mockClear();
         wrapper.setProps({
             item: '1212-1212',
             sherpaRomeo: null,
+            ulrichs: null,
         });
-        expect(action).toHaveBeenCalledWith('1212-1212');
+        expect(mockUseState).toHaveBeenCalledWith({
+            key: '1212-1212',
+            value: {
+                sherpaRomeo: {
+                    link: '',
+                },
+                ulrichs: {
+                    link: '',
+                },
+            },
+        });
 
         mockUseEffect.mockRestore();
         mockUseState.mockRestore();

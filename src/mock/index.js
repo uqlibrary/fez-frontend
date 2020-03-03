@@ -312,8 +312,20 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
             }
         }
         return [200, { data }];
+    })
+    .onPost(routes.ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl)
+    .reply(config => {
+        const issn = JSON.parse(config.data).issn;
+        const data = [];
+        if (!issn.match(/^1111-1111|2222-2222$/)) {
+            data.push({
+                ...mockData.ulrichs[0],
+                ulr_issn: issn,
+                ulr_title_id: issn.replace('-', ''),
+            });
+        }
+        return [200, { data }];
     });
-// .reply(200, { data: mockData.sherpaRomeo });
 
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })

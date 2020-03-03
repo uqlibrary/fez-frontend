@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
+export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => {
     const convertItem = theItem =>
         !!theItem.key
             ? theItem
@@ -26,7 +26,9 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
         if ((item.key || item) !== issn.key) {
             setIssn(convertItem(item));
         }
+    }, [issn, item]);
 
+    React.useEffect(() => {
         if (!issn.value || !issn.value.sherpaRomeo || !issn.value.sherpaRomeo.link) {
             if (sherpaRomeo) {
                 setIssn({
@@ -40,7 +42,23 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
                 actions.getSherpaFromIssn(issn.key);
             }
         }
-    }, [actions, issn, item, sherpaRomeo]);
+    }, [actions, issn, sherpaRomeo]);
+
+    React.useEffect(() => {
+        if (!issn.value || !issn.value.ulrichs || !issn.value.ulrichs.link) {
+            if (ulrichs) {
+                setIssn({
+                    ...issn,
+                    value: {
+                        ...issn.value,
+                        ulrichs,
+                    },
+                });
+            } else {
+                actions.getUlrichsFromIssn(issn.key);
+            }
+        }
+    }, [actions, issn, ulrichs]);
 
     return (
         <React.Fragment>
@@ -60,7 +78,7 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo }) => {
                     !!issn.value.sherpaRomeo.link &&
                     !!issn.value.ulrichs &&
                     !!issn.value.ulrichs.link && <span> &nbsp;</span>}
-                {!!issn.value && !!issn.value.ulrichs && !!issn.value.ulrichs.link && !!issn.value.ulrichs.linkText && (
+                {!!issn.value && !!issn.value.ulrichs && !!issn.value.ulrichs.link && (
                     <ExternalLink
                         href={issn.value.ulrichs.link}
                         aria-label={globalLocale.global.ulrichsLink.ariaLabel}
@@ -78,6 +96,7 @@ IssnRowItemTemplate.propTypes = {
     item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     actions: PropTypes.object,
     sherpaRomeo: PropTypes.object,
+    ulrichs: PropTypes.object,
 };
 
 export default IssnRowItemTemplate;

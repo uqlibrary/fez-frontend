@@ -180,10 +180,9 @@ export default {
             title: "Check publisher's OA archiving policy",
         },
         ulrichsLink: {
-            ariaLabel: 'View Ulrichs information in a new window',
+            ariaLabel: 'Source publisher name/place and alternate ISSNs in a new window',
             externalLinktext: 'Ulrichs',
             externalUrl: EXPROXY_URL_PREFIX + 'http://ulrichsweb.serialssolutions.com/title/[id]',
-            title: 'View Ulrichs information',
         },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to work',
