@@ -757,6 +757,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
         fez_record_search_key_license_biblio: licenseData,
+        issnField,
         ...rest
     } = data;
 
@@ -823,6 +824,16 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
         ...(!!licenseData ? renameLicense(licenseData) : {}),
+        ...(!!issnField
+            ? {
+                fez_record_search_key_issn: issnField.map(({ rek_value: rekValue, rek_order: rekOrder }) => ({
+                    rek_value: {
+                        key: rekValue.key || rekValue,
+                    },
+                    rek_order: rekOrder,
+                })),
+            }
+            : {}),
     };
 };
 
