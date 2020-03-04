@@ -13,7 +13,7 @@ export const styles = () => ({
         outline: '1px solid #333',
         marginLeft: '0.5em',
         marginRight: '0.3em',
-        bottom: '-0.2em',
+        bottom: '-0.1em',
         position: 'relative',
 
         '&.green': {

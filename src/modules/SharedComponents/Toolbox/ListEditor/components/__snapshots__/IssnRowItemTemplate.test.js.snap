@@ -23,7 +23,7 @@ Object {
     "&.yellow": Object {
       "background": "#FFFF99",
     },
-    "bottom": "-0.2em",
+    "bottom": "-0.1em",
     "display": "inline-block",
     "height": "1em",
     "marginLeft": "0.5em",
