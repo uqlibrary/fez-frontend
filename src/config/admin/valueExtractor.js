@@ -199,6 +199,7 @@ export default {
                             issn.fez_sherpa_romeo.srm_issn,
                         )) ||
                     '';
+                const sherpaRomeoColour = (!!issn.fez_sherpa_romeo && issn.fez_sherpa_romeo.srm_colour) || 'none';
                 return {
                     rek_order: issn.rek_issn_order,
                     rek_value: {
@@ -211,6 +212,7 @@ export default {
                             },
                             sherpaRomeo: {
                                 link: sherpaRomeoLink,
+                                colour: sherpaRomeoColour,
                             },
                         },
                     },
