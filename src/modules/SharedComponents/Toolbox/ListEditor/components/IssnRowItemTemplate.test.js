@@ -1,4 +1,4 @@
-import { IssnRowItemTemplate } from './IssnRowItemTemplate';
+import { IssnRowItemTemplate, styles } from './IssnRowItemTemplate';
 import React from 'react';
 
 function setup(testProps = {}, args = { isShallow: true }) {
@@ -8,6 +8,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
             getSherpaFromIssn: jest.fn(),
             getUlrichsFromIssn: jest.fn(),
         },
+        classes: {},
         ...testProps,
     };
     return getElement(IssnRowItemTemplate, props, args);
@@ -29,8 +30,12 @@ describe('IssnRowItemTemplate component', () => {
                     },
                     sherpaRomeo: {
                         link: 'http://example.com/sherpa?issn=1234-1234',
+                        colour: 'blue',
                     },
                 },
+            },
+            classes: {
+                romeoColour: 'example',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -133,5 +138,9 @@ describe('IssnRowItemTemplate component', () => {
 
         mockUseEffect.mockRestore();
         mockUseState.mockRestore();
+    });
+
+    it('should generate styles as expected', () => {
+        expect(styles()).toMatchSnapshot();
     });
 });

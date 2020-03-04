@@ -1,10 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => {
+export const styles = () => ({
+    romeoColour: {
+        display: 'inline-block',
+        width: '1em',
+        height: '1em',
+        outline: '1px solid #333',
+        marginLeft: '0.5em',
+        marginRight: '0.3em',
+        bottom: '-0.2em',
+        position: 'relative',
+
+        '&.green': {
+            background: '#D0F9D2',
+        },
+        '&.blue': {
+            background: '#D3ECFA',
+        },
+        '&.yellow': {
+            background: '#FFFF99',
+        },
+        '&.white': {
+            background: '#FFFFFF',
+        },
+
+        '&.none::after': {
+            content: '" "',
+            width: '1.4em',
+            height: '1.5em',
+            borderBottom: '1px solid #333',
+            transform: 'translateY(-0.85em) translateX(0.3em) rotate(45deg)',
+            position: 'absolute',
+        },
+    },
+});
+
+export const IssnRowItemTemplate = ({ actions, classes, item, sherpaRomeo, ulrichs }) => {
     const convertItem = theItem =>
         !!theItem.key
             ? theItem
@@ -70,6 +106,12 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => 
                         aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
                         title={globalLocale.global.sherpaRomeoLink.title}
                     >
+                        {issn.value.sherpaRomeo.colour && (
+                            <span
+                                className={`${classes.romeoColour} ${issn.value.sherpaRomeo.colour}`}
+                                title={globalLocale.global.sherpaRomeoLink.colourTitle[issn.value.sherpaRomeo.colour]}
+                            />
+                        )}
                         {globalLocale.global.sherpaRomeoLink.externalLinktext}
                     </ExternalLink>
                 )}
@@ -93,10 +135,11 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => 
 };
 
 IssnRowItemTemplate.propTypes = {
-    item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     actions: PropTypes.object,
+    classes: PropTypes.object,
+    item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     sherpaRomeo: PropTypes.object,
     ulrichs: PropTypes.object,
 };
 
-export default IssnRowItemTemplate;
+export default withStyles(styles)(IssnRowItemTemplate);

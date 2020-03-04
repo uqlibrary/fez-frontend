@@ -36,12 +36,14 @@ const mapStateToProps = (state, props) => {
         !loadingSherpaFromIssn && !sherpaLoadFromIssnError && sherpaRomeo && getValidSherpa(sherpaRomeo, item);
     const ulrichsData =
         !loadingUlrichsFromIssn && !ulrichsLoadFromIssnError && ulrichs && getValidUlrichs(ulrichs, item);
+    const knownColours = ['green', 'blue', 'yellow', 'white'];
     return {
         sherpaRomeo:
             (sherpaData && {
                 link:
                     sherpaData.srm_issn &&
                     globalLocale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaData.srm_issn),
+                colour: (knownColours.indexOf(sherpaData.srm_colour) > -1 && sherpaData.srm_colour) || 'none',
             }) ||
             null,
         ulrichs:
