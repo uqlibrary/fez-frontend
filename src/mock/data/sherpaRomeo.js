@@ -14,5 +14,37 @@ export const sherpaRomeo = [
         "srm_journal_name":"Not found in Sherpa Romeo",
         "srm_colour":"Not found in Sherpa Romeo",
         "srm_date_updated":"2017-09-30 19:12:05"
-    }
+    },
+    {
+        "srm_id": 3,
+        "srm_issn": "3333-3333",
+        "srm_xml": "",
+        "srm_journal_name":"Dummy",
+        "srm_colour":"green",
+        "srm_date_updated":"2020-03-05 12:13:25"
+    },
+    {
+        "srm_id": 4,
+        "srm_issn": "4444-4444",
+        "srm_xml": "",
+        "srm_journal_name":"Dummy",
+        "srm_colour":"yellow",
+        "srm_date_updated":"2020-03-05 12:13:25"
+    },
+    {
+        "srm_id": 5,
+        "srm_issn": "5555-5555",
+        "srm_xml": "",
+        "srm_journal_name":"Dummy",
+        "srm_colour":"white",
+        "srm_date_updated":"2020-03-05 12:13:25"
+    },
+    {
+        "srm_id": 6,
+        "srm_issn": "6666-6666",
+        "srm_xml": "",
+        "srm_journal_name":"Dummy",
+        "srm_colour":"",
+        "srm_date_updated":"2020-03-05 12:13:25"
+    },
 ];

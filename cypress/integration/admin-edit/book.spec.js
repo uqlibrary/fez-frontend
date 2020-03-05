@@ -71,25 +71,39 @@ context('Book admin edit', () => {
         const sherpaLinkPrefix = 'http://www.sherpa.ac.uk/romeo/search.php?issn=';
         const ulrichsLinkPrefix =
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
+        const sherpaColourTitles = {
+            green: "Can archive pre-print and post-print or publisher's version/PDF",
+            blue: "Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF",
+            yellow: 'Can archive pre-print (ie pre-refereeing)',
+            white: 'Archiving not formally supported',
+            none: 'Unknown',
+        };
+
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.get('.StandardPage form > div >div')
             .get('.StandardCard')
             .eq(1)
             .as('bibliographicTab');
 
-        const checkIssnLinks = (container, issn) => {
+        const checkIssnLinks = (container, issn, colour) => {
             cy.wrap(container)
                 .find('span > span')
                 .should('contain', issn)
                 .siblings('a')
+                // Make sure the data has loaded...
                 .should('contain', 'SHERPA/RoMEO')
                 .should('contain', 'Ulrichs')
                 .as('issnLinks')
+                // ...before finding 'nth'
                 .eq(0)
-                .should('have.attr', 'href', `${sherpaLinkPrefix}${issn}`);
+                .should('have.attr', 'href', `${sherpaLinkPrefix}${issn}`)
+                .find('span')
+                .should('have.class', colour)
+                .should('have.attr', 'title', sherpaColourTitles[colour]);
+            const ulrichsID = issn === '0302-9743' ? '122527' : issn.replace('-', '');
             cy.get('@issnLinks')
                 .eq(1)
-                .should('have.attr', 'href', `${ulrichsLinkPrefix}${issn.replace('-', '')}`);
+                .should('have.attr', 'href', `${ulrichsLinkPrefix}${ulrichsID}`);
         };
 
         cy.get('@bibliographicTab')
@@ -97,8 +111,16 @@ context('Book admin edit', () => {
                 cy.get('.AdminCard')
                     .contains('h4', 'ISSN')
                     .parents('.AdminCard')
-                    .as('issnBlock')
-                // Find existing entry with placeholder data
+                    .as('issnBlock');
+                cy.log('Find existing entry');
+                cy.get('@issnBlock')
+                    .find('.ListRow-ISSNvalue')
+                    .eq(0)
+                    .within(row => {
+                        checkIssnLinks(row, '0302-9743', 'green');
+                    });
+                cy.log('Find existing entry with placeholder data');
+                cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(1)
                     .should('contain', '1611-3349 Ulrichs')
@@ -123,7 +145,7 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(1)
                     .within(row => {
-                        checkIssnLinks(row, '1611-3340');
+                        checkIssnLinks(row, '1611-3340', 'blue');
                     });
                 cy.log('Add a 3rd entry without match in API');
                 cy.get('@issnBlock')
@@ -133,23 +155,21 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(2)
                     .should('contain', '1111-1111')
-                // Mock returns no sherpa data for issn 1111-1111 or 2222-2222.
-                    .should('not.contain', 'SHERPA/RoMEO');
+                // Mock returns no sherpa/ulrichs data for issn 1111-1111 or 2222-2222.
+                    .should('not.contain', 'SHERPA/RoMEO')
+                    .should('not.contain', 'Ulrichs');
+                cy.viewport(1000, 1000);
                 cy.log('Add 4th entry with match in API');
                 cy.get('@issnBlock')
                     .find('input')
-                    .type('12121212{enter}');
+                    .type('33333333{enter}');
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
                     .within(row => {
-                        checkIssnLinks(row, '1212-1212');
-                        cy.get('span > a')
-                            .eq(0)
-                            .should('contain', 'SHERPA/RoMEO');
+                        checkIssnLinks(row, '3333-3333', 'green');
                         cy.get('span > a')
                             .eq(1)
-                            .should('contain', 'Ulrichs')
                             .should('have.attr', 'title', 'Lecture Notes in Computer Science')
                             .should(
                                 'have.attr',
@@ -163,25 +183,27 @@ context('Book admin edit', () => {
                 cy.log('Edit the 4th entry');
                 cy.get('@issnBlock')
                     .find('input')
-                    .type('{backspace}3{enter}');
+                    .type('{selectall}{del}44444444{enter}');
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
-                    .should('not.contain', '1212-1212')
+                    .should('not.contain', '3333-3333')
                     .within(row => {
-                        checkIssnLinks(row, '1212-1213');
+                        checkIssnLinks(row, '4444-4444', 'yellow');
                     });
                 cy.log('Add a 5th entry');
                 cy.get('@issnBlock')
                     .find('input')
-                    .type('23232323{enter}');
+                    .type('55555555{enter}');
                 cy.log('Verify and move up the 5th entry');
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(4)
-                    .should('contain', '2323-2323 SHERPA/RoMEO')
-                    .contains('span > span', '2323-2323')
-                    .parents('.ListRow-ISSNvalue')
+                    .as('issnToReorder')
+                    .within(row => {
+                        checkIssnLinks(row, '5555-5555', 'white');
+                    });
+                cy.get('@issnToReorder')
                     .find('button[title="Move item up the order"]')
                     .click();
                 cy.log('Ensure 4th and 5th entries have swapped properly');
@@ -189,13 +211,34 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
                     .within(row => {
-                        checkIssnLinks(row, '2323-2323');
+                        checkIssnLinks(row, '5555-5555', 'white');
                     });
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(4)
                     .within(row => {
-                        checkIssnLinks(row, '1212-1213');
+                        checkIssnLinks(row, '4444-4444', 'yellow');
+                    });
+                cy.log('New entry with sherpa placeholder data');
+                cy.get('@issnBlock')
+                    .find('input')
+                    .type('00000000{enter}');
+                cy.get('@issnBlock')
+                    .find('.ListRow-ISSNvalue')
+                    .eq(5)
+                    .should('contain', '0000-0000')
+                    .find('a')
+                    .should('not.contain', 'SHERPA/RoMEO')
+                    .should('contain', 'Ulrichs');
+                cy.log('New entry with unknown sherpa status');
+                cy.get('@issnBlock')
+                    .find('input')
+                    .type('66666666{enter}');
+                cy.get('@issnBlock')
+                    .find('.ListRow-ISSNvalue')
+                    .eq(6)
+                    .within(row => {
+                        checkIssnLinks(row, '6666-6666', 'none');
                     });
             });
 
