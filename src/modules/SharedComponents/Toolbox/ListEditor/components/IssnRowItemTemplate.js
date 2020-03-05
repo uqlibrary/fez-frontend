@@ -59,8 +59,9 @@ export const IssnRowItemTemplate = ({ actions, classes, item, sherpaRomeo, ulric
     const [issn, setIssn] = React.useState(convertItem(item));
 
     React.useEffect(() => {
-        if ((item.key || item) !== issn.key) {
-            setIssn(convertItem(item));
+        const issnFromProp = item.key || item;
+        if (issnFromProp !== issn.key) {
+            setIssn(convertItem(issnFromProp));
         }
     }, [issn, item]);
 

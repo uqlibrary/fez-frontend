@@ -77,11 +77,13 @@ context('Book admin edit', () => {
             .eq(1)
             .as('bibliographicTab');
 
-        const checkIssnLink = (container, issn) => {
+        const checkIssnLinks = (container, issn) => {
             cy.wrap(container)
                 .find('span > span')
                 .should('contain', issn)
                 .siblings('a')
+                .should('contain', 'SHERPA/RoMEO')
+                .should('contain', 'Ulrichs')
                 .as('issnLinks')
                 .eq(0)
                 .should('have.attr', 'href', `${sherpaLinkPrefix}${issn}`);
@@ -113,16 +115,17 @@ context('Book admin edit', () => {
                         cy.get('button[aria-label="Edit this item"]')
                             .click();
                     });
-                // Edit issn to one with valid data
+                cy.log('Edit issn to one with valid data');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('{backspace}0{enter}');
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(1)
-                    .should('contain', '1611-3340 SHERPA/RoMEO')
-                    .should('contain', 'Ulrichs');
-                // Add a 3rd entry without match in API
+                    .within(row => {
+                        checkIssnLinks(row, '1611-3340');
+                    });
+                cy.log('Add a 3rd entry without match in API');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('11111111{enter}');
@@ -132,7 +135,7 @@ context('Book admin edit', () => {
                     .should('contain', '1111-1111')
                 // Mock returns no sherpa data for issn 1111-1111 or 2222-2222.
                     .should('not.contain', 'SHERPA/RoMEO');
-                // Add 4th entry with match in API
+                cy.log('Add 4th entry with match in API');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('12121212{enter}');
@@ -140,7 +143,7 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
                     .within(row => {
-                        checkIssnLink(row, '1212-1212');
+                        checkIssnLinks(row, '1212-1212');
                         cy.get('span > a')
                             .eq(0)
                             .should('contain', 'SHERPA/RoMEO');
@@ -157,7 +160,7 @@ context('Book admin edit', () => {
                     .parents('.ListRow-ISSNvalue')
                     .find('button[aria-label="Edit this item"]')
                     .click();
-                // Edit the 4th entry
+                cy.log('Edit the 4th entry');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('{backspace}3{enter}');
@@ -166,34 +169,33 @@ context('Book admin edit', () => {
                     .eq(3)
                     .should('not.contain', '1212-1212')
                     .within(row => {
-                        checkIssnLink(row, '1212-1213');
+                        checkIssnLinks(row, '1212-1213');
                     });
-                // Add a 5th entry
+                cy.log('Add a 5th entry');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('23232323{enter}');
+                cy.log('Verify and move up the 5th entry');
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(4)
                     .should('contain', '2323-2323 SHERPA/RoMEO')
                     .contains('span > span', '2323-2323')
                     .parents('.ListRow-ISSNvalue')
-                // Move up the 5th entry
                     .find('button[title="Move item up the order"]')
                     .click();
-                // Ensure 4th and 5th entries have swapped properly.
+                cy.log('Ensure 4th and 5th entries have swapped properly');
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
-                    .should('contain', '2323-2323 SHERPA/RoMEO')
                     .within(row => {
-                        checkIssnLink(row, '2323-2323');
+                        checkIssnLinks(row, '2323-2323');
                     });
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(4)
                     .within(row => {
-                        checkIssnLink(row, '1212-1213');
+                        checkIssnLinks(row, '1212-1213');
                     });
             });
 

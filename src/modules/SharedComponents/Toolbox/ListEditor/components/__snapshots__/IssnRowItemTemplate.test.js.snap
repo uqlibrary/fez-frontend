@@ -83,6 +83,40 @@ exports[`IssnRowItemTemplate component should render default view 1`] = `
 </Fragment>
 `;
 
+exports[`IssnRowItemTemplate component should render link data from API 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span>
+      1234-1234
+    </span>
+     
+    <WithStyles(ExternalLink)
+      aria-label="Check publisher's OA archiving policy in a new window"
+      href="1234"
+      title="Check publisher's OA archiving policy"
+    >
+      <span
+        className="undefined blue"
+        title="Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF"
+      />
+      SHERPA/RoMEO
+    </WithStyles(ExternalLink)>
+    <span>
+        
+    </span>
+    <WithStyles(ExternalLink)
+      aria-label="Source publisher name/place and alternate ISSNs in a new window"
+      href="1234"
+    >
+      Ulrichs
+    </WithStyles(ExternalLink)>
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
 exports[`IssnRowItemTemplate component should skip missing ulrichs or sherparomeo 1`] = `
 <Fragment>
   <WithStyles(Typography)
