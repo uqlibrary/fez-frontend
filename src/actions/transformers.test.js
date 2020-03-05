@@ -2751,8 +2751,8 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_issn: [
-                    { rek_value: { key: '1212-1212' }, rek_order: 1 },
-                    { rek_value: { key: '2323-2323' }, rek_order: 2 },
+                    { rek_issn: '1212-1212', rek_issn_order: 1 },
+                    { rek_issn: '2323-2323', rek_issn_order: 2 },
                 ],
             });
         });

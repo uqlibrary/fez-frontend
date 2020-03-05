@@ -826,11 +826,9 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!licenseData ? renameLicense(licenseData) : {}),
         ...(!!issnField
             ? {
-                fez_record_search_key_issn: issnField.map(({ rek_value: rekValue, rek_order: rekOrder }) => ({
-                    rek_value: {
-                        key: rekValue.key || rekValue,
-                    },
-                    rek_order: rekOrder,
+                fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
+                    rek_issn: value.key || value,
+                    rek_issn_order: order,
                 })),
             }
             : {}),
