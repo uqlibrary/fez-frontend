@@ -2,10 +2,10 @@
 
 exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -23,7 +23,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -40,6 +40,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -57,23 +62,28 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`AuthorLinking should call componentDidMount life cycle method with authorList only 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -91,7 +101,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -108,6 +118,11 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -125,23 +140,28 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`AuthorLinking should maintain question if onchange prop is missing 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -159,7 +179,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 1`] 
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -176,6 +196,11 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 1`] 
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -193,23 +218,28 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 1`] 
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`AuthorLinking should maintain question if onchange prop is missing 2`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -227,7 +257,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -244,6 +274,11 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -261,22 +296,27 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(WithFormControlContext(FormControlLabel))
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(FormControlLabel))
     classes={
       Object {
         "root": undefined,
       }
     }
     control={
-      <WithStyles(Checkbox)
+      <ForwardRef(WithStyles)
         checked={false}
         classes={
           Object {
@@ -290,7 +330,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
     }
     disabled={false}
     label={
-      <WithStyles(Typography)
+      <ForwardRef(WithStyles)
         classes={
           Object {
             "root": undefined,
@@ -299,7 +339,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
         color="error"
       >
         I confirm and understand that I am claiming this work under the above name, and confirm this is me
-      </WithStyles(Typography)>
+      </ForwardRef(WithStyles)>
     }
   />
 </div>
@@ -307,10 +347,10 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
 
 exports[`AuthorLinking should render component if authorList has more authors than linkedAuthorIdList 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -328,7 +368,7 @@ exports[`AuthorLinking should render component if authorList has more authors th
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -345,6 +385,11 @@ exports[`AuthorLinking should render component if authorList has more authors th
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -362,13 +407,18 @@ exports[`AuthorLinking should render component if authorList has more authors th
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

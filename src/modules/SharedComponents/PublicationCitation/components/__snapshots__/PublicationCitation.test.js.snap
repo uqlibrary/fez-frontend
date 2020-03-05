@@ -41,19 +41,19 @@ exports[`PublicationCitation  should render button disabled with spinners on act
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -62,7 +62,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -71,9 +71,9 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -490,16 +490,16 @@ exports[`PublicationCitation  should render button disabled with spinners on act
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -921,41 +921,31 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       key="action_key_0"
       sm="auto"
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="publicationAction buttonOrder0"
         classes={
           Object {
@@ -969,7 +959,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
         variant="contained"
       >
         Claim now
-        <WithStyles(CircularProgress)
+        <WithStyles(ForwardRef(CircularProgress))
           aria-label="Waiting for records to finish loading"
           color="secondary"
           size={12}
@@ -982,15 +972,15 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           thickness={3}
           variant="indeterminate"
         />
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       key="action_key_1"
       sm="auto"
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="publicationAction buttonOrder1"
         classes={
           Object {
@@ -1004,7 +994,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
         variant="text"
       >
         Not mine
-        <WithStyles(CircularProgress)
+        <WithStyles(ForwardRef(CircularProgress))
           aria-label="Waiting for records to finish loading"
           color="secondary"
           size={12}
@@ -1017,15 +1007,15 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           thickness={3}
           variant="indeterminate"
         />
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       key="action_key_2"
       sm="auto"
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="publicationAction buttonOrder2"
         classes={
           Object {
@@ -1039,7 +1029,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
         variant="text"
       >
         View stats
-        <WithStyles(CircularProgress)
+        <WithStyles(ForwardRef(CircularProgress))
           aria-label="Waiting for records to finish loading"
           color="secondary"
           size={12}
@@ -1052,15 +1042,15 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           thickness={3}
           variant="indeterminate"
         />
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -1069,8 +1059,8 @@ exports[`PublicationCitation  should render button disabled with spinners on act
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1078,19 +1068,19 @@ exports[`PublicationCitation  should render component with content indicators 1`
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -1099,7 +1089,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -1108,9 +1098,9 @@ exports[`PublicationCitation  should render component with content indicators 1`
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -1527,16 +1517,16 @@ exports[`PublicationCitation  should render component with content indicators 1`
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -1958,18 +1948,18 @@ exports[`PublicationCitation  should render component with content indicators 1`
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -1978,8 +1968,8 @@ exports[`PublicationCitation  should render component with content indicators 1`
         :
       </span>
       a content indicator, another content indicator
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1987,19 +1977,19 @@ exports[`PublicationCitation  should render component with default actions 1`] =
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -2008,7 +1998,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -2017,9 +2007,9 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -2436,16 +2426,16 @@ exports[`PublicationCitation  should render component with default actions 1`] =
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -2867,41 +2857,31 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       key="action_key_0"
       sm="auto"
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="publicationAction buttonOrder0"
         classes={
           Object {
@@ -2915,15 +2895,15 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         variant="text"
       >
         Request Correction
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -2932,8 +2912,8 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -2941,19 +2921,19 @@ exports[`PublicationCitation  should render component with default item 1`] = `
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -2962,7 +2942,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -2971,9 +2951,9 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -3390,16 +3370,16 @@ exports[`PublicationCitation  should render component with default item 1`] = `
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -3821,18 +3801,18 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -3841,8 +3821,8 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -3850,19 +3830,19 @@ exports[`PublicationCitation  should render component with default item without 
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -3871,14 +3851,14 @@ exports[`PublicationCitation  should render component with default item without 
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
             Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -4295,16 +4275,16 @@ exports[`PublicationCitation  should render component with default item without 
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -4726,18 +4706,18 @@ exports[`PublicationCitation  should render component with default item without 
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -4746,8 +4726,8 @@ exports[`PublicationCitation  should render component with default item without 
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -4755,19 +4735,19 @@ exports[`PublicationCitation  should render component with default list hiding t
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -4776,7 +4756,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -4785,9 +4765,9 @@ exports[`PublicationCitation  should render component with default list hiding t
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -5204,16 +5184,16 @@ exports[`PublicationCitation  should render component with default list hiding t
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -5635,18 +5615,18 @@ exports[`PublicationCitation  should render component with default list hiding t
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -5655,8 +5635,8 @@ exports[`PublicationCitation  should render component with default list hiding t
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -5664,19 +5644,19 @@ exports[`PublicationCitation  should render component with default list hiding t
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -5685,7 +5665,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -5694,9 +5674,9 @@ exports[`PublicationCitation  should render component with default list hiding t
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -6113,16 +6093,16 @@ exports[`PublicationCitation  should render component with default list hiding t
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -6544,18 +6524,18 @@ exports[`PublicationCitation  should render component with default list hiding t
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -6564,8 +6544,8 @@ exports[`PublicationCitation  should render component with default list hiding t
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -6573,19 +6553,19 @@ exports[`PublicationCitation  should render component with publication from mult
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -6594,7 +6574,7 @@ exports[`PublicationCitation  should render component with publication from mult
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -6603,9 +6583,9 @@ exports[`PublicationCitation  should render component with publication from mult
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -7028,16 +7008,16 @@ exports[`PublicationCitation  should render component with publication from mult
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -7465,37 +7445,41 @@ exports[`PublicationCitation  should render component with publication from mult
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             gutterBottom={true}
             variant="caption"
           >
-            Found in:
+            Found in: 
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
+              classes={Object {}}
               href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
               key="source_0"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               eSpace
             </WithStyles(ExternalLink)>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -7504,8 +7488,8 @@ exports[`PublicationCitation  should render component with publication from mult
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -7513,23 +7497,23 @@ exports[`PublicationCitation  should render component without a title 1`] = `
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -7952,16 +7936,16 @@ exports[`PublicationCitation  should render component without a title 1`] = `
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -8389,37 +8373,41 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             gutterBottom={true}
             variant="caption"
           >
-            Found in:
+            Found in: 
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
+              classes={Object {}}
               href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
               key="source_0"
+              openInNewIcon={true}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               eSpace
             </WithStyles(ExternalLink)>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -8428,19 +8416,19 @@ exports[`PublicationCitation  should render component without a title 1`] = `
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`PublicationCitation  should render primary action button 1`] = `
 Array [
-  <WithStyles(Grid)
+  <ForwardRef(WithStyles)
     item={true}
     sm="auto"
     xs={12}
   >
-    <WithStyles(Button)
+    <ForwardRef(WithStyles)
       className="publicationAction buttonOrder0"
       classes={
         Object {
@@ -8453,36 +8441,40 @@ Array [
       onClick={[Function]}
       variant="contained"
     />
-  </WithStyles(Grid)>,
+  </ForwardRef(WithStyles)>,
 ]
 `;
 
 exports[`PublicationCitation  should render publication with citation metric 1`] = `
 <WithStyles(ExternalLink)
   aria-label="Full citation in Altmetric will open in a new window"
+  className=""
+  classes={Object {}}
   href="http://www.test.com"
   openInNewIcon={false}
+  rel="noopener noreferrer"
+  target="_blank"
   title="Full citation in Altmetric will open in a new window"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <span
         className="fez-icon altmetric xxxlarge"
       />
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="h6"
       >
         23
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="difference"
         color="inherit"
         title="Difference in social media activities"
@@ -8490,39 +8482,31 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       >
         +
         5
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </WithStyles(ExternalLink)>
 `;
 
-exports[`PublicationCitation  should render publication with citation metric 2`] = `
-<WithStyles(Typography)
-  className="count"
-  color="inherit"
-  variant="h6"
->
-  23
-</WithStyles(Typography)>
-`;
+exports[`PublicationCitation  should render publication with citation metric 2`] = `null`;
 
 exports[`PublicationCitation  should render publication with unpublished buffer 1`] = `
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -8531,7 +8515,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -8540,9 +8524,9 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -8959,8 +8943,8 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -9376,16 +9360,16 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -9807,18 +9791,18 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   }
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -9827,14 +9811,14 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`PublicationCitation  should return message indicating unavailability of citation display 1`] = `
 <div>
-  Citation display not available for
+  Citation display not available for 
 </div>
 `;
 
@@ -9842,19 +9826,19 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
 <div
   className="publicationCitation"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={0}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -9863,7 +9847,7 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
           }
           xs={true}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="h6"
             variant="h6"
           >
@@ -9872,9 +9856,9 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
             </Link>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -10291,16 +10275,16 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
               }
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
             >
               <Memo(AdminActions)
@@ -10336,18 +10320,18 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
                 }
                 pid="UQ:41878"
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Divider) />
-  <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       gutterBottom={true}
       variant="caption"
     >
@@ -10356,7 +10340,7 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
         :
       </span>
       Scholarship of Teaching and Learning, Protocol
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

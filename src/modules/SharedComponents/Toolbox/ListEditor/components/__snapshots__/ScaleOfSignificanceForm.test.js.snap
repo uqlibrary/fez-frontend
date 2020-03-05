@@ -1,19 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScaleOfSignificanceForm component should render the default view 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   alignItems="center"
   container={true}
   display="row"
   spacing={2}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Alert) />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    <Alert
+      allowDismiss={false}
+      dismissTitle="Click to dismiss this alert"
+      message="Unexpected error"
+      showLoader={false}
+      type="error"
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     style={
       Object {
@@ -46,8 +52,8 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       onChange={[Function]}
       selectedValue={null}
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -83,18 +89,18 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       value=""
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Button)
+    <WithStyles(ForwardRef(Button))
       color="primary"
       fullWidth={true}
       id="add-items"
       onClick={[Function]}
       variant="contained"
     />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

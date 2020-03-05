@@ -2,7 +2,7 @@
 
 exports[`Component ContributorForm should display org affiliation selector if affiliation is NotUQ 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -12,7 +12,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={2}
       xs={12}
@@ -39,8 +39,8 @@ exports[`Component ContributorForm should display org affiliation selector if af
         }
         onAffiliationChange={[Function]}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -56,8 +56,8 @@ exports[`Component ContributorForm should display org affiliation selector if af
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={3}
       xs={12}
@@ -73,9 +73,9 @@ exports[`Component ContributorForm should display org affiliation selector if af
         showClear={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -84,7 +84,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -93,7 +93,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -101,14 +101,14 @@ exports[`Component ContributorForm should display org affiliation selector if af
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should display org affiliation selector if affiliation is NotUQ 2`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -118,7 +118,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={2}
       xs={12}
@@ -145,8 +145,8 @@ exports[`Component ContributorForm should display org affiliation selector if af
         }
         onAffiliationChange={[Function]}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -162,8 +162,8 @@ exports[`Component ContributorForm should display org affiliation selector if af
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -189,9 +189,9 @@ exports[`Component ContributorForm should display org affiliation selector if af
         orgAffiliation=""
         orgType=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -200,7 +200,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -209,7 +209,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -217,14 +217,14 @@ exports[`Component ContributorForm should display org affiliation selector if af
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should handle affiliation change 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -234,7 +234,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={2}
       xs={12}
@@ -261,8 +261,8 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         }
         onAffiliationChange={[Function]}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -278,8 +278,8 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={3}
       xs={12}
@@ -295,9 +295,9 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         showClear={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -306,7 +306,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -315,7 +315,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -323,14 +323,14 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should process prop updates 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -340,7 +340,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -356,9 +356,9 @@ exports[`Component ContributorForm should process prop updates 1`] = `
         required={false}
         value="value1"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -367,7 +367,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -376,7 +376,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={false}
         fullWidth={true}
@@ -384,14 +384,14 @@ exports[`Component ContributorForm should process prop updates 1`] = `
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should process prop updates 2`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -401,7 +401,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -417,9 +417,9 @@ exports[`Component ContributorForm should process prop updates 2`] = `
         required={false}
         value="value2"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -428,7 +428,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -437,7 +437,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={false}
         fullWidth={true}
@@ -445,14 +445,14 @@ exports[`Component ContributorForm should process prop updates 2`] = `
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should render NTRO fields 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -462,7 +462,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={2}
       xs={12}
@@ -489,8 +489,8 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         }
         onAffiliationChange={[Function]}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -506,8 +506,8 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={3}
       xs={12}
@@ -523,9 +523,9 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         showClear={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -534,7 +534,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -543,7 +543,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -551,14 +551,14 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field and identifier field 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -568,7 +568,7 @@ exports[`Component ContributorForm should render display name field and identifi
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -584,8 +584,8 @@ exports[`Component ContributorForm should render display name field and identifi
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={3}
       xs={12}
@@ -601,9 +601,9 @@ exports[`Component ContributorForm should render display name field and identifi
         showClear={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -612,7 +612,7 @@ exports[`Component ContributorForm should render display name field and identifi
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -621,7 +621,7 @@ exports[`Component ContributorForm should render display name field and identifi
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -629,14 +629,14 @@ exports[`Component ContributorForm should render display name field and identifi
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field and role field 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -646,7 +646,7 @@ exports[`Component ContributorForm should render display name field and role fie
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -662,8 +662,8 @@ exports[`Component ContributorForm should render display name field and role fie
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={5}
       sm={12}
@@ -680,9 +680,9 @@ exports[`Component ContributorForm should render display name field and role fie
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -691,7 +691,7 @@ exports[`Component ContributorForm should render display name field and role fie
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -700,7 +700,7 @@ exports[`Component ContributorForm should render display name field and role fie
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -708,14 +708,14 @@ exports[`Component ContributorForm should render display name field and role fie
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should render display name field only 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -725,7 +725,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -741,9 +741,9 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -752,7 +752,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -761,7 +761,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -769,15 +769,15 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should show contributor assignment 1`] = `
 <Fragment>
   Step 1 description
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -787,7 +787,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -803,9 +803,9 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -814,7 +814,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -823,7 +823,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -831,14 +831,14 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should show error regarding affiliation type selector 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -848,7 +848,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={2}
       xs={12}
@@ -875,8 +875,8 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         }
         onAffiliationChange={[Function]}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -892,8 +892,8 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         required={true}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={3}
       xs={12}
@@ -909,9 +909,9 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         showClear={false}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -920,7 +920,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -929,7 +929,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -937,14 +937,14 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`Component ContributorForm should show error regarding name field 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     id="contributorForm"
     spacing={1}
@@ -954,7 +954,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={true}
       xs={12}
@@ -970,9 +970,9 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
         required={true}
         value=""
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -981,7 +981,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -990,7 +990,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
       }
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -998,7 +998,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;

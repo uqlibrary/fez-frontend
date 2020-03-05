@@ -5,17 +5,22 @@ exports[`Component WhatIsEspace with different locale should render external lin
   primaryHeader={true}
   title="what is espace title"
 >
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     variant="body2"
   >
     what is espace intro
     <WithStyles(ExternalLink)
       aria-label="mouse over and see me"
+      className=""
+      classes={Object {}}
       href="https://example.com/"
+      openInNewIcon={true}
+      rel="noopener noreferrer"
+      target="_blank"
       title="mouse over and see me"
     >
       click me to learn more
     </WithStyles(ExternalLink)>
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </StandardCard>
 `;

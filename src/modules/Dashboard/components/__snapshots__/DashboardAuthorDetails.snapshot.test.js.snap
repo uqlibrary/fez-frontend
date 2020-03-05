@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={1}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       variant="h6"
     >
        
        
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   />
-</WithStyles(Grid)>
+</WithStyles(ForwardRef(Grid))>
 `;

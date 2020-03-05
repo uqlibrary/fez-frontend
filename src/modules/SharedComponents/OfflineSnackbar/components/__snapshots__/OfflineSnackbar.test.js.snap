@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component OfflineSnackbar renderMessage returns expected message 1`] = `
-<WithStyles(Grid)
+<ForwardRef(WithStyles)
   alignContent="center"
   alignItems="center"
   container={true}
   justify="center"
 >
-  <WithStyles(Grid)
+  <ForwardRef(WithStyles)
     item={true}
     xs={true}
   />
-  <WithStyles(Grid)
+  <ForwardRef(WithStyles)
     item={true}
     style={
       Object {
@@ -20,24 +20,24 @@ exports[`Component OfflineSnackbar renderMessage returns expected message 1`] = 
     }
   >
     icon
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </ForwardRef(WithStyles)>
+  <ForwardRef(WithStyles)
     item={true}
   >
     message
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </ForwardRef(WithStyles)>
+  <ForwardRef(WithStyles)
     item={true}
     xs={true}
   />
-</WithStyles(Grid)>
+</ForwardRef(WithStyles)>
 `;
 
 exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
 <div
   className="offlineSnackbar"
 >
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -46,17 +46,17 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
     }
     autoHideDuration={5000}
     message={
-      <WithStyles(Grid)
+      <ForwardRef(WithStyles)
         alignContent="center"
         alignItems="center"
         container={true}
         justify="center"
       >
-        <WithStyles(Grid)
+        <ForwardRef(WithStyles)
           item={true}
           xs={true}
         />
-        <WithStyles(Grid)
+        <ForwardRef(WithStyles)
           item={true}
           style={
             Object {
@@ -64,18 +64,18 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
             }
           }
         >
-          <pure(LinkIcon) />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          <Memo(LinkIcon) />
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
           item={true}
         >
           Your connection is back online
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
           item={true}
           xs={true}
         />
-      </WithStyles(Grid)>
+      </ForwardRef(WithStyles)>
     }
     onClose={[Function]}
     open={true}
@@ -87,7 +87,7 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
 <div
   className="offlineSnackbar"
 >
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -96,17 +96,17 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
     }
     autoHideDuration={5000}
     message={
-      <WithStyles(Grid)
+      <ForwardRef(WithStyles)
         alignContent="center"
         alignItems="center"
         container={true}
         justify="center"
       >
-        <WithStyles(Grid)
+        <ForwardRef(WithStyles)
           item={true}
           xs={true}
         />
-        <WithStyles(Grid)
+        <ForwardRef(WithStyles)
           item={true}
           style={
             Object {
@@ -114,18 +114,18 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
             }
           }
         >
-          <pure(LinkIcon) />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          <Memo(LinkIcon) />
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
           item={true}
         >
           Your connection is back online
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
           item={true}
           xs={true}
         />
-      </WithStyles(Grid)>
+      </ForwardRef(WithStyles)>
     }
     onClose={[Function]}
     open={false}
@@ -137,7 +137,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
 <div
   className="offlineSnackbar"
 >
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -146,17 +146,17 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
     }
     autoHideDuration={null}
     message={
-      <WithStyles(Grid)
+      <ForwardRef(WithStyles)
         alignContent="center"
         alignItems="center"
         container={true}
         justify="center"
       >
-        <WithStyles(Grid)
+        <ForwardRef(WithStyles)
           item={true}
           xs={true}
         />
-        <WithStyles(Grid)
+        <ForwardRef(WithStyles)
           item={true}
           style={
             Object {
@@ -164,18 +164,18 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
             }
           }
         >
-          <pure(LinkOffIcon) />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          <Memo(LinkOffIcon) />
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
           item={true}
         >
           Your connection is offline
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
           item={true}
           xs={true}
         />
-      </WithStyles(Grid)>
+      </ForwardRef(WithStyles)>
     }
     onClose={[Function]}
     open={true}

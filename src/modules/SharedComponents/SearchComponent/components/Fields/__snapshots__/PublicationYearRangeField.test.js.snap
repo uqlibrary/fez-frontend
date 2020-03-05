@@ -11,24 +11,24 @@ Object {
 
 exports[`Component PublicationYearRangeField should render as expected 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(WithFormControlContext(InputLabel))
+      <WithStyles(ForwardRef(InputLabel))
         shrink={true}
       >
         Published year range
-      </WithStyles(WithFormControlContext(InputLabel))>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+      </WithStyles(ForwardRef(InputLabel))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -38,13 +38,13 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       }
       zeroMinWidth={true}
     >
-      <WithStyles(WithFormControlContext(InputLabel))
+      <WithStyles(ForwardRef(InputLabel))
         hidden={true}
         id="from-label"
       >
         Enter a year to search from
-      </WithStyles(WithFormControlContext(InputLabel))>
-      <TextField
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(TextField))
         aria-label="Enter a year to search from"
         disabled={false}
         error={false}
@@ -57,23 +57,20 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
         }
         onChange={[Function]}
         placeholder="Year from"
-        required={false}
-        select={false}
         value="1999"
-        variant="standard"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs="auto"
     >
-      <WithStyles(WithFormControlContext(InputLabel))
+      <WithStyles(ForwardRef(InputLabel))
         hidden={true}
         id="combiner-label"
       >
         to
-      </WithStyles(WithFormControlContext(InputLabel))>
-      <TextField
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(TextField))
         InputProps={
           Object {
             "disableUnderline": true,
@@ -85,18 +82,15 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
             "aria-labelledby": "combiner-label",
           }
         }
-        required={false}
-        select={false}
         style={
           Object {
             "width": 24,
           }
         }
         value=" to "
-        variant="standard"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -106,13 +100,13 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       }
       zeroMinWidth={true}
     >
-      <WithStyles(WithFormControlContext(InputLabel))
+      <WithStyles(ForwardRef(InputLabel))
         hidden={true}
         id="to-label"
       >
         Enter a year to search to
-      </WithStyles(WithFormControlContext(InputLabel))>
-      <TextField
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(TextField))
         aria-label="Enter a year to search to"
         aria-labelledby="to-label"
         disabled={false}
@@ -126,13 +120,10 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
         }
         onChange={[Function]}
         placeholder="Year to"
-        required={false}
-        select={false}
         value="2001"
-        variant="standard"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 

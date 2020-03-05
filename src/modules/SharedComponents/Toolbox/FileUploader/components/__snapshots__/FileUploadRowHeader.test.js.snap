@@ -4,24 +4,14 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
 
 exports[`Component FileUploadRowHeader should render with access condition and embargo date column 1`] = `
 <Hidden
-  implementation="js"
-  lgDown={false}
-  lgUp={false}
-  mdDown={false}
-  mdUp={false}
   only={
     Array [
       "xs",
     ]
   }
-  smDown={false}
-  smUp={false}
-  xlDown={false}
-  xlUp={false}
-  xsDown={false}
-  xsUp={false}
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -32,6 +22,7 @@ exports[`Component FileUploadRowHeader should render with access condition and e
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <div
     style={
@@ -41,89 +32,79 @@ exports[`Component FileUploadRowHeader should render with access condition and e
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       alignItems="center"
       container={true}
       direction="row"
       gutter={8}
       spacing={1}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={6}
         sm={5}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           Filename
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={4}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           Access conditions
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={2}
         sm={2}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           Embargo release date
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         className=""
         item={true}
         xs={1}
       >
-        <WithStyles(Tooltip)
+        <WithStyles(ForwardRef(Tooltip))
           title="Remove all files from the upload queue"
         >
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
 </Hidden>
 `;
 
 exports[`Component FileUploadRowHeader should render with default setup 1`] = `
 <Hidden
-  implementation="js"
-  lgDown={false}
-  lgUp={false}
-  mdDown={false}
-  mdUp={false}
   only={
     Array [
       "xs",
     ]
   }
-  smDown={false}
-  smUp={false}
-  xlDown={false}
-  xlUp={false}
-  xsDown={false}
-  xsUp={false}
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -134,6 +115,7 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <div
     style={
@@ -143,61 +125,61 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       alignItems="center"
       container={true}
       direction="row"
       gutter={8}
       spacing={1}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={6}
         sm={5}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           File name
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={4}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={2}
         sm={2}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         className=""
         item={true}
         xs={1}
       >
-        <WithStyles(Tooltip)
+        <WithStyles(ForwardRef(Tooltip))
           title="Remove all files from the upload queue"
         >
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
 </Hidden>
 `;
@@ -230,24 +212,14 @@ exports[`Component FileUploadRowHeader should render with default setup with sty
 
 exports[`Component FileUploadRowHeader should render without access condition even if requireAccessCondition true but default access condition is provided 1`] = `
 <Hidden
-  implementation="js"
-  lgDown={false}
-  lgUp={false}
-  mdDown={false}
-  mdUp={false}
   only={
     Array [
       "xs",
     ]
   }
-  smDown={false}
-  smUp={false}
-  xlDown={false}
-  xlUp={false}
-  xsDown={false}
-  xsUp={false}
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -258,6 +230,7 @@ exports[`Component FileUploadRowHeader should render without access condition ev
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <div
     style={
@@ -267,65 +240,65 @@ exports[`Component FileUploadRowHeader should render without access condition ev
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       alignItems="center"
       container={true}
       direction="row"
       gutter={8}
       spacing={1}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={6}
         sm={5}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           Filename
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={4}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           Access conditions
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={2}
         sm={2}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           gutterBottom={true}
           variant="caption"
         >
           Embargo release date
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         className=""
         item={true}
         xs={1}
       >
-        <WithStyles(Tooltip)
+        <WithStyles(ForwardRef(Tooltip))
           title="Remove all files from the upload queue"
         >
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
 </Hidden>
 `;

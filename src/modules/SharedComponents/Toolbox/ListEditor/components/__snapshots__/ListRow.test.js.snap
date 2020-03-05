@@ -11,6 +11,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -21,13 +22,14 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={6}
@@ -36,38 +38,38 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       <GenericTemplate
         item="one"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       md={2}
       sm={5}
       xs={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         justify="flex-end"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove this item"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           id="delete-0"
           onClick={[Function]}
         >
-          <pure(DeleteIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -82,6 +84,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -92,13 +95,14 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={6}
@@ -107,67 +111,67 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       <GenericTemplate
         item="one"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       md={2}
       sm={5}
       xs={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         justify="flex-end"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
         >
-          <WithStyles(Tooltip)
+          <WithStyles(ForwardRef(Tooltip))
             title="Move item up the order"
           >
-            <WithStyles(IconButton)
+            <WithStyles(ForwardRef(IconButton))
               disabled={false}
               onClick={[Function]}
             >
-              <pure(KeyboardArrowUpIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+              <KeyboardArrowUpIcon />
+            </WithStyles(ForwardRef(IconButton))>
+          </WithStyles(ForwardRef(Tooltip))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
         >
-          <WithStyles(Tooltip)
+          <WithStyles(ForwardRef(Tooltip))
             title="Move item down the order"
           >
-            <WithStyles(IconButton)
+            <WithStyles(ForwardRef(IconButton))
               disabled={false}
               onClick={[Function]}
             >
-              <pure(KeyboardArrowDownIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+              <KeyboardArrowDownIcon />
+            </WithStyles(ForwardRef(IconButton))>
+          </WithStyles(ForwardRef(Tooltip))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove this item"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           id="delete-0"
           onClick={[Function]}
         >
-          <pure(DeleteIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -182,6 +186,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -192,13 +197,14 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={11}
       sm={11}
@@ -207,26 +213,26 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
       <GenericTemplate
         item="one"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove this item"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           id="delete-0"
           onClick={[Function]}
         >
-          <pure(DeleteIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -241,6 +247,7 @@ exports[`ListRow renders  should move row down 1`] = `
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -251,13 +258,14 @@ exports[`ListRow renders  should move row down 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={6}
@@ -266,53 +274,53 @@ exports[`ListRow renders  should move row down 1`] = `
       <GenericTemplate
         item="one"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       md={2}
       sm={5}
       xs={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         justify="flex-end"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
         >
-          <WithStyles(Tooltip)
+          <WithStyles(ForwardRef(Tooltip))
             title="Move item down the order"
           >
-            <WithStyles(IconButton)
+            <WithStyles(ForwardRef(IconButton))
               disabled={false}
               onClick={[Function]}
             >
-              <pure(KeyboardArrowDownIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+              <KeyboardArrowDownIcon />
+            </WithStyles(ForwardRef(IconButton))>
+          </WithStyles(ForwardRef(Tooltip))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove this item"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           id="delete-0"
           onClick={[Function]}
         >
-          <pure(DeleteIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -327,6 +335,7 @@ exports[`ListRow renders  should move row up 1`] = `
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -337,13 +346,14 @@ exports[`ListRow renders  should move row up 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={6}
@@ -352,53 +362,53 @@ exports[`ListRow renders  should move row up 1`] = `
       <GenericTemplate
         item="one"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       md={2}
       sm={5}
       xs={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         justify="flex-end"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
         >
-          <WithStyles(Tooltip)
+          <WithStyles(ForwardRef(Tooltip))
             title="Move item up the order"
           >
-            <WithStyles(IconButton)
+            <WithStyles(ForwardRef(IconButton))
               disabled={false}
               onClick={[Function]}
             >
-              <pure(KeyboardArrowUpIcon) />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+              <KeyboardArrowUpIcon />
+            </WithStyles(ForwardRef(IconButton))>
+          </WithStyles(ForwardRef(Tooltip))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className="center"
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove this item"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           id="delete-0"
           onClick={[Function]}
         >
-          <pure(DeleteIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 

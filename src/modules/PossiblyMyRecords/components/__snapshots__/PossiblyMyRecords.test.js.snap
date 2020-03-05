@@ -4,11 +4,11 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -28,28 +28,18 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
           </p>
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
       smDown={true}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={3}
       >
         <StandardRighthandCard
           title="Refine results"
         >
-          <FacetsFilter
+          <Memo(FacetsFilter)
             activeFacets={
               Object {
                 "filters": Object {},
@@ -84,12 +74,11 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
                 "Subtype": "Work subtype",
               }
             }
-            showOpenAccessFilter={false}
           />
         </StandardRighthandCard>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </Hidden>
-  </WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -97,16 +86,19 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(Alert)
+  <Alert
+    allowDismiss={false}
+    dismissTitle="Click to dismiss this alert"
     message="Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later."
+    showLoader={false}
     title="Error"
     type="error"
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -126,8 +118,8 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
           </p>
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -136,6 +128,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
   title="Claim possible works"
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -146,12 +139,13 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       xs={12}
@@ -159,15 +153,15 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -176,7 +170,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
           }
           xs={true}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={true}
           >
@@ -220,31 +214,21 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 ]
               }
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
       </StandardCard>
-    </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
       smDown={true}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={3}
       >
         <StandardRighthandCard
           title="Refine results"
         >
-          <FacetsFilter
+          <Memo(FacetsFilter)
             activeFacets={
               Object {
                 "filters": Object {},
@@ -329,12 +313,11 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 "Subtype": "Work subtype",
               }
             }
-            showOpenAccessFilter={false}
           />
         </StandardRighthandCard>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </Hidden>
-  </WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -342,26 +325,26 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     />
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <WithStyles(InlineLoader)
         message="Searching for possibly your works"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   />
@@ -372,26 +355,26 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     />
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <WithStyles(InlineLoader)
         message="Searching for possibly your works"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   />
@@ -402,11 +385,11 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -426,21 +409,29 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
           </p>
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
 exports[`Component PossiblyMyRecords renders nothing while account is loading 1`] = `""`;
 
 exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 1`] = `
-<WithStyles(Alert)
+<Alert
+  allowDismiss={false}
+  dismissTitle="Click to dismiss this alert"
   message={null}
+  showLoader={false}
+  type="error"
 />
 `;
 
 exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 2`] = `
-<WithStyles(Alert)
+<Alert
+  allowDismiss={false}
+  dismissTitle="Click to dismiss this alert"
   message="Alert: test message"
+  showLoader={false}
+  type="error"
 />
 `;

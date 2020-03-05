@@ -3,6 +3,7 @@
 exports[`Component ContributorRow Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -13,8 +14,9 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -28,27 +30,17 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -102,38 +94,39 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -144,8 +137,9 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -159,27 +153,17 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -233,38 +217,39 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -275,8 +260,9 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
@@ -290,27 +276,17 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -335,38 +311,39 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -377,8 +354,9 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
@@ -392,27 +370,17 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -437,38 +405,39 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       suffix=" listed contributor"
       width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -479,8 +448,9 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -494,27 +464,17 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -568,82 +528,83 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Move record up the order"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Move record up the order"
             disabled={false}
             onClick={[Function]}
           >
-            <pure(KeyboardArrowUpIcon)
+            <KeyboardArrowUpIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-      <WithStyles(Tooltip)
+      </WithStyles(ForwardRef(Tooltip))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Move record down the order"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Move record down the order"
             disabled={false}
             onClick={[Function]}
           >
-            <pure(KeyboardArrowDownIcon)
+            <KeyboardArrowDownIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-      <WithStyles(Tooltip)
+      </WithStyles(ForwardRef(Tooltip))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -654,8 +615,9 @@ exports[`Component ContributorRow a row with index and contributor with author d
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -669,27 +631,17 @@ exports[`Component ContributorRow a row with index and contributor with author d
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "selected",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -715,38 +667,39 @@ exports[`Component ContributorRow a row with index and contributor with author d
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "selected",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -757,8 +710,9 @@ exports[`Component ContributorRow a row with index and contributor with author d
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -772,27 +726,17 @@ exports[`Component ContributorRow a row with index and contributor with author d
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "selected",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -818,38 +762,39 @@ exports[`Component ContributorRow a row with index and contributor with author d
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "selected",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details & delete button 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -860,8 +805,9 @@ exports[`Component ContributorRow a row with index and contributor with author d
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -875,27 +821,17 @@ exports[`Component ContributorRow a row with index and contributor with author d
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -949,38 +885,39 @@ exports[`Component ContributorRow a row with index and contributor with author d
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -991,8 +928,9 @@ exports[`Component ContributorRow a row with index and creator with creator role
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -1006,27 +944,17 @@ exports[`Component ContributorRow a row with index and creator with creator role
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "selected",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -1053,38 +981,39 @@ exports[`Component ContributorRow a row with index and creator with creator role
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "selected",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1095,8 +1024,9 @@ exports[`Component ContributorRow a row with index and creator with creator role
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
@@ -1110,27 +1040,17 @@ exports[`Component ContributorRow a row with index and creator with creator role
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "selected",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -1157,32 +1077,32 @@ exports[`Component ContributorRow a row with index and creator with creator role
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "selected",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
@@ -1393,9 +1313,9 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
 </Fragment>
 `;
 
-exports[`Component ContributorRow should get row icon 1`] = `<pure(HowToRegIcon) />`;
+exports[`Component ContributorRow should get row icon 1`] = `<Memo(HowToRegIcon) />`;
 
-exports[`Component ContributorRow should get row icon 2`] = `<pure(LockIcon) />`;
+exports[`Component ContributorRow should get row icon 2`] = `<Memo(LockIcon) />`;
 
 exports[`Component ContributorRow should have a proper style generator 1`] = `
 Object {
@@ -1535,6 +1455,7 @@ Object {
 exports[`Component ContributorRow should render a row with a disabled contributor 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1545,8 +1466,9 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (undefined) to assign it to you"
     classes={
       Object {
@@ -1560,31 +1482,21 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     tabIndex={-1}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <WithStyles(Tooltip)
+        <WithStyles(ForwardRef(Tooltip))
           title="You are not able to edit this row"
         >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
-      </WithStyles(ListItemIcon)>
+          <LockIcon />
+        </WithStyles(ForwardRef(Tooltip))>
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -1609,38 +1521,39 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow should render row as required 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1651,8 +1564,9 @@ exports[`Component ContributorRow should render row as required 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (Test) to assign it to you"
     classes={
       Object {
@@ -1666,27 +1580,17 @@ exports[`Component ContributorRow should render row as required 1`] = `
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -1709,42 +1613,52 @@ exports[`Component ContributorRow should render row as required 1`] = `
       suffix=" listed contributor"
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
             id="delete-record-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure?",
+        "confirmationTitle": "Confirmation",
+      }
+    }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label=""
     classes={
       Object {
@@ -1758,27 +1672,17 @@ exports[`Component ContributorRow should render with missing aria label if selec
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
@@ -1802,31 +1706,31 @@ exports[`Component ContributorRow should render with missing aria label if selec
       showRoleInput={false}
       width="md"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             disabled={false}
             id="function deleteButtonId() {
           return 'delete-record-0';
         }-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;

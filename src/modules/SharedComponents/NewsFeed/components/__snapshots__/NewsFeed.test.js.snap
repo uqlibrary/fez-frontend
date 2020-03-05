@@ -17,16 +17,16 @@ exports[`Component NewsFeed should render news feed 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="newsItem-0"
       spacing={2}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs="auto"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="center"
           container={true}
@@ -34,40 +34,40 @@ exports[`Component NewsFeed should render news feed 1`] = `
           justify="center"
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             className="day"
             item={true}
           >
             15
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="month"
             item={true}
           >
             Dec
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="year"
             item={true}
           >
             2018
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="body2"
         >
           <b>
             Outage
           </b>
           There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
   <div
     key="1"
@@ -77,16 +77,16 @@ exports[`Component NewsFeed should render news feed 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="newsItem-1"
       spacing={2}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs="auto"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="center"
           container={true}
@@ -94,40 +94,40 @@ exports[`Component NewsFeed should render news feed 1`] = `
           justify="center"
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             className="day"
             item={true}
           >
             15
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="month"
             item={true}
           >
             Dec
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="year"
             item={true}
           >
             2017
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="body2"
         >
           <b>
             Statistics
           </b>
           The file download and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
   <div
     key="2"
@@ -137,16 +137,16 @@ exports[`Component NewsFeed should render news feed 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="newsItem-2"
       spacing={2}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs="auto"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="center"
           container={true}
@@ -154,40 +154,40 @@ exports[`Component NewsFeed should render news feed 1`] = `
           justify="center"
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             className="day"
             item={true}
           >
             15
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="month"
             item={true}
           >
             Dec
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="year"
             item={true}
           >
             2016
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="body2"
         >
           <b>
             PREFS - Account Preferences
           </b>
           When you set 'Remember search parameters' to 'Yes' via the PREFS tab, date filters applied to searches will now be remembered between searches
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
 </StandardCard>
 `;
@@ -205,16 +205,16 @@ exports[`Component NewsFeed should show new count if above set limit 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="newsItem-0"
       spacing={2}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs="auto"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="center"
           container={true}
@@ -222,40 +222,40 @@ exports[`Component NewsFeed should show new count if above set limit 1`] = `
           justify="center"
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             className="day"
             item={true}
           >
             15
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="month"
             item={true}
           >
             Dec
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             className="year"
             item={true}
           >
             2018
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="body2"
         >
           <b>
             Outage
           </b>
           There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
 </StandardCard>
 `;

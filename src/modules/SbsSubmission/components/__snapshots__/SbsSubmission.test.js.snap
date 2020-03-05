@@ -4,25 +4,25 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(Typography)>
+        <WithStyles(ForwardRef(Typography))>
           <p>
             You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
           </p>
-        </WithStyles(Typography)>
+        </WithStyles(ForwardRef(Typography))>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -30,25 +30,25 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(Typography)>
+        <WithStyles(ForwardRef(Typography))>
           <p>
             You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
           </p>
-        </WithStyles(Typography)>
+        </WithStyles(ForwardRef(Typography))>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -69,6 +69,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
       when={true}
     />
     <WithStyles(ConfirmDialogBox)
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -79,23 +80,24 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
       }
       onAction={[MockFunction]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={3}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Thesis information"
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={3}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -112,14 +114,317 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={6}
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "Naked": [Function],
+                    "defaultProps": undefined,
+                    "displayName": "WithStyles(TextFieldWrapper)",
+                    "options": Object {
+                      "defaultTheme": Object {
+                        "breakpoints": Object {
+                          "between": [Function],
+                          "down": [Function],
+                          "keys": Array [
+                            "xs",
+                            "sm",
+                            "md",
+                            "lg",
+                            "xl",
+                          ],
+                          "only": [Function],
+                          "up": [Function],
+                          "values": Object {
+                            "lg": 1280,
+                            "md": 960,
+                            "sm": 600,
+                            "xl": 1920,
+                            "xs": 0,
+                          },
+                          "width": [Function],
+                        },
+                        "direction": "ltr",
+                        "mixins": Object {
+                          "gutters": [Function],
+                          "toolbar": Object {
+                            "@media (min-width:0px) and (orientation: landscape)": Object {
+                              "minHeight": 48,
+                            },
+                            "@media (min-width:600px)": Object {
+                              "minHeight": 64,
+                            },
+                            "minHeight": 56,
+                          },
+                        },
+                        "overrides": Object {},
+                        "palette": Object {
+                          "action": Object {
+                            "activatedOpacity": 0.12,
+                            "active": "rgba(0, 0, 0, 0.54)",
+                            "disabled": "rgba(0, 0, 0, 0.26)",
+                            "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                            "disabledOpacity": 0.38,
+                            "focus": "rgba(0, 0, 0, 0.12)",
+                            "focusOpacity": 0.12,
+                            "hover": "rgba(0, 0, 0, 0.04)",
+                            "hoverOpacity": 0.04,
+                            "selected": "rgba(0, 0, 0, 0.08)",
+                            "selectedOpacity": 0.08,
+                          },
+                          "augmentColor": [Function],
+                          "background": Object {
+                            "default": "#fafafa",
+                            "paper": "#fff",
+                          },
+                          "common": Object {
+                            "black": "#000",
+                            "white": "#fff",
+                          },
+                          "contrastThreshold": 3,
+                          "divider": "rgba(0, 0, 0, 0.12)",
+                          "error": Object {
+                            "contrastText": "#fff",
+                            "dark": "#d32f2f",
+                            "light": "#e57373",
+                            "main": "#f44336",
+                          },
+                          "getContrastText": [Function],
+                          "grey": Object {
+                            "100": "#f5f5f5",
+                            "200": "#eeeeee",
+                            "300": "#e0e0e0",
+                            "400": "#bdbdbd",
+                            "50": "#fafafa",
+                            "500": "#9e9e9e",
+                            "600": "#757575",
+                            "700": "#616161",
+                            "800": "#424242",
+                            "900": "#212121",
+                            "A100": "#d5d5d5",
+                            "A200": "#aaaaaa",
+                            "A400": "#303030",
+                            "A700": "#616161",
+                          },
+                          "info": Object {
+                            "contrastText": "#fff",
+                            "dark": "#1976d2",
+                            "light": "#64b5f6",
+                            "main": "#2196f3",
+                          },
+                          "primary": Object {
+                            "contrastText": "#fff",
+                            "dark": "#303f9f",
+                            "light": "#7986cb",
+                            "main": "#3f51b5",
+                          },
+                          "secondary": Object {
+                            "contrastText": "#fff",
+                            "dark": "#c51162",
+                            "light": "#ff4081",
+                            "main": "#f50057",
+                          },
+                          "success": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#388e3c",
+                            "light": "#81c784",
+                            "main": "#4caf50",
+                          },
+                          "text": Object {
+                            "disabled": "rgba(0, 0, 0, 0.38)",
+                            "hint": "rgba(0, 0, 0, 0.38)",
+                            "primary": "rgba(0, 0, 0, 0.87)",
+                            "secondary": "rgba(0, 0, 0, 0.54)",
+                          },
+                          "tonalOffset": 0.2,
+                          "type": "light",
+                          "warning": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#f57c00",
+                            "light": "#ffb74d",
+                            "main": "#ff9800",
+                          },
+                        },
+                        "props": Object {},
+                        "shadows": Array [
+                          "none",
+                          "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+                          "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                          "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                          "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                          "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                          "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                          "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                          "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                          "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                          "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                          "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                          "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                          "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                          "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                          "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                          "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                          "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                          "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                          "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                          "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                        ],
+                        "shape": Object {
+                          "borderRadius": 4,
+                        },
+                        "spacing": [Function],
+                        "transitions": Object {
+                          "create": [Function],
+                          "duration": Object {
+                            "complex": 375,
+                            "enteringScreen": 225,
+                            "leavingScreen": 195,
+                            "short": 250,
+                            "shorter": 200,
+                            "shortest": 150,
+                            "standard": 300,
+                          },
+                          "easing": Object {
+                            "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                            "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                            "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                            "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                          },
+                          "getAutoHeightDuration": [Function],
+                        },
+                        "typography": Object {
+                          "body1": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.00938em",
+                            "lineHeight": 1.5,
+                          },
+                          "body2": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.875rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.01071em",
+                            "lineHeight": 1.43,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.875rem",
+                            "fontWeight": 500,
+                            "letterSpacing": "0.02857em",
+                            "lineHeight": 1.75,
+                            "textTransform": "uppercase",
+                          },
+                          "caption": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.03333em",
+                            "lineHeight": 1.66,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                          "fontSize": 14,
+                          "fontWeightBold": 700,
+                          "fontWeightLight": 300,
+                          "fontWeightMedium": 500,
+                          "fontWeightRegular": 400,
+                          "h1": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "6rem",
+                            "fontWeight": 300,
+                            "letterSpacing": "-0.01562em",
+                            "lineHeight": 1.167,
+                          },
+                          "h2": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "3.75rem",
+                            "fontWeight": 300,
+                            "letterSpacing": "-0.00833em",
+                            "lineHeight": 1.2,
+                          },
+                          "h3": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "3rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0em",
+                            "lineHeight": 1.167,
+                          },
+                          "h4": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "2.125rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.00735em",
+                            "lineHeight": 1.235,
+                          },
+                          "h5": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1.5rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0em",
+                            "lineHeight": 1.334,
+                          },
+                          "h6": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1.25rem",
+                            "fontWeight": 500,
+                            "letterSpacing": "0.0075em",
+                            "lineHeight": 1.6,
+                          },
+                          "htmlFontSize": 16,
+                          "overline": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.08333em",
+                            "lineHeight": 2.66,
+                            "textTransform": "uppercase",
+                          },
+                          "pxToRem": [Function],
+                          "round": [Function],
+                          "subtitle1": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.00938em",
+                            "lineHeight": 1.75,
+                          },
+                          "subtitle2": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.875rem",
+                            "fontWeight": 500,
+                            "letterSpacing": "0.00714em",
+                            "lineHeight": 1.57,
+                          },
+                        },
+                        "zIndex": Object {
+                          "appBar": 1100,
+                          "drawer": 1200,
+                          "mobileStepper": 1000,
+                          "modal": 1300,
+                          "snackbar": 1400,
+                          "speedDial": 1050,
+                          "tooltip": 1500,
+                        },
+                      },
+                    },
+                    "propTypes": Object {
+                      "classes": [Function],
+                      "innerRef": [Function],
+                    },
+                    "render": [Function],
+                    "useStyles": [Function],
+                  }
+                }
                 disabled={false}
                 fullWidth={true}
                 label="Author name"
@@ -134,8 +439,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={6}
               xs={12}
@@ -176,8 +481,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -186,7 +491,314 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   Object {
                     "$$typeof": Symbol(react.memo),
                     "Naked": [Function],
-                    "WrappedComponent": [Function],
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "Naked": [Function],
+                      "defaultProps": Object {
+                        "MenuItemComponent": [Function],
+                        "filter": [Function],
+                        "maxResults": 10,
+                        "required": false,
+                        "showClear": false,
+                      },
+                      "displayName": "WithStyles(AutoCompleteAsyncField)",
+                      "options": Object {
+                        "defaultTheme": Object {
+                          "breakpoints": Object {
+                            "between": [Function],
+                            "down": [Function],
+                            "keys": Array [
+                              "xs",
+                              "sm",
+                              "md",
+                              "lg",
+                              "xl",
+                            ],
+                            "only": [Function],
+                            "up": [Function],
+                            "values": Object {
+                              "lg": 1280,
+                              "md": 960,
+                              "sm": 600,
+                              "xl": 1920,
+                              "xs": 0,
+                            },
+                            "width": [Function],
+                          },
+                          "direction": "ltr",
+                          "mixins": Object {
+                            "gutters": [Function],
+                            "toolbar": Object {
+                              "@media (min-width:0px) and (orientation: landscape)": Object {
+                                "minHeight": 48,
+                              },
+                              "@media (min-width:600px)": Object {
+                                "minHeight": 64,
+                              },
+                              "minHeight": 56,
+                            },
+                          },
+                          "overrides": Object {},
+                          "palette": Object {
+                            "action": Object {
+                              "activatedOpacity": 0.12,
+                              "active": "rgba(0, 0, 0, 0.54)",
+                              "disabled": "rgba(0, 0, 0, 0.26)",
+                              "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                              "disabledOpacity": 0.38,
+                              "focus": "rgba(0, 0, 0, 0.12)",
+                              "focusOpacity": 0.12,
+                              "hover": "rgba(0, 0, 0, 0.04)",
+                              "hoverOpacity": 0.04,
+                              "selected": "rgba(0, 0, 0, 0.08)",
+                              "selectedOpacity": 0.08,
+                            },
+                            "augmentColor": [Function],
+                            "background": Object {
+                              "default": "#fafafa",
+                              "paper": "#fff",
+                            },
+                            "common": Object {
+                              "black": "#000",
+                              "white": "#fff",
+                            },
+                            "contrastThreshold": 3,
+                            "divider": "rgba(0, 0, 0, 0.12)",
+                            "error": Object {
+                              "contrastText": "#fff",
+                              "dark": "#d32f2f",
+                              "light": "#e57373",
+                              "main": "#f44336",
+                            },
+                            "getContrastText": [Function],
+                            "grey": Object {
+                              "100": "#f5f5f5",
+                              "200": "#eeeeee",
+                              "300": "#e0e0e0",
+                              "400": "#bdbdbd",
+                              "50": "#fafafa",
+                              "500": "#9e9e9e",
+                              "600": "#757575",
+                              "700": "#616161",
+                              "800": "#424242",
+                              "900": "#212121",
+                              "A100": "#d5d5d5",
+                              "A200": "#aaaaaa",
+                              "A400": "#303030",
+                              "A700": "#616161",
+                            },
+                            "info": Object {
+                              "contrastText": "#fff",
+                              "dark": "#1976d2",
+                              "light": "#64b5f6",
+                              "main": "#2196f3",
+                            },
+                            "primary": Object {
+                              "contrastText": "#fff",
+                              "dark": "#303f9f",
+                              "light": "#7986cb",
+                              "main": "#3f51b5",
+                            },
+                            "secondary": Object {
+                              "contrastText": "#fff",
+                              "dark": "#c51162",
+                              "light": "#ff4081",
+                              "main": "#f50057",
+                            },
+                            "success": Object {
+                              "contrastText": "rgba(0, 0, 0, 0.87)",
+                              "dark": "#388e3c",
+                              "light": "#81c784",
+                              "main": "#4caf50",
+                            },
+                            "text": Object {
+                              "disabled": "rgba(0, 0, 0, 0.38)",
+                              "hint": "rgba(0, 0, 0, 0.38)",
+                              "primary": "rgba(0, 0, 0, 0.87)",
+                              "secondary": "rgba(0, 0, 0, 0.54)",
+                            },
+                            "tonalOffset": 0.2,
+                            "type": "light",
+                            "warning": Object {
+                              "contrastText": "rgba(0, 0, 0, 0.87)",
+                              "dark": "#f57c00",
+                              "light": "#ffb74d",
+                              "main": "#ff9800",
+                            },
+                          },
+                          "props": Object {},
+                          "shadows": Array [
+                            "none",
+                            "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+                            "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                            "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                            "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                            "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                            "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                            "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                            "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                            "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                            "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                            "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                            "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                            "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                            "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                            "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                            "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                          ],
+                          "shape": Object {
+                            "borderRadius": 4,
+                          },
+                          "spacing": [Function],
+                          "transitions": Object {
+                            "create": [Function],
+                            "duration": Object {
+                              "complex": 375,
+                              "enteringScreen": 225,
+                              "leavingScreen": 195,
+                              "short": 250,
+                              "shorter": 200,
+                              "shortest": 150,
+                              "standard": 300,
+                            },
+                            "easing": Object {
+                              "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                              "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                              "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                              "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                            },
+                            "getAutoHeightDuration": [Function],
+                          },
+                          "typography": Object {
+                            "body1": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
+                            },
+                            "body2": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.875rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.43,
+                            },
+                            "button": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.875rem",
+                              "fontWeight": 500,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.75,
+                              "textTransform": "uppercase",
+                            },
+                            "caption": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.75rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
+                            },
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": 14,
+                            "fontWeightBold": 700,
+                            "fontWeightLight": 300,
+                            "fontWeightMedium": 500,
+                            "fontWeightRegular": 400,
+                            "h1": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "6rem",
+                              "fontWeight": 300,
+                              "letterSpacing": "-0.01562em",
+                              "lineHeight": 1.167,
+                            },
+                            "h2": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "3.75rem",
+                              "fontWeight": 300,
+                              "letterSpacing": "-0.00833em",
+                              "lineHeight": 1.2,
+                            },
+                            "h3": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "3rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0em",
+                              "lineHeight": 1.167,
+                            },
+                            "h4": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "2.125rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.00735em",
+                              "lineHeight": 1.235,
+                            },
+                            "h5": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1.5rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0em",
+                              "lineHeight": 1.334,
+                            },
+                            "h6": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1.25rem",
+                              "fontWeight": 500,
+                              "letterSpacing": "0.0075em",
+                              "lineHeight": 1.6,
+                            },
+                            "htmlFontSize": 16,
+                            "overline": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.75rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.08333em",
+                              "lineHeight": 2.66,
+                              "textTransform": "uppercase",
+                            },
+                            "pxToRem": [Function],
+                            "round": [Function],
+                            "subtitle1": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.75,
+                            },
+                            "subtitle2": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.875rem",
+                              "fontWeight": 500,
+                              "letterSpacing": "0.00714em",
+                              "lineHeight": 1.57,
+                            },
+                          },
+                          "zIndex": Object {
+                            "appBar": 1100,
+                            "drawer": 1200,
+                            "mobileStepper": 1000,
+                            "modal": 1300,
+                            "snackbar": 1400,
+                            "speedDial": 1050,
+                            "tooltip": 1500,
+                          },
+                        },
+                      },
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "innerRef": [Function],
+                      },
+                      "render": [Function],
+                      "useStyles": [Function],
+                    },
                     "compare": null,
                     "displayName": "Connect(WithStyles(AutoCompleteAsyncField))",
                     "options": Object {
@@ -228,12 +840,17 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                         "overrides": Object {},
                         "palette": Object {
                           "action": Object {
+                            "activatedOpacity": 0.12,
                             "active": "rgba(0, 0, 0, 0.54)",
                             "disabled": "rgba(0, 0, 0, 0.26)",
                             "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                            "hover": "rgba(0, 0, 0, 0.08)",
-                            "hoverOpacity": 0.08,
-                            "selected": "rgba(0, 0, 0, 0.14)",
+                            "disabledOpacity": 0.38,
+                            "focus": "rgba(0, 0, 0, 0.12)",
+                            "focusOpacity": 0.12,
+                            "hover": "rgba(0, 0, 0, 0.04)",
+                            "hoverOpacity": 0.04,
+                            "selected": "rgba(0, 0, 0, 0.08)",
+                            "selectedOpacity": 0.08,
                           },
                           "augmentColor": [Function],
                           "background": Object {
@@ -269,6 +886,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                             "A400": "#303030",
                             "A700": "#616161",
                           },
+                          "info": Object {
+                            "contrastText": "#fff",
+                            "dark": "#1976d2",
+                            "light": "#64b5f6",
+                            "main": "#2196f3",
+                          },
                           "primary": Object {
                             "contrastText": "#fff",
                             "dark": "#303f9f",
@@ -281,6 +904,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                             "light": "#ff4081",
                             "main": "#f50057",
                           },
+                          "success": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#388e3c",
+                            "light": "#81c784",
+                            "main": "#4caf50",
+                          },
                           "text": Object {
                             "disabled": "rgba(0, 0, 0, 0.38)",
                             "hint": "rgba(0, 0, 0, 0.38)",
@@ -289,13 +918,19 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                           },
                           "tonalOffset": 0.2,
                           "type": "light",
+                          "warning": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#f57c00",
+                            "light": "#ffb74d",
+                            "main": "#ff9800",
+                          },
                         },
                         "props": Object {},
                         "shadows": Array [
                           "none",
-                          "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-                          "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-                          "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                          "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
                           "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
                           "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
                           "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -321,9 +956,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                         "shape": Object {
                           "borderRadius": 4,
                         },
-                        "spacing": Object {
-                          "unit": 8,
-                        },
+                        "spacing": [Function],
                         "transitions": Object {
                           "create": [Function],
                           "duration": Object {
@@ -345,14 +978,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                         },
                         "typography": Object {
                           "body1": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.875rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.46429em",
-                          },
-                          "body1Next": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1rem",
                             "fontWeight": 400,
@@ -360,29 +985,13 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                             "lineHeight": 1.5,
                           },
                           "body2": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.875rem",
-                            "fontWeight": 500,
-                            "lineHeight": "1.71429em",
-                          },
-                          "body2Next": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.875rem",
                             "fontWeight": 400,
                             "letterSpacing": "0.01071em",
-                            "lineHeight": 1.5,
+                            "lineHeight": 1.43,
                           },
                           "button": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.875rem",
-                            "fontWeight": 500,
-                            "textTransform": "uppercase",
-                          },
-                          "buttonNext": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.875rem",
                             "fontWeight": 500,
@@ -391,115 +1000,62 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                             "textTransform": "uppercase",
                           },
                           "caption": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.75rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.375em",
-                          },
-                          "captionNext": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.75rem",
                             "fontWeight": 400,
                             "letterSpacing": "0.03333em",
                             "lineHeight": 1.66,
                           },
-                          "display1": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "2.125rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.20588em",
-                          },
-                          "display2": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "2.8125rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.13333em",
-                            "marginLeft": "-.02em",
-                          },
-                          "display3": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "3.5rem",
-                            "fontWeight": 400,
-                            "letterSpacing": "-.02em",
-                            "lineHeight": "1.30357em",
-                            "marginLeft": "-.02em",
-                          },
-                          "display4": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "7rem",
-                            "fontWeight": 300,
-                            "letterSpacing": "-.04em",
-                            "lineHeight": "1.14286em",
-                            "marginLeft": "-.04em",
-                          },
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": 14,
+                          "fontWeightBold": 700,
                           "fontWeightLight": 300,
                           "fontWeightMedium": 500,
                           "fontWeightRegular": 400,
                           "h1": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "6rem",
                             "fontWeight": 300,
                             "letterSpacing": "-0.01562em",
-                            "lineHeight": 1,
+                            "lineHeight": 1.167,
                           },
                           "h2": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "3.75rem",
                             "fontWeight": 300,
                             "letterSpacing": "-0.00833em",
-                            "lineHeight": 1,
+                            "lineHeight": 1.2,
                           },
                           "h3": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "3rem",
                             "fontWeight": 400,
                             "letterSpacing": "0em",
-                            "lineHeight": 1.04,
+                            "lineHeight": 1.167,
                           },
                           "h4": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "2.125rem",
                             "fontWeight": 400,
                             "letterSpacing": "0.00735em",
-                            "lineHeight": 1.17,
+                            "lineHeight": 1.235,
                           },
                           "h5": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1.5rem",
                             "fontWeight": 400,
                             "letterSpacing": "0em",
-                            "lineHeight": 1.33,
+                            "lineHeight": 1.334,
                           },
                           "h6": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1.25rem",
                             "fontWeight": 500,
                             "letterSpacing": "0.0075em",
                             "lineHeight": 1.6,
                           },
-                          "headline": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "1.5rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.35417em",
-                          },
+                          "htmlFontSize": 16,
                           "overline": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.75rem",
                             "fontWeight": 400,
@@ -509,15 +1065,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                           },
                           "pxToRem": [Function],
                           "round": [Function],
-                          "subheading": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "1rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.5em",
-                          },
                           "subtitle1": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1rem",
                             "fontWeight": 400,
@@ -525,21 +1073,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                             "lineHeight": 1.75,
                           },
                           "subtitle2": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.875rem",
                             "fontWeight": 500,
                             "letterSpacing": "0.00714em",
                             "lineHeight": 1.57,
                           },
-                          "title": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "1.3125rem",
-                            "fontWeight": 500,
-                            "lineHeight": "1.16667em",
-                          },
-                          "useNextVariants": false,
                         },
                         "zIndex": Object {
                           "appBar": 1100,
@@ -547,11 +1086,13 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                           "mobileStepper": 1000,
                           "modal": 1300,
                           "snackbar": 1400,
+                          "speedDial": 1050,
                           "tooltip": 1500,
                         },
                       },
                     },
                     "type": [Function],
+                    "useStyles": [Function],
                   }
                 }
                 disabled={false}
@@ -565,8 +1106,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -583,8 +1124,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -603,8 +1144,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -620,11 +1161,11 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -692,17 +1233,17 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Field of research"
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             Select up to 3 Field of Research (FoR) codes at the 4 digit level
-          </WithStyles(Typography)>
+          </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
@@ -751,17 +1292,17 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Keywords"
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
-          </WithStyles(Typography)>
+          </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
@@ -815,8 +1356,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -824,7 +1365,310 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           title="Additional notes"
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "Naked": [Function],
+                "defaultProps": undefined,
+                "displayName": "WithStyles(TextFieldWrapper)",
+                "options": Object {
+                  "defaultTheme": Object {
+                    "breakpoints": Object {
+                      "between": [Function],
+                      "down": [Function],
+                      "keys": Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ],
+                      "only": [Function],
+                      "up": [Function],
+                      "values": Object {
+                        "lg": 1280,
+                        "md": 960,
+                        "sm": 600,
+                        "xl": 1920,
+                        "xs": 0,
+                      },
+                      "width": [Function],
+                    },
+                    "direction": "ltr",
+                    "mixins": Object {
+                      "gutters": [Function],
+                      "toolbar": Object {
+                        "@media (min-width:0px) and (orientation: landscape)": Object {
+                          "minHeight": 48,
+                        },
+                        "@media (min-width:600px)": Object {
+                          "minHeight": 64,
+                        },
+                        "minHeight": 56,
+                      },
+                    },
+                    "overrides": Object {},
+                    "palette": Object {
+                      "action": Object {
+                        "activatedOpacity": 0.12,
+                        "active": "rgba(0, 0, 0, 0.54)",
+                        "disabled": "rgba(0, 0, 0, 0.26)",
+                        "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                        "disabledOpacity": 0.38,
+                        "focus": "rgba(0, 0, 0, 0.12)",
+                        "focusOpacity": 0.12,
+                        "hover": "rgba(0, 0, 0, 0.04)",
+                        "hoverOpacity": 0.04,
+                        "selected": "rgba(0, 0, 0, 0.08)",
+                        "selectedOpacity": 0.08,
+                      },
+                      "augmentColor": [Function],
+                      "background": Object {
+                        "default": "#fafafa",
+                        "paper": "#fff",
+                      },
+                      "common": Object {
+                        "black": "#000",
+                        "white": "#fff",
+                      },
+                      "contrastThreshold": 3,
+                      "divider": "rgba(0, 0, 0, 0.12)",
+                      "error": Object {
+                        "contrastText": "#fff",
+                        "dark": "#d32f2f",
+                        "light": "#e57373",
+                        "main": "#f44336",
+                      },
+                      "getContrastText": [Function],
+                      "grey": Object {
+                        "100": "#f5f5f5",
+                        "200": "#eeeeee",
+                        "300": "#e0e0e0",
+                        "400": "#bdbdbd",
+                        "50": "#fafafa",
+                        "500": "#9e9e9e",
+                        "600": "#757575",
+                        "700": "#616161",
+                        "800": "#424242",
+                        "900": "#212121",
+                        "A100": "#d5d5d5",
+                        "A200": "#aaaaaa",
+                        "A400": "#303030",
+                        "A700": "#616161",
+                      },
+                      "info": Object {
+                        "contrastText": "#fff",
+                        "dark": "#1976d2",
+                        "light": "#64b5f6",
+                        "main": "#2196f3",
+                      },
+                      "primary": Object {
+                        "contrastText": "#fff",
+                        "dark": "#303f9f",
+                        "light": "#7986cb",
+                        "main": "#3f51b5",
+                      },
+                      "secondary": Object {
+                        "contrastText": "#fff",
+                        "dark": "#c51162",
+                        "light": "#ff4081",
+                        "main": "#f50057",
+                      },
+                      "success": Object {
+                        "contrastText": "rgba(0, 0, 0, 0.87)",
+                        "dark": "#388e3c",
+                        "light": "#81c784",
+                        "main": "#4caf50",
+                      },
+                      "text": Object {
+                        "disabled": "rgba(0, 0, 0, 0.38)",
+                        "hint": "rgba(0, 0, 0, 0.38)",
+                        "primary": "rgba(0, 0, 0, 0.87)",
+                        "secondary": "rgba(0, 0, 0, 0.54)",
+                      },
+                      "tonalOffset": 0.2,
+                      "type": "light",
+                      "warning": Object {
+                        "contrastText": "rgba(0, 0, 0, 0.87)",
+                        "dark": "#f57c00",
+                        "light": "#ffb74d",
+                        "main": "#ff9800",
+                      },
+                    },
+                    "props": Object {},
+                    "shadows": Array [
+                      "none",
+                      "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+                      "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                      "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                      "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                      "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                      "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                      "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                      "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                      "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                      "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                      "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                      "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                      "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                      "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                      "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                      "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                    ],
+                    "shape": Object {
+                      "borderRadius": 4,
+                    },
+                    "spacing": [Function],
+                    "transitions": Object {
+                      "create": [Function],
+                      "duration": Object {
+                        "complex": 375,
+                        "enteringScreen": 225,
+                        "leavingScreen": 195,
+                        "short": 250,
+                        "shorter": 200,
+                        "shortest": 150,
+                        "standard": 300,
+                      },
+                      "easing": Object {
+                        "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                        "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                        "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                        "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                      },
+                      "getAutoHeightDuration": [Function],
+                    },
+                    "typography": Object {
+                      "body1": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.00938em",
+                        "lineHeight": 1.5,
+                      },
+                      "body2": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.875rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.01071em",
+                        "lineHeight": 1.43,
+                      },
+                      "button": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.875rem",
+                        "fontWeight": 500,
+                        "letterSpacing": "0.02857em",
+                        "lineHeight": 1.75,
+                        "textTransform": "uppercase",
+                      },
+                      "caption": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.03333em",
+                        "lineHeight": 1.66,
+                      },
+                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                      "fontSize": 14,
+                      "fontWeightBold": 700,
+                      "fontWeightLight": 300,
+                      "fontWeightMedium": 500,
+                      "fontWeightRegular": 400,
+                      "h1": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "6rem",
+                        "fontWeight": 300,
+                        "letterSpacing": "-0.01562em",
+                        "lineHeight": 1.167,
+                      },
+                      "h2": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "3.75rem",
+                        "fontWeight": 300,
+                        "letterSpacing": "-0.00833em",
+                        "lineHeight": 1.2,
+                      },
+                      "h3": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "3rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0em",
+                        "lineHeight": 1.167,
+                      },
+                      "h4": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "2.125rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.00735em",
+                        "lineHeight": 1.235,
+                      },
+                      "h5": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1.5rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0em",
+                        "lineHeight": 1.334,
+                      },
+                      "h6": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 500,
+                        "letterSpacing": "0.0075em",
+                        "lineHeight": 1.6,
+                      },
+                      "htmlFontSize": 16,
+                      "overline": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.08333em",
+                        "lineHeight": 2.66,
+                        "textTransform": "uppercase",
+                      },
+                      "pxToRem": [Function],
+                      "round": [Function],
+                      "subtitle1": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.00938em",
+                        "lineHeight": 1.75,
+                      },
+                      "subtitle2": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.875rem",
+                        "fontWeight": 500,
+                        "letterSpacing": "0.00714em",
+                        "lineHeight": 1.57,
+                      },
+                    },
+                    "zIndex": Object {
+                      "appBar": 1100,
+                      "drawer": 1200,
+                      "mobileStepper": 1000,
+                      "modal": 1300,
+                      "snackbar": 1400,
+                      "speedDial": 1050,
+                      "tooltip": 1500,
+                    },
+                  },
+                },
+                "propTypes": Object {
+                  "classes": [Function],
+                  "innerRef": [Function],
+                },
+                "render": [Function],
+                "useStyles": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -836,8 +1680,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             type="text"
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -858,10 +1702,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB.
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure
-
+                   
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -874,9 +1718,9 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                       s1234567_pd_totalthesis.pdf
                     </li>
                   </ul>
-                  Supplementary audio files are to be in MP 3 format.
+                  Supplementary audio files are to be in MP 3 format. 
                   <br />
-                  Supplementary video files are to be in WMV or AVI format.
+                  Supplementary video files are to be in WMV or AVI format. 
                   <br />
                 </div>,
                 "instructions": "",
@@ -900,46 +1744,46 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={true}
         xs={false}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Deposit your thesis
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </form>
 </StandardPage>
 `;
@@ -961,6 +1805,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       when={true}
     />
     <WithStyles(ConfirmDialogBox)
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -971,23 +1816,24 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       }
       onAction={[MockFunction]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={3}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Thesis information"
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={3}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -1004,14 +1850,317 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={6}
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "Naked": [Function],
+                    "defaultProps": undefined,
+                    "displayName": "WithStyles(TextFieldWrapper)",
+                    "options": Object {
+                      "defaultTheme": Object {
+                        "breakpoints": Object {
+                          "between": [Function],
+                          "down": [Function],
+                          "keys": Array [
+                            "xs",
+                            "sm",
+                            "md",
+                            "lg",
+                            "xl",
+                          ],
+                          "only": [Function],
+                          "up": [Function],
+                          "values": Object {
+                            "lg": 1280,
+                            "md": 960,
+                            "sm": 600,
+                            "xl": 1920,
+                            "xs": 0,
+                          },
+                          "width": [Function],
+                        },
+                        "direction": "ltr",
+                        "mixins": Object {
+                          "gutters": [Function],
+                          "toolbar": Object {
+                            "@media (min-width:0px) and (orientation: landscape)": Object {
+                              "minHeight": 48,
+                            },
+                            "@media (min-width:600px)": Object {
+                              "minHeight": 64,
+                            },
+                            "minHeight": 56,
+                          },
+                        },
+                        "overrides": Object {},
+                        "palette": Object {
+                          "action": Object {
+                            "activatedOpacity": 0.12,
+                            "active": "rgba(0, 0, 0, 0.54)",
+                            "disabled": "rgba(0, 0, 0, 0.26)",
+                            "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                            "disabledOpacity": 0.38,
+                            "focus": "rgba(0, 0, 0, 0.12)",
+                            "focusOpacity": 0.12,
+                            "hover": "rgba(0, 0, 0, 0.04)",
+                            "hoverOpacity": 0.04,
+                            "selected": "rgba(0, 0, 0, 0.08)",
+                            "selectedOpacity": 0.08,
+                          },
+                          "augmentColor": [Function],
+                          "background": Object {
+                            "default": "#fafafa",
+                            "paper": "#fff",
+                          },
+                          "common": Object {
+                            "black": "#000",
+                            "white": "#fff",
+                          },
+                          "contrastThreshold": 3,
+                          "divider": "rgba(0, 0, 0, 0.12)",
+                          "error": Object {
+                            "contrastText": "#fff",
+                            "dark": "#d32f2f",
+                            "light": "#e57373",
+                            "main": "#f44336",
+                          },
+                          "getContrastText": [Function],
+                          "grey": Object {
+                            "100": "#f5f5f5",
+                            "200": "#eeeeee",
+                            "300": "#e0e0e0",
+                            "400": "#bdbdbd",
+                            "50": "#fafafa",
+                            "500": "#9e9e9e",
+                            "600": "#757575",
+                            "700": "#616161",
+                            "800": "#424242",
+                            "900": "#212121",
+                            "A100": "#d5d5d5",
+                            "A200": "#aaaaaa",
+                            "A400": "#303030",
+                            "A700": "#616161",
+                          },
+                          "info": Object {
+                            "contrastText": "#fff",
+                            "dark": "#1976d2",
+                            "light": "#64b5f6",
+                            "main": "#2196f3",
+                          },
+                          "primary": Object {
+                            "contrastText": "#fff",
+                            "dark": "#303f9f",
+                            "light": "#7986cb",
+                            "main": "#3f51b5",
+                          },
+                          "secondary": Object {
+                            "contrastText": "#fff",
+                            "dark": "#c51162",
+                            "light": "#ff4081",
+                            "main": "#f50057",
+                          },
+                          "success": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#388e3c",
+                            "light": "#81c784",
+                            "main": "#4caf50",
+                          },
+                          "text": Object {
+                            "disabled": "rgba(0, 0, 0, 0.38)",
+                            "hint": "rgba(0, 0, 0, 0.38)",
+                            "primary": "rgba(0, 0, 0, 0.87)",
+                            "secondary": "rgba(0, 0, 0, 0.54)",
+                          },
+                          "tonalOffset": 0.2,
+                          "type": "light",
+                          "warning": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#f57c00",
+                            "light": "#ffb74d",
+                            "main": "#ff9800",
+                          },
+                        },
+                        "props": Object {},
+                        "shadows": Array [
+                          "none",
+                          "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+                          "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                          "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                          "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                          "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                          "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                          "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                          "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                          "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                          "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                          "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                          "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                          "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                          "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                          "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                          "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                          "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                          "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                          "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                          "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                        ],
+                        "shape": Object {
+                          "borderRadius": 4,
+                        },
+                        "spacing": [Function],
+                        "transitions": Object {
+                          "create": [Function],
+                          "duration": Object {
+                            "complex": 375,
+                            "enteringScreen": 225,
+                            "leavingScreen": 195,
+                            "short": 250,
+                            "shorter": 200,
+                            "shortest": 150,
+                            "standard": 300,
+                          },
+                          "easing": Object {
+                            "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                            "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                            "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                            "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                          },
+                          "getAutoHeightDuration": [Function],
+                        },
+                        "typography": Object {
+                          "body1": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.00938em",
+                            "lineHeight": 1.5,
+                          },
+                          "body2": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.875rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.01071em",
+                            "lineHeight": 1.43,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.875rem",
+                            "fontWeight": 500,
+                            "letterSpacing": "0.02857em",
+                            "lineHeight": 1.75,
+                            "textTransform": "uppercase",
+                          },
+                          "caption": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.03333em",
+                            "lineHeight": 1.66,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                          "fontSize": 14,
+                          "fontWeightBold": 700,
+                          "fontWeightLight": 300,
+                          "fontWeightMedium": 500,
+                          "fontWeightRegular": 400,
+                          "h1": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "6rem",
+                            "fontWeight": 300,
+                            "letterSpacing": "-0.01562em",
+                            "lineHeight": 1.167,
+                          },
+                          "h2": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "3.75rem",
+                            "fontWeight": 300,
+                            "letterSpacing": "-0.00833em",
+                            "lineHeight": 1.2,
+                          },
+                          "h3": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "3rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0em",
+                            "lineHeight": 1.167,
+                          },
+                          "h4": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "2.125rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.00735em",
+                            "lineHeight": 1.235,
+                          },
+                          "h5": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1.5rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0em",
+                            "lineHeight": 1.334,
+                          },
+                          "h6": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1.25rem",
+                            "fontWeight": 500,
+                            "letterSpacing": "0.0075em",
+                            "lineHeight": 1.6,
+                          },
+                          "htmlFontSize": 16,
+                          "overline": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.75rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.08333em",
+                            "lineHeight": 2.66,
+                            "textTransform": "uppercase",
+                          },
+                          "pxToRem": [Function],
+                          "round": [Function],
+                          "subtitle1": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "1rem",
+                            "fontWeight": 400,
+                            "letterSpacing": "0.00938em",
+                            "lineHeight": 1.75,
+                          },
+                          "subtitle2": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": "0.875rem",
+                            "fontWeight": 500,
+                            "letterSpacing": "0.00714em",
+                            "lineHeight": 1.57,
+                          },
+                        },
+                        "zIndex": Object {
+                          "appBar": 1100,
+                          "drawer": 1200,
+                          "mobileStepper": 1000,
+                          "modal": 1300,
+                          "snackbar": 1400,
+                          "speedDial": 1050,
+                          "tooltip": 1500,
+                        },
+                      },
+                    },
+                    "propTypes": Object {
+                      "classes": [Function],
+                      "innerRef": [Function],
+                    },
+                    "render": [Function],
+                    "useStyles": [Function],
+                  }
+                }
                 disabled={false}
                 fullWidth={true}
                 label="Author name"
@@ -1026,8 +2175,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={6}
               xs={12}
@@ -1068,8 +2217,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -1078,7 +2227,314 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   Object {
                     "$$typeof": Symbol(react.memo),
                     "Naked": [Function],
-                    "WrappedComponent": [Function],
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "Naked": [Function],
+                      "defaultProps": Object {
+                        "MenuItemComponent": [Function],
+                        "filter": [Function],
+                        "maxResults": 10,
+                        "required": false,
+                        "showClear": false,
+                      },
+                      "displayName": "WithStyles(AutoCompleteAsyncField)",
+                      "options": Object {
+                        "defaultTheme": Object {
+                          "breakpoints": Object {
+                            "between": [Function],
+                            "down": [Function],
+                            "keys": Array [
+                              "xs",
+                              "sm",
+                              "md",
+                              "lg",
+                              "xl",
+                            ],
+                            "only": [Function],
+                            "up": [Function],
+                            "values": Object {
+                              "lg": 1280,
+                              "md": 960,
+                              "sm": 600,
+                              "xl": 1920,
+                              "xs": 0,
+                            },
+                            "width": [Function],
+                          },
+                          "direction": "ltr",
+                          "mixins": Object {
+                            "gutters": [Function],
+                            "toolbar": Object {
+                              "@media (min-width:0px) and (orientation: landscape)": Object {
+                                "minHeight": 48,
+                              },
+                              "@media (min-width:600px)": Object {
+                                "minHeight": 64,
+                              },
+                              "minHeight": 56,
+                            },
+                          },
+                          "overrides": Object {},
+                          "palette": Object {
+                            "action": Object {
+                              "activatedOpacity": 0.12,
+                              "active": "rgba(0, 0, 0, 0.54)",
+                              "disabled": "rgba(0, 0, 0, 0.26)",
+                              "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                              "disabledOpacity": 0.38,
+                              "focus": "rgba(0, 0, 0, 0.12)",
+                              "focusOpacity": 0.12,
+                              "hover": "rgba(0, 0, 0, 0.04)",
+                              "hoverOpacity": 0.04,
+                              "selected": "rgba(0, 0, 0, 0.08)",
+                              "selectedOpacity": 0.08,
+                            },
+                            "augmentColor": [Function],
+                            "background": Object {
+                              "default": "#fafafa",
+                              "paper": "#fff",
+                            },
+                            "common": Object {
+                              "black": "#000",
+                              "white": "#fff",
+                            },
+                            "contrastThreshold": 3,
+                            "divider": "rgba(0, 0, 0, 0.12)",
+                            "error": Object {
+                              "contrastText": "#fff",
+                              "dark": "#d32f2f",
+                              "light": "#e57373",
+                              "main": "#f44336",
+                            },
+                            "getContrastText": [Function],
+                            "grey": Object {
+                              "100": "#f5f5f5",
+                              "200": "#eeeeee",
+                              "300": "#e0e0e0",
+                              "400": "#bdbdbd",
+                              "50": "#fafafa",
+                              "500": "#9e9e9e",
+                              "600": "#757575",
+                              "700": "#616161",
+                              "800": "#424242",
+                              "900": "#212121",
+                              "A100": "#d5d5d5",
+                              "A200": "#aaaaaa",
+                              "A400": "#303030",
+                              "A700": "#616161",
+                            },
+                            "info": Object {
+                              "contrastText": "#fff",
+                              "dark": "#1976d2",
+                              "light": "#64b5f6",
+                              "main": "#2196f3",
+                            },
+                            "primary": Object {
+                              "contrastText": "#fff",
+                              "dark": "#303f9f",
+                              "light": "#7986cb",
+                              "main": "#3f51b5",
+                            },
+                            "secondary": Object {
+                              "contrastText": "#fff",
+                              "dark": "#c51162",
+                              "light": "#ff4081",
+                              "main": "#f50057",
+                            },
+                            "success": Object {
+                              "contrastText": "rgba(0, 0, 0, 0.87)",
+                              "dark": "#388e3c",
+                              "light": "#81c784",
+                              "main": "#4caf50",
+                            },
+                            "text": Object {
+                              "disabled": "rgba(0, 0, 0, 0.38)",
+                              "hint": "rgba(0, 0, 0, 0.38)",
+                              "primary": "rgba(0, 0, 0, 0.87)",
+                              "secondary": "rgba(0, 0, 0, 0.54)",
+                            },
+                            "tonalOffset": 0.2,
+                            "type": "light",
+                            "warning": Object {
+                              "contrastText": "rgba(0, 0, 0, 0.87)",
+                              "dark": "#f57c00",
+                              "light": "#ffb74d",
+                              "main": "#ff9800",
+                            },
+                          },
+                          "props": Object {},
+                          "shadows": Array [
+                            "none",
+                            "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+                            "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                            "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                            "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                            "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                            "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                            "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                            "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                            "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                            "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                            "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                            "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                            "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                            "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                            "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                            "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                          ],
+                          "shape": Object {
+                            "borderRadius": 4,
+                          },
+                          "spacing": [Function],
+                          "transitions": Object {
+                            "create": [Function],
+                            "duration": Object {
+                              "complex": 375,
+                              "enteringScreen": 225,
+                              "leavingScreen": 195,
+                              "short": 250,
+                              "shorter": 200,
+                              "shortest": 150,
+                              "standard": 300,
+                            },
+                            "easing": Object {
+                              "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                              "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                              "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                              "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                            },
+                            "getAutoHeightDuration": [Function],
+                          },
+                          "typography": Object {
+                            "body1": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.5,
+                            },
+                            "body2": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.875rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.01071em",
+                              "lineHeight": 1.43,
+                            },
+                            "button": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.875rem",
+                              "fontWeight": 500,
+                              "letterSpacing": "0.02857em",
+                              "lineHeight": 1.75,
+                              "textTransform": "uppercase",
+                            },
+                            "caption": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.75rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.03333em",
+                              "lineHeight": 1.66,
+                            },
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                            "fontSize": 14,
+                            "fontWeightBold": 700,
+                            "fontWeightLight": 300,
+                            "fontWeightMedium": 500,
+                            "fontWeightRegular": 400,
+                            "h1": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "6rem",
+                              "fontWeight": 300,
+                              "letterSpacing": "-0.01562em",
+                              "lineHeight": 1.167,
+                            },
+                            "h2": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "3.75rem",
+                              "fontWeight": 300,
+                              "letterSpacing": "-0.00833em",
+                              "lineHeight": 1.2,
+                            },
+                            "h3": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "3rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0em",
+                              "lineHeight": 1.167,
+                            },
+                            "h4": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "2.125rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.00735em",
+                              "lineHeight": 1.235,
+                            },
+                            "h5": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1.5rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0em",
+                              "lineHeight": 1.334,
+                            },
+                            "h6": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1.25rem",
+                              "fontWeight": 500,
+                              "letterSpacing": "0.0075em",
+                              "lineHeight": 1.6,
+                            },
+                            "htmlFontSize": 16,
+                            "overline": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.75rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.08333em",
+                              "lineHeight": 2.66,
+                              "textTransform": "uppercase",
+                            },
+                            "pxToRem": [Function],
+                            "round": [Function],
+                            "subtitle1": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "1rem",
+                              "fontWeight": 400,
+                              "letterSpacing": "0.00938em",
+                              "lineHeight": 1.75,
+                            },
+                            "subtitle2": Object {
+                              "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                              "fontSize": "0.875rem",
+                              "fontWeight": 500,
+                              "letterSpacing": "0.00714em",
+                              "lineHeight": 1.57,
+                            },
+                          },
+                          "zIndex": Object {
+                            "appBar": 1100,
+                            "drawer": 1200,
+                            "mobileStepper": 1000,
+                            "modal": 1300,
+                            "snackbar": 1400,
+                            "speedDial": 1050,
+                            "tooltip": 1500,
+                          },
+                        },
+                      },
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "innerRef": [Function],
+                      },
+                      "render": [Function],
+                      "useStyles": [Function],
+                    },
                     "compare": null,
                     "displayName": "Connect(WithStyles(AutoCompleteAsyncField))",
                     "options": Object {
@@ -1120,12 +2576,17 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                         "overrides": Object {},
                         "palette": Object {
                           "action": Object {
+                            "activatedOpacity": 0.12,
                             "active": "rgba(0, 0, 0, 0.54)",
                             "disabled": "rgba(0, 0, 0, 0.26)",
                             "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                            "hover": "rgba(0, 0, 0, 0.08)",
-                            "hoverOpacity": 0.08,
-                            "selected": "rgba(0, 0, 0, 0.14)",
+                            "disabledOpacity": 0.38,
+                            "focus": "rgba(0, 0, 0, 0.12)",
+                            "focusOpacity": 0.12,
+                            "hover": "rgba(0, 0, 0, 0.04)",
+                            "hoverOpacity": 0.04,
+                            "selected": "rgba(0, 0, 0, 0.08)",
+                            "selectedOpacity": 0.08,
                           },
                           "augmentColor": [Function],
                           "background": Object {
@@ -1161,6 +2622,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                             "A400": "#303030",
                             "A700": "#616161",
                           },
+                          "info": Object {
+                            "contrastText": "#fff",
+                            "dark": "#1976d2",
+                            "light": "#64b5f6",
+                            "main": "#2196f3",
+                          },
                           "primary": Object {
                             "contrastText": "#fff",
                             "dark": "#303f9f",
@@ -1173,6 +2640,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                             "light": "#ff4081",
                             "main": "#f50057",
                           },
+                          "success": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#388e3c",
+                            "light": "#81c784",
+                            "main": "#4caf50",
+                          },
                           "text": Object {
                             "disabled": "rgba(0, 0, 0, 0.38)",
                             "hint": "rgba(0, 0, 0, 0.38)",
@@ -1181,13 +2654,19 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                           },
                           "tonalOffset": 0.2,
                           "type": "light",
+                          "warning": Object {
+                            "contrastText": "rgba(0, 0, 0, 0.87)",
+                            "dark": "#f57c00",
+                            "light": "#ffb74d",
+                            "main": "#ff9800",
+                          },
                         },
                         "props": Object {},
                         "shadows": Array [
                           "none",
-                          "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-                          "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-                          "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                          "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                          "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
                           "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
                           "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
                           "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -1213,9 +2692,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                         "shape": Object {
                           "borderRadius": 4,
                         },
-                        "spacing": Object {
-                          "unit": 8,
-                        },
+                        "spacing": [Function],
                         "transitions": Object {
                           "create": [Function],
                           "duration": Object {
@@ -1237,14 +2714,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                         },
                         "typography": Object {
                           "body1": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.875rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.46429em",
-                          },
-                          "body1Next": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1rem",
                             "fontWeight": 400,
@@ -1252,29 +2721,13 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                             "lineHeight": 1.5,
                           },
                           "body2": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.875rem",
-                            "fontWeight": 500,
-                            "lineHeight": "1.71429em",
-                          },
-                          "body2Next": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.875rem",
                             "fontWeight": 400,
                             "letterSpacing": "0.01071em",
-                            "lineHeight": 1.5,
+                            "lineHeight": 1.43,
                           },
                           "button": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.875rem",
-                            "fontWeight": 500,
-                            "textTransform": "uppercase",
-                          },
-                          "buttonNext": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.875rem",
                             "fontWeight": 500,
@@ -1283,115 +2736,62 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                             "textTransform": "uppercase",
                           },
                           "caption": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "0.75rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.375em",
-                          },
-                          "captionNext": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.75rem",
                             "fontWeight": 400,
                             "letterSpacing": "0.03333em",
                             "lineHeight": 1.66,
                           },
-                          "display1": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "2.125rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.20588em",
-                          },
-                          "display2": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "2.8125rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.13333em",
-                            "marginLeft": "-.02em",
-                          },
-                          "display3": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "3.5rem",
-                            "fontWeight": 400,
-                            "letterSpacing": "-.02em",
-                            "lineHeight": "1.30357em",
-                            "marginLeft": "-.02em",
-                          },
-                          "display4": Object {
-                            "color": "rgba(0, 0, 0, 0.54)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "7rem",
-                            "fontWeight": 300,
-                            "letterSpacing": "-.04em",
-                            "lineHeight": "1.14286em",
-                            "marginLeft": "-.04em",
-                          },
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": 14,
+                          "fontWeightBold": 700,
                           "fontWeightLight": 300,
                           "fontWeightMedium": 500,
                           "fontWeightRegular": 400,
                           "h1": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "6rem",
                             "fontWeight": 300,
                             "letterSpacing": "-0.01562em",
-                            "lineHeight": 1,
+                            "lineHeight": 1.167,
                           },
                           "h2": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "3.75rem",
                             "fontWeight": 300,
                             "letterSpacing": "-0.00833em",
-                            "lineHeight": 1,
+                            "lineHeight": 1.2,
                           },
                           "h3": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "3rem",
                             "fontWeight": 400,
                             "letterSpacing": "0em",
-                            "lineHeight": 1.04,
+                            "lineHeight": 1.167,
                           },
                           "h4": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "2.125rem",
                             "fontWeight": 400,
                             "letterSpacing": "0.00735em",
-                            "lineHeight": 1.17,
+                            "lineHeight": 1.235,
                           },
                           "h5": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1.5rem",
                             "fontWeight": 400,
                             "letterSpacing": "0em",
-                            "lineHeight": 1.33,
+                            "lineHeight": 1.334,
                           },
                           "h6": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1.25rem",
                             "fontWeight": 500,
                             "letterSpacing": "0.0075em",
                             "lineHeight": 1.6,
                           },
-                          "headline": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "1.5rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.35417em",
-                          },
+                          "htmlFontSize": 16,
                           "overline": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.75rem",
                             "fontWeight": 400,
@@ -1401,15 +2801,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                           },
                           "pxToRem": [Function],
                           "round": [Function],
-                          "subheading": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "1rem",
-                            "fontWeight": 400,
-                            "lineHeight": "1.5em",
-                          },
                           "subtitle1": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "1rem",
                             "fontWeight": 400,
@@ -1417,21 +2809,12 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                             "lineHeight": 1.75,
                           },
                           "subtitle2": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
                             "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                             "fontSize": "0.875rem",
                             "fontWeight": 500,
                             "letterSpacing": "0.00714em",
                             "lineHeight": 1.57,
                           },
-                          "title": Object {
-                            "color": "rgba(0, 0, 0, 0.87)",
-                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                            "fontSize": "1.3125rem",
-                            "fontWeight": 500,
-                            "lineHeight": "1.16667em",
-                          },
-                          "useNextVariants": false,
                         },
                         "zIndex": Object {
                           "appBar": 1100,
@@ -1439,11 +2822,13 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                           "mobileStepper": 1000,
                           "modal": 1300,
                           "snackbar": 1400,
+                          "speedDial": 1050,
                           "tooltip": 1500,
                         },
                       },
                     },
                     "type": [Function],
+                    "useStyles": [Function],
                   }
                 }
                 disabled={false}
@@ -1457,8 +2842,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -1475,8 +2860,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -1495,8 +2880,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -1512,11 +2897,11 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   ]
                 }
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -1584,17 +2969,17 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Field of research"
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             Select up to 3 Field of Research (FoR) codes at the 4 digit level
-          </WithStyles(Typography)>
+          </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
@@ -1643,17 +3028,17 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Keywords"
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
-          </WithStyles(Typography)>
+          </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
@@ -1707,8 +3092,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -1716,7 +3101,310 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           title="Additional notes"
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "Naked": [Function],
+                "defaultProps": undefined,
+                "displayName": "WithStyles(TextFieldWrapper)",
+                "options": Object {
+                  "defaultTheme": Object {
+                    "breakpoints": Object {
+                      "between": [Function],
+                      "down": [Function],
+                      "keys": Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ],
+                      "only": [Function],
+                      "up": [Function],
+                      "values": Object {
+                        "lg": 1280,
+                        "md": 960,
+                        "sm": 600,
+                        "xl": 1920,
+                        "xs": 0,
+                      },
+                      "width": [Function],
+                    },
+                    "direction": "ltr",
+                    "mixins": Object {
+                      "gutters": [Function],
+                      "toolbar": Object {
+                        "@media (min-width:0px) and (orientation: landscape)": Object {
+                          "minHeight": 48,
+                        },
+                        "@media (min-width:600px)": Object {
+                          "minHeight": 64,
+                        },
+                        "minHeight": 56,
+                      },
+                    },
+                    "overrides": Object {},
+                    "palette": Object {
+                      "action": Object {
+                        "activatedOpacity": 0.12,
+                        "active": "rgba(0, 0, 0, 0.54)",
+                        "disabled": "rgba(0, 0, 0, 0.26)",
+                        "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                        "disabledOpacity": 0.38,
+                        "focus": "rgba(0, 0, 0, 0.12)",
+                        "focusOpacity": 0.12,
+                        "hover": "rgba(0, 0, 0, 0.04)",
+                        "hoverOpacity": 0.04,
+                        "selected": "rgba(0, 0, 0, 0.08)",
+                        "selectedOpacity": 0.08,
+                      },
+                      "augmentColor": [Function],
+                      "background": Object {
+                        "default": "#fafafa",
+                        "paper": "#fff",
+                      },
+                      "common": Object {
+                        "black": "#000",
+                        "white": "#fff",
+                      },
+                      "contrastThreshold": 3,
+                      "divider": "rgba(0, 0, 0, 0.12)",
+                      "error": Object {
+                        "contrastText": "#fff",
+                        "dark": "#d32f2f",
+                        "light": "#e57373",
+                        "main": "#f44336",
+                      },
+                      "getContrastText": [Function],
+                      "grey": Object {
+                        "100": "#f5f5f5",
+                        "200": "#eeeeee",
+                        "300": "#e0e0e0",
+                        "400": "#bdbdbd",
+                        "50": "#fafafa",
+                        "500": "#9e9e9e",
+                        "600": "#757575",
+                        "700": "#616161",
+                        "800": "#424242",
+                        "900": "#212121",
+                        "A100": "#d5d5d5",
+                        "A200": "#aaaaaa",
+                        "A400": "#303030",
+                        "A700": "#616161",
+                      },
+                      "info": Object {
+                        "contrastText": "#fff",
+                        "dark": "#1976d2",
+                        "light": "#64b5f6",
+                        "main": "#2196f3",
+                      },
+                      "primary": Object {
+                        "contrastText": "#fff",
+                        "dark": "#303f9f",
+                        "light": "#7986cb",
+                        "main": "#3f51b5",
+                      },
+                      "secondary": Object {
+                        "contrastText": "#fff",
+                        "dark": "#c51162",
+                        "light": "#ff4081",
+                        "main": "#f50057",
+                      },
+                      "success": Object {
+                        "contrastText": "rgba(0, 0, 0, 0.87)",
+                        "dark": "#388e3c",
+                        "light": "#81c784",
+                        "main": "#4caf50",
+                      },
+                      "text": Object {
+                        "disabled": "rgba(0, 0, 0, 0.38)",
+                        "hint": "rgba(0, 0, 0, 0.38)",
+                        "primary": "rgba(0, 0, 0, 0.87)",
+                        "secondary": "rgba(0, 0, 0, 0.54)",
+                      },
+                      "tonalOffset": 0.2,
+                      "type": "light",
+                      "warning": Object {
+                        "contrastText": "rgba(0, 0, 0, 0.87)",
+                        "dark": "#f57c00",
+                        "light": "#ffb74d",
+                        "main": "#ff9800",
+                      },
+                    },
+                    "props": Object {},
+                    "shadows": Array [
+                      "none",
+                      "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+                      "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                      "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                      "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                      "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                      "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                      "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                      "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                      "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                      "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                      "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                      "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                      "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                      "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                      "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                      "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                    ],
+                    "shape": Object {
+                      "borderRadius": 4,
+                    },
+                    "spacing": [Function],
+                    "transitions": Object {
+                      "create": [Function],
+                      "duration": Object {
+                        "complex": 375,
+                        "enteringScreen": 225,
+                        "leavingScreen": 195,
+                        "short": 250,
+                        "shorter": 200,
+                        "shortest": 150,
+                        "standard": 300,
+                      },
+                      "easing": Object {
+                        "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                        "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                        "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                        "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                      },
+                      "getAutoHeightDuration": [Function],
+                    },
+                    "typography": Object {
+                      "body1": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.00938em",
+                        "lineHeight": 1.5,
+                      },
+                      "body2": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.875rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.01071em",
+                        "lineHeight": 1.43,
+                      },
+                      "button": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.875rem",
+                        "fontWeight": 500,
+                        "letterSpacing": "0.02857em",
+                        "lineHeight": 1.75,
+                        "textTransform": "uppercase",
+                      },
+                      "caption": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.03333em",
+                        "lineHeight": 1.66,
+                      },
+                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                      "fontSize": 14,
+                      "fontWeightBold": 700,
+                      "fontWeightLight": 300,
+                      "fontWeightMedium": 500,
+                      "fontWeightRegular": 400,
+                      "h1": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "6rem",
+                        "fontWeight": 300,
+                        "letterSpacing": "-0.01562em",
+                        "lineHeight": 1.167,
+                      },
+                      "h2": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "3.75rem",
+                        "fontWeight": 300,
+                        "letterSpacing": "-0.00833em",
+                        "lineHeight": 1.2,
+                      },
+                      "h3": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "3rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0em",
+                        "lineHeight": 1.167,
+                      },
+                      "h4": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "2.125rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.00735em",
+                        "lineHeight": 1.235,
+                      },
+                      "h5": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1.5rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0em",
+                        "lineHeight": 1.334,
+                      },
+                      "h6": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1.25rem",
+                        "fontWeight": 500,
+                        "letterSpacing": "0.0075em",
+                        "lineHeight": 1.6,
+                      },
+                      "htmlFontSize": 16,
+                      "overline": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.75rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.08333em",
+                        "lineHeight": 2.66,
+                        "textTransform": "uppercase",
+                      },
+                      "pxToRem": [Function],
+                      "round": [Function],
+                      "subtitle1": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                        "letterSpacing": "0.00938em",
+                        "lineHeight": 1.75,
+                      },
+                      "subtitle2": Object {
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                        "fontSize": "0.875rem",
+                        "fontWeight": 500,
+                        "letterSpacing": "0.00714em",
+                        "lineHeight": 1.57,
+                      },
+                    },
+                    "zIndex": Object {
+                      "appBar": 1100,
+                      "drawer": 1200,
+                      "mobileStepper": 1000,
+                      "modal": 1300,
+                      "snackbar": 1400,
+                      "speedDial": 1050,
+                      "tooltip": 1500,
+                    },
+                  },
+                },
+                "propTypes": Object {
+                  "classes": [Function],
+                  "innerRef": [Function],
+                },
+                "render": [Function],
+                "useStyles": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -1728,8 +3416,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             type="text"
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -1750,10 +3438,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB.
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure
-
+                   
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -1766,9 +3454,9 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                       s1234567_pd_totalthesis.pdf
                     </li>
                   </ul>
-                  Supplementary audio files are to be in MP 3 format.
+                  Supplementary audio files are to be in MP 3 format. 
                   <br />
-                  Supplementary video files are to be in WMV or AVI format.
+                  Supplementary video files are to be in WMV or AVI format. 
                   <br />
                 </div>,
                 "instructions": "",
@@ -1792,46 +3480,46 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={true}
         xs={false}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Deposit your thesis
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </form>
 </StandardPage>
 `;
@@ -1840,22 +3528,25 @@ exports[`SbsSubmission test should render sbs thesis submission form 3`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Alert)
+      <Alert
         action={[Function]}
         actionButtonLabel="RESUBMIT YOUR THESIS"
+        allowDismiss={false}
+        dismissTitle="Click to dismiss this alert"
         message="There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button."
+        showLoader={false}
         title="FILE UPLOAD ERROR"
         type="error"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;

@@ -7,54 +7,54 @@ exports[`Component MyTrendingPublications should not render trending publication
 `;
 
 exports[`Component MyTrendingPublications should render loading indicator 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   alignItems="center"
   container={true}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
     <WithStyles(InlineLoader)
       message="Loading your trending publications"
     />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component MyTrendingPublications should render trending publications 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   id="myTrendingPublications"
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="0"
       spacing={3}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h6"
         >
           <div
             className="fez-icon scopus xxlarge"
           />
           Scopus citation count
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
+        </WithStyles(ForwardRef(Typography))>
+        <WithStyles(ForwardRef(Typography))
           variant="subtitle1"
         >
           The + (plus) value indicates how much the citation count has increased in the last three months.
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
         <Connect(WithStyles(HelpIcon))
@@ -89,8 +89,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           }
           title="About these metrics"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -904,32 +904,32 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="1"
       spacing={3}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h6"
         >
           <div
             className="fez-icon thomson xxlarge"
           />
           Web of Science citation count
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
+        </WithStyles(ForwardRef(Typography))>
+        <WithStyles(ForwardRef(Typography))
           variant="subtitle1"
         >
           The + (plus) value indicates how much the citation count has increased in the last three months.
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
         <Connect(WithStyles(HelpIcon))
@@ -964,8 +964,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           }
           title="About these metrics"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -1860,32 +1860,32 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       key="2"
       spacing={3}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h6"
         >
           <div
             className="fez-icon altmetric xxlarge"
           />
           Altmetric score
-        </WithStyles(Typography)>
-        <WithStyles(Typography)
+        </WithStyles(ForwardRef(Typography))>
+        <WithStyles(ForwardRef(Typography))
           variant="subtitle1"
         >
           The +plus score indicates recent increase in social media activity
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
         <Connect(WithStyles(HelpIcon))
@@ -1920,8 +1920,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           }
           title="About these metrics"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -2735,8 +2735,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

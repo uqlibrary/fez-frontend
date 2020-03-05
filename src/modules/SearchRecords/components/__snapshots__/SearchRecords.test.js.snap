@@ -4,11 +4,11 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -32,19 +32,22 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Alert)
+      <Alert
+        allowDismiss={false}
+        dismissTitle="Click to dismiss this alert"
         message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
         pushToTop={true}
+        showLoader={false}
         title="Error"
         type="error_outline"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -52,11 +55,11 @@ exports[`SearchRecords page renders loading screen while export publications loa
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -80,8 +83,8 @@ exports[`SearchRecords page renders loading screen while export publications loa
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -102,11 +105,11 @@ exports[`SearchRecords page should render advanced search component 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -130,8 +133,8 @@ exports[`SearchRecords page should render advanced search component 1`] = `
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -139,11 +142,11 @@ exports[`SearchRecords page should render loading screen while export publicatio
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -167,8 +170,8 @@ exports[`SearchRecords page should render loading screen while export publicatio
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={true}
@@ -177,19 +180,19 @@ exports[`SearchRecords page should render loading screen while export publicatio
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <span>
               Searching for works
             </span>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -202,8 +205,8 @@ exports[`SearchRecords page should render loading screen while export publicatio
               sortBy="score"
               sortDirection="Desc"
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -212,28 +215,28 @@ exports[`SearchRecords page should render loading screen while export publicatio
               loading={true}
               onPageChanged={[Function]}
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           justify="center"
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
           >
             <WithStyles(InlineLoader)
               message="Exporting search results"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
         <WithStyles(PublicationsListPaging)
           disabled={true}
           loading={true}
           onPageChanged={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -241,11 +244,11 @@ exports[`SearchRecords page should render loading screen while loading publicati
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -269,16 +272,16 @@ exports[`SearchRecords page should render loading screen while loading publicati
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
       <WithStyles(InlineLoader)
         message="Searching for works"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={true}
@@ -287,19 +290,19 @@ exports[`SearchRecords page should render loading screen while loading publicati
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <span>
               Searching for works
             </span>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -312,8 +315,8 @@ exports[`SearchRecords page should render loading screen while loading publicati
               sortBy="score"
               sortDirection="Desc"
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -322,28 +325,28 @@ exports[`SearchRecords page should render loading screen while loading publicati
               loading={true}
               onPageChanged={[Function]}
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           justify="center"
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
           >
             <WithStyles(InlineLoader)
               message="Searching for works"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
         <WithStyles(PublicationsListPaging)
           disabled={true}
           loading={true}
           onPageChanged={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -351,11 +354,11 @@ exports[`SearchRecords page should render loading screen while loading search re
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -379,16 +382,16 @@ exports[`SearchRecords page should render loading screen while loading search re
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
       <WithStyles(InlineLoader)
         message="Searching for works"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -396,11 +399,11 @@ exports[`SearchRecords page should render no results 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -424,8 +427,8 @@ exports[`SearchRecords page should render no results 1`] = `
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -441,8 +444,8 @@ exports[`SearchRecords page should render no results 1`] = `
           We were unable to find any results.
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -450,11 +453,11 @@ exports[`SearchRecords page should render placeholders 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -478,8 +481,8 @@ exports[`SearchRecords page should render placeholders 1`] = `
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -487,11 +490,11 @@ exports[`SearchRecords page should render when paging 1`] = `
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -515,8 +518,8 @@ exports[`SearchRecords page should render when paging 1`] = `
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       sm={true}
@@ -525,19 +528,19 @@ exports[`SearchRecords page should render when paging 1`] = `
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <span>
-              Displaying works 10 to 20 of 100 total records.
+              Displaying works 10 to 20 of 100 total records. 
             </span>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -557,8 +560,8 @@ exports[`SearchRecords page should render when paging 1`] = `
               sortBy="score"
               sortDirection="Desc"
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -574,8 +577,8 @@ exports[`SearchRecords page should render when paging 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
         <div
           style={
             Object {
@@ -614,8 +617,8 @@ exports[`SearchRecords page should render when paging 1`] = `
           }
         />
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -637,11 +640,11 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -664,8 +667,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -681,8 +684,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -690,11 +693,11 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -719,8 +722,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -736,8 +739,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -745,11 +748,11 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -777,8 +780,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -794,8 +797,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -803,11 +806,11 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -831,8 +834,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -848,28 +851,18 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
       smDown={true}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
       >
         <StandardRighthandCard
           title="Refine results"
         >
-          <FacetsFilter
+          <Memo(FacetsFilter)
             activeFacets={
               Object {
                 "filters": Object {},
@@ -908,9 +901,9 @@ exports[`SearchRecords page should show available filters or selected filters if
             showOpenAccessFilter={true}
           />
         </StandardRighthandCard>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </Hidden>
-  </WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -918,11 +911,11 @@ exports[`SearchRecords page should show available filters or selected filters if
 <StandardPage
   className="page-search-records"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -946,8 +939,8 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -963,28 +956,18 @@ exports[`SearchRecords page should show available filters or selected filters if
           We were unable to find any results.
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
       smDown={true}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
       >
         <StandardRighthandCard
           title="Refine results"
         >
-          <FacetsFilter
+          <Memo(FacetsFilter)
             activeFacets={
               Object {
                 "filters": Object {},
@@ -1020,8 +1003,8 @@ exports[`SearchRecords page should show available filters or selected filters if
             showOpenAccessFilter={true}
           />
         </StandardRighthandCard>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </Hidden>
-  </WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;

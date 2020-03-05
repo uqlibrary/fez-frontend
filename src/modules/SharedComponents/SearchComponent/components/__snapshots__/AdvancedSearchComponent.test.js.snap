@@ -79,15 +79,15 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -96,28 +96,28 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -136,21 +136,22 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           showUnpublishedFields={false}
           value="i feel lucky"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
               docTypes={
                 Array [
@@ -158,13 +159,15 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
                   "202",
                 ]
               }
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -174,14 +177,14 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   disabled={false}
@@ -190,11 +193,11 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -203,12 +206,12 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -221,49 +224,39 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -273,12 +266,12 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -289,13 +282,13 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -326,9 +319,9 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -342,15 +335,15 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -359,28 +352,28 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -399,21 +392,22 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           showUnpublishedFields={false}
           value="i feel lucky"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
               docTypes={
                 Array [
@@ -421,13 +415,15 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
                   202,
                 ]
               }
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -437,14 +433,14 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   disabled={false}
@@ -453,11 +449,11 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -466,12 +462,12 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -484,49 +480,39 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -536,12 +522,12 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -552,13 +538,13 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -589,9 +575,9 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -605,15 +591,15 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -622,28 +608,28 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -662,29 +648,32 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           showUnpublishedFields={false}
           value="i feel lucky"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -694,14 +683,14 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   disabled={false}
@@ -710,11 +699,11 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -723,12 +712,12 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -741,49 +730,39 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -793,12 +772,12 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -809,13 +788,13 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -840,9 +819,9 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -856,15 +835,15 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -873,28 +852,28 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -913,21 +892,22 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           showUnpublishedFields={false}
           value="i feel lucky"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
               docTypes={
                 Array [
@@ -935,13 +915,15 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
                   202,
                 ]
               }
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -951,14 +933,14 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   disabled={false}
@@ -967,11 +949,11 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -980,12 +962,12 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -998,49 +980,39 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -1050,12 +1022,12 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -1066,13 +1038,13 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1103,9 +1075,9 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -1119,15 +1091,15 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1136,28 +1108,28 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -1177,29 +1149,32 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           showUnpublishedFields={true}
           value=""
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -1209,14 +1184,16 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DateRangeField)
+              className="publicationyearrange menuitem"
               disableFuture={true}
               disabled={false}
+              format="DD/MM/YYYY"
               locale={
                 Object {
                   "ariaLabel": "Add valid date ranges to search between",
@@ -1232,14 +1209,16 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
               }
               onChange={[Function]}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DateRangeField)
+              className="publicationyearrange menuitem"
               disableFuture={true}
               disabled={false}
+              format="DD/MM/YYYY"
               locale={
                 Object {
                   "ariaLabel": "Add valid date ranges to search between",
@@ -1255,14 +1234,14 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
               }
               onChange={[Function]}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   disabled={false}
@@ -1271,11 +1250,11 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -1284,12 +1263,12 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -1302,49 +1281,39 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -1354,12 +1323,12 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -1370,13 +1339,13 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1402,9 +1371,9 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -1418,15 +1387,15 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1435,28 +1404,28 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -1476,29 +1445,32 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           showUnpublishedFields={false}
           value=""
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -1508,14 +1480,14 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={false}
                   disabled={false}
@@ -1524,11 +1496,11 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -1537,12 +1509,12 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -1555,49 +1527,39 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -1607,12 +1569,12 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -1623,13 +1585,13 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1655,9 +1617,9 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -1671,15 +1633,15 @@ exports[`AdvancedSearchComponent should render default view with open access che
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1688,28 +1650,28 @@ exports[`AdvancedSearchComponent should render default view with open access che
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -1729,29 +1691,32 @@ exports[`AdvancedSearchComponent should render default view with open access che
           showUnpublishedFields={false}
           value=""
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -1761,14 +1726,14 @@ exports[`AdvancedSearchComponent should render default view with open access che
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={true}
                   disabled={false}
@@ -1777,11 +1742,11 @@ exports[`AdvancedSearchComponent should render default view with open access che
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -1790,12 +1755,12 @@ exports[`AdvancedSearchComponent should render default view with open access che
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -1808,49 +1773,39 @@ exports[`AdvancedSearchComponent should render default view with open access che
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -1860,12 +1815,12 @@ exports[`AdvancedSearchComponent should render default view with open access che
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -1876,13 +1831,13 @@ exports[`AdvancedSearchComponent should render default view with open access che
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1908,9 +1863,9 @@ exports[`AdvancedSearchComponent should render default view with open access che
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -1924,15 +1879,15 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1941,28 +1896,28 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Show advanced search"
           onClick={[Function]}
           tooltip="Show advanced search"
         >
-          <pure(KeyboardArrowDownIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowDownIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -1988,9 +1943,9 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;
 
@@ -2004,15 +1959,15 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={3}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={40}
+      spacing={5}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -2021,28 +1976,28 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           }
         }
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           variant="h5"
         >
           Advanced search
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
-          <pure(KeyboardArrowUpIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <KeyboardArrowUpIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={8}
         xs={12}
@@ -2062,29 +2017,32 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           showUnpublishedFields={false}
           value=""
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(DocumentTypeMultipleField)
+              className="displaytype menuitem"
               disabled={false}
+              value={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
             <WithStyles(PublicationYearRangeField)
+              className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
               updateYearRangeFilter={[MockFunction]}
@@ -2094,14 +2052,14 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(WithFormControlContext(FormControlLabel))
+            <WithStyles(ForwardRef(FormControlLabel))
               control={
-                <WithStyles(Checkbox)
+                <ForwardRef(WithStyles)
                   aria-label="Check to search for publications with are only open access / full text"
                   checked={false}
                   disabled={false}
@@ -2110,11 +2068,11 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
               }
               label="Open access"
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={2}
       style={
@@ -2123,12 +2081,12 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to add another advanced search field"
           classes={
             Object {
@@ -2141,49 +2099,39 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           variant="contained"
         >
           Add another field
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to reset the advanced search"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Reset
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to return to the simple search"
           fullWidth={true}
           onClick={[Function]}
         >
           Simple search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
         smDown={true}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -2193,12 +2141,12 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           }
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
           disabled={false}
@@ -2209,13 +2157,13 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           variant="contained"
         >
           Search
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -2241,8 +2189,8 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             }
           }
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </form>
 `;

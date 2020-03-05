@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AttachedFiles component should render admin edit view 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   xs={12}
 >
@@ -16,107 +16,77 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         alignItems="center"
         container={true}
         direction="row"
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={1}
         >
            
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={3}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             gutterBottom={true}
             variant="caption"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
           xsDown={true}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             sm={3}
           >
-            <WithStyles(Typography)
+            <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
               variant="caption"
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
           smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             md={2}
           >
-            <WithStyles(Typography)
+            <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
               variant="caption"
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
           xsDown={true}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             sm={true}
           />
         </Hidden>
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={2}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             gutterBottom={true}
             variant="caption"
           >
             Embargo date
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="0"
@@ -126,23 +96,23 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-0"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -157,8 +127,8 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -197,21 +167,11 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
@@ -221,47 +181,27 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
                   name="fileDescription"
                   onChange={[Function]}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   3.02 KB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -275,21 +215,23 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
                   isOpenAccess={false}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               id="embargoDateButton-test-txt"
               item={true}
               xs={2}
             >
               <WithStyles(FileUploadEmbargoDate)
                 canBeCleared={true}
+                minDate={2020-03-05T02:58:40.944Z}
                 onChange={[Function]}
                 value="3000-10-20"
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -298,26 +240,26 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
               }
               xs={true}
             >
-              <WithStyles(Tooltip)
+              <WithStyles(ForwardRef(Tooltip))
                 title="Remove this file"
               >
-                <WithStyles(IconButton)
+                <WithStyles(ForwardRef(IconButton))
                   onClick={[Function]}
                 >
-                  <pure(DeleteIcon) />
-                </WithStyles(IconButton)>
-              </WithStyles(Tooltip)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+                  <DeleteIcon />
+                </WithStyles(ForwardRef(IconButton))>
+              </WithStyles(ForwardRef(Tooltip))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
   </StandardCard>
-</WithStyles(Grid)>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AttachedFiles component should render default view 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   xs={12}
 >
@@ -332,92 +274,62 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         alignItems="center"
         container={true}
         direction="row"
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={1}
         >
            
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={3}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             gutterBottom={true}
             variant="caption"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
           xsDown={true}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             sm={3}
           >
-            <WithStyles(Typography)
+            <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
               variant="caption"
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
           smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             md={2}
           >
-            <WithStyles(Typography)
+            <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
               variant="caption"
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
           xsDown={true}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             sm={true}
           />
         </Hidden>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="0"
@@ -427,23 +339,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-0"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -458,8 +370,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -498,71 +410,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   Full text (open access)
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   487.57 KB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -576,12 +458,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={false}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="1"
@@ -591,23 +474,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-1"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -622,8 +505,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -661,71 +544,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   My UQ eSpace - Researcher Guide
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   1.05 MB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -739,12 +592,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="2"
@@ -754,23 +608,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-2"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -785,8 +639,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -824,71 +678,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   My UQ eSpace - Researcher Guide
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   267.44 KB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -902,12 +726,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="3"
@@ -917,23 +742,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-3"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -948,8 +773,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -987,71 +812,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   Full text (open access)
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   1.03 MB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -1065,12 +860,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="4"
@@ -1080,23 +876,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-4"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -1111,8 +907,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -1150,71 +946,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   UPO Guide v.3
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   1.27 MB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -1228,12 +994,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="5"
@@ -1243,23 +1010,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-5"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -1274,8 +1041,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -1313,71 +1080,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   UPO Guide v.4
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   573.25 KB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -1391,12 +1128,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="6"
@@ -1406,23 +1144,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-6"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -1437,8 +1175,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -1476,71 +1214,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   UPO Guide - v.1
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   902.51 KB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -1554,12 +1262,13 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="7"
@@ -1569,23 +1278,23 @@ exports[`AttachedFiles component should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         key="file-7"
         spacing={3}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
             direction="row"
             spacing={2}
             wrap="nowrap"
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={1}
             >
@@ -1600,8 +1309,8 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webFileName={null}
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               sm={3}
             >
@@ -1639,71 +1348,41 @@ exports[`AttachedFiles component should render default view 1`] = `
                 thumbnailFileName={null}
                 webMediaUrl={null}
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={3}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   Full text
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={2}
               >
-                <WithStyles(Typography)
+                <WithStyles(ForwardRef(Typography))
                   noWrap={true}
                   variant="body2"
                 >
                   84.36 KB
-                </WithStyles(Typography)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
               xsDown={true}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 sm={true}
                 style={
@@ -1717,29 +1396,19 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
+                  showEmbargoText={false}
                 />
-              </WithStyles(Grid)>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
   </StandardCard>
-</WithStyles(Grid)>
+</WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`AttachedFiles component should show alerts 1`] = `
-Array [
-  <WithStyles(Alert)
-    allowDismiss={true}
-    message="test advisory"
-    type="info"
-  />,
-  <WithStyles(Alert)
-    allowDismiss={true}
-  />,
-]
-`;
+exports[`AttachedFiles component should show alerts 1`] = `null`;
 
 exports[`AttachedFiles component should toggle preview 1`] = `
 <MediaPreview

@@ -10,6 +10,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -20,53 +21,54 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     className=""
     container={true}
     spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="caption"
       >
         Name
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={5}
       xs={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="caption"
       >
         Reorder items
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove all items"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={true}
           onClick={[Function]}
         >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteForeverIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -80,6 +82,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -90,53 +93,54 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     className=""
     container={true}
     spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="caption"
       >
         Name
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={5}
       xs={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="caption"
       >
         Reorder items
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove all items"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteForeverIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -176,6 +180,7 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
   }
 >
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -186,41 +191,42 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     className=""
     container={true}
     spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm={11}
       xs={10}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="caption"
       >
         Name
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       sm={1}
       xs={2}
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         title="Remove all items"
       >
-        <WithStyles(IconButton)
+        <WithStyles(ForwardRef(IconButton))
           disabled={false}
           onClick={[Function]}
         >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
-      </WithStyles(Tooltip)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+          <DeleteForeverIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

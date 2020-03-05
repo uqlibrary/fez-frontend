@@ -2,23 +2,7 @@
 
 exports[`DataStreamSecurityItem component should change security value for the file 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
-
-@@ -44,11 +44,12 @@
-          <div
-            class=\\"MuiSelect-root-581\\"
-          >
-            <div
-              aria-haspopup=\\"true\\"
--             aria-pressed=\\"false\\"
-+             aria-owns=\\"menu-test.jpg\\"
-+             aria-pressed=\\"true\\"
-              class=\\"MuiSelect-select-582 MuiSelect-selectMenu-585 MuiInputBase-input-611 MuiInput-input-596\\"
-              id=\\"select-test.jpg\\"
-              role=\\"button\\"
-              tabindex=\\"0\\"
-            >"
+Compared values have no visual difference."
 `;
 
 exports[`DataStreamSecurityItem component should change security value for the file 2`] = `
@@ -44,23 +28,7 @@ exports[`DataStreamSecurityItem component should change security value for the f
 
 exports[`DataStreamSecurityItem component should change security value for the file back to inherited 1`] = `
 "Snapshot Diff:
-- First value
-+ Second value
-
-@@ -44,11 +44,12 @@
-          <div
-            class=\\"MuiSelect-root-849\\"
-          >
-            <div
-              aria-haspopup=\\"true\\"
--             aria-pressed=\\"false\\"
-+             aria-owns=\\"menu-test.jpg\\"
-+             aria-pressed=\\"true\\"
-              class=\\"MuiSelect-select-850 MuiSelect-selectMenu-853 MuiInputBase-input-879 MuiInput-input-864\\"
-              id=\\"select-test.jpg\\"
-              role=\\"button\\"
-              tabindex=\\"0\\"
-            >"
+Compared values have no visual difference."
 `;
 
 exports[`DataStreamSecurityItem component should change security value for the file back to inherited 2`] = `
@@ -87,79 +55,74 @@ exports[`DataStreamSecurityItem component should change security value for the f
 exports[`DataStreamSecurityItem component should render default view with inherited security 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49 dataStreamFileName"
+    class="MuiGrid-root dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
   >
     <a
-      class="MuiTypography-root-103 MuiTypography-colorPrimary-133 MuiTypography-inline-138 MuiLink-root-98 MuiLink-underlineHover-100"
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
       title="test.jpg"
     >
       test.jpg
     </a>
     <span
-      class="MuiTypography-root-103 MuiTypography-caption-113"
+      class="MuiTypography-root MuiTypography-caption"
     >
       Inherited
     </span>
   </div>
   <div
-    class="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
   >
     <div
-      class="MuiFormControl-root-139"
+      class="MuiFormControl-root"
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root-154 MuiFormLabel-filled-158 MuiFormLabel-required-159 MuiInputLabel-required-147 MuiInputLabel-root-143 MuiInputLabel-formControl-148 MuiInputLabel-animated-151 MuiInputLabel-shrink-150"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
         data-shrink="true"
         id="Test Policy Dropdown Label-label"
       >
         Test Policy Dropdown Label
         <span
-          class="MuiFormLabel-asterisk-160"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
         >
            *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-181 MuiInput-root-168 MuiInput-underline-172 MuiInputBase-formControl-182 MuiInput-formControl-169"
-        label="Test Policy Dropdown Label"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
       >
         <div
-          class="MuiSelect-root-161"
+          aria-haspopup="listbox"
+          aria-labelledby=" Test Policy Dropdown Label"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="Test Policy Dropdown Label"
+          role="button"
+          tabindex="0"
         >
-          <div
-            aria-haspopup="true"
-            aria-pressed="false"
-            class="MuiSelect-select-162 MuiSelect-selectMenu-165 MuiInputBase-input-191 MuiInput-input-176"
-            id="select-test.jpg"
-            role="button"
-            tabindex="0"
-          >
-            Theses Assessors
-          </div>
-          <input
-            aria-labelledby="Test Policy Dropdown Label-label"
-            id="Test Policy Dropdown Label"
-            name="test.jpg"
-            type="hidden"
-            value="2"
-          />
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root-198 MuiSelect-icon-167"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7 10l5 5 5-5z"
-            />
-          </svg>
+          Theses Assessors
         </div>
+        <input
+          aria-labelledby="Test Policy Dropdown Label-label"
+          id="Test Policy Dropdown Label"
+          name="test.jpg"
+          type="hidden"
+          value="2"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -169,79 +132,74 @@ exports[`DataStreamSecurityItem component should render default view with inheri
 exports[`DataStreamSecurityItem component should render default view with overridden security 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-item-212 MuiGrid-grid-xs-12-251 MuiGrid-grid-sm-6-259 dataStreamFileName"
+    class="MuiGrid-root dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
   >
     <a
-      class="MuiTypography-root-313 MuiTypography-colorPrimary-343 MuiTypography-inline-348 MuiLink-root-308 MuiLink-underlineHover-310"
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
       title="test.jpg"
     >
       test.jpg
     </a>
     <span
-      class="MuiTypography-root-313 MuiTypography-caption-323"
+      class="MuiTypography-root MuiTypography-caption"
     >
       Overridden
     </span>
   </div>
   <div
-    class="MuiGrid-item-212 MuiGrid-grid-xs-12-251 MuiGrid-grid-sm-6-259"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
   >
     <div
-      class="MuiFormControl-root-349"
+      class="MuiFormControl-root"
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root-364 MuiFormLabel-filled-368 MuiFormLabel-required-369 MuiInputLabel-required-357 MuiInputLabel-root-353 MuiInputLabel-formControl-358 MuiInputLabel-animated-361 MuiInputLabel-shrink-360"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
         data-shrink="true"
         id="Test Policy Dropdown Label-label"
       >
         Test Policy Dropdown Label
         <span
-          class="MuiFormLabel-asterisk-370"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
         >
            *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-391 MuiInput-root-378 MuiInput-underline-382 MuiInputBase-formControl-392 MuiInput-formControl-379"
-        label="Test Policy Dropdown Label"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
       >
         <div
-          class="MuiSelect-root-371"
+          aria-haspopup="listbox"
+          aria-labelledby=" Test Policy Dropdown Label"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="Test Policy Dropdown Label"
+          role="button"
+          tabindex="0"
         >
-          <div
-            aria-haspopup="true"
-            aria-pressed="false"
-            class="MuiSelect-select-372 MuiSelect-selectMenu-375 MuiInputBase-input-401 MuiInput-input-386"
-            id="select-test.jpg"
-            role="button"
-            tabindex="0"
-          >
-            Theses Assessors
-          </div>
-          <input
-            aria-labelledby="Test Policy Dropdown Label-label"
-            id="Test Policy Dropdown Label"
-            name="test.jpg"
-            type="hidden"
-            value="2"
-          />
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root-408 MuiSelect-icon-377"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7 10l5 5 5-5z"
-            />
-          </svg>
+          Theses Assessors
         </div>
+        <input
+          aria-labelledby="Test Policy Dropdown Label-label"
+          id="Test Policy Dropdown Label"
+          name="test.jpg"
+          type="hidden"
+          value="2"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -251,79 +209,74 @@ exports[`DataStreamSecurityItem component should render default view with overri
 exports[`DataStreamSecurityItem component should render view for a subsequent file 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-item-958 MuiGrid-grid-xs-12-997 MuiGrid-grid-sm-6-1005 dataStreamFileName"
+    class="MuiGrid-root dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
   >
     <a
-      class="MuiTypography-root-1059 MuiTypography-colorPrimary-1089 MuiTypography-inline-1094 MuiLink-root-1054 MuiLink-underlineHover-1056"
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
       title="test.jpg"
     >
       test.jpg
     </a>
     <span
-      class="MuiTypography-root-1059 MuiTypography-caption-1069"
+      class="MuiTypography-root MuiTypography-caption"
     >
       Overridden
     </span>
   </div>
   <div
-    class="MuiGrid-item-958 MuiGrid-grid-xs-12-997 MuiGrid-grid-sm-6-1005"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
   >
     <div
-      class="MuiFormControl-root-1095"
+      class="MuiFormControl-root"
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root-1110 MuiFormLabel-filled-1114 MuiFormLabel-required-1115 MuiInputLabel-required-1103 MuiInputLabel-root-1099 MuiInputLabel-formControl-1104 MuiInputLabel-animated-1107 MuiInputLabel-shrink-1106"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
         data-shrink="true"
         id="Test Policy Dropdown Label-label"
       >
         Test Policy Dropdown Label
         <span
-          class="MuiFormLabel-asterisk-1116"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
         >
            *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-1137 MuiInput-root-1124 MuiInput-underline-1128 MuiInputBase-formControl-1138 MuiInput-formControl-1125"
-        label="Test Policy Dropdown Label"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
       >
         <div
-          class="MuiSelect-root-1117"
+          aria-haspopup="listbox"
+          aria-labelledby=" Test Policy Dropdown Label"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="Test Policy Dropdown Label"
+          role="button"
+          tabindex="0"
         >
-          <div
-            aria-haspopup="true"
-            aria-pressed="false"
-            class="MuiSelect-select-1118 MuiSelect-selectMenu-1121 MuiInputBase-input-1147 MuiInput-input-1132"
-            id="select-test.jpg"
-            role="button"
-            tabindex="0"
-          >
-            Theses Assessors
-          </div>
-          <input
-            aria-labelledby="Test Policy Dropdown Label-label"
-            id="Test Policy Dropdown Label"
-            name="test.jpg"
-            type="hidden"
-            value="2"
-          />
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root-1154 MuiSelect-icon-1123"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7 10l5 5 5-5z"
-            />
-          </svg>
+          Theses Assessors
         </div>
+        <input
+          aria-labelledby="Test Policy Dropdown Label-label"
+          id="Test Policy Dropdown Label"
+          name="test.jpg"
+          type="hidden"
+          value="2"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
       </div>
     </div>
   </div>

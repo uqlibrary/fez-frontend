@@ -2,10 +2,10 @@
 
 exports[`layout should handle basic props properly 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -22,17 +22,17 @@ exports[`layout should handle basic props properly 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`layout should handle empty params on rendering authors 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -49,17 +49,17 @@ exports[`layout should handle empty params on rendering authors 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`layout should handle missing props properly 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -76,17 +76,17 @@ exports[`layout should handle missing props properly 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`layout should handle missing search keys properly 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -103,7 +103,7 @@ exports[`layout should handle missing search keys properly 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -120,6 +120,11 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -136,6 +141,11 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -152,11 +162,16 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={2}
             key="2"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="3"
         >
@@ -173,6 +188,11 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={3}
             key="3"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -189,6 +209,11 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={4}
             key="4"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -205,11 +230,16 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={5}
             key="5"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="6"
         >
@@ -226,6 +256,11 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={6}
             key="6"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -242,6 +277,11 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={7}
             key="7"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -258,22 +298,27 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={8}
             key="8"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`layout shows extra small widths correctly (1 per row) 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -290,7 +335,7 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -307,12 +352,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="1"
         >
@@ -329,12 +379,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="2"
         >
@@ -351,12 +406,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={2}
             key="2"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="3"
         >
@@ -373,12 +433,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={3}
             key="3"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="4"
         >
@@ -395,12 +460,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={4}
             key="4"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="5"
         >
@@ -417,12 +487,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={5}
             key="5"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="6"
         >
@@ -439,12 +514,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={6}
             key="6"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="7"
         >
@@ -461,12 +541,17 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={7}
             key="7"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="8"
         >
@@ -483,23 +568,28 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={8}
             key="8"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`layout shows normal widths correctly (3 per row) 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -516,7 +606,7 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -533,6 +623,11 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -550,6 +645,11 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -567,12 +667,17 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={2}
             key="2"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="3"
         >
@@ -589,6 +694,11 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={3}
             key="3"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -606,6 +716,11 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={4}
             key="4"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -623,12 +738,17 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={5}
             key="5"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="6"
         >
@@ -645,6 +765,11 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={6}
             key="6"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -662,6 +787,11 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={7}
             key="7"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -679,23 +809,28 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={8}
             key="8"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`layout shows small widths correctly (2 per row) 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
     >
       <Infinite
@@ -712,7 +847,7 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -729,6 +864,11 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={0}
             key="0"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -746,12 +886,17 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={1}
             key="1"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="2"
         >
@@ -768,6 +913,11 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={2}
             key="2"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -785,12 +935,17 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={3}
             key="3"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="4"
         >
@@ -807,6 +962,11 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={4}
             key="4"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -824,12 +984,17 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={5}
             key="5"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="6"
         >
@@ -846,6 +1011,11 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={6}
             key="6"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -863,12 +1033,17 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={7}
             key="7"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="8"
         >
@@ -885,13 +1060,18 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={8}
             key="8"
             linked={false}
+            locale={
+              Object {
+                "suffix": " listed [type]",
+              }
+            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

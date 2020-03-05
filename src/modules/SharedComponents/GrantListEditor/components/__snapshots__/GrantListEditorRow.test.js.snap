@@ -96,10 +96,20 @@ Object {
 exports[`GrantListEditorRow should render default mobile view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure?",
+        "confirmationTitle": "Confirmation",
+      }
+    }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label={null}
     divider={true}
     style={
@@ -108,28 +118,28 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={10}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="stretch"
           container={true}
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
               primary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "undefined ",
@@ -140,7 +150,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                 />
               }
               secondary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "",
@@ -150,7 +160,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                   variant="caption"
                 >
                   
-                </WithStyles(Typography)>
+                </ForwardRef(WithStyles)>
               }
               style={
                 Object {
@@ -158,28 +168,18 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
           <Hidden
-            implementation="js"
-            lgDown={false}
-            lgUp={false}
-            mdDown={false}
-            mdUp={false}
-            smDown={false}
-            smUp={false}
-            xlDown={false}
-            xlUp={false}
             xsDown={true}
-            xsUp={false}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={5}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -189,10 +189,10 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                     variant="body2"
                   >
                     undefined
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -202,7 +202,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -210,15 +210,15 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={4}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -228,10 +228,10 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                     variant="body2"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -241,7 +241,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -249,15 +249,15 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
           </Hidden>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={2}
       >
-        <WithStyles(ListItemSecondaryAction)
+        <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -266,24 +266,14 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
             }
           }
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={0}
           >
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 style={
                   Object {
@@ -292,7 +282,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                 }
                 xs={8}
               >
-                <WithStyles(Tooltip)
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -304,21 +294,21 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowUpIcon)
+                      <KeyboardArrowUpIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-                <WithStyles(Tooltip)
+                </WithStyles(ForwardRef(Tooltip))>
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -330,23 +320,23 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowDownIcon)
+                      <KeyboardArrowDownIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Tooltip))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -355,7 +345,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               }
               xs={12}
             >
-              <WithStyles(Tooltip)
+              <WithStyles(ForwardRef(Tooltip))
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -367,30 +357,40 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
                     }
                   }
                 >
-                  <WithStyles(IconButton)
+                  <WithStyles(ForwardRef(IconButton))
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <pure(DeleteIcon) />
-                  </WithStyles(IconButton)>
+                    <DeleteIcon />
+                  </WithStyles(ForwardRef(IconButton))>
                 </div>
-              </WithStyles(Tooltip)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(ListItemSecondaryAction)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(ListItem)>
+              </WithStyles(ForwardRef(Tooltip))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(ListItemSecondaryAction))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`GrantListEditorRow should render default view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure?",
+        "confirmationTitle": "Confirmation",
+      }
+    }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label={null}
     divider={true}
     style={
@@ -399,28 +399,28 @@ exports[`GrantListEditorRow should render default view 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={9}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="stretch"
           container={true}
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={5}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
               primary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "undefined ",
@@ -431,7 +431,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                 />
               }
               secondary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "",
@@ -441,7 +441,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                   variant="caption"
                 >
                   
-                </WithStyles(Typography)>
+                </ForwardRef(WithStyles)>
               }
               style={
                 Object {
@@ -449,28 +449,18 @@ exports[`GrantListEditorRow should render default view 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
           <Hidden
-            implementation="js"
-            lgDown={false}
-            lgUp={false}
-            mdDown={false}
-            mdUp={false}
-            smDown={false}
-            smUp={false}
-            xlDown={false}
-            xlUp={false}
             xsDown={true}
-            xsUp={false}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={4}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -480,10 +470,10 @@ exports[`GrantListEditorRow should render default view 1`] = `
                     variant="body2"
                   >
                     undefined
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -493,7 +483,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -501,15 +491,15 @@ exports[`GrantListEditorRow should render default view 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={3}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -519,10 +509,10 @@ exports[`GrantListEditorRow should render default view 1`] = `
                     variant="body2"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -532,7 +522,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -540,15 +530,15 @@ exports[`GrantListEditorRow should render default view 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
           </Hidden>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={3}
       >
-        <WithStyles(ListItemSecondaryAction)
+        <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -557,24 +547,14 @@ exports[`GrantListEditorRow should render default view 1`] = `
             }
           }
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={0}
           >
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 style={
                   Object {
@@ -583,7 +563,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
                 }
                 xs={8}
               >
-                <WithStyles(Tooltip)
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -595,21 +575,21 @@ exports[`GrantListEditorRow should render default view 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowUpIcon)
+                      <KeyboardArrowUpIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-                <WithStyles(Tooltip)
+                </WithStyles(ForwardRef(Tooltip))>
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -621,23 +601,23 @@ exports[`GrantListEditorRow should render default view 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowDownIcon)
+                      <KeyboardArrowDownIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Tooltip))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -646,7 +626,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               }
               xs={4}
             >
-              <WithStyles(Tooltip)
+              <WithStyles(ForwardRef(Tooltip))
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -658,31 +638,33 @@ exports[`GrantListEditorRow should render default view 1`] = `
                     }
                   }
                 >
-                  <WithStyles(IconButton)
+                  <WithStyles(ForwardRef(IconButton))
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <pure(DeleteIcon) />
-                  </WithStyles(IconButton)>
+                    <DeleteIcon />
+                  </WithStyles(ForwardRef(IconButton))>
                 </div>
-              </WithStyles(Tooltip)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(ListItemSecondaryAction)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(ListItem)>
+              </WithStyles(ForwardRef(Tooltip))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(ListItemSecondaryAction))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`GrantListEditorRow should render given grant data 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={Object {}}
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select hint undefined"
     divider={true}
     style={
@@ -691,28 +673,28 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={9}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="stretch"
           container={true}
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={5}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
               primary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "undefined selected-grant",
@@ -722,10 +704,10 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                   variant="body2"
                 >
                   testing
-                </WithStyles(Typography)>
+                </ForwardRef(WithStyles)>
               }
               secondary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "",
@@ -735,7 +717,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                   variant="caption"
                 >
                   
-                </WithStyles(Typography)>
+                </ForwardRef(WithStyles)>
               }
               style={
                 Object {
@@ -743,28 +725,18 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
           <Hidden
-            implementation="js"
-            lgDown={false}
-            lgUp={false}
-            mdDown={false}
-            mdUp={false}
-            smDown={false}
-            smUp={false}
-            xlDown={false}
-            xlUp={false}
             xsDown={true}
-            xsUp={false}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={4}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined selected-grant",
@@ -774,10 +746,10 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                     variant="body2"
                   >
                     1234
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -787,7 +759,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -795,15 +767,15 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={3}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined selected-grant",
@@ -813,10 +785,10 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                     variant="body2"
                   >
                     Government
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -826,7 +798,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -834,15 +806,15 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
           </Hidden>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={3}
       >
-        <WithStyles(ListItemSecondaryAction)
+        <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -851,24 +823,14 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
             }
           }
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={0}
           >
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 style={
                   Object {
@@ -877,7 +839,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                 }
                 xs={8}
               >
-                <WithStyles(Tooltip)
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -890,22 +852,22 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       aria-label="Move up"
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowUpIcon)
+                      <KeyboardArrowUpIcon
                         classes={
                           Object {
                             "root": "selected-grant",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-                <WithStyles(Tooltip)
+                </WithStyles(ForwardRef(Tooltip))>
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -918,24 +880,24 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       aria-label="Move down"
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowDownIcon)
+                      <KeyboardArrowDownIcon
                         classes={
                           Object {
                             "root": "selected-grant",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Tooltip))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -944,7 +906,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
               }
               xs={4}
             >
-              <WithStyles(Tooltip)
+              <WithStyles(ForwardRef(Tooltip))
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -957,32 +919,34 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
                     }
                   }
                 >
-                  <WithStyles(IconButton)
+                  <WithStyles(ForwardRef(IconButton))
                     aria-label="Delete hint"
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <pure(DeleteIcon) />
-                  </WithStyles(IconButton)>
+                    <DeleteIcon />
+                  </WithStyles(ForwardRef(IconButton))>
                 </div>
-              </WithStyles(Tooltip)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(ListItemSecondaryAction)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(ListItem)>
+              </WithStyles(ForwardRef(Tooltip))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(ListItemSecondaryAction))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`GrantListEditorRow should render given locale 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
     locale={Object {}}
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select hint testing"
     divider={true}
     style={
@@ -991,28 +955,28 @@ exports[`GrantListEditorRow should render given locale 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={9}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="stretch"
           container={true}
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={5}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
               primary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "undefined ",
@@ -1023,7 +987,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                 />
               }
               secondary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "",
@@ -1033,7 +997,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                   variant="caption"
                 >
                   
-                </WithStyles(Typography)>
+                </ForwardRef(WithStyles)>
               }
               style={
                 Object {
@@ -1041,28 +1005,18 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
           <Hidden
-            implementation="js"
-            lgDown={false}
-            lgUp={false}
-            mdDown={false}
-            mdUp={false}
-            smDown={false}
-            smUp={false}
-            xlDown={false}
-            xlUp={false}
             xsDown={true}
-            xsUp={false}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={4}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -1072,10 +1026,10 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                     variant="body2"
                   >
                     undefined
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -1085,7 +1039,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -1093,15 +1047,15 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={3}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -1111,10 +1065,10 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                     variant="body2"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -1124,7 +1078,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -1132,15 +1086,15 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
           </Hidden>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={3}
       >
-        <WithStyles(ListItemSecondaryAction)
+        <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -1149,24 +1103,14 @@ exports[`GrantListEditorRow should render given locale 1`] = `
             }
           }
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={0}
           >
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 style={
                   Object {
@@ -1175,7 +1119,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                 }
                 xs={8}
               >
-                <WithStyles(Tooltip)
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -1188,22 +1132,22 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       aria-label="Move up"
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowUpIcon)
+                      <KeyboardArrowUpIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-                <WithStyles(Tooltip)
+                </WithStyles(ForwardRef(Tooltip))>
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -1216,24 +1160,24 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       aria-label="Move down"
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowDownIcon)
+                      <KeyboardArrowDownIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Tooltip))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -1242,7 +1186,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               }
               xs={4}
             >
-              <WithStyles(Tooltip)
+              <WithStyles(ForwardRef(Tooltip))
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -1255,31 +1199,41 @@ exports[`GrantListEditorRow should render given locale 1`] = `
                     }
                   }
                 >
-                  <WithStyles(IconButton)
+                  <WithStyles(ForwardRef(IconButton))
                     aria-label="Delete hint"
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <pure(DeleteIcon) />
-                  </WithStyles(IconButton)>
+                    <DeleteIcon />
+                  </WithStyles(ForwardRef(IconButton))>
                 </div>
-              </WithStyles(Tooltip)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(ListItemSecondaryAction)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(ListItem)>
+              </WithStyles(ForwardRef(Tooltip))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(ListItemSecondaryAction))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`GrantListEditorRow should show confirmation box 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure?",
+        "confirmationTitle": "Confirmation",
+      }
+    }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label={null}
     divider={true}
     style={
@@ -1288,28 +1242,28 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={9}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           alignContent="center"
           alignItems="stretch"
           container={true}
           spacing={0}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={5}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
               primary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "undefined ",
@@ -1320,7 +1274,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                 />
               }
               secondary={
-                <WithStyles(Typography)
+                <ForwardRef(WithStyles)
                   classes={
                     Object {
                       "root": "",
@@ -1330,7 +1284,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                   variant="caption"
                 >
                   
-                </WithStyles(Typography)>
+                </ForwardRef(WithStyles)>
               }
               style={
                 Object {
@@ -1338,28 +1292,18 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
           <Hidden
-            implementation="js"
-            lgDown={false}
-            lgUp={false}
-            mdDown={false}
-            mdUp={false}
-            smDown={false}
-            smUp={false}
-            xlDown={false}
-            xlUp={false}
             xsDown={true}
-            xsUp={false}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={4}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -1369,10 +1313,10 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                     variant="body2"
                   >
                     undefined
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -1382,7 +1326,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -1390,15 +1334,15 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={3}
             >
-              <WithStyles(ListItemText)
+              <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
                 primary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "undefined ",
@@ -1408,10 +1352,10 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                     variant="body2"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 secondary={
-                  <WithStyles(Typography)
+                  <ForwardRef(WithStyles)
                     classes={
                       Object {
                         "root": "",
@@ -1421,7 +1365,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                     variant="caption"
                   >
                     
-                  </WithStyles(Typography)>
+                  </ForwardRef(WithStyles)>
                 }
                 style={
                   Object {
@@ -1429,15 +1373,15 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                   }
                 }
               />
-            </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
           </Hidden>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={3}
       >
-        <WithStyles(ListItemSecondaryAction)
+        <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
             Object {
               "margin": "0 0 -32px 0",
@@ -1446,24 +1390,14 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
             }
           }
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={0}
           >
             <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
               smDown={true}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={false}
-              xsUp={false}
             >
-              <WithStyles(Grid)
+              <WithStyles(ForwardRef(Grid))
                 item={true}
                 style={
                   Object {
@@ -1472,7 +1406,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                 }
                 xs={8}
               >
-                <WithStyles(Tooltip)
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -1484,21 +1418,21 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowUpIcon)
+                      <KeyboardArrowUpIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-                <WithStyles(Tooltip)
+                </WithStyles(ForwardRef(Tooltip))>
+                <WithStyles(ForwardRef(Tooltip))
                   disableFocusListener={true}
                   disableHoverListener={true}
                   disableTouchListener={true}
@@ -1510,23 +1444,23 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                       }
                     }
                   >
-                    <WithStyles(IconButton)
+                    <WithStyles(ForwardRef(IconButton))
                       disabled={true}
                       onClick={[Function]}
                     >
-                      <pure(KeyboardArrowDownIcon)
+                      <KeyboardArrowDownIcon
                         classes={
                           Object {
                             "root": "",
                           }
                         }
                       />
-                    </WithStyles(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
                   </div>
-                </WithStyles(Tooltip)>
-              </WithStyles(Grid)>
+                </WithStyles(ForwardRef(Tooltip))>
+              </WithStyles(ForwardRef(Grid))>
             </Hidden>
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               style={
                 Object {
@@ -1535,7 +1469,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               }
               xs={4}
             >
-              <WithStyles(Tooltip)
+              <WithStyles(ForwardRef(Tooltip))
                 disableFocusListener={false}
                 disableHoverListener={false}
                 disableTouchListener={false}
@@ -1547,19 +1481,19 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
                     }
                   }
                 >
-                  <WithStyles(IconButton)
+                  <WithStyles(ForwardRef(IconButton))
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <pure(DeleteIcon) />
-                  </WithStyles(IconButton)>
+                    <DeleteIcon />
+                  </WithStyles(ForwardRef(IconButton))>
                 </div>
-              </WithStyles(Tooltip)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(ListItemSecondaryAction)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(ListItem)>
+              </WithStyles(ForwardRef(Tooltip))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(ListItemSecondaryAction))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;

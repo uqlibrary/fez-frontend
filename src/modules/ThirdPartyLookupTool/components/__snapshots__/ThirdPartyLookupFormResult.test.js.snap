@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -14,7 +14,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
     >
       <p>
         primary heading
-         -
+         - 
         dummy UT
       </p>
       <StandardCard
@@ -28,7 +28,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
 ]
         </pre>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -39,18 +39,18 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
         variant="contained"
       >
         New Test Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component ThirdPartyLookupFormResult renders api data when no second field provided 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -59,7 +59,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
     >
       <p>
         pf heading 9
-         -
+         - 
         dummy UT
       </p>
       <StandardCard
@@ -73,7 +73,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
 ]
         </pre>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -84,18 +84,18 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
         variant="contained"
       >
         New Test Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component ThirdPartyLookupFormResult should display a blank when the response is blank 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -104,22 +104,22 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
     >
       <p>
         primary heading
-         -
+         - 
         dummy UT
       </p>
       <StandardCard
         title="Results"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
           <StandardCard>
             No results found
           </StandardCard>
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -130,18 +130,18 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
         variant="contained"
       >
         New Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component ThirdPartyLookupFormResult should display the secondary field when required 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -150,12 +150,12 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
     >
       <p>
         pf heading 10
-         -
+         - 
         dummy UT
       </p>
       <p>
         sf heading 10
-         -
+         - 
         123456789
       </p>
       <StandardCard
@@ -169,7 +169,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
 ]
         </pre>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -180,18 +180,18 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
         variant="contained"
       >
         New Test Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -200,7 +200,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
     >
       <p>
         PF 8
-         -
+         - 
         dummy UT
       </p>
       <StandardCard
@@ -214,7 +214,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
 ]
         </pre>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -225,18 +225,18 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
         variant="contained"
       >
         New Test Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component ThirdPartyLookupFormResult should show locale-defined message when no results 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -245,22 +245,22 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
     >
       <p>
         primary heading
-         -
+         - 
         dummy UT
       </p>
       <StandardCard
         title="Test Results"
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
           <StandardCard>
             No test results found
           </StandardCard>
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -271,18 +271,18 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
         variant="contained"
       >
         New Test Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component ThirdPartyLookupFormResult should use defaults when locale values are not provided 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -291,7 +291,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
     >
       <p>
         primary heading
-         -
+         - 
         dummy UT
       </p>
       <StandardCard
@@ -305,7 +305,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
 ]
         </pre>
       </StandardCard>
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         onClick={[Function]}
         style={
@@ -316,8 +316,8 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
         variant="contained"
       >
         New Search
-      </WithStyles(Button)>
+      </WithStyles(ForwardRef(Button))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

@@ -9,18 +9,18 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={11}
       sm={11}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         noWrap={true}
         variant="body2"
@@ -29,9 +29,9 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
          (
         100 MB
         )
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       xs={1}
@@ -41,8 +41,8 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -55,18 +55,18 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       sm={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         noWrap={true}
         variant="body2"
@@ -75,9 +75,9 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
          (
         100 MB
         )
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={4}
@@ -85,23 +85,33 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
         onChange={[MockFunction]}
         value={8}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={2}
       sm={2}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       xs={1}
@@ -111,8 +121,8 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -125,18 +135,18 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       sm={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         noWrap={true}
         variant="body2"
@@ -145,9 +155,9 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
          (
         100 MB
         )
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={4}
@@ -155,23 +165,33 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
         onChange={[MockFunction]}
         value={null}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={2}
       sm={2}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       xs={1}
@@ -181,8 +201,8 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -221,18 +241,18 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
     direction="row"
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       sm={5}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         noWrap={true}
         variant="body2"
@@ -241,9 +261,9 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
          (
         100 MB
         )
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={4}
@@ -251,22 +271,34 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
         onChange={[MockFunction]}
         value={9}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={2}
       sm={2}
     >
       <WithStyles(FileUploadEmbargoDate)
+        canBeCleared={false}
         disabled={false}
+        minDate={2020-03-05T02:58:52.369Z}
         onChange={[MockFunction]}
         value="01/01/2017"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       className=""
       item={true}
       xs={1}
@@ -276,7 +308,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

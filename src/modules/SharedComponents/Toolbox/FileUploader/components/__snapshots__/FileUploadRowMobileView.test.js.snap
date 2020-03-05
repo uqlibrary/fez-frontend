@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
-<WithStyles(List)
+<WithStyles(ForwardRef(List))
   classes={
     Object {
       "root": "root",
     }
   }
 >
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(AttachmentIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <AttachmentIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -33,29 +33,29 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
         }
       }
     />
-  </WithStyles(ListItem)>
-</WithStyles(List)>
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
 `;
 
 exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
-<WithStyles(List)
+<WithStyles(ForwardRef(List))
   classes={
     Object {
       "root": "root",
     }
   }
 >
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(AttachmentIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <AttachmentIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -70,18 +70,18 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     />
-  </WithStyles(ListItem)>
-  <WithStyles(ListItem)
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(LockOutlinedIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <LockOutlinedIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
       secondaryTypographyProps={
         Object {
@@ -92,22 +92,32 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
         onChange={[MockFunction]}
         value={8}
       />
-    </WithStyles(ListItemText)>
-  </WithStyles(ListItem)>
-  <WithStyles(ListItem)
+    </WithStyles(ForwardRef(ListItemText))>
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(CalendarTodayOutlinedIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <CalendarTodayOutlinedIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
         Object {
           "variant": "body1",
@@ -120,14 +130,14 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(Typography)>
-    </WithStyles(ListItemText)>
-    <WithStyles(ListItemSecondaryAction)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(ListItemText))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -139,30 +149,30 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
-</WithStyles(List)>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
 `;
 
 exports[`Component FileUploadRowMobileView should render default view 1`] = `
-<WithStyles(List)
+<WithStyles(ForwardRef(List))
   classes={
     Object {
       "root": "root",
     }
   }
 >
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(AttachmentIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <AttachmentIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -177,18 +187,18 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     />
-  </WithStyles(ListItem)>
-  <WithStyles(ListItem)
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(LockOutlinedIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <LockOutlinedIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
       secondaryTypographyProps={
         Object {
@@ -199,22 +209,32 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
         onChange={[MockFunction]}
         value={null}
       />
-    </WithStyles(ListItemText)>
-  </WithStyles(ListItem)>
-  <WithStyles(ListItem)
+    </WithStyles(ForwardRef(ListItemText))>
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(CalendarTodayOutlinedIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <CalendarTodayOutlinedIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
         Object {
           "variant": "body1",
@@ -227,14 +247,14 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         variant="body2"
       >
         No date required
-      </WithStyles(Typography)>
-    </WithStyles(ListItemText)>
-    <WithStyles(ListItemSecondaryAction)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(ListItemText))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -246,9 +266,9 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
-</WithStyles(List)>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
 `;
 
 exports[`Component FileUploadRowMobileView should render default view with styles 1`] = `
@@ -282,24 +302,24 @@ exports[`Component FileUploadRowMobileView should render default view with style
 `;
 
 exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
-<WithStyles(List)
+<WithStyles(ForwardRef(List))
   classes={
     Object {
       "root": "root",
     }
   }
 >
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(AttachmentIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <AttachmentIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -314,18 +334,18 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         }
       }
     />
-  </WithStyles(ListItem)>
-  <WithStyles(ListItem)
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(LockOutlinedIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <LockOutlinedIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
       secondaryTypographyProps={
         Object {
@@ -336,22 +356,32 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        locale={
+          Object {
+            "accessSelectOptionsText": Object {
+              "8": "Closed Access",
+              "9": "Open Access",
+            },
+            "errorMessage": "This field is required",
+            "initialValue": "Select access conditions",
+          }
+        }
         onChange={[MockFunction]}
         value={9}
       />
-    </WithStyles(ListItemText)>
-  </WithStyles(ListItem)>
-  <WithStyles(ListItem)
+    </WithStyles(ForwardRef(ListItemText))>
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "listItem",
       }
     }
   >
-    <WithStyles(ListItemIcon)>
-      <pure(CalendarTodayOutlinedIcon) />
-    </WithStyles(ListItemIcon)>
-    <WithStyles(ListItemText)
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <CalendarTodayOutlinedIcon />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
         Object {
           "variant": "body1",
@@ -365,12 +395,14 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       }
     >
       <WithStyles(FileUploadEmbargoDate)
+        canBeCleared={false}
         disabled={false}
+        minDate={2020-03-05T02:58:52.233Z}
         onChange={[MockFunction]}
         value="01/01/2017"
       />
-    </WithStyles(ListItemText)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(ListItemText))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -382,7 +414,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         name="test.pdf"
         onDelete={[MockFunction]}
       />
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
-</WithStyles(List)>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
 `;

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox snapshots tests renders Checkbox component 1`] = `
-<WithStyles(WithFormControlContext(FormControlLabel))
+<WithStyles(ForwardRef(FormControlLabel))
   control={
-    <WithStyles(Checkbox)
+    <ForwardRef(WithStyles)
       error={false}
       label="This is a test checkbox component"
       onChange={[Function]}
@@ -14,9 +14,9 @@ exports[`Checkbox snapshots tests renders Checkbox component 1`] = `
 `;
 
 exports[`Checkbox snapshots tests should render correct class for error 1`] = `
-<WithStyles(WithFormControlContext(FormControlLabel))
+<WithStyles(ForwardRef(FormControlLabel))
   control={
-    <WithStyles(Checkbox)
+    <ForwardRef(WithStyles)
       error={false}
       label="This is a test"
       onChange={[Function]}

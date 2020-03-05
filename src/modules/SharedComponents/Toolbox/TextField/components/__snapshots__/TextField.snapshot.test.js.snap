@@ -2,7 +2,7 @@
 
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 <Fragment>
-  <TextField
+  <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
         "hidden": false,
@@ -24,17 +24,14 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
       }
     }
     name="testField"
-    required={false}
-    select={false}
     type="text"
-    variant="standard"
   />
 </Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
 <Fragment>
-  <TextField
+  <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
         "hidden": false,
@@ -57,17 +54,14 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
       }
     }
     name="testField"
-    required={false}
-    select={false}
     type="text"
-    variant="standard"
   />
 </Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component with shrink:true 1`] = `
 <Fragment>
-  <TextField
+  <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
         "hidden": false,
@@ -90,10 +84,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
       }
     }
     name="testField"
-    required={false}
-    select={false}
     type="text"
-    variant="standard"
   />
 </Fragment>
 `;

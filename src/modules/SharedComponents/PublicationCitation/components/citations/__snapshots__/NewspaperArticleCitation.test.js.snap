@@ -79,7 +79,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         }
       }
     >
-      <MuiThemeProviderOld
+      <ThemeProvider
         theme={
           Object {
             "breakpoints": Object {
@@ -158,12 +158,17 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "main": "#316799",
               },
               "action": Object {
+                "activatedOpacity": 0.12,
                 "active": "rgba(0, 0, 0, 0.54)",
                 "disabled": "rgba(0, 0, 0, 0.26)",
                 "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                "hover": "rgba(0, 0, 0, 0.08)",
-                "hoverOpacity": 0.08,
-                "selected": "rgba(0, 0, 0, 0.14)",
+                "disabledOpacity": 0.38,
+                "focus": "rgba(0, 0, 0, 0.12)",
+                "focusOpacity": 0.12,
+                "hover": "rgba(0, 0, 0, 0.04)",
+                "hoverOpacity": 0.04,
+                "selected": "rgba(0, 0, 0, 0.08)",
+                "selectedOpacity": 0.08,
               },
               "augmentColor": [Function],
               "background": Object {
@@ -199,6 +204,12 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "A400": "#303030",
                 "A700": "#616161",
               },
+              "info": Object {
+                "contrastText": "#fff",
+                "dark": "#1976d2",
+                "light": "#64b5f6",
+                "main": "#2196f3",
+              },
               "primary": Object {
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
@@ -222,6 +233,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "main": "#595959",
               },
               "success": Object {
+                "contrastText": "#fff",
                 "dark": "#005000",
                 "light": "#00a700",
                 "main": "#007200",
@@ -235,6 +247,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
+                "contrastText": "#fff",
                 "dark": "#542400",
                 "light": "#ff9a57",
                 "main": "#bf5000",
@@ -246,9 +259,9 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+              "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+              "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
               "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
               "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
               "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -274,9 +287,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
             "shape": Object {
               "borderRadius": 4,
             },
-            "spacing": Object {
-              "unit": 8,
-            },
+            "spacing": [Function],
             "status": Object {
               "danger": "#f44336",
               "warning": "#ff9800",
@@ -302,15 +313,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
             },
             "typography": Object {
               "body1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.00938em",
-                "lineHeight": 1.5,
-              },
-              "body1Next": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 300,
@@ -318,32 +320,13 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "lineHeight": 1.5,
               },
               "body2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.01071em",
-                "lineHeight": 1.5,
-              },
-              "body2Next": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.01071em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.43,
               },
               "button": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "letterSpacing": "0.02857em",
-                "lineHeight": 1.75,
-                "textTransform": "uppercase",
-              },
-              "buttonNext": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
@@ -352,116 +335,62 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.03333em",
                 "lineHeight": 1.66,
-              },
-              "captionNext": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.75rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.03333em",
-                "lineHeight": 1.66,
-              },
-              "display1": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "2.125rem",
-                "fontWeight": 300,
-                "lineHeight": "1.20588em",
-              },
-              "display2": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "2.8125rem",
-                "fontWeight": 300,
-                "lineHeight": "1.13333em",
-                "marginLeft": "-.02em",
-              },
-              "display3": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "3.5rem",
-                "fontWeight": 300,
-                "letterSpacing": "-.02em",
-                "lineHeight": "1.30357em",
-                "marginLeft": "-.02em",
-              },
-              "display4": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "7rem",
-                "fontWeight": 200,
-                "letterSpacing": "-.04em",
-                "lineHeight": "1.14286em",
-                "marginLeft": "-.04em",
               },
               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
               "fontSize": 14,
+              "fontWeightBold": 700,
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
               "h1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "6rem",
                 "fontWeight": 200,
                 "letterSpacing": "-0.01562em",
-                "lineHeight": 1,
+                "lineHeight": 1.167,
               },
               "h2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "3.75rem",
                 "fontWeight": 200,
                 "letterSpacing": "-0.00833em",
-                "lineHeight": 1,
+                "lineHeight": 1.2,
               },
               "h3": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "3rem",
                 "fontWeight": 300,
                 "letterSpacing": "0em",
-                "lineHeight": 1.04,
+                "lineHeight": 1.167,
               },
               "h4": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "2.125rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.00735em",
-                "lineHeight": 1.17,
+                "lineHeight": 1.235,
               },
               "h5": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "letterSpacing": "0em",
-                "lineHeight": 1.33,
+                "lineHeight": 1.334,
               },
               "h6": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.25rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.0075em",
                 "lineHeight": 1.6,
               },
-              "headline": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
-                "lineHeight": "1.35417em",
-              },
+              "htmlFontSize": 16,
               "overline": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
@@ -471,15 +400,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               },
               "pxToRem": [Function],
               "round": [Function],
-              "subheading": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1rem",
-                "fontWeight": 300,
-                "lineHeight": "1.5em",
-              },
               "subtitle1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 300,
@@ -487,7 +408,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "lineHeight": 1.75,
               },
               "subtitle2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
@@ -495,13 +415,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "lineHeight": 1.57,
               },
               "suppressDeprecationWarnings": true,
-              "title": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.3125rem",
-                "fontWeight": 400,
-                "lineHeight": "1.16667em",
-              },
               "useNextVariants": true,
             },
             "zIndex": Object {
@@ -510,8 +423,10 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               "mobileStepper": 1000,
               "modal": 1300,
               "snackbar": 1400,
+              "speedDial": 1050,
               "tooltip": 1500,
             },
+            Symbol(mui.nested): false,
           }
         }
       >
@@ -521,14 +436,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               "calls": Array [
                 Array [
                   Object {
+                    "instance": undefined,
                     "locale": undefined,
-                    "moment": undefined,
                   },
                 ],
                 Array [
                   Object {
+                    "instance": undefined,
                     "locale": undefined,
-                    "moment": undefined,
                   },
                 ],
               ],
@@ -896,6 +811,16 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               className="citationContent citationNewspaperArticle"
             >
               <WithStyles(AuthorsCitationView)
+                className="citationAuthors"
+                getLink={[Function]}
+                idSearchKey={
+                  Object {
+                    "idKey": "fez_record_search_key_author_id",
+                    "idOrder": "rek_author_id_order",
+                    "idSubkey": "rek_author_id",
+                  }
+                }
+                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_record_search_key_article_number": null,
@@ -1241,6 +1166,17 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
+                searchKey={
+                  Object {
+                    "key": "fez_record_search_key_author",
+                    "order": "rek_author_order",
+                    "subkey": "rek_author",
+                  }
+                }
+                separator=", "
+                showLink={false}
+                suffix=" "
+                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -1691,12 +1627,17 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "main": "#316799",
                         },
                         "action": Object {
+                          "activatedOpacity": 0.12,
                           "active": "rgba(0, 0, 0, 0.54)",
                           "disabled": "rgba(0, 0, 0, 0.26)",
                           "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                          "hover": "rgba(0, 0, 0, 0.08)",
-                          "hoverOpacity": 0.08,
-                          "selected": "rgba(0, 0, 0, 0.14)",
+                          "disabledOpacity": 0.38,
+                          "focus": "rgba(0, 0, 0, 0.12)",
+                          "focusOpacity": 0.12,
+                          "hover": "rgba(0, 0, 0, 0.04)",
+                          "hoverOpacity": 0.04,
+                          "selected": "rgba(0, 0, 0, 0.08)",
+                          "selectedOpacity": 0.08,
                         },
                         "augmentColor": [Function],
                         "background": Object {
@@ -1732,6 +1673,12 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "A400": "#303030",
                           "A700": "#616161",
                         },
+                        "info": Object {
+                          "contrastText": "#fff",
+                          "dark": "#1976d2",
+                          "light": "#64b5f6",
+                          "main": "#2196f3",
+                        },
                         "primary": Object {
                           "contrastText": "#fff",
                           "dark": "#3b1a59",
@@ -1755,6 +1702,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "main": "#595959",
                         },
                         "success": Object {
+                          "contrastText": "#fff",
                           "dark": "#005000",
                           "light": "#00a700",
                           "main": "#007200",
@@ -1768,6 +1716,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         "tonalOffset": 0.2,
                         "type": "light",
                         "warning": Object {
+                          "contrastText": "#fff",
                           "dark": "#542400",
                           "light": "#ff9a57",
                           "main": "#bf5000",
@@ -1779,9 +1728,9 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       "props": Object {},
                       "shadows": Array [
                         "none",
-                        "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-                        "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-                        "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                        "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                        "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                        "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
                         "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
                         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
                         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -1807,9 +1756,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       "shape": Object {
                         "borderRadius": 4,
                       },
-                      "spacing": Object {
-                        "unit": 8,
-                      },
+                      "spacing": [Function],
                       "status": Object {
                         "danger": "#f44336",
                         "warning": "#ff9800",
@@ -1835,15 +1782,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       },
                       "typography": Object {
                         "body1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.00938em",
-                          "lineHeight": 1.5,
-                        },
-                        "body1Next": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1rem",
                           "fontWeight": 300,
@@ -1851,32 +1789,13 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "lineHeight": 1.5,
                         },
                         "body2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.01071em",
-                          "lineHeight": 1.5,
-                        },
-                        "body2Next": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.875rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.01071em",
-                          "lineHeight": 1.5,
+                          "lineHeight": 1.43,
                         },
                         "button": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.875rem",
-                          "fontWeight": 400,
-                          "letterSpacing": "0.02857em",
-                          "lineHeight": 1.75,
-                          "textTransform": "uppercase",
-                        },
-                        "buttonNext": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 400,
@@ -1885,116 +1804,62 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "textTransform": "uppercase",
                         },
                         "caption": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.75rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.03333em",
                           "lineHeight": 1.66,
-                        },
-                        "captionNext": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.75rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.03333em",
-                          "lineHeight": 1.66,
-                        },
-                        "display1": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "2.125rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.20588em",
-                        },
-                        "display2": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "2.8125rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.13333em",
-                          "marginLeft": "-.02em",
-                        },
-                        "display3": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "3.5rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "-.02em",
-                          "lineHeight": "1.30357em",
-                          "marginLeft": "-.02em",
-                        },
-                        "display4": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "7rem",
-                          "fontWeight": 200,
-                          "letterSpacing": "-.04em",
-                          "lineHeight": "1.14286em",
-                          "marginLeft": "-.04em",
                         },
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": 14,
+                        "fontWeightBold": 700,
                         "fontWeightLight": 200,
                         "fontWeightMedium": 400,
                         "fontWeightRegular": 300,
                         "h1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "6rem",
                           "fontWeight": 200,
                           "letterSpacing": "-0.01562em",
-                          "lineHeight": 1,
+                          "lineHeight": 1.167,
                         },
                         "h2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "3.75rem",
                           "fontWeight": 200,
                           "letterSpacing": "-0.00833em",
-                          "lineHeight": 1,
+                          "lineHeight": 1.2,
                         },
                         "h3": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "3rem",
                           "fontWeight": 300,
                           "letterSpacing": "0em",
-                          "lineHeight": 1.04,
+                          "lineHeight": 1.167,
                         },
                         "h4": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "2.125rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.00735em",
-                          "lineHeight": 1.17,
+                          "lineHeight": 1.235,
                         },
                         "h5": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1.5rem",
                           "fontWeight": 300,
                           "letterSpacing": "0em",
-                          "lineHeight": 1.33,
+                          "lineHeight": 1.334,
                         },
                         "h6": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1.25rem",
                           "fontWeight": 400,
                           "letterSpacing": "0.0075em",
                           "lineHeight": 1.6,
                         },
-                        "headline": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1.5rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.35417em",
-                        },
+                        "htmlFontSize": 16,
                         "overline": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.75rem",
                           "fontWeight": 300,
@@ -2004,15 +1869,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         },
                         "pxToRem": [Function],
                         "round": [Function],
-                        "subheading": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.5em",
-                        },
                         "subtitle1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1rem",
                           "fontWeight": 300,
@@ -2020,7 +1877,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "lineHeight": 1.75,
                         },
                         "subtitle2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 400,
@@ -2028,13 +1884,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "lineHeight": 1.57,
                         },
                         "suppressDeprecationWarnings": true,
-                        "title": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1.3125rem",
-                          "fontWeight": 400,
-                          "lineHeight": "1.16667em",
-                        },
                         "useNextVariants": true,
                       },
                       "zIndex": Object {
@@ -2043,8 +1892,10 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         "mobileStepper": 1000,
                         "modal": 1300,
                         "snackbar": 1400,
+                        "speedDial": 1050,
                         "tooltip": 1500,
                       },
+                      Symbol(mui.nested): false,
                     }
                   }
                   thresholdNumberOfAuthors={3}
@@ -2194,7 +2045,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
             </div>
           </NewspaperArticleCitation>
         </MuiPickersUtilsProvider>
-      </MuiThemeProviderOld>
+      </ThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -2279,7 +2130,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
         }
       }
     >
-      <MuiThemeProviderOld
+      <ThemeProvider
         theme={
           Object {
             "breakpoints": Object {
@@ -2358,12 +2209,17 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "main": "#316799",
               },
               "action": Object {
+                "activatedOpacity": 0.12,
                 "active": "rgba(0, 0, 0, 0.54)",
                 "disabled": "rgba(0, 0, 0, 0.26)",
                 "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                "hover": "rgba(0, 0, 0, 0.08)",
-                "hoverOpacity": 0.08,
-                "selected": "rgba(0, 0, 0, 0.14)",
+                "disabledOpacity": 0.38,
+                "focus": "rgba(0, 0, 0, 0.12)",
+                "focusOpacity": 0.12,
+                "hover": "rgba(0, 0, 0, 0.04)",
+                "hoverOpacity": 0.04,
+                "selected": "rgba(0, 0, 0, 0.08)",
+                "selectedOpacity": 0.08,
               },
               "augmentColor": [Function],
               "background": Object {
@@ -2399,6 +2255,12 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "A400": "#303030",
                 "A700": "#616161",
               },
+              "info": Object {
+                "contrastText": "#fff",
+                "dark": "#1976d2",
+                "light": "#64b5f6",
+                "main": "#2196f3",
+              },
               "primary": Object {
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
@@ -2422,6 +2284,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "main": "#595959",
               },
               "success": Object {
+                "contrastText": "#fff",
                 "dark": "#005000",
                 "light": "#00a700",
                 "main": "#007200",
@@ -2435,6 +2298,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
+                "contrastText": "#fff",
                 "dark": "#542400",
                 "light": "#ff9a57",
                 "main": "#bf5000",
@@ -2446,9 +2310,9 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+              "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+              "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
               "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
               "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
               "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -2474,9 +2338,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
             "shape": Object {
               "borderRadius": 4,
             },
-            "spacing": Object {
-              "unit": 8,
-            },
+            "spacing": [Function],
             "status": Object {
               "danger": "#f44336",
               "warning": "#ff9800",
@@ -2502,15 +2364,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
             },
             "typography": Object {
               "body1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.00938em",
-                "lineHeight": 1.5,
-              },
-              "body1Next": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 300,
@@ -2518,32 +2371,13 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "lineHeight": 1.5,
               },
               "body2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.01071em",
-                "lineHeight": 1.5,
-              },
-              "body2Next": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.01071em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.43,
               },
               "button": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "letterSpacing": "0.02857em",
-                "lineHeight": 1.75,
-                "textTransform": "uppercase",
-              },
-              "buttonNext": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
@@ -2552,116 +2386,62 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.03333em",
                 "lineHeight": 1.66,
-              },
-              "captionNext": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.75rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.03333em",
-                "lineHeight": 1.66,
-              },
-              "display1": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "2.125rem",
-                "fontWeight": 300,
-                "lineHeight": "1.20588em",
-              },
-              "display2": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "2.8125rem",
-                "fontWeight": 300,
-                "lineHeight": "1.13333em",
-                "marginLeft": "-.02em",
-              },
-              "display3": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "3.5rem",
-                "fontWeight": 300,
-                "letterSpacing": "-.02em",
-                "lineHeight": "1.30357em",
-                "marginLeft": "-.02em",
-              },
-              "display4": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "7rem",
-                "fontWeight": 200,
-                "letterSpacing": "-.04em",
-                "lineHeight": "1.14286em",
-                "marginLeft": "-.04em",
               },
               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
               "fontSize": 14,
+              "fontWeightBold": 700,
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
               "h1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "6rem",
                 "fontWeight": 200,
                 "letterSpacing": "-0.01562em",
-                "lineHeight": 1,
+                "lineHeight": 1.167,
               },
               "h2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "3.75rem",
                 "fontWeight": 200,
                 "letterSpacing": "-0.00833em",
-                "lineHeight": 1,
+                "lineHeight": 1.2,
               },
               "h3": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "3rem",
                 "fontWeight": 300,
                 "letterSpacing": "0em",
-                "lineHeight": 1.04,
+                "lineHeight": 1.167,
               },
               "h4": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "2.125rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.00735em",
-                "lineHeight": 1.17,
+                "lineHeight": 1.235,
               },
               "h5": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "letterSpacing": "0em",
-                "lineHeight": 1.33,
+                "lineHeight": 1.334,
               },
               "h6": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.25rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.0075em",
                 "lineHeight": 1.6,
               },
-              "headline": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
-                "lineHeight": "1.35417em",
-              },
+              "htmlFontSize": 16,
               "overline": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
@@ -2671,15 +2451,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               },
               "pxToRem": [Function],
               "round": [Function],
-              "subheading": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1rem",
-                "fontWeight": 300,
-                "lineHeight": "1.5em",
-              },
               "subtitle1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 300,
@@ -2687,7 +2459,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "lineHeight": 1.75,
               },
               "subtitle2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
@@ -2695,13 +2466,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "lineHeight": 1.57,
               },
               "suppressDeprecationWarnings": true,
-              "title": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.3125rem",
-                "fontWeight": 400,
-                "lineHeight": "1.16667em",
-              },
               "useNextVariants": true,
             },
             "zIndex": Object {
@@ -2710,8 +2474,10 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               "mobileStepper": 1000,
               "modal": 1300,
               "snackbar": 1400,
+              "speedDial": 1050,
               "tooltip": 1500,
             },
+            Symbol(mui.nested): false,
           }
         }
       >
@@ -2721,20 +2487,20 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               "calls": Array [
                 Array [
                   Object {
+                    "instance": undefined,
                     "locale": undefined,
-                    "moment": undefined,
                   },
                 ],
                 Array [
                   Object {
+                    "instance": undefined,
                     "locale": undefined,
-                    "moment": undefined,
                   },
                 ],
                 Array [
                   Object {
+                    "instance": undefined,
                     "locale": undefined,
-                    "moment": undefined,
                   },
                 ],
               ],
@@ -3108,6 +2874,16 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               className="citationContent citationNewspaperArticle"
             >
               <WithStyles(AuthorsCitationView)
+                className="citationAuthors"
+                getLink={[Function]}
+                idSearchKey={
+                  Object {
+                    "idKey": "fez_record_search_key_author_id",
+                    "idOrder": "rek_author_id_order",
+                    "idSubkey": "rek_author_id",
+                  }
+                }
+                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_record_search_key_article_number": null,
@@ -3455,6 +3231,17 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
+                searchKey={
+                  Object {
+                    "key": "fez_record_search_key_author",
+                    "order": "rek_author_order",
+                    "subkey": "rek_author",
+                  }
+                }
+                separator=", "
+                showLink={false}
+                suffix=" "
+                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -3907,12 +3694,17 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "main": "#316799",
                         },
                         "action": Object {
+                          "activatedOpacity": 0.12,
                           "active": "rgba(0, 0, 0, 0.54)",
                           "disabled": "rgba(0, 0, 0, 0.26)",
                           "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                          "hover": "rgba(0, 0, 0, 0.08)",
-                          "hoverOpacity": 0.08,
-                          "selected": "rgba(0, 0, 0, 0.14)",
+                          "disabledOpacity": 0.38,
+                          "focus": "rgba(0, 0, 0, 0.12)",
+                          "focusOpacity": 0.12,
+                          "hover": "rgba(0, 0, 0, 0.04)",
+                          "hoverOpacity": 0.04,
+                          "selected": "rgba(0, 0, 0, 0.08)",
+                          "selectedOpacity": 0.08,
                         },
                         "augmentColor": [Function],
                         "background": Object {
@@ -3948,6 +3740,12 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "A400": "#303030",
                           "A700": "#616161",
                         },
+                        "info": Object {
+                          "contrastText": "#fff",
+                          "dark": "#1976d2",
+                          "light": "#64b5f6",
+                          "main": "#2196f3",
+                        },
                         "primary": Object {
                           "contrastText": "#fff",
                           "dark": "#3b1a59",
@@ -3971,6 +3769,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "main": "#595959",
                         },
                         "success": Object {
+                          "contrastText": "#fff",
                           "dark": "#005000",
                           "light": "#00a700",
                           "main": "#007200",
@@ -3984,6 +3783,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         "tonalOffset": 0.2,
                         "type": "light",
                         "warning": Object {
+                          "contrastText": "#fff",
                           "dark": "#542400",
                           "light": "#ff9a57",
                           "main": "#bf5000",
@@ -3995,9 +3795,9 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       "props": Object {},
                       "shadows": Array [
                         "none",
-                        "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-                        "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-                        "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                        "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                        "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                        "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
                         "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
                         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
                         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -4023,9 +3823,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       "shape": Object {
                         "borderRadius": 4,
                       },
-                      "spacing": Object {
-                        "unit": 8,
-                      },
+                      "spacing": [Function],
                       "status": Object {
                         "danger": "#f44336",
                         "warning": "#ff9800",
@@ -4051,15 +3849,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       },
                       "typography": Object {
                         "body1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.00938em",
-                          "lineHeight": 1.5,
-                        },
-                        "body1Next": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1rem",
                           "fontWeight": 300,
@@ -4067,32 +3856,13 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "lineHeight": 1.5,
                         },
                         "body2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.01071em",
-                          "lineHeight": 1.5,
-                        },
-                        "body2Next": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.875rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.01071em",
-                          "lineHeight": 1.5,
+                          "lineHeight": 1.43,
                         },
                         "button": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.875rem",
-                          "fontWeight": 400,
-                          "letterSpacing": "0.02857em",
-                          "lineHeight": 1.75,
-                          "textTransform": "uppercase",
-                        },
-                        "buttonNext": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 400,
@@ -4101,116 +3871,62 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "textTransform": "uppercase",
                         },
                         "caption": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.75rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.03333em",
                           "lineHeight": 1.66,
-                        },
-                        "captionNext": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.75rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.03333em",
-                          "lineHeight": 1.66,
-                        },
-                        "display1": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "2.125rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.20588em",
-                        },
-                        "display2": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "2.8125rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.13333em",
-                          "marginLeft": "-.02em",
-                        },
-                        "display3": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "3.5rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "-.02em",
-                          "lineHeight": "1.30357em",
-                          "marginLeft": "-.02em",
-                        },
-                        "display4": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "7rem",
-                          "fontWeight": 200,
-                          "letterSpacing": "-.04em",
-                          "lineHeight": "1.14286em",
-                          "marginLeft": "-.04em",
                         },
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": 14,
+                        "fontWeightBold": 700,
                         "fontWeightLight": 200,
                         "fontWeightMedium": 400,
                         "fontWeightRegular": 300,
                         "h1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "6rem",
                           "fontWeight": 200,
                           "letterSpacing": "-0.01562em",
-                          "lineHeight": 1,
+                          "lineHeight": 1.167,
                         },
                         "h2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "3.75rem",
                           "fontWeight": 200,
                           "letterSpacing": "-0.00833em",
-                          "lineHeight": 1,
+                          "lineHeight": 1.2,
                         },
                         "h3": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "3rem",
                           "fontWeight": 300,
                           "letterSpacing": "0em",
-                          "lineHeight": 1.04,
+                          "lineHeight": 1.167,
                         },
                         "h4": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "2.125rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.00735em",
-                          "lineHeight": 1.17,
+                          "lineHeight": 1.235,
                         },
                         "h5": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1.5rem",
                           "fontWeight": 300,
                           "letterSpacing": "0em",
-                          "lineHeight": 1.33,
+                          "lineHeight": 1.334,
                         },
                         "h6": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1.25rem",
                           "fontWeight": 400,
                           "letterSpacing": "0.0075em",
                           "lineHeight": 1.6,
                         },
-                        "headline": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1.5rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.35417em",
-                        },
+                        "htmlFontSize": 16,
                         "overline": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.75rem",
                           "fontWeight": 300,
@@ -4220,15 +3936,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         },
                         "pxToRem": [Function],
                         "round": [Function],
-                        "subheading": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.5em",
-                        },
                         "subtitle1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1rem",
                           "fontWeight": 300,
@@ -4236,7 +3944,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "lineHeight": 1.75,
                         },
                         "subtitle2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 400,
@@ -4244,13 +3951,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "lineHeight": 1.57,
                         },
                         "suppressDeprecationWarnings": true,
-                        "title": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1.3125rem",
-                          "fontWeight": 400,
-                          "lineHeight": "1.16667em",
-                        },
                         "useNextVariants": true,
                       },
                       "zIndex": Object {
@@ -4259,8 +3959,10 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         "mobileStepper": 1000,
                         "modal": 1300,
                         "snackbar": 1400,
+                        "speedDial": 1050,
                         "tooltip": 1500,
                       },
+                      Symbol(mui.nested): false,
                     }
                   }
                   thresholdNumberOfAuthors={3}
@@ -4410,7 +4112,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
             </div>
           </NewspaperArticleCitation>
         </MuiPickersUtilsProvider>
-      </MuiThemeProviderOld>
+      </ThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -4495,7 +4197,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
         }
       }
     >
-      <MuiThemeProviderOld
+      <ThemeProvider
         theme={
           Object {
             "breakpoints": Object {
@@ -4574,12 +4276,17 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "main": "#316799",
               },
               "action": Object {
+                "activatedOpacity": 0.12,
                 "active": "rgba(0, 0, 0, 0.54)",
                 "disabled": "rgba(0, 0, 0, 0.26)",
                 "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                "hover": "rgba(0, 0, 0, 0.08)",
-                "hoverOpacity": 0.08,
-                "selected": "rgba(0, 0, 0, 0.14)",
+                "disabledOpacity": 0.38,
+                "focus": "rgba(0, 0, 0, 0.12)",
+                "focusOpacity": 0.12,
+                "hover": "rgba(0, 0, 0, 0.04)",
+                "hoverOpacity": 0.04,
+                "selected": "rgba(0, 0, 0, 0.08)",
+                "selectedOpacity": 0.08,
               },
               "augmentColor": [Function],
               "background": Object {
@@ -4615,6 +4322,12 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "A400": "#303030",
                 "A700": "#616161",
               },
+              "info": Object {
+                "contrastText": "#fff",
+                "dark": "#1976d2",
+                "light": "#64b5f6",
+                "main": "#2196f3",
+              },
               "primary": Object {
                 "contrastText": "#fff",
                 "dark": "#3b1a59",
@@ -4638,6 +4351,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "main": "#595959",
               },
               "success": Object {
+                "contrastText": "#fff",
                 "dark": "#005000",
                 "light": "#00a700",
                 "main": "#007200",
@@ -4651,6 +4365,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               "tonalOffset": 0.2,
               "type": "light",
               "warning": Object {
+                "contrastText": "#fff",
                 "dark": "#542400",
                 "light": "#ff9a57",
                 "main": "#bf5000",
@@ -4662,9 +4377,9 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+              "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+              "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
               "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
               "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
               "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -4690,9 +4405,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
             "shape": Object {
               "borderRadius": 4,
             },
-            "spacing": Object {
-              "unit": 8,
-            },
+            "spacing": [Function],
             "status": Object {
               "danger": "#f44336",
               "warning": "#ff9800",
@@ -4718,15 +4431,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
             },
             "typography": Object {
               "body1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.00938em",
-                "lineHeight": 1.5,
-              },
-              "body1Next": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 300,
@@ -4734,32 +4438,13 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "lineHeight": 1.5,
               },
               "body2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.01071em",
-                "lineHeight": 1.5,
-              },
-              "body2Next": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.01071em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.43,
               },
               "button": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.875rem",
-                "fontWeight": 400,
-                "letterSpacing": "0.02857em",
-                "lineHeight": 1.75,
-                "textTransform": "uppercase",
-              },
-              "buttonNext": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
@@ -4768,116 +4453,62 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "textTransform": "uppercase",
               },
               "caption": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.03333em",
                 "lineHeight": 1.66,
-              },
-              "captionNext": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "0.75rem",
-                "fontWeight": 300,
-                "letterSpacing": "0.03333em",
-                "lineHeight": 1.66,
-              },
-              "display1": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "2.125rem",
-                "fontWeight": 300,
-                "lineHeight": "1.20588em",
-              },
-              "display2": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "2.8125rem",
-                "fontWeight": 300,
-                "lineHeight": "1.13333em",
-                "marginLeft": "-.02em",
-              },
-              "display3": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "3.5rem",
-                "fontWeight": 300,
-                "letterSpacing": "-.02em",
-                "lineHeight": "1.30357em",
-                "marginLeft": "-.02em",
-              },
-              "display4": Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "7rem",
-                "fontWeight": 200,
-                "letterSpacing": "-.04em",
-                "lineHeight": "1.14286em",
-                "marginLeft": "-.04em",
               },
               "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
               "fontSize": 14,
+              "fontWeightBold": 700,
               "fontWeightLight": 200,
               "fontWeightMedium": 400,
               "fontWeightRegular": 300,
               "h1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "6rem",
                 "fontWeight": 200,
                 "letterSpacing": "-0.01562em",
-                "lineHeight": 1,
+                "lineHeight": 1.167,
               },
               "h2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "3.75rem",
                 "fontWeight": 200,
                 "letterSpacing": "-0.00833em",
-                "lineHeight": 1,
+                "lineHeight": 1.2,
               },
               "h3": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "3rem",
                 "fontWeight": 300,
                 "letterSpacing": "0em",
-                "lineHeight": 1.04,
+                "lineHeight": 1.167,
               },
               "h4": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "2.125rem",
                 "fontWeight": 300,
                 "letterSpacing": "0.00735em",
-                "lineHeight": 1.17,
+                "lineHeight": 1.235,
               },
               "h5": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.5rem",
                 "fontWeight": 300,
                 "letterSpacing": "0em",
-                "lineHeight": 1.33,
+                "lineHeight": 1.334,
               },
               "h6": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1.25rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.0075em",
                 "lineHeight": 1.6,
               },
-              "headline": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.5rem",
-                "fontWeight": 300,
-                "lineHeight": "1.35417em",
-              },
+              "htmlFontSize": 16,
               "overline": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.75rem",
                 "fontWeight": 300,
@@ -4887,15 +4518,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               },
               "pxToRem": [Function],
               "round": [Function],
-              "subheading": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1rem",
-                "fontWeight": 300,
-                "lineHeight": "1.5em",
-              },
               "subtitle1": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "1rem",
                 "fontWeight": 300,
@@ -4903,7 +4526,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "lineHeight": 1.75,
               },
               "subtitle2": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
                 "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
@@ -4911,13 +4533,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "lineHeight": 1.57,
               },
               "suppressDeprecationWarnings": true,
-              "title": Object {
-                "color": "rgba(0, 0, 0, 0.87)",
-                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                "fontSize": "1.3125rem",
-                "fontWeight": 400,
-                "lineHeight": "1.16667em",
-              },
               "useNextVariants": true,
             },
             "zIndex": Object {
@@ -4926,8 +4541,10 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               "mobileStepper": 1000,
               "modal": 1300,
               "snackbar": 1400,
+              "speedDial": 1050,
               "tooltip": 1500,
             },
+            Symbol(mui.nested): false,
           }
         }
       >
@@ -4937,8 +4554,8 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               "calls": Array [
                 Array [
                   Object {
+                    "instance": undefined,
                     "locale": undefined,
-                    "moment": undefined,
                   },
                 ],
               ],
@@ -4958,7 +4575,28 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               className="citationContent citationNewspaperArticle"
             >
               <WithStyles(AuthorsCitationView)
+                className="citationAuthors"
+                getLink={[Function]}
+                idSearchKey={
+                  Object {
+                    "idKey": "fez_record_search_key_author_id",
+                    "idOrder": "rek_author_id_order",
+                    "idSubkey": "rek_author_id",
+                  }
+                }
+                initialNumberOfAuthors={10}
                 publication={Object {}}
+                searchKey={
+                  Object {
+                    "key": "fez_record_search_key_author",
+                    "order": "rek_author_order",
+                    "subkey": "rek_author",
+                  }
+                }
+                separator=", "
+                showLink={false}
+                suffix=" "
+                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -5065,12 +4703,17 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "main": "#316799",
                         },
                         "action": Object {
+                          "activatedOpacity": 0.12,
                           "active": "rgba(0, 0, 0, 0.54)",
                           "disabled": "rgba(0, 0, 0, 0.26)",
                           "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                          "hover": "rgba(0, 0, 0, 0.08)",
-                          "hoverOpacity": 0.08,
-                          "selected": "rgba(0, 0, 0, 0.14)",
+                          "disabledOpacity": 0.38,
+                          "focus": "rgba(0, 0, 0, 0.12)",
+                          "focusOpacity": 0.12,
+                          "hover": "rgba(0, 0, 0, 0.04)",
+                          "hoverOpacity": 0.04,
+                          "selected": "rgba(0, 0, 0, 0.08)",
+                          "selectedOpacity": 0.08,
                         },
                         "augmentColor": [Function],
                         "background": Object {
@@ -5106,6 +4749,12 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "A400": "#303030",
                           "A700": "#616161",
                         },
+                        "info": Object {
+                          "contrastText": "#fff",
+                          "dark": "#1976d2",
+                          "light": "#64b5f6",
+                          "main": "#2196f3",
+                        },
                         "primary": Object {
                           "contrastText": "#fff",
                           "dark": "#3b1a59",
@@ -5129,6 +4778,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "main": "#595959",
                         },
                         "success": Object {
+                          "contrastText": "#fff",
                           "dark": "#005000",
                           "light": "#00a700",
                           "main": "#007200",
@@ -5142,6 +4792,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                         "tonalOffset": 0.2,
                         "type": "light",
                         "warning": Object {
+                          "contrastText": "#fff",
                           "dark": "#542400",
                           "light": "#ff9a57",
                           "main": "#bf5000",
@@ -5153,9 +4804,9 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                       "props": Object {},
                       "shadows": Array [
                         "none",
-                        "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-                        "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-                        "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                        "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+                        "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+                        "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
                         "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
                         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
                         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -5181,9 +4832,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                       "shape": Object {
                         "borderRadius": 4,
                       },
-                      "spacing": Object {
-                        "unit": 8,
-                      },
+                      "spacing": [Function],
                       "status": Object {
                         "danger": "#f44336",
                         "warning": "#ff9800",
@@ -5209,15 +4858,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                       },
                       "typography": Object {
                         "body1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.00938em",
-                          "lineHeight": 1.5,
-                        },
-                        "body1Next": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1rem",
                           "fontWeight": 300,
@@ -5225,32 +4865,13 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "lineHeight": 1.5,
                         },
                         "body2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.01071em",
-                          "lineHeight": 1.5,
-                        },
-                        "body2Next": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.875rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.01071em",
-                          "lineHeight": 1.5,
+                          "lineHeight": 1.43,
                         },
                         "button": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.875rem",
-                          "fontWeight": 400,
-                          "letterSpacing": "0.02857em",
-                          "lineHeight": 1.75,
-                          "textTransform": "uppercase",
-                        },
-                        "buttonNext": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 400,
@@ -5259,116 +4880,62 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "textTransform": "uppercase",
                         },
                         "caption": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.75rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.03333em",
                           "lineHeight": 1.66,
-                        },
-                        "captionNext": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "0.75rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "0.03333em",
-                          "lineHeight": 1.66,
-                        },
-                        "display1": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "2.125rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.20588em",
-                        },
-                        "display2": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "2.8125rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.13333em",
-                          "marginLeft": "-.02em",
-                        },
-                        "display3": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "3.5rem",
-                          "fontWeight": 300,
-                          "letterSpacing": "-.02em",
-                          "lineHeight": "1.30357em",
-                          "marginLeft": "-.02em",
-                        },
-                        "display4": Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "7rem",
-                          "fontWeight": 200,
-                          "letterSpacing": "-.04em",
-                          "lineHeight": "1.14286em",
-                          "marginLeft": "-.04em",
                         },
                         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                         "fontSize": 14,
+                        "fontWeightBold": 700,
                         "fontWeightLight": 200,
                         "fontWeightMedium": 400,
                         "fontWeightRegular": 300,
                         "h1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "6rem",
                           "fontWeight": 200,
                           "letterSpacing": "-0.01562em",
-                          "lineHeight": 1,
+                          "lineHeight": 1.167,
                         },
                         "h2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "3.75rem",
                           "fontWeight": 200,
                           "letterSpacing": "-0.00833em",
-                          "lineHeight": 1,
+                          "lineHeight": 1.2,
                         },
                         "h3": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "3rem",
                           "fontWeight": 300,
                           "letterSpacing": "0em",
-                          "lineHeight": 1.04,
+                          "lineHeight": 1.167,
                         },
                         "h4": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "2.125rem",
                           "fontWeight": 300,
                           "letterSpacing": "0.00735em",
-                          "lineHeight": 1.17,
+                          "lineHeight": 1.235,
                         },
                         "h5": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1.5rem",
                           "fontWeight": 300,
                           "letterSpacing": "0em",
-                          "lineHeight": 1.33,
+                          "lineHeight": 1.334,
                         },
                         "h6": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1.25rem",
                           "fontWeight": 400,
                           "letterSpacing": "0.0075em",
                           "lineHeight": 1.6,
                         },
-                        "headline": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1.5rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.35417em",
-                        },
+                        "htmlFontSize": 16,
                         "overline": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.75rem",
                           "fontWeight": 300,
@@ -5378,15 +4945,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                         },
                         "pxToRem": [Function],
                         "round": [Function],
-                        "subheading": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1rem",
-                          "fontWeight": 300,
-                          "lineHeight": "1.5em",
-                        },
                         "subtitle1": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "1rem",
                           "fontWeight": 300,
@@ -5394,7 +4953,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "lineHeight": 1.75,
                         },
                         "subtitle2": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
                           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
                           "fontSize": "0.875rem",
                           "fontWeight": 400,
@@ -5402,13 +4960,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "lineHeight": 1.57,
                         },
                         "suppressDeprecationWarnings": true,
-                        "title": Object {
-                          "color": "rgba(0, 0, 0, 0.87)",
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                          "fontSize": "1.3125rem",
-                          "fontWeight": 400,
-                          "lineHeight": "1.16667em",
-                        },
                         "useNextVariants": true,
                       },
                       "zIndex": Object {
@@ -5417,8 +4968,10 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                         "mobileStepper": 1000,
                         "modal": 1300,
                         "snackbar": 1400,
+                        "speedDial": 1050,
                         "tooltip": 1500,
                       },
+                      Symbol(mui.nested): false,
                     }
                   }
                   thresholdNumberOfAuthors={3}
@@ -5481,7 +5034,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
             </div>
           </NewspaperArticleCitation>
         </MuiPickersUtilsProvider>
-      </MuiThemeProviderOld>
+      </ThemeProvider>
     </Router>
   </MemoryRouter>
 </Provider>

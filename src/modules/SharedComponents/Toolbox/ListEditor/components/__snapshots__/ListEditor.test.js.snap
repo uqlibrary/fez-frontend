@@ -23,6 +23,19 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <div
@@ -47,6 +60,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="one"
       itemTemplate={[Function]}
       key="0"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -63,6 +90,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="two"
       itemTemplate={[Function]}
       key="1"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -79,6 +120,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="three"
       itemTemplate={[Function]}
       key="2"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -95,6 +150,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="four"
       itemTemplate={[Function]}
       key="3"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -111,6 +180,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="five"
       itemTemplate={[Function]}
       key="4"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -127,6 +210,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="six"
       itemTemplate={[Function]}
       key="5"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -143,6 +240,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="seven"
       itemTemplate={[Function]}
       key="6"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -159,6 +270,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="eight"
       itemTemplate={[Function]}
       key="7"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -175,6 +300,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="nine"
       itemTemplate={[Function]}
       key="8"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -191,6 +330,20 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       item="ten"
       itemTemplate={[Function]}
       key="9"
+      locale={
+        Object {
+          "deleteHint": "Remove this item",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to delete this item?",
+            "confirmationTitle": "Delete item",
+          },
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+        }
+      }
       onDelete={[Function]}
       onEdit={[Function]}
       onMoveDown={[Function]}
@@ -223,6 +376,19 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -236,6 +402,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="one"
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -252,6 +432,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="two"
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -268,6 +462,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="three"
     itemTemplate={[Function]}
     key="2"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -284,6 +492,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="four"
     itemTemplate={[Function]}
     key="3"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -300,6 +522,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="five"
     itemTemplate={[Function]}
     key="4"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -316,6 +552,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="six"
     itemTemplate={[Function]}
     key="5"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -332,6 +582,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="seven"
     itemTemplate={[Function]}
     key="6"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -348,6 +612,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="eight"
     itemTemplate={[Function]}
     key="7"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -364,6 +642,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="nine"
     itemTemplate={[Function]}
     key="8"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -380,6 +672,20 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     item="ten"
     itemTemplate={[Function]}
     key="9"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -411,6 +717,19 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -424,6 +743,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="one"
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -440,6 +773,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="two"
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -456,6 +803,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="three"
     itemTemplate={[Function]}
     key="2"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -472,6 +833,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="four"
     itemTemplate={[Function]}
     key="3"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -488,6 +863,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="five"
     itemTemplate={[Function]}
     key="4"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -504,6 +893,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="six"
     itemTemplate={[Function]}
     key="5"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -520,6 +923,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="seven"
     itemTemplate={[Function]}
     key="6"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -536,6 +953,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="eight"
     itemTemplate={[Function]}
     key="7"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -552,6 +983,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="nine"
     itemTemplate={[Function]}
     key="8"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -568,6 +1013,20 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     item="ten"
     itemTemplate={[Function]}
     key="9"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -614,6 +1073,19 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={true}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -632,6 +1104,20 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
     }
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -678,6 +1164,19 @@ exports[`ListEditor tests should add item and set state 2`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={true}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -696,6 +1195,20 @@ exports[`ListEditor tests should add item and set state 2`] = `
     }
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -746,6 +1259,19 @@ exports[`ListEditor tests should move down an item 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -759,6 +1285,20 @@ exports[`ListEditor tests should move down an item 1`] = `
     item="one"
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -775,6 +1315,20 @@ exports[`ListEditor tests should move down an item 1`] = `
     item="three"
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -791,6 +1345,20 @@ exports[`ListEditor tests should move down an item 1`] = `
     item="two"
     itemTemplate={[Function]}
     key="2"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -822,6 +1390,19 @@ exports[`ListEditor tests should move up an item 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -835,6 +1416,20 @@ exports[`ListEditor tests should move up an item 1`] = `
     item="two"
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -851,6 +1446,20 @@ exports[`ListEditor tests should move up an item 1`] = `
     item="one"
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -867,6 +1476,20 @@ exports[`ListEditor tests should move up an item 1`] = `
     item="three"
     itemTemplate={[Function]}
     key="2"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -967,6 +1590,19 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -979,6 +1615,20 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     index={0}
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -994,6 +1644,20 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     index={1}
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1025,6 +1689,19 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -1037,6 +1714,20 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     index={0}
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1052,6 +1743,20 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     index={1}
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1084,6 +1789,19 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -1104,6 +1822,20 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
     }
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1127,6 +1859,20 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
     }
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1159,6 +1905,19 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
   <WithStyles(ListRowHeader)
     disabled={false}
     hideReorder={false}
+    locale={
+      Object {
+        "deleteAll": "Remove all items",
+        "deleteAllConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all items?",
+          "confirmationTitle": "Delete all",
+        },
+        "nameColumn": "Name",
+        "reorderColumn": "Reorder items",
+      }
+    }
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
@@ -1172,6 +1931,20 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
     item="one"
     itemTemplate={[Function]}
     key="0"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1188,6 +1961,20 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
     item="four"
     itemTemplate={[Function]}
     key="1"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1204,6 +1991,20 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
     item="three"
     itemTemplate={[Function]}
     key="2"
+    locale={
+      Object {
+        "deleteHint": "Remove this item",
+        "deleteRecordConfirmation": Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete this item?",
+          "confirmationTitle": "Delete item",
+        },
+        "editHint": "Edit this item",
+        "moveDownHint": "Move item down the order",
+        "moveUpHint": "Move item up the order",
+      }
+    }
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}

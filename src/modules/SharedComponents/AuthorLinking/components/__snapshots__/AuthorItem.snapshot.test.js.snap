@@ -1,251 +1,251 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorItem renders  should be disabled 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   md={4}
   sm={6}
   xs={12}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="buttonBase"
         disabled={true}
         fullWidth={true}
         onClick={[Function]}
       >
-        <pure(RadioButtonUncheckedIcon)
+        <RadioButtonUncheckedIcon
           className="authorLinkIcon"
           color="secondary"
         />
         Test user
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="authorOrder"
         variant="caption"
       >
         First  listed author
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AuthorItem renders  should be linked 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   md={4}
   sm={6}
   xs={12}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="buttonBase"
         disabled={true}
         fullWidth={true}
       >
-        <pure(LinkIcon)
+        <LinkIcon
           className="authorLinkIcon"
         />
         Test user
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="authorOrder"
         variant="caption"
       >
         First  listed author
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AuthorItem renders  should be linked and disabled 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   md={4}
   sm={6}
   xs={12}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="buttonBase"
         disabled={true}
         fullWidth={true}
         onClick={[Function]}
       >
-        <pure(RadioButtonUncheckedIcon)
+        <RadioButtonUncheckedIcon
           className="authorLinkIcon"
           color="secondary"
         />
         Test user
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="authorOrder"
         variant="caption"
       >
         First  listed author
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AuthorItem renders  should be selected 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   md={4}
   sm={6}
   xs={12}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="buttonBase"
         disabled={false}
         fullWidth={true}
       >
-        <pure(RadioButtonCheckedIcon)
+        <RadioButtonCheckedIcon
           className="authorLinkIcon"
           color="primary"
         />
         Test user
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="authorOrder"
         variant="caption"
       >
         First  listed author
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AuthorItem renders  should be selected and disabled 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   md={4}
   sm={6}
   xs={12}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="buttonBase"
         disabled={true}
         fullWidth={true}
       >
-        <pure(RadioButtonCheckedIcon)
+        <RadioButtonCheckedIcon
           className="authorLinkIcon"
           color="primary"
         />
         Test user
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="authorOrder"
         variant="caption"
       >
         First  listed author
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AuthorItem renders  should be unselected and able to select author 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   item={true}
   md={4}
   sm={6}
   xs={12}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="buttonBase"
         disabled={false}
         fullWidth={true}
         onClick={[Function]}
       >
-        <pure(RadioButtonUncheckedIcon)
+        <RadioButtonUncheckedIcon
           className="authorLinkIcon"
           color="secondary"
         />
         Test user
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         className="authorOrder"
         variant="caption"
       >
         First  listed author
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AuthorItem renders  should have a proper style generator 1`] = `

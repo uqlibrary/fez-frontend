@@ -21,27 +21,17 @@ exports[`Component ScrollTop should not render component 2`] = `
 
 exports[`Component ScrollTop should render component 1`] = `
 <Hidden
-  implementation="js"
-  lgDown={false}
-  lgUp={false}
-  mdDown={false}
-  mdUp={false}
   smDown={true}
-  smUp={false}
-  xlDown={false}
-  xlUp={false}
-  xsDown={false}
-  xsUp={false}
 >
-  <WithStyles(Fab)
+  <WithStyles(ForwardRef(Fab))
     aria-label="Scroll to top of page"
     color="secondary"
     id="scrolltopbtn"
     onClick={[Function]}
     title="Scroll to top of page"
   >
-    <pure(ArrowUpwardIcon) />
-  </WithStyles(Fab)>
+    <ArrowUpwardIcon />
+  </WithStyles(ForwardRef(Fab))>
 </Hidden>
 `;
 

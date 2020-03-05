@@ -2,7 +2,7 @@
 
 exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = `
 <Fragment>
-  <WithStyles(FormControl)
+  <WithStyles(ForwardRef(FormControl))
     error={false}
     style={
       Object {
@@ -10,10 +10,10 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       }
     }
   >
-    <WithStyles(WithFormControlContext(InputLabel))
+    <WithStyles(ForwardRef(InputLabel))
       id="undefined-label"
     />
-    <WithStyles(WithFormControlContext(Select))
+    <WithStyles(ForwardRef(Select))
       autoWidth={true}
       error={false}
       floatingLabelText="This is a test selectfield component"
@@ -30,13 +30,13 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       onChange={[Function]}
       type="text"
     />
-  </WithStyles(FormControl)>
+  </WithStyles(ForwardRef(FormControl))>
 </Fragment>
 `;
 
 exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
 <Fragment>
-  <WithStyles(FormControl)
+  <WithStyles(ForwardRef(FormControl))
     error={true}
     style={
       Object {
@@ -44,10 +44,10 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       }
     }
   >
-    <WithStyles(WithFormControlContext(InputLabel))
+    <WithStyles(ForwardRef(InputLabel))
       id="undefined-label"
     />
-    <WithStyles(WithFormControlContext(Select))
+    <WithStyles(ForwardRef(Select))
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
@@ -64,9 +64,9 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       onChange={[Function]}
       type="text"
     />
-    <WithStyles(WithFormControlContext(FormHelperText))>
+    <WithStyles(ForwardRef(FormHelperText))>
       Something bad happened
-    </WithStyles(WithFormControlContext(FormHelperText))>
-  </WithStyles(FormControl)>
+    </WithStyles(ForwardRef(FormHelperText))>
+  </WithStyles(ForwardRef(FormControl))>
 </Fragment>
 `;

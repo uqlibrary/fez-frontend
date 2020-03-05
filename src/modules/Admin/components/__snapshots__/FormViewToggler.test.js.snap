@@ -1,30 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormViewToggler component should render default view 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   alignItems="center"
   container={true}
   direction="row"
   spacing={0}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Switch to tabbed mode"
     >
-      <WithStyles(Switch)
+      <WithStyles(ForwardRef(Switch))
         checked={false}
         color="primary"
         value="tabbed"
       />
-    </WithStyles(Tooltip)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Tooltip))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
     <Connect(WithStyles(HelpIcon))
-      IconComponent={[Function]}
+      IconComponent={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "displayName": "KeyboardIcon",
+          "muiName": "SvgIcon",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        }
+      }
       buttonLabel="Got it"
       text={
         <div>
@@ -63,35 +74,46 @@ exports[`FormViewToggler component should render default view 1`] = `
       title="Keyboard shortcuts"
       tooltip="Learn about keyboard shortcuts"
     />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`FormViewToggler component should render tooltip for full form 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   alignItems="center"
   container={true}
   direction="row"
   spacing={0}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Switch to full form mode"
     >
-      <WithStyles(Switch)
+      <WithStyles(ForwardRef(Switch))
         checked={true}
         color="primary"
         value="tabbed"
       />
-    </WithStyles(Tooltip)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Tooltip))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
     <Connect(WithStyles(HelpIcon))
-      IconComponent={[Function]}
+      IconComponent={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "displayName": "KeyboardIcon",
+          "muiName": "SvgIcon",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        }
+      }
       buttonLabel="Got it"
       text={
         <div>
@@ -130,6 +152,6 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       title="Keyboard shortcuts"
       tooltip="Learn about keyboard shortcuts"
     />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

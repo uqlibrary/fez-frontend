@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Cards component renders with custom colours and full height 1`] = `
-<WithStyles(Card)
+<WithStyles(ForwardRef(Card))
   className="undefined StandardCard"
   style={
     Object {
@@ -11,7 +11,7 @@ exports[`Cards component renders with custom colours and full height 1`] = `
     }
   }
 >
-  <WithStyles(CardHeader)
+  <WithStyles(ForwardRef(CardHeader))
     action={false}
     classes={
       Object {
@@ -32,18 +32,18 @@ exports[`Cards component renders with custom colours and full height 1`] = `
       }
     }
   />
-  <WithStyles(CardContent)
+  <WithStyles(ForwardRef(CardContent))
     className="no-padding"
   />
-</WithStyles(Card)>
+</WithStyles(ForwardRef(Card))>
 `;
 
 exports[`Cards component renders with square top and accent header 1`] = `
-<WithStyles(Card)
+<WithStyles(ForwardRef(Card))
   className="undefined StandardCard"
   style={Object {}}
 >
-  <WithStyles(CardHeader)
+  <WithStyles(ForwardRef(CardHeader))
     action={false}
     classes={
       Object {
@@ -65,18 +65,18 @@ exports[`Cards component renders with square top and accent header 1`] = `
       }
     }
   />
-  <WithStyles(CardContent)
+  <WithStyles(ForwardRef(CardContent))
     className=""
   />
-</WithStyles(Card)>
+</WithStyles(ForwardRef(Card))>
 `;
 
 exports[`Cards component renders with title and help button 1`] = `
-<WithStyles(Card)
+<WithStyles(ForwardRef(Card))
   className="testClass StandardCard"
   style={Object {}}
 >
-  <WithStyles(CardHeader)
+  <WithStyles(ForwardRef(CardHeader))
     action={
       <Memo(Connect(WithStyles(HelpIcon)))
         buttonLabel="OK"
@@ -99,18 +99,18 @@ exports[`Cards component renders with title and help button 1`] = `
       }
     }
   />
-  <WithStyles(CardContent)
+  <WithStyles(ForwardRef(CardContent))
     className=""
   />
-</WithStyles(Card)>
+</WithStyles(ForwardRef(Card))>
 `;
 
 exports[`Cards component renders with title and no help icon 1`] = `
-<WithStyles(Card)
+<WithStyles(ForwardRef(Card))
   className="testClass StandardCard"
   style={Object {}}
 >
-  <WithStyles(CardHeader)
+  <WithStyles(ForwardRef(CardHeader))
     action={false}
     classes={
       Object {
@@ -127,10 +127,10 @@ exports[`Cards component renders with title and no help icon 1`] = `
       }
     }
   />
-  <WithStyles(CardContent)
+  <WithStyles(ForwardRef(CardContent))
     className=""
   />
-</WithStyles(Card)>
+</WithStyles(ForwardRef(Card))>
 `;
 
 exports[`StandardCard component should render StyledCard with same props 1`] = `

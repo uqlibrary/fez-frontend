@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ selected 1`] = `
-<WithStyles(FormControl)
+<WithStyles(ForwardRef(FormControl))
   fullWidth={true}
 >
-  <WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(ForwardRef(InputLabel))>
     Org affiliation
-  </WithStyles(WithFormControlContext(InputLabel))>
-  <WithStyles(WithFormControlContext(Select))
+  </WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(Select))
     SelectDisplayProps={
       Object {
         "id": "org-affiliation-selector",
@@ -18,36 +18,36 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
     required={true}
     value="NotUQ"
   >
-    <WithStyles(MenuItem)
+    <WithStyles(ForwardRef(MenuItem))
       disabled={true}
       value=""
     >
       Organisational affiliation at time of publication
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
       key="UQ"
       value="UQ"
     >
       UQ
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
       key="NotUQ"
       value="NotUQ"
     >
       Not UQ
-    </WithStyles(MenuItem)>
-  </WithStyles(WithFormControlContext(Select))>
-</WithStyles(FormControl)>
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(ForwardRef(Select))>
+</WithStyles(ForwardRef(FormControl))>
 `;
 
 exports[`OrgAffiliationTypeSelector tests  should render component with UQ selected 1`] = `
-<WithStyles(FormControl)
+<WithStyles(ForwardRef(FormControl))
   fullWidth={true}
 >
-  <WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(ForwardRef(InputLabel))>
     Org affiliation
-  </WithStyles(WithFormControlContext(InputLabel))>
-  <WithStyles(WithFormControlContext(Select))
+  </WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(Select))
     SelectDisplayProps={
       Object {
         "id": "org-affiliation-selector",
@@ -58,36 +58,36 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
     required={true}
     value="UQ"
   >
-    <WithStyles(MenuItem)
+    <WithStyles(ForwardRef(MenuItem))
       disabled={true}
       value=""
     >
       Organisational affiliation at time of publication
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
       key="UQ"
       value="UQ"
     >
       UQ
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
       key="NotUQ"
       value="NotUQ"
     >
       Not UQ
-    </WithStyles(MenuItem)>
-  </WithStyles(WithFormControlContext(Select))>
-</WithStyles(FormControl)>
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(ForwardRef(Select))>
+</WithStyles(ForwardRef(FormControl))>
 `;
 
 exports[`OrgAffiliationTypeSelector tests  should render component with default values 1`] = `
-<WithStyles(FormControl)
+<WithStyles(ForwardRef(FormControl))
   fullWidth={true}
 >
-  <WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(ForwardRef(InputLabel))>
     Org affiliation
-  </WithStyles(WithFormControlContext(InputLabel))>
-  <WithStyles(WithFormControlContext(Select))
+  </WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(Select))
     SelectDisplayProps={
       Object {
         "id": "org-affiliation-selector",
@@ -98,24 +98,24 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
     required={true}
     value=""
   >
-    <WithStyles(MenuItem)
+    <WithStyles(ForwardRef(MenuItem))
       disabled={true}
       value=""
     >
       Organisational affiliation at time of publication
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
       key="UQ"
       value="UQ"
     >
       UQ
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
       key="NotUQ"
       value="NotUQ"
     >
       Not UQ
-    </WithStyles(MenuItem)>
-  </WithStyles(WithFormControlContext(Select))>
-</WithStyles(FormControl)>
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(ForwardRef(Select))>
+</WithStyles(ForwardRef(FormControl))>
 `;

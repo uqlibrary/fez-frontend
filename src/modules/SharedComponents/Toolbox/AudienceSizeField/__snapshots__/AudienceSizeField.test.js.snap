@@ -11,23 +11,23 @@ exports[`AudienceSizeField component should render default view 1`] = `
   label="Audience size"
   name="audienceSize"
 >
-  <WithStyles(MenuItem)
+  <WithStyles(ForwardRef(MenuItem))
     key="453992"
     value={453992}
   >
     Less than 100
-  </WithStyles(MenuItem)>
-  <WithStyles(MenuItem)
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
     key="453993"
     value={453993}
   >
     100 - 500
-  </WithStyles(MenuItem)>
-  <WithStyles(MenuItem)
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
     key="453994"
     value={453994}
   >
     Greater than 500
-  </WithStyles(MenuItem)>
+  </WithStyles(ForwardRef(MenuItem))>
 </Field>
 `;

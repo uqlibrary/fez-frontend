@@ -635,9 +635,17 @@ exports[`MyIncompleteRecord Container should display form once record and author
 />
 `;
 
-exports[`MyIncompleteRecord Container should display loading screen on author loading 1`] = `<WithStyles(InlineLoader) />`;
+exports[`MyIncompleteRecord Container should display loading screen on author loading 1`] = `
+<WithStyles(InlineLoader)
+  message="Loading"
+/>
+`;
 
-exports[`MyIncompleteRecord Container should display loading screen on record loading 1`] = `<WithStyles(InlineLoader) />`;
+exports[`MyIncompleteRecord Container should display loading screen on record loading 1`] = `
+<WithStyles(InlineLoader)
+  message="Loading"
+/>
+`;
 
 exports[`MyIncompleteRecord Container should load all contribution statements and significance for linked admin author 1`] = `
 <ConfirmDiscardFormChanges

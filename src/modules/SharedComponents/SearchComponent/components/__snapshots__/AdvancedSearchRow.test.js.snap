@@ -2,20 +2,20 @@
 
 exports[`AdvancedSearchRow should render default view 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       xs={12}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -23,16 +23,16 @@ exports[`AdvancedSearchRow should render default view 1`] = `
             }
           }
         >
-          <WithStyles(FormControl)
+          <WithStyles(ForwardRef(FormControl))
             fullWidth={true}
           >
-            <WithStyles(WithFormControlContext(Select))
+            <WithStyles(ForwardRef(Select))
               aria-label="Click to select a field to search from the list - Select a field currently selected"
               error={true}
               onChange={[Function]}
               value="0"
             >
-              <WithStyles(MenuItem)
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={true}
                 key="0"
                 style={
@@ -43,11 +43,11 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="0"
               >
                 Select a field
-              </WithStyles(MenuItem)>
-              <WithStyles(Divider)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(Divider))
                 key="1"
               />
-              <WithStyles(MenuItem)
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="all"
                 style={
@@ -58,8 +58,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="all"
               >
                 Any field
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_title"
                 style={
@@ -70,8 +70,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_title"
               >
                 Title
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_book_title"
                 style={
@@ -82,8 +82,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_book_title"
               >
                 Book title for chapters
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_author"
                 style={
@@ -94,8 +94,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_author"
               >
                 Author Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_author_id"
                 style={
@@ -106,8 +106,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_author_id"
               >
                 Author ID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_contributor"
                 style={
@@ -118,8 +118,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_contributor"
               >
                 Editor/Contributor
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_contributor_id"
                 style={
@@ -130,8 +130,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_contributor_id"
               >
                 Contributor ID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_ismemberof"
                 style={
@@ -142,8 +142,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_ismemberof"
               >
                 Collection
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_doi"
                 style={
@@ -154,8 +154,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_doi"
               >
                 DOI
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_pid"
                 style={
@@ -166,8 +166,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_pid"
               >
                 PID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_series"
                 style={
@@ -178,8 +178,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_series"
               >
                 Series
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_journal_name"
                 style={
@@ -190,8 +190,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_journal_name"
               >
                 Journal name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_conference_name"
                 style={
@@ -202,8 +202,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_conference_name"
               >
                 Conference Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_publisher"
                 style={
@@ -214,8 +214,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_publisher"
               >
                 Publisher
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_genre_type"
                 style={
@@ -226,8 +226,8 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_genre_type"
               >
                 Thesis type
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_org_unit_name"
                 style={
@@ -238,33 +238,33 @@ exports[`AdvancedSearchRow should render default view 1`] = `
                 value="rek_org_unit_name"
               >
                 School, Centre or Institute
-              </WithStyles(MenuItem)>
-            </WithStyles(WithFormControlContext(Select))>
-            <WithStyles(WithFormControlContext(FormHelperText))
+              </WithStyles(ForwardRef(MenuItem))>
+            </WithStyles(ForwardRef(Select))>
+            <WithStyles(ForwardRef(FormHelperText))
               error={true}
             >
               Please select a field to search
-            </WithStyles(WithFormControlContext(FormHelperText))>
-          </WithStyles(FormControl)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+            </WithStyles(ForwardRef(FormHelperText))>
+          </WithStyles(ForwardRef(FormControl))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs="auto"
         >
-          <WithStyles(Typography) />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          <WithStyles(ForwardRef(Typography)) />
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       xs={12}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           zeroMinWidth={true}
         >
@@ -292,30 +292,20 @@ exports[`AdvancedSearchRow should render default view 1`] = `
           >
             <Component />
           </AdvancedSearchRowInput>
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
           mdUp={true}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(Divider) />
-          </WithStyles(Grid)>
+            <WithStyles(ForwardRef(Divider)) />
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
@@ -374,12 +364,17 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
       "overrides": Object {},
       "palette": Object {
         "action": Object {
+          "activatedOpacity": 0.12,
           "active": "rgba(0, 0, 0, 0.54)",
           "disabled": "rgba(0, 0, 0, 0.26)",
           "disabledBackground": "rgba(0, 0, 0, 0.12)",
-          "hover": "rgba(0, 0, 0, 0.08)",
-          "hoverOpacity": 0.08,
-          "selected": "rgba(0, 0, 0, 0.14)",
+          "disabledOpacity": 0.38,
+          "focus": "rgba(0, 0, 0, 0.12)",
+          "focusOpacity": 0.12,
+          "hover": "rgba(0, 0, 0, 0.04)",
+          "hoverOpacity": 0.04,
+          "selected": "rgba(0, 0, 0, 0.08)",
+          "selectedOpacity": 0.08,
         },
         "augmentColor": [Function],
         "background": Object {
@@ -415,6 +410,12 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
           "A400": "#303030",
           "A700": "#616161",
         },
+        "info": Object {
+          "contrastText": "#fff",
+          "dark": "#1976d2",
+          "light": "#64b5f6",
+          "main": "#2196f3",
+        },
         "primary": Object {
           "contrastText": "#fff",
           "dark": "#303f9f",
@@ -427,6 +428,12 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
           "light": "#ff4081",
           "main": "#f50057",
         },
+        "success": Object {
+          "contrastText": "rgba(0, 0, 0, 0.87)",
+          "dark": "#388e3c",
+          "light": "#81c784",
+          "main": "#4caf50",
+        },
         "text": Object {
           "disabled": "rgba(0, 0, 0, 0.38)",
           "hint": "rgba(0, 0, 0, 0.38)",
@@ -435,13 +442,19 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
         },
         "tonalOffset": 0.2,
         "type": "light",
+        "warning": Object {
+          "contrastText": "rgba(0, 0, 0, 0.87)",
+          "dark": "#f57c00",
+          "light": "#ffb74d",
+          "main": "#ff9800",
+        },
       },
       "props": Object {},
       "shadows": Array [
         "none",
-        "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-        "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-        "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+        "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+        "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+        "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
         "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
         "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
@@ -467,9 +480,7 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
       "shape": Object {
         "borderRadius": 4,
       },
-      "spacing": Object {
-        "unit": 8,
-      },
+      "spacing": [Function],
       "transitions": Object {
         "create": [Function],
         "duration": Object {
@@ -491,14 +502,6 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
       },
       "typography": Object {
         "body1": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.875rem",
-          "fontWeight": 400,
-          "lineHeight": "1.46429em",
-        },
-        "body1Next": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "1rem",
           "fontWeight": 400,
@@ -506,29 +509,13 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
           "lineHeight": 1.5,
         },
         "body2": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.875rem",
-          "fontWeight": 500,
-          "lineHeight": "1.71429em",
-        },
-        "body2Next": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.875rem",
           "fontWeight": 400,
           "letterSpacing": "0.01071em",
-          "lineHeight": 1.5,
+          "lineHeight": 1.43,
         },
         "button": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.875rem",
-          "fontWeight": 500,
-          "textTransform": "uppercase",
-        },
-        "buttonNext": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.875rem",
           "fontWeight": 500,
@@ -537,115 +524,62 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
           "textTransform": "uppercase",
         },
         "caption": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.75rem",
-          "fontWeight": 400,
-          "lineHeight": "1.375em",
-        },
-        "captionNext": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.75rem",
           "fontWeight": 400,
           "letterSpacing": "0.03333em",
           "lineHeight": 1.66,
         },
-        "display1": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "2.125rem",
-          "fontWeight": 400,
-          "lineHeight": "1.20588em",
-        },
-        "display2": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "2.8125rem",
-          "fontWeight": 400,
-          "lineHeight": "1.13333em",
-          "marginLeft": "-.02em",
-        },
-        "display3": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "3.5rem",
-          "fontWeight": 400,
-          "letterSpacing": "-.02em",
-          "lineHeight": "1.30357em",
-          "marginLeft": "-.02em",
-        },
-        "display4": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "7rem",
-          "fontWeight": 300,
-          "letterSpacing": "-.04em",
-          "lineHeight": "1.14286em",
-          "marginLeft": "-.04em",
-        },
         "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
         "fontSize": 14,
+        "fontWeightBold": 700,
         "fontWeightLight": 300,
         "fontWeightMedium": 500,
         "fontWeightRegular": 400,
         "h1": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "6rem",
           "fontWeight": 300,
           "letterSpacing": "-0.01562em",
-          "lineHeight": 1,
+          "lineHeight": 1.167,
         },
         "h2": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "3.75rem",
           "fontWeight": 300,
           "letterSpacing": "-0.00833em",
-          "lineHeight": 1,
+          "lineHeight": 1.2,
         },
         "h3": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "3rem",
           "fontWeight": 400,
           "letterSpacing": "0em",
-          "lineHeight": 1.04,
+          "lineHeight": 1.167,
         },
         "h4": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "2.125rem",
           "fontWeight": 400,
           "letterSpacing": "0.00735em",
-          "lineHeight": 1.17,
+          "lineHeight": 1.235,
         },
         "h5": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "1.5rem",
           "fontWeight": 400,
           "letterSpacing": "0em",
-          "lineHeight": 1.33,
+          "lineHeight": 1.334,
         },
         "h6": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "1.25rem",
           "fontWeight": 500,
           "letterSpacing": "0.0075em",
           "lineHeight": 1.6,
         },
-        "headline": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1.5rem",
-          "fontWeight": 400,
-          "lineHeight": "1.35417em",
-        },
+        "htmlFontSize": 16,
         "overline": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.75rem",
           "fontWeight": 400,
@@ -655,15 +589,7 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
         },
         "pxToRem": [Function],
         "round": [Function],
-        "subheading": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1rem",
-          "fontWeight": 400,
-          "lineHeight": "1.5em",
-        },
         "subtitle1": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "1rem",
           "fontWeight": 400,
@@ -671,21 +597,12 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
           "lineHeight": 1.75,
         },
         "subtitle2": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
           "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
           "fontSize": "0.875rem",
           "fontWeight": 500,
           "letterSpacing": "0.00714em",
           "lineHeight": 1.57,
         },
-        "title": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1.3125rem",
-          "fontWeight": 500,
-          "lineHeight": "1.16667em",
-        },
-        "useNextVariants": false,
       },
       "zIndex": Object {
         "appBar": 1100,
@@ -693,6 +610,7 @@ exports[`AdvancedSearchRow should render default view with styles 1`] = `
         "mobileStepper": 1000,
         "modal": 1300,
         "snackbar": 1400,
+        "speedDial": 1050,
         "tooltip": 1500,
       },
     }
@@ -714,20 +632,20 @@ exports[`AdvancedSearchRow should render input component and props 1`] = `
 
 exports[`AdvancedSearchRow should render search field row with given disabled options 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       xs={12}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -735,16 +653,16 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
             }
           }
         >
-          <WithStyles(FormControl)
+          <WithStyles(ForwardRef(FormControl))
             fullWidth={true}
           >
-            <WithStyles(WithFormControlContext(Select))
+            <WithStyles(ForwardRef(Select))
               aria-label="Click to select a field to search from the list - Any field currently selected"
               error={false}
               onChange={[Function]}
               value="all"
             >
-              <WithStyles(MenuItem)
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={true}
                 key="0"
                 style={
@@ -755,11 +673,11 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="0"
               >
                 Select a field
-              </WithStyles(MenuItem)>
-              <WithStyles(Divider)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(Divider))
                 key="1"
               />
-              <WithStyles(MenuItem)
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={true}
                 key="all"
                 style={
@@ -770,8 +688,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="all"
               >
                 Any field
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_title"
                 style={
@@ -782,8 +700,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_title"
               >
                 Title
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_book_title"
                 style={
@@ -794,8 +712,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_book_title"
               >
                 Book title for chapters
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_author"
                 style={
@@ -806,8 +724,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_author"
               >
                 Author Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_author_id"
                 style={
@@ -818,8 +736,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_author_id"
               >
                 Author ID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_contributor"
                 style={
@@ -830,8 +748,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_contributor"
               >
                 Editor/Contributor
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_contributor_id"
                 style={
@@ -842,8 +760,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_contributor_id"
               >
                 Contributor ID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_ismemberof"
                 style={
@@ -854,8 +772,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_ismemberof"
               >
                 Collection
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_doi"
                 style={
@@ -866,8 +784,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_doi"
               >
                 DOI
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_pid"
                 style={
@@ -878,8 +796,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_pid"
               >
                 PID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_series"
                 style={
@@ -890,8 +808,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_series"
               >
                 Series
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_journal_name"
                 style={
@@ -902,8 +820,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_journal_name"
               >
                 Journal name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_conference_name"
                 style={
@@ -914,8 +832,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_conference_name"
               >
                 Conference Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_publisher"
                 style={
@@ -926,8 +844,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_publisher"
               >
                 Publisher
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_genre_type"
                 style={
@@ -938,8 +856,8 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_genre_type"
               >
                 Thesis type
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_org_unit_name"
                 style={
@@ -950,33 +868,33 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
                 value="rek_org_unit_name"
               >
                 School, Centre or Institute
-              </WithStyles(MenuItem)>
-            </WithStyles(WithFormControlContext(Select))>
-            <WithStyles(WithFormControlContext(FormHelperText))
+              </WithStyles(ForwardRef(MenuItem))>
+            </WithStyles(ForwardRef(Select))>
+            <WithStyles(ForwardRef(FormHelperText))
               error={false}
             />
-          </WithStyles(FormControl)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(FormControl))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs="auto"
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             contains
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       xs={12}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           zeroMinWidth={true}
         >
@@ -1012,49 +930,39 @@ exports[`AdvancedSearchRow should render search field row with given disabled op
           >
             <Component />
           </AdvancedSearchRowInput>
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
           mdUp={true}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(Divider) />
-          </WithStyles(Grid)>
+            <WithStyles(ForwardRef(Divider)) />
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`AdvancedSearchRow should render search field row with select field and search text 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       xs={12}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           style={
             Object {
@@ -1062,16 +970,16 @@ exports[`AdvancedSearchRow should render search field row with select field and 
             }
           }
         >
-          <WithStyles(FormControl)
+          <WithStyles(ForwardRef(FormControl))
             fullWidth={true}
           >
-            <WithStyles(WithFormControlContext(Select))
+            <WithStyles(ForwardRef(Select))
               aria-label="Click to select a field to search from the list - Any field currently selected"
               error={false}
               onChange={[Function]}
               value="all"
             >
-              <WithStyles(MenuItem)
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={true}
                 key="0"
                 style={
@@ -1082,11 +990,11 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="0"
               >
                 Select a field
-              </WithStyles(MenuItem)>
-              <WithStyles(Divider)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(Divider))
                 key="1"
               />
-              <WithStyles(MenuItem)
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="all"
                 style={
@@ -1097,8 +1005,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="all"
               >
                 Any field
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_title"
                 style={
@@ -1109,8 +1017,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_title"
               >
                 Title
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_book_title"
                 style={
@@ -1121,8 +1029,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_book_title"
               >
                 Book title for chapters
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_author"
                 style={
@@ -1133,8 +1041,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_author"
               >
                 Author Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_author_id"
                 style={
@@ -1145,8 +1053,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_author_id"
               >
                 Author ID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_contributor"
                 style={
@@ -1157,8 +1065,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_contributor"
               >
                 Editor/Contributor
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_contributor_id"
                 style={
@@ -1169,8 +1077,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_contributor_id"
               >
                 Contributor ID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_ismemberof"
                 style={
@@ -1181,8 +1089,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_ismemberof"
               >
                 Collection
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_doi"
                 style={
@@ -1193,8 +1101,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_doi"
               >
                 DOI
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_pid"
                 style={
@@ -1205,8 +1113,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_pid"
               >
                 PID
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_series"
                 style={
@@ -1217,8 +1125,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_series"
               >
                 Series
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_journal_name"
                 style={
@@ -1229,8 +1137,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_journal_name"
               >
                 Journal name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_conference_name"
                 style={
@@ -1241,8 +1149,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_conference_name"
               >
                 Conference Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_publisher"
                 style={
@@ -1253,8 +1161,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_publisher"
               >
                 Publisher
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_genre_type"
                 style={
@@ -1265,8 +1173,8 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_genre_type"
               >
                 Thesis type
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
+              </WithStyles(ForwardRef(MenuItem))>
+              <WithStyles(ForwardRef(MenuItem))
                 disabled={false}
                 key="rek_org_unit_name"
                 style={
@@ -1277,33 +1185,33 @@ exports[`AdvancedSearchRow should render search field row with select field and 
                 value="rek_org_unit_name"
               >
                 School, Centre or Institute
-              </WithStyles(MenuItem)>
-            </WithStyles(WithFormControlContext(Select))>
-            <WithStyles(WithFormControlContext(FormHelperText))
+              </WithStyles(ForwardRef(MenuItem))>
+            </WithStyles(ForwardRef(Select))>
+            <WithStyles(ForwardRef(FormHelperText))
               error={false}
             />
-          </WithStyles(FormControl)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(FormControl))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs="auto"
         >
-          <WithStyles(Typography)>
+          <WithStyles(ForwardRef(Typography))>
             contains
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={6}
       xs={12}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           zeroMinWidth={true}
         >
@@ -1334,29 +1242,19 @@ exports[`AdvancedSearchRow should render search field row with select field and 
           >
             <Component />
           </AdvancedSearchRowInput>
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
           mdUp={true}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
-            <WithStyles(Divider) />
-          </WithStyles(Grid)>
+            <WithStyles(ForwardRef(Divider)) />
+          </WithStyles(ForwardRef(Grid))>
         </Hidden>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;

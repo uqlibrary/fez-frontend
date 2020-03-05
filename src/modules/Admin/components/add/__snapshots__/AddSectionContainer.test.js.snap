@@ -21,61 +21,61 @@ Object {
   "hasSubtypes": true,
   "publicationSubtype": "Creative Work - Textual",
   "publicationSubtypeItems": Array [
-    <WithStyles(MenuItem)
+    <ForwardRef(WithStyles)
       value="Research book chapter (original research)"
     >
       Research book chapter (original research)
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Critical review of research, literature review, critical commentary"
     >
       Critical review of research, literature review, critical commentary
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Chapter in textbook"
     >
       Chapter in textbook
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Chapter in reference work, encyclopaedia, manual or handbook"
     >
       Chapter in reference work, encyclopaedia, manual or handbook
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Introduction, foreword, editorial or appendix"
     >
       Introduction, foreword, editorial or appendix
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Creative Work - Design/Architectural"
     >
       Creative Work - Design/Architectural
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Creative Work - Textual"
     >
       Creative Work - Textual
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Creative Work - Visual Art"
     >
       Creative Work - Visual Art
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Creative Work - Musical Composition"
     >
       Creative Work - Musical Composition
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Creative Work - Other"
     >
       Creative Work - Other
-    </WithStyles(MenuItem)>,
-    <WithStyles(MenuItem)
+    </ForwardRef(WithStyles)>,
+    <ForwardRef(WithStyles)
       value="Other"
     >
       Other
-    </WithStyles(MenuItem)>,
+    </ForwardRef(WithStyles)>,
   ],
   "subtypes": Array [
     "Creative Work - Design/Architectural",
