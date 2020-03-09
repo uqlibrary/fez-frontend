@@ -367,7 +367,10 @@ export class PublicationCitation extends PureComponent {
                                             <Grid item>
                                                 <AdminActions
                                                     pid={this.props.publication.rek_pid}
-                                                    navigatedFrom={location.hash.replace('#', '')}
+                                                    navigatedFrom={
+                                                        (location.hash && location.hash.replace('#', '')) ||
+                                                        `${location.pathname}${location.search}`
+                                                    }
                                                     options={options}
                                                 />
                                             </Grid>
