@@ -76,7 +76,7 @@ context('Book admin edit', () => {
             blue: "Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF",
             yellow: 'Can archive pre-print (ie pre-refereeing)',
             white: 'Archiving not formally supported',
-            none: 'Unknown',
+            none: 'Ungraded',
         };
 
         cy.loadRecordForAdminEdit(record.rek_pid);
