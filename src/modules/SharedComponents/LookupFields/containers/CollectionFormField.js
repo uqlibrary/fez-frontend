@@ -8,11 +8,11 @@ const mapStateToProps = (state, props) => {
     return {
         id: props.id,
         itemsList: itemsList || [],
-        onChange: item => props.onChange(item.map(collection => collection.rek_pid).join(', ')),
-        onClear: () => props.onChange(null),
+        onChange: item => props.input.onChange(item),
+        onClear: () => props.input.onChange(null),
         getOptionLabel: item => item.rek_title,
-        error: props.error,
-        errorText: (props.error && props.errorText) || '',
+        error: (!!props.meta && !!props.meta.error) || props.error,
+        errorText: (!!props.meta && !!props.meta.error && props.meta.error) || (props.error && props.errorText) || '',
     };
 };
 
@@ -25,6 +25,6 @@ const CollectionAutoComplete = connect(
     mapDispatchToProps,
 )(AutoCompleteMultiSelectField);
 
-export function CollectionField(fieldProps) {
+export function CollectionFormField(fieldProps) {
     return <CollectionAutoComplete {...fieldProps} />;
 }

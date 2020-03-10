@@ -2,8 +2,13 @@ import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import * as validationRules from 'config/validation';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { AuthorIdField, PublisherField, OrgUnitNameField } from 'modules/SharedComponents/LookupFields';
-import { ThesisSubtypeField, CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
+import {
+    AuthorIdField,
+    PublisherField,
+    OrgUnitNameField,
+    CollectionField,
+} from 'modules/SharedComponents/LookupFields';
+import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import UnpublishedStatusField from './Fields/UnpublishedStatusField';
 
 export default class AdvancedSearchRowInput extends PureComponent {
@@ -61,7 +66,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'ThesisTypeLookup':
                 return ThesisSubtypeField;
             case 'CollectionsLookup':
-                return CollectionsSelectField;
+                return CollectionField;
             case 'AuthorIdLookup':
             case 'ContributorIdLookup':
                 return AuthorIdField;
