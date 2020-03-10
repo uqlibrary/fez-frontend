@@ -2,7 +2,6 @@ import React from 'react';
 import AdminActions from './AdminActions';
 import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
 import { RECORD_ACTION_URLS as options } from 'config/general';
-import { APP_URL } from '../../../../../../config';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -19,7 +18,7 @@ describe('AdminActions component', () => {
 
     it('should handle admin actions menu', async() => {
         global.window.open = jest.fn((url, target) => {
-            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?tab=security&navigatedFrom=');
+            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?tab=security');
             expect(target).toBe('_self');
         });
 
@@ -36,53 +35,20 @@ describe('AdminActions component', () => {
         fireEvent.click(getByText(/edit security for selected record/i, menu));
     });
 
-    it('should handle admin actions menu for non-admin', async() => {
-        global.window.open = jest.fn((url, target) => {
-            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?navigatedFrom=');
-            expect(target).toBe('_self');
-        });
-
-        const { getByTestId, getByText, container } = setup({
-            authorDetails: {
-                is_administrator: 0,
-                is_super_administrator: 0,
-            },
-        });
-
-        fireEvent.click(getByTestId('admin-actions-button'));
-
-        fireEvent.click(container);
-
-        fireEvent.click(getByTestId('admin-actions-button'));
-
-        const menu = await waitForElement(() => getByTestId('admin-actions-menu'));
-
-        fireEvent.click(getByText(/edit selected record/i, menu));
-    });
-
     it('should handle admin actions in a new window ', async() => {
         global.window.open = jest.fn((url, target) => {
-            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?navigatedFrom=');
+            expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111');
             expect(target).toBe('_blank');
         });
 
-        const { getByTestId, getByText, container } = setup({
-            authorDetails: {
-                is_administrator: 1,
-                is_super_administrator: 1,
-            },
+        const { getByTestId, getByText } = setup({
             options: [
                 {
-                    label: 'Edit selected record',
-                    url: pid => `${APP_URL}admin/edit/${pid}`,
+                    ...options[0],
                     inApp: false,
                 },
             ],
         });
-
-        fireEvent.click(getByTestId('admin-actions-button'));
-
-        fireEvent.click(container);
 
         fireEvent.click(getByTestId('admin-actions-button'));
 

@@ -30,19 +30,37 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 
-export const useQueryStringTabValueState = (location, initialValue) => {
-    const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
-    const tabValue = (queryStringObject && queryStringObject.tab) || initialValue;
-    return useState(tabValue);
+export const getQueryStringValue = (location, varName, initialValue) => {
+    const queryStringObject = queryString.parse(
+        location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
+        { ignoreQueryPrefix: true },
+    );
+    return (queryStringObject && queryStringObject[varName]) || initialValue;
+};
+
+export const navigateToSearchResult = (createMode, authorDetails, history, location) => {
+    if (createMode) {
+        history.push(routes.pathConfig.admin.add);
+    }
+    const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
+    if (
+        authorDetails &&
+        (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
+        !!navigatedFrom
+    ) {
+        history.push(decodeURIComponent(navigatedFrom));
+    } else {
+        history.push(routes.pathConfig.records.mine);
+    }
 };
 
 export const AdminInterface = ({
     classes,
     submitting,
     handleSubmit,
-    location,
     tabs,
     history,
+    location,
     submitSucceeded,
     createMode,
     disableSubmit,
@@ -56,7 +74,7 @@ export const AdminInterface = ({
         ((record || {}).rek_object_type_lookup || '').toLowerCase() === RECORD_TYPE_RECORD
             ? 'bibliographic'
             : 'security';
-    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location, defaultTab);
+    const [currentTabValue, setCurrentTabValue] = useState(getQueryStringValue(location, 'tab', defaultTab));
 
     const successConfirmationRef = useRef();
     const alertProps = useRef(null);
@@ -111,28 +129,6 @@ export const AdminInterface = ({
     }
 
     /* istanbul ignore next */
-    const navigateToSearchResult = createMode => {
-        if (createMode) {
-            history.push(routes.pathConfig.admin.add);
-        }
-        const navigatedFrom = queryString.parse(location.search).navigatedFrom || null;
-        if (
-            (authorDetails && authorDetails.is_administrator === 1) ||
-            (authorDetails.is_super_administrator === 1 && !!navigatedFrom)
-        ) {
-            history.push(navigatedFrom);
-        } else if (
-            authorDetails &&
-            authorDetails.is_administrator !== 1 &&
-            authorDetails.is_super_administrator !== 1
-        ) {
-            history.push(routes.pathConfig.records.mine);
-        } else {
-            history.push(navigatedFrom);
-        }
-    };
-
-    /* istanbul ignore next */
     const navigateToViewRecord = pid => {
         if (!!pid && validation.isValidPid(pid)) {
             history.push(routes.pathConfig.records.view(pid));
@@ -162,7 +158,7 @@ export const AdminInterface = ({
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
-                        onAction={() => navigateToSearchResult(createMode)}
+                        onAction={() => navigateToSearchResult(createMode, authorDetails, history, location)}
                         locale={saveConfirmationLocale}
                         onCancelAction={
                             /* istanbul ignore next */

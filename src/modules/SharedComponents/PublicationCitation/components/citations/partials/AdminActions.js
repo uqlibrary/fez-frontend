@@ -5,12 +5,13 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-export const navigateToUrl = (url, target, navigatedFrom = '') => () => {
-    if (url.indexOf('?') > 0) {
-        window.open(`${url}&navigatedFrom=${navigatedFrom}`, target);
-    } else {
-        window.open(`${url}?navigatedFrom=${navigatedFrom}`, target);
+export const navigateToUrl = (uri, target, navigatedFrom = '') => () => {
+    let fullUri = uri;
+    if (navigatedFrom) {
+        const queryStringGlue = uri.indexOf('?') > 0 ? '&' : '?';
+        fullUri = `${uri}${queryStringGlue}navigatedFrom=${encodeURIComponent(navigatedFrom)}`;
     }
+    window.open(fullUri, target);
 };
 
 export const AdminActions = ({ pid, navigatedFrom, options }) => {
