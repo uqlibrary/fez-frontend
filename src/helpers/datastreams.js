@@ -1,4 +1,5 @@
 import { viewRecordsConfig } from '../config';
+import { STATE_ADDED } from '../config/viewRecord';
 
 export const isAudioXT = dataStream => {
     return !!(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0);
@@ -15,12 +16,5 @@ export const isDerivative = dataStream => {
 };
 
 export const isAdded = datastream => {
-    const STATE_ADDED = 'A';
     return datastream.dsi_state === STATE_ADDED;
 };
-
-// unused; kept for definition
-// export const isDeleted = (datastream) => {
-//     const STATE_DELETED = 'D';
-//     return datastream.dsi_state === STATE_DELETED;
-// };
