@@ -11,8 +11,8 @@ const mapStateToProps = (state, props) => {
         onChange: item => props.input.onChange(item),
         onClear: () => props.input.onChange(null),
         getOptionLabel: item => item.rek_title,
-        error: (!!props.meta && !!props.meta.error) || props.error,
-        errorText: (!!props.meta && !!props.meta.error && props.meta.error) || (props.error && props.errorText) || '',
+        error: !!props.meta && !!props.meta.error,
+        errorText: (!!props.meta && !!props.meta.error && props.meta.error) || '',
     };
 };
 

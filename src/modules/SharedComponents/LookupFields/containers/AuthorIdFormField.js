@@ -3,6 +3,7 @@ import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 import matchSorter from 'match-sorter';
+import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const mapStateToProps = (state, props) => {
     return {
@@ -19,6 +20,7 @@ const mapStateToProps = (state, props) => {
         filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['id', 'value'] }),
         error: (!!props.meta && !!props.meta.error) || props.error,
         errorText: (!!props.meta && !!props.meta.error && props.meta.error) || (props.error && props.errorText) || '',
+        OptionTemplate: GenericOptionTemplate,
     };
 };
 

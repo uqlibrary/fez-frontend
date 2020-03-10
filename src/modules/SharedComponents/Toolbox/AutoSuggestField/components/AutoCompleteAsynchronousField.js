@@ -123,7 +123,6 @@ export const AutoCompleteAsynchronousField = ({
 };
 
 AutoCompleteAsynchronousField.propTypes = {
-    //     defaultValue: PropTypes.object,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     filterOptions: PropTypes.func.isRequired,
@@ -132,7 +131,7 @@ AutoCompleteAsynchronousField.propTypes = {
     id: PropTypes.string,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
-    OptionTemplate: PropTypes.func,
+    OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     onChange: PropTypes.func,
     onClear: PropTypes.func,
     required: PropTypes.bool,
