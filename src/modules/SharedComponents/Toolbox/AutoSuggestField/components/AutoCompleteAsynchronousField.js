@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { throttle } from 'throttle-debounce';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -18,6 +16,7 @@ export const AutoCompleteAsynchronousField = ({
     loadSuggestions,
     onChange,
     onClear,
+    OptionTemplate,
     required,
 }) => {
     const [open, setOpen] = useState(false);
@@ -34,6 +33,8 @@ export const AutoCompleteAsynchronousField = ({
     const handleInputChange = useCallback(
         (event, value, reason) => {
             if (reason === 'clear') {
+                onClear();
+            } else if (!value && reason === 'input') {
                 onClear();
             }
         },
@@ -116,20 +117,7 @@ export const AutoCompleteAsynchronousField = ({
                     required={required}
                 />
             )}
-            renderOption={option => (
-                <Grid container>
-                    <Grid item xs={12}>
-                        <Typography variant="body1" color="textPrimary">
-                            {option.value}
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant="body2" color="textSecondary">
-                            {option.id}
-                        </Typography>
-                    </Grid>
-                </Grid>
-            )}
+            renderOption={option => <OptionTemplate option={option} />}
         />
     );
 };
@@ -144,6 +132,7 @@ AutoCompleteAsynchronousField.propTypes = {
     id: PropTypes.string,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
+    OptionTemplate: PropTypes.func,
     onChange: PropTypes.func,
     onClear: PropTypes.func,
     required: PropTypes.bool,

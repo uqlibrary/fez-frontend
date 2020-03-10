@@ -11,24 +11,10 @@ const mapStateToProps = (state, props) => {
             state.get('searchKeysReducer') && state.get('searchKeysReducer').author
                 ? state.get('searchKeysReducer').author.itemsList.filter(item => !!item.id && item.id !== 0)
                 : [],
-        onChange: item => {
-            if (!!item && !item.id && !!props.input) {
-                props.input.onChange(null);
-            } else if ((!!item && !item.id) || isNaN(parseInt(item.id, 10))) {
-                props.input.onChange({
-                    ...item,
-                    id: isNaN(parseInt(item.value, 10)) ? undefined : `${parseInt(item.value, 10)}`,
-                });
-            } else {
-                props.input.onChange(item);
-            }
-        },
+        onChange: item => props.input.onChange(item),
         onClear: () => props.input.onChange(null),
         defaultValue:
-            (!!props.input &&
-                !!props.input.value &&
-                (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
-            null,
+            (!!props.input.value && (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) || null,
         getOptionLabel: item => (!!item && String(`${item.id} (${item.value})`)) || '',
         filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['id', 'value'] }),
         error: (!!props.meta && !!props.meta.error) || props.error,
