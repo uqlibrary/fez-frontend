@@ -1,7 +1,7 @@
 import React from 'react';
 import AdminActions from './AdminActions';
 import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
-import { UNPUBLISHED_BUFFER_ACTION_URLS as options } from 'config/general';
+import { RECORD_ACTION_URLS as options } from 'config/general';
 import { APP_URL } from '../../../../../../config';
 
 function setup(testProps = {}) {
@@ -60,7 +60,7 @@ describe('AdminActions component', () => {
         fireEvent.click(getByText(/edit selected record/i, menu));
     });
 
-    it('should handle admin actions ina  new window ', async() => {
+    it('should handle admin actions in a new window ', async() => {
         global.window.open = jest.fn((url, target) => {
             expect(url).toBe('https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111?navigatedFrom=');
             expect(target).toBe('_blank');
@@ -74,10 +74,7 @@ describe('AdminActions component', () => {
             options: [
                 {
                     label: 'Edit selected record',
-                    url: pid =>
-                        process.env.NODE_ENV === 'development'
-                            ? `${APP_URL}#/admin/edit/${pid}`
-                            : `${APP_URL}admin/edit/${pid}`,
+                    url: pid => `${APP_URL}admin/edit/${pid}`,
                     inApp: false,
                 },
             ],

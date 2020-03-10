@@ -11,7 +11,7 @@ import { routes, publicationTypes } from 'config';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import { withStyles } from '@material-ui/core/styles';
-import { UNPUBLISHED_BUFFER_ACTION_URLS as options } from 'config/general';
+import { RECORD_ACTION_URLS as options } from 'config/general';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
