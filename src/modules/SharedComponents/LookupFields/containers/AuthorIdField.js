@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) => {
             state.get('searchKeysReducer') && state.get('searchKeysReducer').author
                 ? state.get('searchKeysReducer').author.itemsList.filter(item => !!item.id && item.id !== 0)
                 : [],
-        getOptionLabel: item => (!!item && String(`${item.id} (${item.value})`)) || '',
+        getOptionLabel: item => (!!item && !!item.id && String(`${item.id} (${item.value})`)) || '',
         filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['id', 'value'] }),
         OptionTemplate: GenericOptionTemplate,
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
@@ -24,6 +24,7 @@ const mapStateToProps = (state, props) => {
                 errorText: props.meta.error || '',
             }
             : {
+                defaultValue: props.value || null,
                 error: props.error,
                 errorText: props.errorText || '',
             }),

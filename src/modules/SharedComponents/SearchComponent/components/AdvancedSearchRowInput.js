@@ -134,6 +134,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'ContributorIdLookup':
                 return {
                     ...lookupDefaultProps,
+                    value: { id: this.props.value, value: this.props.label },
                     label: this.props.label,
                     onChange: item => {
                         if (!!item && !!item.id && parseInt(item.id, 10) > 0) {
