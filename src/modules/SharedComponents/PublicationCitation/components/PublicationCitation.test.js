@@ -205,28 +205,27 @@ describe('PublicationCitation ', () => {
     });
 
     it('should show admin actions on unpublished buffer/search records page for admins', () => {
-        const { location } = global.window;
-        delete global.window.location;
-        global.window.location = {
-            ...location,
-            hash: '#/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
-            search: '',
-            pathname: '/espace/feature-example/', // hosted feature branch
-        };
-
-        const wrapper = setup({ showAdminActions: true, hideCitationCounts: true });
+        const wrapper = setup({
+            showAdminActions: true,
+            hideCitationCounts: true,
+            location: {
+                hash: '#/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+                search: '',
+                pathname: '/espace/feature-example/', // hosted feature branch
+            },
+        });
         expect(toJson(wrapper.find('Memo(AdminActions)'))).toMatchSnapshot();
 
-        delete global.window.location;
-        global.window.location = {
-            ...location,
-            hash: '',
-            pathname: '/records/search',
-            search: '?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
-        };
-        const wrapper2 = setup({ showAdminActions: true, hideCitationCounts: true });
+        const wrapper2 = setup({
+            showAdminActions: true,
+            hideCitationCounts: true,
+            location: {
+                hash: '',
+                pathname: '/records/search',
+                search: '?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+            },
+        });
         expect(toJson(wrapper2.find('Memo(AdminActions)'))).toMatchSnapshot();
-        global.window.location = location;
     });
 
     it('should render component with content indicators', () => {
