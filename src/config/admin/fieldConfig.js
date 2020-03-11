@@ -32,7 +32,7 @@ import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateG
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
 import {
-    AuthorIdFormField,
+    AuthorIdField,
     CollectionField,
     FieldOfResearchListField,
     OrgUnitNameField,
@@ -1116,7 +1116,7 @@ export default {
             },
         },
         contactNameId: {
-            component: AuthorIdFormField,
+            component: AuthorIdField,
             componentProps: {
                 name: 'adminSection.contactNameId',
                 fullWidth: true,

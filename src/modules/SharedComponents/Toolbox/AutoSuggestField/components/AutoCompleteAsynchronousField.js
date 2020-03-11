@@ -6,6 +6,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const AutoCompleteAsynchronousField = ({
+    allowFreeText,
     error,
     errorText,
     filterOptions,
@@ -36,9 +37,11 @@ export const AutoCompleteAsynchronousField = ({
                 onClear();
             } else if (!value && reason === 'input') {
                 onClear();
+            } else if (!!allowFreeText && !!value && reason === 'input') {
+                onChange({ value });
             }
         },
-        [onClear],
+        [allowFreeText, onChange, onClear],
     );
 
     const handleChange = useCallback(
@@ -117,12 +120,14 @@ export const AutoCompleteAsynchronousField = ({
                     required={required}
                 />
             )}
-            renderOption={option => <OptionTemplate option={option} />}
+            {...((!!allowFreeText && { freeSolo: true }) || {})}
+            {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
         />
     );
 };
 
 AutoCompleteAsynchronousField.propTypes = {
+    allowFreeText: PropTypes.bool,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     filterOptions: PropTypes.func.isRequired,

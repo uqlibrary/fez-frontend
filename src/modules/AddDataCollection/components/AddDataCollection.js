@@ -16,7 +16,7 @@ import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
-import { AuthorIdFormField } from 'modules/SharedComponents/LookupFields';
+import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 
@@ -173,7 +173,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={6}>
                                         <Field
                                             id="contact-name-id-auto-complete"
-                                            component={AuthorIdFormField}
+                                            component={AuthorIdField}
                                             disabled={this.props.submitting}
                                             name="contact.contactNameId"
                                             fullWidth
