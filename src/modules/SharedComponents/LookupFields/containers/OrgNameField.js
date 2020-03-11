@@ -27,7 +27,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList('org_name', searchQuery)),
     ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
         ? {
             onChange: item => props.input.onChange(item),
