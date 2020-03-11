@@ -123,7 +123,7 @@ export const AutoCompleteAsynchronousField = ({
             )}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
-            {...((!!defaultValue && { defaultValue }) || {})}
+            {...((!!defaultValue && { value: defaultValue }) || {})}
         />
     );
 };

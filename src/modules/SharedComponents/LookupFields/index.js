@@ -12,5 +12,4 @@ export { UqIdField } from './containers/UqIdField';
 export { RoleField } from './containers/RoleField';
 export { RelatedDatasetAndPublicationListField } from './containers/RelatedDatasetAndPublicationListField';
 export { CollectionField } from './containers/CollectionField';
-export { CollectionFormField } from './containers/CollectionFormField';
 export { default as GenericOptionTemplate } from './OptionTemplates/GenericOptionTemplate';

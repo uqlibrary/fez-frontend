@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export const AutoCompleteMultiSelectField = ({
+    defaultValue,
     error,
     errorText,
     floatingLabelText,
@@ -46,12 +47,13 @@ export const AutoCompleteMultiSelectField = ({
                 />
             )}
             {...(!!OptionTemplate ? { renderOption: option => <OptionTemplate option={option} /> } : {})}
+            {...((!!defaultValue && { value: defaultValue }) || {})}
         />
     );
 };
 
 AutoCompleteMultiSelectField.propTypes = {
-    async: PropTypes.bool,
+    defaultValue: PropTypes.array,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     floatingLabelText: PropTypes.string,
@@ -59,7 +61,6 @@ AutoCompleteMultiSelectField.propTypes = {
     id: PropTypes.string,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
-    multiple: PropTypes.bool,
     OptionTemplate: PropTypes.func,
     onChange: PropTypes.func,
     onClear: PropTypes.func,
