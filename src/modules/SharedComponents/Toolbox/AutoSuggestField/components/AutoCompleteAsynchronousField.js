@@ -7,6 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
+    defaultValue,
     error,
     errorText,
     filterOptions,
@@ -122,12 +123,14 @@ export const AutoCompleteAsynchronousField = ({
             )}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
+            {...((!!defaultValue && { defaultValue }) || {})}
         />
     );
 };
 
 AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
+    defaultValue: PropTypes.any,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     filterOptions: PropTypes.func.isRequired,
@@ -136,9 +139,9 @@ AutoCompleteAsynchronousField.propTypes = {
     id: PropTypes.string,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
-    OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     onChange: PropTypes.func,
     onClear: PropTypes.func,
+    OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     required: PropTypes.bool,
 };
 
