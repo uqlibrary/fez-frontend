@@ -4,14 +4,15 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const category = 'org_name';
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
+        state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
         category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList
-                : [],
+        itemsList,
+        itemsLoading,
         allowFreeText: true,
         getOptionLabel: item => (!!item && String(item.value)) || '',
+        filterOptions: options => options,
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
             ? {
                 defaultValue: (!!props.input.value && { value: props.input.value }) || null,
@@ -30,7 +31,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList('org_name', searchQuery)),
     ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
         ? {
-            onChange: item => props.input.onChange(item),
+            onChange: item => props.input.onChange(item.value),
             onClear: () => props.input.onChange(null),
         }
         : {

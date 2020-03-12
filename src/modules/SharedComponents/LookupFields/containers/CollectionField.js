@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
-    const { itemsList } = state.get('collectionsReducer') || {};
+    const { itemsList, itemsLoading } = state.get('collectionsReducer') || {};
     return {
         id: props.id,
         itemsList: itemsList || [],
+        itemsLoading,
         getOptionLabel: item => item.rek_title,
         ...(!!((props || {}).meta || {}).form
             ? {

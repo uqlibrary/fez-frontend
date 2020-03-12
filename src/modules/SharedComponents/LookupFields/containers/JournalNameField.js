@@ -5,11 +5,11 @@ import matchSorter from 'match-sorter';
 
 const mapStateToProps = (state, props) => {
     const category = 'journal_name';
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
+        state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList
-                : [],
+        itemsList,
+        itemsLoading,
         allowFreeText: true,
         errorText: props.meta ? props.meta.error : null,
         error: props.meta ? !!props.meta.error : null,

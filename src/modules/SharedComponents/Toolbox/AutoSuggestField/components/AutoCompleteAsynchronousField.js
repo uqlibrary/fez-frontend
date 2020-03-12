@@ -15,6 +15,7 @@ export const AutoCompleteAsynchronousField = ({
     getOptionLabel,
     id,
     itemsList,
+    itemsLoading,
     loadSuggestions,
     onChange,
     onClear,
@@ -24,8 +25,9 @@ export const AutoCompleteAsynchronousField = ({
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
     const [inputValue, setInputValue] = useState('');
+    const [value, setValue] = useState(defaultValue);
 
-    const loading = open && options.length === 0;
+    const loading = itemsLoading;
     const throttledLoadSuggestions = React.useMemo(() => throttle(1000, loadSuggestions), [loadSuggestions]);
 
     const handleSearchTextChange = useCallback(event => {
@@ -46,8 +48,9 @@ export const AutoCompleteAsynchronousField = ({
     );
 
     const handleChange = useCallback(
-        (event, value) => {
-            !!value && onChange(value);
+        (event, newValue) => {
+            setValue(newValue);
+            !!newValue && onChange(newValue);
         },
         [onChange],
     );
@@ -61,7 +64,7 @@ export const AutoCompleteAsynchronousField = ({
     useEffect(() => {
         let active = true;
 
-        if (!loading) {
+        if (!loading && itemsList.length === 0) {
             return undefined;
         }
 
@@ -83,7 +86,6 @@ export const AutoCompleteAsynchronousField = ({
     return (
         <Autocomplete
             id={id || 'auto-complete-asynchronous-field'}
-            open={open}
             clearOnEscape
             disableOpenOnFocus
             onOpen={() => {
@@ -100,6 +102,7 @@ export const AutoCompleteAsynchronousField = ({
             options={options}
             loading={loading}
             popupIcon={false}
+            value={value}
             renderInput={params => (
                 <TextField
                     {...params}
@@ -123,7 +126,6 @@ export const AutoCompleteAsynchronousField = ({
             )}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
-            {...((!!defaultValue && { value: defaultValue }) || {})}
         />
     );
 };
@@ -138,6 +140,7 @@ AutoCompleteAsynchronousField.propTypes = {
     getOptionLabel: PropTypes.func.isRequired,
     id: PropTypes.string,
     itemsList: PropTypes.array,
+    itemsLoading: PropTypes.bool,
     loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,
     onClear: PropTypes.func,

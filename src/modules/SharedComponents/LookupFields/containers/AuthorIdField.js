@@ -5,12 +5,14 @@ import matchSorter from 'match-sorter';
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const mapStateToProps = (state, props) => {
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') && state.get('searchKeysReducer').author) || {
+        itemsList: [],
+        itemsLoading: false,
+    };
     return {
         id: props.id,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer').author
-                ? state.get('searchKeysReducer').author.itemsList.filter(item => !!item.id && item.id !== 0)
-                : [],
+        itemsList: itemsList.filter(item => !!item.id && item.id !== 0),
+        itemsLoading,
         getOptionLabel: item => (!!item && !!item.id && String(`${item.id} (${item.value})`)) || '',
         filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['id', 'value'] }),
         OptionTemplate: GenericOptionTemplate,
