@@ -2,8 +2,8 @@ import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 
+const category = 'org_name';
 const mapStateToProps = (state, props) => {
-    const category = 'org_name';
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
@@ -28,7 +28,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList('org_name', searchQuery)),
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
     ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
         ? {
             onChange: item => props.input.onChange(item.value),
@@ -36,7 +36,7 @@ const mapDispatchToProps = (dispatch, props) => ({
         }
         : {
             onChange: item => props.onChange(item),
-            onClear: () => props.onChange(null),
+            onClear: () => props.onChange({ value: null }),
         }),
 });
 

@@ -1,48 +1,46 @@
-import React from 'react';
-import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 
+const category = 'org_unit_name';
 const mapStateToProps = (state, props) => {
-    const category = 'org_unit_name';
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
+        state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
         category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList
-                : [],
+        itemsList,
+        itemsLoading,
         allowFreeText: true,
-        async: true,
-        onClear: () => props.input.onChange(null),
-        errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText && props.errorText) || null,
-        error: props.meta ? !!props.meta.error : (props.error && !!props.errorText) || null,
-        selectedValue:
-            (!!props.input && !!props.input.value && { value: props.input.value }) ||
-            (!!props.value && { value: props.value }) ||
-            '',
-        itemToString: item => (!!item && String(item.value)) || '',
-        ...props,
+        getOptionLabel: item => (!!item && String(item.value)) || '',
+        filterOptions: options => options,
+        ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
+            ? {
+                defaultValue: (!!props.input.value && { value: props.input.value }) || null,
+                error: !!props.meta.error,
+                errorText: props.meta.error || '',
+            }
+            : {
+                defaultValue: (!!props.value && { value: props.value }) || '',
+                error: props.error,
+                errorText: props.errorText || '',
+            }),
     };
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
-    onChange: value => {
-        if (!!props.input) {
-            props.input.onChange(value.value);
-        } else if (typeof value === 'string') {
-            props.onChange({ value });
-        } else {
-            props.onChange(value);
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
+    ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
+        ? {
+            onChange: item => props.input.onChange(item.value),
+            onClear: () => props.input.onChange(null),
         }
-    },
+        : {
+            onChange: item => props.onChange(item),
+            onClear: () => props.onChange({ value: null }),
+        }),
 });
 
-const OrgUnitNameAutoComplete = connect(
+export const OrgUnitNameField = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(AutoCompleteAsyncField);
-
-export function OrgUnitNameField(fieldProps) {
-    return <OrgUnitNameAutoComplete {...fieldProps} />;
-}
+)(AutoCompleteAsynchronousField);
