@@ -129,7 +129,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
-        add: '/admin/add/',
+        add: '/admin/add',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,

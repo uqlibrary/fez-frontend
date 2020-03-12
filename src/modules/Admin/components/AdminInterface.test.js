@@ -1,4 +1,5 @@
-import { AdminInterface } from './AdminInterface';
+import React from 'react';
+import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
 
 jest.mock('../../../context');
@@ -21,6 +22,9 @@ function setup(testProps = {}) {
         },
         submitting: false,
         handleSubmit: jest.fn(),
+        history: {
+            push: jest.fn(),
+        },
         location: {
             search: '',
         },
@@ -30,6 +34,7 @@ function setup(testProps = {}) {
                 component: () => '<p>Security component</p>',
             },
         },
+        destroy: jest.fn(),
         ...testProps,
     };
 
@@ -37,7 +42,20 @@ function setup(testProps = {}) {
 }
 
 describe('AdminInterface component', () => {
+    let mockUseEffect;
+    const cleanupFns = [];
+
+    beforeAll(() => {
+        mockUseEffect = jest.spyOn(React, 'useEffect');
+    });
+
     beforeEach(() => {
+        mockUseEffect.mockImplementation(f => {
+            const hookReturn = f();
+            if (typeof hookReturn === 'function') {
+                cleanupFns.push(hookReturn);
+            }
+        });
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
@@ -51,6 +69,13 @@ describe('AdminInterface component', () => {
     afterEach(() => {
         useRecordContext.mockReset();
         useTabbedContext.mockReset();
+        while (cleanupFns.length > 0) {
+            cleanupFns.pop()();
+        }
+    });
+
+    afterAll(() => {
+        mockUseEffect.mockRestore();
     });
 
     it('should render when no record is available', () => {
@@ -351,10 +376,6 @@ describe('AdminInterface component', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
         const wrapper = setup({
             submitSucceeded: true,
-            history: {
-                go: jest.fn(),
-                push: jest.fn(),
-            },
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -396,5 +417,156 @@ describe('AdminInterface component', () => {
         // prettier-ignore
         expect(toJson(wrapper))
             .toMatchSnapshot();
+    });
+
+    it('should navigate to "My research" after saving a record edit without referral and choosing "Edit another record"', () => {
+        const pushFn = jest.fn();
+        const createMode = false;
+        const authorDetails = {};
+        const history = {
+            push: pushFn,
+        };
+        const location = {
+            hash: '',
+            pathname: '/admin/edit/UQ:123456',
+            search: '',
+        };
+        navigateToSearchResult(createMode, authorDetails, history, location);
+        expect(pushFn).toHaveBeenCalledWith('/records/mine');
+    });
+
+    it('should navigate to navigatedFrom after saving a record edit with referral as an admin and choosing "Edit another record"', () => {
+        const pushFn = jest.fn();
+        const createMode = false;
+        const authorDetails = {
+            is_administrator: 1,
+        };
+        const history = {
+            push: pushFn,
+        };
+        const location = {
+            hash: '#/admin/edit/UQ:123456?navigatedFrom=%2Fdashboard',
+            search: '',
+        };
+        navigateToSearchResult(createMode, authorDetails, history, location);
+        expect(pushFn).toHaveBeenCalledWith('/dashboard');
+    });
+
+    it('should navigate to admin add after saving a new record as an admin', () => {
+        const pushFn = jest.fn();
+        const history = {
+            push: pushFn,
+        };
+        navigateToSearchResult(true, null, history);
+        expect(pushFn).toHaveBeenCalledWith('/admin/add');
+    });
+
+    it('should call method through reference', () => {
+        const mockUseRef = jest.spyOn(React, 'useRef');
+        const testFn = jest.fn();
+        mockUseRef.mockImplementation(() => ({
+            current: {
+                showConfirmation: testFn,
+            },
+        }));
+        const mockUseCallback = jest.spyOn(React, 'useCallback');
+        mockUseCallback.mockImplementationOnce(f => f());
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({}));
+
+        setup({
+            submitSucceeded: true,
+        });
+        expect(testFn).toHaveBeenCalledTimes(1);
+        expect(mockUseCallback).toHaveBeenCalledTimes(1);
+
+        mockUseRef.mockRestore();
+        mockUseCallback.mockRestore();
+    });
+
+    it('should call method to handle cancel of the form', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: 'record',
+            },
+        }));
+        const push = jest.fn();
+
+        const wrapper = setup({
+            history: {
+                push,
+            },
+        });
+        wrapper
+            .find('WithStyles(Button)')
+            .get(0)
+            .props.onClick({
+                preventDefault: jest.fn(),
+            });
+        expect(push).toHaveBeenCalledWith('/');
+        push.mockClear();
+
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: 'record',
+                rek_pid: 'UQ:111111',
+            },
+        }));
+        const wrapper2 = setup({
+            history: {
+                push,
+            },
+        });
+        wrapper2
+            .find('WithStyles(Button)')
+            .get(0)
+            .props.onClick({
+                preventDefault: jest.fn(),
+            });
+        expect(push).toHaveBeenCalledWith('/view/UQ:111111');
+    });
+
+    it('should handle cancel action of submit confirmation', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: 'record',
+                rek_pid: 'UQ:111111',
+            },
+        }));
+        const push = jest.fn();
+
+        const wrapper = setup({
+            history: {
+                push,
+            },
+        });
+        wrapper
+            .find('WithStyles(ConfirmDialogBox)')
+            .props()
+            .onCancelAction();
+        expect(push).toHaveBeenCalledWith('/view/UQ:111111');
+        push.mockClear();
+
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: 'record',
+            },
+        }));
+        const wrapper2 = setup({
+            history: {
+                push,
+            },
+        });
+        wrapper2
+            .find('WithStyles(ConfirmDialogBox)')
+            .props()
+            .onCancelAction();
+        expect(push).toHaveBeenCalledTimes(0);
     });
 });

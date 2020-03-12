@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
@@ -20,7 +20,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import ScrollToSection from './ScrollToSection';
-import { useTabbedContext, useRecordContext /* , ScrollToSectionContext */ } from 'context';
+import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
@@ -74,11 +74,11 @@ export const AdminInterface = ({
         ((record || {}).rek_object_type_lookup || '').toLowerCase() === RECORD_TYPE_RECORD
             ? 'bibliographic'
             : 'security';
-    const [currentTabValue, setCurrentTabValue] = useState(getQueryStringValue(location, 'tab', defaultTab));
+    const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
-    const successConfirmationRef = useRef();
-    const alertProps = useRef(null);
-    const txt = useRef(pageLocale.pages.edit);
+    const successConfirmationRef = React.useRef();
+    const alertProps = React.useRef(null);
+    const txt = React.useRef(pageLocale.pages.edit);
 
     alertProps.current = validation.getErrorAlertProps({
         submitting,
@@ -87,27 +87,24 @@ export const AdminInterface = ({
         alertLocale: txt.current.alerts,
     });
 
-    /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         return () => {
             destroy(FORM_NAME);
         };
     }, [destroy]);
 
-    /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         Cookies.set('adminFormTabbed', tabbed ? 'tabbed' : 'fullform');
     }, [tabbed]);
 
-    /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         if (!submitting && submitSucceeded && successConfirmationRef.current) {
             successConfirmationRef.current.showConfirmation();
         }
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-    /* istanbul ignore next */
+
     const handleCancel = event => {
         event.preventDefault();
         if (!!record.rek_pid) {
@@ -119,16 +116,14 @@ export const AdminInterface = ({
         }
     };
 
-    /* istanbul ignore next */
-    const setSuccessConfirmationRef = useCallback(node => {
-        successConfirmationRef.current = node;
+    const setSuccessConfirmationRef = React.useCallback(node => {
+        successConfirmationRef.current = node; // TODO: Add check that this worked
     }, []);
 
     if (!record) {
         return <div className="empty" />;
     }
 
-    /* istanbul ignore next */
     const navigateToViewRecord = pid => {
         if (!!pid && validation.isValidPid(pid)) {
             history.push(routes.pathConfig.records.view(pid));
@@ -160,10 +155,7 @@ export const AdminInterface = ({
                         onRef={setSuccessConfirmationRef}
                         onAction={() => navigateToSearchResult(createMode, authorDetails, history, location)}
                         locale={saveConfirmationLocale}
-                        onCancelAction={
-                            /* istanbul ignore next */
-                            () => navigateToViewRecord(record.rek_pid)
-                        }
+                        onCancelAction={() => navigateToViewRecord(record.rek_pid)}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
@@ -239,7 +231,6 @@ export const AdminInterface = ({
                         </Grid>
                     </Hidden>
                 </Grid>
-                {/* --------------- Content here ---------------*/}
                 <form>
                     <Grid container spacing={0}>
                         {!tabbed
