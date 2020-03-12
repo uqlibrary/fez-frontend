@@ -167,7 +167,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
         }
-        return [404, ['Request not found']];
+        // return [404, ['Request not found']];
+        return [200, mockData.internalTitleSearchList];
     })
     .onGet(
         new RegExp(

@@ -298,6 +298,7 @@ export class AutoCompleteAsyncField extends Component {
                                                                     key={item.id}
                                                                     tabIndex={-1}
                                                                     label={item.value}
+                                                                    id={`${item.value} - ${item.id}`}
                                                                     className={classes.chip}
                                                                     onDelete={this.handleDelete(item, index)}
                                                                 />

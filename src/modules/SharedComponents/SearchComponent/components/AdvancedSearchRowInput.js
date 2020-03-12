@@ -155,13 +155,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'CollectionsLookup':
                 return {
                     ...selectDefaultProps,
-                    loadingHint: this.props.inputField.loadingHint,
-                    errorHint: this.props.inputField.errorHint,
-                    multiple: this.props.inputField.multiple,
                     onChange: this.props.onChange,
-                    autoWidth: false,
-                    hideLabel: true,
-                    displayEmpty: true,
+                    disableClearable: true,
                 };
             case 'StatusLookup':
                 return {

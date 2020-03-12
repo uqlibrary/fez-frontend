@@ -148,6 +148,7 @@ export class AdvancedSearchCaption extends PureComponent {
     };
 
     render() {
+        console.log('CAPTION =====> ', this.props);
         return (
             <div className={`${this.props.className} searchQueryCaption`}>
                 {this.renderCaptions(this.state.captionData)}

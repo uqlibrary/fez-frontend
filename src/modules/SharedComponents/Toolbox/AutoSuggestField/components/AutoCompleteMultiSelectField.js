@@ -7,6 +7,7 @@ export const AutoCompleteMultiSelectField = ({
     defaultValue,
     error,
     errorText,
+    hintText,
     floatingLabelText,
     getOptionLabel,
     id,
@@ -17,6 +18,7 @@ export const AutoCompleteMultiSelectField = ({
     required,
 }) => {
     const handleChange = useCallback((event, value) => {
+        console.log(value);
         onChange(value);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -36,6 +38,8 @@ export const AutoCompleteMultiSelectField = ({
             options={itemsList}
             onChange={handleChange}
             popupIcon={false}
+            filterSelectedOptions
+            disableClearable
             renderInput={params => (
                 <TextField
                     {...params}
@@ -43,6 +47,7 @@ export const AutoCompleteMultiSelectField = ({
                     helperText={(error && errorText) || ''}
                     fullWidth
                     label={floatingLabelText}
+                    placeholder={hintText}
                     required={required}
                 />
             )}
@@ -57,6 +62,7 @@ AutoCompleteMultiSelectField.propTypes = {
     error: PropTypes.bool,
     errorText: PropTypes.string,
     floatingLabelText: PropTypes.string,
+    hintText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
     id: PropTypes.string,
     itemsList: PropTypes.array,

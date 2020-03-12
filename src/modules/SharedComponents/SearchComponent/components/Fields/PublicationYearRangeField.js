@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
+import Typography from '@material-ui/core/Typography';
 import locale from 'locale/components';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -56,16 +56,13 @@ export class PublicationYearRangeField extends PureComponent {
             <React.Fragment>
                 <Grid container>
                     <Grid item xs={12}>
-                        <InputLabel shrink className={classes.title}>
+                        <Typography className={classes.title}>
                             {txt.title}
-                        </InputLabel>
+                        </Typography>
                     </Grid>
                 </Grid>
                 <Grid container>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                        <InputLabel hidden id="from-label">
-                            {txt.fromAria}
-                        </InputLabel>
                         <TextField
                             fullWidth
                             id="from"
@@ -82,9 +79,6 @@ export class PublicationYearRangeField extends PureComponent {
                         />
                     </Grid>
                     <Grid item xs={'auto'}>
-                        <InputLabel hidden id="combiner-label">
-                            to
-                        </InputLabel>
                         <TextField
                             style={{ width: 24 }}
                             value={' to '}
@@ -96,9 +90,6 @@ export class PublicationYearRangeField extends PureComponent {
                         />
                     </Grid>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                        <InputLabel hidden id="to-label">
-                            {txt.toAria}
-                        </InputLabel>
                         <TextField
                             fullWidth
                             id="to"
