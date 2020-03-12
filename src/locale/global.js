@@ -178,13 +178,6 @@ export default {
             externalLinktext: 'SHERPA/RoMEO',
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]',
             title: "Check publisher's OA archiving policy",
-            colourTitle: {
-                green: "Can archive pre-print and post-print or publisher's version/PDF",
-                blue: "Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF",
-                yellow: 'Can archive pre-print (ie pre-refereeing)',
-                white: 'Archiving not formally supported',
-                none: 'Ungraded',
-            },
         },
         ulrichsLink: {
             ariaLabel: 'Source publisher name/place and alternate ISSNs in a new window',

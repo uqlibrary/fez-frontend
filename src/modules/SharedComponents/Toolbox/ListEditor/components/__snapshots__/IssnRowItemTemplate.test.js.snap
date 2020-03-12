@@ -1,40 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IssnRowItemTemplate component should generate styles as expected 1`] = `
-Object {
-  "romeoColour": Object {
-    "&.blue": Object {
-      "background": "#D3ECFA",
-    },
-    "&.green": Object {
-      "background": "#D0F9D2",
-    },
-    "&.none::after": Object {
-      "borderBottom": "1px solid #333",
-      "content": "\\" \\"",
-      "height": "1.5em",
-      "position": "absolute",
-      "transform": "translateY(-0.85em) translateX(0.3em) rotate(45deg)",
-      "width": "1.4em",
-    },
-    "&.white": Object {
-      "background": "#FFFFFF",
-    },
-    "&.yellow": Object {
-      "background": "#FFFF99",
-    },
-    "bottom": "-0.1em",
-    "display": "inline-block",
-    "height": "1em",
-    "marginLeft": "0.5em",
-    "marginRight": "0.3em",
-    "outline": "1px solid #333",
-    "position": "relative",
-    "width": "1em",
-  },
-}
-`;
-
 exports[`IssnRowItemTemplate component should render a value 1`] = `
 <Fragment>
   <WithStyles(Typography)
@@ -50,10 +15,6 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
       href="http://example.com/sherpa?issn=1234-1234"
       title="Check publisher's OA archiving policy"
     >
-      <span
-        className="example blue"
-        title="Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF"
-      />
       SHERPA/RoMEO
     </WithStyles(ExternalLink)>
     <span>
@@ -98,10 +59,6 @@ exports[`IssnRowItemTemplate component should render link data from API 1`] = `
       href="1234"
       title="Check publisher's OA archiving policy"
     >
-      <span
-        className="undefined blue"
-        title="Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF"
-      />
       SHERPA/RoMEO
     </WithStyles(ExternalLink)>
     <span>

@@ -71,13 +71,6 @@ context('Book admin edit', () => {
         const sherpaLinkPrefix = 'http://www.sherpa.ac.uk/romeo/search.php?issn=';
         const ulrichsLinkPrefix =
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
-        const sherpaColourTitles = {
-            green: "Can archive pre-print and post-print or publisher's version/PDF",
-            blue: "Can archive post-print (ie final draft post-refereeing) or publisher's version/PDF",
-            yellow: 'Can archive pre-print (ie pre-refereeing)',
-            white: 'Archiving not formally supported',
-            none: 'Ungraded',
-        };
 
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.get('.StandardPage form > div >div')
@@ -85,7 +78,7 @@ context('Book admin edit', () => {
             .eq(1)
             .as('bibliographicTab');
 
-        const checkIssnLinks = (container, issn, colour) => {
+        const checkIssnLinks = (container, issn) => {
             cy.wrap(container)
                 .find('span > span')
                 .should('contain', issn)
@@ -96,10 +89,7 @@ context('Book admin edit', () => {
                 .as('issnLinks')
                 // ...before finding 'nth'
                 .eq(0)
-                .should('have.attr', 'href', `${sherpaLinkPrefix}${issn}`)
-                .find('span')
-                .should('have.class', colour)
-                .should('have.attr', 'title', sherpaColourTitles[colour]);
+                .should('have.attr', 'href', `${sherpaLinkPrefix}${issn}`);
             const ulrichsID = issn === '0302-9743' ? '122527' : issn.replace('-', '');
             cy.get('@issnLinks')
                 .eq(1)
@@ -117,7 +107,7 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(0)
                     .within(row => {
-                        checkIssnLinks(row, '0302-9743', 'green');
+                        checkIssnLinks(row, '0302-9743');
                     });
                 cy.log('Find existing entry with placeholder data');
                 cy.get('@issnBlock')
@@ -145,7 +135,7 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(1)
                     .within(row => {
-                        checkIssnLinks(row, '1611-3340', 'blue');
+                        checkIssnLinks(row, '1611-3340');
                     });
                 cy.log('Add a 3rd entry without match in API');
                 cy.get('@issnBlock')
@@ -167,7 +157,7 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
                     .within(row => {
-                        checkIssnLinks(row, '3333-3333', 'green');
+                        checkIssnLinks(row, '3333-3333');
                         cy.get('span > a')
                             .eq(1)
                             .should('have.attr', 'title', 'Lecture Notes in Computer Science')
@@ -189,7 +179,7 @@ context('Book admin edit', () => {
                     .eq(3)
                     .should('not.contain', '3333-3333')
                     .within(row => {
-                        checkIssnLinks(row, '4444-4444', 'yellow');
+                        checkIssnLinks(row, '4444-4444');
                     });
                 cy.log('Add a 5th entry');
                 cy.get('@issnBlock')
@@ -201,7 +191,7 @@ context('Book admin edit', () => {
                     .eq(4)
                     .as('issnToReorder')
                     .within(row => {
-                        checkIssnLinks(row, '5555-5555', 'white');
+                        checkIssnLinks(row, '5555-5555');
                     });
                 cy.get('@issnToReorder')
                     .find('button[title="Move item up the order"]')
@@ -211,13 +201,13 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(3)
                     .within(row => {
-                        checkIssnLinks(row, '5555-5555', 'white');
+                        checkIssnLinks(row, '5555-5555');
                     });
                 cy.get('@issnBlock')
                     .find('.ListRow-ISSNvalue')
                     .eq(4)
                     .within(row => {
-                        checkIssnLinks(row, '4444-4444', 'yellow');
+                        checkIssnLinks(row, '4444-4444');
                     });
                 cy.log('New entry with sherpa placeholder data');
                 cy.get('@issnBlock')
@@ -238,7 +228,7 @@ context('Book admin edit', () => {
                     .find('.ListRow-ISSNvalue')
                     .eq(6)
                     .within(row => {
-                        checkIssnLinks(row, '6666-6666', 'none');
+                        checkIssnLinks(row, '6666-6666');
                     });
             });
 

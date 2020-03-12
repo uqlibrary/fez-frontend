@@ -1,4 +1,4 @@
-import { IssnRowItemTemplate, styles } from './IssnRowItemTemplate';
+import { IssnRowItemTemplate } from './IssnRowItemTemplate';
 import React from 'react';
 
 function setup(testProps = {}, args = { isShallow: true }) {
@@ -61,12 +61,8 @@ describe('IssnRowItemTemplate component', () => {
                     },
                     sherpaRomeo: {
                         link: 'http://example.com/sherpa?issn=1234-1234',
-                        colour: 'blue',
                     },
                 },
-            },
-            classes: {
-                romeoColour: 'example',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -123,7 +119,7 @@ describe('IssnRowItemTemplate component', () => {
             item: '1234-1234',
         });
         wrapper.setProps({
-            sherpaRomeo: { link: '1234', colour: 'blue' },
+            sherpaRomeo: { link: '1234' },
             ulrichs: { link: '1234' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -156,9 +152,5 @@ describe('IssnRowItemTemplate component', () => {
         });
         expect(actionSherpa).toHaveBeenCalledWith('1212-1212');
         expect(actionUlrichs).toHaveBeenCalledWith('1212-1212');
-    });
-
-    it('should generate styles as expected', () => {
-        expect(styles()).toMatchSnapshot();
     });
 });
