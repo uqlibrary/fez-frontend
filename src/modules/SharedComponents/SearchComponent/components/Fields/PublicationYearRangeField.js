@@ -56,9 +56,7 @@ export class PublicationYearRangeField extends PureComponent {
             <React.Fragment>
                 <Grid container>
                     <Grid item xs={12}>
-                        <Typography className={classes.title}>
-                            {txt.title}
-                        </Typography>
+                        <Typography className={classes.title}>{txt.title}</Typography>
                     </Grid>
                 </Grid>
                 <Grid container>
