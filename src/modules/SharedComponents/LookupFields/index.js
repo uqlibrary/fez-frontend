@@ -13,3 +13,4 @@ export { RoleField } from './containers/RoleField';
 export { RelatedDatasetAndPublicationListField } from './containers/RelatedDatasetAndPublicationListField';
 export { CollectionField } from './containers/CollectionField';
 export { default as GenericOptionTemplate } from './OptionTemplates/GenericOptionTemplate';
+export { default as TitleOrPidOptionTemplate } from './OptionTemplates/TitleOrPidOptionTemplate';

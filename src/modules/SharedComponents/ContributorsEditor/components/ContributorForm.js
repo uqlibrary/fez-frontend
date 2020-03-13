@@ -329,6 +329,7 @@ export class ContributorForm extends PureComponent {
                         <Grid item xs={12} sm={12} md={(showIdentifierLookup && 3) || 5}>
                             <RoleField
                                 fullWidth
+                                key={`role-input-${contributor.nameAsPublished.trim().length === 0}`}
                                 id="creatorRoleField"
                                 floatingLabelText={locale.creatorRoleLabel}
                                 hintText={locale.creatorRoleHint}

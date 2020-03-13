@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 import matchSorter from 'match-sorter';
 
+const category = 'journal_name';
 const mapStateToProps = (state, props) => {
-    const category = 'journal_name';
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
@@ -19,7 +19,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList('journal_name', searchQuery)),
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
     onChange: item => props.input.onChange(item.value),
     onClear: () => props.input.onChange(null),
 });

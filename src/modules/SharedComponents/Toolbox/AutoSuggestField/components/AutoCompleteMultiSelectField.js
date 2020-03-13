@@ -18,7 +18,6 @@ export const AutoCompleteMultiSelectField = ({
     required,
 }) => {
     const handleChange = useCallback((event, value) => {
-        console.log(value);
         onChange(value);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -62,14 +61,13 @@ AutoCompleteMultiSelectField.propTypes = {
     error: PropTypes.bool,
     errorText: PropTypes.string,
     floatingLabelText: PropTypes.string,
-    hintText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
+    hintText: PropTypes.string,
     id: PropTypes.string,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
-    OptionTemplate: PropTypes.func,
     onChange: PropTypes.func,
-    onClear: PropTypes.func,
+    OptionTemplate: PropTypes.func,
     required: PropTypes.bool,
 };
 
