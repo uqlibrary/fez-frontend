@@ -44,6 +44,7 @@ describe('AdminInterface component', () => {
                 rek_title: 'This is test record',
                 rek_object_type_lookup: 'Record',
                 rek_display_type_lookup: 'Journal Article',
+                rek_display_type: 179,
             },
         }));
     });
@@ -243,6 +244,7 @@ describe('AdminInterface component', () => {
                 fez_record_search_key_retracted: {
                     rek_retracted: 1,
                 },
+                rek_display_type: 179,
             },
         }));
         const wrapper = setup({
@@ -381,6 +383,7 @@ describe('AdminInterface component', () => {
                 rek_title: rekTitle,
                 rek_object_type_lookup: 'Record',
                 rek_display_type_lookup: 'Journal Article',
+                rek_display_type: 179,
             },
         }));
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
@@ -396,5 +399,17 @@ describe('AdminInterface component', () => {
         // prettier-ignore
         expect(toJson(wrapper))
             .toMatchSnapshot();
+    });
+
+    it('should display an alert if editing of a pubtype is not supported', () => {
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_object_type_lookup: 'record',
+                rek_display_type: 999,
+            },
+        }));
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

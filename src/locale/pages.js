@@ -861,6 +861,7 @@ export default {
                 buttonLabel: 'Got it',
             },
             loadingMessage: 'Loading record',
+            notSupportedMessage: 'Editing of [pubType] is not yet supported.',
             retractedMessage: 'This article has been retracted',
             community: {
                 title: 'Edit community',

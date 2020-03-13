@@ -29,6 +29,7 @@ import { RECORD_TYPE_RECORD } from 'config/general';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
+import { adminInterfaceConfig } from 'config/admin';
 
 export const useQueryStringTabValueState = (location, initialValue) => {
     const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
@@ -52,10 +53,8 @@ export const AdminInterface = ({
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
-    const defaultTab =
-        ((record || {}).rek_object_type_lookup || '').toLowerCase() === RECORD_TYPE_RECORD
-            ? 'bibliographic'
-            : 'security';
+    const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
+    const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
     const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location, defaultTab);
 
     const successConfirmationRef = useRef();
@@ -110,6 +109,25 @@ export const AdminInterface = ({
         return <div className="empty" />;
     }
 
+    const selectedPublicationType =
+        (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
+        'record';
+
+    if (objectType === RECORD_TYPE_RECORD && !adminInterfaceConfig[record.rek_display_type]) {
+        return (
+            <StandardPage>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Alert
+                            message={txt.current.notSupportedMessage.replace('[pubType]', selectedPublicationType)}
+                            type="info"
+                        />
+                    </Grid>
+                </Grid>
+            </StandardPage>
+        );
+    }
+
     /* istanbul ignore next */
     const navigateToSearchResult = createMode => {
         if (createMode) {
@@ -148,10 +166,6 @@ export const AdminInterface = ({
             </ScrollToSection>
         </TabContainer>
     );
-
-    const selectedPublicationType =
-        (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
-        'record';
 
     const saveConfirmationLocale = createMode
         ? txt.current.successAddWorkflowConfirmation
