@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
     defaultValue,
+    disabled,
     error,
     errorText,
     filterOptions,
@@ -88,6 +89,7 @@ export const AutoCompleteAsynchronousField = ({
             id={id || 'auto-complete-asynchronous-field'}
             clearOnEscape
             disableOpenOnFocus
+            disabled={disabled}
             onOpen={() => {
                 setOpen(true);
             }}
@@ -133,6 +135,7 @@ export const AutoCompleteAsynchronousField = ({
 AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
     defaultValue: PropTypes.any,
+    disabled: PropTypes.bool,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     filterOptions: PropTypes.func.isRequired,

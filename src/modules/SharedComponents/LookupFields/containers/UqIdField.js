@@ -1,6 +1,8 @@
-import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
+import matchSorter from 'match-sorter';
+import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const mapStateToProps = (state, props) => {
     return {
@@ -17,24 +19,25 @@ const mapStateToProps = (state, props) => {
                         ...item,
                     }))
                 : [],
-        itemsListLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
-        onChange: props.onChange,
-        onClear: props.onClear,
-        allowFreeText: false,
-        async: true,
-        selectedValue: (!!props.value && { value: props.value }) || '',
-        itemToString: () => '',
-        maxResults: 7,
+        itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
+        defaultValue: (!!props.value && { value: props.value }) || '',
+        getOptionLabel: option => option.value || '',
+        filterOptions: (options, { inputValue }) =>
+            matchSorter(options, inputValue, { keys: ['aut_id', 'aut_display_name'] }),
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
         hintText: props.hintText || 'Enter a value to search',
+        OptionTemplate: GenericOptionTemplate,
+        disabled: props.disabled,
     };
 };
 
-const mapDispatchToProps = dispatch => ({
-    loadSuggestions: (searchKey, searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
+const mapDispatchToProps = (dispatch, props) => ({
+    loadSuggestions: (searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
+    onChange: props.onChange,
+    onClear: props.onClear,
 });
 
 export const UqIdField = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(AutoCompleteAsyncField);
+)(AutoCompleteAsynchronousField);
