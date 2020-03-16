@@ -11,7 +11,7 @@ import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from '@material-ui/core/Checkbox';
 import { locale } from 'locale';
 import DocumentTypeMultipleField from './Fields/DocumentTypeMultipleField';
-import PublicationYearRangeField from './Fields/PublicationYearRangeField';
+import { default as PublicationYearRangeField } from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
 import { withStyles } from '@material-ui/core/styles';

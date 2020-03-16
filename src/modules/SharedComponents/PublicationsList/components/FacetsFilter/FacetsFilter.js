@@ -102,7 +102,6 @@ export const FacetsFilter = ({
     showOpenAccessFilter,
     onFacetsChanged,
 }) => {
-    console.log(activeFacets);
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({
         ...activeFacets.filters,
         ...((initialFacets || {}).filters || {}),
@@ -189,8 +188,6 @@ export const FacetsFilter = ({
     if (facetsToDisplay.length === 0 && !hasActiveFilters) {
         return <span id="empty-facet-filters" className="facetsFilter empty" />;
     }
-
-    console.log(activeFacetsFilters);
     return (
         <div className="facetsFilter">
             <List component="nav" dense>

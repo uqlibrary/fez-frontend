@@ -306,6 +306,5 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .onAny()
     .reply(config => {
         console.log('url not found...');
-        console.log(config);
         return [404, { message: `MOCK URL NOT FOUND: ${config.url}` }];
     });

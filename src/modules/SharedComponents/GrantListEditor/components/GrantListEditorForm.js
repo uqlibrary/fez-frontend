@@ -5,7 +5,7 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
+import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { ORG_AFFILIATION_TYPES } from 'config/general';
@@ -40,7 +40,7 @@ export class GrantListEditorFormClass extends PureComponent {
             grantIdLabel: 'Grant ID',
             grantIdHint: 'Enter grant number for this work, if available',
             grantAgencyTypeLabel: 'Funder/Sponsor type',
-            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+            grantAgencyTypeHint: 'Funder/Sponsor type',
             addButton: 'Add grant',
             editButton: 'Edit grant',
             description:
@@ -142,6 +142,7 @@ export class GrantListEditorFormClass extends PureComponent {
             grantAgencyTypeHint,
         } = this.props.locale;
         const { grantAgencyName, grantAgencyType, grantId } = this.state;
+        console.log(grantAgencyTypeHint);
 
         // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 ||
         // this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;
@@ -183,18 +184,21 @@ export class GrantListEditorFormClass extends PureComponent {
                                 required={required || grantAgencyName.trim().length > 0}
                                 error={grantAgencyName.trim().length > 0 && grantAgencyType.trim().length === 0}
                             >
-                                <InputLabel>{grantAgencyTypeLabel}</InputLabel>
+                                <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
+                                    {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;
+                                </Typography>
                                 <Select
                                     SelectDisplayProps={{
                                         id: 'grantType',
                                     }}
                                     label={grantAgencyType}
                                     placeholder={grantAgencyTypeHint}
+                                    displayEmpty
                                     value={grantAgencyType}
                                     onChange={this._onTypeChanged}
                                     disabled={disabled || grantAgencyName.trim().length === 0}
                                 >
-                                    <MenuItem value={''} disabled>
+                                    <MenuItem value="" disabled>
                                         {grantAgencyTypeHint}
                                     </MenuItem>
                                     {ORG_AFFILIATION_TYPES.map((item, index) => {

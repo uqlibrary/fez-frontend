@@ -18,7 +18,6 @@ const onSubmit = (values, dispatch) => {
             if (!response || !response.data) {
                 throw new SubmissionError();
             }
-            // console.log(`Success: ${response.data}`);
         })
         .catch(error => {
             throw new SubmissionError({ _error: error.message });

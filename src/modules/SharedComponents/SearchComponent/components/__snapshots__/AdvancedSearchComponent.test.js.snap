@@ -166,7 +166,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -422,7 +422,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -672,7 +672,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -922,7 +922,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -1173,7 +1173,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -1469,7 +1469,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -1715,7 +1715,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}
@@ -2041,7 +2041,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationYearRangeField)
+            <PublicationYearRangeField
               className="publicationyearrange menuitem"
               disabled={false}
               invalid={false}

@@ -83,13 +83,18 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
     }
   }
 >
-  <AuthorIdField
+  <Connect(Component)
     allowFreeText={true}
     error={true}
     errorText="This field is required"
     hideLabel={true}
     onChange={[Function]}
-    value={null}
+    value={
+      Object {
+        "id": null,
+        "value": undefined,
+      }
+    }
   />
 </ContextProvider>
 `;
@@ -177,13 +182,18 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
     }
   }
 >
-  <AuthorIdField
+  <Connect(Component)
     allowFreeText={true}
     error={true}
     errorText="This field is required"
     hideLabel={true}
     onChange={[Function]}
-    value={null}
+    value={
+      Object {
+        "id": null,
+        "value": undefined,
+      }
+    }
   />
 </ContextProvider>
 `;
@@ -271,11 +281,9 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Collec
     }
   }
 >
-  <CollectionsSelectField
-    autoWidth={false}
-    displayEmpty={true}
+  <CollectionField
+    disableClearable={true}
     error={false}
-    hideLabel={true}
     onChange={[MockFunction]}
     selectedValue={Array []}
     style={
@@ -370,7 +378,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for OrgUni
     }
   }
 >
-  <OrgUnitNameField
+  <Connect(Component)
     allowFreeText={true}
     error={true}
     errorText="This field is required"

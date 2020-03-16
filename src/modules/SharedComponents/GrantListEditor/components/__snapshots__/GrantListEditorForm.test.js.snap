@@ -1651,69 +1651,71 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 <div
                                   className="MuiFormControl-root MuiFormControl-fullWidth"
                                 >
-                                  <WithStyles(ForwardRef(InputLabel))>
-                                    <ForwardRef(InputLabel)
+                                  <WithStyles(ForwardRef(Typography))
+                                    color="secondary"
+                                    style={
+                                      Object {
+                                        "marginBottom": -3,
+                                      }
+                                    }
+                                    variant="caption"
+                                  >
+                                    <ForwardRef(Typography)
                                       classes={
                                         Object {
-                                          "animated": "MuiInputLabel-animated",
-                                          "asterisk": "MuiInputLabel-asterisk",
-                                          "disabled": "Mui-disabled",
-                                          "error": "Mui-error",
-                                          "filled": "MuiInputLabel-filled",
-                                          "focused": "Mui-focused",
-                                          "formControl": "MuiInputLabel-formControl",
-                                          "marginDense": "MuiInputLabel-marginDense",
-                                          "outlined": "MuiInputLabel-outlined",
-                                          "required": "Mui-required",
-                                          "root": "MuiInputLabel-root",
-                                          "shrink": "MuiInputLabel-shrink",
+                                          "alignCenter": "MuiTypography-alignCenter",
+                                          "alignJustify": "MuiTypography-alignJustify",
+                                          "alignLeft": "MuiTypography-alignLeft",
+                                          "alignRight": "MuiTypography-alignRight",
+                                          "body1": "MuiTypography-body1",
+                                          "body2": "MuiTypography-body2",
+                                          "button": "MuiTypography-button",
+                                          "caption": "MuiTypography-caption",
+                                          "colorError": "MuiTypography-colorError",
+                                          "colorInherit": "MuiTypography-colorInherit",
+                                          "colorPrimary": "MuiTypography-colorPrimary",
+                                          "colorSecondary": "MuiTypography-colorSecondary",
+                                          "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                          "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                          "displayBlock": "MuiTypography-displayBlock",
+                                          "displayInline": "MuiTypography-displayInline",
+                                          "gutterBottom": "MuiTypography-gutterBottom",
+                                          "h1": "MuiTypography-h1",
+                                          "h2": "MuiTypography-h2",
+                                          "h3": "MuiTypography-h3",
+                                          "h4": "MuiTypography-h4",
+                                          "h5": "MuiTypography-h5",
+                                          "h6": "MuiTypography-h6",
+                                          "noWrap": "MuiTypography-noWrap",
+                                          "overline": "MuiTypography-overline",
+                                          "paragraph": "MuiTypography-paragraph",
+                                          "root": "MuiTypography-root",
+                                          "srOnly": "MuiTypography-srOnly",
+                                          "subtitle1": "MuiTypography-subtitle1",
+                                          "subtitle2": "MuiTypography-subtitle2",
                                         }
                                       }
+                                      color="secondary"
+                                      style={
+                                        Object {
+                                          "marginBottom": -3,
+                                        }
+                                      }
+                                      variant="caption"
                                     >
-                                      <WithStyles(ForwardRef(FormLabel))
-                                        className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                        classes={
+                                      <span
+                                        className="MuiTypography-root MuiTypography-caption MuiTypography-colorSecondary"
+                                        style={
                                           Object {
-                                            "asterisk": "MuiInputLabel-asterisk",
-                                            "disabled": "Mui-disabled",
-                                            "error": "Mui-error",
-                                            "focused": "Mui-focused",
-                                            "required": "Mui-required",
+                                            "marginBottom": -3,
                                           }
                                         }
-                                        data-shrink={false}
                                       >
-                                        <ForwardRef(FormLabel)
-                                          className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                          classes={
-                                            Object {
-                                              "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
-                                              "colorSecondary": "MuiFormLabel-colorSecondary",
-                                              "disabled": "Mui-disabled Mui-disabled",
-                                              "error": "Mui-error Mui-error",
-                                              "filled": "MuiFormLabel-filled",
-                                              "focused": "Mui-focused Mui-focused",
-                                              "required": "Mui-required Mui-required",
-                                              "root": "MuiFormLabel-root",
-                                            }
-                                          }
-                                          data-shrink={false}
-                                        >
-                                          <label
-                                            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
-                                            data-shrink={false}
-                                          >
-                                            <span
-                                              className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-                                            >
-                                               
-                                              *
-                                            </span>
-                                          </label>
-                                        </ForwardRef(FormLabel)>
-                                      </WithStyles(ForwardRef(FormLabel))>
-                                    </ForwardRef(InputLabel)>
-                                  </WithStyles(ForwardRef(InputLabel))>
+                                         
+                                         
+                                      </span>
+                                    </ForwardRef(Typography)>
+                                  </WithStyles(ForwardRef(Typography))>
                                   <WithStyles(ForwardRef(Select))
                                     SelectDisplayProps={
                                       Object {
@@ -1721,6 +1723,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       }
                                     }
                                     disabled={true}
+                                    displayEmpty={true}
                                     label=""
                                     onChange={[Function]}
                                     value=""
@@ -1746,6 +1749,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         }
                                       }
                                       disabled={true}
+                                      displayEmpty={true}
                                       label=""
                                       onChange={[Function]}
                                       value=""
@@ -1866,7 +1870,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               "select": "MuiSelect-select",
                                               "selectMenu": "MuiSelect-selectMenu",
                                             },
-                                            "displayEmpty": false,
+                                            "displayEmpty": true,
                                             "labelId": undefined,
                                             "multiple": false,
                                             "onClose": undefined,
@@ -2014,7 +2018,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "select": "MuiSelect-select",
                                                 "selectMenu": "MuiSelect-selectMenu",
                                               },
-                                              "displayEmpty": false,
+                                              "displayEmpty": true,
                                               "labelId": undefined,
                                               "multiple": false,
                                               "onClose": undefined,
@@ -2163,7 +2167,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "select": "MuiSelect-select",
                                                   "selectMenu": "MuiSelect-selectMenu",
                                                 },
-                                                "displayEmpty": false,
+                                                "displayEmpty": true,
                                                 "labelId": undefined,
                                                 "multiple": false,
                                                 "onClose": undefined,
@@ -2318,7 +2322,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     "select": "MuiSelect-select",
                                                     "selectMenu": "MuiSelect-selectMenu",
                                                   },
-                                                  "displayEmpty": false,
+                                                  "displayEmpty": true,
                                                   "labelId": undefined,
                                                   "multiple": false,
                                                   "onClose": undefined,
@@ -2374,7 +2378,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     }
                                                   }
                                                   disabled={true}
-                                                  displayEmpty={false}
+                                                  displayEmpty={true}
                                                   inputRef={[Function]}
                                                   multiple={false}
                                                   onAnimationStart={[Function]}
@@ -4442,69 +4446,71 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             <div
                               className="MuiFormControl-root MuiFormControl-fullWidth"
                             >
-                              <WithStyles(ForwardRef(InputLabel))>
-                                <ForwardRef(InputLabel)
+                              <WithStyles(ForwardRef(Typography))
+                                color="secondary"
+                                style={
+                                  Object {
+                                    "marginBottom": -3,
+                                  }
+                                }
+                                variant="caption"
+                              >
+                                <ForwardRef(Typography)
                                   classes={
                                     Object {
-                                      "animated": "MuiInputLabel-animated",
-                                      "asterisk": "MuiInputLabel-asterisk",
-                                      "disabled": "Mui-disabled",
-                                      "error": "Mui-error",
-                                      "filled": "MuiInputLabel-filled",
-                                      "focused": "Mui-focused",
-                                      "formControl": "MuiInputLabel-formControl",
-                                      "marginDense": "MuiInputLabel-marginDense",
-                                      "outlined": "MuiInputLabel-outlined",
-                                      "required": "Mui-required",
-                                      "root": "MuiInputLabel-root",
-                                      "shrink": "MuiInputLabel-shrink",
+                                      "alignCenter": "MuiTypography-alignCenter",
+                                      "alignJustify": "MuiTypography-alignJustify",
+                                      "alignLeft": "MuiTypography-alignLeft",
+                                      "alignRight": "MuiTypography-alignRight",
+                                      "body1": "MuiTypography-body1",
+                                      "body2": "MuiTypography-body2",
+                                      "button": "MuiTypography-button",
+                                      "caption": "MuiTypography-caption",
+                                      "colorError": "MuiTypography-colorError",
+                                      "colorInherit": "MuiTypography-colorInherit",
+                                      "colorPrimary": "MuiTypography-colorPrimary",
+                                      "colorSecondary": "MuiTypography-colorSecondary",
+                                      "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                      "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                      "displayBlock": "MuiTypography-displayBlock",
+                                      "displayInline": "MuiTypography-displayInline",
+                                      "gutterBottom": "MuiTypography-gutterBottom",
+                                      "h1": "MuiTypography-h1",
+                                      "h2": "MuiTypography-h2",
+                                      "h3": "MuiTypography-h3",
+                                      "h4": "MuiTypography-h4",
+                                      "h5": "MuiTypography-h5",
+                                      "h6": "MuiTypography-h6",
+                                      "noWrap": "MuiTypography-noWrap",
+                                      "overline": "MuiTypography-overline",
+                                      "paragraph": "MuiTypography-paragraph",
+                                      "root": "MuiTypography-root",
+                                      "srOnly": "MuiTypography-srOnly",
+                                      "subtitle1": "MuiTypography-subtitle1",
+                                      "subtitle2": "MuiTypography-subtitle2",
                                     }
                                   }
+                                  color="secondary"
+                                  style={
+                                    Object {
+                                      "marginBottom": -3,
+                                    }
+                                  }
+                                  variant="caption"
                                 >
-                                  <WithStyles(ForwardRef(FormLabel))
-                                    className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                    classes={
+                                  <span
+                                    className="MuiTypography-root MuiTypography-caption MuiTypography-colorSecondary"
+                                    style={
                                       Object {
-                                        "asterisk": "MuiInputLabel-asterisk",
-                                        "disabled": "Mui-disabled",
-                                        "error": "Mui-error",
-                                        "focused": "Mui-focused",
-                                        "required": "Mui-required",
+                                        "marginBottom": -3,
                                       }
                                     }
-                                    data-shrink={false}
                                   >
-                                    <ForwardRef(FormLabel)
-                                      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                      classes={
-                                        Object {
-                                          "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
-                                          "colorSecondary": "MuiFormLabel-colorSecondary",
-                                          "disabled": "Mui-disabled Mui-disabled",
-                                          "error": "Mui-error Mui-error",
-                                          "filled": "MuiFormLabel-filled",
-                                          "focused": "Mui-focused Mui-focused",
-                                          "required": "Mui-required Mui-required",
-                                          "root": "MuiFormLabel-root",
-                                        }
-                                      }
-                                      data-shrink={false}
-                                    >
-                                      <label
-                                        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
-                                        data-shrink={false}
-                                      >
-                                        <span
-                                          className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-                                        >
-                                           
-                                          *
-                                        </span>
-                                      </label>
-                                    </ForwardRef(FormLabel)>
-                                  </WithStyles(ForwardRef(FormLabel))>
-                                </ForwardRef(InputLabel)>
-                              </WithStyles(ForwardRef(InputLabel))>
+                                     
+                                     
+                                  </span>
+                                </ForwardRef(Typography)>
+                              </WithStyles(ForwardRef(Typography))>
                               <WithStyles(ForwardRef(Select))
                                 SelectDisplayProps={
                                   Object {
@@ -4512,6 +4518,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   }
                                 }
                                 disabled={true}
+                                displayEmpty={true}
                                 label=""
                                 onChange={[Function]}
                                 value=""
@@ -4537,6 +4544,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     }
                                   }
                                   disabled={true}
+                                  displayEmpty={true}
                                   label=""
                                   onChange={[Function]}
                                   value=""
@@ -4657,7 +4665,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           "select": "MuiSelect-select",
                                           "selectMenu": "MuiSelect-selectMenu",
                                         },
-                                        "displayEmpty": false,
+                                        "displayEmpty": true,
                                         "labelId": undefined,
                                         "multiple": false,
                                         "onClose": undefined,
@@ -4805,7 +4813,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "select": "MuiSelect-select",
                                             "selectMenu": "MuiSelect-selectMenu",
                                           },
-                                          "displayEmpty": false,
+                                          "displayEmpty": true,
                                           "labelId": undefined,
                                           "multiple": false,
                                           "onClose": undefined,
@@ -4954,7 +4962,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "select": "MuiSelect-select",
                                               "selectMenu": "MuiSelect-selectMenu",
                                             },
-                                            "displayEmpty": false,
+                                            "displayEmpty": true,
                                             "labelId": undefined,
                                             "multiple": false,
                                             "onClose": undefined,
@@ -5109,7 +5117,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 "select": "MuiSelect-select",
                                                 "selectMenu": "MuiSelect-selectMenu",
                                               },
-                                              "displayEmpty": false,
+                                              "displayEmpty": true,
                                               "labelId": undefined,
                                               "multiple": false,
                                               "onClose": undefined,
@@ -5165,7 +5173,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 }
                                               }
                                               disabled={true}
-                                              displayEmpty={false}
+                                              displayEmpty={true}
                                               inputRef={[Function]}
                                               multiple={false}
                                               onAnimationStart={[Function]}
@@ -5721,7 +5729,18 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         fullWidth={true}
         required={false}
       >
-        <WithStyles(ForwardRef(InputLabel)) />
+        <WithStyles(ForwardRef(Typography))
+          color="secondary"
+          style={
+            Object {
+              "marginBottom": -3,
+            }
+          }
+          variant="caption"
+        >
+           
+           
+        </WithStyles(ForwardRef(Typography))>
         <WithStyles(ForwardRef(Select))
           SelectDisplayProps={
             Object {
@@ -5729,6 +5748,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             }
           }
           disabled={true}
+          displayEmpty={true}
           label=""
           onChange={[Function]}
           value=""
