@@ -86,8 +86,8 @@ export const validateDepartmentTechnicalReport = (
         }),
     },
     filesSection: {
-        ...(((fs || {}).depositAgreement !== 'on' && {
-            depositAgreement: summary.rek_copyright,
+        ...(((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
         }) ||
             {}),
     },
