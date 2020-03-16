@@ -62,7 +62,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       sm={3}
       xs={12}
     >
-      <Connect(WithStyles(AutoCompleteAsyncField))
+      <Connect(Component)
         disabled={true}
         floatingLabelText="UQ Author ID"
         hintText="Type UQ author name to search"
@@ -284,7 +284,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
       sm={3}
       xs={12}
     >
-      <Connect(WithStyles(AutoCompleteAsyncField))
+      <Connect(Component)
         disabled={true}
         floatingLabelText="UQ Author ID"
         hintText="Type UQ author name to search"
@@ -512,7 +512,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       sm={3}
       xs={12}
     >
-      <Connect(WithStyles(AutoCompleteAsyncField))
+      <Connect(Component)
         disabled={true}
         floatingLabelText="UQ Author ID"
         hintText="Type UQ author name to search"
@@ -590,7 +590,7 @@ exports[`Component ContributorForm should render display name field and identifi
       sm={3}
       xs={12}
     >
-      <Connect(WithStyles(AutoCompleteAsyncField))
+      <Connect(Component)
         disabled={true}
         floatingLabelText="UQ Author ID"
         hintText="Type UQ author name to search"
@@ -669,13 +669,14 @@ exports[`Component ContributorForm should render display name field and role fie
       sm={12}
       xs={12}
     >
-      <Connect(WithStyles(AutoCompleteAsyncField))
+      <Connect(Component)
         autoComplete="off"
         clearInput={true}
         disabled={true}
         error={false}
         fullWidth={true}
         id="creatorRoleField"
+        key="role-input-true"
         onChange={[Function]}
         required={false}
         value=""
@@ -898,7 +899,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
       sm={3}
       xs={12}
     >
-      <Connect(WithStyles(AutoCompleteAsyncField))
+      <Connect(Component)
         disabled={true}
         floatingLabelText="UQ Author ID"
         hintText="Type UQ author name to search"

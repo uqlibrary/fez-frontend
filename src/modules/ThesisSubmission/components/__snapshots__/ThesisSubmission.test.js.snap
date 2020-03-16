@@ -542,7 +542,19 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Enrolling unit"
                 hintText="Enrolling unit, eg. School of Business"
@@ -1370,7 +1382,19 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Enrolling unit"
                 hintText="Enrolling unit, eg. School of Business"

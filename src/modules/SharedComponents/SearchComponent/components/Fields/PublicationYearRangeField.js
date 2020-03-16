@@ -4,22 +4,14 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import locale from 'locale/components';
-import { withStyles } from '@material-ui/core/styles';
 
-export const styles = theme => ({
-    title: {
-        ...theme.typography.caption,
-    },
-});
-
-export class PublicationYearRangeField extends PureComponent {
+export default class PublicationYearRangeField extends PureComponent {
     static propTypes = {
         yearFilter: PropTypes.object,
         updateYearRangeFilter: PropTypes.func.isRequired,
         className: PropTypes.string,
         disabled: PropTypes.bool,
         invalid: PropTypes.bool,
-        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -51,12 +43,13 @@ export class PublicationYearRangeField extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range;
-        const { classes } = this.props;
         return (
             <React.Fragment>
                 <Grid container>
                     <Grid item xs={12}>
-                        <Typography className={classes.title}>{txt.title}</Typography>
+                        <Typography variant={'caption'} color={'secondary'}>
+                            {txt.title}
+                        </Typography>
                     </Grid>
                 </Grid>
                 <Grid container>
@@ -108,5 +101,3 @@ export class PublicationYearRangeField extends PureComponent {
         );
     }
 }
-
-export default withStyles(styles, { withTheme: true })(PublicationYearRangeField);

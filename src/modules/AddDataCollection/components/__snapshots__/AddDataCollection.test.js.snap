@@ -1095,12 +1095,26 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Contact name ID"
                 fullWidth={true}
                 hintText="Type to search ID of primary contact for this dataset"
+                id="contact-name-id-auto-complete"
                 name="contact.contactNameId"
+                required={true}
                 validate={
                   Array [
                     [Function],
@@ -5667,12 +5681,26 @@ exports[`AddDataCollection test should render component with a valid collection 
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Contact name ID"
                 fullWidth={true}
                 hintText="Type to search ID of primary contact for this dataset"
+                id="contact-name-id-auto-complete"
                 name="contact.contactNameId"
+                required={true}
                 validate={
                   Array [
                     [Function],
@@ -10239,12 +10267,26 @@ exports[`AddDataCollection test should render component with an invalid collecti
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Contact name ID"
                 fullWidth={true}
                 hintText="Type to search ID of primary contact for this dataset"
+                id="contact-name-id-auto-complete"
                 name="contact.contactNameId"
+                required={true}
                 validate={
                   Array [
                     [Function],
@@ -14811,12 +14853,26 @@ exports[`AddDataCollection test should render data set form 1`] = `
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Contact name ID"
                 fullWidth={true}
                 hintText="Type to search ID of primary contact for this dataset"
+                id="contact-name-id-auto-complete"
                 name="contact.contactNameId"
+                required={true}
                 validate={
                   Array [
                     [Function],

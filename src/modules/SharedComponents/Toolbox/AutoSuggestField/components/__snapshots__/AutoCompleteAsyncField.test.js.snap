@@ -15,7 +15,6 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     defaultHighlightedIndex={null}
     defaultInputValue="test 1"
     defaultIsOpen={false}
-    defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     id="Test"
@@ -43,7 +42,6 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   defaultHighlightedIndex={null}
   defaultInputValue="test 1"
   defaultIsOpen={false}
-  defaultSelectedItem={null}
   environment={[Window]}
   getA11yStatusMessage={[Function]}
   id="Test"
@@ -464,7 +462,6 @@ exports[`AutoCompleteAsyncField component should call given filter function on i
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
-    defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     id="autosuggest"
@@ -525,7 +522,6 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
-    defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     id="autosuggest"
@@ -1058,7 +1054,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
-                defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
                 id="autosuggest"
@@ -1351,6 +1346,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     "onKeyDown": [Function],
                                     "startAdornment": Array [
                                       <ForwardRef(WithStyles)
+                                        id="Test - 1"
                                         label="Test"
                                         onDelete={[Function]}
                                         tabIndex={-1}
@@ -1398,6 +1394,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                       "onKeyDown": [Function],
                                       "startAdornment": Array [
                                         <ForwardRef(WithStyles)
+                                          id="Test - 1"
                                           label="Test"
                                           onDelete={[Function]}
                                           tabIndex={-1}
@@ -1454,6 +1451,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                         "onKeyDown": [Function],
                                         "startAdornment": Array [
                                           <ForwardRef(WithStyles)
+                                            id="Test - 1"
                                             label="Test"
                                             onDelete={[Function]}
                                             tabIndex={-1}
@@ -1517,6 +1515,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                           "onKeyDown": [Function],
                                           "startAdornment": Array [
                                             <ForwardRef(WithStyles)
+                                              id="Test - 1"
                                               label="Test"
                                               onDelete={[Function]}
                                               tabIndex={-1}
@@ -1700,6 +1699,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                               startAdornment={
                                                 Array [
                                                   <ForwardRef(WithStyles)
+                                                    id="Test - 1"
                                                     label="Test"
                                                     onDelete={[Function]}
                                                     tabIndex={-1}
@@ -1765,6 +1765,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                 startAdornment={
                                                   Array [
                                                     <ForwardRef(WithStyles)
+                                                      id="Test - 1"
                                                       label="Test"
                                                       onDelete={[Function]}
                                                       tabIndex={-1}
@@ -1831,6 +1832,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                   startAdornment={
                                                     Array [
                                                       <ForwardRef(WithStyles)
+                                                        id="Test - 1"
                                                         label="Test"
                                                         onDelete={[Function]}
                                                         tabIndex={-1}
@@ -1902,6 +1904,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                     startAdornment={
                                                       Array [
                                                         <ForwardRef(WithStyles)
+                                                          id="Test - 1"
                                                           label="Test"
                                                           onDelete={[Function]}
                                                           tabIndex={-1}
@@ -1920,6 +1923,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                       onClick={[Function]}
                                                     >
                                                       <WithStyles(ForwardRef(Chip))
+                                                        id="Test - 1"
                                                         key="1"
                                                         label="Test"
                                                         onDelete={[Function]}
@@ -1960,12 +1964,14 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                               "sizeSmall": "MuiChip-sizeSmall",
                                                             }
                                                           }
+                                                          id="Test - 1"
                                                           label="Test"
                                                           onDelete={[Function]}
                                                           tabIndex={-1}
                                                         >
                                                           <div
                                                             className="MuiChip-root MuiChip-deletable"
+                                                            id="Test - 1"
                                                             onKeyUp={[Function]}
                                                             role="button"
                                                             tabIndex={-1}
@@ -2763,7 +2769,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
-                defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
                 id="autosuggest"
@@ -3542,7 +3547,6 @@ exports[`AutoCompleteAsyncField component should render default MenuItemComponen
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
-    defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     id="autosuggest"
@@ -3598,7 +3602,6 @@ exports[`AutoCompleteAsyncField component should render default MenuItemComponen
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
-    defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     id="autosuggest"
@@ -4182,7 +4185,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
-                defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
                 id="Test"
@@ -5409,7 +5411,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
-                defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
                 id="Test"
@@ -6086,7 +6087,6 @@ exports[`AutoCompleteAsyncField component should render with an input which allo
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
-    defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
     id="autosuggest"
@@ -6598,7 +6598,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
-                defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
                 id="autosuggest"
