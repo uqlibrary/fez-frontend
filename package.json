@@ -118,7 +118,7 @@
         "string-to-arraybuffer": "^1.0.0",
         "strip-loader": "^0.1.2",
         "style-loader": "^0.21.0",
-        "uglifyjs-webpack-plugin": "^1.2.5",
+        "terser-webpack-plugin": "^2.3.5",
         "webpack": "^4.41.4",
         "webpack-bundle-analyzer": "^3.3.2",
         "webpack-cli": "^3.0.8",
@@ -257,7 +257,7 @@
                             },
                             "targets": {
                                 "ie": 11,
-                                "uglify": true
+                                "terser": true
                             }
                         }
                     ]

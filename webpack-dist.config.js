@@ -2,7 +2,7 @@
 
 const { resolve } = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -162,7 +162,7 @@ const webpackConfig = {
             },
         },
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 sourceMap: true,
                 parallel: true,
             }),

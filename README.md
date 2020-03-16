@@ -145,7 +145,7 @@ to keep initial load to a minimum following optimisation has been added to the p
             }
         },
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 sourceMap: true,
                 parallel: true
             })
@@ -153,10 +153,10 @@ to keep initial load to a minimum following optimisation has been added to the p
     },
   ```
 
-- uglify/tree shake: used with split chunks built-in plugin in webpack 4
+- Terser/tree shake: used with split chunks built-in plugin in webpack 4
 
   ```javascript
-  new UglifyJsPlugin({ sourceMap: true });
+  new TerserPlugin({ sourceMap: true });
   ```
 
 - minify in deployment:
