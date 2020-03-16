@@ -1,30 +1,30 @@
-import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
 
+const category = 'series';
 const mapStateToProps = (state, props) => {
-    const category = 'series';
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
+        state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
-        category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList
-                : [],
         allowFreeText: true,
-        onChange: item => props.input.onChange(item.value),
-        async: true,
+        defaultValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
         errorText: props.meta ? props.meta.error : null,
         error: !!props.meta && !!props.meta.error,
-        itemToString: item => (!!item && String(item.value)) || '',
-        selectedValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
+        filterOptions: options => options,
+        getOptionLabel: item => (!!item && String(item.value)) || '',
+        itemsList,
+        itemsLoading,
     };
 };
 
-const mapDispatchToProps = dispatch => ({
-    loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+const mapDispatchToProps = (dispatch, props) => ({
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
+    onChange: item => props.input.onChange(item.value),
+    onClear: () => props.input.onChange(null),
 });
 
 export const SeriesField = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(AutoCompleteAsyncField);
+)(AutoCompleteAsynchronousField);
