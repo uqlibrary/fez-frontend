@@ -125,13 +125,16 @@ describe('SbsSubmission test', () => {
     });
 
     it('should redirect to after submit page', () => {
-        window.location.assign = jest.fn();
+        const { location } = window;
+        delete window.location;
+        window.location = { assign: jest.fn() };
         setup({})
             .instance()
             .afterSubmit();
         expect(window.location.assign).toBeCalledWith(
             expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
         );
+        window.location = location;
     });
 
     it('should display confirmation box before submission', () => {
@@ -159,12 +162,13 @@ describe('SbsSubmission test', () => {
     });
 
     it('cancelSubmit() method', () => {
-        const testMethod = jest.fn();
+        const { location } = window;
+        delete window.location;
+        window.location = { reload: jest.fn() };
         const wrapper = setup();
-        delete global.window.location;
-        global.window.location = { reload: testMethod };
         wrapper.instance().cancelSubmit();
-        expect(testMethod).toHaveBeenCalled();
+        expect(window.location.reload).toHaveBeenCalled();
+        window.location = location;
     });
 
     it('setDepositConfirmation(ref) method', () => {
