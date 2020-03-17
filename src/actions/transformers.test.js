@@ -2729,6 +2729,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2748,6 +2749,10 @@ describe('getBibliographicSectionSearchKeys', () => {
                     {
                         rek_language_of_book_title: 'fre',
                     },
+                ],
+                fez_record_search_key_issn: [
+                    { rek_issn: '1212-1212', rek_issn_order: 1 },
+                    { rek_issn: '2323-2323', rek_issn_order: 2 },
                 ],
             });
         });

@@ -4,30 +4,86 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnRowItemTemplate = ({ item }) => {
+export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => {
+    const convertItem = theItem =>
+        !!theItem.key
+            ? theItem
+            : {
+                key: theItem,
+                value: {
+                    sherpaRomeo: {
+                        link: '',
+                    },
+                    ulrichs: {
+                        link: '',
+                    },
+                },
+            };
+
+    const [issn, setIssn] = React.useState(convertItem(item));
+
+    React.useEffect(() => {
+        const issnFromProp = item.key || item;
+        if (issnFromProp !== issn.key) {
+            setIssn(convertItem(issnFromProp));
+        }
+    }, [issn, item]);
+
+    React.useEffect(() => {
+        if (!issn.value || !issn.value.sherpaRomeo || !issn.value.sherpaRomeo.link) {
+            if (sherpaRomeo) {
+                setIssn({
+                    ...issn,
+                    value: {
+                        ...issn.value,
+                        sherpaRomeo,
+                    },
+                });
+            } else {
+                actions.getSherpaFromIssn(issn.key);
+            }
+        }
+    }, [actions, issn, sherpaRomeo]);
+
+    React.useEffect(() => {
+        if (!issn.value || !issn.value.ulrichs || !issn.value.ulrichs.link) {
+            if (ulrichs) {
+                setIssn({
+                    ...issn,
+                    value: {
+                        ...issn.value,
+                        ulrichs,
+                    },
+                });
+            } else {
+                actions.getUlrichsFromIssn(issn.key);
+            }
+        }
+    }, [actions, issn, ulrichs]);
+
     return (
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
-                <span>{!!item.key ? item.key : item}</span>{' '}
-                {!!item.value && !!item.value.sherpaRomeo && !!item.value.sherpaRomeo.link && (
+                <span>{issn.key}</span>{' '}
+                {!!issn.value && !!issn.value.sherpaRomeo && !!issn.value.sherpaRomeo.link && (
                     <ExternalLink
-                        href={item.value.sherpaRomeo.link}
+                        href={issn.value.sherpaRomeo.link}
                         aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
-                        title={item.value.sherpaRomeo.title}
+                        title={globalLocale.global.sherpaRomeoLink.title}
                     >
                         {globalLocale.global.sherpaRomeoLink.externalLinktext}
                     </ExternalLink>
                 )}
-                {!!item.value &&
-                    !!item.value.sherpaRomeo &&
-                    !!item.value.sherpaRomeo.link &&
-                    !!item.value.ulrichs &&
-                    !!item.value.ulrichs.link && <span> or </span>}
-                {!!item.value && !!item.value.ulrichs.link && !!item.value.ulrichs.linkText && (
+                {!!issn.value &&
+                    !!issn.value.sherpaRomeo &&
+                    !!issn.value.sherpaRomeo.link &&
+                    !!issn.value.ulrichs &&
+                    !!issn.value.ulrichs.link && <span> &nbsp;</span>}
+                {!!issn.value && !!issn.value.ulrichs && !!issn.value.ulrichs.link && (
                     <ExternalLink
-                        href={item.value.ulrichs.link}
+                        href={issn.value.ulrichs.link}
                         aria-label={globalLocale.global.ulrichsLink.ariaLabel}
-                        title={item.value.ulrichs.title}
+                        title={issn.value.ulrichs.title}
                     >
                         {globalLocale.global.ulrichsLink.externalLinktext}
                     </ExternalLink>
@@ -38,5 +94,10 @@ export const IssnRowItemTemplate = ({ item }) => {
 };
 
 IssnRowItemTemplate.propTypes = {
+    actions: PropTypes.object,
     item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    sherpaRomeo: PropTypes.object,
+    ulrichs: PropTypes.object,
 };
+
+export default IssnRowItemTemplate;

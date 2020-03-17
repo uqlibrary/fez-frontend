@@ -310,3 +310,7 @@ export const BATCH_IMPORT_API = () => {
         apiUrl: 'external/records/batch-import',
     };
 };
+
+export const ISSN_LINKS_API = ({ type }) => ({
+    apiUrl: `tool/lookup/${type}`,
+});

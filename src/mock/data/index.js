@@ -58,3 +58,5 @@ export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';
 export { batchImportDirectories } from './batchImportDirectories';
+export { sherpaRomeo } from './sherpaRomeo';
+export { ulrichs } from './ulrichs';
