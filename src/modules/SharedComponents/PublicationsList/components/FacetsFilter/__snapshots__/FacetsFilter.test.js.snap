@@ -60,7 +60,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
       key="facet-category-Display-type"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -90,7 +90,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -140,7 +140,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -170,7 +170,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -205,7 +205,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
       key="facet-category-Collection"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -235,7 +235,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
       key="facet-category-Author"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -289,7 +289,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
       key="facet-category-Display-type"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -324,7 +324,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -374,7 +374,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -404,7 +404,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -439,7 +439,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
       key="facet-category-Collection"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -469,7 +469,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
       key="facet-category-Author"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -523,7 +523,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       key="facet-category-Display-type"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {
@@ -557,7 +557,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {
@@ -611,7 +611,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {
@@ -645,7 +645,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {
@@ -684,7 +684,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       key="facet-category-Collection"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {
@@ -718,7 +718,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       key="facet-category-Author"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {
@@ -15320,7 +15320,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   <div
                                     className="MuiCollapse-wrapperInner-76"
                                   >
-                                    <Memo(FacetFilterNestedListItemsList)
+                                    <Memo(FacetFilterNestedListItems)
                                       activeFacets={
                                         Object {
                                           "filters": Object {
@@ -16533,7 +16533,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                           </WithStyles(ListItem)>
                                         </FacetsFilterNestedListItem>
                                       </WithStyles(FacetsFilterNestedListItem)>
-                                    </Memo(FacetFilterNestedListItemsList)>
+                                    </Memo(FacetFilterNestedListItems)>
                                   </div>
                                 </div>
                               </div>
@@ -26384,7 +26384,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       key="facet-category-Display-type"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26416,7 +26416,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26468,7 +26468,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26500,7 +26500,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26537,7 +26537,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       key="facet-category-Collection"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26569,7 +26569,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       key="facet-category-Author"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26625,7 +26625,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26675,7 +26675,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26705,7 +26705,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26740,7 +26740,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       key="facet-category-Collection"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -26770,7 +26770,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       key="facet-category-Author"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -27818,7 +27818,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       key="facet-category-Display-type"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -27848,7 +27848,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -27898,7 +27898,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -27928,7 +27928,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -27963,7 +27963,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       key="facet-category-Collection"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -27993,7 +27993,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       key="facet-category-Author"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -28057,7 +28057,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       key="facet-category-Display-type"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -28092,7 +28092,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       key="facet-category-Keywords"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -28142,7 +28142,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       key="facet-category-Year-published"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -28172,7 +28172,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       key="facet-category-Journal-name"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -28207,7 +28207,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       key="facet-category-Collection-(lookup)"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
@@ -28237,7 +28237,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       key="facet-category-Author-(lookup)"
       onToggle={[Function]}
     >
-      <Memo(FacetFilterNestedListItemsList)
+      <Memo(FacetFilterNestedListItems)
         activeFacets={
           Object {
             "filters": Object {},
