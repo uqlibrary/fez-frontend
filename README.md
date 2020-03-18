@@ -302,6 +302,8 @@ you in as that user. Usernames can be found in the `src/mock/data/accounts.js` f
 - user who has readonly masquerade (but not admin): <http://localhost:3000/?user=uqmasquerade>
 - user who can do CSV Ingest: <http://localhost:3000/?user=digiteamMember>
 
+So an example staff link for an example admin edit page will be <http://localhost:3000/admin/edit/UQ:358319?user=uqstaff>
+
 The following access is required:
 
 | User type          | masquerade | admin | Resulting access                               |
