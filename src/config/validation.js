@@ -130,7 +130,9 @@ export const authorAffiliationRequired = (authorAffiliation, loggedInAuthor) =>
     (authorAffiliation.uqIdentifier === '0' || authorAffiliation.uqIdentifier === String(loggedInAuthor.aut_id)) &&
     ((authorAffiliation.nameAsPublished || '').trim().length === 0 ||
         (authorAffiliation.orgaff || '').trim().length === 0 ||
+        authorAffiliation.orgaff === 'Missing' ||
         (authorAffiliation.orgtype || '').trim().length === 0 ||
+        authorAffiliation.orgtype === 'Missing' ||
         authorAffiliation.orgtype === ORG_TYPE_NOT_SET);
 
 // DateTime
