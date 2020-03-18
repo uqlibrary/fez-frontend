@@ -2783,6 +2783,51 @@ describe('getBibliographicSectionSearchKeys', () => {
             });
         });
     });
+
+    describe('Department Technical Report', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: {
+                            id: 'UQ:734361',
+                            value: 'The Material Library of Cladding Materials',
+                        },
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: 'UQ:734361',
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            });
+
+            const data2 = {
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: 'UQ:734361',
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: 'UQ:734361',
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            });
+        });
+    });
 });
 
 describe('getAuthorsSectionSearchKeys', () => {
