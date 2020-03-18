@@ -1098,43 +1098,34 @@ export const LANGUAGE = [
     { value: 'yid', text: 'Yiddish' },
 ];
 
-export const UNPUBLISHED_BUFFER_ACTION_URLS = [
+const pathPrefix = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+
+export const RECORD_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid =>
-            process.env.NODE_ENV === 'development' ? `${APP_URL}#/admin/edit/${pid}` : `${APP_URL}admin/edit/${pid}`,
+        url: pid => `${APP_URL}${pathPrefix}admin/edit/${pid}`,
         inApp: true,
     },
     {
         label: 'Edit author affiliations',
         url: pid =>
-            process.env.NODE_ENV === 'development'
-                ? `${APP_URL}#/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
-                : `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+            `${APP_URL}${pathPrefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
         inApp: true,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: pid =>
-            process.env.NODE_ENV === 'development'
-                ? `${APP_URL}#/admin/edit/${pid}?tab=security`
-                : `${APP_URL}admin/edit/${pid}?tab=security`,
+        url: pid => `${APP_URL}${pathPrefix}admin/edit/${pid}?tab=security`,
     },
     {
         label: 'Delete selected record',
         url: pid =>
-            process.env.NODE_ENV === 'development'
-                ? `${APP_URL}#/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
-                : `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
+            `${APP_URL}${pathPrefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
         inApp: true,
     },
     {
         label: 'More options',
-        url: pid =>
-            process.env.NODE_ENV === 'development'
-                ? `${APP_URL}#/workflow/list_workflows2.php?pid=${pid}`
-                : `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
+        url: pid => `${APP_URL}${pathPrefix}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
     },
 ];

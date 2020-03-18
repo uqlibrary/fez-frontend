@@ -6121,7 +6121,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "exact": true,
           "pageTitle": "Add a new record",
-          "path": "/admin/add/",
+          "path": "/admin/add",
           "render": [Function],
         },
         Object {
@@ -6445,7 +6445,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing collection",
         },
         Object {
-          "linkTo": "/admin/add/",
+          "linkTo": "/admin/add",
           "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
@@ -6772,7 +6772,7 @@ exports[`Application component should render app for account with fez author wit
           exact={true}
           key="route_19"
           pageTitle="Add a new record"
-          path="/admin/add/"
+          path="/admin/add"
           render={[Function]}
         />
         <Route
@@ -7842,7 +7842,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "exact": true,
           "pageTitle": "Add a new record",
-          "path": "/admin/add/",
+          "path": "/admin/add",
           "render": [Function],
         },
         Object {
@@ -8166,7 +8166,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing collection",
         },
         Object {
-          "linkTo": "/admin/add/",
+          "linkTo": "/admin/add",
           "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
@@ -8522,7 +8522,7 @@ exports[`Application component should render app for account with fez author wit
           exact={true}
           key="route_19"
           pageTitle="Add a new record"
-          path="/admin/add/"
+          path="/admin/add"
           render={[Function]}
         />
         <Route
@@ -8839,7 +8839,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "exact": true,
           "pageTitle": "Add a new record",
-          "path": "/admin/add/",
+          "path": "/admin/add",
           "render": [Function],
         },
         Object {
@@ -9163,7 +9163,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing collection",
         },
         Object {
-          "linkTo": "/admin/add/",
+          "linkTo": "/admin/add",
           "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
@@ -9490,7 +9490,7 @@ exports[`Application component should render app for account with fez author wit
           exact={true}
           key="route_19"
           pageTitle="Add a new record"
-          path="/admin/add/"
+          path="/admin/add"
           render={[Function]}
         />
         <Route
@@ -9807,7 +9807,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "exact": true,
           "pageTitle": "Add a new record",
-          "path": "/admin/add/",
+          "path": "/admin/add",
           "render": [Function],
         },
         Object {
@@ -10131,7 +10131,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "Add a missing collection",
         },
         Object {
-          "linkTo": "/admin/add/",
+          "linkTo": "/admin/add",
           "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
@@ -10487,7 +10487,7 @@ exports[`Application component should render app for account with fez author wit
           exact={true}
           key="route_19"
           pageTitle="Add a new record"
-          path="/admin/add/"
+          path="/admin/add"
           render={[Function]}
         />
         <Route

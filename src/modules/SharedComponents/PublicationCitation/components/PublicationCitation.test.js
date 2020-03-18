@@ -205,8 +205,27 @@ describe('PublicationCitation ', () => {
     });
 
     it('should show admin actions on unpublished buffer/search records page for admins', () => {
-        const wrapper = setup({ showAdminActions: true, hideCitationCounts: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper = setup({
+            showAdminActions: true,
+            hideCitationCounts: true,
+            location: {
+                hash: '#/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+                search: '',
+                pathname: '/espace/feature-example/', // hosted feature branch
+            },
+        });
+        expect(toJson(wrapper.find('Memo(AdminActions)'))).toMatchSnapshot();
+
+        const wrapper2 = setup({
+            showAdminActions: true,
+            hideCitationCounts: true,
+            location: {
+                hash: '',
+                pathname: '/records/search',
+                search: '?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+            },
+        });
+        expect(toJson(wrapper2.find('Memo(AdminActions)'))).toMatchSnapshot();
     });
 
     it('should render component with content indicators', () => {

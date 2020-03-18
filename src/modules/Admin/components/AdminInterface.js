@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
@@ -20,7 +20,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import ScrollToSection from './ScrollToSection';
-import { useTabbedContext, useRecordContext /* , ScrollToSectionContext */ } from 'context';
+import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
@@ -31,19 +31,37 @@ import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 import { adminInterfaceConfig } from 'config/admin';
 
-export const useQueryStringTabValueState = (location, initialValue) => {
-    const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
-    const tabValue = (queryStringObject && queryStringObject.tab) || initialValue;
-    return useState(tabValue);
+export const getQueryStringValue = (location, varName, initialValue) => {
+    const queryStringObject = queryString.parse(
+        location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
+        { ignoreQueryPrefix: true },
+    );
+    return (queryStringObject && queryStringObject[varName]) || initialValue;
+};
+
+export const navigateToSearchResult = (createMode, authorDetails, history, location) => {
+    if (createMode) {
+        history.push(routes.pathConfig.admin.add);
+    }
+    const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
+    if (
+        authorDetails &&
+        (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
+        !!navigatedFrom
+    ) {
+        history.push(decodeURIComponent(navigatedFrom));
+    } else {
+        history.push(routes.pathConfig.records.mine);
+    }
 };
 
 export const AdminInterface = ({
     classes,
     submitting,
     handleSubmit,
-    location,
     tabs,
     history,
+    location,
     submitSucceeded,
     createMode,
     disableSubmit,
@@ -55,11 +73,11 @@ export const AdminInterface = ({
     const { tabbed } = useTabbedContext();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
     const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
-    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location, defaultTab);
+    const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
-    const successConfirmationRef = useRef();
-    const alertProps = useRef(null);
-    const txt = useRef(pageLocale.pages.edit);
+    const successConfirmationRef = React.useRef();
+    const alertProps = React.useRef(null);
+    const txt = React.useRef(pageLocale.pages.edit);
 
     alertProps.current = validation.getErrorAlertProps({
         submitting,
@@ -68,27 +86,24 @@ export const AdminInterface = ({
         alertLocale: txt.current.alerts,
     });
 
-    /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         return () => {
             destroy(FORM_NAME);
         };
     }, [destroy]);
 
-    /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         Cookies.set('adminFormTabbed', tabbed ? 'tabbed' : 'fullform');
     }, [tabbed]);
 
-    /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         if (!submitting && submitSucceeded && successConfirmationRef.current) {
             successConfirmationRef.current.showConfirmation();
         }
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-    /* istanbul ignore next */
+
     const handleCancel = event => {
         event.preventDefault();
         if (!!record.rek_pid) {
@@ -100,9 +115,8 @@ export const AdminInterface = ({
         }
     };
 
-    /* istanbul ignore next */
-    const setSuccessConfirmationRef = useCallback(node => {
-        successConfirmationRef.current = node;
+    const setSuccessConfirmationRef = React.useCallback(node => {
+        successConfirmationRef.current = node; // TODO: Add check that this worked
     }, []);
 
     if (!record) {
@@ -127,30 +141,6 @@ export const AdminInterface = ({
             </StandardPage>
         );
     }
-
-    /* istanbul ignore next */
-    const navigateToSearchResult = createMode => {
-        if (createMode) {
-            history.push(routes.pathConfig.admin.add);
-        }
-        const navigatedFrom = queryString.parse(location.search).navigatedFrom || null;
-        if (
-            (authorDetails && authorDetails.is_administrator === 1) ||
-            (authorDetails.is_super_administrator === 1 && !!navigatedFrom)
-        ) {
-            history.push(navigatedFrom);
-        } else if (
-            authorDetails &&
-            authorDetails.is_administrator !== 1 &&
-            authorDetails.is_super_administrator !== 1
-        ) {
-            history.push(routes.pathConfig.records.mine);
-        } else {
-            history.push(navigatedFrom);
-        }
-    };
-
-    /* istanbul ignore next */
     const navigateToViewRecord = pid => {
         if (!!pid && validation.isValidPid(pid)) {
             history.push(routes.pathConfig.records.view(pid));
@@ -176,12 +166,9 @@ export const AdminInterface = ({
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
-                        onAction={() => navigateToSearchResult(createMode)}
+                        onAction={() => navigateToSearchResult(createMode, authorDetails, history, location)}
                         locale={saveConfirmationLocale}
-                        onCancelAction={
-                            /* istanbul ignore next */
-                            () => navigateToViewRecord(record.rek_pid)
-                        }
+                        onCancelAction={() => navigateToViewRecord(record.rek_pid)}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
@@ -257,7 +244,6 @@ export const AdminInterface = ({
                         </Grid>
                     </Hidden>
                 </Grid>
-                {/* --------------- Content here ---------------*/}
                 <form>
                     <Grid container spacing={0}>
                         {!tabbed
