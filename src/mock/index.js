@@ -263,8 +263,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        const vocabId = config.url.substring(config.url.indexOf('=') + 1);
-        return [200, mockData.vocabulariesList[vocabId]];
+        const vocabIds = config.url
+            .substring(config.url.indexOf('=') + 1)
+            .split(',')
+            .map(vocabId => parseInt(vocabId));
+        let data = [];
+        const { vocabulariesList } = mockData;
+        vocabIds.forEach(vocabId => {
+            !!vocabulariesList[vocabId] && data.push(...vocabulariesList[vocabId].data);
+        });
+        return [200, { total: data.length, data }];
     })
     .onGet(
         new RegExp(
