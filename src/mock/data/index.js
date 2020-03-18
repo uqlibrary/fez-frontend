@@ -24,6 +24,7 @@ export {
     recordWithDatastreams,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    UQ341923,
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
