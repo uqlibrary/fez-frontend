@@ -58,7 +58,7 @@ export class LinksClass extends PureComponent {
     );
 
     getDOILink = (doi, openAccessStatus) => {
-        if (doi.indexOf('uql') === -1) {
+        if (doi.indexOf('10.14264') === -1) {
             return {
                 index: 'doi',
                 link: <DoiCitationView doi={doi} />,
