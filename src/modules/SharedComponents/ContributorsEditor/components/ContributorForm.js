@@ -114,8 +114,7 @@ export const ContributorForm = ({
             ...contributor,
             nameAsPublished:
                 contributor.nameAsPublished ||
-                (selectedItem && selectedItem.aut_lname && `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`) ||
-                '',
+                (selectedItem && selectedItem.aut_lname && `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
             uqIdentifier: `${selectedItem.aut_id}`,
             uqUsername: `${selectedItem.aut_org_username || selectedItem.aut_student_username} - ${
                 selectedItem.aut_id

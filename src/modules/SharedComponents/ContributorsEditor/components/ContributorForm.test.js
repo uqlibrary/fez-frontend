@@ -1,6 +1,8 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
 import { rtlRender, withRedux, fireEvent, waitForElement } from 'test-utils';
+import * as repositories from 'repositories';
+import * as mockData from 'mock/data';
 
 function setup(testProps = {}) {
     const props = {
@@ -34,6 +36,7 @@ describe('Component ContributorForm', () => {
     it('should render display name field only', () => {
         const { getByTestId } = setup();
         expect(getByTestId('name-as-published')).toBeInTheDocument();
+        expect(getByTestId('submit-author').disabled).toBeTruthy();
     });
 
     it('should render display name field and identifier field', () => {
@@ -200,252 +203,275 @@ describe('Component ContributorForm', () => {
         expect(getByTestId('submit-author').disabled).toBeFalsy();
     });
 
-    // it('should disable button for NTRO 2', () => {
-    //     const wrapper = setup({
-    //         disabled: false,
-    //         showRoleInput: false,
-    //         isNtro: true,
-    //     });
-    //     wrapper.setState({
-    //         contributor: {
-    //             nameAsPublished: 'test',
-    //             creatorRole: 'role',
-    //             affiliation: AFFILIATION_TYPE_NOT_UQ,
-    //             orgaff: 'test',
-    //             orgtype: '',
-    //         },
-    //     });
-    //     expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
-    // });
+    it('should show contributor assignment', () => {
+        const { getByText } = setup({
+            showContributorAssignment: true,
+        });
+        expect(getByText('Step 1 description')).toBeInTheDocument();
+    });
 
-    // it('should not disable the button if work is not NTRO', () => {
-    //     const wrapper = setup({
-    //         disabled: false,
-    //         showRoleInput: false,
-    //         isNtro: false,
-    //     });
-    //     wrapper.setState({
-    //         contributor: {
-    //             nameAsPublished: 'test',
-    //             creatorRole: '',
-    //             affiliation: '',
-    //             orgaff: '',
-    //             orgtype: '',
-    //         },
-    //     });
-    //     expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
-    // });
+    it('should be able to set uqIdentifier on the contributor object', async() => {
+        const testParam = 'christ';
+        const testRequest = { query: testParam };
 
-    // it('should be disable the button', () => {
-    //     const wrapper = setup({
-    //         disabled: true,
-    //         showRoleInput: false,
-    //     });
-    //     wrapper.setState({
-    //         contributor: {
-    //             nameAsPublished: 'test',
-    //             creatorRole: '',
-    //             affiliation: '',
-    //             orgaff: '',
-    //             orgtype: '',
-    //         },
-    //     });
-    //     expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
-    // });
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, mockData.authorsSearch);
+        const testFn = jest.fn();
 
-    // it('should show contributor assignment', () => {
-    //     const wrapper = setup({
-    //         showContributorAssignment: true,
-    //     });
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // });
+        const { getByTestId, getByText } = setup({
+            showIdentifierLookup: true,
+            onSubmit: testFn,
+        });
 
-    // it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
-    //     const wrapper = setup({
-    //         showRoleInput: true,
-    //         showIdentifierLookup: true,
-    //     });
-    //     expect(
-    //         wrapper
-    //             .find('#creatorRoleField')
-    //             .parent()
-    //             .prop('md'),
-    //     ).toBe(3);
-    // });
+        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Testing, UqId' } });
+        fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
-    // it('should process prop updates', () => {
-    //     const contributor1 = { nameAsPublished: 'value1' };
-    //     const contributor2 = { nameAsPublished: 'value2' };
+        const list = await waitForElement(() => getByTestId('identifier-field-popup'));
+        fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
+        expect(testFn).toBeCalledWith({
+            id: 553,
+            value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+            affiliation: '',
+            creatorRole: '',
+            nameAsPublished: 'Testing, UqId',
+            orgaff: '',
+            orgtype: '',
+            uqIdentifier: '553',
+            aut_id: 553,
+            aut_org_username: 'mdcmar',
+            aut_org_staff_id: '0002633',
+            aut_org_student_id: null,
+            aut_email: null,
+            aut_display_name: 'Del Mar, Christopher B.',
+            aut_fname: 'Christopher',
+            aut_mname: 'Bernard',
+            aut_lname: 'Del Mar',
+            aut_title: 'Professor',
+            aut_position: '',
+            aut_homepage_link: '',
+            aut_created_date: null,
+            aut_update_date: '2010-10-08',
+            aut_external_id: '0000041362',
+            aut_ref_num: '',
+            aut_researcher_id: null,
+            aut_scopus_id: '',
+            aut_mypub_url: '',
+            aut_rid_password: null,
+            aut_people_australia_id: null,
+            aut_description: null,
+            aut_orcid_id: null,
+            aut_google_scholar_id: null,
+            aut_rid_last_updated: null,
+            aut_publons_id: null,
+            aut_student_username: null,
+            uqUsername: 'mdcmar - 553',
+        });
+    });
 
-    //     const wrapper = setup({
-    //         contributor: contributor1,
-    //     });
-    //     const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+    it('should be able to set nameAsPublished on the contributor object from selected author', async() => {
+        const testParam = 'christ';
+        const testRequest = { query: testParam };
 
-    //     expect(toJson(wrapper)).toMatchSnapshot();
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, mockData.authorsSearch);
+        const testFn = jest.fn();
 
-    //     wrapper.setProps({
-    //         contributor: contributor2,
-    //     });
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    //     expect(componentWillReceiveProps).toHaveBeenCalled();
-    // });
+        const { getByTestId, getByText } = setup({
+            showIdentifierLookup: true,
+            onSubmit: testFn,
+        });
 
-    // it('should be able to set uqIdentifier on the contributor object', () => {
-    //     const testFn = jest.fn();
-    //     const wrapper = setup({
-    //         onSubmit: testFn,
-    //     });
-    //     wrapper.instance()._onUQIdentifierSelected({ aut_id: 111, aut_org_username: 'uqtest' });
-    //     expect(testFn).toBeCalledWith({
-    //         affiliation: '',
-    //         creatorRole: '',
-    //         nameAsPublished: '',
-    //         orgaff: '',
-    //         orgtype: '',
-    //         uqIdentifier: '111',
-    //         aut_id: 111,
-    //         aut_org_username: 'uqtest',
-    //         uqUsername: 'uqtest - 111',
-    //     });
-    // });
+        fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
-    // it('should be able to set nameAsPublished on the contributor object from selected author', () => {
-    //     const testFn = jest.fn();
-    //     const wrapper = setup({
-    //         onSubmit: testFn,
-    //     });
-    //     wrapper.instance()._onUQIdentifierSelected({
-    //         aut_id: 111,
-    //         aut_lname: 'Test',
-    //         aut_fname: 'Testing',
-    //         aut_org_username: 'uqtest',
-    //     });
-    //     expect(testFn).toBeCalledWith({
-    //         affiliation: '',
-    //         creatorRole: '',
-    //         nameAsPublished: 'Test, Testing',
-    //         orgaff: '',
-    //         orgtype: '',
-    //         uqIdentifier: '111',
-    //         aut_id: 111,
-    //         aut_lname: 'Test',
-    //         aut_fname: 'Testing',
-    //         aut_org_username: 'uqtest',
-    //         uqUsername: 'uqtest - 111',
-    //     });
-    // });
+        const list = await waitForElement(() => getByTestId('identifier-field-popup'));
+        fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
+        expect(testFn).toBeCalledWith({
+            id: 553,
+            value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+            affiliation: '',
+            creatorRole: '',
+            nameAsPublished: 'Del Mar, Christopher',
+            orgaff: '',
+            orgtype: '',
+            uqIdentifier: '553',
+            aut_id: 553,
+            aut_org_username: 'mdcmar',
+            aut_org_staff_id: '0002633',
+            aut_org_student_id: null,
+            aut_email: null,
+            aut_display_name: 'Del Mar, Christopher B.',
+            aut_fname: 'Christopher',
+            aut_mname: 'Bernard',
+            aut_lname: 'Del Mar',
+            aut_title: 'Professor',
+            aut_position: '',
+            aut_homepage_link: '',
+            aut_created_date: null,
+            aut_update_date: '2010-10-08',
+            aut_external_id: '0000041362',
+            aut_ref_num: '',
+            aut_researcher_id: null,
+            aut_scopus_id: '',
+            aut_mypub_url: '',
+            aut_rid_password: null,
+            aut_people_australia_id: null,
+            aut_description: null,
+            aut_orcid_id: null,
+            aut_google_scholar_id: null,
+            aut_rid_last_updated: null,
+            aut_publons_id: null,
+            aut_student_username: null,
+            uqUsername: 'mdcmar - 553',
+        });
+    });
+    it('should be able to set uqUsername on the contributor object from selected author student username', async() => {
+        const testParam = 'christ';
+        const testRequest = { query: testParam };
 
-    // it('should be able to set nameAsPublished on the contributor object from selected author', () => {
-    //     const testFn = jest.fn();
-    //     const wrapper = setup({
-    //         onSubmit: testFn,
-    //     });
-    //     wrapper.instance()._onUQIdentifierSelected({
-    //         aut_id: 111,
-    //         aut_lname: 'Test',
-    //         aut_fname: 'Testing',
-    //         aut_student_username: 'uqtest',
-    //     });
-    //     expect(testFn).toBeCalledWith({
-    //         affiliation: '',
-    //         creatorRole: '',
-    //         nameAsPublished: 'Test, Testing',
-    //         orgaff: '',
-    //         orgtype: '',
-    //         uqIdentifier: '111',
-    //         aut_id: 111,
-    //         aut_lname: 'Test',
-    //         aut_fname: 'Testing',
-    //         aut_student_username: 'uqtest',
-    //         uqUsername: 'uqtest - 111',
-    //     });
-    // });
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, {
+            data: [
+                {
+                    aut_id: 553,
+                    aut_org_username: null,
+                    aut_org_staff_id: '0002633',
+                    aut_org_student_id: null,
+                    aut_email: null,
+                    aut_display_name: 'Del Mar, Christopher B.',
+                    aut_fname: 'Christopher',
+                    aut_mname: 'Bernard',
+                    aut_lname: 'Del Mar',
+                    aut_title: 'Professor',
+                    aut_position: '',
+                    aut_homepage_link: '',
+                    aut_created_date: null,
+                    aut_update_date: '2010-10-08',
+                    aut_external_id: '0000041362',
+                    aut_ref_num: '',
+                    aut_researcher_id: null,
+                    aut_scopus_id: '',
+                    aut_mypub_url: '',
+                    aut_rid_password: null,
+                    aut_people_australia_id: null,
+                    aut_description: null,
+                    aut_orcid_id: null,
+                    aut_google_scholar_id: null,
+                    aut_rid_last_updated: null,
+                    aut_publons_id: null,
+                    aut_student_username: 'smdcmar',
+                },
+            ],
+        });
+        const testFn = jest.fn();
 
-    // it('should set state properly when UQ identifier is cleared', () => {
-    //     const wrapper = setup({});
-    //     const testFn = jest.fn();
-    //     wrapper.instance()._onSubmit = testFn;
+        const { getByTestId, getByText } = setup({
+            showIdentifierLookup: true,
+            onSubmit: testFn,
+        });
 
-    //     const initialState = wrapper.state();
-    //     const { uqUsername, ...rest } = initialState.contributor;
+        fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
-    //     const expected = {
-    //         ...initialState,
-    //         contributor: {
-    //             ...rest,
-    //             uqIdentifier: '0',
-    //             orgaff: 'Missing',
-    //             affiliation: '',
-    //             uqUsername: '',
-    //         },
-    //     };
+        const list = await waitForElement(() => getByTestId('identifier-field-popup'));
+        fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
+        expect(testFn).toBeCalledWith({
+            id: 553,
+            value: 'Professor Del Mar, Christopher B.  (smdcmar)',
+            affiliation: '',
+            creatorRole: '',
+            nameAsPublished: 'Del Mar, Christopher',
+            orgaff: '',
+            orgtype: '',
+            uqIdentifier: '553',
+            aut_id: 553,
+            aut_org_username: null,
+            aut_org_staff_id: '0002633',
+            aut_org_student_id: null,
+            aut_email: null,
+            aut_display_name: 'Del Mar, Christopher B.',
+            aut_fname: 'Christopher',
+            aut_mname: 'Bernard',
+            aut_lname: 'Del Mar',
+            aut_title: 'Professor',
+            aut_position: '',
+            aut_homepage_link: '',
+            aut_created_date: null,
+            aut_update_date: '2010-10-08',
+            aut_external_id: '0000041362',
+            aut_ref_num: '',
+            aut_researcher_id: null,
+            aut_scopus_id: '',
+            aut_mypub_url: '',
+            aut_rid_password: null,
+            aut_people_australia_id: null,
+            aut_description: null,
+            aut_orcid_id: null,
+            aut_google_scholar_id: null,
+            aut_rid_last_updated: null,
+            aut_publons_id: null,
+            aut_student_username: 'smdcmar',
+            uqUsername: 'smdcmar - 553',
+        });
+    });
+    it('should set state properly when UQ identifier is cleared', () => {
+        const testFn = jest.fn();
+        const { getByTitle } = setup({
+            onSubmit: testFn,
+            showIdentifierLookup: true,
+            contributor: {
+                nameAsPublished: 'Test',
+                uqIdentifier: '411',
+            },
+        });
 
-    //     wrapper.instance()._onUQIdentifierCleared();
+        fireEvent.click(getByTitle('Clear'));
 
-    //     expect(wrapper.state()).toEqual(expected);
-    //     expect(testFn).toHaveBeenCalledTimes(1);
-    //     expect(uqUsername).toBe('');
-    // });
+        expect(testFn).toHaveBeenCalledWith({
+            affiliation: '',
+            creatorRole: '',
+            nameAsPublished: 'Test',
+            orgaff: 'Missing',
+            orgtype: '',
+            uqIdentifier: '0',
+            uqUsername: '',
+        });
+    });
 
-    // it('should clear contributor form on cancellation from edit', () => {
-    //     const testFn = jest.fn();
-    //     const wrapper = setup({
-    //         onSubmit: testFn,
-    //         contributor: {
-    //             nameAsPublished: 'Firstname Lastname',
-    //             affiliation: 'UQ',
-    //             orgaff: '',
-    //             orgtype: '',
-    //             creatorRole: '',
-    //         },
-    //     });
-    //     wrapper.instance()._onCancel();
-    //     expect(testFn).toBeCalledWith({
-    //         nameAsPublished: 'Firstname Lastname',
-    //         affiliation: 'UQ',
-    //         orgaff: '',
-    //         orgtype: '',
-    //         creatorRole: '',
-    //     });
-    // });
+    it('should clear contributor form on cancellation from edit', () => {
+        const testFn = jest.fn();
+        const { getByTestId } = setup({
+            onSubmit: testFn,
+            displayCancel: true,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+        });
+        fireEvent.click(getByTestId('cancel-submit-author'));
+        expect(testFn).toBeCalledWith({
+            nameAsPublished: 'Firstname Lastname',
+            affiliation: 'UQ',
+            orgaff: '',
+            orgtype: '',
+            creatorRole: '',
+        });
+    });
 
-    // it('should clear contributor form on clearing from UQ ID but should not submit for admins', () => {
-    //     const testFn = jest.fn();
-    //     const wrapper = setup({
-    //         canEdit: true,
-    //         onSubmit: testFn,
-    //         showRoleInput: true,
-    //         contributor: {
-    //             nameAsPublished: 'Firstname Lastname',
-    //             affiliation: 'UQ',
-    //             orgaff: '',
-    //             orgtype: '',
-    //             creatorRole: '',
-    //         },
-    //     });
-    //     wrapper.instance()._onUQIdentifierCleared();
-    //     expect(testFn).not.toBeCalledWith();
-    // });
-
-    // it('should not submit contributor form if admin user is adding dataset', () => {
-    //     const testFn = jest.fn();
-    //     const wrapper = setup({
-    //         onSubmit: testFn,
-    //         contributor: {
-    //             nameAsPublished: 'Firstname Lastname',
-    //             affiliation: 'UQ',
-    //             orgaff: '',
-    //             orgtype: '',
-    //             creatorRole: '',
-    //         },
-    //         canEdit: true,
-    //         showRoleInput: true,
-    //     });
-    //     wrapper.instance()._onUQIdentifierSelected({
-    //         aut_id: 1,
-    //         aut_org_username: 'uqtest',
-    //     });
-    //     expect(testFn).not.toBeCalledWith();
-    // });
+    it('should clear contributor form on clearing from UQ ID but should not submit for admins', () => {
+        const testFn = jest.fn();
+        const { getByTitle } = setup({
+            canEdit: true,
+            onSubmit: testFn,
+            showRoleInput: true,
+            showIdentifierLookup: true,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+        });
+        fireEvent.click(getByTitle('Clear'));
+        expect(testFn).not.toBeCalled();
+    });
 });
