@@ -25,3 +25,4 @@ export { default as recordWithTiffAndThumbnail } from './recordWithTiffAndThumbn
 export { default as UQ352045 } from './incompleteNTRORecordUQ352045';
 export { default as UQ716942uqagrinb } from './incompleteNTRORecordUQ716942_uqagrinb';
 export { default as UQ716942uqagrinbGrants } from './incompleteNTRORecordUQ716942_uqagrinb_grants';
+export { default as UQ341923} from './incompleteNTRORecordUQ341923';

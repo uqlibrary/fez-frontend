@@ -6,9 +6,7 @@ context('Thesis', () => {
     });
 
     afterEach(() => {
-        // Add this when we have a dialog when navigating away from a form
-        cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+        cy.killWindowUnloadHandler();
     });
 
     it('Submitting a thesis successfully', () => {
@@ -20,13 +18,13 @@ context('Thesis', () => {
             .should('have.length', 8);
 
         // Title
-        cy.type_ckeditor('editor1', '<p>This is a thesis title</p>');
+        cy.typeCKEditor('editor1', '<p>This is a thesis title</p>');
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 7);
         // Abstract
-        cy.type_ckeditor('editor2', '<p>This is the thesis abstract</p>');
+        cy.typeCKEditor('editor2', '<p>This is the thesis abstract</p>');
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -50,9 +48,7 @@ context('Thesis', () => {
         // Enrolling unit
         cy.get('input[label="Enrolling unit"]')
             .type('a');
-        cy.wait(1000); // Wait for suggestions
-        cy.get('li[id="Enrollingunit-item-0"]')
-            .click();
+        cy.clickAutoSuggestion('Enrollingunit', 0);
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -138,9 +134,7 @@ context('Thesis', () => {
         // Field of Research
         cy.get('input[label="Field of research"]')
             .type('a');
-        cy.wait(1000); // Wait for suggestions
-        cy.get('li[id="Fieldofresearch-item-0"]')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 0);
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -159,13 +153,7 @@ context('Thesis', () => {
             .should('have.length', 3);
         cy.get('input[label="Field of research"]')
             .type('a');
-        cy.wait(1000); // Wait for suggestions
-        cy.get('.alert-text')
-            .find('ul')
-            .children()
-            .should('have.length', 3);
-        cy.get('li[id="Fieldofresearch-item-0"]')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 0);
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -183,9 +171,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
         cy.get('input[label="Field of research"]')
             .type('a');
-        cy.wait(1000); // Wait for suggestions
-        cy.get('li[id="Fieldofresearch-item-0"]')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 0);
         cy.get('.alert-text')
             .find('ul')
             .children()
