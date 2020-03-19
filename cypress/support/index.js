@@ -13,11 +13,19 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands';
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-
+// Plugins
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
+import 'cypress-wait-until';
+
+// Custom
+import './ckeditor';
+import './commands';
+
+// Ignore uncaught exceptions
+// https://docs.cypress.io/guides/references/error-messages.html#Uncaught-exceptions-from-your-application
+// Cypress has flagged handling of uncaught app exceptions as WIP.
+// They recommend ignoring these until they say otherwise.
+Cypress.on('uncaught:exception', () => {
+    return false;
+});

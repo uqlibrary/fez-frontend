@@ -7,5 +7,9 @@
   "defaultCommandTimeout": 10000,
   "videoUploadOnPasses": false,
   "projectId": "mvfnrv",
-  "blacklistHosts": ["www.googletagmanager.com"]
+  "blacklistHosts": ["www.googletagmanager.com"],
+  "firefoxGcInterval": {
+    "runMode": 1,
+    "openMode": 1
+  }
 }

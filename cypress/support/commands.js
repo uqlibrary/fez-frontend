@@ -24,16 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-// Allows the targeting of CKEditors
-// CKeditor dynamically names instances as "editor1", "editor2" etc.
-// USAGE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
-Cypress.Commands.add('type_ckeditor', (element, content) => {
-    cy.window()
-        .then(win => {
-            win.CKEDITOR.instances[element].setData(content);
-        });
-});
-
 Cypress.Commands.add('closeUnsupported', () => {
     cy.get('#unsupportedBrowser.card button')
         .then($button => {
@@ -50,8 +40,10 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
 
     // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
     cy.get('button[title="Main navigation"]')
+        .should('not.be.empty')
         .click();
     cy.get('#mainMenu .menu-item-container')
+        .should('not.be.empty')
         .contains('Home')
         .click();
     // Say yes to 'Are you sure' if it does trigger
@@ -64,4 +56,22 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
                     .click();
             }
         });
+});
+
+Cypress.Commands.add('killWindowUnloadHandler', () => {
+    cy.window()
+        .then(win => {
+            win.onbeforeunload = undefined;
+        });
+});
+
+Cypress.Commands.add('clickAutoSuggestion', (fieldName, ordinal) => {
+    cy.get(`#${fieldName}-menu`)
+        .should('exist');
+    cy.get(`#${fieldName}-item-${ordinal}`)
+        .as('menuItem')
+        .should('exist');
+    cy.wait(200);
+    cy.get('@menuItem')
+        .click();
 });
