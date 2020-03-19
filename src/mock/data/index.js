@@ -48,6 +48,7 @@ export {
     recordWithDatastreams,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    UQ341923,
     UQ716942uqagrinb,
 } from './records';
 
