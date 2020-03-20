@@ -1982,7 +1982,17 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                 "scroll": "scroll",
                               }
                             }
-                            contributor={Object {}}
+                            contributor={
+                              Object {
+                                "affiliation": "",
+                                "creatorRole": "",
+                                "nameAsPublished": "",
+                                "orgaff": "",
+                                "orgtype": "",
+                                "uqIdentifier": "",
+                                "uqUsername": "",
+                              }
+                            }
                             disableNameAsPublished={false}
                             displayCancel={true}
                             editMode={false}
@@ -2295,7 +2305,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           disabled={false}
                                           error={false}
                                           fullWidth={true}
-                                          id="nameAsPublishedField"
+                                          id="name-as-published"
                                           label="Name as published"
                                           onChange={[Function]}
                                           onKeyDown={[Function]}
@@ -2309,7 +2319,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             disabled={false}
                                             error={false}
                                             fullWidth={true}
-                                            id="nameAsPublishedField"
+                                            id="name-as-published"
                                             label="Name as published"
                                             onChange={[Function]}
                                             onKeyDown={[Function]}
@@ -2321,8 +2331,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               InputLabelProps={
                                                 Object {
                                                   "hidden": false,
-                                                  "htmlFor": "nameAsPublishedField",
-                                                  "id": "nameAsPublishedField-label",
+                                                  "htmlFor": "name-as-published",
+                                                  "id": "name-as-published-label",
                                                   "shrink": undefined,
                                                 }
                                               }
@@ -2331,12 +2341,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               disabled={false}
                                               error={false}
                                               fullWidth={true}
-                                              id="nameAsPublishedField"
+                                              id="name-as-published"
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Name as published",
-                                                  "aria-labelledby": "nameAsPublishedField-label",
-                                                  "id": "nameAsPublishedField",
+                                                  "aria-labelledby": "name-as-published-label",
+                                                  "id": "name-as-published",
                                                   "label": "Name as published",
                                                 }
                                               }
@@ -2351,8 +2361,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 InputLabelProps={
                                                   Object {
                                                     "hidden": false,
-                                                    "htmlFor": "nameAsPublishedField",
-                                                    "id": "nameAsPublishedField-label",
+                                                    "htmlFor": "name-as-published",
+                                                    "id": "name-as-published-label",
                                                     "shrink": undefined,
                                                   }
                                                 }
@@ -2365,12 +2375,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 disabled={false}
                                                 error={false}
                                                 fullWidth={true}
-                                                id="nameAsPublishedField"
+                                                id="name-as-published"
                                                 inputProps={
                                                   Object {
                                                     "aria-label": "Name as published",
-                                                    "aria-labelledby": "nameAsPublishedField-label",
-                                                    "id": "nameAsPublishedField",
+                                                    "aria-labelledby": "name-as-published-label",
+                                                    "id": "name-as-published",
                                                     "label": "Name as published",
                                                   }
                                                 }
@@ -2415,8 +2425,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     >
                                                       <WithStyles(ForwardRef(InputLabel))
                                                         hidden={false}
-                                                        htmlFor="nameAsPublishedField"
-                                                        id="nameAsPublishedField-label"
+                                                        htmlFor="name-as-published"
+                                                        id="name-as-published-label"
                                                       >
                                                         <ForwardRef(InputLabel)
                                                           classes={
@@ -2436,8 +2446,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             }
                                                           }
                                                           hidden={false}
-                                                          htmlFor="nameAsPublishedField"
-                                                          id="nameAsPublishedField-label"
+                                                          htmlFor="name-as-published"
+                                                          id="name-as-published-label"
                                                         >
                                                           <WithStyles(ForwardRef(FormLabel))
                                                             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -2452,8 +2462,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             }
                                                             data-shrink={false}
                                                             hidden={false}
-                                                            htmlFor="nameAsPublishedField"
-                                                            id="nameAsPublishedField-label"
+                                                            htmlFor="name-as-published"
+                                                            id="name-as-published-label"
                                                           >
                                                             <ForwardRef(FormLabel)
                                                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -2471,15 +2481,15 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               }
                                                               data-shrink={false}
                                                               hidden={false}
-                                                              htmlFor="nameAsPublishedField"
-                                                              id="nameAsPublishedField-label"
+                                                              htmlFor="name-as-published"
+                                                              id="name-as-published-label"
                                                             >
                                                               <label
                                                                 className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                                                 data-shrink={false}
                                                                 hidden={false}
-                                                                htmlFor="nameAsPublishedField"
-                                                                id="nameAsPublishedField-label"
+                                                                htmlFor="name-as-published"
+                                                                id="name-as-published-label"
                                                               >
                                                                 Name as published
                                                               </label>
@@ -2491,12 +2501,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                         autoComplete="off"
                                                         autoFocus={false}
                                                         fullWidth={true}
-                                                        id="nameAsPublishedField"
+                                                        id="name-as-published"
                                                         inputProps={
                                                           Object {
                                                             "aria-label": "Name as published",
-                                                            "aria-labelledby": "nameAsPublishedField-label",
-                                                            "id": "nameAsPublishedField",
+                                                            "aria-labelledby": "name-as-published-label",
+                                                            "id": "name-as-published",
                                                             "label": "Name as published",
                                                           }
                                                         }
@@ -2527,12 +2537,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             }
                                                           }
                                                           fullWidth={true}
-                                                          id="nameAsPublishedField"
+                                                          id="name-as-published"
                                                           inputProps={
                                                             Object {
                                                               "aria-label": "Name as published",
-                                                              "aria-labelledby": "nameAsPublishedField-label",
-                                                              "id": "nameAsPublishedField",
+                                                              "aria-labelledby": "name-as-published-label",
+                                                              "id": "name-as-published",
                                                               "label": "Name as published",
                                                             }
                                                           }
@@ -2563,13 +2573,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               }
                                                             }
                                                             fullWidth={true}
-                                                            id="nameAsPublishedField"
+                                                            id="name-as-published"
                                                             inputComponent="input"
                                                             inputProps={
                                                               Object {
                                                                 "aria-label": "Name as published",
-                                                                "aria-labelledby": "nameAsPublishedField-label",
-                                                                "id": "nameAsPublishedField",
+                                                                "aria-labelledby": "name-as-published-label",
+                                                                "id": "name-as-published",
                                                                 "label": "Name as published",
                                                               }
                                                             }
@@ -2605,13 +2615,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                 }
                                                               }
                                                               fullWidth={true}
-                                                              id="nameAsPublishedField"
+                                                              id="name-as-published"
                                                               inputComponent="input"
                                                               inputProps={
                                                                 Object {
                                                                   "aria-label": "Name as published",
-                                                                  "aria-labelledby": "nameAsPublishedField-label",
-                                                                  "id": "nameAsPublishedField",
+                                                                  "aria-labelledby": "name-as-published-label",
+                                                                  "id": "name-as-published",
                                                                   "label": "Name as published",
                                                                 }
                                                               }
@@ -2628,12 +2638,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                 <input
                                                                   aria-invalid={false}
                                                                   aria-label="Name as published"
-                                                                  aria-labelledby="nameAsPublishedField-label"
+                                                                  aria-labelledby="name-as-published-label"
                                                                   autoComplete="off"
                                                                   autoFocus={false}
                                                                   className="MuiInputBase-input MuiInput-input"
                                                                   disabled={false}
-                                                                  id="nameAsPublishedField"
+                                                                  id="name-as-published"
                                                                   label="Name as published"
                                                                   onAnimationStart={[Function]}
                                                                   onBlur={[Function]}
@@ -2783,11 +2793,10 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           disabled={false}
                                           floatingLabelText="UQ Author ID"
                                           hintText="Type UQ author name to search"
-                                          id="identifierField"
+                                          id="identifier-field"
                                           key=""
                                           onChange={[Function]}
                                           onClear={[Function]}
-                                          showClear={false}
                                           value=""
                                         >
                                           <Memo(AutoCompleteAsynchronousField)
@@ -2804,13 +2813,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             floatingLabelText="UQ Author ID"
                                             getOptionLabel={[Function]}
                                             hintText="Type UQ author name to search"
-                                            id="identifierField"
+                                            id="identifier-field"
                                             itemsList={Array []}
                                             itemsLoading={false}
                                             loadSuggestions={[Function]}
                                             onChange={[Function]}
                                             onClear={[Function]}
-                                            showClear={false}
                                             value=""
                                           >
                                             <WithStyles(ForwardRef(Autocomplete))
@@ -2820,7 +2828,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               filterOptions={[Function]}
                                               getOptionLabel={[Function]}
                                               getOptionSelected={[Function]}
-                                              id="identifierField"
+                                              id="identifier-field"
                                               loading={false}
                                               onChange={[Function]}
                                               onClose={[Function]}
@@ -2866,7 +2874,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 filterOptions={[Function]}
                                                 getOptionLabel={[Function]}
                                                 getOptionSelected={[Function]}
-                                                id="identifierField"
+                                                id="identifier-field"
                                                 loading={false}
                                                 onChange={[Function]}
                                                 onClose={[Function]}
@@ -2890,8 +2898,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   <WithStyles(ForwardRef(TextField))
                                                     InputLabelProps={
                                                       Object {
-                                                        "htmlFor": "identifierField",
-                                                        "id": "identifierField-label",
+                                                        "htmlFor": "identifier-field",
+                                                        "id": "identifier-field-label",
                                                       }
                                                     }
                                                     InputProps={
@@ -2929,7 +2937,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     disabled={false}
                                                     fullWidth={true}
                                                     helperText=""
-                                                    id="identifierField"
+                                                    id="identifier-field"
                                                     inputProps={
                                                       Object {
                                                         "aria-activedescendant": null,
@@ -2939,7 +2947,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                         "autoComplete": "off",
                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                         "disabled": false,
-                                                        "id": "identifierField",
+                                                        "id": "identifier-field",
                                                         "onBlur": [Function],
                                                         "onChange": [Function],
                                                         "onFocus": [Function],
@@ -2951,7 +2959,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             autocapitalize="none"
                                                             autocomplete="off"
                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                            id="identifierField"
+                                                            id="identifier-field"
                                                             spellcheck="false"
                                                             type="text"
                                                             value=""
@@ -2968,8 +2976,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     <ForwardRef(TextField)
                                                       InputLabelProps={
                                                         Object {
-                                                          "htmlFor": "identifierField",
-                                                          "id": "identifierField-label",
+                                                          "htmlFor": "identifier-field",
+                                                          "id": "identifier-field-label",
                                                         }
                                                       }
                                                       InputProps={
@@ -3012,7 +3020,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                       disabled={false}
                                                       fullWidth={true}
                                                       helperText=""
-                                                      id="identifierField"
+                                                      id="identifier-field"
                                                       inputProps={
                                                         Object {
                                                           "aria-activedescendant": null,
@@ -3022,7 +3030,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                           "autoComplete": "off",
                                                           "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                           "disabled": false,
-                                                          "id": "identifierField",
+                                                          "id": "identifier-field",
                                                           "onBlur": [Function],
                                                           "onChange": [Function],
                                                           "onFocus": [Function],
@@ -3034,7 +3042,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               autocapitalize="none"
                                                               autocomplete="off"
                                                               class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                              id="identifierField"
+                                                              id="identifier-field"
                                                               spellcheck="false"
                                                               type="text"
                                                               value=""
@@ -3078,8 +3086,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                                           >
                                                             <WithStyles(ForwardRef(InputLabel))
-                                                              htmlFor="identifierField"
-                                                              id="identifierField-label"
+                                                              htmlFor="identifier-field"
+                                                              id="identifier-field-label"
                                                             >
                                                               <ForwardRef(InputLabel)
                                                                 classes={
@@ -3098,8 +3106,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     "shrink": "MuiInputLabel-shrink",
                                                                   }
                                                                 }
-                                                                htmlFor="identifierField"
-                                                                id="identifierField-label"
+                                                                htmlFor="identifier-field"
+                                                                id="identifier-field-label"
                                                               >
                                                                 <WithStyles(ForwardRef(FormLabel))
                                                                   className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -3113,8 +3121,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     }
                                                                   }
                                                                   data-shrink={false}
-                                                                  htmlFor="identifierField"
-                                                                  id="identifierField-label"
+                                                                  htmlFor="identifier-field"
+                                                                  id="identifier-field-label"
                                                                 >
                                                                   <ForwardRef(FormLabel)
                                                                     className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -3131,14 +3139,14 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       }
                                                                     }
                                                                     data-shrink={false}
-                                                                    htmlFor="identifierField"
-                                                                    id="identifierField-label"
+                                                                    htmlFor="identifier-field"
+                                                                    id="identifier-field-label"
                                                                   >
                                                                     <label
                                                                       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                                                       data-shrink={false}
-                                                                      htmlFor="identifierField"
-                                                                      id="identifierField-label"
+                                                                      htmlFor="identifier-field"
+                                                                      id="identifier-field-label"
                                                                     >
                                                                       UQ Author ID
                                                                     </label>
@@ -3177,7 +3185,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                 </React.Fragment>
                                                               }
                                                               fullWidth={true}
-                                                              id="identifierField"
+                                                              id="identifier-field"
                                                               inputProps={
                                                                 Object {
                                                                   "aria-activedescendant": null,
@@ -3187,7 +3195,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                   "autoComplete": "off",
                                                                   "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                   "disabled": false,
-                                                                  "id": "identifierField",
+                                                                  "id": "identifier-field",
                                                                   "onBlur": [Function],
                                                                   "onChange": [Function],
                                                                   "onFocus": [Function],
@@ -3199,7 +3207,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       autocapitalize="none"
                                                                       autocomplete="off"
                                                                       class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                      id="identifierField"
+                                                                      id="identifier-field"
                                                                       spellcheck="false"
                                                                       type="text"
                                                                       value=""
@@ -3262,7 +3270,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                   </React.Fragment>
                                                                 }
                                                                 fullWidth={true}
-                                                                id="identifierField"
+                                                                id="identifier-field"
                                                                 inputProps={
                                                                   Object {
                                                                     "aria-activedescendant": null,
@@ -3272,7 +3280,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     "autoComplete": "off",
                                                                     "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                     "disabled": false,
-                                                                    "id": "identifierField",
+                                                                    "id": "identifier-field",
                                                                     "onBlur": [Function],
                                                                     "onChange": [Function],
                                                                     "onFocus": [Function],
@@ -3284,7 +3292,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         autocapitalize="none"
                                                                         autocomplete="off"
                                                                         class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                        id="identifierField"
+                                                                        id="identifier-field"
                                                                         spellcheck="false"
                                                                         type="text"
                                                                         value=""
@@ -3347,7 +3355,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     </React.Fragment>
                                                                   }
                                                                   fullWidth={true}
-                                                                  id="identifierField"
+                                                                  id="identifier-field"
                                                                   inputComponent="input"
                                                                   inputProps={
                                                                     Object {
@@ -3358,7 +3366,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       "autoComplete": "off",
                                                                       "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                       "disabled": false,
-                                                                      "id": "identifierField",
+                                                                      "id": "identifier-field",
                                                                       "onBlur": [Function],
                                                                       "onChange": [Function],
                                                                       "onFocus": [Function],
@@ -3370,7 +3378,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                           autocapitalize="none"
                                                                           autocomplete="off"
                                                                           class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                          id="identifierField"
+                                                                          id="identifier-field"
                                                                           spellcheck="false"
                                                                           type="text"
                                                                           value=""
@@ -3438,7 +3446,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       </React.Fragment>
                                                                     }
                                                                     fullWidth={true}
-                                                                    id="identifierField"
+                                                                    id="identifier-field"
                                                                     inputComponent="input"
                                                                     inputProps={
                                                                       Object {
@@ -3449,7 +3457,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         "autoComplete": "off",
                                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                         "disabled": false,
-                                                                        "id": "identifierField",
+                                                                        "id": "identifier-field",
                                                                         "onBlur": [Function],
                                                                         "onChange": [Function],
                                                                         "onFocus": [Function],
@@ -3461,7 +3469,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                             autocapitalize="none"
                                                                             autocomplete="off"
                                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                            id="identifierField"
+                                                                            id="identifier-field"
                                                                             spellcheck="false"
                                                                             type="text"
                                                                             value=""
@@ -3490,7 +3498,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         autoFocus={false}
                                                                         className="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                                         disabled={false}
-                                                                        id="identifierField"
+                                                                        id="identifier-field"
                                                                         onAnimationStart={[Function]}
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
@@ -5169,7 +5177,17 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                 "scroll": "scroll",
                               }
                             }
-                            contributor={Object {}}
+                            contributor={
+                              Object {
+                                "affiliation": "",
+                                "creatorRole": "",
+                                "nameAsPublished": "",
+                                "orgaff": "",
+                                "orgtype": "",
+                                "uqIdentifier": "",
+                                "uqUsername": "",
+                              }
+                            }
                             disableNameAsPublished={false}
                             displayCancel={false}
                             editMode={false}
@@ -5499,6 +5517,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           onAffiliationChange={[Function]}
                                         >
                                           <WithStyles(ForwardRef(FormControl))
+                                            error={false}
                                             fullWidth={true}
                                           >
                                             <ForwardRef(FormControl)
@@ -5510,12 +5529,15 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   "root": "MuiFormControl-root",
                                                 }
                                               }
+                                              error={false}
                                               fullWidth={true}
                                             >
                                               <div
                                                 className="MuiFormControl-root MuiFormControl-fullWidth"
                                               >
-                                                <WithStyles(ForwardRef(InputLabel))>
+                                                <WithStyles(ForwardRef(InputLabel))
+                                                  id="org-affiliation-selector-label"
+                                                >
                                                   <ForwardRef(InputLabel)
                                                     classes={
                                                       Object {
@@ -5533,6 +5555,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "shrink": "MuiInputLabel-shrink",
                                                       }
                                                     }
+                                                    id="org-affiliation-selector-label"
                                                   >
                                                     <WithStyles(ForwardRef(FormLabel))
                                                       className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -5546,6 +5569,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         }
                                                       }
                                                       data-shrink={false}
+                                                      id="org-affiliation-selector-label"
                                                     >
                                                       <ForwardRef(FormLabel)
                                                         className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -5562,10 +5586,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           }
                                                         }
                                                         data-shrink={false}
+                                                        id="org-affiliation-selector-label"
                                                       >
                                                         <label
                                                           className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                                           data-shrink={false}
+                                                          id="org-affiliation-selector-label"
                                                         >
                                                           Org affiliation
                                                         </label>
@@ -5579,7 +5605,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       "id": "org-affiliation-selector",
                                                     }
                                                   }
-                                                  error={false}
+                                                  labelId="org-affiliation-selector-label"
+                                                  name="org-affiliation-selector"
                                                   onChange={[Function]}
                                                   required={true}
                                                   value=""
@@ -5604,13 +5631,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "selectMenu": "MuiSelect-selectMenu",
                                                       }
                                                     }
-                                                    error={false}
+                                                    labelId="org-affiliation-selector-label"
+                                                    name="org-affiliation-selector"
                                                     onChange={[Function]}
                                                     required={true}
                                                     value=""
                                                   >
                                                     <WithStyles(ForwardRef(Input))
-                                                      error={false}
                                                       inputComponent={
                                                         Object {
                                                           "$$typeof": Symbol(react.forward_ref),
@@ -5697,7 +5724,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "selectMenu": "MuiSelect-selectMenu",
                                                           },
                                                           "displayEmpty": false,
-                                                          "labelId": undefined,
+                                                          "labelId": "org-affiliation-selector-label",
                                                           "multiple": false,
                                                           "onClose": undefined,
                                                           "onOpen": undefined,
@@ -5707,6 +5734,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           "variant": "standard",
                                                         }
                                                       }
+                                                      name="org-affiliation-selector"
                                                       onChange={[Function]}
                                                       required={true}
                                                       value=""
@@ -5730,7 +5758,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "underline": "MuiInput-underline",
                                                           }
                                                         }
-                                                        error={false}
                                                         inputComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -5817,7 +5844,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "selectMenu": "MuiSelect-selectMenu",
                                                             },
                                                             "displayEmpty": false,
-                                                            "labelId": undefined,
+                                                            "labelId": "org-affiliation-selector-label",
                                                             "multiple": false,
                                                             "onClose": undefined,
                                                             "onOpen": undefined,
@@ -5827,6 +5854,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "variant": "standard",
                                                           }
                                                         }
+                                                        name="org-affiliation-selector"
                                                         onChange={[Function]}
                                                         required={true}
                                                         value=""
@@ -5850,7 +5878,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "underline": null,
                                                             }
                                                           }
-                                                          error={false}
                                                           fullWidth={false}
                                                           inputComponent={
                                                             Object {
@@ -5938,7 +5965,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "selectMenu": "MuiSelect-selectMenu",
                                                               },
                                                               "displayEmpty": false,
-                                                              "labelId": undefined,
+                                                              "labelId": "org-affiliation-selector-label",
                                                               "multiple": false,
                                                               "onClose": undefined,
                                                               "onOpen": undefined,
@@ -5949,6 +5976,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                           }
                                                           multiline={false}
+                                                          name="org-affiliation-selector"
                                                           onChange={[Function]}
                                                           required={true}
                                                           type="text"
@@ -5977,7 +6005,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
                                                               }
                                                             }
-                                                            error={false}
                                                             fullWidth={false}
                                                             inputComponent={
                                                               Object {
@@ -6065,7 +6092,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "selectMenu": "MuiSelect-selectMenu",
                                                                 },
                                                                 "displayEmpty": false,
-                                                                "labelId": undefined,
+                                                                "labelId": "org-affiliation-selector-label",
                                                                 "multiple": false,
                                                                 "onClose": undefined,
                                                                 "onOpen": undefined,
@@ -6076,6 +6103,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               }
                                                             }
                                                             multiline={false}
+                                                            name="org-affiliation-selector"
                                                             onChange={[Function]}
                                                             required={true}
                                                             type="text"
@@ -6124,7 +6152,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 disabled={false}
                                                                 displayEmpty={false}
                                                                 inputRef={[Function]}
+                                                                labelId="org-affiliation-selector-label"
                                                                 multiple={false}
+                                                                name="org-affiliation-selector"
                                                                 onAnimationStart={[Function]}
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
@@ -6135,7 +6165,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               >
                                                                 <div
                                                                   aria-haspopup="listbox"
-                                                                  aria-labelledby=" org-affiliation-selector"
+                                                                  aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
                                                                   className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                                   id="org-affiliation-selector"
                                                                   onBlur={[Function]}
@@ -6154,6 +6184,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   />
                                                                 </div>
                                                                 <input
+                                                                  name="org-affiliation-selector"
                                                                   onAnimationStart={[Function]}
                                                                   type="hidden"
                                                                   value=""
@@ -6197,7 +6228,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 <WithStyles(ForwardRef(Menu))
                                                                   MenuListProps={
                                                                     Object {
-                                                                      "aria-labelledby": undefined,
+                                                                      "aria-labelledby": "org-affiliation-selector-label",
                                                                       "disableListWrap": true,
                                                                       "role": "listbox",
                                                                     }
@@ -6212,7 +6243,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   anchorEl={
                                                                     <div
                                                                       aria-haspopup="listbox"
-                                                                      aria-labelledby=" org-affiliation-selector"
+                                                                      aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
                                                                       class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                                       id="org-affiliation-selector"
                                                                       role="button"
@@ -6223,14 +6254,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       </span>
                                                                     </div>
                                                                   }
-                                                                  id="menu-"
+                                                                  id="menu-org-affiliation-selector"
                                                                   onClose={[Function]}
                                                                   open={false}
                                                                 >
                                                                   <ForwardRef(Menu)
                                                                     MenuListProps={
                                                                       Object {
-                                                                        "aria-labelledby": undefined,
+                                                                        "aria-labelledby": "org-affiliation-selector-label",
                                                                         "disableListWrap": true,
                                                                         "role": "listbox",
                                                                       }
@@ -6245,7 +6276,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     anchorEl={
                                                                       <div
                                                                         aria-haspopup="listbox"
-                                                                        aria-labelledby=" org-affiliation-selector"
+                                                                        aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
                                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                                         id="org-affiliation-selector"
                                                                         role="button"
@@ -6262,7 +6293,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         "paper": "MuiMenu-paper",
                                                                       }
                                                                     }
-                                                                    id="menu-"
+                                                                    id="menu-org-affiliation-selector"
                                                                     onClose={[Function]}
                                                                     open={false}
                                                                   >
@@ -6280,7 +6311,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       anchorEl={
                                                                         <div
                                                                           aria-haspopup="listbox"
-                                                                          aria-labelledby=" org-affiliation-selector"
+                                                                          aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
                                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                                           id="org-affiliation-selector"
                                                                           role="button"
@@ -6298,7 +6329,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         }
                                                                       }
                                                                       getContentAnchorEl={[Function]}
-                                                                      id="menu-"
+                                                                      id="menu-org-affiliation-selector"
                                                                       onClose={[Function]}
                                                                       onEntering={[Function]}
                                                                       open={false}
@@ -6324,7 +6355,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         anchorEl={
                                                                           <div
                                                                             aria-haspopup="listbox"
-                                                                            aria-labelledby=" org-affiliation-selector"
+                                                                            aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
                                                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                                             id="org-affiliation-selector"
                                                                             role="button"
@@ -6348,7 +6379,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           }
                                                                         }
                                                                         getContentAnchorEl={[Function]}
-                                                                        id="menu-"
+                                                                        id="menu-org-affiliation-selector"
                                                                         onClose={[Function]}
                                                                         onEntering={[Function]}
                                                                         open={false}
@@ -6368,7 +6399,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           }
                                                                           className="MuiPopover-root"
                                                                           container={<body />}
-                                                                          id="menu-"
+                                                                          id="menu-org-affiliation-selector"
                                                                           onClose={[Function]}
                                                                           open={false}
                                                                         />
@@ -6516,7 +6547,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           disabled={true}
                                           error={false}
                                           fullWidth={true}
-                                          id="nameAsPublishedField"
+                                          id="name-as-published"
                                           label="Name as published"
                                           onChange={[Function]}
                                           onKeyDown={[Function]}
@@ -6530,7 +6561,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             disabled={true}
                                             error={false}
                                             fullWidth={true}
-                                            id="nameAsPublishedField"
+                                            id="name-as-published"
                                             label="Name as published"
                                             onChange={[Function]}
                                             onKeyDown={[Function]}
@@ -6542,8 +6573,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               InputLabelProps={
                                                 Object {
                                                   "hidden": false,
-                                                  "htmlFor": "nameAsPublishedField",
-                                                  "id": "nameAsPublishedField-label",
+                                                  "htmlFor": "name-as-published",
+                                                  "id": "name-as-published-label",
                                                   "shrink": undefined,
                                                 }
                                               }
@@ -6552,12 +6583,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               disabled={true}
                                               error={false}
                                               fullWidth={true}
-                                              id="nameAsPublishedField"
+                                              id="name-as-published"
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Name as published",
-                                                  "aria-labelledby": "nameAsPublishedField-label",
-                                                  "id": "nameAsPublishedField",
+                                                  "aria-labelledby": "name-as-published-label",
+                                                  "id": "name-as-published",
                                                   "label": "Name as published",
                                                 }
                                               }
@@ -6572,8 +6603,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 InputLabelProps={
                                                   Object {
                                                     "hidden": false,
-                                                    "htmlFor": "nameAsPublishedField",
-                                                    "id": "nameAsPublishedField-label",
+                                                    "htmlFor": "name-as-published",
+                                                    "id": "name-as-published-label",
                                                     "shrink": undefined,
                                                   }
                                                 }
@@ -6586,12 +6617,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 disabled={true}
                                                 error={false}
                                                 fullWidth={true}
-                                                id="nameAsPublishedField"
+                                                id="name-as-published"
                                                 inputProps={
                                                   Object {
                                                     "aria-label": "Name as published",
-                                                    "aria-labelledby": "nameAsPublishedField-label",
-                                                    "id": "nameAsPublishedField",
+                                                    "aria-labelledby": "name-as-published-label",
+                                                    "id": "name-as-published",
                                                     "label": "Name as published",
                                                   }
                                                 }
@@ -6636,8 +6667,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     >
                                                       <WithStyles(ForwardRef(InputLabel))
                                                         hidden={false}
-                                                        htmlFor="nameAsPublishedField"
-                                                        id="nameAsPublishedField-label"
+                                                        htmlFor="name-as-published"
+                                                        id="name-as-published-label"
                                                       >
                                                         <ForwardRef(InputLabel)
                                                           classes={
@@ -6657,8 +6688,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                           }
                                                           hidden={false}
-                                                          htmlFor="nameAsPublishedField"
-                                                          id="nameAsPublishedField-label"
+                                                          htmlFor="name-as-published"
+                                                          id="name-as-published-label"
                                                         >
                                                           <WithStyles(ForwardRef(FormLabel))
                                                             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -6673,8 +6704,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                             data-shrink={false}
                                                             hidden={false}
-                                                            htmlFor="nameAsPublishedField"
-                                                            id="nameAsPublishedField-label"
+                                                            htmlFor="name-as-published"
+                                                            id="name-as-published-label"
                                                           >
                                                             <ForwardRef(FormLabel)
                                                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -6692,15 +6723,15 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               }
                                                               data-shrink={false}
                                                               hidden={false}
-                                                              htmlFor="nameAsPublishedField"
-                                                              id="nameAsPublishedField-label"
+                                                              htmlFor="name-as-published"
+                                                              id="name-as-published-label"
                                                             >
                                                               <label
                                                                 className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
                                                                 data-shrink={false}
                                                                 hidden={false}
-                                                                htmlFor="nameAsPublishedField"
-                                                                id="nameAsPublishedField-label"
+                                                                htmlFor="name-as-published"
+                                                                id="name-as-published-label"
                                                               >
                                                                 Name as published
                                                               </label>
@@ -6712,12 +6743,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         autoComplete="off"
                                                         autoFocus={false}
                                                         fullWidth={true}
-                                                        id="nameAsPublishedField"
+                                                        id="name-as-published"
                                                         inputProps={
                                                           Object {
                                                             "aria-label": "Name as published",
-                                                            "aria-labelledby": "nameAsPublishedField-label",
-                                                            "id": "nameAsPublishedField",
+                                                            "aria-labelledby": "name-as-published-label",
+                                                            "id": "name-as-published",
                                                             "label": "Name as published",
                                                           }
                                                         }
@@ -6748,12 +6779,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                           }
                                                           fullWidth={true}
-                                                          id="nameAsPublishedField"
+                                                          id="name-as-published"
                                                           inputProps={
                                                             Object {
                                                               "aria-label": "Name as published",
-                                                              "aria-labelledby": "nameAsPublishedField-label",
-                                                              "id": "nameAsPublishedField",
+                                                              "aria-labelledby": "name-as-published-label",
+                                                              "id": "name-as-published",
                                                               "label": "Name as published",
                                                             }
                                                           }
@@ -6784,13 +6815,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               }
                                                             }
                                                             fullWidth={true}
-                                                            id="nameAsPublishedField"
+                                                            id="name-as-published"
                                                             inputComponent="input"
                                                             inputProps={
                                                               Object {
                                                                 "aria-label": "Name as published",
-                                                                "aria-labelledby": "nameAsPublishedField-label",
-                                                                "id": "nameAsPublishedField",
+                                                                "aria-labelledby": "name-as-published-label",
+                                                                "id": "name-as-published",
                                                                 "label": "Name as published",
                                                               }
                                                             }
@@ -6826,13 +6857,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 }
                                                               }
                                                               fullWidth={true}
-                                                              id="nameAsPublishedField"
+                                                              id="name-as-published"
                                                               inputComponent="input"
                                                               inputProps={
                                                                 Object {
                                                                   "aria-label": "Name as published",
-                                                                  "aria-labelledby": "nameAsPublishedField-label",
-                                                                  "id": "nameAsPublishedField",
+                                                                  "aria-labelledby": "name-as-published-label",
+                                                                  "id": "name-as-published",
                                                                   "label": "Name as published",
                                                                 }
                                                               }
@@ -6849,12 +6880,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 <input
                                                                   aria-invalid={false}
                                                                   aria-label="Name as published"
-                                                                  aria-labelledby="nameAsPublishedField-label"
+                                                                  aria-labelledby="name-as-published-label"
                                                                   autoComplete="off"
                                                                   autoFocus={false}
                                                                   className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
                                                                   disabled={true}
-                                                                  id="nameAsPublishedField"
+                                                                  id="name-as-published"
                                                                   label="Name as published"
                                                                   onAnimationStart={[Function]}
                                                                   onBlur={[Function]}
@@ -7004,11 +7035,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           disabled={true}
                                           floatingLabelText="UQ Author ID"
                                           hintText="Type UQ author name to search"
-                                          id="identifierField"
+                                          id="identifier-field"
                                           key=""
                                           onChange={[Function]}
                                           onClear={[Function]}
-                                          showClear={false}
                                           value=""
                                         >
                                           <Memo(AutoCompleteAsynchronousField)
@@ -7025,13 +7055,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             floatingLabelText="UQ Author ID"
                                             getOptionLabel={[Function]}
                                             hintText="Type UQ author name to search"
-                                            id="identifierField"
+                                            id="identifier-field"
                                             itemsList={Array []}
                                             itemsLoading={false}
                                             loadSuggestions={[Function]}
                                             onChange={[Function]}
                                             onClear={[Function]}
-                                            showClear={false}
                                             value=""
                                           >
                                             <WithStyles(ForwardRef(Autocomplete))
@@ -7041,7 +7070,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               filterOptions={[Function]}
                                               getOptionLabel={[Function]}
                                               getOptionSelected={[Function]}
-                                              id="identifierField"
+                                              id="identifier-field"
                                               loading={false}
                                               onChange={[Function]}
                                               onClose={[Function]}
@@ -7087,7 +7116,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 filterOptions={[Function]}
                                                 getOptionLabel={[Function]}
                                                 getOptionSelected={[Function]}
-                                                id="identifierField"
+                                                id="identifier-field"
                                                 loading={false}
                                                 onChange={[Function]}
                                                 onClose={[Function]}
@@ -7111,8 +7140,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   <WithStyles(ForwardRef(TextField))
                                                     InputLabelProps={
                                                       Object {
-                                                        "htmlFor": "identifierField",
-                                                        "id": "identifierField-label",
+                                                        "htmlFor": "identifier-field",
+                                                        "id": "identifier-field-label",
                                                       }
                                                     }
                                                     InputProps={
@@ -7139,7 +7168,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     disabled={true}
                                                     fullWidth={true}
                                                     helperText=""
-                                                    id="identifierField"
+                                                    id="identifier-field"
                                                     inputProps={
                                                       Object {
                                                         "aria-activedescendant": null,
@@ -7149,7 +7178,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "autoComplete": "off",
                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                         "disabled": true,
-                                                        "id": "identifierField",
+                                                        "id": "identifier-field",
                                                         "onBlur": [Function],
                                                         "onChange": [Function],
                                                         "onFocus": [Function],
@@ -7162,7 +7191,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             autocomplete="off"
                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                             disabled=""
-                                                            id="identifierField"
+                                                            id="identifier-field"
                                                             spellcheck="false"
                                                             type="text"
                                                             value=""
@@ -7179,8 +7208,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     <ForwardRef(TextField)
                                                       InputLabelProps={
                                                         Object {
-                                                          "htmlFor": "identifierField",
-                                                          "id": "identifierField-label",
+                                                          "htmlFor": "identifier-field",
+                                                          "id": "identifier-field-label",
                                                         }
                                                       }
                                                       InputProps={
@@ -7212,7 +7241,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       disabled={true}
                                                       fullWidth={true}
                                                       helperText=""
-                                                      id="identifierField"
+                                                      id="identifier-field"
                                                       inputProps={
                                                         Object {
                                                           "aria-activedescendant": null,
@@ -7222,7 +7251,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           "autoComplete": "off",
                                                           "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                           "disabled": true,
-                                                          "id": "identifierField",
+                                                          "id": "identifier-field",
                                                           "onBlur": [Function],
                                                           "onChange": [Function],
                                                           "onFocus": [Function],
@@ -7235,7 +7264,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               autocomplete="off"
                                                               class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                               disabled=""
-                                                              id="identifierField"
+                                                              id="identifier-field"
                                                               spellcheck="false"
                                                               type="text"
                                                               value=""
@@ -7279,8 +7308,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                                           >
                                                             <WithStyles(ForwardRef(InputLabel))
-                                                              htmlFor="identifierField"
-                                                              id="identifierField-label"
+                                                              htmlFor="identifier-field"
+                                                              id="identifier-field-label"
                                                             >
                                                               <ForwardRef(InputLabel)
                                                                 classes={
@@ -7299,8 +7328,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     "shrink": "MuiInputLabel-shrink",
                                                                   }
                                                                 }
-                                                                htmlFor="identifierField"
-                                                                id="identifierField-label"
+                                                                htmlFor="identifier-field"
+                                                                id="identifier-field-label"
                                                               >
                                                                 <WithStyles(ForwardRef(FormLabel))
                                                                   className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -7314,8 +7343,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     }
                                                                   }
                                                                   data-shrink={false}
-                                                                  htmlFor="identifierField"
-                                                                  id="identifierField-label"
+                                                                  htmlFor="identifier-field"
+                                                                  id="identifier-field-label"
                                                                 >
                                                                   <ForwardRef(FormLabel)
                                                                     className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -7332,14 +7361,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       }
                                                                     }
                                                                     data-shrink={false}
-                                                                    htmlFor="identifierField"
-                                                                    id="identifierField-label"
+                                                                    htmlFor="identifier-field"
+                                                                    id="identifier-field-label"
                                                                   >
                                                                     <label
                                                                       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
                                                                       data-shrink={false}
-                                                                      htmlFor="identifierField"
-                                                                      id="identifierField-label"
+                                                                      htmlFor="identifier-field"
+                                                                      id="identifier-field-label"
                                                                     >
                                                                       UQ Author ID
                                                                     </label>
@@ -7367,7 +7396,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 </React.Fragment>
                                                               }
                                                               fullWidth={true}
-                                                              id="identifierField"
+                                                              id="identifier-field"
                                                               inputProps={
                                                                 Object {
                                                                   "aria-activedescendant": null,
@@ -7377,7 +7406,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "autoComplete": "off",
                                                                   "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                   "disabled": true,
-                                                                  "id": "identifierField",
+                                                                  "id": "identifier-field",
                                                                   "onBlur": [Function],
                                                                   "onChange": [Function],
                                                                   "onFocus": [Function],
@@ -7390,7 +7419,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       autocomplete="off"
                                                                       class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                                       disabled=""
-                                                                      id="identifierField"
+                                                                      id="identifier-field"
                                                                       spellcheck="false"
                                                                       type="text"
                                                                       value=""
@@ -7442,7 +7471,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   </React.Fragment>
                                                                 }
                                                                 fullWidth={true}
-                                                                id="identifierField"
+                                                                id="identifier-field"
                                                                 inputProps={
                                                                   Object {
                                                                     "aria-activedescendant": null,
@@ -7452,7 +7481,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     "autoComplete": "off",
                                                                     "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                     "disabled": true,
-                                                                    "id": "identifierField",
+                                                                    "id": "identifier-field",
                                                                     "onBlur": [Function],
                                                                     "onChange": [Function],
                                                                     "onFocus": [Function],
@@ -7465,7 +7494,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         autocomplete="off"
                                                                         class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                                         disabled=""
-                                                                        id="identifierField"
+                                                                        id="identifier-field"
                                                                         spellcheck="false"
                                                                         type="text"
                                                                         value=""
@@ -7517,7 +7546,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     </React.Fragment>
                                                                   }
                                                                   fullWidth={true}
-                                                                  id="identifierField"
+                                                                  id="identifier-field"
                                                                   inputComponent="input"
                                                                   inputProps={
                                                                     Object {
@@ -7528,7 +7557,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       "autoComplete": "off",
                                                                       "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                       "disabled": true,
-                                                                      "id": "identifierField",
+                                                                      "id": "identifier-field",
                                                                       "onBlur": [Function],
                                                                       "onChange": [Function],
                                                                       "onFocus": [Function],
@@ -7541,7 +7570,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           autocomplete="off"
                                                                           class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                                           disabled=""
-                                                                          id="identifierField"
+                                                                          id="identifier-field"
                                                                           spellcheck="false"
                                                                           type="text"
                                                                           value=""
@@ -7598,7 +7627,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       </React.Fragment>
                                                                     }
                                                                     fullWidth={true}
-                                                                    id="identifierField"
+                                                                    id="identifier-field"
                                                                     inputComponent="input"
                                                                     inputProps={
                                                                       Object {
@@ -7609,7 +7638,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         "autoComplete": "off",
                                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
                                                                         "disabled": true,
-                                                                        "id": "identifierField",
+                                                                        "id": "identifier-field",
                                                                         "onBlur": [Function],
                                                                         "onChange": [Function],
                                                                         "onFocus": [Function],
@@ -7622,7 +7651,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                             autocomplete="off"
                                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                                             disabled=""
-                                                                            id="identifierField"
+                                                                            id="identifier-field"
                                                                             spellcheck="false"
                                                                             type="text"
                                                                             value=""
@@ -7651,7 +7680,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         autoFocus={false}
                                                                         className="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
                                                                         disabled={true}
-                                                                        id="identifierField"
+                                                                        id="identifier-field"
                                                                         onAnimationStart={[Function]}
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
@@ -8190,7 +8219,17 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8265,7 +8304,17 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8340,7 +8389,17 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8415,7 +8474,17 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -8480,7 +8549,17 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
       "scroll": "scroll",
     }
   }
-  contributor={Object {}}
+  contributor={
+    Object {
+      "affiliation": "",
+      "creatorRole": "",
+      "nameAsPublished": "",
+      "orgaff": "",
+      "orgtype": "",
+      "uqIdentifier": "",
+      "uqUsername": "",
+    }
+  }
   contributors={
     Array [
       Object {
@@ -8547,7 +8626,17 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
       "scroll": "scroll",
     }
   }
-  contributor={Object {}}
+  contributor={
+    Object {
+      "affiliation": "",
+      "creatorRole": "",
+      "nameAsPublished": "",
+      "orgaff": "",
+      "orgtype": "",
+      "uqIdentifier": "",
+      "uqUsername": "",
+    }
+  }
   contributors={
     Array [
       Object {
@@ -8608,7 +8697,17 @@ exports[`ContributorsEditor should get contributors from props and input value s
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8795,7 +8894,17 @@ exports[`ContributorsEditor should get contributors from props and input value s
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8997,7 +9106,17 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9072,7 +9191,17 @@ exports[`ContributorsEditor should render error as html 1`] = `
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9166,7 +9295,17 @@ exports[`ContributorsEditor should render error as one child 1`] = `
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9254,7 +9393,17 @@ exports[`ContributorsEditor should show validation error 1`] = `
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}

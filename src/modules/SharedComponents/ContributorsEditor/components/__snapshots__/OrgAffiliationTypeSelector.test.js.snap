@@ -2,9 +2,12 @@
 
 exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ selected 1`] = `
 <WithStyles(ForwardRef(FormControl))
+  error={false}
   fullWidth={true}
 >
-  <WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(InputLabel))
+    id="org-affiliation-selector-label"
+  >
     Org affiliation
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
@@ -13,7 +16,8 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
         "id": "org-affiliation-selector",
       }
     }
-    error={false}
+    labelId="org-affiliation-selector-label"
+    name="org-affiliation-selector"
     onChange={[MockFunction]}
     required={true}
     value="NotUQ"
@@ -42,9 +46,12 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
 
 exports[`OrgAffiliationTypeSelector tests  should render component with UQ selected 1`] = `
 <WithStyles(ForwardRef(FormControl))
+  error={false}
   fullWidth={true}
 >
-  <WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(InputLabel))
+    id="org-affiliation-selector-label"
+  >
     Org affiliation
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
@@ -53,7 +60,8 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
         "id": "org-affiliation-selector",
       }
     }
-    error={false}
+    labelId="org-affiliation-selector-label"
+    name="org-affiliation-selector"
     onChange={[MockFunction]}
     required={true}
     value="UQ"
@@ -82,9 +90,12 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
 
 exports[`OrgAffiliationTypeSelector tests  should render component with default values 1`] = `
 <WithStyles(ForwardRef(FormControl))
+  error={false}
   fullWidth={true}
 >
-  <WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(InputLabel))
+    id="org-affiliation-selector-label"
+  >
     Org affiliation
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
@@ -93,7 +104,8 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
         "id": "org-affiliation-selector",
       }
     }
-    error={false}
+    labelId="org-affiliation-selector-label"
+    name="org-affiliation-selector"
     onChange={[MockFunction]}
     required={true}
     value=""
