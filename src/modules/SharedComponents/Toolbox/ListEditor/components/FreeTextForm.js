@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     MUITextLabel: theme.overrides.MuiFormLabel,
     remindToAdd: {
         marginTop: 8,
         color: '#f06f0d',
     },
-});
+}));
 
 const onItemChangeCallback = (setItem, normalize) => {
     const callback = event => setItem(normalize(event.target.value));
@@ -27,12 +27,12 @@ export const FreeTextForm = ({
     disabled,
     errorText,
     remindToAdd,
-    classes,
     maxInputLength,
     normalize,
     required,
     itemSelectedToEdit,
 }) => {
+    const classes = useStyles();
     const [item, setItem] = useState(itemSelectedToEdit || '');
     const [itemSubmitted, setItemSubmitted] = useState(false);
 
@@ -118,7 +118,6 @@ FreeTextForm.propTypes = {
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
     remindToAdd: PropTypes.bool,
-    classes: PropTypes.object,
     maxInputLength: PropTypes.number,
     normalize: PropTypes.func,
     required: PropTypes.bool,
@@ -139,4 +138,4 @@ FreeTextForm.defaultProps = {
     itemSelectedToEdit: '',
 };
 
-export default React.memo(withStyles(styles)(FreeTextForm));
+export default React.memo(FreeTextForm);

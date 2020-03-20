@@ -75,4 +75,4 @@ ListRowHeader.defaultProps = {
     },
 };
 
-export default ListRowHeader;
+export default React.memo(ListRowHeader);

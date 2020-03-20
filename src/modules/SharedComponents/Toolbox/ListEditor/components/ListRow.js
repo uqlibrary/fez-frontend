@@ -172,4 +172,4 @@ ListRow.defaultProps = {
     form: 'Form',
 };
 
-export default ListRow;
+export default React.memo(ListRow);
