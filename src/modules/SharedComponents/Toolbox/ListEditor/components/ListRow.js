@@ -44,27 +44,24 @@ export const ListRow = ({
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const deleteRecord = useCallback(() => {
-        if (!disabled && onDelete) {
-            onDelete(item, index);
-        }
+        !disabled && !!onDelete && onDelete(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const _handleEdit = () => {
+    const _handleEdit = useCallback(() => {
         !!onEdit && onEdit(index);
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    const _handleMoveUp = () => {
-        if (!disabled && onMoveUp) {
-            onMoveUp(item, index);
-        }
-    };
+    const _handleMoveUp = useCallback(() => {
+        !disabled && !!onMoveUp && onMoveUp(item, index);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    const _handleMoveDown = () => {
-        if (!disabled && onMoveDown) {
-            onMoveDown(item, index);
-        }
-    };
+    const _handleMoveDown = useCallback(() => {
+        !disabled && !!onMoveDown && onMoveDown(item, index);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div
