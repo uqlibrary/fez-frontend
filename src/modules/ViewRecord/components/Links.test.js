@@ -120,7 +120,7 @@ describe('Component Links ', () => {
     it('Will not render a UQ generated doi', () => {
         const wrapper = setup({
             publication: {
-                fez_record_search_key_doi: { rek_doi: '12345uql' },
+                fez_record_search_key_doi: { rek_doi: '10.14264' },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
