@@ -531,48 +531,42 @@ exports[`AddSection component should render default view 1`] = `
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
                   key="16"
-                  value={272}
-                >
-                  Reference Entry
-                </WithStyles(MenuItem)>
-                <WithStyles(MenuItem)
-                  key="17"
                   value={275}
                 >
                   Research Report
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="18"
+                  key="17"
                   value={294}
                 >
                   Journal
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="19"
+                  key="18"
                   value={310}
                 >
                   Video Document
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="20"
+                  key="19"
                   value={313}
                 >
                   Creative Work
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="21"
+                  key="20"
                   value={316}
                 >
                   Design
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="22"
+                  key="21"
                   value={371}
                 >
                   Data Collection
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="23"
+                  key="22"
                   value={374}
                 >
                   Manuscript
@@ -1179,48 +1173,42 @@ exports[`AddSection component should render with subtypes 1`] = `
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
                   key="16"
-                  value={272}
-                >
-                  Reference Entry
-                </WithStyles(MenuItem)>
-                <WithStyles(MenuItem)
-                  key="17"
                   value={275}
                 >
                   Research Report
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="18"
+                  key="17"
                   value={294}
                 >
                   Journal
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="19"
+                  key="18"
                   value={310}
                 >
                   Video Document
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="20"
+                  key="19"
                   value={313}
                 >
                   Creative Work
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="21"
+                  key="20"
                   value={316}
                 >
                   Design
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="22"
+                  key="21"
                   value={371}
                 >
                   Data Collection
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
-                  key="23"
+                  key="22"
                   value={374}
                 >
                   Manuscript
