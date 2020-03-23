@@ -1,4 +1,4 @@
-import { PureComponent } from 'react';
+import { useEffect, useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import * as validationRules from 'config/validation';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -9,181 +9,169 @@ import {
     CollectionField,
 } from 'modules/SharedComponents/LookupFields';
 import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import UnpublishedStatusField from './Fields/UnpublishedStatusField';
+import { UnpublishedStatusField } from './Fields/UnpublishedStatusField';
 
-export default class AdvancedSearchRowInput extends PureComponent {
-    static propTypes = {
-        children: PropTypes.func.isRequired,
-        value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.number]),
-        hintText: PropTypes.string,
-        label: PropTypes.any,
-        onChange: PropTypes.func,
-        inputField: PropTypes.shape({
-            type: PropTypes.string.isRequired,
-            validation: PropTypes.array.isRequired,
-            hint: PropTypes.string,
-            label: PropTypes.string,
-            id: PropTypes.string,
-            multiple: PropTypes.bool,
-            errorHint: PropTypes.string,
-            loadingHint: PropTypes.string,
-            ariaLabel: PropTypes.string,
-        }),
+const runValidationRules = (inputField, value) => {
+    const rules = !!inputField.validation && inputField.validation;
+    return (
+        (!!rules &&
+            rules
+                .reduce((errors, rule) => [...errors, validationRules[rule](value)], [])
+                .filter(error => error)
+                .join(', ')) ||
+        undefined
+    );
+};
+
+const getInputComponent = type => {
+    switch (type) {
+        case 'TextField':
+            return TextField;
+        case 'PublisherLookup':
+            return PublisherField;
+        case 'ThesisTypeLookup':
+            return ThesisSubtypeField;
+        case 'CollectionsLookup':
+            return CollectionField;
+        case 'AuthorIdLookup':
+        case 'ContributorIdLookup':
+            return AuthorIdField;
+        case 'OrgUnitLookup':
+            return OrgUnitNameField;
+        case 'StatusLookup':
+            return UnpublishedStatusField;
+        default:
+            return TextField;
+    }
+};
+
+const getInputProps = (inputField, value, onChange, label) => {
+    const defaultProps = {
+        hintText: inputField.hint,
+        'aria-label': inputField.ariaLabel,
+        errorText: runValidationRules(inputField, value),
+        error: !!runValidationRules(inputField, value),
+        label: label,
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            InputComponent: TextField,
-            inputProps: {},
-        };
-    }
+    const textFieldMui1Props = {
+        placeholder: inputField.hint,
+        id: inputField.id || inputField.label || 'textfield',
+        'aria-label': inputField.ariaLabel,
+        error: !!runValidationRules(inputField, value),
+        errorText: runValidationRules(inputField, value),
+        label: inputField.label,
+    };
 
-    componentWillMount() {
-        this.setState({
-            InputComponent: this.getInputComponent(),
-            inputProps: this.getInputProps(),
+    const lookupDefaultProps = {
+        ...defaultProps,
+        value: label || value,
+        allowFreeText: true,
+        floatingLabelText: inputField.ariaLabel,
+        hideLabel: true,
+    };
+
+    const selectDefaultProps = {
+        ...defaultProps,
+        selectedValue: value,
+        onChange: item => onChange(item, item),
+        label: inputField.label,
+        style: { marginTop: 0 },
+    };
+
+    switch (inputField.type) {
+        case 'TextField':
+            return {
+                ...textFieldMui1Props,
+                autoComplete: 'search',
+                onChange: event => onChange(event.target.value),
+                hideLabel: true,
+            };
+        case 'PublisherLookup':
+        case 'OrgUnitLookup':
+            return {
+                ...lookupDefaultProps,
+                onChange: item => onChange(item.value, item.value),
+            };
+        case 'AuthorIdLookup':
+        case 'ContributorIdLookup':
+            return {
+                ...lookupDefaultProps,
+                value: { id: value, value: label },
+                label: label,
+                onChange: item => {
+                    if (!!item && !!item.id && parseInt(item.id, 10) > 0) {
+                        onChange(item.id, item.value);
+                    } else {
+                        onChange(0, '');
+                    }
+                },
+            };
+        case 'ThesisTypeLookup':
+            return {
+                ...selectDefaultProps,
+                multiple: inputField.multiple,
+                autoWidth: false,
+                hideLabel: true,
+                displayEmpty: true,
+            };
+        case 'CollectionsLookup':
+            return {
+                ...selectDefaultProps,
+                onChange: onChange,
+                disableClearable: true,
+            };
+        case 'StatusLookup':
+            return {
+                ...selectDefaultProps,
+                autoWidth: false,
+                hideLabel: true,
+                displayEmpty: false,
+                onChange: item => onChange(item),
+            };
+        default:
+            return {};
+    }
+};
+
+const getErrorProps = (inputField, value) => ({
+    error: !!runValidationRules(inputField, value),
+    errorText: runValidationRules(inputField, value),
+});
+
+export const AdvancedSearchRowInput = ({ render, value, label, onChange, inputField }) => {
+    const InputComponent = getInputComponent(inputField.type);
+    const [inputProps, setInputProps] = useState({
+        ...getInputProps(inputField, value, onChange, label),
+        ...getErrorProps(inputField, value),
+    });
+
+    useEffect(() => {
+        setInputProps({
+            ...getInputProps(inputField, value, onChange, label),
+            ...getErrorProps(inputField, value),
         });
-    }
+    }, [inputField, value, onChange, label]);
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            ...this.state,
-            inputProps: {
-                ...this.state.inputProps,
-                error: !!this.runValidationRules(nextProps.value),
-                errorText: this.runValidationRules(nextProps.value),
-            },
-        });
-    }
+    return render(InputComponent, { ...inputProps });
+};
 
-    getInputComponent = () => {
-        switch (this.props.inputField.type) {
-            case 'TextField':
-                return TextField;
-            case 'PublisherLookup':
-                return PublisherField;
-            case 'ThesisTypeLookup':
-                return ThesisSubtypeField;
-            case 'CollectionsLookup':
-                return CollectionField;
-            case 'AuthorIdLookup':
-            case 'ContributorIdLookup':
-                return AuthorIdField;
-            case 'OrgUnitLookup':
-                return OrgUnitNameField;
-            case 'StatusLookup':
-                return UnpublishedStatusField;
-            default:
-                return TextField;
-        }
-    };
+AdvancedSearchRowInput.propTypes = {
+    render: PropTypes.func.isRequired,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.number]),
+    label: PropTypes.any,
+    onChange: PropTypes.func,
+    inputField: PropTypes.shape({
+        type: PropTypes.string.isRequired,
+        validation: PropTypes.array.isRequired,
+        hint: PropTypes.string,
+        label: PropTypes.string,
+        id: PropTypes.string,
+        multiple: PropTypes.bool,
+        errorHint: PropTypes.string,
+        loadingHint: PropTypes.string,
+        ariaLabel: PropTypes.string,
+    }),
+};
 
-    getInputProps = () => {
-        const defaultProps = {
-            hintText: this.props.inputField.hint,
-            'aria-label': this.props.inputField.ariaLabel,
-            errorText: this.runValidationRules(this.props.value),
-            error: !!this.runValidationRules(this.props.value),
-            label: this.props.label,
-        };
-
-        const textFieldMui1Props = {
-            placeholder: this.props.inputField.hint,
-            id: this.props.inputField.id || this.props.inputField.label || 'textfield',
-            'aria-label': this.props.inputField.ariaLabel,
-            error: !!this.runValidationRules(this.props.value),
-            errorText: this.runValidationRules(this.props.value),
-            label: this.props.inputField.label,
-        };
-
-        const lookupDefaultProps = {
-            ...defaultProps,
-            value: this.props.label || this.props.value,
-            'aria-label': this.props.inputField.ariaLabel,
-            allowFreeText: true,
-            floatingLabelText: this.props.inputField.ariaLabel,
-            hideLabel: true,
-        };
-
-        const selectDefaultProps = {
-            ...defaultProps,
-            selectedValue: this.props.value,
-            hintText: this.props.inputField.hint,
-            onChange: item => this.props.onChange(item, item),
-            'aria-label': this.props.inputField.ariaLabel,
-            label: this.props.inputField.label,
-            style: { marginTop: 0 },
-        };
-
-        switch (this.props.inputField.type) {
-            case 'TextField':
-                return {
-                    ...textFieldMui1Props,
-                    autoComplete: 'search',
-                    onChange: event => this.props.onChange(event.target.value),
-                    hideLabel: true,
-                };
-            case 'PublisherLookup':
-            case 'OrgUnitLookup':
-                return {
-                    ...lookupDefaultProps,
-                    onChange: item => this.props.onChange(item.value, item.value),
-                };
-            case 'AuthorIdLookup':
-            case 'ContributorIdLookup':
-                return {
-                    ...lookupDefaultProps,
-                    value: { id: this.props.value, value: this.props.label },
-                    label: this.props.label,
-                    onChange: item => {
-                        if (!!item && !!item.id && parseInt(item.id, 10) > 0) {
-                            this.props.onChange(item.id, item.value);
-                        } else {
-                            this.props.onChange(0, '');
-                        }
-                    },
-                };
-            case 'ThesisTypeLookup':
-                return {
-                    ...selectDefaultProps,
-                    multiple: this.props.inputField.multiple,
-                    autoWidth: false,
-                    hideLabel: true,
-                    displayEmpty: true,
-                };
-            case 'CollectionsLookup':
-                return {
-                    ...selectDefaultProps,
-                    onChange: this.props.onChange,
-                    disableClearable: true,
-                };
-            case 'StatusLookup':
-                return {
-                    ...selectDefaultProps,
-                    autoWidth: false,
-                    hideLabel: true,
-                    displayEmpty: false,
-                    onChange: item => this.props.onChange(item),
-                };
-            default:
-                return {};
-        }
-    };
-
-    runValidationRules = value => {
-        const rules = !!this.props.inputField.validation && this.props.inputField.validation;
-        return (
-            (!!rules &&
-                rules
-                    .reduce((errors, rule) => [...errors, validationRules[rule](value)], [])
-                    .filter(error => error)
-                    .join(', ')) ||
-            undefined
-        );
-    };
-
-    render() {
-        return this.props.children(this.state.InputComponent, this.state.inputProps);
-    }
-}
+export default memo(AdvancedSearchRowInput);

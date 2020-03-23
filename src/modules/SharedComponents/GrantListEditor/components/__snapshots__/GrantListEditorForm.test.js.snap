@@ -17,7 +17,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         autoComplete="off"
         disabled={false}
         error={true}
@@ -35,7 +35,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         disabled={true}
         fullWidth={true}
         id="grantId"
@@ -816,7 +816,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                           <div
                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true"
                           >
-                            <WithStyles(TextFieldWrapper)
+                            <TextField
                               autoComplete="off"
                               disabled={false}
                               error={true}
@@ -827,19 +827,34 @@ exports[`GrantListEditorForm should render default view 1`] = `
                               required={true}
                               value=""
                             >
-                              <TextFieldWrapper
+                              <WithStyles(ForwardRef(TextField))
+                                InputLabelProps={
+                                  Object {
+                                    "hidden": false,
+                                    "htmlFor": "grantAgencyName",
+                                    "id": "grantAgencyName-label",
+                                    "shrink": undefined,
+                                  }
+                                }
                                 autoComplete="off"
-                                classes={Object {}}
                                 disabled={false}
                                 error={true}
-                                errorText="This field is required"
                                 fullWidth={true}
+                                helperText="This field is required"
                                 id="grantAgencyName"
+                                inputProps={
+                                  Object {
+                                    "aria-label": undefined,
+                                    "aria-labelledby": "grantAgencyName-label",
+                                    "id": "grantAgencyName",
+                                    "label": undefined,
+                                  }
+                                }
                                 onChange={[Function]}
                                 required={true}
                                 value=""
                               >
-                                <WithStyles(ForwardRef(TextField))
+                                <ForwardRef(TextField)
                                   InputLabelProps={
                                     Object {
                                       "hidden": false,
@@ -849,7 +864,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     }
                                   }
                                   autoComplete="off"
-                                  classes={Object {}}
+                                  classes={
+                                    Object {
+                                      "root": "MuiTextField-root",
+                                    }
+                                  }
                                   disabled={false}
                                   error={true}
                                   fullWidth={true}
@@ -867,40 +886,25 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   required={true}
                                   value=""
                                 >
-                                  <ForwardRef(TextField)
-                                    InputLabelProps={
-                                      Object {
-                                        "hidden": false,
-                                        "htmlFor": "grantAgencyName",
-                                        "id": "grantAgencyName-label",
-                                        "shrink": undefined,
-                                      }
-                                    }
-                                    autoComplete="off"
-                                    classes={
-                                      Object {
-                                        "root": "MuiTextField-root",
-                                      }
-                                    }
+                                  <WithStyles(ForwardRef(FormControl))
+                                    className="MuiTextField-root"
+                                    color="primary"
                                     disabled={false}
                                     error={true}
                                     fullWidth={true}
-                                    helperText="This field is required"
-                                    id="grantAgencyName"
-                                    inputProps={
-                                      Object {
-                                        "aria-label": undefined,
-                                        "aria-labelledby": "grantAgencyName-label",
-                                        "id": "grantAgencyName",
-                                        "label": undefined,
-                                      }
-                                    }
-                                    onChange={[Function]}
                                     required={true}
-                                    value=""
+                                    variant="standard"
                                   >
-                                    <WithStyles(ForwardRef(FormControl))
+                                    <ForwardRef(FormControl)
                                       className="MuiTextField-root"
+                                      classes={
+                                        Object {
+                                          "fullWidth": "MuiFormControl-fullWidth",
+                                          "marginDense": "MuiFormControl-marginDense",
+                                          "marginNormal": "MuiFormControl-marginNormal",
+                                          "root": "MuiFormControl-root",
+                                        }
+                                      }
                                       color="primary"
                                       disabled={false}
                                       error={true}
@@ -908,30 +912,49 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       required={true}
                                       variant="standard"
                                     >
-                                      <ForwardRef(FormControl)
-                                        className="MuiTextField-root"
-                                        classes={
-                                          Object {
-                                            "fullWidth": "MuiFormControl-fullWidth",
-                                            "marginDense": "MuiFormControl-marginDense",
-                                            "marginNormal": "MuiFormControl-marginNormal",
-                                            "root": "MuiFormControl-root",
-                                          }
-                                        }
-                                        color="primary"
-                                        disabled={false}
-                                        error={true}
-                                        fullWidth={true}
-                                        required={true}
-                                        variant="standard"
+                                      <div
+                                        className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                       >
-                                        <div
-                                          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+                                        <WithStyles(ForwardRef(Input))
+                                          aria-describedby="grantAgencyName-helper-text"
+                                          autoComplete="off"
+                                          autoFocus={false}
+                                          fullWidth={true}
+                                          id="grantAgencyName"
+                                          inputProps={
+                                            Object {
+                                              "aria-label": undefined,
+                                              "aria-labelledby": "grantAgencyName-label",
+                                              "id": "grantAgencyName",
+                                              "label": undefined,
+                                            }
+                                          }
+                                          multiline={false}
+                                          onChange={[Function]}
+                                          value=""
                                         >
-                                          <WithStyles(ForwardRef(Input))
+                                          <ForwardRef(Input)
                                             aria-describedby="grantAgencyName-helper-text"
                                             autoComplete="off"
                                             autoFocus={false}
+                                            classes={
+                                              Object {
+                                                "colorSecondary": "MuiInput-colorSecondary",
+                                                "disabled": "Mui-disabled",
+                                                "error": "Mui-error",
+                                                "focused": "Mui-focused",
+                                                "formControl": "MuiInput-formControl",
+                                                "fullWidth": "MuiInput-fullWidth",
+                                                "input": "MuiInput-input",
+                                                "inputMarginDense": "MuiInput-inputMarginDense",
+                                                "inputMultiline": "MuiInput-inputMultiline",
+                                                "inputTypeSearch": "MuiInput-inputTypeSearch",
+                                                "marginDense": "MuiInput-marginDense",
+                                                "multiline": "MuiInput-multiline",
+                                                "root": "MuiInput-root",
+                                                "underline": "MuiInput-underline",
+                                              }
+                                            }
                                             fullWidth={true}
                                             id="grantAgencyName"
                                             inputProps={
@@ -946,7 +969,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             onChange={[Function]}
                                             value=""
                                           >
-                                            <ForwardRef(Input)
+                                            <WithStyles(ForwardRef(InputBase))
                                               aria-describedby="grantAgencyName-helper-text"
                                               autoComplete="off"
                                               autoFocus={false}
@@ -964,12 +987,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "inputTypeSearch": "MuiInput-inputTypeSearch",
                                                   "marginDense": "MuiInput-marginDense",
                                                   "multiline": "MuiInput-multiline",
-                                                  "root": "MuiInput-root",
-                                                  "underline": "MuiInput-underline",
+                                                  "root": "MuiInput-root MuiInput-underline",
+                                                  "underline": null,
                                                 }
                                               }
                                               fullWidth={true}
                                               id="grantAgencyName"
+                                              inputComponent="input"
                                               inputProps={
                                                 Object {
                                                   "aria-label": undefined,
@@ -980,28 +1004,33 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                               multiline={false}
                                               onChange={[Function]}
+                                              type="text"
                                               value=""
                                             >
-                                              <WithStyles(ForwardRef(InputBase))
+                                              <ForwardRef(InputBase)
                                                 aria-describedby="grantAgencyName-helper-text"
                                                 autoComplete="off"
                                                 autoFocus={false}
                                                 classes={
                                                   Object {
-                                                    "colorSecondary": "MuiInput-colorSecondary",
-                                                    "disabled": "Mui-disabled",
-                                                    "error": "Mui-error",
-                                                    "focused": "Mui-focused",
-                                                    "formControl": "MuiInput-formControl",
-                                                    "fullWidth": "MuiInput-fullWidth",
-                                                    "input": "MuiInput-input",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense",
-                                                    "inputMultiline": "MuiInput-inputMultiline",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch",
-                                                    "marginDense": "MuiInput-marginDense",
-                                                    "multiline": "MuiInput-multiline",
-                                                    "root": "MuiInput-root MuiInput-underline",
-                                                    "underline": null,
+                                                    "adornedEnd": "MuiInputBase-adornedEnd",
+                                                    "adornedStart": "MuiInputBase-adornedStart",
+                                                    "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                                                    "disabled": "Mui-disabled Mui-disabled",
+                                                    "error": "Mui-error Mui-error",
+                                                    "focused": "Mui-focused Mui-focused",
+                                                    "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                                                    "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                                                    "input": "MuiInputBase-input MuiInput-input",
+                                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                                                    "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                                    "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                                                    "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                                                    "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                                                    "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                                                    "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
                                                   }
                                                 }
                                                 fullWidth={true}
@@ -1020,107 +1049,64 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 type="text"
                                                 value=""
                                               >
-                                                <ForwardRef(InputBase)
-                                                  aria-describedby="grantAgencyName-helper-text"
-                                                  autoComplete="off"
-                                                  autoFocus={false}
-                                                  classes={
-                                                    Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd",
-                                                      "adornedStart": "MuiInputBase-adornedStart",
-                                                      "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
-                                                      "disabled": "Mui-disabled Mui-disabled",
-                                                      "error": "Mui-error Mui-error",
-                                                      "focused": "Mui-focused Mui-focused",
-                                                      "formControl": "MuiInputBase-formControl MuiInput-formControl",
-                                                      "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
-                                                      "input": "MuiInputBase-input MuiInput-input",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart",
-                                                      "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
-                                                      "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
-                                                      "multiline": "MuiInputBase-multiline MuiInput-multiline",
-                                                      "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
-                                                    }
-                                                  }
-                                                  fullWidth={true}
-                                                  id="grantAgencyName"
-                                                  inputComponent="input"
-                                                  inputProps={
-                                                    Object {
-                                                      "aria-label": undefined,
-                                                      "aria-labelledby": "grantAgencyName-label",
-                                                      "id": "grantAgencyName",
-                                                      "label": undefined,
-                                                    }
-                                                  }
-                                                  multiline={false}
-                                                  onChange={[Function]}
-                                                  type="text"
-                                                  value=""
+                                                <div
+                                                  className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                                                  onClick={[Function]}
                                                 >
-                                                  <div
-                                                    className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-                                                    onClick={[Function]}
-                                                  >
-                                                    <input
-                                                      aria-describedby="grantAgencyName-helper-text"
-                                                      aria-invalid={true}
-                                                      aria-labelledby="grantAgencyName-label"
-                                                      autoComplete="off"
-                                                      autoFocus={false}
-                                                      className="MuiInputBase-input MuiInput-input"
-                                                      disabled={false}
-                                                      id="grantAgencyName"
-                                                      onAnimationStart={[Function]}
-                                                      onBlur={[Function]}
-                                                      onChange={[Function]}
-                                                      onFocus={[Function]}
-                                                      required={true}
-                                                      type="text"
-                                                      value=""
-                                                    />
-                                                  </div>
-                                                </ForwardRef(InputBase)>
-                                              </WithStyles(ForwardRef(InputBase))>
-                                            </ForwardRef(Input)>
-                                          </WithStyles(ForwardRef(Input))>
-                                          <WithStyles(ForwardRef(FormHelperText))
+                                                  <input
+                                                    aria-describedby="grantAgencyName-helper-text"
+                                                    aria-invalid={true}
+                                                    aria-labelledby="grantAgencyName-label"
+                                                    autoComplete="off"
+                                                    autoFocus={false}
+                                                    className="MuiInputBase-input MuiInput-input"
+                                                    disabled={false}
+                                                    id="grantAgencyName"
+                                                    onAnimationStart={[Function]}
+                                                    onBlur={[Function]}
+                                                    onChange={[Function]}
+                                                    onFocus={[Function]}
+                                                    required={true}
+                                                    type="text"
+                                                    value=""
+                                                  />
+                                                </div>
+                                              </ForwardRef(InputBase)>
+                                            </WithStyles(ForwardRef(InputBase))>
+                                          </ForwardRef(Input)>
+                                        </WithStyles(ForwardRef(Input))>
+                                        <WithStyles(ForwardRef(FormHelperText))
+                                          id="grantAgencyName-helper-text"
+                                        >
+                                          <ForwardRef(FormHelperText)
+                                            classes={
+                                              Object {
+                                                "contained": "MuiFormHelperText-contained",
+                                                "disabled": "Mui-disabled",
+                                                "error": "Mui-error",
+                                                "filled": "MuiFormHelperText-filled",
+                                                "focused": "Mui-focused",
+                                                "marginDense": "MuiFormHelperText-marginDense",
+                                                "required": "Mui-required",
+                                                "root": "MuiFormHelperText-root",
+                                              }
+                                            }
                                             id="grantAgencyName-helper-text"
                                           >
-                                            <ForwardRef(FormHelperText)
-                                              classes={
-                                                Object {
-                                                  "contained": "MuiFormHelperText-contained",
-                                                  "disabled": "Mui-disabled",
-                                                  "error": "Mui-error",
-                                                  "filled": "MuiFormHelperText-filled",
-                                                  "focused": "Mui-focused",
-                                                  "marginDense": "MuiFormHelperText-marginDense",
-                                                  "required": "Mui-required",
-                                                  "root": "MuiFormHelperText-root",
-                                                }
-                                              }
+                                            <p
+                                              className="MuiFormHelperText-root Mui-error Mui-required"
                                               id="grantAgencyName-helper-text"
                                             >
-                                              <p
-                                                className="MuiFormHelperText-root Mui-error Mui-required"
-                                                id="grantAgencyName-helper-text"
-                                              >
-                                                This field is required
-                                              </p>
-                                            </ForwardRef(FormHelperText)>
-                                          </WithStyles(ForwardRef(FormHelperText))>
-                                        </div>
-                                      </ForwardRef(FormControl)>
-                                    </WithStyles(ForwardRef(FormControl))>
-                                  </ForwardRef(TextField)>
-                                </WithStyles(ForwardRef(TextField))>
-                              </TextFieldWrapper>
-                            </WithStyles(TextFieldWrapper)>
+                                              This field is required
+                                            </p>
+                                          </ForwardRef(FormHelperText)>
+                                        </WithStyles(ForwardRef(FormHelperText))>
+                                      </div>
+                                    </ForwardRef(FormControl)>
+                                  </WithStyles(ForwardRef(FormControl))>
+                                </ForwardRef(TextField)>
+                              </WithStyles(ForwardRef(TextField))>
+                            </TextField>
                           </div>
                         </ForwardRef(Grid)>
                       </WithStyles(ForwardRef(Grid))>
@@ -1246,7 +1232,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                           <div
                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3"
                           >
-                            <WithStyles(TextFieldWrapper)
+                            <TextField
                               disabled={true}
                               fullWidth={true}
                               id="grantId"
@@ -1254,16 +1240,32 @@ exports[`GrantListEditorForm should render default view 1`] = `
                               required={true}
                               value=""
                             >
-                              <TextFieldWrapper
-                                classes={Object {}}
+                              <WithStyles(ForwardRef(TextField))
+                                InputLabelProps={
+                                  Object {
+                                    "hidden": false,
+                                    "htmlFor": "grantId",
+                                    "id": "grantId-label",
+                                    "shrink": undefined,
+                                  }
+                                }
                                 disabled={true}
+                                error={false}
                                 fullWidth={true}
                                 id="grantId"
+                                inputProps={
+                                  Object {
+                                    "aria-label": undefined,
+                                    "aria-labelledby": "grantId-label",
+                                    "id": "grantId",
+                                    "label": undefined,
+                                  }
+                                }
                                 onChange={[Function]}
                                 required={true}
                                 value=""
                               >
-                                <WithStyles(ForwardRef(TextField))
+                                <ForwardRef(TextField)
                                   InputLabelProps={
                                     Object {
                                       "hidden": false,
@@ -1272,7 +1274,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       "shrink": undefined,
                                     }
                                   }
-                                  classes={Object {}}
+                                  classes={
+                                    Object {
+                                      "root": "MuiTextField-root",
+                                    }
+                                  }
                                   disabled={true}
                                   error={false}
                                   fullWidth={true}
@@ -1289,38 +1295,25 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   required={true}
                                   value=""
                                 >
-                                  <ForwardRef(TextField)
-                                    InputLabelProps={
-                                      Object {
-                                        "hidden": false,
-                                        "htmlFor": "grantId",
-                                        "id": "grantId-label",
-                                        "shrink": undefined,
-                                      }
-                                    }
-                                    classes={
-                                      Object {
-                                        "root": "MuiTextField-root",
-                                      }
-                                    }
+                                  <WithStyles(ForwardRef(FormControl))
+                                    className="MuiTextField-root"
+                                    color="primary"
                                     disabled={true}
                                     error={false}
                                     fullWidth={true}
-                                    id="grantId"
-                                    inputProps={
-                                      Object {
-                                        "aria-label": undefined,
-                                        "aria-labelledby": "grantId-label",
-                                        "id": "grantId",
-                                        "label": undefined,
-                                      }
-                                    }
-                                    onChange={[Function]}
                                     required={true}
-                                    value=""
+                                    variant="standard"
                                   >
-                                    <WithStyles(ForwardRef(FormControl))
+                                    <ForwardRef(FormControl)
                                       className="MuiTextField-root"
+                                      classes={
+                                        Object {
+                                          "fullWidth": "MuiFormControl-fullWidth",
+                                          "marginDense": "MuiFormControl-marginDense",
+                                          "marginNormal": "MuiFormControl-marginNormal",
+                                          "root": "MuiFormControl-root",
+                                        }
+                                      }
                                       color="primary"
                                       disabled={true}
                                       error={false}
@@ -1328,28 +1321,45 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       required={true}
                                       variant="standard"
                                     >
-                                      <ForwardRef(FormControl)
-                                        className="MuiTextField-root"
-                                        classes={
-                                          Object {
-                                            "fullWidth": "MuiFormControl-fullWidth",
-                                            "marginDense": "MuiFormControl-marginDense",
-                                            "marginNormal": "MuiFormControl-marginNormal",
-                                            "root": "MuiFormControl-root",
-                                          }
-                                        }
-                                        color="primary"
-                                        disabled={true}
-                                        error={false}
-                                        fullWidth={true}
-                                        required={true}
-                                        variant="standard"
+                                      <div
+                                        className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                       >
-                                        <div
-                                          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+                                        <WithStyles(ForwardRef(Input))
+                                          autoFocus={false}
+                                          fullWidth={true}
+                                          id="grantId"
+                                          inputProps={
+                                            Object {
+                                              "aria-label": undefined,
+                                              "aria-labelledby": "grantId-label",
+                                              "id": "grantId",
+                                              "label": undefined,
+                                            }
+                                          }
+                                          multiline={false}
+                                          onChange={[Function]}
+                                          value=""
                                         >
-                                          <WithStyles(ForwardRef(Input))
+                                          <ForwardRef(Input)
                                             autoFocus={false}
+                                            classes={
+                                              Object {
+                                                "colorSecondary": "MuiInput-colorSecondary",
+                                                "disabled": "Mui-disabled",
+                                                "error": "Mui-error",
+                                                "focused": "Mui-focused",
+                                                "formControl": "MuiInput-formControl",
+                                                "fullWidth": "MuiInput-fullWidth",
+                                                "input": "MuiInput-input",
+                                                "inputMarginDense": "MuiInput-inputMarginDense",
+                                                "inputMultiline": "MuiInput-inputMultiline",
+                                                "inputTypeSearch": "MuiInput-inputTypeSearch",
+                                                "marginDense": "MuiInput-marginDense",
+                                                "multiline": "MuiInput-multiline",
+                                                "root": "MuiInput-root",
+                                                "underline": "MuiInput-underline",
+                                              }
+                                            }
                                             fullWidth={true}
                                             id="grantId"
                                             inputProps={
@@ -1364,7 +1374,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             onChange={[Function]}
                                             value=""
                                           >
-                                            <ForwardRef(Input)
+                                            <WithStyles(ForwardRef(InputBase))
                                               autoFocus={false}
                                               classes={
                                                 Object {
@@ -1380,12 +1390,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "inputTypeSearch": "MuiInput-inputTypeSearch",
                                                   "marginDense": "MuiInput-marginDense",
                                                   "multiline": "MuiInput-multiline",
-                                                  "root": "MuiInput-root",
-                                                  "underline": "MuiInput-underline",
+                                                  "root": "MuiInput-root MuiInput-underline",
+                                                  "underline": null,
                                                 }
                                               }
                                               fullWidth={true}
                                               id="grantId"
+                                              inputComponent="input"
                                               inputProps={
                                                 Object {
                                                   "aria-label": undefined,
@@ -1396,26 +1407,31 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                               multiline={false}
                                               onChange={[Function]}
+                                              type="text"
                                               value=""
                                             >
-                                              <WithStyles(ForwardRef(InputBase))
+                                              <ForwardRef(InputBase)
                                                 autoFocus={false}
                                                 classes={
                                                   Object {
-                                                    "colorSecondary": "MuiInput-colorSecondary",
-                                                    "disabled": "Mui-disabled",
-                                                    "error": "Mui-error",
-                                                    "focused": "Mui-focused",
-                                                    "formControl": "MuiInput-formControl",
-                                                    "fullWidth": "MuiInput-fullWidth",
-                                                    "input": "MuiInput-input",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense",
-                                                    "inputMultiline": "MuiInput-inputMultiline",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch",
-                                                    "marginDense": "MuiInput-marginDense",
-                                                    "multiline": "MuiInput-multiline",
-                                                    "root": "MuiInput-root MuiInput-underline",
-                                                    "underline": null,
+                                                    "adornedEnd": "MuiInputBase-adornedEnd",
+                                                    "adornedStart": "MuiInputBase-adornedStart",
+                                                    "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                                                    "disabled": "Mui-disabled Mui-disabled",
+                                                    "error": "Mui-error Mui-error",
+                                                    "focused": "Mui-focused Mui-focused",
+                                                    "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                                                    "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                                                    "input": "MuiInputBase-input MuiInput-input",
+                                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                                                    "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                                    "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                                                    "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                                                    "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                                                    "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                                                    "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
                                                   }
                                                 }
                                                 fullWidth={true}
@@ -1434,77 +1450,36 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 type="text"
                                                 value=""
                                               >
-                                                <ForwardRef(InputBase)
-                                                  autoFocus={false}
-                                                  classes={
-                                                    Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd",
-                                                      "adornedStart": "MuiInputBase-adornedStart",
-                                                      "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
-                                                      "disabled": "Mui-disabled Mui-disabled",
-                                                      "error": "Mui-error Mui-error",
-                                                      "focused": "Mui-focused Mui-focused",
-                                                      "formControl": "MuiInputBase-formControl MuiInput-formControl",
-                                                      "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
-                                                      "input": "MuiInputBase-input MuiInput-input",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart",
-                                                      "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
-                                                      "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
-                                                      "multiline": "MuiInputBase-multiline MuiInput-multiline",
-                                                      "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
-                                                    }
-                                                  }
-                                                  fullWidth={true}
-                                                  id="grantId"
-                                                  inputComponent="input"
-                                                  inputProps={
-                                                    Object {
-                                                      "aria-label": undefined,
-                                                      "aria-labelledby": "grantId-label",
-                                                      "id": "grantId",
-                                                      "label": undefined,
-                                                    }
-                                                  }
-                                                  multiline={false}
-                                                  onChange={[Function]}
-                                                  type="text"
-                                                  value=""
+                                                <div
+                                                  className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-disabled Mui-disabled MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                                                  onClick={[Function]}
                                                 >
-                                                  <div
-                                                    className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-disabled Mui-disabled MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-                                                    onClick={[Function]}
-                                                  >
-                                                    <input
-                                                      aria-invalid={false}
-                                                      aria-labelledby="grantId-label"
-                                                      autoFocus={false}
-                                                      className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
-                                                      disabled={true}
-                                                      id="grantId"
-                                                      onAnimationStart={[Function]}
-                                                      onBlur={[Function]}
-                                                      onChange={[Function]}
-                                                      onFocus={[Function]}
-                                                      required={true}
-                                                      type="text"
-                                                      value=""
-                                                    />
-                                                  </div>
-                                                </ForwardRef(InputBase)>
-                                              </WithStyles(ForwardRef(InputBase))>
-                                            </ForwardRef(Input)>
-                                          </WithStyles(ForwardRef(Input))>
-                                        </div>
-                                      </ForwardRef(FormControl)>
-                                    </WithStyles(ForwardRef(FormControl))>
-                                  </ForwardRef(TextField)>
-                                </WithStyles(ForwardRef(TextField))>
-                              </TextFieldWrapper>
-                            </WithStyles(TextFieldWrapper)>
+                                                  <input
+                                                    aria-invalid={false}
+                                                    aria-labelledby="grantId-label"
+                                                    autoFocus={false}
+                                                    className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
+                                                    disabled={true}
+                                                    id="grantId"
+                                                    onAnimationStart={[Function]}
+                                                    onBlur={[Function]}
+                                                    onChange={[Function]}
+                                                    onFocus={[Function]}
+                                                    required={true}
+                                                    type="text"
+                                                    value=""
+                                                  />
+                                                </div>
+                                              </ForwardRef(InputBase)>
+                                            </WithStyles(ForwardRef(InputBase))>
+                                          </ForwardRef(Input)>
+                                        </WithStyles(ForwardRef(Input))>
+                                      </div>
+                                    </ForwardRef(FormControl)>
+                                  </WithStyles(ForwardRef(FormControl))>
+                                </ForwardRef(TextField)>
+                              </WithStyles(ForwardRef(TextField))>
+                            </TextField>
                           </div>
                         </ForwardRef(Grid)>
                       </WithStyles(ForwardRef(Grid))>
@@ -3611,7 +3586,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                       <div
                         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true"
                       >
-                        <WithStyles(TextFieldWrapper)
+                        <TextField
                           autoComplete="off"
                           disabled={false}
                           error={true}
@@ -3622,19 +3597,34 @@ exports[`GrantListEditorForm should render default view 2`] = `
                           required={true}
                           value=""
                         >
-                          <TextFieldWrapper
+                          <WithStyles(ForwardRef(TextField))
+                            InputLabelProps={
+                              Object {
+                                "hidden": false,
+                                "htmlFor": "grantAgencyName",
+                                "id": "grantAgencyName-label",
+                                "shrink": undefined,
+                              }
+                            }
                             autoComplete="off"
-                            classes={Object {}}
                             disabled={false}
                             error={true}
-                            errorText="This field is required"
                             fullWidth={true}
+                            helperText="This field is required"
                             id="grantAgencyName"
+                            inputProps={
+                              Object {
+                                "aria-label": undefined,
+                                "aria-labelledby": "grantAgencyName-label",
+                                "id": "grantAgencyName",
+                                "label": undefined,
+                              }
+                            }
                             onChange={[Function]}
                             required={true}
                             value=""
                           >
-                            <WithStyles(ForwardRef(TextField))
+                            <ForwardRef(TextField)
                               InputLabelProps={
                                 Object {
                                   "hidden": false,
@@ -3644,7 +3634,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 }
                               }
                               autoComplete="off"
-                              classes={Object {}}
+                              classes={
+                                Object {
+                                  "root": "MuiTextField-root",
+                                }
+                              }
                               disabled={false}
                               error={true}
                               fullWidth={true}
@@ -3662,40 +3656,25 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               required={true}
                               value=""
                             >
-                              <ForwardRef(TextField)
-                                InputLabelProps={
-                                  Object {
-                                    "hidden": false,
-                                    "htmlFor": "grantAgencyName",
-                                    "id": "grantAgencyName-label",
-                                    "shrink": undefined,
-                                  }
-                                }
-                                autoComplete="off"
-                                classes={
-                                  Object {
-                                    "root": "MuiTextField-root",
-                                  }
-                                }
+                              <WithStyles(ForwardRef(FormControl))
+                                className="MuiTextField-root"
+                                color="primary"
                                 disabled={false}
                                 error={true}
                                 fullWidth={true}
-                                helperText="This field is required"
-                                id="grantAgencyName"
-                                inputProps={
-                                  Object {
-                                    "aria-label": undefined,
-                                    "aria-labelledby": "grantAgencyName-label",
-                                    "id": "grantAgencyName",
-                                    "label": undefined,
-                                  }
-                                }
-                                onChange={[Function]}
                                 required={true}
-                                value=""
+                                variant="standard"
                               >
-                                <WithStyles(ForwardRef(FormControl))
+                                <ForwardRef(FormControl)
                                   className="MuiTextField-root"
+                                  classes={
+                                    Object {
+                                      "fullWidth": "MuiFormControl-fullWidth",
+                                      "marginDense": "MuiFormControl-marginDense",
+                                      "marginNormal": "MuiFormControl-marginNormal",
+                                      "root": "MuiFormControl-root",
+                                    }
+                                  }
                                   color="primary"
                                   disabled={false}
                                   error={true}
@@ -3703,30 +3682,49 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   required={true}
                                   variant="standard"
                                 >
-                                  <ForwardRef(FormControl)
-                                    className="MuiTextField-root"
-                                    classes={
-                                      Object {
-                                        "fullWidth": "MuiFormControl-fullWidth",
-                                        "marginDense": "MuiFormControl-marginDense",
-                                        "marginNormal": "MuiFormControl-marginNormal",
-                                        "root": "MuiFormControl-root",
-                                      }
-                                    }
-                                    color="primary"
-                                    disabled={false}
-                                    error={true}
-                                    fullWidth={true}
-                                    required={true}
-                                    variant="standard"
+                                  <div
+                                    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                   >
-                                    <div
-                                      className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+                                    <WithStyles(ForwardRef(Input))
+                                      aria-describedby="grantAgencyName-helper-text"
+                                      autoComplete="off"
+                                      autoFocus={false}
+                                      fullWidth={true}
+                                      id="grantAgencyName"
+                                      inputProps={
+                                        Object {
+                                          "aria-label": undefined,
+                                          "aria-labelledby": "grantAgencyName-label",
+                                          "id": "grantAgencyName",
+                                          "label": undefined,
+                                        }
+                                      }
+                                      multiline={false}
+                                      onChange={[Function]}
+                                      value=""
                                     >
-                                      <WithStyles(ForwardRef(Input))
+                                      <ForwardRef(Input)
                                         aria-describedby="grantAgencyName-helper-text"
                                         autoComplete="off"
                                         autoFocus={false}
+                                        classes={
+                                          Object {
+                                            "colorSecondary": "MuiInput-colorSecondary",
+                                            "disabled": "Mui-disabled",
+                                            "error": "Mui-error",
+                                            "focused": "Mui-focused",
+                                            "formControl": "MuiInput-formControl",
+                                            "fullWidth": "MuiInput-fullWidth",
+                                            "input": "MuiInput-input",
+                                            "inputMarginDense": "MuiInput-inputMarginDense",
+                                            "inputMultiline": "MuiInput-inputMultiline",
+                                            "inputTypeSearch": "MuiInput-inputTypeSearch",
+                                            "marginDense": "MuiInput-marginDense",
+                                            "multiline": "MuiInput-multiline",
+                                            "root": "MuiInput-root",
+                                            "underline": "MuiInput-underline",
+                                          }
+                                        }
                                         fullWidth={true}
                                         id="grantAgencyName"
                                         inputProps={
@@ -3741,7 +3739,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         onChange={[Function]}
                                         value=""
                                       >
-                                        <ForwardRef(Input)
+                                        <WithStyles(ForwardRef(InputBase))
                                           aria-describedby="grantAgencyName-helper-text"
                                           autoComplete="off"
                                           autoFocus={false}
@@ -3759,12 +3757,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "inputTypeSearch": "MuiInput-inputTypeSearch",
                                               "marginDense": "MuiInput-marginDense",
                                               "multiline": "MuiInput-multiline",
-                                              "root": "MuiInput-root",
-                                              "underline": "MuiInput-underline",
+                                              "root": "MuiInput-root MuiInput-underline",
+                                              "underline": null,
                                             }
                                           }
                                           fullWidth={true}
                                           id="grantAgencyName"
+                                          inputComponent="input"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
@@ -3775,28 +3774,33 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                           multiline={false}
                                           onChange={[Function]}
+                                          type="text"
                                           value=""
                                         >
-                                          <WithStyles(ForwardRef(InputBase))
+                                          <ForwardRef(InputBase)
                                             aria-describedby="grantAgencyName-helper-text"
                                             autoComplete="off"
                                             autoFocus={false}
                                             classes={
                                               Object {
-                                                "colorSecondary": "MuiInput-colorSecondary",
-                                                "disabled": "Mui-disabled",
-                                                "error": "Mui-error",
-                                                "focused": "Mui-focused",
-                                                "formControl": "MuiInput-formControl",
-                                                "fullWidth": "MuiInput-fullWidth",
-                                                "input": "MuiInput-input",
-                                                "inputMarginDense": "MuiInput-inputMarginDense",
-                                                "inputMultiline": "MuiInput-inputMultiline",
-                                                "inputTypeSearch": "MuiInput-inputTypeSearch",
-                                                "marginDense": "MuiInput-marginDense",
-                                                "multiline": "MuiInput-multiline",
-                                                "root": "MuiInput-root MuiInput-underline",
-                                                "underline": null,
+                                                "adornedEnd": "MuiInputBase-adornedEnd",
+                                                "adornedStart": "MuiInputBase-adornedStart",
+                                                "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                                                "disabled": "Mui-disabled Mui-disabled",
+                                                "error": "Mui-error Mui-error",
+                                                "focused": "Mui-focused Mui-focused",
+                                                "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                                                "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                                                "input": "MuiInputBase-input MuiInput-input",
+                                                "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                                                "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                                                "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                                "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                                                "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                                                "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                                                "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                                                "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                                                "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
                                               }
                                             }
                                             fullWidth={true}
@@ -3815,107 +3819,64 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             type="text"
                                             value=""
                                           >
-                                            <ForwardRef(InputBase)
-                                              aria-describedby="grantAgencyName-helper-text"
-                                              autoComplete="off"
-                                              autoFocus={false}
-                                              classes={
-                                                Object {
-                                                  "adornedEnd": "MuiInputBase-adornedEnd",
-                                                  "adornedStart": "MuiInputBase-adornedStart",
-                                                  "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
-                                                  "disabled": "Mui-disabled Mui-disabled",
-                                                  "error": "Mui-error Mui-error",
-                                                  "focused": "Mui-focused Mui-focused",
-                                                  "formControl": "MuiInputBase-formControl MuiInput-formControl",
-                                                  "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
-                                                  "input": "MuiInputBase-input MuiInput-input",
-                                                  "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
-                                                  "inputAdornedStart": "MuiInputBase-inputAdornedStart",
-                                                  "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
-                                                  "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
-                                                  "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
-                                                  "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
-                                                  "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
-                                                  "multiline": "MuiInputBase-multiline MuiInput-multiline",
-                                                  "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
-                                                }
-                                              }
-                                              fullWidth={true}
-                                              id="grantAgencyName"
-                                              inputComponent="input"
-                                              inputProps={
-                                                Object {
-                                                  "aria-label": undefined,
-                                                  "aria-labelledby": "grantAgencyName-label",
-                                                  "id": "grantAgencyName",
-                                                  "label": undefined,
-                                                }
-                                              }
-                                              multiline={false}
-                                              onChange={[Function]}
-                                              type="text"
-                                              value=""
+                                            <div
+                                              className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                                              onClick={[Function]}
                                             >
-                                              <div
-                                                className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-                                                onClick={[Function]}
-                                              >
-                                                <input
-                                                  aria-describedby="grantAgencyName-helper-text"
-                                                  aria-invalid={true}
-                                                  aria-labelledby="grantAgencyName-label"
-                                                  autoComplete="off"
-                                                  autoFocus={false}
-                                                  className="MuiInputBase-input MuiInput-input"
-                                                  disabled={false}
-                                                  id="grantAgencyName"
-                                                  onAnimationStart={[Function]}
-                                                  onBlur={[Function]}
-                                                  onChange={[Function]}
-                                                  onFocus={[Function]}
-                                                  required={true}
-                                                  type="text"
-                                                  value=""
-                                                />
-                                              </div>
-                                            </ForwardRef(InputBase)>
-                                          </WithStyles(ForwardRef(InputBase))>
-                                        </ForwardRef(Input)>
-                                      </WithStyles(ForwardRef(Input))>
-                                      <WithStyles(ForwardRef(FormHelperText))
+                                              <input
+                                                aria-describedby="grantAgencyName-helper-text"
+                                                aria-invalid={true}
+                                                aria-labelledby="grantAgencyName-label"
+                                                autoComplete="off"
+                                                autoFocus={false}
+                                                className="MuiInputBase-input MuiInput-input"
+                                                disabled={false}
+                                                id="grantAgencyName"
+                                                onAnimationStart={[Function]}
+                                                onBlur={[Function]}
+                                                onChange={[Function]}
+                                                onFocus={[Function]}
+                                                required={true}
+                                                type="text"
+                                                value=""
+                                              />
+                                            </div>
+                                          </ForwardRef(InputBase)>
+                                        </WithStyles(ForwardRef(InputBase))>
+                                      </ForwardRef(Input)>
+                                    </WithStyles(ForwardRef(Input))>
+                                    <WithStyles(ForwardRef(FormHelperText))
+                                      id="grantAgencyName-helper-text"
+                                    >
+                                      <ForwardRef(FormHelperText)
+                                        classes={
+                                          Object {
+                                            "contained": "MuiFormHelperText-contained",
+                                            "disabled": "Mui-disabled",
+                                            "error": "Mui-error",
+                                            "filled": "MuiFormHelperText-filled",
+                                            "focused": "Mui-focused",
+                                            "marginDense": "MuiFormHelperText-marginDense",
+                                            "required": "Mui-required",
+                                            "root": "MuiFormHelperText-root",
+                                          }
+                                        }
                                         id="grantAgencyName-helper-text"
                                       >
-                                        <ForwardRef(FormHelperText)
-                                          classes={
-                                            Object {
-                                              "contained": "MuiFormHelperText-contained",
-                                              "disabled": "Mui-disabled",
-                                              "error": "Mui-error",
-                                              "filled": "MuiFormHelperText-filled",
-                                              "focused": "Mui-focused",
-                                              "marginDense": "MuiFormHelperText-marginDense",
-                                              "required": "Mui-required",
-                                              "root": "MuiFormHelperText-root",
-                                            }
-                                          }
+                                        <p
+                                          className="MuiFormHelperText-root Mui-error Mui-required"
                                           id="grantAgencyName-helper-text"
                                         >
-                                          <p
-                                            className="MuiFormHelperText-root Mui-error Mui-required"
-                                            id="grantAgencyName-helper-text"
-                                          >
-                                            This field is required
-                                          </p>
-                                        </ForwardRef(FormHelperText)>
-                                      </WithStyles(ForwardRef(FormHelperText))>
-                                    </div>
-                                  </ForwardRef(FormControl)>
-                                </WithStyles(ForwardRef(FormControl))>
-                              </ForwardRef(TextField)>
-                            </WithStyles(ForwardRef(TextField))>
-                          </TextFieldWrapper>
-                        </WithStyles(TextFieldWrapper)>
+                                          This field is required
+                                        </p>
+                                      </ForwardRef(FormHelperText)>
+                                    </WithStyles(ForwardRef(FormHelperText))>
+                                  </div>
+                                </ForwardRef(FormControl)>
+                              </WithStyles(ForwardRef(FormControl))>
+                            </ForwardRef(TextField)>
+                          </WithStyles(ForwardRef(TextField))>
+                        </TextField>
                       </div>
                     </ForwardRef(Grid)>
                   </WithStyles(ForwardRef(Grid))>
@@ -4041,7 +4002,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                       <div
                         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3"
                       >
-                        <WithStyles(TextFieldWrapper)
+                        <TextField
                           disabled={true}
                           fullWidth={true}
                           id="grantId"
@@ -4049,16 +4010,32 @@ exports[`GrantListEditorForm should render default view 2`] = `
                           required={true}
                           value=""
                         >
-                          <TextFieldWrapper
-                            classes={Object {}}
+                          <WithStyles(ForwardRef(TextField))
+                            InputLabelProps={
+                              Object {
+                                "hidden": false,
+                                "htmlFor": "grantId",
+                                "id": "grantId-label",
+                                "shrink": undefined,
+                              }
+                            }
                             disabled={true}
+                            error={false}
                             fullWidth={true}
                             id="grantId"
+                            inputProps={
+                              Object {
+                                "aria-label": undefined,
+                                "aria-labelledby": "grantId-label",
+                                "id": "grantId",
+                                "label": undefined,
+                              }
+                            }
                             onChange={[Function]}
                             required={true}
                             value=""
                           >
-                            <WithStyles(ForwardRef(TextField))
+                            <ForwardRef(TextField)
                               InputLabelProps={
                                 Object {
                                   "hidden": false,
@@ -4067,7 +4044,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   "shrink": undefined,
                                 }
                               }
-                              classes={Object {}}
+                              classes={
+                                Object {
+                                  "root": "MuiTextField-root",
+                                }
+                              }
                               disabled={true}
                               error={false}
                               fullWidth={true}
@@ -4084,38 +4065,25 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               required={true}
                               value=""
                             >
-                              <ForwardRef(TextField)
-                                InputLabelProps={
-                                  Object {
-                                    "hidden": false,
-                                    "htmlFor": "grantId",
-                                    "id": "grantId-label",
-                                    "shrink": undefined,
-                                  }
-                                }
-                                classes={
-                                  Object {
-                                    "root": "MuiTextField-root",
-                                  }
-                                }
+                              <WithStyles(ForwardRef(FormControl))
+                                className="MuiTextField-root"
+                                color="primary"
                                 disabled={true}
                                 error={false}
                                 fullWidth={true}
-                                id="grantId"
-                                inputProps={
-                                  Object {
-                                    "aria-label": undefined,
-                                    "aria-labelledby": "grantId-label",
-                                    "id": "grantId",
-                                    "label": undefined,
-                                  }
-                                }
-                                onChange={[Function]}
                                 required={true}
-                                value=""
+                                variant="standard"
                               >
-                                <WithStyles(ForwardRef(FormControl))
+                                <ForwardRef(FormControl)
                                   className="MuiTextField-root"
+                                  classes={
+                                    Object {
+                                      "fullWidth": "MuiFormControl-fullWidth",
+                                      "marginDense": "MuiFormControl-marginDense",
+                                      "marginNormal": "MuiFormControl-marginNormal",
+                                      "root": "MuiFormControl-root",
+                                    }
+                                  }
                                   color="primary"
                                   disabled={true}
                                   error={false}
@@ -4123,28 +4091,45 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   required={true}
                                   variant="standard"
                                 >
-                                  <ForwardRef(FormControl)
-                                    className="MuiTextField-root"
-                                    classes={
-                                      Object {
-                                        "fullWidth": "MuiFormControl-fullWidth",
-                                        "marginDense": "MuiFormControl-marginDense",
-                                        "marginNormal": "MuiFormControl-marginNormal",
-                                        "root": "MuiFormControl-root",
-                                      }
-                                    }
-                                    color="primary"
-                                    disabled={true}
-                                    error={false}
-                                    fullWidth={true}
-                                    required={true}
-                                    variant="standard"
+                                  <div
+                                    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                   >
-                                    <div
-                                      className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+                                    <WithStyles(ForwardRef(Input))
+                                      autoFocus={false}
+                                      fullWidth={true}
+                                      id="grantId"
+                                      inputProps={
+                                        Object {
+                                          "aria-label": undefined,
+                                          "aria-labelledby": "grantId-label",
+                                          "id": "grantId",
+                                          "label": undefined,
+                                        }
+                                      }
+                                      multiline={false}
+                                      onChange={[Function]}
+                                      value=""
                                     >
-                                      <WithStyles(ForwardRef(Input))
+                                      <ForwardRef(Input)
                                         autoFocus={false}
+                                        classes={
+                                          Object {
+                                            "colorSecondary": "MuiInput-colorSecondary",
+                                            "disabled": "Mui-disabled",
+                                            "error": "Mui-error",
+                                            "focused": "Mui-focused",
+                                            "formControl": "MuiInput-formControl",
+                                            "fullWidth": "MuiInput-fullWidth",
+                                            "input": "MuiInput-input",
+                                            "inputMarginDense": "MuiInput-inputMarginDense",
+                                            "inputMultiline": "MuiInput-inputMultiline",
+                                            "inputTypeSearch": "MuiInput-inputTypeSearch",
+                                            "marginDense": "MuiInput-marginDense",
+                                            "multiline": "MuiInput-multiline",
+                                            "root": "MuiInput-root",
+                                            "underline": "MuiInput-underline",
+                                          }
+                                        }
                                         fullWidth={true}
                                         id="grantId"
                                         inputProps={
@@ -4159,7 +4144,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         onChange={[Function]}
                                         value=""
                                       >
-                                        <ForwardRef(Input)
+                                        <WithStyles(ForwardRef(InputBase))
                                           autoFocus={false}
                                           classes={
                                             Object {
@@ -4175,12 +4160,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "inputTypeSearch": "MuiInput-inputTypeSearch",
                                               "marginDense": "MuiInput-marginDense",
                                               "multiline": "MuiInput-multiline",
-                                              "root": "MuiInput-root",
-                                              "underline": "MuiInput-underline",
+                                              "root": "MuiInput-root MuiInput-underline",
+                                              "underline": null,
                                             }
                                           }
                                           fullWidth={true}
                                           id="grantId"
+                                          inputComponent="input"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
@@ -4191,26 +4177,31 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                           multiline={false}
                                           onChange={[Function]}
+                                          type="text"
                                           value=""
                                         >
-                                          <WithStyles(ForwardRef(InputBase))
+                                          <ForwardRef(InputBase)
                                             autoFocus={false}
                                             classes={
                                               Object {
-                                                "colorSecondary": "MuiInput-colorSecondary",
-                                                "disabled": "Mui-disabled",
-                                                "error": "Mui-error",
-                                                "focused": "Mui-focused",
-                                                "formControl": "MuiInput-formControl",
-                                                "fullWidth": "MuiInput-fullWidth",
-                                                "input": "MuiInput-input",
-                                                "inputMarginDense": "MuiInput-inputMarginDense",
-                                                "inputMultiline": "MuiInput-inputMultiline",
-                                                "inputTypeSearch": "MuiInput-inputTypeSearch",
-                                                "marginDense": "MuiInput-marginDense",
-                                                "multiline": "MuiInput-multiline",
-                                                "root": "MuiInput-root MuiInput-underline",
-                                                "underline": null,
+                                                "adornedEnd": "MuiInputBase-adornedEnd",
+                                                "adornedStart": "MuiInputBase-adornedStart",
+                                                "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                                                "disabled": "Mui-disabled Mui-disabled",
+                                                "error": "Mui-error Mui-error",
+                                                "focused": "Mui-focused Mui-focused",
+                                                "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                                                "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                                                "input": "MuiInputBase-input MuiInput-input",
+                                                "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                                                "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                                                "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                                "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                                                "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                                                "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                                                "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                                                "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                                                "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
                                               }
                                             }
                                             fullWidth={true}
@@ -4229,77 +4220,36 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             type="text"
                                             value=""
                                           >
-                                            <ForwardRef(InputBase)
-                                              autoFocus={false}
-                                              classes={
-                                                Object {
-                                                  "adornedEnd": "MuiInputBase-adornedEnd",
-                                                  "adornedStart": "MuiInputBase-adornedStart",
-                                                  "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
-                                                  "disabled": "Mui-disabled Mui-disabled",
-                                                  "error": "Mui-error Mui-error",
-                                                  "focused": "Mui-focused Mui-focused",
-                                                  "formControl": "MuiInputBase-formControl MuiInput-formControl",
-                                                  "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
-                                                  "input": "MuiInputBase-input MuiInput-input",
-                                                  "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
-                                                  "inputAdornedStart": "MuiInputBase-inputAdornedStart",
-                                                  "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
-                                                  "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
-                                                  "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
-                                                  "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
-                                                  "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
-                                                  "multiline": "MuiInputBase-multiline MuiInput-multiline",
-                                                  "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
-                                                }
-                                              }
-                                              fullWidth={true}
-                                              id="grantId"
-                                              inputComponent="input"
-                                              inputProps={
-                                                Object {
-                                                  "aria-label": undefined,
-                                                  "aria-labelledby": "grantId-label",
-                                                  "id": "grantId",
-                                                  "label": undefined,
-                                                }
-                                              }
-                                              multiline={false}
-                                              onChange={[Function]}
-                                              type="text"
-                                              value=""
+                                            <div
+                                              className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-disabled Mui-disabled MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                                              onClick={[Function]}
                                             >
-                                              <div
-                                                className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-disabled Mui-disabled MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
-                                                onClick={[Function]}
-                                              >
-                                                <input
-                                                  aria-invalid={false}
-                                                  aria-labelledby="grantId-label"
-                                                  autoFocus={false}
-                                                  className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
-                                                  disabled={true}
-                                                  id="grantId"
-                                                  onAnimationStart={[Function]}
-                                                  onBlur={[Function]}
-                                                  onChange={[Function]}
-                                                  onFocus={[Function]}
-                                                  required={true}
-                                                  type="text"
-                                                  value=""
-                                                />
-                                              </div>
-                                            </ForwardRef(InputBase)>
-                                          </WithStyles(ForwardRef(InputBase))>
-                                        </ForwardRef(Input)>
-                                      </WithStyles(ForwardRef(Input))>
-                                    </div>
-                                  </ForwardRef(FormControl)>
-                                </WithStyles(ForwardRef(FormControl))>
-                              </ForwardRef(TextField)>
-                            </WithStyles(ForwardRef(TextField))>
-                          </TextFieldWrapper>
-                        </WithStyles(TextFieldWrapper)>
+                                              <input
+                                                aria-invalid={false}
+                                                aria-labelledby="grantId-label"
+                                                autoFocus={false}
+                                                className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
+                                                disabled={true}
+                                                id="grantId"
+                                                onAnimationStart={[Function]}
+                                                onBlur={[Function]}
+                                                onChange={[Function]}
+                                                onFocus={[Function]}
+                                                required={true}
+                                                type="text"
+                                                value=""
+                                              />
+                                            </div>
+                                          </ForwardRef(InputBase)>
+                                        </WithStyles(ForwardRef(InputBase))>
+                                      </ForwardRef(Input)>
+                                    </WithStyles(ForwardRef(Input))>
+                                  </div>
+                                </ForwardRef(FormControl)>
+                              </WithStyles(ForwardRef(FormControl))>
+                            </ForwardRef(TextField)>
+                          </WithStyles(ForwardRef(TextField))>
+                        </TextField>
                       </div>
                     </ForwardRef(Grid)>
                   </WithStyles(ForwardRef(Grid))>
@@ -5691,7 +5641,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         autoComplete="off"
         disabled={false}
         error={false}
@@ -5709,7 +5659,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         disabled={true}
         fullWidth={true}
         id="grantId"

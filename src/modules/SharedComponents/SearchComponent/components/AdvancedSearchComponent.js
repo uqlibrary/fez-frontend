@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
@@ -14,97 +14,63 @@ import DocumentTypeMultipleField from './Fields/DocumentTypeMultipleField';
 import { default as PublicationYearRangeField } from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import * as validationRules from 'config/validation';
 
-export const styles = theme => ({
-    sideBar: {
-        [theme.breakpoints.up('md')]: {
-            paddingLeft: 32,
-            marginTop: -16,
-        },
-    },
-    searchButton: {
-        [theme.breakpoints.up('sm')]: {
-            paddingLeft: 32,
-        },
-    },
-    blueButton: {
-        backgroundColor: ((theme.palette || {}).accent || {}).main,
-        color: ((theme.palette || {}).white || {}).main,
-        '&:hover': {
-            backgroundColor: ((theme.palette || {}).accent || {}).dark,
-        },
-    },
-});
-
-export class AdvancedSearchComponent extends PureComponent {
-    static propTypes = {
-        className: PropTypes.string,
-        classes: PropTypes.object,
-
-        fieldRows: PropTypes.array,
-        docTypes: PropTypes.array,
-        yearFilter: PropTypes.object,
-        activeFacets: PropTypes.object,
-        isOpenAccess: PropTypes.bool,
-        isMinimised: PropTypes.bool,
-        isLoading: PropTypes.bool,
-        showUnpublishedFields: PropTypes.bool,
-        createdRange: PropTypes.object,
-        updatedRange: PropTypes.object,
-
-        // Event handlers
-        onToggleSearchMode: PropTypes.func,
-        onToggleMinimise: PropTypes.func,
-        onToggleOpenAccess: PropTypes.func,
-        onAdvancedSearchRowAdd: PropTypes.func,
-        onAdvancedSearchRowRemove: PropTypes.func,
-        onAdvancedSearchReset: PropTypes.func,
-        updateDocTypeValues: PropTypes.func,
-        updateYearRangeFilter: PropTypes.func,
-        updateDateRange: PropTypes.func,
-
-        onAdvancedSearchRowChange: PropTypes.func.isRequired,
-        onSearch: PropTypes.func.isRequired,
-    };
-    static defaultProps = {
-        fieldRows: [
-            {
-                searchField: '0',
-                value: '',
-                label: '',
+export const useStyles = makeStyles(
+    theme => ({
+        sideBar: {
+            [theme.breakpoints.up('md')]: {
+                paddingLeft: 32,
+                marginTop: -16,
             },
-        ],
-        yearFilter: {
-            from: null,
-            to: null,
-            invalid: true,
         },
-        isMinimised: false,
-        isOpenAccess: false,
-        showUnpublishedFields: false,
-        createdRange: {},
-        updatedRange: {},
+        searchButton: {
+            [theme.breakpoints.up('sm')]: {
+                paddingLeft: 32,
+            },
+        },
+        blueButton: {
+            backgroundColor: ((theme.palette || {}).accent || {}).main,
+            color: ((theme.palette || {}).white || {}).main,
+            '&:hover': {
+                backgroundColor: ((theme.palette || {}).accent || {}).dark,
+            },
+        },
+    }),
+    { withTheme: true },
+);
 
-        onToggleSearchMode: () => {},
-        onToggleMinimise: () => {},
-        onToggleOpenAccess: () => {},
-        onAdvancedSearchRowAdd: () => {},
-        onAdvancedSearchRowRemove: () => {},
-        onAdvancedSearchReset: () => {},
-    };
-
-    constructor(props) {
-        super(props);
-    }
-
-    haveAllAdvancedSearchFieldsValidated = fieldRows => {
+export const AdvancedSearchComponent = ({
+    className,
+    fieldRows,
+    docTypes,
+    yearFilter,
+    isOpenAccess,
+    isMinimised,
+    isLoading,
+    showUnpublishedFields,
+    createdRange,
+    updatedRange,
+    onToggleSearchMode,
+    onToggleMinimise,
+    onToggleOpenAccess,
+    onAdvancedSearchRowAdd,
+    onAdvancedSearchRowRemove,
+    onAdvancedSearchReset,
+    updateDocTypeValues,
+    updateYearRangeFilter,
+    updateDateRange,
+    onAdvancedSearchRowChange,
+    onSearch,
+}) => {
+    const classes = useStyles();
+    const haveAllAdvancedSearchFieldsValidated = fieldRows => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return (
-            !this.props.isLoading &&
-            !this.props.yearFilter.invalid &&
+            !isLoading &&
+            !yearFilter.invalid &&
             fieldRows
                 .reduce((errors, item) => {
                     const newErrors = fieldTypes[item.searchField].validation.map(rule =>
@@ -116,230 +82,275 @@ export class AdvancedSearchComponent extends PureComponent {
         );
     };
 
-    _handleAdvancedSearch = event => {
+    const _handleAdvancedSearch = event => {
         event.preventDefault();
         if (event.key && event.key !== 'Enter') {
             return;
         }
-        this.props.onSearch();
+        onSearch();
     };
 
-    _toggleSearchMode = () => {
-        !!this.props.onToggleSearchMode && this.props.onToggleSearchMode();
+    const _toggleSearchMode = () => {
+        !!onToggleSearchMode && onToggleSearchMode();
     };
 
-    _toggleMinimise = () => {
-        !!this.props.onToggleMinimise && this.props.onToggleMinimise();
+    const _toggleMinimise = () => {
+        !!onToggleMinimise && onToggleMinimise();
     };
 
-    _toggleOpenAccess = () => {
-        !!this.props.onToggleOpenAccess && this.props.onToggleOpenAccess();
+    const _toggleOpenAccess = () => {
+        !!onToggleOpenAccess && onToggleOpenAccess();
     };
 
-    _handleAdvancedSearchRowChange = (index, searchRow) => {
-        !!this.props.onAdvancedSearchRowChange && this.props.onAdvancedSearchRowChange(index, searchRow);
+    const _handleAdvancedSearchRowChange = useCallback((index, searchRow) => {
+        !!onAdvancedSearchRowChange && onAdvancedSearchRowChange(index, searchRow);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const _addAdvancedSearchRow = () => {
+        !!onAdvancedSearchRowAdd && onAdvancedSearchRowAdd();
     };
 
-    _addAdvancedSearchRow = () => {
-        !!this.props.onAdvancedSearchRowAdd && this.props.onAdvancedSearchRowAdd();
+    const _removeAdvancedSearchRow = useCallback(index => {
+        !!onAdvancedSearchRowRemove && onAdvancedSearchRowRemove(index);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const _resetAdvancedSearch = () => {
+        !!onAdvancedSearchReset && onAdvancedSearchReset();
     };
 
-    _removeAdvancedSearchRow = index => {
-        !!this.props.onAdvancedSearchRowRemove && this.props.onAdvancedSearchRowRemove(index);
+    const _handleDateRangeChange = key => value => {
+        !!updateDateRange && updateDateRange(key, value);
     };
 
-    _resetAdvancedSearch = () => {
-        !!this.props.onAdvancedSearchReset && this.props.onAdvancedSearchReset();
-    };
-
-    _handleDateRangeChange = key => value => {
-        !!this.props.updateDateRange && this.props.updateDateRange(key, value);
-    };
-
-    _captionProps = () => {
+    const _captionProps = () => {
         return {
-            className: this.props.className,
-            fieldRows: this.props.fieldRows,
-            docTypes: this.props.docTypes,
-            yearFilter: this.props.yearFilter,
-            isOpenAccess: this.props.isOpenAccess,
+            className: className,
+            fieldRows: fieldRows,
+            docTypes: docTypes,
+            yearFilter: yearFilter,
+            isOpenAccess: isOpenAccess,
         };
     };
 
-    render() {
-        const { classes } = this.props;
-        const txt = locale.components.searchComponent;
-        const lastFieldAdded = [...this.props.fieldRows].pop();
-        const canAddAnotherField =
-            this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows) && lastFieldAdded.searchField !== '0';
-        const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
+    const txt = locale.components.searchComponent;
+    const lastFieldAdded = [...fieldRows].pop();
+    const canAddAnotherField = haveAllAdvancedSearchFieldsValidated(fieldRows) && lastFieldAdded.searchField !== '0';
+    const alreadyAddedFields = fieldRows.map(item => item.searchField);
 
-        return (
-            <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{ padding: 12 }}>
-                <Grid container spacing={3}>
-                    <Grid container spacing={5}>
-                        <Grid item style={{ flexGrow: 1, width: 1 }}>
-                            <Typography variant="h5">{txt.advancedSearch.title}</Typography>
-                        </Grid>
-                        <Grid item>
-                            <IconButton
-                                aria-label={
-                                    this.props.isMinimised
-                                        ? txt.advancedSearch.tooltip.show
-                                        : txt.advancedSearch.tooltip.hide
-                                }
-                                onClick={this._toggleMinimise}
-                                tooltip={
-                                    this.props.isMinimised
-                                        ? txt.advancedSearch.tooltip.show
-                                        : txt.advancedSearch.tooltip.hide
-                                }
-                            >
-                                {!this.props.isMinimised ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-                            </IconButton>
-                        </Grid>
+    return (
+        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch} style={{ padding: 12 }}>
+            <Grid container spacing={3}>
+                <Grid container spacing={5}>
+                    <Grid item style={{ flexGrow: 1, width: 1 }}>
+                        <Typography variant="h5">{txt.advancedSearch.title}</Typography>
                     </Grid>
-                    {!this.props.isMinimised && (
-                        <Fragment>
-                            <Grid container>
-                                <Grid item xs={12} md={8}>
-                                    {this.props.fieldRows
-                                        .filter(item => {
-                                            return (
-                                                item.searchField &&
-                                                txt.advancedSearch.fieldTypes[item.searchField].type !== null
-                                            );
-                                        })
-                                        .map((item, index) => (
-                                            <AdvancedSearchRow
-                                                key={`advanced-search-field-${item.searchField}`}
-                                                rowIndex={index}
-                                                disabledFields={alreadyAddedFields}
-                                                onSearchRowChange={this._handleAdvancedSearchRowChange}
-                                                onSearchRowDelete={this._removeAdvancedSearchRow}
-                                                showUnpublishedFields={this.props.showUnpublishedFields}
-                                                {...item}
-                                            />
-                                        ))}
-                                </Grid>
-                                <Grid item xs={12} md={4} className={classes.sideBar}>
-                                    <Grid container spacing={2}>
-                                        <Grid item xs={12}>
-                                            <DocumentTypeMultipleField
-                                                docTypes={this.props.docTypes}
-                                                updateDocTypeValues={this.props.updateDocTypeValues}
-                                                disabled={this.props.isLoading}
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationYearRangeField
-                                                yearFilter={this.props.yearFilter}
-                                                updateYearRangeFilter={this.props.updateYearRangeFilter}
-                                                disabled={this.props.isLoading}
-                                                invalid={this.props.yearFilter.invalid}
-                                            />
-                                        </Grid>
-                                        {this.props.showUnpublishedFields && (
-                                            <React.Fragment>
-                                                <Grid item xs={12}>
-                                                    <DateRangeField
-                                                        onChange={this._handleDateRangeChange('rek_created_date')}
-                                                        disabled={this.props.isLoading}
-                                                        disableFuture
-                                                        locale={
-                                                            locale.components.searchComponent.advancedSearch.fieldTypes
-                                                                .rek_created_date
-                                                        }
-                                                        {...this.props.createdRange}
-                                                    />
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <DateRangeField
-                                                        onChange={this._handleDateRangeChange('rek_updated_date')}
-                                                        disabled={this.props.isLoading}
-                                                        disableFuture
-                                                        locale={
-                                                            locale.components.searchComponent.advancedSearch.fieldTypes
-                                                                .rek_updated_date
-                                                        }
-                                                        {...this.props.updatedRange}
-                                                    />
-                                                </Grid>
-                                            </React.Fragment>
-                                        )}
-                                        <Grid item xs={12}>
-                                            <FormControlLabel
-                                                control={
-                                                    <Checkbox
-                                                        aria-label={txt.advancedSearch.openAccess.ariaLabel}
-                                                        checked={this.props.isOpenAccess}
-                                                        onChange={this._toggleOpenAccess}
-                                                        disabled={this.props.isLoading}
-                                                    />
-                                                }
-                                                label={txt.advancedSearch.openAccess.title}
-                                            />
-                                        </Grid>
+                    <Grid item>
+                        <IconButton
+                            aria-label={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
+                            onClick={_toggleMinimise}
+                            tooltip={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
+                        >
+                            {!isMinimised ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+                        </IconButton>
+                    </Grid>
+                </Grid>
+                {!isMinimised && (
+                    <Fragment>
+                        <Grid container>
+                            <Grid item xs={12} md={8}>
+                                {fieldRows
+                                    .filter(item => {
+                                        return (
+                                            item.searchField &&
+                                            txt.advancedSearch.fieldTypes[item.searchField].type !== null
+                                        );
+                                    })
+                                    .map((item, index) => (
+                                        <AdvancedSearchRow
+                                            key={`advanced-search-field-${item.searchField}`}
+                                            rowIndex={index}
+                                            disabledFields={alreadyAddedFields}
+                                            onSearchRowChange={_handleAdvancedSearchRowChange}
+                                            onSearchRowDelete={_removeAdvancedSearchRow}
+                                            showUnpublishedFields={showUnpublishedFields}
+                                            {...item}
+                                        />
+                                    ))}
+                            </Grid>
+                            <Grid item xs={12} md={4} className={classes.sideBar}>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        <DocumentTypeMultipleField
+                                            docTypes={docTypes}
+                                            updateDocTypeValues={updateDocTypeValues}
+                                            disabled={isLoading}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationYearRangeField
+                                            yearFilter={yearFilter}
+                                            updateYearRangeFilter={updateYearRangeFilter}
+                                            disabled={isLoading}
+                                            invalid={yearFilter.invalid}
+                                        />
+                                    </Grid>
+                                    {showUnpublishedFields && (
+                                        <React.Fragment>
+                                            <Grid item xs={12}>
+                                                <DateRangeField
+                                                    onChange={_handleDateRangeChange('rek_created_date')}
+                                                    disabled={isLoading}
+                                                    disableFuture
+                                                    locale={
+                                                        locale.components.searchComponent.advancedSearch.fieldTypes
+                                                            .rek_created_date
+                                                    }
+                                                    {...createdRange}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <DateRangeField
+                                                    onChange={_handleDateRangeChange('rek_updated_date')}
+                                                    disabled={isLoading}
+                                                    disableFuture
+                                                    locale={
+                                                        locale.components.searchComponent.advancedSearch.fieldTypes
+                                                            .rek_updated_date
+                                                    }
+                                                    {...updatedRange}
+                                                />
+                                            </Grid>
+                                        </React.Fragment>
+                                    )}
+                                    <Grid item xs={12}>
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox
+                                                    aria-label={txt.advancedSearch.openAccess.ariaLabel}
+                                                    checked={isOpenAccess}
+                                                    onChange={_toggleOpenAccess}
+                                                    disabled={isLoading}
+                                                />
+                                            }
+                                            label={txt.advancedSearch.openAccess.title}
+                                        />
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid container spacing={2} style={{ marginTop: 24 }}>
-                                <Grid item xs={12} sm={'auto'}>
-                                    <Button
-                                        variant={'contained'}
-                                        classes={{ root: classes.blueButton }}
-                                        children={txt.advancedSearch.addField.title}
-                                        aria-label={txt.advancedSearch.addField.aria}
-                                        disabled={!canAddAnotherField}
-                                        onClick={this._addAdvancedSearchRow}
-                                        fullWidth
-                                    />
-                                </Grid>
-                                <Grid item xs={12} sm={'auto'}>
-                                    <Button
-                                        variant={'contained'}
-                                        children={txt.advancedSearch.reset.title}
-                                        aria-label={txt.advancedSearch.reset.aria}
-                                        onClick={this._resetAdvancedSearch}
-                                        fullWidth
-                                    />
-                                </Grid>
-                                <Grid item xs={12} sm={'auto'}>
-                                    <Button
-                                        children={txt.advancedSearch.simpleSearch.title}
-                                        aria-label={txt.advancedSearch.simpleSearch.aria}
-                                        onClick={this._toggleSearchMode}
-                                        fullWidth
-                                    />
-                                </Grid>
-                                <Hidden smDown>
-                                    <Grid item style={{ flexGrow: 1, width: 1 }} />
-                                </Hidden>
-                                <Grid item xs={12} md={4} className={classes.searchButton}>
-                                    <Button
-                                        variant={'contained'}
-                                        children={txt.searchButtonText}
-                                        aria-label={txt.searchButtonAriaLabel}
-                                        type="submit"
-                                        color={'primary'}
-                                        fullWidth
-                                        onClick={this._handleAdvancedSearch}
-                                        disabled={!this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)}
-                                        id="advancedSearchButton"
-                                    />
-                                </Grid>
-                            </Grid>
-                        </Fragment>
-                    )}
-                    <Grid container>
-                        <Grid item style={{ paddingTop: 24 }}>
-                            <AdvancedSearchCaption {...this._captionProps()} />
                         </Grid>
+                        <Grid container spacing={2} style={{ marginTop: 24 }}>
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'contained'}
+                                    classes={{ root: classes.blueButton }}
+                                    children={txt.advancedSearch.addField.title}
+                                    aria-label={txt.advancedSearch.addField.aria}
+                                    disabled={!canAddAnotherField}
+                                    onClick={_addAdvancedSearchRow}
+                                    fullWidth
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'contained'}
+                                    children={txt.advancedSearch.reset.title}
+                                    aria-label={txt.advancedSearch.reset.aria}
+                                    onClick={_resetAdvancedSearch}
+                                    fullWidth
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    children={txt.advancedSearch.simpleSearch.title}
+                                    aria-label={txt.advancedSearch.simpleSearch.aria}
+                                    onClick={_toggleSearchMode}
+                                    fullWidth
+                                />
+                            </Grid>
+                            <Hidden smDown>
+                                <Grid item style={{ flexGrow: 1, width: 1 }} />
+                            </Hidden>
+                            <Grid item xs={12} md={4} className={classes.searchButton}>
+                                <Button
+                                    variant={'contained'}
+                                    children={txt.searchButtonText}
+                                    aria-label={txt.searchButtonAriaLabel}
+                                    type="submit"
+                                    color={'primary'}
+                                    fullWidth
+                                    onClick={_handleAdvancedSearch}
+                                    disabled={!haveAllAdvancedSearchFieldsValidated(fieldRows)}
+                                    id="advancedSearchButton"
+                                />
+                            </Grid>
+                        </Grid>
+                    </Fragment>
+                )}
+                <Grid container>
+                    <Grid item style={{ paddingTop: 24 }}>
+                        <AdvancedSearchCaption {..._captionProps()} />
                     </Grid>
                 </Grid>
-            </form>
-        );
-    }
-}
+            </Grid>
+        </form>
+    );
+};
 
-export default withStyles(styles, { withTheme: true })(AdvancedSearchComponent);
+AdvancedSearchComponent.propTypes = {
+    className: PropTypes.string,
+
+    fieldRows: PropTypes.array,
+    docTypes: PropTypes.array,
+    yearFilter: PropTypes.object,
+    isOpenAccess: PropTypes.bool,
+    isMinimised: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    showUnpublishedFields: PropTypes.bool,
+    createdRange: PropTypes.object,
+    updatedRange: PropTypes.object,
+
+    // Event handlers
+    onToggleSearchMode: PropTypes.func,
+    onToggleMinimise: PropTypes.func,
+    onToggleOpenAccess: PropTypes.func,
+    onAdvancedSearchRowAdd: PropTypes.func,
+    onAdvancedSearchRowRemove: PropTypes.func,
+    onAdvancedSearchReset: PropTypes.func,
+    updateDocTypeValues: PropTypes.func,
+    updateYearRangeFilter: PropTypes.func,
+    updateDateRange: PropTypes.func,
+
+    onAdvancedSearchRowChange: PropTypes.func.isRequired,
+    onSearch: PropTypes.func.isRequired,
+};
+
+AdvancedSearchComponent.defaultProps = {
+    fieldRows: [
+        {
+            searchField: '0',
+            value: '',
+            label: '',
+        },
+    ],
+    yearFilter: {
+        from: null,
+        to: null,
+        invalid: true,
+    },
+    isMinimised: false,
+    isOpenAccess: false,
+    showUnpublishedFields: false,
+    createdRange: {},
+    updatedRange: {},
+
+    onToggleSearchMode: () => {},
+    onToggleMinimise: () => {},
+    onToggleOpenAccess: () => {},
+    onAdvancedSearchRowAdd: () => {},
+    onAdvancedSearchRowRemove: () => {},
+    onAdvancedSearchReset: () => {},
+};
+
+export default React.memo(AdvancedSearchComponent);

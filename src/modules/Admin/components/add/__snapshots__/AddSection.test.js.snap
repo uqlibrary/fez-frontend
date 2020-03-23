@@ -25,7 +25,19 @@ exports[`AddSection component should render default view 1`] = `
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Member of collections"
                 fullwidth={true}
@@ -292,7 +304,19 @@ exports[`AddSection component should render with subtypes 1`] = `
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    },
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  }
+                }
                 disabled={false}
                 floatingLabelText="Member of collections"
                 fullwidth={true}

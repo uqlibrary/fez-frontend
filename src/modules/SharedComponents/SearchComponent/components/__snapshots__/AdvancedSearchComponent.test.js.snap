@@ -122,7 +122,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "all",
@@ -138,6 +138,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -215,7 +216,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={false}
@@ -267,6 +268,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -378,7 +380,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "all",
@@ -394,6 +396,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -471,7 +474,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={false}
@@ -523,6 +526,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -634,7 +638,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "all",
@@ -650,6 +654,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -721,7 +726,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={false}
@@ -773,6 +778,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -878,7 +884,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "all",
@@ -894,6 +900,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -971,7 +978,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={false}
@@ -1023,6 +1030,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -1134,7 +1142,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "0",
@@ -1151,6 +1159,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -1272,7 +1281,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={true}
@@ -1324,6 +1333,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -1430,7 +1440,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "0",
@@ -1447,6 +1457,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -1518,7 +1529,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={true}
@@ -1570,6 +1581,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -1676,7 +1688,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "0",
@@ -1693,6 +1705,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -1764,7 +1777,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={true}
@@ -1816,6 +1829,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}
@@ -2002,7 +2016,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         md={8}
         xs={12}
       >
-        <WithStyles(AdvancedSearchRow)
+        <Memo(AdvancedSearchRow)
           disabledFields={
             Array [
               "0",
@@ -2019,6 +2033,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         />
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-sideBar-1"
         item={true}
         md={4}
         xs={12}
@@ -2090,7 +2105,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           aria-label="Click to add another advanced search field"
           classes={
             Object {
-              "root": undefined,
+              "root": "makeStyles-blueButton-3",
             }
           }
           disabled={true}
@@ -2142,6 +2157,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         />
       </Hidden>
       <WithStyles(ForwardRef(Grid))
+        className="makeStyles-searchButton-2"
         item={true}
         md={4}
         xs={12}

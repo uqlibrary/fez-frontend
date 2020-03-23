@@ -1,4 +1,4 @@
-import UnpublishedStatusField, { mapStateToProps } from './UnpublishedStatusField';
+import { UnpublishedStatusField, mapStateToProps } from './UnpublishedStatusField';
 
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {

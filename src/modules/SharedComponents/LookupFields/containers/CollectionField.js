@@ -1,4 +1,3 @@
-import React from 'react';
 import { AutoCompleteMultiSelectField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
@@ -37,11 +36,7 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-const CollectionAutoComplete = connect(
+export const CollectionField = connect(
     mapStateToProps,
     mapDispatchToProps,
 )(AutoCompleteMultiSelectField);
-
-export function CollectionField(fieldProps) {
-    return <CollectionAutoComplete {...fieldProps} />;
-}

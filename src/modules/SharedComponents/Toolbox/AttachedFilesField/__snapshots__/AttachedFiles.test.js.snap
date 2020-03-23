@@ -175,7 +175,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
                 item={true}
                 sm={3}
               >
-                <WithStyles(TextFieldWrapper)
+                <TextField
                   defaultValue="FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf"
                   fullWidth={true}
                   name="fileDescription"
@@ -226,7 +226,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
             >
               <WithStyles(FileUploadEmbargoDate)
                 canBeCleared={true}
-                minDate={2020-03-20T03:56:32.685Z}
+                minDate={2020-03-23T22:36:12.265Z}
                 onChange={[Function]}
                 value="3000-10-20"
               />

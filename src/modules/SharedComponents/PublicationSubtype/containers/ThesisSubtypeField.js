@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { THESIS_SUBTYPES } from 'config/general';
@@ -15,25 +14,17 @@ const mapStateToProps = (state, props) => {
         itemsLoadingHint: props.loadingHint || 'Loading..',
         errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText && props.errorText) || '',
         error: (!!props.meta && !!props.meta.error) || props.error || false,
+        ...props,
     };
 };
 
-const mapDispatchToProps = () => {
-    return {};
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onchange: (!!props.input && props.input.onChange) || (!!props.onChange && props.onChange),
+    };
 };
 
-const ThesisSubtypeList = connect(
+export const ThesisSubtypeField = connect(
     mapStateToProps,
     mapDispatchToProps,
 )(GenericSelectField);
-
-export default function ThesisSubtypeField(fieldProps) {
-    return (
-        <ThesisSubtypeList
-            onChange={
-                (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
-            }
-            {...fieldProps}
-        />
-    );
-}

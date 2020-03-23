@@ -3,9 +3,6 @@ import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 
 import propFilter from '../../helpers/_filterProps';
-import { withStyles } from '@material-ui/core/styles';
-
-const styles = {};
 
 export const TextFieldWrapper = props => {
     const filteredProps = propFilter({ ...props, forceError: true }, TextField.propTypes);
@@ -46,7 +43,8 @@ TextFieldWrapper.propTypes = {
         text: PropTypes.any,
         buttonLabel: PropTypes.string,
     }),
-    classes: PropTypes.object,
 };
 
-export default withStyles(styles)(TextFieldWrapper);
+TextFieldWrapper.displayName = 'TextField';
+
+export default TextFieldWrapper;
