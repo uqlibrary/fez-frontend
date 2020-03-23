@@ -20,6 +20,7 @@ import {
     PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
     PUBLICATION_TYPE_PATENT,
     PUBLICATION_TYPE_PREPRINT,
+    PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
     PUBLICATION_TYPE_THESIS,
@@ -45,6 +46,7 @@ import {
     validateNewspaperArticle,
     validatePatent,
     validatePreprint,
+    validateReferenceEntry,
     validateResearchReport,
     validateSeminarPaper,
     validateThesis,
@@ -154,6 +156,10 @@ export default values => {
         case PUBLICATION_TYPE_RESEARCH_REPORT:
             const researchReportErrors = validateResearchReport(data, locale);
             errors = deepmerge(errors, researchReportErrors);
+            break;
+        case PUBLICATION_TYPE_REFERENCE_ENTRY:
+            const referenceEntryErrors = validateReferenceEntry(data, locale);
+            errors = deepmerge(errors, referenceEntryErrors);
             break;
         case PUBLICATION_TYPE_SEMINAR_PAPER:
             const seminarPaperErrors = validateSeminarPaper(data, locale);
