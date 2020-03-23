@@ -221,7 +221,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         const mockRecords = [
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
-            { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.UQ716942uqagrinb },

@@ -1,6 +1,5 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails, uqrdav10, uqagrinb } from './account';
 export {
-    collectionRecord,
     collections,
     collectionsByCommunity,
     communityRecord,
@@ -12,8 +11,6 @@ export {
     incompleteNTROlist,
     incompleteNTROrecord,
     incompleteNTRORecordUQ352045,
-    incompleteNTROrecordUqrdav10,
-    incompleteNTROrecordUqsbutl1,
     internalTitleSearchList,
     internalTitleSearchListNoResults,
     lookupToolIncites,
@@ -48,7 +45,6 @@ export {
     recordWithDatastreams,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
-    UQ341923,
     UQ716942uqagrinb,
 } from './records';
 

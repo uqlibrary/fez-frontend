@@ -97,11 +97,14 @@ describe('AddDataCollection test', () => {
     });
 
     it('should redirect to cancel page', () => {
-        window.location.reload = jest.fn();
+        const { location } = window;
+        delete window.location;
+        window.location = { reload: jest.fn() };
         setup({})
             .instance()
             ._restartWorkflow();
         expect(window.location.reload).toHaveBeenCalled();
+        window.location = location;
     });
 
     it('should navigate to my datasets url', () => {

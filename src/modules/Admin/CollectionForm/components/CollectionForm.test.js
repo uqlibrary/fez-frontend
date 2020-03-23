@@ -61,20 +61,7 @@ function setup(testProps) {
     return getElement(CollectionForm, props);
 }
 
-describe('Collection form test', () => {
-    const { reload } = window.location;
-
-    beforeAll(() => {
-        Object.defineProperty(window.location, 'reload', {
-            configurable: true,
-        });
-        window.location.reload = jest.fn();
-    });
-
-    afterAll(() => {
-        window.location.reload = reload;
-    });
-
+describe('Collection form', () => {
     it('should render form with only the community dropdown', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -125,9 +112,21 @@ describe('Collection form test', () => {
         wrapper.setProps({ submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+});
+
+describe('Collection form - redirections', () => {
+    const { location } = window;
+
+    beforeAll(() => {
+        delete window.location;
+        window.location = { assign: jest.fn(), reload: jest.fn() };
+    });
+
+    afterAll(() => {
+        window.location = location;
+    });
 
     it('should redirect to cancel page', () => {
-        window.location.assign = jest.fn();
         setup({})
             .instance()
             .cancelSubmit();
@@ -135,7 +134,6 @@ describe('Collection form test', () => {
     });
 
     it('should redirect to after submit page', () => {
-        window.location.assign = jest.fn();
         setup({})
             .instance()
             .afterSubmit();
@@ -143,7 +141,6 @@ describe('Collection form test', () => {
     });
 
     it('should reload the page', () => {
-        jest.spyOn(window.location, 'reload');
         setup({})
             .instance()
             .reloadForm();

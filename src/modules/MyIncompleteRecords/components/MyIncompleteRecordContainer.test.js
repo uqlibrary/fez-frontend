@@ -1,5 +1,5 @@
 import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
-import { UQ352045 } from 'mock/data/records';
+import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 
 function setup(testProps = {}) {
@@ -66,7 +66,7 @@ describe('MyIncompleteRecord Container', () => {
 
         wrapper.setProps({
             recordToFix: {
-                ...UQ352045,
+                ...incompleteNTRORecordUQ352045,
                 fez_record_search_key_author_affiliation_name: [
                     {
                         rek_author_affiliation_name: '',
@@ -226,7 +226,7 @@ describe('MyIncompleteRecord Container', () => {
 
         wrapper.setProps({
             recordToFix: {
-                ...UQ352045,
+                ...incompleteNTRORecordUQ352045,
                 fez_record_search_key_creator_contribution_statement: [
                     {
                         rek_creator_contribution_statement: 'Test statement',
@@ -383,7 +383,7 @@ describe('MyIncompleteRecord Container', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        const { ...recordToFix } = UQ352045;
+        const { ...recordToFix } = incompleteNTRORecordUQ352045;
         delete recordToFix.rek_formatted_abstract;
         delete recordToFix.fez_record_search_key_language;
         delete recordToFix.fez_record_search_key_total_pages;

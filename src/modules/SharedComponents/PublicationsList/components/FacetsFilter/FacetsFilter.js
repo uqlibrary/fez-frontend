@@ -12,27 +12,30 @@ import OpenAccessFilter from './OpenAccessFilter';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-export const FacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
-    facetCategory,
-    disabled,
-    activeFacets,
-    handleFacetClick,
-    isFacetFilterActive,
-}) {
-    return facetCategory.facets.map((item, index) => {
-        const isActive = isFacetFilterActive(activeFacets, facetCategory.facetTitle, item.key);
-        return (
-            <FacetFilterNestedListItem
-                key={index}
-                index={index}
-                onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
-                isActive={isActive}
-                primaryText={`${item.title} (${item.count})`}
-                disabled={disabled}
-            />
-        );
-    });
-});
+const FacetFilterNestedListItems = ({ facetCategory, disabled, activeFacets, handleFacetClick, isFacetFilterActive }) =>
+    facetCategory.facets.map((item, index) => (
+        <FacetFilterNestedListItem
+            key={index}
+            index={index}
+            onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
+            isActive={isFacetFilterActive(activeFacets, facetCategory.facetTitle, item.key)}
+            primaryText={`${item.title} (${item.count})`}
+            disabled={disabled}
+        />
+    ));
+
+FacetFilterNestedListItems.PropTypes = {
+    facetCategory: PropTypes.shape({
+        facets: PropTypes.array,
+        facetTitle: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    activeFacets: PropTypes.array,
+    handleFacetClick: PropTypes.func,
+    isFacetFilterActive: PropTypes.bool,
+};
+
+export const FacetFilterNestedListItemsList = React.memo(FacetFilterNestedListItems);
 
 export default class FacetsFilter extends PureComponent {
     static propTypes = {

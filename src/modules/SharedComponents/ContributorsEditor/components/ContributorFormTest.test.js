@@ -57,9 +57,9 @@ describe('ContributorForm', () => {
 
             fireEvent.click(getByRole('button'));
             waitForElement(() => {
-                const menu = getByRole('presentation');
+                const menu = getByTestId('menu-');
 
-                fireEvent.click(getByText(/UQ/), menu);
+                fireEvent.click(getByText('UQ', menu));
 
                 // assert name as published field is enabled and displayed in error state
                 expect(getByTestId('nameAsPublishedField')).toHaveAttribute('disabled', '');
@@ -76,8 +76,8 @@ describe('ContributorForm', () => {
             expect(contributorForm.children.length).toBe(3);
 
             fireEvent.click(getByRole('button'));
-            const menu = waitForElement(getByRole('presentation'));
-            fireEvent.click(getByText(/Not UQ/), menu);
+            const menu = getByTestId('menu-');
+            fireEvent.click(getByText(/Not UQ/, menu));
 
             try {
                 getByTestId('UQAuthorID-input');
@@ -121,8 +121,8 @@ describe('ContributorForm', () => {
             expect(contributorForm.children.length).toBe(3);
 
             fireEvent.click(getByRole('button'));
-            const menu = waitForElement(getByRole('presentation'));
-            fireEvent.click(getByText(/Not UQ/), menu);
+            const menu = getByTestId('menu-');
+            fireEvent.click(getByText(/Not UQ/, menu));
 
             try {
                 getByTestId('UQAuthorID-input');

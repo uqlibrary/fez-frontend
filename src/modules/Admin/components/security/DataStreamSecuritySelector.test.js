@@ -1,6 +1,6 @@
 import React from 'react';
 import DataStreamSecuritySelector, { isSame } from './DataStreamSecuritySelector';
-import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, cleanup } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -64,8 +64,8 @@ describe('DataStreamSecuritySelector component', () => {
         expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
     });
 
-    it('should change security value for the file', async() => {
-        const { asFragment, getByText, getByTestId } = setup({
+    it('should change security value for the file', () => {
+        const { asFragment, getByText, getAllByText, getByTestId } = setup({
             meta: {
                 initial: {
                     toJS: () => [
@@ -81,12 +81,12 @@ describe('DataStreamSecuritySelector component', () => {
         let fragment = asFragment();
         fireEvent.click(getByText(/Administrator/i));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
-        const menu = await waitForElement(() => getByTestId('menu-test5.txt'));
+        const menu = getByTestId('menu-test5.txt');
 
-        fireEvent.click(getByText(/public/i, menu));
+        fireEvent.click(getAllByText(/public/i, menu)[0]);
         expect(fragment).toMatchDiffSnapshot(asFragment());
-        expect(getByText(/public/i)).toHaveAttribute('id', 'select-test5.txt');
-        expect(getByText(/public/i)).toHaveAttribute('role', 'button');
+        expect(getAllByText(/public/i, menu)[0]).toHaveAttribute('id', 'select-test5.txt');
+        expect(getAllByText(/public/i, menu)[0]).toHaveAttribute('role', 'button');
     });
 
     it('should not display datastream security selected in dropdown', () => {

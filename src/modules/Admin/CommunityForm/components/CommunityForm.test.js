@@ -61,14 +61,7 @@ function setup(testProps) {
     return getElement(CommunityForm, props);
 }
 
-describe('Collection form test', () => {
-    beforeAll(() => {
-        Object.defineProperty(window.location, 'reload', {
-            configurable: true,
-        });
-        window.location.reload = jest.fn();
-    });
-
+describe('Collection form', () => {
     it('should render form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -102,8 +95,25 @@ describe('Collection form test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render success panel', () => {
+        const wrapper = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+});
+
+describe('Collection form redirections', () => {
+    const { location } = window;
+
+    beforeAll(() => {
+        delete window.location;
+        window.location = { assign: jest.fn(), reload: jest.fn() };
+    });
+
+    afterAll(() => {
+        window.location = location;
+    });
+
     it('should redirect to cancel page', () => {
-        window.location.assign = jest.fn();
         setup({})
             .instance()
             .cancelSubmit();
@@ -111,7 +121,6 @@ describe('Collection form test', () => {
     });
 
     it('should redirect to after submit page', () => {
-        window.location.assign = jest.fn();
         setup({})
             .instance()
             .afterSubmit();
@@ -119,15 +128,9 @@ describe('Collection form test', () => {
     });
 
     it('should reload the page', () => {
-        jest.spyOn(window.location, 'reload');
         setup({})
             .instance()
             .reloadForm();
         expect(window.location.reload).toBeCalled();
-    });
-
-    it('should render success panel', () => {
-        const wrapper = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
