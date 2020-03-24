@@ -100,15 +100,18 @@ export const AdvancedSearchRow = props => {
                     {/* Select and combiner */}
                     <Grid container spacing={2}>
                         <Grid item className={classes.autoWidth} style={{ minWidth: 200 }}>
-                            <FormControl fullWidth>
+                            <FormControl fullWidth error={!!selectFieldValidation()} id="field-type-selector-label">
                                 <Select
                                     value={searchField}
+                                    name="field-type-selector"
                                     onChange={_handleSearchFieldChange}
-                                    error={!!selectFieldValidation()}
                                     aria-label={txt.selectAria.replace(
                                         '[current_selection]',
                                         txt.fieldTypes[searchField].title,
                                     )}
+                                    SelectDisplayProps={{
+                                        id: 'field-type-selector',
+                                    }}
                                 >
                                     {Object.keys(txt.fieldTypes)
                                         .filter(item => txt.fieldTypes[item].type !== null)
@@ -163,6 +166,7 @@ export const AdvancedSearchRow = props => {
                                     aria-label={txt.deleteAria}
                                     className="deleteFieldButton"
                                     onClick={_deleteRow}
+                                    id={`delete-advanced-search-row-${rowIndex}`}
                                 >
                                     <Close />
                                 </IconButton>

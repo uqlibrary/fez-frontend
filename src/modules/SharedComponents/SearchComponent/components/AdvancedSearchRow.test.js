@@ -1,5 +1,6 @@
-import { AdvancedSearchRow } from './AdvancedSearchRow';
-import AdvancedSearchRowWithStyles from './AdvancedSearchRow';
+import React from 'react';
+import AdvancedSearchRow from './AdvancedSearchRow';
+import { rtlRender, fireEvent, waitForElement } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     searchField: '0',
@@ -8,59 +9,52 @@ const getProps = (testProps = {}) => ({
     rowIndex: 0,
     onSearchRowChange: jest.fn(),
     onSearchRowDelete: jest.fn(),
-    classes: {},
     ...testProps,
 });
 
 function setup(testProps = {}) {
-    return getElement(AdvancedSearchRow, getProps(testProps));
+    return rtlRender(<AdvancedSearchRow {...getProps(testProps)} />);
 }
 
 describe('AdvancedSearchRow', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByText } = setup();
+        expect(getByText(/select a field/i)).toBeInTheDocument();
+        expect(getByText(/please select a field to search/i)).toBeInTheDocument();
     });
 
-    it('should render search field row with select field and search text', () => {
-        const wrapper = setup({ searchField: 'all', value: 'i feel lucky' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should render search field row with given disabled options', async() => {
+        const { getByTestId, getByText } = setup({
+            searchField: 'all',
+            value: 'i feel lucky',
+            disabledFields: ['0'],
+        });
+        expect(getByTestId('textfield').value).toEqual('i feel lucky');
+        fireEvent.keyDown(getByTestId('field-type-selector'), { key: 'Enter', code: 13 });
+        const list = await waitForElement(() => getByTestId('menu-field-type-selector'));
+        expect(getByText(/select a field/i, list)).toHaveClass('Mui-disabled');
     });
 
-    it('should render search field row with given disabled options', () => {
-        const wrapper = setup({ searchField: 'all', value: 'i feel lucky', disabledFields: ['all', 0] });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should handle search field dropdown change', () => {
+    it('should handle search field dropdown change', async() => {
         const testFn = jest.fn();
-        const wrapper = setup({ rowIndex: 1, onSearchRowChange: testFn });
-        wrapper.instance()._handleSearchFieldChange({ target: { value: 2 } });
-        expect(testFn).toHaveBeenCalledWith(1, { label: '', searchField: 2, value: '' });
+        const { getByTestId, getByText } = setup({ rowIndex: 1, onSearchRowChange: testFn });
+        fireEvent.keyDown(getByTestId('field-type-selector'), { key: 'Enter', code: 13 });
+        const list = await waitForElement(() => getByTestId('menu-field-type-selector'));
+        fireEvent.click(getByText(/book title for chapters/i), list);
+        expect(testFn).toHaveBeenCalledWith(1, { label: '', searchField: 'rek_book_title', value: '' });
     });
 
     it('should handle search field text change', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ rowIndex: 1, onSearchRowChange: testFn });
-        wrapper.instance()._handleTextChange('i feel lucky');
-        expect(testFn).toHaveBeenCalledWith(1, { searchField: '0', value: 'i feel lucky', label: '' });
+        const { getByTestId } = setup({ rowIndex: 1, onSearchRowChange: testFn });
+        fireEvent.change(getByTestId('textfield'), { target: { value: 'i feel lucky' } });
+        expect(testFn).toHaveBeenCalledWith(1, { searchField: '0', value: 'i feel lucky', label: undefined });
     });
 
     it('should handle delete row', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ rowIndex: 3, onSearchRowDelete: testFn });
-        wrapper.instance()._deleteRow();
+        const { getByTestId } = setup({ rowIndex: 3, onSearchRowDelete: testFn });
+        fireEvent.click(getByTestId('delete-advanced-search-row-3'));
         expect(testFn).toHaveBeenCalledWith(3);
-    });
-
-    it('should render default view with styles', () => {
-        const wrapper = getElement(AdvancedSearchRowWithStyles, getProps());
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render input component and props', () => {
-        const wrapper = setup();
-        const inputComponent = wrapper.instance().renderInputComponentAndProps()('div', {});
-        expect(inputComponent).toMatchSnapshot();
     });
 });
