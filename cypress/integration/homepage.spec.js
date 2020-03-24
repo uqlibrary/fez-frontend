@@ -1,6 +1,6 @@
 context('Homepage', () => {
     const checkMenuItemCount = expectedCount => {
-        cy.closeUnsupported();
+        // cy.closeUnsupported();
         cy.get('button[aria-label="Click to open the main navigation"]')
             .click();
         cy.get('nav#mainMenu')
@@ -10,7 +10,7 @@ context('Homepage', () => {
 
     it('Renders the tabbed panes as expected', () => {
         cy.visit('/');
-        cy.closeUnsupported();
+        // cy.closeUnsupported();
 
         cy.get('button[role="tab"]')
             .contains('Trending on Scopus')
