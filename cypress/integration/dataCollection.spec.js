@@ -3,7 +3,7 @@ context('Data Collection form', () => {
 
     before(() => {
         cy.visit('/data-collections/add');
-        cy.closeUnsupported();
+        // cy.closeUnsupported();
     });
 
     beforeEach(() => {

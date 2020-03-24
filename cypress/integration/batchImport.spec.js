@@ -10,7 +10,7 @@ context('Batch import', () => {
 
     beforeEach(() => {
         cy.visit('/batch-import?user=digiteamMember');
-        cy.closeUnsupported();
+        // cy.closeUnsupported();
     });
 
     afterEach(() => {

@@ -8,7 +8,7 @@ context('Search', () => {
 
     beforeEach(() => {
         cy.visit('/records/search');
-        cy.closeUnsupported();
+        // cy.closeUnsupported();
     });
 
     it('Doing a basic search to advanced search', () => {
