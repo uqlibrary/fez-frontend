@@ -1,259 +1,232 @@
-import { AdvancedSearchComponent, styles } from './AdvancedSearchComponent';
+import React from 'react';
+import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-
-const getProps = (testProps = {}) => ({
-    isLoading: false,
-    yearFilter: {
-        invalid: false,
-    },
-    className: 'advanced-search',
-    classes: {},
-
-    onAdvancedSearchRowChange: jest.fn(),
-    onSearch: jest.fn(),
-    updateYearRangeFilter: jest.fn(),
-    ...testProps,
-});
+import { rtlRender, fireEvent, waitForElement } from 'test-utils';
+import { act, getAllByRole } from 'react-testing-library';
 
 function setup(testProps = {}) {
-    return getElement(AdvancedSearchComponent, getProps(testProps));
+    const props = {
+        isLoading: false,
+        isMinimised: false,
+        isOpenAccess: false,
+        yearFilter: {
+            invalid: false,
+        },
+        className: 'advanced-search',
+
+        onAdvancedSearchRowChange: jest.fn(),
+        onSearch: jest.fn(),
+        updateYearRangeFilter: jest.fn(),
+        docTypes: [],
+        ...testProps,
+    };
+    return rtlRender(<AdvancedSearchComponent {...props} />);
 }
 
 describe('AdvancedSearchComponent', () => {
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            breakpoints: {
-                up: jest.fn(() => 'test1'),
-            },
-            palette: {
-                accent: {
-                    main: 'test2',
-                    dark: 'test3',
-                },
-                white: {
-                    main: 'test4',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.accent;
-        delete theme.palette.white;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
-    });
-
-    it('should have default event handler props return undefined', () => {
-        const wrapper = setup();
-        const defaultPropMethodNames = [
-            'onToggleSearchMode',
-            'onToggleMinimise',
-            'onToggleOpenAccess',
-            'onAdvancedSearchRowAdd',
-            'onAdvancedSearchRowRemove',
-            'onAdvancedSearchReset',
-        ];
-        defaultPropMethodNames.forEach(methodName => {
-            expect(wrapper.instance().props[methodName]()).toBeUndefined();
-        });
+        const { getByTestId, getByText } = setup();
+        expect(getByText(/advanced search/i)).toBeInTheDocument();
+        expect(getByText(/please select a field to search/i)).toBeInTheDocument();
+        expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
+        expect(getByTestId('textfield').disabled).toBeTruthy();
+        expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
     });
 
     it('should render minimised view', () => {
-        const wrapper = setup({ isMinimised: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const testFn = jest.fn();
+        const { getByTestId, getByText } = setup({ isMinimised: true, onToggleMinimise: testFn });
+        expect(getByText(/advanced search/i)).toBeInTheDocument();
+        expect(getByTestId('maximize-advanced-search')).toBeInTheDocument();
+        fireEvent.click(getByTestId('maximize-advanced-search'));
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('should render default view with open access checked', () => {
-        const wrapper = setup({ isOpenAccess: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const testFn = jest.fn();
+        const { getByTestId, getByText } = setup({ isOpenAccess: true, onToggleOpenAccess: testFn });
+        expect(getByText(/advanced search/i)).toBeInTheDocument();
+        expect(getByText(/please select a field to search/i)).toBeInTheDocument();
+        expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
+        expect(getByTestId('textfield').disabled).toBeTruthy();
+        expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
+        expect(getByText('open access/full text')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('advanced-search-open-access'));
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('should render advanced search row based on props', () => {
-        const wrapper = setup({ isOpenAccess: true, fieldRows: [{ value: 'i feel lucky', searchField: 'all' }] });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should toggle minimised view for advanced search', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ onToggleMinimise: testFn });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._toggleMinimise();
-        expect(testFn).toHaveBeenCalled();
-    });
-
-    it('should toggle open access for advanced search', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ onToggleOpenAccess: testFn });
-
-        wrapper.instance()._toggleOpenAccess({ preventDefault: jest.fn() });
-        expect(testFn).toHaveBeenCalled();
+        const { getByTestId, getByText } = setup({
+            isOpenAccess: true,
+            fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
+        });
+        expect(getByText(/advanced search/i)).toBeInTheDocument();
+        expect(getByTestId('textfield').value).toEqual('i feel lucky');
+        expect(getByTestId('add-another-search-row').disabled).toBeFalsy();
+        expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
+        expect(getByText('open access/full text')).toBeInTheDocument();
     });
 
     it('should toggle search mode from advanced to simple', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onToggleSearchMode: testFn });
-
-        wrapper.instance()._toggleSearchMode();
+        const { getByTestId } = setup({ onToggleSearchMode: testFn });
+        fireEvent.click(getByTestId('toggle-to-simple-search-mode'));
         expect(testFn).toHaveBeenCalled();
     });
 
     it('should add advanced search row', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({ onAdvancedSearchRowAdd: testMethod });
-
-        wrapper.instance()._addAdvancedSearchRow();
-        expect(testMethod).toHaveBeenCalled();
+        const testFn = jest.fn();
+        const { getByTestId } = setup({
+            onAdvancedSearchRowAdd: testFn,
+            fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
+        });
+        fireEvent.click(getByTestId('add-another-search-row'));
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('should remove advanced search row', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({ onAdvancedSearchRowRemove: testMethod });
-
-        wrapper.instance()._removeAdvancedSearchRow();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should reset advanced search', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({ onAdvancedSearchReset: testMethod });
-
-        wrapper.instance()._resetAdvancedSearch();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should handle changes in advanced search row', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({ onAdvancedSearchRowChange: testMethod });
-
-        wrapper.instance()._handleAdvancedSearchRowChange(1, { searchField: 'all', value: 'test value' });
-        expect(testMethod).toHaveBeenCalledWith(1, { searchField: 'all', value: 'test value' });
-    });
-
-    it("should not submit search if ENTER wasn't pressed", () => {
-        const testMethod = jest.fn();
-        const preventDefault = jest.fn();
-        const wrapper = setup({ onSearch: testMethod });
-
-        wrapper.instance()._handleAdvancedSearch({ key: 'a', preventDefault: preventDefault });
-        expect(testMethod).not.toHaveBeenCalled();
-    });
-
-    it('should submit search if search text is not null and ENTER is pressed', () => {
-        const testMethod = jest.fn();
-        const preventDefault = jest.fn();
-        const wrapper = setup({
-            onSearch: testMethod,
+        const testFn = jest.fn();
+        const { getByTestId } = setup({
+            onAdvancedSearchRowRemove: testFn,
             fieldRows: [
-                {
-                    searchField: 'all',
-                    value: 'i feel lucky',
-                },
+                { value: 'i feel lucky', searchField: 'all' },
+                { value: 'i feel more lucky', searchField: 'rek_title' },
             ],
         });
 
-        wrapper.instance()._handleAdvancedSearch({ key: 'Enter', preventDefault: preventDefault });
-        expect(testMethod).toHaveBeenCalled();
+        fireEvent.click(getByTestId('delete-advanced-search-row-1'));
+        expect(testFn).toHaveBeenCalled();
     });
 
-    it('haveAllAdvancedSearchFieldsValidated should return false for a fieldRow which is too short', () => {
+    it('should reset advanced search', () => {
+        const testFn = jest.fn();
+        const { getByTestId } = setup({
+            onAdvancedSearchReset: testFn,
+            fieldRows: [
+                { value: 'i feel lucky', searchField: 'all' },
+                { value: 'i feel more lucky', searchField: 'rek_title' },
+            ],
+        });
+
+        fireEvent.click(getByTestId('reset-advanced-search'));
+        expect(testFn).toHaveBeenCalled();
+    });
+
+    it('should handle changes in advanced search row when field selector is changed', async() => {
+        const testFn = jest.fn();
+        const { getByTestId, getByText } = setup({
+            onAdvancedSearchRowChange: testFn,
+        });
+
+        fireEvent.mouseDown(getByTestId('field-type-selector'));
+        const list = await waitForElement(() => getByTestId('menu-field-type-selector'));
+        fireEvent.click(getByText(/any field/i, list));
+        expect(testFn).toHaveBeenCalledWith(0, { searchField: 'all', value: '', label: '' });
+    });
+
+    it('should handle changes in advanced search row when text field is changed for selected field', () => {
+        const testFn = jest.fn();
+        const { getByTestId } = setup({
+            onAdvancedSearchRowChange: testFn,
+            fieldRows: [{ value: '', searchField: 'all' }],
+        });
+
+        fireEvent.change(getByTestId('textfield'), { target: { value: 'testing' } });
+        expect(testFn).toHaveBeenCalledWith(0, { searchField: 'all', value: 'testing', label: '' });
+    });
+
+    it('haveAllAdvancedSearchFieldsValidated should return false for a fieldRow which is longer than the max length', () => {
         const thisProps = {
-            fieldRows: [{ searchField: 'rek_title', value: '123' }],
+            fieldRows: [
+                {
+                    searchField: 'rek_title',
+                    value:
+                        'OuuCJZb8JA35CrCl1wjx5WzgN2eAMBGryy72EGw7hB98P5P1SRwBDlHz2c1sej4YMIuzwPi3ewpAPiUp65' +
+                        'sgJrL0BIVhr3S1ESxLpPfDlzgMSosPIT5Eq3WytsehVd8T8n5hy4akLPYQ1HTWYbSzvifjw79rbuMdvLGm' +
+                        'XWS36ljaluN6v3sg8gtwUi5owNsuEIPiaOquVkV1k8nqdDx1npntW9fTX0B84UvnzemXIWySCoeiIsZVNm' +
+                        'jdonoC3SYT2dDIddraqgShz256k1ZC56P9M6Zgs9FpmeFUHwEuXHBxcWLmxGfsxpJhNuFNKnELD2rhWYq3' +
+                        'RXkDm67FyYwDX9V8IpMBNfAZi8Bb57VFvFbuGqQo56D99mkTA7SfRoVcbd3mMkSDQdowH8Bpni2EFPdC1a' +
+                        'KcsWGxPPIS4Cr93PVFJFp9X2zSvXGDQ0WRLzINYFUahICxwIkclTK4uc9N3c3Czmy06mchh8aMlHDaplnc' +
+                        'ul8TOLV8J',
+                },
+            ],
         };
-        const wrapper = setup({ ...thisProps });
-        expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeTruthy();
+        const { getByText } = setup({ ...thisProps });
+        expect(getByText('Must be 255 characters or less')).toBeInTheDocument();
     });
-
-    it('haveAllAdvancedSearchFieldsValidated should return true for a fieldRow which is longer than minLength', () => {
-        const thisProps = {
-            fieldRows: [{ searchField: 'rek_title', value: '1234567890ABC' }],
-        };
-        const wrapper = setup({ ...thisProps });
-        expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeTruthy();
-    });
-
-    it(
-        'haveAllAdvancedSearchFieldsValidated should return false ' +
-            'for a fieldRow which is longer than the max length',
-        () => {
-            const thisProps = {
-                fieldRows: [
-                    {
-                        searchField: 'rek_title',
-                        value:
-                            'OuuCJZb8JA35CrCl1wjx5WzgN2eAMBGryy72EGw7hB98P5P1SRwBDlHz2c1sej4YMIuzwPi3ewpAPiUp65' +
-                            'sgJrL0BIVhr3S1ESxLpPfDlzgMSosPIT5Eq3WytsehVd8T8n5hy4akLPYQ1HTWYbSzvifjw79rbuMdvLGm' +
-                            'XWS36ljaluN6v3sg8gtwUi5owNsuEIPiaOquVkV1k8nqdDx1npntW9fTX0B84UvnzemXIWySCoeiIsZVNm' +
-                            'jdonoC3SYT2dDIddraqgShz256k1ZC56P9M6Zgs9FpmeFUHwEuXHBxcWLmxGfsxpJhNuFNKnELD2rhWYq3' +
-                            'RXkDm67FyYwDX9V8IpMBNfAZi8Bb57VFvFbuGqQo56D99mkTA7SfRoVcbd3mMkSDQdowH8Bpni2EFPdC1a' +
-                            'KcsWGxPPIS4Cr93PVFJFp9X2zSvXGDQ0WRLzINYFUahICxwIkclTK4uc9N3c3Czmy06mchh8aMlHDaplnc' +
-                            'ul8TOLV8J',
-                    },
-                ],
-            };
-            const wrapper = setup({ ...thisProps });
-            expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
-        },
-    );
 
     it('haveAllAdvancedSearchFieldsValidated should allow all field to be empty and empty field', () => {
         const thisProps = {
             fieldRows: [{ searchField: 'all', value: '' }, { searchField: '0', value: '' }],
         };
-        const wrapper = setup({ ...thisProps });
-        expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeTruthy();
+        const { getByTestId } = setup({ ...thisProps });
+        expect(getByTestId('advancedSearchButton').disabled).toBeFalsy();
     });
 
-    it('should render advanced search docTypes with checked values based on props', () => {
-        const wrapper = setup({
+    it('should render advanced search docTypes with checked values based on props', async() => {
+        const { getByTestId, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: [179, 202],
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        fireEvent.mouseDown(getByTestId('document-type-selector'));
+        const list = await waitForElement(() => getByTestId('menu-document-type-selector'));
+        const options = getAllByRole('option', list);
+        expect(options[4]).toHaveClass('Mui-selected'); // Journal article
+        expect(options[4].checked).toBeTruthy(); // Journal article
+        expect(options[12]).toHaveClass('Mui-selected'); // Generic document
+        expect(options[12].checked).toBeTruthy(); // Generic document
     });
 
-    it('should render advanced search docTypes with checked values based on fixed invalid props', () => {
-        const wrapper = setup({
+    it('should render advanced search docTypes with checked values based on fixed invalid props', async() => {
+        const { getByTestId, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: ['179', '202'],
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        fireEvent.mouseDown(getByTestId('document-type-selector'));
+        const list = await waitForElement(() => getByTestId('menu-document-type-selector'));
+        const options = getAllByRole('option', list);
+        expect(options[4]).toHaveClass('Mui-selected'); // Journal article
+        expect(options[12]).toHaveClass('Mui-selected'); // Generic document
     });
 
-    it('should render advanced search with no valid checked docTypes based on invalid props', () => {
-        const wrapper = setup({
+    it('should render advanced search with no valid checked docTypes based on invalid props', async() => {
+        const { getByTestId, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: ['test', 202],
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        fireEvent.mouseDown(getByTestId('document-type-selector'));
+        const list = await waitForElement(() => getByTestId('menu-document-type-selector'));
+        const options = getAllByRole('option', list);
+        expect(options[12].checked).toBeTruthy(); // Generic document
+        expect(options[12]).toHaveClass('Mui-selected'); // Generic document
+        expect(options.filter(option => option['data-value'] === 'test').length).toEqual(0);
     });
 
-    it('should render date range fields', () => {
-        const updateDateRangeFn = jest.fn();
-        const wrapper = setup({ isOpenAccess: true, showUnpublishedFields: true, updateDateRange: updateDateRangeFn });
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should update date range filter', () => {
+        const updateYearRangeFilterFn = jest.fn();
+        const { getByTestId } = setup({
+            updateYearRangeFilter: updateYearRangeFilterFn,
+            isOpenAccess: true,
+        });
 
-        wrapper
-            .find('WithStyles(DateRangeField)')
-            .get(0)
-            .props.onChange({
-                from: moment('10/10/2010', 'DD/MM/YYYY'),
-                to: moment('12/10/2010', 'DD/MM/YYYY'),
-            });
+        fireEvent.change(getByTestId('from'), { target: { value: '2010' } });
 
-        expect(updateDateRangeFn).toHaveBeenCalledWith('rek_created_date', {
-            from: moment('10/10/2010', 'DD/MM/YYYY'),
-            to: moment('12/10/2010', 'DD/MM/YYYY'),
+        expect(updateYearRangeFilterFn).toHaveBeenCalledWith({
+            from: 2010,
+            invalid: false,
+        });
+
+        fireEvent.change(getByTestId('to'), { target: { value: '2014' } });
+        expect(updateYearRangeFilterFn).toHaveBeenCalledWith({
+            to: 2014,
+            invalid: false,
         });
     });
 });

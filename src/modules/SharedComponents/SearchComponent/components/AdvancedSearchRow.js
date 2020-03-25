@@ -48,7 +48,7 @@ export const AdvancedSearchRow = props => {
         rowIndex,
         searchField,
         value,
-        label,
+        // label,
         disabledFields,
         showUnpublishedFields,
         onSearchRowChange,
@@ -56,7 +56,7 @@ export const AdvancedSearchRow = props => {
     } = props;
     const classes = useStyles();
 
-    const _handleTextChange = value => {
+    const _handleTextChange = (value, label = '') => {
         onSearchRowChange(rowIndex, { searchField: searchField, value, label });
     };
 

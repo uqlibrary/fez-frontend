@@ -8,7 +8,7 @@ export { ReportNumberField } from './containers/ReportNumberField';
 export { FieldOfResearchField } from './containers/FieldOfResearchField';
 export { FieldOfResearchListField } from './containers/FieldOfResearchListField';
 export { FilteredFieldOfResearchListField } from './containers/FieldOfResearchListField';
-export { default as UqIdField } from './containers/UqIdField';
+export { UqIdField } from './containers/UqIdField';
 export { RoleField } from './containers/RoleField';
 export { RelatedDatasetAndPublicationListField } from './containers/RelatedDatasetAndPublicationListField';
 export { CollectionField } from './containers/CollectionField';

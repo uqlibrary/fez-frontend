@@ -84,9 +84,6 @@ export const AdvancedSearchComponent = ({
 
     const _handleAdvancedSearch = event => {
         event.preventDefault();
-        if (event.key && event.key !== 'Enter') {
-            return;
-        }
         onSearch();
     };
 
@@ -151,6 +148,7 @@ export const AdvancedSearchComponent = ({
                             aria-label={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
                             onClick={_toggleMinimise}
                             tooltip={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
+                            id={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
                         >
                             {!isMinimised ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
                         </IconButton>
@@ -228,7 +226,10 @@ export const AdvancedSearchComponent = ({
                                         <FormControlLabel
                                             control={
                                                 <Checkbox
-                                                    aria-label={txt.advancedSearch.openAccess.ariaLabel}
+                                                    id="advanced-search-open-access"
+                                                    inputProps={{
+                                                        'aria-label': txt.advancedSearch.openAccess.ariaLabel,
+                                                    }}
                                                     checked={isOpenAccess}
                                                     onChange={_toggleOpenAccess}
                                                     disabled={isLoading}
@@ -249,11 +250,13 @@ export const AdvancedSearchComponent = ({
                                     aria-label={txt.advancedSearch.addField.aria}
                                     disabled={!canAddAnotherField}
                                     onClick={_addAdvancedSearchRow}
+                                    id="add-another-search-row"
                                     fullWidth
                                 />
                             </Grid>
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
+                                    id="reset-advanced-search"
                                     variant={'contained'}
                                     children={txt.advancedSearch.reset.title}
                                     aria-label={txt.advancedSearch.reset.aria}
@@ -263,6 +266,7 @@ export const AdvancedSearchComponent = ({
                             </Grid>
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
+                                    id="toggle-to-simple-search-mode"
                                     children={txt.advancedSearch.simpleSearch.title}
                                     aria-label={txt.advancedSearch.simpleSearch.aria}
                                     onClick={_toggleSearchMode}
