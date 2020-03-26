@@ -1,6 +1,6 @@
 import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
-import { useRecordContext, useTabbedContext } from 'context';
+import { useRecordContext, useTabbedContext, useAccountContext } from 'context';
 
 jest.mock('../../../context');
 
@@ -56,6 +56,9 @@ describe('AdminInterface component', () => {
                 cleanupFns.push(hookReturn);
             }
         });
+        useAccountContext.mockImplementation(() => ({
+            account: {},
+        }));
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
@@ -68,6 +71,7 @@ describe('AdminInterface component', () => {
     });
 
     afterEach(() => {
+        useAccountContext.mockReset();
         useRecordContext.mockReset();
         useTabbedContext.mockReset();
         while (cleanupFns.length > 0) {

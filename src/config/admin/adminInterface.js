@@ -22,6 +22,8 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
+    APP_URL,
+    pathPrefix,
 } from 'config/general';
 
 import {
@@ -49,6 +51,48 @@ import {
     videoFields,
     workingPaperFields,
 } from './fields';
+
+export const USER_IDS_WITH_LEGACY_LINK = [
+    'uqstaff',
+    'uqaheath',
+    'uqmmarr1',
+    'uqmfeen1',
+    'uqamartl',
+    'uqldegro',
+    'uqklane1',
+    'uqvasai',
+    'uqawil42',
+];
+
+const getLegacyEditUrl = (pid, type) => {
+    let wftID;
+    let xdisID;
+    let viewSlug;
+    switch (type) {
+        case 'community':
+            wftID = 291;
+            xdisID = 11;
+            viewSlug = 'community';
+            break;
+        case 'collection':
+            wftID = 290;
+            xdisID = 9;
+            viewSlug = 'collection';
+            break;
+        default:
+            wftID = 289;
+            xdisID = 179;
+            viewSlug = 'view';
+            break;
+    }
+    const href = encodeURIComponent(`/${viewSlug}/${pid}`);
+    return `${APP_URL}${pathPrefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
+};
+
+export const ADMIN_EDIT_LEGACY_LINK = {
+    label: 'Edit in legacy',
+    url: getLegacyEditUrl,
+};
 
 export default {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: audioFields,

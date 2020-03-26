@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRecordContext, useAccountContext } from 'context';
 import { publicationTypes } from 'config';
+import { USER_IDS_WITH_LEGACY_LINK } from 'config/admin/adminInterface';
 
 export const usePublicationSubtype = (displayType = null) => {
     const { record } = useRecordContext();
@@ -23,4 +24,9 @@ export const userIsAuthor = () => {
             return parseInt(authors.rek_author_id, 10) === parseInt(account.aut_id, 10);
         })
     );
+};
+
+export const userHasNewAdminEdit = () => {
+    const { account } = useAccountContext();
+    return !!account && USER_IDS_WITH_LEGACY_LINK.includes(account.id);
 };

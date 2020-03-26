@@ -1098,7 +1098,7 @@ export const LANGUAGE = [
     { value: 'yid', text: 'Yiddish' },
 ];
 
-const pathPrefix = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+export const pathPrefix = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 
 export const RECORD_ACTION_URLS = [
     {

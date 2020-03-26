@@ -148,7 +148,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.searchKeyList[config.params.search_key]];
         } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
-            return [200, mockData.collectionsList];
+            return [200, mockData.collectionSearchList];
         } else if (config.params.key && config.params.key.rek_object_type === 1) {
             return [200, mockData.communitySearchList];
         } else if (
