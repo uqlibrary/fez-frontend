@@ -306,16 +306,12 @@ export class PublicationCitation extends PureComponent {
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
         const adminActions = [...options];
-        if (userHasNewAdminEdit) {
-            const editUrl = ADMIN_EDIT_LEGACY_LINK.url(
+        if (!userHasNewAdminEdit) {
+            const legacyEditUrl = ADMIN_EDIT_LEGACY_LINK.url(
                 publication.rek_pid,
                 publication.rek_object_type_lookup && publication.rek_object_type_lookup.toLowerCase(),
             );
-            adminActions.splice(1, 0, {
-                label: ADMIN_EDIT_LEGACY_LINK.label,
-                url: () => editUrl,
-                inApp: true,
-            });
+            adminActions[0].url = () => legacyEditUrl;
         }
         return (
             <div className="publicationCitation">

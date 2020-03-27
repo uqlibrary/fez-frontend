@@ -24,7 +24,7 @@ import {
     PUBLICATION_TYPE_WORKING_PAPER,
     APP_URL,
     STAGING_URL,
-    pathPrefix,
+    PATH_PREFIX,
 } from 'config/general';
 
 import {
@@ -89,7 +89,7 @@ const getLegacyEditUrl = (pid, type) => {
     }
 
     // Use staging URL for non-prod sites
-    const prefix = APP_URL.indexOf('https://espace.') === 0 ? `${APP_URL}${pathPrefix}` : STAGING_URL;
+    const prefix = APP_URL.indexOf('https://espace.') === 0 ? `${APP_URL}${PATH_PREFIX}` : STAGING_URL;
 
     const href = encodeURIComponent(`/${viewSlug}/${pid}`);
     return `${prefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
