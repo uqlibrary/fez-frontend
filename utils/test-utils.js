@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import { mui1theme } from 'config/theme';
@@ -13,8 +13,8 @@ import { getStore } from '../src/config/store';
 import Immutable from 'immutable';
 import { createMemoryHistory } from 'history';
 
-const domTestingLib = require('dom-testing-library');
-const reactTestingLib = require('react-testing-library');
+const domTestingLib = require('@testing-library/dom');
+const reactTestingLib = require('@testing-library/react');
 
 const { configure } = domTestingLib;
 
