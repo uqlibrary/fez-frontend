@@ -30,8 +30,6 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 import { adminInterfaceConfig } from 'config/admin';
-import { ADMIN_EDIT_LEGACY_LINK } from 'config/admin/adminInterface';
-import { userHasNewAdminEdit } from 'hooks';
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -181,19 +179,6 @@ export const AdminInterface = ({
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
-                    {userHasNewAdminEdit() && (
-                        <Grid item xs="auto">
-                            <Button
-                                variant="contained"
-                                fullWidth
-                                children={ADMIN_EDIT_LEGACY_LINK.label}
-                                href={ADMIN_EDIT_LEGACY_LINK.url(
-                                    record.rek_pid,
-                                    record.rek_object_type_lookup.toLowerCase(),
-                                )}
-                            />
-                        </Grid>
-                    )}
                     <Hidden xsDown>
                         <Grid item xs="auto">
                             <FormViewToggler />
