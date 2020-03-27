@@ -202,7 +202,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -212,7 +212,52 @@ exports[`AdminInterface component should disabled button and render alert for fo
 </StandardPage>
 `;
 
-exports[`AdminInterface component should display badges on tabs for erroring fields 1`] = `null`;
+exports[`AdminInterface component should display an alert if editing of a pubtype is not supported 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Alert)
+        message="Editing of record is not yet supported."
+        type="info"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should display badges on tabs for erroring fields 1`] = `
+Array [
+  <WithStyles(Tab)
+    key="bibliographic"
+    label={
+      <WithStyles(Badge)
+        badgeContent={1}
+        color="error"
+      >
+        Bibliographic
+      </WithStyles(Badge)>
+    }
+    value="bibliographic"
+  />,
+  <WithStyles(Tab)
+    key="security"
+    label={
+      <WithStyles(Badge)
+        badgeContent={3}
+        color="error"
+      >
+        Security
+      </WithStyles(Badge)>
+    }
+    value="security"
+  />,
+]
+`;
 
 exports[`AdminInterface component should display successful alert 1`] = `
 <StandardPage>
@@ -415,7 +460,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -626,7 +671,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -798,7 +843,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -1006,7 +1051,7 @@ exports[`AdminInterface component should render default view as a full form view
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -1202,7 +1247,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -1403,7 +1448,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
               }
               variant="contained"
             >
-               Submit 
+               Submit
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>

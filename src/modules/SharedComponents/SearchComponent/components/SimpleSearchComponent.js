@@ -105,7 +105,7 @@ export class SimpleSearchComponent extends PureComponent {
     }
 
     searchTextValidationMessage = value => {
-        if (!!value && value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
+        if (!!value && typeof value === 'string' && value.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             return locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH);
         }
 

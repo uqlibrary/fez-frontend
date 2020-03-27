@@ -74,7 +74,7 @@ export default class SearchComponent extends PureComponent {
                     (!!props.searchQueryParams.all &&
                         !!props.searchQueryParams.all.value &&
                         props.searchQueryParams.all.value) ||
-                    props.searchQueryParams.all ||
+                    (typeof props.searchQueryParams.all === 'string' && props.searchQueryParams.all) ||
                     '',
             },
             advancedSearch: {

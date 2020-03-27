@@ -49,7 +49,6 @@ const styles = theme => ({
 });
 
 export const AdminContainer = ({
-    location,
     recordToView,
     loadingRecordToView,
     loadRecordToView,
@@ -152,8 +151,8 @@ export const AdminContainer = ({
                             submitting={submitting}
                             submitSucceeded={submitSucceeded}
                             disableSubmit={disableSubmit}
-                            location={location}
                             history={history}
+                            location={location}
                             createMode={createMode}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
@@ -218,7 +217,6 @@ AdminContainer.propTypes = {
     createMode: PropTypes.bool,
     recordToView: PropTypes.object,
     actions: PropTypes.object,
-    location: PropTypes.object,
     classes: PropTypes.object,
     submitting: PropTypes.any,
     submitSucceeded: PropTypes.bool,

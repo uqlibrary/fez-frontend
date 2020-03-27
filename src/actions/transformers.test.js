@@ -2729,6 +2729,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2748,6 +2749,10 @@ describe('getBibliographicSectionSearchKeys', () => {
                     {
                         rek_language_of_book_title: 'fre',
                     },
+                ],
+                fez_record_search_key_issn: [
+                    { rek_issn: '1212-1212', rek_issn_order: 1 },
+                    { rek_issn: '2323-2323', rek_issn_order: 2 },
                 ],
             });
         });
@@ -2773,6 +2778,51 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_language_of_journal_name: [
                     {
                         rek_language_of_journal_name: 'fre',
+                    },
+                ],
+            });
+        });
+    });
+
+    describe('Department Technical Report', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: {
+                            id: 'UQ:734361',
+                            value: 'The Material Library of Cladding Materials',
+                        },
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: 'UQ:734361',
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            });
+
+            const data2 = {
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: 'UQ:734361',
+                        rek_isderivationof_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof: 'UQ:734361',
+                        rek_isderivationof_order: 1,
                     },
                 ],
             });

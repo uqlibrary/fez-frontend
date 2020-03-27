@@ -179,7 +179,7 @@ context('Journal Article admin edit', () => {
                                         .should('contain.text', issn);
                                     cy.get('.ListRow-ISSNvalue a')
                                         .eq(2 * index)
-                                        .should('contain.text', "Check publisher's open access policy")
+                                        .should('contain.text', 'SHERPA/RoMEO')
                                         .should(
                                             'have.attr',
                                             'href',
@@ -187,7 +187,7 @@ context('Journal Article admin edit', () => {
                                         );
                                     cy.get('.ListRow-ISSNvalue a')
                                         .eq(2 * index + 1)
-                                        .should('contain.text', 'Ulrichs information')
+                                        .should('contain.text', 'Ulrichs')
                                         .should(
                                             'have.attr',
                                             'href',

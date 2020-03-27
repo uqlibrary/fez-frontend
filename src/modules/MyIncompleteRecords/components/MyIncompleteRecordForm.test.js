@@ -1,5 +1,5 @@
 import MyIncompleteRecordForm, { onSubmit, validate } from './MyIncompleteRecordForm';
-import { UQ352045 } from 'mock/data/records';
+import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
 import { Map } from 'immutable';
 import { SubmissionError } from 'redux-form';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
@@ -20,7 +20,7 @@ function setup(testProps = {}) {
 describe('MyIncompleteRecordForm', () => {
     it('should mount the component with redux-form', () => {
         const wrapper = setup({
-            recordToFix: UQ352045,
+            recordToFix: incompleteNTRORecordUQ352045,
             author: { aut_id: 411 },
             isNtro: true,
             hasAnyFiles: true,

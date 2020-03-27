@@ -51,7 +51,7 @@ export default class CollectionForm extends Component {
     };
 
     reloadForm = () => {
-        location.reload();
+        window.location.reload();
     };
 
     render() {

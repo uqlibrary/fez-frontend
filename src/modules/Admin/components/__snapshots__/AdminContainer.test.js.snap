@@ -1333,8 +1333,20 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 }
               }
               location={
-                Object {
+                Location {
+                  "assign": [Function],
+                  "hash": "#/",
+                  "host": "fez-staging.library.uq.edu.au",
+                  "hostname": "fez-staging.library.uq.edu.au",
+                  "href": "http://fez-staging.library.uq.edu.au/#/",
+                  "origin": "http://fez-staging.library.uq.edu.au",
+                  "pathname": "/",
+                  "port": "",
+                  "protocol": "http:",
+                  "reload": [Function],
+                  "replace": [Function],
                   "search": "",
+                  "toString": [Function],
                 }
               }
               tabs={
@@ -4662,8 +4674,20 @@ exports[`AdminContainer component should not render non-security errors for comm
         }
         formErrors={false}
         location={
-          Object {
+          Location {
+            "assign": [Function],
+            "hash": "#/",
+            "host": "fez-staging.library.uq.edu.au",
+            "hostname": "fez-staging.library.uq.edu.au",
+            "href": "http://fez-staging.library.uq.edu.au/#/",
+            "origin": "http://fez-staging.library.uq.edu.au",
+            "pathname": "/",
+            "port": "",
+            "protocol": "http:",
+            "reload": [Function],
+            "replace": [Function],
             "search": "",
+            "toString": [Function],
           }
         }
         tabs={
@@ -5668,8 +5692,20 @@ exports[`AdminContainer component should render default view 1`] = `
           }
         }
         location={
-          Object {
+          Location {
+            "assign": [Function],
+            "hash": "#/",
+            "host": "fez-staging.library.uq.edu.au",
+            "hostname": "fez-staging.library.uq.edu.au",
+            "href": "http://fez-staging.library.uq.edu.au/#/",
+            "origin": "http://fez-staging.library.uq.edu.au",
+            "pathname": "/",
+            "port": "",
+            "protocol": "http:",
+            "reload": [Function],
+            "replace": [Function],
             "search": "",
+            "toString": [Function],
           }
         }
         tabs={

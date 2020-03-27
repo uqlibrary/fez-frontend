@@ -145,7 +145,7 @@ to keep initial load to a minimum following optimisation has been added to the p
             }
         },
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 sourceMap: true,
                 parallel: true
             })
@@ -153,10 +153,10 @@ to keep initial load to a minimum following optimisation has been added to the p
     },
   ```
 
-- uglify/tree shake: used with split chunks built-in plugin in webpack 4
+- Terser/tree shake: used with split chunks built-in plugin in webpack 4
 
   ```javascript
-  new UglifyJsPlugin({ sourceMap: true });
+  new TerserPlugin({ sourceMap: true });
   ```
 
 - minify in deployment:
@@ -301,6 +301,8 @@ you in as that user. Usernames can be found in the `src/mock/data/accounts.js` f
 - user with expired token: <http://localhost:3000/?user=uqexpired>
 - user who has readonly masquerade (but not admin): <http://localhost:3000/?user=uqmasquerade>
 - user who can do CSV Ingest: <http://localhost:3000/?user=digiteamMember>
+
+So an example staff link for an example admin edit page will be <http://localhost:3000/admin/edit/UQ:358319?user=uqstaff>
 
 The following access is required:
 

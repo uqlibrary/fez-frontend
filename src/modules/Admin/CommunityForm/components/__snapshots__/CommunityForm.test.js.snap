@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Collection form test should display successfull submission screen 1`] = `
+exports[`Collection form should display successfull submission screen 1`] = `
 <StandardPage
   title="Add a missing community"
 >
@@ -189,7 +189,7 @@ exports[`Collection form test should display successfull submission screen 1`] =
 </StandardPage>
 `;
 
-exports[`Collection form test should render form 1`] = `
+exports[`Collection form should render form 1`] = `
 <StandardPage
   title="Add a missing community"
 >
@@ -365,7 +365,7 @@ exports[`Collection form test should render form 1`] = `
 </StandardPage>
 `;
 
-exports[`Collection form test should render success panel 1`] = `
+exports[`Collection form should render success panel 1`] = `
 <StandardPage
   title="Add a missing community"
 >

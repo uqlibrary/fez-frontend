@@ -11973,7 +11973,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-             
+
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -12040,7 +12040,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-             
+
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -20647,7 +20647,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             gutterBottom={true}
             variant="caption"
           >
-             
+
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -20787,7 +20787,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
             gutterBottom={true}
             variant="caption"
           >
-             
+
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -43463,16 +43463,13 @@ Object {
 
 exports[`Component Links  should use special default description if the link has the RDM hostname 2`] = `
 Object {
-  "description": "Request access to the dataset",
+  "description": "Access this dataset",
   "index": 1,
   "link": <ForwardRef(WithStyles)
     className=""
     classes={Object {}}
     href="https://uat.rdm.uq.edu.au/files/example123"
-    openInNewIcon={true}
-    rel="noopener noreferrer"
-    target="_blank"
-    title="Request access to the dataset"
+    title="Access this dataset"
   >
     https://uat.rdm.uq.edu.au/files/example123
   </ForwardRef(WithStyles)>,

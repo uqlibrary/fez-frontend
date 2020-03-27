@@ -129,7 +129,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
-        add: '/admin/add/',
+        add: '/admin/add',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
@@ -502,8 +502,7 @@ export const getRoutesConfig = ({
                         if (
                             process.env.NODE_ENV !== 'test' &&
                             process.env.NODE_ENV !== 'cc' &&
-                            process.env.NODE_ENV !== 'development' &&
-                            process.env.NODE_ENV !== 'local'
+                            process.env.NODE_ENV !== 'development'
                         ) {
                             window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
                         }

@@ -61,7 +61,7 @@ function setup(testProps, isShallow = true) {
     return getElement(ThesisSubmission, props, isShallow);
 }
 
-describe('ThesisSubmission test', () => {
+describe('ThesisSubmission', () => {
     it('should render sbs thesis submission form', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -129,24 +129,6 @@ describe('ThesisSubmission test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should redirect to cancel page', () => {
-        window.location.assign = jest.fn();
-        setup({})
-            .instance()
-            .cancelSubmit();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.cancelLink));
-    });
-
-    it('should redirect to after submit page', () => {
-        window.location.assign = jest.fn();
-        setup({})
-            .instance()
-            .afterSubmit();
-        expect(window.location.assign).toBeCalledWith(
-            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
-        );
-    });
-
     it('should display confirmation box before submission', () => {
         const testMethod = jest.fn();
         const wrapper = setup({});
@@ -179,17 +161,43 @@ describe('ThesisSubmission test', () => {
         expect(wrapper.instance().depositConfirmationBox).toEqual(test);
     });
 
-    it('should reload when told to', () => {
-        const reloadFn = jest.fn();
-        delete window.location;
-        global.window.location = { reload: reloadFn };
-        const wrapper = setup({ initialValues: {} });
-        wrapper.instance().afterFailedSubmit();
-        expect(reloadFn).toHaveBeenCalled();
-    });
-
     it('should show the file upload alert', () => {
         const wrapper = setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+});
+
+describe('ThesisSubmission form - redirections', () => {
+    const { location } = window;
+
+    beforeAll(() => {
+        delete window.location;
+        window.location = { assign: jest.fn(), reload: jest.fn() };
+    });
+
+    afterAll(() => {
+        window.location = location;
+    });
+
+    it('should redirect to cancel page', () => {
+        setup({})
+            .instance()
+            .cancelSubmit();
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.cancelLink));
+    });
+
+    it('should redirect to after submit page', () => {
+        setup({})
+            .instance()
+            .afterSubmit();
+        expect(window.location.assign).toBeCalledWith(
+            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
+        );
+    });
+
+    it('should reload when told to', () => {
+        const wrapper = setup({ initialValues: {} });
+        wrapper.instance().afterFailedSubmit();
+        expect(window.location.reload).toHaveBeenCalled();
     });
 });
