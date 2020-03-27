@@ -431,34 +431,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <BookCitation
             publication={
@@ -2340,54 +2313,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <BookCitation
             publication={
@@ -4378,24 +4304,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <BookCitation
             publication={Object {}}
@@ -5307,44 +5216,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <BookCitation
             publication={

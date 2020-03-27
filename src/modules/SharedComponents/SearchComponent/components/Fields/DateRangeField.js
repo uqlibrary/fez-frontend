@@ -98,7 +98,7 @@ export const DateRangeField = ({
                         value={to}
                         onChange={handleToDateChange}
                         error={!!error || !!toError}
-                        helperText={error || toError}
+                        helperText={toError}
                         autoOk
                         variant="inline"
                         disableToolbar
@@ -130,4 +130,4 @@ DateRangeField.defaultProps = {
     disableFuture: false,
 };
 
-export default DateRangeField;
+export default React.memo(DateRangeField);

@@ -431,24 +431,7 @@ exports[`RichEditor should render component 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""
@@ -939,94 +922,7 @@ exports[`RichEditor should render error as one child 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""
@@ -1681,84 +1577,7 @@ exports[`RichEditor should render error as react children 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""
@@ -2419,74 +2238,7 @@ exports[`RichEditor should render error showing input length 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""
@@ -3139,54 +2891,7 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""
@@ -3826,34 +3531,7 @@ exports[`RichEditor should render given title and description 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""
@@ -4438,44 +4116,7 @@ exports[`RichEditor should render given title and description with error 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RichEditor
             className=""

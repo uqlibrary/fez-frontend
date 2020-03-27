@@ -517,24 +517,7 @@ exports[`Related publications Component  should render component 2`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RelatedPublications
             publication={
@@ -4463,34 +4446,7 @@ exports[`Related publications Component  should render with a publication title 
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RelatedPublications
             publication={
@@ -8498,44 +8454,7 @@ exports[`Related publications Component  should render without a child search ke
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RelatedPublications
             parentSearchKey={
@@ -12512,54 +12431,7 @@ exports[`Related publications Component  should render without a parent search k
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <RelatedPublications
             parentSearchKey={

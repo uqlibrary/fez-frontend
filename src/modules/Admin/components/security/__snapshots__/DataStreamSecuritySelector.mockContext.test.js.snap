@@ -431,24 +431,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <WithStyles(DataStreamSecuritySelector)
             classes={

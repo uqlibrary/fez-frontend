@@ -431,54 +431,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={true}
@@ -6177,34 +6130,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <WithStyles(CitationCounts)
             publication={
@@ -13224,44 +13150,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <WithStyles(CitationCounts)
             publication={
@@ -19728,24 +19617,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <WithStyles(CitationCounts)
             publication={Object {}}

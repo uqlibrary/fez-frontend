@@ -17,7 +17,7 @@ import { api, sessionApi } from 'config/axios';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
-jest.mock('@date-io/moment');
+// jest.mock('@date-io/moment');
 import MomentUtils from '@date-io/moment';
 
 const setupStoreForActions = () => {

@@ -448,24 +448,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <Connect(FileUploader)
             fileNameRestrictions={/\\.\\+/}
@@ -3051,24 +3034,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         }
       >
         <MuiPickersUtilsProvider
-          utils={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "instance": undefined,
-                    "locale": undefined,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          utils={[Function]}
         >
           <Connect(FileUploader)
             fileNameRestrictions={/\\.\\+/}

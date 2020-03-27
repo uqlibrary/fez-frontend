@@ -226,7 +226,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
             >
               <WithStyles(FileUploadEmbargoDate)
                 canBeCleared={true}
-                minDate={2020-03-27T03:39:57.451Z}
+                minDate={2020-03-27T05:10:47.802Z}
                 onChange={[Function]}
                 value="3000-10-20"
               />
