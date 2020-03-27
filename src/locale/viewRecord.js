@@ -45,7 +45,7 @@ export default {
                 },
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
-                rdmLinkMissingDescriptionTitle: 'Request access to the dataset',
+                rdmLinkMissingDescriptionTitle: 'Access this dataset',
                 doiDescription: 'Full text from publisher',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read',
                 openAccessEmbargoedLabel: '[oa_status] - Open access after [embargo_date]',
