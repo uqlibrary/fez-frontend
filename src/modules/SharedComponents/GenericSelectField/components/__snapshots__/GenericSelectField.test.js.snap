@@ -1819,7 +1819,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
 exports[`GenericSelectField Methods renderMenuItems (hideLabel: false) 1`] = `
 Array [
   false,
-  <ForwardRef(WithStyles)
+  <WithStyles(ForwardRef(MenuItem))
     aria-label="One"
     classes={
       Object {
@@ -1835,8 +1835,8 @@ Array [
     value={1}
   >
     One
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label="Two"
     classes={
       Object {
@@ -1852,8 +1852,8 @@ Array [
     value={2}
   >
     Two
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label="Three"
     classes={
       Object {
@@ -1869,14 +1869,14 @@ Array [
     value={3}
   >
     Three
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ForwardRef(MenuItem))>,
 ]
 `;
 
 exports[`GenericSelectField Methods renderMenuItems (hideLabel: false) 2`] = `
 Array [
   false,
-  <ForwardRef(WithStyles)
+  <WithStyles(ForwardRef(MenuItem))
     aria-label={1}
     classes={
       Object {
@@ -1892,8 +1892,8 @@ Array [
     value={1}
   >
     1
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label={2}
     classes={
       Object {
@@ -1909,8 +1909,8 @@ Array [
     value={2}
   >
     2
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label={3}
     classes={
       Object {
@@ -1926,13 +1926,13 @@ Array [
     value={3}
   >
     3
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ForwardRef(MenuItem))>,
 ]
 `;
 
 exports[`GenericSelectField Methods renderMenuItems (hideLabel: true) 1`] = `
 Array [
-  <ForwardRef(WithStyles)
+  <WithStyles(ForwardRef(MenuItem))
     disabled={true}
     style={
       Object {
@@ -1941,7 +1941,7 @@ Array [
     }
     value={-1}
   />,
-  <ForwardRef(WithStyles)
+  <WithStyles(ForwardRef(MenuItem))
     aria-label="One"
     classes={
       Object {
@@ -1957,8 +1957,8 @@ Array [
     value={1}
   >
     One
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label="Two"
     classes={
       Object {
@@ -1974,8 +1974,8 @@ Array [
     value={2}
   >
     Two
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label="Three"
     classes={
       Object {
@@ -1991,14 +1991,14 @@ Array [
     value={3}
   >
     Three
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ForwardRef(MenuItem))>,
 ]
 `;
 
 exports[`GenericSelectField Methods renderMenuItems (multiple: true) 1`] = `
 Array [
   undefined,
-  <ForwardRef(WithStyles)
+  <WithStyles(ForwardRef(MenuItem))
     aria-label={1}
     classes={
       Object {
@@ -2015,8 +2015,8 @@ Array [
     value={1}
   >
     1
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label={2}
     classes={
       Object {
@@ -2032,8 +2032,8 @@ Array [
     value={2}
   >
     2
-  </ForwardRef(WithStyles)>,
-  <ForwardRef(WithStyles)
+  </WithStyles(ForwardRef(MenuItem))>,
+  <WithStyles(ForwardRef(MenuItem))
     aria-label={3}
     classes={
       Object {
@@ -2049,7 +2049,7 @@ Array [
     value={3}
   >
     3
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ForwardRef(MenuItem))>,
 ]
 `;
 

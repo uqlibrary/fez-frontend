@@ -12378,10 +12378,10 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <ForwardRef(WithStyles)
+              <WithStyles(ForwardRef(Grid))
                 container={true}
               >
-                <ForwardRef(WithStyles)
+                <WithStyles(ForwardRef(Grid))
                   item={true}
                   xs={12}
                 >
@@ -12394,8 +12394,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     title="File upload and/or edits/changes/comments post failed"
                     type="warning"
                   />
-                </ForwardRef(WithStyles)>
-              </ForwardRef(WithStyles)>
+                </WithStyles(ForwardRef(Grid))>
+              </WithStyles(ForwardRef(Grid))>
               <span
                 style={
                   Object {

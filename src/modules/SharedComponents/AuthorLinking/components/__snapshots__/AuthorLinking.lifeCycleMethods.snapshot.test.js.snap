@@ -316,7 +316,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
       }
     }
     control={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Checkbox))
         checked={false}
         classes={
           Object {
@@ -330,7 +330,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
     }
     disabled={false}
     label={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Typography))
         classes={
           Object {
             "root": undefined,
@@ -339,7 +339,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
         color="error"
       >
         I confirm and understand that I am claiming this work under the above name, and confirm this is me
-      </ForwardRef(WithStyles)>
+      </WithStyles(ForwardRef(Typography))>
     }
   />
 </div>

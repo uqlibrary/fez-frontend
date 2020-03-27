@@ -7550,7 +7550,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               description="Search Google Scholar for this open access article"
                                               index="google"
                                               link={
-                                                <ForwardRef(WithStyles)
+                                                <WithStyles(ExternalLink)
                                                   className=""
                                                   classes={Object {}}
                                                   href="https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22"
@@ -7560,7 +7560,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   title="Search Google Scholar for this open access article"
                                                 >
                                                   https://scholar.google.com/scholar?q=intitle:"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22
-                                                </ForwardRef(WithStyles)>
+                                                </WithStyles(ExternalLink)>
                                               }
                                               openAccessStatus={
                                                 Object {
@@ -9066,7 +9066,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               index={0}
                                               key="0"
                                               link={
-                                                <ForwardRef(WithStyles)
+                                                <WithStyles(ExternalLink)
                                                   className=""
                                                   classes={Object {}}
                                                   href="http://www.thisisatest.com"
@@ -9076,7 +9076,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   title="Link to publication"
                                                 >
                                                   http://www.thisisatest.com
-                                                </ForwardRef(WithStyles)>
+                                                </WithStyles(ExternalLink)>
                                               }
                                               openAccessStatus={Object {}}
                                             >
@@ -10486,7 +10486,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               index={1}
                                               key="1"
                                               link={
-                                                <ForwardRef(WithStyles)
+                                                <WithStyles(ExternalLink)
                                                   className=""
                                                   classes={Object {}}
                                                   href="http://www.thisisanothertest.com"
@@ -10496,7 +10496,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   title="Click to open link in a new window"
                                                 >
                                                   http://www.thisisanothertest.com
-                                                </ForwardRef(WithStyles)>
+                                                </WithStyles(ExternalLink)>
                                               }
                                               openAccessStatus={Object {}}
                                             >
@@ -11973,7 +11973,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-
+             
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -12040,7 +12040,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-
+             
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -16328,7 +16328,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           index={0}
                                           key="0"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisatest.com"
@@ -16338,7 +16338,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -17746,7 +17746,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           index={1}
                                           key="1"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisanothertest.com"
@@ -17756,7 +17756,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -19164,7 +19164,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           index={2}
                                           key="2"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.nodescription.com"
@@ -19174,7 +19174,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -20647,7 +20647,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             gutterBottom={true}
             variant="caption"
           >
-
+             
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -20683,7 +20683,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       index={0}
       key="0"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="http://www.thisisatest.com"
@@ -20693,7 +20693,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           title="Link to publication"
         >
           http://www.thisisatest.com
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={Object {}}
     />
@@ -20702,7 +20702,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       index={1}
       key="1"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="http://www.thisisanothertest.com"
@@ -20712,7 +20712,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           title="Another link to publication"
         >
           http://www.thisisanothertest.com
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={Object {}}
     />
@@ -20721,7 +20721,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       index={2}
       key="2"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="http://www.nodescription.com"
@@ -20731,7 +20731,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           title="Click to open link in a new window"
         >
           http://www.nodescription.com
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={Object {}}
     />
@@ -20787,7 +20787,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
             gutterBottom={true}
             variant="caption"
           >
-
+             
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -20796,7 +20796,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       description="Search Google Scholar for this open access article"
       index="google"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
@@ -20806,7 +20806,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
           title="Search Google Scholar for this open access article"
         >
           https://scholar.google.com/scholar?q=intitle:"undefined%22
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={
         Object {
@@ -20821,7 +20821,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       index={0}
       key="0"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="http://www.thisisatest.com"
@@ -20831,7 +20831,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
           title="Link to publication"
         >
           http://www.thisisatest.com
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={Object {}}
     />
@@ -20840,7 +20840,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       index={1}
       key="1"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="http://www.thisisanothertest.com"
@@ -20850,7 +20850,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
           title="Another link to publication"
         >
           http://www.thisisanothertest.com
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={Object {}}
     />
@@ -20859,7 +20859,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       index={2}
       key="2"
       link={
-        <ForwardRef(WithStyles)
+        <WithStyles(ExternalLink)
           className=""
           classes={Object {}}
           href="http://www.nodescription.com"
@@ -20869,7 +20869,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
           title="Click to open link in a new window"
         >
           http://www.nodescription.com
-        </ForwardRef(WithStyles)>
+        </WithStyles(ExternalLink)>
       }
       openAccessStatus={Object {}}
     />
@@ -23628,7 +23628,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           index={0}
                                           key="0"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisatest.com"
@@ -23638,7 +23638,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -25046,7 +25046,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           index={1}
                                           key="1"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisanothertest.com"
@@ -25056,7 +25056,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -26464,7 +26464,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           index={2}
                                           key="2"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.nodescription.com"
@@ -26474,7 +26474,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -32082,7 +32082,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           index={0}
                                           key="0"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisatest.com"
@@ -32092,7 +32092,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -33500,7 +33500,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           index={1}
                                           key="1"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisanothertest.com"
@@ -33510,7 +33510,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -34918,7 +34918,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           index={2}
                                           key="2"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.nodescription.com"
@@ -34928,7 +34928,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -39171,7 +39171,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           index={0}
                                           key="0"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisatest.com"
@@ -39181,7 +39181,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -40589,7 +40589,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           index={1}
                                           key="1"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.thisisanothertest.com"
@@ -40599,7 +40599,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -42007,7 +42007,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           index={2}
                                           key="2"
                                           link={
-                                            <ForwardRef(WithStyles)
+                                            <WithStyles(ExternalLink)
                                               className=""
                                               classes={Object {}}
                                               href="http://www.nodescription.com"
@@ -42017,7 +42017,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
-                                            </ForwardRef(WithStyles)>
+                                            </WithStyles(ExternalLink)>
                                           }
                                           openAccessStatus={Object {}}
                                         >
@@ -43446,7 +43446,7 @@ exports[`Component Links  should use special default description if the link has
 Object {
   "description": "Provided description",
   "index": 0,
-  "link": <ForwardRef(WithStyles)
+  "link": <WithStyles(ExternalLink)
     className=""
     classes={Object {}}
     href="https://rdm.uq.edu.au/files/example123"
@@ -43456,7 +43456,7 @@ Object {
     title="Provided description"
   >
     https://rdm.uq.edu.au/files/example123
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ExternalLink)>,
   "openAccessStatus": Object {},
 }
 `;
@@ -43465,14 +43465,17 @@ exports[`Component Links  should use special default description if the link has
 Object {
   "description": "Access this dataset",
   "index": 1,
-  "link": <ForwardRef(WithStyles)
+  "link": <WithStyles(ExternalLink)
     className=""
     classes={Object {}}
     href="https://uat.rdm.uq.edu.au/files/example123"
+    openInNewIcon={true}
+    rel="noopener noreferrer"
+    target="_blank"
     title="Access this dataset"
   >
     https://uat.rdm.uq.edu.au/files/example123
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ExternalLink)>,
   "openAccessStatus": Object {},
 }
 `;

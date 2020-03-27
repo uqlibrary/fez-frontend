@@ -1200,7 +1200,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Any unpublished"
                                       classes={
                                         Object {
@@ -1216,8 +1216,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="Any unpublished"
                                     >
                                       Any unpublished
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Creation"
                                       classes={
                                         Object {
@@ -1233,8 +1233,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="In Creation"
                                     >
                                       In Creation
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Draft"
                                       classes={
                                         Object {
@@ -1250,8 +1250,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="In Draft"
                                     >
                                       In Draft
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Review"
                                       classes={
                                         Object {
@@ -1267,8 +1267,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="In Review"
                                     >
                                       In Review
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Retracted"
                                       classes={
                                         Object {
@@ -1284,8 +1284,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="Retracted"
                                     >
                                       Retracted
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Submitted for Approval"
                                       classes={
                                         Object {
@@ -1301,8 +1301,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="Submitted for Approval"
                                     >
                                       Submitted for Approval
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Unpublished"
                                       classes={
                                         Object {
@@ -1318,7 +1318,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       value="Unpublished"
                                     >
                                       Unpublished
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                   "classes": Object {
                                     "disabled": "Mui-disabled",
@@ -1422,7 +1422,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
-                                      <ForwardRef(WithStyles)
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Any unpublished"
                                         classes={
                                           Object {
@@ -1438,8 +1438,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="Any unpublished"
                                       >
                                         Any unpublished
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Creation"
                                         classes={
                                           Object {
@@ -1455,8 +1455,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="In Creation"
                                       >
                                         In Creation
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Draft"
                                         classes={
                                           Object {
@@ -1472,8 +1472,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="In Draft"
                                       >
                                         In Draft
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Review"
                                         classes={
                                           Object {
@@ -1489,8 +1489,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="In Review"
                                       >
                                         In Review
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Retracted"
                                         classes={
                                           Object {
@@ -1506,8 +1506,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="Retracted"
                                       >
                                         Retracted
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Submitted for Approval"
                                         classes={
                                           Object {
@@ -1523,8 +1523,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="Submitted for Approval"
                                       >
                                         Submitted for Approval
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Unpublished"
                                         classes={
                                           Object {
@@ -1540,7 +1540,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         value="Unpublished"
                                       >
                                         Unpublished
-                                      </ForwardRef(WithStyles)>,
+                                      </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                     "classes": Object {
                                       "disabled": "Mui-disabled",
@@ -1645,7 +1645,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
-                                        <ForwardRef(WithStyles)
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Any unpublished"
                                           classes={
                                             Object {
@@ -1661,8 +1661,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="Any unpublished"
                                         >
                                           Any unpublished
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Creation"
                                           classes={
                                             Object {
@@ -1678,8 +1678,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="In Creation"
                                         >
                                           In Creation
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Draft"
                                           classes={
                                             Object {
@@ -1695,8 +1695,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="In Draft"
                                         >
                                           In Draft
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Review"
                                           classes={
                                             Object {
@@ -1712,8 +1712,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="In Review"
                                         >
                                           In Review
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Retracted"
                                           classes={
                                             Object {
@@ -1729,8 +1729,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="Retracted"
                                         >
                                           Retracted
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Submitted for Approval"
                                           classes={
                                             Object {
@@ -1746,8 +1746,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="Submitted for Approval"
                                         >
                                           Submitted for Approval
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Unpublished"
                                           classes={
                                             Object {
@@ -1763,7 +1763,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           value="Unpublished"
                                         >
                                           Unpublished
-                                        </ForwardRef(WithStyles)>,
+                                        </WithStyles(ForwardRef(MenuItem))>,
                                       ],
                                       "classes": Object {
                                         "disabled": "Mui-disabled",
@@ -1874,7 +1874,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
-                                          <ForwardRef(WithStyles)
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Any unpublished"
                                             classes={
                                               Object {
@@ -1890,8 +1890,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="Any unpublished"
                                           >
                                             Any unpublished
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Creation"
                                             classes={
                                               Object {
@@ -1907,8 +1907,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="In Creation"
                                           >
                                             In Creation
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Draft"
                                             classes={
                                               Object {
@@ -1924,8 +1924,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="In Draft"
                                           >
                                             In Draft
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Review"
                                             classes={
                                               Object {
@@ -1941,8 +1941,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="In Review"
                                           >
                                             In Review
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Retracted"
                                             classes={
                                               Object {
@@ -1958,8 +1958,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="Retracted"
                                           >
                                             Retracted
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Submitted for Approval"
                                             classes={
                                               Object {
@@ -1975,8 +1975,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="Submitted for Approval"
                                           >
                                             Submitted for Approval
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Unpublished"
                                             classes={
                                               Object {
@@ -1992,7 +1992,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             value="Unpublished"
                                           >
                                             Unpublished
-                                          </ForwardRef(WithStyles)>,
+                                          </WithStyles(ForwardRef(MenuItem))>,
                                         ],
                                         "classes": Object {
                                           "disabled": "Mui-disabled",
@@ -3532,7 +3532,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Any unpublished"
                                       classes={
                                         Object {
@@ -3548,8 +3548,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="Any unpublished"
                                     >
                                       Any unpublished
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Creation"
                                       classes={
                                         Object {
@@ -3565,8 +3565,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="In Creation"
                                     >
                                       In Creation
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Draft"
                                       classes={
                                         Object {
@@ -3582,8 +3582,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="In Draft"
                                     >
                                       In Draft
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Review"
                                       classes={
                                         Object {
@@ -3599,8 +3599,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="In Review"
                                     >
                                       In Review
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Retracted"
                                       classes={
                                         Object {
@@ -3616,8 +3616,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="Retracted"
                                     >
                                       Retracted
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Submitted for Approval"
                                       classes={
                                         Object {
@@ -3633,8 +3633,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="Submitted for Approval"
                                     >
                                       Submitted for Approval
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Unpublished"
                                       classes={
                                         Object {
@@ -3650,7 +3650,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       value="Unpublished"
                                     >
                                       Unpublished
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                   "classes": Object {
                                     "disabled": "Mui-disabled",
@@ -3754,7 +3754,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
-                                      <ForwardRef(WithStyles)
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Any unpublished"
                                         classes={
                                           Object {
@@ -3770,8 +3770,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="Any unpublished"
                                       >
                                         Any unpublished
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Creation"
                                         classes={
                                           Object {
@@ -3787,8 +3787,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="In Creation"
                                       >
                                         In Creation
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Draft"
                                         classes={
                                           Object {
@@ -3804,8 +3804,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="In Draft"
                                       >
                                         In Draft
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Review"
                                         classes={
                                           Object {
@@ -3821,8 +3821,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="In Review"
                                       >
                                         In Review
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Retracted"
                                         classes={
                                           Object {
@@ -3838,8 +3838,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="Retracted"
                                       >
                                         Retracted
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Submitted for Approval"
                                         classes={
                                           Object {
@@ -3855,8 +3855,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="Submitted for Approval"
                                       >
                                         Submitted for Approval
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Unpublished"
                                         classes={
                                           Object {
@@ -3872,7 +3872,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         value="Unpublished"
                                       >
                                         Unpublished
-                                      </ForwardRef(WithStyles)>,
+                                      </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                     "classes": Object {
                                       "disabled": "Mui-disabled",
@@ -3977,7 +3977,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
-                                        <ForwardRef(WithStyles)
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Any unpublished"
                                           classes={
                                             Object {
@@ -3993,8 +3993,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="Any unpublished"
                                         >
                                           Any unpublished
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Creation"
                                           classes={
                                             Object {
@@ -4010,8 +4010,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="In Creation"
                                         >
                                           In Creation
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Draft"
                                           classes={
                                             Object {
@@ -4027,8 +4027,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="In Draft"
                                         >
                                           In Draft
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Review"
                                           classes={
                                             Object {
@@ -4044,8 +4044,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="In Review"
                                         >
                                           In Review
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Retracted"
                                           classes={
                                             Object {
@@ -4061,8 +4061,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="Retracted"
                                         >
                                           Retracted
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Submitted for Approval"
                                           classes={
                                             Object {
@@ -4078,8 +4078,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="Submitted for Approval"
                                         >
                                           Submitted for Approval
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Unpublished"
                                           classes={
                                             Object {
@@ -4095,7 +4095,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           value="Unpublished"
                                         >
                                           Unpublished
-                                        </ForwardRef(WithStyles)>,
+                                        </WithStyles(ForwardRef(MenuItem))>,
                                       ],
                                       "classes": Object {
                                         "disabled": "Mui-disabled",
@@ -4206,7 +4206,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
-                                          <ForwardRef(WithStyles)
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Any unpublished"
                                             classes={
                                               Object {
@@ -4222,8 +4222,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="Any unpublished"
                                           >
                                             Any unpublished
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Creation"
                                             classes={
                                               Object {
@@ -4239,8 +4239,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="In Creation"
                                           >
                                             In Creation
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Draft"
                                             classes={
                                               Object {
@@ -4256,8 +4256,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="In Draft"
                                           >
                                             In Draft
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Review"
                                             classes={
                                               Object {
@@ -4273,8 +4273,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="In Review"
                                           >
                                             In Review
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Retracted"
                                             classes={
                                               Object {
@@ -4290,8 +4290,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="Retracted"
                                           >
                                             Retracted
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Submitted for Approval"
                                             classes={
                                               Object {
@@ -4307,8 +4307,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="Submitted for Approval"
                                           >
                                             Submitted for Approval
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Unpublished"
                                             classes={
                                               Object {
@@ -4324,7 +4324,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             value="Unpublished"
                                           >
                                             Unpublished
-                                          </ForwardRef(WithStyles)>,
+                                          </WithStyles(ForwardRef(MenuItem))>,
                                         ],
                                         "classes": Object {
                                           "disabled": "Mui-disabled",
@@ -5880,7 +5880,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Any unpublished"
                                       classes={
                                         Object {
@@ -5896,8 +5896,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="Any unpublished"
                                     >
                                       Any unpublished
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Creation"
                                       classes={
                                         Object {
@@ -5913,8 +5913,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="In Creation"
                                     >
                                       In Creation
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Draft"
                                       classes={
                                         Object {
@@ -5930,8 +5930,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="In Draft"
                                     >
                                       In Draft
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Review"
                                       classes={
                                         Object {
@@ -5947,8 +5947,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="In Review"
                                     >
                                       In Review
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Retracted"
                                       classes={
                                         Object {
@@ -5964,8 +5964,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="Retracted"
                                     >
                                       Retracted
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Submitted for Approval"
                                       classes={
                                         Object {
@@ -5981,8 +5981,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="Submitted for Approval"
                                     >
                                       Submitted for Approval
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Unpublished"
                                       classes={
                                         Object {
@@ -5998,7 +5998,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       value="Unpublished"
                                     >
                                       Unpublished
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                   "classes": Object {
                                     "disabled": "Mui-disabled",
@@ -6102,7 +6102,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
-                                      <ForwardRef(WithStyles)
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Any unpublished"
                                         classes={
                                           Object {
@@ -6118,8 +6118,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="Any unpublished"
                                       >
                                         Any unpublished
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Creation"
                                         classes={
                                           Object {
@@ -6135,8 +6135,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="In Creation"
                                       >
                                         In Creation
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Draft"
                                         classes={
                                           Object {
@@ -6152,8 +6152,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="In Draft"
                                       >
                                         In Draft
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Review"
                                         classes={
                                           Object {
@@ -6169,8 +6169,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="In Review"
                                       >
                                         In Review
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Retracted"
                                         classes={
                                           Object {
@@ -6186,8 +6186,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="Retracted"
                                       >
                                         Retracted
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Submitted for Approval"
                                         classes={
                                           Object {
@@ -6203,8 +6203,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="Submitted for Approval"
                                       >
                                         Submitted for Approval
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Unpublished"
                                         classes={
                                           Object {
@@ -6220,7 +6220,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         value="Unpublished"
                                       >
                                         Unpublished
-                                      </ForwardRef(WithStyles)>,
+                                      </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                     "classes": Object {
                                       "disabled": "Mui-disabled",
@@ -6325,7 +6325,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
-                                        <ForwardRef(WithStyles)
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Any unpublished"
                                           classes={
                                             Object {
@@ -6341,8 +6341,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="Any unpublished"
                                         >
                                           Any unpublished
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Creation"
                                           classes={
                                             Object {
@@ -6358,8 +6358,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="In Creation"
                                         >
                                           In Creation
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Draft"
                                           classes={
                                             Object {
@@ -6375,8 +6375,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="In Draft"
                                         >
                                           In Draft
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Review"
                                           classes={
                                             Object {
@@ -6392,8 +6392,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="In Review"
                                         >
                                           In Review
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Retracted"
                                           classes={
                                             Object {
@@ -6409,8 +6409,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="Retracted"
                                         >
                                           Retracted
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Submitted for Approval"
                                           classes={
                                             Object {
@@ -6426,8 +6426,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="Submitted for Approval"
                                         >
                                           Submitted for Approval
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Unpublished"
                                           classes={
                                             Object {
@@ -6443,7 +6443,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           value="Unpublished"
                                         >
                                           Unpublished
-                                        </ForwardRef(WithStyles)>,
+                                        </WithStyles(ForwardRef(MenuItem))>,
                                       ],
                                       "classes": Object {
                                         "disabled": "Mui-disabled",
@@ -6554,7 +6554,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
-                                          <ForwardRef(WithStyles)
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Any unpublished"
                                             classes={
                                               Object {
@@ -6570,8 +6570,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="Any unpublished"
                                           >
                                             Any unpublished
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Creation"
                                             classes={
                                               Object {
@@ -6587,8 +6587,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="In Creation"
                                           >
                                             In Creation
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Draft"
                                             classes={
                                               Object {
@@ -6604,8 +6604,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="In Draft"
                                           >
                                             In Draft
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Review"
                                             classes={
                                               Object {
@@ -6621,8 +6621,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="In Review"
                                           >
                                             In Review
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Retracted"
                                             classes={
                                               Object {
@@ -6638,8 +6638,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="Retracted"
                                           >
                                             Retracted
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Submitted for Approval"
                                             classes={
                                               Object {
@@ -6655,8 +6655,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="Submitted for Approval"
                                           >
                                             Submitted for Approval
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Unpublished"
                                             classes={
                                               Object {
@@ -6672,7 +6672,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             value="Unpublished"
                                           >
                                             Unpublished
-                                          </ForwardRef(WithStyles)>,
+                                          </WithStyles(ForwardRef(MenuItem))>,
                                         ],
                                         "classes": Object {
                                           "disabled": "Mui-disabled",
@@ -8205,7 +8205,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Any unpublished"
                                       classes={
                                         Object {
@@ -8221,8 +8221,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="Any unpublished"
                                     >
                                       Any unpublished
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Creation"
                                       classes={
                                         Object {
@@ -8238,8 +8238,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="In Creation"
                                     >
                                       In Creation
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Draft"
                                       classes={
                                         Object {
@@ -8255,8 +8255,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="In Draft"
                                     >
                                       In Draft
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="In Review"
                                       classes={
                                         Object {
@@ -8272,8 +8272,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="In Review"
                                     >
                                       In Review
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Retracted"
                                       classes={
                                         Object {
@@ -8289,8 +8289,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="Retracted"
                                     >
                                       Retracted
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Submitted for Approval"
                                       classes={
                                         Object {
@@ -8306,8 +8306,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="Submitted for Approval"
                                     >
                                       Submitted for Approval
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       aria-label="Unpublished"
                                       classes={
                                         Object {
@@ -8323,7 +8323,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       value="Unpublished"
                                     >
                                       Unpublished
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                   "classes": Object {
                                     "disabled": "Mui-disabled",
@@ -8427,7 +8427,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
-                                      <ForwardRef(WithStyles)
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Any unpublished"
                                         classes={
                                           Object {
@@ -8443,8 +8443,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="Any unpublished"
                                       >
                                         Any unpublished
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Creation"
                                         classes={
                                           Object {
@@ -8460,8 +8460,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="In Creation"
                                       >
                                         In Creation
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Draft"
                                         classes={
                                           Object {
@@ -8477,8 +8477,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="In Draft"
                                       >
                                         In Draft
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="In Review"
                                         classes={
                                           Object {
@@ -8494,8 +8494,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="In Review"
                                       >
                                         In Review
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Retracted"
                                         classes={
                                           Object {
@@ -8511,8 +8511,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="Retracted"
                                       >
                                         Retracted
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Submitted for Approval"
                                         classes={
                                           Object {
@@ -8528,8 +8528,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="Submitted for Approval"
                                       >
                                         Submitted for Approval
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         aria-label="Unpublished"
                                         classes={
                                           Object {
@@ -8545,7 +8545,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         value="Unpublished"
                                       >
                                         Unpublished
-                                      </ForwardRef(WithStyles)>,
+                                      </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                     "classes": Object {
                                       "disabled": "Mui-disabled",
@@ -8650,7 +8650,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
-                                        <ForwardRef(WithStyles)
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Any unpublished"
                                           classes={
                                             Object {
@@ -8666,8 +8666,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="Any unpublished"
                                         >
                                           Any unpublished
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Creation"
                                           classes={
                                             Object {
@@ -8683,8 +8683,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="In Creation"
                                         >
                                           In Creation
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Draft"
                                           classes={
                                             Object {
@@ -8700,8 +8700,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="In Draft"
                                         >
                                           In Draft
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="In Review"
                                           classes={
                                             Object {
@@ -8717,8 +8717,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="In Review"
                                         >
                                           In Review
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Retracted"
                                           classes={
                                             Object {
@@ -8734,8 +8734,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="Retracted"
                                         >
                                           Retracted
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Submitted for Approval"
                                           classes={
                                             Object {
@@ -8751,8 +8751,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="Submitted for Approval"
                                         >
                                           Submitted for Approval
-                                        </ForwardRef(WithStyles)>,
-                                        <ForwardRef(WithStyles)
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
                                           aria-label="Unpublished"
                                           classes={
                                             Object {
@@ -8768,7 +8768,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           value="Unpublished"
                                         >
                                           Unpublished
-                                        </ForwardRef(WithStyles)>,
+                                        </WithStyles(ForwardRef(MenuItem))>,
                                       ],
                                       "classes": Object {
                                         "disabled": "Mui-disabled",
@@ -8879,7 +8879,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
-                                          <ForwardRef(WithStyles)
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Any unpublished"
                                             classes={
                                               Object {
@@ -8895,8 +8895,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="Any unpublished"
                                           >
                                             Any unpublished
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Creation"
                                             classes={
                                               Object {
@@ -8912,8 +8912,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="In Creation"
                                           >
                                             In Creation
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Draft"
                                             classes={
                                               Object {
@@ -8929,8 +8929,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="In Draft"
                                           >
                                             In Draft
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="In Review"
                                             classes={
                                               Object {
@@ -8946,8 +8946,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="In Review"
                                           >
                                             In Review
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Retracted"
                                             classes={
                                               Object {
@@ -8963,8 +8963,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="Retracted"
                                           >
                                             Retracted
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Submitted for Approval"
                                             classes={
                                               Object {
@@ -8980,8 +8980,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="Submitted for Approval"
                                           >
                                             Submitted for Approval
-                                          </ForwardRef(WithStyles)>,
-                                          <ForwardRef(WithStyles)
+                                          </WithStyles(ForwardRef(MenuItem))>,
+                                          <WithStyles(ForwardRef(MenuItem))
                                             aria-label="Unpublished"
                                             classes={
                                               Object {
@@ -8997,7 +8997,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             value="Unpublished"
                                           >
                                             Unpublished
-                                          </ForwardRef(WithStyles)>,
+                                          </WithStyles(ForwardRef(MenuItem))>,
                                         ],
                                         "classes": Object {
                                           "disabled": "Mui-disabled",

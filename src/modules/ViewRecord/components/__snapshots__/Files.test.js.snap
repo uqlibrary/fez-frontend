@@ -130,7 +130,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -747,7 +747,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -1078,7 +1078,7 @@ exports[`Files Component  should not render cultural message 2`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -1417,7 +1417,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -1947,7 +1947,7 @@ exports[`Files Component  should render component 1`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -7284,7 +7284,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                   container={[Function]}
                                                                   decode={true}
                                                                   loader={
-                                                                    <ForwardRef(WithStyles)
+                                                                    <WithStyles(ForwardRef(CircularProgress))
                                                                       size={15}
                                                                       thickness={1}
                                                                     />
@@ -7486,7 +7486,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             description="testing image description"
                                                             fileName="image.jpg"
                                                             icon={
-                                                              <ForwardRef(WithStyles)
+                                                              <WithStyles(Thumbnail)
                                                                 fileName="image.jpg"
                                                                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                                 mimeType="image/jpeg"
@@ -7532,7 +7532,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               description="testing image description"
                                                               fileName="image.jpg"
                                                               icon={
-                                                                <ForwardRef(WithStyles)
+                                                                <WithStyles(Thumbnail)
                                                                   fileName="image.jpg"
                                                                   mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                                   mimeType="image/jpeg"
@@ -9649,7 +9649,7 @@ exports[`Files Component  should render cultural message 1`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -9980,7 +9980,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -10311,7 +10311,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -10642,7 +10642,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -10973,7 +10973,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -11304,7 +11304,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -11635,7 +11635,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
@@ -12165,7 +12165,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <ForwardRef(WithStyles)
+              <WithStyles(Thumbnail)
                 fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"

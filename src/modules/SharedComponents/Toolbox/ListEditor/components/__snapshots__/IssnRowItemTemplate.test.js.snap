@@ -9,10 +9,15 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
     <span>
       1234-1234
     </span>
-
+     
     <WithStyles(ExternalLink)
       aria-label="Check publisher's OA archiving policy in a new window"
+      className=""
+      classes={Object {}}
       href="http://example.com/sherpa?issn=1234-1234"
+      openInNewIcon={true}
+      rel="noopener noreferrer"
+      target="_blank"
       title="Check publisher's OA archiving policy"
     >
       SHERPA/RoMEO
@@ -22,6 +27,8 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
     </span>
     <WithStyles(ExternalLink)
       aria-label="Source publisher name/place and alternate ISSNs in a new window"
+      className=""
+      classes={Object {}}
       href="http://example.com/ulrichs?id=1234"
       openInNewIcon={true}
       rel="noopener noreferrer"
@@ -42,24 +49,29 @@ exports[`IssnRowItemTemplate component should render default view 1`] = `
     <span>
       <Component />
     </span>
-
+     
   </WithStyles(ForwardRef(Typography))>
 </Fragment>
 `;
 
 exports[`IssnRowItemTemplate component should render link data from API 1`] = `
 <Fragment>
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     component="span"
     variant="body2"
   >
     <span>
       1234-1234
     </span>
-
+     
     <WithStyles(ExternalLink)
       aria-label="Check publisher's OA archiving policy in a new window"
+      className=""
+      classes={Object {}}
       href="1234"
+      openInNewIcon={true}
+      rel="noopener noreferrer"
+      target="_blank"
       title="Check publisher's OA archiving policy"
     >
       SHERPA/RoMEO
@@ -69,11 +81,16 @@ exports[`IssnRowItemTemplate component should render link data from API 1`] = `
     </span>
     <WithStyles(ExternalLink)
       aria-label="Source publisher name/place and alternate ISSNs in a new window"
+      className=""
+      classes={Object {}}
       href="1234"
+      openInNewIcon={true}
+      rel="noopener noreferrer"
+      target="_blank"
     >
       Ulrichs
     </WithStyles(ExternalLink)>
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </Fragment>
 `;
 
@@ -86,7 +103,7 @@ exports[`IssnRowItemTemplate component should skip missing ulrichs or sherparome
     <span>
       1235-1235
     </span>
-
+     
   </WithStyles(ForwardRef(Typography))>
 </Fragment>
 `;

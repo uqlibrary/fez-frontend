@@ -7456,7 +7456,7 @@ exports[`PublicationCitation  should render component with publication from mult
             gutterBottom={true}
             variant="caption"
           >
-            Found in:
+            Found in: 
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
@@ -8384,7 +8384,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-            Found in:
+            Found in: 
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
@@ -8423,12 +8423,12 @@ exports[`PublicationCitation  should render component without a title 1`] = `
 
 exports[`PublicationCitation  should render primary action button 1`] = `
 Array [
-  <ForwardRef(WithStyles)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     sm="auto"
     xs={12}
   >
-    <ForwardRef(WithStyles)
+    <WithStyles(ForwardRef(Button))
       className="publicationAction buttonOrder0"
       classes={
         Object {
@@ -8441,7 +8441,7 @@ Array [
       onClick={[Function]}
       variant="contained"
     />
-  </ForwardRef(WithStyles)>,
+  </WithStyles(ForwardRef(Grid))>,
 ]
 `;
 
@@ -9818,7 +9818,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
 
 exports[`PublicationCitation  should return message indicating unavailability of citation display 1`] = `
 <div>
-  Citation display not available for
+  Citation display not available for 
 </div>
 `;
 

@@ -59,7 +59,9 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     aria-label="Select multiple publications types to search on"
     disabled={false}
     fullWidth={true}
+    id="document-type-selector"
     multiple={true}
+    name="document-type-selector"
     onChange={[Function]}
     value={Array []}
   >
@@ -492,7 +494,9 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     aria-label="Select multiple publications types to search on"
     disabled={true}
     fullWidth={true}
+    id="document-type-selector"
     multiple={true}
+    name="document-type-selector"
     onChange={[Function]}
     value={Array []}
   >
@@ -925,7 +929,9 @@ exports[`DocumentTypeMultipleField component should render with given document t
     aria-label="Select multiple publications types to search on"
     disabled={false}
     fullWidth={true}
+    id="document-type-selector"
     multiple={true}
+    name="document-type-selector"
     onChange={[Function]}
     value={
       Array [

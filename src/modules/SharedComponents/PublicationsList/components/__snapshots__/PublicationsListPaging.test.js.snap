@@ -901,7 +901,7 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
 `;
 
 exports[`PublicationsListPaging renders  should render buttons with zero total pages 1`] = `
-<ForwardRef(WithStyles)
+<WithStyles(ForwardRef(Button))
   aria-label="Click to select page test of 0 result pages"
   className=" paging-button"
   color="default"
@@ -911,5 +911,5 @@ exports[`PublicationsListPaging renders  should render buttons with zero total p
   variant="text"
 >
   test
-</ForwardRef(WithStyles)>
+</WithStyles(ForwardRef(Button))>
 `;

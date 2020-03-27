@@ -11,11 +11,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         Object {
           "cancelButtonLabel": "Add another missing dataset",
           "confirmButtonLabel": "Go to my datasets",
-          "confirmationMessage": <ForwardRef(WithStyles)
+          "confirmationMessage": <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={3}
           >
-            <ForwardRef(WithStyles)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -27,8 +27,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 title="File upload and/or notes post failed"
                 type="warning"
               />
-            </ForwardRef(WithStyles)>
-          </ForwardRef(WithStyles)>,
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>,
           "confirmationTitle": "Your dataset has been submitted",
           "datasetSuccessConfirmationMessage": <p>
             Your dataset has been saved.
@@ -1273,15 +1273,15 @@ exports[`AddDataCollection test should render component with a valid collection 
         Object {
           "cancelButtonLabel": "Add another missing dataset",
           "confirmButtonLabel": "Go to my datasets",
-          "confirmationMessage": <ForwardRef(WithStyles)
+          "confirmationMessage": <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={3}
           >
-            <ForwardRef(WithStyles)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             />
-          </ForwardRef(WithStyles)>,
+          </WithStyles(ForwardRef(Grid))>,
           "confirmationTitle": "Your dataset has been submitted",
           "datasetSuccessConfirmationMessage": <p>
             Your dataset has been saved.
@@ -2526,15 +2526,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
         Object {
           "cancelButtonLabel": "Add another missing dataset",
           "confirmButtonLabel": "Go to my datasets",
-          "confirmationMessage": <ForwardRef(WithStyles)
+          "confirmationMessage": <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={3}
           >
-            <ForwardRef(WithStyles)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             />
-          </ForwardRef(WithStyles)>,
+          </WithStyles(ForwardRef(Grid))>,
           "confirmationTitle": "Your dataset has been submitted",
           "datasetSuccessConfirmationMessage": <p>
             Your dataset has been saved.
@@ -3779,15 +3779,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
         Object {
           "cancelButtonLabel": "Add another missing dataset",
           "confirmButtonLabel": "Go to my datasets",
-          "confirmationMessage": <ForwardRef(WithStyles)
+          "confirmationMessage": <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={3}
           >
-            <ForwardRef(WithStyles)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             />
-          </ForwardRef(WithStyles)>,
+          </WithStyles(ForwardRef(Grid))>,
           "confirmationTitle": "Your dataset has been submitted",
           "datasetSuccessConfirmationMessage": <p>
             Your dataset has been saved.

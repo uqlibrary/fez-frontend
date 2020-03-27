@@ -495,7 +495,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     disabled={true}
                     displayEmpty={true}
                     input={
-                      <ForwardRef(WithStyles)
+                      <WithStyles(ForwardRef(Input))
                         classes={
                           Object {
                             "root": undefined,
@@ -528,7 +528,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       disabled={true}
                       displayEmpty={true}
                       input={
-                        <ForwardRef(WithStyles)
+                        <WithStyles(ForwardRef(Input))
                           classes={
                             Object {
                               "root": undefined,
@@ -606,23 +606,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             },
                             "autoWidth": false,
                             "children": Array [
-                              <ForwardRef(WithStyles)
+                              <WithStyles(ForwardRef(MenuItem))
                                 disabled={true}
                                 value=""
                               >
                                 Select access conditions
-                              </ForwardRef(WithStyles)>,
+                              </WithStyles(ForwardRef(MenuItem))>,
                               Array [
-                                <ForwardRef(WithStyles)
+                                <WithStyles(ForwardRef(MenuItem))
                                   value={9}
                                 >
                                   Open Access
-                                </ForwardRef(WithStyles)>,
-                                <ForwardRef(WithStyles)
+                                </WithStyles(ForwardRef(MenuItem))>,
+                                <WithStyles(ForwardRef(MenuItem))
                                   value={8}
                                 >
                                   Closed Access
-                                </ForwardRef(WithStyles)>,
+                                </WithStyles(ForwardRef(MenuItem))>,
                               ],
                             ],
                             "classes": Object {
@@ -729,23 +729,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               },
                               "autoWidth": false,
                               "children": Array [
-                                <ForwardRef(WithStyles)
+                                <WithStyles(ForwardRef(MenuItem))
                                   disabled={true}
                                   value=""
                                 >
                                   Select access conditions
-                                </ForwardRef(WithStyles)>,
+                                </WithStyles(ForwardRef(MenuItem))>,
                                 Array [
-                                  <ForwardRef(WithStyles)
+                                  <WithStyles(ForwardRef(MenuItem))
                                     value={9}
                                   >
                                     Open Access
-                                  </ForwardRef(WithStyles)>,
-                                  <ForwardRef(WithStyles)
+                                  </WithStyles(ForwardRef(MenuItem))>,
+                                  <WithStyles(ForwardRef(MenuItem))
                                     value={8}
                                   >
                                     Closed Access
-                                  </ForwardRef(WithStyles)>,
+                                  </WithStyles(ForwardRef(MenuItem))>,
                                 ],
                               ],
                               "classes": Object {
@@ -852,23 +852,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 },
                                 "autoWidth": false,
                                 "children": Array [
-                                  <ForwardRef(WithStyles)
+                                  <WithStyles(ForwardRef(MenuItem))
                                     disabled={true}
                                     value=""
                                   >
                                     Select access conditions
-                                  </ForwardRef(WithStyles)>,
+                                  </WithStyles(ForwardRef(MenuItem))>,
                                   Array [
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       value={9}
                                     >
                                       Open Access
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       value={8}
                                     >
                                       Closed Access
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                 ],
                                 "classes": Object {
@@ -981,23 +981,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   },
                                   "autoWidth": false,
                                   "children": Array [
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       disabled={true}
                                       value=""
                                     >
                                       Select access conditions
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                     Array [
-                                      <ForwardRef(WithStyles)
+                                      <WithStyles(ForwardRef(MenuItem))
                                         value={9}
                                       >
                                         Open Access
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         value={8}
                                       >
                                         Closed Access
-                                      </ForwardRef(WithStyles)>,
+                                      </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                   ],
                                   "classes": Object {
@@ -1853,7 +1853,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     disabled={true}
                     displayEmpty={true}
                     input={
-                      <ForwardRef(WithStyles)
+                      <WithStyles(ForwardRef(Input))
                         classes={
                           Object {
                             "root": undefined,
@@ -1886,7 +1886,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       disabled={true}
                       displayEmpty={true}
                       input={
-                        <ForwardRef(WithStyles)
+                        <WithStyles(ForwardRef(Input))
                           classes={
                             Object {
                               "root": undefined,
@@ -1964,23 +1964,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             },
                             "autoWidth": false,
                             "children": Array [
-                              <ForwardRef(WithStyles)
+                              <WithStyles(ForwardRef(MenuItem))
                                 disabled={true}
                                 value=""
                               >
                                 Select access conditions
-                              </ForwardRef(WithStyles)>,
+                              </WithStyles(ForwardRef(MenuItem))>,
                               Array [
-                                <ForwardRef(WithStyles)
+                                <WithStyles(ForwardRef(MenuItem))
                                   value={9}
                                 >
                                   Open Access
-                                </ForwardRef(WithStyles)>,
-                                <ForwardRef(WithStyles)
+                                </WithStyles(ForwardRef(MenuItem))>,
+                                <WithStyles(ForwardRef(MenuItem))
                                   value={8}
                                 >
                                   Closed Access
-                                </ForwardRef(WithStyles)>,
+                                </WithStyles(ForwardRef(MenuItem))>,
                               ],
                             ],
                             "classes": Object {
@@ -2087,23 +2087,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               },
                               "autoWidth": false,
                               "children": Array [
-                                <ForwardRef(WithStyles)
+                                <WithStyles(ForwardRef(MenuItem))
                                   disabled={true}
                                   value=""
                                 >
                                   Select access conditions
-                                </ForwardRef(WithStyles)>,
+                                </WithStyles(ForwardRef(MenuItem))>,
                                 Array [
-                                  <ForwardRef(WithStyles)
+                                  <WithStyles(ForwardRef(MenuItem))
                                     value={9}
                                   >
                                     Open Access
-                                  </ForwardRef(WithStyles)>,
-                                  <ForwardRef(WithStyles)
+                                  </WithStyles(ForwardRef(MenuItem))>,
+                                  <WithStyles(ForwardRef(MenuItem))
                                     value={8}
                                   >
                                     Closed Access
-                                  </ForwardRef(WithStyles)>,
+                                  </WithStyles(ForwardRef(MenuItem))>,
                                 ],
                               ],
                               "classes": Object {
@@ -2210,23 +2210,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 },
                                 "autoWidth": false,
                                 "children": Array [
-                                  <ForwardRef(WithStyles)
+                                  <WithStyles(ForwardRef(MenuItem))
                                     disabled={true}
                                     value=""
                                   >
                                     Select access conditions
-                                  </ForwardRef(WithStyles)>,
+                                  </WithStyles(ForwardRef(MenuItem))>,
                                   Array [
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       value={9}
                                     >
                                       Open Access
-                                    </ForwardRef(WithStyles)>,
-                                    <ForwardRef(WithStyles)
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
                                       value={8}
                                     >
                                       Closed Access
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                 ],
                                 "classes": Object {
@@ -2339,23 +2339,23 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   },
                                   "autoWidth": false,
                                   "children": Array [
-                                    <ForwardRef(WithStyles)
+                                    <WithStyles(ForwardRef(MenuItem))
                                       disabled={true}
                                       value=""
                                     >
                                       Select access conditions
-                                    </ForwardRef(WithStyles)>,
+                                    </WithStyles(ForwardRef(MenuItem))>,
                                     Array [
-                                      <ForwardRef(WithStyles)
+                                      <WithStyles(ForwardRef(MenuItem))
                                         value={9}
                                       >
                                         Open Access
-                                      </ForwardRef(WithStyles)>,
-                                      <ForwardRef(WithStyles)
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
                                         value={8}
                                       >
                                         Closed Access
-                                      </ForwardRef(WithStyles)>,
+                                      </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                   ],
                                   "classes": Object {
@@ -2710,7 +2710,7 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
     className=""
     displayEmpty={true}
     input={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Input))
         classes={
           Object {
             "root": undefined,
@@ -2782,7 +2782,7 @@ exports[`Component FileUploadAccessSelector should render with value 1`] = `
     className=""
     displayEmpty={true}
     input={
-      <ForwardRef(WithStyles)
+      <WithStyles(ForwardRef(Input))
         classes={
           Object {
             "root": undefined,

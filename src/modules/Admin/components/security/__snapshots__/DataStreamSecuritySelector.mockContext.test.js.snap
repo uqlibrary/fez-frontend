@@ -1398,36 +1398,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                   "children": Array [
                                                     false,
                                                     Array [
-                                                      <ForwardRef(WithStyles)
+                                                      <WithStyles(ForwardRef(MenuItem))
                                                         disabled={false}
                                                         value={1}
                                                       >
                                                         Administrators
-                                                      </ForwardRef(WithStyles)>,
-                                                      <ForwardRef(WithStyles)
+                                                      </WithStyles(ForwardRef(MenuItem))>,
+                                                      <WithStyles(ForwardRef(MenuItem))
                                                         disabled={true}
                                                         value={2}
                                                       >
                                                         Theses Assessors
-                                                      </ForwardRef(WithStyles)>,
-                                                      <ForwardRef(WithStyles)
+                                                      </WithStyles(ForwardRef(MenuItem))>,
+                                                      <WithStyles(ForwardRef(MenuItem))
                                                         disabled={true}
                                                         value={3}
                                                       >
                                                         Evidence Assessors
-                                                      </ForwardRef(WithStyles)>,
-                                                      <ForwardRef(WithStyles)
+                                                      </WithStyles(ForwardRef(MenuItem))>,
+                                                      <WithStyles(ForwardRef(MenuItem))
                                                         disabled={true}
                                                         value={4}
                                                       >
                                                         Staff and Students
-                                                      </ForwardRef(WithStyles)>,
-                                                      <ForwardRef(WithStyles)
+                                                      </WithStyles(ForwardRef(MenuItem))>,
+                                                      <WithStyles(ForwardRef(MenuItem))
                                                         disabled={true}
                                                         value={5}
                                                       >
                                                         Public
-                                                      </ForwardRef(WithStyles)>,
+                                                      </WithStyles(ForwardRef(MenuItem))>,
                                                     ],
                                                   ],
                                                   "classes": Object {
@@ -1543,36 +1543,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                     "children": Array [
                                                       false,
                                                       Array [
-                                                        <ForwardRef(WithStyles)
+                                                        <WithStyles(ForwardRef(MenuItem))
                                                           disabled={false}
                                                           value={1}
                                                         >
                                                           Administrators
-                                                        </ForwardRef(WithStyles)>,
-                                                        <ForwardRef(WithStyles)
+                                                        </WithStyles(ForwardRef(MenuItem))>,
+                                                        <WithStyles(ForwardRef(MenuItem))
                                                           disabled={true}
                                                           value={2}
                                                         >
                                                           Theses Assessors
-                                                        </ForwardRef(WithStyles)>,
-                                                        <ForwardRef(WithStyles)
+                                                        </WithStyles(ForwardRef(MenuItem))>,
+                                                        <WithStyles(ForwardRef(MenuItem))
                                                           disabled={true}
                                                           value={3}
                                                         >
                                                           Evidence Assessors
-                                                        </ForwardRef(WithStyles)>,
-                                                        <ForwardRef(WithStyles)
+                                                        </WithStyles(ForwardRef(MenuItem))>,
+                                                        <WithStyles(ForwardRef(MenuItem))
                                                           disabled={true}
                                                           value={4}
                                                         >
                                                           Staff and Students
-                                                        </ForwardRef(WithStyles)>,
-                                                        <ForwardRef(WithStyles)
+                                                        </WithStyles(ForwardRef(MenuItem))>,
+                                                        <WithStyles(ForwardRef(MenuItem))
                                                           disabled={true}
                                                           value={5}
                                                         >
                                                           Public
-                                                        </ForwardRef(WithStyles)>,
+                                                        </WithStyles(ForwardRef(MenuItem))>,
                                                       ],
                                                     ],
                                                     "classes": Object {
@@ -1689,36 +1689,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                       "children": Array [
                                                         false,
                                                         Array [
-                                                          <ForwardRef(WithStyles)
+                                                          <WithStyles(ForwardRef(MenuItem))
                                                             disabled={false}
                                                             value={1}
                                                           >
                                                             Administrators
-                                                          </ForwardRef(WithStyles)>,
-                                                          <ForwardRef(WithStyles)
+                                                          </WithStyles(ForwardRef(MenuItem))>,
+                                                          <WithStyles(ForwardRef(MenuItem))
                                                             disabled={true}
                                                             value={2}
                                                           >
                                                             Theses Assessors
-                                                          </ForwardRef(WithStyles)>,
-                                                          <ForwardRef(WithStyles)
+                                                          </WithStyles(ForwardRef(MenuItem))>,
+                                                          <WithStyles(ForwardRef(MenuItem))
                                                             disabled={true}
                                                             value={3}
                                                           >
                                                             Evidence Assessors
-                                                          </ForwardRef(WithStyles)>,
-                                                          <ForwardRef(WithStyles)
+                                                          </WithStyles(ForwardRef(MenuItem))>,
+                                                          <WithStyles(ForwardRef(MenuItem))
                                                             disabled={true}
                                                             value={4}
                                                           >
                                                             Staff and Students
-                                                          </ForwardRef(WithStyles)>,
-                                                          <ForwardRef(WithStyles)
+                                                          </WithStyles(ForwardRef(MenuItem))>,
+                                                          <WithStyles(ForwardRef(MenuItem))
                                                             disabled={true}
                                                             value={5}
                                                           >
                                                             Public
-                                                          </ForwardRef(WithStyles)>,
+                                                          </WithStyles(ForwardRef(MenuItem))>,
                                                         ],
                                                       ],
                                                       "classes": Object {
@@ -1841,36 +1841,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                         "children": Array [
                                                           false,
                                                           Array [
-                                                            <ForwardRef(WithStyles)
+                                                            <WithStyles(ForwardRef(MenuItem))
                                                               disabled={false}
                                                               value={1}
                                                             >
                                                               Administrators
-                                                            </ForwardRef(WithStyles)>,
-                                                            <ForwardRef(WithStyles)
+                                                            </WithStyles(ForwardRef(MenuItem))>,
+                                                            <WithStyles(ForwardRef(MenuItem))
                                                               disabled={true}
                                                               value={2}
                                                             >
                                                               Theses Assessors
-                                                            </ForwardRef(WithStyles)>,
-                                                            <ForwardRef(WithStyles)
+                                                            </WithStyles(ForwardRef(MenuItem))>,
+                                                            <WithStyles(ForwardRef(MenuItem))
                                                               disabled={true}
                                                               value={3}
                                                             >
                                                               Evidence Assessors
-                                                            </ForwardRef(WithStyles)>,
-                                                            <ForwardRef(WithStyles)
+                                                            </WithStyles(ForwardRef(MenuItem))>,
+                                                            <WithStyles(ForwardRef(MenuItem))
                                                               disabled={true}
                                                               value={4}
                                                             >
                                                               Staff and Students
-                                                            </ForwardRef(WithStyles)>,
-                                                            <ForwardRef(WithStyles)
+                                                            </WithStyles(ForwardRef(MenuItem))>,
+                                                            <WithStyles(ForwardRef(MenuItem))
                                                               disabled={true}
                                                               value={5}
                                                             >
                                                               Public
-                                                            </ForwardRef(WithStyles)>,
+                                                            </WithStyles(ForwardRef(MenuItem))>,
                                                           ],
                                                         ],
                                                         "classes": Object {
