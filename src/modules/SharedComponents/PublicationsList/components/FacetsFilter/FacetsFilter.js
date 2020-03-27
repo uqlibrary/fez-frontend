@@ -39,7 +39,7 @@ FacetFilterNestedListItemsList.propTypes = {
     disabled: PropTypes.bool,
     activeFacets: PropTypes.array,
     handleFacetClick: PropTypes.func,
-    isFacetFilterActive: PropTypes.bool,
+    isFacetFilterActive: PropTypes.func,
 };
 
 const getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
