@@ -19,8 +19,8 @@ function setup(testProps = {}) {
 describe('AdvancedSearchRow', () => {
     it('should render default view', () => {
         const { getByText } = setup();
-        expect(getByText(/select a field/i)).toBeInTheDocument();
-        expect(getByText(/please select a field to search/i)).toBeInTheDocument();
+        expect(getByText('Select a field')).toBeInTheDocument();
+        expect(getByText('Please select a field to search')).toBeInTheDocument();
     });
 
     it('should render search field row with given disabled options', async() => {
@@ -48,7 +48,7 @@ describe('AdvancedSearchRow', () => {
         const testFn = jest.fn();
         const { getByTestId } = setup({ rowIndex: 1, onSearchRowChange: testFn });
         fireEvent.change(getByTestId('textfield'), { target: { value: 'i feel lucky' } });
-        expect(testFn).toHaveBeenCalledWith(1, { searchField: '0', value: 'i feel lucky', label: undefined });
+        expect(testFn).toHaveBeenCalledWith(1, { searchField: '0', value: 'i feel lucky', label: '' });
     });
 
     it('should handle delete row', () => {

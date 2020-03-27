@@ -1,6 +1,5 @@
 import React from 'react';
 import DateRangeField from './DateRangeField';
-import moment from 'moment';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 import { rtlRender, fireEvent, act } from 'test-utils';
 

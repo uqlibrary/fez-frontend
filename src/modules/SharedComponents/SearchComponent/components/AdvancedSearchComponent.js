@@ -32,10 +32,10 @@ export const useStyles = makeStyles(
             },
         },
         blueButton: {
-            backgroundColor: ((theme.palette || {}).accent || {}).main,
-            color: ((theme.palette || {}).white || {}).main,
+            backgroundColor: theme.palette.accent.main,
+            color: theme.palette.white.main,
             '&:hover': {
-                backgroundColor: ((theme.palette || {}).accent || {}).dark,
+                backgroundColor: theme.palette.accent.dark,
             },
         },
     }),
@@ -351,12 +351,12 @@ AdvancedSearchComponent.defaultProps = {
     createdRange: {},
     updatedRange: {},
 
-    onToggleSearchMode: () => {},
-    onToggleMinimise: () => {},
-    onToggleOpenAccess: () => {},
-    onAdvancedSearchRowAdd: () => {},
-    onAdvancedSearchRowRemove: () => {},
-    onAdvancedSearchReset: () => {},
+    onToggleSearchMode: undefined,
+    onToggleMinimise: undefined,
+    onToggleOpenAccess: undefined,
+    onAdvancedSearchRowAdd: undefined,
+    onAdvancedSearchRowRemove: undefined,
+    onAdvancedSearchReset: undefined,
 };
 
 export default AdvancedSearchComponent;

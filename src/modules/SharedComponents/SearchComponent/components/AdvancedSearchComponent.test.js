@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { rtlRender, fireEvent, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, waitForElement, act } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -12,11 +12,9 @@ function setup(testProps = {}) {
             invalid: false,
         },
         className: 'advanced-search',
-
-        onAdvancedSearchRowChange: jest.fn(),
-        onSearch: jest.fn(),
         updateYearRangeFilter: jest.fn(),
         docTypes: [],
+        onSearch: jest.fn(),
         ...testProps,
     };
     return rtlRender(<AdvancedSearchComponent {...props} />);
@@ -242,5 +240,29 @@ describe('AdvancedSearchComponent', () => {
 
         fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '10/10/2013' } });
         expect(getByTestId('created-range-to-date').value).toBe('10/10/2013');
+        expect(updateDateRangeFn).toHaveBeenCalledWith('rek_created_date', {
+            from: moment('10/10/2010', 'DD/MM/YYYY'),
+            to: moment('10/10/2013', 'DD/MM/YYYY', true),
+        });
+    });
+
+    it('should handle search for created date range filter', () => {
+        const onSearchFn = jest.fn();
+        const { getByTestId } = setup({
+            showUnpublishedFields: true,
+            onSearch: onSearchFn,
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('created-range-from-date'), { target: { value: '10/10/2013' } });
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '10/11/2013' } });
+        });
+
+        fireEvent.click(getByTestId('advancedSearchButton'));
+
+        expect(onSearchFn).toHaveBeenCalledWith();
     });
 });
