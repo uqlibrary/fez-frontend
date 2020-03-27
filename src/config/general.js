@@ -24,8 +24,9 @@ export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 
 // URLS - values are set in webpack build
+export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
-export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
+export const APP_URL = getValue(process.env.APP_URL) || STAGING_URL;
 
 export const AUTH_URL_LOGIN = getValue(process.env.AUTH_LOGIN_URL) || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = getValue(process.env.AUTH_LOGOUT_URL) || 'https://auth.library.uq.edu.au/logout';

@@ -23,6 +23,7 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
     APP_URL,
+    STAGING_URL,
     pathPrefix,
 } from 'config/general';
 
@@ -68,6 +69,7 @@ const getLegacyEditUrl = (pid, type) => {
     let wftID;
     let xdisID;
     let viewSlug;
+
     switch (type) {
         case 'community':
             wftID = 291;
@@ -85,8 +87,12 @@ const getLegacyEditUrl = (pid, type) => {
             viewSlug = 'view';
             break;
     }
+
+    // Use staging URL for non-prod sites
+    const prefix = APP_URL.indexOf('https://espace.') === 0 ? `${APP_URL}${pathPrefix}` : STAGING_URL;
+
     const href = encodeURIComponent(`/${viewSlug}/${pid}`);
-    return `${APP_URL}${pathPrefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
+    return `${prefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
 };
 
 export const ADMIN_EDIT_LEGACY_LINK = {
