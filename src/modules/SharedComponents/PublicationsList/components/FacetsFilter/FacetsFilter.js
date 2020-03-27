@@ -34,6 +34,14 @@ export const FacetFilterNestedListItemsList = React.memo(function FacetFilterNes
     });
 });
 
+FacetFilterNestedListItemsList.propTypes = {
+    facetCategory: PropTypes.object,
+    disabled: PropTypes.bool,
+    activeFacets: PropTypes.array,
+    handleFacetClick: PropTypes.func,
+    isFacetFilterActive: PropTypes.bool,
+};
+
 const getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
     const facetsToDisplay = [];
     Object.keys(rawFacets).forEach(key => {
