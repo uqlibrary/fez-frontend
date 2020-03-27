@@ -1,5 +1,4 @@
-import DateRangeFieldWithStyles from './DateRangeField';
-import { DateRangeField } from './DateRangeField';
+import DateRangeField from './DateRangeField';
 import moment from 'moment';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
@@ -22,12 +21,6 @@ function setup(testProps = {}) {
 }
 
 describe('DateRangeField component', () => {
-    it('should render default view with styles', () => {
-        const wrapper = getElement(DateRangeFieldWithStyles, { onChange: jest.fn() });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should render default view', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();

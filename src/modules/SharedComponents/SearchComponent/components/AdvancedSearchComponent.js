@@ -198,6 +198,7 @@ export const AdvancedSearchComponent = ({
                                         <React.Fragment>
                                             <Grid item xs={12}>
                                                 <DateRangeField
+                                                    id="created-range"
                                                     onChange={_handleDateRangeChange('rek_created_date')}
                                                     disabled={isLoading}
                                                     disableFuture
@@ -210,6 +211,7 @@ export const AdvancedSearchComponent = ({
                                             </Grid>
                                             <Grid item xs={12}>
                                                 <DateRangeField
+                                                    id="updated-range"
                                                     onChange={_handleDateRangeChange('rek_updated_date')}
                                                     disabled={isLoading}
                                                     disableFuture
@@ -357,4 +359,4 @@ AdvancedSearchComponent.defaultProps = {
     onAdvancedSearchReset: () => {},
 };
 
-export default React.memo(AdvancedSearchComponent);
+export default AdvancedSearchComponent;

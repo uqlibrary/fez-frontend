@@ -2,7 +2,6 @@ import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
 import { rtlRender, fireEvent, waitForElement } from 'test-utils';
-import { act, getAllByRole } from 'react-testing-library';
 
 function setup(testProps = {}) {
     const props = {
@@ -228,5 +227,20 @@ describe('AdvancedSearchComponent', () => {
             to: 2014,
             invalid: false,
         });
+    });
+
+    it('should update created date range filter for unpublished filters', () => {
+        const updateDateRangeFn = jest.fn();
+        const { getByTestId } = setup({
+            showUnpublishedFields: true,
+            updateDateRange: updateDateRangeFn,
+            createdRange: {
+                from: moment('10/10/2010', 'DD/MM/YYYY'),
+                to: null,
+            },
+        });
+
+        fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '10/10/2013' } });
+        expect(getByTestId('created-range-to-date').value).toBe('10/10/2013');
     });
 });

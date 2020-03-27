@@ -1,123 +1,133 @@
-import React, { PureComponent } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
-import { withStyles } from '@material-ui/core/styles';
-import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
+import { makeStyles } from '@material-ui/core/styles';
+
+import { KeyboardDatePicker } from '@material-ui/pickers';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
-const styles = theme => ({
-    title: {
-        ...theme.typography.caption,
-    },
-});
+const useStyles = makeStyles(
+    theme => ({
+        title: {
+            ...theme.typography.caption,
+        },
+    }),
+    { withTheme: true },
+);
 
-export class DateRangeField extends PureComponent {
-    static propTypes = {
-        searchKey: PropTypes.string,
-        disabled: PropTypes.bool,
-        invalid: PropTypes.bool,
-        classes: PropTypes.object,
-        locale: PropTypes.object,
-        format: PropTypes.string,
-        from: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
-        to: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
-        onChange: PropTypes.func.isRequired,
-        disableFuture: PropTypes.bool,
-    };
+export const DateRangeField = ({
+    id,
+    locale,
+    format,
+    from: initialFrom,
+    to: initialTo,
+    onChange,
+    disableFuture,
+    disabled,
+}) => {
+    const [from, setFrom] = useState(initialFrom || null);
+    const [to, setTo] = useState(initialTo || null);
+    const [error, setError] = useState(undefined);
+    const [fromError, setFromError] = useState(undefined);
+    const [toError, setToError] = useState(undefined);
+    const [allGood, setAllGood] = useState(false);
+    const classes = useStyles();
 
-    static defaultProps = {
-        className: 'publicationyearrange menuitem',
-        disabled: false,
-        format: GENERIC_DATE_FORMAT,
-        disableFuture: false,
-    };
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            from: props.from || null,
-            to: props.to || null,
-            error: undefined,
-        };
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-        if (
-            !!this.props.onChange &&
-            (this.state.from !== nextState.from ||
-                this.state.to !== nextState.to ||
-                this.state.error !== nextState.error) &&
-            !nextState.error
-        ) {
-            this.props.onChange(nextState);
+    useEffect(() => {
+        if (!!from && !from.isValid()) {
+            setFromError('Please provide valid date');
+        } else if (!!to && !to.isValid()) {
+            setToError('Please provide valid date');
+        } else if (!!from && !!to && from.isAfter(to)) {
+            setError('Please provide valid date range');
+        } else {
+            setFromError(undefined);
+            setToError(undefined);
+            setError(undefined);
         }
-    }
+        setAllGood(true);
+    }, [from, to]);
 
-    updateDateRangeValue = key => value => {
-        this.setState(
-            {
-                [key]: value,
-            },
-            () => {
-                const { from, to } = this.state;
-                if (!!from && !!to && from.isAfter(to)) {
-                    this.setState({
-                        error: 'Please provide valid date range',
-                    });
-                } else {
-                    this.setState({
-                        error: undefined,
-                    });
-                }
-            },
-        );
-    };
+    useEffect(() => {
+        if (allGood && !error && !!from && !!to) {
+            onChange({ from, to });
+            setAllGood(false);
+        }
+    }, [allGood, error, from, fromError, onChange, to, toError]);
 
-    render() {
-        const { classes, locale } = this.props;
-        return (
-            <React.Fragment>
-                <Grid container>
-                    <Grid item xs={12}>
-                        <InputLabel shrink className={classes.title}>
-                            {locale.title}
-                        </InputLabel>
-                    </Grid>
+    const handleFromDateChange = useCallback(value => {
+        setFrom(value);
+    }, []);
+
+    const handleToDateChange = useCallback(value => {
+        setTo(value);
+    }, []);
+
+    return (
+        <React.Fragment>
+            <Grid container>
+                <Grid item xs={12}>
+                    <InputLabel shrink className={classes.title}>
+                        {locale.title}
+                    </InputLabel>
                 </Grid>
-                <Grid container>
-                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                        <DatePickerField
-                            value={this.state.from}
-                            onChange={this.updateDateRangeValue('from')}
-                            error={this.state.error}
-                            errorText={this.state.error}
-                            format={this.props.format}
-                            disableFuture={this.props.disableFuture}
-                        />
-                    </Grid>
-                    <Grid item xs="auto">
-                        <TextField
-                            style={{ width: 24 }}
-                            value=" to "
-                            disabled
-                            InputProps={{ disableUnderline: true }}
-                        />
-                    </Grid>
-                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                        <DatePickerField
-                            value={this.state.to}
-                            onChange={this.updateDateRangeValue('to')}
-                            error={!!this.state.error}
-                            format={this.props.format}
-                            disableFuture={this.props.disableFuture}
-                        />
-                    </Grid>
+            </Grid>
+            <Grid container>
+                <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
+                    <KeyboardDatePicker
+                        value={from}
+                        onChange={handleFromDateChange}
+                        error={!!error || !!fromError}
+                        helperText={error || fromError}
+                        autoOk
+                        variant="inline"
+                        disableToolbar
+                        format={format}
+                        id={`${id}-from-date`}
+                        disableFuture={disableFuture}
+                        disabled={disabled}
+                    />
                 </Grid>
-            </React.Fragment>
-        );
-    }
-}
+                <Grid item xs="auto">
+                    <TextField style={{ width: 24 }} value=" to " disabled InputProps={{ disableUnderline: true }} />
+                </Grid>
+                <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
+                    <KeyboardDatePicker
+                        value={to}
+                        onChange={handleToDateChange}
+                        error={!!error || !!toError}
+                        helperText={error || toError}
+                        autoOk
+                        variant="inline"
+                        disableToolbar
+                        format={format}
+                        id={`${id}-to-date`}
+                        disableFuture={disableFuture}
+                        disabled={disabled}
+                    />
+                </Grid>
+            </Grid>
+        </React.Fragment>
+    );
+};
 
-export default withStyles(styles, { withTheme: true })(DateRangeField);
+DateRangeField.propTypes = {
+    id: PropTypes.string,
+    locale: PropTypes.object,
+    format: PropTypes.string,
+    from: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
+    to: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
+    onChange: PropTypes.func.isRequired,
+    disableFuture: PropTypes.bool,
+    disabled: PropTypes.bool,
+};
+
+DateRangeField.defaultProps = {
+    disabled: false,
+    format: GENERIC_DATE_FORMAT,
+    disableFuture: false,
+};
+
+export default DateRangeField;
