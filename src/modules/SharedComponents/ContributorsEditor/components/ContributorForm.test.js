@@ -1,6 +1,6 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
-import { rtlRender, withRedux, fireEvent, waitForElement } from 'test-utils';
+import { rtlRender, withRedux, fireEvent, waitForElement, act } from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
@@ -152,17 +152,29 @@ describe('Component ContributorForm', () => {
         expect(onAddFn).not.toBeCalled();
     });
 
-    it('should handle affiliation change', () => {
+    it('should handle affiliation change', async() => {
         const { getByTestId, getByText } = setup({
             isNtro: true,
         });
 
         fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
-        fireEvent.click(getByText('Not UQ'));
-        expect(getByText('Not UQ')).toBeInTheDocument();
 
-        fireEvent.click(getByText('UQ'));
-        expect(getByText('UQ')).toBeInTheDocument();
+        let options = await waitForElement(() => getByTestId('menu-org-affiliation-selector'));
+
+        act(() => {
+            fireEvent.click(getByText('Not UQ', options));
+        });
+
+        expect(getByTestId('org-affiliation-selector')).toHaveTextContent('Not UQ');
+
+        fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
+        options = await waitForElement(() => getByTestId('menu-org-affiliation-selector'));
+
+        act(() => {
+            fireEvent.click(getByText('UQ', options));
+        });
+
+        expect(getByTestId('org-affiliation-selector')).toHaveTextContent('UQ');
     });
 
     it('should show affiliation type selector in error state', () => {
