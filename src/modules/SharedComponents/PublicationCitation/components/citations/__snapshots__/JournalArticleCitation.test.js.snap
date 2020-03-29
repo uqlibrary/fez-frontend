@@ -1295,109 +1295,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 18:26:18",
                       "srm_id": 13764,
                       "srm_issn": "1477-9137",
                       "srm_journal_name": "Journal of Cell Science",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1477-9137</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:26:17</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "1477-9137",
                     "rek_issn_id": 5382905,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 1,
                     "rek_issn_pid": "UQ:676287",
                     "rek_issn_xsdmf_id": null,
@@ -2369,109 +2275,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                           },
                         ],
                         "fez_sherpa_romeo": Object {
-                          "srm_colour": "green",
                           "srm_date_updated": "2017-09-30 18:26:18",
                           "srm_id": 13764,
                           "srm_issn": "1477-9137",
                           "srm_journal_name": "Journal of Cell Science",
-                          "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1477-9137</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:26:17</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                          "srm_json": "{}",
                         },
                         "rek_issn": "1477-9137",
                         "rek_issn_id": 5382905,
-                        "rek_issn_lookup": "green",
+                        "rek_issn_lookup": "",
                         "rek_issn_order": 1,
                         "rek_issn_pid": "UQ:676287",
                         "rek_issn_xsdmf_id": null,
@@ -3455,109 +3267,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             },
                           ],
                           "fez_sherpa_romeo": Object {
-                            "srm_colour": "green",
                             "srm_date_updated": "2017-09-30 18:26:18",
                             "srm_id": 13764,
                             "srm_issn": "1477-9137",
                             "srm_journal_name": "Journal of Cell Science",
-                            "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1477-9137</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:26:17</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                            "srm_json": "{}",
                           },
                           "rek_issn": "1477-9137",
                           "rek_issn_id": 5382905,
-                          "rek_issn_lookup": "green",
+                          "rek_issn_lookup": "",
                           "rek_issn_order": 1,
                           "rek_issn_pid": "UQ:676287",
                           "rek_issn_xsdmf_id": null,
@@ -5177,109 +4895,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                           },
                         ],
                         "fez_sherpa_romeo": Object {
-                          "srm_colour": "green",
                           "srm_date_updated": "2017-09-30 18:26:18",
                           "srm_id": 13764,
                           "srm_issn": "1477-9137",
                           "srm_journal_name": "Journal of Cell Science",
-                          "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1477-9137</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:26:17</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                          "srm_json": "{}",
                         },
                         "rek_issn": "1477-9137",
                         "rek_issn_id": 5382905,
-                        "rek_issn_lookup": "green",
+                        "rek_issn_lookup": "",
                         "rek_issn_order": 1,
                         "rek_issn_pid": "UQ:676287",
                         "rek_issn_xsdmf_id": null,
@@ -6265,109 +5889,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                               },
                             ],
                             "fez_sherpa_romeo": Object {
-                              "srm_colour": "green",
                               "srm_date_updated": "2017-09-30 18:26:18",
                               "srm_id": 13764,
                               "srm_issn": "1477-9137",
                               "srm_journal_name": "Journal of Cell Science",
-                              "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1477-9137</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:26:17</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                              "srm_json": "{}",
                             },
                             "rek_issn": "1477-9137",
                             "rek_issn_id": 5382905,
-                            "rek_issn_lookup": "green",
+                            "rek_issn_lookup": "",
                             "rek_issn_order": 1,
                             "rek_issn_pid": "UQ:676287",
                             "rek_issn_xsdmf_id": null,
@@ -7350,109 +6880,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                               },
                             ],
                             "fez_sherpa_romeo": Object {
-                              "srm_colour": "green",
                               "srm_date_updated": "2017-09-30 18:26:18",
                               "srm_id": 13764,
                               "srm_issn": "1477-9137",
                               "srm_journal_name": "Journal of Cell Science",
-                              "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1477-9137</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:26:17</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Cell Science</jtitle>
-      <issn>0021-9533</issn>
-      <zetocpub>Company of Biologists</zetocpub>
-      <romeopub>Company of Biologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"29\\">
-      <name>Company of Biologists</name>
-      <alias />
-      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>can</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>On author's personal website immediately</condition>
-        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>
-        <condition>Authors retain copyright</condition>
-        <condition>Publisher's version/PDF may be used</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>
-        <condition>Non-commercial use</condition>
-        <condition>Publisher last contacted on 30/03/2016</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>
-          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2004-01-10 00:00:00</dateadded>
-      <dateupdated>2016-04-12 16:14:47</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                              "srm_json": "{}",
                             },
                             "rek_issn": "1477-9137",
                             "rek_issn_id": 5382905,
-                            "rek_issn_lookup": "green",
+                            "rek_issn_lookup": "",
                             "rek_issn_order": 1,
                             "rek_issn_pid": "UQ:676287",
                             "rek_issn_xsdmf_id": null,

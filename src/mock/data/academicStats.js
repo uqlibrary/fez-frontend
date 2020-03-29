@@ -1509,9 +1509,9 @@ export const trendingPublications = {
                 "srm_id": 11251478,
                 "srm_issn": "2397-334X",
                 "srm_journal_name": "Nature Ecology and Evolution",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4582061,
@@ -2767,9 +2767,9 @@ export const trendingPublications = {
                 "srm_id": 7529,
                 "srm_issn": "1558-8238",
                 "srm_journal_name": "Journal of Clinical Investigation",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5403654,
             "rek_issn_pid": "UQ:a62a760",
@@ -2841,9 +2841,9 @@ export const trendingPublications = {
                 "srm_id": 7528,
                 "srm_issn": "0021-9738",
                 "srm_journal_name": "Journal of Clinical Investigation",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4582696,
@@ -4173,9 +4173,9 @@ export const trendingPublications = {
                 "srm_id": 8887,
                 "srm_issn": "0036-8075",
                 "srm_journal_name": "Science",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4581047,
@@ -6864,9 +6864,9 @@ export const trendingPublications = {
                 "srm_id": 8052,
                 "srm_issn": "1546-1718",
                 "srm_journal_name": "Nature Genetics",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4582538,
@@ -7402,9 +7402,9 @@ export const trendingPublications = {
                 "srm_id": 8052,
                 "srm_issn": "1546-1718",
                 "srm_journal_name": "Nature Genetics",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4582466,
@@ -8054,9 +8054,9 @@ export const trendingPublications = {
                 "srm_id": 3147609,
                 "srm_issn": "2214-109X",
                 "srm_journal_name": "Lancet Global Health",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4397189,
@@ -8513,9 +8513,9 @@ export const trendingPublications = {
                 "srm_id": 11440,
                 "srm_issn": "0899-8418",
                 "srm_journal_name": "International Journal of Climatology",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5011107,
             "rek_issn_pid": "UQ:404005",
@@ -8587,9 +8587,9 @@ export const trendingPublications = {
                 "srm_id": 11441,
                 "srm_issn": "1097-0088",
                 "srm_journal_name": "International Journal of Climatology",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4351219,
@@ -9085,9 +9085,9 @@ export const trendingPublicationsWithNoSources = {
                 "srm_id": 3666552,
                 "srm_issn": "1178-2005",
                 "srm_journal_name": "International Journal of Chronic Obstructive Pulmonary Disease",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5510686,
             "rek_issn_pid": "UQ:d8ece17",
@@ -9159,9 +9159,9 @@ export const trendingPublicationsWithNoSources = {
                 "srm_id": 25793,
                 "srm_issn": "1176-9106",
                 "srm_journal_name": "International Journal of Chronic Obstructive Pulmonary Disease",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com",
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": null,
         "fez_record_search_key_journal_name": {

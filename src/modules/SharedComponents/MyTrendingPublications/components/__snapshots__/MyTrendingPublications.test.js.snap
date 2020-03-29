@@ -384,112 +384,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 18:51:44",
                       "srm_id": 6131,
                       "srm_issn": "1550-6606",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Journal of Immunology",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1550-6606</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:51:44</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Immunology</jtitle>
-      <issn>0022-1767</issn>
-      <zetocpub>American Association of Immunologists</zetocpub>
-      <romeopub>American Association of Immunologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"214\\">
-      <name>American Association of Immunologists</name>
-      <alias />
-      <homeurl>http://www.aai.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Author's pre-print on websits or bioRxiv</condition>
-        <condition>Author's post-print on personal website only</condition>
-        <condition>Author's post-print not allowed on Institutional Repository</condition>
-        <condition>Set statement must accompany article (see policy link)</condition>
-        <condition>If mandated by funding agency may deposit authors post-print in PubMed Central, 6 or 12 months after publication</condition>
-        <condition>Papers submitted after 29th March 2011, funded by NIH, HHMI, MRC or Wellcome Trust, will be automatically deposited in PubMed Central if requested at submission</condition>
-        <condition>Publisher's version/PDF may only be used, if part of a thesis/ dissertation within a thesis repository</condition>
-        <condition>Must link to publisher version</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.jimmunol.org/info/authorchoice</paidaccessurl>
-        <paidaccessname>Author Choice</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Copyright Transfer</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/authors#CopyrightTransfer</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Funding Body Public Access Policy:: FAQ</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/PublicAccessFAQ</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Prior Publication</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/journalpolicies#PriorPublication</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2006-10-01 00:00:00</dateadded>
-      <dateupdated>2017-02-24 10:57:28</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "1550-6606",
                     "rek_issn_id": 5088122,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 1,
                     "rek_issn_pid": "UQ:330391",
                     "rek_issn_xsdmf_id": null,
@@ -562,112 +466,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 15:14:27",
                       "srm_id": 6130,
                       "srm_issn": "0022-1767",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Journal of Immunology",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0022-1767</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:14:27</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Immunology</jtitle>
-      <issn>0022-1767</issn>
-      <zetocpub>American Association of Immunologists</zetocpub>
-      <romeopub>American Association of Immunologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"214\\">
-      <name>American Association of Immunologists</name>
-      <alias />
-      <homeurl>http://www.aai.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Author's pre-print on websits or bioRxiv</condition>
-        <condition>Author's post-print on personal website only</condition>
-        <condition>Author's post-print not allowed on Institutional Repository</condition>
-        <condition>Set statement must accompany article (see policy link)</condition>
-        <condition>If mandated by funding agency may deposit authors post-print in PubMed Central, 6 or 12 months after publication</condition>
-        <condition>Papers submitted after 29th March 2011, funded by NIH, HHMI, MRC or Wellcome Trust, will be automatically deposited in PubMed Central if requested at submission</condition>
-        <condition>Publisher's version/PDF may only be used, if part of a thesis/ dissertation within a thesis repository</condition>
-        <condition>Must link to publisher version</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.jimmunol.org/info/authorchoice</paidaccessurl>
-        <paidaccessname>Author Choice</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Copyright Transfer</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/authors#CopyrightTransfer</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Funding Body Public Access Policy:: FAQ</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/PublicAccessFAQ</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Prior Publication</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/journalpolicies#PriorPublication</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2006-10-01 00:00:00</dateadded>
-      <dateupdated>2017-02-24 10:57:28</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "0022-1767",
                     "rek_issn_id": 5088123,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 2,
                     "rek_issn_pid": "UQ:330391",
                     "rek_issn_xsdmf_id": null,
@@ -1397,128 +1205,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 15:58:18",
                       "srm_id": 13751,
                       "srm_issn": "0264-410X",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Vaccine",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0264-410X</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:58:18</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Vaccine</jtitle>
-      <issn>0264-410X</issn>
-      <zetocpub>Elsevier: 12 months</zetocpub>
-      <romeopub>Elsevier: 12 months</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"2823\\"  parentid=\\"30\\">
-      <name>Elsevier</name>
-      <alias>12 months</alias>
-      <homeurl>http://www.elsevier.com/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Authors pre-print on any website, including arXiv and RePEC</condition>
-        <condition>Author's post-print on author's personal website immediately</condition>
-        <condition>Author's post-print on open access repository after an embargo period of between &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt;</condition>
-        <condition>Permitted deposit due to Funding Body, Institutional and Governmental policy or mandate, may be required to comply with embargo periods of &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt;</condition>
-        <condition>Author's post-print may be used to update arXiv and RepEC</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Must link to publisher version with DOI</condition>
-        <condition>Author's post-print must be released with a Creative Commons Attribution Non-Commercial No Derivatives License</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.elsevier.com/about/open-access/sponsored-articles</paidaccessurl>
-        <paidaccessname>Open Access</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Unleashing the power of academic sharing</copyrightlinktext>
-          <copyrightlinkurl>http://www.elsevier.com/connect/elsevier-updates-its-policies-perspectives-and-services-on-article-sharing</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Sharing Policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.elsevier.com/about/company-information/policies/sharing</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Sharing and Hosting Policy FAQ</copyrightlinktext>
-          <copyrightlinkurl>https://www.elsevier.com/about/our-business/policies/sharing/policy-faq</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Green open access</copyrightlinktext>
-          <copyrightlinkurl>http://www.elsevier.com/about/open-access/green-open-access</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal Embargo Period List</copyrightlinktext>
-          <copyrightlinkurl>https://www.elsevier.com/__data/assets/pdf_file/0005/78476/external-embargo-list.pdf</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Journal Embargo List for UK Authors&lt;a/&gt; - &lt;a href=http://www.elsevier.com/about/company-information/policies/sharing/how-to-attach-a-user-license&gt;Attaching a User License</copyrightlinktext>
-          <copyrightlinkurl>https://www.elsevier.com/__data/assets/pdf_file/0011/78473/EmbargoPeriods_2.pdf</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Funding Body Agreements</copyrightlinktext>
-          <copyrightlinkurl>http://www.elsevier.com/about/open-access/open-access-policies/funding-body-agreements</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2016-07-01 11:10:04</dateadded>
-      <dateupdated>2016-07-01 11:10:04</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "0264-410X",
                     "rek_issn_id": 5266700,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 1,
                     "rek_issn_pid": "UQ:103860",
                     "rek_issn_xsdmf_id": null,
@@ -1526,50 +1222,12 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                   Object {
                     "fez_journal_issns": Array [],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "",
                       "srm_date_updated": "2017-09-30 15:58:07",
                       "srm_id": 68953,
                       "srm_issn": "0264-110X",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0264-110X</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits />
-    <apicontrol>invalid</apicontrol>
-    <outcome>failed</outcome>
-    <message>The ISSN has an invalid format or checksum digit.</message>
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:58:07</timestamp>
-  </header>
-  <journals />
-  <publishers />
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "0264-110X",
                     "rek_issn_id": 5266701,
@@ -2215,112 +1873,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 18:51:44",
                       "srm_id": 6131,
                       "srm_issn": "1550-6606",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Journal of Immunology",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1550-6606</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:51:44</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Immunology</jtitle>
-      <issn>0022-1767</issn>
-      <zetocpub>American Association of Immunologists</zetocpub>
-      <romeopub>American Association of Immunologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"214\\">
-      <name>American Association of Immunologists</name>
-      <alias />
-      <homeurl>http://www.aai.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Author's pre-print on websits or bioRxiv</condition>
-        <condition>Author's post-print on personal website only</condition>
-        <condition>Author's post-print not allowed on Institutional Repository</condition>
-        <condition>Set statement must accompany article (see policy link)</condition>
-        <condition>If mandated by funding agency may deposit authors post-print in PubMed Central, 6 or 12 months after publication</condition>
-        <condition>Papers submitted after 29th March 2011, funded by NIH, HHMI, MRC or Wellcome Trust, will be automatically deposited in PubMed Central if requested at submission</condition>
-        <condition>Publisher's version/PDF may only be used, if part of a thesis/ dissertation within a thesis repository</condition>
-        <condition>Must link to publisher version</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.jimmunol.org/info/authorchoice</paidaccessurl>
-        <paidaccessname>Author Choice</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Copyright Transfer</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/authors#CopyrightTransfer</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Funding Body Public Access Policy:: FAQ</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/PublicAccessFAQ</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Prior Publication</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/journalpolicies#PriorPublication</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2006-10-01 00:00:00</dateadded>
-      <dateupdated>2017-02-24 10:57:28</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "1550-6606",
                     "rek_issn_id": 5088122,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 1,
                     "rek_issn_pid": "UQ:330391",
                     "rek_issn_xsdmf_id": null,
@@ -2393,112 +1955,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 15:14:27",
                       "srm_id": 6130,
                       "srm_issn": "0022-1767",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Journal of Immunology",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0022-1767</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:16:14:27</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Journal of Immunology</jtitle>
-      <issn>0022-1767</issn>
-      <zetocpub>American Association of Immunologists</zetocpub>
-      <romeopub>American Association of Immunologists</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"214\\">
-      <name>American Association of Immunologists</name>
-      <alias />
-      <homeurl>http://www.aai.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Author's pre-print on websits or bioRxiv</condition>
-        <condition>Author's post-print on personal website only</condition>
-        <condition>Author's post-print not allowed on Institutional Repository</condition>
-        <condition>Set statement must accompany article (see policy link)</condition>
-        <condition>If mandated by funding agency may deposit authors post-print in PubMed Central, 6 or 12 months after publication</condition>
-        <condition>Papers submitted after 29th March 2011, funded by NIH, HHMI, MRC or Wellcome Trust, will be automatically deposited in PubMed Central if requested at submission</condition>
-        <condition>Publisher's version/PDF may only be used, if part of a thesis/ dissertation within a thesis repository</condition>
-        <condition>Must link to publisher version</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.jimmunol.org/info/authorchoice</paidaccessurl>
-        <paidaccessname>Author Choice</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Copyright Transfer</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/authors#CopyrightTransfer</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Funding Body Public Access Policy:: FAQ</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/PublicAccessFAQ</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Prior Publication</copyrightlinktext>
-          <copyrightlinkurl>http://www.jimmunol.org/info/journalpolicies#PriorPublication</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2006-10-01 00:00:00</dateadded>
-      <dateupdated>2017-02-24 10:57:28</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "0022-1767",
                     "rek_issn_id": 5088123,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 2,
                     "rek_issn_pid": "UQ:330391",
                     "rek_issn_xsdmf_id": null,

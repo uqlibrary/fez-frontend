@@ -20,7 +20,7 @@ describe('Journal Name Component test ', () => {
     it('should render with journal article', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
+        // expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
         expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
     });
 
@@ -32,8 +32,8 @@ describe('Journal Name Component test ', () => {
     it('should render without era journal listed', () => {
         delete testJournalArticle.fez_record_search_key_issn[0].fez_journal_issns;
         const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.eraYearListed').length).toEqual(0);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render without sherpa romeo', () => {
