@@ -118,6 +118,61 @@ describe('DataStreamSecuritySelector component', () => {
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
     });
 
+    it('should hide derivative datastreams', () => {
+        const { asFragment } = setup({
+            meta: {
+                initial: {
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'preview_test8.txt',
+                        },
+                        {
+                            dsi_dsid: 'testA.txt',
+                        },
+                    ],
+                },
+            },
+            collections: [
+                {
+                    parent: {
+                        rek_datastream_policy: 1,
+                    },
+                },
+                {
+                    rek_pid: 'UQ:111111',
+                },
+            ],
+        });
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should show non-derivative datastreams', () => {
+        const { asFragment } = setup({
+            meta: {
+                initial: {
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'test9.txt',
+                        },
+                    ],
+                },
+            },
+            collections: [
+                {
+                    parent: {
+                        rek_datastream_policy: 1,
+                    },
+                },
+                {
+                    rek_pid: 'UQ:111111',
+                },
+            ],
+        });
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+
     describe('isSame callback function', () => {
         it('should return true if current props are same as previous props', () => {
             expect(isSame({ disabled: true }, { disabled: true })).toBeTruthy();

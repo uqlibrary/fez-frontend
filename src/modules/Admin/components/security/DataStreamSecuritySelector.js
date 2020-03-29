@@ -30,10 +30,15 @@ export const DataStreamSecuritySelector = ({
 }) => {
     const { formValues } = useFormValuesContext();
 
+    const canDisplay = dataStream => {
+        return !isDerivative(dataStream) && !isAudioXT(dataStream);
+    };
+
     const [initialDataStreams] = useState(() => dataStreams.toJS());
-    const [dataStreamSecurity, setDataStreamSecurity] = useState(() =>
-        !!formValues.dataStreams ? formValues.dataStreams : dataStreams.toJS(),
-    );
+    const [dataStreamSecurity, setDataStreamSecurity] = useState(() => {
+        const result = !!formValues.dataStreams ? formValues.dataStreams : dataStreams.toJS();
+        return result.filter(dataStream => canDisplay(dataStream));
+    });
     const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
     const [mostSecureParentDatastreamSecurity] = useState(() =>
@@ -50,13 +55,6 @@ export const DataStreamSecuritySelector = ({
         setDataStreamIndexToChange(index);
         setDataStreamToChange(dataStream);
     }, []);
-
-    const isDisabled = dataStream => {
-        if (!!dataStream.disabled) {
-            return true;
-        }
-        return isDerivative(dataStream) || isAudioXT(dataStream);
-    };
 
     useEffect(() => {
         if (dataStreamIndexToChange >= 0) {
@@ -82,19 +80,24 @@ export const DataStreamSecuritySelector = ({
                     container
                     spacing={32}
                 >
-                    {dataStreamSecurity.map((dataStream, index) => (
-                        <DataStreamSecurityItem
-                            classes={classes}
-                            dataStream={dataStream}
-                            disabled={!!disabled || isDisabled(dataStream)}
-                            index={index}
-                            inheritedSecurity={mostSecureParentDatastreamSecurity}
-                            initialDataStream={initialDataStreams[index]}
-                            key={dataStream.dsi_dsid}
-                            onSecurityChange={handleDataStreamSecurityChange}
-                            policyDropdownLabel={text.overridePolicyPrompt}
-                        />
-                    ))}
+                    {dataStreamSecurity.length > 0 &&
+                        dataStreamSecurity.map((dataStream, index) => (
+                            <DataStreamSecurityItem
+                                classes={classes}
+                                dataStream={dataStream}
+                                disabled={!!disabled}
+                                index={index}
+                                inheritedSecurity={mostSecureParentDatastreamSecurity}
+                                initialDataStream={initialDataStreams[index]}
+                                key={dataStream.dsi_dsid}
+                                onSecurityChange={handleDataStreamSecurityChange}
+                                policyDropdownLabel={text.overridePolicyPrompt}
+                            />
+                        ))}
+                    {dataStreamSecurity.length === 0 && (
+                        /* istanbul ignore next */
+                        <Typography variant="body2">{text.noDataStreams}</Typography>
+                    )}
                 </Grid>
             </div>
         </React.Fragment>

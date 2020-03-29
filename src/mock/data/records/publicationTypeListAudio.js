@@ -303,7 +303,7 @@ export default {
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 655953,
-                "rek_oa_status_pid": "UQ:048b923",
+                "rek_oa_status_pid": "UQ:358319",
                 "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453696,
                 "rek_oa_status_lookup": "File (Author Post-print)"

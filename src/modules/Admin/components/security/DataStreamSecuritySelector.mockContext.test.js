@@ -115,23 +115,6 @@ describe('DataStreamSecuritySelector handling disabled component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should display datastreams correctly as disabled on derivative file', () => {
-        useFormValuesContext.mockImplementation(() =>
-            contextSetup({
-                formValues: {
-                    dataStreams: new List([
-                        {
-                            dsi_dsid: 'preview_test8.txt',
-                        },
-                    ]),
-                },
-            }),
-        );
-        const wrapper = setup();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should display datastreams correctly as disabled when props set to disabled', () => {
         useFormValuesContext.mockImplementation(() =>
             contextSetup({
