@@ -1,5 +1,3 @@
-import uq6de77b0 from './incompleteNTRORecordUqrdav10';
-
 export default {
     "total": 6,
     "per_page": 10,

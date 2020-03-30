@@ -390,3 +390,6 @@ export const viewRecordsConfig = {
         },
     ],
 };
+
+export const STATE_ADDED = 'A';
+export const STATE_DELETED = 'D';

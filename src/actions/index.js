@@ -8,6 +8,7 @@ export * from './publications';
 export * from './claimPublications';
 export * from './exportPublications';
 export * from './fixRecord';
+export * from './issnLinks';
 export * from './viewRecord';
 export * from './controlledVocabularies';
 export * from './newsFeed';

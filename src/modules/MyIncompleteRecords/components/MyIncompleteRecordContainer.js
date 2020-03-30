@@ -11,6 +11,7 @@ import {
     NTRO_SUBTYPES,
     ORG_TYPE_NOT_SET,
 } from 'config/general';
+import { isAdded } from 'helpers/datastreams';
 import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
 import { authorAffiliationRequired } from 'config/validation';
@@ -220,7 +221,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
         const {
             files: { blacklist },
         } = incompleteRecord;
-        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && dataStream.dsi_state === 'A';
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && isAdded(dataStream);
     };
 
     render() {

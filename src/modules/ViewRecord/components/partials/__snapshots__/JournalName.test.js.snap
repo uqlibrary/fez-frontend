@@ -2184,11 +2184,11 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
               </span>
               <span>
                 <WithStyles(ExternalLink)
-                  aria-label="View publisher's open access policy in an new window"
+                  aria-label="Check publisher's OA archiving policy in a new window"
                   href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                 >
                   <ExternalLink
-                    aria-label="View publisher's open access policy in an new window"
+                    aria-label="Check publisher's OA archiving policy in a new window"
                     className=""
                     classes={
                       Object {
@@ -2636,7 +2636,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                     }
                   >
                     <a
-                      aria-label="View publisher's open access policy in an new window"
+                      aria-label="Check publisher's OA archiving policy in a new window"
                       className=" ExternalLink-externalLink-1"
                       href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                       rel="noopener noreferrer"
@@ -4767,11 +4767,11 @@ exports[`Journal Name Component test  should render without era journal listed 1
               </Link>
               <span>
                 <WithStyles(ExternalLink)
-                  aria-label="View publisher's open access policy in an new window"
+                  aria-label="Check publisher's OA archiving policy in a new window"
                   href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                 >
                   <ExternalLink
-                    aria-label="View publisher's open access policy in an new window"
+                    aria-label="Check publisher's OA archiving policy in a new window"
                     className=""
                     classes={
                       Object {
@@ -5219,7 +5219,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
                     }
                   >
                     <a
-                      aria-label="View publisher's open access policy in an new window"
+                      aria-label="Check publisher's OA archiving policy in a new window"
                       className=" ExternalLink-externalLink-1"
                       href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
                       rel="noopener noreferrer"

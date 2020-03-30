@@ -1,6 +1,5 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails, uqrdav10, uqagrinb } from './account';
 export {
-    collectionRecord,
     collections,
     collectionsByCommunity,
     communityRecord,
@@ -12,8 +11,6 @@ export {
     incompleteNTROlist,
     incompleteNTROrecord,
     incompleteNTRORecordUQ352045,
-    incompleteNTROrecordUqrdav10,
-    incompleteNTROrecordUqsbutl1,
     internalTitleSearchList,
     internalTitleSearchListNoResults,
     lookupToolIncites,
@@ -58,3 +55,5 @@ export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';
 export { batchImportDirectories } from './batchImportDirectories';
+export { sherpaRomeo } from './sherpaRomeo';
+export { ulrichs } from './ulrichs';

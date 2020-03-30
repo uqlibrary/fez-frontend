@@ -1,6 +1,7 @@
 import { loadPublicationsListActions, loadPublicationActions } from 'actions/actionTypes';
 import { openAccessConfig, viewRecordsConfig } from 'config';
 import moment from 'moment';
+import { isAdded } from 'helpers/datastreams';
 
 export const calculateOpenAccess = record => {
     const openAccessStatusId = !!record.fez_record_search_key_oa_status
@@ -42,9 +43,7 @@ export const calculateOpenAccess = record => {
         const allFiles =
             (record.fez_datastream_info || []).length > 0
                 ? record.fez_datastream_info.filter(
-                    item =>
-                        !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                          item.dsi_state === 'A',
+                    item => !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) && isAdded(item),
                 )
                 : [];
         const hasFiles = allFiles.length > 0;
@@ -55,7 +54,7 @@ export const calculateOpenAccess = record => {
                         !!item.dsi_embargo_date &&
                           moment(item.dsi_embargo_date).isAfter(moment()) &&
                           !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                          item.dsi_state === 'A',
+                          isAdded(item),
                 )
                 .sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];

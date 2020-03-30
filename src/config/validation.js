@@ -1,7 +1,9 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
+import { isAdded, isAudioXT } from 'helpers/datastreams';
 import Immutable from 'immutable';
-import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
+import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
+
 const moment = require('moment');
 
 // Max Length
@@ -325,10 +327,7 @@ export const getErrorAlertProps = ({
 export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream => {
     const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
     const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
-    const isAudioXT = !!(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0);
-    const validDsiState = dataStream.dsi_state === 'A';
-    const result = (!prefixMatch && !suffixMatch && !isAudioXT && validDsiState) || isAdmin;
-    return result;
+    return (!prefixMatch && !suffixMatch && !isAudioXT(dataStream) && isAdded(dataStream)) || isAdmin;
 };
 
 export const isAuthorOrEditorSelected = (data, isAdmin = false) => {

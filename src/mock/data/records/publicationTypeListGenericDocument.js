@@ -80,20 +80,20 @@ export default {
             "fez_record_search_key_isi_loc": null,
             "fez_record_search_key_keywords": [{
                 "rek_keywords_id": 30800253,
-                "rek_keywords_pid": "UQ:732833",
+                "rek_keywords_pid": "UQ:151480",
                 "rek_keywords_xsdmf_id": 7954,
                 "rek_keywords": "University of Queensland. Library",
                 "rek_keywords_order": 1
             }, {
                 "rek_keywords_id": 30800256,
-                "rek_keywords_pid": "UQ:732833",
+                "rek_keywords_pid": "UQ:151480",
                 "rek_keywords_xsdmf_id": 7954,
                 "rek_keywords": "University of Queensland. Library -- Exhibitions",
                 "rek_keywords_order": 2
             }],
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 694142,
-                "rek_oa_status_pid": "UQ:6de77b0",
+                "rek_oa_status_pid": "UQ:151480",
                 "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453698,
                 "rek_oa_status_lookup": "Not Open Access"

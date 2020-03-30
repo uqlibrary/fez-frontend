@@ -221,7 +221,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         const mockRecords = [
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
-            { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.UQ716942uqagrinb },
@@ -263,8 +262,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        const vocabId = config.url.substring(config.url.indexOf('=') + 1);
-        return [200, mockData.vocabulariesList[vocabId]];
+        const vocabIds = config.url
+            .substring(config.url.indexOf('=') + 1)
+            .split(',')
+            .map(vocabId => parseInt(vocabId));
+        let data = [];
+        const { vocabulariesList } = mockData;
+        vocabIds.forEach(vocabId => {
+            !!vocabulariesList[vocabId] && data.push(...vocabulariesList[vocabId].data);
+        });
+        return [200, { total: data.length, data }];
     })
     .onGet(
         new RegExp(
@@ -291,9 +298,47 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, { data: { rek_pid: 'UQ:1111111' } }); // TODO: add actual record to data return!!!
-// .reply(500, {message: 'error - failed NEW_RECORD_API'});
-// .reply(403, {message: 'Session expired'});
+    .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
+    // .reply(500, {message: 'error - failed NEW_RECORD_API'})
+    // .reply(403, {message: 'Session expired'})
+    .onPost(routes.ISSN_LINKS_API({ type: 'sherpa' }).apiUrl)
+    .reply(config => {
+        const issn = JSON.parse(config.data).issn;
+        const data = [];
+        switch (issn) {
+            case '0000-0000':
+                data.push({
+                    ...mockData.sherpaRomeo[1],
+                    srm_issn: issn,
+                });
+                break;
+            case '1111-1111':
+            case '2222-2222':
+                break;
+            default:
+                const mockSherpa = mockData.sherpaRomeo.find(mockEntry => mockEntry.srm_issn === issn);
+                data.push(
+                    mockSherpa || {
+                        ...mockData.sherpaRomeo[0],
+                        srm_issn: issn,
+                    },
+                );
+        }
+        return [200, { data }];
+    })
+    .onPost(routes.ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl)
+    .reply(config => {
+        const issn = JSON.parse(config.data).issn;
+        const data = [];
+        if (!issn.match(/^1111-1111|2222-2222$/)) {
+            data.push({
+                ...mockData.ulrichs[0],
+                ulr_issn: issn,
+                ulr_title_id: issn.replace('-', ''),
+            });
+        }
+        return [200, { data }];
+    });
 
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })

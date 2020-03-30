@@ -354,6 +354,7 @@ exports[`SecurityCard component should render security card correctly for record
             text={
               Object {
                 "cardTitle": [Function],
+                "noDataStreams": "No datastreams to display",
                 "overridePolicyPrompt": "Security policy for this file to override inheritance",
                 "overridePrompt": "Override datastream security policy details",
               }
@@ -444,6 +445,7 @@ exports[`SecurityCard component should render security card correctly for record
                 "cardTitle": [Function],
                 "dataStream": Object {
                   "cardTitle": [Function],
+                  "noDataStreams": "No datastreams to display",
                   "overridePolicyPrompt": "Security policy for this file to override inheritance",
                   "overridePrompt": "Override datastream security policy details",
                 },
@@ -537,6 +539,7 @@ exports[`SecurityCard component should render security card correctly for record
             text={
               Object {
                 "cardTitle": [Function],
+                "noDataStreams": "No datastreams to display",
                 "overridePolicyPrompt": "Security policy for this file to override inheritance",
                 "overridePrompt": "Override datastream security policy details",
               }
@@ -627,6 +630,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 "cardTitle": [Function],
                 "dataStream": Object {
                   "cardTitle": [Function],
+                  "noDataStreams": "No datastreams to display",
                   "overridePolicyPrompt": "Security policy for this file to override inheritance",
                   "overridePrompt": "Override datastream security policy details",
                 },
@@ -720,6 +724,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             text={
               Object {
                 "cardTitle": [Function],
+                "noDataStreams": "No datastreams to display",
                 "overridePolicyPrompt": "Security policy for this file to override inheritance",
                 "overridePrompt": "Override datastream security policy details",
               }

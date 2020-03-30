@@ -26,6 +26,11 @@
     "sinon": true,
     "toJson": true
   },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
   "rules": {
     "no-var": 2,                     // http://eslint.org/docs/rules/no-var
     "prefer-const": 2,               // http://eslint.org/docs/rules/prefer-const

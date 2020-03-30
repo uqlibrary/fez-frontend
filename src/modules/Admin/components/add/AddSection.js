@@ -149,7 +149,6 @@ AddSection.propTypes = {
     publicationSubtype: PropTypes.string,
     hasSubtypes: PropTypes.bool,
     formValues: PropTypes.any,
-    location: PropTypes.object,
     history: PropTypes.object,
     actions: PropTypes.object,
     onCreate: PropTypes.func,
