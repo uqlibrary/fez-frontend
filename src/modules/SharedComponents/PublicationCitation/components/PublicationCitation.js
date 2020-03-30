@@ -13,8 +13,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 import { locale } from 'locale';
 import { routes, publicationTypes } from 'config';
-import { RECORD_ACTION_URLS as options } from 'config/general';
-import { ADMIN_EDIT_LEGACY_LINK } from 'config/admin/adminInterface';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -305,14 +303,6 @@ export class PublicationCitation extends PureComponent {
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
-        const adminActions = [...options];
-        if (!userHasNewAdminEdit) {
-            const legacyEditUrl = ADMIN_EDIT_LEGACY_LINK.url(
-                publication.rek_pid,
-                publication.rek_object_type_lookup && publication.rek_object_type_lookup.toLowerCase(),
-            );
-            adminActions[0].url = () => legacyEditUrl;
-        }
         return (
             <div className="publicationCitation">
                 <Grid container spacing={0}>
@@ -407,7 +397,12 @@ export class PublicationCitation extends PureComponent {
                                                         (location.hash && location.hash.replace('#', '')) ||
                                                         `${location.pathname}${location.search}`
                                                     }
-                                                    options={adminActions}
+                                                    recordType={
+                                                        (publication.rek_object_type_lookup &&
+                                                            publication.rek_object_type_lookup.toLowerCase()) ||
+                                                        ''
+                                                    }
+                                                    {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>
                                         )}

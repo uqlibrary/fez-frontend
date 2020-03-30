@@ -1504,6 +1504,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 "rek_herdc_notes": null,
                 "rek_herdc_notes_xsdmf_id": null,
                 "rek_object_type": 3,
+                "rek_object_type_lookup": "Record",
                 "rek_object_type_xsdmf_id": 3674,
                 "rek_pid": "UQ:41878",
                 "rek_pubmed_doc_type": null,
@@ -1935,6 +1936,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                     "rek_herdc_notes": null,
                     "rek_herdc_notes_xsdmf_id": null,
                     "rek_object_type": 3,
+                    "rek_object_type_lookup": "Record",
                     "rek_object_type_xsdmf_id": 3674,
                     "rek_pid": "UQ:41878",
                     "rek_pubmed_doc_type": null,
@@ -9836,76 +9838,4 @@ exports[`PublicationCitation  should return message indicating unavailability of
 <div>
   Citation display not available for 
 </div>
-`;
-
-exports[`PublicationCitation  should show admin actions on unpublished buffer/search records page for admins 1`] = `
-<Memo(AdminActions)
-  navigatedFrom="/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc"
-  options={
-    Array [
-      Object {
-        "inApp": true,
-        "label": "Edit selected record",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "Edit author affiliations",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "Edit security for selected record",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "Delete selected record",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "More options",
-        "url": [Function],
-      },
-    ]
-  }
-  pid="UQ:41878"
-/>
-`;
-
-exports[`PublicationCitation  should show admin actions on unpublished buffer/search records page for admins 2`] = `
-<Memo(AdminActions)
-  navigatedFrom="/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc"
-  options={
-    Array [
-      Object {
-        "inApp": true,
-        "label": "Edit selected record",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "Edit author affiliations",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "Edit security for selected record",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "Delete selected record",
-        "url": [Function],
-      },
-      Object {
-        "inApp": true,
-        "label": "More options",
-        "url": [Function],
-      },
-    ]
-  }
-  pid="UQ:41878"
-/>
 `;

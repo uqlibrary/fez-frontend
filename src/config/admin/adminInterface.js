@@ -22,9 +22,6 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
-    APP_URL,
-    STAGING_URL,
-    PATH_PREFIX,
 } from 'config/general';
 
 import {
@@ -64,41 +61,6 @@ export const USER_IDS_WITH_LEGACY_LINK = [
     'uqvasai',
     'uqawil42',
 ];
-
-const getLegacyEditUrl = (pid, type) => {
-    let wftID;
-    let xdisID;
-    let viewSlug;
-
-    switch (type) {
-        case 'community':
-            wftID = 291;
-            xdisID = 11;
-            viewSlug = 'community';
-            break;
-        case 'collection':
-            wftID = 290;
-            xdisID = 9;
-            viewSlug = 'collection';
-            break;
-        default:
-            wftID = 289;
-            xdisID = 179;
-            viewSlug = 'view';
-            break;
-    }
-
-    // Use staging URL for non-prod sites
-    const prefix = APP_URL.indexOf('https://espace.') === 0 ? `${APP_URL}${PATH_PREFIX}` : STAGING_URL;
-
-    const href = encodeURIComponent(`/${viewSlug}/${pid}`);
-    return `${prefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
-};
-
-export const ADMIN_EDIT_LEGACY_LINK = {
-    label: 'Edit in legacy',
-    url: getLegacyEditUrl,
-};
 
 export default {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: audioFields,
