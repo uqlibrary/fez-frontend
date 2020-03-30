@@ -80,16 +80,7 @@ export default {
             groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
-    ntro: () => [
-        {
-            title: 'Scale/Significance of work & Creator research statement',
-            groups: [['significanceAndContributionStatement']],
-        },
-        {
-            title: 'Quality indicators',
-            groups: [['qualityIndicators']],
-        },
-    ],
+    ntro: () => [],
 };
 
 export const validateReferenceEntry = (

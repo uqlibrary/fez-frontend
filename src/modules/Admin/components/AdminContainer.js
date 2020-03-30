@@ -4,12 +4,7 @@ import Cookies from 'js-cookie';
 import Immutable from 'immutable';
 
 import locale from 'locale/pages';
-import {
-    NTRO_SUBTYPES,
-    PUBLICATION_TYPE_MANUSCRIPT,
-    PUBLICATION_TYPE_THESIS,
-    PUBLICATION_TYPE_REFERENCE_ENTRY,
-} from 'config/general';
+import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
 
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
@@ -185,10 +180,7 @@ export const AdminContainer = ({
                                     component: NtroSection,
                                     activated:
                                         isActivated() &&
-                                        (NTRO_SUBTYPES.includes(recordToView && recordToView.rek_subtype) ||
-                                            [PUBLICATION_TYPE_REFERENCE_ENTRY].includes(
-                                                recordToView && recordToView.rek_display_type,
-                                            )),
+                                        NTRO_SUBTYPES.includes(recordToView && recordToView.rek_subtype),
                                 },
                                 grantInformation: {
                                     component: GrantInformationSection,

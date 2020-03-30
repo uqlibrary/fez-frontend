@@ -22,7 +22,6 @@ import {
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_PATENT,
     PUBLICATION_TYPE_PREPRINT,
-    PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
@@ -1627,9 +1626,6 @@ export default {
             fez_record_search_key_publisher: () => ({
                 label: 'Patent owner',
             }),
-        },
-        [PUBLICATION_TYPE_REFERENCE_ENTRY]: {
-            authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_RESEARCH_REPORT]: {
             fez_record_search_key_place_of_publication: () => ({
