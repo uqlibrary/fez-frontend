@@ -4733,3 +4733,114 @@ exports[`Media Preview Component  should render when video fails with no error c
   </Hidden>
 </Fragment>
 `;
+
+exports[`Media Preview Component  should show the preview onload 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container"
+    style="margin-top: 32px;"
+  >
+    <span />
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h6"
+        id="medie-preview-title"
+      >
+        Image preview
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item"
+    >
+      <div
+        id="media-preview-buttons-larger-screen"
+        style="padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-justify-xs-flex-end"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+              id="open-original-file"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Open original file in a new window
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+              id="open-web-file"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Open web version file in a new window
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-fullWidth"
+              id="close-preview"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Close
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto"
+    >
+      <img
+        alt="https://test.com/test.jpg"
+        id="image-preview"
+        src="https://test.com/preview_test.jpg"
+        style="border: 5px solid black; max-width: 100%; margin-top: 32px; margin-bottom: 32px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    />
+  </div>
+</DocumentFragment>
+`;
