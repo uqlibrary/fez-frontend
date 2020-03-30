@@ -6,6 +6,8 @@
 @import './components';
 // Print styles
 @import "./print";
+// Browser update script styles
+@import './browserUpdate';
 
 html, body {
   overflow: hidden;

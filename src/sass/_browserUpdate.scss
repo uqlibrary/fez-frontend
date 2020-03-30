@@ -1,0 +1,78 @@
+.buorg {
+  position: absolute;
+  position: fixed;
+  z-index: 111111;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 70px !important;
+  border-bottom:none !important;
+  text-align: center;
+  color: #FFF !important;
+  background-color: red !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-size: 13px !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  animation: 1s ease-out 0s buorgfly
+}
+
+.buorg-pad {
+  padding: 12px;
+  line-height: 1.7em;
+}
+
+.buorg-buttons {
+  margin-top: 4px !important;
+  display: block;
+  text-align: center;
+}
+
+#buorgig, #buorgul, #buorgpermanent {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  padding: 1px 10px;
+  border-radius: 4px;
+  font-weight: normal;
+  background: #5ab400;
+  white-space: nowrap;
+  margin: 0 2px;
+  display: inline-block;
+}
+
+#buorgig {
+  background-color: #333333 !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .buorg div {
+    padding: 5px 12px 5px 9px;
+    line-height: 1.3em;
+  }
+}
+
+@keyframes buorgfly {
+  from {
+    opacity: 0;
+    transform: translateY(-50px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+.buorg-fadeout {
+  transition: visibility 0s 2.5s, opacity 2s ease-out .5s !important;
+}
+
+.buorg-icon {
+  width: 22px;
+  height: 16px;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em;
+  display: inline-block;
+  background: no-repeat 0px center;
+}
