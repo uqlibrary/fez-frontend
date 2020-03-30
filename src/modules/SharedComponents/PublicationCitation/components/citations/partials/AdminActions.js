@@ -37,7 +37,7 @@ export const getLegacyEditUrl = (pid, type, urlPrefix) => {
     return `${prefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
 };
 
-export const navigateToUrl = (uri, target, navigatedFrom = '') => () => {
+export const navigateToUrl = (uri, target, navigatedFrom) => () => {
     let fullUri = uri;
     if (navigatedFrom) {
         const queryStringGlue = uri.indexOf('?') > -1 ? '&' : '?';
@@ -48,7 +48,7 @@ export const navigateToUrl = (uri, target, navigatedFrom = '') => () => {
 
 export const AdminActions = ({
     pid,
-    navigatedFrom,
+    navigatedFrom = '',
     userHasNewAdminEdit = false,
     recordType,
     adminActions = [...defaultActions],
@@ -69,10 +69,10 @@ export const AdminActions = ({
         const linkTarget = action.inApp ? '_self' : '_blank';
         const isEditUrl = index === 0;
         const url =
-            userHasNewAdminEdit && isEditUrl
+            isEditUrl && userHasNewAdminEdit
                 ? action.url(pid)
                 : getLegacyEditUrl(pid, recordType, `${APP_URL}${PATH_PREFIX}`);
-        const clickHandler = navigateToUrl(url, linkTarget, isEditUrl && navigatedFrom);
+        const clickHandler = navigateToUrl(url, linkTarget, isEditUrl && userHasNewAdminEdit && navigatedFrom);
         return {
             label: action.label,
             clickHandler,

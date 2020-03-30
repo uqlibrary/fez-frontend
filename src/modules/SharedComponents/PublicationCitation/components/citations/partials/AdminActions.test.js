@@ -88,6 +88,13 @@ describe('AdminActions component', () => {
             `${APP_URL}admin/edit/UQ:111111?tab=security&navigatedFrom=%2Frecords%2Fmine`,
             '_blank',
         );
+        windowOpenSpy.mockClear();
+
+        // missing referral
+        const legacyUrl = `${APP_URL}workflow/update.php?pid=UQ:3A111111&cat=select_workflow&xdis_id=11&wft_id=291&href=%2Fcommunity%2FUQ%3A111111`;
+        navigateToUrl(legacyUrl, '_self', false)();
+        expect(global.window.open).toHaveBeenCalledTimes(1);
+        expect(global.window.open).toHaveBeenCalledWith(legacyUrl, '_self');
     });
 
     it('should open the new edit url if user is whitelisted', () => {
