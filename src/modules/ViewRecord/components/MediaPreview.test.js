@@ -1,6 +1,6 @@
 import React from 'react';
 import MediaPreview from './MediaPreview';
-import { rtlRender, fireEvent, waitForElement, act } from 'test-utils';
+import { rtlRender, fireEvent, act } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
 
 function createMatchMedia(width) {
