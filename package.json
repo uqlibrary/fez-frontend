@@ -133,6 +133,7 @@
         "axios": "^0.18.1",
         "axios-cache-adapter": "^2.0.0",
         "babel-loader": "^8.0.0",
+        "browser-update": "^3.3.13",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
         "caniuse-lite": "^1.0.30001006",
