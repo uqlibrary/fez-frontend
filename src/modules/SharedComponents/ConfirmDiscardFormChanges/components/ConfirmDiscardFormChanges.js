@@ -1,38 +1,38 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 
 function confirmDiscardFormChanges(WrappedComponent) {
-    class ConfirmDiscardFormChanges extends React.Component {
-        static propTypes = {
-            dirty: PropTypes.bool,
-            submitSucceeded: PropTypes.bool,
-        };
+    const ConfirmDiscardFormChanges = props => {
+        const { dirty, submitSucceeded } = props;
 
-        static defaultProps = {
-            dirty: false,
-            submitSucceeded: false,
-        };
-
-        componentDidUpdate() {
-            this.promptDiscardFormChanges(this.props.dirty && !this.props.submitSucceeded);
-        }
-
-        componentWillUnmount() {
-            window.onbeforeunload = null;
-        }
-
-        getDiscardFormChangesConfirmationLocale = () =>
+        const getDiscardFormChangesConfirmationLocale = () =>
             locale.global.discardFormChangesConfirmation.confirmationMessage;
 
-        promptDiscardFormChanges(isDirty = false) {
-            window.onbeforeunload = isDirty && this.getDiscardFormChangesConfirmationLocale;
-        }
+        const promptDiscardFormChanges = useCallback((isDirty = false) => {
+            window.onbeforeunload = isDirty && getDiscardFormChangesConfirmationLocale;
+        }, []);
 
-        render() {
-            return <WrappedComponent {...this.props} />;
-        }
-    }
+        useEffect(() => {
+            promptDiscardFormChanges(dirty && !submitSucceeded);
+
+            return () => {
+                window.onbeforeunload = null;
+            };
+        }, [dirty, promptDiscardFormChanges, submitSucceeded]);
+
+        return <WrappedComponent {...props} />;
+    };
+
+    ConfirmDiscardFormChanges.propTypes = {
+        dirty: PropTypes.bool,
+        submitSucceeded: PropTypes.bool,
+    };
+
+    ConfirmDiscardFormChanges.defaultProps = {
+        dirty: false,
+        submitSucceeded: false,
+    };
 
     return ConfirmDiscardFormChanges;
 }

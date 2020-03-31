@@ -19,10 +19,8 @@ export const ThesisSubmission = componentProps => (
 export const SbsSubmission = componentProps => (
     <Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />
 );
-export const ViewRecord = () => <Async load={import('modules/ViewRecord/containers/ViewRecord')} />;
-export const AddDataCollection = () => (
-    <Async load={import('modules/AddDataCollection/containers/AddDataCollection')} />
-);
+export const ViewRecord = React.lazy(() => import('modules/ViewRecord/containers/ViewRecord'));
+export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const CollectionForm = () => <Async load={import('modules/Admin/CollectionForm/containers/CollectionForm')} />;
 export const CommunityForm = () => <Async load={import('modules/Admin/CommunityForm/containers/CommunityForm')} />;
 export const ThirdPartyLookupTool = () => (

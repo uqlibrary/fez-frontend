@@ -8,6 +8,7 @@ import { isFileUrl } from 'config/routes';
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { ScrollTop } from 'modules/SharedComponents/ScrollTop';
+import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -409,11 +410,13 @@ export class AppClass extends PureComponent {
                                 account: { ...this.props.account, ...this.props.author, ...this.props.authorDetails },
                             }}
                         >
-                            <Switch>
-                                {routesConfig.map((route, index) => (
-                                    <Route key={`route_${index}`} {...route} />
-                                ))}
-                            </Switch>
+                            <React.Suspense fallback={<ContentLoader message="Loading content" />}>
+                                <Switch>
+                                    {routesConfig.map((route, index) => (
+                                        <Route key={`route_${index}`} {...route} />
+                                    ))}
+                                </Switch>
+                            </React.Suspense>
                         </AccountContext.Provider>
                     )}
                 </div>
