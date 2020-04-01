@@ -13,7 +13,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 import { locale } from 'locale';
 import { routes, publicationTypes } from 'config';
-import { RECORD_ACTION_URLS as options } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -99,6 +98,7 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         showSources: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
+        userHasNewAdminEdit: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -115,6 +115,7 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: false,
         showSources: false,
         showUnpublishedBufferFields: false,
+        userHasNewAdminEdit: false,
     };
 
     constructor(props) {
@@ -298,6 +299,7 @@ export class PublicationCitation extends PureComponent {
             showSourceCountIcon,
             showSources,
             showUnpublishedBufferFields,
+            userHasNewAdminEdit,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
@@ -395,7 +397,12 @@ export class PublicationCitation extends PureComponent {
                                                         (location.hash && location.hash.replace('#', '')) ||
                                                         `${location.pathname}${location.search}`
                                                     }
-                                                    options={options}
+                                                    recordType={
+                                                        (publication.rek_object_type_lookup &&
+                                                            publication.rek_object_type_lookup.toLowerCase()) ||
+                                                        ''
+                                                    }
+                                                    {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>
                                         )}

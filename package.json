@@ -70,6 +70,7 @@
         "babel-plugin-dynamic-import-node": "^2.3.0",
         "babel-plugin-istanbul": "^6.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+        "browser-update": "^3.3.13",
         "chalk": "2.4.1",
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",

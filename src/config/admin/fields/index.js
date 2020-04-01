@@ -19,6 +19,7 @@ export { default as manuscriptFields, validateManuscript } from './manuscriptFie
 export { default as newspaperArticleFields, validateNewspaperArticle } from './newspaperArticleFields';
 export { default as patentFields, validatePatent } from './patentFields';
 export { default as preprintFields, validatePreprint } from './preprintFields';
+export { default as referenceEntryFields, validateReferenceEntry } from './referenceEntryFields';
 export { default as researchReportFields, validateResearchReport } from './researchReportFields';
 export { default as seminarPaperFields, validateSeminarPaper } from './seminarPaperFields';
 export { default as thesisFields, validateThesis } from './thesisFields';

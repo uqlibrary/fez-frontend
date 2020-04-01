@@ -2,14 +2,7 @@ import locale from 'locale/components';
 import moment from 'moment';
 const converter = require('number-to-words');
 
-const getValue = value => (typeof value !== 'undefined' && !!value ? value : null);
-
-const getKeyValue = value => {
-    if (process.env.NODE_ENV === 'production') {
-        return '?key=' + value + '&';
-    }
-    return '?';
-};
+const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${value}&` : '?');
 
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
@@ -24,14 +17,15 @@ export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 
 // URLS - values are set in webpack build
-export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
-export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
+export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
+export const APP_URL = process.env.APP_URL || STAGING_URL;
 
-export const AUTH_URL_LOGIN = getValue(process.env.AUTH_LOGIN_URL) || 'https://fez-staging.library.uq.edu.au/login.php';
-export const AUTH_URL_LOGOUT = getValue(process.env.AUTH_LOGOUT_URL) || 'https://auth.library.uq.edu.au/logout';
+export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
+export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
-export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.org';
-export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
+export const ORCID_BASE_URL = process.env.ORCID_URL || 'http://orcid.org';
+export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
@@ -119,6 +113,8 @@ export const DOCUMENT_TYPE_SEMINAR_PAPER = 'Seminar Paper';
 export const DOCUMENT_TYPE_THESIS = 'Thesis';
 export const DOCUMENT_TYPE_VIDEO_DOCUMENT = 'Video Document';
 export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
+
+export const DOCUMENT_TYPES_EDIT_ONLY = [PUBLICATION_TYPE_REFERENCE_ENTRY];
 
 export const DOCUMENT_TYPES_LOOKUP = {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: DOCUMENT_TYPE_AUDIO_DOCUMENT,
@@ -1098,34 +1094,34 @@ export const LANGUAGE = [
     { value: 'yid', text: 'Yiddish' },
 ];
 
-const pathPrefix = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 
 export const RECORD_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid => `${APP_URL}${pathPrefix}admin/edit/${pid}`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}`,
         inApp: true,
     },
     {
         label: 'Edit author affiliations',
         url: pid =>
-            `${APP_URL}${pathPrefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+            `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
         inApp: true,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: pid => `${APP_URL}${pathPrefix}admin/edit/${pid}?tab=security`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
     },
     {
         label: 'Delete selected record',
         url: pid =>
-            `${APP_URL}${pathPrefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
+            `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
         inApp: true,
     },
     {
         label: 'More options',
-        url: pid => `${APP_URL}${pathPrefix}workflow/list_workflows2.php?pid=${pid}`,
+        url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
     },
 ];

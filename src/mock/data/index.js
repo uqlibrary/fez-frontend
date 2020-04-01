@@ -1,6 +1,7 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails, uqrdav10, uqagrinb } from './account';
 export {
-    collections,
+    collectionRecord,
+    collectionSearchList,
     collectionsByCommunity,
     communityRecord,
     communitySearchList,
@@ -35,6 +36,7 @@ export {
     publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
     publicationTypeListPreprint,
+    publicationTypeListReferenceEntry,
     publicationTypeListResearchReport,
     publicationTypeListSeminarPaper,
     publicationTypeListThesis,

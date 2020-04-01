@@ -10,7 +10,6 @@ context('Request correction form', () => {
 
     beforeEach(() => {
         cy.visit('/records/UQ:67abc8/fix');
-        cy.closeUnsupported();
     });
 
     afterEach(() => {

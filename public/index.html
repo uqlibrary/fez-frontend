@@ -18,10 +18,14 @@
     <!-- End Google Tag Manager -->
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= htmlWebpackPlugin.options.gtm %>"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- build:injectBrowserIndicator -->
-<div id="react-root" class="layout-fill"><!-- build:injectLoadIndicator --></div>
-<!-- build:injectBrowserUpdateScript -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=<%= htmlWebpackPlugin.options.gtm %>"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden">
+
+    </iframe>
+</noscript>
+<div id="react-root" class="layout-fill"></div>
 </body>
 </html>

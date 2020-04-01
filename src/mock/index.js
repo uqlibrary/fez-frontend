@@ -148,7 +148,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.searchKeyList[config.params.search_key]];
         } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
-            return [200, mockData.collections];
+            return [200, mockData.collectionSearchList];
         } else if (config.params.key && config.params.key.rek_object_type === 1) {
             return [200, mockData.communitySearchList];
         } else if (
@@ -219,12 +219,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
+            { ...mockData.collectionRecord },
+            { ...mockData.communityRecord },
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.UQ716942uqagrinb },
             { ...mockTestingData.dataCollection },
+            ...mockData.collectionSearchList.data,
+            ...mockData.communitySearchList.data,
             ...mockData.incompleteNTROlist.data,
             ...mockData.myRecordsList.data,
             ...mockData.possibleUnclaimedList.data,
@@ -246,6 +250,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListNewspaperArticle.data,
             ...mockData.publicationTypeListPatent.data,
             ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListReferenceEntry.data,
             ...mockData.publicationTypeListResearchReport.data,
             ...mockData.publicationTypeListSeminarPaper.data,
             ...mockData.publicationTypeListThesis.data,
