@@ -74,26 +74,15 @@ export default {
     ntro: () => [],
 };
 
-export const validateJournal = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
-    { validationErrorsSummary: summary },
-) => ({
-    bibliographicSection: {
-        ...((!((bs || {}).fez_record_search_key_journal_name || {}).rek_journal_name && {
-            fez_record_search_key_journal_name: {
-                rek_journal_name: summary.rek_journal_name,
-            },
-        }) ||
-            {}),
-    },
+export const validateJournal = ({ filesSection: fs, authorsSection: as }, { validationErrorsSummary: summary }) => ({
     filesSection: {
         ...((fs || {}).rek_copyright !== 'on' && {
             rek_copyright: summary.rek_copyright,
         }),
     },
     authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
-            authors: summary.authors,
+        ...(((as || {}).editors || []).length === 0 && {
+            editors: summary.editors,
         }),
     },
 });
