@@ -35,6 +35,7 @@ export {
     publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
     publicationTypeListPreprint,
+    publicationTypeListReferenceEntry,
     publicationTypeListResearchReport,
     publicationTypeListSeminarPaper,
     publicationTypeListThesis,
