@@ -436,7 +436,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
             )
-            .reply(200, mockData.collections);
+            .reply(200, mockData.collectionSearchList);
 
         const expectedActions = [
             `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,

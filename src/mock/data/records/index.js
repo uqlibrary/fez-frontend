@@ -1,4 +1,5 @@
-export { default as collections } from './collections';
+export { default as collectionRecord } from './collectionRecord';
+export { default as collectionSearchList } from './collectionSearchList';
 export { default as collectionsByCommunity } from './collectionsByCommunity';
 export { default as communityRecord } from './communityRecord';
 export { default as communitySearchList } from './communitySearchList';

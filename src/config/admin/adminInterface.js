@@ -52,6 +52,18 @@ import {
     workingPaperFields,
 } from './fields';
 
+export const USER_IDS_WITH_LEGACY_LINK = [
+    'uqstaff',
+    'uqaheath',
+    'uqmmarr1',
+    'uqmfeen1',
+    'uqamartl',
+    'uqldegro',
+    'uqklane1',
+    'uqvasai',
+    'uqawil42',
+];
+
 export default {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: audioFields,
     [PUBLICATION_TYPE_BOOK]: bookFields,

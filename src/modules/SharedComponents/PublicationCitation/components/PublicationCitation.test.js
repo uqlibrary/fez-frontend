@@ -204,7 +204,9 @@ describe('PublicationCitation ', () => {
         expect(wrapper.instance().renderCitation(null)).toMatchSnapshot();
     });
 
-    it('should show admin actions on unpublished buffer/search records page for admins', () => {
+    it('should set referral URL for admin edit links with or without url fragments', () => {
+        const expectedRefUrl =
+            '/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
         const wrapper = setup({
             showAdminActions: true,
             hideCitationCounts: true,
@@ -214,7 +216,7 @@ describe('PublicationCitation ', () => {
                 pathname: '/espace/feature-example/', // hosted feature branch
             },
         });
-        expect(toJson(wrapper.find('Memo(AdminActions)'))).toMatchSnapshot();
+        expect(wrapper.find('Memo(AdminActions)').props().navigatedFrom).toBe(expectedRefUrl);
 
         const wrapper2 = setup({
             showAdminActions: true,
@@ -224,8 +226,12 @@ describe('PublicationCitation ', () => {
                 pathname: '/records/search',
                 search: '?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
             },
+            publication: {
+                ...mockRecordToFix,
+                rek_object_type_lookup: 'Record',
+            },
         });
-        expect(toJson(wrapper2.find('Memo(AdminActions)'))).toMatchSnapshot();
+        expect(wrapper2.find('Memo(AdminActions)').props().navigatedFrom).toBe(expectedRefUrl);
     });
 
     it('should render component with content indicators', () => {
@@ -248,7 +254,12 @@ describe('PublicationCitation ', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: publicationWithContentIndicators });
+        const wrapper = setup({
+            publication: {
+                ...publicationWithContentIndicators,
+                rek_object_type_lookup: 'Record',
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
