@@ -24,17 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('closeUnsupported', () => {
-    cy.get('#unsupportedBrowser.card button')
-        .then($button => {
-        // Button is only visible if browser is unsupported.
-            if ($button.filter(':visible').length) {
-                cy.wrap($button)
-                    .click();
-            }
-        });
-});
-
 Cypress.Commands.add('navToHomeFromMenu', locale => {
     const baseUrl = Cypress.config('baseUrl');
 

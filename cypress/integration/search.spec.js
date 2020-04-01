@@ -8,7 +8,6 @@ context('Search', () => {
 
     beforeEach(() => {
         cy.visit('/records/search');
-        // cy.closeUnsupported();
     });
 
     it('Doing a basic search to advanced search', () => {
@@ -204,7 +203,6 @@ context('Search', () => {
 
     //     it('should issue and handle API calls as expected when searching from homepage header', () => {
     //         cy.visit('/');
-    //         cy.closeUnsupported();
 
     //         cy.get('#simpleSearchField')
     //             .type('test1{enter}');
@@ -219,8 +217,6 @@ context('Search', () => {
     //             );
     //         cy.wait(['@searchAPICall']);
 
-    //         cy.closeUnsupported();
-
     //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
     //             .contains('Displaying works 1 to 5 of 5 total records.')
     //             .then(() => {
@@ -230,7 +226,6 @@ context('Search', () => {
 
     //     it('should issue and handle API calls as expected when changing the search query', () => {
     //         cy.visit('/#/records/search');
-    //         cy.closeUnsupported();
 
     //         cy.get('#simpleSearchField')
     //             .type('vaccination{enter}');
