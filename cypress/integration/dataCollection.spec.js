@@ -3,7 +3,7 @@ context('Data Collection form', () => {
 
     before(() => {
         cy.visit('/data-collections/add');
-        cy.closeUnsupported();
+        // cy.closeUnsupported();
     });
 
     beforeEach(() => {
@@ -275,7 +275,9 @@ context('Data Collection form', () => {
         cy.get('#Projectdescription')
             .type(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
-                { force: true },
+                {
+                    force: true,
+                },
             );
         cy.get('@submitButton')
             .should('not.be.disabled');
