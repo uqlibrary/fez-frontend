@@ -1,5 +1,4 @@
 import React from 'react';
-import Async from 'modules/SharedComponents/Async';
 
 // lazy loaded components
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
@@ -19,10 +18,7 @@ export const ThirdPartyLookupTool = React.lazy(() =>
     import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool'),
 );
 export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
-export const Prototype = () => <Async load={import('modules/Admin/containers/Admin')} />;
-export const Admin = componentProps => (
-    <Async load={import('modules/Admin/containers/Admin')} componentProps={componentProps} />
-);
+export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
