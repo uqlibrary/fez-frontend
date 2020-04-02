@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { getFormSyncErrors } from 'redux-form/immutable';
 import Immutable from 'immutable';
+import { loadRecordToFix, clearFixRecord } from 'actions';
 import { withRouter } from 'react-router-dom';
-import * as actions from 'actions';
 
 import { FORM_NAME } from '../components/MyIncompleteRecordForm';
 import MyIncompleteRecordContainer from '../components/MyIncompleteRecordContainer';
@@ -19,15 +18,14 @@ const mapStateToProps = state => {
     };
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch),
-    };
-}
+const mapDispatchToProps = dispatch => ({
+    loadRecordToFix: pid => dispatch(loadRecordToFix(pid)),
+    clearFixRecord: () => dispatch(clearFixRecord()),
+});
 
-let MyIncompleteRecordConnectedContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(MyIncompleteRecordContainer);
-MyIncompleteRecordConnectedContainer = withRouter(MyIncompleteRecordConnectedContainer);
-export default MyIncompleteRecordConnectedContainer;
+export default withRouter(
+    connect(
+        mapStateToProps,
+        mapDispatchToProps,
+    )(MyIncompleteRecordContainer),
+);

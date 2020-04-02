@@ -1,3 +1,4 @@
+import React from 'react';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
@@ -335,12 +336,9 @@ export const getRoutesConfig = ({
                 },
                 {
                     path: pathConfig.records.incompleteFix(pid),
-                    render: props =>
-                        components.MyIncompleteRecord({
-                            ...props,
-                            disableInitialGrants: true,
-                            disableDeleteAllGrants: true,
-                        }),
+                    render: props => (
+                        <components.MyIncompleteRecord {...props} disableInitialGrants disableDeleteAllGrants />
+                    ),
                     access: [roles.researcher, roles.admin],
                     exact: true,
                     pageTitle: locale.pages.incompletePublication.title,

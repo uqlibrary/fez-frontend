@@ -2,14 +2,10 @@ import React from 'react';
 import Async from 'modules/SharedComponents/Async';
 
 // lazy loaded components
-export const FixRecord = () => <Async load={import('modules/FixRecord/containers/FixRecord')} />;
-export const ClaimRecord = () => <Async load={import('modules/ClaimRecord/containers/ClaimRecord')} />;
-export const PossiblyMyRecords = () => (
-    <Async load={import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')} />
-);
-export const MyIncompleteRecord = componentProps => (
-    <Async load={import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')} componentProps={componentProps} />
-);
+export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
+export const ClaimRecord = React.lazy(() => import('modules/ClaimRecord/containers/ClaimRecord'));
+export const PossiblyMyRecords = React.lazy(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords'));
+export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
 export const Dashboard = () => <Async load={import('modules/Dashboard/containers/Dashboard')} />;
 export const Orcid = () => <Async load={import('modules/AuthorIdentifiers/containers/Orcid')} />;
 export const GoogleScholar = () => <Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />;
