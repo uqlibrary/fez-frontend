@@ -69,9 +69,9 @@ export const AdminActions = ({
         const linkTarget = action.inApp ? '_self' : '_blank';
         const isEditUrl = index === 0;
         const url =
-            isEditUrl && userHasNewAdminEdit
-                ? action.url(pid)
-                : getLegacyEditUrl(pid, recordType, `${APP_URL}${PATH_PREFIX}`);
+            isEditUrl && !userHasNewAdminEdit
+                ? getLegacyEditUrl(pid, recordType, `${APP_URL}${PATH_PREFIX}`)
+                : action.url(pid);
         const clickHandler = navigateToUrl(url, linkTarget, isEditUrl && userHasNewAdminEdit && navigatedFrom);
         return {
             label: action.label,

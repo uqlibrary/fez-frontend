@@ -14,6 +14,7 @@ function setup(testProps = {}) {
 
 describe('AdminActions component', () => {
     let windowOpenSpy;
+    const legacyEditUrl = `${APP_URL}workflow/update.php?pid=UQ:111111&cat=select_workflow&xdis_id=179&wft_id=289&href=%2Fview%2FUQ%3A111111`;
 
     beforeAll(() => {
         windowOpenSpy = jest.spyOn(global.window, 'open').mockImplementation(() => {});
@@ -37,12 +38,18 @@ describe('AdminActions component', () => {
 
         const menu = getByTestId('admin-actions-menu');
 
-        fireEvent.click(getByText(/edit security for selected record/i, menu));
-        expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(
-            `${APP_URL}workflow/update.php?pid=UQ:111111&cat=select_workflow&xdis_id=179&wft_id=289&href=%2Fview%2FUQ%3A111111`,
-            '_self',
-        );
+        const expectedActions = defaultActions.map(action => ({
+            ...action,
+            url: action.url('UQ:111111'),
+        }));
+        expectedActions[0].url = legacyEditUrl;
+
+        expectedActions.map(action => {
+            fireEvent.click(getByText(action.label, menu));
+            expect(global.window.open).toHaveBeenCalledTimes(1);
+            expect(global.window.open).toHaveBeenCalledWith(action.url, '_self');
+            windowOpenSpy.mockClear();
+        });
     });
 
     it('should handle admin actions in a new window ', () => {
@@ -61,10 +68,7 @@ describe('AdminActions component', () => {
 
         fireEvent.click(getByText(/edit selected record/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(
-            `${APP_URL}workflow/update.php?pid=UQ:111111&cat=select_workflow&xdis_id=179&wft_id=289&href=%2Fview%2FUQ%3A111111`,
-            '_blank',
-        );
+        expect(global.window.open).toHaveBeenCalledWith(legacyEditUrl, '_blank');
     });
 
     it('should have helper to append referral URL', () => {
