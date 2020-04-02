@@ -5,7 +5,6 @@ import CommunityForm from '../components/CommunityForm';
 import { createCommunity, checkSession, clearSessionExpiredFlag } from 'actions';
 import { bindActionCreators } from 'redux';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { reloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
 
 const FORM_NAME = 'Community';
 
@@ -18,7 +17,7 @@ const onSubmit = (values, dispatch, props) => {
     );
 };
 
-let CommunityContainer = reduxForm({
+const CommunityContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
 })(confirmDiscardFormChanges(CommunityForm, FORM_NAME));
@@ -39,9 +38,7 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag }, dispatch),
 });
 
-CommunityContainer = connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps,
 )(CommunityContainer);
-
-export default reloadReducerFromLocalStorage()(CommunityContainer);

@@ -13,12 +13,12 @@ export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmissio
 export const SbsSubmission = React.lazy(() => import('modules/SbsSubmission/containers/SbsSubmission'));
 export const ViewRecord = React.lazy(() => import('modules/ViewRecord/containers/ViewRecord'));
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
-export const CollectionForm = () => <Async load={import('modules/Admin/CollectionForm/containers/CollectionForm')} />;
-export const CommunityForm = () => <Async load={import('modules/Admin/CommunityForm/containers/CommunityForm')} />;
-export const ThirdPartyLookupTool = () => (
-    <Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />
+export const CollectionForm = React.lazy(() => import('modules/Admin/CollectionForm/containers/CollectionForm'));
+export const CommunityForm = React.lazy(() => import('modules/Admin/CommunityForm/containers/CommunityForm'));
+export const ThirdPartyLookupTool = React.lazy(() =>
+    import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool'),
 );
-export const BatchImport = () => <Async load={import('modules/BatchImport/containers/BatchImport')} />;
+export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
 export const Prototype = () => <Async load={import('modules/Admin/containers/Admin')} />;
 export const Admin = componentProps => (
     <Async load={import('modules/Admin/containers/Admin')} componentProps={componentProps} />
