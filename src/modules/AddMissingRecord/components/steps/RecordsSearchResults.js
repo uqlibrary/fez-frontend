@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Suspense, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -119,10 +119,12 @@ export default class RecordsSearchResults extends PureComponent {
                 <Grid container spacing={3}>
                     <Hidden smUp>
                         <Grid item xs>
-                            <PublicationListLoadingProgress
-                                mobile
-                                loadingPublicationSources={this.props.loadingPublicationSources}
-                            />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <PublicationListLoadingProgress
+                                    mobile
+                                    loadingPublicationSources={this.props.loadingPublicationSources}
+                                />
+                            </Suspense>
                         </Grid>
                     </Hidden>
                     <Grid item sm={8} md={9}>
@@ -138,14 +140,16 @@ export default class RecordsSearchResults extends PureComponent {
                                             {searchResultsTxt.searchResults.text}
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <PublicationsList
-                                                publicationsLoading={this.props.searchLoading}
-                                                publicationsList={this.props.publicationsList}
-                                                customActions={actions}
-                                                publicationsListSubset={unclaimablePublicationsList}
-                                                subsetCustomActions={unclaimable}
-                                                showSources
-                                            />
+                                            <Suspense fallback={<div>Loading...</div>}>
+                                                <PublicationsList
+                                                    publicationsLoading={this.props.searchLoading}
+                                                    publicationsList={this.props.publicationsList}
+                                                    customActions={actions}
+                                                    publicationsListSubset={unclaimablePublicationsList}
+                                                    subsetCustomActions={unclaimable}
+                                                    showSources
+                                                />
+                                            </Suspense>
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
@@ -189,9 +193,11 @@ export default class RecordsSearchResults extends PureComponent {
                     <Hidden xsDown>
                         <Grid item sm={4} md={3}>
                             <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
-                                <PublicationListLoadingProgress
-                                    loadingPublicationSources={this.props.loadingPublicationSources}
-                                />
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <PublicationListLoadingProgress
+                                        loadingPublicationSources={this.props.loadingPublicationSources}
+                                    />
+                                </Suspense>
                             </StandardRighthandCard>
                         </Grid>
                     </Hidden>
