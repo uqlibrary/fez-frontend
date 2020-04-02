@@ -15,7 +15,7 @@ component for a standard card display with help button
 import React from 'react';
 ...
 
-import {StandardCard} from 'uqlibrary-react-toolbox';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 const App = () => (
   <div>

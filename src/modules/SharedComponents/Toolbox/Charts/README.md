@@ -19,7 +19,7 @@ displays types of publications per year for an author
 import React from 'react';
 ...
 
-import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
+import { AuthorsPublicationsPerYearChart } from 'modules/SharedComponents/Toolbox/Charts';
 
 const App = () => (
   <div>

@@ -15,7 +15,6 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
     />
     <WithStyles(WithFormControlContext(Select))
       autoWidth={true}
-      error={false}
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
       id="undefined"

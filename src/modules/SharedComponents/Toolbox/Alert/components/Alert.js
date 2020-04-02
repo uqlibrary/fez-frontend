@@ -19,7 +19,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const classNames = require('classnames');
 
-const styles = theme => ({
+export const styles = theme => ({
     common: {
         borderRadius: 5,
         boxShadow: theme.shadows[1],
@@ -47,6 +47,14 @@ const styles = theme => ({
             [theme.breakpoints.down('xs')]: {
                 marginRight: 12,
             },
+            [theme.breakpoints.up('md')]: {
+                width: 'auto',
+            },
+        },
+        '& .action + .action': {
+            [theme.breakpoints.up('md')]: {
+                marginLeft: 12,
+            },
         },
     },
     dismissButton: {
@@ -57,6 +65,9 @@ const styles = theme => ({
             [theme.breakpoints.down('xs')]: {
                 marginRight: -12,
             },
+        },
+        '& #dismiss': {
+            marginLeft: -12,
         },
     },
     linked: {
@@ -218,6 +229,8 @@ export class Alert extends PureComponent {
         ]),
         action: PropTypes.func,
         actionButtonLabel: PropTypes.string,
+        alternateAction: PropTypes.func,
+        alternateActionButtonLabel: PropTypes.string,
         allowDismiss: PropTypes.bool,
         dismissAction: PropTypes.func,
         dismissTitle: PropTypes.string,
@@ -263,23 +276,29 @@ export class Alert extends PureComponent {
 
     render() {
         const { classes } = this.props;
+        const wholeAlertAction = (!this.props.alternateAction && this.props.action) || undefined;
         return (
             <div style={{ padding: 12 }} className="Alert">
                 <Grid
-                    container
-                    spacing={24}
-                    className={classNames(classes[this.props.type], classes.common)}
-                    justify={'center'}
-                    alignItems={'flex-start'}
                     alignContent={'center'}
+                    alignItems={'flex-start'}
+                    className={classNames(classes[this.props.type], classes.common)}
+                    container
+                    justify={'center'}
+                    spacing={24}
                 >
-                    <Grid item xs={12} sm className={this.props.action && classes.linked}>
+                    <Grid
+                        className={(this.props.action && !this.props.alternateAction && classes.linked) || ''}
+                        item
+                        sm
+                        xs={12}
+                    >
                         <Grid container justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
                             <Grid
-                                item
                                 className={`${classes.icon} alert-icon`}
-                                onClick={this.props.action}
-                                onKeyDown={this.props.action}
+                                item
+                                onClick={wholeAlertAction}
+                                onKeyDown={wholeAlertAction}
                             >
                                 {this.props.showLoader ? (
                                     <CircularProgress className={'spinner'} size={38} thickness={3} />
@@ -288,11 +307,11 @@ export class Alert extends PureComponent {
                                 )}
                             </Grid>
                             <Grid
-                                item
-                                xs
                                 className={`${classes.text} alert-text`}
-                                onClick={this.props.action}
-                                onKeyDown={this.props.action}
+                                item
+                                onClick={wholeAlertAction}
+                                onKeyDown={wholeAlertAction}
+                                xs
                             >
                                 <b>{this.props.title && `${this.props.title} - `}</b>
                                 {this.props.message}
@@ -301,10 +320,10 @@ export class Alert extends PureComponent {
                                 <Hidden smUp>
                                     <Grid item className={classes.dismissButton}>
                                         <IconButton
-                                            onClick={this.props.dismissAction}
-                                            title={this.props.dismissTitle}
                                             aria-label={this.props.dismissTitle}
                                             id={'dismiss'}
+                                            onClick={this.props.dismissAction}
+                                            title={this.props.dismissTitle}
                                         >
                                             <Close className="dismiss" />
                                         </IconButton>
@@ -313,25 +332,37 @@ export class Alert extends PureComponent {
                             )}
                         </Grid>
                     </Grid>
-                    {this.props.action && this.props.actionButtonLabel && (
-                        <Grid item xs sm={'auto'} className={classes.actionButton}>
-                            <Button
-                                variant={'text'}
-                                children={this.props.actionButtonLabel}
-                                onClick={this.props.action}
-                                fullWidth
-                                className="action alert-button"
-                            />
+                    {((this.props.action && this.props.actionButtonLabel) ||
+                        (this.props.alternateAction && this.props.alternateActionButtonLabel)) && (
+                        <Grid item xs sm={4} md={'auto'} className={classes.actionButton}>
+                            {this.props.action && this.props.actionButtonLabel && (
+                                <Button
+                                    children={this.props.actionButtonLabel}
+                                    className="action alert-button"
+                                    fullWidth
+                                    onClick={this.props.action}
+                                    variant={'text'}
+                                />
+                            )}
+                            {this.props.alternateAction && this.props.alternateActionButtonLabel && (
+                                <Button
+                                    children={this.props.alternateActionButtonLabel}
+                                    className="action alert-button"
+                                    fullWidth
+                                    onClick={this.props.alternateAction}
+                                    variant={'text'}
+                                />
+                            )}
                         </Grid>
                     )}
                     {this.props.allowDismiss && this.props.dismissAction && (
                         <Hidden xsDown>
                             <Grid item className={classes.dismissButton}>
                                 <IconButton
-                                    onClick={this.props.dismissAction}
-                                    title={this.props.dismissTitle}
                                     aria-label={this.props.dismissTitle}
                                     id={'dismiss'}
+                                    onClick={this.props.dismissAction}
+                                    title={this.props.dismissTitle}
                                 >
                                     <Close className="dismiss" />
                                 </IconButton>

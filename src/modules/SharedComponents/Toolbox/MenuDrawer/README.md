@@ -19,7 +19,7 @@ simple reusable menu for UQ Library applications using ReactJs
 import React from 'react';
 ...
 
-import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
+import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 
 // Icon import is required to display an icon in the menu
 import ActionHome from 'material-ui/svg-icons/action/home';

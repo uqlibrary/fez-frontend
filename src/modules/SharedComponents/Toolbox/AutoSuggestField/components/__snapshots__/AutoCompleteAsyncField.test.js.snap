@@ -1609,7 +1609,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="autosuggest-input"
                                     inputProps={
@@ -1630,7 +1629,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={true}
                                       variant="standard"
@@ -3493,7 +3491,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="autosuggest-input"
                                     inputProps={
@@ -3514,7 +3511,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -5082,7 +5078,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="Test-input"
                                     inputProps={
@@ -5102,7 +5097,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -6411,7 +6405,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="Test-input"
                                     inputProps={
@@ -6431,7 +6424,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -7704,7 +7696,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     }
                                     classes={Object {}}
                                     disabled={true}
-                                    error={false}
                                     fullWidth={true}
                                     id="autosuggest-input"
                                     inputProps={
@@ -7725,7 +7716,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={true}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"

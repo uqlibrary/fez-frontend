@@ -4,7 +4,7 @@ import locale from 'locale/pages';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     noOfArticles: {
         padding: '0 16px',
         color: theme.palette.white.main,

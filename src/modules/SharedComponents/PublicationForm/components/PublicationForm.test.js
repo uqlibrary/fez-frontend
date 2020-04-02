@@ -5,18 +5,6 @@ import { validation } from 'config';
 
 function setup(testProps = {}) {
     const props = {
-        array: {
-            insert: jest.fn(),
-            move: jest.fn(),
-            pop: jest.fn(),
-            push: jest.fn(),
-            remove: jest.fn(),
-            removeAll: jest.fn(),
-            shift: jest.fn(),
-            splice: jest.fn(),
-            swap: jest.fn(),
-            unshift: jest.fn(),
-        },
         autofill: jest.fn(),
         blur: jest.fn(),
         change: jest.fn(),

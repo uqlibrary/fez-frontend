@@ -1,6 +1,14 @@
-import { DashboardResearcherIdsClass } from './DashboardResearcherIds';
-import Dashboard from './DashboardResearcherIds';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
+import { setupStoreForMount } from 'test.setup';
+import { render } from 'react-testing-library';
+import { DashboardResearcherIdsClass, styles } from './DashboardResearcherIds';
+
 import { currentAuthor } from 'mock/data';
+
+jest.mock('../../../context');
+import { OrcidSyncContext } from 'context';
 
 function setup(testProps) {
     // build full props list required by the component
@@ -12,37 +20,34 @@ function setup(testProps) {
     return getElement(DashboardResearcherIdsClass, props);
 }
 
-describe('Dashboard Rsearcher IDs test', () => {
+describe('Dashboard Researcher IDs test', () => {
+    const testFn = jest.fn();
+    const props = {
+        history: { push: testFn },
+        classes: {},
+        values: {
+            publons: currentAuthor.uqresearcher.data.aut_publons_id,
+            researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
+            scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
+            google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
+            orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
+        },
+        authenticated: { publons: false, researcher: true, scopus: false, google_scholar: false, orcid: true },
+    };
+
+    afterEach(() => {
+        testFn.mockReset();
+    });
+
     it('Render the authors Researcher IDs as expected for a UQ researcher', () => {
-        const values = {
-            history: {},
-            values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
-            },
-            authenticated: { publons: false, researcher: true, scopus: false, google_scholar: false, orcid: true },
-        };
-        const wrapper = setup(values);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper = setup(props);
+        wrapper.find('ContextConsumer').forEach(consumer => {
+            expect(toJson(consumer.dive())).toMatchSnapshot();
+        });
     });
 
     it('navigateToRoute method', () => {
-        const testFn = jest.fn();
-        const values = {
-            history: { push: testFn },
-            values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
-            },
-            authenticated: { publons: false, researcher: true, scopus: false, google_scholar: false, orcid: true },
-        };
-        const wrapper = setup(values);
+        const wrapper = setup(props);
         wrapper.instance().navigateToRoute(null, 'publons');
         expect(testFn).toHaveBeenCalledWith(
             'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
@@ -50,19 +55,15 @@ describe('Dashboard Rsearcher IDs test', () => {
     });
 
     it('Testing clicking on ID internal links', () => {
-        const testFn = jest.fn();
-        const values = {
-            history: { push: testFn },
+        const testValues = {
+            ...props,
             values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: null, // currentAuthor.uqresearcher.data.aut_orcid_id,
+                ...props.values,
+                orcid: null,
             },
             authenticated: { publons: false, researcher: false, scopus: false, google_scholar: false, orcid: false },
         };
-        const wrapper = setup(values);
+        const wrapper = setup(testValues);
         const navigateToRoute = jest.spyOn(wrapper.instance(), 'navigateToRoute');
         const button = wrapper.find('#orcid');
         expect(button.length).toEqual(1);
@@ -76,73 +77,82 @@ describe('Dashboard Rsearcher IDs test', () => {
         });
     });
 
-    it('Testing styles on unauth internal links', () => {
-        const testFn = jest.fn();
-        const values = {
-            history: { push: testFn },
+    it('Testing unauth internal links', () => {
+        const testValues = {
+            ...props,
             values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
+                ...props.values,
                 orcid: null,
             },
             authenticated: { publons: false, researcher: false, scopus: false, google_scholar: false, orcid: false },
         };
-        const wrapper = setup(values);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper = setup(testValues);
+        wrapper.find('ContextConsumer').forEach(consumer => {
+            expect(toJson(consumer.dive())).toMatchSnapshot();
+        });
+        expect(toJson(wrapper.find('a'))).toMatchSnapshot();
     });
 
-    it('Testing styles on auth internal links', () => {
-        const testFn = jest.fn();
-        const values = {
-            history: { push: testFn },
+    it('Testing auth internal links', () => {
+        const testValues = {
+            ...props,
             values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
+                ...props.values,
                 orcid: null,
             },
             authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = setup(values);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper = setup(testValues);
+        wrapper.find('ContextConsumer').forEach(consumer => {
+            expect(toJson(consumer.dive())).toMatchSnapshot();
+        });
+        expect(toJson(wrapper.find('a'))).toMatchSnapshot();
     });
 
     it('Testing orcid caption', () => {
-        const testFn = jest.fn();
-        const values = {
-            history: { push: testFn },
-            values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
-            },
+        const testValues = {
+            ...props,
             authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = setup(values);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper = setup(testValues);
+        wrapper.find('ContextConsumer').forEach(consumer => {
+            expect(toJson(consumer.dive())).toMatchSnapshot();
+        });
     });
 
-    it('Full mount render to test withStyles/Theme', () => {
-        const testFn = jest.fn();
-        const values = {
-            classes: {},
-            theme: {},
-            history: { push: testFn },
-            values: {
-                publons: currentAuthor.uqresearcher.data.aut_publons_id,
-                researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
-                scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
-                google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
+    it('should have a style generator', () => {
+        const theme = {
+            palette: {
+                white: {
+                    main: '#fff',
+                },
             },
-            authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = getElement(Dashboard, values, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should show orcid sync UI', () => {
+        const context = {
+            showSyncUI: true,
+            orcidSyncProps: {
+                author: {
+                    aut_orcid_id: 'test',
+                },
+                orcidSyncStatus: {
+                    orj_status: 'Done',
+                },
+            },
+        };
+        const wrapper = render(
+            <Provider store={setupStoreForMount().store}>
+                <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
+                    <OrcidSyncContext.Provider value={context}>
+                        <DashboardResearcherIdsClass {...props} />
+                    </OrcidSyncContext.Provider>
+                </MemoryRouter>
+            </Provider>,
+        );
+        expect(wrapper.asFragment()).toMatchSnapshot();
     });
 });

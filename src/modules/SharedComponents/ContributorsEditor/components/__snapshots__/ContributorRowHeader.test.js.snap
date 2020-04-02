@@ -152,9 +152,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon)
-              titleAccess="Remove all records"
-            />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </span>
       </WithStyles(Tooltip)>
@@ -285,9 +283,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={true}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon)
-              titleAccess="Remove all records"
-            />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </span>
       </WithStyles(Tooltip)>
@@ -418,9 +414,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon)
-              titleAccess="Remove all records"
-            />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </span>
       </WithStyles(Tooltip)>
@@ -574,9 +568,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon)
-              titleAccess="Remove all records"
-            />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </span>
       </WithStyles(Tooltip)>
@@ -707,9 +699,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon)
-              titleAccess="Remove all records"
-            />
+            <pure(DeleteForeverIcon) />
           </WithStyles(IconButton)>
         </span>
       </WithStyles(Tooltip)>

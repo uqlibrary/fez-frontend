@@ -1,4 +1,4 @@
-import { Alert } from '../components/Alert';
+import { Alert, styles } from '../components/Alert';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -46,6 +46,46 @@ describe('Alert snapshots test', () => {
             actionButtonLabel: 'Do something',
             allowDismiss: true,
             dismissAction: jest.fn(),
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should generate expected styles', () => {
+        const theme = {
+            shadows: ['test1'],
+            breakpoints: {
+                up: jest.fn(breakpoint => breakpoint),
+                down: jest.fn(breakpoint => breakpoint),
+            },
+            palette: {
+                error: {
+                    dark: '#111',
+                },
+                white: {
+                    main: '#eee',
+                },
+                warning: {
+                    dark: '#222',
+                },
+                secondary: {
+                    dark: '#333',
+                    main: '#444',
+                },
+                accent: {
+                    dark: '#555',
+                },
+                success: {
+                    dark: '#123',
+                },
+            },
+        };
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should render alert with alternate action', () => {
+        const wrapper = setup({
+            alternateAction: jest.fn(),
+            alternateActionButtonLabel: 'Do something',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

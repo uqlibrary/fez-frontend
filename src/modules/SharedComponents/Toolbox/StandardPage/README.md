@@ -14,7 +14,7 @@ component for a pre-formatted page
 import React from 'react';
 ...
 
-import {StandardPage} from 'uqlibrary-react-toolbox';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 const App = () => (
   <div>

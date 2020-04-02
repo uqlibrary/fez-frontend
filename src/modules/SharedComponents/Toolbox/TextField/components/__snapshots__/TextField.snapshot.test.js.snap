@@ -11,7 +11,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
         "shrink": undefined,
       }
     }
-    error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
     id="undefined"
@@ -44,7 +43,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
       }
     }
     className="requiredField"
-    error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
     id="undefined"
@@ -76,7 +74,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
         "shrink": true,
       }
     }
-    error={false}
     floatingLabelText="This is a test textfield component"
     floatinglabelfixed={true}
     fullWidth={true}

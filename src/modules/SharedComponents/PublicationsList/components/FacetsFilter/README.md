@@ -18,7 +18,7 @@ A complimentary component to PublicationList to render the elastic search facets
 import React from 'react';
 ...
 
-import {FacetsFilter} from 'modules/FacetsFilter';
+import { FacetsFilter } from 'modules/FacetsFilter';
 
 const App = () => (
     <FacetsFilter
