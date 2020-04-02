@@ -125,8 +125,9 @@ export class GrantListEditorHeader extends PureComponent {
                                                 <IconButton
                                                     onClick={this._showConfirmation}
                                                     disabled={this.props.disabled}
+                                                    aria-label={deleteAll}
                                                 >
-                                                    <DeleteForever titleAccess={deleteAll} />
+                                                    <DeleteForever />
                                                 </IconButton>
                                             </div>
                                         </Tooltip>

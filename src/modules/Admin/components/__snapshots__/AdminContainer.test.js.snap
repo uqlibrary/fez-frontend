@@ -6017,6 +6017,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             >
                                                                               <WithStyles(IconButton)
                                                                                 aria-describedby={null}
+                                                                                aria-label="Learn about keyboard shortcuts"
                                                                                 className=""
                                                                                 onBlur={[Function]}
                                                                                 onClick={[Function]}
@@ -6029,6 +6030,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               >
                                                                                 <IconButton
                                                                                   aria-describedby={null}
+                                                                                  aria-label="Learn about keyboard shortcuts"
                                                                                   className=""
                                                                                   classes={
                                                                                     Object {
@@ -6053,6 +6055,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 >
                                                                                   <WithStyles(ButtonBase)
                                                                                     aria-describedby={null}
+                                                                                    aria-label="Learn about keyboard shortcuts"
                                                                                     centerRipple={true}
                                                                                     className="MuiIconButton-root-246"
                                                                                     disabled={false}
@@ -6068,6 +6071,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   >
                                                                                     <ButtonBase
                                                                                       aria-describedby={null}
+                                                                                      aria-label="Learn about keyboard shortcuts"
                                                                                       centerRipple={true}
                                                                                       className="MuiIconButton-root-246"
                                                                                       classes={
@@ -6095,6 +6099,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     >
                                                                                       <button
                                                                                         aria-describedby={null}
+                                                                                        aria-label="Learn about keyboard shortcuts"
                                                                                         className="MuiButtonBase-root-222 MuiIconButton-root-246"
                                                                                         disabled={false}
                                                                                         onBlur={[Function]}
@@ -6119,15 +6124,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                         >
                                                                                           <pure(KeyboardIcon)
                                                                                             className="HelpIcon-helpIcon-252"
-                                                                                            titleAccess="Learn about keyboard shortcuts"
                                                                                           >
                                                                                             <KeyboardIcon
                                                                                               className="HelpIcon-helpIcon-252"
-                                                                                              titleAccess="Learn about keyboard shortcuts"
                                                                                             >
                                                                                               <WithStyles(SvgIcon)
                                                                                                 className="HelpIcon-helpIcon-252"
-                                                                                                titleAccess="Learn about keyboard shortcuts"
                                                                                               >
                                                                                                 <SvgIcon
                                                                                                   className="HelpIcon-helpIcon-252"
@@ -6147,14 +6149,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                                   color="inherit"
                                                                                                   component="svg"
                                                                                                   fontSize="default"
-                                                                                                  titleAccess="Learn about keyboard shortcuts"
                                                                                                   viewBox="0 0 24 24"
                                                                                                 >
                                                                                                   <svg
-                                                                                                    aria-hidden="false"
+                                                                                                    aria-hidden="true"
                                                                                                     className="MuiSvgIcon-root-253 HelpIcon-helpIcon-252"
                                                                                                     focusable="false"
-                                                                                                    role="img"
+                                                                                                    role="presentation"
                                                                                                     viewBox="0 0 24 24"
                                                                                                   >
                                                                                                     <path
@@ -6164,9 +6165,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                                       d="M0 0h24v24H0zm0 0h24v24H0z"
                                                                                                       fill="none"
                                                                                                     />
-                                                                                                    <title>
-                                                                                                      Learn about keyboard shortcuts
-                                                                                                    </title>
                                                                                                   </svg>
                                                                                                 </SvgIcon>
                                                                                               </WithStyles(SvgIcon)>

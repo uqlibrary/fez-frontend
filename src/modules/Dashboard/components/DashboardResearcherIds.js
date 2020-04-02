@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { OrcidSyncContext } from 'context';
+
+import DashboardOrcidSync from '../containers/DashboardOrcidSync';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
-// import {pathConfig} from 'config/routes';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     researcherIDlink: {
         '&:hover': {
             cursor: 'pointer',
@@ -17,10 +21,83 @@ const styles = theme => ({
             filter: 'grayscale(1)',
         },
     },
+    orcidSyncBadge: {
+        '& button': {
+            padding: 0,
+            position: 'relative',
+            top: -15,
+        },
+        '& svg': {
+            color: theme.palette.white.main,
+        },
+    },
     orcidLink: {
         color: theme.palette.white.main,
     },
 });
+
+export const renderIcon = (title, className) => {
+    return (
+        <Tooltip title={title}>
+            <div className={className} style={{ width: 32, height: 32, borderRadius: 32 }} />
+        </Tooltip>
+    );
+};
+
+export const renderButton = args => {
+    const { item, index, navHandler, values, authenticated, classes, txt, link } = args;
+    const isLinkedExternal = values[item] && link.linkedUrl[item].indexOf('http') !== -1;
+    const isUnlinkedExternal = !values[item] && link.notLinkedUrl[item].indexOf('http') !== -1;
+    const isInternal = !values[item] && link.notLinkedUrl[item].indexOf('http') === -1;
+
+    const url = values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item];
+    const title = values[item]
+        ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item])
+        : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item]);
+    const externalIconClassName = `fez-icon ${item} ${values[item] && authenticated[item] ? 'ok' : 'error'}`;
+    const internalIconClassName = `fez-icon ${item} dashboard ${authenticated[item] ? 'ok' : 'error'}`;
+
+    return (
+        <Grid item key={index}>
+            {/* external URLs */}
+            <OrcidSyncContext.Consumer>
+                {({ showSyncUI, orcidSyncProps }) =>
+                    (isLinkedExternal || isUnlinkedExternal) && (
+                        <React.Fragment>
+                            <ExternalLink
+                                id={item}
+                                openInNewIcon={false}
+                                className={classes.researcherIDlink}
+                                href={url}
+                            >
+                                {renderIcon(title, externalIconClassName)}
+                            </ExternalLink>
+                            {item === 'orcid' && showSyncUI && (
+                                <span className={classes.orcidSyncBadge}>
+                                    <DashboardOrcidSync {...orcidSyncProps} />
+                                </span>
+                            )}
+                        </React.Fragment>
+                    )
+                }
+            </OrcidSyncContext.Consumer>
+
+            {/* Internal URLs - will be non-linked IDs only */}
+            {isInternal && (
+                <a
+                    id={item}
+                    tabIndex="0"
+                    onClick={navHandler}
+                    className={classes.researcherIDlink}
+                    onKeyPress={navHandler}
+                    title={title}
+                >
+                    <div title={title} className={internalIconClassName} />
+                </a>
+            )}
+        </Grid>
+    );
+};
 
 export class DashboardResearcherIdsClass extends React.Component {
     static propTypes = {
@@ -48,73 +125,22 @@ export class DashboardResearcherIdsClass extends React.Component {
     };
 
     render() {
-        const { values, authenticated, classes } = this.props;
+        const { values, classes } = this.props;
         const txt = locale.pages.dashboard.header.dashboardResearcherIds;
         const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
+
         return (
             <Grid container spacing={8} alignItems={'center'} style={{ marginTop: 12 }}>
                 {values &&
-                    Object.keys(values).map((item, index) => (
-                        <Grid item key={index}>
-                            {/* external URL's */}
-                            {((values[item] && link.linkedUrl[item].indexOf('http') !== -1) ||
-                                (!values[item] && link.notLinkedUrl[item].indexOf('http') !== -1)) && (
-                                <ExternalLink
-                                    id={item}
-                                    openInNewIcon={false}
-                                    className={classes.researcherIDlink}
-                                    href={values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item]}
-                                    title={
-                                        values[item]
-                                            ? txt.researcherIsLinked
-                                                .replace('[resource]', txt.titles[item])
-                                                .replace('[id]', values[item])
-                                            : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])
-                                    }
-                                >
-                                    <div
-                                        title={
-                                            !!values[item]
-                                                ? txt.researcherIsLinked
-                                                    .replace('[resource]', txt.titles[item])
-                                                    .replace('[id]', values[item])
-                                                : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])
-                                        }
-                                        className={
-                                            'fez-icon ' +
-                                            item +
-                                            (values[item] && authenticated[item] ? ' ok' : ' error')
-                                        }
-                                        style={{ width: 32, height: 32, borderRadius: 32 }}
-                                    />
-                                </ExternalLink>
-                            )}
-
-                            {/* Internal URL's - will be non-linked ID's only */}
-                            {!values[item] && link.notLinkedUrl[item].indexOf('http') === -1 && (
-                                <a
-                                    id={item}
-                                    tabIndex="0"
-                                    onClick={event => this.navigateToRoute(event, item)}
-                                    className={classes.researcherIDlink}
-                                    onKeyPress={event => this.navigateToRoute(event, item)}
-                                    title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
-                                >
-                                    <div
-                                        title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
-                                        className={`fez-icon ${item} dashboard ${
-                                            authenticated[item] ? ' ok' : ' error'
-                                        }`}
-                                    />
-                                </a>
-                            )}
-                        </Grid>
-                    ))}
+                    Object.keys(values).map((item, index) => {
+                        const navHandler = event => this.navigateToRoute(event, item);
+                        return renderButton({ item, index, navHandler, ...this.props, txt, link });
+                    })}
 
                 {values.orcid && (
                     <Grid item>
                         <a
-                            href={txt.orcidUrlPrefix + values.orcid}
+                            href={`${txt.orcidUrlPrefix}${values.orcid}`}
                             id={'orcid'}
                             target="_blank"
                             aria-label={txt.orcidlinkLabel}
@@ -122,8 +148,7 @@ export class DashboardResearcherIdsClass extends React.Component {
                             tabIndex="0"
                         >
                             <Typography variant={'caption'} className={classes.orcidLink}>
-                                {txt.orcidLinkPrefix}
-                                {values.orcid}
+                                {`${txt.orcidLinkPrefix}${values.orcid}`}
                             </Typography>
                         </a>
                     </Grid>
@@ -133,6 +158,5 @@ export class DashboardResearcherIdsClass extends React.Component {
     }
 }
 
-const StyledDashboardResearcherIds = withStyles(styles, { withTheme: true })(DashboardResearcherIdsClass);
-const DashboardResearcherIds = props => <StyledDashboardResearcherIds {...props} />;
+const DashboardResearcherIds = withStyles(styles, { withTheme: true })(DashboardResearcherIdsClass);
 export default DashboardResearcherIds;

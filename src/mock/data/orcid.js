@@ -37,3 +37,31 @@ export const afterOrcid = {
     "aut_publons_id": null,
     "aut_student_username": null
 };
+
+export const orcidSyncStatus = {
+    "data": {
+        "orj_id": 235539,
+        "orj_author_id": 3712787,
+        "orj_status": "Done",
+        "orj_description": "Sync author's publications",
+        "orj_imported_count": 0,
+        "orj_scopus_skipped_count": 0,
+        "orj_processed_count": 0,
+        "orj_total_count": 0,
+        "orj_created_at": "2019-11-27 04:32:30",
+        "orj_started_at": "2019-11-27 04:32:30",
+        "orj_finished_at": "2019-11-27 04:32:32",
+        "orj_type": "Sync",
+        "orj_created_count": 0,
+        "orj_deleted_count": 0,
+        "orj_updated_count": 0
+    }
+};
+
+export const orcidSyncResponse = {
+    "data": "An orcid sync job has been queued",
+};
+
+export const orcidSyncNullResponse = {
+    "data": "Author has no orcid sync job"
+};

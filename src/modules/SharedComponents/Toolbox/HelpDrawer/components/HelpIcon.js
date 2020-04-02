@@ -27,6 +27,8 @@ export class HelpIcon extends Component {
         onClick: PropTypes.func,
         classes: PropTypes.object,
         IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
+        iconSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        style: PropTypes.object,
     };
 
     static defaultProps = {
@@ -40,11 +42,11 @@ export class HelpIcon extends Component {
     };
 
     render() {
-        const { classes, tooltip, IconComponent } = this.props;
+        const { classes, tooltip, IconComponent, iconSize, style } = this.props;
         return (
             <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
-                <IconButton onClick={this.setDrawerContent}>
-                    <IconComponent className={classes.helpIcon} titleAccess={tooltip} />
+                <IconButton onClick={this.setDrawerContent} aria-label={tooltip}>
+                    <IconComponent className={classes.helpIcon} size={iconSize} {...{ style }} />
                 </IconButton>
             </Tooltip>
         );

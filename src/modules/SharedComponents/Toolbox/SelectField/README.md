@@ -16,7 +16,7 @@ A simple SelectField component that lists items for UQ Library applications usin
 import React from 'react';
 ...
 
-import {SelectField} from 'uqlibrary-react-toolbox';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 
 const App = () => (
   <div>

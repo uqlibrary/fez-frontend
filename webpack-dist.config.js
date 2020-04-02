@@ -178,7 +178,7 @@ const webpackConfig = {
             },
             {
                 test: /\.js?$/,
-                include: [resolve(__dirname, 'src'), resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')],
+                include: [resolve(__dirname, 'src')],
                 exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',

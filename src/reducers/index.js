@@ -17,6 +17,7 @@ export { default as issnLinksReducer } from './issnLinks';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';
 export { default as myTrendingPublicationsReducer } from './myTrendingPublications';
 export { default as newsFeedReducer } from './newsFeed';
+export { default as orcidSyncReducer } from './orcidSync';
 export { default as publicationsReducer } from './publications';
 export { default as searchKeysReducer } from './searchKeys';
 export { default as searchRecordsReducer } from './searchRecords';
