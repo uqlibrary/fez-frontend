@@ -6,12 +6,10 @@ export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/F
 export const ClaimRecord = React.lazy(() => import('modules/ClaimRecord/containers/ClaimRecord'));
 export const PossiblyMyRecords = React.lazy(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
-export const Dashboard = () => <Async load={import('modules/Dashboard/containers/Dashboard')} />;
-export const Orcid = () => <Async load={import('modules/AuthorIdentifiers/containers/Orcid')} />;
-export const GoogleScholar = () => <Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />;
-export const ThesisSubmission = componentProps => (
-    <Async load={import('modules/ThesisSubmission/containers/ThesisSubmission')} componentProps={componentProps} />
-);
+export const Dashboard = React.lazy(() => import('modules/Dashboard/containers/Dashboard'));
+export const Orcid = React.lazy(() => import('modules/AuthorIdentifiers/containers/Orcid'));
+export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
+export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmission/containers/ThesisSubmission'));
 export const SbsSubmission = componentProps => (
     <Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />
 );

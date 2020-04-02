@@ -256,7 +256,7 @@ export const getRoutesConfig = ({
                 {
                     path: pathConfig.hdrSubmission,
                     render: isHdrStudent
-                        ? () => components.ThesisSubmission({ isHdrThesis: true })
+                        ? props => <components.ThesisSubmission isHdrThesis {...props} />
                         : () => components.StandardPage({ ...locale.pages.thesisSubmissionDenied }),
                     pageTitle: formLocale.thesisSubmission.hdrTitle,
                 },
