@@ -8,10 +8,7 @@ jest.mock('redux-form/immutable', () => ({
             get: jest.fn(() => ({ toJS: jest.fn(() => ({})) })),
         })),
     ),
-    Field: jest.fn(() => {
-        const Dummy = props => <div {...props} />;
-        return Dummy;
-    }),
+    Field: () => props => <div {...props} />,
 }));
 import { getFormValues } from 'redux-form/immutable';
 

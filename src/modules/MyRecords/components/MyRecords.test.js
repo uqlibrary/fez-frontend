@@ -17,6 +17,7 @@ function setup(testProps = {}) {
             go: jest.fn(),
         },
         accountLoading: false,
+        authorDetails: {},
         exportPublicationsLoading: false,
         localePages: locale.pages.myResearch,
         publicationsListPagingData: {},

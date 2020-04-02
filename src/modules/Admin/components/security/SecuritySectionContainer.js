@@ -11,7 +11,7 @@ import SecurityCard from './SecurityCard';
 const SecuritySectionContainer = ({ disabled, formValues, isSuperAdmin }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
-            <SecurityCard disabled={disabled} isSuperAdmin={isSuperAdmin} />
+            <SecurityCard {...{ disabled, isSuperAdmin }} />
         </FormValuesContext.Provider>
     );
 };

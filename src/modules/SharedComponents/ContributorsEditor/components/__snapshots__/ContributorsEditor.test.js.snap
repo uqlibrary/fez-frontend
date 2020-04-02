@@ -2351,7 +2351,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               autoComplete="off"
                                               classes={Object {}}
                                               disabled={false}
-                                              error={false}
                                               fullWidth={true}
                                               id="nameAsPublishedField"
                                               inputProps={
@@ -2374,7 +2373,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               <WithStyles(FormControl)
                                                 classes={Object {}}
                                                 disabled={false}
-                                                error={false}
                                                 fullWidth={true}
                                                 onKeyDown={[Function]}
                                                 required={false}
@@ -3326,7 +3324,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       }
                                                                       classes={Object {}}
                                                                       disabled={false}
-                                                                      error={false}
                                                                       fullWidth={true}
                                                                       id="UQAuthorID-input"
                                                                       inputProps={
@@ -3347,7 +3344,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       <WithStyles(FormControl)
                                                                         classes={Object {}}
                                                                         disabled={false}
-                                                                        error={false}
                                                                         fullWidth={true}
                                                                         required={false}
                                                                         variant="standard"
@@ -7128,7 +7124,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               autoComplete="off"
                                               classes={Object {}}
                                               disabled={true}
-                                              error={false}
                                               fullWidth={true}
                                               id="nameAsPublishedField"
                                               inputProps={
@@ -7151,7 +7146,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               <WithStyles(FormControl)
                                                 classes={Object {}}
                                                 disabled={true}
-                                                error={false}
                                                 fullWidth={true}
                                                 onKeyDown={[Function]}
                                                 required={false}
@@ -8103,7 +8097,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       }
                                                                       classes={Object {}}
                                                                       disabled={true}
-                                                                      error={false}
                                                                       fullWidth={true}
                                                                       id="UQAuthorID-input"
                                                                       inputProps={
@@ -8124,7 +8117,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       <WithStyles(FormControl)
                                                                         classes={Object {}}
                                                                         disabled={true}
-                                                                        error={false}
                                                                         fullWidth={true}
                                                                         required={false}
                                                                         variant="standard"

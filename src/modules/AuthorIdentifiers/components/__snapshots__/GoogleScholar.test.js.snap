@@ -869,20 +869,6 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
               }
             }
             anyTouched={true}
-            array={
-              Object {
-                "insert": [MockFunction],
-                "move": [MockFunction],
-                "pop": [MockFunction],
-                "push": [MockFunction],
-                "remove": [MockFunction],
-                "removeAll": [MockFunction],
-                "shift": [MockFunction],
-                "splice": [MockFunction],
-                "swap": [MockFunction],
-                "unshift": [MockFunction],
-              }
-            }
             asyncValidate={[MockFunction]}
             asyncValidating={false}
             author={
