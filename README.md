@@ -293,7 +293,7 @@ you in as that user. Usernames can be found in the `src/mock/data/accounts.js` f
 
 - anonymous user: <http://localhost:3000/?user=anon>
 - researcher user: <http://localhost:3000/?user=uqresearcher>
-- researcher user without orcid: <http://localhost:3000/?user=noorcid>
+- researcher user without orcid: <http://localhost:3000/?user=uqnoauthid>
 - staff/not author user (has admin): <http://localhost:3000/?user=uqstaff>
 - undegrad student user: <http://localhost:3000/?user=s1111111>
 - postgrad student user: <http://localhost:3000/?user=s2222222>
@@ -335,7 +335,7 @@ for branches: "master", "staging, "production" and any branch starting with "fea
 - Master branch is always deployed to staging/production
 - Deployments to production are hosted on <https://espace.library.uq.edu.au/>
 - Deployments to staging are hosted on <https://fez-staging.library.uq.edu.au/>
-- All other branches are deployed on <https://development.library.uq.edu/espace/`branchName`/>.
+- All other branches are deployed on <https://development.library.uq.edu/espace/branchName/>.
 
 Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions

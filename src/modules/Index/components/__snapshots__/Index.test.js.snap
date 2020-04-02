@@ -2067,6 +2067,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadCurrentAccount": [Function],
                                                         "loadFullRecordToClaim": [Function],
                                                         "loadNewsFeed": [Function],
+                                                        "loadOrcidSyncStatus": [Function],
                                                         "loadPublicationList": [Function],
                                                         "loadRecordToFix": [Function],
                                                         "loadRecordToView": [Function],
@@ -2074,6 +2075,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadThirdPartyResults": [Function],
                                                         "loadVocabulariesList": [Function],
                                                         "logout": [Function],
+                                                        "requestOrcidSync": [Function],
                                                         "resetSavingAuthorState": [Function],
                                                         "searchAuthorPublications": [Function],
                                                         "searchAuthors": [Function],
@@ -2185,6 +2187,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadCurrentAccount": [Function],
                                                           "loadFullRecordToClaim": [Function],
                                                           "loadNewsFeed": [Function],
+                                                          "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
                                                           "loadRecordToFix": [Function],
                                                           "loadRecordToView": [Function],
@@ -2192,6 +2195,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadThirdPartyResults": [Function],
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
+                                                          "requestOrcidSync": [Function],
                                                           "resetSavingAuthorState": [Function],
                                                           "searchAuthorPublications": [Function],
                                                           "searchAuthors": [Function],
@@ -2310,6 +2314,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             "loadCurrentAccount": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
+                                                            "loadOrcidSyncStatus": [Function],
                                                             "loadPublicationList": [Function],
                                                             "loadRecordToFix": [Function],
                                                             "loadRecordToView": [Function],
@@ -2317,6 +2322,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             "loadThirdPartyResults": [Function],
                                                             "loadVocabulariesList": [Function],
                                                             "logout": [Function],
+                                                            "requestOrcidSync": [Function],
                                                             "resetSavingAuthorState": [Function],
                                                             "searchAuthorPublications": [Function],
                                                             "searchAuthors": [Function],
@@ -2869,6 +2875,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               "loadCurrentAccount": [Function],
                                                               "loadFullRecordToClaim": [Function],
                                                               "loadNewsFeed": [Function],
+                                                              "loadOrcidSyncStatus": [Function],
                                                               "loadPublicationList": [Function],
                                                               "loadRecordToFix": [Function],
                                                               "loadRecordToView": [Function],
@@ -2876,6 +2883,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               "loadThirdPartyResults": [Function],
                                                               "loadVocabulariesList": [Function],
                                                               "logout": [Function],
+                                                              "requestOrcidSync": [Function],
                                                               "resetSavingAuthorState": [Function],
                                                               "searchAuthorPublications": [Function],
                                                               "searchAuthors": [Function],
@@ -3557,6 +3565,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       className="MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-error-186 Alert-common-180"
                                                                     >
                                                                       <WithStyles(Grid)
+                                                                        className=""
                                                                         item={true}
                                                                         sm={true}
                                                                         xs={12}
@@ -3564,6 +3573,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                         <Grid
                                                                           alignContent="stretch"
                                                                           alignItems="stretch"
+                                                                          className=""
                                                                           classes={
                                                                             Object {
                                                                               "align-content-xs-center": "MuiGrid-align-content-xs-center-15",
@@ -6337,6 +6347,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadCurrentAccount": [Function],
                                                                   "loadFullRecordToClaim": [Function],
                                                                   "loadNewsFeed": [Function],
+                                                                  "loadOrcidSyncStatus": [Function],
                                                                   "loadPublicationList": [Function],
                                                                   "loadRecordToFix": [Function],
                                                                   "loadRecordToView": [Function],
@@ -6344,6 +6355,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadThirdPartyResults": [Function],
                                                                   "loadVocabulariesList": [Function],
                                                                   "logout": [Function],
+                                                                  "requestOrcidSync": [Function],
                                                                   "resetSavingAuthorState": [Function],
                                                                   "searchAuthorPublications": [Function],
                                                                   "searchAuthors": [Function],
@@ -6409,6 +6421,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadCurrentAccount": [Function],
                                                                     "loadFullRecordToClaim": [Function],
                                                                     "loadNewsFeed": [Function],
+                                                                    "loadOrcidSyncStatus": [Function],
                                                                     "loadPublicationList": [Function],
                                                                     "loadRecordToFix": [Function],
                                                                     "loadRecordToView": [Function],
@@ -6416,6 +6429,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadThirdPartyResults": [Function],
                                                                     "loadVocabulariesList": [Function],
                                                                     "logout": [Function],
+                                                                    "requestOrcidSync": [Function],
                                                                     "resetSavingAuthorState": [Function],
                                                                     "searchAuthorPublications": [Function],
                                                                     "searchAuthors": [Function],

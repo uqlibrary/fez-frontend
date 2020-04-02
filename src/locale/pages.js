@@ -208,6 +208,28 @@ export default {
                         },
                     },
                 },
+                dashboardOrcidSync: {
+                    badgeTooltip: 'Information about uploading your eSpace works to ORCID',
+                    helpDrawer: {
+                        messages: {
+                            // Persistent help message
+                            activated: 'Weekly automatic upload of your works to ORCID is activated.',
+                            // Statuses
+                            done:
+                                'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
+                            error:
+                                'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
+                            inProgress: 'A manual upload of your eSpace works to ORCID is in progress.',
+                            // Date of last upload
+                            lastUpload: 'The last upload was on [syncTime].',
+                            noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                        },
+                        title: 'ORCID Upload',
+                        type: 'info',
+                        actionButtonLabel: 'Upload works to ORCID',
+                        alternateActionButtonLabel: 'View works in ORCID',
+                    },
+                },
             },
             myLatestPublications: {
                 title: 'My works',

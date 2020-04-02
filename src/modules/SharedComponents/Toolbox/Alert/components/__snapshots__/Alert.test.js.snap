@@ -18,6 +18,7 @@ exports[`Alert component functionality test  matches snapshot 1`] = `
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -82,7 +83,8 @@ exports[`Alert component functionality test  matches snapshot 1`] = `
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -144,6 +146,7 @@ exports[`Alert component functionality test  should render correct icon based on
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -208,7 +211,8 @@ exports[`Alert component functionality test  should render correct icon based on
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -270,6 +274,7 @@ exports[`Alert component functionality test  should render correct icon based on
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -334,7 +339,8 @@ exports[`Alert component functionality test  should render correct icon based on
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -396,6 +402,7 @@ exports[`Alert component functionality test  should render correct icon based on
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -460,7 +467,8 @@ exports[`Alert component functionality test  should render correct icon based on
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -522,6 +530,7 @@ exports[`Alert component functionality test  should render correct icon based on
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -586,7 +595,8 @@ exports[`Alert component functionality test  should render correct icon based on
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -648,6 +658,7 @@ exports[`Alert component functionality test  should render correct icon based on
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -712,7 +723,8 @@ exports[`Alert component functionality test  should render correct icon based on
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -774,6 +786,7 @@ exports[`Alert component functionality test  should render correct icon based on
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -838,7 +851,8 @@ exports[`Alert component functionality test  should render correct icon based on
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -900,6 +914,7 @@ exports[`Alert component functionality test  should render correct icon for defa
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -964,7 +979,8 @@ exports[`Alert component functionality test  should render correct icon for defa
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)

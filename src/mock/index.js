@@ -288,7 +288,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
-    .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
+    .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
+    .onGet(routes.ORCID_SYNC_API().apiUrl)
+    .reply(200, mockData.orcidSyncStatus);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
 // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
@@ -302,6 +304,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .onPost(routes.BATCH_IMPORT_API().apiUrl)
     .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
+    .onPost(routes.ORCID_SYNC_API().apiUrl)
+    .reply(201, mockData.orcidSyncResponse)
+    // .reply(400) // if current sync job exists
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
     // .reply(500, {message: 'error - failed NEW_RECORD_API'})

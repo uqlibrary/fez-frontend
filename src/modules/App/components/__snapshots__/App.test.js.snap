@@ -17245,6 +17245,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadCurrentAccount": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
+                                                            "loadOrcidSyncStatus": [Function],
                                                             "loadPublicationList": [Function],
                                                             "loadRecordToFix": [Function],
                                                             "loadRecordToView": [Function],
@@ -17252,6 +17253,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadThirdPartyResults": [Function],
                                                             "loadVocabulariesList": [Function],
                                                             "logout": [Function],
+                                                            "requestOrcidSync": [Function],
                                                             "resetSavingAuthorState": [Function],
                                                             "searchAuthorPublications": [Function],
                                                             "searchAuthors": [Function],
@@ -23287,6 +23289,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadCurrentAccount": [Function],
                                 "loadFullRecordToClaim": [Function],
                                 "loadNewsFeed": [Function],
+                                "loadOrcidSyncStatus": [Function],
                                 "loadPublicationList": [Function],
                                 "loadRecordToFix": [Function],
                                 "loadRecordToView": [Function],
@@ -23294,6 +23297,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadThirdPartyResults": [Function],
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
+                                "requestOrcidSync": [Function],
                                 "resetSavingAuthorState": [Function],
                                 "searchAuthorPublications": [Function],
                                 "searchAuthors": [Function],
@@ -24960,6 +24964,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadCurrentAccount": [Function],
                                                                           "loadFullRecordToClaim": [Function],
                                                                           "loadNewsFeed": [Function],
+                                                                          "loadOrcidSyncStatus": [Function],
                                                                           "loadPublicationList": [Function],
                                                                           "loadRecordToFix": [Function],
                                                                           "loadRecordToView": [Function],
@@ -24967,6 +24972,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadThirdPartyResults": [Function],
                                                                           "loadVocabulariesList": [Function],
                                                                           "logout": [Function],
+                                                                          "requestOrcidSync": [Function],
                                                                           "resetSavingAuthorState": [Function],
                                                                           "searchAuthorPublications": [Function],
                                                                           "searchAuthors": [Function],
@@ -25078,6 +25084,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadFullRecordToClaim": [Function],
                                                                             "loadNewsFeed": [Function],
+                                                                            "loadOrcidSyncStatus": [Function],
                                                                             "loadPublicationList": [Function],
                                                                             "loadRecordToFix": [Function],
                                                                             "loadRecordToView": [Function],
@@ -25085,6 +25092,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadThirdPartyResults": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
+                                                                            "requestOrcidSync": [Function],
                                                                             "resetSavingAuthorState": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
@@ -25203,6 +25211,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadCurrentAccount": [Function],
                                                                               "loadFullRecordToClaim": [Function],
                                                                               "loadNewsFeed": [Function],
+                                                                              "loadOrcidSyncStatus": [Function],
                                                                               "loadPublicationList": [Function],
                                                                               "loadRecordToFix": [Function],
                                                                               "loadRecordToView": [Function],
@@ -25210,6 +25219,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadThirdPartyResults": [Function],
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
+                                                                              "requestOrcidSync": [Function],
                                                                               "resetSavingAuthorState": [Function],
                                                                               "searchAuthorPublications": [Function],
                                                                               "searchAuthors": [Function],
@@ -25762,6 +25772,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadCurrentAccount": [Function],
                                                                                 "loadFullRecordToClaim": [Function],
                                                                                 "loadNewsFeed": [Function],
+                                                                                "loadOrcidSyncStatus": [Function],
                                                                                 "loadPublicationList": [Function],
                                                                                 "loadRecordToFix": [Function],
                                                                                 "loadRecordToView": [Function],
@@ -25769,6 +25780,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadThirdPartyResults": [Function],
                                                                                 "loadVocabulariesList": [Function],
                                                                                 "logout": [Function],
+                                                                                "requestOrcidSync": [Function],
                                                                                 "resetSavingAuthorState": [Function],
                                                                                 "searchAuthorPublications": [Function],
                                                                                 "searchAuthors": [Function],
@@ -26450,6 +26462,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-331 Alert-common-325"
                                                                                       >
                                                                                         <WithStyles(Grid)
+                                                                                          className=""
                                                                                           item={true}
                                                                                           sm={true}
                                                                                           xs={12}
@@ -26457,6 +26470,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           <Grid
                                                                                             alignContent="stretch"
                                                                                             alignItems="stretch"
+                                                                                            className=""
                                                                                             classes={
                                                                                               Object {
                                                                                                 "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -29230,6 +29244,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadCurrentAccount": [Function],
                                                                                     "loadFullRecordToClaim": [Function],
                                                                                     "loadNewsFeed": [Function],
+                                                                                    "loadOrcidSyncStatus": [Function],
                                                                                     "loadPublicationList": [Function],
                                                                                     "loadRecordToFix": [Function],
                                                                                     "loadRecordToView": [Function],
@@ -29237,6 +29252,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadThirdPartyResults": [Function],
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
+                                                                                    "requestOrcidSync": [Function],
                                                                                     "resetSavingAuthorState": [Function],
                                                                                     "searchAuthorPublications": [Function],
                                                                                     "searchAuthors": [Function],
@@ -29302,6 +29318,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
                                                                                       "loadNewsFeed": [Function],
+                                                                                      "loadOrcidSyncStatus": [Function],
                                                                                       "loadPublicationList": [Function],
                                                                                       "loadRecordToFix": [Function],
                                                                                       "loadRecordToView": [Function],
@@ -29309,6 +29326,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadThirdPartyResults": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
+                                                                                      "requestOrcidSync": [Function],
                                                                                       "resetSavingAuthorState": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
