@@ -263,7 +263,7 @@ export const getRoutesConfig = ({
                 {
                     path: pathConfig.sbsSubmission,
                     render: isHdrStudent
-                        ? () => components.SbsSubmission({ isHdrThesis: false })
+                        ? () => <components.SbsSubmission />
                         : () => components.StandardPage({ ...locale.pages.thesisSubmissionDenied }),
                     pageTitle: formLocale.thesisSubmission.sbsTitle,
                 },

@@ -1,3 +1,4 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, getFormValues, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
 import Immutable from 'immutable';
@@ -7,9 +8,11 @@ import { general } from 'config';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
+import moment from 'moment';
 
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { reloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
+import { ReloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
+import { LocallyStoredReducerContext } from 'context';
 
 const FORM_NAME = 'SbsSubmission';
 
@@ -42,7 +45,7 @@ const mapStateToProps = (state, props) => {
 
     const today = new Date();
     const initialValues = {
-        rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
+        rek_date: moment(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`),
         fez_record_search_key_org_name: { rek_org_name: 'The University of Queensland' },
         currentAuthor: [
             {
@@ -79,5 +82,15 @@ SbsSubmissionContainer = connect(
     mapStateToProps,
     mapDispatchToProps,
 )(SbsSubmissionContainer);
+
 SbsSubmissionContainer = withRouter(SbsSubmissionContainer);
-export default reloadReducerFromLocalStorage()(SbsSubmissionContainer);
+
+const SbsSubmissionContainerWithReducer = () => (
+    <ReloadReducerFromLocalStorage>
+        <LocallyStoredReducerContext.Consumer>
+            {({ locallyStoredReducer }) => <SbsSubmissionContainer locallyStoredReducer={locallyStoredReducer} />}
+        </LocallyStoredReducerContext.Consumer>
+    </ReloadReducerFromLocalStorage>
+);
+
+export default SbsSubmissionContainerWithReducer;

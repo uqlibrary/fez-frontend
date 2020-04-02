@@ -10,9 +10,7 @@ export const Dashboard = React.lazy(() => import('modules/Dashboard/containers/D
 export const Orcid = React.lazy(() => import('modules/AuthorIdentifiers/containers/Orcid'));
 export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
 export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmission/containers/ThesisSubmission'));
-export const SbsSubmission = componentProps => (
-    <Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />
-);
+export const SbsSubmission = React.lazy(() => import('modules/SbsSubmission/containers/SbsSubmission'));
 export const ViewRecord = React.lazy(() => import('modules/ViewRecord/containers/ViewRecord'));
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const CollectionForm = () => <Async load={import('modules/Admin/CollectionForm/containers/CollectionForm')} />;
