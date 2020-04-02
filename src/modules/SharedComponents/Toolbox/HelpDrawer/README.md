@@ -30,7 +30,7 @@ All these props are passed in from HelpDrawer's `reducer.js` file:
 import React from 'react';
 ...
 
-import {HelpDrawer, HelpIcon} from 'uqlibrary-react-toolbox';
+import {HelpDrawer, HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 // Data configuration
 const text = 'Where ever additional cues or explanation are required to clarify a process or procedure. Can be used as a card cue (inline inside of <CardHeader> to offer the icon in the top right of the card, or inline in text or form elements. Additionally, by adding 2 parameters (helpTitle and helpText) to a <Field> element, an integrated help icon can be produced. More info on this implementation in forms.'
@@ -61,7 +61,7 @@ import { reducer as formReducer } from 'redux-form/immutable';
 import { combineReducers } from 'redux-immutable';
 
 // Reducers
-import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
+import { helpDrawerReducer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 const rootReducer = combineReducers({
     form: formReducer,

@@ -188,8 +188,8 @@ to keep initial load to a minimum following optimisation has been added to the p
 - component should extend React.PureComponent if props are simple
 - component should extend React.Component, shouldComponentUpdate() should be implemented if props have objects
 - import explicit and specific components (do not import all):
-  - _DO NOT_ `import {Button} from 'material-ui';`
-  - _DO_ `import {Button} from 'material-ui/Button';`
+  - _DO NOT_ `import { Button } from 'material-ui';`
+  - _DO_ `import { Button } from 'material-ui/Button';`
 - any set of components which is not required in the initial load, eg PublicationForm, FixForm, ClaimForm etc, should
   lazy loaded using `<Async>`
 

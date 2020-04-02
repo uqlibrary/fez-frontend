@@ -17,11 +17,11 @@ Prototype component to publically search eSpace
 import React from 'react';
 ...
 
-import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
+import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 
 const App = () => (
   <div>
-  
+
     <SearchComponent
         inHeader
         showAdvancedSearchButton

@@ -36,7 +36,7 @@ Props:
 ```jsx
 import React from 'react';
 ...
-import {AppLoader} from 'uqlibrary-react-toolbox';
+import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 
 const App = () => (
