@@ -9,21 +9,12 @@ import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 
 // forms & custom components
-import Async from 'modules/SharedComponents/Async';
-const PublicationsList = componentProps => (
-    <Async
-        load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}
-        componentProps={componentProps}
-    />
+const PublicationsList = React.lazy(() =>
+    import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
 );
 
-const PublicationListLoadingProgress = componentProps => (
-    <Async
-        load={import(
-            'modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'
-        )}
-        componentProps={componentProps}
-    />
+const PublicationListLoadingProgress = React.lazy(() =>
+    import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
 );
 
 import { pathConfig } from 'config/routes';
