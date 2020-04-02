@@ -1,54 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // MUI 1
 import IconButton from '@material-ui/core/IconButton';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
 
-const styles = theme => ({
-    helpIcon: {
-        color: theme.palette.secondary.main,
-        opacity: 0.66,
-        '&:hover': {
-            opacity: 0.87,
+const useStyles = makeStyles(
+    theme => ({
+        helpIcon: {
+            color: theme.palette.secondary.main,
+            opacity: 0.66,
+            '&:hover': {
+                opacity: 0.87,
+            },
         },
-    },
-});
+    }),
+    { withTheme: true },
+);
 
-export class HelpIcon extends Component {
-    static propTypes = {
-        title: PropTypes.string,
-        text: PropTypes.any.isRequired,
-        buttonLabel: PropTypes.string,
-        tooltip: PropTypes.string,
-        onClick: PropTypes.func,
-        classes: PropTypes.object,
-        IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.Component]),
-    };
-
-    static defaultProps = {
-        tooltip: 'Click for more information',
-        IconComponent: HelpOutlineIcon,
-    };
-
-    setDrawerContent = () => {
-        const { title, text, buttonLabel, onClick } = this.props;
+export const HelpIcon = ({ title, text, buttonLabel, tooltip, onClick, IconComponent }) => {
+    const classes = useStyles();
+    const setDrawerContent = () => {
         onClick(title, text, buttonLabel);
     };
 
-    render() {
-        const { classes, tooltip, IconComponent } = this.props;
-        return (
-            <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
-                <IconButton onClick={this.setDrawerContent}>
-                    <IconComponent className={classes.helpIcon} titleAccess={tooltip} />
-                </IconButton>
-            </Tooltip>
-        );
-    }
-}
+    return (
+        <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
+            <IconButton id="help-icon" onClick={setDrawerContent}>
+                <IconComponent className={classes.helpIcon} titleAccess={tooltip} />
+            </IconButton>
+        </Tooltip>
+    );
+};
 
-export default withStyles(styles, { withTheme: true })(HelpIcon);
+HelpIcon.propTypes = {
+    title: PropTypes.string,
+    text: PropTypes.any.isRequired,
+    buttonLabel: PropTypes.string,
+    tooltip: PropTypes.string,
+    onClick: PropTypes.func,
+    IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.Component]),
+};
+
+HelpIcon.defaultProps = {
+    tooltip: 'Click for more information',
+    IconComponent: HelpOutlineIcon,
+};
+
+export default HelpIcon;

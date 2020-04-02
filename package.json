@@ -354,6 +354,7 @@
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
+            "!src/modules/App/components/pages.js",
             "!src/modules/**/*.integration.{js,jsx}",
             "!src/modules/SharedComponents/ScrollTop/**",
             "!src/**/{index,locale,config}.js",
