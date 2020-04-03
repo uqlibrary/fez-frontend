@@ -27,7 +27,7 @@ case "$PIPE_NUM" in
         npm run test:unit:serial:skipcoverage
     fi
 
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+    if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == *"cypress"* ]]; then
         npm run test:e2e:dashboard
     fi
 ;;
@@ -53,7 +53,7 @@ case "$PIPE_NUM" in
 
     # run cypress tests if in master branch, or the branch name includes 'cypress'
     # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+    if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == *"cypress"* ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
         # Use this variant to only run tests locally in Codeship
         # npm run test:e2e
