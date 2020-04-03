@@ -19,7 +19,6 @@ jest.mock('@material-ui/styles/useTheme', () => () => ({
 }));
 
 jest.mock('@material-ui/core/useMediaQuery');
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
@@ -63,10 +62,6 @@ describe('AdminContainer component', () => {
 
     it('should render component with tabbed interface', () => {
         Cookies.get = jest.fn(() => 'tabbed');
-
-        useMediaQuery.mockImplementation(() => ({
-            unstable_useMediaQuery: jest.fn(() => true),
-        }));
 
         const wrapper = setup({
             loadingRecordToView: false,
