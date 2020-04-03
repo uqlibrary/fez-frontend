@@ -633,7 +633,7 @@ export default {
                     "srm_id": 69421,
                     "srm_issn": "0302-9743",
                     "srm_journal_name": "Lecture Notes in Artificial Intelligence",
-                    "srm_journal_link": "http://example.com"
+                    "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/33095"
                 },
                 "fez_ulrichs": {
                     "ulr_issn": "0302-9743",

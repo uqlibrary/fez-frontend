@@ -27,14 +27,10 @@ export default class JournalName extends PureComponent {
         return years;
     };
 
-    // rek_issn_lookup returns sherpa romeo color
     getSherpaRomeo = issns => {
-        const issnField = 'rek_issn';
-        const colorField = 'rek_issn_lookup';
-        const colors = ['green', 'blue', 'yellow', 'white'];
-        const filteredIssns = issns.filter(issn => colors.includes(issn[colorField]));
+        const filteredIssns = issns.filter(issn => !!issn.fez_sherpa_romeo && !!issn.fez_sherpa_romeo.srm_journal_link);
         return filteredIssns.length > 0
-            ? { issn: filteredIssns[0][issnField], color: filteredIssns[0][colorField] }
+            ? { issn: filteredIssns[0].rek_issn, url: filteredIssns[0].fez_sherpa_romeo.srm_journal_link }
             : null;
     };
 
@@ -42,17 +38,11 @@ export default class JournalName extends PureComponent {
         const sherpaRomeoData = this.getSherpaRomeo(issns);
         let sherpaRomeoElement = <span />;
         if (sherpaRomeoData) {
-            const sherpaRomeoColor = sherpaRomeoData.color;
-            const sherpaRomeoLink = globalLocale.global.sherpaRomeoLink.externalUrl.replace(
-                '[issn]',
-                sherpaRomeoData.issn,
-            );
             sherpaRomeoElement = (
                 <span>
-                    <ExternalLink href={sherpaRomeoLink} aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}>
-                        <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>
-                            {viewRecordLocale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
-                        </span>
+                    {' '}
+                    <ExternalLink href={sherpaRomeoData.url} aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}>
+                        {viewRecordLocale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
                     </ExternalLink>
                 </span>
             );

@@ -20,7 +20,6 @@ describe('Journal Name Component test ', () => {
     it('should render with journal article', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
         expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
     });
 
@@ -42,7 +41,6 @@ describe('Journal Name Component test ', () => {
 
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(0);
     });
 
     it('should have getERAYears return ERA years appropriately', () => {

@@ -39,9 +39,7 @@ const mapStateToProps = (state, props) => {
     return {
         sherpaRomeo:
             (sherpaData && {
-                link:
-                    sherpaData.srm_issn &&
-                    globalLocale.global.sherpaRomeoLink.externalUrl.replace('[issn]', sherpaData.srm_issn),
+                link: (sherpaData.srm_issn && sherpaData.srm_journal_link) || '',
             }) ||
             null,
         ulrichs:

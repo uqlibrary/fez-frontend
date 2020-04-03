@@ -4099,7 +4099,8 @@ export const journalArticle = {
                 "srm_issn": "1477-9137",
                 "srm_json": "{}",
                 "srm_journal_name": "Journal of Cell Science",
-                "srm_date_updated": "2017-09-30 18:26:18"
+                "srm_date_updated": "2017-09-30 18:26:18",
+                "srm_journal_link": "https://example.com/"
             },
             "rek_issn_lookup": ""
         }
