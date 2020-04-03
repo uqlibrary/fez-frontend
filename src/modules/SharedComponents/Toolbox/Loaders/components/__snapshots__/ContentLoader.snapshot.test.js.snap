@@ -3,7 +3,7 @@
 exports[`ContentLoader snapshots tests renders loader 1`] = `
 <StandardPage>
   <WithStyles(ForwardRef(Grid))
-    container={16}
+    container={true}
   >
     <WithStyles(ForwardRef(Grid))
       item={true}

@@ -8,17 +8,32 @@ exports[`MyIncompleteRecord Container should display form once record and author
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 410,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -41,12 +56,12 @@ exports[`MyIncompleteRecord Container should display form once record and author
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 410,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   hasAnyFiles={true}
@@ -117,6 +132,21 @@ exports[`MyIncompleteRecord Container should display form once record and author
   }
   isAuthorLinked={false}
   isNtro={true}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -655,17 +685,32 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -688,12 +733,12 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   hasAnyFiles={true}
@@ -785,6 +830,21 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
   }
   isAuthorLinked={true}
   isNtro={true}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -1292,17 +1352,32 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -1325,12 +1400,12 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   hasAnyFiles={true}
@@ -1388,6 +1463,21 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
   }
   isAuthorLinked={true}
   isNtro={true}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -1639,33 +1729,32 @@ exports[`MyIncompleteRecord Container should run componentDidMount() life cycle 
     }
   }
   accountAuthorLoading={false}
-  actions={
-    Object {
-      "loadRecordToFix": [MockFunction] {
-        "calls": Array [
-          Array [
-            "UQ:123456",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-    }
-  }
   author={
     Object {
       "aut_id": 410,
     }
   }
+  clearFixRecord={[MockFunction]}
   dirty={false}
   disableInitialGrants={true}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:123456",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
