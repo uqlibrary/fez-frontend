@@ -18,7 +18,7 @@ exports[`Snapshot tests for RighthandCard component renders with title and help 
   <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <Connect(WithStyles(HelpIcon))
+    <Connect(HelpIcon)
       buttonLabel="OK"
       text="Some help text"
       title="Help text"
@@ -55,7 +55,7 @@ exports[`Snapshot tests for RighthandCard component renders with title and help 
   <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <Connect(WithStyles(HelpIcon))
+    <Connect(HelpIcon)
       buttonLabel="OK"
       text="Some help text"
       title="Help text"

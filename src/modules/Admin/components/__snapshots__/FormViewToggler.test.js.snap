@@ -23,7 +23,7 @@ exports[`FormViewToggler component should render default view 1`] = `
   <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <Connect(WithStyles(HelpIcon))
+    <Connect(HelpIcon)
       IconComponent={
         Object {
           "$$typeof": Symbol(react.memo),
@@ -101,7 +101,7 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
   <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <Connect(WithStyles(HelpIcon))
+    <Connect(HelpIcon)
       IconComponent={
         Object {
           "$$typeof": Symbol(react.memo),

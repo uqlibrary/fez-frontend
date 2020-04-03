@@ -90,7 +90,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
         }
         xs="auto"
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>
@@ -1031,7 +1031,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         xs="auto"
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>

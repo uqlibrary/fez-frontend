@@ -57,7 +57,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
       <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>
@@ -932,7 +932,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
       <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>
@@ -1888,7 +1888,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
       <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>
