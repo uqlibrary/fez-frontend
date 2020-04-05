@@ -4,7 +4,14 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => {
+export const IssnRowItemTemplate = ({
+    actions,
+    item,
+    loadingSherpaFromIssn,
+    loadingUlrichsFromIssn,
+    sherpaRomeo,
+    ulrichs,
+}) => {
     const convertItem = theItem =>
         !!theItem.key
             ? theItem
@@ -40,10 +47,10 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => 
                     },
                 });
             } else {
-                actions.getSherpaFromIssn(issn.key);
+                !loadingSherpaFromIssn && actions.getSherpaFromIssn(issn.key);
             }
         }
-    }, [actions, issn, sherpaRomeo]);
+    }, [actions, issn, loadingSherpaFromIssn, sherpaRomeo]);
 
     React.useEffect(() => {
         if (!issn.value || !issn.value.ulrichs || !issn.value.ulrichs.link) {
@@ -56,10 +63,10 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => 
                     },
                 });
             } else {
-                actions.getUlrichsFromIssn(issn.key);
+                !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(issn.key);
             }
         }
-    }, [actions, issn, ulrichs]);
+    }, [actions, issn, loadingUlrichsFromIssn, ulrichs]);
 
     return (
         <React.Fragment>
@@ -96,6 +103,8 @@ export const IssnRowItemTemplate = ({ actions, item, sherpaRomeo, ulrichs }) => 
 IssnRowItemTemplate.propTypes = {
     actions: PropTypes.object,
     item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    loadingSherpaFromIssn: PropTypes.bool,
+    loadingUlrichsFromIssn: PropTypes.bool,
     sherpaRomeo: PropTypes.object,
     ulrichs: PropTypes.object,
 };

@@ -37,6 +37,8 @@ const mapStateToProps = (state, props) => {
     const ulrichsData =
         !loadingUlrichsFromIssn && !ulrichsLoadFromIssnError && ulrichs && getValidUlrichs(ulrichs, item);
     return {
+        loadingSherpaFromIssn,
+        loadingUlrichsFromIssn,
         sherpaRomeo:
             (sherpaData && {
                 link: (sherpaData.srm_issn && sherpaData.srm_journal_link) || '',
