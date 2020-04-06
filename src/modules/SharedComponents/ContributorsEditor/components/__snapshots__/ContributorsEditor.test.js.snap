@@ -759,11 +759,11 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
 <div
   className="contributorEditor"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -780,7 +780,17 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -802,14 +812,14 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               >
                 Step 1 of 2
               </span>
-              - Please
+              - Please 
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please
+              Please 
               <b>
                 add to a list of contributors below
               </b>
@@ -826,17 +836,17 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         showIdentifierLookup={false}
         showRoleInput={false}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         style={
           Object {
             "marginBottom": 0,
@@ -845,22 +855,40 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
+          hideReorder={false}
           isInfinite={false}
           isNtro={false}
+          locale={
+            Object {
+              "contributorAssignmentColumn": "Select your name",
+              "deleteAll": "Remove all records",
+              "deleteAllConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all records?",
+                "confirmationTitle": "Delete all",
+              },
+              "descriptionStep2": "Step 2 - Select your name from the list below",
+              "identifierColumn": "UQ identifier / Organisation",
+              "nameColumn": "Name as published",
+              "reorderColumn": "Reorder records",
+              "roleColumn": "Role",
+            }
+          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-      </WithStyles(List)>
-      <WithStyles(List)
+      </WithStyles(ForwardRef(List))>
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "ContributorList list ",
           }
         }
       >
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -883,7 +911,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -906,7 +934,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -929,9 +957,9 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -939,11 +967,11 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
 <div
   className="contributorEditor"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -960,7 +988,17 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
             "scroll": "scroll",
           }
         }
-        contributor={Object {}}
+        contributor={
+          Object {
+            "affiliation": "",
+            "creatorRole": "",
+            "nameAsPublished": "",
+            "orgaff": "",
+            "orgtype": "",
+            "uqIdentifier": "",
+            "uqUsername": "",
+          }
+        }
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -982,14 +1020,14 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               >
                 Step 1 of 2
               </span>
-              - Please
+              - Please 
               <b>
                 add to a list of contributors below
               </b>
               , in the format and order that they are published.
             </div>,
             "descriptionStep1NoStep2": <div>
-              Please
+              Please 
               <b>
                 add to a list of contributors below
               </b>
@@ -1006,17 +1044,17 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         showIdentifierLookup={false}
         showRoleInput={false}
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         style={
           Object {
             "marginBottom": 0,
@@ -1025,22 +1063,40 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
+          hideReorder={false}
           isInfinite={true}
           isNtro={false}
+          locale={
+            Object {
+              "contributorAssignmentColumn": "Select your name",
+              "deleteAll": "Remove all records",
+              "deleteAllConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all records?",
+                "confirmationTitle": "Delete all",
+              },
+              "descriptionStep2": "Step 2 - Select your name from the list below",
+              "identifierColumn": "UQ identifier / Organisation",
+              "nameColumn": "Name as published",
+              "reorderColumn": "Reorder records",
+              "roleColumn": "Role",
+            }
+          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-      </WithStyles(List)>
-      <WithStyles(List)
+      </WithStyles(ForwardRef(List))>
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "ContributorList list scroll",
           }
         }
       >
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -1063,7 +1119,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -1086,7 +1142,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -1109,7 +1165,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+        <WithStyles(WithWidth(ContributorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -1132,9 +1188,9 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
