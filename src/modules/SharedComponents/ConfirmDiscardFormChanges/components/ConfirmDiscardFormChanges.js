@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 
@@ -6,20 +6,20 @@ function confirmDiscardFormChanges(WrappedComponent) {
     const ConfirmDiscardFormChanges = props => {
         const { dirty, submitSucceeded } = props;
 
-        const getDiscardFormChangesConfirmationLocale = () =>
-            locale.global.discardFormChangesConfirmation.confirmationMessage;
-
-        const promptDiscardFormChanges = useCallback((isDirty = false) => {
-            window.onbeforeunload = isDirty && getDiscardFormChangesConfirmationLocale;
-        }, []);
+        const getDiscardFormChangesConfirmationLocale = () => {
+            return locale.global.discardFormChangesConfirmation.confirmationMessage;
+        };
 
         useEffect(() => {
+            const promptDiscardFormChanges = (isDirty = false) => {
+                window.onbeforeunload = isDirty && getDiscardFormChangesConfirmationLocale;
+            };
             promptDiscardFormChanges(dirty && !submitSucceeded);
 
             return () => {
                 window.onbeforeunload = null;
             };
-        }, [dirty, promptDiscardFormChanges, submitSucceeded]);
+        }, [dirty, submitSucceeded]);
 
         return <WrappedComponent {...props} />;
     };
@@ -38,3 +38,34 @@ function confirmDiscardFormChanges(WrappedComponent) {
 }
 
 export default confirmDiscardFormChanges;
+
+export const ConfirmDiscardFormChanges = props => {
+    const { dirty, submitSucceeded, children } = props;
+    const getDiscardFormChangesConfirmationLocale = () => {
+        return locale.global.discardFormChangesConfirmation.confirmationMessage;
+    };
+    useEffect(() => {
+        const promptDiscardFormChanges = () => {
+            console.log('logging');
+            window.onbeforeunload = getDiscardFormChangesConfirmationLocale;
+        };
+        dirty && !submitSucceeded && promptDiscardFormChanges();
+
+        console.log(window.onbeforeunload);
+        return () => {
+            window.onbeforeunload = null;
+        };
+    }, [dirty, submitSucceeded]);
+
+    return [children];
+};
+
+ConfirmDiscardFormChanges.propTypes = {
+    dirty: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+};
+
+ConfirmDiscardFormChanges.defaultProps = {
+    dirty: false,
+    submitSucceeded: false,
+};
