@@ -40,7 +40,7 @@ describe('Audio Player Component ', () => {
     it('should play audio via button click', () => {
         const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
-        const element = wrapper.find('PlayArrowIcon.play');
+        const element = wrapper.find('ForwardRef(SvgIcon).play');
         const audio = wrapper.find('audio');
         const play = jest.fn();
         audio.getDOMNode().play = play;
@@ -67,7 +67,7 @@ describe('Audio Player Component ', () => {
         wrapper.setState({ isPlaying: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
-        const playElement = wrapper.find('WithStyles(IconButton)#playButton');
+        const playElement = wrapper.find('WithStyles(ForwardRef(IconButton))#playButton');
         const audio = wrapper.find('#audioPlayer');
         const pause = jest.fn();
         const play = jest.fn();
@@ -76,7 +76,7 @@ describe('Audio Player Component ', () => {
         playElement.simulate('click');
         expect(pause).toHaveBeenCalledTimes(0);
         expect(play).toHaveBeenCalledTimes(1);
-        const pauseElement = wrapper.find('WithStyles(IconButton)#pauseButton');
+        const pauseElement = wrapper.find('WithStyles(ForwardRef(IconButton))#pauseButton');
         pauseElement.simulate('click');
         expect(pause).toHaveBeenCalledTimes(1);
         expect(play).toHaveBeenCalledTimes(1);
