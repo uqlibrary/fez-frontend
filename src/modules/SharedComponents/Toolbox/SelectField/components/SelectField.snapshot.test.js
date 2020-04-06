@@ -52,13 +52,13 @@ describe('SelectfieldWrapper snapshots tests', () => {
         });
 
         wrapper
-            .find('WithStyles(WithFormControlContext(Select))')
+            .find('WithStyles(ForwardRef(Select))')
             .props()
             .onChange({ target: { value: 'test' } });
         expect(onChangeFn).toHaveBeenCalledWith('test');
 
         wrapper
-            .find('WithStyles(WithFormControlContext(Select))')
+            .find('WithStyles(ForwardRef(Select))')
             .props()
             .onBlur();
         expect(onBlurFn).toHaveBeenCalledWith('testing');
