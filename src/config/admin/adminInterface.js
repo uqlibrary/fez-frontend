@@ -54,15 +54,19 @@ import {
 
 export const USER_IDS_WITH_LEGACY_LINK = [
     'uqstaff',
+    'uqtest',
     'uqaheath',
     'uqmmarr1',
     'uqmfeen1',
+    'uqdstew1',
+    'uqfyu',
+    'uqayeate',
+    'uqcokeef',
     'uqamartl',
     'uqldegro',
     'uqklane1',
     'uqvasai',
     'uqawil42',
-    'uqtest',
 ];
 
 export default {
