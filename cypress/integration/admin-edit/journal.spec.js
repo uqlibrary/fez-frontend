@@ -13,10 +13,9 @@ context('Journal admin edit', () => {
 
     it('should load with specifed elements', () => {
         cy.adminEditCountCards(7);
-        cy.adminEditVerifyAlerts(2, ['Journal name is required']);
+        cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(2);
     });
 
     it('should render the different sections as expected', () => {

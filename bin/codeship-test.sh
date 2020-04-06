@@ -27,7 +27,7 @@ case "$PIPE_NUM" in
         npm run test:unit:serial:skipcoverage
     fi
 
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+    if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == *"cypress"* ]]; then
         npm run test:e2e:dashboard
     fi
 ;;
