@@ -10,13 +10,19 @@ import { history } from './history';
 export const getStore = (initialState = Immutable.Map()) => {
     const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-    return createStore(
+    const store = createStore(
         rootReducer,
         initialState,
         composeEnhancer(
             applyMiddleware(routerMiddleware(history), thunk, publicationEnhancer, saveReducerOnSessionExpired),
         ),
     );
+
+    if (window.Cypress) {
+        window.__store__ = store;
+    }
+
+    return store;
 };
 
 export const store = getStore();
