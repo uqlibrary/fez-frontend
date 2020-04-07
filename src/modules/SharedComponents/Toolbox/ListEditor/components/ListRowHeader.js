@@ -6,7 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import DeleteForever from '@material-ui/icons/DeleteForever';
-import { ConfirmationBox, useConfirmationState } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { useConfirmationState } from 'hooks';
 
 const useStyles = makeStyles(() => ({
     right: {
