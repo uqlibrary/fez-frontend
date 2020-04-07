@@ -122,6 +122,10 @@ export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
 export const EXISTING_RECORD_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
+export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
+export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
 // search/list records apis
