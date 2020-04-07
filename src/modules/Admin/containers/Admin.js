@@ -116,7 +116,15 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
 
     let action = null;
     const requestObject = isEdit
-        ? { ...changes, pid: data.publication.rek_pid, date: data.publication.rek_date }
+        ? {
+            // This is ignored for regular records.
+            ...changes,
+            pid: data.publication.rek_pid,
+            // The fallback to rek_created_date for rek_date may only be used for
+            // collections and communities. Legacy omits rek_date when creating
+            // them, but it's required by API.
+            date: data.publication.rek_date || data.publication.rek_created_date,
+        }
         : data;
     switch (data.publication.rek_object_type_lookup) {
         case 'Collection':
