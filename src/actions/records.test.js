@@ -1449,6 +1449,7 @@ describe('Record action creators', () => {
         const pid = 'UQ:123456';
         const testInput = {
             pid,
+            date: '2020-04-07',
             updated: {
                 securitySection: {
                     rek_datastream_policy: 2,
@@ -1550,6 +1551,7 @@ describe('Record action creators', () => {
         const pid = 'UQ:123456';
         const testInput = {
             pid,
+            date: '2020-04-07',
             updated: {
                 securitySection: {
                     rek_security_policy: 4,

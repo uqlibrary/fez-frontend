@@ -334,12 +334,13 @@ export function createCollection(data, authorId) {
     };
 }
 
-export const updateCollection = ({ pid, updated }) => {
+export const updateCollection = ({ pid, date, updated }) => {
     return dispatch => {
         dispatch({
             type: actions.COLLECTION_UPDATING,
         });
         const patchRecordRequest = {
+            rek_date: date,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
@@ -397,12 +398,13 @@ export function createCommunity(data, authorId) {
     };
 }
 
-export const updateCommunity = ({ pid, updated }) => {
+export const updateCommunity = ({ pid, date, updated }) => {
     return dispatch => {
         dispatch({
             type: actions.COMMUNITY_UPDATING,
         });
         const patchRecordRequest = {
+            rek_date: date,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])

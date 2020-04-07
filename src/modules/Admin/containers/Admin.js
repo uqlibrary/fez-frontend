@@ -115,7 +115,9 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
     const isEdit = !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
 
     let action = null;
-    const requestObject = isEdit ? { ...changes, pid: data.publication.rek_pid } : data;
+    const requestObject = isEdit
+        ? { ...changes, pid: data.publication.rek_pid, date: data.publication.rek_date }
+        : data;
     switch (data.publication.rek_object_type_lookup) {
         case 'Collection':
             action = isEdit ? updateCollection : null;
