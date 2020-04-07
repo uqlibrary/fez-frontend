@@ -551,7 +551,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for EXISTING_COLLECTION_API', () => {
-        expect(routes.EXISTING_COLLECTION_API({ pid: 'UQ:123456' })).toEqual({ apiUrl: 'collections/UQ:123456' });
+        expect(routes.EXISTING_COLLECTION_API({ pid: 'UQ:123456' })).toEqual({ apiUrl: 'records/UQ:123456' });
     });
 
     it('should construct url for NEW_COMMUNITY_API', () => {
@@ -559,7 +559,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for EXISTING_COMMUNITY_API', () => {
-        expect(routes.EXISTING_COMMUNITY_API({ pid: 'UQ:123456' })).toEqual({ apiUrl: 'communities/UQ:123456' });
+        expect(routes.EXISTING_COMMUNITY_API({ pid: 'UQ:123456' })).toEqual({ apiUrl: 'records/UQ:123456' });
     });
 
     it('should construct url for AUTHORS_SEARCH_API', () => {

@@ -340,7 +340,6 @@ export const updateCollection = ({ pid, updated }) => {
             type: actions.COLLECTION_UPDATING,
         });
         const patchRecordRequest = {
-            rek_pid: pid,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
@@ -404,7 +403,6 @@ export const updateCommunity = ({ pid, updated }) => {
             type: actions.COMMUNITY_UPDATING,
         });
         const patchRecordRequest = {
-            rek_pid: pid,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
