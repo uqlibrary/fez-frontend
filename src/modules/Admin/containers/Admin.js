@@ -1,7 +1,7 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 import { destroy, reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
-import { adminUpdate, adminCreate } from 'actions';
+import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -20,7 +20,6 @@ import {
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { detailedDiff } from 'deep-object-diff';
-import { pathConfig } from 'config/routes';
 import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 
 export const bibliographicParams = record =>
@@ -107,16 +106,30 @@ const getInitialFormValues = (recordToView, recordType) => {
     };
 };
 
-const onSubmit = (values, dispatch, { initialValues, match }) => {
-    console.log(detailedDiff((initialValues && initialValues.toJS()) || null, (values && values.toJS()) || null));
+export const onSubmit = (values, dispatch, { initialValues, match }) => {
+    const data = (values && values.toJS()) || null;
+    const initialData = (initialValues && initialValues.toJS()) || null;
+    const changes = detailedDiff(initialData, data);
+    console.log(changes);
+
+    const isEdit = !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
+
     let action = null;
-    if (match.url === pathConfig.admin.edit(match.params.pid || '')) {
-        action = adminUpdate;
-    } else {
-        action = adminCreate;
+    const requestObject = isEdit ? { ...changes, pid: data.publication.rek_pid } : data;
+    switch (data.publication.rek_object_type_lookup) {
+        case 'Collection':
+            action = isEdit ? updateCollection : null;
+            break;
+        case 'Community':
+            action = isEdit ? updateCommunity : null;
+            break;
+        default:
+            requestObject = data;
+            action = isEdit ? adminUpdate : adminCreate;
+            break;
     }
 
-    return dispatch(action(values.toJS())).catch(error => {
+    return dispatch(action(requestObject)).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };

@@ -17270,6 +17270,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "showAppAlert": [Function],
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
+                                                            "updateCollection": [Function],
+                                                            "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
@@ -23314,6 +23316,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "showAppAlert": [Function],
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
+                                "updateCollection": [Function],
+                                "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
                                 "updateIncompleteRecord": [Function],
                               }
@@ -24989,6 +24993,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "showAppAlert": [Function],
                                                                           "submitThesis": [Function],
                                                                           "unclaimRecord": [Function],
+                                                                          "updateCollection": [Function],
+                                                                          "updateCommunity": [Function],
                                                                           "updateCurrentAuthor": [Function],
                                                                           "updateIncompleteRecord": [Function],
                                                                         }
@@ -25109,6 +25115,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "showAppAlert": [Function],
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
+                                                                            "updateCollection": [Function],
+                                                                            "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                           }
@@ -25236,6 +25244,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "showAppAlert": [Function],
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
+                                                                              "updateCollection": [Function],
+                                                                              "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
                                                                               "updateIncompleteRecord": [Function],
                                                                             }
@@ -25797,6 +25807,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "showAppAlert": [Function],
                                                                                 "submitThesis": [Function],
                                                                                 "unclaimRecord": [Function],
+                                                                                "updateCollection": [Function],
+                                                                                "updateCommunity": [Function],
                                                                                 "updateCurrentAuthor": [Function],
                                                                                 "updateIncompleteRecord": [Function],
                                                                               }
@@ -29269,6 +29281,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "showAppAlert": [Function],
                                                                                     "submitThesis": [Function],
                                                                                     "unclaimRecord": [Function],
+                                                                                    "updateCollection": [Function],
+                                                                                    "updateCommunity": [Function],
                                                                                     "updateCurrentAuthor": [Function],
                                                                                     "updateIncompleteRecord": [Function],
                                                                                   }
@@ -29343,6 +29357,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "showAppAlert": [Function],
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
+                                                                                      "updateCollection": [Function],
+                                                                                      "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                     }

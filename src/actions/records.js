@@ -4,7 +4,9 @@ import {
     EXISTING_RECORD_API,
     RECORDS_ISSUES_API,
     NEW_COLLECTION_API,
+    EXISTING_COLLECTION_API,
     NEW_COMMUNITY_API,
+    EXISTING_COMMUNITY_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
@@ -332,6 +334,36 @@ export function createCollection(data, authorId) {
     };
 }
 
+export const updateCollection = ({ pid, updated }) => {
+    return dispatch => {
+        dispatch({
+            type: actions.COLLECTION_UPDATING,
+        });
+        const patchRecordRequest = {
+            rek_pid: pid,
+            ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
+        };
+        return Promise.resolve([])
+            .then(() => patch(EXISTING_COLLECTION_API({ pid }), patchRecordRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.COLLECTION_UPDATE_SUCCESS,
+                    payload: {
+                        ...response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.COLLECTION_UPDATE_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+};
+
 /**
  * Save a new community involves a single request.
  * If error occurs on any stage failed action is dispatched
@@ -365,6 +397,36 @@ export function createCommunity(data, authorId) {
             });
     };
 }
+
+export const updateCommunity = ({ pid, updated }) => {
+    return dispatch => {
+        dispatch({
+            type: actions.COMMUNITY_UPDATING,
+        });
+        const patchRecordRequest = {
+            rek_pid: pid,
+            ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
+        };
+        return Promise.resolve([])
+            .then(() => patch(EXISTING_COMMUNITY_API({ pid }), patchRecordRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.COMMUNITY_UPDATE_SUCCESS,
+                    payload: {
+                        ...response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.COMMUNITY_UPDATE_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+};
 
 /**
  * Clear new record
