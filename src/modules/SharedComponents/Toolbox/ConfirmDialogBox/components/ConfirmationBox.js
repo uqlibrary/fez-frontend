@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -19,20 +19,6 @@ export const useStyles = makeStyles(theme => ({
         },
     },
 }));
-
-export const useConfirmationState = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const showConfirmation = useCallback(() => {
-        setIsOpen(true);
-    }, []);
-
-    const hideConfirmation = useCallback(() => {
-        setIsOpen(false);
-    }, []);
-
-    return [isOpen, showConfirmation, hideConfirmation];
-};
 
 export const ConfirmationBox = ({
     hideCancelButton,

@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import { useState, useCallback } from 'react';
 import { useRecordContext, useAccountContext } from 'context';
 import { publicationTypes } from 'config';
 
@@ -23,4 +24,18 @@ export const userIsAuthor = () => {
             return parseInt(authors.rek_author_id, 10) === parseInt(account.aut_id, 10);
         })
     );
+};
+
+export const useConfirmationState = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const showConfirmation = useCallback(() => {
+        setIsOpen(true);
+    }, []);
+
+    const hideConfirmation = useCallback(() => {
+        setIsOpen(false);
+    }, []);
+
+    return [isOpen, showConfirmation, hideConfirmation];
 };

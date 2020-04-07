@@ -1,6 +1,8 @@
-import { MyIncompleteRecordClass, styles } from './MyIncompleteRecord';
+import MyIncompleteRecord from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import { routes } from 'config';
+import { act } from '@testing-library/react';
+import React from 'react';
 
 function setup(testProps = {}) {
     const props = {
@@ -62,7 +64,7 @@ function setup(testProps = {}) {
         publicationToFixFileUploadingError: false,
         ...testProps,
     };
-    return getElement(MyIncompleteRecordClass, props);
+    return getElement(MyIncompleteRecord, props);
 }
 
 describe('Component MyIncompleteRecord', () => {
@@ -91,33 +93,47 @@ describe('Component MyIncompleteRecord', () => {
                 push: testMethod,
             },
         });
-        wrapper.instance()._cancelFix();
-        expect(testMethod).toHaveBeenCalledWith('/records/incomplete');
+        wrapper
+            .find('#cancel-fix-work')
+            .first()
+            .simulate('click');
+        expect(testMethod).toHaveBeenCalledWith(routes.pathConfig.records.incomplete);
     });
 
     it('should display confirmation box after successful submission', () => {
-        const testMethod = jest.fn();
         const wrapper = setup({ recordToFix: mockRecordToFix });
-        wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
-        wrapper.instance().componentWillReceiveProps({ submitSucceeded: true });
-        expect(testMethod).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+        act(() => {
+            wrapper.setProps({ submitSucceeded: true });
+            wrapper.update();
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render the confirm dialog box with an alert due to a file upload failure', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: true,
         });
-        wrapper.setState({ selectedRecordAction: 'fix' });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        act(() => {
+            wrapper.setProps({ publicationToFixFileUploadingError: true });
+            wrapper.update();
+        });
+
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render the confirm dialog box without an alert due to a file upload success', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false,
         });
-        wrapper.setState({ selectedRecordAction: 'fix' });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({ publicationToFixFileUploadingError: false });
+
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -126,19 +142,11 @@ describe('Component MyIncompleteRecord', () => {
             recordToFix: mockRecordToFix,
             publicationToFixFileUploadingError: false,
         });
-        const testFN = jest.fn();
-        const event = { preventDefault: testFN };
-        wrapper.instance()._handleDefaultSubmit(event);
-        expect(testFN).toHaveBeenCalled();
-    });
+        const testFn = jest.fn();
+        const event = { preventDefault: testFn };
 
-    it('_handleDefaultSubmit()', () => {
-        const wrapper = setup({
-            recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false,
-        });
-        wrapper.instance()._handleDefaultSubmit();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.find('form').simulate('submit', event);
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('should be able to navigate to specific routes', () => {
@@ -149,23 +157,20 @@ describe('Component MyIncompleteRecord', () => {
                 go: jest.fn(),
             },
         });
-        wrapper.instance()._navigateToMyIncomplete();
+
+        wrapper
+            .find('ConfirmationBox')
+            .shallow()
+            .find('#confirm-cancel-action')
+            .simulate('click');
         expect(testFn).toBeCalledWith(routes.pathConfig.records.incomplete);
 
-        wrapper.instance()._navigateToDashboard();
+        wrapper
+            .find('ConfirmationBox')
+            .shallow()
+            .find('#confirm-action')
+            .simulate('click');
         expect(testFn).toBeCalledWith(routes.pathConfig.dashboard);
-    });
-
-    it('componentWillReceiveProps()', () => {
-        const wrapper = setup({
-            submitSucceeded: true,
-            recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false,
-        });
-
-        const nextProps = { submitSucceeded: true };
-        wrapper.setProps(nextProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render no fields as they are complete', () => {
@@ -235,58 +240,5 @@ describe('Component MyIncompleteRecord', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('_navigateToMyIncomplete()', () => {
-        const testFN = jest.fn();
-        const wrapper = setup({
-            author: {
-                aut_id: 1,
-            },
-            recordToFix: {
-                fez_datastream_info: [],
-                fez_record_search_key_author_id: [{ rek_author_id: 1 }],
-            },
-            history: { push: testFN },
-            accountAuthorLoading: false,
-            loadingRecordToFix: false,
-        });
-        wrapper.instance()._navigateToMyIncomplete();
-        expect(testFN).toHaveBeenCalledWith('/records/incomplete');
-    });
-
-    it('_navigateToDashboard()', () => {
-        const testFN = jest.fn();
-        const wrapper = setup({
-            author: {
-                aut_id: 1,
-            },
-            recordToFix: {
-                fez_datastream_info: [],
-                fez_record_search_key_author_id: [{ rek_author_id: 1 }],
-            },
-            history: { push: testFN },
-            accountAuthorLoading: false,
-            loadingRecordToFix: false,
-        });
-        wrapper.instance()._navigateToDashboard();
-        expect(testFN).toHaveBeenCalledWith('/dashboard');
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                secondary: {
-                    light: 'test1',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-    });
-
-    it('should set the correct ref for successfulConformationBox', () => {
-        const wrapper = setup();
-        wrapper.instance()._setSuccessConfirmation('successBox');
-        expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
     });
 });

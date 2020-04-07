@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';
 
-import { ConfirmationBox, useConfirmationState } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { useConfirmationState } from 'hooks';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -66,6 +67,7 @@ export const MyIncompleteRecord = props => {
 
     const txt = pagesLocale;
 
+    /* istanbul ignore next */
     useEffect(() => {
         if (submitSucceeded) showConfirmation();
     }, [showConfirmation, submitSucceeded]);
@@ -110,7 +112,7 @@ export const MyIncompleteRecord = props => {
     };
 
     const _handleDefaultSubmit = event => {
-        if (event) event.preventDefault();
+        !!event && event.preventDefault();
     };
 
     return (
@@ -245,6 +247,7 @@ export const MyIncompleteRecord = props => {
                     </Hidden>
                     <Grid item xs={12} md="auto">
                         <Button
+                            id="cancel-fix-work"
                             variant="contained"
                             fullWidth
                             children={txt.cancelButtonLabel}
