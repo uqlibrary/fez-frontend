@@ -119,3 +119,17 @@ Cypress.Commands.add('setPartialDate', (selector, { day, month, year }) => {
             .find('#year')
             .type(`{selectall}${year}`);
 });
+
+/**
+ * Enables access to redux store via cy.store().
+ * Can dispatch actions like example:
+ *   cy.store()
+ *      .dispatch({
+ *          type: 'SOMETHING_FAILED',
+ *          payload: 'Simulated Error',
+ *      });
+ */
+Cypress.Commands.add('store', () => {
+    return cy.window()
+        .its('__store__');
+});
