@@ -66,7 +66,7 @@ describe('ThesisSubmission', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(9);
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 
     it('should render hdr thesis submission form', () => {
@@ -93,7 +93,7 @@ describe('ThesisSubmission', () => {
 
     it('should disable submit button if invalid form data before submit', () => {
         const wrapper = setup({ disableSubmit: true });
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
 
         wrapper.find('WithStyles(Button)').forEach(field => {
             if (field.props().label === formLocale.thesisSubmission.submit) {
@@ -104,9 +104,9 @@ describe('ThesisSubmission', () => {
 
     it('should not disable submit button if form submit has failed', () => {
         const wrapper = setup({ submitFailed: true });
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
 
-        wrapper.find('WithStyles(Button)').forEach(field => {
+        wrapper.find('WithStyles(ForwardRef(Button))').forEach(field => {
             if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }

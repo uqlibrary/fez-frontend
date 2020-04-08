@@ -66,7 +66,7 @@ describe('SbsSubmission test', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(12);
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 
     it('should render sbs thesis submission form', () => {
@@ -88,9 +88,9 @@ describe('SbsSubmission test', () => {
 
     it('should disable submit button if invalid form data before submit', () => {
         const wrapper = setup({ disableSubmit: true });
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
 
-        wrapper.find('WithStyles(Button)').forEach(field => {
+        wrapper.find('WithStyles(ForwardRef(Button))').forEach(field => {
             if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(true);
             }
@@ -99,9 +99,9 @@ describe('SbsSubmission test', () => {
 
     it('should not disable submit button if form submit has failed', () => {
         const wrapper = setup({ submitFailed: true });
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
 
-        wrapper.find('WithStyles(Button)').forEach(field => {
+        wrapper.find('WithStyles(ForwardRef(Button))').forEach(field => {
             if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
@@ -179,8 +179,12 @@ describe('SbsSubmission test', () => {
     });
 
     it('should reload when told to', () => {
+        delete global.window.location;
+        const reloadFn = jest.fn();
+        global.window.location = { reload: reloadFn };
         const wrapper = setup({ initialValues: {} });
         wrapper.instance().afterFailedSubmit();
+        expect(reloadFn).toBeCalled();
     });
 
     it('should render sbs thesis submission form', () => {
