@@ -18,7 +18,7 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
-import { isAdded, isAudioXT, isDerivative } from 'helpers/datastreams';
+import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
 
 const styles = theme => ({
@@ -181,12 +181,7 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
-        return (
-            this.getSecurityAccess(dataStream) &&
-            !isDerivative(dataStream) &&
-            !isAudioXT(dataStream) &&
-            isAdded(dataStream)
-        );
+        return this.getSecurityAccess(dataStream) && !isDerivative(dataStream) && isAdded(dataStream);
     };
 
     checkArrayForObjectValue = value => {

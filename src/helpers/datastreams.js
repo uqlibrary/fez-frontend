@@ -1,15 +1,6 @@
 import { viewRecordsConfig } from '../config';
 import { STATE_ADDED } from '../config/viewRecord';
 
-export const isAudioXT = dataStream => {
-    return (
-        !!dataStream.dsi_dsid &&
-        dataStream.dsi_dsid.indexOf('_xt.') !== -1 &&
-        !!dataStream.dsi_mimetype &&
-        dataStream.dsi_mimetype.indexOf('audio') !== -1
-    );
-};
-
 export const isDerivative = dataStream => {
     const {
         files: { blacklist },

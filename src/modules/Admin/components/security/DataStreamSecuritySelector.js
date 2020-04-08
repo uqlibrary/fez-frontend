@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
 import { useFormValuesContext } from 'context';
-import { isAudioXT, isDerivative } from 'helpers/datastreams';
+import { isDerivative } from 'helpers/datastreams';
 
 export const styles = () => ({
     dataStreamFileBlock: {
@@ -31,7 +31,7 @@ export const DataStreamSecuritySelector = ({
     const { formValues } = useFormValuesContext();
 
     const canDisplay = dataStream => {
-        return !isDerivative(dataStream) && !isAudioXT(dataStream);
+        return !isDerivative(dataStream);
     };
 
     const [initialDataStreams] = useState(() => dataStreams.toJS());
