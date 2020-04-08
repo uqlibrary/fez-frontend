@@ -952,7 +952,7 @@ exports[`SearchComponent should update date range filter 1`] = `
 
 exports[`SearchComponent should update date range filter 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
     createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
@@ -1002,7 +1002,7 @@ exports[`SearchComponent should update date range filter 2`] = `
 
 exports[`SearchComponent should update date range filter 3`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
     createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
@@ -1097,7 +1097,7 @@ exports[`SearchComponent should update doc type values 1`] = `
 
 exports[`SearchComponent should update doc type values 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
     createdRange={Object {}}
     docTypes={
       Array [
@@ -1192,7 +1192,7 @@ exports[`SearchComponent should update year range filter 1`] = `
 
 exports[`SearchComponent should update year range filter 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
     createdRange={Object {}}
     docTypes={Array []}
     fieldRows={

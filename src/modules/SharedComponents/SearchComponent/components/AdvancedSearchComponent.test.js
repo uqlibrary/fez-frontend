@@ -15,6 +15,7 @@ function setup(testProps = {}) {
         updateYearRangeFilter: jest.fn(),
         docTypes: [],
         onSearch: jest.fn(),
+        onAdvancedSearchRowChange: jest.fn(),
         ...testProps,
     };
     return rtlRender(<AdvancedSearchComponent {...props} />);
