@@ -142,7 +142,6 @@ export class GrantListEditorFormClass extends PureComponent {
             grantAgencyTypeHint,
         } = this.props.locale;
         const { grantAgencyName, grantAgencyType, grantId } = this.state;
-        console.log(grantAgencyTypeHint);
 
         // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 ||
         // this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;

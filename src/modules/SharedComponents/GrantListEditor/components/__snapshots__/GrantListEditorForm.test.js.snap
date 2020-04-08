@@ -5735,7 +5735,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
 
 exports[`GrantListEditorForm should set grant agency type as a required input if agency name is set 2`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -5744,13 +5744,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={true}
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         autoComplete="off"
         disabled={false}
         error={false}
@@ -5761,14 +5761,14 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         required={false}
         value="test"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         disabled={false}
         fullWidth={true}
         id="grantId"
@@ -5776,95 +5776,107 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         required={false}
         value=""
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={12}
       xs={12}
     >
-      <WithStyles(FormControl)
+      <WithStyles(ForwardRef(FormControl))
         error={true}
         fullWidth={true}
         required={true}
       >
-        <WithStyles(WithFormControlContext(InputLabel)) />
-        <WithStyles(WithFormControlContext(Select))
+        <WithStyles(ForwardRef(Typography))
+          color="secondary"
+          style={
+            Object {
+              "marginBottom": -3,
+            }
+          }
+          variant="caption"
+        >
+           
+           
+        </WithStyles(ForwardRef(Typography))>
+        <WithStyles(ForwardRef(Select))
           SelectDisplayProps={
             Object {
               "id": "grantType",
             }
           }
           disabled={false}
+          displayEmpty={true}
           label=""
           onChange={[Function]}
           value=""
         >
-          <WithStyles(MenuItem)
+          <WithStyles(ForwardRef(MenuItem))
             disabled={true}
             value=""
           />
-          <WithStyles(MenuItem)
+          <WithStyles(ForwardRef(MenuItem))
             key="0"
             value="453983"
           >
             Library/Museum/Public Gallery
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="1"
             value="453984"
           >
             Commercial Gallery
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="2"
             value="453985"
           >
             Government
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="3"
             value="453986"
           >
             NGO
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="4"
             value="453987"
           >
             Foundation
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="5"
             value="453988"
           >
             Corporate/Industry
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="6"
             value="453989"
           >
             University
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="7"
             value="453990"
           >
             Other
-          </WithStyles(MenuItem)>
-        </WithStyles(WithFormControlContext(Select))>
-        <WithStyles(WithFormControlContext(FormHelperText))
+          </WithStyles(ForwardRef(MenuItem))>
+        </WithStyles(ForwardRef(Select))>
+        <WithStyles(ForwardRef(FormHelperText))
           error={true}
         >
           This field is required
-        </WithStyles(WithFormControlContext(FormHelperText))>
-      </WithStyles(FormControl)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(FormHelperText))>
+      </WithStyles(ForwardRef(FormControl))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -5873,15 +5885,15 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         variant="contained"
       >
         Button
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 
 exports[`GrantListEditorForm should set grant agency type as a required input if agency name is set 3`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
     spacing={1}
     style={
@@ -5890,13 +5902,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       }
     }
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={true}
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         autoComplete="off"
         disabled={false}
         error={false}
@@ -5907,14 +5919,14 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         required={false}
         value="test"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={12}
       xs={12}
     >
-      <WithStyles(TextFieldWrapper)
+      <TextField
         disabled={false}
         fullWidth={true}
         id="grantId"
@@ -5922,95 +5934,107 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         required={false}
         value="1234"
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       sm={12}
       xs={12}
     >
-      <WithStyles(FormControl)
+      <WithStyles(ForwardRef(FormControl))
         error={true}
         fullWidth={true}
         required={true}
       >
-        <WithStyles(WithFormControlContext(InputLabel)) />
-        <WithStyles(WithFormControlContext(Select))
+        <WithStyles(ForwardRef(Typography))
+          color="secondary"
+          style={
+            Object {
+              "marginBottom": -3,
+            }
+          }
+          variant="caption"
+        >
+           
+           
+        </WithStyles(ForwardRef(Typography))>
+        <WithStyles(ForwardRef(Select))
           SelectDisplayProps={
             Object {
               "id": "grantType",
             }
           }
           disabled={false}
+          displayEmpty={true}
           label=""
           onChange={[Function]}
           value=""
         >
-          <WithStyles(MenuItem)
+          <WithStyles(ForwardRef(MenuItem))
             disabled={true}
             value=""
           />
-          <WithStyles(MenuItem)
+          <WithStyles(ForwardRef(MenuItem))
             key="0"
             value="453983"
           >
             Library/Museum/Public Gallery
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="1"
             value="453984"
           >
             Commercial Gallery
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="2"
             value="453985"
           >
             Government
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="3"
             value="453986"
           >
             NGO
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="4"
             value="453987"
           >
             Foundation
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="5"
             value="453988"
           >
             Corporate/Industry
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="6"
             value="453989"
           >
             University
-          </WithStyles(MenuItem)>
-          <WithStyles(MenuItem)
+          </WithStyles(ForwardRef(MenuItem))>
+          <WithStyles(ForwardRef(MenuItem))
             key="7"
             value="453990"
           >
             Other
-          </WithStyles(MenuItem)>
-        </WithStyles(WithFormControlContext(Select))>
-        <WithStyles(WithFormControlContext(FormHelperText))
+          </WithStyles(ForwardRef(MenuItem))>
+        </WithStyles(ForwardRef(Select))>
+        <WithStyles(ForwardRef(FormHelperText))
           error={true}
         >
           This field is required
-        </WithStyles(WithFormControlContext(FormHelperText))>
-      </WithStyles(FormControl)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+        </WithStyles(ForwardRef(FormHelperText))>
+      </WithStyles(ForwardRef(FormControl))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         color="primary"
         disabled={true}
         fullWidth={true}
@@ -6019,8 +6043,8 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         variant="contained"
       >
         Button
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;

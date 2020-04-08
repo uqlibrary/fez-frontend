@@ -50,19 +50,19 @@ describe('GrantListEditorForm', () => {
     it('should set grant agency type as a required input if agency name is set', () => {
         const wrapper = setup({ required: false });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(FormControl)').props().required).toBeFalsy();
+        expect(wrapper.find('WithStyles(ForwardRef(FormControl))').props().required).toBeFalsy();
 
         wrapper.setState({
             grantAgencyName: 'test',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(FormControl)').props().required).toBeTruthy();
+        expect(wrapper.find('WithStyles(ForwardRef(FormControl))').props().required).toBeTruthy();
 
         wrapper.setState({
             grantId: '1234',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(WithFormControlContext(FormHelperText))').length).toEqual(1);
+        expect(wrapper.find('WithStyles(ForwardRef(FormHelperText))').length).toEqual(1);
     });
 
     it('should add grant and pass isPopulated info', () => {
