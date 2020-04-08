@@ -261,6 +261,7 @@ export class ContributorRow extends PureComponent {
                             >
                                 <span>
                                     <IconButton
+                                        id={`move-up-${index}`}
                                         onClick={this._onMoveUp}
                                         disabled={disabled || hideReorder}
                                         aria-label={moveUpHint}
@@ -279,6 +280,7 @@ export class ContributorRow extends PureComponent {
                             >
                                 <span>
                                     <IconButton
+                                        id={`move-down-${index}`}
                                         onClick={this._onMoveDown}
                                         disabled={disabled || hideReorder}
                                         aria-label={moveDownHint}

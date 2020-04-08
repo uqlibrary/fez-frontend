@@ -161,16 +161,16 @@ describe('Component ContributorRow', () => {
                 canMoveUp: true,
                 onMoveUp: testFunction,
             },
-            { isShallow: false },
+            { isShallow: true },
         );
 
-        const button = wrapper.find('pure(KeyboardArrowUpIcon)');
+        const button = wrapper.find('KeyboardArrowUpIcon');
         expect(button.length).toBe(1);
 
-        const buttonDown = wrapper.find('pure(KeyboardArrowDownIcon)');
+        const buttonDown = wrapper.find('KeyboardArrowDownIcon');
         expect(buttonDown.length).toBe(0);
 
-        wrapper.find('pure(KeyboardArrowUpIcon)').simulate('click');
+        wrapper.find('#move-up-0').simulate('click');
         expect(testFunction).toBeCalled();
     });
 
@@ -182,16 +182,16 @@ describe('Component ContributorRow', () => {
                 canMoveDown: true,
                 onMoveDown: testFunction,
             },
-            { isShallow: false },
+            { isShallow: true },
         );
 
-        const button = wrapper.find('pure(KeyboardArrowDownIcon)');
+        const button = wrapper.find('KeyboardArrowDownIcon');
         expect(button.length).toBe(1);
 
-        wrapper.find('pure(KeyboardArrowDownIcon)').simulate('click');
-        expect(testFunction).toBeCalled;
+        wrapper.find('#move-down-0').simulate('click');
+        expect(testFunction).toBeCalled();
 
-        const buttonUp = wrapper.find('pure(KeyboardArrowUpIcon)');
+        const buttonUp = wrapper.find('KeyboardArrowUpIcon');
         expect(buttonUp.length).toBe(0);
         testFunction.mockReset();
     });
@@ -204,9 +204,9 @@ describe('Component ContributorRow', () => {
                 showContributorAssignment: true,
                 onSelect: testFunction,
             },
-            { isShallow: false },
+            { isShallow: true },
         );
-        wrapper.find('ListItem').simulate('click');
+        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
@@ -217,11 +217,11 @@ describe('Component ContributorRow', () => {
                 index: 0,
                 onDelete: testFunction,
             },
-            { isShallow: false },
+            { isShallow: true },
         );
-        const button = wrapper.find('pure(DeleteIcon)');
+        const button = wrapper.find('DeleteIcon');
         expect(button.length).toBe(1);
-        wrapper.find('pure(DeleteIcon)').simulate('click');
+        wrapper.find('DeleteIcon').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
@@ -399,7 +399,7 @@ describe('Component ContributorRow', () => {
 
         const blurFn = jest.fn();
         wrapper
-            .find('WithStyles(ListItem)')
+            .find('WithStyles(ForwardRef(ListItem))')
             .props()
             .onClick({
                 currentTarget: {
@@ -432,11 +432,11 @@ describe('Component ContributorRow', () => {
         });
 
         wrapper
-            .find('WithStyles(ListItem)')
+            .find('WithStyles(ForwardRef(ListItem))')
             .props()
             .onClick();
         wrapper
-            .find('WithStyles(ListItem)')
+            .find('WithStyles(ForwardRef(ListItem))')
             .props()
             .onKeyDown();
         expect(toJson(wrapper)).toMatchSnapshot();
