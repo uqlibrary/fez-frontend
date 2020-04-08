@@ -1,47 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grant Information Component  renderGrantDetail() 1`] = `
-<div
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
-  <WithStyles(ForwardRef(Grid))
-    alignItems="flex-start"
-    container={true}
-    spacing={2}
-  >
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      sm={3}
-      xs={12}
-    >
-      <UNDEFINED
-        className="header"
-        grantAgencyName="Grant agency"
-        grantId={false}
-      />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      sm={9}
-      xs={12}
-    >
-      <UNDEFINED
-        grantId={false}
-      />
-      <WithStyles(ForwardRef(Typography))
-        variant="body2"
-      />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</div>
-`;
-
-exports[`Grant Information Component  renderGrants() 1 1`] = `undefined`;
-
 exports[`Grant Information Component  should not break if grant text is not in the record 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}
@@ -50,126 +8,72 @@ exports[`Grant Information Component  should not break if grant text is not in t
   <StandardCard
     title="Grant information"
   >
-    <div
+    <GrantDetails
+      grantAgencyName={
+        Object {
+          "rek_grant_agency": "National Health and Medical Research Council",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 1,
+          "rek_grant_agency_pid": "UQ:676287",
+        }
+      }
+      grantId={
+        Object {
+          "rek_grant_id": "",
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 1,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      grantText={false}
+      index={0}
       key="0"
-      style={
+      order={1}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "Cancer Council Queensland",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 2,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="1"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Health and Medical Research Council"
-            grantId={false}
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      grantId={
+        Object {
+          "rek_grant_id": "1042819",
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 2,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      grantText={false}
+      index={1}
       key="1"
-      style={
+      order={2}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "National Breast Cancer Foundation",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 3,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="2"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="Cancer Council Queensland"
-            grantId="1042819"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      grantId={
+        Object {
+          "rek_grant_id": "CG-12-07 | CG-10-04",
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 3,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      grantText={false}
+      index={2}
       key="2"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="3"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Breast Cancer Foundation"
-            grantId="CG-12-07 | CG-10-04"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
+      order={3}
+    />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -189,126 +93,75 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
     >
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(ForwardRef(Typography))>
-    <div
+    <GrantDetails
+      grantAgencyName={
+        Object {
+          "rek_grant_agency": "National Health and Medical Research Council",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 1,
+          "rek_grant_agency_pid": "UQ:676287",
+        }
+      }
+      grantId={
+        Object {
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 1,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      grantText={
+        Object {
+          "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+          "rek_grant_text_id": 583,
+          "rek_grant_text_order": 1,
+          "rek_grant_text_pid": "UQ:676287",
+          "rek_grant_text_xsdmf_id": 0,
+        }
+      }
+      index={0}
       key="0"
-      style={
+      order={1}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "Cancer Council Queensland",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 2,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="1"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Health and Medical Research Council"
-            grantId={false}
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      grantId={
+        Object {
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 2,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      index={1}
       key="1"
-      style={
+      order={2}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "National Breast Cancer Foundation",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 3,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="2"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="Cancer Council Queensland"
-            grantId={false}
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      grantId={
+        Object {
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 3,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      index={2}
       key="2"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="3"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId={false}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Breast Cancer Foundation"
-            grantId={false}
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
+      order={3}
+    />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -330,126 +183,78 @@ exports[`Grant Information Component  should render component 1`] = `
     >
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(ForwardRef(Typography))>
-    <div
+    <GrantDetails
+      grantAgencyName={
+        Object {
+          "rek_grant_agency": "National Health and Medical Research Council",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 1,
+          "rek_grant_agency_pid": "UQ:676287",
+        }
+      }
+      grantId={
+        Object {
+          "rek_grant_id": "569645 | 1022263",
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 1,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      grantText={
+        Object {
+          "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+          "rek_grant_text_id": 583,
+          "rek_grant_text_order": 1,
+          "rek_grant_text_pid": "UQ:676287",
+          "rek_grant_text_xsdmf_id": 0,
+        }
+      }
+      index={0}
       key="0"
-      style={
+      order={1}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "Cancer Council Queensland",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 2,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="1"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Health and Medical Research Council"
-            grantId="569645 | 1022263"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      grantId={
+        Object {
+          "rek_grant_id": "1042819",
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 2,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      index={1}
       key="1"
-      style={
+      order={2}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "National Breast Cancer Foundation",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 3,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="2"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="Cancer Council Queensland"
-            grantId="1042819"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      grantId={
+        Object {
+          "rek_grant_id": "CG-12-07 | CG-10-04",
+          "rek_grant_id_id": null,
+          "rek_grant_id_order": 3,
+          "rek_grant_id_pid": "UQ:676287",
+        }
+      }
+      index={2}
       key="2"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="3"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-            grantId="Grant ID"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Breast Cancer Foundation"
-            grantId="CG-12-07 | CG-10-04"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
+      order={3}
+    />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -2697,7 +2502,15 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                               "rek_grant_id_pid": "UQ:676287",
                                             }
                                           }
-                                          grantText={false}
+                                          grantText={
+                                            Object {
+                                              "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+                                              "rek_grant_text_id": 583,
+                                              "rek_grant_text_order": 1,
+                                              "rek_grant_text_pid": "UQ:676287",
+                                              "rek_grant_text_xsdmf_id": 0,
+                                            }
+                                          }
                                           index={0}
                                           key="0"
                                           order={1}
@@ -4050,7 +3863,9 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                           >
                                                             <p
                                                               className="MuiTypography-root MuiTypography-body2"
-                                                            />
+                                                            >
+                                                              We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
+                                                            </p>
                                                           </ForwardRef(Typography)>
                                                         </WithStyles(ForwardRef(Typography))>
                                                       </div>
@@ -4078,7 +3893,6 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                               "rek_grant_id_pid": "UQ:676287",
                                             }
                                           }
-                                          grantText={false}
                                           index={1}
                                           key="1"
                                           order={2}
@@ -5459,7 +5273,6 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                               "rek_grant_id_pid": "UQ:676287",
                                             }
                                           }
-                                          grantText={false}
                                           index={2}
                                           key="2"
                                           order={3}
@@ -6860,120 +6673,54 @@ exports[`Grant Information Component  should render with publication without gra
     >
       We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
     </WithStyles(ForwardRef(Typography))>
-    <div
+    <GrantDetails
+      grantAgencyName={
+        Object {
+          "rek_grant_agency": "National Health and Medical Research Council",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 1,
+          "rek_grant_agency_pid": "UQ:676287",
+        }
+      }
+      grantText={
+        Object {
+          "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+          "rek_grant_text_id": 583,
+          "rek_grant_text_order": 1,
+          "rek_grant_text_pid": "UQ:676287",
+          "rek_grant_text_xsdmf_id": 0,
+        }
+      }
+      index={0}
       key="0"
-      style={
+      order={1}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "Cancer Council Queensland",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 2,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="1"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Health and Medical Research Council"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      index={1}
       key="1"
-      style={
+      order={2}
+    />
+    <GrantDetails
+      grantAgencyName={
         Object {
-          "padding": 8,
+          "rek_grant_agency": "National Breast Cancer Foundation",
+          "rek_grant_agency_id": null,
+          "rek_grant_agency_order": 3,
+          "rek_grant_agency_pid": "UQ:676287",
         }
       }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="2"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="Cancer Council Queensland"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
+      index={2}
       key="2"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        container={true}
-        key="3"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <Component
-            className="header"
-            grantAgencyName="Grant agency"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <Component
-            grantAgencyName="National Breast Cancer Foundation"
-          />
-          <WithStyles(ForwardRef(Typography))
-            variant="body2"
-          />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
+      order={3}
+    />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
