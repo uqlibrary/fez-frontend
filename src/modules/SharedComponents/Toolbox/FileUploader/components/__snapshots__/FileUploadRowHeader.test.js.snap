@@ -1,6 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component FileUploadRowHeader should render confirmation on delete all 1`] = `"{}"`;
+exports[`Component FileUploadRowHeader should render confirmation on delete all 1`] = `
+<Hidden
+  only={
+    Array [
+      "xs",
+    ]
+  }
+>
+  <WithStyles(ConfirmDialogBox)
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+    showAlternateActionButton={false}
+  />
+  <div
+    style={
+      Object {
+        "flexGrow": 1,
+        "padding": 4,
+      }
+    }
+  >
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      container={true}
+      direction="row"
+      gutter={8}
+      spacing={1}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={6}
+        sm={5}
+      >
+        <WithStyles(ForwardRef(Typography))
+          gutterBottom={true}
+          variant="caption"
+        >
+          Filename
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={3}
+        sm={4}
+      >
+        <WithStyles(ForwardRef(Typography))
+          gutterBottom={true}
+          variant="caption"
+        >
+          Access conditions
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={2}
+        sm={2}
+      >
+        <WithStyles(ForwardRef(Typography))
+          gutterBottom={true}
+          variant="caption"
+        >
+          Embargo release date
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        className=""
+        item={true}
+        xs={1}
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          title="Remove all files from the upload queue"
+        >
+          <WithStyles(ForwardRef(IconButton))
+            onClick={[Function]}
+          >
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </div>
+</Hidden>
+`;
 
 exports[`Component FileUploadRowHeader should render with access condition and embargo date column 1`] = `
 <Hidden

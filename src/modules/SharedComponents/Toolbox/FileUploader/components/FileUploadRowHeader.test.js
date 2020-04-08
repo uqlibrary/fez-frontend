@@ -70,10 +70,15 @@ describe('Component FileUploadRowHeader', () => {
             locale: locale,
         };
 
-        const wrapper = setup({ ...props }, { isShallow: false });
-        const tightWrapper = wrapper.find('FileUploadRowHeader');
-        tightWrapper.instance()._showConfirmation();
+        const wrapper = setup({ ...props }, { isShallow: true });
+        const showconfirmationFn = jest.fn();
+        wrapper.instance().confirmationBox = {
+            showConfirmation: showconfirmationFn,
+        };
+
+        wrapper.instance()._showConfirmation();
         wrapper.update();
-        expect(JSON.stringify(tightWrapper)).toMatchSnapshot();
+        expect(showconfirmationFn).toBeCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
