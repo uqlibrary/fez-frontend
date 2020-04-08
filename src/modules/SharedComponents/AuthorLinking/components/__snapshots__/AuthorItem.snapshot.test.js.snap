@@ -251,11 +251,11 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
 exports[`AuthorItem renders  should have a proper style generator 1`] = `
 Object {
   "authorLinkIcon": Object {
-    "marginRight": 10,
+    "marginRight": 8,
   },
   "authorOrder": Object {
-    "marginBottom": 20,
-    "marginLeft": 60,
+    "marginBottom": 16,
+    "marginLeft": 48,
   },
   "buttonBase": Object {
     "justifyContent": "flex-start",
