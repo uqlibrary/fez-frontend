@@ -274,7 +274,7 @@ export function submitThesis(data) {
                         },
                     });
                     return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                        issue: `The submitter had issues uploading files on this record: ${newRecord}`,
+                        issue: `The submitter had issues uploading files on this record: ${newRecord.rek_pid}`,
                     }).then(
                         /* istanbul ignore next */
                         () => {
