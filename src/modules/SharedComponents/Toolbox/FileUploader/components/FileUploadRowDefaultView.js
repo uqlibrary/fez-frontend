@@ -78,6 +78,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 {accessConditionId === config.OPEN_ACCESS_ID && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
+                                        minDate={new Date()}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
                                     />

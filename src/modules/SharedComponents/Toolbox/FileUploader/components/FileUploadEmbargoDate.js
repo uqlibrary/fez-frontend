@@ -2,9 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 import { withStyles } from '@material-ui/core/styles';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import Event from '@material-ui/icons/Event';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export class FileUploadEmbargoDate extends PureComponent {
@@ -18,7 +15,7 @@ export class FileUploadEmbargoDate extends PureComponent {
     };
 
     static defaultProps = {
-        minDate: new Date(),
+        // minDate: new Date(),
         canBeCleared: false,
     };
 
@@ -38,16 +35,14 @@ export class FileUploadEmbargoDate extends PureComponent {
         return (
             <KeyboardDatePicker
                 format={GENERIC_DATE_FORMAT}
-                minDate={this.props.minDate}
                 value={this.props.value ? new Date(this.props.value) : null}
+                variant="inline"
+                minDate={this.props.minDate}
                 onChange={this._onChange}
                 disabled={this.props.disabled}
                 InputProps={inputProps}
                 allowKeyboardControl
                 autoOk
-                leftArrowIcon={<KeyboardArrowLeft />}
-                rightArrowIcon={<KeyboardArrowRight />}
-                keyboardIcon={<Event />}
                 clearable={this.props.canBeCleared}
             />
         );

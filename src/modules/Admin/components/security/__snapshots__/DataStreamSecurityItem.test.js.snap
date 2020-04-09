@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataStreamSecurityItem component should change security value for the file 1`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
-`;
-
-exports[`DataStreamSecurityItem component should change security value for the file 2`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -44,12 +44,11 @@
-          <div
-            class=\\"MuiSelect-root-581\\"
-          >
-            <div
-              aria-haspopup=\\"true\\"
--             aria-owns=\\"menu-test.jpg\\"
--             aria-pressed=\\"true\\"
-+             aria-pressed=\\"false\\"
-              class=\\"MuiSelect-select-582 MuiSelect-selectMenu-585 MuiInputBase-input-611 MuiInput-input-596\\"
-              id=\\"select-test.jpg\\"
-              role=\\"button\\"
-              tabindex=\\"0\\"
-            >"
-`;
-
-exports[`DataStreamSecurityItem component should change security value for the file back to inherited 1`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
-`;
-
-exports[`DataStreamSecurityItem component should change security value for the file back to inherited 2`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -44,12 +44,11 @@
-          <div
-            class=\\"MuiSelect-root-849\\"
-          >
-            <div
-              aria-haspopup=\\"true\\"
--             aria-owns=\\"menu-test.jpg\\"
--             aria-pressed=\\"true\\"
-+             aria-pressed=\\"false\\"
-              class=\\"MuiSelect-select-850 MuiSelect-selectMenu-853 MuiInputBase-input-879 MuiInput-input-864\\"
-              id=\\"select-test.jpg\\"
-              role=\\"button\\"
-              tabindex=\\"0\\"
-            >"
-`;
-
 exports[`DataStreamSecurityItem component should render default view with inherited security 1`] = `
 <DocumentFragment>
   <div
