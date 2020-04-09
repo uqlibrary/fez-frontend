@@ -50,9 +50,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
   <h6
     class="MuiTypography-root MuiTypography-h6"
-  >
-    Override datastream security policy
-  </h6>
+  />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
@@ -84,9 +82,9 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
             data-shrink="true"
-            id="Record level policy to apply to this PID-label"
+            id="Override datastream security policy-label"
           >
-            Record level policy to apply to this PID
+            Override datastream security policy
             <span
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
             >
@@ -102,17 +100,17 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" Record level policy to apply to this PID"
+              aria-labelledby=" Override datastream security policy"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-              id="Record level policy to apply to this PID"
+              id="Override datastream security policy"
               role="button"
               tabindex="0"
             >
               Administrators
             </div>
             <input
-              aria-labelledby="Record level policy to apply to this PID-label"
-              id="Record level policy to apply to this PID"
+              aria-labelledby="Override datastream security policy-label"
+              id="Override datastream security policy"
               name="test4.txt"
               type="hidden"
               value="1"
