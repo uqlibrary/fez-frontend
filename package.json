@@ -351,8 +351,6 @@
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
-            "!src/modules/**/*.integration.{js,jsx}",
-            "!src/modules/SharedComponents/ScrollTop/**",
             "!src/**/{index,locale,config}.js",
             "!src/**/containers/*.{js,jsx}",
             "src/modules/Index/*.{js,jsx}",
@@ -415,10 +413,8 @@
             "src/repositories/routes.js"
         ],
         "exclude": [
-            "src/modules/**/*.integration.{js,jsx}",
             "src/**/{index,locale,config}.js",
-            "src/**/containers/*.{js,jsx}",
-            "src/modules/SharedComponents/ScrollTop/**"
+            "src/**/containers/*.{js,jsx}"
         ],
         "all": true
     }
