@@ -1,4 +1,4 @@
-import { NewsFeed } from './NewsFeed';
+import { NewsFeed, styles } from './NewsFeed';
 
 function setup(testProps = {}) {
     const props = {
@@ -76,5 +76,37 @@ describe('Component NewsFeed', () => {
             showNewsCount: 1,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a helper to generate styles', () => {
+        const theme = {
+            palette: {
+                primary: {
+                    main: '#fff',
+                },
+            },
+            typography: {
+                fontWeightMedium: '600',
+            },
+        };
+
+        expect(styles(theme)).toEqual({
+            newsItem: {
+                '& .day': {
+                    fontSize: '1.7rem',
+                    fontWeight: '600',
+                },
+                '& .month': {
+                    fontSize: '1.1rem',
+                    ontWeight: '600',
+                    textTransform: 'uppercase',
+                },
+                '& .year': {
+                    fontSize: '0.9rem',
+                    ontWeight: '600',
+                },
+                color: '#fff',
+            },
+        });
     });
 });

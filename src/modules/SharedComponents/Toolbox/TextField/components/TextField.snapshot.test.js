@@ -32,6 +32,7 @@ describe('TextFieldWrapper snapshots tests', () => {
         const wrapper = setup({
             ...testProps,
             floatinglabelfixed: true,
+            label: 'test',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

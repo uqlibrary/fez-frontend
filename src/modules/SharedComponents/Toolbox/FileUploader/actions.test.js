@@ -1,10 +1,12 @@
 import {
+    FILE_UPLOAD_STARTED,
     FILE_UPLOAD_PROGRESS,
     FILE_UPLOAD_CLEARED,
     FILE_UPLOADED_FAILED,
     notifyFileUploadProgress,
     clearFileUpload,
     notifyUploadFailed,
+    startFileUpload,
 } from './actions';
 
 describe('FileUploader actions ', () => {
@@ -25,5 +27,11 @@ describe('FileUploader actions ', () => {
 
     it('notifies on failing file upload', () => {
         expect(notifyUploadFailed('a.txt')).toEqual({ type: `${FILE_UPLOADED_FAILED}@a.txt` });
+    });
+
+    it('notifies on starting file upload', () => {
+        expect(startFileUpload()).toEqual({
+            type: FILE_UPLOAD_STARTED,
+        });
     });
 });

@@ -94,11 +94,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
                     return (
                         <Grid item id={item.id} key={index} style={{ marginRight: spaceBetween }}>
                             <ExternalLink {...locale[item].link} id={locale[item].id}>
-                                <Icon
-                                    /* istanbul ignore if */
-                                    size={size}
-                                    round={round}
-                                />
+                                <Icon size={size} round={round} />
                             </ExternalLink>
                         </Grid>
                     );

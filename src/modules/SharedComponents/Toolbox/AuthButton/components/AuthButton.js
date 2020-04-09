@@ -7,7 +7,7 @@ import PersonOutline from '@material-ui/icons/PersonOutline';
 import Fade from '@material-ui/core/Fade';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     iconButton: {
         color: theme.palette.white.main,
     },

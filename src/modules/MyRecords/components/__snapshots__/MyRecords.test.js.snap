@@ -68,7 +68,7 @@ exports[`MyRecords test component has displayable facets 1`] = `
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <FacetsFilter
@@ -105,7 +105,7 @@ exports[`MyRecords test component has displayable facets 1`] = `
             }
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
@@ -180,7 +180,7 @@ exports[`MyRecords test renders active filters 1`] = `
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <FacetsFilter
@@ -221,7 +221,7 @@ exports[`MyRecords test renders active filters 1`] = `
             }
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
@@ -658,7 +658,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <FacetsFilter
@@ -749,7 +749,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             }
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
@@ -1178,7 +1178,7 @@ exports[`MyRecords test should handle export publications 1`] = `
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <FacetsFilter
@@ -1269,7 +1269,7 @@ exports[`MyRecords test should handle export publications 1`] = `
             }
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>

@@ -46,7 +46,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
         item={true}
         sm={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <FacetsFilter
@@ -86,7 +86,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             }
             showOpenAccessFilter={false}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
@@ -241,7 +241,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
         item={true}
         sm={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <FacetsFilter
@@ -331,7 +331,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             }
             showOpenAccessFilter={false}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
