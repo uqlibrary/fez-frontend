@@ -115,7 +115,7 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
     const isEdit = !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
 
     let action = null;
-    const requestObject = isEdit
+    let requestObject = isEdit
         ? {
             // This is ignored for regular records.
             ...changes,
