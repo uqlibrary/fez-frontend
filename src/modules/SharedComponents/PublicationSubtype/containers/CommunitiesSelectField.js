@@ -39,6 +39,7 @@ export default function CommunitiesSelectField(fieldProps) {
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
+            id="rek_ismemberof"
             {...fieldProps}
         />
     );

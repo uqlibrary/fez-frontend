@@ -112,7 +112,7 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
     const changes = detailedDiff(initialData, data);
     console.log(changes);
 
-    const isEdit = !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
+    const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
 
     let action = null;
     let requestObject = isEdit
@@ -126,7 +126,7 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
             date: data.publication.rek_date || data.publication.rek_created_date,
         }
         : data;
-    switch (data.publication.rek_object_type_lookup) {
+    switch ((!!data.publication && data.publication.rek_object_type_lookup) || '') {
         case 'Collection':
             action = isEdit ? updateCollection : null;
             break;
