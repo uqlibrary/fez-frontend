@@ -311,6 +311,10 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
     // .reply(500, {message: 'error - failed NEW_RECORD_API'})
     // .reply(403, {message: 'Session expired'})
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
+    .reply(() => [200, { data: mockData.collectionRecord }])
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
+    .reply(() => [200, { data: mockData.communityRecord }])
     .onPost(routes.ISSN_LINKS_API({ type: 'sherpa' }).apiUrl)
     .reply(config => {
         const issn = JSON.parse(config.data).issn;
