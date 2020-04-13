@@ -15,16 +15,14 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
   clearable={true}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
-  keyboardIcon={<Memo(EventIcon) />}
-  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   maxDate={2100-01-01T00:00:00.000Z}
   maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
   minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
   openTo="date"
-  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
   views={
     Array [
       "year",
@@ -50,16 +48,14 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
   disabled={true}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
-  keyboardIcon={<Memo(EventIcon) />}
-  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   maxDate={2100-01-01T00:00:00.000Z}
   maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
   minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
   openTo="date"
-  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
   views={
     Array [
       "year",
@@ -84,16 +80,14 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
   clearable={false}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
-  keyboardIcon={<Memo(EventIcon) />}
-  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   maxDate={2100-01-01T00:00:00.000Z}
   maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
   minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
   openTo="date"
-  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
   views={
     Array [
       "year",
@@ -131,16 +125,14 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
   clearable={false}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
-  keyboardIcon={<Memo(EventIcon) />}
-  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   maxDate={2100-01-01T00:00:00.000Z}
   maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
   minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
   openTo="date"
-  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={null}
+  variant="inline"
   views={
     Array [
       "year",
@@ -165,16 +157,14 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   clearable={false}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
-  keyboardIcon={<Memo(EventIcon) />}
-  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   maxDate={2100-01-01T00:00:00.000Z}
   maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
   minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
   openTo="date"
-  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
   views={
     Array [
       "year",
@@ -199,16 +189,14 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   clearable={false}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
-  keyboardIcon={<Memo(EventIcon) />}
-  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   maxDate={2100-01-01T00:00:00.000Z}
   maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
   minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
   openTo="date"
-  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
   views={
     Array [
       "year",

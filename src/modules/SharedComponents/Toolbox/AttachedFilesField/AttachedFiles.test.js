@@ -88,7 +88,7 @@ describe('AttachedFiles component', () => {
 
         act(() => {
             wrapper
-                .find('WithStyles(TextFieldWrapper)')
+                .find('TextField')
                 .props()
                 .onChange({
                     target: {
@@ -102,7 +102,7 @@ describe('AttachedFiles component', () => {
 
         act(() => {
             wrapper
-                .find('WithStyles(IconButton)')
+                .find('WithStyles(ForwardRef(IconButton))')
                 .props()
                 .onClick();
         });
@@ -168,16 +168,16 @@ describe('AttachedFiles component', () => {
                 });
         });
         wrapper.update();
-        expect(toJson(wrapper.find('MediaPreview'))).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
 
         act(() => {
             wrapper
-                .find('MediaPreview')
+                .find('Memo(MediaPreview)')
                 .props()
                 .onClose();
         });
         wrapper.update();
-        expect(wrapper.find('MediaPreview').length).toBe(0);
+        expect(wrapper.find('Memo(MediaPreview)').length).toBe(0);
     });
 });
 

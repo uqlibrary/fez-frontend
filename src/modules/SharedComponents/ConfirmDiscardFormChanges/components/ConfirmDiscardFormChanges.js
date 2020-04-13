@@ -46,12 +46,10 @@ export const ConfirmDiscardFormChanges = props => {
     };
     useEffect(() => {
         const promptDiscardFormChanges = () => {
-            console.log('logging');
             window.onbeforeunload = getDiscardFormChangesConfirmationLocale;
         };
         dirty && !submitSucceeded && promptDiscardFormChanges();
 
-        console.log(window.onbeforeunload);
         return () => {
             window.onbeforeunload = null;
         };

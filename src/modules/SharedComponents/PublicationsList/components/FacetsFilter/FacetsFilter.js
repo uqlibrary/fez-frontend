@@ -37,7 +37,7 @@ export const FacetFilterNestedListItemsList = React.memo(function FacetFilterNes
 FacetFilterNestedListItemsList.propTypes = {
     facetCategory: PropTypes.object,
     disabled: PropTypes.bool,
-    activeFacets: PropTypes.array,
+    activeFacets: PropTypes.object,
     handleFacetClick: PropTypes.func,
     isFacetFilterActive: PropTypes.func,
 };

@@ -1,46 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataStreamSecuritySelector component should change security value for the file 1`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
-`;
-
-exports[`DataStreamSecuritySelector component should change security value for the file 2`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -55,25 +55,24 @@
-              <div
-                class=\\"MuiSelect-root-375\\"
-              >
-                <div
-                  aria-haspopup=\\"true\\"
--                 aria-owns=\\"menu-test5.txt\\"
--                 aria-pressed=\\"true\\"
-+                 aria-pressed=\\"false\\"
-                  class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test5.txt\\"
-                  role=\\"button\\"
-                  tabindex=\\"0\\"
-                >
--                 Administrators
-+                 Public
-                </div>
-                <input
-                  aria-labelledby=\\"Record level policy to apply to this PID-label\\"
-                  id=\\"Record level policy to apply to this PID\\"
-                  name=\\"test5.txt\\"
-                  type=\\"hidden\\"
--                 value=\\"1\\"
-+                 value=\\"5\\"
-                />
-                <svg
-                  aria-hidden=\\"true\\"
-                  class=\\"MuiSvgIcon-root-412 MuiSelect-icon-381\\"
-                  focusable=\\"false\\""
-`;
-
 exports[`DataStreamSecuritySelector component should not display datastream security selected in dropdown 1`] = `
 "Snapshot Diff:
 Compared values have no visual difference."

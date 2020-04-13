@@ -42,7 +42,7 @@ HelpIcon.propTypes = {
     buttonLabel: PropTypes.string,
     tooltip: PropTypes.string,
     onClick: PropTypes.func,
-    IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.Component]),
+    IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
 };
 
 HelpIcon.defaultProps = {

@@ -226,7 +226,6 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
             >
               <WithStyles(FileUploadEmbargoDate)
                 canBeCleared={true}
-                minDate={2020-03-27T05:10:47.802Z}
                 onChange={[Function]}
                 value="3000-10-20"
               />
@@ -1411,11 +1410,225 @@ exports[`AttachedFiles component should render default view 1`] = `
 exports[`AttachedFiles component should show alerts 1`] = `null`;
 
 exports[`AttachedFiles component should toggle preview 1`] = `
-<MediaPreview
-  fileName="test3"
-  mediaUrl="test1"
-  mimeType="test2"
-  onClose={[Function]}
-  previewMediaUrl="test4"
-/>
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    subCard={true}
+  >
+    <Alert
+      allowDismiss={true}
+      dismissTitle="Click to dismiss this alert"
+      message="Unexpected error"
+      showLoader={false}
+      type="error"
+    />
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={3}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        key="file-0"
+        spacing={3}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={2}
+            wrap="nowrap"
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="test.mp4"
+                mimeType="video/mp4"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName="thumbnail_test_t.jpg"
+                webFileName={null}
+              />
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="3.02 KB"
+                description="FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                embargoDate={null}
+                fileName="test.mp4"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "test.mp4",
+                    "mimeType": "video/mp4",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": "thumbnail_test_t.jpg",
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/test.mp4"
+                mimeType="video/mp4"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/test.mp4"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_test_t.jpg"
+                webMediaUrl={null}
+              />
+            </WithStyles(ForwardRef(Grid))>
+            <Hidden
+              xsDown={true}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={3}
+              >
+                <WithStyles(ForwardRef(Typography))
+                  noWrap={true}
+                  variant="body2"
+                >
+                  FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
+            </Hidden>
+            <Hidden
+              smDown={true}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={2}
+              >
+                <WithStyles(ForwardRef(Typography))
+                  noWrap={true}
+                  variant="body2"
+                >
+                  3.02 KB
+                </WithStyles(ForwardRef(Typography))>
+              </WithStyles(ForwardRef(Grid))>
+            </Hidden>
+            <Hidden
+              xsDown={true}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                  showEmbargoText={false}
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </Hidden>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <Memo(MediaPreview)
+      fileName="test3"
+      mediaUrl="test1"
+      mimeType="test2"
+      onClose={[Function]}
+      previewMediaUrl="test4"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
 `;
