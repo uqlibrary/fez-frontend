@@ -38,6 +38,34 @@ exports[`Cards component renders with custom colours and full height 1`] = `
 </WithStyles(Card)>
 `;
 
+exports[`Cards component renders with small title and as a subcard 1`] = `
+<WithStyles(Card)
+  className="testClass StandardCard"
+  style={Object {}}
+>
+  <WithStyles(CardHeader)
+    action={false}
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    style={Object {}}
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h4",
+        "variant": "h6",
+      }
+    }
+  />
+  <WithStyles(CardContent)
+    className=""
+  />
+</WithStyles(Card)>
+`;
+
 exports[`Cards component renders with square top and accent header 1`] = `
 <WithStyles(Card)
   className="undefined StandardCard"

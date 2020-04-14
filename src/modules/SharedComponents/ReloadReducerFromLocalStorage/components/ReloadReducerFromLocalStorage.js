@@ -11,6 +11,7 @@ const reloadReducerFromLocalStorage = (reducer = 'form') => WrappedComponent => 
         }
 
         componentWillMount() {
+            /* istanbul ignore else */
             if (!!localStorage && localStorage.getItem(reducer) !== null) {
                 const locallyStoredReducer = Immutable.Map(JSON.parse(localStorage.getItem(reducer)));
 

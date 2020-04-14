@@ -56,6 +56,14 @@ describe('Cards component', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('renders with small title and as a subcard', () => {
+        const wrapper = setup({
+            smallTitle: true,
+            subCard: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('StandardCard component', () => {
