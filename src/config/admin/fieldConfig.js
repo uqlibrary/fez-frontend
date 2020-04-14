@@ -1526,6 +1526,14 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
+            fez_record_search_key_start_page: () => ({
+                required: true,
+                validate: [validation.required],
+            }),
+            fez_record_search_key_end_page: () => ({
+                required: true,
+                validate: [validation.required],
+            }),
             authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_CREATIVE_WORK]: {
