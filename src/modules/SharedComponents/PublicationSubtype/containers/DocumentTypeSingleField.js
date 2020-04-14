@@ -13,7 +13,7 @@ const documentTypeList = () => {
 };
 const mapStateToProps = (state, props) => {
     return {
-        selectedValue: props.input.value || [],
+        value: props.input.value || [],
         itemsList: documentTypeList() || [],
         itemsLoadingHint: props.loadingHint || 'Loading..',
     };
