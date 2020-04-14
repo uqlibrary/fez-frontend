@@ -1,6 +1,6 @@
 import React from 'react';
 import ListRowHeader from './ListRowHeader';
-import { rtlRender, fireEvent, queryByText, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, queryByText, waitFor } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -34,7 +34,7 @@ describe('ListRowHeader renders ', () => {
         const { getByTestId } = setup({ onDeleteAll: onDeleteAllFn });
 
         fireEvent.click(getByTestId('delete-all-items'));
-        await waitForElement(() => getByTestId('confirm-action'));
+        await waitFor(() => getByTestId('confirm-action'));
         fireEvent.click(getByTestId('confirm-action'));
 
         expect(onDeleteAllFn).toHaveBeenCalled();

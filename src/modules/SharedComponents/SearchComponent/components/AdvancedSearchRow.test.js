@@ -1,6 +1,6 @@
 import React from 'react';
 import AdvancedSearchRow from './AdvancedSearchRow';
-import { rtlRender, fireEvent, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     searchField: '0',
@@ -31,7 +31,7 @@ describe('AdvancedSearchRow', () => {
         });
         expect(getByTestId('textfield').value).toEqual('i feel lucky');
         fireEvent.keyDown(getByTestId('field-type-selector'), { key: 'Enter', code: 13 });
-        const list = await waitForElement(() => getByTestId('menu-field-type-selector'));
+        const list = await waitFor(() => getByTestId('menu-field-type-selector'));
         expect(getByText(/select a field/i, list)).toHaveClass('Mui-disabled');
     });
 
@@ -39,7 +39,7 @@ describe('AdvancedSearchRow', () => {
         const testFn = jest.fn();
         const { getByTestId, getByText } = setup({ rowIndex: 1, onSearchRowChange: testFn });
         fireEvent.keyDown(getByTestId('field-type-selector'), { key: 'Enter', code: 13 });
-        const list = await waitForElement(() => getByTestId('menu-field-type-selector'));
+        const list = await waitFor(() => getByTestId('menu-field-type-selector'));
         fireEvent.click(getByText(/book title for chapters/i), list);
         expect(testFn).toHaveBeenCalledWith(1, { label: '', searchField: 'rek_book_title', value: '' });
     });

@@ -1,6 +1,6 @@
 import React from 'react';
 import DataStreamSecurityItem, { isSame } from './DataStreamSecurityItem';
-import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, cleanup, waitFor } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -57,7 +57,7 @@ describe('DataStreamSecurityItem component', () => {
 
         fireEvent.mouseDown(getByText(/Administrator/i));
 
-        const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
+        const menu = await waitFor(() => getByTestId('menu-test.jpg'));
 
         fireEvent.mouseDown(getByText(/public/i, menu));
 
@@ -75,7 +75,7 @@ describe('DataStreamSecurityItem component', () => {
 
         fireEvent.mouseDown(getByText(/administrator/i));
 
-        const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
+        const menu = await waitFor(() => getByTestId('menu-test.jpg'));
 
         fireEvent.mouseDown(getByText(/Theses Assessors/i, menu));
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import DataStreamSecuritySelector, { isSame } from './DataStreamSecuritySelector';
-import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, cleanup, waitFor } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -79,7 +79,7 @@ describe('DataStreamSecuritySelector component', () => {
         });
 
         fireEvent.mouseDown(getByText(/Administrator/i));
-        const menu = await waitForElement(() => getByTestId('menu-test5.txt'));
+        const menu = await waitFor(() => getByTestId('menu-test5.txt'));
 
         fireEvent.mouseDown(getByText(/public/i, menu));
         expect(getByText(/public/i, menu)).toHaveAttribute('role', 'option');
