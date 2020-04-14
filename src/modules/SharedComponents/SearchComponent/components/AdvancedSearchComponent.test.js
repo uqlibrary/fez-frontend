@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { rtlRender, fireEvent, waitForElement, act } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -118,7 +118,7 @@ describe('AdvancedSearchComponent', () => {
         });
 
         fireEvent.mouseDown(getByTestId('field-type-selector'));
-        const list = await waitForElement(() => getByTestId('menu-field-type-selector'));
+        const list = await waitFor(() => getByTestId('menu-field-type-selector'));
         fireEvent.click(getByText(/any field/i, list));
         expect(testFn).toHaveBeenCalledWith(0, { searchField: 'all', value: '', label: '' });
     });
@@ -170,7 +170,7 @@ describe('AdvancedSearchComponent', () => {
         });
 
         fireEvent.mouseDown(getByTestId('document-type-selector'));
-        const list = await waitForElement(() => getByTestId('menu-document-type-selector'));
+        const list = await waitFor(() => getByTestId('menu-document-type-selector'));
         const options = getAllByRole('option', list);
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
         expect(options[4].checked).toBeTruthy(); // Journal article
@@ -186,7 +186,7 @@ describe('AdvancedSearchComponent', () => {
         });
 
         fireEvent.mouseDown(getByTestId('document-type-selector'));
-        const list = await waitForElement(() => getByTestId('menu-document-type-selector'));
+        const list = await waitFor(() => getByTestId('menu-document-type-selector'));
         const options = getAllByRole('option', list);
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document
@@ -200,7 +200,7 @@ describe('AdvancedSearchComponent', () => {
         });
 
         fireEvent.mouseDown(getByTestId('document-type-selector'));
-        const list = await waitForElement(() => getByTestId('menu-document-type-selector'));
+        const list = await waitFor(() => getByTestId('menu-document-type-selector'));
         const options = getAllByRole('option', list);
         expect(options[12].checked).toBeTruthy(); // Generic document
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document

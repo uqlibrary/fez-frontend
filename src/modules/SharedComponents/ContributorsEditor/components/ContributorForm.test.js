@@ -1,6 +1,6 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
-import { rtlRender, withRedux, fireEvent, waitForElement, act } from 'test-utils';
+import { rtlRender, withRedux, fireEvent, waitFor, act } from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
@@ -93,7 +93,7 @@ describe('Component ContributorForm', () => {
         });
         fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Test Author' } });
         fireEvent.click(getByTestId('creator-role-field'));
-        const list = waitForElement(() => getByRole('presentation'));
+        const list = waitFor(() => getByRole('presentation'));
         fireEvent.click(getByText('Co-investigator'), list);
         expect(testFn).toHaveBeenCalledWith({
             affiliation: '',
@@ -159,7 +159,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
 
-        let options = await waitForElement(() => getByTestId('menu-org-affiliation-selector'));
+        let options = await waitFor(() => getByTestId('menu-org-affiliation-selector'));
 
         act(() => {
             fireEvent.click(getByText('Not UQ', options));
@@ -168,7 +168,7 @@ describe('Component ContributorForm', () => {
         expect(getByTestId('org-affiliation-selector')).toHaveTextContent('Not UQ');
 
         fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
-        options = await waitForElement(() => getByTestId('menu-org-affiliation-selector'));
+        options = await waitFor(() => getByTestId('menu-org-affiliation-selector'));
 
         act(() => {
             fireEvent.click(getByText('UQ', options));
@@ -237,7 +237,7 @@ describe('Component ContributorForm', () => {
         fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Testing, UqId' } });
         fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
-        const list = await waitForElement(() => getByTestId('identifier-field-popup'));
+        const list = await waitFor(() => getByTestId('identifier-field-popup'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -293,7 +293,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
-        const list = await waitForElement(() => getByTestId('identifier-field-popup'));
+        const list = await waitFor(() => getByTestId('identifier-field-popup'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -380,7 +380,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
-        const list = await waitForElement(() => getByTestId('identifier-field-popup'));
+        const list = await waitFor(() => getByTestId('identifier-field-popup'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,

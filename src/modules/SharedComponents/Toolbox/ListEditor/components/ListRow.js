@@ -85,22 +85,30 @@ export const ListRow = ({
                             {canMoveUp && (
                                 <Grid item>
                                     <Tooltip title={moveUpHint}>
-                                        <IconButton onClick={_handleMoveUp} disabled={disabled} id={`move-up-${index}`}>
-                                            <KeyboardArrowUp />
-                                        </IconButton>
+                                        <span>
+                                            <IconButton
+                                                onClick={_handleMoveUp}
+                                                disabled={disabled}
+                                                id={`move-up-${index}`}
+                                            >
+                                                <KeyboardArrowUp />
+                                            </IconButton>
+                                        </span>
                                     </Tooltip>
                                 </Grid>
                             )}
                             {canMoveDown && (
                                 <Grid item>
                                     <Tooltip title={moveDownHint}>
-                                        <IconButton
-                                            onClick={_handleMoveDown}
-                                            disabled={disabled}
-                                            id={`move-down-${index}`}
-                                        >
-                                            <KeyboardArrowDown />
-                                        </IconButton>
+                                        <span>
+                                            <IconButton
+                                                onClick={_handleMoveDown}
+                                                disabled={disabled}
+                                                id={`move-down-${index}`}
+                                            >
+                                                <KeyboardArrowDown />
+                                            </IconButton>
+                                        </span>
                                     </Tooltip>
                                 </Grid>
                             )}
@@ -128,9 +136,11 @@ export const ListRow = ({
                 )}
                 <Grid item xs={2} sm={1} className={classes.center}>
                     <Tooltip title={deleteHint}>
-                        <IconButton onClick={showConfirmation} disabled={disabled} id={`delete-${index}`}>
-                            <Delete />
-                        </IconButton>
+                        <span>
+                            <IconButton onClick={showConfirmation} disabled={disabled} id={`delete-${index}`}>
+                                <Delete />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 </Grid>
             </Grid>

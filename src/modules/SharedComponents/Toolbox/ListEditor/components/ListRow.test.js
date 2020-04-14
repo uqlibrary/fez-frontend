@@ -1,6 +1,6 @@
 import React from 'react';
 import ListRow from './ListRow';
-import { rtlRender, fireEvent, waitForElement, queryByTestId } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, queryByTestId } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -60,7 +60,7 @@ describe('ListRow renders ', () => {
         expect(getByTestId('delete-0')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('delete-0'));
-        await waitForElement(() => getByTestId('confirm-action'));
+        await waitFor(() => getByTestId('confirm-action'));
         fireEvent.click(getByTestId('confirm-action'));
         expect(testFunction).toHaveBeenCalled();
     });
