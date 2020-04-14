@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) => {
             .batchImportDirectoryList.map((item, index) => ({ text: item, value: item, index: index + 1 }));
     return {
         label: (props.locale && props.locale.label) || props.label || '',
-        value: props.input.value || [],
+        value: props.input.value || '',
         itemsList: translatedItemList || [],
     };
 };

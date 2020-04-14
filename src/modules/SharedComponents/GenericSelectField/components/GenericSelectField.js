@@ -48,7 +48,7 @@ export class GenericSelectFieldClass extends Component {
         onChange: PropTypes.func,
         parentItemsId: PropTypes.number,
         required: PropTypes.bool,
-        selectedValue: PropTypes.any,
+        value: PropTypes.any,
         style: PropTypes.object,
     };
 
@@ -95,23 +95,23 @@ export class GenericSelectFieldClass extends Component {
         if (this.props.multiple) {
             if (this.props.hideLabel) {
                 return (
-                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || [
+                    (this.props.value && this.props.value.length > 0 && this.props.value) || [
                         -1,
                     ]
                 );
             } else {
                 return (
-                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || []
+                    (this.props.value && this.props.value.length > 0 && this.props.value) || []
                 );
             }
         } else {
             if (this.props.hideLabel) {
                 return (
-                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) ||
+                    (this.props.value && this.props.value.length > 0 && this.props.value) ||
                     '-1'
                 );
             } else {
-                return this.props.selectedValue || '';
+                return this.props.value || '';
             }
         }
     };
@@ -132,7 +132,7 @@ export class GenericSelectFieldClass extends Component {
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
                         selected={
-                            (this.props.multiple && this.props.selectedValue.includes(item.value || item)) || undefined
+                            (this.props.multiple && this.props.value.includes(item.value || item)) || undefined
                         }
                         value={item.value || item}
                         key={index + 1}

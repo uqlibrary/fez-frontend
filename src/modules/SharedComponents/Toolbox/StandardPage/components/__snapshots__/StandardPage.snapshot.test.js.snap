@@ -64,8 +64,13 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
           Array [],
           Array [],
           Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -85,8 +90,15 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -1069,6 +1081,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                             }
                           }
                           buttonLabel="Test"
+                          dispatch={[MockFunction]}
                           onClick={[Function]}
                           text="Test"
                           title="Test"

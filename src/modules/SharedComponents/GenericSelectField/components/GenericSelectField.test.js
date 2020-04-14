@@ -47,7 +47,7 @@ describe('GenericSelectField', () => {
             const testFn = jest.fn();
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
-                selectedValue: 'Item 2',
+                value: 'Item 2',
                 parentItemsId: 1234,
                 loadItemsList: testFn,
             });
@@ -61,7 +61,7 @@ describe('GenericSelectField', () => {
             const testFn = jest.fn();
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
-                selectedValue: 'Item 2',
+                value: 'Item 2',
                 parentItemsId: 1234,
                 loadItemsList: testFn,
             });
@@ -86,7 +86,7 @@ describe('GenericSelectField', () => {
             const testOnChangeFn = jest.fn();
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
-                selectedValue: 'Item 2',
+                value: 'Item 2',
                 onChange: testOnChangeFn,
             });
             wrapper.instance()._itemSelected({
@@ -143,7 +143,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: true,
-                selectedValue: [1, 2, 3],
+                value: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -152,7 +152,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: false,
-                selectedValue: [1, 2, 3],
+                value: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -161,7 +161,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: false,
                 hideLabel: false,
-                selectedValue: [1, 2, 3],
+                value: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -170,7 +170,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: false,
                 hideLabel: true,
-                selectedValue: [1, 2, 3],
+                value: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -179,7 +179,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: false,
                 hideLabel: true,
-                selectedValue: null,
+                value: null,
             });
             expect(wrapper.instance().newValue()).toEqual('-1');
         });
@@ -188,7 +188,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: true,
-                selectedValue: null,
+                value: null,
             });
             expect(wrapper.instance().newValue()).toEqual([-1]);
         });
@@ -197,7 +197,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: false,
-                selectedValue: null,
+                value: null,
             });
             expect(wrapper.instance().newValue()).toEqual([]);
         });
@@ -248,7 +248,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 itemsList: [1, 2, 3],
-                selectedValue: [1],
+                value: [1],
             });
             expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });

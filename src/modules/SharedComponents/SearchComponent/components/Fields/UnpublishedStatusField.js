@@ -4,7 +4,7 @@ import { UNPUBLISHED_STATUS } from 'config/general';
 
 export const mapStateToProps = (state, props) => {
     return {
-        selectedValue: props.input ? props.input.value : props.value,
+        value: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || UNPUBLISHED_STATUS,
         itemsLoading: false,
         hideLabel: props.hideLabel || false,

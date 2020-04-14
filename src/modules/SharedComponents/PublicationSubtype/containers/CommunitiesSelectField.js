@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
             return { text: dompurify.sanitize(item.rek_title, noHtmlConfig), value: item.rek_pid, index: index + 1 };
         });
     return {
-        value: props.input.value || [],
+        value: props.input.value || '',
         itemsList: translatedItemList || [],
         itemsLoading: (state.get('communitiesReducer') && state.get('communitiesReducer').itemsLoading) || false,
         itemsLoadingError:

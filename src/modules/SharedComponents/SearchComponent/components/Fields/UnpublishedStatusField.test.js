@@ -18,7 +18,7 @@ describe('UnpublishedStatusField component', () => {
     it('should render with value selected from redux form Field', () => {
         const wrapper = setup({
             input: {
-                value: 'test',
+                value: 'Any unpublished',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

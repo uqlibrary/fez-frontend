@@ -45,9 +45,11 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder }) =>
                 )}
                 <Grid item xs={2} sm={1} className={classes.center}>
                     <Tooltip title={deleteAll}>
-                        <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-items">
-                            <DeleteForever />
-                        </IconButton>
+                        <span>
+                            <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-items">
+                                <DeleteForever />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 </Grid>
             </Grid>
