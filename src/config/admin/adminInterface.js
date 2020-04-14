@@ -54,7 +54,7 @@ import {
 
 export const USER_IDS_WITH_LEGACY_LINK = [
     'uqstaff',
-    'uqtest',
+    'admin_test',
     'uqaheath',
     'uqmmarr1',
     'uqmfeen1',
@@ -66,6 +66,8 @@ export const USER_IDS_WITH_LEGACY_LINK = [
     'uqldegro',
     'uqklane1',
     'uqvasai',
+    'uqmmoise',
+    'uqclien1',
     'uqawil42',
 ];
 
