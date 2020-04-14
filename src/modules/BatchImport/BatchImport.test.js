@@ -30,6 +30,6 @@ describe('BatchImport Component', () => {
         });
         fireEvent.click(getByTestId('cancelBatchImport'));
 
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalledWith('/');
     });
 });
