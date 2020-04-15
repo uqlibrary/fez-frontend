@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import Grid from '@material-ui/core/Grid';
@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
+import * as MediaPreviewUtils from './MediaPreviewUtils';
 
 const MediaPreviewButtons = React.memo(({ ...props }) => {
     const { openOriginal, openWeb, close } = locale.viewRecord.sections.files.preview;
@@ -72,7 +73,7 @@ MediaPreviewButtons.propTypes = {
 
 export const MediaPreview = ({ ...props }) => {
     const { mediaUrl, previewMediaUrl, mimeType } = props;
-    const mediaPreviewRef = React.createRef();
+    const mediaPreviewRef = React.useRef();
 
     const [videoErrorMsg, setVideoErrorMsg] = useState(null);
     const [videoErrorCode, setVideoErrorCode] = useState(null);
@@ -83,21 +84,6 @@ export const MediaPreview = ({ ...props }) => {
     const isVideo = mimeType.indexOf('video') >= 0;
     const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
     const title = isVideo ? videoTitle : imageTitle;
-
-    const scrollToPreview = useCallback(() => {
-        const scrollToMedia = () => {
-            if (((mediaPreviewRef || {}).current || {}).scrollIntoView) {
-                mediaPreviewRef.current.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'center',
-                });
-            }
-        };
-        setTimeout(() => {
-            scrollToMedia();
-        }, 80);
-    }, [mediaPreviewRef]);
 
     const videoLoaded = () => setVideoLoading(false);
 
@@ -110,11 +96,12 @@ export const MediaPreview = ({ ...props }) => {
 
     const imageFailed = () => setImageError(true);
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (imageError || (videoErrorCode && videoErrorMsg) || !videoLoading) {
-            scrollToPreview();
+            /* istanbul ignore next */
+            MediaPreviewUtils.scrollToPreview(mediaPreviewRef);
         }
-    }, [imageError, scrollToPreview, videoErrorCode, videoErrorMsg, videoLoading]);
+    }, [imageError, videoErrorCode, videoErrorMsg, videoLoading]);
 
     return (
         <React.Fragment>
@@ -131,6 +118,7 @@ export const MediaPreview = ({ ...props }) => {
                     </Grid>
                 </Hidden>
             </Grid>
+            /* istanbul ignore next */
             {isVideo && videoErrorMsg && videoErrorCode && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
                     <Alert
@@ -139,6 +127,7 @@ export const MediaPreview = ({ ...props }) => {
                     />
                 </div>
             )}
+            /* istanbul ignore next */
             {isPreviewable && imageError && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
                     <Alert
@@ -180,7 +169,7 @@ export const MediaPreview = ({ ...props }) => {
                             id="image-preview"
                             src={previewMediaUrl}
                             alt={mediaUrl}
-                            onLoad={scrollToPreview()}
+                            onLoad={MediaPreviewUtils.scrollToPreview(mediaPreviewRef)}
                             style={{ border: '5px solid black', maxWidth: '100%', marginTop: 32, marginBottom: 32 }}
                             onError={imageFailed}
                         />
