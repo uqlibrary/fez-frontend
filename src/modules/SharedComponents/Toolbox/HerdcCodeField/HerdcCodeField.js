@@ -33,7 +33,7 @@ export default function HerdcCodeField(fieldProps) {
             itemsList={[..._herdcCodes(preselected)]}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={
+            value={
                 preselected instanceof Immutable.List
                     ? preselected.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || preselected || []

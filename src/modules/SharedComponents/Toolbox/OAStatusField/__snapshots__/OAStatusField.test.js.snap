@@ -55,7 +55,7 @@ exports[`OAStatus component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -131,7 +131,7 @@ exports[`OAStatus component should render immutable list as selected value with 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -198,7 +198,7 @@ exports[`OAStatus component should render when given a default value field props
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -278,7 +278,7 @@ exports[`OAStatus component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

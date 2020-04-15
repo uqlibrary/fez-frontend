@@ -10,7 +10,7 @@ export default function AlternateGenreField(fieldProps) {
             itemsList={ALTERNATE_GENRE}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={
+            value={
                 input instanceof Immutable.List
                     ? input.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []

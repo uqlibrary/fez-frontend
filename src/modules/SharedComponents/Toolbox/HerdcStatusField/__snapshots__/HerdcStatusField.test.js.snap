@@ -27,7 +27,7 @@ exports[`HerdcStatusField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -75,7 +75,7 @@ exports[`HerdcStatusField component should render immutable list as selected val
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -114,7 +114,7 @@ exports[`HerdcStatusField component should render when given a default value fie
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -166,7 +166,7 @@ exports[`HerdcStatusField component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

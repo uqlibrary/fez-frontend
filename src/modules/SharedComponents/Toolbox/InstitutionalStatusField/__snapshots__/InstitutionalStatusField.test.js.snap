@@ -31,7 +31,7 @@ exports[`InstitutionalStatusField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -83,7 +83,7 @@ exports[`InstitutionalStatusField component should render immutable list as sele
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -126,7 +126,7 @@ exports[`InstitutionalStatusField component should render when given a default v
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -182,7 +182,7 @@ exports[`InstitutionalStatusField component should render with given field props
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

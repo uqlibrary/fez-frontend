@@ -48,7 +48,7 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
       ],
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -82,7 +82,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -133,7 +133,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       454079,
       454080,
@@ -187,7 +187,7 @@ exports[`ContentIndicatorsField component should render with given field props 2
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       454079,
       454080,

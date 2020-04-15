@@ -7,7 +7,7 @@ export default function AccessSelectorField(fieldProps) {
         <GenericSelectField
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={fieldProps.input.value}
+            value={fieldProps.input.value}
             onChange={!!fieldProps.input && fieldProps.input.onChange}
             itemsList={[
                 {

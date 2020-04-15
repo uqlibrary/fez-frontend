@@ -10,7 +10,7 @@ export default function WoSDocTypesField(fieldProps) {
             itemsList={WOS_DOC_TYPES}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={
+            value={
                 input instanceof Immutable.List
                     ? input.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []

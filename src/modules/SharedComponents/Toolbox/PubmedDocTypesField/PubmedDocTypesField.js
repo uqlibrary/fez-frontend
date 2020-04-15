@@ -10,7 +10,7 @@ export default function PubmedDocTypesField(fieldProps) {
             itemsList={PUBMED_DOC_TYPES}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={
+            value={
                 input instanceof Immutable.List
                     ? input.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []

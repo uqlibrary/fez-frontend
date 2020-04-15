@@ -10,7 +10,7 @@ export default function QualityIndicatorField(fieldProps) {
             itemsList={QUALITY_INDICATORS}
             hideLabel={false}
             locale={{ label: fieldProps.label, placeholder: fieldProps.placeholder }}
-            selectedValue={
+            value={
                 input instanceof Immutable.List
                     ? input.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []

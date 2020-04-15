@@ -55,7 +55,7 @@ exports[`QualityIndicatorField component should render default view 1`] = `
       "placeholder": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -131,7 +131,7 @@ exports[`QualityIndicatorField component should render immutable list as selecte
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -198,7 +198,7 @@ exports[`QualityIndicatorField component should render when given a default valu
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -278,7 +278,7 @@ exports[`QualityIndicatorField component should render with given field props 1`
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

@@ -50,7 +50,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       name="key"
       onChange={[Function]}
-      selectedValue={null}
+      value={null}
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))

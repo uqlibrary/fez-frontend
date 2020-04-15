@@ -46,7 +46,7 @@ export const ContentIndicatorsField = props => (
         itemsList={getContentIndicators(props)}
         hideLabel={false}
         locale={{ label: props.label }}
-        selectedValue={getSelected(props)}
+        value={getSelected(props)}
         onChange={(!!props.input && props.input.onChange) || undefined}
         errorText={(!!props.meta && props.meta.error) || ''}
         error={(!!props.meta && !!props.meta.error) || false}

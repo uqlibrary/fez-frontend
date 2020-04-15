@@ -40,7 +40,7 @@ exports[`LicenceSelectorField component should render default view 1`] = `
     }
   }
   onChange={[MockFunction]}
-  selectedValue={
+  value={
     Array [
       "test",
       "test1",
@@ -94,7 +94,7 @@ exports[`LicenceSelectorField component should render error and error message 1`
     }
   }
   onChange={[MockFunction]}
-  selectedValue={
+  value={
     Array [
       "test",
       "test1",
@@ -169,7 +169,7 @@ exports[`LicenceSelectorField component should render with deprecated list 1`] =
     }
   }
   onChange={[MockFunction]}
-  selectedValue={
+  value={
     Array [
       "test",
       "test1",

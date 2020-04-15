@@ -81,7 +81,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                     onChange={handleSignificance}
                     error={!!errorText}
                     disabled={disabled}
-                    selectedValue={significance}
+                    value={significance}
                     itemsList={SIGNIFICANCE}
                 />
             </Grid>

@@ -194,7 +194,7 @@ exports[`PubmedDocTypesField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -409,7 +409,7 @@ exports[`PubmedDocTypesField component should render immutable list as selected 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -615,7 +615,7 @@ exports[`PubmedDocTypesField component should render when given a default value 
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -834,7 +834,7 @@ exports[`PubmedDocTypesField component should render with given field props 1`] 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

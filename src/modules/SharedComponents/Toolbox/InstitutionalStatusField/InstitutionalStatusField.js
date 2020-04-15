@@ -11,7 +11,7 @@ export default function InstitutionalStatusField(fieldProps) {
             itemsList={INSTITUTIONAL_STATUS}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={
+            value={
                 input instanceof Immutable.List
                     ? input.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []
