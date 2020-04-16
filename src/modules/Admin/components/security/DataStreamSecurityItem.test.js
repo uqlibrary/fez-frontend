@@ -59,7 +59,7 @@ describe('DataStreamSecurityItem component', () => {
 
         const menu = await waitFor(() => getByTestId('menu-test.jpg'));
 
-        fireEvent.mouseDown(getByText(/public/i, menu));
+        fireEvent.click(getByText(/public/i, menu));
 
         expect(getByText('Public')).toBeInTheDocument();
     });
@@ -77,7 +77,7 @@ describe('DataStreamSecurityItem component', () => {
 
         const menu = await waitFor(() => getByTestId('menu-test.jpg'));
 
-        fireEvent.mouseDown(getByText(/Theses Assessors/i, menu));
+        fireEvent.click(getByText(/Theses Assessors/i, menu));
 
         expect(getByText('Theses Assessors')).toBeInTheDocument();
     });

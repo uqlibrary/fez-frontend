@@ -81,8 +81,8 @@ describe('DataStreamSecuritySelector component', () => {
         fireEvent.mouseDown(getByText(/Administrator/i));
         const menu = await waitFor(() => getByTestId('menu-test5.txt'));
 
-        fireEvent.mouseDown(getByText(/public/i, menu));
         expect(getByText(/public/i, menu)).toHaveAttribute('role', 'option');
+        fireEvent.click(getByText(/public/i, menu));
     });
 
     it('should not display datastream security selected in dropdown', () => {
