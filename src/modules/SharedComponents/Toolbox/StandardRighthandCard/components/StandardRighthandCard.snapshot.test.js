@@ -1,4 +1,4 @@
-import { RighthandCard } from './StandardRighthandCard';
+import { StandardRighthandCard } from './StandardRighthandCard';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -6,10 +6,10 @@ function setup(testProps, isShallow = true) {
         classes: {},
         ...testProps,
     };
-    return getElement(RighthandCard, props, isShallow);
+    return getElement(StandardRighthandCard, props, isShallow);
 }
 
-describe('Snapshot tests for RighthandCard component', () => {
+describe('Snapshot tests for StandardRighthandCard component', () => {
     it('renders with title and no help icon', () => {
         const wrapper = setup({ title: 'card title' });
         const tree = toJson(wrapper);

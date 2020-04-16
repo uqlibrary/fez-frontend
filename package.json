@@ -31,7 +31,7 @@
         "@babel/preset-react": "^7.8.3",
         "@babel/register": "^7.8.6",
         "@babel/runtime-corejs2": "^7.8.7",
-        "@cypress/code-coverage": "^1.14.0",
+        "@cypress/code-coverage": "^2.0.0",
         "@sentry/webpack-plugin": "^1.10.0",
         "@testing-library/dom": "^7.1.2",
         "@testing-library/jest-dom": "^5.1.1",
@@ -64,7 +64,7 @@
         "@types/sinon": "^5.0.2",
         "@types/webpack": "^4.41.7",
         "assets-webpack-plugin": "^3.9.10",
-        "autoprefixer": "^9.7.3",
+        "autoprefixer": "^9.7.5",
         "axios-mock-adapter": "^1.15.0",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.1.0",
@@ -72,12 +72,13 @@
         "babel-plugin-dynamic-import-node": "^2.3.0",
         "babel-plugin-istanbul": "^6.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+        "browser-update": "^3.3.13",
         "chalk": "2.4.1",
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
         "css-mediaquery": "^0.1.2",
-        "cypress": "^4.2.0",
+        "cypress": "^4.3.0",
         "cypress-file-upload": "^3.5.3",
         "cypress-plugin-tab": "^1.0.5",
         "cypress-wait-until": "^1.6.1",
@@ -101,7 +102,6 @@
         "mini-css-extract-plugin": "^0.5.0",
         "mockdate": "^2.0.2",
         "node-sass": "^4.13.1",
-        "nyc": "^15.0.0",
         "postcss-loader": "^2.1.4",
         "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
         "prettier": "^1.18.2",
@@ -141,7 +141,7 @@
         "babel-loader": "^8.0.6",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
-        "caniuse-lite": "^1.0.30001015",
+        "caniuse-lite": "^1.0.30001038",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
         "deep-diff": "^1.0.2",
@@ -230,7 +230,11 @@
         "test:e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'npm run cypress:watch'",
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit:serial": "npm run test:unit -- --ci --runInBand",
+        "test:unit:ci1": "npm run test:unit -- --ci --runInBand --testPathIgnorePatterns=SharedComponents --coveragePathIgnorePatterns=SharedComponents",
+        "test:unit:ci2": "npm run test:unit -- --ci --runInBand SharedComponents --collectCoverageFrom=['**/SharedComponents/**','!**/containers/**','!**/index.js']",
         "test:unit:serial:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage",
+        "test:unit:ci1:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage --testPathIgnorePatterns=SharedComponents",
+        "test:unit:ci2:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage SharedComponents",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
@@ -355,8 +359,6 @@
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
             "!src/modules/App/components/pages.js",
-            "!src/modules/**/*.integration.{js,jsx}",
-            "!src/modules/SharedComponents/ScrollTop/**",
             "!src/**/{index,locale,config}.js",
             "!src/**/containers/*.{js,jsx}",
             "src/modules/Index/*.{js,jsx}",
@@ -419,10 +421,8 @@
             "src/repositories/routes.js"
         ],
         "exclude": [
-            "src/modules/**/*.integration.{js,jsx}",
             "src/**/{index,locale,config}.js",
-            "src/**/containers/*.{js,jsx}",
-            "src/modules/SharedComponents/ScrollTop/**"
+            "src/**/containers/*.{js,jsx}"
         ],
         "all": true
     }

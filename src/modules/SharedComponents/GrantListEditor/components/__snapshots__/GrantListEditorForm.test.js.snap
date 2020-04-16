@@ -1263,7 +1263,6 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     }
                                   }
                                   disabled={true}
-                                  error={false}
                                   fullWidth={true}
                                   id="grantId"
                                   inputProps={
@@ -1282,7 +1281,6 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     className="MuiTextField-root"
                                     color="primary"
                                     disabled={true}
-                                    error={false}
                                     fullWidth={true}
                                     required={true}
                                     variant="standard"
@@ -4006,7 +4004,6 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 }
                               }
                               disabled={true}
-                              error={false}
                               fullWidth={true}
                               id="grantId"
                               inputProps={
@@ -4025,7 +4022,6 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 className="MuiTextField-root"
                                 color="primary"
                                 disabled={true}
-                                error={false}
                                 fullWidth={true}
                                 required={true}
                                 variant="standard"

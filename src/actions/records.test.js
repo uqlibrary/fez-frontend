@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import { record } from 'mock/data';
+import { record, collectionRecord, communityRecord } from 'mock/data';
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -1445,6 +1445,48 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('updateCollection()', () => {
+        const pid = 'UQ:123456';
+        const testInput = {
+            pid,
+            date: '2020-04-07',
+            updated: {
+                securitySection: {
+                    rek_datastream_policy: 2,
+                },
+            },
+        };
+
+        it('dispatches expected actions on successful save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .reply(200, { data: { ...collectionRecord } });
+
+            const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.updateCollection(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .reply(500, { error: { message: 'FAILED' } });
+
+            const expectedActions = [
+                actions.COLLECTION_UPDATING,
+                actions.APP_ALERT_SHOW,
+                actions.COLLECTION_UPDATE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.updateCollection(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
     describe('createCommunity()', () => {
         it('dispatches expected actions on successful save', async() => {
             const testInput = {
@@ -1502,6 +1544,48 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(recordActions.createCommunity(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('updateCommunity()', () => {
+        const pid = 'UQ:123456';
+        const testInput = {
+            pid,
+            date: '2020-04-07',
+            updated: {
+                securitySection: {
+                    rek_security_policy: 4,
+                },
+            },
+        };
+
+        it('dispatches expected actions on successful save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .reply(200, { data: { ...collectionRecord } });
+
+            const expectedActions = [actions.COMMUNITY_UPDATING, actions.COMMUNITY_UPDATE_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.updateCommunity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .reply(500, { error: { message: 'FAILED' } });
+
+            const expectedActions = [
+                actions.COMMUNITY_UPDATING,
+                actions.APP_ALERT_SHOW,
+                actions.COMMUNITY_UPDATE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.updateCommunity(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 });

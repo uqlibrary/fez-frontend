@@ -1,4 +1,5 @@
-export { default as collections } from './collections';
+export { default as collectionRecord } from './collectionRecord';
+export { default as collectionSearchList } from './collectionSearchList';
 export { default as collectionsByCommunity } from './collectionsByCommunity';
 export { default as communityRecord } from './communityRecord';
 export { default as communitySearchList } from './communitySearchList';
@@ -33,6 +34,7 @@ export { default as publicationTypeListManuscript } from './publicationTypeListM
 export { default as publicationTypeListNewspaperArticle } from './publicationTypeListNewspaperArticle';
 export { default as publicationTypeListPatent } from './publicationTypeListPatent';
 export { default as publicationTypeListPreprint } from './publicationTypeListPreprint';
+export { default as publicationTypeListReferenceEntry } from './publicationTypeListReferenceEntry';
 export { default as publicationTypeListResearchReport } from './publicationTypeListResearchReport';
 export { default as publicationTypeListSeminarPaper } from './publicationTypeListSeminarPaper';
 export { default as publicationTypeListThesis } from './publicationTypeListThesis';

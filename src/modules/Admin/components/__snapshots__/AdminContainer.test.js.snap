@@ -2186,7 +2186,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       }
                                     >
                                       <WithStyles(ConfirmDialogBox)
-                                        hideCancelButton={false}
                                         locale={
                                           Object {
                                             "cancelButtonLabel": "View updated record",
@@ -2198,7 +2197,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                         onAction={[Function]}
                                         onCancelAction={[Function]}
                                         onRef={[Function]}
-                                        showAlternateActionButton={false}
                                       >
                                         <ConfirmDialogBox
                                           classes={
@@ -2271,7 +2269,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       },
                                                       "render": [Function],
                                                     },
-                                                    "defaultProps": undefined,
                                                     "displayName": "WithStyles(ForwardRef(Backdrop))",
                                                     "options": Object {
                                                       "defaultTheme": Object {
@@ -4287,36 +4284,34 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     >
                                                                       Cancel
                                                                     </span>
-                                                                    <NoSsr>
-                                                                      <WithStyles(undefined)
+                                                                    <WithStyles(memo)
+                                                                      center={false}
+                                                                    >
+                                                                      <ForwardRef(TouchRipple)
                                                                         center={false}
-                                                                      >
-                                                                        <ForwardRef(TouchRipple)
-                                                                          center={false}
-                                                                          classes={
-                                                                            Object {
-                                                                              "child": "MuiTouchRipple-child",
-                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                              "ripple": "MuiTouchRipple-ripple",
-                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                              "root": "MuiTouchRipple-root",
-                                                                            }
+                                                                        classes={
+                                                                          Object {
+                                                                            "child": "MuiTouchRipple-child",
+                                                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                            "ripple": "MuiTouchRipple-ripple",
+                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                            "root": "MuiTouchRipple-root",
                                                                           }
+                                                                        }
+                                                                      >
+                                                                        <span
+                                                                          className="MuiTouchRipple-root"
                                                                         >
-                                                                          <span
-                                                                            className="MuiTouchRipple-root"
-                                                                          >
-                                                                            <TransitionGroup
-                                                                              childFactory={[Function]}
-                                                                              component={null}
-                                                                              exit={true}
-                                                                            />
-                                                                          </span>
-                                                                        </ForwardRef(TouchRipple)>
-                                                                      </WithStyles(undefined)>
-                                                                    </NoSsr>
+                                                                          <TransitionGroup
+                                                                            childFactory={[Function]}
+                                                                            component={null}
+                                                                            exit={true}
+                                                                          />
+                                                                        </span>
+                                                                      </ForwardRef(TouchRipple)>
+                                                                    </WithStyles(memo)>
                                                                   </button>
                                                                 </ForwardRef(ButtonBase)>
                                                               </WithStyles(ForwardRef(ButtonBase))>
@@ -4558,36 +4553,34 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     >
                                                                        Submit 
                                                                     </span>
-                                                                    <NoSsr>
-                                                                      <WithStyles(undefined)
+                                                                    <WithStyles(memo)
+                                                                      center={false}
+                                                                    >
+                                                                      <ForwardRef(TouchRipple)
                                                                         center={false}
-                                                                      >
-                                                                        <ForwardRef(TouchRipple)
-                                                                          center={false}
-                                                                          classes={
-                                                                            Object {
-                                                                              "child": "MuiTouchRipple-child",
-                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                              "ripple": "MuiTouchRipple-ripple",
-                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                              "root": "MuiTouchRipple-root",
-                                                                            }
+                                                                        classes={
+                                                                          Object {
+                                                                            "child": "MuiTouchRipple-child",
+                                                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                            "ripple": "MuiTouchRipple-ripple",
+                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                            "root": "MuiTouchRipple-root",
                                                                           }
+                                                                        }
+                                                                      >
+                                                                        <span
+                                                                          className="MuiTouchRipple-root"
                                                                         >
-                                                                          <span
-                                                                            className="MuiTouchRipple-root"
-                                                                          >
-                                                                            <TransitionGroup
-                                                                              childFactory={[Function]}
-                                                                              component={null}
-                                                                              exit={true}
-                                                                            />
-                                                                          </span>
-                                                                        </ForwardRef(TouchRipple)>
-                                                                      </WithStyles(undefined)>
-                                                                    </NoSsr>
+                                                                          <TransitionGroup
+                                                                            childFactory={[Function]}
+                                                                            component={null}
+                                                                            exit={true}
+                                                                          />
+                                                                        </span>
+                                                                      </ForwardRef(TouchRipple)>
+                                                                    </WithStyles(memo)>
                                                                   </button>
                                                                 </ForwardRef(ButtonBase)>
                                                               </WithStyles(ForwardRef(ButtonBase))>

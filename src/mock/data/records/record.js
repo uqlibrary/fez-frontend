@@ -464,7 +464,7 @@
         "rek_doi_id": 1482945,
         "rek_doi_pid": "UQ:396321",
         "rek_doi_xsdmf_id": null,
-        "rek_doi": "10.1093/hmg/ddw177",
+        "rek_doi": "10.1093/uql/ddw177",
         "fez_altmetric": {
             "as_id": 54987,
             "as_amid": 9271343,

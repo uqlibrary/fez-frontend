@@ -4,7 +4,6 @@
 context('Scroll to top module', () => {
     beforeEach(() => {
         cy.visit('/');
-        cy.closeUnsupported();
     });
 
     it('Scroll to the bottom of the homepage, then click the scroll to top and the tabs should be visible', () => {

@@ -94,26 +94,8 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={true}
@@ -230,26 +212,8 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={true}
@@ -437,26 +401,8 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -573,26 +519,8 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -855,26 +783,8 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -1063,26 +973,8 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={true}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -1221,26 +1113,8 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -2353,7 +2227,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             }
                                             autoComplete="off"
                                             disabled={false}
-                                            error={false}
                                             fullWidth={true}
                                             id="name-as-published"
                                             inputProps={
@@ -2387,7 +2260,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 }
                                               }
                                               disabled={false}
-                                              error={false}
                                               fullWidth={true}
                                               id="name-as-published"
                                               inputProps={
@@ -2903,6 +2775,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   aria-expanded={false}
                                                   aria-owns={null}
                                                   className="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon"
+                                                  disableOpenOnFocus={true}
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   onMouseDown={[Function]}
@@ -3628,7 +3501,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                                             aria-hidden="true"
                                                                                             className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
                                                                                             focusable="false"
-                                                                                            role="presentation"
                                                                                             viewBox="0 0 24 24"
                                                                                           >
                                                                                             <path
@@ -3639,36 +3511,34 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                                       </WithStyles(ForwardRef(SvgIcon))>
                                                                                     </ForwardRef>
                                                                                   </span>
-                                                                                  <NoSsr>
-                                                                                    <WithStyles(undefined)
+                                                                                  <WithStyles(memo)
+                                                                                    center={true}
+                                                                                  >
+                                                                                    <ForwardRef(TouchRipple)
                                                                                       center={true}
-                                                                                    >
-                                                                                      <ForwardRef(TouchRipple)
-                                                                                        center={true}
-                                                                                        classes={
-                                                                                          Object {
-                                                                                            "child": "MuiTouchRipple-child",
-                                                                                            "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                                            "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                                            "ripple": "MuiTouchRipple-ripple",
-                                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                                            "root": "MuiTouchRipple-root",
-                                                                                          }
+                                                                                      classes={
+                                                                                        Object {
+                                                                                          "child": "MuiTouchRipple-child",
+                                                                                          "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                                          "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                                          "ripple": "MuiTouchRipple-ripple",
+                                                                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                                          "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                                          "root": "MuiTouchRipple-root",
                                                                                         }
+                                                                                      }
+                                                                                    >
+                                                                                      <span
+                                                                                        className="MuiTouchRipple-root"
                                                                                       >
-                                                                                        <span
-                                                                                          className="MuiTouchRipple-root"
-                                                                                        >
-                                                                                          <TransitionGroup
-                                                                                            childFactory={[Function]}
-                                                                                            component={null}
-                                                                                            exit={true}
-                                                                                          />
-                                                                                        </span>
-                                                                                      </ForwardRef(TouchRipple)>
-                                                                                    </WithStyles(undefined)>
-                                                                                  </NoSsr>
+                                                                                        <TransitionGroup
+                                                                                          childFactory={[Function]}
+                                                                                          component={null}
+                                                                                          exit={true}
+                                                                                        />
+                                                                                      </span>
+                                                                                    </ForwardRef(TouchRipple)>
+                                                                                  </WithStyles(memo)>
                                                                                 </button>
                                                                               </ForwardRef(ButtonBase)>
                                                                             </WithStyles(ForwardRef(ButtonBase))>
@@ -3753,36 +3623,34 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                                   <span
                                                                                     className="MuiIconButton-label"
                                                                                   />
-                                                                                  <NoSsr>
-                                                                                    <WithStyles(undefined)
+                                                                                  <WithStyles(memo)
+                                                                                    center={true}
+                                                                                  >
+                                                                                    <ForwardRef(TouchRipple)
                                                                                       center={true}
-                                                                                    >
-                                                                                      <ForwardRef(TouchRipple)
-                                                                                        center={true}
-                                                                                        classes={
-                                                                                          Object {
-                                                                                            "child": "MuiTouchRipple-child",
-                                                                                            "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                                            "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                                            "ripple": "MuiTouchRipple-ripple",
-                                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                                            "root": "MuiTouchRipple-root",
-                                                                                          }
+                                                                                      classes={
+                                                                                        Object {
+                                                                                          "child": "MuiTouchRipple-child",
+                                                                                          "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                                          "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                                          "ripple": "MuiTouchRipple-ripple",
+                                                                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                                          "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                                          "root": "MuiTouchRipple-root",
                                                                                         }
+                                                                                      }
+                                                                                    >
+                                                                                      <span
+                                                                                        className="MuiTouchRipple-root"
                                                                                       >
-                                                                                        <span
-                                                                                          className="MuiTouchRipple-root"
-                                                                                        >
-                                                                                          <TransitionGroup
-                                                                                            childFactory={[Function]}
-                                                                                            component={null}
-                                                                                            exit={true}
-                                                                                          />
-                                                                                        </span>
-                                                                                      </ForwardRef(TouchRipple)>
-                                                                                    </WithStyles(undefined)>
-                                                                                  </NoSsr>
+                                                                                        <TransitionGroup
+                                                                                          childFactory={[Function]}
+                                                                                          component={null}
+                                                                                          exit={true}
+                                                                                        />
+                                                                                      </span>
+                                                                                    </ForwardRef(TouchRipple)>
+                                                                                  </WithStyles(memo)>
                                                                                 </button>
                                                                               </ForwardRef(ButtonBase)>
                                                                             </WithStyles(ForwardRef(ButtonBase))>
@@ -5641,6 +5509,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "IconComponent": [Function],
                                                             "MenuProps": [Function],
                                                             "SelectDisplayProps": [Function],
+                                                            "aria-label": [Function],
                                                             "autoFocus": [Function],
                                                             "autoWidth": [Function],
                                                             "children": [Function],
@@ -5761,6 +5630,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "IconComponent": [Function],
                                                               "MenuProps": [Function],
                                                               "SelectDisplayProps": [Function],
+                                                              "aria-label": [Function],
                                                               "autoFocus": [Function],
                                                               "autoWidth": [Function],
                                                               "children": [Function],
@@ -5882,6 +5752,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "IconComponent": [Function],
                                                                 "MenuProps": [Function],
                                                                 "SelectDisplayProps": [Function],
+                                                                "aria-label": [Function],
                                                                 "autoFocus": [Function],
                                                                 "autoWidth": [Function],
                                                                 "children": [Function],
@@ -6009,6 +5880,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "IconComponent": [Function],
                                                                   "MenuProps": [Function],
                                                                   "SelectDisplayProps": [Function],
+                                                                  "aria-label": [Function],
                                                                   "autoFocus": [Function],
                                                                   "autoWidth": [Function],
                                                                   "children": [Function],
@@ -6211,7 +6083,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         aria-hidden="true"
                                                                         className="MuiSvgIcon-root MuiSelect-icon"
                                                                         focusable="false"
-                                                                        role="presentation"
                                                                         viewBox="0 0 24 24"
                                                                       >
                                                                         <path
@@ -6562,7 +6433,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             }
                                             autoComplete="off"
                                             disabled={true}
-                                            error={false}
                                             fullWidth={true}
                                             id="name-as-published"
                                             inputProps={
@@ -6596,7 +6466,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 }
                                               }
                                               disabled={true}
-                                              error={false}
                                               fullWidth={true}
                                               id="name-as-published"
                                               inputProps={
@@ -7112,6 +6981,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   aria-expanded={false}
                                                   aria-owns={null}
                                                   className="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon"
+                                                  disableOpenOnFocus={true}
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   onMouseDown={[Function]}
@@ -8764,26 +8634,8 @@ exports[`ContributorsEditor should get contributors from props and input value s
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
@@ -8961,26 +8813,8 @@ exports[`ContributorsEditor should get contributors from props and input value s
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          hideReorder={false}
           isInfinite={false}
           isNtro={false}
-          locale={
-            Object {
-              "contributorAssignmentColumn": "Select your name",
-              "deleteAll": "Remove all records",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all records?",
-                "confirmationTitle": "Delete all",
-              },
-              "descriptionStep2": "Step 2 - Select your name from the list below",
-              "identifierColumn": "UQ identifier / Organisation",
-              "nameColumn": "Name as published",
-              "reorderColumn": "Reorder records",
-              "roleColumn": "Role",
-            }
-          }
           onDeleteAll={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}

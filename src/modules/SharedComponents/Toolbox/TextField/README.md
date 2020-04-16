@@ -16,7 +16,7 @@ A simple TextField component that lists items for UQ Library applications using 
 import React from 'react';
 ...
 
-import {TextField} from 'uqlibrary-react-toolbox';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 const App = () => (
   <div>

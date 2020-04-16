@@ -21,7 +21,7 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
-export const HelpIcon = ({ title, text, buttonLabel, tooltip, onClick, IconComponent }) => {
+export const HelpIcon = ({ title, text, buttonLabel, iconSize, tooltip, onClick, IconComponent }) => {
     const classes = useStyles();
     const setDrawerContent = () => {
         onClick(title, text, buttonLabel);
@@ -29,8 +29,8 @@ export const HelpIcon = ({ title, text, buttonLabel, tooltip, onClick, IconCompo
 
     return (
         <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
-            <IconButton id="help-icon" onClick={setDrawerContent}>
-                <IconComponent className={classes.helpIcon} titleAccess={tooltip} />
+            <IconButton id="help-icon" onClick={setDrawerContent} aria-label={tooltip}>
+                <IconComponent className={classes.helpIcon} size={iconSize} titleAccess={tooltip} />
             </IconButton>
         </Tooltip>
     );
@@ -43,6 +43,7 @@ HelpIcon.propTypes = {
     tooltip: PropTypes.string,
     onClick: PropTypes.func,
     IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.node, PropTypes.object]),
+    iconSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 HelpIcon.defaultProps = {

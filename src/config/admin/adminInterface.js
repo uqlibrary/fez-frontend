@@ -17,6 +17,7 @@ import {
     PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
     PUBLICATION_TYPE_PATENT,
     PUBLICATION_TYPE_PREPRINT,
+    PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
     PUBLICATION_TYPE_THESIS,
@@ -43,12 +44,32 @@ import {
     newspaperArticleFields,
     patentFields,
     preprintFields,
+    referenceEntryFields,
     researchReportFields,
     seminarPaperFields,
     thesisFields,
     videoFields,
     workingPaperFields,
 } from './fields';
+
+export const USER_IDS_WITH_LEGACY_LINK = [
+    'uqstaff',
+    'admin_test',
+    'uqaheath',
+    'uqmmarr1',
+    'uqmfeen1',
+    'uqdstew1',
+    'uqfyu',
+    'uqayeate',
+    'uqcokeef',
+    'uqamartl',
+    'uqldegro',
+    'uqklane1',
+    'uqvasai',
+    'uqmmoise',
+    'uqclien1',
+    'uqawil42',
+];
 
 export default {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: audioFields,
@@ -69,6 +90,7 @@ export default {
     [PUBLICATION_TYPE_NEWSPAPER_ARTICLE]: newspaperArticleFields,
     [PUBLICATION_TYPE_PATENT]: patentFields,
     [PUBLICATION_TYPE_PREPRINT]: preprintFields,
+    [PUBLICATION_TYPE_REFERENCE_ENTRY]: referenceEntryFields,
     [PUBLICATION_TYPE_RESEARCH_REPORT]: researchReportFields,
     [PUBLICATION_TYPE_SEMINAR_PAPER]: seminarPaperFields,
     [PUBLICATION_TYPE_THESIS]: thesisFields,

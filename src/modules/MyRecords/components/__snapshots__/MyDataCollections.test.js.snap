@@ -294,7 +294,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <Memo(FacetsFilter)
@@ -380,7 +380,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             renameFacetsList={Object {}}
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>

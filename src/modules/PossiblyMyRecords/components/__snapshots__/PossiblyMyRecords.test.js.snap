@@ -36,7 +36,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
         item={true}
         sm={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <Memo(FacetsFilter)
@@ -75,7 +75,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
               }
             }
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
@@ -128,7 +128,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
   title="Claim possible works"
 >
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -139,7 +138,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
     }
     onAction={[Function]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -225,7 +223,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
         item={true}
         sm={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <Memo(FacetsFilter)
@@ -314,7 +312,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
               }
             }
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>

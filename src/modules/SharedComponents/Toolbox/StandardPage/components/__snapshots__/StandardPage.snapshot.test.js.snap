@@ -1140,6 +1140,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                             >
                               <WithStyles(ForwardRef(IconButton))
                                 aria-describedby={null}
+                                aria-label="Click for more information"
                                 className=""
                                 id="help-icon"
                                 onBlur={[Function]}
@@ -1153,6 +1154,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               >
                                 <ForwardRef(IconButton)
                                   aria-describedby={null}
+                                  aria-label="Click for more information"
                                   className=""
                                   classes={
                                     Object {
@@ -1179,6 +1181,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 >
                                   <WithStyles(ForwardRef(ButtonBase))
                                     aria-describedby={null}
+                                    aria-label="Click for more information"
                                     centerRipple={true}
                                     className="MuiIconButton-root"
                                     disabled={false}
@@ -1195,6 +1198,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   >
                                     <ForwardRef(ButtonBase)
                                       aria-describedby={null}
+                                      aria-label="Click for more information"
                                       centerRipple={true}
                                       className="MuiIconButton-root"
                                       classes={
@@ -1218,6 +1222,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     >
                                       <button
                                         aria-describedby={null}
+                                        aria-label="Click for more information"
                                         className="MuiButtonBase-root MuiIconButton-root"
                                         disabled={false}
                                         id="help-icon"
@@ -1283,36 +1288,34 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                             </WithStyles(ForwardRef(SvgIcon))>
                                           </ForwardRef>
                                         </span>
-                                        <NoSsr>
-                                          <WithStyles(undefined)
+                                        <WithStyles(memo)
+                                          center={true}
+                                        >
+                                          <ForwardRef(TouchRipple)
                                             center={true}
-                                          >
-                                            <ForwardRef(TouchRipple)
-                                              center={true}
-                                              classes={
-                                                Object {
-                                                  "child": "MuiTouchRipple-child",
-                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                  "ripple": "MuiTouchRipple-ripple",
-                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                  "root": "MuiTouchRipple-root",
-                                                }
+                                            classes={
+                                              Object {
+                                                "child": "MuiTouchRipple-child",
+                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                "ripple": "MuiTouchRipple-ripple",
+                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                "root": "MuiTouchRipple-root",
                                               }
+                                            }
+                                          >
+                                            <span
+                                              className="MuiTouchRipple-root"
                                             >
-                                              <span
-                                                className="MuiTouchRipple-root"
-                                              >
-                                                <TransitionGroup
-                                                  childFactory={[Function]}
-                                                  component={null}
-                                                  exit={true}
-                                                />
-                                              </span>
-                                            </ForwardRef(TouchRipple)>
-                                          </WithStyles(undefined)>
-                                        </NoSsr>
+                                              <TransitionGroup
+                                                childFactory={[Function]}
+                                                component={null}
+                                                exit={true}
+                                              />
+                                            </span>
+                                          </ForwardRef(TouchRipple)>
+                                        </WithStyles(memo)>
                                       </button>
                                     </ForwardRef(ButtonBase)>
                                   </WithStyles(ForwardRef(ButtonBase))>
@@ -1321,6 +1324,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               <ForwardRef(Popper)
                                 anchorEl={
                                   <button
+                                    aria-label="Click for more information"
                                     class="MuiButtonBase-root MuiIconButton-root"
                                     id="help-icon"
                                     tabindex="0"

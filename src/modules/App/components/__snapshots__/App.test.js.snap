@@ -274,7 +274,6 @@ exports[`Application component Should display mobile correctly 1`] = `
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -288,7 +287,6 @@ exports[`Application component Should display mobile correctly 1`] = `
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -867,7 +865,6 @@ exports[`Application component should determine if it has incomplete works from 
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -881,7 +878,6 @@ exports[`Application component should determine if it has incomplete works from 
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -1692,7 +1688,6 @@ exports[`Application component should determine if it has incomplete works from 
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -1706,7 +1701,6 @@ exports[`Application component should determine if it has incomplete works from 
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -2335,7 +2329,6 @@ exports[`Application component should not show orcid alert for a student without
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -2349,7 +2342,6 @@ exports[`Application component should not show orcid alert for a student without
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -2712,7 +2704,6 @@ exports[`Application component should redirect to login page with correct return
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -2726,7 +2717,6 @@ exports[`Application component should redirect to login page with correct return
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -3301,7 +3291,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -3315,7 +3304,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -4163,7 +4151,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -4177,7 +4164,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -4840,7 +4826,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -4854,7 +4839,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -5498,7 +5482,6 @@ exports[`Application component should render app for account with author account
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -5512,7 +5495,6 @@ exports[`Application component should render app for account with author account
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -6398,7 +6380,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -6412,7 +6393,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -7396,7 +7376,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -7410,7 +7389,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -8408,7 +8386,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -8422,7 +8399,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -9438,7 +9414,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -9452,7 +9427,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -10645,7 +10619,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -10659,7 +10632,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -11820,7 +11792,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -11834,7 +11805,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       alignContent="center"
@@ -12730,7 +12700,6 @@ exports[`Application component should render app for account with fez author wit
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -12744,7 +12713,6 @@ exports[`Application component should render app for account with fez author wit
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -13532,7 +13500,6 @@ exports[`Application component should render application with routing for the us
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -13546,7 +13513,6 @@ exports[`Application component should render application with routing for the us
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <WithStyles(InlineLoader)
@@ -13832,7 +13798,6 @@ exports[`Application component should render for anon user 1`] = `
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -13846,7 +13811,6 @@ exports[`Application component should render for anon user 1`] = `
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -14133,7 +14097,6 @@ exports[`Application component should render thesis submission for HDR without m
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -14147,7 +14110,6 @@ exports[`Application component should render thesis submission for HDR without m
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -14544,7 +14506,6 @@ exports[`Application component should show orcid alert for a student without an 
       <WithStyles(ScrollTop)
         containerId="content-container"
         show={true}
-        showAfter={100}
       />
     </Hidden>
     <WithStyles(ConfirmDialogBox)
@@ -14558,7 +14519,6 @@ exports[`Application component should show orcid alert for a student without an 
         }
       }
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <Connect(AppAlert) />
     <ContextProvider
@@ -16908,7 +16868,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           style={
                                                                             Object {
                                                                               "color": "white",
@@ -16924,36 +16883,34 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     </WithStyles(ForwardRef(SvgIcon))>
                                                                   </ForwardRef>
                                                                 </span>
-                                                                <NoSsr>
-                                                                  <WithStyles(undefined)
+                                                                <WithStyles(memo)
+                                                                  center={true}
+                                                                >
+                                                                  <ForwardRef(TouchRipple)
                                                                     center={true}
-                                                                  >
-                                                                    <ForwardRef(TouchRipple)
-                                                                      center={true}
-                                                                      classes={
-                                                                        Object {
-                                                                          "child": "MuiTouchRipple-child",
-                                                                          "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                          "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                          "ripple": "MuiTouchRipple-ripple",
-                                                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                          "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                          "root": "MuiTouchRipple-root",
-                                                                        }
+                                                                    classes={
+                                                                      Object {
+                                                                        "child": "MuiTouchRipple-child",
+                                                                        "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                        "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                        "ripple": "MuiTouchRipple-ripple",
+                                                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                        "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                        "root": "MuiTouchRipple-root",
                                                                       }
+                                                                    }
+                                                                  >
+                                                                    <span
+                                                                      className="MuiTouchRipple-root"
                                                                     >
-                                                                      <span
-                                                                        className="MuiTouchRipple-root"
-                                                                      >
-                                                                        <TransitionGroup
-                                                                          childFactory={[Function]}
-                                                                          component={null}
-                                                                          exit={true}
-                                                                        />
-                                                                      </span>
-                                                                    </ForwardRef(TouchRipple)>
-                                                                  </WithStyles(undefined)>
-                                                                </NoSsr>
+                                                                      <TransitionGroup
+                                                                        childFactory={[Function]}
+                                                                        component={null}
+                                                                        exit={true}
+                                                                      />
+                                                                    </span>
+                                                                  </ForwardRef(TouchRipple)>
+                                                                </WithStyles(memo)>
                                                               </button>
                                                             </ForwardRef(ButtonBase)>
                                                           </WithStyles(ForwardRef(ButtonBase))>
@@ -16976,7 +16933,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 aria-hidden="true"
                                                                 class="MuiSvgIcon-root"
                                                                 focusable="false"
-                                                                role="presentation"
                                                                 style="color: white;"
                                                                 viewBox="0 0 24 24"
                                                               >
@@ -17717,6 +17673,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadCurrentAccount": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
+                                                            "loadOrcidSyncStatus": [Function],
                                                             "loadPublicationList": [Function],
                                                             "loadRecordToFix": [Function],
                                                             "loadRecordToView": [Function],
@@ -17724,6 +17681,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadThirdPartyResults": [Function],
                                                             "loadVocabulariesList": [Function],
                                                             "logout": [Function],
+                                                            "requestOrcidSync": [Function],
                                                             "resetSavingAuthorState": [Function],
                                                             "searchAuthorPublications": [Function],
                                                             "searchAuthors": [Function],
@@ -17740,6 +17698,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "showAppAlert": [Function],
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
+                                                            "updateCollection": [Function],
+                                                            "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
@@ -18595,7 +18555,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               className="MuiSvgIcon-root makeStyles-iconButton-228"
                                                                               focusable="false"
                                                                               id="logged-in-icon"
-                                                                              role="presentation"
                                                                               viewBox="0 0 24 24"
                                                                             >
                                                                               <path
@@ -18606,36 +18565,34 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         </WithStyles(ForwardRef(SvgIcon))>
                                                                       </ForwardRef>
                                                                     </span>
-                                                                    <NoSsr>
-                                                                      <WithStyles(undefined)
+                                                                    <WithStyles(memo)
+                                                                      center={true}
+                                                                    >
+                                                                      <ForwardRef(TouchRipple)
                                                                         center={true}
-                                                                      >
-                                                                        <ForwardRef(TouchRipple)
-                                                                          center={true}
-                                                                          classes={
-                                                                            Object {
-                                                                              "child": "MuiTouchRipple-child",
-                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                              "ripple": "MuiTouchRipple-ripple",
-                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                              "root": "MuiTouchRipple-root",
-                                                                            }
+                                                                        classes={
+                                                                          Object {
+                                                                            "child": "MuiTouchRipple-child",
+                                                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                            "ripple": "MuiTouchRipple-ripple",
+                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                            "root": "MuiTouchRipple-root",
                                                                           }
+                                                                        }
+                                                                      >
+                                                                        <span
+                                                                          className="MuiTouchRipple-root"
                                                                         >
-                                                                          <span
-                                                                            className="MuiTouchRipple-root"
-                                                                          >
-                                                                            <TransitionGroup
-                                                                              childFactory={[Function]}
-                                                                              component={null}
-                                                                              exit={true}
-                                                                            />
-                                                                          </span>
-                                                                        </ForwardRef(TouchRipple)>
-                                                                      </WithStyles(undefined)>
-                                                                    </NoSsr>
+                                                                          <TransitionGroup
+                                                                            childFactory={[Function]}
+                                                                            component={null}
+                                                                            exit={true}
+                                                                          />
+                                                                        </span>
+                                                                      </ForwardRef(TouchRipple)>
+                                                                    </WithStyles(memo)>
                                                                   </button>
                                                                 </ForwardRef(ButtonBase)>
                                                               </WithStyles(ForwardRef(ButtonBase))>
@@ -18658,7 +18615,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     class="MuiSvgIcon-root makeStyles-iconButton-228"
                                                                     focusable="false"
                                                                     id="logged-in-icon"
-                                                                    role="presentation"
                                                                     viewBox="0 0 24 24"
                                                                   >
                                                                     <path
@@ -19225,7 +19181,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       },
                                       "render": [Function],
                                     },
-                                    "defaultProps": undefined,
                                     "displayName": "WithStyles(ForwardRef(Backdrop))",
                                     "options": Object {
                                       "defaultTheme": Object {
@@ -19576,7 +19531,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           }
                           onAction={[MockFunction]}
                           onRef={[Function]}
-                          showAlternateActionButton={false}
                         >
                           <ConfirmDialogBox
                             classes={
@@ -19648,7 +19602,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         },
                                         "render": [Function],
                                       },
-                                      "defaultProps": undefined,
                                       "displayName": "WithStyles(ForwardRef(Backdrop))",
                                       "options": Object {
                                         "defaultTheme": Object {
@@ -20017,6 +19970,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadCurrentAccount": [Function],
                                 "loadFullRecordToClaim": [Function],
                                 "loadNewsFeed": [Function],
+                                "loadOrcidSyncStatus": [Function],
                                 "loadPublicationList": [Function],
                                 "loadRecordToFix": [Function],
                                 "loadRecordToView": [Function],
@@ -20024,6 +19978,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadThirdPartyResults": [Function],
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
+                                "requestOrcidSync": [Function],
                                 "resetSavingAuthorState": [Function],
                                 "searchAuthorPublications": [Function],
                                 "searchAuthors": [Function],
@@ -20040,6 +19995,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "showAppAlert": [Function],
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
+                                "updateCollection": [Function],
+                                "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
                                 "updateIncompleteRecord": [Function],
                               }
@@ -21498,6 +21455,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadFullRecordToClaim": [Function],
                                                                             "loadNewsFeed": [Function],
+                                                                            "loadOrcidSyncStatus": [Function],
                                                                             "loadPublicationList": [Function],
                                                                             "loadRecordToFix": [Function],
                                                                             "loadRecordToView": [Function],
@@ -21505,6 +21463,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadThirdPartyResults": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
+                                                                            "requestOrcidSync": [Function],
                                                                             "resetSavingAuthorState": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
@@ -21521,6 +21480,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "showAppAlert": [Function],
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
+                                                                            "updateCollection": [Function],
+                                                                            "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                           }
@@ -21616,6 +21577,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadCurrentAccount": [Function],
                                                                               "loadFullRecordToClaim": [Function],
                                                                               "loadNewsFeed": [Function],
+                                                                              "loadOrcidSyncStatus": [Function],
                                                                               "loadPublicationList": [Function],
                                                                               "loadRecordToFix": [Function],
                                                                               "loadRecordToView": [Function],
@@ -21623,6 +21585,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadThirdPartyResults": [Function],
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
+                                                                              "requestOrcidSync": [Function],
                                                                               "resetSavingAuthorState": [Function],
                                                                               "searchAuthorPublications": [Function],
                                                                               "searchAuthors": [Function],
@@ -21639,6 +21602,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "showAppAlert": [Function],
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
+                                                                              "updateCollection": [Function],
+                                                                              "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
                                                                               "updateIncompleteRecord": [Function],
                                                                             }
@@ -22657,12 +22622,17 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                             <Link
                                                                                                               to="/contact"
                                                                                                             >
-                                                                                                              <a
+                                                                                                              <LinkAnchor
                                                                                                                 href="/contact"
-                                                                                                                onClick={[Function]}
+                                                                                                                navigate={[Function]}
                                                                                                               >
-                                                                                                                 read more
-                                                                                                              </a>
+                                                                                                                <a
+                                                                                                                  href="/contact"
+                                                                                                                  onClick={[Function]}
+                                                                                                                >
+                                                                                                                   read more
+                                                                                                                </a>
+                                                                                                              </LinkAnchor>
                                                                                                             </Link>
                                                                                                           </p>
                                                                                                         </ForwardRef(Typography)>
@@ -22845,6 +22815,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
                                                                                       "loadNewsFeed": [Function],
+                                                                                      "loadOrcidSyncStatus": [Function],
                                                                                       "loadPublicationList": [Function],
                                                                                       "loadRecordToFix": [Function],
                                                                                       "loadRecordToView": [Function],
@@ -22852,6 +22823,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadThirdPartyResults": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
+                                                                                      "requestOrcidSync": [Function],
                                                                                       "resetSavingAuthorState": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
@@ -22868,13 +22840,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "showAppAlert": [Function],
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
+                                                                                      "updateCollection": [Function],
+                                                                                      "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
-                                                                                  loadingNewsFeedList={true}
-                                                                                  newsFeedList={Array []}
-                                                                                  showNewsCount={3}
                                                                                 >
                                                                                   <NewsFeed
                                                                                     actions={
@@ -22920,6 +22891,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "loadCurrentAccount": [Function],
                                                                                         "loadFullRecordToClaim": [Function],
                                                                                         "loadNewsFeed": [Function],
+                                                                                        "loadOrcidSyncStatus": [Function],
                                                                                         "loadPublicationList": [Function],
                                                                                         "loadRecordToFix": [Function],
                                                                                         "loadRecordToView": [Function],
@@ -22927,6 +22899,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "loadThirdPartyResults": [Function],
                                                                                         "loadVocabulariesList": [Function],
                                                                                         "logout": [Function],
+                                                                                        "requestOrcidSync": [Function],
                                                                                         "resetSavingAuthorState": [Function],
                                                                                         "searchAuthorPublications": [Function],
                                                                                         "searchAuthors": [Function],
@@ -22943,6 +22916,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "showAppAlert": [Function],
                                                                                         "submitThesis": [Function],
                                                                                         "unclaimRecord": [Function],
+                                                                                        "updateCollection": [Function],
+                                                                                        "updateCommunity": [Function],
                                                                                         "updateCurrentAuthor": [Function],
                                                                                         "updateIncompleteRecord": [Function],
                                                                                       }
@@ -23337,7 +23312,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       </div>
                       <Connect(WithStyles(HelpDrawer))>
                         <WithStyles(HelpDrawer)
-                          buttonLabel="CLOSE"
                           hide={[Function]}
                           open={false}
                           text=""
@@ -23753,7 +23727,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         },
                                         "render": [Function],
                                       },
-                                      "defaultProps": undefined,
                                       "displayName": "WithStyles(ForwardRef(Backdrop))",
                                       "options": Object {
                                         "defaultTheme": Object {

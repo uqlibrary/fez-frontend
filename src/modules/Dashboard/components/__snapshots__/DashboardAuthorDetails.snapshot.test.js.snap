@@ -19,6 +19,37 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
   <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
-  />
+  >
+    <WithStyles(ForwardRef(Typography))
+      component="span"
+      key="0"
+      variant="caption"
+    >
+      <b>
+        Affiliate Professor
+      </b>
+      , Institute for Molecular Bioscience
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(Typography))
+      component="span"
+      key="2"
+      variant="caption"
+    >
+      <b>
+        Affiliate Professorial Res Fellow
+      </b>
+      , School of Chemistry and Molecular Biosciences
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(ForwardRef(Typography))
+      component="span"
+      key="3"
+      variant="caption"
+    >
+      <b>
+        ARC Australian Laureate Fellow
+      </b>
+      , The University of Queensland Diamantina Institute
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;

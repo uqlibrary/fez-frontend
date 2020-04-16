@@ -11,8 +11,7 @@ export const TextFieldWrapper = props => {
     const hideLabel = !!filteredProps.hideLabel;
     delete filteredProps.errorText;
     delete filteredProps.hideLabel;
-    const ariaLabel = `${filteredProps.id ||
-        (filteredProps.label && filteredProps.label.replace(/\s+/g, ''))}`.toString();
+    const ariaLabel = filteredProps.id || (filteredProps.label && filteredProps.label.replace(/\s+/g, '')) || '';
     return (
         <Fragment>
             <TextField

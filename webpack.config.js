@@ -87,10 +87,7 @@ module.exports = {
             },
             {
                 test: /\.scss|\.styl/,
-                include: [
-                    path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src'),
-                ],
+                include: [path.resolve(__dirname, 'src')],
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {

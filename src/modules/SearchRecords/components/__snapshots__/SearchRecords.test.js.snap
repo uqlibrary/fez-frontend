@@ -859,7 +859,7 @@ exports[`SearchRecords page should show available filters or selected filters if
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <Memo(FacetsFilter)
@@ -900,7 +900,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             }
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
@@ -964,7 +964,7 @@ exports[`SearchRecords page should show available filters or selected filters if
         item={true}
         md={3}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
           <Memo(FacetsFilter)
@@ -1002,7 +1002,7 @@ exports[`SearchRecords page should show available filters or selected filters if
             }
             showOpenAccessFilter={true}
           />
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>

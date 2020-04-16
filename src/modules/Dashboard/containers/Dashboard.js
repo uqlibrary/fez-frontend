@@ -8,16 +8,20 @@ const mapStateToProps = state => {
     const { loadingLatestPublications, latestPublicationsList } = state.get('myLatestPublicationsReducer');
     const { loadingTrendingPublications, trendingPublicationsList } = state.get('myTrendingPublicationsReducer');
     const { possibleCounts, loadingPossibleCounts } = state.get('claimPublicationReducer');
+    const account = state.get('accountReducer');
 
     return {
-        ...state.get('accountReducer'),
-        author: { ...state.get('accountReducer').author },
-        authorDetails: { ...state.get('accountReducer').authorDetails },
+        ...account,
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
         ...state.get('publicationsReducer'),
+        ...state.get('orcidSyncReducer'),
         showLatestPublicationsTab: loadingLatestPublications || latestPublicationsList.length > 0,
         showTrendingPublicationsTab: loadingTrendingPublications || trendingPublicationsList.length > 0,
+        orcidSyncEnabled:
+            !!account.author.aut_is_orcid_sync_enabled &&
+            account.authorDetails &&
+            account.authorDetails.espace.doc_count > 0,
         possiblyYourPublicationsCount: possibleCounts,
         possiblyYourPublicationsCountLoading: loadingPossibleCounts,
     };

@@ -146,7 +146,7 @@ export class ContributorRowHeader extends PureComponent {
                                     disabled={disabled || hideDelete}
                                     aria-label={deleteAll}
                                 >
-                                    <DeleteForever titleAccess={deleteAll} />
+                                    <DeleteForever />
                                 </IconButton>
                             </span>
                         </Tooltip>

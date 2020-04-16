@@ -7,7 +7,6 @@ context('Masquerade', () => {
 
     it('privileged users can masquerade', () => {
         cy.visit('/admin/masquerade/?user=uqmasquerade');
-        cy.closeUnsupported();
         cy.get('#userName')
             .type('s1111111');
         cy.get('button')

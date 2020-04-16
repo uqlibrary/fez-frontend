@@ -6,20 +6,19 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
     InputLabelProps={
       Object {
         "hidden": false,
-        "htmlFor": "undefined",
-        "id": "undefined-label",
+        "htmlFor": "",
+        "id": "-label",
         "shrink": undefined,
       }
     }
-    error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
-    id="undefined"
+    id=""
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "undefined-label",
-        "id": "undefined",
+        "aria-labelledby": "-label",
+        "id": "",
         "label": undefined,
       }
     }
@@ -35,21 +34,20 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
     InputLabelProps={
       Object {
         "hidden": false,
-        "htmlFor": "undefined",
-        "id": "undefined-label",
+        "htmlFor": "",
+        "id": "-label",
         "shrink": undefined,
       }
     }
     className="requiredField"
-    error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
-    id="undefined"
+    id=""
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "undefined-label",
-        "id": "undefined",
+        "aria-labelledby": "-label",
+        "id": "",
         "label": undefined,
       }
     }
@@ -65,24 +63,24 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
     InputLabelProps={
       Object {
         "hidden": false,
-        "htmlFor": "undefined",
-        "id": "undefined-label",
+        "htmlFor": "test",
+        "id": "test-label",
         "shrink": true,
       }
     }
-    error={false}
     floatingLabelText="This is a test textfield component"
     floatinglabelfixed={true}
     fullWidth={true}
-    id="undefined"
+    id="test"
     inputProps={
       Object {
-        "aria-label": undefined,
-        "aria-labelledby": "undefined-label",
-        "id": "undefined",
-        "label": undefined,
+        "aria-label": "test",
+        "aria-labelledby": "test-label",
+        "id": "test",
+        "label": "test",
       }
     }
+    label="test"
     name="testField"
     type="text"
   />

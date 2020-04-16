@@ -118,14 +118,8 @@ export const deduplicateResults = list => {
                                 const itemPriority = locale.global.sources[item.sources[0].source].priority;
 
                                 // prevent duplicate sources
-                                /* istanbul ignore else */
-                                if (
-                                    !currentItemSources.some(source => {
-                                        return source.source === item.sources[0].source;
-                                    })
-                                ) {
+                                !currentItemSources.some(source => source.source === item.sources[0].source) &&
                                     currentItemSources.push(item.sources[0]);
-                                }
 
                                 if (itemPriority < currentItemPriority) {
                                     const itemWithNewSources = { ...item };

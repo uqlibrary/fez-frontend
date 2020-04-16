@@ -18,11 +18,12 @@ Prorotype component to display alerts/warnings/errors
 import React from 'react';
 ...
 
-import {Alert} from 'uqlibrary-react-toolbox';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 const App = () => (
   <div>
-      <Alert
+
+    <Alert
         title="This is a title"
         message="Some body text."
         type="error_outline"

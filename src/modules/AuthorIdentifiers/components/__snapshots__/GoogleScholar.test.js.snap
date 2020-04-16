@@ -764,20 +764,6 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
               }
             }
             anyTouched={true}
-            array={
-              Object {
-                "insert": [MockFunction],
-                "move": [MockFunction],
-                "pop": [MockFunction],
-                "push": [MockFunction],
-                "remove": [MockFunction],
-                "removeAll": [MockFunction],
-                "shift": [MockFunction],
-                "splice": [MockFunction],
-                "swap": [MockFunction],
-                "unshift": [MockFunction],
-              }
-            }
             asyncValidate={[MockFunction]}
             asyncValidating={false}
             author={
@@ -2540,6 +2526,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                           >
                                                                             <WithStyles(ForwardRef(IconButton))
                                                                               aria-describedby={null}
+                                                                              aria-label="Click for more information"
                                                                               className=""
                                                                               id="help-icon"
                                                                               onBlur={[Function]}
@@ -2553,6 +2540,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                             >
                                                                               <ForwardRef(IconButton)
                                                                                 aria-describedby={null}
+                                                                                aria-label="Click for more information"
                                                                                 className=""
                                                                                 classes={
                                                                                   Object {
@@ -2579,6 +2567,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                               >
                                                                                 <WithStyles(ForwardRef(ButtonBase))
                                                                                   aria-describedby={null}
+                                                                                  aria-label="Click for more information"
                                                                                   centerRipple={true}
                                                                                   className="MuiIconButton-root"
                                                                                   disabled={false}
@@ -2595,6 +2584,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                                 >
                                                                                   <ForwardRef(ButtonBase)
                                                                                     aria-describedby={null}
+                                                                                    aria-label="Click for more information"
                                                                                     centerRipple={true}
                                                                                     className="MuiIconButton-root"
                                                                                     classes={
@@ -2618,6 +2608,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                                   >
                                                                                     <button
                                                                                       aria-describedby={null}
+                                                                                      aria-label="Click for more information"
                                                                                       className="MuiButtonBase-root MuiIconButton-root"
                                                                                       disabled={false}
                                                                                       id="help-icon"
@@ -2683,36 +2674,34 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                                           </WithStyles(ForwardRef(SvgIcon))>
                                                                                         </ForwardRef>
                                                                                       </span>
-                                                                                      <NoSsr>
-                                                                                        <WithStyles(undefined)
+                                                                                      <WithStyles(memo)
+                                                                                        center={true}
+                                                                                      >
+                                                                                        <ForwardRef(TouchRipple)
                                                                                           center={true}
-                                                                                        >
-                                                                                          <ForwardRef(TouchRipple)
-                                                                                            center={true}
-                                                                                            classes={
-                                                                                              Object {
-                                                                                                "child": "MuiTouchRipple-child",
-                                                                                                "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                                                "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                                                "ripple": "MuiTouchRipple-ripple",
-                                                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                                                "root": "MuiTouchRipple-root",
-                                                                                              }
+                                                                                          classes={
+                                                                                            Object {
+                                                                                              "child": "MuiTouchRipple-child",
+                                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                                              "ripple": "MuiTouchRipple-ripple",
+                                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                                              "root": "MuiTouchRipple-root",
                                                                                             }
+                                                                                          }
+                                                                                        >
+                                                                                          <span
+                                                                                            className="MuiTouchRipple-root"
                                                                                           >
-                                                                                            <span
-                                                                                              className="MuiTouchRipple-root"
-                                                                                            >
-                                                                                              <TransitionGroup
-                                                                                                childFactory={[Function]}
-                                                                                                component={null}
-                                                                                                exit={true}
-                                                                                              />
-                                                                                            </span>
-                                                                                          </ForwardRef(TouchRipple)>
-                                                                                        </WithStyles(undefined)>
-                                                                                      </NoSsr>
+                                                                                            <TransitionGroup
+                                                                                              childFactory={[Function]}
+                                                                                              component={null}
+                                                                                              exit={true}
+                                                                                            />
+                                                                                          </span>
+                                                                                        </ForwardRef(TouchRipple)>
+                                                                                      </WithStyles(memo)>
                                                                                     </button>
                                                                                   </ForwardRef(ButtonBase)>
                                                                                 </WithStyles(ForwardRef(ButtonBase))>
@@ -2721,6 +2710,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                             <ForwardRef(Popper)
                                                                               anchorEl={
                                                                                 <button
+                                                                                  aria-label="Click for more information"
                                                                                   class="MuiButtonBase-root MuiIconButton-root"
                                                                                   id="help-icon"
                                                                                   tabindex="0"
@@ -3548,36 +3538,34 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                       >
                                                         Cancel
                                                       </span>
-                                                      <NoSsr>
-                                                        <WithStyles(undefined)
+                                                      <WithStyles(memo)
+                                                        center={false}
+                                                      >
+                                                        <ForwardRef(TouchRipple)
                                                           center={false}
-                                                        >
-                                                          <ForwardRef(TouchRipple)
-                                                            center={false}
-                                                            classes={
-                                                              Object {
-                                                                "child": "MuiTouchRipple-child",
-                                                                "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                "ripple": "MuiTouchRipple-ripple",
-                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                "root": "MuiTouchRipple-root",
-                                                              }
+                                                          classes={
+                                                            Object {
+                                                              "child": "MuiTouchRipple-child",
+                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                              "ripple": "MuiTouchRipple-ripple",
+                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                              "root": "MuiTouchRipple-root",
                                                             }
+                                                          }
+                                                        >
+                                                          <span
+                                                            className="MuiTouchRipple-root"
                                                           >
-                                                            <span
-                                                              className="MuiTouchRipple-root"
-                                                            >
-                                                              <TransitionGroup
-                                                                childFactory={[Function]}
-                                                                component={null}
-                                                                exit={true}
-                                                              />
-                                                            </span>
-                                                          </ForwardRef(TouchRipple)>
-                                                        </WithStyles(undefined)>
-                                                      </NoSsr>
+                                                            <TransitionGroup
+                                                              childFactory={[Function]}
+                                                              component={null}
+                                                              exit={true}
+                                                            />
+                                                          </span>
+                                                        </ForwardRef(TouchRipple)>
+                                                      </WithStyles(memo)>
                                                     </button>
                                                   </ForwardRef(ButtonBase)>
                                                 </WithStyles(ForwardRef(ButtonBase))>
@@ -3801,36 +3789,34 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                       >
                                                         Save Google Scholar ID
                                                       </span>
-                                                      <NoSsr>
-                                                        <WithStyles(undefined)
+                                                      <WithStyles(memo)
+                                                        center={false}
+                                                      >
+                                                        <ForwardRef(TouchRipple)
                                                           center={false}
-                                                        >
-                                                          <ForwardRef(TouchRipple)
-                                                            center={false}
-                                                            classes={
-                                                              Object {
-                                                                "child": "MuiTouchRipple-child",
-                                                                "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                "ripple": "MuiTouchRipple-ripple",
-                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                "root": "MuiTouchRipple-root",
-                                                              }
+                                                          classes={
+                                                            Object {
+                                                              "child": "MuiTouchRipple-child",
+                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                              "ripple": "MuiTouchRipple-ripple",
+                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                              "root": "MuiTouchRipple-root",
                                                             }
+                                                          }
+                                                        >
+                                                          <span
+                                                            className="MuiTouchRipple-root"
                                                           >
-                                                            <span
-                                                              className="MuiTouchRipple-root"
-                                                            >
-                                                              <TransitionGroup
-                                                                childFactory={[Function]}
-                                                                component={null}
-                                                                exit={true}
-                                                              />
-                                                            </span>
-                                                          </ForwardRef(TouchRipple)>
-                                                        </WithStyles(undefined)>
-                                                      </NoSsr>
+                                                            <TransitionGroup
+                                                              childFactory={[Function]}
+                                                              component={null}
+                                                              exit={true}
+                                                            />
+                                                          </span>
+                                                        </ForwardRef(TouchRipple)>
+                                                      </WithStyles(memo)>
                                                     </button>
                                                   </ForwardRef(ButtonBase)>
                                                 </WithStyles(ForwardRef(ButtonBase))>

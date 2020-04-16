@@ -1,5 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DataStreamSecuritySelector component should hide derivative datastreams 1`] = `
+<DocumentFragment>
+  <h6
+    class="MuiTypography-root MuiTypography-h6"
+  />
+  <div
+    style="margin-top: 8px; padding: 16px;"
+  >
+    <div
+      class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileBlock-721 dataStreamFileBlock MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-flex-end"
+    >
+      <div
+        class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileName-722 dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          title="testA.txt"
+        >
+          testA.txt
+        </a>
+        <span
+          class="MuiTypography-root MuiTypography-caption"
+        >
+          Overridden
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          class="MuiFormControl-root"
+          style="width: 100%;"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+            data-shrink="false"
+            id="Override datastream security policy-label"
+          >
+            Override datastream security policy
+            <span
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            required=""
+            validation="function required(value) {
+  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+}"
+          >
+            <div
+              aria-haspopup="listbox"
+              aria-labelledby="Override datastream security policy"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              id="Override datastream security policy"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                ​
+              </span>
+            </div>
+            <input
+              aria-labelledby="Override datastream security policy-label"
+              id="Override datastream security policy"
+              name="testA.txt"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`DataStreamSecuritySelector component should not display datastream security selected in dropdown 1`] = `
 "Snapshot Diff:
 Compared values have no visual difference."
@@ -59,7 +148,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" Override datastream security policy"
+              aria-labelledby="Override datastream security policy"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
               id="Override datastream security policy"
               role="button"
@@ -78,7 +167,95 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSelect-icon"
               focusable="false"
-              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DataStreamSecuritySelector component should show non-derivative datastreams 1`] = `
+<DocumentFragment>
+  <h6
+    class="MuiTypography-root MuiTypography-h6"
+  />
+  <div
+    style="margin-top: 8px; padding: 16px;"
+  >
+    <div
+      class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileBlock-941 dataStreamFileBlock MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-flex-end"
+    >
+      <div
+        class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileName-942 dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          title="test9.txt"
+        >
+          test9.txt
+        </a>
+        <span
+          class="MuiTypography-root MuiTypography-caption"
+        >
+          Overridden
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          class="MuiFormControl-root"
+          style="width: 100%;"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+            data-shrink="false"
+            id="Override datastream security policy-label"
+          >
+            Override datastream security policy
+            <span
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            required=""
+            validation="function required(value) {
+  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+}"
+          >
+            <div
+              aria-haspopup="listbox"
+              aria-labelledby="Override datastream security policy"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              id="Override datastream security policy"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                ​
+              </span>
+            </div>
+            <input
+              aria-labelledby="Override datastream security policy-label"
+              id="Override datastream security policy"
+              name="test9.txt"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
               viewBox="0 0 24 24"
             >
               <path

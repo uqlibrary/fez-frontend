@@ -2010,6 +2010,7 @@ export default {
                     ),
                     overridePrompt: 'Override datastream security policy details',
                     overridePolicyPrompt: 'Security policy for this file to override inheritance',
+                    noDataStreams: 'No datastreams to display',
                 },
                 inheritedPolicy: {
                     record: {

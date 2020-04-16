@@ -15,7 +15,7 @@ component for a right hand panel wrapper
 import React from 'react';
 ...
 
-import {StandardRighthandCard} from 'uqlibrary-react-toolbox';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 
 const App = () => (
     <StandardRighthandCard title={txt.component.title} help={txt.component.help}>

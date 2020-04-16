@@ -148,7 +148,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.searchKeyList[config.params.search_key]];
         } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
-            return [200, mockData.collections];
+            return [200, mockData.collectionSearchList];
         } else if (config.params.key && config.params.key.rek_object_type === 1) {
             return [200, mockData.communitySearchList];
         } else if (
@@ -220,12 +220,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
+            { ...mockData.collectionRecord },
+            { ...mockData.communityRecord },
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.UQ716942uqagrinb },
             { ...mockTestingData.dataCollection },
+            ...mockData.collectionSearchList.data,
+            ...mockData.communitySearchList.data,
             ...mockData.incompleteNTROlist.data,
             ...mockData.myRecordsList.data,
             ...mockData.possibleUnclaimedList.data,
@@ -247,6 +251,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListNewspaperArticle.data,
             ...mockData.publicationTypeListPatent.data,
             ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListReferenceEntry.data,
             ...mockData.publicationTypeListResearchReport.data,
             ...mockData.publicationTypeListSeminarPaper.data,
             ...mockData.publicationTypeListThesis.data,
@@ -285,7 +290,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
-    .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
+    .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
+    .onGet(routes.ORCID_SYNC_API().apiUrl)
+    .reply(200, mockData.orcidSyncStatus);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
 // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
@@ -299,10 +306,17 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .onPost(routes.BATCH_IMPORT_API().apiUrl)
     .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
+    .onPost(routes.ORCID_SYNC_API().apiUrl)
+    .reply(201, mockData.orcidSyncResponse)
+    // .reply(400) // if current sync job exists
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
     // .reply(500, {message: 'error - failed NEW_RECORD_API'})
     // .reply(403, {message: 'Session expired'})
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
+    .reply(() => [200, { data: mockData.collectionRecord }])
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
+    .reply(() => [200, { data: mockData.communityRecord }])
     .onPost(routes.ISSN_LINKS_API({ type: 'sherpa' }).apiUrl)
     .reply(config => {
         const issn = JSON.parse(config.data).issn;
@@ -344,6 +358,10 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
 
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.collectionRecord } })
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_COMMUNITY_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.communityRecord } })
     // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, { ...mockData.currentAuthor.uqresearcher })

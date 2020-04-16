@@ -1,11 +1,12 @@
-import DashboardAuthorProfile from './DashboardAuthorProfile';
+import { DashboardAuthorProfile } from './DashboardAuthorProfile';
 import * as mock from 'mock/data';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps = {}, args = {}) {
     const props = {
         authorDetails: mock.authorDetails.uqresearcher,
         author: mock.currentAuthor.uqresearcher.data,
         history: {},
+        classes: {},
         ...testProps,
     };
     return getElement(DashboardAuthorProfile, props, args);

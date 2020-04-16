@@ -19,7 +19,7 @@ const styles = {
     },
 };
 
-class DashboardAuthorProfile extends PureComponent {
+export class DashboardAuthorProfile extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
         authorDetails: PropTypes.object,

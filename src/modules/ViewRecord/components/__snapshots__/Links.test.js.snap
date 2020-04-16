@@ -12050,6 +12050,8 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
 
 exports[`Component Links  Rendering due to being open access link no doi 1`] = `""`;
 
+exports[`Component Links  Will not render a UQ generated doi 1`] = `""`;
+
 exports[`Component Links  should not render component for empty publication 1`] = `""`;
 
 exports[`Component Links  should render 3 not OA links and DOI and PMC links with OA for OPEN_ACCESS_ID_DOI 1`] = `

@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import { validation, publicationTypes } from 'config';
+import { DOCUMENT_TYPES_EDIT_ONLY } from 'config/general';
 import locale from 'locale/pages';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -28,8 +29,11 @@ export const AddSection = ({
     history,
 }) => {
     const allPublicationTypes = Object.values(publicationTypes());
+    const availablePublicationTypes = allPublicationTypes.filter(
+        pubType => !DOCUMENT_TYPES_EDIT_ONLY.includes(pubType.id),
+    );
     const publicationTypeItems = [
-        ...allPublicationTypes.map((item, index) => {
+        ...availablePublicationTypes.map((item, index) => {
             return (
                 <MenuItem value={item.id} key={index}>
                     {item.name}

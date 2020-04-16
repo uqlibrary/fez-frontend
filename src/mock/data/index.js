@@ -1,6 +1,7 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails, uqrdav10, uqagrinb } from './account';
 export {
-    collections,
+    collectionRecord,
+    collectionSearchList,
     collectionsByCommunity,
     communityRecord,
     communitySearchList,
@@ -35,6 +36,7 @@ export {
     publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
     publicationTypeListPreprint,
+    publicationTypeListReferenceEntry,
     publicationTypeListResearchReport,
     publicationTypeListSeminarPaper,
     publicationTypeListThesis,
@@ -52,7 +54,7 @@ export { vocabulariesList } from './vocabularies';
 export { quickTemplates } from './acml';
 export { hindexResponse, trendingPublications, currentAuthorStats } from './academicStats';
 export { searchKeyList } from './searchKeys';
-export { authorOrcidDetails } from './orcid';
+export { authorOrcidDetails, orcidSyncStatus, orcidSyncResponse, orcidSyncNullResponse } from './orcid';
 export { newsFeed } from './newsFeed';
 export { batchImportDirectories } from './batchImportDirectories';
 export { sherpaRomeo } from './sherpaRomeo';

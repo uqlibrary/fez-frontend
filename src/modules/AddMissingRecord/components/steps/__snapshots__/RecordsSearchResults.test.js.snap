@@ -464,7 +464,7 @@ exports[`Search record results should render a single claimable item with no aut
         md={3}
         sm={4}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Repository search"
         >
           <Suspense
@@ -478,7 +478,7 @@ exports[`Search record results should render a single claimable item with no aut
               loadingPublicationSources={Object {}}
             />
           </Suspense>
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
@@ -722,7 +722,7 @@ exports[`Search record results should render a single unclaimable item with no a
         md={3}
         sm={4}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Repository search"
         >
           <Suspense
@@ -736,7 +736,7 @@ exports[`Search record results should render a single unclaimable item with no a
               loadingPublicationSources={Object {}}
             />
           </Suspense>
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
@@ -3242,36 +3242,34 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     >
                                                       Abandon and search again
                                                     </span>
-                                                    <NoSsr>
-                                                      <WithStyles(undefined)
+                                                    <WithStyles(memo)
+                                                      center={false}
+                                                    >
+                                                      <ForwardRef(TouchRipple)
                                                         center={false}
-                                                      >
-                                                        <ForwardRef(TouchRipple)
-                                                          center={false}
-                                                          classes={
-                                                            Object {
-                                                              "child": "MuiTouchRipple-child",
-                                                              "childLeaving": "MuiTouchRipple-childLeaving",
-                                                              "childPulsate": "MuiTouchRipple-childPulsate",
-                                                              "ripple": "MuiTouchRipple-ripple",
-                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                              "root": "MuiTouchRipple-root",
-                                                            }
+                                                        classes={
+                                                          Object {
+                                                            "child": "MuiTouchRipple-child",
+                                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                                            "ripple": "MuiTouchRipple-ripple",
+                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                            "root": "MuiTouchRipple-root",
                                                           }
+                                                        }
+                                                      >
+                                                        <span
+                                                          className="MuiTouchRipple-root"
                                                         >
-                                                          <span
-                                                            className="MuiTouchRipple-root"
-                                                          >
-                                                            <TransitionGroup
-                                                              childFactory={[Function]}
-                                                              component={null}
-                                                              exit={true}
-                                                            />
-                                                          </span>
-                                                        </ForwardRef(TouchRipple)>
-                                                      </WithStyles(undefined)>
-                                                    </NoSsr>
+                                                          <TransitionGroup
+                                                            childFactory={[Function]}
+                                                            component={null}
+                                                            exit={true}
+                                                          />
+                                                        </span>
+                                                      </ForwardRef(TouchRipple)>
+                                                    </WithStyles(memo)>
                                                   </button>
                                                 </ForwardRef(ButtonBase)>
                                               </WithStyles(ForwardRef(ButtonBase))>
@@ -3497,36 +3495,34 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     >
                                                       Create a new eSpace record
                                                     </span>
-                                                    <NoSsr>
-                                                      <WithStyles(undefined)
+                                                    <WithStyles(memo)
+                                                      center={false}
+                                                    >
+                                                      <ForwardRef(TouchRipple)
                                                         center={false}
-                                                      >
-                                                        <ForwardRef(TouchRipple)
-                                                          center={false}
-                                                          classes={
-                                                            Object {
-                                                              "child": "MuiTouchRipple-child",
-                                                              "childLeaving": "MuiTouchRipple-childLeaving",
-                                                              "childPulsate": "MuiTouchRipple-childPulsate",
-                                                              "ripple": "MuiTouchRipple-ripple",
-                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                              "root": "MuiTouchRipple-root",
-                                                            }
+                                                        classes={
+                                                          Object {
+                                                            "child": "MuiTouchRipple-child",
+                                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                                            "ripple": "MuiTouchRipple-ripple",
+                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                            "root": "MuiTouchRipple-root",
                                                           }
+                                                        }
+                                                      >
+                                                        <span
+                                                          className="MuiTouchRipple-root"
                                                         >
-                                                          <span
-                                                            className="MuiTouchRipple-root"
-                                                          >
-                                                            <TransitionGroup
-                                                              childFactory={[Function]}
-                                                              component={null}
-                                                              exit={true}
-                                                            />
-                                                          </span>
-                                                        </ForwardRef(TouchRipple)>
-                                                      </WithStyles(undefined)>
-                                                    </NoSsr>
+                                                          <TransitionGroup
+                                                            childFactory={[Function]}
+                                                            component={null}
+                                                            exit={true}
+                                                          />
+                                                        </span>
+                                                      </ForwardRef(TouchRipple)>
+                                                    </WithStyles(memo)>
                                                   </button>
                                                 </ForwardRef(ButtonBase)>
                                               </WithStyles(ForwardRef(ButtonBase))>
@@ -3788,7 +3784,7 @@ exports[`Search record results should render publications list with one publicat
         md={3}
         sm={4}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Repository search"
         >
           <Suspense
@@ -3802,7 +3798,7 @@ exports[`Search record results should render publications list with one publicat
               loadingPublicationSources={Object {}}
             />
           </Suspense>
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
@@ -3853,7 +3849,7 @@ exports[`Search record results should render spinner 1`] = `
         md={3}
         sm={4}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Repository search"
         >
           <Suspense
@@ -3867,7 +3863,7 @@ exports[`Search record results should render spinner 1`] = `
               loadingPublicationSources={Object {}}
             />
           </Suspense>
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
@@ -3972,7 +3968,7 @@ exports[`Search record results should render stepper and no results 1`] = `
         md={3}
         sm={4}
       >
-        <StandardRighthandCard
+        <WithStyles(StandardRighthandCard)
           title="Repository search"
         >
           <Suspense
@@ -3986,7 +3982,7 @@ exports[`Search record results should render stepper and no results 1`] = `
               loadingPublicationSources={Object {}}
             />
           </Suspense>
-        </StandardRighthandCard>
+        </WithStyles(StandardRighthandCard)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
