@@ -31,7 +31,10 @@ export const AutoCompleteMultiSelectField = ({
 
     return (
         <Autocomplete
-            id={id || 'auto-complete-multi-select-field'}
+            id={id}
+            ChipProps={{
+                id: `${id}-selected`,
+            }}
             multiple
             getOptionLabel={getOptionLabel}
             options={itemsList}
@@ -63,7 +66,7 @@ AutoCompleteMultiSelectField.propTypes = {
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
     hintText: PropTypes.string,
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,
