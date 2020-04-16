@@ -4,7 +4,7 @@ import { THESIS_SUBTYPES } from 'config/general';
 
 const mapStateToProps = (state, props) => {
     return {
-        selectedValue: props.input ? props.input.value : props.value,
+        value: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || THESIS_SUBTYPES,
         itemsLoading: false,
         hideLabel: props.hideLabel || false,
@@ -20,7 +20,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onchange: (!!props.input && props.input.onChange) || (!!props.onChange && props.onChange),
+        onChange: (!!props.input && props.input.onChange) || (!!props.onChange && props.onChange),
     };
 };
 
