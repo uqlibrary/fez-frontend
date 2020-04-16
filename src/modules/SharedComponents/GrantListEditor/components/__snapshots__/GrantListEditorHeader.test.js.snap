@@ -26,18 +26,8 @@ Object {
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(ForwardRef(ListItem))
     classes={
@@ -184,18 +174,8 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 exports[`GrantListEditorHeader should render default mobile view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(ForwardRef(ListItem))
     classes={
@@ -359,18 +339,8 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
 exports[`GrantListEditorHeader should render default view 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(ForwardRef(ListItem))
     classes={
@@ -534,18 +504,8 @@ exports[`GrantListEditorHeader should render default view 1`] = `
 exports[`GrantListEditorHeader should show confirmation box 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(ForwardRef(ListItem))
     classes={

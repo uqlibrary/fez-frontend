@@ -59,11 +59,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       >
         <WithStyles(ExternalLink)
           className="noHover"
-          classes={Object {}}
           href="test"
           openInNewIcon={false}
-          rel="noopener noreferrer"
-          target="_blank"
           title="test"
         >
           <div
@@ -147,12 +144,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
   <div>
     CRICOS Provider No: 
     <WithStyles(ExternalLink)
-      className=""
-      classes={Object {}}
       href="http://www.uq.edu.au/about/cricos-link"
       openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
       title="CRICOS Provider No: "
     >
       00025B
@@ -201,11 +194,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <WithStyles(ExternalLink)
           className="noHover"
-          classes={Object {}}
           href="test"
           openInNewIcon={false}
-          rel="noopener noreferrer"
-          target="_blank"
           title="test"
         >
           <div
@@ -307,12 +297,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   <div>
     CRICOS Provider No: 
     <WithStyles(ExternalLink)
-      className=""
-      classes={Object {}}
       href="http://www.uq.edu.au/about/cricos-link"
       openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
       title="CRICOS Provider No: "
     >
       00025B
@@ -361,11 +347,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <WithStyles(ExternalLink)
           className="noHover"
-          classes={Object {}}
           href="test"
           openInNewIcon={false}
-          rel="noopener noreferrer"
-          target="_blank"
           title="test"
         >
           <div
@@ -467,12 +450,8 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   <div>
     CRICOS Provider No: 
     <WithStyles(ExternalLink)
-      className=""
-      classes={Object {}}
       href="http://www.uq.edu.au/about/cricos-link"
       openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
       title="CRICOS Provider No: "
     >
       00025B

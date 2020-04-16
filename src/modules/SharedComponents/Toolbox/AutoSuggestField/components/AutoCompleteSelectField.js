@@ -51,7 +51,7 @@ export const AutoCompleteSelectField = ({
 
     return (
         <Autocomplete
-            id={id || 'auto-complete-asynchronous-field'}
+            id={id}
             open={open}
             clearOnEscape
             disableClearable
@@ -64,7 +64,6 @@ export const AutoCompleteSelectField = ({
             value={value}
             onInputChange={handleInputChange}
             onChange={handleChange}
-            getOptionSelected={(option, value) => option.value === value.value}
             getOptionLabel={getOptionLabel}
             options={options}
             popupIcon={false}
@@ -94,7 +93,7 @@ AutoCompleteSelectField.propTypes = {
     errorText: PropTypes.string,
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,

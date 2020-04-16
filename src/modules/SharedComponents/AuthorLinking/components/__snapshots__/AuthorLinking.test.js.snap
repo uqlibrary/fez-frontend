@@ -120,11 +120,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={0}
             key="0"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -141,11 +136,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={1}
             key="1"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -162,11 +152,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={2}
             key="2"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -188,11 +173,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={3}
             key="3"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -209,11 +189,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={4}
             key="4"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -230,11 +205,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={5}
             key="5"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -256,11 +226,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={6}
             key="6"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -277,11 +242,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={7}
             key="7"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -298,11 +258,6 @@ exports[`layout should handle missing search keys properly 1`] = `
             index={8}
             key="8"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
           />
@@ -352,11 +307,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={0}
             key="0"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -379,11 +329,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={1}
             key="1"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -406,11 +351,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={2}
             key="2"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -433,11 +373,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={3}
             key="3"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -460,11 +395,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={4}
             key="4"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -487,11 +417,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={5}
             key="5"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -514,11 +439,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={6}
             key="6"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -541,11 +461,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={7}
             key="7"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -568,11 +483,6 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
             index={8}
             key="8"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -623,11 +533,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={0}
             key="0"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -645,11 +550,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={1}
             key="1"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -667,11 +567,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={2}
             key="2"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -694,11 +589,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={3}
             key="3"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -716,11 +606,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={4}
             key="4"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -738,11 +623,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={5}
             key="5"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -765,11 +645,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={6}
             key="6"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -787,11 +662,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={7}
             key="7"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -809,11 +679,6 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
             index={8}
             key="8"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -864,11 +729,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={0}
             key="0"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -886,11 +746,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={1}
             key="1"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -913,11 +768,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={2}
             key="2"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -935,11 +785,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={3}
             key="3"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -962,11 +807,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={4}
             key="4"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -984,11 +824,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={5}
             key="5"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -1011,11 +846,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={6}
             key="6"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -1033,11 +863,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={7}
             key="7"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"
@@ -1060,11 +885,6 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
             index={8}
             key="8"
             linked={false}
-            locale={
-              Object {
-                "suffix": " listed [type]",
-              }
-            }
             onAuthorSelected={[Function]}
             selected={null}
             type="author"

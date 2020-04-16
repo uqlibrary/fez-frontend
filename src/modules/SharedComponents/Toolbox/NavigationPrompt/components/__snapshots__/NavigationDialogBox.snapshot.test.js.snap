@@ -68,7 +68,6 @@ exports[`NavigationDialogBox component should render 1`] = `
     >
       <div>
         <WithStyles(ConfirmDialogBox)
-          hideCancelButton={false}
           locale={
             Object {
               "cancelButtonLabel": "No",
@@ -80,7 +79,6 @@ exports[`NavigationDialogBox component should render 1`] = `
           onAction={[Function]}
           onCancelAction={[Function]}
           onRef={[Function]}
-          showAlternateActionButton={false}
         >
           <ConfirmDialogBox
             classes={
@@ -153,7 +151,6 @@ exports[`NavigationDialogBox component should render 1`] = `
                         },
                         "render": [Function],
                       },
-                      "defaultProps": undefined,
                       "displayName": "WithStyles(ForwardRef(Backdrop))",
                       "options": Object {
                         "defaultTheme": Object {

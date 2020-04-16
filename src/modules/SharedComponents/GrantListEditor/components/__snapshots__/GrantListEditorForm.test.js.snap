@@ -515,7 +515,6 @@ exports[`GrantListEditorForm should render default view 1`] = `
               disabled={false}
               errorText={null}
               hideType={false}
-              isPopulated={false}
               locale={
                 Object {
                   "addButton": "Test",
@@ -1233,7 +1232,6 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   }
                                 }
                                 disabled={true}
-                                error={false}
                                 fullWidth={true}
                                 id="grantId"
                                 inputProps={
@@ -1281,6 +1279,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     className="MuiTextField-root"
                                     color="primary"
                                     disabled={true}
+                                    error={false}
                                     fullWidth={true}
                                     required={true}
                                     variant="standard"
@@ -1719,6 +1718,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               "IconComponent": [Function],
                                               "MenuProps": [Function],
                                               "SelectDisplayProps": [Function],
+                                              "aria-label": [Function],
                                               "autoFocus": [Function],
                                               "autoWidth": [Function],
                                               "children": [Function],
@@ -1867,6 +1867,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "IconComponent": [Function],
                                                 "MenuProps": [Function],
                                                 "SelectDisplayProps": [Function],
+                                                "aria-label": [Function],
                                                 "autoFocus": [Function],
                                                 "autoWidth": [Function],
                                                 "children": [Function],
@@ -2016,6 +2017,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "IconComponent": [Function],
                                                   "MenuProps": [Function],
                                                   "SelectDisplayProps": [Function],
+                                                  "aria-label": [Function],
                                                   "autoFocus": [Function],
                                                   "autoWidth": [Function],
                                                   "children": [Function],
@@ -2171,6 +2173,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     "IconComponent": [Function],
                                                     "MenuProps": [Function],
                                                     "SelectDisplayProps": [Function],
+                                                    "aria-label": [Function],
                                                     "autoFocus": [Function],
                                                     "autoWidth": [Function],
                                                     "children": [Function],
@@ -2346,8 +2349,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   variant="standard"
                                                 >
                                                   <div
+                                                    aria-disabled="true"
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby=" grantType"
+                                                    aria-labelledby="grantType"
                                                     className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                     id="grantType"
                                                     onBlur={[Function]}
@@ -2371,13 +2375,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     value=""
                                                   />
                                                   <ForwardRef
-                                                    className="MuiSelect-icon"
+                                                    className="MuiSelect-icon Mui-disabled"
                                                   >
                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                      className="MuiSelect-icon"
+                                                      className="MuiSelect-icon Mui-disabled"
                                                     >
                                                       <ForwardRef(SvgIcon)
-                                                        className="MuiSelect-icon"
+                                                        className="MuiSelect-icon Mui-disabled"
                                                         classes={
                                                           Object {
                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -2394,9 +2398,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       >
                                                         <svg
                                                           aria-hidden="true"
-                                                          className="MuiSvgIcon-root MuiSelect-icon"
+                                                          className="MuiSvgIcon-root MuiSelect-icon Mui-disabled"
                                                           focusable="false"
-                                                          role="presentation"
                                                           viewBox="0 0 24 24"
                                                         >
                                                           <path
@@ -2423,8 +2426,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     }
                                                     anchorEl={
                                                       <div
+                                                        aria-disabled="true"
                                                         aria-haspopup="listbox"
-                                                        aria-labelledby=" grantType"
+                                                        aria-labelledby="grantType"
                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                         id="grantType"
                                                         role="button"
@@ -2455,8 +2459,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       }
                                                       anchorEl={
                                                         <div
+                                                          aria-disabled="true"
                                                           aria-haspopup="listbox"
-                                                          aria-labelledby=" grantType"
+                                                          aria-labelledby="grantType"
                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                           id="grantType"
                                                           role="button"
@@ -2489,8 +2494,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                         }
                                                         anchorEl={
                                                           <div
+                                                            aria-disabled="true"
                                                             aria-haspopup="listbox"
-                                                            aria-labelledby=" grantType"
+                                                            aria-labelledby="grantType"
                                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                             id="grantType"
                                                             role="button"
@@ -2532,8 +2538,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           }
                                                           anchorEl={
                                                             <div
+                                                              aria-disabled="true"
                                                               aria-haspopup="listbox"
-                                                              aria-labelledby=" grantType"
+                                                              aria-labelledby="grantType"
                                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                               id="grantType"
                                                               role="button"
@@ -3974,7 +3981,6 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               }
                             }
                             disabled={true}
-                            error={false}
                             fullWidth={true}
                             id="grantId"
                             inputProps={
@@ -4022,6 +4028,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 className="MuiTextField-root"
                                 color="primary"
                                 disabled={true}
+                                error={false}
                                 fullWidth={true}
                                 required={true}
                                 variant="standard"
@@ -4460,6 +4467,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           "IconComponent": [Function],
                                           "MenuProps": [Function],
                                           "SelectDisplayProps": [Function],
+                                          "aria-label": [Function],
                                           "autoFocus": [Function],
                                           "autoWidth": [Function],
                                           "children": [Function],
@@ -4608,6 +4616,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "IconComponent": [Function],
                                             "MenuProps": [Function],
                                             "SelectDisplayProps": [Function],
+                                            "aria-label": [Function],
                                             "autoFocus": [Function],
                                             "autoWidth": [Function],
                                             "children": [Function],
@@ -4757,6 +4766,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "IconComponent": [Function],
                                               "MenuProps": [Function],
                                               "SelectDisplayProps": [Function],
+                                              "aria-label": [Function],
                                               "autoFocus": [Function],
                                               "autoWidth": [Function],
                                               "children": [Function],
@@ -4912,6 +4922,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 "IconComponent": [Function],
                                                 "MenuProps": [Function],
                                                 "SelectDisplayProps": [Function],
+                                                "aria-label": [Function],
                                                 "autoFocus": [Function],
                                                 "autoWidth": [Function],
                                                 "children": [Function],
@@ -5087,8 +5098,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               variant="standard"
                                             >
                                               <div
+                                                aria-disabled="true"
                                                 aria-haspopup="listbox"
-                                                aria-labelledby=" grantType"
+                                                aria-labelledby="grantType"
                                                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                 id="grantType"
                                                 onBlur={[Function]}
@@ -5112,13 +5124,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 value=""
                                               />
                                               <ForwardRef
-                                                className="MuiSelect-icon"
+                                                className="MuiSelect-icon Mui-disabled"
                                               >
                                                 <WithStyles(ForwardRef(SvgIcon))
-                                                  className="MuiSelect-icon"
+                                                  className="MuiSelect-icon Mui-disabled"
                                                 >
                                                   <ForwardRef(SvgIcon)
-                                                    className="MuiSelect-icon"
+                                                    className="MuiSelect-icon Mui-disabled"
                                                     classes={
                                                       Object {
                                                         "colorAction": "MuiSvgIcon-colorAction",
@@ -5135,9 +5147,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   >
                                                     <svg
                                                       aria-hidden="true"
-                                                      className="MuiSvgIcon-root MuiSelect-icon"
+                                                      className="MuiSvgIcon-root MuiSelect-icon Mui-disabled"
                                                       focusable="false"
-                                                      role="presentation"
                                                       viewBox="0 0 24 24"
                                                     >
                                                       <path
@@ -5164,8 +5175,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 }
                                                 anchorEl={
                                                   <div
+                                                    aria-disabled="true"
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby=" grantType"
+                                                    aria-labelledby="grantType"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                     id="grantType"
                                                     role="button"
@@ -5196,8 +5208,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   }
                                                   anchorEl={
                                                     <div
+                                                      aria-disabled="true"
                                                       aria-haspopup="listbox"
-                                                      aria-labelledby=" grantType"
+                                                      aria-labelledby="grantType"
                                                       class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                       id="grantType"
                                                       role="button"
@@ -5230,8 +5243,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                     }
                                                     anchorEl={
                                                       <div
+                                                        aria-disabled="true"
                                                         aria-haspopup="listbox"
-                                                        aria-labelledby=" grantType"
+                                                        aria-labelledby="grantType"
                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                         id="grantType"
                                                         role="button"
@@ -5273,8 +5287,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       }
                                                       anchorEl={
                                                         <div
+                                                          aria-disabled="true"
                                                           aria-haspopup="listbox"
-                                                          aria-labelledby=" grantType"
+                                                          aria-labelledby="grantType"
                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
                                                           id="grantType"
                                                           role="button"

@@ -349,7 +349,6 @@ exports[`SecurityCard component should render security card correctly for record
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "Naked": [Function],
-                  "defaultProps": undefined,
                   "displayName": "WithStyles(DataStreamSecuritySelector)",
                   "options": Object {
                     "defaultTheme": Object {
@@ -835,7 +834,6 @@ exports[`SecurityCard component should render security card correctly for record
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "Naked": [Function],
-                  "defaultProps": undefined,
                   "displayName": "WithStyles(DataStreamSecuritySelector)",
                   "options": Object {
                     "defaultTheme": Object {
@@ -1321,7 +1319,6 @@ exports[`SecurityCard component should render security card with disabled inputs
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "Naked": [Function],
-                  "defaultProps": undefined,
                   "displayName": "WithStyles(DataStreamSecuritySelector)",
                   "options": Object {
                     "defaultTheme": Object {

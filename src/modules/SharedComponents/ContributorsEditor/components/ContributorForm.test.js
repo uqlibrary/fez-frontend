@@ -85,15 +85,15 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should add contributor if nameAsPublished is not empty and role from the dropdown is selected', () => {
+    it('should add contributor if nameAsPublished is not empty and role from the dropdown is selected', async() => {
         const testFn = jest.fn();
         const { getByTestId, getByText, getByRole } = setup({
             onSubmit: testFn,
             showRoleInput: true,
         });
         fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Test Author' } });
-        fireEvent.click(getByTestId('creator-role-field'));
-        const list = waitFor(() => getByRole('presentation'));
+        fireEvent.change(getByTestId('creator-role-field'), { target: { value: 'C' } });
+        const list = await waitFor(() => getByRole('presentation'));
         fireEvent.click(getByText('Co-investigator'), list);
         expect(testFn).toHaveBeenCalledWith({
             affiliation: '',

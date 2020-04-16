@@ -687,12 +687,8 @@ exports[`File Name Component  should display file name link 1`] = `
                         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
                       >
                         <WithStyles(ExternalLink)
-                          className=""
-                          classes={Object {}}
                           href="http://localhost/view/UQ:676287/test.jpg?dsi_version=d96659e552c8eb09fd5f1b9511b66d71"
                           openInNewIcon={true}
-                          rel="noopener noreferrer"
-                          target="_blank"
                           title="test.jpg"
                         >
                           <ExternalLink
@@ -1441,7 +1437,6 @@ exports[`File Name Component  should display file name link 1`] = `
                                       aria-hidden="true"
                                       className="MuiSvgIcon-root ExternalLink-externalLinkIcon-135"
                                       focusable="false"
-                                      role="presentation"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -2172,12 +2167,8 @@ exports[`File Name Component  should render audio player 1`] = `
                         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
                       >
                         <WithStyles(ExternalLink)
-                          className=""
-                          classes={Object {}}
                           href="http://localhost/view/UQ:676287/test.mp3?dsi_version=96ba1368c9263ef0c5200d522eaf3488"
                           openInNewIcon={true}
-                          rel="noopener noreferrer"
-                          target="_blank"
                           title="test.mp3"
                         >
                           <ExternalLink
@@ -2926,7 +2917,6 @@ exports[`File Name Component  should render audio player 1`] = `
                                       aria-hidden="true"
                                       className="MuiSvgIcon-root ExternalLink-externalLinkIcon-135"
                                       focusable="false"
-                                      role="presentation"
                                       viewBox="0 0 24 24"
                                     >
                                       <path

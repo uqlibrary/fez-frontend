@@ -440,11 +440,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
             <WithStyles(ExternalLink)
               aria-label="Open this DOI in an new window"
               className="citationDoiLink"
-              classes={Object {}}
               href="https://doi.org/10.121212/lskdjflsdjf"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
               title="Open this DOI in an new window"
             >
               <ExternalLink
@@ -1195,7 +1191,6 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                           aria-hidden="true"
                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-2"
                           focusable="false"
-                          role="presentation"
                           viewBox="0 0 24 24"
                         >
                           <path

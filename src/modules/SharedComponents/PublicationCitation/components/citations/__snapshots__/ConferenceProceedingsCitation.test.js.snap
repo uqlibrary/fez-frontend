@@ -1688,7 +1688,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                   separator=", "
                   showLink={false}
                   suffix=" ed. "
-                  thresholdNumberOfAuthors={3}
                 >
                   <AuthorsCitationView
                     className="citationEditors"
@@ -4324,7 +4323,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                   separator=", "
                   showLink={false}
                   suffix=" ed. "
-                  thresholdNumberOfAuthors={3}
                 >
                   <AuthorsCitationView
                     className="citationEditors"
@@ -5733,7 +5731,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                   separator=", "
                   showLink={false}
                   suffix=" ed. "
-                  thresholdNumberOfAuthors={3}
                 >
                   <AuthorsCitationView
                     className="citationEditors"

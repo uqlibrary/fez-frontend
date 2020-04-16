@@ -1206,16 +1206,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -1983,17 +1973,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -3278,11 +3258,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                 <WithStyles(ExternalLink)
                   aria-label="Open this DOI in an new window"
                   className="citationDoiLink"
-                  classes={Object {}}
                   href="https://doi.org/10.14264/uql.2016.841"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   title="Open this DOI in an new window"
                 >
                   <ExternalLink
@@ -4033,7 +4009,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -5263,16 +5238,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -6040,17 +6005,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -7331,11 +7286,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 <WithStyles(ExternalLink)
                   aria-label="Open this DOI in an new window"
                   className="citationDoiLink"
-                  classes={Object {}}
                   href="https://doi.org/10.14264/uql.2016.841"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   title="Open this DOI in an new window"
                 >
                   <ExternalLink
@@ -8086,7 +8037,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -9316,16 +9266,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -10093,17 +10033,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -11384,11 +11314,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 <WithStyles(ExternalLink)
                   aria-label="Open this DOI in an new window"
                   className="citationDoiLink"
-                  classes={Object {}}
                   href="https://doi.org/10.14264/uql.2016.841"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   title="Open this DOI in an new window"
                 >
                   <ExternalLink
@@ -12139,7 +12065,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -13333,16 +13258,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -14074,17 +13989,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -15263,11 +15168,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 <WithStyles(ExternalLink)
                   aria-label="Open this DOI in an new window"
                   className="citationDoiLink"
-                  classes={Object {}}
                   href="https://doi.org/10.14264/uql.2016.841"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   title="Open this DOI in an new window"
                 >
                   <ExternalLink
@@ -16018,7 +15919,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -17248,16 +17148,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -18025,17 +17915,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -19316,11 +19196,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 <WithStyles(ExternalLink)
                   aria-label="Open this DOI in an new window"
                   className="citationDoiLink"
-                  classes={Object {}}
                   href="https://doi.org/10.14264/uql.2016.841"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   title="Open this DOI in an new window"
                 >
                   <ExternalLink
@@ -20071,7 +19947,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -21296,16 +21171,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -22068,17 +21933,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -24569,16 +24424,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_datastream_info": Array [
@@ -25341,17 +25186,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -26627,11 +26462,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 <WithStyles(ExternalLink)
                   aria-label="Open this DOI in an new window"
                   className="citationDoiLink"
-                  classes={Object {}}
                   href="https://doi.org/10.14264/uql.2016.841"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   title="Open this DOI in an new window"
                 >
                   <ExternalLink
@@ -27382,7 +27213,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -27846,28 +27676,8 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
               className="citationContent citationDataCollection"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={Object {}}
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
                 suffix=""
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"

@@ -1290,14 +1290,6 @@ exports[`Related publications Component  should render component 2`] = `
             title="Title"
           >
             <WithStyles(RelatedPublicationsClass)
-              childrenSearchKey={
-                Object {
-                  "key": "fez_record_search_key_has_related_datasets",
-                  "order": "rek_has_related_datasets_order",
-                  "pid": "rek_has_related_datasets",
-                  "title": "rek_has_related_datasets_lookup",
-                }
-              }
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -2065,7 +2057,6 @@ exports[`Related publications Component  should render component 2`] = `
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              showPublicationTitle={false}
               title="Title"
             >
               <RelatedPublicationsClass
@@ -3919,12 +3910,17 @@ exports[`Related publications Component  should render component 2`] = `
                                                       <Link
                                                         to="/view/UQ:313292"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:313292"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          Toxicity characterization of urban stormwater with bioanalytical tools
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:313292"
+                                                            onClick={[Function]}
+                                                          >
+                                                            Toxicity characterization of urban stormwater with bioanalytical tools
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>
@@ -3979,12 +3975,17 @@ exports[`Related publications Component  should render component 2`] = `
                                                       <Link
                                                         to="/view/UQ:313292"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:313292"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          dataset 2
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:313292"
+                                                            onClick={[Function]}
+                                                          >
+                                                            dataset 2
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>
@@ -5228,14 +5229,6 @@ exports[`Related publications Component  should render with a publication title 
             title="A test Title"
           >
             <WithStyles(RelatedPublicationsClass)
-              childrenSearchKey={
-                Object {
-                  "key": "fez_record_search_key_has_related_datasets",
-                  "order": "rek_has_related_datasets_order",
-                  "pid": "rek_has_related_datasets",
-                  "title": "rek_has_related_datasets_lookup",
-                }
-              }
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -7927,12 +7920,17 @@ exports[`Related publications Component  should render with a publication title 
                                                       <Link
                                                         to="/view/UQ:313292"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:313292"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          Toxicity characterization of urban stormwater with bioanalytical tools
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:313292"
+                                                            onClick={[Function]}
+                                                          >
+                                                            Toxicity characterization of urban stormwater with bioanalytical tools
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>
@@ -7987,12 +7985,17 @@ exports[`Related publications Component  should render with a publication title 
                                                       <Link
                                                         to="/view/UQ:313292"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:313292"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          dataset 2
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:313292"
+                                                            onClick={[Function]}
+                                                          >
+                                                            dataset 2
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>
@@ -9243,14 +9246,6 @@ exports[`Related publications Component  should render without a child search ke
             title="Title"
           >
             <WithStyles(RelatedPublicationsClass)
-              childrenSearchKey={
-                Object {
-                  "key": "fez_record_search_key_has_related_datasets",
-                  "order": "rek_has_related_datasets_order",
-                  "pid": "rek_has_related_datasets",
-                  "title": "rek_has_related_datasets_lookup",
-                }
-              }
               parentSearchKey={
                 Object {
                   "key": "fez_record_search_key_isderivationof",
@@ -10034,7 +10029,6 @@ exports[`Related publications Component  should render without a child search ke
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              showPublicationTitle={false}
               title="Title"
             >
               <RelatedPublicationsClass
@@ -11904,12 +11898,17 @@ exports[`Related publications Component  should render without a child search ke
                                                       <Link
                                                         to="/view/UQ:313292"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:313292"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          Toxicity characterization of urban stormwater with bioanalytical tools
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:313292"
+                                                            onClick={[Function]}
+                                                          >
+                                                            Toxicity characterization of urban stormwater with bioanalytical tools
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>
@@ -11964,12 +11963,17 @@ exports[`Related publications Component  should render without a child search ke
                                                       <Link
                                                         to="/view/UQ:313292"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:313292"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          dataset 2
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:313292"
+                                                            onClick={[Function]}
+                                                          >
+                                                            dataset 2
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>
@@ -15957,14 +15961,6 @@ exports[`Related publications Component  should render without a parent search k
             title="Title"
           >
             <WithStyles(RelatedPublicationsClass)
-              childrenSearchKey={
-                Object {
-                  "key": "fez_record_search_key_has_related_datasets",
-                  "order": "rek_has_related_datasets_order",
-                  "pid": "rek_has_related_datasets",
-                  "title": "rek_has_related_datasets_lookup",
-                }
-              }
               parentSearchKey={
                 Object {
                   "key": "fez_record_search_key_isderivationof",
@@ -19485,7 +19481,6 @@ exports[`Related publications Component  should render without a parent search k
                   "rek_wok_doc_type_xsdmf_id": 12551,
                 }
               }
-              showPublicationTitle={false}
               title="Title"
             >
               <RelatedPublicationsClass
@@ -24092,12 +24087,17 @@ exports[`Related publications Component  should render without a parent search k
                                                       <Link
                                                         to="/view/UQ:390658"
                                                       >
-                                                        <a
+                                                        <LinkAnchor
                                                           href="/view/UQ:390658"
-                                                          onClick={[Function]}
+                                                          navigate={[Function]}
                                                         >
-                                                          Landscape of somatic mutations in 560 breast cancer whole-genome sequences
-                                                        </a>
+                                                          <a
+                                                            href="/view/UQ:390658"
+                                                            onClick={[Function]}
+                                                          >
+                                                            Landscape of somatic mutations in 560 breast cancer whole-genome sequences
+                                                          </a>
+                                                        </LinkAnchor>
                                                       </Link>
                                                     </p>
                                                   </ForwardRef(Typography)>

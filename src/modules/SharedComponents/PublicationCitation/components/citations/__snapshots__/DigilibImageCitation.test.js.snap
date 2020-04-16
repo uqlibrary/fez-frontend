@@ -721,16 +721,6 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
               className="citationContent citationDesign"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_record_search_key_alternative_title": Array [],
@@ -1013,17 +1003,6 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -2183,28 +2162,7 @@ exports[`DigilibImageCitation renders  component with empty publication 1`] = `
               className="citationContent citationDesign"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={Object {}}
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"

@@ -1450,7 +1450,6 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                                   aria-hidden="true"
                                                                   className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-107"
                                                                   focusable="false"
-                                                                  role="presentation"
                                                                   viewBox="0 0 24 24"
                                                                 >
                                                                   <path
@@ -3124,7 +3123,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                                   aria-hidden="true"
                                                                   className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-107"
                                                                   focusable="false"
-                                                                  role="presentation"
                                                                   viewBox="0 0 24 24"
                                                                 >
                                                                   <path

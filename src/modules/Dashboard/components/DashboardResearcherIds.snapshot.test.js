@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { setupStoreForMount } from 'test.setup';
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import { DashboardResearcherIdsClass, styles } from './DashboardResearcherIds';
 
 import { currentAuthor } from 'mock/data';

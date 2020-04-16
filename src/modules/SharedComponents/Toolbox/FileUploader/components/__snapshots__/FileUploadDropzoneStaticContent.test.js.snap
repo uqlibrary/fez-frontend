@@ -1134,7 +1134,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                                               aria-hidden="true"
                                               className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-4"
                                               focusable="false"
-                                              role="presentation"
                                               viewBox="0 0 24 24"
                                             >
                                               <path

@@ -452,11 +452,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
             parentItemsId={1234}
           >
             <WithStyles(GenericSelectFieldClass)
-              autoWidth={false}
-              canUnselect={false}
-              fullWidth={false}
-              hintText={null}
-              itemsList={Array []}
               loadItemsList={
                 [MockFunction] {
                   "calls": Array [
@@ -472,14 +467,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                   ],
                 }
               }
-              locale={
-                Object {
-                  "label": "Select item",
-                  "loading": "loading...",
-                }
-              }
-              menuItemClassName=""
-              multiple={false}
               parentItemsId={1234}
             >
               <GenericSelectFieldClass
@@ -1005,6 +992,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   "IconComponent": [Function],
                                   "MenuProps": [Function],
                                   "SelectDisplayProps": [Function],
+                                  "aria-label": [Function],
                                   "autoFocus": [Function],
                                   "autoWidth": [Function],
                                   "children": [Function],
@@ -1108,6 +1096,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     "IconComponent": [Function],
                                     "MenuProps": [Function],
                                     "SelectDisplayProps": [Function],
+                                    "aria-label": [Function],
                                     "autoFocus": [Function],
                                     "autoWidth": [Function],
                                     "children": [Function],
@@ -1212,6 +1201,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       "IconComponent": [Function],
                                       "MenuProps": [Function],
                                       "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
                                       "autoFocus": [Function],
                                       "autoWidth": [Function],
                                       "children": [Function],
@@ -1322,6 +1312,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         "IconComponent": [Function],
                                         "MenuProps": [Function],
                                         "SelectDisplayProps": [Function],
+                                        "aria-label": [Function],
                                         "autoFocus": [Function],
                                         "autoWidth": [Function],
                                         "children": [Function],
@@ -1454,7 +1445,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     >
                                       <div
                                         aria-haspopup="listbox"
-                                        aria-labelledby=" "
                                         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
@@ -1503,7 +1493,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                               aria-hidden="true"
                                               className="MuiSvgIcon-root MuiSelect-icon"
                                               focusable="false"
-                                              role="presentation"
                                               viewBox="0 0 24 24"
                                             >
                                               <path
@@ -1531,7 +1520,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         anchorEl={
                                           <div
                                             aria-haspopup="listbox"
-                                            aria-labelledby=" "
                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                             role="button"
                                             tabindex="0"
@@ -1563,7 +1551,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
-                                              aria-labelledby=" "
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                               role="button"
                                               tabindex="0"
@@ -1597,7 +1584,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
-                                                aria-labelledby=" "
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                 role="button"
                                                 tabindex="0"
@@ -1640,7 +1626,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
-                                                  aria-labelledby=" "
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                   role="button"
                                                   tabindex="0"

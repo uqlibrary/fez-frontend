@@ -1504,48 +1504,58 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 key="citationAuthor_1"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_1"
-                    prefix=""
-                    suffix=""
-                    value="Pedroso, Marcelo Monteiro"
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_1"
+                      prefix=""
+                      suffix=""
+                      value="Pedroso, Marcelo Monteiro"
                     >
-                      Pedroso, Marcelo Monteiro
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        Pedroso, Marcelo Monteiro
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
               <Link
                 key="citationAuthor_2"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_2"
-                    prefix=", "
-                    suffix=""
-                    value="Smith, J"
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_2"
+                      prefix=", "
+                      suffix=""
+                      value="Smith, J"
                     >
-                      , 
-                      Smith, J
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        , 
+                        Smith, J
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
                
             </span>
@@ -2040,51 +2050,63 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 key="citationAuthor_1"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   className="authorNameLink"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_1"
-                    prefix=""
-                    suffix=""
-                    value="Pedroso, Marcelo Monteiro"
+                  <a
+                    className="authorNameLink"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_1"
+                      prefix=""
+                      suffix=""
+                      value="Pedroso, Marcelo Monteiro"
                     >
-                      Pedroso, Marcelo Monteiro
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        Pedroso, Marcelo Monteiro
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
               <Link
                 className="authorNameLink"
                 key="citationAuthor_2"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   className="authorNameLink"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_2"
-                    prefix=", "
-                    suffix=""
-                    value="Smith, J"
+                  <a
+                    className="authorNameLink"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_2"
+                      prefix=", "
+                      suffix=""
+                      value="Smith, J"
                     >
-                      , 
-                      Smith, J
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        , 
+                        Smith, J
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
                
             </span>
@@ -3136,72 +3158,87 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                 key="citationAuthor_1"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_1"
-                    prefix=""
-                    suffix=", "
-                    value="Pedroso, Marcelo Monteiro"
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_1"
+                      prefix=""
+                      suffix=", "
+                      value="Pedroso, Marcelo Monteiro"
                     >
-                      Pedroso, Marcelo Monteiro
-                      , 
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        Pedroso, Marcelo Monteiro
+                        , 
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
               <Link
                 key="citationAuthor_2"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_2"
-                    prefix=""
-                    suffix=""
-                    value="Smith, J"
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_2"
+                      prefix=""
+                      suffix=""
+                      value="Smith, J"
                     >
-                      Smith, J
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        Smith, J
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
               <Link
                 key="citationAuthor_3"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <CitationView
-                    className="citationAuthor"
-                    key="citationAuthor_3"
-                    prefix=", "
-                    suffix=""
-                    value="Smith, J"
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
+                    onClick={[Function]}
                   >
-                    <span
+                    <CitationView
                       className="citationAuthor"
+                      key="citationAuthor_3"
+                      prefix=", "
+                      suffix=""
+                      value="Smith, J"
                     >
-                      , 
-                      Smith, J
-                    </span>
-                  </CitationView>
-                </a>
+                      <span
+                        className="citationAuthor"
+                      >
+                        , 
+                        Smith, J
+                      </span>
+                    </CitationView>
+                  </a>
+                </LinkAnchor>
               </Link>
                
             </span>

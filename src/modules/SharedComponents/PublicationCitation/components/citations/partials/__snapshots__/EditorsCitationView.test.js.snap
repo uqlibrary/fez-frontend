@@ -24,7 +24,6 @@ exports[`EditorsCitationView test  should render component with no contributors 
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;
 
@@ -63,7 +62,6 @@ exports[`EditorsCitationView test  should render component with one contributor 
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;
 
@@ -114,7 +112,6 @@ exports[`EditorsCitationView test  should render component with three contributo
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;
 
@@ -159,6 +156,5 @@ exports[`EditorsCitationView test  should render component with two contributors
   separator=", "
   showLink={false}
   suffix=". "
-  thresholdNumberOfAuthors={3}
 />
 `;

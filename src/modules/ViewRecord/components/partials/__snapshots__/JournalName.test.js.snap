@@ -1953,14 +1953,19 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
               <Link
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <span>
-                    Journal of Cell Science
-                  </span>
-                </a>
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                    onClick={[Function]}
+                  >
+                    <span>
+                      Journal of Cell Science
+                    </span>
+                  </a>
+                </LinkAnchor>
               </Link>
               <span
                 className="eraYearListed"
@@ -1971,12 +1976,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
               <span>
                 <WithStyles(ExternalLink)
                   aria-label="Check publisher's OA archiving policy in a new window"
-                  className=""
-                  classes={Object {}}
                   href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                 >
                   <ExternalLink
                     aria-label="Check publisher's OA archiving policy in a new window"
@@ -2725,7 +2725,6 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-2"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -4243,24 +4242,24 @@ exports[`Journal Name Component test  should render without era journal listed 1
               <Link
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <span>
-                    Journal of Cell Science
-                  </span>
-                </a>
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                    onClick={[Function]}
+                  >
+                    <span>
+                      Journal of Cell Science
+                    </span>
+                  </a>
+                </LinkAnchor>
               </Link>
               <span>
                 <WithStyles(ExternalLink)
                   aria-label="Check publisher's OA archiving policy in a new window"
-                  className=""
-                  classes={Object {}}
                   href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
-                  openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                 >
                   <ExternalLink
                     aria-label="Check publisher's OA archiving policy in a new window"
@@ -5009,7 +5008,6 @@ exports[`Journal Name Component test  should render without era journal listed 1
                               aria-hidden="true"
                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-2"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -6443,14 +6441,19 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
               <Link
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
               >
-                <a
+                <LinkAnchor
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                  onClick={[Function]}
+                  navigate={[Function]}
                 >
-                  <span>
-                    Journal of Cell Science
-                  </span>
-                </a>
+                  <a
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                    onClick={[Function]}
+                  >
+                    <span>
+                      Journal of Cell Science
+                    </span>
+                  </a>
+                </LinkAnchor>
               </Link>
               <span
                 className="eraYearListed"

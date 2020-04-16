@@ -127,7 +127,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
       when={true}
     />
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -138,7 +137,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
       }
       onAction={[MockFunction]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -672,7 +670,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
       when={true}
     />
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -683,7 +680,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
       }
       onAction={[MockFunction]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       container={true}

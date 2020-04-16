@@ -10,11 +10,7 @@ exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`
 <WithStyles(ExternalLink)
   aria-label="Full text via Pubmed Central (open access)"
   className="pubmedCentralLinkUrl"
-  classes={Object {}}
   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
-  openInNewIcon={true}
-  rel="noopener noreferrer"
-  target="_blank"
   title="Full text via Pubmed Central (open access)"
 >
   https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677

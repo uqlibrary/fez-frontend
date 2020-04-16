@@ -92,16 +92,6 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
-        locale={
-          Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          }
-        }
         onChange={[MockFunction]}
         value={8}
       />
@@ -209,16 +199,6 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
-        locale={
-          Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          }
-        }
         onChange={[MockFunction]}
         value={null}
       />
@@ -356,16 +336,6 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
-        locale={
-          Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          }
-        }
         onChange={[MockFunction]}
         value={9}
       />
@@ -395,7 +365,6 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       }
     >
       <WithStyles(FileUploadEmbargoDate)
-        canBeCleared={false}
         disabled={false}
         minDate={2017-06-29T14:00:00.000Z}
         onChange={[MockFunction]}

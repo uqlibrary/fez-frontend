@@ -737,16 +737,6 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
               className="citationContent citationBook"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_record_search_key_access_conditions": null,
@@ -1045,17 +1035,6 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     "rek_wok_doc_type": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -3093,7 +3072,6 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                   separator=", "
                   showLink={false}
                   suffix=" ed."
-                  thresholdNumberOfAuthors={3}
                 >
                   <AuthorsCitationView
                     className="citationEditors"
@@ -4313,28 +4291,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
               className="citationContent citationBook"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={Object {}}
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -5990,7 +5947,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                   separator=", "
                   showLink={false}
                   suffix=" ed."
-                  thresholdNumberOfAuthors={3}
                 >
                   <AuthorsCitationView
                     className="citationEditors"

@@ -7462,12 +7462,8 @@ exports[`PublicationCitation  should render component with publication from mult
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
-              classes={Object {}}
               href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
               key="source_0"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
             >
               eSpace
             </WithStyles(ExternalLink)>
@@ -8390,12 +8386,8 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
-              classes={Object {}}
               href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
               key="source_0"
-              openInNewIcon={true}
-              rel="noopener noreferrer"
-              target="_blank"
             >
               eSpace
             </WithStyles(ExternalLink)>
@@ -8450,12 +8442,8 @@ Array [
 exports[`PublicationCitation  should render publication with citation metric 1`] = `
 <WithStyles(ExternalLink)
   aria-label="Full citation in Altmetric will open in a new window"
-  className=""
-  classes={Object {}}
   href="http://www.test.com"
   openInNewIcon={false}
-  rel="noopener noreferrer"
-  target="_blank"
   title="Full citation in Altmetric will open in a new window"
 >
   <WithStyles(ForwardRef(Grid))

@@ -1449,11 +1449,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Web of science will open in a new window"
                                 className="wosCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Web of science will open in a new window"
                               >
                                 <ExternalLink
@@ -2561,11 +2558,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
                                 className="scopusCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
@@ -3673,11 +3667,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
                                 className="altmetricCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
@@ -4785,11 +4776,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
                                 className="googleCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
@@ -5527,12 +5515,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               </WithStyles(ExternalLink)>
                             </CitationCountView>
                           </WithStyles(CitationCountView)>
-                          <WithStyles(OpenAccessIcon)
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            securityStatus={true}
-                            showEmbargoText={false}
-                          >
+                          <WithStyles(OpenAccessIcon)>
                             <OpenAccessIcon
                               classes={
                                 Object {
@@ -8816,11 +8799,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
                                 className="scopusCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
@@ -9928,11 +9908,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
                                 className="altmetricCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="https://queensland.altmetric.com/details/23535331"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
@@ -11040,11 +11017,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
                                 className="googleCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
@@ -11777,12 +11751,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               </WithStyles(ExternalLink)>
                             </CitationCountView>
                           </WithStyles(CitationCountView)>
-                          <WithStyles(OpenAccessIcon)
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            securityStatus={true}
-                            showEmbargoText={false}
-                          >
+                          <WithStyles(OpenAccessIcon)>
                             <OpenAccessIcon
                               classes={
                                 Object {
@@ -11921,11 +11890,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                         >
                           <WithStyles(ExternalLink)
                             className="CitationCounts-statsLink-1"
-                            classes={Object {}}
                             href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
-                            openInNewIcon={true}
-                            rel="noopener noreferrer"
-                            target="_blank"
                             title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                           >
                             <ExternalLink
@@ -12674,7 +12639,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         aria-hidden="true"
                                         className="MuiSvgIcon-root ExternalLink-externalLinkIcon-110"
                                         focusable="false"
-                                        role="presentation"
                                         viewBox="0 0 24 24"
                                       >
                                         <path
@@ -14166,11 +14130,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Web of science will open in a new window"
                                 className="wosCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Web of science will open in a new window"
                               >
                                 <ExternalLink
@@ -15278,11 +15239,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
                                 className="scopusCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
@@ -16390,11 +16348,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
                                 className="altmetricCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
@@ -17502,11 +17457,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
                                 className="googleCitationCount CitationCountView-citationCount-107"
-                                classes={Object {}}
                                 href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
-                                rel="noopener noreferrer"
-                                target="_blank"
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
@@ -18244,12 +18196,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               </WithStyles(ExternalLink)>
                             </CitationCountView>
                           </WithStyles(CitationCountView)>
-                          <WithStyles(OpenAccessIcon)
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            securityStatus={true}
-                            showEmbargoText={false}
-                          >
+                          <WithStyles(OpenAccessIcon)>
                             <OpenAccessIcon
                               classes={
                                 Object {
@@ -18388,11 +18335,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                         >
                           <WithStyles(ExternalLink)
                             className="CitationCounts-statsLink-1"
-                            classes={Object {}}
                             href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-                            openInNewIcon={true}
-                            rel="noopener noreferrer"
-                            target="_blank"
                             title="This is test title"
                           >
                             <ExternalLink
@@ -19141,7 +19084,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         aria-hidden="true"
                                         className="MuiSvgIcon-root ExternalLink-externalLinkIcon-110"
                                         focusable="false"
-                                        role="presentation"
                                         viewBox="0 0 24 24"
                                       >
                                         <path
@@ -20217,12 +20159,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                         <div
                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto"
                         >
-                          <WithStyles(OpenAccessIcon)
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            securityStatus={true}
-                            showEmbargoText={false}
-                          >
+                          <WithStyles(OpenAccessIcon)>
                             <OpenAccessIcon
                               classes={
                                 Object {

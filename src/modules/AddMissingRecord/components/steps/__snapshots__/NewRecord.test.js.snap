@@ -5,7 +5,6 @@ exports[`Add new record should not render publication form if author is not load
 exports[`Add new record should render alert about file uploading or issue error 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "alternateActionButtonLabel": "Fix record",
@@ -76,7 +75,6 @@ exports[`Add new record should render alert about file uploading or issue error 
 exports[`Add new record should render stepper and a publication form 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "alternateActionButtonLabel": "Fix record",
@@ -116,7 +114,6 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onAlternateAction={[Function]}
     onCancelAction={[Function]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <Connect(ReduxForm)
     initialValues={
@@ -138,7 +135,6 @@ exports[`Add new record should render stepper and a publication form 1`] = `
 
 exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `
 <WithStyles(ConfirmDialogBox)
-  hideCancelButton={false}
   locale={
     Object {
       "alternateActionButtonLabel": "Fix record",
@@ -178,7 +174,6 @@ exports[`Add new record should render the confirm dialog with an alert for faile
   onAlternateAction={[Function]}
   onCancelAction={[Function]}
   onRef={[Function]}
-  showAlternateActionButton={false}
 >
   <ConfirmDialogBox
     classes={
@@ -279,7 +274,6 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                 },
                 "render": [Function],
               },
-              "defaultProps": undefined,
               "displayName": "WithStyles(ForwardRef(Backdrop))",
               "options": Object {
                 "defaultTheme": Object {
@@ -607,7 +601,6 @@ exports[`Add new record should render the confirm dialog with an alert for faile
 
 exports[`Add new record should render the confirm dialog without an alert for a succcessful file upload 1`] = `
 <WithStyles(ConfirmDialogBox)
-  hideCancelButton={false}
   locale={
     Object {
       "alternateActionButtonLabel": "Fix record",
@@ -647,6 +640,5 @@ exports[`Add new record should render the confirm dialog without an alert for a 
   onAlternateAction={[Function]}
   onCancelAction={[Function]}
   onRef={[Function]}
-  showAlternateActionButton={false}
 />
 `;

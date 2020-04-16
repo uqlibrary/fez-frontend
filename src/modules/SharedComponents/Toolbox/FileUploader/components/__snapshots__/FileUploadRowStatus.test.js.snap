@@ -607,7 +607,6 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                                       aria-hidden="true"
                                       className="MuiSvgIcon-root"
                                       focusable="false"
-                                      role="presentation"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -618,36 +617,34 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                                 </WithStyles(ForwardRef(SvgIcon))>
                               </ForwardRef>
                             </span>
-                            <NoSsr>
-                              <WithStyles(undefined)
+                            <WithStyles(memo)
+                              center={true}
+                            >
+                              <ForwardRef(TouchRipple)
                                 center={true}
-                              >
-                                <ForwardRef(TouchRipple)
-                                  center={true}
-                                  classes={
-                                    Object {
-                                      "child": "MuiTouchRipple-child",
-                                      "childLeaving": "MuiTouchRipple-childLeaving",
-                                      "childPulsate": "MuiTouchRipple-childPulsate",
-                                      "ripple": "MuiTouchRipple-ripple",
-                                      "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                      "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                      "root": "MuiTouchRipple-root",
-                                    }
+                                classes={
+                                  Object {
+                                    "child": "MuiTouchRipple-child",
+                                    "childLeaving": "MuiTouchRipple-childLeaving",
+                                    "childPulsate": "MuiTouchRipple-childPulsate",
+                                    "ripple": "MuiTouchRipple-ripple",
+                                    "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                    "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                    "root": "MuiTouchRipple-root",
                                   }
+                                }
+                              >
+                                <span
+                                  className="MuiTouchRipple-root"
                                 >
-                                  <span
-                                    className="MuiTouchRipple-root"
-                                  >
-                                    <TransitionGroup
-                                      childFactory={[Function]}
-                                      component={null}
-                                      exit={true}
-                                    />
-                                  </span>
-                                </ForwardRef(TouchRipple)>
-                              </WithStyles(undefined)>
-                            </NoSsr>
+                                  <TransitionGroup
+                                    childFactory={[Function]}
+                                    component={null}
+                                    exit={true}
+                                  />
+                                </span>
+                              </ForwardRef(TouchRipple)>
+                            </WithStyles(memo)>
                           </button>
                         </ForwardRef(ButtonBase)>
                       </WithStyles(ForwardRef(ButtonBase))>
@@ -668,7 +665,6 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                             aria-hidden="true"
                             class="MuiSvgIcon-root"
                             focusable="false"
-                            role="presentation"
                             viewBox="0 0 24 24"
                           >
                             <path

@@ -651,16 +651,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
               className="citationContent citationDepartmentTechnicalReport"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_record_search_key_article_number": null,
@@ -873,17 +863,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -2248,16 +2227,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
               className="citationContent citationDepartmentTechnicalReport"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={
                   Object {
                     "fez_record_search_key_article_number": null,
@@ -2475,17 +2444,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                     "rek_wok_doc_type_xsdmf_id": null,
                   }
                 }
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"
@@ -3639,28 +3597,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
               className="citationContent citationDepartmentTechnicalReport"
             >
               <WithStyles(AuthorsCitationView)
-                className="citationAuthors"
-                getLink={[Function]}
-                idSearchKey={
-                  Object {
-                    "idKey": "fez_record_search_key_author_id",
-                    "idOrder": "rek_author_id_order",
-                    "idSubkey": "rek_author_id",
-                  }
-                }
-                initialNumberOfAuthors={10}
                 publication={Object {}}
-                searchKey={
-                  Object {
-                    "key": "fez_record_search_key_author",
-                    "order": "rek_author_order",
-                    "subkey": "rek_author",
-                  }
-                }
-                separator=", "
-                showLink={false}
-                suffix=" "
-                thresholdNumberOfAuthors={3}
               >
                 <AuthorsCitationView
                   className="citationAuthors"

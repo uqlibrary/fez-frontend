@@ -45,7 +45,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" Test Policy Dropdown Label"
+          aria-labelledby="Test Policy Dropdown Label"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="Test Policy Dropdown Label"
           role="button"
@@ -64,7 +64,6 @@ exports[`DataStreamSecurityItem component should render default view with inheri
           aria-hidden="true"
           class="MuiSvgIcon-root MuiSelect-icon"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -122,7 +121,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" Test Policy Dropdown Label"
+          aria-labelledby="Test Policy Dropdown Label"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="Test Policy Dropdown Label"
           role="button"
@@ -141,7 +140,6 @@ exports[`DataStreamSecurityItem component should render default view with overri
           aria-hidden="true"
           class="MuiSvgIcon-root MuiSelect-icon"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -199,7 +197,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" Test Policy Dropdown Label"
+          aria-labelledby="Test Policy Dropdown Label"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           id="Test Policy Dropdown Label"
           role="button"
@@ -218,7 +216,6 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
           aria-hidden="true"
           class="MuiSvgIcon-root MuiSelect-icon"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path

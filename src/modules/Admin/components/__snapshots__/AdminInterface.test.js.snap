@@ -14,7 +14,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View updated record",
@@ -26,7 +25,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -249,7 +247,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View updated record",
@@ -261,7 +258,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -460,7 +456,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View updated record",
@@ -472,7 +467,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -671,7 +665,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View updated record",
@@ -683,7 +676,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -845,7 +837,6 @@ exports[`AdminInterface component should render default view as a full form view
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View updated record",
@@ -857,7 +848,6 @@ exports[`AdminInterface component should render default view as a full form view
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -1051,7 +1041,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View updated record",
@@ -1063,7 +1052,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -1247,7 +1235,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
     }
   >
     <WithStyles(ConfirmDialogBox)
-      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "View new record",
@@ -1259,7 +1246,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(ForwardRef(Grid))
       item={true}

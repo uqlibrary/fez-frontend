@@ -437,7 +437,6 @@ exports[`Journal Name Component test  should render closed access 1`] = `
             embargoDate={null}
             isOpenAccess={false}
             openAccessStatusId={1234}
-            securityStatus={true}
             showEmbargoText={false}
           >
             <OpenAccessIcon
@@ -902,7 +901,6 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
             embargoDate="2019-01-01"
             isOpenAccess={false}
             openAccessStatusId={453694}
-            securityStatus={true}
             showEmbargoText={false}
           >
             <OpenAccessIcon
@@ -1079,7 +1077,6 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                               aria-hidden="true"
                               className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-2 MuiSvgIcon-fontSizeSmall"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -1724,7 +1721,6 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                               aria-hidden="true"
                               className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-2 MuiSvgIcon-fontSizeSmall"
                               focusable="false"
-                              role="presentation"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -2360,7 +2356,6 @@ exports[`Journal Name Component test  should render locked 1`] = `
                                   aria-hidden="true"
                                   className="MuiSvgIcon-root OpenAccessIcon-badgeStyle-1 MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall"
                                   focusable="false"
-                                  role="presentation"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
@@ -2392,7 +2387,6 @@ exports[`Journal Name Component test  should render locked 1`] = `
                             aria-hidden="true"
                             class="MuiSvgIcon-root OpenAccessIcon-badgeStyle-1 MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall"
                             focusable="false"
-                            role="presentation"
                             viewBox="0 0 24 24"
                           >
                             <path
@@ -3331,7 +3325,6 @@ exports[`Journal Name Component test  should render open access 1`] = `
             embargoDate={null}
             isOpenAccess={true}
             openAccessStatusId={1234}
-            securityStatus={true}
             showEmbargoText={false}
           >
             <OpenAccessIcon
@@ -3884,7 +3877,6 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
             embargoDate={null}
             isOpenAccess={true}
             openAccessStatusId={453694}
-            securityStatus={true}
             showEmbargoText={false}
           >
             <OpenAccessIcon

@@ -215,7 +215,6 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
                   isOpenAccess={false}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -457,7 +456,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={false}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -591,7 +589,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -725,7 +722,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -859,7 +855,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -993,7 +988,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -1127,7 +1121,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -1261,7 +1254,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -1395,7 +1387,6 @@ exports[`AttachedFiles component should render default view 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>
@@ -1614,7 +1605,6 @@ exports[`AttachedFiles component should toggle preview 1`] = `
                   isOpenAccess={true}
                   openAccessStatusId={453697}
                   securityStatus={true}
-                  showEmbargoText={false}
                 />
               </WithStyles(ForwardRef(Grid))>
             </Hidden>

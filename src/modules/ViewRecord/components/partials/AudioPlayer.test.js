@@ -50,7 +50,7 @@ describe('Audio Player Component ', () => {
 
     it('should play audio', () => {
         const shallowWrapper = setup();
-        shallowWrapper.setState({ isPlaying: true });
+        shallowWrapper.instance().setState({ isPlaying: true });
         expect(toJson(shallowWrapper)).toMatchSnapshot();
     });
 
@@ -64,9 +64,7 @@ describe('Audio Player Component ', () => {
             },
             { isShallow: false },
         );
-        wrapper.setState({ isPlaying: true });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
         const playElement = wrapper.find('WithStyles(ForwardRef(IconButton))#playButton');
         const audio = wrapper.find('#audioPlayer');
         const pause = jest.fn();
@@ -85,13 +83,13 @@ describe('Audio Player Component ', () => {
     it('should set component state to playing', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setState({ isPlaying: true });
+        wrapper.instance().setState({ isPlaying: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render when image ends', () => {
         const wrapper = setup();
-        wrapper.setState({ isPlaying: true });
+        wrapper.instance().setState({ isPlaying: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
         const endOfAudio = jest.spyOn(wrapper.instance(), 'setState');

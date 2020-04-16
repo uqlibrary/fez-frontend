@@ -5153,15 +5153,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
                                                                 <WithStyles(AuthorsCitationView)
-                                                                  className="citationAuthors"
-                                                                  getLink={[Function]}
-                                                                  idSearchKey={
-                                                                    Object {
-                                                                      "idKey": "fez_record_search_key_author_id",
-                                                                      "idOrder": "rek_author_id_order",
-                                                                      "idSubkey": "rek_author_id",
-                                                                    }
-                                                                  }
                                                                   initialNumberOfAuthors={9}
                                                                   key="additional-information-authors"
                                                                   prefix=""
@@ -6234,17 +6225,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       "rek_wok_doc_type": "@",
                                                                     }
                                                                   }
-                                                                  searchKey={
-                                                                    Object {
-                                                                      "key": "fez_record_search_key_author",
-                                                                      "order": "rek_author_order",
-                                                                      "subkey": "rek_author",
-                                                                    }
-                                                                  }
                                                                   separator=", "
                                                                   showLink={true}
                                                                   suffix=""
-                                                                  thresholdNumberOfAuthors={3}
                                                                 >
                                                                   <AuthorsCitationView
                                                                     className="citationAuthors"
@@ -7701,233 +7684,287 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         key="citationAuthor_1"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_1"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Azimi, Iman"
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_1"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Azimi, Iman"
                                                                             >
-                                                                              Azimi, Iman
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Azimi, Iman
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="authorNameLink"
                                                                         key="citationAuthor_2"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="authorNameLink"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_2"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Milevskiy, Michael J. G."
+                                                                          <a
+                                                                            className="authorNameLink"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Milevskiy%2C+Michael+J.+G.&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_2"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Milevskiy, Michael J. G."
                                                                             >
-                                                                              Milevskiy, Michael J. G.
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Milevskiy, Michael J. G.
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         key="citationAuthor_3"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_3"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Kaemmerer, Elke"
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_3"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Kaemmerer, Elke"
                                                                             >
-                                                                              Kaemmerer, Elke
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Kaemmerer, Elke
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         key="citationAuthor_4"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_4"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Turner, Dane"
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_4"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Turner, Dane"
                                                                             >
-                                                                              Turner, Dane
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Turner, Dane
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         key="citationAuthor_5"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_5"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Yapa, Kunsala T. D. S."
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_5"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Yapa, Kunsala T. D. S."
                                                                             >
-                                                                              Yapa, Kunsala T. D. S.
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Yapa, Kunsala T. D. S.
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         key="citationAuthor_6"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_6"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Brown, Melissa A."
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_6"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Brown, Melissa A."
                                                                             >
-                                                                              Brown, Melissa A.
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Brown, Melissa A.
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="authorNameLink"
                                                                         key="citationAuthor_7"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="authorNameLink"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_7"
-                                                                            prefix=""
-                                                                            suffix=", "
-                                                                            value="Thompson, Erik W."
+                                                                          <a
+                                                                            className="authorNameLink"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+Erik+W.&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_7"
+                                                                              prefix=""
+                                                                              suffix=", "
+                                                                              value="Thompson, Erik W."
                                                                             >
-                                                                              Thompson, Erik W.
-                                                                              , 
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Thompson, Erik W.
+                                                                                , 
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         key="citationAuthor_8"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_8"
-                                                                            prefix=""
-                                                                            suffix=""
-                                                                            value="Roberts-Thomson, Sarah J."
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_8"
+                                                                              prefix=""
+                                                                              suffix=""
+                                                                              value="Roberts-Thomson, Sarah J."
                                                                             >
-                                                                              Roberts-Thomson, Sarah J.
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                Roberts-Thomson, Sarah J.
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         key="citationAuthor_9"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
                                                                       >
-                                                                        <a
+                                                                        <LinkAnchor
                                                                           className="AuthorsCitationView-authorIdLink-177"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
-                                                                          onClick={[Function]}
+                                                                          navigate={[Function]}
                                                                         >
-                                                                          <CitationView
-                                                                            className="citationAuthor"
-                                                                            key="citationAuthor_9"
-                                                                            prefix=", "
-                                                                            suffix=""
-                                                                            value="Monteith, Gregory R."
+                                                                          <a
+                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
+                                                                            onClick={[Function]}
                                                                           >
-                                                                            <span
+                                                                            <CitationView
                                                                               className="citationAuthor"
+                                                                              key="citationAuthor_9"
+                                                                              prefix=", "
+                                                                              suffix=""
+                                                                              value="Monteith, Gregory R."
                                                                             >
-                                                                              , 
-                                                                              Monteith, Gregory R.
-                                                                            </span>
-                                                                          </CitationView>
-                                                                        </a>
+                                                                              <span
+                                                                                className="citationAuthor"
+                                                                              >
+                                                                                , 
+                                                                                Monteith, Gregory R.
+                                                                              </span>
+                                                                            </CitationView>
+                                                                          </a>
+                                                                        </LinkAnchor>
                                                                       </Link>
                                                                     </span>
                                                                   </AuthorsCitationView>
@@ -10458,14 +10495,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        <span>
-                                                                          Journal of Cell Science
-                                                                        </span>
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          <span>
+                                                                            Journal of Cell Science
+                                                                          </span>
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                     <span
                                                                       className="eraYearListed"
@@ -10476,12 +10518,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <span>
                                                                       <WithStyles(ExternalLink)
                                                                         aria-label="Check publisher's OA archiving policy in a new window"
-                                                                        className=""
-                                                                        classes={Object {}}
                                                                         href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
-                                                                        openInNewIcon={true}
-                                                                        rel="noopener noreferrer"
-                                                                        target="_blank"
                                                                       >
                                                                         <ExternalLink
                                                                           aria-label="Check publisher's OA archiving policy in a new window"
@@ -11230,7 +11267,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                     aria-hidden="true"
                                                                                     className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                                     focusable="false"
-                                                                                    role="presentation"
                                                                                     viewBox="0 0 24 24"
                                                                                   >
                                                                                     <path
@@ -13228,11 +13264,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                   <WithStyles(ExternalLink)
                                                                     aria-label="Open this DOI in an new window"
                                                                     className="citationDoiLink"
-                                                                    classes={Object {}}
                                                                     href="https://doi.org/10.1242/jcs.196659"
-                                                                    openInNewIcon={true}
-                                                                    rel="noopener noreferrer"
-                                                                    target="_blank"
                                                                     title="Open this DOI in an new window"
                                                                   >
                                                                     <ExternalLink
@@ -13983,7 +14015,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 aria-hidden="true"
                                                                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                                 focusable="false"
-                                                                                role="presentation"
                                                                                 viewBox="0 0 24 24"
                                                                               >
                                                                                 <path
@@ -17870,12 +17901,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 <Link
                                                                   to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
                                                                 >
-                                                                  <a
+                                                                  <LinkAnchor
                                                                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
-                                                                    onClick={[Function]}
+                                                                    navigate={[Function]}
                                                                   >
-                                                                    Company of Biologists
-                                                                  </a>
+                                                                    <a
+                                                                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      Company of Biologists
+                                                                    </a>
+                                                                  </LinkAnchor>
                                                                 </Link>
                                                               </span>
                                                             </ForwardRef(Typography)>
@@ -18370,12 +18406,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Akt%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Akt%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        Akt
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Akt%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Akt
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                   <li
@@ -18384,12 +18425,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Breast+cancer%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Breast+cancer%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        Breast cancer
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Breast+cancer%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Breast cancer
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                   <li
@@ -18398,12 +18444,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Ca2%2B%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Ca2%2B%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        Ca2+
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Ca2%2B%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Ca2+
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                   <li
@@ -18412,12 +18463,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hypoxia%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hypoxia%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        Hypoxia
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Hypoxia%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Hypoxia
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                   <li
@@ -18426,12 +18482,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22PTEN%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22PTEN%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        PTEN
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22PTEN%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          PTEN
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                   <li
@@ -18440,12 +18501,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Signal+transduction%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Signal+transduction%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        Signal transduction
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22Signal+transduction%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          Signal transduction
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                   <li
@@ -18454,12 +18520,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     <Link
                                                                       to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22TRPC1%22"
                                                                     >
-                                                                      <a
+                                                                      <LinkAnchor
                                                                         href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22TRPC1%22"
-                                                                        onClick={[Function]}
+                                                                        navigate={[Function]}
                                                                       >
-                                                                        TRPC1
-                                                                      </a>
+                                                                        <a
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=%22TRPC1%22"
+                                                                          onClick={[Function]}
+                                                                        >
+                                                                          TRPC1
+                                                                        </a>
+                                                                      </LinkAnchor>
                                                                     </Link>
                                                                   </li>
                                                                 </ul>
@@ -18949,12 +19020,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 <Link
                                                                   to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=450009"
                                                                 >
-                                                                  <a
+                                                                  <LinkAnchor
                                                                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=450009"
-                                                                    onClick={[Function]}
+                                                                    navigate={[Function]}
                                                                   >
-                                                                    450009
-                                                                  </a>
+                                                                    <a
+                                                                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=450009"
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      450009
+                                                                    </a>
+                                                                  </LinkAnchor>
                                                                 </Link>
                                                               </span>
                                                             </ForwardRef(Typography)>
@@ -19442,12 +19518,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 <Link
                                                                   to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
                                                                 >
-                                                                  <a
+                                                                  <LinkAnchor
                                                                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
-                                                                    onClick={[Function]}
+                                                                    navigate={[Function]}
                                                                   >
-                                                                    453220
-                                                                  </a>
+                                                                    <a
+                                                                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      453220
+                                                                    </a>
+                                                                  </LinkAnchor>
                                                                 </Link>
                                                               </span>
                                                             </ForwardRef(Typography)>
@@ -19935,12 +20016,17 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 <Link
                                                                   to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
                                                                 >
-                                                                  <a
+                                                                  <LinkAnchor
                                                                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
-                                                                    onClick={[Function]}
+                                                                    navigate={[Function]}
                                                                   >
-                                                                    453223
-                                                                  </a>
+                                                                    <a
+                                                                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      453223
+                                                                    </a>
+                                                                  </LinkAnchor>
                                                                 </Link>
                                                               </span>
                                                             </ForwardRef(Typography)>
@@ -20109,15 +20195,6 @@ exports[`Additional Information Component  should render component with audio do
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={5}
               key="additional-information-authors"
               prefix=""
@@ -20492,17 +20569,9 @@ exports[`Additional Information Component  should render component with audio do
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -20916,12 +20985,8 @@ exports[`Additional Information Component  should render component with audio do
               </Link>
               <div>
                 <WithStyles(ExternalLink)
-                  className=""
-                  classes={Object {}}
                   href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                   openInNewIcon={false}
-                  rel="noopener noreferrer"
-                  target="_blank"
                 >
                   <div
                     className="fez-icon license cc-by-nc-nd"
@@ -21161,15 +21226,6 @@ exports[`Additional Information Component  should render component with book 1`]
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={4}
               key="additional-information-authors"
               prefix=""
@@ -21471,17 +21527,9 @@ exports[`Additional Information Component  should render component with book 1`]
                   "rek_wok_doc_type": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -22304,15 +22352,6 @@ exports[`Additional Information Component  should render component with book cha
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={5}
               key="additional-information-authors"
               prefix=""
@@ -22732,17 +22771,9 @@ exports[`Additional Information Component  should render component with book cha
                   "rek_wok_doc_type": "@",
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -24225,15 +24256,6 @@ exports[`Additional Information Component  should render component with conferen
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={14}
               key="additional-information-authors"
               prefix=""
@@ -24922,17 +24944,9 @@ exports[`Additional Information Component  should render component with conferen
                   "rek_wok_doc_type": "MC",
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -28015,15 +28029,6 @@ exports[`Additional Information Component  should render component with creative
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -28427,17 +28432,9 @@ exports[`Additional Information Component  should render component with creative
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -29925,15 +29922,6 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={5}
               key="additional-information-authors"
               prefix=""
@@ -30704,17 +30692,9 @@ exports[`Additional Information Component  should render component with data col
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -31488,12 +31468,8 @@ exports[`Additional Information Component  should render component with data col
               </Link>
               <div>
                 <WithStyles(ExternalLink)
-                  className=""
-                  classes={Object {}}
                   href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                   openInNewIcon={true}
-                  rel="noopener noreferrer"
-                  target="_blank"
                 >
                   View licence details
                 </WithStyles(ExternalLink)>
@@ -33305,15 +33281,6 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={5}
               key="additional-information-authors"
               prefix=""
@@ -33819,17 +33786,9 @@ exports[`Additional Information Component  should render component with data col
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -34085,12 +34044,8 @@ exports[`Additional Information Component  should render component with data col
               </Link>
               <div>
                 <WithStyles(ExternalLink)
-                  className=""
-                  classes={Object {}}
                   href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
                   openInNewIcon={false}
-                  rel="noopener noreferrer"
-                  target="_blank"
                 >
                   <div
                     className="fez-icon license cc-by"
@@ -34900,15 +34855,6 @@ exports[`Additional Information Component  should render component with design d
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={2}
               key="additional-information-authors"
               prefix=""
@@ -35324,17 +35270,9 @@ exports[`Additional Information Component  should render component with design d
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -36785,15 +36723,6 @@ exports[`Additional Information Component  should render component with digilib 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -37079,17 +37008,9 @@ exports[`Additional Information Component  should render component with digilib 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -37939,15 +37860,6 @@ exports[`Additional Information Component  should render component with generic 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -38420,17 +38332,9 @@ exports[`Additional Information Component  should render component with generic 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -40092,15 +39996,6 @@ exports[`Additional Information Component  should render component with journal 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={9}
               key="additional-information-authors"
               prefix=""
@@ -41173,17 +41068,9 @@ exports[`Additional Information Component  should render component with journal 
                   "rek_wok_doc_type": "@",
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -43161,15 +43048,6 @@ exports[`Additional Information Component  should render component with manuscri
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -43628,17 +43506,9 @@ exports[`Additional Information Component  should render component with manuscri
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -44903,15 +44773,6 @@ exports[`Additional Information Component  should render component with newspape
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={5}
               key="additional-information-authors"
               prefix=""
@@ -45260,17 +45121,9 @@ exports[`Additional Information Component  should render component with newspape
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -46456,15 +46309,6 @@ exports[`Additional Information Component  should render component with patent 1
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={4}
               key="additional-information-authors"
               prefix=""
@@ -46682,17 +46526,9 @@ exports[`Additional Information Component  should render component with patent 1
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -47542,15 +47378,6 @@ exports[`Additional Information Component  should render component with preprint
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={3}
               key="additional-information-authors"
               prefix=""
@@ -47884,17 +47711,9 @@ exports[`Additional Information Component  should render component with preprint
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -48150,15 +47969,6 @@ exports[`Additional Information Component  should render component with proceedi
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={3}
               key="additional-information-authors"
               prefix=""
@@ -48779,17 +48589,9 @@ exports[`Additional Information Component  should render component with proceedi
                   "rek_wok_doc_type_xsdmf_id": 12551,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -50491,15 +50293,6 @@ exports[`Additional Information Component  should render component with referenc
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -50778,17 +50571,9 @@ exports[`Additional Information Component  should render component with referenc
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -51831,15 +51616,6 @@ exports[`Additional Information Component  should render component with rek_herd
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={9}
               key="additional-information-authors"
               prefix=""
@@ -52912,17 +52688,9 @@ exports[`Additional Information Component  should render component with rek_herd
                   "rek_wok_doc_type": "@",
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -55100,15 +54868,6 @@ exports[`Additional Information Component  should render component with rek_star
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -55526,17 +55285,9 @@ exports[`Additional Information Component  should render component with rek_star
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -56156,15 +55907,6 @@ exports[`Additional Information Component  should render component with research
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -56442,17 +56184,9 @@ exports[`Additional Information Component  should render component with research
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -56914,15 +56648,6 @@ exports[`Additional Information Component  should render component with thesis 1
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -57203,17 +56928,9 @@ exports[`Additional Information Component  should render component with thesis 1
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -57841,15 +57558,6 @@ exports[`Additional Information Component  should render component with video do
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -58141,17 +57849,9 @@ exports[`Additional Information Component  should render component with video do
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -58664,15 +58364,6 @@ exports[`Additional Information Component  should render component with working 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={2}
               key="additional-information-authors"
               prefix=""
@@ -59008,17 +58699,9 @@ exports[`Additional Information Component  should render component with working 
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -59961,15 +59644,6 @@ exports[`Additional Information Component  should render oa status value link in
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              className="citationAuthors"
-              getLink={[Function]}
-              idSearchKey={
-                Object {
-                  "idKey": "fez_record_search_key_author_id",
-                  "idOrder": "rek_author_id_order",
-                  "idSubkey": "rek_author_id",
-                }
-              }
               initialNumberOfAuthors={1}
               key="additional-information-authors"
               prefix=""
@@ -60251,17 +59925,9 @@ exports[`Additional Information Component  should render oa status value link in
                   "rek_wok_doc_type_xsdmf_id": null,
                 }
               }
-              searchKey={
-                Object {
-                  "key": "fez_record_search_key_author",
-                  "order": "rek_author_order",
-                  "subkey": "rek_author",
-                }
-              }
               separator=", "
               showLink={true}
               suffix=""
-              thresholdNumberOfAuthors={3}
             />
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>

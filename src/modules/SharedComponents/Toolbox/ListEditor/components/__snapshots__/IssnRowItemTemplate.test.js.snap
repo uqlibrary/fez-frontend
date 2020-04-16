@@ -12,12 +12,7 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
      
     <WithStyles(ExternalLink)
       aria-label="Check publisher's OA archiving policy in a new window"
-      className=""
-      classes={Object {}}
       href="http://example.com/sherpa?issn=1234-1234"
-      openInNewIcon={true}
-      rel="noopener noreferrer"
-      target="_blank"
       title="Check publisher's OA archiving policy"
     >
       SHERPA/RoMEO
@@ -27,12 +22,7 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
     </span>
     <WithStyles(ExternalLink)
       aria-label="Source publisher name/place and alternate ISSNs in a new window"
-      className=""
-      classes={Object {}}
       href="http://example.com/ulrichs?id=1234"
-      openInNewIcon={true}
-      rel="noopener noreferrer"
-      target="_blank"
     >
       Ulrichs
     </WithStyles(ExternalLink)>
@@ -66,12 +56,7 @@ exports[`IssnRowItemTemplate component should render link data from API 1`] = `
      
     <WithStyles(ExternalLink)
       aria-label="Check publisher's OA archiving policy in a new window"
-      className=""
-      classes={Object {}}
       href="1234"
-      openInNewIcon={true}
-      rel="noopener noreferrer"
-      target="_blank"
       title="Check publisher's OA archiving policy"
     >
       SHERPA/RoMEO
@@ -81,12 +66,7 @@ exports[`IssnRowItemTemplate component should render link data from API 1`] = `
     </span>
     <WithStyles(ExternalLink)
       aria-label="Source publisher name/place and alternate ISSNs in a new window"
-      className=""
-      classes={Object {}}
       href="1234"
-      openInNewIcon={true}
-      rel="noopener noreferrer"
-      target="_blank"
     >
       Ulrichs
     </WithStyles(ExternalLink)>

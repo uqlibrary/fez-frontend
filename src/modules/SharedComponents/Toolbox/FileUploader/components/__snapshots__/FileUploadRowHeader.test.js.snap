@@ -9,7 +9,6 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
   }
 >
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -20,7 +19,6 @@ exports[`Component FileUploadRowHeader should render confirmation on delete all 
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <div
     style={
@@ -102,7 +100,6 @@ exports[`Component FileUploadRowHeader should render with access condition and e
   }
 >
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -113,7 +110,6 @@ exports[`Component FileUploadRowHeader should render with access condition and e
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <div
     style={
@@ -195,7 +191,6 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
   }
 >
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -206,7 +201,6 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <div
     style={
@@ -310,7 +304,6 @@ exports[`Component FileUploadRowHeader should render without access condition ev
   }
 >
   <WithStyles(ConfirmDialogBox)
-    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -321,7 +314,6 @@ exports[`Component FileUploadRowHeader should render without access condition ev
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <div
     style={

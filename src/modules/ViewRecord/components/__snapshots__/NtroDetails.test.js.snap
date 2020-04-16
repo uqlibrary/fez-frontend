@@ -5983,12 +5983,17 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   <Link
                                                                     to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
                                                                   >
-                                                                    <a
+                                                                    <LinkAnchor
                                                                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
-                                                                      onClick={[Function]}
+                                                                      navigate={[Function]}
                                                                     >
-                                                                      Series
-                                                                    </a>
+                                                                      <a
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
+                                                                        onClick={[Function]}
+                                                                      >
+                                                                        Series
+                                                                      </a>
+                                                                    </LinkAnchor>
                                                                   </Link>
                                                                 </span>
                                                               </ForwardRef(Typography)>

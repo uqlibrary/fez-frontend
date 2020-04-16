@@ -536,13 +536,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
               onChange={[MockFunction]}
             >
               <WithStyles(GenericSelectFieldClass)
-                autoWidth={false}
-                canUnselect={false}
                 error={false}
                 errorText=""
-                fullWidth={false}
                 hideLabel={false}
-                hintText={null}
                 itemsList={
                   Array [
                     Object {
@@ -576,14 +572,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                   ]
                 }
                 itemsLoading={false}
-                locale={
-                  Object {
-                    "label": "Select item",
-                    "loading": "loading...",
-                  }
-                }
-                menuItemClassName=""
-                multiple={false}
                 onChange={[MockFunction]}
               >
                 <GenericSelectFieldClass
@@ -1134,6 +1122,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     "IconComponent": [Function],
                                     "MenuProps": [Function],
                                     "SelectDisplayProps": [Function],
+                                    "aria-label": [Function],
                                     "autoFocus": [Function],
                                     "autoWidth": [Function],
                                     "children": [Function],
@@ -1356,6 +1345,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "IconComponent": [Function],
                                       "MenuProps": [Function],
                                       "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
                                       "autoFocus": [Function],
                                       "autoWidth": [Function],
                                       "children": [Function],
@@ -1579,6 +1569,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "IconComponent": [Function],
                                         "MenuProps": [Function],
                                         "SelectDisplayProps": [Function],
+                                        "aria-label": [Function],
                                         "autoFocus": [Function],
                                         "autoWidth": [Function],
                                         "children": [Function],
@@ -1808,6 +1799,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "IconComponent": [Function],
                                           "MenuProps": [Function],
                                           "SelectDisplayProps": [Function],
+                                          "aria-label": [Function],
                                           "autoFocus": [Function],
                                           "autoWidth": [Function],
                                           "children": [Function],
@@ -2059,7 +2051,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       >
                                         <div
                                           aria-haspopup="listbox"
-                                          aria-labelledby=" "
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
@@ -2108,7 +2099,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 aria-hidden="true"
                                                 className="MuiSvgIcon-root MuiSelect-icon"
                                                 focusable="false"
-                                                role="presentation"
                                                 viewBox="0 0 24 24"
                                               >
                                                 <path
@@ -2136,7 +2126,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
-                                              aria-labelledby=" "
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                               role="button"
                                               tabindex="0"
@@ -2168,7 +2157,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
-                                                aria-labelledby=" "
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                 role="button"
                                                 tabindex="0"
@@ -2202,7 +2190,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
-                                                  aria-labelledby=" "
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                   role="button"
                                                   tabindex="0"
@@ -2245,7 +2232,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby=" "
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                     role="button"
                                                     tabindex="0"
@@ -2821,13 +2807,9 @@ exports[`UnpublishedStatusField component should render error message from redux
               onChange={[MockFunction]}
             >
               <WithStyles(GenericSelectFieldClass)
-                autoWidth={false}
-                canUnselect={false}
                 error={true}
                 errorText="This field is required"
-                fullWidth={false}
                 hideLabel={false}
-                hintText={null}
                 itemsList={
                   Array [
                     Object {
@@ -2861,19 +2843,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                   ]
                 }
                 itemsLoading={false}
-                locale={
-                  Object {
-                    "label": "Select item",
-                    "loading": "loading...",
-                  }
-                }
-                menuItemClassName=""
                 meta={
                   Object {
                     "error": "This field is required",
                   }
                 }
-                multiple={false}
                 onChange={[MockFunction]}
               >
                 <GenericSelectFieldClass
@@ -3429,6 +3403,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     "IconComponent": [Function],
                                     "MenuProps": [Function],
                                     "SelectDisplayProps": [Function],
+                                    "aria-label": [Function],
                                     "autoFocus": [Function],
                                     "autoWidth": [Function],
                                     "children": [Function],
@@ -3651,6 +3626,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "IconComponent": [Function],
                                       "MenuProps": [Function],
                                       "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
                                       "autoFocus": [Function],
                                       "autoWidth": [Function],
                                       "children": [Function],
@@ -3874,6 +3850,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "IconComponent": [Function],
                                         "MenuProps": [Function],
                                         "SelectDisplayProps": [Function],
+                                        "aria-label": [Function],
                                         "autoFocus": [Function],
                                         "autoWidth": [Function],
                                         "children": [Function],
@@ -4103,6 +4080,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "IconComponent": [Function],
                                           "MenuProps": [Function],
                                           "SelectDisplayProps": [Function],
+                                          "aria-label": [Function],
                                           "autoFocus": [Function],
                                           "autoWidth": [Function],
                                           "children": [Function],
@@ -4354,7 +4332,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       >
                                         <div
                                           aria-haspopup="listbox"
-                                          aria-labelledby=" "
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
@@ -4403,7 +4380,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 aria-hidden="true"
                                                 className="MuiSvgIcon-root MuiSelect-icon"
                                                 focusable="false"
-                                                role="presentation"
                                                 viewBox="0 0 24 24"
                                               >
                                                 <path
@@ -4431,7 +4407,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
-                                              aria-labelledby=" "
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                               role="button"
                                               tabindex="0"
@@ -4463,7 +4438,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
-                                                aria-labelledby=" "
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                 role="button"
                                                 tabindex="0"
@@ -4497,7 +4471,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
-                                                  aria-labelledby=" "
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                   role="button"
                                                   tabindex="0"
@@ -4540,7 +4513,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby=" "
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                     role="button"
                                                     tabindex="0"
@@ -5132,13 +5104,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
               onChange={[MockFunction]}
             >
               <WithStyles(GenericSelectFieldClass)
-                autoWidth={false}
-                canUnselect={false}
                 error={false}
                 errorText=""
-                fullWidth={false}
                 hideLabel={false}
-                hintText={null}
                 itemsList={
                   Array [
                     Object {
@@ -5172,14 +5140,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                   ]
                 }
                 itemsLoading={false}
-                locale={
-                  Object {
-                    "label": "Select item",
-                    "loading": "loading...",
-                  }
-                }
-                menuItemClassName=""
-                multiple={false}
                 onChange={[MockFunction]}
               >
                 <GenericSelectFieldClass
@@ -5730,6 +5690,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     "IconComponent": [Function],
                                     "MenuProps": [Function],
                                     "SelectDisplayProps": [Function],
+                                    "aria-label": [Function],
                                     "autoFocus": [Function],
                                     "autoWidth": [Function],
                                     "children": [Function],
@@ -5952,6 +5913,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "IconComponent": [Function],
                                       "MenuProps": [Function],
                                       "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
                                       "autoFocus": [Function],
                                       "autoWidth": [Function],
                                       "children": [Function],
@@ -6175,6 +6137,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "IconComponent": [Function],
                                         "MenuProps": [Function],
                                         "SelectDisplayProps": [Function],
+                                        "aria-label": [Function],
                                         "autoFocus": [Function],
                                         "autoWidth": [Function],
                                         "children": [Function],
@@ -6404,6 +6367,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "IconComponent": [Function],
                                           "MenuProps": [Function],
                                           "SelectDisplayProps": [Function],
+                                          "aria-label": [Function],
                                           "autoFocus": [Function],
                                           "autoWidth": [Function],
                                           "children": [Function],
@@ -6655,7 +6619,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       >
                                         <div
                                           aria-haspopup="listbox"
-                                          aria-labelledby=" "
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
@@ -6704,7 +6667,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 aria-hidden="true"
                                                 className="MuiSvgIcon-root MuiSelect-icon"
                                                 focusable="false"
-                                                role="presentation"
                                                 viewBox="0 0 24 24"
                                               >
                                                 <path
@@ -6732,7 +6694,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
-                                              aria-labelledby=" "
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                               role="button"
                                               tabindex="0"
@@ -6764,7 +6725,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
-                                                aria-labelledby=" "
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                 role="button"
                                                 tabindex="0"
@@ -6798,7 +6758,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
-                                                  aria-labelledby=" "
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                   role="button"
                                                   tabindex="0"
@@ -6841,7 +6800,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby=" "
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                     role="button"
                                                     tabindex="0"
@@ -7418,13 +7376,9 @@ exports[`UnpublishedStatusField component should render with value selected from
               value="Any unpublished"
             >
               <WithStyles(GenericSelectFieldClass)
-                autoWidth={false}
-                canUnselect={false}
                 error={false}
                 errorText=""
-                fullWidth={false}
                 hideLabel={false}
-                hintText={null}
                 input={
                   Object {
                     "value": "Any unpublished",
@@ -7463,14 +7417,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                   ]
                 }
                 itemsLoading={false}
-                locale={
-                  Object {
-                    "label": "Select item",
-                    "loading": "loading...",
-                  }
-                }
-                menuItemClassName=""
-                multiple={false}
                 onChange={[MockFunction]}
                 value="Any unpublished"
               >
@@ -8028,6 +7974,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                     "IconComponent": [Function],
                                     "MenuProps": [Function],
                                     "SelectDisplayProps": [Function],
+                                    "aria-label": [Function],
                                     "autoFocus": [Function],
                                     "autoWidth": [Function],
                                     "children": [Function],
@@ -8250,6 +8197,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "IconComponent": [Function],
                                       "MenuProps": [Function],
                                       "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
                                       "autoFocus": [Function],
                                       "autoWidth": [Function],
                                       "children": [Function],
@@ -8473,6 +8421,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "IconComponent": [Function],
                                         "MenuProps": [Function],
                                         "SelectDisplayProps": [Function],
+                                        "aria-label": [Function],
                                         "autoFocus": [Function],
                                         "autoWidth": [Function],
                                         "children": [Function],
@@ -8702,6 +8651,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "IconComponent": [Function],
                                           "MenuProps": [Function],
                                           "SelectDisplayProps": [Function],
+                                          "aria-label": [Function],
                                           "autoFocus": [Function],
                                           "autoWidth": [Function],
                                           "children": [Function],
@@ -8953,7 +8903,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       >
                                         <div
                                           aria-haspopup="listbox"
-                                          aria-labelledby=" "
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
@@ -8996,7 +8945,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 aria-hidden="true"
                                                 className="MuiSvgIcon-root MuiSelect-icon"
                                                 focusable="false"
-                                                role="presentation"
                                                 viewBox="0 0 24 24"
                                               >
                                                 <path
@@ -9024,7 +8972,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
-                                              aria-labelledby=" "
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                               role="button"
                                               tabindex="0"
@@ -9054,7 +9001,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
-                                                aria-labelledby=" "
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                 role="button"
                                                 tabindex="0"
@@ -9086,7 +9032,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
-                                                  aria-labelledby=" "
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                   role="button"
                                                   tabindex="0"
@@ -9127,7 +9072,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby=" "
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                                                     role="button"
                                                     tabindex="0"

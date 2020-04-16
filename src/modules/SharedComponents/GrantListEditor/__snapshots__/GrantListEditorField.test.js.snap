@@ -2,9 +2,6 @@
 
 exports[`GrantListEditorField should render default component 1`] = `
 <WithStyles(GrantListEditor)
-  canEdit={false}
-  disableDeleteAllGrants={false}
-  hideType={false}
   input={
     Object {
       "onChange": [MockFunction],

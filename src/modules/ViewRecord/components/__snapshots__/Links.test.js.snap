@@ -4908,11 +4908,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   <WithStyles(ExternalLink)
                                                                     aria-label="Full text via Pubmed Central (open access)"
                                                                     className="pubmedCentralLinkUrl"
-                                                                    classes={Object {}}
                                                                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345678"
-                                                                    openInNewIcon={true}
-                                                                    rel="noopener noreferrer"
-                                                                    target="_blank"
                                                                     title="Full text via Pubmed Central (open access)"
                                                                   >
                                                                     <ExternalLink
@@ -5663,7 +5659,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                                                 aria-hidden="true"
                                                                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                                 focusable="false"
-                                                                                role="presentation"
                                                                                 viewBox="0 0 24 24"
                                                                               >
                                                                                 <path
@@ -5995,8 +5990,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                             embargoDate={null}
                                                             isOpenAccess={true}
                                                             openAccessStatusId={453954}
-                                                            securityStatus={true}
-                                                            showEmbargoText={false}
                                                           >
                                                             <OpenAccessIcon
                                                               classes={
@@ -6416,11 +6409,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   <WithStyles(ExternalLink)
                                                                     aria-label="Open this DOI in an new window"
                                                                     className="citationDoiLink"
-                                                                    classes={Object {}}
                                                                     href="https://doi.org/10.1093/hmg/ddw177"
-                                                                    openInNewIcon={true}
-                                                                    rel="noopener noreferrer"
-                                                                    target="_blank"
                                                                     title="Open this DOI in an new window"
                                                                   >
                                                                     <ExternalLink
@@ -7171,7 +7160,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                                                 aria-hidden="true"
                                                                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                                 focusable="false"
-                                                                                role="presentation"
                                                                                 viewBox="0 0 24 24"
                                                                               >
                                                                                 <path
@@ -7499,12 +7487,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             }
                                                           }
                                                         >
-                                                          <WithStyles(OpenAccessIcon)
-                                                            embargoDate={null}
-                                                            isOpenAccess={false}
-                                                            securityStatus={true}
-                                                            showEmbargoText={false}
-                                                          >
+                                                          <WithStyles(OpenAccessIcon)>
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
@@ -7534,12 +7517,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               index="google"
                                               link={
                                                 <WithStyles(ExternalLink)
-                                                  className=""
-                                                  classes={Object {}}
                                                   href="https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22"
-                                                  openInNewIcon={true}
-                                                  rel="noopener noreferrer"
-                                                  target="_blank"
                                                   title="Search Google Scholar for this open access article"
                                                 >
                                                   https://scholar.google.com/scholar?q=intitle:"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22
@@ -7843,12 +7821,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
                                                                 <WithStyles(ExternalLink)
-                                                                  className=""
-                                                                  classes={Object {}}
                                                                   href="https://scholar.google.com/scholar?q=intitle:%22Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer%22"
-                                                                  openInNewIcon={true}
-                                                                  rel="noopener noreferrer"
-                                                                  target="_blank"
                                                                   title="Search Google Scholar for this open access article"
                                                                 >
                                                                   <ExternalLink
@@ -8597,7 +8570,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               aria-hidden="true"
                                                                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                               focusable="false"
-                                                                              role="presentation"
                                                                               viewBox="0 0 24 24"
                                                                             >
                                                                               <path
@@ -8928,8 +8900,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                             embargoDate={null}
                                                             isOpenAccess={true}
                                                             openAccessStatusId={453954}
-                                                            securityStatus={true}
-                                                            showEmbargoText={false}
                                                           >
                                                             <OpenAccessIcon
                                                               classes={
@@ -9050,12 +9020,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               key="0"
                                               link={
                                                 <WithStyles(ExternalLink)
-                                                  className=""
-                                                  classes={Object {}}
                                                   href="http://www.thisisatest.com"
-                                                  openInNewIcon={true}
-                                                  rel="noopener noreferrer"
-                                                  target="_blank"
                                                   title="Link to publication"
                                                 >
                                                   http://www.thisisatest.com
@@ -9353,12 +9318,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
                                                                 <WithStyles(ExternalLink)
-                                                                  className=""
-                                                                  classes={Object {}}
                                                                   href="http://www.thisisatest.com"
-                                                                  openInNewIcon={true}
-                                                                  rel="noopener noreferrer"
-                                                                  target="_blank"
                                                                   title="Link to publication"
                                                                 >
                                                                   <ExternalLink
@@ -10107,7 +10067,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               aria-hidden="true"
                                                                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                               focusable="false"
-                                                                              role="presentation"
                                                                               viewBox="0 0 24 24"
                                                                             >
                                                                               <path
@@ -10434,12 +10393,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             }
                                                           }
                                                         >
-                                                          <WithStyles(OpenAccessIcon)
-                                                            embargoDate={null}
-                                                            isOpenAccess={false}
-                                                            securityStatus={true}
-                                                            showEmbargoText={false}
-                                                          >
+                                                          <WithStyles(OpenAccessIcon)>
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
@@ -10470,12 +10424,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               key="1"
                                               link={
                                                 <WithStyles(ExternalLink)
-                                                  className=""
-                                                  classes={Object {}}
                                                   href="http://www.thisisanothertest.com"
-                                                  openInNewIcon={true}
-                                                  rel="noopener noreferrer"
-                                                  target="_blank"
                                                   title="Click to open link in a new window"
                                                 >
                                                   http://www.thisisanothertest.com
@@ -10773,12 +10722,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
                                                                 <WithStyles(ExternalLink)
-                                                                  className=""
-                                                                  classes={Object {}}
                                                                   href="http://www.thisisanothertest.com"
-                                                                  openInNewIcon={true}
-                                                                  rel="noopener noreferrer"
-                                                                  target="_blank"
                                                                   title="Click to open link in a new window"
                                                                 >
                                                                   <ExternalLink
@@ -11527,7 +11471,6 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               aria-hidden="true"
                                                                               className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                               focusable="false"
-                                                                              role="presentation"
                                                                               viewBox="0 0 24 24"
                                                                             >
                                                                               <path
@@ -11854,12 +11797,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             }
                                                           }
                                                         >
-                                                          <WithStyles(OpenAccessIcon)
-                                                            embargoDate={null}
-                                                            isOpenAccess={false}
-                                                            securityStatus={true}
-                                                            showEmbargoText={false}
-                                                          >
+                                                          <WithStyles(OpenAccessIcon)>
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
@@ -13558,11 +13496,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                               <WithStyles(ExternalLink)
                                                                 aria-label="Full text via Pubmed Central (open access)"
                                                                 className="pubmedCentralLinkUrl"
-                                                                classes={Object {}}
                                                                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
-                                                                openInNewIcon={true}
-                                                                rel="noopener noreferrer"
-                                                                target="_blank"
                                                                 title="Full text via Pubmed Central (open access)"
                                                               >
                                                                 <ExternalLink
@@ -14313,7 +14247,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                             aria-hidden="true"
                                                                             className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                             focusable="false"
-                                                                            role="presentation"
                                                                             viewBox="0 0 24 24"
                                                                           >
                                                                             <path
@@ -14643,8 +14576,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         embargoDate={null}
                                                         isOpenAccess={true}
                                                         openAccessStatusId={453954}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
                                                       >
                                                         <OpenAccessIcon
                                                           classes={
@@ -15070,11 +15001,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                               <WithStyles(ExternalLink)
                                                                 aria-label="Open this DOI in an new window"
                                                                 className="citationDoiLink"
-                                                                classes={Object {}}
                                                                 href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                                openInNewIcon={true}
-                                                                rel="noopener noreferrer"
-                                                                target="_blank"
                                                                 title="Open this DOI in an new window"
                                                               >
                                                                 <ExternalLink
@@ -15825,7 +15752,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                             aria-hidden="true"
                                                                             className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                             focusable="false"
-                                                                            role="presentation"
                                                                             viewBox="0 0 24 24"
                                                                           >
                                                                             <path
@@ -16155,8 +16081,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         embargoDate={null}
                                                         isOpenAccess={true}
                                                         openAccessStatusId={453693}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
                                                       >
                                                         <OpenAccessIcon
                                                           classes={
@@ -16277,12 +16201,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           key="0"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisatest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
@@ -16580,12 +16499,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisatest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Link to publication"
                                                             >
                                                               <ExternalLink
@@ -17334,7 +17248,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -17659,12 +17572,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -17695,12 +17603,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           key="1"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisanothertest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
@@ -17998,12 +17901,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisanothertest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Another link to publication"
                                                             >
                                                               <ExternalLink
@@ -18752,7 +18650,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -19077,12 +18974,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -19113,12 +19005,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           key="2"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.nodescription.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
@@ -19416,12 +19303,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.nodescription.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Click to open link in a new window"
                                                             >
                                                               <ExternalLink
@@ -20170,7 +20052,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -20495,12 +20376,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -20632,12 +20508,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       key="0"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="http://www.thisisatest.com"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Link to publication"
         >
           http://www.thisisatest.com
@@ -20651,12 +20522,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       key="1"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="http://www.thisisanothertest.com"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Another link to publication"
         >
           http://www.thisisanothertest.com
@@ -20670,12 +20536,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
       key="2"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="http://www.nodescription.com"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Click to open link in a new window"
         >
           http://www.nodescription.com
@@ -20745,12 +20606,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       index="google"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Search Google Scholar for this open access article"
         >
           https://scholar.google.com/scholar?q=intitle:"undefined%22
@@ -20770,12 +20626,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       key="0"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="http://www.thisisatest.com"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Link to publication"
         >
           http://www.thisisatest.com
@@ -20789,12 +20640,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       key="1"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="http://www.thisisanothertest.com"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Another link to publication"
         >
           http://www.thisisanothertest.com
@@ -20808,12 +20654,7 @@ exports[`Component Links  should render 3 not OA links and OA google scholar lin
       key="2"
       link={
         <WithStyles(ExternalLink)
-          className=""
-          classes={Object {}}
           href="http://www.nodescription.com"
-          openInNewIcon={true}
-          rel="noopener noreferrer"
-          target="_blank"
           title="Click to open link in a new window"
         >
           http://www.nodescription.com
@@ -22323,11 +22164,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                               <WithStyles(ExternalLink)
                                                                 aria-label="Full text via Pubmed Central (open access)"
                                                                 className="pubmedCentralLinkUrl"
-                                                                classes={Object {}}
                                                                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
-                                                                openInNewIcon={true}
-                                                                rel="noopener noreferrer"
-                                                                target="_blank"
                                                                 title="Full text via Pubmed Central (open access)"
                                                               >
                                                                 <ExternalLink
@@ -23078,7 +22915,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                             aria-hidden="true"
                                                                             className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                             focusable="false"
-                                                                            role="presentation"
                                                                             viewBox="0 0 24 24"
                                                                           >
                                                                             <path
@@ -23408,8 +23244,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         embargoDate={null}
                                                         isOpenAccess={true}
                                                         openAccessStatusId={453954}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
                                                       >
                                                         <OpenAccessIcon
                                                           classes={
@@ -23530,12 +23364,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           key="0"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisatest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
@@ -23833,12 +23662,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisatest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Link to publication"
                                                             >
                                                               <ExternalLink
@@ -24587,7 +24411,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -24912,12 +24735,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -24948,12 +24766,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           key="1"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisanothertest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
@@ -25251,12 +25064,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisanothertest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Another link to publication"
                                                             >
                                                               <ExternalLink
@@ -26005,7 +25813,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -26330,12 +26137,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -26366,12 +26168,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           key="2"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.nodescription.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
@@ -26669,12 +26466,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.nodescription.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Click to open link in a new window"
                                                             >
                                                               <ExternalLink
@@ -27423,7 +27215,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -27748,12 +27539,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -29304,11 +29090,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                               <WithStyles(ExternalLink)
                                                                 aria-label="Full text via Pubmed Central (open access)"
                                                                 className="pubmedCentralLinkUrl"
-                                                                classes={Object {}}
                                                                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
-                                                                openInNewIcon={true}
-                                                                rel="noopener noreferrer"
-                                                                target="_blank"
                                                                 title="Full text via Pubmed Central (open access)"
                                                               >
                                                                 <ExternalLink
@@ -30059,7 +29841,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                             aria-hidden="true"
                                                                             className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                             focusable="false"
-                                                                            role="presentation"
                                                                             viewBox="0 0 24 24"
                                                                           >
                                                                             <path
@@ -30389,8 +30170,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         embargoDate={null}
                                                         isOpenAccess={true}
                                                         openAccessStatusId={453954}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
                                                       >
                                                         <OpenAccessIcon
                                                           classes={
@@ -30810,11 +30589,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                               <WithStyles(ExternalLink)
                                                                 aria-label="Open this DOI in an new window"
                                                                 className="citationDoiLink"
-                                                                classes={Object {}}
                                                                 href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                                openInNewIcon={true}
-                                                                rel="noopener noreferrer"
-                                                                target="_blank"
                                                                 title="Open this DOI in an new window"
                                                               >
                                                                 <ExternalLink
@@ -31565,7 +31340,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                             aria-hidden="true"
                                                                             className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                             focusable="false"
-                                                                            role="presentation"
                                                                             viewBox="0 0 24 24"
                                                                           >
                                                                             <path
@@ -31891,12 +31665,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -31927,12 +31696,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           key="0"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisatest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
@@ -32230,12 +31994,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisatest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Link to publication"
                                                             >
                                                               <ExternalLink
@@ -32984,7 +32743,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -33309,12 +33067,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -33345,12 +33098,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           key="1"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisanothertest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
@@ -33648,12 +33396,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisanothertest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Another link to publication"
                                                             >
                                                               <ExternalLink
@@ -34402,7 +34145,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -34727,12 +34469,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -34763,12 +34500,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           key="2"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.nodescription.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
@@ -35066,12 +34798,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.nodescription.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Click to open link in a new window"
                                                             >
                                                               <ExternalLink
@@ -35820,7 +35547,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -36145,12 +35871,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -37695,11 +37416,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                               <WithStyles(ExternalLink)
                                                                 aria-label="Open this DOI in an new window"
                                                                 className="citationDoiLink"
-                                                                classes={Object {}}
                                                                 href="https://doi.org/10.1016/j.pnsc.2012.12.004"
-                                                                openInNewIcon={true}
-                                                                rel="noopener noreferrer"
-                                                                target="_blank"
                                                                 title="Open this DOI in an new window"
                                                               >
                                                                 <ExternalLink
@@ -38450,7 +38167,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                             aria-hidden="true"
                                                                             className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                             focusable="false"
-                                                                            role="presentation"
                                                                             viewBox="0 0 24 24"
                                                                           >
                                                                             <path
@@ -38780,8 +38496,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         embargoDate="24th December 2020"
                                                         isOpenAccess={false}
                                                         openAccessStatusId={453693}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
                                                       >
                                                         <OpenAccessIcon
                                                           classes={
@@ -38957,7 +38671,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-190 MuiSvgIcon-fontSizeSmall"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -38989,12 +38702,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           key="0"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisatest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Link to publication"
                                             >
                                               http://www.thisisatest.com
@@ -39292,12 +39000,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisatest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Link to publication"
                                                             >
                                                               <ExternalLink
@@ -40046,7 +39749,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -40371,12 +40073,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -40407,12 +40104,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           key="1"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.thisisanothertest.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Another link to publication"
                                             >
                                               http://www.thisisanothertest.com
@@ -40710,12 +40402,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.thisisanothertest.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Another link to publication"
                                                             >
                                                               <ExternalLink
@@ -41464,7 +41151,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -41789,12 +41475,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -41825,12 +41506,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           key="2"
                                           link={
                                             <WithStyles(ExternalLink)
-                                              className=""
-                                              classes={Object {}}
                                               href="http://www.nodescription.com"
-                                              openInNewIcon={true}
-                                              rel="noopener noreferrer"
-                                              target="_blank"
                                               title="Click to open link in a new window"
                                             >
                                               http://www.nodescription.com
@@ -42128,12 +41804,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             className="MuiTypography-root MuiTypography-body2"
                                                           >
                                                             <WithStyles(ExternalLink)
-                                                              className=""
-                                                              classes={Object {}}
                                                               href="http://www.nodescription.com"
-                                                              openInNewIcon={true}
-                                                              rel="noopener noreferrer"
-                                                              target="_blank"
                                                               title="Click to open link in a new window"
                                                             >
                                                               <ExternalLink
@@ -42882,7 +42553,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           aria-hidden="true"
                                                                           className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
                                                                           focusable="false"
-                                                                          role="presentation"
                                                                           viewBox="0 0 24 24"
                                                                         >
                                                                           <path
@@ -43207,12 +42877,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         }
                                                       }
                                                     >
-                                                      <WithStyles(OpenAccessIcon)
-                                                        embargoDate={null}
-                                                        isOpenAccess={false}
-                                                        securityStatus={true}
-                                                        showEmbargoText={false}
-                                                      >
+                                                      <WithStyles(OpenAccessIcon)>
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
@@ -43264,12 +42929,7 @@ Object {
   "description": "Provided description",
   "index": 0,
   "link": <WithStyles(ExternalLink)
-    className=""
-    classes={Object {}}
     href="https://rdm.uq.edu.au/files/example123"
-    openInNewIcon={true}
-    rel="noopener noreferrer"
-    target="_blank"
     title="Provided description"
   >
     https://rdm.uq.edu.au/files/example123
@@ -43283,12 +42943,7 @@ Object {
   "description": "Access this dataset",
   "index": 1,
   "link": <WithStyles(ExternalLink)
-    className=""
-    classes={Object {}}
     href="https://uat.rdm.uq.edu.au/files/example123"
-    openInNewIcon={true}
-    rel="noopener noreferrer"
-    target="_blank"
     title="Access this dataset"
   >
     https://uat.rdm.uq.edu.au/files/example123

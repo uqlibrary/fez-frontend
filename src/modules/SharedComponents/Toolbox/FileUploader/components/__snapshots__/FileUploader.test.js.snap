@@ -1010,51 +1010,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                               }
                             }
                             maxSize={1}
-                            mimeTypeWhitelist={
-                              Object {
-                                "7z": "application/x-7z-compressed",
-                                "avi": "video/x-msvideo",
-                                "csv": "text/csv",
-                                "gif": "image/gif",
-                                "gsheet": "application/vnd.google-apps.spreadsheet",
-                                "gz": "application/gzip",
-                                "jpe": "image/jpeg",
-                                "jpeg": "image/jpeg",
-                                "jpg": "image/jpeg",
-                                "m1v": "video/mpeg",
-                                "m2v": "video/mpeg",
-                                "m4a": "audio/x-m4a",
-                                "mk3d": "video/x-matroska",
-                                "mks": "video/x-matroska",
-                                "mkv": "video/x-matroska",
-                                "mov": "video/quicktime",
-                                "mp3": "audio/mp3",
-                                "mp4": "video/mp4",
-                                "mp4v": "video/mp4",
-                                "mpe": "video/mpeg",
-                                "mpeg": "video/mpeg",
-                                "mpg": "video/mpeg",
-                                "ods": "application/vnd.oasis.opendocument.spreadsheet",
-                                "pdf": "application/pdf",
-                                "png": "image/png",
-                                "qt": "video/quicktime",
-                                "rar": "application/x-rar-compressed",
-                                "tar": "application/x-tar",
-                                "tif": "image/tiff",
-                                "tiff": "image/tiff",
-                                "wav": "audio/wav",
-                                "wma": "audio/x-ms-wma",
-                                "wmv": "video/x-ms-wmv",
-                                "xla": "application/vnd.ms-excel",
-                                "xlc": "application/vnd.ms-excel",
-                                "xlm": "application/vnd.ms-excel",
-                                "xls": "application/vnd.ms-excel",
-                                "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                "xlt": "application/vnd.ms-excel",
-                                "xlw": "application/vnd.ms-excel",
-                                "zip": "application/zip",
-                              }
-                            }
                             onDrop={[Function]}
                           >
                             <FileUploadDropzone
@@ -2378,7 +2333,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                                     aria-hidden="true"
                                                                                     className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-138"
                                                                                     focusable="false"
-                                                                                    role="presentation"
                                                                                     viewBox="0 0 24 24"
                                                                                   >
                                                                                     <path
@@ -3596,51 +3550,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                               }
                             }
                             maxSize={1}
-                            mimeTypeWhitelist={
-                              Object {
-                                "7z": "application/x-7z-compressed",
-                                "avi": "video/x-msvideo",
-                                "csv": "text/csv",
-                                "gif": "image/gif",
-                                "gsheet": "application/vnd.google-apps.spreadsheet",
-                                "gz": "application/gzip",
-                                "jpe": "image/jpeg",
-                                "jpeg": "image/jpeg",
-                                "jpg": "image/jpeg",
-                                "m1v": "video/mpeg",
-                                "m2v": "video/mpeg",
-                                "m4a": "audio/x-m4a",
-                                "mk3d": "video/x-matroska",
-                                "mks": "video/x-matroska",
-                                "mkv": "video/x-matroska",
-                                "mov": "video/quicktime",
-                                "mp3": "audio/mp3",
-                                "mp4": "video/mp4",
-                                "mp4v": "video/mp4",
-                                "mpe": "video/mpeg",
-                                "mpeg": "video/mpeg",
-                                "mpg": "video/mpeg",
-                                "ods": "application/vnd.oasis.opendocument.spreadsheet",
-                                "pdf": "application/pdf",
-                                "png": "image/png",
-                                "qt": "video/quicktime",
-                                "rar": "application/x-rar-compressed",
-                                "tar": "application/x-tar",
-                                "tif": "image/tiff",
-                                "tiff": "image/tiff",
-                                "wav": "audio/wav",
-                                "wma": "audio/x-ms-wma",
-                                "wmv": "video/x-ms-wmv",
-                                "xla": "application/vnd.ms-excel",
-                                "xlc": "application/vnd.ms-excel",
-                                "xlm": "application/vnd.ms-excel",
-                                "xls": "application/vnd.ms-excel",
-                                "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                "xlt": "application/vnd.ms-excel",
-                                "xlw": "application/vnd.ms-excel",
-                                "zip": "application/zip",
-                              }
-                            }
                             onDrop={[Function]}
                           >
                             <FileUploadDropzone
@@ -4964,7 +4873,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                                     aria-hidden="true"
                                                                                     className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-138"
                                                                                     focusable="false"
-                                                                                    role="presentation"
                                                                                     viewBox="0 0 24 24"
                                                                                   >
                                                                                     <path
@@ -5844,20 +5752,6 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -6165,20 +6059,6 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -6763,20 +6643,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -7252,20 +7118,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -7574,20 +7426,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -7898,20 +7736,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -8232,20 +8056,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -8729,20 +8539,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     xs={12}
   >
     <WithStyles(FileUploadRowHeader)
-      locale={
-        Object {
-          "deleteAllFiles": "Remove all files from the upload queue",
-          "deleteAllFilesConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to delete all files?",
-            "confirmationTitle": "Delete all",
-          },
-          "embargoDateColumn": "Embargo release date",
-          "fileAccessColumn": "Access conditions",
-          "filenameColumn": "File name",
-        }
-      }
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />

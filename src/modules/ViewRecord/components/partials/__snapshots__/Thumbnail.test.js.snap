@@ -62,12 +62,8 @@ exports[`Thumbnail component should render FLV files as a thumbnail only for spe
 
 exports[`Thumbnail component should render PDF files as a thumbnail only plus link to original 1`] = `
 <WithStyles(ExternalLink)
-  className=""
-  classes={Object {}}
   href="pdf.jpg"
   openInNewIcon={false}
-  rel="noopener noreferrer"
-  target="_blank"
   title="original.pdf"
 >
   <Img

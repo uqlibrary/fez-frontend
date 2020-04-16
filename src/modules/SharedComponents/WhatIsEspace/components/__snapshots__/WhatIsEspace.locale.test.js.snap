@@ -11,12 +11,7 @@ exports[`Component WhatIsEspace with different locale should render external lin
     what is espace intro
     <WithStyles(ExternalLink)
       aria-label="mouse over and see me"
-      className=""
-      classes={Object {}}
       href="https://example.com/"
-      openInNewIcon={true}
-      rel="noopener noreferrer"
-      target="_blank"
       title="mouse over and see me"
     >
       click me to learn more
