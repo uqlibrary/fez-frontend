@@ -26,7 +26,7 @@ function setup(testProps = {}) {
                 nws_title: 'Statistics',
                 nws_status: 'active',
                 nws_message:
-                    'The file download and page view statistics for publications in eSpace currently ' +
+                    'The <a href="http://www.uq.edu.au" target="_blank" file download and page view statistics for publications in eSpace currently ' +
                     'may not be accurate and are being reviewed by our development team. Until this ' +
                     'issue is resolved eSpace statistics should not be considered reliable.',
                 nws_admin_only: 0,
