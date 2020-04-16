@@ -8,7 +8,8 @@ export const calculateOpenAccess = record => {
         ? record.fez_record_search_key_oa_status.rek_oa_status
         : null;
 
-    if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI) {
+    if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI ||
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_RDM) {
         // OA with a possible embargo days - check now vs published date + OA embargo days
         // calculate embargo date
         const embargoDays =
