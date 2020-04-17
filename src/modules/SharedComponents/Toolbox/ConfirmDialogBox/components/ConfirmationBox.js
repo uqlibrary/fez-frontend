@@ -118,6 +118,7 @@ ConfirmationBox.defaultProps = {
         confirmationMessage: 'Are you sure?',
         cancelButtonLabel: 'No',
         confirmButtonLabel: 'Yes',
+        alternateActionButtonLabel: 'Cancel',
     },
     showAlternateActionButton: false,
 };
