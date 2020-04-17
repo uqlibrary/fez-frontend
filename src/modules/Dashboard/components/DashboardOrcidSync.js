@@ -37,7 +37,8 @@ export const DashboardOrcidSync = props => {
     const messageTemplate = pagesLocale.pages.dashboard.header.dashboardOrcidSync.helpDrawer;
     let status;
     let detailedStatus;
-    switch (orcidSyncStatus.orj_status) {
+    const orjStatus = orcidSyncStatus && orcidSyncStatus.orj_status;
+    switch (orjStatus) {
         case 'Pending':
         case 'In Progress':
             status = messageTemplate.messages.inProgress;
@@ -67,7 +68,7 @@ export const DashboardOrcidSync = props => {
             )) ||
         messageTemplate.messages.noPrevious;
 
-    const isInProgress = ['Pending', 'In Progress'].indexOf(orcidSyncStatus.orj_status) > -1;
+    const isInProgress = ['Pending', 'In Progress'].indexOf(orjStatus) > -1;
     const disableRequest = requestingOrcidSync || isInProgress;
     const primaryClick = () => {
         requestOrcidSync();
@@ -83,12 +84,9 @@ export const DashboardOrcidSync = props => {
                 primaryClick,
                 lastSyncMessage,
                 status: detailedStatus,
-                StatusIcon: renderBadgeIcon(orcidSyncStatus && orcidSyncStatus.orj_status) || DoneIcon,
+                StatusIcon: renderBadgeIcon(orjStatus) || DoneIcon,
                 statusIconStyle: {
-                    color:
-                        (orcidSyncStatus.orj_status === 'Done' && 'green') ||
-                        (orcidSyncStatus.orj_status === 'Error' && 'red') ||
-                        undefined,
+                    color: (orjStatus === 'Done' && 'green') || (orjStatus === 'Error' && 'red') || undefined,
                 },
             }}
         />
@@ -96,7 +94,7 @@ export const DashboardOrcidSync = props => {
 
     const helpIconProps = {
         showLoader: requestingOrcidSync,
-        IconComponent: renderBadgeIcon(orcidSyncStatus.orj_status),
+        IconComponent: renderBadgeIcon(orjStatus),
         text: message,
         title: messageTemplate.title,
         tooltip: status,
