@@ -5,7 +5,6 @@ function setup(testProps = {}, args = {}, component = DashboardOrcidSync) {
         author: {
             aut_orcid_works_last_sync: '2020-02-14 16:23:30',
         },
-        orcidSyncStatus: {},
         ...testProps,
     };
     return getElement(component, props, args);
