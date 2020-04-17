@@ -69,9 +69,7 @@ export const AutoCompleteAsynchronousField = ({
             return undefined;
         }
 
-        if (active) {
-            setOptions(itemsList);
-        }
+        !!active && setOptions(itemsList);
 
         return () => {
             active = false;
@@ -86,7 +84,7 @@ export const AutoCompleteAsynchronousField = ({
 
     return (
         <Autocomplete
-            id={id || 'auto-complete-asynchronous-field'}
+            id={id}
             clearOnEscape
             disableOpenOnFocus
             disabled={disabled}
@@ -116,7 +114,9 @@ export const AutoCompleteAsynchronousField = ({
                         ...params.InputProps,
                         endAdornment: (
                             <React.Fragment>
-                                {loading ? <CircularProgress color="inherit" size={20} /> : null}
+                                {loading ? (
+                                    <CircularProgress color="inherit" size={20} id="loading-suggestions" />
+                                ) : null}
                                 {params.InputProps.endAdornment}
                             </React.Fragment>
                         ),
@@ -141,7 +141,7 @@ AutoCompleteAsynchronousField.propTypes = {
     filterOptions: PropTypes.func.isRequired,
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     itemsLoading: PropTypes.bool,
     loadSuggestions: PropTypes.func,

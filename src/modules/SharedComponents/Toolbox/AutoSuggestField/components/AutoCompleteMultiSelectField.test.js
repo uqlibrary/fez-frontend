@@ -43,7 +43,7 @@ describe('AutoCompleteMultiSelectField component', () => {
         expect(getAllByRole('option')[2]).toHaveTextContent('apple juice');
     });
 
-    it('should render component and select options as you type', async() => {
+    it('should render component and select options', async() => {
         const { getByTestId, getByRole, getAllByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
