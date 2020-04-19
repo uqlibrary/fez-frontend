@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { useConfirmationState } from 'hooks';
 
 import Button from '@material-ui/core/Button';
@@ -118,156 +119,158 @@ export const MyIncompleteRecord = props => {
     return (
         <StandardPage title={txt.title} help={txt.help}>
             <PublicationCitation publication={recordToFix} hideContentIndicators />
-            <form onSubmit={_handleDefaultSubmit}>
-                <NavigationDialogBox when={dirty && !submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
-                <ConfirmationBox
-                    onAction={_navigateToDashboard}
-                    onClose={hideConfirmation}
-                    onCancelAction={_navigateToMyIncomplete}
-                    isOpen={isOpen}
-                    locale={saveConfirmationLocale}
-                />
-                <Grid container spacing={3}>
-                    <Grid item xs={12}>
-                        <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                            <Grid container spacing={1} className={classes.GridType}>
-                                {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                    <Grid container spacing={2} alignItems="flex-start">
-                                        <Grid item xs={12} sm={3}>
-                                            <Typography variant="body2">
-                                                {
-                                                    viewRecordLocale.viewRecord.headings.default.publicationDetails
-                                                        .rek_display_type
-                                                }
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={12} sm={9}>
-                                            <Typography variant="body2">
-                                                {recordToFix.rek_display_type_lookup}
-                                            </Typography>
-                                        </Grid>
-                                    </Grid>
-                                )}
-                            </Grid>
-                            <Grid container spacing={1} className={classes.GridSubType}>
-                                {!!recordToFix && !!recordToFix.rek_subtype && (
-                                    <Grid container spacing={2} alignItems="flex-start">
-                                        <Grid item xs={12} sm={3}>
-                                            <Typography variant="body2">
-                                                {
-                                                    viewRecordLocale.viewRecord.headings.default.publicationDetails
-                                                        .rek_subtype
-                                                }
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={12} sm={9}>
-                                            <Typography variant="body2">{recordToFix.rek_subtype}</Typography>
-                                        </Grid>
-                                    </Grid>
-                                )}
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                    {isNtro && (
-                        <NtroFields
-                            submitting={submitting}
-                            hideIsmn
-                            hideIsrc
-                            hideVolume
-                            hideIssue
-                            hideStartPage
-                            hideEndPage
-                            hideOriginalFormat
-                            hideSeries
-                            disableDeleteAllGrants={disableDeleteAllGrants}
-                            {...ntroFieldProps}
-                        />
-                    )}
-                    <Grid item xs={12}>
-                        <StandardCard title={authors.title} help={authors.help}>
-                            <Typography>{authors.description}</Typography>
-                            <Field
-                                component={ContributorsEditorField}
-                                editMode
-                                canEdit
-                                hideDelete
-                                hideReorder
-                                isNtro
-                                locale={txt.fields.authors.field}
-                                name="authorsAffiliation"
-                                required
-                                showContributorAssignment
-                            />
-                        </StandardCard>
-                    </Grid>
-
-                    <Grid item xs={12}>
-                        <StandardCard title={txt.fields.notes.title}>
-                            <Field
-                                style={{ marginTop: -24 }}
-                                component={TextField}
-                                name="comments"
-                                type="text"
-                                disabled={submitting}
-                                fullWidth
-                                multiline
-                                rows={5}
-                                label={txt.fields.notes.label}
-                                placeholder={txt.fields.notes.placeholder}
-                            />
-                        </StandardCard>
-                    </Grid>
-                    {!hasAnyFiles && (
+            <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+                <form onSubmit={_handleDefaultSubmit}>
+                    <NavigationDialogBox when={dirty && !submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
+                    <ConfirmationBox
+                        onAction={_navigateToDashboard}
+                        onClose={hideConfirmation}
+                        onCancelAction={_navigateToMyIncomplete}
+                        isOpen={isOpen}
+                        locale={saveConfirmationLocale}
+                    />
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
-                            <StandardCard title={txt.fields.fileUpload.title}>
+                            <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
+                                <Grid container spacing={1} className={classes.GridType}>
+                                    {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
+                                        <Grid container spacing={2} alignItems="flex-start">
+                                            <Grid item xs={12} sm={3}>
+                                                <Typography variant="body2">
+                                                    {
+                                                        viewRecordLocale.viewRecord.headings.default.publicationDetails
+                                                            .rek_display_type
+                                                    }
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item xs={12} sm={9}>
+                                                <Typography variant="body2">
+                                                    {recordToFix.rek_display_type_lookup}
+                                                </Typography>
+                                            </Grid>
+                                        </Grid>
+                                    )}
+                                </Grid>
+                                <Grid container spacing={1} className={classes.GridSubType}>
+                                    {!!recordToFix && !!recordToFix.rek_subtype && (
+                                        <Grid container spacing={2} alignItems="flex-start">
+                                            <Grid item xs={12} sm={3}>
+                                                <Typography variant="body2">
+                                                    {
+                                                        viewRecordLocale.viewRecord.headings.default.publicationDetails
+                                                            .rek_subtype
+                                                    }
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item xs={12} sm={9}>
+                                                <Typography variant="body2">{recordToFix.rek_subtype}</Typography>
+                                            </Grid>
+                                        </Grid>
+                                    )}
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                        {isNtro && (
+                            <NtroFields
+                                submitting={submitting}
+                                hideIsmn
+                                hideIsrc
+                                hideVolume
+                                hideIssue
+                                hideStartPage
+                                hideEndPage
+                                hideOriginalFormat
+                                hideSeries
+                                disableDeleteAllGrants={disableDeleteAllGrants}
+                                {...ntroFieldProps}
+                            />
+                        )}
+                        <Grid item xs={12}>
+                            <StandardCard title={authors.title} help={authors.help}>
+                                <Typography>{authors.description}</Typography>
                                 <Field
-                                    name="files"
-                                    component={FileUploadField}
-                                    disabled={submitting}
-                                    requireOpenAccessStatus
-                                    validate={[validation.fileUploadRequired, validation.validFileUpload]}
+                                    component={ContributorsEditorField}
+                                    editMode
+                                    canEdit
+                                    hideDelete
+                                    hideReorder
                                     isNtro
-                                    {...txt.fields.fileUpload}
+                                    locale={txt.fields.authors.field}
+                                    name="authorsAffiliation"
+                                    required
+                                    showContributorAssignment
                                 />
                             </StandardCard>
                         </Grid>
-                    )}
-                    {alertProps && (
+
                         <Grid item xs={12}>
-                            <Alert pushToTop {...alertProps} />
+                            <StandardCard title={txt.fields.notes.title}>
+                                <Field
+                                    style={{ marginTop: -24 }}
+                                    component={TextField}
+                                    name="comments"
+                                    type="text"
+                                    disabled={submitting}
+                                    fullWidth
+                                    multiline
+                                    rows={5}
+                                    label={txt.fields.notes.label}
+                                    placeholder={txt.fields.notes.placeholder}
+                                />
+                            </StandardCard>
                         </Grid>
-                    )}
-                </Grid>
-                <Grid container spacing={3}>
-                    <Hidden smDown>
-                        <Grid item xs />
-                    </Hidden>
-                    <Grid item xs={12} md="auto">
-                        <Button
-                            id="cancel-fix-work"
-                            variant="contained"
-                            fullWidth
-                            children={txt.cancelButtonLabel}
-                            disabled={submitting}
-                            onClick={_cancelFix}
-                        />
+                        {!hasAnyFiles && (
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.fields.fileUpload.title}>
+                                    <Field
+                                        name="files"
+                                        component={FileUploadField}
+                                        disabled={submitting}
+                                        requireOpenAccessStatus
+                                        validate={[validation.fileUploadRequired, validation.validFileUpload]}
+                                        isNtro
+                                        {...txt.fields.fileUpload}
+                                    />
+                                </StandardCard>
+                            </Grid>
+                        )}
+                        {alertProps && (
+                            <Grid item xs={12}>
+                                <Alert pushToTop {...alertProps} />
+                            </Grid>
+                        )}
                     </Grid>
-                    <Grid item xs={12} md="auto">
-                        <Button
-                            id="update-my-work"
-                            variant="contained"
-                            color="primary"
-                            fullWidth
-                            children={txt.submitButtonLabel}
-                            onClick={handleSubmit}
-                            disabled={submitting || disableSubmit}
-                        />
+                    <Grid container spacing={3}>
+                        <Hidden smDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} md="auto">
+                            <Button
+                                id="cancel-fix-work"
+                                variant="contained"
+                                fullWidth
+                                children={txt.cancelButtonLabel}
+                                disabled={submitting}
+                                onClick={_cancelFix}
+                            />
+                        </Grid>
+                        <Grid item xs={12} md="auto">
+                            <Button
+                                id="update-my-work"
+                                variant="contained"
+                                color="primary"
+                                fullWidth
+                                children={txt.submitButtonLabel}
+                                onClick={handleSubmit}
+                                disabled={submitting || disableSubmit}
+                            />
+                        </Grid>
                     </Grid>
-                </Grid>
-            </form>
+                </form>
+            </ConfirmDiscardFormChanges>
         </StandardPage>
     );
 };
