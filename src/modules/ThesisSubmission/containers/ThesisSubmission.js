@@ -8,7 +8,6 @@ import { general } from 'config';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { ReloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
 import { LocallyStoredReducerContext } from 'context';
 
@@ -23,7 +22,7 @@ const onSubmit = (values, dispatch, props) => {
 let ThesisSubmissionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
+})(ThesisSubmission);
 
 const mapStateToProps = (state, props) => {
     //  Get any initial values set during redux store initialisation
@@ -79,10 +78,7 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag, ...actions }, dispatch),
 });
 
-ThesisSubmissionContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ThesisSubmissionContainer);
+ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
 
 const ThesisSubmissionContainerWithReducer = () => (
     <ReloadReducerFromLocalStorage>

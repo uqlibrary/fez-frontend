@@ -114,487 +114,492 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
 <StandardPage
   title="Higher degree by research thesis deposit"
 >
-  <form>
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to abandon workflow?",
-          "confirmationTitle": "Abandon workflow",
+  <ConfirmDiscardFormChanges
+    dirty={true}
+    submitSucceeded={false}
+  >
+    <form>
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to abandon workflow?",
+            "confirmationTitle": "Abandon workflow",
+          }
         }
-      }
-      when={true}
-    />
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "No, continue editing",
-          "confirmButtonLabel": "Yes, deposit thesis",
-          "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
-          "confirmationTitle": "Thesis deposit",
+        when={true}
+      />
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "No, continue editing",
+            "confirmButtonLabel": "Yes, deposit thesis",
+            "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+            "confirmationTitle": "Thesis deposit",
+          }
         }
-      }
-      onAction={[MockFunction]}
-      onRef={[Function]}
-    />
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={3}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Thesis information"
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={3}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                height={50}
-                name="thesisTitle"
-                required={true}
-                title="Thesis title"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={6}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Author name"
-                name="currentAuthor.0.nameAsPublished"
-                placeholder=""
-                required={true}
-                rows={1}
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={6}
-              xs={12}
-            >
-              <Field
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.memo),
-                    "WrappedComponent": [Function],
-                    "compare": null,
-                    "displayName": "Connect(GenericSelectField)",
-                    "type": [Function],
-                  }
-                }
-                disabled={false}
-                id="thesis-subtype"
-                itemsList={
-                  Array [
-                    Object {
-                      "text": "Select a thesis type",
-                      "value": undefined,
-                    },
-                    Object {
-                      "text": "MPhil Thesis",
-                      "value": "MPhil Thesis",
-                    },
-                    Object {
-                      "text": "PhD Thesis",
-                      "value": "PhD Thesis",
-                    },
-                    Object {
-                      "text": "Professional Doctorate",
-                      "value": "Professional Doctorate",
-                    },
-                  ]
-                }
-                label="Thesis type"
-                name="rek_genre_type"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.memo),
-                    "WrappedComponent": Object {
-                      "$$typeof": Symbol(react.memo),
-                      "compare": null,
-                      "type": [Function],
-                    },
-                    "compare": null,
-                    "displayName": "Connect(Component)",
-                    "type": [Function],
-                  }
-                }
-                disabled={false}
-                floatingLabelText="Enrolling unit"
-                hintText="Enrolling unit, eg. School of Business"
-                name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                name="thesisAbstract"
-                required={true}
-                title="Abstract"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Supervisors"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "form": Object {
-                  "locale": Object {
-                    "addButton": "Add supervisor",
-                    "descriptionStep1": "",
-                    "descriptionStep1NoStep2": "List your current supervisors",
-                    "identifierLabel": "UQ identifier (if available)",
-                    "nameAsPublishedFieldId": "supervisors-name-as-published-field",
-                    "nameAsPublishedHint": "",
-                    "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
-                  },
-                },
-                "header": Object {
-                  "locale": Object {
-                    "contributorAssignmentColumn": "Select your name",
-                    "deleteAll": "Remove all items",
-                    "deleteAllConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete all items?",
-                      "confirmationTitle": "Delete all",
-                    },
-                    "descriptionStep2": "",
-                    "identifierColumn": "UQ identifier",
-                    "nameColumn": "Supervisor's name",
-                    "reorderColumn": "Reorder items",
-                  },
-                },
-                "row": Object {
-                  "locale": Object {
-                    "deleteButtonId": "delete-supervisor",
-                    "deleteHint": "Remove this item",
-                    "deleteRecordConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete this item?",
-                      "confirmationTitle": "Delete item",
-                    },
-                    "editButtonId": "edit-supervisor",
-                    "editHint": "Edit this item",
-                    "moveDownHint": "Move item down the order",
-                    "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this supervisor ([name]) to assign it as you",
-                    "suffix": " listed supervisor",
-                  },
-                },
-              }
-            }
-            name="supervisors"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Field of research"
-        >
-          <WithStyles(ForwardRef(Typography))>
-            Select up to 3 Field of Research (FoR) codes at the 4 digit level
-          </WithStyles(ForwardRef(Typography))>
-          <Field
-            component={[Function]}
-            disabled={false}
-            distinctOnly={true}
-            hideReorder={true}
-            locale={
-              Object {
-                "form": Object {
-                  "locale": Object {
-                    "inputFieldHint": "Start typing code or field name and select from list",
-                    "inputFieldLabel": "Field of research",
-                  },
-                },
-                "header": Object {
-                  "locale": Object {
-                    "deleteAll": "Remove all items",
-                    "deleteAllConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete all items?",
-                      "confirmationTitle": "Delete all",
-                    },
-                    "nameColumn": "Field of research",
-                  },
-                },
-                "row": Object {
-                  "locale": Object {
-                    "deleteHint": "Remove this item",
-                    "deleteRecordConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete this item?",
-                      "confirmationTitle": "Delete item",
-                    },
-                  },
-                },
-              }
-            }
-            maxCount={3}
-            name="fieldOfResearch"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Keywords"
-        >
-          <WithStyles(ForwardRef(Typography))>
-            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
-          </WithStyles(ForwardRef(Typography))>
-          <Field
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "form": Object {
-                  "locale": Object {
-                    "addButtonLabel": "Add",
-                    "editButtonLabel": "Update",
-                    "id": "keywords-input",
-                    "inputFieldHint": "Type keywords",
-                    "inputFieldLabel": "Keywords",
-                  },
-                },
-                "header": Object {
-                  "locale": Object {
-                    "deleteAll": "Remove all keywords",
-                    "deleteAllConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete all keywords?",
-                      "confirmationTitle": "Delete all",
-                    },
-                    "nameColumn": "Keyword",
-                    "reorderColumn": "Reorder keywords",
-                  },
-                },
-                "row": Object {
-                  "locale": Object {
-                    "deleteHint": "Remove this keyword",
-                    "deleteRecordConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete this keyword?",
-                      "confirmationTitle": "Delete keyword",
-                    },
-                    "editHint": "Edit this item",
-                    "moveDownHint": "Move keyword down the order",
-                    "moveUpHint": "Move keyword up the order",
-                  },
-                },
-              }
-            }
-            maxCount={10}
-            maxInputLength={111}
-            name="fez_record_search_key_keywords"
-            required={true}
-            searchKey={
-              Object {
-                "order": "rek_keywords_order",
-                "value": "rek_keywords",
-              }
-            }
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            defaultQuickTemplateId={3}
-            disabled={false}
-            locale={
-              Object {
-                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
-                "delayNotice": "Notice",
-                "errorTitle": "Upload Errors",
-                "fileUploadInstruction": <p>
-                  Click here to select files, or drag files into this area to upload
-                </p>,
-                "fileUploadRestrictionHeading": "File upload restrictions",
-                "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB. 
-                  <br />
-                  PDF files must be saved using the following naming structure
-                   
-                  <b>
-                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
-                  </b>
-                  . Document name could be thesis, abstract, and etc. For example:
-                  <ul>
-                    <li>
-                      s1234567_phd_thesis.pdf
-                    </li>
-                    <li>
-                      s1234567_phd_abstract.pdf
-                    </li>
-                  </ul>
-                  Supplementary audio files are to be in MP 3 format. 
-                  <br />
-                  Supplementary video files are to be in WMV or AVI format. 
-                  <br />
-                </div>,
-                "instructions": "",
-                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-                "successTitle": "Success",
-                "validation": Object {
-                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
-                  "notFiles": "Invalid files ([fileNames])",
-                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-                },
-              }
-            }
-            name="files"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={true}
-        xs={false}
+        onAction={[MockFunction]}
+        onRef={[Function]}
       />
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={3}
       >
-        <WithStyles(ForwardRef(Button))
-          disabled={false}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
-          Cancel
-        </WithStyles(ForwardRef(Button))>
+          <StandardCard
+            title="Thesis information"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={3}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  height={50}
+                  name="thesisTitle"
+                  required={true}
+                  title="Thesis title"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={6}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  label="Author name"
+                  name="currentAuthor.0.nameAsPublished"
+                  placeholder=""
+                  required={true}
+                  rows={1}
+                  type="text"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={6}
+                xs={12}
+              >
+                <Field
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "WrappedComponent": [Function],
+                      "compare": null,
+                      "displayName": "Connect(GenericSelectField)",
+                      "type": [Function],
+                    }
+                  }
+                  disabled={false}
+                  id="thesis-subtype"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Select a thesis type",
+                        "value": undefined,
+                      },
+                      Object {
+                        "text": "MPhil Thesis",
+                        "value": "MPhil Thesis",
+                      },
+                      Object {
+                        "text": "PhD Thesis",
+                        "value": "PhD Thesis",
+                      },
+                      Object {
+                        "text": "Professional Doctorate",
+                        "value": "Professional Doctorate",
+                      },
+                    ]
+                  }
+                  label="Thesis type"
+                  name="rek_genre_type"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "WrappedComponent": Object {
+                        "$$typeof": Symbol(react.memo),
+                        "compare": null,
+                        "type": [Function],
+                      },
+                      "compare": null,
+                      "displayName": "Connect(Component)",
+                      "type": [Function],
+                    }
+                  }
+                  disabled={false}
+                  floatingLabelText="Enrolling unit"
+                  hintText="Enrolling unit, eg. School of Business"
+                  name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  name="thesisAbstract"
+                  required={true}
+                  title="Abstract"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Supervisors"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "form": Object {
+                    "locale": Object {
+                      "addButton": "Add supervisor",
+                      "descriptionStep1": "",
+                      "descriptionStep1NoStep2": "List your current supervisors",
+                      "identifierLabel": "UQ identifier (if available)",
+                      "nameAsPublishedFieldId": "supervisors-name-as-published-field",
+                      "nameAsPublishedHint": "",
+                      "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
+                    },
+                  },
+                  "header": Object {
+                    "locale": Object {
+                      "contributorAssignmentColumn": "Select your name",
+                      "deleteAll": "Remove all items",
+                      "deleteAllConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete all items?",
+                        "confirmationTitle": "Delete all",
+                      },
+                      "descriptionStep2": "",
+                      "identifierColumn": "UQ identifier",
+                      "nameColumn": "Supervisor's name",
+                      "reorderColumn": "Reorder items",
+                    },
+                  },
+                  "row": Object {
+                    "locale": Object {
+                      "deleteButtonId": "delete-supervisor",
+                      "deleteHint": "Remove this item",
+                      "deleteRecordConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete this item?",
+                        "confirmationTitle": "Delete item",
+                      },
+                      "editButtonId": "edit-supervisor",
+                      "editHint": "Edit this item",
+                      "moveDownHint": "Move item down the order",
+                      "moveUpHint": "Move item up the order",
+                      "selectHint": "Select this supervisor ([name]) to assign it as you",
+                      "suffix": " listed supervisor",
+                    },
+                  },
+                }
+              }
+              name="supervisors"
+              required={true}
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Field of research"
+          >
+            <WithStyles(ForwardRef(Typography))>
+              Select up to 3 Field of Research (FoR) codes at the 4 digit level
+            </WithStyles(ForwardRef(Typography))>
+            <Field
+              component={[Function]}
+              disabled={false}
+              distinctOnly={true}
+              hideReorder={true}
+              locale={
+                Object {
+                  "form": Object {
+                    "locale": Object {
+                      "inputFieldHint": "Start typing code or field name and select from list",
+                      "inputFieldLabel": "Field of research",
+                    },
+                  },
+                  "header": Object {
+                    "locale": Object {
+                      "deleteAll": "Remove all items",
+                      "deleteAllConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete all items?",
+                        "confirmationTitle": "Delete all",
+                      },
+                      "nameColumn": "Field of research",
+                    },
+                  },
+                  "row": Object {
+                    "locale": Object {
+                      "deleteHint": "Remove this item",
+                      "deleteRecordConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete this item?",
+                        "confirmationTitle": "Delete item",
+                      },
+                    },
+                  },
+                }
+              }
+              maxCount={3}
+              name="fieldOfResearch"
+              required={true}
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Keywords"
+          >
+            <WithStyles(ForwardRef(Typography))>
+              Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
+            </WithStyles(ForwardRef(Typography))>
+            <Field
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "form": Object {
+                    "locale": Object {
+                      "addButtonLabel": "Add",
+                      "editButtonLabel": "Update",
+                      "id": "keywords-input",
+                      "inputFieldHint": "Type keywords",
+                      "inputFieldLabel": "Keywords",
+                    },
+                  },
+                  "header": Object {
+                    "locale": Object {
+                      "deleteAll": "Remove all keywords",
+                      "deleteAllConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete all keywords?",
+                        "confirmationTitle": "Delete all",
+                      },
+                      "nameColumn": "Keyword",
+                      "reorderColumn": "Reorder keywords",
+                    },
+                  },
+                  "row": Object {
+                    "locale": Object {
+                      "deleteHint": "Remove this keyword",
+                      "deleteRecordConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete this keyword?",
+                        "confirmationTitle": "Delete keyword",
+                      },
+                      "editHint": "Edit this item",
+                      "moveDownHint": "Move keyword down the order",
+                      "moveUpHint": "Move keyword up the order",
+                    },
+                  },
+                }
+              }
+              maxCount={10}
+              maxInputLength={111}
+              name="fez_record_search_key_keywords"
+              required={true}
+              searchKey={
+                Object {
+                  "order": "rek_keywords_order",
+                  "value": "rek_keywords",
+                }
+              }
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Upload files"
+          >
+            <Field
+              component={[Function]}
+              defaultQuickTemplateId={3}
+              disabled={false}
+              locale={
+                Object {
+                  "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+                  "delayNotice": "Notice",
+                  "errorTitle": "Upload Errors",
+                  "fileUploadInstruction": <p>
+                    Click here to select files, or drag files into this area to upload
+                  </p>,
+                  "fileUploadRestrictionHeading": "File upload restrictions",
+                  "fileUploadRestrictions": <div>
+                    Maximum file size is 8GB. 
+                    <br />
+                    PDF files must be saved using the following naming structure
+                     
+                    <b>
+                      &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                    </b>
+                    . Document name could be thesis, abstract, and etc. For example:
+                    <ul>
+                      <li>
+                        s1234567_phd_thesis.pdf
+                      </li>
+                      <li>
+                        s1234567_phd_abstract.pdf
+                      </li>
+                    </ul>
+                    Supplementary audio files are to be in MP 3 format. 
+                    <br />
+                    Supplementary video files are to be in WMV or AVI format. 
+                    <br />
+                  </div>,
+                  "instructions": "",
+                  "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                  "successTitle": "Success",
+                  "validation": Object {
+                    "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                    "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
+                    "notFiles": "Invalid files ([fileNames])",
+                    "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                    "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                  },
+                }
+              }
+              name="files"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={2}
       >
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-          fullWidth={true}
-          id="submit-thesis"
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={true}
+          xs={false}
+        />
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Deposit your thesis
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Cancel
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            id="submit-thesis"
+            onClick={[Function]}
+            variant="contained"
+          >
+            Deposit your thesis
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -657,487 +662,492 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
-  <form>
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to abandon workflow?",
-          "confirmationTitle": "Abandon workflow",
+  <ConfirmDiscardFormChanges
+    dirty={true}
+    submitSucceeded={false}
+  >
+    <form>
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to abandon workflow?",
+            "confirmationTitle": "Abandon workflow",
+          }
         }
-      }
-      when={true}
-    />
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "No, continue editing",
-          "confirmButtonLabel": "Yes, deposit thesis",
-          "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
-          "confirmationTitle": "Thesis deposit",
+        when={true}
+      />
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "No, continue editing",
+            "confirmButtonLabel": "Yes, deposit thesis",
+            "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+            "confirmationTitle": "Thesis deposit",
+          }
         }
-      }
-      onAction={[MockFunction]}
-      onRef={[Function]}
-    />
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={3}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Thesis information"
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={3}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                height={50}
-                name="thesisTitle"
-                required={true}
-                title="Thesis title"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={6}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Author name"
-                name="currentAuthor.0.nameAsPublished"
-                placeholder=""
-                required={true}
-                rows={1}
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={6}
-              xs={12}
-            >
-              <Field
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.memo),
-                    "WrappedComponent": [Function],
-                    "compare": null,
-                    "displayName": "Connect(GenericSelectField)",
-                    "type": [Function],
-                  }
-                }
-                disabled={false}
-                id="thesis-subtype"
-                itemsList={
-                  Array [
-                    Object {
-                      "text": "Select a thesis type",
-                      "value": undefined,
-                    },
-                    Object {
-                      "text": "MPhil Thesis",
-                      "value": "MPhil Thesis",
-                    },
-                    Object {
-                      "text": "PhD Thesis",
-                      "value": "PhD Thesis",
-                    },
-                    Object {
-                      "text": "Professional Doctorate",
-                      "value": "Professional Doctorate",
-                    },
-                  ]
-                }
-                label="Thesis type"
-                name="rek_genre_type"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.memo),
-                    "WrappedComponent": Object {
-                      "$$typeof": Symbol(react.memo),
-                      "compare": null,
-                      "type": [Function],
-                    },
-                    "compare": null,
-                    "displayName": "Connect(Component)",
-                    "type": [Function],
-                  }
-                }
-                disabled={false}
-                floatingLabelText="Enrolling unit"
-                hintText="Enrolling unit, eg. School of Business"
-                name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                name="thesisAbstract"
-                required={true}
-                title="Abstract"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Supervisors"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "form": Object {
-                  "locale": Object {
-                    "addButton": "Add supervisor",
-                    "descriptionStep1": "",
-                    "descriptionStep1NoStep2": "List your current supervisors",
-                    "identifierLabel": "UQ identifier (if available)",
-                    "nameAsPublishedFieldId": "supervisors-name-as-published-field",
-                    "nameAsPublishedHint": "",
-                    "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
-                  },
-                },
-                "header": Object {
-                  "locale": Object {
-                    "contributorAssignmentColumn": "Select your name",
-                    "deleteAll": "Remove all items",
-                    "deleteAllConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete all items?",
-                      "confirmationTitle": "Delete all",
-                    },
-                    "descriptionStep2": "",
-                    "identifierColumn": "UQ identifier",
-                    "nameColumn": "Supervisor's name",
-                    "reorderColumn": "Reorder items",
-                  },
-                },
-                "row": Object {
-                  "locale": Object {
-                    "deleteButtonId": "delete-supervisor",
-                    "deleteHint": "Remove this item",
-                    "deleteRecordConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete this item?",
-                      "confirmationTitle": "Delete item",
-                    },
-                    "editButtonId": "edit-supervisor",
-                    "editHint": "Edit this item",
-                    "moveDownHint": "Move item down the order",
-                    "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this supervisor ([name]) to assign it as you",
-                    "suffix": " listed supervisor",
-                  },
-                },
-              }
-            }
-            name="supervisors"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Field of research"
-        >
-          <WithStyles(ForwardRef(Typography))>
-            Select up to 3 Field of Research (FoR) codes at the 4 digit level
-          </WithStyles(ForwardRef(Typography))>
-          <Field
-            component={[Function]}
-            disabled={false}
-            distinctOnly={true}
-            hideReorder={true}
-            locale={
-              Object {
-                "form": Object {
-                  "locale": Object {
-                    "inputFieldHint": "Start typing code or field name and select from list",
-                    "inputFieldLabel": "Field of research",
-                  },
-                },
-                "header": Object {
-                  "locale": Object {
-                    "deleteAll": "Remove all items",
-                    "deleteAllConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete all items?",
-                      "confirmationTitle": "Delete all",
-                    },
-                    "nameColumn": "Field of research",
-                  },
-                },
-                "row": Object {
-                  "locale": Object {
-                    "deleteHint": "Remove this item",
-                    "deleteRecordConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete this item?",
-                      "confirmationTitle": "Delete item",
-                    },
-                  },
-                },
-              }
-            }
-            maxCount={3}
-            name="fieldOfResearch"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Keywords"
-        >
-          <WithStyles(ForwardRef(Typography))>
-            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
-          </WithStyles(ForwardRef(Typography))>
-          <Field
-            component={[Function]}
-            disabled={false}
-            locale={
-              Object {
-                "form": Object {
-                  "locale": Object {
-                    "addButtonLabel": "Add",
-                    "editButtonLabel": "Update",
-                    "id": "keywords-input",
-                    "inputFieldHint": "Type keywords",
-                    "inputFieldLabel": "Keywords",
-                  },
-                },
-                "header": Object {
-                  "locale": Object {
-                    "deleteAll": "Remove all keywords",
-                    "deleteAllConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete all keywords?",
-                      "confirmationTitle": "Delete all",
-                    },
-                    "nameColumn": "Keyword",
-                    "reorderColumn": "Reorder keywords",
-                  },
-                },
-                "row": Object {
-                  "locale": Object {
-                    "deleteHint": "Remove this keyword",
-                    "deleteRecordConfirmation": Object {
-                      "cancelButtonLabel": "No",
-                      "confirmButtonLabel": "Yes",
-                      "confirmationMessage": "Are you sure you want to delete this keyword?",
-                      "confirmationTitle": "Delete keyword",
-                    },
-                    "editHint": "Edit this item",
-                    "moveDownHint": "Move keyword down the order",
-                    "moveUpHint": "Move keyword up the order",
-                  },
-                },
-              }
-            }
-            maxCount={10}
-            maxInputLength={111}
-            name="fez_record_search_key_keywords"
-            required={true}
-            searchKey={
-              Object {
-                "order": "rek_keywords_order",
-                "value": "rek_keywords",
-              }
-            }
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Upload files"
-        >
-          <Field
-            component={[Function]}
-            defaultQuickTemplateId={3}
-            disabled={false}
-            locale={
-              Object {
-                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
-                "delayNotice": "Notice",
-                "errorTitle": "Upload Errors",
-                "fileUploadInstruction": <p>
-                  Click here to select files, or drag files into this area to upload
-                </p>,
-                "fileUploadRestrictionHeading": "File upload restrictions",
-                "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB. 
-                  <br />
-                  PDF files must be saved using the following naming structure
-                   
-                  <b>
-                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
-                  </b>
-                  . Document name could be thesis, abstract, and etc. For example:
-                  <ul>
-                    <li>
-                      s1234567_phd_thesis.pdf
-                    </li>
-                    <li>
-                      s1234567_phd_abstract.pdf
-                    </li>
-                  </ul>
-                  Supplementary audio files are to be in MP 3 format. 
-                  <br />
-                  Supplementary video files are to be in WMV or AVI format. 
-                  <br />
-                </div>,
-                "instructions": "",
-                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-                "successTitle": "Success",
-                "validation": Object {
-                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
-                  "notFiles": "Invalid files ([fileNames])",
-                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-                },
-              }
-            }
-            name="files"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={true}
-        xs={false}
+        onAction={[MockFunction]}
+        onRef={[Function]}
       />
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={3}
       >
-        <WithStyles(ForwardRef(Button))
-          disabled={false}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
-          Cancel
-        </WithStyles(ForwardRef(Button))>
+          <StandardCard
+            title="Thesis information"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={3}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  height={50}
+                  name="thesisTitle"
+                  required={true}
+                  title="Thesis title"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={6}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  label="Author name"
+                  name="currentAuthor.0.nameAsPublished"
+                  placeholder=""
+                  required={true}
+                  rows={1}
+                  type="text"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                sm={6}
+                xs={12}
+              >
+                <Field
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "WrappedComponent": [Function],
+                      "compare": null,
+                      "displayName": "Connect(GenericSelectField)",
+                      "type": [Function],
+                    }
+                  }
+                  disabled={false}
+                  id="thesis-subtype"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Select a thesis type",
+                        "value": undefined,
+                      },
+                      Object {
+                        "text": "MPhil Thesis",
+                        "value": "MPhil Thesis",
+                      },
+                      Object {
+                        "text": "PhD Thesis",
+                        "value": "PhD Thesis",
+                      },
+                      Object {
+                        "text": "Professional Doctorate",
+                        "value": "Professional Doctorate",
+                      },
+                    ]
+                  }
+                  label="Thesis type"
+                  name="rek_genre_type"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "WrappedComponent": Object {
+                        "$$typeof": Symbol(react.memo),
+                        "compare": null,
+                        "type": [Function],
+                      },
+                      "compare": null,
+                      "displayName": "Connect(Component)",
+                      "type": [Function],
+                    }
+                  }
+                  disabled={false}
+                  floatingLabelText="Enrolling unit"
+                  hintText="Enrolling unit, eg. School of Business"
+                  name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  name="thesisAbstract"
+                  required={true}
+                  title="Abstract"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Supervisors"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "form": Object {
+                    "locale": Object {
+                      "addButton": "Add supervisor",
+                      "descriptionStep1": "",
+                      "descriptionStep1NoStep2": "List your current supervisors",
+                      "identifierLabel": "UQ identifier (if available)",
+                      "nameAsPublishedFieldId": "supervisors-name-as-published-field",
+                      "nameAsPublishedHint": "",
+                      "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
+                    },
+                  },
+                  "header": Object {
+                    "locale": Object {
+                      "contributorAssignmentColumn": "Select your name",
+                      "deleteAll": "Remove all items",
+                      "deleteAllConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete all items?",
+                        "confirmationTitle": "Delete all",
+                      },
+                      "descriptionStep2": "",
+                      "identifierColumn": "UQ identifier",
+                      "nameColumn": "Supervisor's name",
+                      "reorderColumn": "Reorder items",
+                    },
+                  },
+                  "row": Object {
+                    "locale": Object {
+                      "deleteButtonId": "delete-supervisor",
+                      "deleteHint": "Remove this item",
+                      "deleteRecordConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete this item?",
+                        "confirmationTitle": "Delete item",
+                      },
+                      "editButtonId": "edit-supervisor",
+                      "editHint": "Edit this item",
+                      "moveDownHint": "Move item down the order",
+                      "moveUpHint": "Move item up the order",
+                      "selectHint": "Select this supervisor ([name]) to assign it as you",
+                      "suffix": " listed supervisor",
+                    },
+                  },
+                }
+              }
+              name="supervisors"
+              required={true}
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Field of research"
+          >
+            <WithStyles(ForwardRef(Typography))>
+              Select up to 3 Field of Research (FoR) codes at the 4 digit level
+            </WithStyles(ForwardRef(Typography))>
+            <Field
+              component={[Function]}
+              disabled={false}
+              distinctOnly={true}
+              hideReorder={true}
+              locale={
+                Object {
+                  "form": Object {
+                    "locale": Object {
+                      "inputFieldHint": "Start typing code or field name and select from list",
+                      "inputFieldLabel": "Field of research",
+                    },
+                  },
+                  "header": Object {
+                    "locale": Object {
+                      "deleteAll": "Remove all items",
+                      "deleteAllConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete all items?",
+                        "confirmationTitle": "Delete all",
+                      },
+                      "nameColumn": "Field of research",
+                    },
+                  },
+                  "row": Object {
+                    "locale": Object {
+                      "deleteHint": "Remove this item",
+                      "deleteRecordConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete this item?",
+                        "confirmationTitle": "Delete item",
+                      },
+                    },
+                  },
+                }
+              }
+              maxCount={3}
+              name="fieldOfResearch"
+              required={true}
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Keywords"
+          >
+            <WithStyles(ForwardRef(Typography))>
+              Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
+            </WithStyles(ForwardRef(Typography))>
+            <Field
+              component={[Function]}
+              disabled={false}
+              locale={
+                Object {
+                  "form": Object {
+                    "locale": Object {
+                      "addButtonLabel": "Add",
+                      "editButtonLabel": "Update",
+                      "id": "keywords-input",
+                      "inputFieldHint": "Type keywords",
+                      "inputFieldLabel": "Keywords",
+                    },
+                  },
+                  "header": Object {
+                    "locale": Object {
+                      "deleteAll": "Remove all keywords",
+                      "deleteAllConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete all keywords?",
+                        "confirmationTitle": "Delete all",
+                      },
+                      "nameColumn": "Keyword",
+                      "reorderColumn": "Reorder keywords",
+                    },
+                  },
+                  "row": Object {
+                    "locale": Object {
+                      "deleteHint": "Remove this keyword",
+                      "deleteRecordConfirmation": Object {
+                        "cancelButtonLabel": "No",
+                        "confirmButtonLabel": "Yes",
+                        "confirmationMessage": "Are you sure you want to delete this keyword?",
+                        "confirmationTitle": "Delete keyword",
+                      },
+                      "editHint": "Edit this item",
+                      "moveDownHint": "Move keyword down the order",
+                      "moveUpHint": "Move keyword up the order",
+                    },
+                  },
+                }
+              }
+              maxCount={10}
+              maxInputLength={111}
+              name="fez_record_search_key_keywords"
+              required={true}
+              searchKey={
+                Object {
+                  "order": "rek_keywords_order",
+                  "value": "rek_keywords",
+                }
+              }
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            title="Upload files"
+          >
+            <Field
+              component={[Function]}
+              defaultQuickTemplateId={3}
+              disabled={false}
+              locale={
+                Object {
+                  "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+                  "delayNotice": "Notice",
+                  "errorTitle": "Upload Errors",
+                  "fileUploadInstruction": <p>
+                    Click here to select files, or drag files into this area to upload
+                  </p>,
+                  "fileUploadRestrictionHeading": "File upload restrictions",
+                  "fileUploadRestrictions": <div>
+                    Maximum file size is 8GB. 
+                    <br />
+                    PDF files must be saved using the following naming structure
+                     
+                    <b>
+                      &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                    </b>
+                    . Document name could be thesis, abstract, and etc. For example:
+                    <ul>
+                      <li>
+                        s1234567_phd_thesis.pdf
+                      </li>
+                      <li>
+                        s1234567_phd_abstract.pdf
+                      </li>
+                    </ul>
+                    Supplementary audio files are to be in MP 3 format. 
+                    <br />
+                    Supplementary video files are to be in WMV or AVI format. 
+                    <br />
+                  </div>,
+                  "instructions": "",
+                  "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                  "successTitle": "Success",
+                  "validation": Object {
+                    "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                    "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
+                    "notFiles": "Invalid files ([fileNames])",
+                    "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                    "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                  },
+                }
+              }
+              name="files"
+              validate={
+                Array [
+                  [Function],
+                ]
+              }
+            />
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={2}
       >
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-          fullWidth={true}
-          id="submit-thesis"
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={true}
+          xs={false}
+        />
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Deposit your thesis
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Cancel
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            id="submit-thesis"
+            onClick={[Function]}
+            variant="contained"
+          >
+            Deposit your thesis
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
