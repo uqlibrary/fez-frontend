@@ -10,7 +10,6 @@ import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 import moment from 'moment';
 
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { ReloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
 import { LocallyStoredReducerContext } from 'context';
 
@@ -25,7 +24,7 @@ const onSubmit = (values, dispatch, props) => {
 let SbsSubmissionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(SbsSubmission, FORM_NAME));
+})(SbsSubmission);
 
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
@@ -78,10 +77,7 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag, ...actions }, dispatch),
 });
 
-SbsSubmissionContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(SbsSubmissionContainer);
+SbsSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(SbsSubmissionContainer);
 
 SbsSubmissionContainer = withRouter(SbsSubmissionContainer);
 
