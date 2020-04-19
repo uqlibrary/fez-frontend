@@ -4,100 +4,105 @@ exports[`Collection form should display successfull submission screen 1`] = `
 <StandardPage
   title="Add a missing collection"
 >
-  <form>
-    <NavigationDialogBox
-      when={false}
-    />
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={3}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          help={Object {}}
-          title="Add a missing collection"
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={3}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                label="Select community"
-                name="fez_record_search_key_ismemberof"
-                placeholder="Select a community this collection is a member of"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <Alert
-          allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
-          message="New work has been saved successfully."
-          showLoader={false}
-          title="Success"
-          type="done"
-        />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={true}
-        xs={false}
+  <ConfirmDiscardFormChanges
+    dirty={true}
+    submitSucceeded={true}
+  >
+    <form>
+      <NavigationDialogBox
+        when={false}
       />
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={3}
       >
-        <WithStyles(ForwardRef(Button))
-          disabled={false}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
-          Return to the homepage
-        </WithStyles(ForwardRef(Button))>
+          <StandardCard
+            help={Object {}}
+            title="Add a missing collection"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={3}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  label="Select community"
+                  name="fez_record_search_key_ismemberof"
+                  placeholder="Select a community this collection is a member of"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Alert
+            allowDismiss={false}
+            dismissTitle="Click to dismiss this alert"
+            message="New work has been saved successfully."
+            showLoader={false}
+            title="Success"
+            type="done"
+          />
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={2}
       >
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={true}
+          xs={false}
+        />
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Add collection
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Return to the homepage
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            onClick={[MockFunction]}
+            variant="contained"
+          >
+            Add collection
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -105,87 +110,92 @@ exports[`Collection form should render form with only the community dropdown 1`]
 <StandardPage
   title="Add a missing collection"
 >
-  <form>
-    <NavigationDialogBox
-      when={true}
-    />
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={3}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          help={Object {}}
-          title="Add a missing collection"
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={3}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                label="Select community"
-                name="fez_record_search_key_ismemberof"
-                placeholder="Select a community this collection is a member of"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={true}
-        xs={false}
+  <ConfirmDiscardFormChanges
+    dirty={true}
+    submitSucceeded={false}
+  >
+    <form>
+      <NavigationDialogBox
+        when={true}
       />
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={3}
       >
-        <WithStyles(ForwardRef(Button))
-          disabled={false}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
-          Return to the homepage
-        </WithStyles(ForwardRef(Button))>
+          <StandardCard
+            help={Object {}}
+            title="Add a missing collection"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={3}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  label="Select community"
+                  name="fez_record_search_key_ismemberof"
+                  placeholder="Select a community this collection is a member of"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={2}
       >
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={true}
+          xs={false}
+        />
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Add collection
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Return to the homepage
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            onClick={[MockFunction]}
+            variant="contained"
+          >
+            Add collection
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -249,202 +259,207 @@ exports[`Collection form should render the full form 1`] = `
 <StandardPage
   title="Add a missing collection"
 >
-  <form>
-    <NavigationDialogBox
-      when={true}
-    />
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={3}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          help={Object {}}
-          title="Add a missing collection"
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={3}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                label="Select community"
-                name="fez_record_search_key_ismemberof"
-                placeholder="Select a community this collection is a member of"
-                required={true}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          help={Object {}}
-          title="Collection details"
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={3}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                autoFocus={true}
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Title of collection"
-                name="rek_title"
-                placeholder="Type a title for this collection"
-                required={true}
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Collection description"
-                multiline={true}
-                name="rek_description"
-                placeholder="Type a description of this collection."
-                required={true}
-                rows={5}
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Typography))>
-                Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.
-              </WithStyles(ForwardRef(Typography))>
-              <Field
-                component={[Function]}
-                disabled={false}
-                locale={
-                  Object {
-                    "form": Object {
-                      "locale": Object {
-                        "addButtonLabel": "Add",
-                        "id": "keywords-input",
-                        "inputFieldHint": "Type keywords",
-                        "inputFieldLabel": "Keywords",
-                      },
-                    },
-                    "header": Object {
-                      "locale": Object {
-                        "deleteAll": "Remove all keywords",
-                        "deleteAllConfirmation": Object {
-                          "cancelButtonLabel": "No",
-                          "confirmButtonLabel": "Yes",
-                          "confirmationMessage": "Are you sure you want to delete all keywords?",
-                          "confirmationTitle": "Delete all",
-                        },
-                        "nameColumn": "Keyword",
-                        "reorderColumn": "Reorder keywords",
-                      },
-                    },
-                    "row": Object {
-                      "locale": Object {
-                        "deleteHint": "Remove this keyword",
-                        "deleteRecordConfirmation": Object {
-                          "cancelButtonLabel": "No",
-                          "confirmButtonLabel": "Yes",
-                          "confirmationMessage": "Are you sure you want to delete this keyword?",
-                          "confirmationTitle": "Delete keyword",
-                        },
-                        "moveDownHint": "Move keyword down the order",
-                        "moveUpHint": "Move keyword up the order",
-                      },
-                    },
-                  }
-                }
-                maxCount={10}
-                maxInputLength={111}
-                name="fez_record_search_key_keywords"
-                searchKey={
-                  Object {
-                    "order": "rek_keywords_order",
-                    "value": "rek_keywords",
-                  }
-                }
-              />
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </StandardCard>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={true}
-        xs={false}
+  <ConfirmDiscardFormChanges
+    dirty={true}
+    submitSucceeded={false}
+  >
+    <form>
+      <NavigationDialogBox
+        when={true}
       />
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={3}
       >
-        <WithStyles(ForwardRef(Button))
-          disabled={false}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
-          Return to the homepage
-        </WithStyles(ForwardRef(Button))>
+          <StandardCard
+            help={Object {}}
+            title="Add a missing collection"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={3}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  label="Select community"
+                  name="fez_record_search_key_ismemberof"
+                  placeholder="Select a community this collection is a member of"
+                  required={true}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <StandardCard
+            help={Object {}}
+            title="Collection details"
+          >
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              spacing={3}
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  autoFocus={true}
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  label="Title of collection"
+                  name="rek_title"
+                  placeholder="Type a title for this collection"
+                  required={true}
+                  type="text"
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  label="Collection description"
+                  multiline={true}
+                  name="rek_description"
+                  placeholder="Type a description of this collection."
+                  required={true}
+                  rows={5}
+                  validate={
+                    Array [
+                      [Function],
+                    ]
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <WithStyles(ForwardRef(Typography))>
+                  Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.
+                </WithStyles(ForwardRef(Typography))>
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  locale={
+                    Object {
+                      "form": Object {
+                        "locale": Object {
+                          "addButtonLabel": "Add",
+                          "id": "keywords-input",
+                          "inputFieldHint": "Type keywords",
+                          "inputFieldLabel": "Keywords",
+                        },
+                      },
+                      "header": Object {
+                        "locale": Object {
+                          "deleteAll": "Remove all keywords",
+                          "deleteAllConfirmation": Object {
+                            "cancelButtonLabel": "No",
+                            "confirmButtonLabel": "Yes",
+                            "confirmationMessage": "Are you sure you want to delete all keywords?",
+                            "confirmationTitle": "Delete all",
+                          },
+                          "nameColumn": "Keyword",
+                          "reorderColumn": "Reorder keywords",
+                        },
+                      },
+                      "row": Object {
+                        "locale": Object {
+                          "deleteHint": "Remove this keyword",
+                          "deleteRecordConfirmation": Object {
+                            "cancelButtonLabel": "No",
+                            "confirmButtonLabel": "Yes",
+                            "confirmationMessage": "Are you sure you want to delete this keyword?",
+                            "confirmationTitle": "Delete keyword",
+                          },
+                          "moveDownHint": "Move keyword down the order",
+                          "moveUpHint": "Move keyword up the order",
+                        },
+                      },
+                    }
+                  }
+                  maxCount={10}
+                  maxInputLength={111}
+                  name="fez_record_search_key_keywords"
+                  searchKey={
+                    Object {
+                      "order": "rek_keywords_order",
+                      "value": "rek_keywords",
+                    }
+                  }
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </StandardCard>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
+        container={true}
+        spacing={2}
       >
-        <WithStyles(ForwardRef(Button))
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          variant="contained"
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={true}
+          xs={false}
+        />
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
         >
-          Add collection
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            disabled={false}
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            Return to the homepage
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm="auto"
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            onClick={[MockFunction]}
+            variant="contained"
+          >
+            Add collection
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;

@@ -4,7 +4,6 @@ import Immutable from 'immutable';
 import CommunityForm from '../components/CommunityForm';
 import { createCommunity, checkSession, clearSessionExpiredFlag } from 'actions';
 import { bindActionCreators } from 'redux';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'Community';
 
@@ -20,7 +19,7 @@ const onSubmit = (values, dispatch, props) => {
 const CommunityContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(CommunityForm, FORM_NAME));
+})(CommunityForm);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -38,7 +37,4 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag }, dispatch),
 });
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(CommunityContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CommunityContainer);
