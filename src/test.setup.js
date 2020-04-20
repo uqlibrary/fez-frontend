@@ -26,9 +26,7 @@ const setupStoreForActions = () => {
     return mockStore({});
 };
 
-export const setupStoreForMount = () => {
-    const initialState = Immutable.Map();
-
+export const setupStoreForMount = (initialState = Immutable.Map()) => {
     const store = {
         getState: jest.fn(() => initialState),
         dispatch: jest.fn(),
@@ -100,7 +98,7 @@ global.setupMockAdapter = setupMockAdapter;
 global.setupSessionMockAdapter = setupSessionMockAdapter;
 global.mockApi = setupMockAdapter();
 global.mockSessionApi = setupSessionMockAdapter();
-global.setupStoreForMount = setupStoreForMount();
+global.setupStoreForMount = setupStoreForMount;
 
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 

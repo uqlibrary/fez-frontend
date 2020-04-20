@@ -11,3 +11,4 @@ export { FilteredFieldOfResearchListField } from './containers/FieldOfResearchLi
 export { UqIdField } from './containers/UqIdField';
 export { RoleField } from './containers/RoleField';
 export { RelatedDatasetAndPublicationListField } from './containers/RelatedDatasetAndPublicationListField';
+export { CollectionField } from './containers/CollectionField';

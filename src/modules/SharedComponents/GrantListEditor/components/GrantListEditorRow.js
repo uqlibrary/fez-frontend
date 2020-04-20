@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
+import Edit from '@material-ui/icons/Edit';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import Hidden from '@material-ui/core/Hidden';
 import { ORG_TYPES_LOOKUP } from 'config/general';
@@ -47,6 +48,7 @@ export const styles = theme => ({
 
 export class GrantListEditorRow extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
         index: PropTypes.number.isRequired,
         grant: PropTypes.object.isRequired,
         canMoveUp: PropTypes.bool,
@@ -54,6 +56,7 @@ export class GrantListEditorRow extends PureComponent {
         onMoveUp: PropTypes.func,
         onMoveDown: PropTypes.func,
         onDelete: PropTypes.func,
+        onEdit: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
@@ -61,11 +64,14 @@ export class GrantListEditorRow extends PureComponent {
     };
 
     static defaultProps = {
+        canEdit: false,
         locale: {
             suffix: ' grant',
             moveUpHint: 'Move entry up the order',
             moveDownHint: 'Move entry down the order',
             deleteHint: 'Remove this entry',
+            editHint: 'Edit this entry',
+            editButtonId: 'edit-grant-info',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete entry',
                 confirmationMessage: 'Are you sure you want to delete this entry?',
@@ -101,6 +107,10 @@ export class GrantListEditorRow extends PureComponent {
         if (!this.props.disabled && this.props.onMoveDown) {
             this.props.onMoveDown(this.props.grant, this.props.index);
         }
+    };
+
+    _handleEdit = () => {
+        this.props.onEdit(this.props.grant, this.props.index);
     };
 
     getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
@@ -150,8 +160,16 @@ export class GrantListEditorRow extends PureComponent {
     };
 
     render() {
-        const { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint } = this.props.locale;
-        const { grant, canMoveDown, canMoveUp, disabled, classes } = this.props;
+        const {
+            deleteRecordConfirmation,
+            moveUpHint,
+            moveDownHint,
+            deleteHint,
+            editHint,
+            selectHint,
+            editButtonId,
+        } = this.props.locale;
+        const { grant, canMoveDown, canMoveUp, disabled, classes, canEdit, index } = this.props;
         const ariaLabel =
             selectHint && selectHint.indexOf('[name]') > -1
                 ? selectHint.replace('[name]', grant.nameAsPublished)
@@ -208,6 +226,25 @@ export class GrantListEditorRow extends PureComponent {
                                                     </IconButton>
                                                 </div>
                                             </Tooltip>
+                                            {canEdit && (
+                                                <Tooltip
+                                                    title={editHint}
+                                                    disableFocusListener={disabled}
+                                                    disableHoverListener={disabled}
+                                                    disableTouchListener={disabled}
+                                                >
+                                                    <span>
+                                                        <IconButton
+                                                            aria-label={editHint}
+                                                            onClick={this._handleEdit}
+                                                            disabled={disabled}
+                                                            id={`${editButtonId}-${index}`}
+                                                        >
+                                                            <Edit />
+                                                        </IconButton>
+                                                    </span>
+                                                </Tooltip>
+                                            )}
                                         </Grid>
                                     </Hidden>
                                     <Grid

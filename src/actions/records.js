@@ -4,7 +4,9 @@ import {
     EXISTING_RECORD_API,
     RECORDS_ISSUES_API,
     NEW_COLLECTION_API,
+    EXISTING_COLLECTION_API,
     NEW_COMMUNITY_API,
+    EXISTING_COMMUNITY_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
@@ -332,6 +334,36 @@ export function createCollection(data, authorId) {
     };
 }
 
+export const updateCollection = ({ pid, date, updated }) => {
+    return dispatch => {
+        dispatch({
+            type: actions.COLLECTION_UPDATING,
+        });
+        const patchRecordRequest = {
+            rek_date: date,
+            ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
+        };
+        return Promise.resolve([])
+            .then(() => patch(EXISTING_COLLECTION_API({ pid }), patchRecordRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.COLLECTION_UPDATE_SUCCESS,
+                    payload: {
+                        ...response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.COLLECTION_UPDATE_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+};
+
 /**
  * Save a new community involves a single request.
  * If error occurs on any stage failed action is dispatched
@@ -366,6 +398,36 @@ export function createCommunity(data, authorId) {
     };
 }
 
+export const updateCommunity = ({ pid, date, updated }) => {
+    return dispatch => {
+        dispatch({
+            type: actions.COMMUNITY_UPDATING,
+        });
+        const patchRecordRequest = {
+            rek_date: date,
+            ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
+        };
+        return Promise.resolve([])
+            .then(() => patch(EXISTING_COMMUNITY_API({ pid }), patchRecordRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.COMMUNITY_UPDATE_SUCCESS,
+                    payload: {
+                        ...response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.COMMUNITY_UPDATE_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+};
+
 /**
  * Clear new record
  * @returns {action}
@@ -381,6 +443,44 @@ export function clearNewRecord() {
 const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
 const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
+const getAdminRecordRequest = data => {
+    const { files, ...restFilesSection } = data.filesSection || {};
+    const hasFilesToUpload = files && files.queue && files.queue.length > 0;
+    // delete extra form values from request object
+    const keys = [
+        'pid',
+        'recordType',
+        'publication',
+        'adminSection',
+        'identifiersSection',
+        'bibliographicSection',
+        'authorsSection',
+        'grantInformationSection',
+        'ntroSection',
+        'filesSection',
+        'securitySection',
+    ];
+
+    return [
+        {
+            ...sanitiseData(data, makeReplacer(keys)),
+            ...transformers.getAdminSectionSearchKeys(data.adminSection),
+            ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
+            ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+            ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
+            ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
+            ...transformers.getNtroSectionSearchKeys(data.ntroSection),
+            ...transformers.getFilesSectionSearchKeys(restFilesSection),
+            ...transformers.getSecuritySectionSearchKeys(
+                data.securitySection,
+                (data.filesSection || {}).fez_datastream_info || [],
+            ),
+        },
+        hasFilesToUpload,
+        hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(files.queue) : null,
+    ];
+};
+
 /**
  * Update work request for admins: patch record
  * If error occurs on any stage failed action is displayed
@@ -388,44 +488,116 @@ const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function adminUpdate(data) {
+    const { files } = data.filesSection || {};
     return dispatch => {
         dispatch({
             type: actions.ADMIN_UPDATE_WORK_PROCESSING,
         });
 
-        // delete extra form values from request object
-        const keys = ['pid', 'recordType', 'publication', 'securitySection', 'collection', 'subject'];
-
-        // if user updated NTRO data - update record
-        let patchRecordRequest = null;
-        patchRecordRequest = {
-            ...sanitiseData(data, makeReplacer(keys)),
-            ...transformers.getSecuritySectionSearchKeys(data.securitySection),
-        };
+        const [patchRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
 
         return Promise.resolve([])
+            .then(() => (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch) : null))
             .then(() =>
-                patch(
-                    EXISTING_RECORD_API({
-                        pid: data.publication.rek_pid,
-                    }),
-                    patchRecordRequest,
-                ),
+                hasFilesToUpload
+                    ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
+                        ...patchRecordRequest,
+                        ...patchFilesRequest,
+                    })
+                    : patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
-            .then(responses => {
+            .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_SUCCESS,
                     payload: {
-                        pid: data.publication.rek_pid,
+                        pid: response.data,
                     },
                 });
-                return Promise.resolve(responses);
+                return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_FAILED,
                     payload: error.message,
                 });
+                return Promise.reject(error);
+            });
+    };
+}
+
+/**
+ * Clear new admin record
+ * @returns {action}
+ */
+export function adminReset() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_CREATE_RECORD_RESET,
+        });
+    };
+}
+
+/**
+ * Save a new record as an admin involves multiple requests.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function adminCreate(data) {
+    const {
+        filesSection: { files },
+    } = data;
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_CREATE_RECORD_SAVING,
+        });
+
+        let newRecord = null;
+        const [createRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
+
+        return post(NEW_RECORD_API(), {
+            ...NEW_RECORD_DEFAULT_VALUES,
+            ...createRecordRequest,
+        })
+            .then(response => {
+                newRecord = response.data;
+                return response;
+            })
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload
+                    ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), patchFilesRequest)
+                    : newRecord,
+            )
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_CREATE_RECORD_SUCCESS,
+                    payload: {
+                        newRecord: response.data ? response.data : newRecord,
+                        fileUploadOrIssueFailed: false,
+                    },
+                });
+                return Promise.resolve(response.data ? response.data : newRecord);
+            })
+            .catch(error => {
+                // record was created, but file upload or record patch failed or issue post failed
+                if (!!newRecord && !!newRecord.rek_pid) {
+                    dispatch({
+                        type: actions.ADMIN_CREATE_RECORD_SUCCESS,
+                        payload: {
+                            newRecord: newRecord,
+                            fileUploadOrIssueFailed: true,
+                        },
+                    });
+
+                    return Promise.resolve(newRecord);
+                }
+
+                dispatch({
+                    type: actions.ADMIN_CREATE_RECORD_FAILED,
+                    payload: error.message,
+                });
+
                 return Promise.reject(error);
             });
     };

@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssnRowItemTemplate component should render a value 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span>
+      1234-1234
+    </span>
+     
+    <WithStyles(ExternalLink)
+      aria-label="Check publisher's OA archiving policy in a new window"
+      href="http://example.com/sherpa?issn=1234-1234"
+      title="Check publisher's OA archiving policy"
+    >
+      SHERPA/RoMEO
+    </WithStyles(ExternalLink)>
+    <span>
+        
+    </span>
+    <WithStyles(ExternalLink)
+      aria-label="Source publisher name/place and alternate ISSNs in a new window"
+      href="http://example.com/ulrichs?id=1234"
+    >
+      Ulrichs
+    </WithStyles(ExternalLink)>
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
+exports[`IssnRowItemTemplate component should render default view 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span>
+      <Component />
+    </span>
+     
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
+exports[`IssnRowItemTemplate component should render link data from API 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span>
+      1234-1234
+    </span>
+     
+    <WithStyles(ExternalLink)
+      aria-label="Check publisher's OA archiving policy in a new window"
+      href="1234"
+      title="Check publisher's OA archiving policy"
+    >
+      SHERPA/RoMEO
+    </WithStyles(ExternalLink)>
+    <span>
+        
+    </span>
+    <WithStyles(ExternalLink)
+      aria-label="Source publisher name/place and alternate ISSNs in a new window"
+      href="1234"
+    >
+      Ulrichs
+    </WithStyles(ExternalLink)>
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
+exports[`IssnRowItemTemplate component should skip missing ulrichs or sherparomeo 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span>
+      1235-1235
+    </span>
+     
+  </WithStyles(Typography)>
+</Fragment>
+`;

@@ -2,7 +2,7 @@ import React from 'react';
 import ListEditor from './ListEditor';
 import { List } from 'immutable';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, args = {}) {
     const props = {
         className: 'testClass', // : PropTypes.string,
         searchKey: { value: 'value', order: 'order' }, // : PropTypes.object.isRequired,
@@ -14,9 +14,11 @@ function setup(testProps = {}) {
         hideReorder: false,
         distinctOnly: false,
         errorText: '',
+        scrollList: testProps.scrollList || false,
+        scrollListHeight: testProps.scrollListHeight || 250,
         ...testProps,
     };
-    return getElement(ListEditor, props);
+    return getElement(ListEditor, props, args);
 }
 
 describe('ListEditor tests', () => {
@@ -42,6 +44,17 @@ describe('ListEditor tests', () => {
         expect(wrapper.state().itemList.length).toEqual(0);
         wrapper.instance().addItem({ id: 'test', value: 'test value' });
         expect(wrapper.state().itemList.length).toEqual(1);
+    });
+
+    it('should update an object item in the list', () => {
+        const wrapper = setup();
+        expect(wrapper.state().itemList.length).toEqual(0);
+        wrapper.instance().addItem({ id: 'test', value: 'test value' });
+        expect(wrapper.state().itemList.length).toEqual(1);
+        wrapper.instance().editItem(0);
+        wrapper.instance().addItem({ id: 'test', value: 'testing value' });
+        expect(wrapper.state().itemList.length).toEqual(1);
+        expect(wrapper.state().itemList).toEqual([{ id: 'test', value: 'testing value' }]);
     });
 
     it('should render items not more than maxCount', () => {
@@ -216,5 +229,61 @@ describe('ListEditor tests', () => {
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Should render a list of many items in a scrollable HTML div', () => {
+        const wrapper = setup({ scrollList: true, scrollListHeight: 250 });
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        expect(wrapper.state().itemList.length).toEqual(3);
+        wrapper.setState({ itemList: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'] });
+        expect(wrapper.state().itemList.length).toEqual(10);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Should render a list of many items inline', () => {
+        const wrapper2 = setup({ scrollList: false, scrollListHeight: 250 });
+        wrapper2.setState({ itemList: ['one', 'two', 'three'] });
+        expect(wrapper2.state().itemList.length).toEqual(3);
+        wrapper2.setState({
+            itemList: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
+        });
+        expect(wrapper2.state().itemList.length).toEqual(10);
+        expect(toJson(wrapper2)).toMatchSnapshot();
+    });
+
+    it('Should render a list of many items inline', () => {
+        const wrapper2 = setup({ scrollList: false });
+        wrapper2.setState({ itemList: ['one', 'two', 'three'] });
+        expect(wrapper2.state().itemList.length).toEqual(3);
+        wrapper2.setState({
+            itemList: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
+        });
+        expect(wrapper2.state().itemList.length).toEqual(10);
+        expect(toJson(wrapper2)).toMatchSnapshot();
+    });
+
+    it('should update an item with selected index', () => {
+        const wrapper = setup();
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        wrapper.setState({ itemIndexSelectedToEdit: 1 });
+        wrapper.instance().addItem('four');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should update an issn with selected index', () => {
+        const wrapper = setup();
+        wrapper.setState({
+            itemList: [{ key: '1234-1234', value: { ulrichs: {} } }, { key: '1234-1111', value: { ulrichs: {} } }],
+        });
+        wrapper.setState({ itemIndexSelectedToEdit: 1 });
+        wrapper.instance().addItem('1234-2222');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should set item to edit index', () => {
+        const wrapper = setup();
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        wrapper.instance().editItem(1);
+        expect(wrapper.state().itemIndexSelectedToEdit).toEqual(1);
     });
 });

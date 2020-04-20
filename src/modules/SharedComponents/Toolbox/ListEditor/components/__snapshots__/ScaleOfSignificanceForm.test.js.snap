@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScaleOfSignificanceForm component should render the default view 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  display="row"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Alert) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+    xs={12}
+  >
+    <GenericSelectField
+      SelectDisplayProps={
+        Object {
+          "id": "scaleOfSignificance",
+        }
+      }
+      error={false}
+      fullWidth={true}
+      itemsList={
+        Array [
+          Object {
+            "text": "Minor",
+            "value": 454027,
+          },
+          Object {
+            "text": "Major",
+            "value": 454026,
+          },
+        ]
+      }
+      name="key"
+      onChange={[Function]}
+      selectedValue={null}
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <RichEditor
+      className=""
+      disabled={false}
+      error={false}
+      fullWidth={true}
+      height={100}
+      id=""
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      instanceRef={
+        Object {
+          "current": null,
+        }
+      }
+      name="value"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={false}
+      returnSingleValue={false}
+      titleProps={
+        Object {
+          "style": Object {
+            "opacity": 0.666,
+          },
+          "variant": "caption",
+        }
+      }
+      value=""
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      fullWidth={true}
+      id="add-items"
+      onClick={[Function]}
+      variant="contained"
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

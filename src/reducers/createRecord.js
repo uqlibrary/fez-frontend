@@ -13,11 +13,13 @@ const handlers = {
         ...initialState,
     }),
 
-    [actions.CREATE_RECORD_SUCCESS]: (state, action) => ({
-        ...initialState,
-        newRecord: action.payload.newRecord,
-        newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed,
-    }),
+    [actions.CREATE_RECORD_SUCCESS]: (state, action) => {
+        return {
+            ...initialState,
+            newRecord: action.payload.newRecord,
+            newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed,
+        };
+    },
 
     [actions.CREATE_RECORD_FAILED]: (state, action) => ({
         ...initialState,

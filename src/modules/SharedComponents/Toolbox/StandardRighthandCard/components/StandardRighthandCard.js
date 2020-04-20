@@ -16,7 +16,7 @@ const styles = {
     },
 };
 
-export class RighthandCard extends React.Component {
+export class StandardRighthandCard extends React.Component {
     static propTypes = {
         classes: PropTypes.object.isRequired,
         children: PropTypes.any,
@@ -55,6 +55,4 @@ export class RighthandCard extends React.Component {
     }
 }
 
-const StyledCard = withStyles(styles, { withTheme: true })(RighthandCard);
-const StandardRighthandCard = props => <StyledCard {...props} />;
-export default StandardRighthandCard;
+export default withStyles(styles, { withTheme: true })(StandardRighthandCard);

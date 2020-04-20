@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> 1`] = `
+<LinkInfoListEditor
+  errorText={null}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;
+
+exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> with error attributes 1`] = `
+<LinkInfoListEditor
+  error="test"
+  errorText="test"
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  meta={
+    Object {
+      "error": "test",
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;

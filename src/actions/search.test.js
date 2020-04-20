@@ -420,6 +420,59 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
+    it('should dispath search key lookup actions on success', async() => {
+        const searchKey = 'collection';
+        const searchQuery = 'test';
+        const params = {
+            searchQueryParams: { rek_object_type: 2, all: searchQuery },
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'desc',
+            facets: {},
+        };
+        mockApi
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
+            )
+            .reply(200, mockData.collectionSearchList);
+
+        const expectedActions = [
+            `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
+            `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`,
+        ];
+        await mockActionsStore.dispatch(searchActions.loadCollectionsList(searchKey, searchQuery));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should dispath search key lookup actions on error', async() => {
+        const searchKey = 'collection';
+        const searchQuery = 'test';
+        const params = {
+            searchQueryParams: { rek_object_type: 2, all: searchQuery },
+            page: 1,
+            pageSize: 20,
+            sortBy: 'title',
+            sortDirection: 'Asc',
+            facets: {},
+        };
+        mockApi
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
+            )
+            .reply(500, {});
+
+        const expectedActions = [
+            `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
+            // actions.APP_ALERT_SHOW,
+            `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
+        ];
+        await mockActionsStore.dispatch(searchActions.loadCollectionsList(searchKey, searchQuery));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
     it('should dispatch series of search actions for eSpace only search when searching', async() => {
         const searchQuery = 'test';
         const searchKey = 'publications';

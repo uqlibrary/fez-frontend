@@ -15,8 +15,11 @@ export default class RichEditor extends PureComponent {
         maxValue: PropTypes.number,
         instructions: PropTypes.any,
         title: PropTypes.any,
+        titleProps: PropTypes.object,
         description: PropTypes.any,
         inputRef: PropTypes.object,
+        instanceRef: PropTypes.object,
+        required: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -25,6 +28,9 @@ export default class RichEditor extends PureComponent {
         height: 100,
         disabled: false,
         returnSingleValue: false,
+        titleProps: {},
+        instanceRef: React.createRef(),
+        required: false,
     };
 
     componentDidMount() {
@@ -42,6 +48,7 @@ export default class RichEditor extends PureComponent {
 
         !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
         !!this.editorInstance && this.editorInstance.on('change', this.onChange);
+        this.props.instanceRef.current = this.editorInstance;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -94,8 +101,12 @@ export default class RichEditor extends PureComponent {
             <React.Fragment>
                 <span>
                     {this.props.title && (
-                        <Typography color={this.props.meta && this.props.meta.error && 'error'}>
+                        <Typography
+                            {...this.props.titleProps}
+                            color={this.props.meta && this.props.meta.error && 'error'}
+                        >
                             {this.props.title}
+                            {this.props.required && <span> *</span>}
                         </Typography>
                     )}
                     {this.props.description && (
@@ -120,6 +131,8 @@ export default class RichEditor extends PureComponent {
                 )}
                 {this.props.maxValue && (
                     <Typography
+                        color="error"
+                        variant="caption"
                         component={'span'}
                         style={{
                             display: 'inline-block',

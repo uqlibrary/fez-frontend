@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export default {
     viewRecord: {
         linkTexts: {
@@ -24,8 +25,7 @@ export default {
                 embargoDate: 'Open access after [embargoDate]',
                 size: 'Size',
                 culturalSensitivityStatement:
-                    'Cultural Sensitivity Statement - Be advised that some files may contain content which is ' +
-                    'of a sensitive nature to some cultures or tastes.',
+                    'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
                 linkTitle: 'Click to open this file in a new window - [filename] - [description] - [size]',
                 preview: {
                     videoTitle: 'Video preview',
@@ -72,8 +72,7 @@ export default {
                     abstract: {
                         label: 'Abstract/Description (for public view)',
                         description:
-                            'Enter a statement (800 characters or less, ' +
-                            'approximately 100 words) that summarises the work',
+                            'Enter a statement (800 characters or less, approximately 100 words) that summarises the work',
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -2582,8 +2581,7 @@ export default {
             type: 'error',
             title: 'IMAGE FAILED TO LOAD',
             message:
-                'You may need to log in to view the preview and original files. Please click the download/open' +
-                ' in a new window link above to open the original file format.',
+                'You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format.',
         },
     },
 };

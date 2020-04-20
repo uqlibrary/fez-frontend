@@ -36,8 +36,7 @@ import { OfflineSnackbar } from 'modules/SharedComponents/OfflineSnackbar';
 import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
-// import ipInfo from 'ipinfo';
-
+import { AccountContext } from 'context';
 // MUI1
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
@@ -96,6 +95,7 @@ export class AppClass extends PureComponent {
         authorDetails: PropTypes.object,
         accountLoading: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
+        accountAuthorDetailsLoading: PropTypes.bool,
         isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
@@ -144,12 +144,6 @@ export class AppClass extends PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
-        /* istanbul ignore next */
-        // ipInfo((err, cLoc) => {
-        //     this.setState({
-        //         userCountry: (cLoc && cLoc.country) || err,
-        //     });
-        // });
     }
 
     componentWillReceiveProps(nextProps) {
@@ -293,6 +287,7 @@ export class AppClass extends PureComponent {
             components: pages,
             authorDetails: this.props.authorDetails,
             account: this.props.account,
+            accountAuthorDetailsLoading: this.props.accountAuthorDetailsLoading,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,
         });
@@ -426,11 +421,17 @@ export class AppClass extends PureComponent {
                     {isAuthorLoading && <InlineLoader message={locale.global.loadingUserAccount} />}
 
                     {!isAuthorLoading && (
-                        <Switch>
-                            {routesConfig.map((route, index) => (
-                                <Route key={`route_${index}`} {...route} />
-                            ))}
-                        </Switch>
+                        <AccountContext.Provider
+                            value={{
+                                account: { ...this.props.account, ...this.props.author, ...this.props.authorDetails },
+                            }}
+                        >
+                            <Switch>
+                                {routesConfig.map((route, index) => (
+                                    <Route key={`route_${index}`} {...route} />
+                                ))}
+                            </Switch>
+                        </AccountContext.Provider>
                     )}
                 </div>
                 <HelpDrawer />

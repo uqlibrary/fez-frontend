@@ -16,9 +16,11 @@
 // Plugins
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
+import '@cypress/code-coverage/support';
 import 'cypress-wait-until';
 
 // Custom
+import './adminEdit';
 import './ckeditor';
 import './commands';
 

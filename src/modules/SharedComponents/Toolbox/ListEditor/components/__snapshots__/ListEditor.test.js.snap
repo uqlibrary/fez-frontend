@@ -1,5 +1,581 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ListEditor tests Should render a list of many items in a scrollable HTML div 1`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <div
+    className="ListEditor-scrollable-list"
+    style={
+      Object {
+        "height": 250,
+        "overflowX": "hidden",
+        "overflowY": "scroll",
+        "width": "100%",
+      }
+    }
+  >
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={false}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={0}
+      item="one"
+      itemTemplate={[Function]}
+      key="0"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={1}
+      item="two"
+      itemTemplate={[Function]}
+      key="1"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={2}
+      item="three"
+      itemTemplate={[Function]}
+      key="2"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={3}
+      item="four"
+      itemTemplate={[Function]}
+      key="3"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={4}
+      item="five"
+      itemTemplate={[Function]}
+      key="4"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={5}
+      item="six"
+      itemTemplate={[Function]}
+      key="5"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={6}
+      item="seven"
+      itemTemplate={[Function]}
+      key="6"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={7}
+      item="eight"
+      itemTemplate={[Function]}
+      key="7"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={true}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={8}
+      item="nine"
+      itemTemplate={[Function]}
+      key="8"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+    <WithStyles(ListRow)
+      canEdit={false}
+      canMoveDown={false}
+      canMoveUp={true}
+      disabled={false}
+      form="NoLabel"
+      hideReorder={false}
+      index={9}
+      item="ten"
+      itemTemplate={[Function]}
+      key="9"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`ListEditor tests Should render a list of many items inline 1`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={false}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={0}
+    item="one"
+    itemTemplate={[Function]}
+    key="0"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={1}
+    item="two"
+    itemTemplate={[Function]}
+    key="1"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={2}
+    item="three"
+    itemTemplate={[Function]}
+    key="2"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={3}
+    item="four"
+    itemTemplate={[Function]}
+    key="3"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={4}
+    item="five"
+    itemTemplate={[Function]}
+    key="4"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={5}
+    item="six"
+    itemTemplate={[Function]}
+    key="5"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={6}
+    item="seven"
+    itemTemplate={[Function]}
+    key="6"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={7}
+    item="eight"
+    itemTemplate={[Function]}
+    key="7"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={8}
+    item="nine"
+    itemTemplate={[Function]}
+    key="8"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={false}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={9}
+    item="ten"
+    itemTemplate={[Function]}
+    key="9"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+</div>
+`;
+
+exports[`ListEditor tests Should render a list of many items inline 2`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={false}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={0}
+    item="one"
+    itemTemplate={[Function]}
+    key="0"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={1}
+    item="two"
+    itemTemplate={[Function]}
+    key="1"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={2}
+    item="three"
+    itemTemplate={[Function]}
+    key="2"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={3}
+    item="four"
+    itemTemplate={[Function]}
+    key="3"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={4}
+    item="five"
+    itemTemplate={[Function]}
+    key="4"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={5}
+    item="six"
+    itemTemplate={[Function]}
+    key="5"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={6}
+    item="seven"
+    itemTemplate={[Function]}
+    key="6"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={7}
+    item="eight"
+    itemTemplate={[Function]}
+    key="7"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={8}
+    item="nine"
+    itemTemplate={[Function]}
+    key="8"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={false}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={9}
+    item="ten"
+    itemTemplate={[Function]}
+    key="9"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+</div>
+`;
+
 exports[`ListEditor tests should add an object item and set state 1`] = `
 <div
   className="testClass "
@@ -9,9 +585,12 @@ exports[`ListEditor tests should add an object item and set state 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
 </div>
 `;
@@ -25,9 +604,12 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
   <WithStyles(ListRowHeader)
     disabled={false}
@@ -35,6 +617,7 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={false}
     canMoveUp={false}
     disabled={false}
@@ -47,8 +630,10 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
         "value": "test",
       }
     }
+    itemTemplate={[Function]}
     key="0"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
@@ -64,9 +649,12 @@ exports[`ListEditor tests should add item and set state 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
 </div>
 `;
@@ -80,9 +668,12 @@ exports[`ListEditor tests should add item and set state 2`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
   <WithStyles(ListRowHeader)
     disabled={false}
@@ -90,6 +681,7 @@ exports[`ListEditor tests should add item and set state 2`] = `
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={false}
     canMoveUp={false}
     disabled={false}
@@ -102,8 +694,10 @@ exports[`ListEditor tests should add item and set state 2`] = `
         "value": "test",
       }
     }
+    itemTemplate={[Function]}
     key="0"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
@@ -119,9 +713,12 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
 </div>
 `;
@@ -135,6 +732,8 @@ exports[`ListEditor tests should move down an item 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -142,6 +741,7 @@ exports[`ListEditor tests should move down an item 1`] = `
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
   <WithStyles(ListRowHeader)
     disabled={false}
@@ -149,6 +749,7 @@ exports[`ListEditor tests should move down an item 1`] = `
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
@@ -156,12 +757,15 @@ exports[`ListEditor tests should move down an item 1`] = `
     hideReorder={false}
     index={0}
     item="one"
+    itemTemplate={[Function]}
     key="0"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={true}
     canMoveUp={true}
     disabled={false}
@@ -169,12 +773,15 @@ exports[`ListEditor tests should move down an item 1`] = `
     hideReorder={false}
     index={1}
     item="three"
+    itemTemplate={[Function]}
     key="1"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
@@ -182,8 +789,10 @@ exports[`ListEditor tests should move down an item 1`] = `
     hideReorder={false}
     index={2}
     item="two"
+    itemTemplate={[Function]}
     key="2"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
@@ -199,6 +808,8 @@ exports[`ListEditor tests should move up an item 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -206,6 +817,7 @@ exports[`ListEditor tests should move up an item 1`] = `
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
   <WithStyles(ListRowHeader)
     disabled={false}
@@ -213,6 +825,7 @@ exports[`ListEditor tests should move up an item 1`] = `
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
@@ -220,12 +833,15 @@ exports[`ListEditor tests should move up an item 1`] = `
     hideReorder={false}
     index={0}
     item="two"
+    itemTemplate={[Function]}
     key="0"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={true}
     canMoveUp={true}
     disabled={false}
@@ -233,12 +849,15 @@ exports[`ListEditor tests should move up an item 1`] = `
     hideReorder={false}
     index={1}
     item="one"
+    itemTemplate={[Function]}
     key="1"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
@@ -246,8 +865,10 @@ exports[`ListEditor tests should move up an item 1`] = `
     hideReorder={false}
     index={2}
     item="three"
+    itemTemplate={[Function]}
     key="2"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
@@ -263,6 +884,8 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -270,6 +893,7 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
 </div>
 `;
@@ -283,6 +907,8 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -290,6 +916,7 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
 </div>
 `;
@@ -303,6 +930,8 @@ exports[`ListEditor tests should render full component with a defined className 
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -310,6 +939,7 @@ exports[`ListEditor tests should render full component with a defined className 
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
 </div>
 `;
@@ -323,6 +953,8 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -330,6 +962,42 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={false}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={0}
+    itemTemplate={[Function]}
+    key="0"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={false}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={1}
+    itemTemplate={[Function]}
+    key="1"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
   />
 </div>
 `;
@@ -343,6 +1011,8 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
+    itemSelectedToEdit={null}
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -350,6 +1020,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     }
     normalize={[Function]}
     onAdd={[Function]}
+    required={false}
   />
   <WithStyles(ListRowHeader)
     disabled={false}
@@ -357,26 +1028,184 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     onDeleteAll={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
     form="NoLabel"
     hideReorder={false}
     index={0}
+    itemTemplate={[Function]}
     key="0"
     onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />
   <WithStyles(ListRow)
+    canEdit={false}
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
     form="NoLabel"
     hideReorder={false}
     index={1}
+    itemTemplate={[Function]}
     key="1"
     onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+</div>
+`;
+
+exports[`ListEditor tests should update an issn with selected index 1`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="1"
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={false}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={0}
+    item={
+      Object {
+        "key": "1234-1234",
+        "value": Object {
+          "ulrichs": Object {},
+        },
+      }
+    }
+    itemTemplate={[Function]}
+    key="0"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={false}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={1}
+    item={
+      Object {
+        "key": "1234-2222",
+        "value": Object {
+          "ulrichs": Object {},
+        },
+      }
+    }
+    itemTemplate={[Function]}
+    key="1"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+</div>
+`;
+
+exports[`ListEditor tests should update an item with selected index 1`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="1"
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={false}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={0}
+    item="one"
+    itemTemplate={[Function]}
+    key="0"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={1}
+    item="four"
+    itemTemplate={[Function]}
+    key="1"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={false}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={2}
+    item="three"
+    itemTemplate={[Function]}
+    key="2"
+    onDelete={[Function]}
+    onEdit={[Function]}
     onMoveDown={[Function]}
     onMoveUp={[Function]}
   />

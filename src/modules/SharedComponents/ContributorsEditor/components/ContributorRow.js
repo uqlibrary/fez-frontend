@@ -1,27 +1,25 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { numberToWords } from 'config';
-import { ORG_TYPES_LOOKUP } from 'config/general';
 import locale from 'locale/global';
 
 import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
-import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Person from '@material-ui/icons/Person';
 import PersonOutlined from '@material-ui/icons/PersonOutlined';
+import HowToRegIcon from '@material-ui/icons/HowToReg';
 import Delete from '@material-ui/icons/Delete';
+import Edit from '@material-ui/icons/Edit';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ContributorRowText } from './ContributorRowText';
 
 export const styles = theme => ({
     listContainer: {
@@ -68,6 +66,7 @@ export const styles = theme => ({
 
 export class ContributorRow extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
         canMoveDown: PropTypes.bool,
         canMoveUp: PropTypes.bool,
         classes: PropTypes.object,
@@ -79,19 +78,24 @@ export class ContributorRow extends PureComponent {
         locale: PropTypes.object,
         onSelect: PropTypes.func,
         onDelete: PropTypes.func,
+        onEdit: PropTypes.func,
         onMoveDown: PropTypes.func,
         onMoveUp: PropTypes.func,
-        showContributorAssignment: PropTypes.bool,
         width: PropTypes.string,
         required: PropTypes.bool,
+        enableSelect: PropTypes.bool,
+        showIdentifierLookup: PropTypes.bool,
+        showRoleInput: PropTypes.bool,
     };
 
     static defaultProps = {
+        canEdit: false,
         locale: {
             suffix: ' listed contributor',
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
+            editHint: 'Edit this record',
             selectHint: 'Select this record ([name]) to assign it to you',
             lockedTooltip: 'You are not able to edit this row',
             deleteRecordConfirmation: {
@@ -100,11 +104,13 @@ export class ContributorRow extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes',
             },
-            deleteButtonId: index => `delete-record-${index}`,
+            deleteButtonId: 'delete-record',
+            editButtonId: 'edit-record',
         },
         hideReorder: false,
         hideDelete: false,
         required: false,
+        enableSelect: false,
     };
 
     constructor(props) {
@@ -145,96 +151,44 @@ export class ContributorRow extends PureComponent {
     };
 
     _select = () => {
-        const { disabled, onSelect, index } = this.props;
-        if (!disabled && !!onSelect) {
+        const { disabled, onSelect, index, enableSelect } = this.props;
+        if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
     };
 
-    getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
-        <ListItemText
-            disableTypography
-            primary={
-                primaryText && (
-                    <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
-                        {primaryText}
-                    </Typography>
-                )
-            }
-            secondary={
-                secondaryText && (
-                    <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
-                        {secondaryText}
-                    </Typography>
-                )
-            }
-        />
-    );
-
-    getContributorRowText = selectedClass => {
-        const { index, contributor, classes, width } = this.props;
-        const { suffix } = this.props.locale;
-        const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
-        return (
-            <Grid container classes={{ container: classes.listContainer }}>
-                <Grid item xs={10} sm={5} md={5}>
-                    {this.getListItemTypography(
-                        contributor.nameAsPublished,
-                        contributorOrder,
-                        `${classes.primary} ${selectedClass}`,
-                        `${selectedClass}`,
-                    )}
-                </Grid>
-                {!!contributor.aut_title && (
-                    <Grid item xs={10} sm={5} md={5}>
-                        {this.getListItemTypography(
-                            `${contributor.aut_title} ${contributor.aut_display_name}`,
-                            `${locale.global.orgTitle} (${contributor.aut_org_username ||
-                                contributor.aut_student_username})`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
-                        )}
-                    </Grid>
-                )}
-                {contributor.affiliation && !contributor.aut_title && (
-                    <Grid item xs={12} sm={5}>
-                        {this.getListItemTypography(
-                            `${contributor.orgaff}`,
-                            `${(ORG_TYPES_LOOKUP[contributor.orgtype] &&
-                                `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
-                                ''}`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
-                        )}
-                    </Grid>
-                )}
-                {contributor.creatorRole && (
-                    <Grid item xs={12} sm={5} md={5}>
-                        {this.getListItemTypography(
-                            contributor.creatorRole,
-                            '',
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
-                        )}
-                    </Grid>
-                )}
-            </Grid>
-        );
+    _handleEdit = () => {
+        const { canEdit, index } = this.props;
+        canEdit && !!this.props.onEdit && this.props.onEdit(index);
     };
+
+    getRowIcon() {
+        const {
+            contributor,
+            disabled,
+            locale: { lockedTooltip },
+        } = this.props;
+        if (parseInt(contributor.uqIdentifier, 10)) {
+            return <HowToRegIcon />;
+        } else if (contributor.selected) {
+            return <Person />;
+        } else if ((disabled || contributor.disabled) && !this.props.enableSelect) {
+            return lockedTooltip ? (
+                <Tooltip title={lockedTooltip}>
+                    <Lock />
+                </Tooltip>
+            ) : (
+                <Lock />
+            );
+        } else {
+            return <PersonOutlined />;
+        }
+    }
 
     render() {
         const {
-            deleteRecordConfirmation,
-            moveUpHint,
-            moveDownHint,
-            deleteHint,
-            selectHint,
-            lockedTooltip,
-            deleteButtonId,
-        } = this.props.locale;
-
-        const {
             contributor,
+            canEdit,
             canMoveDown,
             canMoveUp,
             disabled,
@@ -243,9 +197,18 @@ export class ContributorRow extends PureComponent {
             hideDelete,
             required,
             index,
+            locale: {
+                deleteRecordConfirmation,
+                moveUpHint,
+                moveDownHint,
+                deleteHint,
+                editHint,
+                selectHint,
+                deleteButtonId,
+                editButtonId,
+            },
         } = this.props;
 
-        const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
         const ariaLabel =
@@ -253,22 +216,6 @@ export class ContributorRow extends PureComponent {
                 `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||
                     ''}`.trim()) ||
             '';
-
-        const rowIcon = () => {
-            if (contributor.selected) {
-                return <Person />;
-            } else if (this.props.disabled || !enableSelect) {
-                return lockedTooltip ? (
-                    <Tooltip title={lockedTooltip}>
-                        <Lock />
-                    </Tooltip>
-                ) : (
-                    <Lock />
-                );
-            } else {
-                return <PersonOutlined />;
-            }
-        };
 
         return (
             <Fragment>
@@ -281,20 +228,29 @@ export class ContributorRow extends PureComponent {
                     divider
                     classes={{
                         root: `${classes.listItem || ''} ${(required && classes.highlighted) ||
-                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!enableSelect &&
+                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!contributor.disabled &&
                             classes.disabledListItem) ||
                             ''}`.trim(),
                     }}
-                    onClick={enableSelect ? this._onSelect : () => {}}
-                    tabIndex={!enableSelect || this.props.disabled ? -1 : 0}
-                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => {}}
+                    onClick={this._onSelect}
+                    tabIndex={contributor.disabled || this.props.disabled ? -1 : 0}
+                    onKeyDown={contributor.disabled ? this._onSelectKeyboard : () => {}}
                     aria-label={ariaLabel}
                     id={`contributor-editor-row-${this.props.index}`}
                 >
                     <Hidden xsDown>
-                        <ListItemIcon classes={{ root: selectedClass }}>{rowIcon()}</ListItemIcon>
+                        <ListItemIcon classes={{ root: selectedClass }}>{this.getRowIcon()}</ListItemIcon>
                     </Hidden>
-                    {this.getContributorRowText(selectedClass)}
+                    <ContributorRowText
+                        index={this.props.index}
+                        canEdit={this.props.canEdit}
+                        contributor={this.props.contributor}
+                        classes={this.props.classes}
+                        width={this.props.width}
+                        showRoleInput={this.props.showRoleInput}
+                        selectedClass={selectedClass}
+                        suffix={this.props.locale.suffix}
+                    />
                     <ListItemSecondaryAction>
                         {canMoveUp && (
                             <Tooltip
@@ -332,6 +288,25 @@ export class ContributorRow extends PureComponent {
                                 </span>
                             </Tooltip>
                         )}
+                        {canEdit && (
+                            <Tooltip
+                                title={editHint}
+                                disableFocusListener={disabled || !!contributor.disabled}
+                                disableHoverListener={disabled || !!contributor.disabled}
+                                disableTouchListener={disabled || !!contributor.disabled}
+                            >
+                                <span>
+                                    <IconButton
+                                        aria-label={editHint}
+                                        onClick={this._handleEdit}
+                                        disabled={disabled || !!contributor.disabled}
+                                        id={`${editButtonId}-${index}`}
+                                    >
+                                        <Edit classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
+                            </Tooltip>
+                        )}
                         <Tooltip
                             title={deleteHint}
                             disableFocusListener={disabled || hideDelete}
@@ -343,7 +318,7 @@ export class ContributorRow extends PureComponent {
                                     aria-label={deleteHint}
                                     onClick={this._showConfirmation}
                                     disabled={disabled || hideDelete}
-                                    id={deleteButtonId(index)}
+                                    id={`${deleteButtonId}-${index}`}
                                 >
                                     <Delete classes={{ root: `${selectedClass}` }} />
                                 </IconButton>

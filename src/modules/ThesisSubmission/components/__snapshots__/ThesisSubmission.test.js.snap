@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThesisSubmission test should display successfull submission screen 1`] = `
+exports[`ThesisSubmission should display successfull submission screen 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
@@ -55,7 +55,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
 </StandardPage>
 `;
 
-exports[`ThesisSubmission test should render hdr thesis submission acknowledgement 1`] = `
+exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`] = `
 <StandardPage
   title="Higher degree by research thesis deposit"
 >
@@ -110,7 +110,7 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
 </StandardPage>
 `;
 
-exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
+exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
 <StandardPage
   title="Higher degree by research thesis deposit"
 >
@@ -162,6 +162,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 disabled={false}
                 height={50}
                 name="thesisTitle"
+                required={true}
                 title="Thesis title"
                 validate={
                   Array [
@@ -257,6 +258,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 component={[Function]}
                 disabled={false}
                 name="thesisAbstract"
+                required={true}
                 title="Abstract"
                 validate={
                   Array [
@@ -309,7 +311,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-supervisor",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -317,6 +319,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-supervisor",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this supervisor ([name]) to assign it as you",
@@ -412,6 +416,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "editButtonLabel": "Update",
                     "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
@@ -439,6 +444,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this keyword?",
                       "confirmationTitle": "Delete keyword",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move keyword down the order",
                     "moveUpHint": "Move keyword up the order",
                   },
@@ -572,7 +578,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
 </StandardPage>
 `;
 
-exports[`ThesisSubmission test should render sbs thesis submission acknowledgement 1`] = `
+exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
@@ -627,7 +633,7 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
 </StandardPage>
 `;
 
-exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
+exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
@@ -679,6 +685,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 disabled={false}
                 height={50}
                 name="thesisTitle"
+                required={true}
                 title="Thesis title"
                 validate={
                   Array [
@@ -774,6 +781,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 component={[Function]}
                 disabled={false}
                 name="thesisAbstract"
+                required={true}
                 title="Abstract"
                 validate={
                   Array [
@@ -826,7 +834,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-supervisor",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -834,6 +842,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-supervisor",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this supervisor ([name]) to assign it as you",
@@ -929,6 +939,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "editButtonLabel": "Update",
                     "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
@@ -956,6 +967,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this keyword?",
                       "confirmationTitle": "Delete keyword",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move keyword down the order",
                     "moveUpHint": "Move keyword up the order",
                   },
@@ -1089,7 +1101,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
 </StandardPage>
 `;
 
-exports[`ThesisSubmission test should show the file upload alert 1`] = `
+exports[`ThesisSubmission should show the file upload alert 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >

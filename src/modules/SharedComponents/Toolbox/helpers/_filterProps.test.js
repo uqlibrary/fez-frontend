@@ -33,7 +33,7 @@ describe('filterProps helper', () => {
                 touched: true,
             },
         });
-        expect(test4.error).toBe(false);
+        expect(test4.error).toBeUndefined();
         expect(test4.errorText).toBeUndefined();
     });
 });

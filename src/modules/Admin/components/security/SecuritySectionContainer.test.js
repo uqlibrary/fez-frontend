@@ -8,10 +8,7 @@ jest.mock('redux-form/immutable', () => ({
             get: jest.fn(() => ({ toJS: jest.fn(() => ({})) })),
         })),
     ),
-    Field: jest.fn(() => {
-        const Dummy = props => <div {...props} />;
-        return Dummy;
-    }),
+    Field: () => props => <div {...props} />,
 }));
 import { getFormValues } from 'redux-form/immutable';
 
@@ -29,12 +26,12 @@ function setup(testProps = {}, args = { isShallow: false }) {
 }
 
 describe('SecuritySectionContainer', () => {
-    it('should mount with default props', () => {
+    it('should mount with default props for a record', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
                 dataStreams: Immutable.List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test7.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -74,7 +71,7 @@ describe('SecuritySectionContainer', () => {
 
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:123456',
+                rek_pid: 'UQ:123457',
                 rek_object_type_lookup: 'Record',
                 fez_record_search_key_ismemberof: [
                     {
@@ -92,18 +89,7 @@ describe('SecuritySectionContainer', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should mount with default props', () => {
-        const store = {
-            ...global.setupStoreForMount.store,
-            getState: jest.fn(() =>
-                Immutable.Map({
-                    authorDetails: {
-                        is_super_administrator: true,
-                    },
-                }),
-            ),
-        };
-
+    it('should mount with default props for a collection for a super admin', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
                 rek_security_inherited: 1,
@@ -114,7 +100,7 @@ describe('SecuritySectionContainer', () => {
 
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:123456',
+                rek_pid: 'UQ:123458',
                 rek_object_type_lookup: 'Collection',
             },
         }));
@@ -122,7 +108,16 @@ describe('SecuritySectionContainer', () => {
             {
                 isSuperAdmin: false,
             },
-            { isShallow: false, store: store },
+            {
+                isShallow: false,
+                store: global.setupStoreForMount(
+                    Immutable.Map({
+                        authorDetails: {
+                            is_super_administrator: true,
+                        },
+                    }),
+                ).store,
+            },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

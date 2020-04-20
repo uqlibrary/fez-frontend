@@ -1,4 +1,4 @@
-import { DashboardArticleCount } from './DashboardArticleCount';
+import { DashboardArticleCount, styles } from './DashboardArticleCount';
 import { currentAuthorStats } from 'mock/data';
 
 function setup(testProps = {}) {
@@ -29,5 +29,20 @@ describe('Dashboard Article Count test', () => {
             articleCount,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a style generator', () => {
+        const theme = {
+            palette: {
+                white: {
+                    main: '#fff',
+                },
+            },
+            typography: {
+                fontWeightLight: '600',
+            },
+        };
+
+        expect(styles(theme)).toMatchSnapshot();
     });
 });

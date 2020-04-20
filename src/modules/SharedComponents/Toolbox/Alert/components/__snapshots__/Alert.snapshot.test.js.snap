@@ -18,6 +18,7 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -70,6 +71,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -104,7 +106,8 @@ exports[`Alert snapshots test renders Alert of error type should render action b
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -138,6 +141,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -244,6 +248,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -306,7 +311,8 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -368,6 +374,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
     spacing={24}
   >
     <WithStyles(Grid)
+      className=""
       item={true}
       sm={true}
       xs={12}
@@ -432,7 +439,8 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
-      sm="auto"
+      md="auto"
+      sm={4}
       xs={true}
     >
       <WithStyles(Button)
@@ -472,6 +480,262 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         </WithStyles(IconButton)>
       </WithStyles(Grid)>
     </Hidden>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`Alert snapshots test should generate expected styles 1`] = `
+Object {
+  "actionButton": Object {
+    "& .action": Object {
+      "md": Object {
+        "width": "auto",
+      },
+      "xs": Object {
+        "marginRight": 12,
+      },
+    },
+    "& .action + .action": Object {
+      "md": Object {
+        "marginLeft": 12,
+      },
+    },
+  },
+  "common": Object {
+    "borderRadius": 5,
+    "boxShadow": undefined,
+  },
+  "dismissButton": Object {
+    "& #dismiss": Object {
+      "marginLeft": -12,
+    },
+    "& .dismiss": Object {
+      "xs": Object {
+        "marginRight": -12,
+      },
+    },
+  },
+  "done": Object {
+    "& .action": Object {
+      "backgroundColor": "#123",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#123",
+    },
+    "& .icon": Object {
+      "color": "#123",
+    },
+    "& .spinner": Object {
+      "color": "#123",
+    },
+    "backgroundColor": undefined,
+    "color": "#eee",
+  },
+  "error": Object {
+    "& .action": Object {
+      "backgroundColor": "#111",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#111",
+    },
+    "& .icon": Object {
+      "color": "#111",
+    },
+    "& .spinner": Object {
+      "color": "#111",
+    },
+    "backgroundColor": undefined,
+    "color": "#eee",
+  },
+  "error_outline": Object {
+    "& .action": Object {
+      "backgroundColor": "#111",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#111",
+    },
+    "& .icon": Object {
+      "color": "#111",
+    },
+    "& .spinner": Object {
+      "color": "#111",
+    },
+    "backgroundColor": undefined,
+    "color": "#eee",
+  },
+  "help": Object {
+    "& .action": Object {
+      "backgroundColor": "#333",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#333",
+    },
+    "& .icon": Object {
+      "color": "#333",
+    },
+    "& .spinner": Object {
+      "color": "#333",
+    },
+    "backgroundColor": "#444",
+    "color": "#eee",
+  },
+  "help_outline": Object {
+    "& .action": Object {
+      "backgroundColor": "#333",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#333",
+    },
+    "& .icon": Object {
+      "color": "#333",
+    },
+    "& .spinner": Object {
+      "color": "#333",
+    },
+    "backgroundColor": "#444",
+    "color": "#eee",
+  },
+  "icon": Object {
+    "& .icon": Object {
+      "fontSize": 48,
+      "marginBottom": -6,
+      "marginRight": 16,
+    },
+    "& .spinner": Object {
+      "margin": "8px 24px 0 6px",
+    },
+  },
+  "info": Object {
+    "& .action": Object {
+      "backgroundColor": "#555",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#555",
+    },
+    "& .icon": Object {
+      "color": "#555",
+    },
+    "& .spinner": Object {
+      "color": "#555",
+    },
+    "backgroundColor": undefined,
+    "color": "#eee",
+  },
+  "info_outline": Object {
+    "& .action": Object {
+      "backgroundColor": "#555",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#555",
+    },
+    "& .icon": Object {
+      "color": "#555",
+    },
+    "& .spinner": Object {
+      "color": "#555",
+    },
+    "backgroundColor": undefined,
+    "color": "#eee",
+  },
+  "linked": Object {
+    "&:hover": Object {
+      "cursor": "pointer",
+    },
+  },
+  "text": Object {
+    "alignSelf": "center",
+    "padding": "6px 0",
+    "textShadow": "1px 1px 1px rgba(0, 0, 0, 0.2)",
+  },
+  "warning": Object {
+    "& .action": Object {
+      "backgroundColor": "#222",
+      "color": "#eee",
+    },
+    "& .dismiss": Object {
+      "color": "#222",
+    },
+    "& .icon": Object {
+      "color": "#222",
+    },
+    "& .spinner": Object {
+      "color": "#222",
+    },
+    "backgroundColor": undefined,
+    "color": "#eee",
+  },
+}
+`;
+
+exports[`Alert snapshots test should render alert with alternate action 1`] = `
+<div
+  className="Alert"
+  style={
+    Object {
+      "padding": 12,
+    }
+  }
+>
+  <WithStyles(Grid)
+    alignContent="center"
+    alignItems="flex-start"
+    className=""
+    container={true}
+    justify="center"
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      className=""
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        alignContent="center"
+        alignItems="flex-start"
+        container={true}
+        justify="center"
+      >
+        <WithStyles(Grid)
+          className="undefined alert-icon"
+          item={true}
+        >
+          <pure(ErrorIcon)
+            className="icon"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          className="undefined alert-text"
+          item={true}
+          xs={true}
+        >
+          <b />
+          Unexpected error
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md="auto"
+      sm={4}
+      xs={true}
+    >
+      <WithStyles(Button)
+        className="action alert-button"
+        fullWidth={true}
+        onClick={[MockFunction]}
+        variant="text"
+      >
+        Do something
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </div>
 `;

@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     newsItem: {
         color: theme.palette.primary.main,
         '& .day': {
@@ -57,8 +57,8 @@ export class NewsFeed extends PureComponent {
         }
 
         const allowedHtmlConfig = {
-            ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
-            ALLOWED_ATTR: [],
+            ALLOWED_TAGS: ['a', 'p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
+            ALLOWED_ATTR: ['href', 'target'],
         };
         const subNewsFeed = this.props.newsFeedList.slice(
             0,
@@ -96,6 +96,7 @@ export class NewsFeed extends PureComponent {
                                 <Grid item xs>
                                     <Typography variant={'body2'}>
                                         <b>{newsItem.nws_title}</b>
+                                        &nbsp;-&nbsp;
                                         {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
                                     </Typography>
                                 </Grid>

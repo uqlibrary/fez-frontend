@@ -168,7 +168,7 @@ export const accounts = {
         "expiryDate": "31-12-19",
         "hasSession": true,
         "tokenBased": false,
-        'canMasquerade': false,
+        "canMasquerade": true,
         "blocked": false,
     },
     // expired session
@@ -548,8 +548,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": "2016-01-08",
         "aut_publons_id": null,
         "aut_student_username": null,
-    },
-    ],
+    }],
 };
 
 export const currentAuthor = {
@@ -585,6 +584,7 @@ export const currentAuthor = {
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
             "aut_student_username": null,
+            "aut_is_orcid_sync_enabled": 1,
         },
     },
     uqnoauthid: {

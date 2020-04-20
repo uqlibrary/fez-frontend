@@ -50,7 +50,7 @@ export default class CommunityForm extends Component {
     };
 
     reloadForm = () => {
-        location.reload();
+        window.location.reload();
     };
 
     render() {

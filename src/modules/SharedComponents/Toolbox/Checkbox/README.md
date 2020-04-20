@@ -16,7 +16,7 @@ A simple Checkbox component that lists items for UQ Library applications using R
 import React from 'react';
 ...
 
-import {Checkbox} from 'uqlibrary-react-toolbox';
+import { Checkbox } from 'modules/SharedComponents/Toolbox/Checkbox';
 
 const App = () => (
   <div>

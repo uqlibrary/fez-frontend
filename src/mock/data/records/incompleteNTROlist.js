@@ -1,5 +1,3 @@
-import uq6de77b0 from './incompleteNTRORecordUqrdav10';
-
 export default {
     "total": 6,
     "per_page": 10,
@@ -925,7 +923,29 @@ export default {
                 "rek_volume_number_id": null,
                 "rek_volume_number_pid": "UQ:678742",
                 "rek_volume_number": "9"
-            }
+            },
+            "rek_object_type_lookup": "Record",
+            "fez_datastream_info": [{
+                "dsi_pid": "UQ:678742",
+                "dsi_dsid": "Balance.pdf",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "Work evidence - not publicly available",
+                "dsi_mimetype": "application\/pdf",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 225201
+            },{
+                "dsi_pid": "UQ:678742",
+                "dsi_dsid": "FezACML_Balance.pdf.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "FezACML security for datastream - Balance.pdf",
+                "dsi_mimetype": "text\/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 326
+            }],
         },
         {
             "rek_pid": "UQ:678743",
@@ -939,7 +959,7 @@ export default {
             "rek_object_type": 3,
             "rek_depositor": null,
             "rek_file_downloads": 0,
-            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Pedroso, Marcelo Monteiro\" href=\"\/list\/author\/Pedroso%2C+Marcelo+Monteiro\/\">Pedroso, Marcelo Monteiro<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Selleck, Christopher\" href=\"\/list\/author\/Selleck%2C+Christopher\/\">Selleck, Christopher<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Enculescu, Charmaine\" href=\"\/list\/author\/Enculescu%2C+Charmaine\/\">Enculescu, Charmaine<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Harmer, Jeffrey R.\" href=\"\/list\/author\/Harmer%2C+Jeffrey+R.\/\">Harmer, Jeffrey R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Miti\u0107, Nata\u0161a\" href=\"\/list\/author\/Miti%C4%87%2C+Nata%26scaron%3Ba\/\">Miti\u0107, Nata\u0161a<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Craig, Whitney R.\" href=\"\/list\/author\/Craig%2C+Whitney+R.\/\">Craig, Whitney R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Helweh, Waleed\" href=\"\/list\/author\/Helweh%2C+Waleed\/\">Helweh, Waleed<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hugenholtz, Philip\" href=\"\/list\/author\/Hugenholtz%2C+Philip\/\">Hugenholtz, Philip<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tyson, Gene W.\" href=\"\/list\/author\/Tyson%2C+Gene+W.\/\">Tyson, Gene W.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tierney, David L.\" href=\"\/list\/author\/Tierney%2C+David+L.\/\">Tierney, David L.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Larrabee, James A.\" href=\"\/list\/author\/Larrabee%2C+James+A.\/\">Larrabee, James A.<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Schenk, Gerhard\" href=\"\/list\/author_id\/683\/\">Schenk, Gerhard<\/a> (<span class=\"citation_date\">2017<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Characterization of a highly efficient antibiotic-degrading metallo-&beta;-lactamase obtained from an uncultured member of a permafrost community\" href=\"\/view\/UQ:678742\">Characterization of a highly efficient antibiotic-degrading metallo-\u03b2-lactamase obtained from an uncultured member of a permafrost community<\/a>. <i><span class=\"citation_journal_name\">Metallomics<\/span><\/i>, <i><span class=\"citation_volume_number\">9<\/span><\/i> <span class=\"citation_issue_number\">8<\/span>: <span class=\"citation_start_page\">1157<\/span>-<span class=\"citation_end_page\">1168<\/span>. doi:<span class=\"citation_doi\">10.1039\/c7mt00195a<\/span>",
+            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Pedroso, Marcelo Monteiro\" href=\"\/list\/author\/Pedroso%2C+Marcelo+Monteiro\/\">Pedroso, Marcelo Monteiro<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Selleck, Christopher\" href=\"\/list\/author\/Selleck%2C+Christopher\/\">Selleck, Christopher<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Enculescu, Charmaine\" href=\"\/list\/author\/Enculescu%2C+Charmaine\/\">Enculescu, Charmaine<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Harmer, Jeffrey R.\" href=\"\/list\/author\/Harmer%2C+Jeffrey+R.\/\">Harmer, Jeffrey R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Miti\u0107, Nata\u0161a\" href=\"\/list\/author\/Miti%C4%87%2C+Nata%26scaron%3Ba\/\">Miti\u0107, Nata\u0161a<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Craig, Whitney R.\" href=\"\/list\/author\/Craig%2C+Whitney+R.\/\">Craig, Whitney R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Helweh, Waleed\" href=\"\/list\/author\/Helweh%2C+Waleed\/\">Helweh, Waleed<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hugenholtz, Philip\" href=\"\/list\/author\/Hugenholtz%2C+Philip\/\">Hugenholtz, Philip<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tyson, Gene W.\" href=\"\/list\/author\/Tyson%2C+Gene+W.\/\">Tyson, Gene W.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tierney, David L.\" href=\"\/list\/author\/Tierney%2C+David+L.\/\">Tierney, David L.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Larrabee, James A.\" href=\"\/list\/author\/Larrabee%2C+James+A.\/\">Larrabee, James A.<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Schenk, Gerhard\" href=\"\/list\/author_id\/683\/\">Schenk, Gerhard<\/a> (<span class=\"citation_date\">2017<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Characterization of a highly efficient antibiotic-degrading metallo-&beta;-lactamase obtained from an uncultured member of a permafrost community\" href=\"\/view\/UQ:678743\">Characterization of a highly efficient antibiotic-degrading metallo-\u03b2-lactamase obtained from an uncultured member of a permafrost community<\/a>. <i><span class=\"citation_journal_name\">Metallomics<\/span><\/i>, <i><span class=\"citation_volume_number\">9<\/span><\/i> <span class=\"citation_issue_number\">8<\/span>: <span class=\"citation_start_page\">1157<\/span>-<span class=\"citation_end_page\">1168<\/span>. doi:<span class=\"citation_doi\">10.1039\/c7mt00195a<\/span>",
             "rek_genre": "Journal Article",
             "rek_genre_type": null,
             "rek_formatted_title": null,
@@ -969,252 +989,252 @@ export default {
             "fez_record_search_key_assigned_user_id": [],
             "fez_record_search_key_author": [{
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Pedroso, Marcelo Monteiro",
                 "rek_author_order": 1
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Selleck, Christopher",
                 "rek_author_order": 2
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Enculescu, Charmaine",
                 "rek_author_order": 3
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Harmer, Jeffrey R.",
                 "rek_author_order": 4
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Miti\u0107, Nata\u0161a",
                 "rek_author_order": 5
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Craig, Whitney R.",
                 "rek_author_order": 6
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Helweh, Waleed",
                 "rek_author_order": 7
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Hugenholtz, Philip",
                 "rek_author_order": 8
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Tyson, Gene W.",
                 "rek_author_order": 9
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Tierney, David L.",
                 "rek_author_order": 10
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Larrabee, James A.",
                 "rek_author_order": 11
             }, {
                 "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
+                "rek_author_pid": "UQ:678743",
                 "rek_author": "Schenk, Gerhard",
                 "rek_author_order": 12
             }],
             "fez_record_search_key_author_affiliation_id": [{
                 "rek_author_affiliation_id_id": null,
-                "rek_author_affiliation_id_pid": "UQ:678742",
+                "rek_author_affiliation_id_pid": "UQ:678743",
                 "rek_author_affiliation_id_order": 1,
                 "rek_author_affiliation_id": "10.13039\/501100000925"
             }],
             "fez_record_search_key_author_affiliation_country": [],
             "fez_record_search_key_author_affiliation_full_address": [{
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 1,
                 "rek_author_affiliation_full_address": "School of Chemistry and Molecular Biosciences, The University of Queensland, St. Lucia, Queensland 4072, Australia. m.pedroso@uq.edu.au schenk@uq.edu.au."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 2,
                 "rek_author_affiliation_full_address": "School of Chemistry and Molecular Biosciences, The University of Queensland, St. Lucia, Queensland 4072, Australia. m.pedroso@uq.edu.au schenk@uq.edu.au."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 3,
                 "rek_author_affiliation_full_address": "School of Chemistry and Molecular Biosciences, The University of Queensland, St. Lucia, Queensland 4072, Australia. m.pedroso@uq.edu.au schenk@uq.edu.au."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 4,
                 "rek_author_affiliation_full_address": "Centre for Advanced Imaging, The University of Queensland, St. Lucia, Queensland 4072, Australia."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 5,
                 "rek_author_affiliation_full_address": "Department of Chemistry, Maynooth University, Maynooth, Co. Kildare, Ireland."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 6,
                 "rek_author_affiliation_full_address": "Department of Chemistry and Biochemistry, Miami University, Oxford, Ohio 45056, USA."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 7,
                 "rek_author_affiliation_full_address": "Department of Chemistry and Biochemistry, Middlebury College, Middlebury, VT 05753, USA."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 8,
                 "rek_author_affiliation_full_address": "School of Chemistry and Molecular Biosciences, The University of Queensland, St. Lucia, Queensland 4072, Australia. m.pedroso@uq.edu.au schenk@uq.edu.au and Australian Centre for Ecogenomics, The University of Queensland, St. Lucia, Queensland 4072, Australia."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 9,
                 "rek_author_affiliation_full_address": "School of Chemistry and Molecular Biosciences, The University of Queensland, St. Lucia, Queensland 4072, Australia. m.pedroso@uq.edu.au schenk@uq.edu.au and Australian Centre for Ecogenomics, The University of Queensland, St. Lucia, Queensland 4072, Australia."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 10,
                 "rek_author_affiliation_full_address": "Department of Chemistry and Biochemistry, Miami University, Oxford, Ohio 45056, USA."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 11,
                 "rek_author_affiliation_full_address": "Department of Chemistry and Biochemistry, Middlebury College, Middlebury, VT 05753, USA."
             }, {
                 "rek_author_affiliation_full_address_id": null,
-                "rek_author_affiliation_full_address_pid": "UQ:678742",
+                "rek_author_affiliation_full_address_pid": "UQ:678743",
                 "rek_author_affiliation_full_address_order": 12,
                 "rek_author_affiliation_full_address": "School of Chemistry and Molecular Biosciences, The University of Queensland, St. Lucia, Queensland 4072, Australia. m.pedroso@uq.edu.au schenk@uq.edu.au."
             }],
             "fez_record_search_key_author_affiliation_name": [{
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 1,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 2,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 3,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 4,
                 "rek_author_affiliation_name": "Centre for Advanced Imaging | The University of Queensland | St. Lucia | Australia"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 5,
                 "rek_author_affiliation_name": "Department of Chemistry | Maynooth University | Maynooth | Ireland"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 6,
                 "rek_author_affiliation_name": "Department of Chemistry and Biochemistry | Miami University | Oxford | USA"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 7,
                 "rek_author_affiliation_name": "Department of Chemistry and Biochemistry | Middlebury College | Middlebury | USA"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 8,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia | Australian Centre for Ecogenomics"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 9,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia | Australian Centre for Ecogenomics"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 10,
                 "rek_author_affiliation_name": "Department of Chemistry and Biochemistry | Miami University | Oxford | USA"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 11,
                 "rek_author_affiliation_name": "Department of Chemistry and Biochemistry | Middlebury College | Middlebury | USA"
             }, {
                 "rek_author_affiliation_name_id": null,
-                "rek_author_affiliation_name_pid": "UQ:678742",
+                "rek_author_affiliation_name_pid": "UQ:678743",
                 "rek_author_affiliation_name_order": 12,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia"
             }],
             "fez_record_search_key_author_id": [{
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 410,
                 "rek_author_id_order": 1
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 2
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 3
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 4
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 5
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 6
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 7
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 8
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 9
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 10
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 0,
                 "rek_author_id_order": 11
             }, {
                 "rek_author_id_id": null,
-                "rek_author_id_pid": "UQ:678742",
+                "rek_author_id_pid": "UQ:678743",
                 "rek_author_id": 683,
                 "rek_author_id_order": 12
             }],
@@ -1233,7 +1253,7 @@ export default {
             "fez_record_search_key_contributor": [
                 {
                     "rek_contributor_id": null,
-                    "rek_contributor_pid": "UQ:678742",
+                    "rek_contributor_pid": "UQ:678743",
                     "rek_contributor": 'Test contributor',
                     "rek_contributor_id_order": 1
                 }
@@ -1241,7 +1261,7 @@ export default {
             "fez_record_search_key_contributor_id": [
                 {
                     "rek_contributor_id_id": null,
-                    "rek_contributor_id_pid": "UQ:678742",
+                    "rek_contributor_id_pid": "UQ:678743",
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 }
@@ -1263,14 +1283,14 @@ export default {
             "fez_record_search_key_date_scanned": null,
             "fez_record_search_key_doi": {
                 "rek_doi_id": null,
-                "rek_doi_pid": "UQ:678742",
+                "rek_doi_pid": "UQ:678743",
                 "rek_doi": "10.1039\/c7mt00195a"
             },
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_date": null,
             "fez_record_search_key_end_page": {
                 "rek_end_page_id": null,
-                "rek_end_page_pid": "UQ:678742",
+                "rek_end_page_pid": "UQ:678743",
                 "rek_end_page": "1168"
             },
             "fez_record_search_key_fields_of_research": [],
@@ -1279,19 +1299,19 @@ export default {
             "fez_record_search_key_grant_acronym": [],
             "fez_record_search_key_grant_agency": [{
                 "rek_grant_agency_id": null,
-                "rek_grant_agency_pid": "UQ:678742",
+                "rek_grant_agency_pid": "UQ:678743",
                 "rek_grant_agency_order": 1,
                 "rek_grant_agency": "National Health and Medical Research Council"
             }],
             "fez_record_search_key_grant_agency_id": [{
                 "rek_grant_agency_id_id": null,
-                "rek_grant_agency_id_pid": "UQ:678742",
+                "rek_grant_agency_id_pid": "UQ:678743",
                 "rek_grant_agency_id_order": 1,
                 "rek_grant_agency_id": "10.13039\/501100000925"
             }],
             "fez_record_search_key_grant_id": [{
                 "rek_grant_id_id": null,
-                "rek_grant_id_pid": "UQ:678742",
+                "rek_grant_id_pid": "UQ:678743",
                 "rek_grant_id_order": 1,
                 "rek_grant_id": "APP1084778"
             }],
@@ -1307,56 +1327,60 @@ export default {
             "fez_record_search_key_isi_loc": null,
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": null,
-                "rek_ismemberof_pid": "UQ:678742",
+                "rek_ismemberof_pid": "UQ:678743",
                 "rek_ismemberof": "UQ:639325",
                 "rek_ismemberof_order": 1
             }],
             "fez_record_search_key_issn": [{
                 "rek_issn_id": null,
-                "rek_issn_pid": "UQ:678742",
+                "rek_issn_pid": "UQ:678743",
                 "rek_issn": "1756-5901",
                 "rek_issn_order": 1
-            }, { "rek_issn_id": null, "rek_issn_pid": "UQ:678742", "rek_issn": "1756-591X", "rek_issn_order": 2 }],
+            }, { "rek_issn_id": null,
+                "rek_issn_pid": "UQ:678743",
+                "rek_issn": "1756-591X",
+                "rek_issn_order": 2
+            }],
             "fez_record_search_key_issue_number": {
                 "rek_issue_number_id": null,
-                "rek_issue_number_pid": "UQ:678742",
+                "rek_issue_number_pid": "UQ:678743",
                 "rek_issue_number": "8"
             },
             "fez_record_search_key_job_number": null,
             "fez_record_search_key_journal_name": {
                 "rek_journal_name_id": null,
-                "rek_journal_name_pid": "UQ:678742",
+                "rek_journal_name_pid": "UQ:678743",
                 "rek_journal_name": "Metallomics"
             },
             "fez_record_search_key_keywords": [{
                 "rek_keywords_id": null,
-                "rek_keywords_pid": "UQ:678742",
+                "rek_keywords_pid": "UQ:678743",
                 "rek_keywords": "Biophysics",
                 "rek_keywords_order": 1
             }, {
                 "rek_keywords_id": null,
-                "rek_keywords_pid": "UQ:678742",
+                "rek_keywords_pid": "UQ:678743",
                 "rek_keywords": "Biochemistry",
                 "rek_keywords_order": 2
             }, {
                 "rek_keywords_id": null,
-                "rek_keywords_pid": "UQ:678742",
+                "rek_keywords_pid": "UQ:678743",
                 "rek_keywords": "Chemistry (miscellaneous)",
                 "rek_keywords_order": 3
             }, {
                 "rek_keywords_id": null,
-                "rek_keywords_pid": "UQ:678742",
+                "rek_keywords_pid": "UQ:678743",
                 "rek_keywords": "Metals and Alloys",
                 "rek_keywords_order": 4
             }, {
                 "rek_keywords_id": null,
-                "rek_keywords_pid": "UQ:678742",
+                "rek_keywords_pid": "UQ:678743",
                 "rek_keywords": "Biomaterials",
                 "rek_keywords_order": 5
             }],
             "fez_record_search_key_language": [{
                 "rek_language_id": null,
-                "rek_language_pid": "UQ:678742",
+                "rek_language_pid": "UQ:678743",
                 "rek_language": "0",
                 "rek_language_order": 1
             }],
@@ -1380,7 +1404,7 @@ export default {
             "fez_record_search_key_oa_notes": null,
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": null,
-                "rek_oa_status_pid": "UQ:678742",
+                "rek_oa_status_pid": "UQ:678743",
                 "rek_oa_status": 453698
             },
             "fez_record_search_key_org_name": null,
@@ -1397,22 +1421,22 @@ export default {
             "fez_record_search_key_project_start_date": null,
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": null,
-                "rek_publisher_pid": "UQ:678742",
+                "rek_publisher_pid": "UQ:678743",
                 "rek_publisher": "Royal Society of Chemistry (RSC)"
             },
             "fez_record_search_key_pubmed_id": {
                 "rek_pubmed_id_id": null,
-                "rek_pubmed_id_pid": "UQ:678742",
+                "rek_pubmed_id_pid": "UQ:678743",
                 "rek_pubmed_id": "28749495"
             },
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": null,
-                "rek_refereed_pid": "UQ:678742",
+                "rek_refereed_pid": "UQ:678743",
                 "rek_refereed": 1
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": null,
-                "rek_refereed_source_pid": "UQ:678742",
+                "rek_refereed_source_pid": "UQ:678743",
                 "rek_refereed_source": 453635
             },
             "fez_record_search_key_related_datasets": null,
@@ -1435,7 +1459,7 @@ export default {
             "fez_record_search_key_start_date": null,
             "fez_record_search_key_start_page": {
                 "rek_start_page_id": null,
-                "rek_start_page_pid": "UQ:678742",
+                "rek_start_page_pid": "UQ:678743",
                 "rek_start_page": "1157"
             },
             "fez_record_search_key_structural_systems": [],
@@ -1459,11 +1483,31 @@ export default {
             "fez_record_search_key_type_of_data": [],
             "fez_record_search_key_volume_number": {
                 "rek_volume_number_id": null,
-                "rek_volume_number_pid": "UQ:678742",
+                "rek_volume_number_pid": "UQ:678743",
                 "rek_volume_number": "9"
-            }
+            },
+            "fez_datastream_info": [{
+                "dsi_pid": "UQ:678743",
+                "dsi_dsid": "Balance.pdf",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "Work evidence - not publicly available",
+                "dsi_mimetype": "application\/pdf",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 225201
+            },{
+                "dsi_pid": "UQ:678743",
+                "dsi_dsid": "FezACML_Balance.pdf.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "FezACML security for datastream - Balance.pdf",
+                "dsi_mimetype": "text\/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 326
+            }],
         },
-        uq6de77b0
     ],
     "filters": {
         "facets": {

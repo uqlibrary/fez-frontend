@@ -15,7 +15,7 @@ function setup(testProps = {}) {
     return getElement(LicenceSelectorField, props);
 }
 
-describe('LicenseSelectorField component', () => {
+describe('LicenceSelectorField component', () => {
     it('should render default view', () => {
         const wrapper = setup();
 
@@ -28,6 +28,14 @@ describe('LicenseSelectorField component', () => {
                 error: 'This field is required',
             },
         });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render with deprecated list', () => {
+        const wrapper = setup({
+            isAdmin: true,
+        });
+
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

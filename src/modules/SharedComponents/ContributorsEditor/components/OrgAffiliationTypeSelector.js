@@ -4,6 +4,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ } from 'config/general';
 
 export default function OrgAffilicationTypeSelector({ affiliation, onAffiliationChange, locale, error, disabled }) {
     return (
@@ -46,7 +47,7 @@ OrgAffilicationTypeSelector.defaultProps = {
     locale: {
         inputLabel: 'Org affiliation',
         placeholder: 'Organisational affiliation at time of publication',
-        options: [{ key: 'UQ', value: 'UQ' }, { key: 'NotUQ', value: 'Not UQ' }],
+        options: [{ key: AFFILIATION_TYPE_UQ, value: 'UQ' }, { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' }],
     },
     error: false,
     helperText: undefined,

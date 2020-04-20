@@ -1,6 +1,6 @@
 import { AppClass } from './App';
 import App from './App';
-import { accounts, currentAuthor } from 'mock/data';
+import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT } from 'config';
 import mui1theme from 'config';
 
@@ -286,6 +286,77 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render app for account with fez author without ORCID ID but is an admin', () => {
+        const wrapper = setup({
+            account: account,
+            author: {
+                ...author,
+                aut_orcid_id: null,
+            },
+            authorDetails: {
+                is_administrator: 1,
+                is_super_administrator: 0,
+            },
+        });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render app for account with fez author without ORCID ID but is an super admin', () => {
+        const wrapper = setup({
+            account: account,
+            author: {
+                ...author,
+                aut_orcid_id: null,
+            },
+            authorDetails: {
+                is_administrator: 0,
+                is_super_administrator: 1,
+            },
+        });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render app for account with fez author without ORCID ID but is an admin', () => {
+        const wrapper = setup({
+            account: account,
+            author: author,
+            authorDetails: {
+                is_administrator: 1,
+                is_super_administrator: 0,
+            },
+        });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render app for account with fez author with a ORCID ID but is an super admin', () => {
+        const wrapper = setup({
+            account: account,
+            author: author,
+            authorDetails: {
+                is_administrator: 0,
+                is_super_administrator: 1,
+            },
+        });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render app for account with author account without a ORCID ID', () => {
+        const wrapper = setup({
+            account: account,
+            author: {
+                ...author,
+                aut_orcid_id: null,
+            },
+            authorDetails: authorDetails.uqresearcher,
+        });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it(
         'should render app for account with fez author without ORCID ID should ' +
             'not display ORCID warning on thesis submission page',
@@ -313,6 +384,10 @@ describe('Application component', () => {
                 aut_org_username: null,
                 aut_student_username: 's2222222',
                 aut_orcid_id: null,
+            },
+            authorDetails: {
+                is_administrator: 0,
+                is_super_administrator: 0,
             },
         });
         wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };

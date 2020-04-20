@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import { record } from 'mock/data';
+import { record, collectionRecord, communityRecord } from 'mock/data';
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -1050,6 +1050,15 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('adminReset()', () => {
+        it('dispatches expected actions', async() => {
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_RESET];
+
+            await mockActionsStore.dispatch(recordActions.adminReset());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
     describe('adminUpdate()', () => {
         const testInput = {
             pid: 'UQ:396321',
@@ -1121,7 +1130,256 @@ describe('Record action creators', () => {
             }
             expect(requestFailed).toBe(true);
         });
+
+        it('dispatches expected actions on edit record successfully with file upload', async() => {
+            const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
+
+            mockApi
+                .onPatch(url)
+                .reply(200, { data: record })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.ADMIN_UPDATE_WORK_PROCESSING,
+                'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.ADMIN_UPDATE_WORK_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(
+                recordActions.adminUpdate({
+                    publication: {
+                        rek_pid: 'UQ:396321',
+                    },
+                    securitySection: {
+                        rek_security_policy: 2,
+                    },
+
+                    filesSection: {
+                        files: {
+                            queue: [
+                                {
+                                    name: 'test.txt',
+                                    fileData: {
+                                        name: 'test.txt',
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
     });
+
+    describe('adminCreate()', () => {
+        it('dispatches expected actions on create record successfully', async() => {
+            const testInput = {
+                authorsSection: {
+                    authors: [
+                        {
+                            nameAsPublished: 'test',
+                            disabled: false,
+                            selected: true,
+                            authorId: 410,
+                        },
+                    ],
+                },
+                bibliographicSection: {
+                    rek_title: 'test',
+                    rek_display_type: 179,
+                    fez_record_search_key_journal_name: {
+                        rek_journal_name: 'test',
+                    },
+                    rek_date: '2017-01-01',
+                    rek_subtype: 'Article (original research)',
+                },
+                filesSection: {},
+            };
+            const pidRequest = { pid: 'UQ:396321' };
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, { data: { ...record } });
+
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on create record successfully with file upload', async() => {
+            const testInput = {
+                authorsSection: {
+                    authors: [
+                        {
+                            nameAsPublished: 'test',
+                            disabled: false,
+                            selected: true,
+                            authorId: 410,
+                        },
+                    ],
+                },
+                bibliographicSection: {
+                    rek_title: 'test',
+                    rek_display_type: 179,
+                    fez_record_search_key_journal_name: {
+                        rek_journal_name: 'test',
+                    },
+                    rek_date: '2017-01-01',
+                    rek_subtype: 'Article (original research)',
+                },
+                filesSection: {
+                    files: {
+                        queue: [
+                            {
+                                name: 'test.txt',
+                                fileData: {
+                                    name: 'test.txt',
+                                },
+                            },
+                        ],
+                    },
+                },
+            };
+            const pidRequest = { pid: 'UQ:396321' };
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.ADMIN_CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.ADMIN_CREATE_RECORD_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on create record successfully with file upload', async() => {
+            const testInput = {
+                authorsSection: {
+                    authors: [
+                        {
+                            nameAsPublished: 'test',
+                            disabled: false,
+                            selected: true,
+                            authorId: 410,
+                        },
+                    ],
+                },
+                bibliographicSection: {
+                    rek_title: 'test',
+                    rek_display_type: 179,
+                    fez_record_search_key_journal_name: {
+                        rek_journal_name: 'test',
+                    },
+                    rek_date: '2017-01-01',
+                    rek_subtype: 'Article (original research)',
+                },
+                filesSection: {
+                    files: {
+                        queue: [
+                            {
+                                name: 'test.txt',
+                                fileData: {
+                                    name: 'test.txt',
+                                },
+                            },
+                        ],
+                    },
+                },
+            };
+            const pidRequest = { pid: 'UQ:396321' };
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(500)
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.ADMIN_CREATE_RECORD_SAVING,
+                'FILE_UPLOAD_STARTED',
+                actions.APP_ALERT_SHOW,
+                'FILE_UPLOADED_FAILED@test.txt',
+                actions.ADMIN_CREATE_RECORD_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions for anon user', async() => {
+            const testInput = {
+                authorsSection: {
+                    authors: [
+                        {
+                            nameAsPublished: 'test',
+                            disabled: false,
+                            selected: true,
+                            authorId: 410,
+                        },
+                    ],
+                },
+                bibliographicSection: {
+                    rek_title: 'test',
+                    rek_display_type: 179,
+                    fez_record_search_key_journal_name: {
+                        rek_journal_name: 'test',
+                    },
+                    rek_date: '2017-01-01',
+                    rek_subtype: 'Article (original research)',
+                },
+                filesSection: {
+                    files: {
+                        queue: [
+                            {
+                                name: 'test.txt',
+                                fileData: {
+                                    name: 'test.txt',
+                                },
+                            },
+                        ],
+                    },
+                },
+            };
+
+            mockApi.onAny().reply(403, {});
+
+            const expectedActions = [
+                actions.ADMIN_CREATE_RECORD_SAVING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.ADMIN_CREATE_RECORD_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
     describe('createCollection()', () => {
         it('dispatches expected actions on successful save', async() => {
             const testInput = {
@@ -1187,6 +1445,48 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('updateCollection()', () => {
+        const pid = 'UQ:123456';
+        const testInput = {
+            pid,
+            date: '2020-04-07',
+            updated: {
+                securitySection: {
+                    rek_datastream_policy: 2,
+                },
+            },
+        };
+
+        it('dispatches expected actions on successful save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .reply(200, { data: { ...collectionRecord } });
+
+            const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.updateCollection(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .reply(500, { error: { message: 'FAILED' } });
+
+            const expectedActions = [
+                actions.COLLECTION_UPDATING,
+                actions.APP_ALERT_SHOW,
+                actions.COLLECTION_UPDATE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.updateCollection(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
     describe('createCommunity()', () => {
         it('dispatches expected actions on successful save', async() => {
             const testInput = {
@@ -1244,6 +1544,48 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(recordActions.createCommunity(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('updateCommunity()', () => {
+        const pid = 'UQ:123456';
+        const testInput = {
+            pid,
+            date: '2020-04-07',
+            updated: {
+                securitySection: {
+                    rek_security_policy: 4,
+                },
+            },
+        };
+
+        it('dispatches expected actions on successful save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .reply(200, { data: { ...collectionRecord } });
+
+            const expectedActions = [actions.COMMUNITY_UPDATING, actions.COMMUNITY_UPDATE_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.updateCommunity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed save', async() => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .reply(500, { error: { message: 'FAILED' } });
+
+            const expectedActions = [
+                actions.COMMUNITY_UPDATING,
+                actions.APP_ALERT_SHOW,
+                actions.COMMUNITY_UPDATE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.updateCommunity(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 });

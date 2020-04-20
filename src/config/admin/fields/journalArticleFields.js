@@ -1,0 +1,171 @@
+import commonFields from './commonFields';
+
+export default {
+    ...commonFields,
+    identifiers: ({ displayIdentifiers, displayLocation } = { displayIdentifiers: false, displayLocation: false }) => [
+        {
+            title: 'Manage identifiers',
+            groups: [
+                ['fez_record_search_key_doi'],
+                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                ['fez_record_search_key_pubmed_central_id'],
+            ],
+        },
+        {
+            title: 'Manage links',
+            groups: [['links']],
+        },
+        ...(displayIdentifiers
+            ? [
+                {
+                    title: 'Identifiers',
+                    groups: [['fez_record_search_key_identifier']],
+                },
+            ]
+            : []),
+        ...(displayLocation
+            ? [
+                {
+                    title: 'Location',
+                    groups: [['fez_record_search_key_location']],
+                },
+            ]
+            : []),
+    ],
+    bibliographic: (isLote = false) => [
+        {
+            title: 'Title',
+            groups: [
+                ['rek_title'],
+                ...(isLote
+                    ? [
+                        ['languageOfTitle'],
+                        ['fez_record_search_key_native_script_title'],
+                        ['fez_record_search_key_roman_script_title'],
+                        ['fez_record_search_key_translated_title'],
+                    ]
+                    : []),
+            ],
+        },
+        {
+            title: 'Language of work & Journal name',
+            groups: [['languages'], ['fez_record_search_key_journal_name']],
+            ...(isLote
+                ? [
+                    ['languageOfJournalName'],
+                    ['fez_record_search_key_native_script_journal_name'],
+                    ['fez_record_search_key_translated_journal_name'],
+                    ['fez_record_search_key_roman_script_journal_name'],
+                ]
+                : []),
+        },
+        {
+            title: 'ISBN',
+            groups: [['fez_record_search_key_isbn']],
+        },
+        {
+            title: 'ISSN',
+            groups: [['issnField']],
+        },
+        {
+            title: 'Bibliographic',
+            groups: [
+                ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                [
+                    'fez_record_search_key_volume_number',
+                    'fez_record_search_key_issue_number',
+                    'fez_record_search_key_article_number',
+                ],
+                [
+                    'fez_record_search_key_start_page',
+                    'fez_record_search_key_end_page',
+                    'fez_record_search_key_total_pages',
+                ],
+                ['rek_date'],
+                ['fez_record_search_key_date_available'],
+                ['rek_description'],
+            ],
+        },
+        {
+            title: 'Keyword(s)',
+            groups: [['fez_record_search_key_keywords']],
+        },
+        {
+            title: 'Subject',
+            groups: [['subjects']],
+        },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
+    ],
+    authors: () => [
+        {
+            title: 'Authors',
+            groups: [['authors']],
+        },
+    ],
+    admin: () => [
+        {
+            title: 'Member of collections',
+            groups: [['collections']],
+        },
+        {
+            title: 'Additional information',
+            groups: [
+                ['rek_subtype'],
+                [
+                    'fez_record_search_key_herdc_code',
+                    'fez_record_search_key_herdc_status',
+                    'fez_record_search_key_institutional_status',
+                ],
+                ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                ['additionalNotes'],
+            ],
+        },
+        {
+            title: 'Notes',
+            groups: [['internalNotes'], ['rek_herdc_notes']],
+        },
+    ],
+    ntro: () => [
+        {
+            title: 'Scale/Significance of work & Creator research statement',
+            groups: [['significanceAndContributionStatement']],
+        },
+        {
+            title: 'ISMN',
+            groups: [['fez_record_search_key_ismn']],
+        },
+        {
+            title: 'Quality indicators',
+            groups: [['qualityIndicators']],
+        },
+    ],
+};
+
+export const validateJournalArticle = (
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { validationErrorsSummary: summary },
+) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_journal_name || {}).rek_journal_name && {
+            fez_record_search_key_journal_name: {
+                rek_journal_name: summary.rek_journal_name,
+            },
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});

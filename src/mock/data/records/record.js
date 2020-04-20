@@ -1,4 +1,4 @@
-export default {
+ export default {
     "rek_pid": "UQ:396321",
     "rek_title_xsdmf_id": 10588,
     "rek_title": "Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer",
@@ -99,90 +99,138 @@ export default {
             "rek_author": "Betts, Joshua A.",
             "rek_author_order": 6
         },
+    ],
+    "fez_record_search_key_author_affiliation_country": [
         {
-            "rek_author_id": 28593835,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "McCart Reed, Amy E.",
-            "rek_author_order": 7
+            "rek_author_affiliation_country_id": 728545,
+            "rek_author_affiliation_country_pid": "UQ:396321",
+            "rek_author_affiliation_country_xsdmf_id": 0,
+            "rek_author_affiliation_country": "Australia",
+            "rek_author_affiliation_country_order": 1
         },
         {
-            "rek_author_id": 28593836,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Nephew, Kenneth P.",
-            "rek_author_order": 8
+            "rek_author_affiliation_country_id": 728546,
+            "rek_author_affiliation_country_pid": "UQ:396321",
+            "rek_author_affiliation_country_xsdmf_id": 0,
+            "rek_author_affiliation_country": "Australia",
+            "rek_author_affiliation_country_order": 2
         },
         {
-            "rek_author_id": 28593837,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Stone, Andrew",
-            "rek_author_order": 9
+            "rek_author_affiliation_country_id": 728547,
+            "rek_author_affiliation_country_pid": "UQ:396321",
+            "rek_author_affiliation_country_xsdmf_id": 0,
+            "rek_author_affiliation_country": "Australia",
+            "rek_author_affiliation_country_order": 3
         },
         {
-            "rek_author_id": 28593838,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Gee, Julia M. W.",
-            "rek_author_order": 10
+            "rek_author_affiliation_country_id": 728548,
+            "rek_author_affiliation_country_pid": "UQ:396321",
+            "rek_author_affiliation_country_xsdmf_id": 0,
+            "rek_author_affiliation_country": "Australia|Australia",
+            "rek_author_affiliation_country_order": 4
         },
         {
-            "rek_author_id": 28593839,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Dowhan, Dennis H.",
-            "rek_author_order": 11
+            "rek_author_affiliation_country_id": 728549,
+            "rek_author_affiliation_country_pid": "UQ:396321",
+            "rek_author_affiliation_country_xsdmf_id": 0,
+            "rek_author_affiliation_country": "Australia|Australia",
+            "rek_author_affiliation_country_order": 5
         },
         {
-            "rek_author_id": 28593840,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Dray, Eloise",
-            "rek_author_order": 12
+            "rek_author_affiliation_country_id": 728550,
+            "rek_author_affiliation_country_pid": "UQ:396321",
+            "rek_author_affiliation_country_xsdmf_id": 0,
+            "rek_author_affiliation_country": "Australia|Australia",
+            "rek_author_affiliation_country_order": 6
+        },
+    ],
+    "fez_record_search_key_author_affiliation_full_address": [
+        {
+            "rek_author_affiliation_full_address_id": 794699,
+            "rek_author_affiliation_full_address_pid": "UQ:396321",
+            "rek_author_affiliation_full_address_xsdmf_id": 0,
+            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia",
+            "rek_author_affiliation_full_address_order": 1
         },
         {
-            "rek_author_id": 28593841,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Shewan, Annette M.",
-            "rek_author_order": 13
+            "rek_author_affiliation_full_address_id": 794700,
+            "rek_author_affiliation_full_address_pid": "UQ:396321",
+            "rek_author_affiliation_full_address_xsdmf_id": 0,
+            "rek_author_affiliation_full_address": "QIMR Berghofer Med Res Inst, Brisbane, Qld, Australia",
+            "rek_author_affiliation_full_address_order": 2
         },
         {
-            "rek_author_id": 28593842,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "French, Juliet D.",
-            "rek_author_order": 14
+            "rek_author_affiliation_full_address_id": 794701,
+            "rek_author_affiliation_full_address_pid": "UQ:396321",
+            "rek_author_affiliation_full_address_xsdmf_id": 0,
+            "rek_author_affiliation_full_address": "Univ Queensland, UQ Ctr Clin Res, Herston, Qld, Australia",
+            "rek_author_affiliation_full_address_order": 3
         },
         {
-            "rek_author_id": 28593843,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Edwards, Stacey L.",
-            "rek_author_order": 15
+            "rek_author_affiliation_full_address_id": 794702,
+            "rek_author_affiliation_full_address_pid": "UQ:396321",
+            "rek_author_affiliation_full_address_xsdmf_id": 0,
+            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|Univ Queensland, UQ Ctr Clin Res, Herston, Qld, Australia",
+            "rek_author_affiliation_full_address_order": 4
         },
         {
-            "rek_author_id": 28593844,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Clark, Susan J.",
-            "rek_author_order": 16
+            "rek_author_affiliation_full_address_id": 794703,
+            "rek_author_affiliation_full_address_pid": "UQ:396321",
+            "rek_author_affiliation_full_address_xsdmf_id": 0,
+            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|Univ Queensland, Inst Mol Biosci, Brisbane, Qld, Australia",
+            "rek_author_affiliation_full_address_order": 5
         },
         {
-            "rek_author_id": 28593845,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Lakhani, Sunil R.",
-            "rek_author_order": 17
+            "rek_author_affiliation_full_address_id": 794704,
+            "rek_author_affiliation_full_address_pid": "UQ:396321",
+            "rek_author_affiliation_full_address_xsdmf_id": 0,
+            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|QIMR Berghofer Med Res Inst, Brisbane, Qld, Australia",
+            "rek_author_affiliation_full_address_order": 6
+        },
+    ],
+    "fez_record_search_key_author_affiliation_name": [
+        {
+            "rek_author_affiliation_name_id": 729198,
+            "rek_author_affiliation_name_pid": "UQ:396321",
+            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name": "Univ Queensland",
+            "rek_author_affiliation_name_order": 1
         },
         {
-            "rek_author_id": 28593846,
-            "rek_author_pid": "UQ:396321",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Brown, Melissa A.",
-            "rek_author_order": 18
-        }
+            "rek_author_affiliation_name_id": 729199,
+            "rek_author_affiliation_name_pid": "UQ:396321",
+            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name": "QIMR Berghofer Med Res Inst",
+            "rek_author_affiliation_name_order": 2
+        },
+        {
+            "rek_author_affiliation_name_id": 729200,
+            "rek_author_affiliation_name_pid": "UQ:396321",
+            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name": "Univ Queensland",
+            "rek_author_affiliation_name_order": 3
+        },
+        {
+            "rek_author_affiliation_name_id": 729201,
+            "rek_author_affiliation_name_pid": "UQ:396321",
+            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name": "Univ Queensland|Univ Queensland",
+            "rek_author_affiliation_name_order": 4
+        },
+        {
+            "rek_author_affiliation_name_id": 729202,
+            "rek_author_affiliation_name_pid": "UQ:396321",
+            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name": "Univ Queensland|Univ Queensland",
+            "rek_author_affiliation_name_order": 5
+        },
+        {
+            "rek_author_affiliation_name_id": 729203,
+            "rek_author_affiliation_name_pid": "UQ:396321",
+            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name": "Univ Queensland|QIMR Berghofer Med Res Inst",
+            "rek_author_affiliation_name_order": 6
+        },
     ],
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_type": [],
@@ -235,98 +283,6 @@ export default {
             "rek_author_id_order": 6,
             "rek_author_id_lookup": "Joshua Betts"
         },
-        {
-            "rek_author_id_id": 27973934,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 12312,
-            "rek_author_id_order": 7,
-            "rek_author_id_lookup": "Amy McCart"
-        },
-        {
-            "rek_author_id_id": 27973935,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 8
-        },
-        {
-            "rek_author_id_id": 27973936,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 9
-        },
-        {
-            "rek_author_id_id": 27973937,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 10
-        },
-        {
-            "rek_author_id_id": 27973938,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 1262,
-            "rek_author_id_order": 11,
-            "rek_author_id_lookup": "Dowhan, Dennis H."
-        },
-        {
-            "rek_author_id_id": 27973939,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 91834,
-            "rek_author_id_order": 12,
-            "rek_author_id_lookup": "Eloise Dray-Paquet"
-        },
-        {
-            "rek_author_id_id": 27973940,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 961,
-            "rek_author_id_order": 13,
-            "rek_author_id_lookup": "Shewan, Annette M."
-        },
-        {
-            "rek_author_id_id": 27973941,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 950,
-            "rek_author_id_order": 14,
-            "rek_author_id_lookup": "French, Juliet D."
-        },
-        {
-            "rek_author_id_id": 27973942,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 1721,
-            "rek_author_id_order": 15,
-            "rek_author_id_lookup": "Edwards, Stacey"
-        },
-        {
-            "rek_author_id_id": 27973943,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 16
-        },
-        {
-            "rek_author_id_id": 27973944,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 3247,
-            "rek_author_id_order": 17,
-            "rek_author_id_lookup": "Lakhani, Sunil"
-        },
-        {
-            "rek_author_id_id": 27973945,
-            "rek_author_id_pid": "UQ:396321",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 1671,
-            "rek_author_id_order": 18,
-            "rek_author_id_lookup": "Brown, Melissa Anne"
-        }
     ],
     "fez_record_search_key_author_crossref_authenticated": [],
     "fez_record_search_key_author_crossref_orcid": [],
@@ -433,41 +389,6 @@ export default {
             "rek_corresponding_country": "Australia",
             "rek_corresponding_country_order": 6
         },
-        {
-            "rek_corresponding_country_id": 45213,
-            "rek_corresponding_country_pid": "UQ:396321",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country": "Wales",
-            "rek_corresponding_country_order": 7
-        },
-        {
-            "rek_corresponding_country_id": 45214,
-            "rek_corresponding_country_pid": "UQ:396321",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country": "Australia",
-            "rek_corresponding_country_order": 8
-        },
-        {
-            "rek_corresponding_country_id": 45215,
-            "rek_corresponding_country_pid": "UQ:396321",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country": "Australia",
-            "rek_corresponding_country_order": 9
-        },
-        {
-            "rek_corresponding_country_id": 45216,
-            "rek_corresponding_country_pid": "UQ:396321",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country": "Australia",
-            "rek_corresponding_country_order": 10
-        },
-        {
-            "rek_corresponding_country_id": 45217,
-            "rek_corresponding_country_pid": "UQ:396321",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country": "Australia",
-            "rek_corresponding_country_order": 11
-        }
     ],
     "fez_record_search_key_corresponding_email": [
         {
@@ -530,41 +451,6 @@ export default {
             "rek_corresponding_organisation": "Garvan Institute of Medical Research",
             "rek_corresponding_organisation_order": 6
         },
-        {
-            "rek_corresponding_organisation_id": 45094,
-            "rek_corresponding_organisation_pid": "UQ:396321",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation": "Cardiff University",
-            "rek_corresponding_organisation_order": 7
-        },
-        {
-            "rek_corresponding_organisation_id": 45095,
-            "rek_corresponding_organisation_pid": "UQ:396321",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation": "University of Queensland",
-            "rek_corresponding_organisation_order": 8
-        },
-        {
-            "rek_corresponding_organisation_id": 45096,
-            "rek_corresponding_organisation_pid": "UQ:396321",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
-            "rek_corresponding_organisation_order": 9
-        },
-        {
-            "rek_corresponding_organisation_id": 45097,
-            "rek_corresponding_organisation_pid": "UQ:396321",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation": "Royal Brisbane & Womens Hosp",
-            "rek_corresponding_organisation_order": 10
-        },
-        {
-            "rek_corresponding_organisation_id": 45098,
-            "rek_corresponding_organisation_pid": "UQ:396321",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation": "University of Queensland",
-            "rek_corresponding_organisation_order": 11
-        }
     ],
     "fez_record_search_key_creator_contribution_statement": [],
     "fez_record_search_key_datastream_policy": null,
@@ -623,14 +509,26 @@ export default {
         "rek_end_page_xsdmf_id": null,
         "rek_end_page": "3283"
     },
-    "fez_record_search_key_file_attachment_access_condition": [],
-    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_access_condition": [{
+        "rek_file_attachment_access_condition_id": 18363,
+        "rek_file_attachment_access_condition_pid": "UQ:396321",
+        "rek_file_attachment_access_condition_xsdmf_id": 0,
+        "rek_file_attachment_access_condition": "8",
+        "rek_file_attachment_access_condition_order": 1
+    }],
+    "fez_record_search_key_file_attachment_embargo_date": [{
+        "rek_file_attachment_embargo_date_id": 477,
+        "rek_file_attachment_embargo_date_pid": "UQ:396321",
+        "rek_file_attachment_embargo_date_xsdmf_id": 0,
+        "rek_file_attachment_embargo_date": "2099-01-01T00:00:00Z",
+        "rek_file_attachment_embargo_date_order": 1
+    }],
     "fez_record_search_key_file_attachment_name": [
         {
             "rek_file_attachment_name_id": 4215529,
             "rek_file_attachment_name_pid": "UQ:396321",
             "rek_file_attachment_name_xsdmf_id": null,
-            "rek_file_attachment_name": "FezACML_UQ_396321.xml",
+            "rek_file_attachment_name": "Collins_audio_only.mp3",
             "rek_file_attachment_name_order": 1
         }
     ],
@@ -693,41 +591,6 @@ export default {
             "rek_grant_agency": "Institute, Integrative Cancer Biology Program",
             "rek_grant_agency_order": 6
         },
-        {
-            "rek_grant_agency_id": 21120,
-            "rek_grant_agency_pid": "UQ:396321",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency": "NBCF",
-            "rek_grant_agency_order": 7
-        },
-        {
-            "rek_grant_agency_id": 21121,
-            "rek_grant_agency_pid": "UQ:396321",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency": "Breast Cancer Now",
-            "rek_grant_agency_order": 8
-        },
-        {
-            "rek_grant_agency_id": 21122,
-            "rek_grant_agency_pid": "UQ:396321",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency": "Australian Postgraduate Award (APA)",
-            "rek_grant_agency_order": 9
-        },
-        {
-            "rek_grant_agency_id": 21123,
-            "rek_grant_agency_pid": "UQ:396321",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency": "NBCF",
-            "rek_grant_agency_order": 10
-        },
-        {
-            "rek_grant_agency_id": 21124,
-            "rek_grant_agency_pid": "UQ:396321",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency": "NHMRC",
-            "rek_grant_agency_order": 11
-        }
     ],
     "fez_record_search_key_grant_agency_id": [],
     "fez_record_search_key_grant_agency_type": [],
@@ -855,45 +718,6 @@ export default {
             },
             "rek_ismemberof_lookup": "UQ Centre for Clinical Research Publications"
         },
-        {
-            "rek_ismemberof_id": 12445159,
-            "rek_ismemberof_pid": "UQ:396321",
-            "rek_ismemberof_xsdmf_id": null,
-            "rek_ismemberof": "UQ:3858",
-            "rek_ismemberof_order": 4,
-            "parent": {
-                "rek_pid": "UQ:3858",
-                "rek_security_policy": 5,
-                "rek_datastream_policy": 5
-            },
-            "rek_ismemberof_lookup": "Institute for Molecular Bioscience - Publications"
-        },
-        {
-            "rek_ismemberof_id": 12445160,
-            "rek_ismemberof_pid": "UQ:396321",
-            "rek_ismemberof_xsdmf_id": null,
-            "rek_ismemberof": "UQ:3860",
-            "rek_ismemberof_order": 5,
-            "parent": {
-                "rek_pid": "UQ:3860",
-                "rek_security_policy": 5,
-                "rek_datastream_policy": 5
-            },
-            "rek_ismemberof_lookup": "Australian Institute for Bioengineering and Nanotechnology Publications"
-        },
-        {
-            "rek_ismemberof_id": 12445161,
-            "rek_ismemberof_pid": "UQ:396321",
-            "rek_ismemberof_xsdmf_id": null,
-            "rek_ismemberof": "UQ:3831",
-            "rek_ismemberof_order": 6,
-            "parent": {
-                "rek_pid": "UQ:3831",
-                "rek_security_policy": 5,
-                "rek_datastream_policy": 5
-            },
-            "rek_ismemberof_lookup": "School of Medicine Publications"
-        }
     ],
     "fez_record_search_key_ismn": [],
     "fez_record_search_key_issn": [
@@ -1138,7 +962,7 @@ export default {
         "rek_oa_status_id": 281706,
         "rek_oa_status_pid": "UQ:396321",
         "rek_oa_status_xsdmf_id": null,
-        "rek_oa_status": 453693,
+        "rek_oa_status": 453697,
         "rek_oa_status_lookup": "DOI"
     },
     "fez_record_search_key_place_of_publication": {
@@ -1320,14 +1144,14 @@ export default {
         {
             "dsi_pid": "UQ:681794",
             "dsi_dsid": "Collins_audio_only.mp3",
-            "dsi_embargo_date": null,
+            "dsi_embargo_date": "2099-01-01",
             "dsi_open_access": null,
-            "dsi_label": "Audio document (Open Access)",
+            "dsi_label": "Audio document (Embargoed Open Access)",
             "dsi_mimetype": "audio/mpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
             "dsi_size": 16806028,
-            "dsi_security_policy": 1,
+            "dsi_security_policy": 5,
             "dsi_security_inherited": 0
         },
         {
@@ -1407,8 +1231,7 @@ export default {
             "dsi_size": 186680,
             "dsi_security_policy": 1,
             "dsi_security_inherited": 0
-        },
-    ],
+        }],
     "fez_matched_journals": [
         {
             "mtj_pid": "UQ:396321",
@@ -1437,396 +1260,10 @@ export default {
     "rek_scopus_doc_type_lookup": null,
     "rek_status_lookup": "Published",
     "rek_wok_doc_type_lookup": null,
-    "fez_record_search_key_author_affiliation_country": [
-        {
-            "rek_author_affiliation_country_id": 728545,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 1
-        },
-        {
-            "rek_author_affiliation_country_id": 728546,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 2
-        },
-        {
-            "rek_author_affiliation_country_id": 728547,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 3
-        },
-        {
-            "rek_author_affiliation_country_id": 728548,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia",
-            "rek_author_affiliation_country_order": 4
-        },
-        {
-            "rek_author_affiliation_country_id": 728549,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia",
-            "rek_author_affiliation_country_order": 5
-        },
-        {
-            "rek_author_affiliation_country_id": 728550,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia",
-            "rek_author_affiliation_country_order": 6
-        },
-        {
-            "rek_author_affiliation_country_id": 728551,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 7
-        },
-        {
-            "rek_author_affiliation_country_id": 728552,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "USA",
-            "rek_author_affiliation_country_order": 8
-        },
-        {
-            "rek_author_affiliation_country_id": 728553,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 9
-        },
-        {
-            "rek_author_affiliation_country_id": 728554,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Wales",
-            "rek_author_affiliation_country_order": 10
-        },
-        {
-            "rek_author_affiliation_country_id": 728555,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 11
-        },
-        {
-            "rek_author_affiliation_country_id": 728556,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia|Australia",
-            "rek_author_affiliation_country_order": 12
-        },
-        {
-            "rek_author_affiliation_country_id": 728557,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 13
-        },
-        {
-            "rek_author_affiliation_country_id": 728558,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia",
-            "rek_author_affiliation_country_order": 14
-        },
-        {
-            "rek_author_affiliation_country_id": 728559,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia",
-            "rek_author_affiliation_country_order": 15
-        },
-        {
-            "rek_author_affiliation_country_id": 728560,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 16
-        },
-        {
-            "rek_author_affiliation_country_id": 728561,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia|Australia|Australia",
-            "rek_author_affiliation_country_order": 17
-        },
-        {
-            "rek_author_affiliation_country_id": 728562,
-            "rek_author_affiliation_country_pid": "UQ:396321",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country": "Australia",
-            "rek_author_affiliation_country_order": 18
-        }
-    ],
-    "fez_record_search_key_author_affiliation_full_address": [
-        {
-            "rek_author_affiliation_full_address_id": 794699,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 1
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794700,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "QIMR Berghofer Med Res Inst, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 2
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794701,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, UQ Ctr Clin Res, Herston, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 3
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794702,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|Univ Queensland, UQ Ctr Clin Res, Herston, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 4
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794703,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|Univ Queensland, Inst Mol Biosci, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 5
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794704,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|QIMR Berghofer Med Res Inst, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 6
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794705,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, UQ Ctr Clin Res, Herston, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 7
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794706,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Indiana Univ, Sch Med, Bloomington, IN USA",
-            "rek_author_affiliation_full_address_order": 8
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794707,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Garvan Inst Med Res, Div Genom & Epigenet, Epigenet Res Lab, Sydney, NSW, Australia",
-            "rek_author_affiliation_full_address_order": 9
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794708,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Cardiff Univ, Sch Pharm & Pharmaceut Sci, Cardiff, S Glam, Wales",
-            "rek_author_affiliation_full_address_order": 10
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794709,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Inst Mol Biosci, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 11
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794710,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|Univ Queensland, Australian Inst Bioengn & Nanotechnol, Brisbane, Qld, Australia|Queensland Univ Technol, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 12
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794711,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 13
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794712,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|QIMR Berghofer Med Res Inst, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 14
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794713,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia|QIMR Berghofer Med Res Inst, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 15
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794714,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Garvan Inst Med Res, Div Genom & Epigenet, Epigenet Res Lab, Sydney, NSW, Australia",
-            "rek_author_affiliation_full_address_order": 16
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794715,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, UQ Ctr Clin Res, Herston, Qld, Australia|Royal Brisbane & Womens Hosp, Pathol Queensland, Herston, Qld, Australia|Univ Queensland, Sch Med, Herston, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 17
-        },
-        {
-            "rek_author_affiliation_full_address_id": 794716,
-            "rek_author_affiliation_full_address_pid": "UQ:396321",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld, Australia",
-            "rek_author_affiliation_full_address_order": 18
-        }
-    ],
-    "fez_record_search_key_author_affiliation_name": [
-        {
-            "rek_author_affiliation_name_id": 729198,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland",
-            "rek_author_affiliation_name_order": 1
-        },
-        {
-            "rek_author_affiliation_name_id": 729199,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "QIMR Berghofer Med Res Inst",
-            "rek_author_affiliation_name_order": 2
-        },
-        {
-            "rek_author_affiliation_name_id": 729200,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland",
-            "rek_author_affiliation_name_order": 3
-        },
-        {
-            "rek_author_affiliation_name_id": 729201,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|Univ Queensland",
-            "rek_author_affiliation_name_order": 4
-        },
-        {
-            "rek_author_affiliation_name_id": 729202,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|Univ Queensland",
-            "rek_author_affiliation_name_order": 5
-        },
-        {
-            "rek_author_affiliation_name_id": 729203,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|QIMR Berghofer Med Res Inst",
-            "rek_author_affiliation_name_order": 6
-        },
-        {
-            "rek_author_affiliation_name_id": 729204,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland",
-            "rek_author_affiliation_name_order": 7
-        },
-        {
-            "rek_author_affiliation_name_id": 729205,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Indiana Univ",
-            "rek_author_affiliation_name_order": 8
-        },
-        {
-            "rek_author_affiliation_name_id": 729206,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Garvan Inst Med Res",
-            "rek_author_affiliation_name_order": 9
-        },
-        {
-            "rek_author_affiliation_name_id": 729207,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Cardiff Univ",
-            "rek_author_affiliation_name_order": 10
-        },
-        {
-            "rek_author_affiliation_name_id": 729208,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland",
-            "rek_author_affiliation_name_order": 11
-        },
-        {
-            "rek_author_affiliation_name_id": 729209,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|Univ Queensland|Queensland Univ Technol",
-            "rek_author_affiliation_name_order": 12
-        },
-        {
-            "rek_author_affiliation_name_id": 729210,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland",
-            "rek_author_affiliation_name_order": 13
-        },
-        {
-            "rek_author_affiliation_name_id": 729211,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|QIMR Berghofer Med Res Inst",
-            "rek_author_affiliation_name_order": 14
-        },
-        {
-            "rek_author_affiliation_name_id": 729212,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|QIMR Berghofer Med Res Inst",
-            "rek_author_affiliation_name_order": 15
-        },
-        {
-            "rek_author_affiliation_name_id": 729213,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Garvan Inst Med Res",
-            "rek_author_affiliation_name_order": 16
-        },
-        {
-            "rek_author_affiliation_name_id": 729214,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland|Royal Brisbane & Womens Hosp|Univ Queensland",
-            "rek_author_affiliation_name_order": 17
-        },
-        {
-            "rek_author_affiliation_name_id": 729215,
-            "rek_author_affiliation_name_pid": "UQ:396321",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name": "Univ Queensland",
-            "rek_author_affiliation_name_order": 18
-        }
-    ],
-    "fez_record_search_key_security_policy": [
-        {
+    "fez_record_search_key_security_policy": [{
             "rek_security_policy_id": 237556,
             "rek_security_policy_pid": "UQ:396321",
             "rek_security_policy": 5,
             "rek_security_policy_order": 1
-        }
-    ]
+        }]
 };

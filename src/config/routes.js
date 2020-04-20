@@ -129,6 +129,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
+        add: '/admin/add',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
@@ -163,6 +164,11 @@ const flattedPathConfig = [
     '/admin/masquerade',
     '/admin/thirdPartyTools',
     '/admin/unpublished',
+    '/admin/add',
+    '/admin/edit',
+    '/admin/masquerade',
+    '/admin/unpublished',
+    '/admin/thirdPartyTools',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
@@ -195,6 +201,7 @@ export const getRoutesConfig = ({
     components = {},
     account = null,
     authorDetails = null,
+    accountAuthorDetailsLoading = true,
     forceOrcidRegistration = false,
     isHdrStudent = false,
 }) => {
@@ -393,7 +400,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.community,
@@ -408,6 +415,13 @@ export const getRoutesConfig = ({
                     exact: true,
                     access: [roles.admin],
                     pageTitle: locale.pages.collection.title,
+                },
+                {
+                    path: pathConfig.admin.add,
+                    render: props => components.Admin({ ...props, createMode: true }),
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.adminAdd.title,
                 },
                 {
                     path: pathConfig.admin.edit(pid),
@@ -450,7 +464,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.unpublished,
@@ -480,20 +494,24 @@ export const getRoutesConfig = ({
             render: childProps => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
                 const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
-                if ((isValidRoute || isValidFileRoute) && account) {
-                    return components.StandardPage({ ...locale.pages.permissionDenied });
-                }
-                if ((isValidRoute || isValidFileRoute) && !account) {
-                    if (
-                        process.env.NODE_ENV !== 'test' &&
-                        process.env.NODE_ENV !== 'development' &&
-                        process.env.NODE_ENV !== 'local'
-                    ) {
-                        window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+                if (!accountAuthorDetailsLoading) {
+                    if ((isValidRoute || isValidFileRoute) && account && !accountAuthorDetailsLoading) {
+                        return components.StandardPage({ ...locale.pages.permissionDenied });
                     }
-                    return components.StandardPage({ ...locale.pages.authenticationRequired });
+                    if ((isValidRoute || isValidFileRoute) && !account && !accountAuthorDetailsLoading) {
+                        if (
+                            process.env.NODE_ENV !== 'test' &&
+                            process.env.NODE_ENV !== 'cc' &&
+                            process.env.NODE_ENV !== 'development'
+                        ) {
+                            window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+                        }
+                        return components.StandardPage({ ...locale.pages.authenticationRequired });
+                    }
+                    return components.StandardPage({ ...locale.pages.notFound });
+                } else {
+                    return null;
                 }
-                return components.StandardPage({ ...locale.pages.notFound });
             },
             pageTitle: locale.pages.notFound.title,
         },
@@ -595,7 +613,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     linkTo: pathConfig.admin.community,
@@ -615,8 +633,12 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
+                {
+                    linkTo: pathConfig.admin.add,
+                    ...locale.menu.adminAdd,
+                },
                 {
                     // maybe this should be in some admin bit? tbd
                     linkTo: pathConfig.admin.thirdPartyTools,

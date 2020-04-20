@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import {
-    ORG_TYPE_NOT_SET,
+    AFFILIATION_TYPE_NOT_UQ,
+    AFFILIATION_TYPE_UQ,
+    CPEE_NTRO_SUBTYPES,
     DOCUMENT_TYPE_BOOK_CHAPTER,
     DOCUMENT_TYPE_JOURNAL_ARTICLE,
-    CPEE_NTRO_SUBTYPES,
     LP_NTRO_SUBTYPES,
     NTRO_SUBTYPES,
+    ORG_TYPE_NOT_SET,
 } from 'config/general';
+import { isAdded } from 'helpers/datastreams';
 import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
 import { authorAffiliationRequired } from 'config/validation';
@@ -140,7 +143,10 @@ export default class MyIncompleteRecordContainer extends React.Component {
                 recordToFix.fez_record_search_key_author_id,
             )
             .map(authorAffiliation => ({
-                affiliation: authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle ? 'UQ' : 'NotUQ',
+                affiliation:
+                    authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle
+                        ? AFFILIATION_TYPE_UQ
+                        : AFFILIATION_TYPE_NOT_UQ,
                 creatorRole: '',
                 nameAsPublished: authorAffiliation.rek_author,
                 orgaff: authorAffiliation.rek_author_affiliation_name || '',
@@ -215,7 +221,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
         const {
             files: { blacklist },
         } = incompleteRecord;
-        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && dataStream.dsi_state === 'A';
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && isAdded(dataStream);
     };
 
     render() {

@@ -9,7 +9,8 @@ export default function filterProps(props) {
         !!props.error ||
         (!!(props.forceError || (!!props.meta && !!props.meta.touched)) &&
             !!props.meta &&
-            !!(!!props.meta.error || !!props.meta.warn));
+            !!(!!props.meta.error || !!props.meta.warn)) ||
+        undefined;
     validProps.errorText =
         (props.meta && props.meta.error) ||
         (props.meta && props.meta.warn) ||

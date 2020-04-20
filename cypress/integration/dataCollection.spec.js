@@ -3,7 +3,6 @@ context('Data Collection form', () => {
 
     before(() => {
         cy.visit('/data-collections/add');
-        // cy.closeUnsupported();
     });
 
     beforeEach(() => {
@@ -275,7 +274,9 @@ context('Data Collection form', () => {
         cy.get('#Projectdescription')
             .type(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
-                { force: true },
+                {
+                    force: true,
+                },
             );
         cy.get('@submitButton')
             .should('not.be.disabled');
@@ -498,7 +499,7 @@ context('Data Collection form', () => {
             .find('input#year')
             .type('2000');
 
-        cy.contains('p', 'Invalid day')
+        cy.contains('p', 'Invalid date')
             .should('be.visible');
 
         // now check valid dates

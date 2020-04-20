@@ -34,6 +34,9 @@
       <option name="SPACES_WITHIN_IMPORTS" value="true" />
       <option name="SPACE_BEFORE_ASYNC_ARROW_LPAREN" value="false" />
     </JSCodeStyleSettings>
+    <MarkdownNavigatorCodeStyleSettings>
+      <option name="RIGHT_MARGIN" value="72" />
+    </MarkdownNavigatorCodeStyleSettings>
     <codeStyleSettings language="JSON">
       <indentOptions>
         <option name="INDENT_SIZE" value="4" />

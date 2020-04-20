@@ -9,9 +9,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import IconButton from '@material-ui/core/IconButton';
+import Chip from '@material-ui/core/Chip';
+import Clear from '@material-ui/icons/Clear';
 import { throttle } from 'throttle-debounce';
+import { isValidPid } from 'config/validation';
 
-export const styles = () => ({
+export const styles = theme => ({
     root: {
         flexGrow: 1,
     },
@@ -28,6 +33,12 @@ export const styles = () => ({
     inputRoot: {
         flexWrap: 'wrap',
     },
+    noWrap: {
+        flexWrap: 'unset',
+    },
+    chip: {
+        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
+    },
 });
 
 export class AutoCompleteAsyncField extends Component {
@@ -38,6 +49,7 @@ export class AutoCompleteAsyncField extends Component {
         itemsListLoading: PropTypes.bool,
         category: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         onChange: PropTypes.func,
+        onDelete: PropTypes.func,
         itemToString: PropTypes.func,
         floatingLabelText: PropTypes.string,
         hideLabel: PropTypes.bool,
@@ -54,21 +66,27 @@ export class AutoCompleteAsyncField extends Component {
         openOnFocus: PropTypes.bool,
         clearInput: PropTypes.bool,
         MenuItemComponent: PropTypes.func,
+        showChips: PropTypes.bool,
+        selectedItem: PropTypes.array,
+        onClear: PropTypes.func,
+        showClear: PropTypes.bool,
     };
 
     static defaultProps = {
-        maxResults: 7,
+        maxResults: 10,
         required: false,
-        filter: (searchText, key) => {
+        filter: (searchText, key, pid) => {
+            /* istanbul ignore next */
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(
+            const anyPid = `${pid}`;
+            const keywordRegex = new RegExp(
                 `(${searchText
                     .split(' ')
                     .join('|')
                     .replace(/[()]/g, '')})`,
                 'gi',
             );
-            return regex.test(anyKey);
+            return keywordRegex.test(anyKey) || (pid && isValidPid(anyPid));
         },
         MenuItemComponent: ({ suggestion }) => (
             <ListItemText
@@ -82,10 +100,20 @@ export class AutoCompleteAsyncField extends Component {
                 }}
             />
         ),
+        showClear: false,
     };
 
     constructor(props) {
         super(props);
+        this.state = {
+            selectedItem: (props.selectedItem || []).reduce(
+                (items, item) => ({
+                    ...items,
+                    [item.id]: item,
+                }),
+                {},
+            ),
+        };
         this.throttledLoadSuggestions = throttle(1000, this.props.loadSuggestions);
     }
 
@@ -95,6 +123,19 @@ export class AutoCompleteAsyncField extends Component {
         }
     }
 
+    componentWillReceiveProps(newProps) {
+        if ((this.props.selectedItem || []).length !== (newProps.selectedItem || []).length) {
+            this.setState({
+                selectedItem: newProps.selectedItem.reduce(
+                    (items, item) => ({
+                        ...items,
+                        [item.id]: item,
+                    }),
+                    {},
+                ),
+            });
+        }
+    }
     getSuggestions = event => {
         if (this.props.async && this.props.loadSuggestions) {
             this.throttledLoadSuggestions(this.props.category, event.target.value);
@@ -112,7 +153,7 @@ export class AutoCompleteAsyncField extends Component {
                         }
                     },
                     classes: {
-                        root: classes.inputRoot,
+                        root: !!(inputProps || {}).endAdornment ? classes.noWrap : classes.inputRoot,
                     },
                     ...inputProps,
                 }}
@@ -174,9 +215,27 @@ export class AutoCompleteAsyncField extends Component {
     handleStateChange = () =>
         this.props.allowFreeText
             ? ({ inputValue }) => {
-                inputValue !== undefined && this.props.onChange({ value: inputValue });
+                inputValue !== undefined && !!inputValue && this.props.onChange({ value: inputValue });
             }
             : () => {};
+
+    handleDelete = item => () => {
+        this.setState(
+            state => ({
+                selectedItem: Object.entries(state.selectedItem)
+                    .filter(([key]) => key !== item.id)
+                    .reduce((selectedItem, [key, value]) => ({ ...selectedItem, [key]: value }), {}),
+            }),
+            () => {
+                this.props.onDelete(Object.values(this.state.selectedItem));
+            },
+        );
+    };
+
+    handleClear = cb => () => {
+        cb();
+        this.props.onClear();
+    };
 
     render() {
         const {
@@ -194,7 +253,7 @@ export class AutoCompleteAsyncField extends Component {
             selectedValue,
             itemsListLoading,
         } = this.props;
-        const selectedItemProps = this.props.clearInput ? { selectedItem: '' } : {};
+        const selectedItemProps = this.props.clearInput ? { selectedItem: null } : {};
         const labelText = floatingLabelText || 'autosuggest';
         return (
             <div className={classes.root}>
@@ -220,6 +279,7 @@ export class AutoCompleteAsyncField extends Component {
                         selectedItem,
                         highlightedIndex,
                         openMenu,
+                        clearSelection,
                     }) => {
                         return (
                             <div className={classes.container}>
@@ -230,6 +290,36 @@ export class AutoCompleteAsyncField extends Component {
                                             classes,
                                             inputProps: getInputProps({
                                                 onChange: this.getSuggestions,
+                                                ...(this.props.showChips
+                                                    ? {
+                                                        startAdornment: Object.values(this.state.selectedItem).map(
+                                                            (item, index) => (
+                                                                <Chip
+                                                                    key={item.id}
+                                                                    tabIndex={-1}
+                                                                    label={item.value}
+                                                                    className={classes.chip}
+                                                                    onDelete={this.handleDelete(item, index)}
+                                                                />
+                                                            ),
+                                                        ),
+                                                    }
+                                                    : {}),
+                                                ...(this.props.showClear
+                                                    ? {
+                                                        endAdornment: (
+                                                            <InputAdornment position="end">
+                                                                <IconButton
+                                                                    id="clear-input"
+                                                                    aria-label="Clear"
+                                                                    onClick={this.handleClear(clearSelection)}
+                                                                >
+                                                                    <Clear />
+                                                                </IconButton>
+                                                            </InputAdornment>
+                                                        ),
+                                                    }
+                                                    : {}),
                                             }),
                                             error: error,
                                             errorText: (error && errorText) || '',
@@ -271,6 +361,7 @@ export class AutoCompleteAsyncField extends Component {
                                                             isNaN(inputValue)
                                                                 ? suggestion.value
                                                                 : suggestion.id || suggestion.value.toString(),
+                                                            suggestion.id,
                                                         ),
                                                     )
                                                     .slice(0, maxResults)

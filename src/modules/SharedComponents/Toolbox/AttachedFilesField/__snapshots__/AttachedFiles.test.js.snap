@@ -1,0 +1,1752 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AttachedFiles component should render admin edit view 1`] = `
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    subCard={true}
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={3}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+        <WithStyles(Grid)
+          item={true}
+          xs={2}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Embargo date
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-0"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="test.txt"
+                mimeType="text/xml"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={false}
+                calculatedSize="3.02 KB"
+                description="FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                embargoDate="3000-10-20"
+                fileName="test.txt"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "test.txt",
+                    "mimeType": "text/xml",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/test.txt"
+                mimeType="text/xml"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": "3000-10-20",
+                    "isOpenAccess": false,
+                    "openAccessStatusId": 453697,
+                    "securityStatus": true,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/test.txt"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(TextFieldWrapper)
+                  defaultValue="FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                  fullWidth={true}
+                  name="fileDescription"
+                  onChange={[Function]}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  3.02 KB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate="3000-10-20"
+                  isOpenAccess={false}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              id="embargoDateButton-test-txt"
+              item={true}
+              xs={2}
+            >
+              <WithStyles(FileUploadEmbargoDate)
+                canBeCleared={true}
+                onChange={[Function]}
+                value="3000-10-20"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "textAlign": "right",
+                }
+              }
+              xs={true}
+            >
+              <WithStyles(Tooltip)
+                title="Remove this file"
+              >
+                <WithStyles(IconButton)
+                  onClick={[Function]}
+                >
+                  <pure(DeleteIcon) />
+                </WithStyles(IconButton)>
+              </WithStyles(Tooltip)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
+
+exports[`AttachedFiles component should render default view 1`] = `
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    subCard={true}
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={3}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-0"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={false}
+                fileName="MyUQeSpace_Researcher_Guidelines_current.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={false}
+                calculatedSize="487.57 KB"
+                description="Full text (open access)"
+                embargoDate="2099-01-01"
+                fileName="MyUQeSpace_Researcher_Guidelines_current.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": false,
+                    "fileName": "MyUQeSpace_Researcher_Guidelines_current.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/MyUQeSpace_Researcher_Guidelines_current.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": "2099-01-01",
+                    "isOpenAccess": false,
+                    "openAccessStatusId": 453697,
+                    "securityStatus": true,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/MyUQeSpace_Researcher_Guidelines_current.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  Full text (open access)
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  487.57 KB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate="2099-01-01"
+                  isOpenAccess={false}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="1"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-1"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="1.05 MB"
+                description="My UQ eSpace - Researcher Guide"
+                embargoDate={null}
+                fileName="My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "My_UQ_eSpace_researcher_guidelines_2012.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  My UQ eSpace - Researcher Guide
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  1.05 MB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="2"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-2"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="My_UQ_eSpace_researcher_guidelines_2014.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="267.44 KB"
+                description="My UQ eSpace - Researcher Guide"
+                embargoDate={null}
+                fileName="My_UQ_eSpace_researcher_guidelines_2014.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "My_UQ_eSpace_researcher_guidelines_2014.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  My UQ eSpace - Researcher Guide
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  267.44 KB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="3"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-3"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="My_UQ_eSpace_UPO_guidelines.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="1.03 MB"
+                description="Full text (open access)"
+                embargoDate={null}
+                fileName="My_UQ_eSpace_UPO_guidelines.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "My_UQ_eSpace_UPO_guidelines.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  Full text (open access)
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  1.03 MB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="4"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-4"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="My_UQ_eSpace_UPO_guidelines_2013.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="1.27 MB"
+                description="UPO Guide v.3"
+                embargoDate={null}
+                fileName="My_UQ_eSpace_UPO_guidelines_2013.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "My_UQ_eSpace_UPO_guidelines_2013.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  UPO Guide v.3
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  1.27 MB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="5"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-5"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="My_UQ_eSpace_UPO_guidelines_2016.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="573.25 KB"
+                description="UPO Guide v.4"
+                embargoDate={null}
+                fileName="My_UQ_eSpace_UPO_guidelines_2016.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "My_UQ_eSpace_UPO_guidelines_2016.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  UPO Guide v.4
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  573.25 KB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="6"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-6"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="UQ_eSpace_My_Research_091119.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="902.51 KB"
+                description="UPO Guide - v.1"
+                embargoDate={null}
+                fileName="UQ_eSpace_My_Research_091119.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "UQ_eSpace_My_Research_091119.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  UPO Guide - v.1
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  902.51 KB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="7"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        key="file-7"
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={1}
+            >
+              <FileIcon
+                allowDownload={true}
+                fileName="UQ_eSpace_My_Research_091119_old.pdf"
+                mimeType="application/pdf"
+                pid="UQ:252236"
+                previewFileName={null}
+                securityAccess={true}
+                showPreview={[Function]}
+                thumbnailFileName={null}
+                webFileName={null}
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              sm={3}
+            >
+              <WithStyles(FileName)
+                allowDownload={true}
+                calculatedSize="84.36 KB"
+                description="Full text"
+                embargoDate="2000-01-01"
+                fileName="UQ_eSpace_My_Research_091119_old.pdf"
+                iconProps={
+                  Object {
+                    "allowDownload": true,
+                    "fileName": "UQ_eSpace_My_Research_091119_old.pdf",
+                    "mimeType": "application/pdf",
+                    "pid": "UQ:252236",
+                    "previewFileName": null,
+                    "securityAccess": true,
+                    "thumbnailFileName": null,
+                    "webFileName": null,
+                  }
+                }
+                mediaUrl="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
+                mimeType="application/pdf"
+                onFileSelect={[Function]}
+                openAccessStatus={
+                  Object {
+                    "embargoDate": null,
+                    "isOpenAccess": true,
+                    "openAccessStatusId": 453697,
+                  }
+                }
+                pid="UQ:252236"
+                previewMediaUrl="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
+                securityStatus={true}
+                thumbnailFileName={null}
+                webMediaUrl={null}
+              />
+            </WithStyles(Grid)>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  Full text
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={true}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={false}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={2}
+              >
+                <WithStyles(Typography)
+                  noWrap={true}
+                  variant="body2"
+                >
+                  84.36 KB
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </Hidden>
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={true}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <WithStyles(OpenAccessIcon)
+                  embargoDate={null}
+                  isOpenAccess={true}
+                  openAccessStatusId={453697}
+                  securityStatus={true}
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
+
+exports[`AttachedFiles component should show alerts 1`] = `
+Array [
+  <WithStyles(Alert)
+    allowDismiss={true}
+    message="test advisory"
+    type="info"
+  />,
+  <WithStyles(Alert)
+    allowDismiss={true}
+  />,
+]
+`;
+
+exports[`AttachedFiles component should toggle preview 1`] = `
+<MediaPreview
+  fileName="test3"
+  mediaUrl="test1"
+  mimeType="test2"
+  onClose={[Function]}
+  previewMediaUrl="test4"
+/>
+`;

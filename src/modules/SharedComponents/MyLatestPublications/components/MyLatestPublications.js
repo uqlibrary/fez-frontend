@@ -29,12 +29,14 @@ export class MyLatestPublications extends PureComponent {
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
         classes: PropTypes.object,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
         latestPublicationsList: [],
         totalPublicationsCount: null,
         loadingLatestPublications: false,
+        isAdmin: false,
     };
 
     componentDidMount() {
@@ -60,7 +62,11 @@ export class MyLatestPublications extends PureComponent {
 
         return (
             <React.Fragment>
-                <PublicationsList publicationsList={this.props.latestPublicationsList} showDefaultActions />
+                <PublicationsList
+                    publicationsList={this.props.latestPublicationsList}
+                    showDefaultActions
+                    showAdminActions={this.props.isAdmin}
+                />
                 <Grid container>
                     <Grid item xs />
                     <Grid item xs={12} sm="auto">

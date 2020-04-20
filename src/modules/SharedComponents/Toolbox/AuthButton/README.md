@@ -18,7 +18,7 @@ simple reusable login/logout button for UQ Library applications
 import React from 'react';
 ...
 
-import {AuthButton} from 'uqlibrary-react-toolbox';
+import { AuthButton } from 'modules/SharedComponents/Toolbox/AuthButton';
 
 ...
 

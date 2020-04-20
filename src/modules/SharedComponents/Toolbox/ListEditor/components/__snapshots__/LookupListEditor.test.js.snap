@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LookupListEditor should render default component 1`] = `
-<ListsEditor
+<ListEditor
+  canEdit={false}
   distinctOnly={false}
   formComponent={[Function]}
+  getItemSelectedToEdit={[Function]}
   hideReorder={false}
   input={
     Object {
@@ -21,6 +23,10 @@ exports[`LookupListEditor should render default component 1`] = `
     }
   }
   maxCount={0}
+  required={false}
+  rowItemTemplate={[Function]}
+  scrollList={false}
+  scrollListHeight={250}
   searchKey={
     Object {
       "order": "rek_order",

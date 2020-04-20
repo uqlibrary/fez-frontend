@@ -1,7 +1,9 @@
 import React from 'react';
-import SecurityCard, { isSame } from './SecurityCard';
+import SecurityCard, { overrideSecurityValueNormalizer, getRecordType, isSame } from './SecurityCard';
 import { shallow } from 'enzyme';
 import { List } from 'immutable';
+
+import { DOCUMENT_TYPE_JOURNAL_ARTICLE, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 
 jest.mock('../../../../context');
 import { useFormValuesContext, useRecordContext } from 'context';
@@ -26,7 +28,7 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test1.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -97,7 +99,7 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test2.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -182,7 +184,7 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test3.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -214,14 +216,41 @@ describe('SecurityCard component', () => {
         expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
         expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
     });
+});
 
-    describe('isSame callback function', () => {
-        it('should return true if current props are same as previous props', () => {
-            expect(isSame({ disabled: true }, { disabled: true })).toBeTruthy();
-        });
+describe('overrideSecurityValueNormalizer', () => {
+    it('should return 1 or 0', () => {
+        expect(overrideSecurityValueNormalizer(true)).toBe(0);
+        expect(overrideSecurityValueNormalizer(false)).toBe(1);
+    });
+});
 
-        it('should return false if props do not match', () => {
-            expect(isSame({ disabled: true }, { disabled: false })).toBeFalsy();
-        });
+describe('getRecordType', () => {
+    it('should get rek_object_type_lookup when present', () => {
+        const record = {
+            rek_object_type_lookup: 'Test',
+        };
+        expect(getRecordType(record)).toBe('test');
+    });
+
+    it('should get rek_display_type when present and rek_object_type_lookup is not', () => {
+        const record = {
+            rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
+        };
+        expect(getRecordType(record)).toBe(DOCUMENT_TYPE_JOURNAL_ARTICLE.toLowerCase());
+    });
+
+    it('should return null if neither rek_object_type_lookup nor rek_display_type is present', () => {
+        expect(getRecordType({})).toBe(null);
+    });
+});
+
+describe('isSame callback function', () => {
+    it('should return true if current props are same as previous props', () => {
+        expect(isSame({ disabled: true }, { disabled: true })).toBeTruthy();
+    });
+
+    it('should return false if props do not match', () => {
+        expect(isSame({ disabled: true }, { disabled: false })).toBeFalsy();
     });
 });

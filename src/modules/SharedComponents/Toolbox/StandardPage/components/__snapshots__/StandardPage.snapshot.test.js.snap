@@ -2638,6 +2638,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 >
                                   <WithStyles(IconButton)
                                     aria-describedby={null}
+                                    aria-label="Click for more information"
                                     className=""
                                     onBlur={[Function]}
                                     onClick={[Function]}
@@ -2650,6 +2651,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   >
                                     <IconButton
                                       aria-describedby={null}
+                                      aria-label="Click for more information"
                                       className=""
                                       classes={
                                         Object {
@@ -2674,6 +2676,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     >
                                       <WithStyles(ButtonBase)
                                         aria-describedby={null}
+                                        aria-label="Click for more information"
                                         centerRipple={true}
                                         className="MuiIconButton-root-145"
                                         disabled={false}
@@ -2689,6 +2692,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       >
                                         <ButtonBase
                                           aria-describedby={null}
+                                          aria-label="Click for more information"
                                           centerRipple={true}
                                           className="MuiIconButton-root-145"
                                           classes={
@@ -2716,6 +2720,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         >
                                           <button
                                             aria-describedby={null}
+                                            aria-label="Click for more information"
                                             className="MuiButtonBase-root-151 MuiIconButton-root-145"
                                             disabled={false}
                                             onBlur={[Function]}
@@ -2740,15 +2745,12 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                             >
                                               <pure(HelpOutlineIcon)
                                                 className="HelpIcon-helpIcon-136"
-                                                titleAccess="Click for more information"
                                               >
                                                 <HelpOutlineIcon
                                                   className="HelpIcon-helpIcon-136"
-                                                  titleAccess="Click for more information"
                                                 >
                                                   <WithStyles(SvgIcon)
                                                     className="HelpIcon-helpIcon-136"
-                                                    titleAccess="Click for more information"
                                                   >
                                                     <SvgIcon
                                                       className="HelpIcon-helpIcon-136"
@@ -2768,14 +2770,13 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                       color="inherit"
                                                       component="svg"
                                                       fontSize="default"
-                                                      titleAccess="Click for more information"
                                                       viewBox="0 0 24 24"
                                                     >
                                                       <svg
-                                                        aria-hidden="false"
+                                                        aria-hidden="true"
                                                         className="MuiSvgIcon-root-154 HelpIcon-helpIcon-136"
                                                         focusable="false"
-                                                        role="img"
+                                                        role="presentation"
                                                         viewBox="0 0 24 24"
                                                       >
                                                         <path
@@ -2785,9 +2786,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                         <path
                                                           d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
                                                         />
-                                                        <title>
-                                                          Click for more information
-                                                        </title>
                                                       </svg>
                                                     </SvgIcon>
                                                   </WithStyles(SvgIcon)>

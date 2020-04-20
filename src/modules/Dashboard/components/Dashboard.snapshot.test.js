@@ -1,32 +1,40 @@
-import { DashboardClass } from './Dashboard';
-import Dashboard from './Dashboard';
+import { DashboardClass, styles, fibonacci } from './Dashboard';
 import * as mock from 'mock/data';
+import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 
 const publicationTotalCount = {
+    account: mock.accounts.uqresearcher,
     articleCount: mock.currentAuthorStats.total,
     articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
     articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string,
+};
+
+const mockActions = {
+    countPossiblyYourPublications: jest.fn(),
+    loadAuthorPublicationsStats: jest.fn(),
+    searchAuthorPublications: jest.fn(),
+    loadOrcidSyncStatus: jest.fn(),
 };
 
 function setup(testProps = {}, args = {}) {
     const props = {
         classes: {},
         theme: {},
+        author: mock.currentAuthor.uqresearcher,
         account: mock.accounts.uqresearcher,
+        authorDetails: {
+            is_administrator: 0,
+            is_super_administrator: 0,
+        },
         accountAuthorDetailsLoading: false,
         publicationTotalCount: null,
         loadingPublicationsByYear: false,
         hidePossiblyYourPublicationsLure: false,
         loadingPublicationsStats: false,
         possiblyYourPublicationsCountLoading: false,
-        actions: {
-            countPossiblyYourPublications: jest.fn(),
-            loadAuthorPublicationsStats: jest.fn(),
-            searchAuthorPublications: jest.fn(),
-        },
+        actions: mockActions,
         loadingIncompleteRecordData: false,
         history: {},
-        ...testProps,
         incomplete: {
             publicationsListPagingData: {},
             loadingPublicationsList: false,
@@ -34,11 +42,19 @@ function setup(testProps = {}, args = {}) {
             publicationsListFacets: {},
             ...testProps.incomplete,
         },
+        ...orcidSyncInitialState,
+        ...testProps,
     };
     return getElement(DashboardClass, props, args);
 }
 
 describe('Dashboard test', () => {
+    afterEach(() => {
+        Object.values(mockActions).forEach(action => {
+            action.mockClear();
+        });
+    });
+
     it('renders alert for non-authors', () => {
         const wrapper = setup({ account: mock.accounts.uqstaff });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -186,7 +202,10 @@ describe('Dashboard test', () => {
         const wrapper = setup();
         wrapper.instance().handleTabChange(null, value);
         wrapper.update();
-        expect(wrapper.state()).toEqual({ dashboardPubsTabs: value });
+        expect(wrapper.state()).toEqual({
+            dashboardPubsTabs: value,
+            orcidSyncStatusRefreshCount: 1,
+        });
     });
 
     it('should get styles for full render', () => {
@@ -358,6 +377,7 @@ describe('Dashboard test', () => {
             },
             showLatestPublicationsTab: true,
             showTrendingPublicationsTab: true,
+            actions: mockActions,
         });
         wrapper.setState({
             dashboardPubsTabs: 2,
@@ -383,40 +403,10 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('Full mount for styles render', () => {
-        const wrapper = getElement(
-            Dashboard,
-            {
-                classes: {},
-                theme: {},
-                account: mock.accounts.uqresearcher,
-                accountAuthorDetailsLoading: false,
-                publicationTotalCount: null,
-                loadingPublicationsByYear: false,
-                hidePossiblyYourPublicationsLure: false,
-                loadingPublicationsStats: false,
-                possiblyYourPublicationsCountLoading: false,
-                actions: {
-                    countPossiblyYourPublications: jest.fn(),
-                    loadAuthorPublicationsStats: jest.fn(),
-                    searchAuthorPublications: jest.fn(),
-                },
-                incomplete: {
-                    publicationsListPagingData: {},
-                    loadingPublicationsList: false,
-                    publicationsList: [],
-                    publicationsListFacets: {},
-                },
-                history: {},
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('displays a lure when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
             incomplete: {
+                publicationsList: [],
                 publicationsListPagingData: {
                     total: 2,
                     took: 30,
@@ -436,6 +426,7 @@ describe('Dashboard test', () => {
     it('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
             incomplete: {
+                publicationsList: [],
                 publicationsListPagingData: {
                     total: 1,
                     took: 30,
@@ -457,5 +448,78 @@ describe('Dashboard test', () => {
         const wrapper = setup({ history: { push: testFn } });
         wrapper.instance().redirectToIncompleteRecordlist();
         expect(testFn).toBeCalledWith('/records/incomplete');
+    });
+
+    it('should have a style generator', () => {
+        const theme = {
+            breakpoints: {
+                up: jest.fn(() => 'test1'),
+                down: jest.fn(() => 'test2'),
+            },
+            palette: {
+                primary: {
+                    main: '#acf',
+                },
+                white: {
+                    main: '#fff',
+                },
+                accent: {
+                    main: '#ccc',
+                },
+            },
+        };
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('calls action to sync to ORCID', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            loadingOrcidSyncStatus: false,
+            actions: {
+                ...mockActions,
+                requestOrcidSync: testFn,
+            },
+        });
+        wrapper.setProps({
+            orcidSyncEnabled: true,
+        });
+        wrapper.instance().requestOrcidSync();
+        expect(testFn).toHaveBeenCalledTimes(1);
+    });
+
+    it('sets context for showing ORCID sync UI', () => {
+        const wrapper = setup({
+            orcidSyncEnabled: true,
+            loadingOrcidSyncStatus: false,
+        });
+        expect(wrapper.instance().renderAuthorProfile()).toMatchSnapshot();
+    });
+
+    it('should have helper to generate fibonacci numbers', () => {
+        const fibonacciSeries = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
+        fibonacciSeries.forEach((num, index) => {
+            expect(fibonacci(index)).toBe(num);
+        });
+    });
+
+    it('should wait for ORCID sync to complete', () => {
+        jest.useFakeTimers();
+        const wrapper = setup({
+            orcidSyncEnabled: true,
+            loadingOrcidSyncStatus: true,
+        });
+        jest.runAllTimers();
+        wrapper.setProps({
+            loadingOrcidSyncStatus: false,
+            orcidSyncStatus: {
+                orj_status: 'Pending',
+            },
+        });
+        jest.runAllTimers();
+        expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+        wrapper.setProps({
+            orcidSyncStatus: null,
+        });
+        expect(wrapper.instance()._isWaitingForSync()).toBe(false);
     });
 });

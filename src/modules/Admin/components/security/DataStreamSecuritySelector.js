@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
@@ -6,10 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
+import { useFormValuesContext } from 'context';
+import { isDerivative } from 'helpers/datastreams';
 
 export const styles = () => ({
     dataStreamFileBlock: {
         backgroundColor: 'rgba(0,0,0,0.05)',
+        padding: 12,
     },
     dataStreamFileName: {
         overflow: 'hidden',
@@ -18,15 +21,24 @@ export const styles = () => ({
 });
 
 export const DataStreamSecuritySelector = ({
-    text,
-    disabled,
-    collections,
     classes,
+    collections,
+    disabled,
     meta: { initial: dataStreams },
+    text,
     ...props
 }) => {
+    const { formValues } = useFormValuesContext();
+
+    const canDisplay = dataStream => {
+        return !isDerivative(dataStream);
+    };
+
     const [initialDataStreams] = useState(() => dataStreams.toJS());
-    const [dataStreamSecurity, setDataStreamSecurity] = useState(() => dataStreams.toJS());
+    const [dataStreamSecurity, setDataStreamSecurity] = useState(() => {
+        const result = !!formValues.dataStreams ? formValues.dataStreams : dataStreams.toJS();
+        return result.filter(dataStream => canDisplay(dataStream));
+    });
     const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
     const [mostSecureParentDatastreamSecurity] = useState(() =>
@@ -62,25 +74,30 @@ export const DataStreamSecuritySelector = ({
             <Typography variant="h6">{text.overridePrompt}</Typography>
             <div style={{ marginTop: 8, padding: 16 }}>
                 <Grid
+                    alignContent="flex-end"
+                    alignItems="flex-start"
+                    className={classes.dataStreamFileBlock}
                     container
                     spacing={32}
-                    alignContent="flex-end"
-                    alignItems="flex-end"
-                    className={classes.dataStreamFileBlock}
                 >
-                    {dataStreamSecurity.map((dataStream, index) => (
-                        <DataStreamSecurityItem
-                            key={dataStream.dsi_dsid}
-                            disabled={disabled}
-                            initialDataStream={initialDataStreams[index]}
-                            dataStream={dataStream}
-                            policyDropdownLabel={text.overridePolicyPrompt}
-                            inheritedSecurity={mostSecureParentDatastreamSecurity}
-                            onSecurityChange={handleDataStreamSecurityChange}
-                            classes={classes}
-                            index={index}
-                        />
-                    ))}
+                    {dataStreamSecurity.length > 0 &&
+                        dataStreamSecurity.map((dataStream, index) => (
+                            <DataStreamSecurityItem
+                                classes={classes}
+                                dataStream={dataStream}
+                                disabled={!!disabled}
+                                index={index}
+                                inheritedSecurity={mostSecureParentDatastreamSecurity}
+                                initialDataStream={initialDataStreams[index]}
+                                key={dataStream.dsi_dsid}
+                                onSecurityChange={handleDataStreamSecurityChange}
+                                policyDropdownLabel={text.overridePolicyPrompt}
+                            />
+                        ))}
+                    {dataStreamSecurity.length === 0 && (
+                        /* istanbul ignore next */
+                        <Typography variant="body2">{text.noDataStreams}</Typography>
+                    )}
                 </Grid>
             </div>
         </React.Fragment>
@@ -88,16 +105,16 @@ export const DataStreamSecuritySelector = ({
 };
 
 DataStreamSecuritySelector.propTypes = {
-    disabled: PropTypes.bool,
-    text: PropTypes.object,
-    collections: PropTypes.array,
     classes: PropTypes.object,
+    collections: PropTypes.array,
+    disabled: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.shape({
         initial: PropTypes.shape({
             toJS: PropTypes.func.isRequired,
         }).isRequired,
     }).isRequired,
+    text: PropTypes.object,
 };
 
 export function isSame(prevProps, nextProps) {

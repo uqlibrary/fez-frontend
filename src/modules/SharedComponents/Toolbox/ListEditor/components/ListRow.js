@@ -4,26 +4,31 @@ import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
+import Edit from '@material-ui/icons/Edit';
 import { withStyles } from '@material-ui/core/styles';
+import { GenericTemplate } from './GenericTemplate';
 
 export class ListRow extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
+        canMoveDown: PropTypes.bool,
+        canMoveUp: PropTypes.bool,
+        classes: PropTypes.object,
+        disabled: PropTypes.bool,
+        form: PropTypes.string,
+        hideReorder: PropTypes.bool,
         index: PropTypes.number.isRequired,
         item: PropTypes.any.isRequired,
-        canMoveUp: PropTypes.bool,
-        canMoveDown: PropTypes.bool,
-        onMoveUp: PropTypes.func,
-        onMoveDown: PropTypes.func,
-        onDelete: PropTypes.func,
+        itemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
         locale: PropTypes.object,
-        disabled: PropTypes.bool,
-        hideReorder: PropTypes.bool,
-        classes: PropTypes.object,
-        form: PropTypes.string,
+        onDelete: PropTypes.func,
+        onEdit: PropTypes.func,
+        onMoveDown: PropTypes.func,
+        onMoveUp: PropTypes.func,
     };
 
     static defaultProps = {
@@ -31,6 +36,7 @@ export class ListRow extends PureComponent {
             moveUpHint: 'Move item up the order',
             moveDownHint: 'Move item down the order',
             deleteHint: 'Remove this item',
+            editHint: 'Edit this item',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete item',
                 confirmationMessage: 'Are you sure you want to delete this item?',
@@ -38,6 +44,7 @@ export class ListRow extends PureComponent {
                 confirmButtonLabel: 'Yes',
             },
         },
+        itemTemplate: GenericTemplate,
         form: 'Form',
     };
 
@@ -49,6 +56,11 @@ export class ListRow extends PureComponent {
         if (!this.props.disabled && this.props.onDelete) {
             this.props.onDelete(this.props.item, this.props.index);
         }
+    };
+
+    _handleEdit = () => {
+        const { onEdit, index } = this.props;
+        !!onEdit && onEdit(index);
     };
 
     onMoveUp = () => {
@@ -64,8 +76,15 @@ export class ListRow extends PureComponent {
     };
 
     render() {
-        const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes } = this.props;
-        const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation } = this.props.locale;
+        const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes, canEdit, index } = this.props;
+        const {
+            moveDownHint,
+            moveUpHint,
+            deleteHint,
+            deleteRecordConfirmation,
+            editHint,
+            editButtonId,
+        } = this.props.locale;
         const componentID = this.props.form.replace(/\s+/g, '');
         return (
             <div
@@ -78,11 +97,11 @@ export class ListRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <Grid container alignItems="center" spacing={8} className={classes.row}>
-                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
-                        <Typography variant="body2">{item.value || item}</Typography>
+                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6} md={hideReorder ? 11 : 9}>
+                        <this.props.itemTemplate item={item} />
                     </Grid>
                     {!hideReorder && (
-                        <Grid item xs={5} sm={5} className={classes.center}>
+                        <Grid item xs={5} sm={5} md={2} className={classes.center}>
                             <Grid container justify="flex-end">
                                 {canMoveUp && (
                                     <Grid item>
@@ -101,6 +120,25 @@ export class ListRow extends PureComponent {
                                             </IconButton>
                                         </Tooltip>
                                     </Grid>
+                                )}
+                                {canEdit && (
+                                    <Tooltip
+                                        title={editHint}
+                                        disableFocusListener={disabled}
+                                        disableHoverListener={disabled}
+                                        disableTouchListener={disabled}
+                                    >
+                                        <span>
+                                            <IconButton
+                                                aria-label={editHint}
+                                                onClick={this._handleEdit}
+                                                disabled={disabled}
+                                                id={`${editButtonId}-${index}`}
+                                            >
+                                                <Edit />
+                                            </IconButton>
+                                        </span>
+                                    </Tooltip>
                                 )}
                             </Grid>
                         </Grid>
@@ -127,6 +165,8 @@ const styles = () => ({
         textAlign: 'center',
     },
     row: {
+        marginLeft: 0,
+        marginRight: 0,
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     },
 });

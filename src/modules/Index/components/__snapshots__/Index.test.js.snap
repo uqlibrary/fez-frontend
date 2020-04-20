@@ -2026,6 +2026,8 @@ exports[`Index page should render placeholders 1`] = `
                                                   <WithStyles(WithTheme(WithWidth(TopCitedPublicationsClass)))
                                                     actions={
                                                       Object {
+                                                        "adminCreate": [Function],
+                                                        "adminReset": [Function],
                                                         "adminUpdate": [Function],
                                                         "checkSession": [Function],
                                                         "claimPublication": [Function],
@@ -2053,15 +2055,19 @@ exports[`Index page should render placeholders 1`] = `
                                                         "getBatchImportDirectories": [Function],
                                                         "getCollectionsListAPI": [Function],
                                                         "getSearchLookupApi": [Function],
+                                                        "getSherpaFromIssn": [Function],
                                                         "getThirdPartyLookupApiUrl": [Function],
+                                                        "getUlrichsFromIssn": [Function],
                                                         "hidePossiblyYourPublicationsLure": [Function],
                                                         "hideRecord": [Function],
                                                         "hideRecordErrorReset": [Function],
                                                         "linkAuthorOrcidId": [Function],
                                                         "loadAuthorPublicationsStats": [Function],
+                                                        "loadCollectionsList": [Function],
                                                         "loadCurrentAccount": [Function],
                                                         "loadFullRecordToClaim": [Function],
                                                         "loadNewsFeed": [Function],
+                                                        "loadOrcidSyncStatus": [Function],
                                                         "loadPublicationList": [Function],
                                                         "loadRecordToFix": [Function],
                                                         "loadRecordToView": [Function],
@@ -2069,6 +2075,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadThirdPartyResults": [Function],
                                                         "loadVocabulariesList": [Function],
                                                         "logout": [Function],
+                                                        "requestOrcidSync": [Function],
                                                         "resetSavingAuthorState": [Function],
                                                         "searchAuthorPublications": [Function],
                                                         "searchAuthors": [Function],
@@ -2085,6 +2092,8 @@ exports[`Index page should render placeholders 1`] = `
                                                         "showAppAlert": [Function],
                                                         "submitThesis": [Function],
                                                         "unclaimRecord": [Function],
+                                                        "updateCollection": [Function],
+                                                        "updateCommunity": [Function],
                                                         "updateCurrentAuthor": [Function],
                                                         "updateIncompleteRecord": [Function],
                                                       }
@@ -2139,6 +2148,8 @@ exports[`Index page should render placeholders 1`] = `
                                                     <WithTheme(WithWidth(TopCitedPublicationsClass))
                                                       actions={
                                                         Object {
+                                                          "adminCreate": [Function],
+                                                          "adminReset": [Function],
                                                           "adminUpdate": [Function],
                                                           "checkSession": [Function],
                                                           "claimPublication": [Function],
@@ -2166,15 +2177,19 @@ exports[`Index page should render placeholders 1`] = `
                                                           "getBatchImportDirectories": [Function],
                                                           "getCollectionsListAPI": [Function],
                                                           "getSearchLookupApi": [Function],
+                                                          "getSherpaFromIssn": [Function],
                                                           "getThirdPartyLookupApiUrl": [Function],
+                                                          "getUlrichsFromIssn": [Function],
                                                           "hidePossiblyYourPublicationsLure": [Function],
                                                           "hideRecord": [Function],
                                                           "hideRecordErrorReset": [Function],
                                                           "linkAuthorOrcidId": [Function],
                                                           "loadAuthorPublicationsStats": [Function],
+                                                          "loadCollectionsList": [Function],
                                                           "loadCurrentAccount": [Function],
                                                           "loadFullRecordToClaim": [Function],
                                                           "loadNewsFeed": [Function],
+                                                          "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
                                                           "loadRecordToFix": [Function],
                                                           "loadRecordToView": [Function],
@@ -2182,6 +2197,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadThirdPartyResults": [Function],
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
+                                                          "requestOrcidSync": [Function],
                                                           "resetSavingAuthorState": [Function],
                                                           "searchAuthorPublications": [Function],
                                                           "searchAuthors": [Function],
@@ -2198,6 +2214,8 @@ exports[`Index page should render placeholders 1`] = `
                                                           "showAppAlert": [Function],
                                                           "submitThesis": [Function],
                                                           "unclaimRecord": [Function],
+                                                          "updateCollection": [Function],
+                                                          "updateCommunity": [Function],
                                                           "updateCurrentAuthor": [Function],
                                                           "updateIncompleteRecord": [Function],
                                                         }
@@ -2259,6 +2277,8 @@ exports[`Index page should render placeholders 1`] = `
                                                       <WithWidth(TopCitedPublicationsClass)
                                                         actions={
                                                           Object {
+                                                            "adminCreate": [Function],
+                                                            "adminReset": [Function],
                                                             "adminUpdate": [Function],
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
@@ -2286,15 +2306,19 @@ exports[`Index page should render placeholders 1`] = `
                                                             "getBatchImportDirectories": [Function],
                                                             "getCollectionsListAPI": [Function],
                                                             "getSearchLookupApi": [Function],
+                                                            "getSherpaFromIssn": [Function],
                                                             "getThirdPartyLookupApiUrl": [Function],
+                                                            "getUlrichsFromIssn": [Function],
                                                             "hidePossiblyYourPublicationsLure": [Function],
                                                             "hideRecord": [Function],
                                                             "hideRecordErrorReset": [Function],
                                                             "linkAuthorOrcidId": [Function],
                                                             "loadAuthorPublicationsStats": [Function],
+                                                            "loadCollectionsList": [Function],
                                                             "loadCurrentAccount": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
+                                                            "loadOrcidSyncStatus": [Function],
                                                             "loadPublicationList": [Function],
                                                             "loadRecordToFix": [Function],
                                                             "loadRecordToView": [Function],
@@ -2302,6 +2326,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             "loadThirdPartyResults": [Function],
                                                             "loadVocabulariesList": [Function],
                                                             "logout": [Function],
+                                                            "requestOrcidSync": [Function],
                                                             "resetSavingAuthorState": [Function],
                                                             "searchAuthorPublications": [Function],
                                                             "searchAuthors": [Function],
@@ -2318,6 +2343,8 @@ exports[`Index page should render placeholders 1`] = `
                                                             "showAppAlert": [Function],
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
+                                                            "updateCollection": [Function],
+                                                            "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
@@ -2813,6 +2840,8 @@ exports[`Index page should render placeholders 1`] = `
                                                         <TopCitedPublicationsClass
                                                           actions={
                                                             Object {
+                                                              "adminCreate": [Function],
+                                                              "adminReset": [Function],
                                                               "adminUpdate": [Function],
                                                               "checkSession": [Function],
                                                               "claimPublication": [Function],
@@ -2840,15 +2869,19 @@ exports[`Index page should render placeholders 1`] = `
                                                               "getBatchImportDirectories": [Function],
                                                               "getCollectionsListAPI": [Function],
                                                               "getSearchLookupApi": [Function],
+                                                              "getSherpaFromIssn": [Function],
                                                               "getThirdPartyLookupApiUrl": [Function],
+                                                              "getUlrichsFromIssn": [Function],
                                                               "hidePossiblyYourPublicationsLure": [Function],
                                                               "hideRecord": [Function],
                                                               "hideRecordErrorReset": [Function],
                                                               "linkAuthorOrcidId": [Function],
                                                               "loadAuthorPublicationsStats": [Function],
+                                                              "loadCollectionsList": [Function],
                                                               "loadCurrentAccount": [Function],
                                                               "loadFullRecordToClaim": [Function],
                                                               "loadNewsFeed": [Function],
+                                                              "loadOrcidSyncStatus": [Function],
                                                               "loadPublicationList": [Function],
                                                               "loadRecordToFix": [Function],
                                                               "loadRecordToView": [Function],
@@ -2856,6 +2889,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               "loadThirdPartyResults": [Function],
                                                               "loadVocabulariesList": [Function],
                                                               "logout": [Function],
+                                                              "requestOrcidSync": [Function],
                                                               "resetSavingAuthorState": [Function],
                                                               "searchAuthorPublications": [Function],
                                                               "searchAuthors": [Function],
@@ -2872,6 +2906,8 @@ exports[`Index page should render placeholders 1`] = `
                                                               "showAppAlert": [Function],
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
+                                                              "updateCollection": [Function],
+                                                              "updateCommunity": [Function],
                                                               "updateCurrentAuthor": [Function],
                                                               "updateIncompleteRecord": [Function],
                                                             }
@@ -3537,6 +3573,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       className="MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-error-186 Alert-common-180"
                                                                     >
                                                                       <WithStyles(Grid)
+                                                                        className=""
                                                                         item={true}
                                                                         sm={true}
                                                                         xs={12}
@@ -3544,6 +3581,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                         <Grid
                                                                           alignContent="stretch"
                                                                           alignItems="stretch"
+                                                                          className=""
                                                                           classes={
                                                                             Object {
                                                                               "align-content-xs-center": "MuiGrid-align-content-xs-center-15",
@@ -6276,6 +6314,8 @@ exports[`Index page should render placeholders 1`] = `
                                                             <WithStyles(NewsFeed)
                                                               actions={
                                                                 Object {
+                                                                  "adminCreate": [Function],
+                                                                  "adminReset": [Function],
                                                                   "adminUpdate": [Function],
                                                                   "checkSession": [Function],
                                                                   "claimPublication": [Function],
@@ -6303,15 +6343,19 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "getBatchImportDirectories": [Function],
                                                                   "getCollectionsListAPI": [Function],
                                                                   "getSearchLookupApi": [Function],
+                                                                  "getSherpaFromIssn": [Function],
                                                                   "getThirdPartyLookupApiUrl": [Function],
+                                                                  "getUlrichsFromIssn": [Function],
                                                                   "hidePossiblyYourPublicationsLure": [Function],
                                                                   "hideRecord": [Function],
                                                                   "hideRecordErrorReset": [Function],
                                                                   "linkAuthorOrcidId": [Function],
                                                                   "loadAuthorPublicationsStats": [Function],
+                                                                  "loadCollectionsList": [Function],
                                                                   "loadCurrentAccount": [Function],
                                                                   "loadFullRecordToClaim": [Function],
                                                                   "loadNewsFeed": [Function],
+                                                                  "loadOrcidSyncStatus": [Function],
                                                                   "loadPublicationList": [Function],
                                                                   "loadRecordToFix": [Function],
                                                                   "loadRecordToView": [Function],
@@ -6319,6 +6363,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadThirdPartyResults": [Function],
                                                                   "loadVocabulariesList": [Function],
                                                                   "logout": [Function],
+                                                                  "requestOrcidSync": [Function],
                                                                   "resetSavingAuthorState": [Function],
                                                                   "searchAuthorPublications": [Function],
                                                                   "searchAuthors": [Function],
@@ -6335,6 +6380,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "showAppAlert": [Function],
                                                                   "submitThesis": [Function],
                                                                   "unclaimRecord": [Function],
+                                                                  "updateCollection": [Function],
+                                                                  "updateCommunity": [Function],
                                                                   "updateCurrentAuthor": [Function],
                                                                   "updateIncompleteRecord": [Function],
                                                                 }
@@ -6343,6 +6390,8 @@ exports[`Index page should render placeholders 1`] = `
                                                               <NewsFeed
                                                                 actions={
                                                                   Object {
+                                                                    "adminCreate": [Function],
+                                                                    "adminReset": [Function],
                                                                     "adminUpdate": [Function],
                                                                     "checkSession": [Function],
                                                                     "claimPublication": [Function],
@@ -6370,15 +6419,19 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "getBatchImportDirectories": [Function],
                                                                     "getCollectionsListAPI": [Function],
                                                                     "getSearchLookupApi": [Function],
+                                                                    "getSherpaFromIssn": [Function],
                                                                     "getThirdPartyLookupApiUrl": [Function],
+                                                                    "getUlrichsFromIssn": [Function],
                                                                     "hidePossiblyYourPublicationsLure": [Function],
                                                                     "hideRecord": [Function],
                                                                     "hideRecordErrorReset": [Function],
                                                                     "linkAuthorOrcidId": [Function],
                                                                     "loadAuthorPublicationsStats": [Function],
+                                                                    "loadCollectionsList": [Function],
                                                                     "loadCurrentAccount": [Function],
                                                                     "loadFullRecordToClaim": [Function],
                                                                     "loadNewsFeed": [Function],
+                                                                    "loadOrcidSyncStatus": [Function],
                                                                     "loadPublicationList": [Function],
                                                                     "loadRecordToFix": [Function],
                                                                     "loadRecordToView": [Function],
@@ -6386,6 +6439,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadThirdPartyResults": [Function],
                                                                     "loadVocabulariesList": [Function],
                                                                     "logout": [Function],
+                                                                    "requestOrcidSync": [Function],
                                                                     "resetSavingAuthorState": [Function],
                                                                     "searchAuthorPublications": [Function],
                                                                     "searchAuthors": [Function],
@@ -6402,6 +6456,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "showAppAlert": [Function],
                                                                     "submitThesis": [Function],
                                                                     "unclaimRecord": [Function],
+                                                                    "updateCollection": [Function],
+                                                                    "updateCommunity": [Function],
                                                                     "updateCurrentAuthor": [Function],
                                                                     "updateIncompleteRecord": [Function],
                                                                   }

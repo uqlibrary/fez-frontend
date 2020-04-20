@@ -40,7 +40,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(20);
+        expect(testRoutes.length).toEqual(21);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -51,7 +51,53 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
+        expect(testRoutes.length).toEqual(22);
+    });
+
+    it('should return a list of menus for user who can masquerade', () => {
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqmasquerade,
+            currentAuthor.uqmasquerade.data,
+            authorDetails.uqmasquerade,
+            false,
+            false,
+        );
+        expect(testRoutes.length).toEqual(14);
+    });
+
+    it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqmasquerade,
+            currentAuthor.uqmasquerade.data,
+            authorDetails.uqmasquerade,
+            false,
+            true,
+        );
+        expect(testRoutes.length).toEqual(15);
+    });
+
+    it('should not return Switch to old interface menu item for public view page', () => {
+        const testMenuItems = routes.getMenuConfig(null, null, false, true);
+        expect(testMenuItems.length).toEqual(4);
+
+        const contactMenuItem = testMenuItems.pop();
+        expect(contactMenuItem.primaryText).toEqual('Contact');
+    });
+
+    it('should return a list of menus for user who has admin (uqstaff)', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
         expect(testRoutes.length).toEqual(21);
+    });
+
+    it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqstaff,
+            currentAuthor.uqstaff.data,
+            authorDetails.uqstaff,
+            false,
+            true,
+        );
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -122,7 +168,7 @@ describe('Routes getRoutesConfig method', () => {
         expect(testRoutes.length).toEqual(7);
     });
 
-    it('should return a list of routes for researcher (uqresearcher)', () => {
+    it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqresearcher });
         expect(testRoutes.length).toEqual(23);
     });
@@ -142,7 +188,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(33);
+        expect(testRoutes.length).toEqual(34);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -167,12 +213,20 @@ describe('Routes getRoutesConfig method', () => {
 
     it('should render auth required page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent }, account: null });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            account: null,
+            authorDetails: null,
+            accountAuthorDetailsLoading: false,
+            forceOrcidRegistration: false,
+            isHdrStudent: false,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
                 pathname: routes.pathConfig.contact,
             },
+            accountAuthorDetailsLoading: false,
         };
         renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.authenticationRequired);
@@ -184,6 +238,7 @@ describe('Routes getRoutesConfig method', () => {
             components: { StandardPage: testComponent },
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
+            accountAuthorDetailsLoading: false,
         });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
@@ -201,6 +256,7 @@ describe('Routes getRoutesConfig method', () => {
             components: { StandardPage: testComponent },
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
+            accountAuthorDetailsLoading: false,
         });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
@@ -214,7 +270,10 @@ describe('Routes getRoutesConfig method', () => {
 
     it('should render not found page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent } });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            accountAuthorDetailsLoading: false,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {

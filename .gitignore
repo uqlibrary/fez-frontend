@@ -3,6 +3,8 @@
 .idea/watcherTasks.xml
 .idea/composerJson.xml
 .idea/php.xml
+.idea/markdown-navigator*
+.idea/markdown-exported-files.xml
 .idea/dbnavigator.xml
 .idea/markdown-navigator.xml
 node_modules
@@ -27,3 +29,6 @@ index.html
 stats.json
 cypress/videos
 cypress/screenshots
+
+# Code Coverage checker temp dir
+.nyc_output

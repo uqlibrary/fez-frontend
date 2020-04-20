@@ -43,7 +43,7 @@ export default class PublicationForm extends Component {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({ ...recordForms });
+        this.publicationTypes = Object.values(publicationTypes({ ...recordForms }));
         this.publicationTypeItems = [
             ...this.publicationTypes
                 .filter(item => {

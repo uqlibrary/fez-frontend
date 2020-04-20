@@ -1,0 +1,1004 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ContributorForm should display org affiliation selector if affiliation is NotUQ 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation=""
+        disabled={false}
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should display org affiliation selector if affiliation is NotUQ 2`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation="NotUQ"
+        disabled={false}
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={true}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <NonUqOrgAffiliationFormSection
+        disableAffiliationEdit={false}
+        disableOrgTypeEdit={false}
+        locale={
+          Object {
+            "fields": Object {
+              "organisation": Object {
+                "inputLabel": "Organisation",
+                "placeholder": "Enter the primary affiliated organisation",
+              },
+              "organisationType": Object {
+                "inputLabel": "Organisation type",
+                "placeholder": "Select an affiliated organisation type",
+              },
+            },
+          }
+        }
+        onOrgAffiliationChange={[Function]}
+        onOrgTypeChange={[Function]}
+        orgAffiliation=""
+        orgType=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should handle affiliation change 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation=""
+        disabled={false}
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should process prop updates 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value="value1"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={false}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should process prop updates 2`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value="value2"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={false}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should render NTRO fields 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation=""
+        disabled={false}
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should render display name field and identifier field 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should render display name field and role field 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={5}
+      sm={12}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        autoComplete="off"
+        clearInput={true}
+        disabled={true}
+        error={false}
+        fullWidth={true}
+        id="creatorRoleField"
+        onChange={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should render display name field only 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should show contributor assignment 1`] = `
+<Fragment>
+  Step 1 description
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should show error regarding affiliation type selector 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation=""
+        disabled={false}
+        error={true}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={true}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={true}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should show error regarding name field 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    id="contributorForm"
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={true}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={true}
+        value=""
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={true}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;

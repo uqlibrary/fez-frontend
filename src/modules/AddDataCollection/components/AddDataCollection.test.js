@@ -4,18 +4,6 @@ import { default as formLocale } from 'locale/publicationForm';
 
 function setup(testProps) {
     const props = {
-        array: {
-            insert: jest.fn(),
-            move: jest.fn(),
-            pop: jest.fn(),
-            push: jest.fn(),
-            remove: jest.fn(),
-            removeAll: jest.fn(),
-            shift: jest.fn(),
-            splice: jest.fn(),
-            swap: jest.fn(),
-            unshift: jest.fn(),
-        },
         autofill: jest.fn(),
         blur: jest.fn(),
         change: jest.fn(),
@@ -97,11 +85,14 @@ describe('AddDataCollection test', () => {
     });
 
     it('should redirect to cancel page', () => {
-        window.location.reload = jest.fn();
+        const { location } = window;
+        delete window.location;
+        window.location = { reload: jest.fn() };
         setup({})
             .instance()
             ._restartWorkflow();
         expect(window.location.reload).toHaveBeenCalled();
+        window.location = location;
     });
 
     it('should navigate to my datasets url', () => {

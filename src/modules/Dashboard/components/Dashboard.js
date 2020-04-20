@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import { OrcidSyncContext } from 'context';
+
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
@@ -23,7 +25,7 @@ import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
 
-const styles = theme => ({
+export const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
             margin: '-16px -16px',
@@ -42,6 +44,29 @@ const styles = theme => ({
         backgroundColor: theme.palette.accent.main,
     },
 });
+
+/**
+ * Returns the Fibonacci number for given iteration.
+ *
+ * Note: Looping is faster & more efficient than recursion here.
+ *
+ * @param {number} iteration
+ */
+export const fibonacci = iteration => {
+    let a = 1;
+    let b = 0;
+    let temp;
+    let num = iteration;
+
+    while (num > 0) {
+        temp = a;
+        a = a + b;
+        b = temp;
+        num--;
+    }
+
+    return b;
+};
 
 export class DashboardClass extends PureComponent {
     static propTypes = {
@@ -76,12 +101,19 @@ export class DashboardClass extends PureComponent {
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         classes: PropTypes.object,
+
+        // orcid sync
+        loadingOrcidSyncStatus: PropTypes.bool,
+        orcidSyncStatus: PropTypes.object,
+        requestingOrcidSync: PropTypes.bool,
+        orcidSyncEnabled: PropTypes.bool,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             dashboardPubsTabs: 1,
+            orcidSyncStatusRefreshCount: 0,
         };
     }
 
@@ -91,8 +123,42 @@ export class DashboardClass extends PureComponent {
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
             !this.props.incomplete.publicationsList.length &&
                 this.props.actions.searchAuthorPublications({}, 'incomplete');
+            this._loadOrcidSync();
+            this.state.orcidSyncStatusRefreshCount = 1;
         }
     }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.orcidSyncEnabled !== prevProps.orcidSyncEnabled) {
+            this._loadOrcidSync();
+            this.state.orcidSyncStatusRefreshCount = 1;
+        }
+        this.props.loadingOrcidSyncStatus !== prevProps.loadingOrcidSyncStatus &&
+            !this.props.loadingOrcidSyncStatus &&
+            this._waitForSyncSuccess();
+    }
+
+    _isWaitingForSync = () => ['Pending', 'In Progress'].indexOf((this.props.orcidSyncStatus || {}).orj_status) > -1;
+
+    // A repeating check for latest status that gets progressively longer
+    _waitForSyncSuccess = () =>
+        this._isWaitingForSync() &&
+        this.setState(
+            {
+                orcidSyncStatusRefreshCount: this.state.orcidSyncStatusRefreshCount + 1,
+            },
+            () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount) * 1000),
+        );
+
+    _loadOrcidSync = (waitTime = 0) =>
+        global.setTimeout(() => {
+            !this.props.loadingOrcidSyncStatus &&
+                this.props.orcidSyncEnabled &&
+                (this.props.orcidSyncStatus === null || !!waitTime) &&
+                this.props.actions &&
+                this.props.actions.loadOrcidSyncStatus &&
+                this.props.actions.loadOrcidSyncStatus();
+        }, waitTime);
 
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
@@ -111,6 +177,32 @@ export class DashboardClass extends PureComponent {
     redirectToIncompleteRecordlist = () => {
         this.props.history.push(pathConfig.records.incomplete);
     };
+
+    requestOrcidSync = () => {
+        this.props.actions && this.props.actions.requestOrcidSync && this.props.actions.requestOrcidSync();
+    };
+
+    renderAuthorProfile = () => (
+        <Grid item xs={12}>
+            <OrcidSyncContext.Provider
+                value={{
+                    showSyncUI: this.props.orcidSyncEnabled && !this.props.loadingOrcidSyncStatus,
+                    orcidSyncProps: {
+                        author: this.props.author,
+                        orcidSyncStatus: this.props.orcidSyncStatus,
+                        requestingOrcidSync: this.props.requestingOrcidSync,
+                        requestOrcidSync: this.requestOrcidSync,
+                    },
+                }}
+            >
+                <DashboardAuthorProfile
+                    authorDetails={this.props.authorDetails}
+                    author={this.props.author}
+                    history={this.props.history}
+                />
+            </OrcidSyncContext.Provider>
+        </Grid>
+    );
 
     render() {
         const { classes } = this.props;
@@ -181,7 +273,9 @@ export class DashboardClass extends PureComponent {
             this.props.incomplete.publicationsListPagingData.total > 1
                 ? ''
                 : 's';
-
+        const isAdmin =
+            this.props.authorDetails &&
+            (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -217,13 +311,7 @@ export class DashboardClass extends PureComponent {
                                     />
                                 </Grid>
                             )}
-                            <Grid item xs={12}>
-                                <DashboardAuthorProfile
-                                    authorDetails={this.props.authorDetails}
-                                    author={this.props.author}
-                                    history={this.props.history}
-                                />
-                            </Grid>
+                            {this.renderAuthorProfile()}
                             {!this.props.hidePossiblyYourPublicationsLure &&
                             !this.props.possiblyYourPublicationsCountLoading &&
                             this.props.possiblyYourPublicationsCount > 0 ? (
@@ -324,7 +412,7 @@ export class DashboardClass extends PureComponent {
                                             xs={12}
                                             style={this.state.dashboardPubsTabs !== 1 ? { display: 'none' } : {}}
                                         >
-                                            <MyLatestPublications />
+                                            <MyLatestPublications isAdmin={!!isAdmin} />
                                         </Grid>
                                     )}
                                     {this.props.showTrendingPublicationsTab && (
@@ -346,6 +434,5 @@ export class DashboardClass extends PureComponent {
     }
 }
 
-const StyledDashboard = withStyles(styles, { withTheme: true })(DashboardClass);
-const Dashboard = props => <StyledDashboard {...props} />;
+const Dashboard = withStyles(styles, { withTheme: true })(DashboardClass);
 export default Dashboard;

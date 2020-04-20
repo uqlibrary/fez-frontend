@@ -18,6 +18,16 @@ Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 // Get user from query string
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
 
+mockData.accounts.uqrdav10 = mockData.uqrdav10.account;
+mockData.accounts.uqagrinb = mockData.uqagrinb.account;
+mockData.authorDetails.uqrdav10 = mockData.uqrdav10.authorDetails;
+mockData.authorDetails.uqagrinb = mockData.uqagrinb.authorDetails;
+mockData.currentAuthor.uqrdav10 = {
+    data: mockData.uqrdav10.author,
+};
+mockData.currentAuthor.uqagrinb = {
+    data: mockData.uqagrinb.author,
+};
 if (user && !mockData.accounts[user]) {
     console.warn(
         `API MOCK DATA: User name (${user}) is not found, please use one of the usernames from mock data only...`,
@@ -33,7 +43,7 @@ user = user || 'uqresearcher';
  */
 mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
     // mock account response
-    if (user === 's2222222' || user === 's3333333') {
+    if (['s2222222', 's3333333'].indexOf(user) > -1) {
         return [200, mockData.accounts[user]];
     } else if (mockData.accounts[user]) {
         return [403, {}];
@@ -97,16 +107,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.currentAuthorStats];
         } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
             // CURRENT_USER_RECORDS_API - myDataset
-            const totalRecords = mockData.MyDatasetList.data.length;
+            const totalRecords = mockData.myDatasetList.data.length;
             const fromRecord = 1;
             const toRecord = 2;
             return [
                 200,
                 // {total: 0, data: []}
                 {
-                    ...mockData.MyDatasetList,
+                    ...mockData.myDatasetList,
                     current_page: config.params.page,
-                    data: mockData.MyDatasetList.data.slice(
+                    data: mockData.myDatasetList.data.slice(
                         fromRecord,
                         totalRecords > toRecord ? toRecord : totalRecords,
                     ),
@@ -138,7 +148,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.searchKeyList[config.params.search_key]];
         } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
-            return [200, mockData.collections];
+            return [200, mockData.collectionSearchList];
         } else if (config.params.key && config.params.key.rek_object_type === 1) {
             return [200, mockData.communitySearchList];
         } else if (
@@ -209,17 +219,43 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
-            { ...mockData.incompleteNTROrecordUqrdav10 },
-            { ...mockData.incompleteNTROrecordUqsbutl1 },
-            { ...mockData.UQ341923 },
+            { ...mockData.collectionRecord },
+            { ...mockData.communityRecord },
             { ...mockData.incompleteNTROrecord },
-            { ...mockData.incompleteNTROlist.data[1] },
-            { ...mockData.incompleteNTROlist.data[2] },
-            { ...mockTestingData.dataCollection },
-            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.incompleteNTRORecordUQ352045 },
             { ...mockData.recordWithoutAuthorIds },
-            ...mockData.possibleUnclaimedList.data,
+            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.UQ716942uqagrinb },
+            { ...mockTestingData.dataCollection },
+            ...mockData.collectionSearchList.data,
+            ...mockData.communitySearchList.data,
+            ...mockData.incompleteNTROlist.data,
             ...mockData.myRecordsList.data,
+            ...mockData.possibleUnclaimedList.data,
+            ...mockData.publicationTypeListAudio.data,
+            ...mockData.publicationTypeListBook.data,
+            ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListConferencePaper.data,
+            ...mockData.publicationTypeListConferenceProceedings.data,
+            ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDataCollection.data,
+            ...mockData.publicationTypeListDepartmentTechnicalReport.data,
+            ...mockData.publicationTypeListDesign.data,
+            ...mockData.publicationTypeListDigilibImage.data,
+            ...mockData.publicationTypeListGenericDocument.data,
+            ...mockData.publicationTypeListImage.data,
+            ...mockData.publicationTypeListJournal.data,
+            ...mockData.publicationTypeListJournalArticle.data,
+            ...mockData.publicationTypeListManuscript.data,
+            ...mockData.publicationTypeListNewspaperArticle.data,
+            ...mockData.publicationTypeListPatent.data,
+            ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListReferenceEntry.data,
+            ...mockData.publicationTypeListResearchReport.data,
+            ...mockData.publicationTypeListSeminarPaper.data,
+            ...mockData.publicationTypeListThesis.data,
+            ...mockData.publicationTypeListVideo.data,
+            ...mockData.publicationTypeListWorkingPaper.data,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
@@ -231,8 +267,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        const vocabId = config.url.substring(config.url.indexOf('/') + 1);
-        return [200, mockData.vocabulariesList[vocabId]];
+        const vocabIds = config.url
+            .substring(config.url.indexOf('=') + 1)
+            .split(',')
+            .map(vocabId => parseInt(vocabId));
+        let data = [];
+        const { vocabulariesList } = mockData;
+        vocabIds.forEach(vocabId => {
+            !!vocabulariesList[vocabId] && data.push(...vocabulariesList[vocabId].data);
+        });
+        return [200, { total: data.length, data }];
     })
     .onGet(
         new RegExp(
@@ -244,7 +288,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
-    .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
+    .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
+    .onGet(routes.ORCID_SYNC_API().apiUrl)
+    .reply(200, mockData.orcidSyncStatus);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
 // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
@@ -258,13 +304,62 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .onPost(routes.BATCH_IMPORT_API().apiUrl)
     .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
+    .onPost(routes.ORCID_SYNC_API().apiUrl)
+    .reply(201, mockData.orcidSyncResponse)
+    // .reply(400) // if current sync job exists
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, { data: { rek_pid: 'UQ:1111111' } }); // TODO: add actual record to data return!!!
-// .reply(500, {message: 'error - failed NEW_RECORD_API'});
-// .reply(403, {message: 'Session expired'});
+    .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
+    // .reply(500, {message: 'error - failed NEW_RECORD_API'})
+    // .reply(403, {message: 'Session expired'})
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
+    .reply(() => [200, { data: mockData.collectionRecord }])
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
+    .reply(() => [200, { data: mockData.communityRecord }])
+    .onPost(routes.ISSN_LINKS_API({ type: 'sherpa' }).apiUrl)
+    .reply(config => {
+        const issn = JSON.parse(config.data).issn;
+        const data = [];
+        switch (issn) {
+            case '0000-0000':
+                data.push({
+                    ...mockData.sherpaRomeo[1],
+                    srm_issn: issn,
+                });
+                break;
+            case '1111-1111':
+            case '2222-2222':
+                break;
+            default:
+                const mockSherpa = mockData.sherpaRomeo.find(mockEntry => mockEntry.srm_issn === issn);
+                data.push(
+                    mockSherpa || {
+                        ...mockData.sherpaRomeo[0],
+                        srm_issn: issn,
+                    },
+                );
+        }
+        return [200, { data }];
+    })
+    .onPost(routes.ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl)
+    .reply(config => {
+        const issn = JSON.parse(config.data).issn;
+        const data = [];
+        if (!issn.match(/^1111-1111|2222-2222$/)) {
+            data.push({
+                ...mockData.ulrichs[0],
+                ulr_issn: issn,
+                ulr_title_id: issn.replace('-', ''),
+            });
+        }
+        return [200, { data }];
+    });
 
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.collectionRecord } })
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_COMMUNITY_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.communityRecord } })
     // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, { ...mockData.currentAuthor.uqresearcher })

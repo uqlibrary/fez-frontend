@@ -3,7 +3,6 @@ import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
-
 /*
 
 NOTE:
@@ -207,6 +206,28 @@ export default {
                             // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
                             orcid: pathConfig.authorIdentifiers.orcid.link,
                         },
+                    },
+                },
+                dashboardOrcidSync: {
+                    badgeTooltip: 'Information about uploading your eSpace works to ORCID',
+                    helpDrawer: {
+                        messages: {
+                            // Persistent help message
+                            activated: 'Weekly automatic upload of your works to ORCID is activated.',
+                            // Statuses
+                            done:
+                                'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
+                            error:
+                                'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
+                            inProgress: 'A manual upload of your eSpace works to ORCID is in progress.',
+                            // Date of last upload
+                            lastUpload: 'The last upload was on [syncTime].',
+                            noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                        },
+                        title: 'ORCID Upload',
+                        type: 'info',
+                        actionButtonLabel: 'Upload works to ORCID',
+                        alternateActionButtonLabel: 'View works in ORCID',
                     },
                 },
             },
@@ -814,14 +835,17 @@ export default {
                 bibliographic: {
                     title: 'Bibliographic',
                 },
-                admin: {
-                    title: 'Admin',
-                },
                 grantInformation: {
-                    title: 'Grant Information',
+                    title: 'Grant information',
                 },
                 authorDetails: {
                     title: 'Author details',
+                },
+                admin: {
+                    title: 'Admin',
+                },
+                ntro: {
+                    title: 'NTRO',
                 },
                 files: {
                     title: 'Files',
@@ -849,11 +873,18 @@ export default {
                         <p>
                             Your preference is saved as a cookie on this browser and it will remember your preference.
                         </p>
+                        <h3>Page zoom</h3>
+                        <p>
+                            Using <b>CTRL</b> & <b>+/-</b> will zoom the page in/out further for more screen real
+                            estate.
+                        </p>
                     </div>
                 ),
                 buttonLabel: 'Got it',
             },
             loadingMessage: 'Loading record',
+            notSupportedMessage: 'Editing of [pubType] is not yet supported.',
+            retractedMessage: 'This article has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',
@@ -869,8 +900,14 @@ export default {
             successWorkflowConfirmation: {
                 confirmationTitle: 'Work has been updated',
                 confirmationMessage: 'Work has been updated',
-                cancelButtonLabel: 'Cancel',
+                cancelButtonLabel: 'View updated record',
                 confirmButtonLabel: 'Edit another work',
+            },
+            successAddWorkflowConfirmation: {
+                confirmationTitle: 'Work has been added',
+                confirmationMessage: 'Your new record has been added to eSpace.',
+                cancelButtonLabel: 'View new record',
+                confirmButtonLabel: 'Add another work',
             },
             alerts: {
                 errorAlert: {
@@ -891,6 +928,34 @@ export default {
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
+                validationAlert: {
+                    type: 'warning',
+                    title: 'Validation',
+                    message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+                },
+            },
+        },
+        adminAdd: {
+            title: 'Add a new record',
+            step1: 'Identify your new record',
+            buttonLabel: 'Create record',
+            cancelLabel: 'Cancel',
+            submitFailed: 'Failed to assign details to the administrator add form',
+            formLabels: {
+                ismemberof: {
+                    floatingLabelText: 'Member of collections',
+                    hintText: 'Begin typing to select and add record to a list of collection(s)',
+                },
+                rek_display_type: {
+                    inputLabelText: 'Work type',
+                    hintText: 'Select a Work type from the dropdown list',
+                },
+                rek_subtype: {
+                    inputLabelText: 'Work subtype',
+                    hintText: 'Select a work subtype from the dropdown list',
+                },
+                submit: 'Submit',
+                cancel: 'Cancel',
             },
         },
         incompletePublications: {

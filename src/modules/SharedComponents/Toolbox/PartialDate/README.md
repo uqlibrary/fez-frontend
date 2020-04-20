@@ -29,7 +29,7 @@ simple date-picker for UQ Library applications using ReactJs.
 import React from 'react';
 ...
 
-import { PartialDateField } from 'uqlibrary-react-toolbox';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 
 const App = () => (
   <div>
@@ -51,7 +51,7 @@ ReactDOM.render(
 
 ```jsx harmony
 import React from 'react';
-import { PartialDateField } from 'uqlibrary-react-toolbox';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 
 const App = () => (
   <form>

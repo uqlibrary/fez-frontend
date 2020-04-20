@@ -14,7 +14,7 @@ Template for reducers unit tests:
 ```javascript
 import * as actions from 'actions/actionTypes';
 import [REDUCER NAME]Reducer from './[REDUCER NAME]';
-import {initialState} from './[REDUCER NAME]';
+import { initialState } from './[REDUCER NAME]';
 
 describe('[REDUCER NAME] ', () => {
 

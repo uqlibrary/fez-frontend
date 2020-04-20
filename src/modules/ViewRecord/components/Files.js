@@ -18,6 +18,7 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
+import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
 
 const styles = theme => ({
@@ -180,16 +181,7 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
-        const {
-            files: { blacklist },
-        } = viewRecordsConfig;
-        return (
-            this.getSecurityAccess(dataStream) &&
-            !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
-            !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
-            !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
-            dataStream.dsi_state === 'A'
-        );
+        return this.getSecurityAccess(dataStream) && !isDerivative(dataStream) && isAdded(dataStream);
     };
 
     checkArrayForObjectValue = value => {

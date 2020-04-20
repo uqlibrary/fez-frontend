@@ -550,8 +550,16 @@ describe('Backend routes method', () => {
         expect(routes.NEW_COLLECTION_API()).toEqual({ apiUrl: 'collections' });
     });
 
+    it('should construct url for EXISTING_COLLECTION_API', () => {
+        expect(routes.EXISTING_COLLECTION_API({ pid: 'UQ:123456' })).toEqual({ apiUrl: 'records/UQ:123456' });
+    });
+
     it('should construct url for NEW_COMMUNITY_API', () => {
         expect(routes.NEW_COMMUNITY_API({})).toEqual({ apiUrl: 'communities' });
+    });
+
+    it('should construct url for EXISTING_COMMUNITY_API', () => {
+        expect(routes.EXISTING_COMMUNITY_API({ pid: 'UQ:123456' })).toEqual({ apiUrl: 'records/UQ:123456' });
     });
 
     it('should construct url for AUTHORS_SEARCH_API', () => {
@@ -566,7 +574,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for VOCABULARIES_API', () => {
-        expect(routes.VOCABULARIES_API({ id: '410' })).toEqual({ apiUrl: 'vocabularies/410' });
+        expect(routes.VOCABULARIES_API({ id: '410' })).toEqual({ apiUrl: 'vocabularies?cvo_ids=410' });
     });
 
     it('should construct url for GET_PUBLICATION_TYPES_API', () => {
@@ -776,6 +784,18 @@ describe('Backend routes method', () => {
     it('should construct url for BATCH_IMPORT_API', () => {
         expect(routes.BATCH_IMPORT_API()).toEqual({
             apiUrl: 'external/records/batch-import',
+        });
+    });
+
+    it('should construct url for ISSN_LINKS_API', () => {
+        expect(routes.ISSN_LINKS_API({ type: 'test' })).toEqual({
+            apiUrl: 'tool/lookup/test',
+        });
+    });
+
+    it('should construct url for ORCID_SYNC_API', () => {
+        expect(routes.ORCID_SYNC_API()).toEqual({
+            apiUrl: 'external/orcid/jobs/sync',
         });
     });
 });

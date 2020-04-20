@@ -2,7 +2,7 @@
 
 const { resolve } = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -126,7 +126,9 @@ const webpackConfig = {
             'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
             'process.env.GOOGLE_MAPS_URL': JSON.stringify(config.googleMaps),
             'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(process.env.GOOGLE_MAPS_API_KEY),
-            'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
+            'process.env.ENABLE_LOG': JSON.stringify(
+                !!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc',
+            ),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
         }),
@@ -160,7 +162,7 @@ const webpackConfig = {
             },
         },
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 sourceMap: true,
                 parallel: true,
             }),
@@ -176,7 +178,7 @@ const webpackConfig = {
             },
             {
                 test: /\.js?$/,
-                include: [resolve(__dirname, 'src'), resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')],
+                include: [resolve(__dirname, 'src')],
                 exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',

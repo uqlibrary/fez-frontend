@@ -8,15 +8,15 @@ export const escapeRegExp = text => {
 };
 
 const mapStateToProps = (state, props) => {
+    const category = props.category || FIELD_OF_RESEARCH_VOCAB_ID;
     return {
-        category: FIELD_OF_RESEARCH_VOCAB_ID,
+        category,
         onChange: props.input.onChange,
         errorText: props.meta ? props.meta.error : props.errorText,
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
         itemsList:
-            state.get('controlledVocabulariesReducer') &&
-            state.get('controlledVocabulariesReducer')[FIELD_OF_RESEARCH_VOCAB_ID]
-                ? state.get('controlledVocabulariesReducer')[FIELD_OF_RESEARCH_VOCAB_ID].itemsKeyValueList
+            state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[category]
+                ? state.get('controlledVocabulariesReducer')[category].itemsKeyValueList
                 : [],
         selectedValue: !!props.input && !!props.input.value ? { value: props.input.value } : null,
         maxResults: props.maxResults,
@@ -70,6 +70,7 @@ export const FieldOfResearchField = connect(
     mapStateToProps,
     mapDispatchToProps,
 )(AutoCompleteAsyncField);
+
 export const FilteredFieldOfResearchField = connect(
     filterFoRmapStateToProps,
     mapDispatchToProps,

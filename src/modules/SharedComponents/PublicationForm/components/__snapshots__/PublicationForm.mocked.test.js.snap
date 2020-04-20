@@ -73,23 +73,23 @@ exports[`Component PublicationForm should render properly with non-matching doct
               <WithStyles(MenuItem)
                 disabled={false}
                 key="fav_0"
+                value={130}
+              >
+                Conference Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="fav_1"
                 value={174}
               >
                 Book
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
-                key="fav_1"
+                key="fav_2"
                 value={177}
               >
                 Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_2"
-                value={130}
-              >
-                Conference Paper
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
@@ -104,9 +104,9 @@ exports[`Component PublicationForm should render properly with non-matching doct
               <WithStyles(MenuItem)
                 disabled={false}
                 key="0"
-                value={263}
+                value={130}
               >
-                Audio Document
+                Conference Paper
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
@@ -125,114 +125,114 @@ exports[`Component PublicationForm should render properly with non-matching doct
               <WithStyles(MenuItem)
                 disabled={false}
                 key="3"
-                value={130}
-              >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="4"
-                value={197}
-              >
-                Conference Proceedings
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="5"
-                value={313}
-              >
-                Creative Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="6"
-                value={181}
-              >
-                Department Technical Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="7"
-                value={316}
-              >
-                Design
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="8"
-                value={202}
-              >
-                Generic Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="9"
-                value={238}
-              >
-                Image
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="10"
                 value={179}
               >
                 Journal Article
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
-                key="11"
-                value={191}
+                key="4"
+                value={181}
               >
-                Newspaper Article
+                Department Technical Report
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
-                key="12"
+                key="5"
+                value={183}
+              >
+                Working Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="6"
                 value={185}
               >
                 Patent
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
-                key="13"
-                value={204}
-              >
-                Preprint
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="14"
-                value={275}
-              >
-                Research Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="15"
-                value={189}
-              >
-                Seminar Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="16"
+                key="7"
                 value={187}
               >
                 Thesis
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
-                key="17"
+                key="8"
+                value={189}
+              >
+                Seminar Paper
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="9"
+                value={191}
+              >
+                Newspaper Article
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="10"
+                value={197}
+              >
+                Conference Proceedings
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="11"
+                value={202}
+              >
+                Generic Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="12"
+                value={204}
+              >
+                Preprint
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="13"
+                value={238}
+              >
+                Image
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="14"
+                value={263}
+              >
+                Audio Document
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="15"
+                value={275}
+              >
+                Research Report
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="16"
                 value={310}
               >
                 Video Document
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 disabled={false}
-                key="18"
-                value={183}
+                key="17"
+                value={313}
               >
-                Working Paper
+                Creative Work
+              </WithStyles(MenuItem)>
+              <WithStyles(MenuItem)
+                disabled={false}
+                key="18"
+                value={316}
+              >
+                Design
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"

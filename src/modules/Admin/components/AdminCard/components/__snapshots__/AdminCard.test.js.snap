@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminCard component should render StyledCard with same props 1`] = `
+<WithStyles(Cards)
+  test1="test1value"
+  test2="test2value"
+/>
+`;
+
+exports[`Cards component renders with custom colours and full height 1`] = `
+<WithStyles(Grid)
+  className="undefined AdminCard"
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        >
+          <hr />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography)
+            color="primary"
+            component="h4"
+          >
+             
+            card title
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  />
+</WithStyles(Grid)>
+`;
+
+exports[`Cards component renders with square top and accent header 1`] = `
+<WithStyles(Grid)
+  className="undefined AdminCard"
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        >
+          <hr />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography)
+            color="primary"
+            component="h4"
+          >
+             
+            card title
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  />
+</WithStyles(Grid)>
+`;
+
+exports[`Cards component renders with title and help button 1`] = `
+<WithStyles(Grid)
+  className="testClass AdminCard"
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        >
+          <hr />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography)
+            color="primary"
+            component="h4"
+          >
+             
+            card title
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  />
+</WithStyles(Grid)>
+`;
+
+exports[`Cards component renders with title and no help icon 1`] = `
+<WithStyles(Grid)
+  className="testClass AdminCard"
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        >
+          <hr />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs="auto"
+        >
+          <WithStyles(Typography)
+            color="primary"
+            component="h4"
+          >
+             
+            card title
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  />
+</WithStyles(Grid)>
+`;

@@ -546,8 +546,39 @@ exports[`RichEditor should render component 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             onChange={[MockFunction]}
+            required={false}
             returnSingleValue={false}
+            titleProps={Object {}}
             value=""
           >
             <span />
@@ -1178,6 +1209,35 @@ exports[`RichEditor should render error as one child 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -1188,7 +1248,9 @@ exports[`RichEditor should render error as one child 1`] = `
               }
             }
             onChange={[MockFunction]}
+            required={false}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Object {
                 "get": [MockFunction] {
@@ -2896,6 +2958,35 @@ exports[`RichEditor should render error as react children 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -2908,7 +2999,9 @@ exports[`RichEditor should render error as react children 1`] = `
               }
             }
             onChange={[MockFunction]}
+            required={false}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Object {
                 "get": [MockFunction] {
@@ -4610,6 +4703,35 @@ exports[`RichEditor should render error showing input length 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -4618,7 +4740,9 @@ exports[`RichEditor should render error showing input length 1`] = `
               }
             }
             onChange={[MockFunction]}
+            required={false}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Object {
                 "get": [MockFunction] {
@@ -6296,6 +6420,35 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -6304,7 +6457,9 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
               }
             }
             onChange={[MockFunction]}
+            required={true}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Immutable.Map {
                 "htmlText": "This is test value",
@@ -7950,9 +8105,40 @@ exports[`RichEditor should render given title and description 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             onChange={[MockFunction]}
+            required={false}
             returnSingleValue={false}
             title="This is test title"
+            titleProps={Object {}}
             value=""
           >
             <span>
@@ -9560,14 +9746,45 @@ exports[`RichEditor should render given title and description with error 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             meta={
               Object {
                 "error": "This field is required",
               }
             }
             onChange={[MockFunction]}
+            required={true}
             returnSingleValue={false}
             title="This is title with error"
+            titleProps={Object {}}
             value=""
           >
             <span>
@@ -10081,6 +10298,9 @@ exports[`RichEditor should render given title and description with error 1`] = `
                     className="MuiTypography-root-1 MuiTypography-body2-9 MuiTypography-colorError-35"
                   >
                     This is title with error
+                    <span>
+                       *
+                    </span>
                   </p>
                 </Typography>
               </WithStyles(Typography)>

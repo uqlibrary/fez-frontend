@@ -16,7 +16,7 @@ Pre formatted dialog box for confirmation
 import React from 'react';
 ...
 
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 const App = () => (
   <div>

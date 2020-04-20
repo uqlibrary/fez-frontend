@@ -107,7 +107,7 @@ export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-tre
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => ({ apiUrl: 'acml/quick-templates' });
 export const GET_NEWS_API = () => ({ apiUrl: 'fez-news' });
-export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies/${id}` });
+export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 
 // file uploading apis
@@ -121,6 +121,10 @@ export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
 export const EXISTING_RECORD_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
+export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
+export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
@@ -308,5 +312,15 @@ export const BATCH_IMPORT_DIRECTORIES_API = () => {
 export const BATCH_IMPORT_API = () => {
     return {
         apiUrl: 'external/records/batch-import',
+    };
+};
+
+export const ISSN_LINKS_API = ({ type }) => ({
+    apiUrl: `tool/lookup/${type}`,
+});
+
+export const ORCID_SYNC_API = () => {
+    return {
+        apiUrl: 'external/orcid/jobs/sync',
     };
 };

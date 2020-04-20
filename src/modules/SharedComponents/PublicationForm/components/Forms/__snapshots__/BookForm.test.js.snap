@@ -169,6 +169,7 @@ exports[`BookForm renders  component 1`] = `
         isNtro={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -221,14 +222,14 @@ exports[`BookForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -236,6 +237,8 @@ exports[`BookForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -318,14 +321,14 @@ exports[`BookForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -333,6 +336,8 @@ exports[`BookForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -366,10 +371,15 @@ exports[`BookForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -404,6 +414,7 @@ exports[`BookForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -440,10 +451,15 @@ exports[`BookForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -478,6 +494,7 @@ exports[`BookForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -703,10 +720,15 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -741,6 +763,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -777,10 +800,15 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -815,6 +843,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -1051,6 +1080,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
         isNtro={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -1103,14 +1133,14 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1118,6 +1148,8 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -1200,14 +1232,14 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1215,6 +1247,8 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -1248,10 +1282,15 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -1286,6 +1325,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -1322,10 +1362,15 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -1360,6 +1405,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -1581,6 +1627,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         isNtro={true}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -1633,14 +1680,14 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1648,6 +1695,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -1730,14 +1779,14 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1745,6 +1794,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -1921,10 +1972,15 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -1959,6 +2015,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -1995,10 +2052,15 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -2033,6 +2095,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -2305,14 +2368,14 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2320,6 +2383,8 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -2353,10 +2418,15 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -2391,6 +2461,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -2427,10 +2498,15 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -2465,6 +2541,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -2701,6 +2778,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
         isNtro={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -2753,14 +2831,14 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2768,6 +2846,8 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -2850,14 +2930,14 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2865,6 +2945,8 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -2898,10 +2980,15 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -2936,6 +3023,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -2972,10 +3060,15 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -3010,6 +3103,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },

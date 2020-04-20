@@ -24,17 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('closeUnsupported', () => {
-    cy.get('#unsupportedBrowser.card button')
-        .then($button => {
-        // Button is only visible if browser is unsupported.
-            if ($button.filter(':visible').length) {
-                cy.wrap($button)
-                    .click();
-            }
-        });
-});
-
 Cypress.Commands.add('navToHomeFromMenu', locale => {
     const baseUrl = Cypress.config('baseUrl');
 
@@ -74,4 +63,73 @@ Cypress.Commands.add('clickAutoSuggestion', (fieldName, ordinal) => {
     cy.wait(200);
     cy.get('@menuItem')
         .click();
+});
+
+Cypress.Commands.add('checkPartialDate', (selector, { day, monthName, year }) => {
+    day &&
+        cy
+            .get(selector)
+            .find('#day')
+            .should('have.value', day);
+    monthName &&
+        cy
+            .get(selector)
+            .find('#select-month')
+            .should('have.text', monthName);
+    year &&
+        cy
+            .get(selector)
+            .find('#year')
+            .should('have.value', year);
+});
+
+Cypress.Commands.add('checkPartialDateFromRecordValue', (label, dateString) => {
+    cy.root()
+        .contains('label', label)
+        .parent()
+        .siblings('div')
+        .as('dateBlock');
+
+    const date = Cypress.moment(dateString);
+    cy.checkPartialDate('@dateBlock', {
+        day: date.format('D'),
+        monthName: date.format('MMMM'),
+        year: date.format('YYYY'),
+    });
+});
+
+Cypress.Commands.add('setPartialDate', (selector, { day, month, year }) => {
+    day &&
+        cy
+            .get(selector)
+            .find('#day')
+            .type(`{selectall}${day}`);
+    month &&
+        (() => {
+            cy.get(selector)
+                .find('#select-month')
+                .click();
+            cy.get('#menu-month')
+                .find(`li[role=option][data-value=${month - 1}]`)
+                .click();
+        })();
+    year &&
+        cy
+            .get(selector)
+            .find('#year')
+            .type(`{selectall}${year}`);
+});
+
+/**
+ * Enables access to redux store via cy.store().
+ * Can dispatch actions like example:
+ *   cy.store()
+ *      .dispatch({
+ *          type: 'SOMETHING_FAILED',
+ *          payload: 'Simulated Error',
+ *      });
+ */
+Cypress.Commands.add('store', () => {
+    return cy.window()
+        .its('__store__');
 });

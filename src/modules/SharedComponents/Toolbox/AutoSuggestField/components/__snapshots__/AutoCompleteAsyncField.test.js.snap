@@ -27,7 +27,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     onStateChange={[Function]}
     onUserAction={[Function]}
     scrollIntoView={[Function]}
-    selectedItem=""
+    selectedItem={null}
     selectedItemChanged={[Function]}
     stateReducer={[Function]}
     suppressRefError={false}
@@ -55,7 +55,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   onStateChange={[Function]}
   onUserAction={[Function]}
   scrollIntoView={[Function]}
-  selectedItem=""
+  selectedItem={null}
   selectedItemChanged={[Function]}
   stateReducer={[Function]}
   suppressRefError={false}
@@ -118,7 +118,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="123"
+          key="UQ:123"
           selected={false}
           style={
             Object {
@@ -131,7 +131,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 123,
+                "id": "UQ:123",
                 "value": "test 1",
               }
             }
@@ -139,7 +139,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           button={true}
-          key="456"
+          key="UQ:456"
           selected={false}
           style={
             Object {
@@ -152,7 +152,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 456,
+                "id": "UQ:456",
                 "value": "test 2",
               }
             }
@@ -194,7 +194,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         id="Test-input"
         placeholder={null}
         required={true}
-        value="123"
+        value="UQ:123"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -217,7 +217,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="123"
+          key="UQ:123"
           selected={false}
           style={
             Object {
@@ -230,8 +230,29 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 123,
+                "id": "UQ:123",
                 "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          button={true}
+          key="UQ:456"
+          selected={false}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": "UQ:456",
+                "value": "test 2",
               }
             }
           />
@@ -247,9 +268,9 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   button={true}
   classes={
     Object {
-      "gutters": "MuiMenuItem-gutters-161",
-      "root": "MuiMenuItem-root-160",
-      "selected": "MuiMenuItem-selected-162",
+      "gutters": "MuiMenuItem-gutters-216",
+      "root": "MuiMenuItem-root-215",
+      "selected": "MuiMenuItem-selected-217",
     }
   }
   component="li"
@@ -267,7 +288,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   <MenuItemComponent
     suggestion={
       Object {
-        "id": 123,
+        "id": "UQ:123",
         "value": "test 1",
       }
     }
@@ -283,7 +304,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       "variant": "body1",
     }
   }
-  secondary={123}
+  secondary="UQ:123"
   secondaryTypographyProps={
     Object {
       "variant": "body2",
@@ -320,7 +341,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     }
     inputRef={[Function]}
     placeholder={null}
-    value="123"
+    value="UQ:123"
   />
   <WithStyles(WithFormControlContext(FormHelperText))
     id="Test-input-helper-text"
@@ -383,7 +404,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="123"
+          key="UQ:123"
           selected={false}
           style={
             Object {
@@ -396,8 +417,29 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 123,
+                "id": "UQ:123",
                 "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          button={true}
+          key="UQ:456"
+          selected={true}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": "UQ:456",
+                "value": "test 2",
               }
             }
           />
@@ -444,12 +486,18 @@ exports[`AutoCompleteAsyncField component should call given filter function on i
 
 exports[`AutoCompleteAsyncField component should have a proper style generator 1`] = `
 Object {
+  "chip": Object {
+    "margin": "4px 2px",
+  },
   "container": Object {
     "flexGrow": 1,
     "position": "relative",
   },
   "inputRoot": Object {
     "flexWrap": "wrap",
+  },
+  "noWrap": Object {
+    "flexWrap": "unset",
   },
   "paper": Object {
     "maxHeight": 250,
@@ -501,16 +549,16 @@ exports[`AutoCompleteAsyncField component should render a spinner while loading 
 <CircularProgress
   classes={
     Object {
-      "circle": "MuiCircularProgress-circle-156",
-      "circleDisableShrink": "MuiCircularProgress-circleDisableShrink-159",
-      "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-158",
-      "circleStatic": "MuiCircularProgress-circleStatic-157",
-      "colorPrimary": "MuiCircularProgress-colorPrimary-153",
-      "colorSecondary": "MuiCircularProgress-colorSecondary-154",
-      "indeterminate": "MuiCircularProgress-indeterminate-152",
-      "root": "MuiCircularProgress-root-150",
-      "static": "MuiCircularProgress-static-151",
-      "svg": "MuiCircularProgress-svg-155",
+      "circle": "MuiCircularProgress-circle-211",
+      "circleDisableShrink": "MuiCircularProgress-circleDisableShrink-214",
+      "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-213",
+      "circleStatic": "MuiCircularProgress-circleStatic-212",
+      "colorPrimary": "MuiCircularProgress-colorPrimary-208",
+      "colorSecondary": "MuiCircularProgress-colorSecondary-209",
+      "indeterminate": "MuiCircularProgress-indeterminate-207",
+      "root": "MuiCircularProgress-root-205",
+      "static": "MuiCircularProgress-static-206",
+      "svg": "MuiCircularProgress-svg-210",
     }
   }
   color="primary"
@@ -521,7 +569,7 @@ exports[`AutoCompleteAsyncField component should render a spinner while loading 
   variant="indeterminate"
 >
   <div
-    className="MuiCircularProgress-root-150 MuiCircularProgress-colorPrimary-153 MuiCircularProgress-indeterminate-152"
+    className="MuiCircularProgress-root-205 MuiCircularProgress-colorPrimary-208 MuiCircularProgress-indeterminate-207"
     role="progressbar"
     style={
       Object {
@@ -531,11 +579,11 @@ exports[`AutoCompleteAsyncField component should render a spinner while loading 
     }
   >
     <svg
-      className="MuiCircularProgress-svg-155"
+      className="MuiCircularProgress-svg-210"
       viewBox="22 22 44 44"
     >
       <circle
-        className="MuiCircularProgress-circle-156 MuiCircularProgress-circleIndeterminate-158"
+        className="MuiCircularProgress-circle-211 MuiCircularProgress-circleIndeterminate-213"
         cx={44}
         cy={44}
         fill="none"
@@ -1119,7 +1167,17 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             onChange={[MockFunction]}
             openOnFocus={false}
             required={true}
+            selectedItem={
+              Array [
+                Object {
+                  "id": 1,
+                  "value": "Test",
+                },
+              ]
+            }
             selectedValue={null}
+            showChips={true}
+            showClear={true}
           >
             <div
               className="root"
@@ -1418,13 +1476,31 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     "aria-labelledby": "autosuggest-label",
                                     "autoComplete": "off",
                                     "classes": Object {
-                                      "root": "inputRoot",
+                                      "root": undefined,
                                     },
+                                    "endAdornment": <WithStyles(WithFormControlContext(InputAdornment))
+                                      position="end"
+                                    >
+                                      <WithStyles(IconButton)
+                                        aria-label="Clear"
+                                        id="clear-input"
+                                        onClick={[Function]}
+                                      >
+                                        <pure(ClearIcon) />
+                                      </WithStyles(IconButton)>
+                                    </WithStyles(WithFormControlContext(InputAdornment))>,
                                     "id": "autosuggest-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
                                     "onKeyDown": [Function],
+                                    "startAdornment": Array [
+                                      <WithStyles(Chip)
+                                        label="Test"
+                                        onDelete={[Function]}
+                                        tabIndex={-1}
+                                      />,
+                                    ],
                                     "value": "",
                                   }
                                 }
@@ -1447,13 +1523,31 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                       "aria-labelledby": "autosuggest-label",
                                       "autoComplete": "off",
                                       "classes": Object {
-                                        "root": "inputRoot",
+                                        "root": undefined,
                                       },
+                                      "endAdornment": <WithStyles(WithFormControlContext(InputAdornment))
+                                        position="end"
+                                      >
+                                        <WithStyles(IconButton)
+                                          aria-label="Clear"
+                                          id="clear-input"
+                                          onClick={[Function]}
+                                        >
+                                          <pure(ClearIcon) />
+                                        </WithStyles(IconButton)>
+                                      </WithStyles(WithFormControlContext(InputAdornment))>,
                                       "id": "autosuggest-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
                                       "onKeyDown": [Function],
+                                      "startAdornment": Array [
+                                        <WithStyles(Chip)
+                                          label="Test"
+                                          onDelete={[Function]}
+                                          tabIndex={-1}
+                                        />,
+                                      ],
                                       "value": "",
                                     }
                                   }
@@ -1485,19 +1579,36 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                         "aria-labelledby": "autosuggest-label",
                                         "autoComplete": "off",
                                         "classes": Object {
-                                          "root": "inputRoot",
+                                          "root": undefined,
                                         },
+                                        "endAdornment": <WithStyles(WithFormControlContext(InputAdornment))
+                                          position="end"
+                                        >
+                                          <WithStyles(IconButton)
+                                            aria-label="Clear"
+                                            id="clear-input"
+                                            onClick={[Function]}
+                                          >
+                                            <pure(ClearIcon) />
+                                          </WithStyles(IconButton)>
+                                        </WithStyles(WithFormControlContext(InputAdornment))>,
                                         "id": "autosuggest-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
                                         "onKeyDown": [Function],
+                                        "startAdornment": Array [
+                                          <WithStyles(Chip)
+                                            label="Test"
+                                            onDelete={[Function]}
+                                            tabIndex={-1}
+                                          />,
+                                        ],
                                         "value": "",
                                       }
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="autosuggest-input"
                                     inputProps={
@@ -1518,7 +1629,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={true}
                                       variant="standard"
@@ -1590,7 +1700,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                 id="autosuggest-input-label"
                                                 muiFormControl={
                                                   Object {
-                                                    "adornedStart": false,
+                                                    "adornedStart": true,
                                                     "disabled": false,
                                                     "error": false,
                                                     "filled": false,
@@ -1606,7 +1716,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                 }
                                               >
                                                 <WithStyles(WithFormControlContext(FormLabel))
-                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-shrink-109"
                                                   classes={
                                                     Object {
                                                       "disabled": "MuiInputLabel-disabled-104",
@@ -1615,13 +1725,13 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                       "required": "MuiInputLabel-required-106",
                                                     }
                                                   }
-                                                  data-shrink={false}
+                                                  data-shrink={true}
                                                   hidden={false}
                                                   htmlFor="autosuggest-input"
                                                   id="autosuggest-input-label"
                                                 >
                                                   <WithFormControlContext(FormLabel)
-                                                    className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                    className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-shrink-109"
                                                     classes={
                                                       Object {
                                                         "asterisk": "MuiFormLabel-asterisk-119",
@@ -1633,13 +1743,13 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                         "root": "MuiFormLabel-root-113",
                                                       }
                                                     }
-                                                    data-shrink={false}
+                                                    data-shrink={true}
                                                     hidden={false}
                                                     htmlFor="autosuggest-input"
                                                     id="autosuggest-input-label"
                                                   >
                                                     <FormLabel
-                                                      className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                      className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-shrink-109"
                                                       classes={
                                                         Object {
                                                           "asterisk": "MuiFormLabel-asterisk-119",
@@ -1652,13 +1762,13 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                         }
                                                       }
                                                       component="label"
-                                                      data-shrink={false}
+                                                      data-shrink={true}
                                                       hidden={false}
                                                       htmlFor="autosuggest-input"
                                                       id="autosuggest-input-label"
                                                       muiFormControl={
                                                         Object {
-                                                          "adornedStart": false,
+                                                          "adornedStart": true,
                                                           "disabled": false,
                                                           "error": false,
                                                           "filled": false,
@@ -1674,8 +1784,8 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                       }
                                                     >
                                                       <label
-                                                        className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
-                                                        data-shrink={false}
+                                                        className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-shrink-109"
+                                                        data-shrink={true}
                                                         hidden={false}
                                                         htmlFor="autosuggest-input"
                                                         id="autosuggest-input-label"
@@ -1701,8 +1811,21 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                             autoComplete="off"
                                             classes={
                                               Object {
-                                                "root": "inputRoot",
+                                                "root": undefined,
                                               }
+                                            }
+                                            endAdornment={
+                                              <WithStyles(WithFormControlContext(InputAdornment))
+                                                position="end"
+                                              >
+                                                <WithStyles(IconButton)
+                                                  aria-label="Clear"
+                                                  id="clear-input"
+                                                  onClick={[Function]}
+                                                >
+                                                  <pure(ClearIcon) />
+                                                </WithStyles(IconButton)>
+                                              </WithStyles(WithFormControlContext(InputAdornment))>
                                             }
                                             fullWidth={true}
                                             id="autosuggest-input"
@@ -1719,6 +1842,15 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                             onChange={[Function]}
                                             onKeyDown={[Function]}
                                             placeholder={null}
+                                            startAdornment={
+                                              Array [
+                                                <WithStyles(Chip)
+                                                  label="Test"
+                                                  onDelete={[Function]}
+                                                  tabIndex={-1}
+                                                />,
+                                              ]
+                                            }
                                             value=""
                                           >
                                             <Input
@@ -1740,9 +1872,22 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                   "inputType": "MuiInput-inputType-131",
                                                   "inputTypeSearch": "MuiInput-inputTypeSearch-132",
                                                   "multiline": "MuiInput-multiline-126",
-                                                  "root": "MuiInput-root-120 inputRoot",
+                                                  "root": "MuiInput-root-120",
                                                   "underline": "MuiInput-underline-124",
                                                 }
+                                              }
+                                              endAdornment={
+                                                <WithStyles(WithFormControlContext(InputAdornment))
+                                                  position="end"
+                                                >
+                                                  <WithStyles(IconButton)
+                                                    aria-label="Clear"
+                                                    id="clear-input"
+                                                    onClick={[Function]}
+                                                  >
+                                                    <pure(ClearIcon) />
+                                                  </WithStyles(IconButton)>
+                                                </WithStyles(WithFormControlContext(InputAdornment))>
                                               }
                                               fullWidth={true}
                                               id="autosuggest-input"
@@ -1759,6 +1904,15 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                               onChange={[Function]}
                                               onKeyDown={[Function]}
                                               placeholder={null}
+                                              startAdornment={
+                                                Array [
+                                                  <WithStyles(Chip)
+                                                    label="Test"
+                                                    onDelete={[Function]}
+                                                    tabIndex={-1}
+                                                  />,
+                                                ]
+                                              }
                                               value=""
                                             >
                                               <WithStyles(WithFormControlContext(InputBase))
@@ -1780,9 +1934,22 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                     "inputType": "MuiInput-inputType-131",
                                                     "inputTypeSearch": "MuiInput-inputTypeSearch-132",
                                                     "multiline": "MuiInput-multiline-126",
-                                                    "root": "MuiInput-root-120 inputRoot MuiInput-underline-124",
+                                                    "root": "MuiInput-root-120 MuiInput-underline-124",
                                                     "underline": null,
                                                   }
+                                                }
+                                                endAdornment={
+                                                  <WithStyles(WithFormControlContext(InputAdornment))
+                                                    position="end"
+                                                  >
+                                                    <WithStyles(IconButton)
+                                                      aria-label="Clear"
+                                                      id="clear-input"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <pure(ClearIcon) />
+                                                    </WithStyles(IconButton)>
+                                                  </WithStyles(WithFormControlContext(InputAdornment))>
                                                 }
                                                 fullWidth={true}
                                                 id="autosuggest-input"
@@ -1801,6 +1968,15 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                 onChange={[Function]}
                                                 onKeyDown={[Function]}
                                                 placeholder={null}
+                                                startAdornment={
+                                                  Array [
+                                                    <WithStyles(Chip)
+                                                      label="Test"
+                                                      onDelete={[Function]}
+                                                      tabIndex={-1}
+                                                    />,
+                                                  ]
+                                                }
                                                 type="text"
                                                 value=""
                                               >
@@ -1828,8 +2004,21 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                       "inputTypeSearch": "MuiInputBase-inputTypeSearch-147 MuiInput-inputTypeSearch-132",
                                                       "marginDense": "MuiInputBase-marginDense-140",
                                                       "multiline": "MuiInputBase-multiline-141 MuiInput-multiline-126",
-                                                      "root": "MuiInputBase-root-133 MuiInput-root-120 inputRoot MuiInput-underline-124",
+                                                      "root": "MuiInputBase-root-133 MuiInput-root-120 MuiInput-underline-124",
                                                     }
+                                                  }
+                                                  endAdornment={
+                                                    <WithStyles(WithFormControlContext(InputAdornment))
+                                                      position="end"
+                                                    >
+                                                      <WithStyles(IconButton)
+                                                        aria-label="Clear"
+                                                        id="clear-input"
+                                                        onClick={[Function]}
+                                                      >
+                                                        <pure(ClearIcon) />
+                                                      </WithStyles(IconButton)>
+                                                    </WithStyles(WithFormControlContext(InputAdornment))>
                                                   }
                                                   fullWidth={true}
                                                   id="autosuggest-input"
@@ -1848,6 +2037,15 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                   onChange={[Function]}
                                                   onKeyDown={[Function]}
                                                   placeholder={null}
+                                                  startAdornment={
+                                                    Array [
+                                                      <WithStyles(Chip)
+                                                        label="Test"
+                                                        onDelete={[Function]}
+                                                        tabIndex={-1}
+                                                      />,
+                                                    ]
+                                                  }
                                                   type="text"
                                                   value=""
                                                 >
@@ -1875,8 +2073,21 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                         "inputTypeSearch": "MuiInputBase-inputTypeSearch-147 MuiInput-inputTypeSearch-132",
                                                         "marginDense": "MuiInputBase-marginDense-140",
                                                         "multiline": "MuiInputBase-multiline-141 MuiInput-multiline-126",
-                                                        "root": "MuiInputBase-root-133 MuiInput-root-120 inputRoot MuiInput-underline-124",
+                                                        "root": "MuiInputBase-root-133 MuiInput-root-120 MuiInput-underline-124",
                                                       }
+                                                    }
+                                                    endAdornment={
+                                                      <WithStyles(WithFormControlContext(InputAdornment))
+                                                        position="end"
+                                                      >
+                                                        <WithStyles(IconButton)
+                                                          aria-label="Clear"
+                                                          id="clear-input"
+                                                          onClick={[Function]}
+                                                        >
+                                                          <pure(ClearIcon) />
+                                                        </WithStyles(IconButton)>
+                                                      </WithStyles(WithFormControlContext(InputAdornment))>
                                                     }
                                                     fullWidth={true}
                                                     id="autosuggest-input"
@@ -1892,7 +2103,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                     inputRef={[Function]}
                                                     muiFormControl={
                                                       Object {
-                                                        "adornedStart": false,
+                                                        "adornedStart": true,
                                                         "disabled": false,
                                                         "error": false,
                                                         "filled": false,
@@ -1911,6 +2122,15 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                     onChange={[Function]}
                                                     onKeyDown={[Function]}
                                                     placeholder={null}
+                                                    startAdornment={
+                                                      Array [
+                                                        <WithStyles(Chip)
+                                                          label="Test"
+                                                          onDelete={[Function]}
+                                                          tabIndex={-1}
+                                                        />,
+                                                      ]
+                                                    }
                                                     type="text"
                                                     value=""
                                                   >
@@ -1919,15 +2139,122 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                       aria-autocomplete="list"
                                                       aria-controls={null}
                                                       aria-labelledby="autosuggest-label"
-                                                      className="MuiInputBase-root-133 MuiInput-root-120 inputRoot MuiInput-underline-124 MuiInputBase-fullWidth-142 MuiInput-fullWidth-127 MuiInputBase-formControl-134 MuiInput-formControl-121"
+                                                      className="MuiInputBase-root-133 MuiInput-root-120 MuiInput-underline-124 MuiInputBase-fullWidth-142 MuiInput-fullWidth-127 MuiInputBase-formControl-134 MuiInput-formControl-121 MuiInputBase-adornedStart-137 MuiInputBase-adornedEnd-138"
                                                       onClick={[Function]}
                                                     >
+                                                      <WithStyles(Chip)
+                                                        key="1"
+                                                        label="Test"
+                                                        onDelete={[Function]}
+                                                        tabIndex={-1}
+                                                      >
+                                                        <Chip
+                                                          classes={
+                                                            Object {
+                                                              "avatar": "MuiChip-avatar-162",
+                                                              "avatarChildren": "MuiChip-avatarChildren-165",
+                                                              "avatarColorPrimary": "MuiChip-avatarColorPrimary-163",
+                                                              "avatarColorSecondary": "MuiChip-avatarColorSecondary-164",
+                                                              "clickable": "MuiChip-clickable-153",
+                                                              "clickableColorPrimary": "MuiChip-clickableColorPrimary-154",
+                                                              "clickableColorSecondary": "MuiChip-clickableColorSecondary-155",
+                                                              "colorPrimary": "MuiChip-colorPrimary-151",
+                                                              "colorSecondary": "MuiChip-colorSecondary-152",
+                                                              "deletable": "MuiChip-deletable-156",
+                                                              "deletableColorPrimary": "MuiChip-deletableColorPrimary-157",
+                                                              "deletableColorSecondary": "MuiChip-deletableColorSecondary-158",
+                                                              "deleteIcon": "MuiChip-deleteIcon-170",
+                                                              "deleteIconColorPrimary": "MuiChip-deleteIconColorPrimary-171",
+                                                              "deleteIconColorSecondary": "MuiChip-deleteIconColorSecondary-172",
+                                                              "deleteIconOutlinedColorPrimary": "MuiChip-deleteIconOutlinedColorPrimary-173",
+                                                              "deleteIconOutlinedColorSecondary": "MuiChip-deleteIconOutlinedColorSecondary-174",
+                                                              "icon": "MuiChip-icon-166",
+                                                              "iconColorPrimary": "MuiChip-iconColorPrimary-167",
+                                                              "iconColorSecondary": "MuiChip-iconColorSecondary-168",
+                                                              "label": "MuiChip-label-169",
+                                                              "outlined": "MuiChip-outlined-159",
+                                                              "outlinedPrimary": "MuiChip-outlinedPrimary-160",
+                                                              "outlinedSecondary": "MuiChip-outlinedSecondary-161",
+                                                              "root": "MuiChip-root-150",
+                                                            }
+                                                          }
+                                                          color="default"
+                                                          component="div"
+                                                          label="Test"
+                                                          onDelete={[Function]}
+                                                          tabIndex={-1}
+                                                          variant="default"
+                                                        >
+                                                          <div
+                                                            className="MuiChip-root-150 MuiChip-deletable-156"
+                                                            onKeyDown={[Function]}
+                                                            onKeyUp={[Function]}
+                                                            role="button"
+                                                            tabIndex={-1}
+                                                          >
+                                                            <span
+                                                              className="MuiChip-label-169"
+                                                            >
+                                                              Test
+                                                            </span>
+                                                            <pure(Cancel)
+                                                              className="MuiChip-deleteIcon-170"
+                                                              onClick={[Function]}
+                                                            >
+                                                              <Cancel
+                                                                className="MuiChip-deleteIcon-170"
+                                                                onClick={[Function]}
+                                                              >
+                                                                <WithStyles(SvgIcon)
+                                                                  className="MuiChip-deleteIcon-170"
+                                                                  onClick={[Function]}
+                                                                >
+                                                                  <SvgIcon
+                                                                    className="MuiChip-deleteIcon-170"
+                                                                    classes={
+                                                                      Object {
+                                                                        "colorAction": "MuiSvgIcon-colorAction-178",
+                                                                        "colorDisabled": "MuiSvgIcon-colorDisabled-180",
+                                                                        "colorError": "MuiSvgIcon-colorError-179",
+                                                                        "colorPrimary": "MuiSvgIcon-colorPrimary-176",
+                                                                        "colorSecondary": "MuiSvgIcon-colorSecondary-177",
+                                                                        "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-181",
+                                                                        "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-183",
+                                                                        "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-182",
+                                                                        "root": "MuiSvgIcon-root-175",
+                                                                      }
+                                                                    }
+                                                                    color="inherit"
+                                                                    component="svg"
+                                                                    fontSize="default"
+                                                                    onClick={[Function]}
+                                                                    viewBox="0 0 24 24"
+                                                                  >
+                                                                    <svg
+                                                                      aria-hidden="true"
+                                                                      className="MuiSvgIcon-root-175 MuiChip-deleteIcon-170"
+                                                                      focusable="false"
+                                                                      onClick={[Function]}
+                                                                      role="presentation"
+                                                                      viewBox="0 0 24 24"
+                                                                    >
+                                                                      <path
+                                                                        d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                                                                      />
+                                                                    </svg>
+                                                                  </SvgIcon>
+                                                                </WithStyles(SvgIcon)>
+                                                              </Cancel>
+                                                            </pure(Cancel)>
+                                                          </div>
+                                                        </Chip>
+                                                      </WithStyles(Chip)>
                                                       <input
                                                         aria-invalid={false}
                                                         aria-label="autosuggest"
                                                         aria-labelledby="autosuggest-input-label"
                                                         autoComplete="off"
-                                                        className="MuiInputBase-input-143 MuiInput-input-128"
+                                                        className="MuiInputBase-input-143 MuiInput-input-128 MuiInputBase-inputAdornedStart-148 MuiInputBase-inputAdornedEnd-149"
                                                         disabled={false}
                                                         id="autosuggest-input"
                                                         label="autosuggest"
@@ -1940,6 +2267,217 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                         type="text"
                                                         value=""
                                                       />
+                                                      <WithStyles(WithFormControlContext(InputAdornment))
+                                                        position="end"
+                                                      >
+                                                        <WithFormControlContext(InputAdornment)
+                                                          classes={
+                                                            Object {
+                                                              "disablePointerEvents": "MuiInputAdornment-disablePointerEvents-188",
+                                                              "filled": "MuiInputAdornment-filled-185",
+                                                              "positionEnd": "MuiInputAdornment-positionEnd-187",
+                                                              "positionStart": "MuiInputAdornment-positionStart-186",
+                                                              "root": "MuiInputAdornment-root-184",
+                                                            }
+                                                          }
+                                                          position="end"
+                                                        >
+                                                          <InputAdornment
+                                                            classes={
+                                                              Object {
+                                                                "disablePointerEvents": "MuiInputAdornment-disablePointerEvents-188",
+                                                                "filled": "MuiInputAdornment-filled-185",
+                                                                "positionEnd": "MuiInputAdornment-positionEnd-187",
+                                                                "positionStart": "MuiInputAdornment-positionStart-186",
+                                                                "root": "MuiInputAdornment-root-184",
+                                                              }
+                                                            }
+                                                            component="div"
+                                                            disablePointerEvents={false}
+                                                            disableTypography={false}
+                                                            muiFormControl={
+                                                              Object {
+                                                                "adornedStart": true,
+                                                                "disabled": false,
+                                                                "error": false,
+                                                                "filled": false,
+                                                                "focused": false,
+                                                                "margin": "none",
+                                                                "onBlur": [Function],
+                                                                "onEmpty": [Function],
+                                                                "onFilled": [Function],
+                                                                "onFocus": [Function],
+                                                                "required": true,
+                                                                "variant": "standard",
+                                                              }
+                                                            }
+                                                            position="end"
+                                                          >
+                                                            <div
+                                                              className="MuiInputAdornment-root-184 MuiInputAdornment-positionEnd-187"
+                                                            >
+                                                              <WithStyles(IconButton)
+                                                                aria-label="Clear"
+                                                                id="clear-input"
+                                                                onClick={[Function]}
+                                                              >
+                                                                <IconButton
+                                                                  aria-label="Clear"
+                                                                  classes={
+                                                                    Object {
+                                                                      "colorInherit": "MuiIconButton-colorInherit-190",
+                                                                      "colorPrimary": "MuiIconButton-colorPrimary-191",
+                                                                      "colorSecondary": "MuiIconButton-colorSecondary-192",
+                                                                      "disabled": "MuiIconButton-disabled-193",
+                                                                      "label": "MuiIconButton-label-194",
+                                                                      "root": "MuiIconButton-root-189",
+                                                                    }
+                                                                  }
+                                                                  color="default"
+                                                                  disabled={false}
+                                                                  id="clear-input"
+                                                                  onClick={[Function]}
+                                                                >
+                                                                  <WithStyles(ButtonBase)
+                                                                    aria-label="Clear"
+                                                                    centerRipple={true}
+                                                                    className="MuiIconButton-root-189"
+                                                                    disabled={false}
+                                                                    focusRipple={true}
+                                                                    id="clear-input"
+                                                                    onClick={[Function]}
+                                                                  >
+                                                                    <ButtonBase
+                                                                      aria-label="Clear"
+                                                                      centerRipple={true}
+                                                                      className="MuiIconButton-root-189"
+                                                                      classes={
+                                                                        Object {
+                                                                          "disabled": "MuiButtonBase-disabled-196",
+                                                                          "focusVisible": "MuiButtonBase-focusVisible-197",
+                                                                          "root": "MuiButtonBase-root-195",
+                                                                        }
+                                                                      }
+                                                                      component="button"
+                                                                      disableRipple={false}
+                                                                      disableTouchRipple={false}
+                                                                      disabled={false}
+                                                                      focusRipple={true}
+                                                                      id="clear-input"
+                                                                      onClick={[Function]}
+                                                                      tabIndex="0"
+                                                                      type="button"
+                                                                    >
+                                                                      <button
+                                                                        aria-label="Clear"
+                                                                        className="MuiButtonBase-root-195 MuiIconButton-root-189"
+                                                                        disabled={false}
+                                                                        id="clear-input"
+                                                                        onBlur={[Function]}
+                                                                        onClick={[Function]}
+                                                                        onContextMenu={[Function]}
+                                                                        onFocus={[Function]}
+                                                                        onKeyDown={[Function]}
+                                                                        onKeyUp={[Function]}
+                                                                        onMouseDown={[Function]}
+                                                                        onMouseLeave={[Function]}
+                                                                        onMouseUp={[Function]}
+                                                                        onTouchEnd={[Function]}
+                                                                        onTouchMove={[Function]}
+                                                                        onTouchStart={[Function]}
+                                                                        tabIndex="0"
+                                                                        type="button"
+                                                                      >
+                                                                        <span
+                                                                          className="MuiIconButton-label-194"
+                                                                        >
+                                                                          <pure(ClearIcon)>
+                                                                            <ClearIcon>
+                                                                              <WithStyles(SvgIcon)>
+                                                                                <SvgIcon
+                                                                                  classes={
+                                                                                    Object {
+                                                                                      "colorAction": "MuiSvgIcon-colorAction-178",
+                                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled-180",
+                                                                                      "colorError": "MuiSvgIcon-colorError-179",
+                                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary-176",
+                                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary-177",
+                                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-181",
+                                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-183",
+                                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-182",
+                                                                                      "root": "MuiSvgIcon-root-175",
+                                                                                    }
+                                                                                  }
+                                                                                  color="inherit"
+                                                                                  component="svg"
+                                                                                  fontSize="default"
+                                                                                  viewBox="0 0 24 24"
+                                                                                >
+                                                                                  <svg
+                                                                                    aria-hidden="true"
+                                                                                    className="MuiSvgIcon-root-175"
+                                                                                    focusable="false"
+                                                                                    role="presentation"
+                                                                                    viewBox="0 0 24 24"
+                                                                                  >
+                                                                                    <path
+                                                                                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                                                                    />
+                                                                                    <path
+                                                                                      d="M0 0h24v24H0z"
+                                                                                      fill="none"
+                                                                                    />
+                                                                                  </svg>
+                                                                                </SvgIcon>
+                                                                              </WithStyles(SvgIcon)>
+                                                                            </ClearIcon>
+                                                                          </pure(ClearIcon)>
+                                                                        </span>
+                                                                        <NoSsr
+                                                                          defer={false}
+                                                                          fallback={null}
+                                                                        >
+                                                                          <WithStyles(TouchRipple)
+                                                                            center={true}
+                                                                            innerRef={[Function]}
+                                                                          >
+                                                                            <TouchRipple
+                                                                              center={true}
+                                                                              classes={
+                                                                                Object {
+                                                                                  "child": "MuiTouchRipple-child-202",
+                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-203",
+                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-204",
+                                                                                  "ripple": "MuiTouchRipple-ripple-199",
+                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-201",
+                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-200",
+                                                                                  "root": "MuiTouchRipple-root-198",
+                                                                                }
+                                                                              }
+                                                                            >
+                                                                              <TransitionGroup
+                                                                                childFactory={[Function]}
+                                                                                className="MuiTouchRipple-root-198"
+                                                                                component="span"
+                                                                                enter={true}
+                                                                                exit={true}
+                                                                              >
+                                                                                <span
+                                                                                  className="MuiTouchRipple-root-198"
+                                                                                />
+                                                                              </TransitionGroup>
+                                                                            </TouchRipple>
+                                                                          </WithStyles(TouchRipple)>
+                                                                        </NoSsr>
+                                                                      </button>
+                                                                    </ButtonBase>
+                                                                  </WithStyles(ButtonBase)>
+                                                                </IconButton>
+                                                              </WithStyles(IconButton)>
+                                                            </div>
+                                                          </InputAdornment>
+                                                        </WithFormControlContext(InputAdornment)>
+                                                      </WithStyles(WithFormControlContext(InputAdornment))>
                                                     </div>
                                                   </InputBase>
                                                 </WithFormControlContext(InputBase)>
@@ -2575,6 +3113,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             openOnFocus={false}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -2952,7 +3491,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="autosuggest-input"
                                     inputProps={
@@ -2973,7 +3511,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -3439,6 +3976,96 @@ exports[`AutoCompleteAsyncField component should render default MenuItemComponen
     }
   />
 </WithStyles(MenuItem)>
+`;
+
+exports[`AutoCompleteAsyncField component should render default MenuItemComponent 2`] = `
+<div
+  className="root"
+>
+  <label
+    hidden={true}
+    id="autosuggest-label"
+  />
+  <Downshift
+    aria-label="autosuggest"
+    defaultHighlightedIndex={null}
+    defaultInputValue=""
+    defaultIsOpen={false}
+    defaultSelectedItem={null}
+    environment={[Window]}
+    getA11yStatusMessage={[Function]}
+    id="autosuggest"
+    itemToString={[MockFunction]}
+    onChange={[MockFunction]}
+    onInputValueChange={[Function]}
+    onOuterClick={[Function]}
+    onSelect={[Function]}
+    onStateChange={[Function]}
+    onUserAction={[Function]}
+    scrollIntoView={[Function]}
+    selectedItemChanged={[Function]}
+    stateReducer={[Function]}
+    suppressRefError={false}
+  >
+    <Component />
+  </Downshift>
+</div>
+`;
+
+exports[`AutoCompleteAsyncField component should render default MenuItemComponent with array 1`] = `
+<WithStyles(MenuItem)
+  button={true}
+  selected={true}
+  style={
+    Object {
+      "fontWeight": 400,
+      "height": "auto",
+      "whiteSpace": "normal",
+    }
+  }
+>
+  <MenuItemComponent
+    suggestion={
+      Object {
+        "value": "Testing menu item",
+      }
+    }
+  />
+</WithStyles(MenuItem)>
+`;
+
+exports[`AutoCompleteAsyncField component should render default MenuItemComponent with array 2`] = `
+<div
+  className="root"
+>
+  <label
+    hidden={true}
+    id="autosuggest-label"
+  />
+  <Downshift
+    aria-label="autosuggest"
+    defaultHighlightedIndex={null}
+    defaultInputValue=""
+    defaultIsOpen={false}
+    defaultSelectedItem={null}
+    environment={[Window]}
+    getA11yStatusMessage={[Function]}
+    id="autosuggest"
+    itemToString={[MockFunction]}
+    onChange={[MockFunction]}
+    onInputValueChange={[Function]}
+    onOuterClick={[Function]}
+    onSelect={[Function]}
+    onStateChange={[Function]}
+    onUserAction={[Function]}
+    scrollIntoView={[Function]}
+    selectedItemChanged={[Function]}
+    stateReducer={[Function]}
+    suppressRefError={false}
+  >
+    <Component />
+  </Downshift>
+</div>
 `;
 
 exports[`AutoCompleteAsyncField component should render items list on focusing on input 1`] = `
@@ -4073,6 +4700,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             openOnFocus={true}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -4450,7 +5078,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="Test-input"
                                     inputProps={
@@ -4470,7 +5097,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -5401,6 +6027,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             openOnFocus={true}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -5778,7 +6405,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     }
                                     classes={Object {}}
                                     disabled={false}
-                                    error={false}
                                     fullWidth={true}
                                     id="Test-input"
                                     inputProps={
@@ -5798,7 +6424,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={false}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -6693,6 +7318,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             openOnFocus={false}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -7070,7 +7696,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     }
                                     classes={Object {}}
                                     disabled={true}
-                                    error={false}
                                     fullWidth={true}
                                     id="autosuggest-input"
                                     inputProps={
@@ -7091,7 +7716,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={true}
-                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"

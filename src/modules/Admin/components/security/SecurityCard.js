@@ -13,12 +13,26 @@ import SecuritySelector from './SecuritySelector';
 import { useRecordContext, useFormValuesContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { locale } from 'locale';
+import { publicationTypes } from 'config';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
+
+/**
+ * Redux-form normalize callback
+ */
+export const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
+
+export const getRecordType = record =>
+    (
+        record.rek_object_type_lookup ||
+        (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name) ||
+        ''
+    ).toLowerCase() || null;
 
 export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
-    const recordType = record.rek_object_type_lookup.toLowerCase();
+    const recordType = getRecordType(record);
     const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 
@@ -27,15 +41,10 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
-    /* istanbul ignore next */
-    /**
-     * Redux-form normalize callback
-     */
-    const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
     return (
         <Grid container spacing={16}>
             <Grid item xs={12}>
-                <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader>
+                <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader subCard>
                     <Grid container spacing={16}>
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
@@ -89,34 +98,32 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                 </StandardCard>
             </Grid>
             {!!dataStreams && dataStreams.length > 0 && (
-                <Grid item xs={12}>
-                    <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader>
-                        <Grid container spacing={8}>
-                            {dataStreams.length && (
-                                <React.Fragment>
-                                    <Grid item xs={12}>
-                                        <InheritedSecurityDetails
-                                            title={text.inheritedPolicy.dataStream.title}
-                                            collections={record.fez_record_search_key_ismemberof}
-                                            parentKey="rek_datastream_policy"
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={DataStreamSecuritySelector}
-                                            name="securitySection.dataStreams"
-                                            {...{
-                                                disabled,
-                                                text: text.dataStream,
-                                            }}
-                                            collections={record.fez_record_search_key_ismemberof}
-                                        />
-                                    </Grid>
-                                </React.Fragment>
-                            )}
-                        </Grid>
-                    </StandardCard>
-                </Grid>
+                <React.Fragment>
+                    <Grid item xs={12}>
+                        <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader subCard>
+                            <Grid container spacing={8}>
+                                <Grid item xs={12}>
+                                    <InheritedSecurityDetails
+                                        title={text.inheritedPolicy.dataStream.title}
+                                        collections={record.fez_record_search_key_ismemberof}
+                                        parentKey="rek_datastream_policy"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={DataStreamSecuritySelector}
+                                        name="securitySection.dataStreams"
+                                        {...{
+                                            disabled,
+                                            text: text.dataStream,
+                                        }}
+                                        collections={record.fez_record_search_key_ismemberof}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                </React.Fragment>
             )}
         </Grid>
     );

@@ -6,6 +6,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -15,13 +16,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -40,9 +42,9 @@ exports[`AdminInterface component should disabled button and render alert for fo
             "fontSize": 24,
           }
         }
-        variant="h5"
+        variant="h2"
       >
-        UQ:123456 This is test record
+        Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <Hidden
@@ -64,6 +66,20 @@ exports[`AdminInterface component should disabled button and render alert for fo
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -89,13 +105,13 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
-              key="security"
-              label="Security"
-              value="security"
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -105,33 +121,49 @@ exports[`AdminInterface component should disabled button and render alert for fo
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          squareTop={true}
-          title="Security"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={true}
-            name="securitySection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={true}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           message="Request is being processed."
-          pushToTop={true}
           showLoader={true}
           title="Saving"
           type="info_outline"
@@ -139,27 +171,108 @@ exports[`AdminInterface component should disabled button and render alert for fo
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={12}
         xs={12}
       >
-        <WithStyles(Button)
-          color="primary"
-          disabled={true}
-          fullWidth={true}
-          onClick={[MockFunction]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Submit
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={true}
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
 </StandardPage>
+`;
+
+exports[`AdminInterface component should display an alert if editing of a pubtype is not supported 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Alert)
+        message="Editing of record is not yet supported."
+        type="info"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should display badges on tabs for erroring fields 1`] = `
+Array [
+  <WithStyles(Tab)
+    key="bibliographic"
+    label={
+      <WithStyles(Badge)
+        badgeContent={1}
+        color="error"
+      >
+        Bibliographic
+      </WithStyles(Badge)>
+    }
+    value="bibliographic"
+  />,
+  <WithStyles(Tab)
+    key="security"
+    label={
+      <WithStyles(Badge)
+        badgeContent={3}
+        color="error"
+      >
+        Security
+      </WithStyles(Badge)>
+    }
+    value="security"
+  />,
+]
 `;
 
 exports[`AdminInterface component should display successful alert 1`] = `
@@ -168,6 +281,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -177,13 +291,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -202,9 +317,9 @@ exports[`AdminInterface component should display successful alert 1`] = `
             "fontSize": 24,
           }
         }
-        variant="h5"
+        variant="h2"
       >
-        UQ:123456 This is test record
+        Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <Hidden
@@ -226,6 +341,20 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -251,13 +380,13 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
-              key="security"
-              label="Security"
-              value="security"
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -267,57 +396,106 @@ exports[`AdminInterface component should display successful alert 1`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          squareTop={true}
-          title="Security"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="securitySection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
-          pushToTop={true}
           title="Success"
           type="done"
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={12}
         xs={12}
       >
-        <WithStyles(Button)
-          color="primary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Submit
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -330,6 +508,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -339,13 +518,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -364,9 +544,9 @@ exports[`AdminInterface component should display successful alert 2`] = `
             "fontSize": 24,
           }
         }
-        variant="h5"
+        variant="h2"
       >
-        UQ:123456 This is test record
+        Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <Hidden
@@ -388,6 +568,20 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -413,13 +607,13 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
-              key="security"
-              label="Security"
-              value="security"
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -429,69 +623,119 @@ exports[`AdminInterface component should display successful alert 2`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          squareTop={true}
-          title="Security"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="securitySection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
-          pushToTop={true}
           title="Success"
           type="done"
         />
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={12}
         xs={12}
       >
-        <WithStyles(Button)
-          color="primary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Submit
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
 </StandardPage>
 `;
 
-exports[`AdminInterface component should render default view as a full form view 1`] = `
+exports[`AdminInterface component should render a title with html correctly 1`] = `
 <StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -501,13 +745,14 @@ exports[`AdminInterface component should render default view as a full form view
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -526,9 +771,21 @@ exports[`AdminInterface component should render default view as a full form view
             "fontSize": 24,
           }
         }
-        variant="h5"
+        variant="h2"
       >
-        UQ:123456 This is test record
+        Edit Journal Article - Cost analysis: outsourcing radiofrequency ablution for massiv
+        <sub
+          key="1"
+        >
+          e
+        </sub>
+         renal m
+        <sup
+          key="3"
+        >
+          a
+        </sup>
+        sses ™ ♦: UQ:123456
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <Hidden
@@ -550,6 +807,20 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -560,63 +831,319 @@ exports[`AdminInterface component should render default view as a full form view
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={false}
-        value="security"
+        value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={false}
-          squareTop={false}
-          title="Security"
+        <ScrollToSection
+          scrollToSection={true}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="securitySection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
+      </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
+          style={
+            Object {
+              "marginTop": 8,
+            }
+          }
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should render alert message for retracted records 1`] = `
+<WithStyles(Alert)
+  message="This article has been retracted"
+  type="warning"
+/>
+`;
+
+exports[`AdminInterface component should render default view as a full form view 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(ConfirmDialogBox)
+      locale={
+        Object {
+          "cancelButtonLabel": "View updated record",
+          "confirmButtonLabel": "Edit another work",
+          "confirmationMessage": "Work has been updated",
+          "confirmationTitle": "Work has been updated",
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h2"
+      >
+        Edit Journal Article - This is test record: UQ:123456
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <Memo() />
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+      />
+    </Hidden>
+  </WithStyles(Grid)>
+  <form>
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <TabContainer
+        currentTab="bibliographic"
+        key="bibliographic"
+        tabbed={false}
+        value="bibliographic"
+      >
+        <ScrollToSection
+          scrollToSection={true}
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
       <TabContainer
-        currentTab="security"
+        currentTab="bibliographic"
         key="files"
         tabbed={false}
         value="files"
       >
-        <StandardCard
-          primaryHeader={false}
-          squareTop={false}
-          title="Files"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="filesSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Files"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="filesSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
+      <TabContainer
+        currentTab="bibliographic"
+        key="security"
+        tabbed={false}
+        value="security"
+      >
+        <ScrollToSection
+          scrollToSection={false}
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Security"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="securitySection"
+            />
+          </StandardCard>
+        </ScrollToSection>
+      </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
-        sm={12}
         xs={12}
       >
-        <WithStyles(Button)
-          color="primary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Submit
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -629,6 +1156,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -638,13 +1166,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -663,9 +1192,9 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             "fontSize": 24,
           }
         }
-        variant="h5"
+        variant="h2"
       >
-        UQ:123456 This is test record
+        Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <Hidden
@@ -687,6 +1216,20 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -712,18 +1255,18 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
+            <WithStyles(Tab)
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
+            />
             <WithStyles(Tab)
               key="security"
               label="Security"
               value="security"
-            />
-            <WithStyles(Tab)
-              key="files"
-              label="Files"
-              value="files"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -733,47 +1276,315 @@ exports[`AdminInterface component should render default view as a tabbed form vi
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          squareTop={true}
-          title="Security"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="securitySection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
-        sm={12}
         xs={12}
       >
-        <WithStyles(Button)
-          color="primary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Submit
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
 </StandardPage>
+`;
+
+exports[`AdminInterface component should render in create mode 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(ConfirmDialogBox)
+      locale={
+        Object {
+          "cancelButtonLabel": "View new record",
+          "confirmButtonLabel": "Add another work",
+          "confirmationMessage": "Your new record has been added to eSpace.",
+          "confirmationTitle": "Work has been added",
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h2"
+      >
+        Add a new Thesis
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <Memo() />
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
+              }
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            scrollButtons="on"
+            style={
+              Object {
+                "marginLeft": -56,
+                "marginRight": -56,
+              }
+            }
+            textColor="primary"
+            value="bibliographic"
+            variant="scrollable"
+          >
+            <WithStyles(Tab)
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
+            />
+            <WithStyles(Tab)
+              key="files"
+              label="Files"
+              value="files"
+            />
+            <WithStyles(Tab)
+              key="security"
+              label="Security"
+              value="security"
+            />
+          </WithStyles(Tabs)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+  <form>
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <TabContainer
+        currentTab="bibliographic"
+        key="bibliographic"
+        tabbed={true}
+        value="bibliographic"
+      >
+        <ScrollToSection
+          scrollToSection={false}
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
+      </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
+          style={
+            Object {
+              "marginTop": 8,
+            }
+          }
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should render when no record is available 1`] = `
+<div
+  className="empty"
+/>
 `;

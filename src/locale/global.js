@@ -23,6 +23,8 @@ help: {
 
 */
 
+export const EXPROXY_URL_PREFIX = 'http://ezproxy.library.uq.edu.au/login?url=';
+
 export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
@@ -135,29 +137,29 @@ export default {
                 title: 'Web of science',
                 priority: 1,
                 externalUrl:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
+                    EXPROXY_URL_PREFIX +
+                    'http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc',
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
                 priority: 2,
-                externalUrl:
-                    'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
+                externalUrl: EXPROXY_URL_PREFIX + 'http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id',
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
                 priority: 3,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[id]',
+                externalUrl: EXPROXY_URL_PREFIX + 'https://www.ncbi.nlm.nih.gov/pubmed/[id]',
                 idKey: 'fez_record_search_key_pubmed_id.rek_pubmed_id',
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
                 priority: 4,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[id]',
+                externalUrl: EXPROXY_URL_PREFIX + 'https://doi.org/[id]',
                 idKey: 'fez_record_search_key_doi.rek_doi',
             },
         },
@@ -172,9 +174,15 @@ export default {
             externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]',
         },
         sherpaRomeoLink: {
-            ariaLabel: "View publisher's open access policy in an new window",
-            prefix: 'http://www.sherpa.ac.uk/romeo/',
+            ariaLabel: "Check publisher's OA archiving policy in a new window",
+            externalLinktext: 'SHERPA/RoMEO',
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]',
+            title: "Check publisher's OA archiving policy",
+        },
+        ulrichsLink: {
+            ariaLabel: 'Source publisher name/place and alternate ISSNs in a new window',
+            externalLinktext: 'Ulrichs',
+            externalUrl: EXPROXY_URL_PREFIX + 'http://ulrichsweb.serialssolutions.com/title/[id]',
         },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to work',

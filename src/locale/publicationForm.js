@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { default as txt } from './components';
 import { fileUploaderLocale, CLOSED_ACCESS_ID } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -1274,25 +1275,20 @@ export default {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
                 message:
-                    'There was an issue uploading your thesis files. You will need to resubmit ' +
-                    "your thesis by clicking on the 'Resubmit your thesis' button.",
+                    "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
                 actionButtonLabel: 'RESUBMIT YOUR THESIS',
             },
             locale: {
                 instructions: '',
                 accessTermsAndConditions:
-                    'I understand that the files indicated above as open access will be submitted ' +
-                    'as open access and will be made publicly available immediately or will be made ' +
-                    'available on the indicated embargo date.  All other files submitted will be ' +
-                    'accessible by UQ eSpace administrators.',
+                    'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
                     ['tooManyFiles']:
-                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ' +
-                        '([fileNames]) will not be uploaded',
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
                     ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
@@ -1348,14 +1344,12 @@ export default {
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
             confirmationMessage:
-                'Your session has expired and you will now be redirected ' +
-                'to the login page and then redeposit your thesis.',
+                'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
         depositFailedMessage: () =>
-            'Error has occurred during request and request cannot be processed. ' +
-            'Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
+            'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     sbsSubmission: {
         sbsTitle: 'Professional doctorate deposit',
@@ -1382,8 +1376,7 @@ export default {
                     ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
                     ['tooManyFiles']:
-                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
-                        'File(s) ([fileNames]) will not be uploaded',
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
                     ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
@@ -1433,14 +1426,12 @@ export default {
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
             confirmationMessage:
-                'Your session has expired and you will now be redirected ' +
-                'to the login page and then redeposit your thesis.',
+                'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
         depositFailedMessage: () =>
-            'Error has occurred during request and request cannot be processed. Check your internet connection ' +
-            'and TRY AGAIN or contact UQ Graduate School administrators.',
+            'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     addDataset: {
         pageTitle: 'Add data collection',
@@ -1528,7 +1519,7 @@ export default {
                                 <li>Open Access (upload your data, or link to the data)</li>
                                 <li>Meditated Access</li>
                             </ul>
-                            <h3>Licensing and terms of access</h3>
+                            <h3>Licence</h3>
                             <p>
                                 View{' '}
                                 <a
@@ -1564,6 +1555,10 @@ export default {
                     projectDescription: {
                         label: 'Project description',
                         placeholder: 'Briefly describe the project, including purpose',
+                    },
+                    projectId: {
+                        label: 'Project ID',
+                        placeholder: 'Type the ID of the project',
                     },
                     fundingBody: {
                         label: 'Funding body',
@@ -1668,8 +1663,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a comma separated list, ' +
-                    'that describe the content of the collection.',
+                    'Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.',
                 field: {
                     form: {
                         locale: {
@@ -1735,8 +1729,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a comma separated list, ' +
-                    'that describe the content of the community.',
+                    'Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.',
                 field: {
                     form: {
                         locale: {

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileIcon component should render Image for image 1`] = `
+<pure(ImageIcon)
+  color="secondary"
+/>
+`;
+
+exports[`FileIcon component should render PictureAsPdf for PDF 1`] = `
+<pure(PictureAsPdfIcon)
+  color="secondary"
+/>
+`;
+
+exports[`FileIcon component should render Videocam for video 1`] = `
+<pure(VideocamIcon)
+  color="secondary"
+/>
+`;
+
+exports[`FileIcon component should render VolumeUp for audio 1`] = `
+<pure(VolumeUpIcon)
+  color="secondary"
+/>
+`;
+
+exports[`FileIcon component should render a thumbnail when applicable 1`] = `
+<WithStyles(Thumbnail)
+  mimeType=""
+  thumbnailFileName="thumbnail_test.jpg"
+  thumbnailMediaUrl="http://localhost/view/UQ:123456/thumbnail_test.jpg"
+  webMediaUrl="http://localhost/view/UQ:123456/web_test.jpg"
+/>
+`;
+
+exports[`FileIcon component should render a thumbnail when applicable 2`] = `
+<WithStyles(Thumbnail)
+  mimeType=""
+  thumbnailFileName="thumbnail_test.jpg"
+  thumbnailMediaUrl="http://localhost/view/UQ:123456/thumbnail_test.jpg"
+  webMediaUrl={null}
+/>
+`;
+
+exports[`FileIcon component should render the default view 1`] = `
+<pure(InsertDriveFileIcon)
+  color="secondary"
+/>
+`;

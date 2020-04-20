@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
+import { GenericTemplate } from './GenericTemplate';
 
-export default class ListsEditor extends Component {
+export default class ListEditor extends Component {
     static propTypes = {
-        formComponent: PropTypes.func.isRequired,
+        formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
         inputField: PropTypes.oneOfType([
             PropTypes.object, // eg connected auto complete fields
             PropTypes.func,
@@ -25,9 +26,17 @@ export default class ListsEditor extends Component {
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
+        rowItemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+        category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        required: PropTypes.bool,
+        scrollList: PropTypes.bool,
+        scrollListHeight: PropTypes.number,
+        canEdit: PropTypes.bool,
+        getItemSelectedToEdit: PropTypes.func,
     };
 
     static defaultProps = {
+        canEdit: false,
         hideReorder: false,
         distinctOnly: false,
         searchKey: {
@@ -39,6 +48,7 @@ export default class ListsEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1,
         }),
+        rowItemTemplate: GenericTemplate,
         inputNormalizer: value => value,
         locale: {
             form: {
@@ -47,15 +57,20 @@ export default class ListsEditor extends Component {
                 },
             },
         },
+        required: false,
+        scrollList: false,
+        scrollListHeight: 250,
+        getItemSelectedToEdit: (list, index) => list[index] || null,
     };
 
     constructor(props) {
         super(props);
 
         const valueAsJson =
-            (props.input || {}).name &&
-            typeof (props.input.value || {}).toJS === 'function' &&
-            props.input.value.toJS();
+            ((props.input || {}).name &&
+                typeof (props.input.value || {}).toJS === 'function' &&
+                props.input.value.toJS()) ||
+            ((props.input || {}).name && props.input.value);
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
         };
@@ -81,12 +96,23 @@ export default class ListsEditor extends Component {
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
-                // Item is an object with {key: 'something', value: 'something} - as per FoR codes
+                // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
-                this.setState({
-                    itemList: [...this.state.itemList, item],
-                });
-            } else if (!!item && item.includes(',') && !item.key && !item.value) {
+                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
+                    this.setState({
+                        itemList: [
+                            ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
+                            item,
+                            ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
+                        ],
+                        itemIndexSelectedToEdit: null,
+                    });
+                } else {
+                    this.setState({
+                        itemList: [...this.state.itemList, item],
+                    });
+                }
+            } else if (!!item && !item.key && !item.value && item.includes(',')) {
                 // Item is a string with commas in it - we will strip and separate the values to be individual keywords
                 const commaSepListToArray = item.split(','); // Convert the string to an array of values
                 // Filter out empty array values
@@ -100,10 +126,28 @@ export default class ListsEditor extends Component {
                     itemList: [...totalArray],
                 });
             } else {
-                // Item is just a string - so just add it
-                this.setState({
-                    itemList: [...this.state.itemList, item],
-                });
+                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
+                    const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
+                        ? {
+                            ...this.state.itemList[this.state.itemIndexSelectedToEdit],
+                            key: item,
+                        }
+                        : item;
+
+                    this.setState({
+                        itemList: [
+                            ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
+                            itemSelected,
+                            ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
+                        ],
+                        itemIndexSelectedToEdit: null,
+                    });
+                } else {
+                    // Item is just a string - so just add it
+                    this.setState({
+                        itemList: [...this.state.itemList, item],
+                    });
+                }
             }
         }
     };
@@ -141,6 +185,12 @@ export default class ListsEditor extends Component {
         });
     };
 
+    editItem = index => {
+        this.setState({
+            itemIndexSelectedToEdit: index,
+        });
+    };
+
     render() {
         const componentID = (
             (this.props.locale.form && this.props.locale.form.title) ||
@@ -167,15 +217,19 @@ export default class ListsEditor extends Component {
                 onMoveUp={this.moveUpList}
                 onMoveDown={this.moveDownList}
                 onDelete={this.deleteItem}
+                onEdit={this.editItem}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 hideReorder={this.props.hideReorder}
                 disabled={this.props.disabled}
+                itemTemplate={this.props.rowItemTemplate}
+                canEdit={this.props.canEdit}
             />
         ));
         return (
             <div className={`${this.props.className} ${componentID}`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
+                    key={this.state.itemIndexSelectedToEdit + 1 || 'link-info-form'}
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
                     locale={{ ...(this.props.locale && this.props.locale.form ? this.props.locale.form : {}) }}
@@ -188,6 +242,13 @@ export default class ListsEditor extends Component {
                     errorText={this.props.errorText}
                     maxInputLength={this.props.maxInputLength}
                     normalize={this.props.inputNormalizer}
+                    category={this.props.category}
+                    required={this.props.required}
+                    itemSelectedToEdit={this.props.getItemSelectedToEdit(
+                        this.state.itemList,
+                        this.state.itemIndexSelectedToEdit,
+                    )}
+                    itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader
@@ -197,7 +258,21 @@ export default class ListsEditor extends Component {
                         disabled={this.props.disabled}
                     />
                 )}
-                {renderListsRows}
+                {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (
+                    <div
+                        className={'ListEditor-scrollable-list'}
+                        style={{
+                            width: '100%',
+                            height: this.props.scrollListHeight,
+                            overflowX: 'hidden',
+                            overflowY: 'scroll',
+                        }}
+                    >
+                        {renderListsRows}
+                    </div>
+                ) : (
+                    renderListsRows
+                )}
             </div>
         );
     }

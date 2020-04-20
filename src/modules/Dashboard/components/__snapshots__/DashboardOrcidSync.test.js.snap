@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardOrcidSync should render Done status, and be able to click the sync button 1`] = `
+<Connect(WithStyles(HelpIcon))
+  iconSize={20}
+  style={Object {}}
+  text={
+    <DashboardOrcidSyncMessage
+      StatusIcon={[Function]}
+      disableRequest={false}
+      lastSyncMessage="There are no previous uploads of your eSpace works to ORCID."
+      locale={
+        Object {
+          "actionButtonLabel": "Upload works to ORCID",
+          "alternateActionButtonLabel": "View works in ORCID",
+          "messages": Object {
+            "activated": "Weekly automatic upload of your works to ORCID is activated.",
+            "done": "There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.",
+            "error": "There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.",
+            "inProgress": "A manual upload of your eSpace works to ORCID is in progress.",
+            "lastUpload": "The last upload was on [syncTime].",
+            "noPrevious": "There are no previous uploads of your eSpace works to ORCID.",
+          },
+          "title": "ORCID Upload",
+          "type": "info",
+        }
+      }
+      primaryClick={[Function]}
+      secondaryClick={[Function]}
+      status="There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below."
+      statusIconStyle={
+        Object {
+          "color": "green",
+        }
+      }
+    />
+  }
+  title="ORCID Upload"
+  tooltip="Information about uploading your eSpace works to ORCID"
+/>
+`;
+
+exports[`DashboardOrcidSync should render Error status 1`] = `
+<Connect(WithStyles(HelpIcon))
+  IconComponent={[Function]}
+  iconSize={20}
+  style={Object {}}
+  text={
+    <DashboardOrcidSyncMessage
+      StatusIcon={[Function]}
+      disableRequest={false}
+      lastSyncMessage="The last upload was on 14th February, 2020 at 4:23pm."
+      locale={
+        Object {
+          "actionButtonLabel": "Upload works to ORCID",
+          "alternateActionButtonLabel": "View works in ORCID",
+          "messages": Object {
+            "activated": "Weekly automatic upload of your works to ORCID is activated.",
+            "done": "There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.",
+            "error": "There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.",
+            "inProgress": "A manual upload of your eSpace works to ORCID is in progress.",
+            "lastUpload": "The last upload was on [syncTime].",
+            "noPrevious": "There are no previous uploads of your eSpace works to ORCID.",
+          },
+          "title": "ORCID Upload",
+          "type": "info",
+        }
+      }
+      primaryClick={[Function]}
+      secondaryClick={[Function]}
+      status={
+        <React.Fragment>
+          There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact 
+           
+          <a
+            href="mailto:espace@library.uq.edu.au"
+          >
+            espace@library.uq.edu.au
+          </a>
+           if you continue to experience difficulties.
+        </React.Fragment>
+      }
+      statusIconStyle={
+        Object {
+          "color": "red",
+        }
+      }
+    />
+  }
+  title="ORCID Upload"
+  tooltip="There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties."
+/>
+`;
+
+exports[`DashboardOrcidSync should render Pending status 1`] = `
+<Connect(WithStyles(HelpIcon))
+  IconComponent={[Function]}
+  iconSize={20}
+  style={
+    Object {
+      "marginBottom": "2px",
+      "marginLeft": "2px",
+    }
+  }
+  text={
+    <DashboardOrcidSyncMessage
+      StatusIcon={[Function]}
+      disableRequest={true}
+      lastSyncMessage="The last upload was on 14th February, 2020 at 4:23pm."
+      locale={
+        Object {
+          "actionButtonLabel": "Upload works to ORCID",
+          "alternateActionButtonLabel": "View works in ORCID",
+          "messages": Object {
+            "activated": "Weekly automatic upload of your works to ORCID is activated.",
+            "done": "There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.",
+            "error": "There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.",
+            "inProgress": "A manual upload of your eSpace works to ORCID is in progress.",
+            "lastUpload": "The last upload was on [syncTime].",
+            "noPrevious": "There are no previous uploads of your eSpace works to ORCID.",
+          },
+          "title": "ORCID Upload",
+          "type": "info",
+        }
+      }
+      primaryClick={[Function]}
+      secondaryClick={[Function]}
+      status="A manual upload of your eSpace works to ORCID is in progress."
+      statusIconStyle={
+        Object {
+          "color": undefined,
+        }
+      }
+    />
+  }
+  title="ORCID Upload"
+  tooltip="A manual upload of your eSpace works to ORCID is in progress."
+/>
+`;
+
+exports[`DashboardOrcidSync should render Pending status 2`] = `
+<Connect(WithStyles(HelpIcon))
+  IconComponent={[Function]}
+  iconSize={20}
+  style={
+    Object {
+      "marginBottom": "2px",
+      "marginLeft": "2px",
+    }
+  }
+  text={
+    <DashboardOrcidSyncMessage
+      StatusIcon={[Function]}
+      disableRequest={true}
+      lastSyncMessage="The last upload was on 14th February, 2020 at 4:23pm."
+      locale={
+        Object {
+          "actionButtonLabel": "Upload works to ORCID",
+          "alternateActionButtonLabel": "View works in ORCID",
+          "messages": Object {
+            "activated": "Weekly automatic upload of your works to ORCID is activated.",
+            "done": "There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.",
+            "error": "There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.",
+            "inProgress": "A manual upload of your eSpace works to ORCID is in progress.",
+            "lastUpload": "The last upload was on [syncTime].",
+            "noPrevious": "There are no previous uploads of your eSpace works to ORCID.",
+          },
+          "title": "ORCID Upload",
+          "type": "info",
+        }
+      }
+      primaryClick={[Function]}
+      secondaryClick={[Function]}
+      status="A manual upload of your eSpace works to ORCID is in progress."
+      statusIconStyle={
+        Object {
+          "color": undefined,
+        }
+      }
+    />
+  }
+  title="ORCID Upload"
+  tooltip="A manual upload of your eSpace works to ORCID is in progress."
+/>
+`;
+
+exports[`DashboardOrcidSync should render properly 1`] = `
+<Connect(WithStyles(HelpIcon))
+  iconSize={20}
+  style={Object {}}
+  text={
+    <DashboardOrcidSyncMessage
+      StatusIcon={[Function]}
+      disableRequest={false}
+      lastSyncMessage="The last upload was on 14th February, 2020 at 4:23pm."
+      locale={
+        Object {
+          "actionButtonLabel": "Upload works to ORCID",
+          "alternateActionButtonLabel": "View works in ORCID",
+          "messages": Object {
+            "activated": "Weekly automatic upload of your works to ORCID is activated.",
+            "done": "There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.",
+            "error": "There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.",
+            "inProgress": "A manual upload of your eSpace works to ORCID is in progress.",
+            "lastUpload": "The last upload was on [syncTime].",
+            "noPrevious": "There are no previous uploads of your eSpace works to ORCID.",
+          },
+          "title": "ORCID Upload",
+          "type": "info",
+        }
+      }
+      primaryClick={[Function]}
+      secondaryClick={[Function]}
+      status="There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below."
+      statusIconStyle={
+        Object {
+          "color": undefined,
+        }
+      }
+    />
+  }
+  title="ORCID Upload"
+  tooltip="Information about uploading your eSpace works to ORCID"
+/>
+`;
+
+exports[`DashboardOrcidSyncContainer should render properly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction] {
+          "calls": Array [
+            Array [
+              [Function],
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        },
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
+              Array [],
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction] {
+            "calls": Array [
+              Array [
+                [Function],
+              ],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+        },
+        "unsubscribe": undefined,
+      },
+    }
+  }
+>
+  <DashboardOrcidSync
+    author={
+      Object {
+        "aut_orcid_works_last_sync": "2020-02-14 16:23:30",
+      }
+    }
+  />
+</ContextProvider>
+`;

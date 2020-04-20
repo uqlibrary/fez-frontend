@@ -1,6 +1,6 @@
 import React from 'react';
 import DataStreamSecurityItem, { isSame } from './DataStreamSecurityItem';
-import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, cleanup } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -22,7 +22,7 @@ function setup(testProps = {}) {
         },
         inheritedSecurity: 2,
         onSecurityChange: jest.fn(),
-        policyDropdownLabel: 'Test label',
+        policyDropdownLabel: 'Test Policy Dropdown Label',
         ...testProps,
     };
     return rtlRender(<DataStreamSecurityItem {...props} />);
@@ -46,7 +46,7 @@ describe('DataStreamSecurityItem component', () => {
         expect(asFragment()).toMatchSnapshot();
     });
 
-    it('should change security value for the file', async() => {
+    it('should change security value for the file', () => {
         const { asFragment, getByText, getByTestId } = setup({
             dataStream: {
                 dsi_dsid: 'test.jpg',
@@ -58,13 +58,13 @@ describe('DataStreamSecurityItem component', () => {
         let fragment = asFragment();
         fireEvent.click(getByText(/Administrator/i));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
-        const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
+        const menu = getByTestId('menu-test.jpg');
 
         fireEvent.click(getByText(/public/i, menu));
         expect(fragment).toMatchDiffSnapshot(asFragment());
     });
 
-    it('should change security value for the file back to inherited', async() => {
+    it('should change security value for the file back to inherited', () => {
         const { asFragment, getByText, getByTestId } = setup({
             dataStream: {
                 dsi_dsid: 'test.jpg',
@@ -76,7 +76,7 @@ describe('DataStreamSecurityItem component', () => {
         let fragment = asFragment();
         fireEvent.click(getByText(/administrator/i));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
-        const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
+        const menu = getByTestId('menu-test.jpg');
 
         fireEvent.click(getByText(/Theses Assessors/i, menu));
         expect(fragment).toMatchDiffSnapshot(asFragment());
@@ -100,5 +100,18 @@ describe('DataStreamSecurityItem component', () => {
                 ),
             ).toBeFalsy();
         });
+    });
+
+    it('should render view for a subsequent file', () => {
+        const { asFragment } = setup({
+            dataStream: {
+                dsi_dsid: 'test.jpg',
+                dsi_security_policy: 2,
+                dsi_security_inherited: 0,
+                dsi_embargo_date: '2099-01-01',
+            },
+            index: 2,
+        });
+        expect(asFragment()).toMatchSnapshot();
     });
 });

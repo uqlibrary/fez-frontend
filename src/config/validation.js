@@ -1,7 +1,9 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
+import { isAdded } from 'helpers/datastreams';
 import Immutable from 'immutable';
-import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
+import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
+
 const moment = require('moment');
 
 // Max Length
@@ -85,7 +87,7 @@ export const isValidPartialDOIValue = value => {
 
 export const isValidPid = value => {
     const isValid = /^uq:[a-z0-9]+$/i;
-    return isValid.test(value.trim());
+    return isValid.test(value.toString().trim());
 };
 
 export const isValidPublicationTitle = value => {
@@ -141,7 +143,8 @@ export const dateTimeDay = value =>
         ? locale.validationErrors.dateTimeDay
         : undefined;
 export const dateTimeYear = value =>
-    !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > new Date().getFullYear()
+    (value && value.length > 0 && (isNaN(value) || parseInt(value, 10) > new Date().getFullYear())) ||
+    (value && value.length < 4)
         ? locale.validationErrors.dateTimeYear
         : undefined;
 export const validFileUpload = value => {
@@ -237,9 +240,9 @@ export const dateRange = (value, values) => {
 
     if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
         return locale.validationErrors.collectionDateRange;
+    } else {
+        return '';
     }
-
-    return '';
 };
 
 export const fullDate = state => {
@@ -319,4 +322,33 @@ export const getErrorAlertProps = ({
         }
     }
     return alertProps;
+};
+
+export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream => {
+    const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
+    const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
+    return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || isAdmin;
+};
+
+export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
+    const errors = {};
+    if (
+        (!data.authors && !data.editors) ||
+        (!data.authors && data.editors && data.editors.length === 0) ||
+        (!data.editors && data.authors && data.authors.length === 0) ||
+        (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
+        (!isAdmin &&
+            data.authors &&
+            data.authors.length !== 0 &&
+            data.authors.filter(item => item.selected).length === 0) ||
+        (!isAdmin &&
+            data.editors &&
+            data.editors.length !== 0 &&
+            data.editors.filter(item => item.selected).length === 0)
+    ) {
+        errors.authors = locale.validationErrors.authorRequired;
+        errors.editors = locale.validationErrors.editorRequired;
+    }
+
+    return errors;
 };

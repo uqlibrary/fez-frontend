@@ -1,6 +1,6 @@
 import React from 'react';
 import DataStreamSecuritySelector, { isSame } from './DataStreamSecuritySelector';
-import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
+import { rtlRender, fireEvent, cleanup } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -51,7 +51,7 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => [
                         {
-                            dsi_dsid: 'test.txt',
+                            dsi_dsid: 'test4.txt',
                             dsi_security_policy: 1,
                         },
                     ],
@@ -59,18 +59,18 @@ describe('DataStreamSecuritySelector component', () => {
             },
         });
         expect(asFragment()).toMatchSnapshot();
-        expect(getByText(/test.txt/)).toHaveAttribute('title', 'test.txt');
-        expect(getByText(/Administrator/i)).toHaveAttribute('id', 'select-test.txt');
+        expect(getByText(/test4.txt/)).toHaveAttribute('title', 'test4.txt');
+        expect(getByText(/Administrator/i)).toHaveAttribute('id', 'select-test4.txt');
         expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
     });
 
-    it('should change security value for the file', async() => {
-        const { asFragment, getByText, getByTestId } = setup({
+    it('should change security value for the file', () => {
+        const { asFragment, getByText, getAllByText, getByTestId } = setup({
             meta: {
                 initial: {
                     toJS: () => [
                         {
-                            dsi_dsid: 'test.txt',
+                            dsi_dsid: 'test5.txt',
                             dsi_security_policy: 1,
                         },
                     ],
@@ -81,12 +81,12 @@ describe('DataStreamSecuritySelector component', () => {
         let fragment = asFragment();
         fireEvent.click(getByText(/Administrator/i));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
-        const menu = await waitForElement(() => getByTestId('menu-test.txt'));
+        const menu = getByTestId('menu-test5.txt');
 
-        fireEvent.click(getByText(/public/i, menu));
+        fireEvent.click(getAllByText(/public/i, menu)[0]);
         expect(fragment).toMatchDiffSnapshot(asFragment());
-        expect(getByText(/public/i)).toHaveAttribute('id', 'select-test.txt');
-        expect(getByText(/public/i)).toHaveAttribute('role', 'button');
+        expect(getAllByText(/public/i, menu)[0]).toHaveAttribute('id', 'select-test5.txt');
+        expect(getAllByText(/public/i, menu)[0]).toHaveAttribute('role', 'button');
     });
 
     it('should not display datastream security selected in dropdown', () => {
@@ -95,8 +95,9 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => [
                         {
-                            dsi_dsid: 'test.txt',
+                            dsi_dsid: 'test6.txt',
                             dsi_security_policy: 1,
+                            dsi_embargo_date: '2015-12-01',
                         },
                     ],
                 },
@@ -115,6 +116,61 @@ describe('DataStreamSecuritySelector component', () => {
 
         let fragment = asFragment();
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+    });
+
+    it('should hide derivative datastreams', () => {
+        const { asFragment } = setup({
+            meta: {
+                initial: {
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'preview_test8.txt',
+                        },
+                        {
+                            dsi_dsid: 'testA.txt',
+                        },
+                    ],
+                },
+            },
+            collections: [
+                {
+                    parent: {
+                        rek_datastream_policy: 1,
+                    },
+                },
+                {
+                    rek_pid: 'UQ:111111',
+                },
+            ],
+        });
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should show non-derivative datastreams', () => {
+        const { asFragment } = setup({
+            meta: {
+                initial: {
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'test9.txt',
+                        },
+                    ],
+                },
+            },
+            collections: [
+                {
+                    parent: {
+                        rek_datastream_policy: 1,
+                    },
+                },
+                {
+                    rek_pid: 'UQ:111111',
+                },
+            ],
+        });
+
+        expect(asFragment()).toMatchSnapshot();
     });
 
     describe('isSame callback function', () => {

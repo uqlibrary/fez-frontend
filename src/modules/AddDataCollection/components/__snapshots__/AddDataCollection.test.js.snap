@@ -406,7 +406,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-creator",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -414,6 +414,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-creator",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this creator ([name]) to assign it as you",
@@ -455,7 +457,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
@@ -727,6 +729,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
@@ -754,6 +757,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                           "confirmationMessage": "Are you sure you want to delete this type of data?",
                           "confirmationTitle": "Delete type of data",
                         },
+                        "editHint": "Edit this type of data",
                         "moveDownHint": "Move type of data down the order",
                         "moveUpHint": "Move type of data up the order",
                       },
@@ -793,7 +797,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   Object {
                     "form": Object {
                       "locale": Object {
-                        "addButtonLabel": "Add",
+                        "addButtonLabel": "Add software",
+                        "editButtonLabel": "Update software",
                         "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
@@ -821,6 +826,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                           "confirmationMessage": "Are you sure you want to delete this software required?",
                           "confirmationTitle": "Delete software required",
                         },
+                        "editHint": "Edit this software required",
                         "moveDownHint": "Move software required down the order",
                         "moveUpHint": "Move software required up the order",
                       },
@@ -861,6 +867,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
@@ -888,6 +895,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                           "confirmationMessage": "Are you sure you want to delete this keyword?",
                           "confirmationTitle": "Delete keyword",
                         },
+                        "editHint": "Edit this item",
                         "moveDownHint": "Move keyword down the order",
                         "moveUpHint": "Move keyword up the order",
                       },
@@ -1635,7 +1643,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-creator",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -1643,6 +1651,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-creator",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this creator ([name]) to assign it as you",
@@ -1684,7 +1694,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
@@ -1956,6 +1966,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
@@ -1983,6 +1994,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                           "confirmationMessage": "Are you sure you want to delete this type of data?",
                           "confirmationTitle": "Delete type of data",
                         },
+                        "editHint": "Edit this type of data",
                         "moveDownHint": "Move type of data down the order",
                         "moveUpHint": "Move type of data up the order",
                       },
@@ -2022,7 +2034,8 @@ exports[`AddDataCollection test should render component with a valid collection 
                   Object {
                     "form": Object {
                       "locale": Object {
-                        "addButtonLabel": "Add",
+                        "addButtonLabel": "Add software",
+                        "editButtonLabel": "Update software",
                         "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
@@ -2050,6 +2063,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                           "confirmationMessage": "Are you sure you want to delete this software required?",
                           "confirmationTitle": "Delete software required",
                         },
+                        "editHint": "Edit this software required",
                         "moveDownHint": "Move software required down the order",
                         "moveUpHint": "Move software required up the order",
                       },
@@ -2090,6 +2104,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
@@ -2117,6 +2132,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                           "confirmationMessage": "Are you sure you want to delete this keyword?",
                           "confirmationTitle": "Delete keyword",
                         },
+                        "editHint": "Edit this item",
                         "moveDownHint": "Move keyword down the order",
                         "moveUpHint": "Move keyword up the order",
                       },
@@ -2864,7 +2880,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-creator",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -2872,6 +2888,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-creator",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this creator ([name]) to assign it as you",
@@ -2913,7 +2931,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
@@ -3185,6 +3203,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
@@ -3212,6 +3231,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                           "confirmationMessage": "Are you sure you want to delete this type of data?",
                           "confirmationTitle": "Delete type of data",
                         },
+                        "editHint": "Edit this type of data",
                         "moveDownHint": "Move type of data down the order",
                         "moveUpHint": "Move type of data up the order",
                       },
@@ -3251,7 +3271,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   Object {
                     "form": Object {
                       "locale": Object {
-                        "addButtonLabel": "Add",
+                        "addButtonLabel": "Add software",
+                        "editButtonLabel": "Update software",
                         "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
@@ -3279,6 +3300,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                           "confirmationMessage": "Are you sure you want to delete this software required?",
                           "confirmationTitle": "Delete software required",
                         },
+                        "editHint": "Edit this software required",
                         "moveDownHint": "Move software required down the order",
                         "moveUpHint": "Move software required up the order",
                       },
@@ -3319,6 +3341,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
@@ -3346,6 +3369,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                           "confirmationMessage": "Are you sure you want to delete this keyword?",
                           "confirmationTitle": "Delete keyword",
                         },
+                        "editHint": "Edit this item",
                         "moveDownHint": "Move keyword down the order",
                         "moveUpHint": "Move keyword up the order",
                       },
@@ -4093,7 +4117,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-creator",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -4101,6 +4125,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-creator",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this creator ([name]) to assign it as you",
@@ -4142,7 +4168,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
@@ -4414,6 +4440,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
@@ -4441,6 +4468,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                           "confirmationMessage": "Are you sure you want to delete this type of data?",
                           "confirmationTitle": "Delete type of data",
                         },
+                        "editHint": "Edit this type of data",
                         "moveDownHint": "Move type of data down the order",
                         "moveUpHint": "Move type of data up the order",
                       },
@@ -4480,7 +4508,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   Object {
                     "form": Object {
                       "locale": Object {
-                        "addButtonLabel": "Add",
+                        "addButtonLabel": "Add software",
+                        "editButtonLabel": "Update software",
                         "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
@@ -4508,6 +4537,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                           "confirmationMessage": "Are you sure you want to delete this software required?",
                           "confirmationTitle": "Delete software required",
                         },
+                        "editHint": "Edit this software required",
                         "moveDownHint": "Move software required down the order",
                         "moveUpHint": "Move software required up the order",
                       },
@@ -4548,6 +4578,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "editButtonLabel": "Update",
                         "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
@@ -4575,6 +4606,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                           "confirmationMessage": "Are you sure you want to delete this keyword?",
                           "confirmationTitle": "Delete keyword",
                         },
+                        "editHint": "Edit this item",
                         "moveDownHint": "Move keyword down the order",
                         "moveUpHint": "Move keyword up the order",
                       },

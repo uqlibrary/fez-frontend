@@ -203,6 +203,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 <Field
                                     component={ContributorsEditorField}
                                     editMode
+                                    canEdit
                                     hideDelete
                                     hideReorder
                                     isNtro

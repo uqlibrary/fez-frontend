@@ -23,6 +23,7 @@ export default class MyRecords extends PureComponent {
         publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
         publicationsListCustomActions: PropTypes.array,
+        authorDetails: PropTypes.object.isRequired,
 
         initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
@@ -162,7 +163,9 @@ export default class MyRecords extends PureComponent {
                 : {
                     showDefaultActions: true,
                 };
-
+        const isAdmin =
+            this.props.authorDetails &&
+            (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage title={txt.pageTitle}>
                 <Grid container spacing={16}>
@@ -239,6 +242,7 @@ export default class MyRecords extends PureComponent {
                                                 <PublicationsList
                                                     publicationsList={this.props.publicationsList}
                                                     {...actionProps}
+                                                    showAdminActions={isAdmin}
                                                 />
                                             )}
                                         </Grid>

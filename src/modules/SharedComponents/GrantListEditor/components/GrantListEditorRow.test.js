@@ -158,4 +158,21 @@ describe('GrantListEditorRow', () => {
         wrapper.instance()._onMoveDown();
         expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
     });
+
+    it('should correctly handle edit', () => {
+        const onEditFn = jest.fn();
+        const grant = {
+            grantAgencyName: 'testing',
+            grantId: '1234',
+            grantAgencyType: '453985',
+        };
+        const wrapper = setup({
+            canEdit: true,
+            grant: grant,
+            index: 0,
+            onEdit: onEditFn,
+        });
+        wrapper.instance()._handleEdit();
+        expect(onEditFn).toHaveBeenCalledWith(grant, 0);
+    });
 });

@@ -12,9 +12,9 @@ const mapStateToProps = (state, props) => {
                 ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
                 : [],
         onChange: item => {
-            if (!item.id && !!props.input) {
+            if (!!item && !item.id && !!props.input) {
                 props.input.onChange(null);
-            } else if (!item.id || isNaN(parseInt(item.id, 10))) {
+            } else if ((!!item && !item.id) || isNaN(parseInt(item.id, 10))) {
                 !!props.input
                     ? props.input.onChange({
                         ...item,
@@ -25,11 +25,15 @@ const mapStateToProps = (state, props) => {
                 props && !!props.input ? props.input.onChange(item) : props.onChange(item);
             }
         },
+        onClear: () => props.input.onChange(null),
         allowFreeText: true,
         async: true,
         selectedValue:
             (!props.input &&
                 ((!!props.label && { value: props.label }) || (!!props.value && { value: props.value }))) ||
+            (!!props.input &&
+                !!props.input.value &&
+                (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
             null,
         itemToString: item => (!!item && String(`${item.id} (${item.value})`)) || '',
         maxResults: 50,

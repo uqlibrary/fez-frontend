@@ -43,7 +43,10 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should render as required field', () => {
-        const wrapper = setup({ required: true }, { isShallow: false });
+        const wrapper = setup(
+            { required: true, showChips: true, showClear: true, selectedItem: [{ id: 1, value: 'Test' }] },
+            { isShallow: false },
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -123,7 +126,7 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should have a proper style generator', () => {
-        expect(styles()).toMatchSnapshot();
+        expect(styles({ spacing: { unit: 8 } })).toMatchSnapshot();
     });
 
     it('should call stateReducer function on state change as free text field', () => {
@@ -138,6 +141,32 @@ describe('AutoCompleteAsyncField component', () => {
         const wrapper = setup({ required: true, allowFreeText: false });
         const stateChangeFn = wrapper.instance().handleStateChange();
         expect(stateChangeFn()).toEqual(undefined);
+    });
+
+    it('should handle delete', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            required: true,
+            allowFreeText: false,
+            onDelete: testFn,
+            selectedItem: [{ id: '1', value: 'Ti' }, { id: '2', value: 'Ta' }],
+        });
+        const deleteCallback = wrapper.instance().handleDelete({ id: '2', value: 'Ta' });
+        deleteCallback();
+        expect(testFn).toHaveBeenCalledWith([{ id: '1', value: 'Ti' }]);
+    });
+
+    it('should handle clear', () => {
+        const testCallback = jest.fn();
+        const clearCallback = jest.fn();
+        const wrapper = setup({
+            onClear: clearCallback,
+        });
+
+        const cb = wrapper.instance().handleClear(testCallback);
+        cb();
+        expect(testCallback).toHaveBeenCalledTimes(1);
+        expect(clearCallback).toHaveBeenCalledTimes(1);
     });
 
     it('should test stateReducer function correctly when free text input is allowed on blurInput event', () => {
@@ -252,6 +281,28 @@ describe('AutoCompleteAsyncField component', () => {
             selectedItem: { value: 'Testing' },
         });
         expect(menuItemResult).toMatchSnapshot();
+
+        wrapper.setProps({
+            selectedItem: [{ value: 'Test' }, { value: 'Testing' }],
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default MenuItemComponent with array', () => {
+        const wrapper = setup({ required: true, allowFreeText: true, selectedItem: [{ id: 123, value: 'Test' }] });
+        const menuItemResult = wrapper.instance().renderSuggestion({
+            suggestion: { value: 'Testing menu item' },
+            index: 0,
+            itemProps: {},
+            highlightedIndex: 0,
+            selectedItem: [{ id: 123, value: 'Test' }],
+        });
+        expect(menuItemResult).toMatchSnapshot();
+
+        wrapper.setProps({
+            selectedItem: [{ id: 123, value: 'Test' }, { value: 'Testing' }],
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should call loadSuggestions function', () => {
@@ -302,7 +353,7 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should call filter function on itemsList', () => {
-        const itemsList = [{ value: 'test 1', id: 123 }, { value: 'test 2', id: 456 }];
+        const itemsList = [{ value: 'test 1', id: 'UQ:123' }, { value: 'test 2', id: 'UQ:456' }];
         const wrapper = setup({
             required: true,
             allowFreeText: true,
@@ -312,7 +363,7 @@ describe('AutoCompleteAsyncField component', () => {
             floatingLabelText: 'Test',
             hideLabel: true,
             clearInput: true,
-            selectedValue: { value: 'test 1', id: 123 },
+            selectedValue: { value: 'test 1', id: 'UQ:123' },
             error: true,
             errorText: 'This field is required',
         });
@@ -339,17 +390,24 @@ describe('AutoCompleteAsyncField component', () => {
             getInputProps: jest.fn(),
             isOpen: true,
             getMenuProps: jest.fn(),
-            inputValue: '123',
+            inputValue: 'UQ:123',
             getItemProps: jest.fn(),
         });
         const SecondRenderedChildren = getElement(childrens2.type, childrens2.props);
         expect(toJson(SecondRenderedChildren)).toMatchSnapshot();
-        expect(SecondRenderedChildren.find('WithStyles(MenuItem)').length).toEqual(1);
+        expect(SecondRenderedChildren.find('WithStyles(MenuItem)').length).toEqual(2);
 
-        expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)').dive())).toMatchSnapshot();
         expect(
             toJson(
                 SecondRenderedChildren.find('WithStyles(MenuItem)')
+                    .at(0)
+                    .dive(),
+            ),
+        ).toMatchSnapshot();
+        expect(
+            toJson(
+                SecondRenderedChildren.find('WithStyles(MenuItem)')
+                    .at(0)
                     .dive()
                     .find('MenuItemComponent')
                     .dive(),
@@ -373,7 +431,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '123',
             getItemProps: jest.fn(),
             highlightedIndex: 1,
-            selectedItem: { value: 'test 1', id: 123 },
+            selectedItem: { value: 'test 1', id: 'UQ:123' },
         });
 
         const ThirdRenderedChildren = getElement(childrens3.type, childrens3.props);

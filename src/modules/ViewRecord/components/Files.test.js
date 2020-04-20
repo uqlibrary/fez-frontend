@@ -2520,9 +2520,7 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should not render audio files with _xt in their filename', () => {
-        /* eslint-disable max-len */
-        // prettier-ignore
+    it('should render audio files with _xt in their filename for admins', () => {
         const publication = {
             ...journalArticle,
             fez_datastream_info: [
@@ -2550,7 +2548,6 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        /* eslint-enable max-len */
 
         const wrapper = setup({ publication: publication, isAdmin: true });
         expect(toJson(wrapper)).toMatchSnapshot();

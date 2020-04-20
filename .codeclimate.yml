@@ -1,9 +1,46 @@
-engines:
-  rubocop:
+version: "2"
+checks:
+  argument-count:
     enabled: true
-    #checks:
-    #  Rubocop/Metrics/ClassLength:
-    #    enabled: false
+    config:
+      threshold: 4
+  complex-logic:
+    enabled: true
+    config:
+      threshold: 4
+  file-lines:
+    enabled: true
+    config:
+      threshold: 250
+  method-complexity:
+    enabled: true
+    config:
+      threshold: 5
+  method-count:
+    enabled: true
+    config:
+      threshold: 20
+  method-lines:
+    enabled: true
+    config:
+      threshold: 25
+  nested-control-flow:
+    enabled: true
+    config:
+      threshold: 4
+  return-statements:
+    enabled: true
+    config:
+      threshold: 4
+  similar-code:
+    enabled: true
+    config:
+      threshold: #language-specific defaults. overrides affect all languages.
+  identical-code:
+    enabled: true
+    config:
+      threshold: #language-specific defaults. overrides affect all languages.
+plugins:
   eslint:
     enabled: true
   csslint:
@@ -13,17 +50,14 @@ engines:
     config:
       languages:
       - javascript:
-ratings:
-  paths:
-  - src/modules/**
-  - src/actions/**
-  - src/reducers/**
-  - src/repositories/**
-exclude_paths:
-- src/**/*.test.js
-- node_modules/**/*
-- public/**/*
-- test/**/*
-- dist/**/*
-- coverage/**/*
-- __mocks__/**/*
+exclude_patterns:
+- "__mocks__/"
+- "coverage/"
+- "custom_modules/"
+- "cypress/"
+- "dist/"
+- "**/node_modules/"
+- "public/"
+- "scripts/"
+- "src/**/*.test.js"
+- "src/**/*.integration.js"

@@ -234,6 +234,39 @@ export function searchEspacePublications(searchParams) {
     };
 }
 
+export function loadCollectionsList(searchKey, searchQuery) {
+    return dispatch => {
+        dispatch({
+            type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
+            payload: searchKey,
+        });
+
+        return get(
+            SEARCH_INTERNAL_RECORDS_API({
+                searchQueryParams: { all: searchQuery, rek_object_type: 2 },
+                page: 1,
+                pageSize: 20,
+                sortBy: 'score',
+                sortDirection: 'desc',
+                facets: {},
+            }),
+        ).then(
+            response => {
+                dispatch({
+                    type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`,
+                    payload: response.data,
+                });
+            },
+            error => {
+                dispatch({
+                    type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
+                    payload: error.message,
+                });
+            },
+        );
+    };
+}
+
 export function loadPublicationList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({

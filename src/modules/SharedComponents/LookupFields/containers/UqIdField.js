@@ -8,7 +8,7 @@ const mapStateToProps = (state, props) => {
             state.get('authorsReducer') && state.get('authorsReducer')
                 ? state
                     .get('authorsReducer')
-                    .authorsList.filter(item => !!item.aut_org_username)
+                    .authorsList.filter(item => !!item.aut_org_username || !!item.aut_student_username)
                     .map(item => ({
                         value: `${item.aut_title} ${item.aut_display_name} ${
                             item.aut_org_username ? `(${item.aut_org_username})` : ''
@@ -19,6 +19,7 @@ const mapStateToProps = (state, props) => {
                 : [],
         itemsListLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         onChange: props.onChange,
+        onClear: props.onClear,
         allowFreeText: false,
         async: true,
         selectedValue: (!!props.value && { value: props.value }) || '',
