@@ -69,6 +69,7 @@ export const USER_IDS_WITH_LEGACY_LINK = [
     'uqmmoise',
     'uqclien1',
     'uqawil42',
+    'uqswils5',
 ];
 
 export default {
