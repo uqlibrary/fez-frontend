@@ -15,6 +15,20 @@ const getValidSherpa = (sherpaArray, item) => {
     return sherpaArray[validSherpaKey];
 };
 
+export const getSherpaLink = sherpaEntry => {
+    if (!sherpaEntry) {
+        return '';
+    }
+    if (!!sherpaEntry.srm_journal_link) {
+        return sherpaEntry.srm_journal_link;
+    }
+    const validOldColours = ['green', 'blue', 'yellow', 'white'];
+    if (validOldColours.includes(sherpaEntry.srm_colour) && !!sherpaEntry.srm_issn) {
+        return globalLocale.global.sherpaRomeoLink.externalUrl.replace('[id]', sherpaEntry.srm_issn);
+    }
+    return '';
+};
+
 const getValidUlrichs = (ulrichsArray, item) => {
     const validUlrichsKey = Object.keys(ulrichsArray).find(
         issn => ulrichsArray[issn].ulr_title !== '' && ulrichsArray[issn].ulr_issn === (item && (item.key || item)),
@@ -41,7 +55,7 @@ const mapStateToProps = (state, props) => {
         loadingUlrichsFromIssn,
         sherpaRomeo:
             (sherpaData && {
-                link: (sherpaData.srm_issn && sherpaData.srm_journal_link) || '',
+                link: getSherpaLink(sherpaData),
             }) ||
             null,
         ulrichs:

@@ -175,6 +175,7 @@ export default {
         },
         sherpaRomeoLink: {
             ariaLabel: "Check publisher's OA archiving policy in a new window",
+            externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[id]',
             externalLinktext: 'SHERPA/RoMEO',
             title: "Check publisher's OA archiving policy",
         },
