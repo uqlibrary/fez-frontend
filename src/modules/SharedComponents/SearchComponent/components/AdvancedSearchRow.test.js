@@ -1,5 +1,6 @@
 import React from 'react';
 import AdvancedSearchRow from './AdvancedSearchRow';
+import { isSame } from './AdvancedSearchRow';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
@@ -12,8 +13,8 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps = {}) {
-    return rtlRender(<AdvancedSearchRow {...getProps(testProps)} />);
+function setup(testProps = {}, renderer = rtlRender) {
+    return renderer(<AdvancedSearchRow {...getProps(testProps)} />);
 }
 
 describe('AdvancedSearchRow', () => {
@@ -56,5 +57,14 @@ describe('AdvancedSearchRow', () => {
         const { getByTestId } = setup({ rowIndex: 3, onSearchRowDelete: testFn });
         fireEvent.click(getByTestId('delete-advanced-search-row-3'));
         expect(testFn).toHaveBeenCalledWith(3);
+    });
+
+    it('should render the memoized version if props are same', () => {
+        const { rerender } = setup({
+            searchField: 'all',
+            value: 'i feel lucky',
+            disabledFields: ['0'],
+        });
+        setup({ searchField: 'all', value: 'i feel lucky', disabledFields: ['0'] }, rerender);
     });
 });

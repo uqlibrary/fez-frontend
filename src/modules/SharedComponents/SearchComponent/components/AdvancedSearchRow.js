@@ -195,7 +195,7 @@ AdvancedSearchRow.propTypes = {
     onSearchRowDelete: PropTypes.func,
 };
 
-const isSame = (prevProps, nextProps) => {
+export const isSame = (prevProps, nextProps) => {
     return (
         prevProps.rowIndex === nextProps.rowIndex &&
         prevProps.value === nextProps.value &&
