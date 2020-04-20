@@ -53,6 +53,7 @@ export const AdminContainer = ({
     loadingRecordToView,
     loadRecordToView,
     clearRecordToView,
+    dirty,
     classes,
     submitting,
     submitSucceeded,
@@ -150,6 +151,7 @@ export const AdminContainer = ({
                             handleSubmit={handleSubmit}
                             submitting={submitting}
                             submitSucceeded={submitSucceeded}
+                            dirty={dirty}
                             disableSubmit={disableSubmit}
                             history={history}
                             location={location}
@@ -214,6 +216,7 @@ AdminContainer.propTypes = {
     loadRecordToView: PropTypes.func,
     clearRecordToView: PropTypes.func,
     destroy: PropTypes.func,
+    dirty: PropTypes.bool,
     createMode: PropTypes.bool,
     recordToView: PropTypes.object,
     actions: PropTypes.object,

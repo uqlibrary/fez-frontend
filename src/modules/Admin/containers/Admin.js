@@ -4,7 +4,6 @@ import { destroy, reduxForm, getFormValues, getFormSyncErrors, SubmissionError }
 import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
 import { adminInterfaceConfig, valueExtractor, validate } from 'config/admin';
 import { viewRecordsConfig } from 'config';
@@ -149,7 +148,7 @@ const PrototypeContainer = reduxForm({
     onSubmit,
     validate,
     destroyOnUnmount: false,
-})(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
+})(AdminContainer);
 
 const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -211,9 +210,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const AdminReduxFormContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(PrototypeContainer);
+const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
 
 export default withRouter(AdminReduxFormContainer);

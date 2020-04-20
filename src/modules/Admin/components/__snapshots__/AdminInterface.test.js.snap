@@ -98,115 +98,120 @@ exports[`AdminInterface component should disabled button and render alert for fo
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={true}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={true}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={false}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
       >
-        <div
-          style={
-            Object {
-              "height": 16,
-            }
-          }
-        />
-        <Alert
-          allowDismiss={false}
-          dismissTitle="Click to dismiss this alert"
-          message="Request is being processed."
-          showLoader={true}
-          title="Saving"
-          type="info_outline"
-        />
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={true}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
             }
-          }
+          />
+          <Alert
+            allowDismiss={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Request is being processed."
+            showLoader={true}
+            title="Saving"
+            type="info_outline"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              disabled={true}
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                disabled={true}
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -331,114 +336,119 @@ exports[`AdminInterface component should display successful alert 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={true}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={true}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
       >
-        <div
-          style={
-            Object {
-              "height": 16,
-            }
-          }
-        />
-        <Alert
-          allowDismiss={true}
-          dismissTitle="Click to dismiss this alert"
-          message="Work has been saved successfully"
-          showLoader={false}
-          title="Success"
-          type="done"
-        />
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
             }
-          }
+          />
+          <Alert
+            allowDismiss={true}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -540,114 +550,119 @@ exports[`AdminInterface component should display successful alert 2`] = `
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={true}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={true}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
       >
-        <div
-          style={
-            Object {
-              "height": 16,
-            }
-          }
-        />
-        <Alert
-          allowDismiss={true}
-          dismissTitle="Click to dismiss this alert"
-          message="Work has been saved successfully"
-          showLoader={false}
-          title="Success"
-          type="done"
-        />
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
             }
-          }
+          />
+          <Alert
+            allowDismiss={true}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -730,94 +745,99 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       />
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={false}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={true}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={false}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={false}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={true}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
-            }
-          }
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -890,140 +910,145 @@ exports[`AdminInterface component should render default view as a full form view
       />
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={false}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={true}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-      <TabContainer
-        currentTab="bibliographic"
-        key="files"
-        tabbed={false}
-        value="files"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Files"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="filesSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-      <TabContainer
-        currentTab="bibliographic"
-        key="security"
-        tabbed={false}
-        value="security"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Security"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="securitySection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={false}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={false}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={true}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
+        <TabContainer
+          currentTab="bibliographic"
+          key="files"
+          tabbed={false}
+          value="files"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Files"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="filesSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
+        <TabContainer
+          currentTab="bibliographic"
+          key="security"
+          tabbed={false}
+          value="security"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Security"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="securitySection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
-            }
-          }
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -1130,94 +1155,99 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={true}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={false}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
-            }
-          }
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 
@@ -1329,94 +1359,99 @@ exports[`AdminInterface component should render in create mode 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
   </WithStyles(ForwardRef(Grid))>
-  <form>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={0}
-    >
-      <TabContainer
-        currentTab="bibliographic"
-        key="bibliographic"
-        tabbed={true}
-        value="bibliographic"
-      >
-        <ScrollToSection
-          scrollToSection={false}
-        >
-          <StandardCard
-            primaryHeader={true}
-            smallTitle={true}
-            squareTop={true}
-            title="Bibliographic"
-          >
-            <Field
-              component={[Function]}
-              disabled={false}
-              name="bibliographicSection"
-            />
-          </StandardCard>
-        </ScrollToSection>
-      </TabContainer>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={1}
-    >
+  <ConfirmDiscardFormChanges
+    dirty={false}
+    submitSucceeded={false}
+  >
+    <form>
       <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <ScrollToSection
+            scrollToSection={false}
+          >
+            <StandardCard
+              primaryHeader={true}
+              smallTitle={true}
+              squareTop={true}
+              title="Bibliographic"
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                name="bibliographicSection"
+              />
+            </StandardCard>
+          </ScrollToSection>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
       >
         <WithStyles(ForwardRef(Grid))
-          container={true}
-          spacing={1}
-          style={
-            Object {
-              "marginTop": 8,
-            }
-          }
+          item={true}
+          xs={12}
         >
           <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={2}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Button))
-              color="secondary"
-              fullWidth={true}
-              onClick={[Function]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
               }
-              variant="contained"
-            >
-              Cancel
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={10}
-            xs={12}
+            }
           >
-            <WithStyles(ForwardRef(Button))
-              color="primary"
-              fullWidth={true}
-              onClick={[MockFunction]}
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
-              variant="contained"
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
             >
-               Submit 
-            </WithStyles(ForwardRef(Button))>
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={10}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                fullWidth={true}
+                onClick={[MockFunction]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                 Submit 
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </form>
+    </form>
+  </ConfirmDiscardFormChanges>
 </StandardPage>
 `;
 

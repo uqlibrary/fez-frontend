@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
@@ -56,18 +57,19 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
 };
 
 export const AdminInterface = ({
+    authorDetails,
     classes,
-    submitting,
+    createMode,
+    destroy,
+    dirty,
+    disableSubmit,
+    formErrors,
     handleSubmit,
-    tabs,
     history,
     location,
     submitSucceeded,
-    createMode,
-    disableSubmit,
-    formErrors,
-    destroy,
-    authorDetails,
+    submitting,
+    tabs,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -244,66 +246,69 @@ export const AdminInterface = ({
                         </Grid>
                     </Hidden>
                 </Grid>
-                <form>
-                    <Grid container spacing={0}>
-                        {!tabbed
-                            ? Object.keys(tabs)
-                                .filter(tab => tabs[tab].activated)
-                                .map(renderTabContainer)
-                            : renderTabContainer(currentTabValue)}
-                    </Grid>
-                    <Grid container spacing={1}>
-                        {alertProps.current && (
-                            <Grid item xs={12}>
-                                <div style={{ height: 16 }} />
-                                <Alert {...alertProps.current} />
-                            </Grid>
-                        )}
-                        <Grid item xs={12}>
-                            <Grid container spacing={1} style={{ marginTop: 8 }}>
-                                <Grid item xs={12} sm={2}>
-                                    <Button
-                                        style={{ whiteSpace: 'nowrap' }}
-                                        variant="contained"
-                                        color="secondary"
-                                        fullWidth
-                                        children="Cancel"
-                                        onClick={handleCancel}
-                                    />
+                <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+                    <form>
+                        <Grid container spacing={0}>
+                            {!tabbed
+                                ? Object.keys(tabs)
+                                    .filter(tab => tabs[tab].activated)
+                                    .map(renderTabContainer)
+                                : renderTabContainer(currentTabValue)}
+                        </Grid>
+                        <Grid container spacing={1}>
+                            {alertProps.current && (
+                                <Grid item xs={12}>
+                                    <div style={{ height: 16 }} />
+                                    <Alert {...alertProps.current} />
                                 </Grid>
-                                <Grid item xs={12} sm={10}>
-                                    <Button
-                                        style={{ whiteSpace: 'nowrap' }}
-                                        disabled={submitting || disableSubmit}
-                                        variant="contained"
-                                        color="primary"
-                                        fullWidth
-                                        children=" Submit "
-                                        onClick={handleSubmit}
-                                    />
+                            )}
+                            <Grid item xs={12}>
+                                <Grid container spacing={1} style={{ marginTop: 8 }}>
+                                    <Grid item xs={12} sm={2}>
+                                        <Button
+                                            style={{ whiteSpace: 'nowrap' }}
+                                            variant="contained"
+                                            color="secondary"
+                                            fullWidth
+                                            children="Cancel"
+                                            onClick={handleCancel}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} sm={10}>
+                                        <Button
+                                            style={{ whiteSpace: 'nowrap' }}
+                                            disabled={submitting || disableSubmit}
+                                            variant="contained"
+                                            color="primary"
+                                            fullWidth
+                                            children=" Submit "
+                                            onClick={handleSubmit}
+                                        />
+                                    </Grid>
                                 </Grid>
                             </Grid>
                         </Grid>
-                    </Grid>
-                </form>
+                    </form>
+                </ConfirmDiscardFormChanges>
             </React.Fragment>
         </StandardPage>
     );
 };
 
 AdminInterface.propTypes = {
+    authorDetails: PropTypes.object,
     classes: PropTypes.object,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    handleSubmit: PropTypes.func,
-    destroy: PropTypes.func,
-    location: PropTypes.object,
-    history: PropTypes.object,
-    tabs: PropTypes.object,
     createMode: PropTypes.bool,
+    destroy: PropTypes.func,
+    dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
-    authorDetails: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    history: PropTypes.object,
+    location: PropTypes.object,
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.bool,
+    tabs: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);
