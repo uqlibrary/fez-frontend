@@ -60,8 +60,8 @@ const initialPreviewState = {
 const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = args => {
-        setPreview({ ...args });
+    const showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl) => {
+        setPreview({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl });
     };
 
     const hidePreview = () => {
@@ -329,10 +329,14 @@ export const AttachedFiles = ({
                                 <Grid item xs={12}>
                                     <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                         <Grid item xs={1} className={classes.thumbIconCentered}>
-                                            <FileIcon {...item.iconProps} showPreview={showPreview} />
+                                            <FileIcon
+                                                {...item.iconProps}
+                                                showPreview={showPreview}
+                                                id={`file-icon-${index}`}
+                                            />
                                         </Grid>
                                         <Grid item sm={3} className={classes.dataWrapper}>
-                                            <FileName {...item} onFileSelect={showPreview} />
+                                            <FileName {...item} onFileSelect={showPreview} id={`file-name-${index}`} />
                                         </Grid>
                                         <Hidden xsDown>
                                             <Grid item sm={3} className={classes.dataWrapper}>
@@ -342,6 +346,7 @@ export const AttachedFiles = ({
                                                         onChange={onFileDescriptionChange(index)}
                                                         name="fileDescription"
                                                         defaultValue={item.description}
+                                                        id={`file-description-input-${index}`}
                                                     />
                                                 ) : (
                                                     <Typography variant="body2" noWrap>
@@ -384,7 +389,11 @@ export const AttachedFiles = ({
                                                 </Grid>
                                                 <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
-                                                        <IconButton onClick={onFileDelete(index)} disabled={disabled}>
+                                                        <IconButton
+                                                            id={`delete-file-${index}`}
+                                                            onClick={onFileDelete(index)}
+                                                            disabled={disabled}
+                                                        >
                                                             <Delete />
                                                         </IconButton>
                                                     </Tooltip>
@@ -426,7 +435,9 @@ export const AttachedFiles = ({
                         </div>
                     </React.Fragment>
                 ))}
-                {preview.mediaUrl && preview.mimeType && <MediaPreview {...preview} onClose={hidePreview} />}
+                {preview.mediaUrl && preview.mimeType && (
+                    <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
+                )}
             </StandardCard>
         </Grid>
     );

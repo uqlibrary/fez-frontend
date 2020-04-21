@@ -68,21 +68,6 @@ describe('Media Preview Component ', () => {
         expect(getByTestId('close-preview')).toHaveTextContent('Close');
     });
 
-    it('should render component with a PDF', () => {
-        const { getByTestId, getByText } = setup({
-            fileName: 'test.pdf',
-            mediaUrl: 'test_t.pdf',
-            webMediaUrl: 'web_test_t.pdf',
-            previewMediaUrl: 'preview_test_t.pdf',
-            mimeType: 'application/pdf',
-        });
-        expect(getByTestId('image-preview')).toBeInTheDocument();
-        expect(getByText('Image preview')).toBeInTheDocument();
-        expect(getByTestId('open-original-file')).toHaveTextContent('Open original file in a new window');
-        expect(getByTestId('open-web-file')).toHaveTextContent('Open web version file in a new window');
-        expect(getByTestId('close-preview')).toHaveTextContent('Close');
-    });
-
     it('should call open new window on touch tap', () => {
         const open = jest.fn();
         global.open = open;

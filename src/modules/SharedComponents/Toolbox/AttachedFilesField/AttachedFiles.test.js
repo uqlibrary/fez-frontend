@@ -1,15 +1,25 @@
-import { act } from 'test-utils';
-import { AttachedFiles, formatBytes, getFileData, getFileOpenAccessStatus, untranscodedItem } from './AttachedFiles';
+import React from 'react';
+import AttachedFiles from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
+import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
 
-jest.mock('../../../../context');
-import { useAccountContext, useRecordContext } from 'context';
+import mediaQuery from 'css-mediaquery';
 
-jest.mock('@material-ui/styles', () => ({
-    makeStyles: () => () => ({}),
-}));
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
 
-function setup(testProps = {}, args = { isShallow: true }) {
+jest.mock('hooks');
+import { userIsAdmin } from 'hooks';
+
+jest.mock('context');
+import { useRecordContext } from 'context';
+
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         dataStreams: recordWithDatastreams.fez_datastream_info,
         locale: {
@@ -18,213 +28,266 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(AttachedFiles, props, args);
+    return renderer(<AttachedFiles {...props} />);
 }
 
 describe('AttachedFiles component', () => {
     beforeEach(() => {
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                ...recordWithDatastreams,
-                fez_datastream_info: [],
-            },
-        }));
-        useAccountContext.mockImplementation(() => ({
-            account: {},
-        }));
-    });
+        window.matchMedia = createMatchMedia(window.innerWidth);
 
-    afterEach(() => {
-        useAccountContext.mockReset();
-        useRecordContext.mockReset();
+        useRecordContext.mockImplementation(() => ({
+            record: recordWithDatastreams,
+        }));
     });
 
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByText, queryByText } = setup({});
+        expect(getByText('MyUQeSpace_Researcher_Guidelines_current.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_researcher_guidelines_2012.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_researcher_guidelines_2014.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_UPO_guidelines.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_UPO_guidelines_2013.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_UPO_guidelines_2016.pdf')).toBeInTheDocument();
+        expect(getByText('UQ_eSpace_My_Research_091119.pdf')).toBeInTheDocument();
+        expect(getByText('UQ_eSpace_My_Research_091119_old.pdf')).toBeInTheDocument();
+
+        // Admin files should be hidden for non-admin users
+        expect(queryByText('FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_My_UQ_eSpace_researcher_guidelines_2014.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_My_UQ_eSpace_UPO_guidelines.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_My_UQ_eSpace_UPO_guidelines_2013.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_My_UQ_eSpace_UPO_guidelines_2016.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_UQ_252236.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_UQ_eSpace_My_Research_091119.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_MyUQeSpaceResearcherGuidelines.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_MyUQeSpace_Researcher_Guidelines_current.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines_2012.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_My_UQ_eSpace_researcher_guidelines_2014.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_My_UQ_eSpace_UPO_guidelines.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_My_UQ_eSpace_UPO_guidelines_2013.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_My_UQ_eSpace_UPO_guidelines_2016.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_UQ_eSpace_My_Research_091119.xml')).not.toBeInTheDocument();
+        expect(queryByText('presmd_UQ_eSpace_My_Research_091119_old.xml')).not.toBeInTheDocument();
     });
 
-    it('should render with no datastreams', () => {
-        const wrapper = setup({
-            dataStreams: [],
-        });
-        expect(wrapper).toEqual({});
+    it('should render admin view', () => {
+        userIsAdmin.mockImplementation(() => true);
+        const { getByText } = setup({ canEdit: true });
+        expect(getByText('MyUQeSpace_Researcher_Guidelines_current.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_researcher_guidelines_2012.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_researcher_guidelines_2014.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_UPO_guidelines.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_UPO_guidelines_2013.pdf')).toBeInTheDocument();
+        expect(getByText('My_UQ_eSpace_UPO_guidelines_2016.pdf')).toBeInTheDocument();
+        expect(getByText('UQ_eSpace_My_Research_091119.pdf')).toBeInTheDocument();
+        expect(getByText('UQ_eSpace_My_Research_091119_old.pdf')).toBeInTheDocument();
+
+        // Admin files should be shown for admin users
+        expect(getByText('FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_My_UQ_eSpace_researcher_guidelines_2014.pdf.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_My_UQ_eSpace_UPO_guidelines.pdf.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_My_UQ_eSpace_UPO_guidelines_2013.pdf.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_My_UQ_eSpace_UPO_guidelines_2016.pdf.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_UQ_252236.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_UQ_eSpace_My_Research_091119.pdf.xml')).toBeInTheDocument();
+        expect(getByText('FezACML_UQ_eSpace_My_Research_091119_old.pdf.xml')).toBeInTheDocument();
+        expect(getByText('presmd_MyUQeSpaceResearcherGuidelines.xml')).toBeInTheDocument();
+        expect(getByText('presmd_MyUQeSpace_Researcher_Guidelines_current.xml')).toBeInTheDocument();
+        expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines.xml')).toBeInTheDocument();
+        expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines_2012.xml')).toBeInTheDocument();
+        expect(getByText('presmd_My_UQ_eSpace_researcher_guidelines_2014.xml')).toBeInTheDocument();
+        expect(getByText('presmd_My_UQ_eSpace_UPO_guidelines.xml')).toBeInTheDocument();
+        expect(getByText('presmd_My_UQ_eSpace_UPO_guidelines_2013.xml')).toBeInTheDocument();
+        expect(getByText('presmd_My_UQ_eSpace_UPO_guidelines_2016.xml')).toBeInTheDocument();
+        expect(getByText('presmd_UQ_eSpace_My_Research_091119.xml')).toBeInTheDocument();
+        expect(getByText('presmd_UQ_eSpace_My_Research_091119_old.xml')).toBeInTheDocument();
+    });
+
+    it('should render empty view', () => {
+        const { asFragment } = setup({ dataStreams: [] });
+        expect(asFragment()).toMatchInlineSnapshot('<DocumentFragment />');
     });
 
     it('should render admin edit view', () => {
-        useAccountContext.mockImplementation(() => ({
-            account: {
-                is_administrator: true,
-            },
-        }));
-        const testFn1 = jest.fn();
-        const testFn2 = jest.fn();
-        const testFn3 = jest.fn();
-        const testProps = {
-            dataStreams: [
-                {
-                    ...recordWithDatastreams.fez_datastream_info[0],
-                    dsi_dsid: 'test.txt', // override blacklisted filename
-                    dsi_embargo_date: '3000-10-20',
-                },
-            ],
+        userIsAdmin.mockImplementation(() => true);
+        const onDeleteFn = jest.fn();
+        const onDescriptionChangeFn = jest.fn();
+        const { getByTestId } = setup({
             canEdit: true,
-            onDateChange: testFn1,
-            onDescriptionChange: testFn2,
-            onDelete: testFn3,
-        };
-        const wrapper = setup(testProps);
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        act(() => {
-            wrapper
-                .find('WithStyles(FileUploadEmbargoDate)')
-                .props()
-                .onChange();
+            onDelete: onDeleteFn,
+            onDescriptionChange: onDescriptionChangeFn,
         });
-        wrapper.update();
-        expect(testFn1).toHaveBeenCalledTimes(1);
 
-        act(() => {
-            wrapper
-                .find('TextField')
-                .props()
-                .onChange({
-                    target: {
-                        value: 'test',
-                    },
-                });
-        });
-        wrapper.update();
-        expect(testFn2).toHaveBeenCalledTimes(1);
-        expect(testFn2).toHaveBeenCalledWith('dsi_label', 'test', 0);
+        fireEvent.click(getByTestId('delete-file-3'));
+        expect(onDeleteFn).toHaveBeenCalledWith(3);
 
-        act(() => {
-            wrapper
-                .find('WithStyles(ForwardRef(IconButton))')
-                .props()
-                .onClick();
-        });
-        wrapper.update();
-        expect(testFn3).toHaveBeenCalledTimes(1);
+        fireEvent.change(getByTestId('file-description-input-2'), { target: { value: 'test file description' } });
+        expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
     });
 
-    it('should show alerts', () => {
-        Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
+    it('should render embargo date field for open access file with embargo date in future', async() => {
+        userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
-            record: {
-                ...recordWithDatastreams,
-                fez_datastream_info: [],
-                fez_record_search_key_advisory_statement: {
-                    rek_advisory_statement: '',
-                },
-            },
+            record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
         }));
-        const testProps = {
+        const onDateChangeFn = jest.fn();
+        const { getByText, getAllByRole } = setup({
+            canEdit: true,
             dataStreams: [
                 {
-                    ...recordWithDatastreams.fez_datastream_info.slice(0, 1)[0],
-                    dsi_dsid: 'test.mp4',
-                    dsi_mimetype: 'video/mp4',
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'My_UQ_eSpace_UPO_guidelines_2016.pdf',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
                 },
             ],
+            onDateChange: onDateChangeFn,
+        });
+
+        act(() => {
+            fireEvent.click(getAllByRole('button')[0]);
+        });
+        const calendar = await waitFor(() => getAllByRole('presentation')[0]);
+
+        fireEvent.click(getByText('28', calendar));
+        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-28', 0);
+    });
+
+    it('should show alert for advisory statement', () => {
+        userIsAdmin.mockImplementation(() => true);
+        useRecordContext.mockImplementation(() => ({
+            record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: 'test advisory statement' } },
+        }));
+
+        const { getByText } = setup({
+            canEdit: true,
+            hideCulturalSensitivityStatement: false,
             locale: {
                 culturalSensitivityStatement: 'test advisory',
             },
-        };
-        const wrapper = setup(testProps);
-        expect(toJson(wrapper.find('WithStyles(Alert)'))).toMatchSnapshot();
+        });
+
+        expect(getByText('test advisory statement')).toBeInTheDocument();
     });
 
-    it('should toggle preview', () => {
-        const testProps = {
-            dataStreams: [
-                {
-                    ...recordWithDatastreams.fez_datastream_info[0],
-                    dsi_dsid: 'test.mp4',
-                    dsi_mimetype: 'video/mp4',
-                },
-                {
-                    ...recordWithDatastreams.fez_datastream_info[0],
-                    dsi_dsid: 'thumbnail_test_t.jpg',
-                },
-            ],
+    it('should show alert for advisory statement from locale', () => {
+        userIsAdmin.mockImplementation(() => true);
+        useRecordContext.mockImplementation(() => ({
+            record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: null } },
+        }));
+
+        const { getByText } = setup({
+            canEdit: true,
+            hideCulturalSensitivityStatement: false,
             locale: {
                 culturalSensitivityStatement: 'test advisory',
             },
-        };
-        const wrapper = setup(testProps);
+        });
+
+        expect(getByText('test advisory')).toBeInTheDocument();
+    });
+
+    it('should toggle preview', async done => {
+        Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
+        userIsAdmin.mockImplementation(() => true);
+        const onDateChangeFn = jest.fn();
+        const { getByTitle, getByTestId, queryByTestId, getByText } = setup({
+            canEdit: true,
+            dataStreams: [
+                {
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'test.mp4',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'video/mp4',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+                {
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'thumbnail_test.jpg',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'image/jpeg',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+                {
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'preview_test.jpg',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'image/jpeg',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+                {
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'web_test.jpg',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: '',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+                {
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'test_xt.mp4',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'video/mp4',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 0,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+            ],
+            onDateChange: onDateChangeFn,
+        });
+
+        expect(
+            getByText('Please RIGHT CLICK then select link SAVE AS option to save and play video files'),
+        ).toBeInTheDocument();
 
         act(() => {
-            wrapper
-                .find('FileIcon')
-                .props()
-                .showPreview({
-                    mediaUrl: 'test1',
-                    mimeType: 'test2',
-                    fileName: 'test3',
-                    previewMediaUrl: 'test4',
-                });
+            fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        const previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
 
         act(() => {
-            wrapper
-                .find('Memo(MediaPreview)')
-                .props()
-                .onClose();
+            fireEvent.click(getByTestId('close-preview', previewEl));
         });
-        wrapper.update();
-        expect(wrapper.find('Memo(MediaPreview)').length).toBe(0);
-    });
-});
 
-describe('formatBytes helper', () => {
-    it('should return "0 Bytes" when 0 is given', () => {
-        expect(formatBytes(0)).toBe('0 Bytes');
-    });
-});
+        await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
-describe('getFileOpenAccessStatus helper', () => {
-    it('should indicate non-OA status when applicable', () => {
-        const publication = {
-            fez_record_search_key_oa_status: {
-                rek_oa_status: false,
-            },
-        };
-        expect(getFileOpenAccessStatus(publication, {})).toEqual({
-            isOpenAccess: false,
-            embargoDate: null,
-            openAccessStatusId: null,
-        });
-    });
-});
-
-describe('untranscodedItem helper', () => {
-    it('should remove "_xt" and file extension from a given filename', () => {
-        expect(untranscodedItem('test_xt.txt')).toBe('test');
-    });
-});
-
-describe('getFileData helper', () => {
-    const publication = {};
-    const isAdmin = false;
-    const isAuthor = false;
-    it('should set mimetype to empty string if dsi_mimetype is not set', () => {
-        const dataStreams = [{ dsi_dsid: 'test.txt', dsi_state: 'A' }];
-        expect(getFileData(publication, dataStreams, isAdmin, isAuthor)[0].mimeType).toBe('');
-    });
-
-    it('should generate preview and web media URLs when applicable', () => {
-        const dataStreams = [
-            { dsi_pid: 'UQ:123456', dsi_dsid: 'test.mp4', dsi_state: 'A' },
-            { dsi_pid: 'UQ:123456', dsi_dsid: 'preview_test.jpg', dsi_state: 'A' },
-            { dsi_pid: 'UQ:123456', dsi_dsid: 'web_test.jpg', dsi_state: 'A' },
-        ];
-        const testResult = getFileData(publication, dataStreams, isAdmin, isAuthor);
-        expect(testResult[0].previewMediaUrl).toBe('http://localhost/view/UQ:123456/preview_test.jpg');
-        expect(testResult[0].webMediaUrl).toBe('http://localhost/view/UQ:123456/web_test.jpg');
+        done();
     });
 });
