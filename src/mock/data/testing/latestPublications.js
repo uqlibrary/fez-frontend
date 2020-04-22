@@ -1057,7 +1057,6 @@ export const latestPubsPayload = {
             "rek_volume_number": "101"
         },
         "rek_status_lookup": "Published",
-        "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,
         "rek_display_type_lookup": "Journal Article",
         "rek_scopus_doc_type_lookup": null,
@@ -2873,7 +2872,7 @@ export const latestPubsPayload = {
                     "srm_journal_name": "Human Molecular Genetics",
                     "srm_colour": "green"
                 },
-                "rek_issn_lookup": "green"
+                "rek_issn_lookup": ""
             },
             {
                 "rek_issn_id": 5023872,
@@ -2953,7 +2952,7 @@ export const latestPubsPayload = {
                     "srm_journal_name": "Human Molecular Genetics",
                     "srm_colour": "green"
                 },
-                "rek_issn_lookup": "green"
+                "rek_issn_lookup": ""
             }
         ],
         "fez_record_search_key_issue_number": {

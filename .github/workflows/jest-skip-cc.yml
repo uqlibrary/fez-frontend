@@ -3,7 +3,7 @@ name: GitHub CI
 on:
   push:
     branches:
-      - "feature-**"
+      - "feature-example"
 
     paths-ignore:
       - "**.md"

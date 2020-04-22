@@ -496,9 +496,9 @@ export default {
                 "srm_id": 4796,
                 "srm_issn": "1044-7431",
                 "srm_journal_name": "Molecular and Cellular Neuroscience",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5384820,
             "rek_issn_pid": "UQ:678728",
@@ -570,9 +570,9 @@ export default {
                 "srm_id": 4797,
                 "srm_issn": "1095-9327",
                 "srm_journal_name": "Molecular and Cellular Neuroscience",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": null,
         "fez_record_search_key_journal_name": {
@@ -1491,12 +1491,12 @@ export default {
             "fez_sherpa_romeo": {
                 "srm_id": 35381,
                 "srm_issn": "2041-1723",
-                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http:\/\/www.sherpa.ac.uk\/romeo\/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn<\/parametername>\n        <parametervalue>2041-1723<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"specified\">\n        <parametername>versions<\/parametername>\n        <parametervalue>all<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder<\/parametername>\n        <parametervalue>none<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum<\/parametername>\n        <parametervalue>|<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>la<\/parametername>\n        <parametervalue>en<\/parametervalue>\n      <\/parameter>\n    <\/parameters>\n    <numhits>1<\/numhits>\n    <apicontrol>journal<\/apicontrol>\n    <outcome>singleJournal<\/outcome>\n    <message \/>\n    <licence>SHERPA\/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl \/&gt;, and linked-to from the SHERPA\/RoMEO home page.<\/licence>\n    <licenceurl>http:\/\/www.sherpa.ac.uk\/romeoreuse.html<\/licenceurl>\n    <disclaimer>All SHERPA\/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.<\/disclaimer>\n    <timestamp>30-Sep-2017:21:31:06<\/timestamp>\n  <\/header>\n  <journals>\n    <journal>\n      <jtitle>Nature Communications<\/jtitle>\n      <issn>2041-1723<\/issn>\n      <zetocpub>Nature Publishing Group: Nature Communications \/ Nature Publishing Group<\/zetocpub>\n      <romeopub>Nature Publishing Group: Nature Communications<\/romeopub>\n    <\/journal>\n  <\/journals>\n  <publishers>\n    <publisher id=\"1488\"  parentid=\"54\">\n      <name>Nature Publishing Group<\/name>\n      <alias>Nature Communications<\/alias>\n      <homeurl>http:\/\/www.nature.com\/<\/homeurl>\n      <preprints>\n        <prearchiving>can<\/prearchiving>\n        <prerestrictions \/>\n      <\/preprints>\n      <postprints>\n        <postarchiving>can<\/postarchiving>\n        <postrestrictions \/>\n      <\/postprints>\n      <pdfversion>\n        <pdfarchiving>can<\/pdfarchiving>\n        <pdfrestrictions \/>\n      <\/pdfversion>\n      <conditions>\n        <condition>Authors retain copyright<\/condition>\n        <condition>Published source must be acknowledged and DOI cited<\/condition>\n        <condition>Must link to publisher version<\/condition>\n        <condition>Publisher's version\/PDF may be used<\/condition>\n        <condition>On author's personal website, institutional repository or open access repository<\/condition>\n        <condition>The publisher will automatically deposit articles in PubMed Central via Nature's Open Access Hybrid Model<\/condition>\n        <condition>Creative Commons Attribution License 4.0<\/condition>\n        <condition>Creative Commons Attribution Non-Commercial No Derivatives License and Creative Commons Attribution Non-Commercial Share Alike License available on request<\/condition>\n        <condition>If your article was submitted prior to 20th October 2014, it may follow the Nature Publishing Group self-archiving policy<\/condition>\n        <condition>All titles are open access journals<\/condition>\n      <\/conditions>\n      <mandates \/>\n      <paidaccess>\n        <paidaccessurl \/>\n        <paidaccessname \/>\n        <paidaccessnotes \/>\n      <\/paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Policy<\/copyrightlinktext>\n          <copyrightlinkurl>http:\/\/www.nature.com\/ncomms\/open_access\/index.html<\/copyrightlinkurl>\n        <\/copyrightlink>\n      <\/copyrightlinks>\n      <romeocolour>green<\/romeocolour>\n      <dateadded>2013-04-03 16:22:13<\/dateadded>\n      <dateupdated>2015-01-22 15:43:06<\/dateupdated>\n    <\/publisher>\n  <\/publishers>\n<\/romeoapi>\n",
+                "srm_json": "{}",
                 "srm_journal_name": "Nature Communications",
-                "srm_colour": "green",
+                "srm_journal_link": "http://example.com",
                 "srm_date_updated": "2017-09-30 20:31:06"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": null,
         "fez_record_search_key_journal_name": {
@@ -2318,9 +2318,9 @@ export default {
                 "srm_id": 79521,
                 "srm_issn": "1949-2553",
                 "srm_journal_name": "Oncotarget",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4541429,
@@ -3103,9 +3103,9 @@ export default {
                 "srm_id": 79776,
                 "srm_issn": "2045-2322",
                 "srm_journal_name": "Scientific Reports",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4576074,
@@ -3891,12 +3891,12 @@ export default {
             "fez_sherpa_romeo": {
                 "srm_id": 14246,
                 "srm_issn": "1098-5514",
-                "srm_xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<!DOCTYPE romeoapi SYSTEM \"http:\/\/www.sherpa.ac.uk\/romeo\/romeoapi293.dtd\">\n<romeoapi version=\"2.9.9\">\n  <header>\n    <parameters>\n      <parameter source=\"specified\">\n        <parametername>issn<\/parametername>\n        <parametervalue>1098-5514<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"specified\">\n        <parametername>versions<\/parametername>\n        <parametervalue>all<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>showfunder<\/parametername>\n        <parametervalue>none<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>fIDnum<\/parametername>\n        <parametervalue>|<\/parametervalue>\n      <\/parameter>\n      <parameter source=\"default\">\n        <parametername>la<\/parametername>\n        <parametervalue>en<\/parametervalue>\n      <\/parameter>\n    <\/parameters>\n    <numhits>1<\/numhits>\n    <apicontrol>journal<\/apicontrol>\n    <outcome>singleJournal<\/outcome>\n    <message \/>\n    <licence>SHERPA\/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl \/&gt;, and linked-to from the SHERPA\/RoMEO home page.<\/licence>\n    <licenceurl>http:\/\/www.sherpa.ac.uk\/romeoreuse.html<\/licenceurl>\n    <disclaimer>All SHERPA\/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.<\/disclaimer>\n    <timestamp>30-Sep-2017:18:25:31<\/timestamp>\n  <\/header>\n  <journals>\n    <journal>\n      <jtitle>Journal of Virology<\/jtitle>\n      <issn>0022-538X<\/issn>\n      <zetocpub>American Society for Microbiology<\/zetocpub>\n      <romeopub>American Society for Microbiology<\/romeopub>\n    <\/journal>\n  <\/journals>\n  <publishers>\n    <publisher id=\"16\">\n      <name>American Society for Microbiology<\/name>\n      <alias \/>\n      <homeurl>http:\/\/www.asm.org\/<\/homeurl>\n      <preprints>\n        <prearchiving>can<\/prearchiving>\n        <prerestrictions \/>\n      <\/preprints>\n      <postprints>\n        <postarchiving>can<\/postarchiving>\n        <postrestrictions \/>\n      <\/postprints>\n      <pdfversion>\n        <pdfarchiving>can<\/pdfarchiving>\n        <pdfrestrictions \/>\n      <\/pdfversion>\n      <conditions>\n        <condition>Author's pre-print on recognised non profit pre-print archives<\/condition>\n        <condition>Author's post-print on funder's repositories, institutional repository or subject-based repositories<\/condition>\n        <condition>Non-commercial<\/condition>\n        <condition>Publisher's version\/PDF may be used<\/condition>\n        <condition>Publisher's version\/PDF may be used on author's personal website or employers website<\/condition>\n        <condition>Recommended that author's post-prints submitted to PubMed or institutional repositories are made available 6 months after publication<\/condition>\n        <condition>Author's pre-print must be updated with citation and DOI upon publication<\/condition>\n        <condition>Publisher last contacted on 21\/05\/2015<\/condition>\n        <condition>Publisher last reviewed on 15\/09\/2015<\/condition>\n      <\/conditions>\n      <mandates \/>\n      <paidaccess>\n        <paidaccessurl>http:\/\/journals.asm.org\/site\/misc\/announcements.xhtml<\/paidaccessurl>\n        <paidaccessname>Optional Open Access<\/paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.<\/paidaccessnotes>\n      <\/paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Authors Rights<\/copyrightlinktext>\n          <copyrightlinkurl>http:\/\/journals.asm.org\/site\/misc\/ASM_Author_Statement.xhtml<\/copyrightlinkurl>\n        <\/copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Instructions for Authors (Example)<\/copyrightlinktext>\n          <copyrightlinkurl>http:\/\/aac.asm.org\/site\/misc\/journal-ita_edi.xhtml#02<\/copyrightlinkurl>\n        <\/copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Pre-print policy<\/copyrightlinktext>\n          <copyrightlinkurl>http:\/\/journals.asm.org\/site\/misc\/announcements_March2015.xhtml<\/copyrightlinkurl>\n        <\/copyrightlink>\n      <\/copyrightlinks>\n      <romeocolour>green<\/romeocolour>\n      <dateadded>2004-01-10 00:00:00<\/dateadded>\n      <dateupdated>2015-06-04 16:14:40<\/dateupdated>\n    <\/publisher>\n  <\/publishers>\n<\/romeoapi>\n",
+                "srm_json": "{}",
                 "srm_journal_name": "Journal of Virology",
-                "srm_colour": "green",
+                "srm_journal_link": "http://example.com",
                 "srm_date_updated": "2017-09-30 17:25:31"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4374274,
@@ -4840,9 +4840,9 @@ export default {
                 "srm_id": 4793,
                 "srm_issn": "1529-2401",
                 "srm_journal_name": "Journal of Neuroscience",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5310396,
             "rek_issn_pid": "UQ:360881",
@@ -4914,9 +4914,9 @@ export default {
                 "srm_id": 4792,
                 "srm_issn": "0270-6474",
                 "srm_journal_name": "Journal of Neuroscience",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4536244,
@@ -5679,9 +5679,9 @@ export default {
                 "srm_id": 35381,
                 "srm_issn": "2041-1723",
                 "srm_journal_name": "Nature Communications",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4383406,
@@ -6246,9 +6246,9 @@ export default {
                 "srm_id": 4793,
                 "srm_issn": "1529-2401",
                 "srm_journal_name": "Journal of Neuroscience",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5065977,
             "rek_issn_pid": "UQ:350994",
@@ -6320,9 +6320,9 @@ export default {
                 "srm_id": 4792,
                 "srm_issn": "0270-6474",
                 "srm_journal_name": "Journal of Neuroscience",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4384088,
@@ -7209,9 +7209,9 @@ export default {
                 "srm_id": 1298178,
                 "srm_issn": "2211-1247",
                 "srm_journal_name": "Cell Reports",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4395446,
@@ -8345,9 +8345,9 @@ export default {
                 "srm_id": 1298178,
                 "srm_issn": "2211-1247",
                 "srm_journal_name": "Cell Reports",
-                "srm_colour": "blue"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "blue"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4397931,
@@ -9188,9 +9188,9 @@ export default {
                 "srm_id": 13763,
                 "srm_issn": "0021-9533",
                 "srm_journal_name": "Journal of Cell Science",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5020082,
             "rek_issn_pid": "UQ:305893",
@@ -9262,9 +9262,9 @@ export default {
                 "srm_id": 13764,
                 "srm_issn": "1477-9137",
                 "srm_journal_name": "Journal of Cell Science",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4358095,
@@ -9874,9 +9874,9 @@ export default {
                 "srm_id": 23347,
                 "srm_issn": "1932-6203",
                 "srm_journal_name": "PLoS ONE",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4398073,
@@ -10627,9 +10627,9 @@ export default {
                 "srm_id": 13761,
                 "srm_issn": "0021-9525",
                 "srm_journal_name": "Journal of Cell Biology",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5071945,
             "rek_issn_pid": "UQ:294055",
@@ -10701,9 +10701,9 @@ export default {
                 "srm_id": 13762,
                 "srm_issn": "1540-8140",
                 "srm_journal_name": "Journal of Cell Biology",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4386718,
@@ -11315,9 +11315,9 @@ export default {
                 "srm_id": 4792,
                 "srm_issn": "0270-6474",
                 "srm_journal_name": "Journal of Neuroscience",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5069053,
             "rek_issn_pid": "UQ:319620",
@@ -11389,9 +11389,9 @@ export default {
                 "srm_id": 4786,
                 "srm_issn": "1563-5279",
                 "srm_journal_name": "International Journal of Neuroscience",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4385403,
@@ -12162,9 +12162,9 @@ export default {
                 "srm_id": 23347,
                 "srm_issn": "1932-6203",
                 "srm_journal_name": "PLoS ONE",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4398811,
@@ -13124,9 +13124,9 @@ export default {
                 "srm_id": 23347,
                 "srm_issn": "1932-6203",
                 "srm_journal_name": "PLoS ONE",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4398967,
@@ -14156,9 +14156,9 @@ export default {
                 "srm_id": 7275,
                 "srm_issn": "0270-9139",
                 "srm_journal_name": "Hepatology",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5112186,
             "rek_issn_pid": "UQ:265967",
@@ -14230,9 +14230,9 @@ export default {
                 "srm_id": 7276,
                 "srm_issn": "1527-3350",
                 "srm_journal_name": "Hepatology",
-                "srm_colour": "yellow"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "yellow"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4409843,
@@ -15020,9 +15020,9 @@ export default {
                 "srm_id": 13811,
                 "srm_issn": "1059-1524",
                 "srm_journal_name": "Molecular Biology of the Cell",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5006701,
             "rek_issn_pid": "UQ:278920",
@@ -15094,9 +15094,9 @@ export default {
                 "srm_id": 13812,
                 "srm_issn": "1939-4586",
                 "srm_journal_name": "Molecular Biology of the Cell",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4348386,
@@ -15609,9 +15609,9 @@ export default {
                 "srm_id": 5320,
                 "srm_issn": "0041-0101",
                 "srm_journal_name": "Toxicon",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5079775,
             "rek_issn_pid": "UQ:277856",
@@ -15683,9 +15683,9 @@ export default {
                 "srm_id": 5321,
                 "srm_issn": "1879-3150",
                 "srm_journal_name": "Toxicon",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4390957,
@@ -16519,9 +16519,9 @@ export default {
                 "srm_id": 13741,
                 "srm_issn": "0021-9258",
                 "srm_journal_name": "Journal of Biological Chemistry",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }, {
             "rek_issn_id": 5011623,
             "rek_issn_pid": "UQ:256096",
@@ -16593,9 +16593,9 @@ export default {
                 "srm_id": 13742,
                 "srm_issn": "1083-351X",
                 "srm_journal_name": "Journal of Biological Chemistry",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }],
         "fez_record_search_key_issue_number": {
             "rek_issue_number_id": 4351489,
