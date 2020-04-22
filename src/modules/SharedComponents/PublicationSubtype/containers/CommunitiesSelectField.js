@@ -28,10 +28,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const CommunitiesList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+const CommunitiesList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 export default function CommunitiesSelectField(fieldProps) {
     return (

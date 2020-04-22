@@ -94,10 +94,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let AddDataCollectionForm = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AddDataCollectionContainer);
+let AddDataCollectionForm = connect(mapStateToProps, mapDispatchToProps)(AddDataCollectionContainer);
 AddDataCollectionForm = withRouter(AddDataCollectionForm);
 
 export default AddDataCollectionForm;

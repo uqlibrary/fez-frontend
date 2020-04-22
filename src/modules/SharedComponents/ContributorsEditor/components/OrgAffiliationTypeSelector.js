@@ -48,7 +48,10 @@ OrgAffilicationTypeSelector.defaultProps = {
     locale: {
         inputLabel: 'Org affiliation',
         placeholder: 'Organisational affiliation at time of publication',
-        options: [{ key: AFFILIATION_TYPE_UQ, value: 'UQ' }, { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' }],
+        options: [
+            { key: AFFILIATION_TYPE_UQ, value: 'UQ' },
+            { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' },
+        ],
     },
     error: false,
     helperText: undefined,

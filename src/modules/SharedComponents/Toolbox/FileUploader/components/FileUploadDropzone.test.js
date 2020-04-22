@@ -339,7 +339,11 @@ describe('Component FileUploadDropzone', () => {
 
     it('should call onerror if fail on read file', () => {
         const wrapper = setup();
-        const result = wrapper.instance().onReadFileError({ name: 'test' }, [], jest.fn(result => result))();
+        const result = wrapper.instance().onReadFileError(
+            { name: 'test' },
+            [],
+            jest.fn(result => result),
+        )();
         expect(result).toBeFalsy();
 
         const file = wrapper.instance().onReadFileLoad({ name: 'test' }, jest.fn())();

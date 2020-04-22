@@ -32,7 +32,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const TitleOrPidField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const TitleOrPidField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

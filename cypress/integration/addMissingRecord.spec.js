@@ -114,7 +114,7 @@ context('Add missing record', () => {
         cy.get('@validationErrors')
             .should('have.length', 2);
 
-        cy.get('#authors-name-as-published-field')
+        cy.get('#name-as-published')
             .type('New Author');
         cy.get('#submit-author:enabled')
             .click();
@@ -133,7 +133,7 @@ context('Add missing record', () => {
         cy.get('@validationErrors')
             .should('have.length', 2);
 
-        cy.get('#editors-name-as-published-field')
+        cy.get('#name-as-published')
             .type('New Editor');
         cy.get('#submit-author:enabled')
             .click();

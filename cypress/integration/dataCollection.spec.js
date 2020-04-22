@@ -54,9 +54,12 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Contact name ID
-        cy.get('input#ContactnameID-input')
-            .type('a');
-        cy.clickAutoSuggestion('ContactnameID', 0);
+        cy.get('input#contact-name-id-auto-complete')
+            .type('David');
+        cy.get('div')
+            .contains('David Stevens')
+            .click();
+
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -101,23 +104,21 @@ context('Data Collection form', () => {
             .should('have.length', errorCount);
 
         // Publication date
-        cy.contains('h3', 'Dataset information')
-            .closest('.StandardCard')
+        cy.get('div#PartialDate-Publication-year')
             .find('input#day')
             .type('16');
         cy.get('@errors')
             .should('have.length', errorCount);
 
-        cy.get('div[role="button"][aria-haspopup="true"]')
-            .contains('Month')
+        cy.get('div#PartialDate-Publication-year')
+            .find('div#month')
             .click();
         cy.get('li[data-value="11"]')
             .click();
         cy.get('@errors')
             .should('have.length', errorCount);
 
-        cy.contains('h3', 'Dataset information')
-            .closest('.StandardCard')
+        cy.get('div#PartialDate-Publication-year')
             .find('input#year')
             .type('1976');
         cy.get('@submitButton')
@@ -128,14 +129,17 @@ context('Data Collection form', () => {
 
     it('validates FoR codes', () => {
         // Field of research
-        cy.get('input#Fieldofresearch-input')
+        cy.get('div#ListEditor-Field-of-research')
+            .find('input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 4);
+        cy.get('li[role="option"]')
+            .contains('010101')
+            .click();
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('button[title="Remove this item"]')
+        cy.get('button#delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -144,17 +148,26 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', ++errorCount);
-        cy.get('input#Fieldofresearch-input')
+
+        cy.get('div#ListEditor-Field-of-research')
+            .find('input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 3);
+        cy.get('li[role="option"]')
+            .contains('010101')
+            .click();
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('input#Fieldofresearch-input')
+
+        cy.get('div#ListEditor-Field-of-research')
+            .find('input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 1);
-        cy.get('button[title="Remove all items"]')
+        cy.get('li[role="option"]')
+            .contains('010102')
+            .click();
+
+        cy.get('button#delete-all-items')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -163,9 +176,13 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', ++errorCount);
-        cy.get('input#Fieldofresearch-input')
+
+        cy.get('div#ListEditor-Field-of-research')
+            .find('input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 2);
+        cy.get('li[role="option"]')
+            .contains('010102')
+            .click();
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -174,13 +191,15 @@ context('Data Collection form', () => {
 
     it('validates creators', () => {
         // Creators
-        cy.get('input#creators-name-as-published-field')
+        cy.get('div#contributorForm')
+            .find('input#name-as-published')
             .type('Ky Lane');
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', errorCount);
-        cy.get('input#Entercreatorsrole-input')
+        cy.get('div#contributorForm')
+            .find('input#creator-role-field')
             .type('Custom role');
         cy.get('button#submit-author')
             .click();
@@ -188,11 +207,16 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('input#creators-name-as-published-field')
+        cy.get('div#contributorForm')
+            .find('input#name-as-published')
             .type('Vishal Asai');
-        cy.get('input#Entercreatorsrole-input')
+        cy.get('div#contributorForm')
+            .find('input#creator-role-field')
             .click();
-        cy.clickAutoSuggestion('Entercreatorsrole', 1);
+        cy.get('li[role="option"]')
+            .contains('Technician')
+            .click();
+
         cy.get('button#delete-creator-1')
             .click();
         cy.get('[role="dialog"] button')

@@ -223,7 +223,11 @@ describe('GenericSelectField', () => {
         it('renderMenuItems (hideLabel: false)', () => {
             const wrapper = setup({
                 hideLabel: false,
-                itemsList: [{ value: 1, text: 'One' }, { value: 2, text: 'Two' }, { value: 3, text: 'Three' }],
+                itemsList: [
+                    { value: 1, text: 'One' },
+                    { value: 2, text: 'Two' },
+                    { value: 3, text: 'Three' },
+                ],
             });
             expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
@@ -231,7 +235,11 @@ describe('GenericSelectField', () => {
         it('renderMenuItems (hideLabel: true)', () => {
             const wrapper = setup({
                 hideLabel: true,
-                itemsList: [{ value: 1, text: 'One' }, { value: 2, text: 'Two' }, { value: 3, text: 'Three' }],
+                itemsList: [
+                    { value: 1, text: 'One' },
+                    { value: 2, text: 'Two' },
+                    { value: 3, text: 'Three' },
+                ],
             });
             expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });

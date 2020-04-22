@@ -164,8 +164,8 @@ export const ContributorForm = ({
         (contributor.nameAsPublished || '').trim().length === 0 ||
         (showRoleInput && contributor.creatorRole.length === 0) ||
         (isNtro &&
-            (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
-                (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0)));
+            contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
+                (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
     const addButtonLabel = canEdit && !!initialContributor.nameAsPublished ? 'Change Details' : locale.addButton;
 
     useEffect(() => {

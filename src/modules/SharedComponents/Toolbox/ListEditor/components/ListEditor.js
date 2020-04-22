@@ -192,14 +192,16 @@ export default class ListEditor extends Component {
     };
 
     render() {
-        const componentID = (
-            (this.props.locale.form && this.props.locale.form.title) ||
-            (this.props.locale.form && this.props.locale.form.inputFieldLabel) ||
-            (this.props.locale.form &&
-                this.props.locale.form.locale &&
-                this.props.locale.form.locale.inputFieldLabel) ||
-            ''
-        ).replace(/\s+/g, '');
+        const componentID =
+            'ListEditor-' +
+            (
+                (this.props.locale.form && this.props.locale.form.title) ||
+                (this.props.locale.form && this.props.locale.form.inputFieldLabel) ||
+                (this.props.locale.form &&
+                    this.props.locale.form.locale &&
+                    this.props.locale.form.locale.inputFieldLabel) ||
+                ''
+            ).replace(/\s+/g, '-');
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
                 form={
@@ -226,7 +228,7 @@ export default class ListEditor extends Component {
             />
         ));
         return (
-            <div className={`${this.props.className} ${componentID}`}>
+            <div className={`${this.props.className} ${componentID}`} id={componentID}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={this.state.itemIndexSelectedToEdit + 1 || 'link-info-form'}
@@ -261,6 +263,7 @@ export default class ListEditor extends Component {
                 {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (
                     <div
                         className={'ListEditor-scrollable-list'}
+                        id={`${componentID}-List`}
                         style={{
                             width: '100%',
                             height: this.props.scrollListHeight,
@@ -271,7 +274,7 @@ export default class ListEditor extends Component {
                         {renderListsRows}
                     </div>
                 ) : (
-                    renderListsRows
+                    <div id={`${componentID}-List`}>{renderListsRows}</div>
                 )}
             </div>
         );

@@ -32,9 +32,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ViewRecordContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ViewRecord);
+let ViewRecordContainer = connect(mapStateToProps, mapDispatchToProps)(ViewRecord);
 ViewRecordContainer = withRouter(ViewRecordContainer);
 export default ViewRecordContainer;

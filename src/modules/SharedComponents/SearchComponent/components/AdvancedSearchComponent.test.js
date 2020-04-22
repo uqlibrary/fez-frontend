@@ -156,7 +156,10 @@ describe('AdvancedSearchComponent', () => {
 
     it('haveAllAdvancedSearchFieldsValidated should allow all field to be empty and empty field', () => {
         const thisProps = {
-            fieldRows: [{ searchField: 'all', value: '' }, { searchField: '0', value: '' }],
+            fieldRows: [
+                { searchField: 'all', value: '' },
+                { searchField: '0', value: '' },
+            ],
         };
         const { getByTestId } = setup({ ...thisProps });
         expect(getByTestId('advancedSearchButton').disabled).toBeFalsy();

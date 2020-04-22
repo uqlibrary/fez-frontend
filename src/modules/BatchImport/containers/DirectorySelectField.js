@@ -22,10 +22,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const DirectoryList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+const DirectoryList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 export default function DirectorySelectField(fieldProps) {
     return (

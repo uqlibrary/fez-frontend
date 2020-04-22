@@ -81,7 +81,10 @@ export class NtroDetailsClass extends PureComponent {
                                     <this.ViewNtroRow
                                         key={index}
                                         heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                        subheading={`(${publication.fez_record_search_key_author[item.rek_significance_order - 1].rek_author})`}
+                                        subheading={`(${
+                                            publication.fez_record_search_key_author[item.rek_significance_order - 1]
+                                                .rek_author
+                                        })`}
                                         data={
                                             (item.rek_significance !== 0 &&
                                                 item.rek_significance !== '0' &&
@@ -101,11 +104,11 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
                             if (
                                 (this.props.account && this.props.account.canMasquerade) ||
-                                ((item.rek_creator_contribution_statement &&
-                                    (item.rek_creator_contribution_statement !== '' &&
+                                (item.rek_creator_contribution_statement &&
+                                    item.rek_creator_contribution_statement !== '' &&
                                         item.rek_creator_contribution_statement.length > 0 &&
-                                        item.rek_creator_contribution_statement.trim().length !== 0)) ||
-                                    item.rek_creator_contribution_statement === null)
+                                        item.rek_creator_contribution_statement.trim().length !== 0) ||
+                                    item.rek_creator_contribution_statement === null
                             ) {
                                 return (
                                     <this.ViewNtroRow
@@ -116,7 +119,11 @@ export class NtroDetailsClass extends PureComponent {
                                             publication.fez_record_search_key_author[
                                                 item.rek_creator_contribution_statement_order - 1
                                             ].rek_author
-                                                ? `(${publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author})`
+                                                ? `(${
+                                                    publication.fez_record_search_key_author[
+                                                        item.rek_creator_contribution_statement_order - 1
+                                                    ].rek_author
+                                                })`
                                                 : ''
                                         }
                                         data={
@@ -233,7 +240,7 @@ export class NtroDetailsClass extends PureComponent {
                     )}
                     {/* Total pages */}
                     {docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
-                        (docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) &&
+                        docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         docType !== DOCUMENT_TYPE_RESEARCH_REPORT &&
                         publication.fez_record_search_key_total_pages &&
                         publication.fez_record_search_key_total_pages.rek_total_pages && (

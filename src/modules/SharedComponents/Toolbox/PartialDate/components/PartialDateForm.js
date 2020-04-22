@@ -249,9 +249,9 @@ export class PartialDateForm extends Component {
         ));
         const isError = this.errors.date || this.props.hasError || '';
         return (
-            <Grid container spacing={0}>
+            <Grid container spacing={0} id={`PartialDate-${this.props.floatingTitle.replace(' ', '-')}`}>
                 <Grid item xs={12}>
-                    <InputLabel error={!!isError} shrink required={this.props.required} style={{ zoom: '0.75' }}>
+                    <InputLabel error={!!isError} shrink required={this.props.required}>
                         {this.props.floatingTitle}
                     </InputLabel>
                 </Grid>

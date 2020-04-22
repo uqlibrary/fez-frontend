@@ -36,7 +36,4 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-export const CollectionField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteMultiSelectField);
+export const CollectionField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteMultiSelectField);

@@ -22,7 +22,4 @@ const mapDispatchToProps = (dispatch, props) => {
     };
 };
 
-export const UnpublishedStatusField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+export const UnpublishedStatusField = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);

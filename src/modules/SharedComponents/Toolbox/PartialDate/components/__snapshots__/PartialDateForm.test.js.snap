@@ -3,6 +3,7 @@
 exports[`PartialDateForm component should display errors correctly 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
+  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -12,11 +13,6 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
     <WithStyles(ForwardRef(InputLabel))
       error={true}
       shrink={true}
-      style={
-        Object {
-          "zoom": "0.75",
-        }
-      }
     >
       Enter a date
     </WithStyles(ForwardRef(InputLabel))>
@@ -195,6 +191,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
 exports[`PartialDateForm component should handle partial values 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
+  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -204,11 +201,6 @@ exports[`PartialDateForm component should handle partial values 1`] = `
     <WithStyles(ForwardRef(InputLabel))
       error={true}
       shrink={true}
-      style={
-        Object {
-          "zoom": "0.75",
-        }
-      }
     >
       Enter a date
     </WithStyles(ForwardRef(InputLabel))>
@@ -387,6 +379,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
 exports[`PartialDateForm component should handle partial values 2`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
+  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -396,11 +389,6 @@ exports[`PartialDateForm component should handle partial values 2`] = `
     <WithStyles(ForwardRef(InputLabel))
       error={true}
       shrink={true}
-      style={
-        Object {
-          "zoom": "0.75",
-        }
-      }
     >
       Enter a date
     </WithStyles(ForwardRef(InputLabel))>
@@ -579,6 +567,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
 exports[`PartialDateForm component should load existing values 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
+  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -588,11 +577,6 @@ exports[`PartialDateForm component should load existing values 1`] = `
     <WithStyles(ForwardRef(InputLabel))
       error={false}
       shrink={true}
-      style={
-        Object {
-          "zoom": "0.75",
-        }
-      }
     >
       Enter a date
     </WithStyles(ForwardRef(InputLabel))>

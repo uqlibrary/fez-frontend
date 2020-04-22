@@ -40,9 +40,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let SearchComponentContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(SearchComponent);
+let SearchComponentContainer = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
 SearchComponentContainer = withRouter(SearchComponentContainer);
 export default SearchComponentContainer;

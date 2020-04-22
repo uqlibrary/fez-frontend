@@ -40,7 +40,4 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-export const PublisherField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

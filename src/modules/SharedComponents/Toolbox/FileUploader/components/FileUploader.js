@@ -373,7 +373,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(FileUploader);
+export default connect(mapStateToProps, mapDispatchToProps)(FileUploader);

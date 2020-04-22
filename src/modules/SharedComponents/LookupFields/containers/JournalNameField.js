@@ -24,7 +24,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const JournalNameField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const JournalNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

@@ -11,9 +11,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = () => ({});
 
-let MetaContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(Meta);
+let MetaContainer = connect(mapStateToProps, mapDispatchToProps)(Meta);
 MetaContainer = withRouter(MetaContainer);
 export default MetaContainer;

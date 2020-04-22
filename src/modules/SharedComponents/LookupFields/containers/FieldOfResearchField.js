@@ -58,10 +58,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     },
 });
 
-export const FieldOfResearchField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const FieldOfResearchField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
 
 export const FilteredFieldOfResearchField = connect(
     filterFoRmapStateToProps,

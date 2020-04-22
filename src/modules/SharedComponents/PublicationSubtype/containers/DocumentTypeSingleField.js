@@ -23,10 +23,7 @@ function mapDispatchToProps() {
     return {};
 }
 
-const SingleDocumentTypeList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+const SingleDocumentTypeList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 const _onChange = fieldProps => {
     return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);

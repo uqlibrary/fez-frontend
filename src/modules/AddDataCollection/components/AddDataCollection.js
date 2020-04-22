@@ -411,31 +411,30 @@ export default class AddDataCollection extends Component {
                                             <Divider />
                                         </Grid>
                                         <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
-                                            <Typography variant="caption">
-                                                {
-                                                    txt.information.optionalDatasetDetails.fieldLabels.collectionStart
-                                                        .label
-                                                }
-                                            </Typography>
                                             <Field
                                                 component={PartialDateField}
                                                 disableFuture
                                                 autoOk
                                                 name="fez_record_search_key_start_date.rek_start_date"
                                                 id="rek_start_date"
+                                                floatingTitle={
+                                                    txt.information.optionalDatasetDetails.fieldLabels.collectionStart
+                                                        .label
+                                                }
                                                 disabled={this.props.submitting}
                                                 validate={[validation.dateRange]}
                                                 hasError={dateError}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
-                                            <Typography variant="caption">
-                                                {txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label}
-                                            </Typography>
                                             <Field
                                                 component={PartialDateField}
                                                 disableFuture
                                                 autoOk
+                                                floatingTitle={
+                                                    txt.information.optionalDatasetDetails.fieldLabels.collectionEnd
+                                                        .label
+                                                }
                                                 name="fez_record_search_key_end_date.rek_end_date"
                                                 id="rek_end_date"
                                                 disabled={this.props.submitting}

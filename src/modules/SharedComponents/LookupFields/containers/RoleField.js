@@ -22,7 +22,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     onChange: item => props.onChange(item.value),
 });
 
-export const RoleField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteSelectField);
+export const RoleField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteSelectField);

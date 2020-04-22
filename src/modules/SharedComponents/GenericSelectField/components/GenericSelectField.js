@@ -94,22 +94,13 @@ export class GenericSelectFieldClass extends Component {
     newValue = () => {
         if (this.props.multiple) {
             if (this.props.hideLabel) {
-                return (
-                    (this.props.value && this.props.value.length > 0 && this.props.value) || [
-                        -1,
-                    ]
-                );
+                return (this.props.value && this.props.value.length > 0 && this.props.value) || [-1];
             } else {
-                return (
-                    (this.props.value && this.props.value.length > 0 && this.props.value) || []
-                );
+                return (this.props.value && this.props.value.length > 0 && this.props.value) || [];
             }
         } else {
             if (this.props.hideLabel) {
-                return (
-                    (this.props.value && this.props.value.length > 0 && this.props.value) ||
-                    '-1'
-                );
+                return (this.props.value && this.props.value.length > 0 && this.props.value) || '-1';
             } else {
                 return this.props.value || '';
             }
@@ -131,9 +122,7 @@ export class GenericSelectFieldClass extends Component {
                     <MenuItem
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
-                        selected={
-                            (this.props.multiple && this.props.value.includes(item.value || item)) || undefined
-                        }
+                        selected={(this.props.multiple && this.props.value.includes(item.value || item)) || undefined}
                         value={item.value || item}
                         key={index + 1}
                         disabled={item && ((!this.props.canUnselect && !item.value) || !!item.disabled)}

@@ -39,20 +39,12 @@ const getIssuesRequest = text => ({
 /* getFixIssueRequest - returns fix record issue request object
  * @returns {Object} issue request
  */
-export const getFixIssueRequest = pipe(
-    getIssueValues,
-    templates.issues.fixRecord,
-    getIssuesRequest,
-);
+export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
 /* getClaimIssueRequest - returns claim record issue request object
  * @returns {Object} issue request
  */
-export const getClaimIssueRequest = pipe(
-    getIssueValues,
-    templates.issues.claimRecord,
-    getIssuesRequest,
-);
+export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
  * NOTE: link description is required to save link
@@ -111,7 +103,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
             return {
                 rek_file_attachment_access_condition:
-                    item.access_condition_id === OPEN_ACCESS_ID && (item.date && moment(item.date).isAfter())
+                    item.access_condition_id === OPEN_ACCESS_ID && item.date && moment(item.date).isAfter()
                         ? CLOSED_ACCESS_ID
                         : item.access_condition_id,
                 rek_file_attachment_access_condition_order: initialCount + index + 1,

@@ -67,7 +67,9 @@ export const ListRow = ({
     return (
         <div
             style={{ flexGrow: 1, padding: 8 }}
-            className={`ListRow-${componentID} ListRow-${componentID}-${item.value || item}`}
+            className={`ListRow-${componentID} ListRow-${componentID}-${(item.value && item.value.replace(' ', '-')) ||
+                item}`}
+            id={`ListRow-${componentID}-${(item.value && item.value.replace(' ', '-')) || item}`}
         >
             <ConfirmationBox
                 onAction={deleteRecord}

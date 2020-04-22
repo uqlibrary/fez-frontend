@@ -24,7 +24,4 @@ const mapDispatchToProps = (dispatch, props) => {
     };
 };
 
-export const ThesisSubtypeField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+export const ThesisSubtypeField = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);

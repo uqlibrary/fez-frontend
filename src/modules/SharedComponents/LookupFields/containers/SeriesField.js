@@ -24,7 +24,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const SeriesField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const SeriesField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

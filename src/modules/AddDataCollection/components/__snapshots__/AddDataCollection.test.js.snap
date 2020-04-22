@@ -955,16 +955,12 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection start date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection start date"
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
@@ -985,16 +981,12 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection end date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection end date"
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
@@ -2211,16 +2203,12 @@ exports[`AddDataCollection test should render component with a valid collection 
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection start date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection start date"
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
@@ -2241,16 +2229,12 @@ exports[`AddDataCollection test should render component with a valid collection 
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection end date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection end date"
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
@@ -3467,16 +3451,12 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection start date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection start date"
                   hasError="Date range is not valid"
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
@@ -3497,16 +3477,12 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection end date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection end date"
                   hasError="Date range is not valid"
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
@@ -4723,16 +4699,12 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection start date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection start date"
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
@@ -4753,16 +4725,12 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 }
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))
-                  variant="caption"
-                >
-                  Collection end date
-                </WithStyles(ForwardRef(Typography))>
                 <Field
                   autoOk={true}
                   component={[Function]}
                   disableFuture={true}
                   disabled={false}
+                  floatingTitle="Collection end date"
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"

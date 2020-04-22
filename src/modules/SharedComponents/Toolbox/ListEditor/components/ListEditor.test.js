@@ -273,7 +273,10 @@ describe('ListEditor tests', () => {
     it('should update an issn with selected index', () => {
         const wrapper = setup();
         wrapper.setState({
-            itemList: [{ key: '1234-1234', value: { ulrichs: {} } }, { key: '1234-1111', value: { ulrichs: {} } }],
+            itemList: [
+                { key: '1234-1234', value: { ulrichs: {} } },
+                { key: '1234-1111', value: { ulrichs: {} } },
+            ],
         });
         wrapper.setState({ itemIndexSelectedToEdit: 1 });
         wrapper.instance().addItem('1234-2222');

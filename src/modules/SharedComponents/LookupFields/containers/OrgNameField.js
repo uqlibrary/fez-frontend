@@ -40,7 +40,4 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-export const OrgNameField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const OrgNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

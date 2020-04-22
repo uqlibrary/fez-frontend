@@ -23,9 +23,4 @@ const mapDispatchToProps = dispatch => ({
     clearFixRecord: () => dispatch(clearFixRecord()),
 });
 
-export default withRouter(
-    connect(
-        mapStateToProps,
-        mapDispatchToProps,
-    )(MyIncompleteRecordContainer),
-);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MyIncompleteRecordContainer));

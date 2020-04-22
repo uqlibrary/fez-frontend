@@ -1619,7 +1619,10 @@ export default {
         },
         export: {
             label: 'Export results',
-            format: [{ value: 'excel', label: 'Excel File' }, { value: 'endnote', label: 'Endnote File' }],
+            format: [
+                { value: 'excel', label: 'Excel File' },
+                { value: 'endnote', label: 'Endnote File' },
+            ],
             filename: {
                 prefix: 'espace_export',
                 dateFormat: 'YYYYMMDDHHmmss',

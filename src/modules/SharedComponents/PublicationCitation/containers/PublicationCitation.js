@@ -17,9 +17,6 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
-let PublicationCitationContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(PublicationCitation);
+let PublicationCitationContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationCitation);
 PublicationCitationContainer = withRouter(PublicationCitationContainer);
 export default PublicationCitationContainer;
