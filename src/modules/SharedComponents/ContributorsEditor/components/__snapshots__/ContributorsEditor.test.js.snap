@@ -109,7 +109,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={false}
@@ -133,7 +133,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
           showIdentifierLookup={true}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={true}
@@ -157,7 +157,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
           showIdentifierLookup={true}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={false}
           canMoveUp={true}
@@ -227,7 +227,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={false}
@@ -251,7 +251,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
           showIdentifierLookup={true}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={true}
@@ -275,7 +275,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
           showIdentifierLookup={true}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={false}
           canMoveUp={true}
@@ -416,7 +416,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={false}
@@ -440,7 +440,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={true}
@@ -464,7 +464,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={false}
           canMoveUp={true}
@@ -534,7 +534,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={false}
@@ -558,7 +558,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={true}
           canMoveUp={true}
@@ -582,7 +582,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={false}
           canMoveUp={true}
@@ -798,7 +798,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -821,7 +821,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -844,7 +844,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -988,7 +988,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -1011,7 +1011,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -1034,7 +1034,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -1057,7 +1057,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -1128,7 +1128,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={true}
           canMoveDown={false}
           canMoveUp={false}
@@ -8649,7 +8649,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -8672,7 +8672,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -8828,7 +8828,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
           }
         }
       >
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -8851,7 +8851,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
           showIdentifierLookup={false}
           showRoleInput={false}
         />
-        <WithStyles(WithWidth(ContributorRow))
+        <Memo(ContributorRow)
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}

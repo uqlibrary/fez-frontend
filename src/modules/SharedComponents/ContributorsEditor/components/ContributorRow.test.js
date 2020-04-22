@@ -1,7 +1,17 @@
-import { ContributorRow, styles } from './ContributorRow';
+import ContributorRow from './ContributorRow';
 
 import { authorsSearch } from 'mock/data';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
+import mediaQuery from 'css-mediaquery';
+import { act } from '@testing-library/react';
+
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
 
 function setup(testProps = {}, args = {}) {
     // build full props list requied by the component
@@ -15,23 +25,36 @@ function setup(testProps = {}, args = {}) {
         showContributorAssignment: false,
         disabledContributorAssignment: false,
         disabled: false,
-        classes: {
-            listItem: 'listItem',
-            selected: 'selected',
-            hideIcon: 'hideIcon',
-            primary: 'primary',
-            identifierName: 'identifierName',
-            identifierSubtitle: 'identifierSubtitle',
-        },
         width: 'md',
         required: false,
         canEdit: false,
+        locale: {
+            suffix: ' listed contributor',
+            moveUpHint: 'Move record up the order',
+            moveDownHint: 'Move record down the order',
+            deleteHint: 'Remove this record',
+            editHint: 'Edit this record',
+            selectHint: 'Select this record ([name]) to assign it to you',
+            lockedTooltip: 'You are not able to edit this row',
+            deleteRecordConfirmation: {
+                confirmationTitle: 'Delete record',
+                confirmationMessage: 'Are you sure you want to delete this record?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
+            deleteButtonId: 'delete-record',
+            editButtonId: 'edit-record',
+        },
         ...testProps,
     };
     return getElement(ContributorRow, props, args);
 }
 
 describe('Component ContributorRow', () => {
+    beforeAll(() => {
+        window.matchMedia = createMatchMedia(window.innerWidth);
+    });
+
     it('a row with index and contributor set, renders only name and delete button', () => {
         const wrapper = setup({
             index: 0,
@@ -238,13 +261,13 @@ describe('Component ContributorRow', () => {
             enableSelect: true,
             onSelect: testFunction,
         });
-        wrapper.instance()._select();
+        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
         expect(testFunction).toBeCalledWith(0);
 
         // no-op if disabled
         wrapper.setProps({ disabled: true });
         testFunction.mockClear();
-        wrapper.instance()._select();
+        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
         expect(testFunction).not.toBeCalled();
     });
 
@@ -262,36 +285,43 @@ describe('Component ContributorRow', () => {
         };
 
         const wrapper = setup(testObj);
-        wrapper.instance()._select();
+        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('click');
         expect(testFunction).toBeCalledWith(testObj.index);
     });
 
-    it('should call the lifecycle method of the component if props change', () => {
-        const testFunction = jest.fn();
+    it('should attempt to assign the current author when keyboard submit', () => {
+        const testFn = jest.fn();
         const contributor = {
-            nameAsPublished: 'J. Smith',
             ...authorsSearch.data[0],
+            nameAsPublished: 'J. Smith',
         };
-        const wrapper = setup({ contributor, index: 0 });
-        wrapper.instance().shouldComponentUpdate = testFunction;
-        wrapper.setProps({ nameAsPublished: 'Ky Lane' });
-        expect(testFunction).toBeCalled();
+        const wrapper = setup({ contributor, index: 0, enableSelect: true, onSelect: testFn });
+
+        wrapper
+            .find('WithStyles(ForwardRef(ListItem))')
+            .props()
+            .onKeyDown({ key: 'Enter' });
+        expect(testFn).toBeCalled();
+
+        testFn.mockClear();
+        wrapper.find('WithStyles(ForwardRef(ListItem))').simulate('keydown', { key: 'A' });
+        expect(testFn).not.toBeCalled();
     });
 
-    it('should attempt to assign the current author when keyboard submit', () => {
-        const testFunction = jest.fn();
+    it('should not attempt to assign the current author when keyboard submit for disabled contributor', () => {
+        const testFn = jest.fn();
         const contributor = {
-            nameAsPublished: 'J. Smith',
             ...authorsSearch.data[0],
+            nameAsPublished: 'J. Smith',
+            disabled: true,
         };
-        const wrapper = setup({ contributor, index: 0 });
-        wrapper.instance()._select = testFunction;
-        wrapper.instance()._onSelectKeyboard({ key: 'Enter' });
-        expect(testFunction).toBeCalled();
+        const wrapper = setup({ contributor, index: 0, enableSelect: true, onSelect: testFn });
 
-        testFunction.mockClear();
-        wrapper.instance()._onSelectKeyboard({ key: 'A' });
-        expect(testFunction).not.toBeCalled();
+        wrapper
+            .find('WithStyles(ForwardRef(ListItem))')
+            .props()
+            .onKeyDown({ key: 'Enter' });
+        expect(testFn).not.toBeCalled();
     });
 
     it('should handle edits', () => {
@@ -301,7 +331,11 @@ describe('Component ContributorRow', () => {
             canEdit: true,
             onEdit: testFn,
         });
-        wrapper.instance()._handleEdit();
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper
+            .find('WithStyles(ForwardRef(IconButton))')
+            .first()
+            .simulate('click');
         expect(testFn).toHaveBeenCalledWith(2);
     });
 
@@ -311,12 +345,13 @@ describe('Component ContributorRow', () => {
                 uqIdentifier: 123,
             },
         });
-        expect(wrapper.instance().getRowIcon()).toMatchSnapshot();
+        expect(wrapper.find('HowToRegIcon').length).toBe(1);
+
         const wrapper2 = setup({
             locale: {},
             disabled: true,
         });
-        expect(wrapper2.instance().getRowIcon()).toMatchSnapshot();
+        expect(wrapper2.find('LockIcon').length).toBe(1);
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
@@ -345,43 +380,50 @@ describe('Component ContributorRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('triggers the confirmation box', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup();
-        wrapper.instance().confirmationBox = {
-            showConfirmation: testFunction,
-        };
-        wrapper.instance()._showConfirmation();
-        expect(testFunction).toBeCalled();
-    });
-
-    it('should delete record', () => {
+    it('triggers the confirmation box and delete record', () => {
         const onDeleteFn = jest.fn();
-        const wrapper = setup({
-            disabled: false,
-            onDelete: onDeleteFn,
-            contributor: {
-                nameAsPublished: 'test',
-            },
-            index: 0,
+        const wrapper = setup({ onDelete: onDeleteFn });
+
+        act(() => {
+            wrapper.find('WithStyles(ForwardRef(IconButton))').simulate('click');
         });
-        wrapper.instance()._onDelete();
-        expect(onDeleteFn).toHaveBeenCalled();
+
+        wrapper.update();
+
+        wrapper
+            .find('ConfirmationBox')
+            .props()
+            .onAction();
+        expect(onDeleteFn).toBeCalled();
     });
 
     it('should not call certain prop methods if disabled prop is set', () => {
+        const onDeleteFn = jest.fn();
+        const onMoveUpFn = jest.fn();
+        const onMoveDownFn = jest.fn();
+
         const wrapper = setup({
             disabled: true,
-            onDelete: jest.fn(),
-            onMoveUp: jest.fn(),
-            onMoveDown: jest.fn(),
+            index: 0,
+            onDelete: onDeleteFn,
+            onMoveUp: onMoveUpFn,
+            onMoveDown: onMoveDownFn,
+            canMoveUp: true,
+            canMoveDown: true,
         });
-        wrapper.instance()._onDelete();
-        expect(wrapper.instance().props.onDelete).not.toBeCalled();
-        wrapper.instance()._onMoveUp();
-        expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
-        wrapper.instance()._onMoveDown();
-        expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
+
+        wrapper.find('#move-up-0').simulate('click');
+        expect(onMoveUpFn).not.toBeCalled();
+
+        wrapper.find('#move-down-0').simulate('click');
+        expect(onMoveDownFn).not.toBeCalled();
+
+        wrapper.find('#delete-record-0').simulate('click');
+        wrapper
+            .find('ConfirmationBox')
+            .props()
+            .onAction();
+        expect(onDeleteFn).not.toBeCalled();
     });
 
     it('should assign contributor', () => {
@@ -438,34 +480,8 @@ describe('Component ContributorRow', () => {
         wrapper
             .find('WithStyles(ForwardRef(ListItem))')
             .props()
-            .onKeyDown();
+            .onKeyDown({ key: 'Enter' });
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should have a proper style generator', () => {
-        const theme = {
-            palette: {
-                accent: {
-                    light: 'test1',
-                },
-            },
-            typography: {
-                fontWeightMedium: 'test2',
-                body2: {
-                    fontSize: 'test3',
-                },
-                caption: {
-                    fontSize: 'test4',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette.accent;
-        expect(styles(theme)).toMatchSnapshot();
-
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
     });
 
     it('should render row as required', () => {

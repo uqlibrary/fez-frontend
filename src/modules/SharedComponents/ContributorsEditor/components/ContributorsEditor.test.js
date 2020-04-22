@@ -440,7 +440,7 @@ describe('ContributorsEditor', () => {
         });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(WithWidth(ContributorRow))').length).toEqual(3);
+        expect(wrapper.find('Memo(ContributorRow)').length).toEqual(3);
         expect(wrapper.find('Infinite').length).toEqual(0);
     });
 
@@ -449,7 +449,7 @@ describe('ContributorsEditor', () => {
         wrapper.setState({
             contributors: [{ displayName: 1 }, { displayName: 2 }, { displayName: 3 }, { displayName: 4 }],
         });
-        expect(wrapper.find('WithStyles(WithWidth(ContributorRow))').length).toEqual(4);
+        expect(wrapper.find('Memo(ContributorRow)').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
