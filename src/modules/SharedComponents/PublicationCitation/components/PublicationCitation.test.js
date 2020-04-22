@@ -170,6 +170,35 @@ describe('PublicationCitation ', () => {
         wrapper.instance()._handleDefaultActions('');
     });
 
+    it('should handle custom actions', () => {
+        const handleAction = jest.fn();
+        const customActions = [
+            {
+                label: 'Claim now',
+                primary: true,
+                handleAction,
+            },
+            {
+                label: 'Not mine',
+                handleAction,
+            },
+            {
+                label: 'View stats',
+                handleAction,
+            },
+        ];
+        const wrapper = setup({
+            showDefaultActions: false,
+            customActions: customActions,
+        });
+
+        wrapper.find('WithStyles(ForwardRef(Button)).publicationAction').forEach(button => {
+            button.simulate('click');
+        });
+
+        expect(handleAction).toHaveBeenCalledTimes(3);
+    });
+
     it('should render publication with citation metric', () => {
         const publicationWithMetricData = {
             ...mockRecordToFix,

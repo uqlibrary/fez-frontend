@@ -2,7 +2,6 @@ import MyIncompleteRecord from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import { routes } from 'config';
 import { act } from '@testing-library/react';
-import React from 'react';
 
 function setup(testProps = {}) {
     const props = {
@@ -148,16 +147,14 @@ describe('Component MyIncompleteRecord', () => {
 
         wrapper
             .find('ConfirmationBox')
-            .shallow()
-            .find('#confirm-cancel-action')
-            .simulate('click');
+            .props()
+            .onCancelAction();
         expect(testFn).toBeCalledWith(routes.pathConfig.records.incomplete);
 
         wrapper
             .find('ConfirmationBox')
-            .shallow()
-            .find('#confirm-action')
-            .simulate('click');
+            .props()
+            .onAction();
         expect(testFn).toBeCalledWith(routes.pathConfig.dashboard);
     });
 

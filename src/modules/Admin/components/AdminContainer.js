@@ -6,7 +6,7 @@ import Immutable from 'immutable';
 import locale from 'locale/pages';
 import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
 
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -25,28 +25,31 @@ import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY, RECORD_TYPE_RECORD } from 'config/general';
 
-const styles = theme => ({
-    helpIcon: {
-        color: theme.palette.secondary.main,
-        opacity: 0.66,
-        '&:hover': {
-            opacity: 0.87,
+const useStyles = makeStyles(
+    theme => ({
+        helpIcon: {
+            color: theme.palette.secondary.main,
+            opacity: 0.66,
+            '&:hover': {
+                opacity: 0.87,
+            },
         },
-    },
-    tabIndicator: {
-        height: 4,
-        backgroundColor: theme.palette.primary.main,
-    },
-    badgeMargin: {
-        top: 8,
-        left: 28,
-        width: 12,
-        height: 12,
-        fontSize: 10,
-        fontWeight: 'bold',
-        backgroundColor: '#595959',
-    },
-});
+        tabIndicator: {
+            height: 4,
+            backgroundColor: theme.palette.primary.main,
+        },
+        badgeMargin: {
+            top: 8,
+            left: 28,
+            width: 12,
+            height: 12,
+            fontSize: 10,
+            fontWeight: 'bold',
+            backgroundColor: '#595959',
+        },
+    }),
+    { withTheme: true },
+);
 
 export const AdminContainer = ({
     recordToView,
@@ -54,7 +57,6 @@ export const AdminContainer = ({
     loadRecordToView,
     clearRecordToView,
     dirty,
-    classes,
     submitting,
     submitSucceeded,
     disableSubmit,
@@ -68,6 +70,7 @@ export const AdminContainer = ({
 }) => {
     const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
     const [showAddForm, setShowAddForm] = useState(!match.params.pid);
+    const classes = useStyles();
     const theme = useTheme();
     const tabErrors = useRef(null);
 
@@ -128,6 +131,7 @@ export const AdminContainer = ({
         }
         return false;
     };
+    console.log(isMobileView);
     return (
         <React.Fragment>
             {createMode && showAddForm && (
@@ -136,7 +140,7 @@ export const AdminContainer = ({
             {!showAddForm && (
                 <TabbedContext.Provider
                     value={{
-                        tabbed: isMobileView ? false : tabbed,
+                        tabbed: !isMobileView || tabbed,
                         toggleTabbed: handleToggle,
                     }}
                 >
@@ -220,7 +224,6 @@ AdminContainer.propTypes = {
     createMode: PropTypes.bool,
     recordToView: PropTypes.object,
     actions: PropTypes.object,
-    classes: PropTypes.object,
     submitting: PropTypes.any,
     submitSucceeded: PropTypes.bool,
     showAddForm: PropTypes.bool,
@@ -246,4 +249,4 @@ export function isChanged(prevProps, nextProps) {
     );
 }
 
-export default React.memo(withStyles(styles, { withTheme: true })(AdminContainer), isChanged);
+export default React.memo(AdminContainer, isChanged);

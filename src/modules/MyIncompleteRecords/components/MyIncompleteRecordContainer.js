@@ -51,9 +51,9 @@ export default class MyIncompleteRecordContainer extends React.Component {
     }
 
     componentDidMount() {
-        if (!this.props.recordToFix && !!this.props.loadRecordToFix) {
+        !this.props.recordToFix &&
+            !!this.props.loadRecordToFix &&
             this.props.loadRecordToFix(this.props.match.params.pid);
-        }
     }
 
     componentWillReceiveProps(nextProps) {

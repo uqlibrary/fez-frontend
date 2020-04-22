@@ -18,10 +18,10 @@ export const useStyles = makeStyles(
             lineHeight: '24px',
         },
         checkboxRoot: {
-            color: (theme.status || {}).danger || '',
+            color: theme.status.danger,
         },
         checkboxChecked: {
-            color: (!!theme.palette && `${theme.palette.primary.main} !important`) || '',
+            color: `${theme.palette.primary.main} !important`,
         },
     }),
     { withTheme: true },

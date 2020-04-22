@@ -2,10 +2,10 @@ import MemoizedAdminContainer, { AdminContainer, isChanged } from './AdminContai
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
 
-jest.mock('js-cookie', () => ({
-    get: jest.fn(),
-    set: jest.fn(),
-}));
+jest.mock('@material-ui/core/useMediaQuery');
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+jest.mock('js-cookie');
 import Cookies from 'js-cookie';
 
 jest.mock('redux-form/immutable');
@@ -17,8 +17,6 @@ jest.mock('@material-ui/styles/useTheme', () => () => ({
         },
     },
 }));
-
-jest.mock('@material-ui/core/useMediaQuery');
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
@@ -53,6 +51,16 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render mobile view', () => {
+        Cookies.mockImplementation(() => ({
+            get: jest.fn(() => 'tabbed'),
+        }));
+        useMediaQuery.mockImplementation(() => true);
+        const wrapper = setup({});
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render loading record view', () => {
         const wrapper = setup({
             loadingRecordToView: true,
@@ -61,7 +69,7 @@ describe('AdminContainer component', () => {
     });
 
     it('should render component with tabbed interface', () => {
-        Cookies.get = jest.fn(() => 'tabbed');
+        Cookies.mockImplementation(() => ({ get: jest.fn(() => 'tabbed') }));
 
         const wrapper = setup({
             loadingRecordToView: false,
