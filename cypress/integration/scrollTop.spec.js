@@ -7,7 +7,7 @@ context('Scroll to top module', () => {
     });
 
     it('Scroll to the bottom of the homepage, then click the scroll to top and the tabs should be visible', () => {
-        cy.contains('Long-Term Outcomes')
+        cy.contains('Homo sapiens in Arabia')
             .should('exist');
         cy.get('.StandardPage')
             .should('exist'); // This forces a scroll to the top.
