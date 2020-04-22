@@ -39,4 +39,18 @@ describe('ReloadReducerFromLocalStorage component', () => {
             ),
         });
     });
+
+    it('should not provide context for the component to load default reducer from localstorage', () => {
+        window.localStorage.setItem('record', JSON.stringify({ publication: { pid: 'UQ:123455' } }));
+        setup({
+            reducer: 'form',
+            children: (
+                <LocallyStoredReducerContext.Consumer>
+                    {({ locallyStoredReducer }) => {
+                        expect(locallyStoredReducer).toEqual(undefined);
+                    }}
+                </LocallyStoredReducerContext.Consumer>
+            ),
+        });
+    });
 });
