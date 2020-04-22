@@ -375,7 +375,7 @@ export default {
                     "srm_id": 24186,
                     "srm_issn": "1834-7223",
                     "srm_journal_name": "Not found in Sherpa Romeo",
-                    "srm_colour": "Not found in Sherpa Romeo"
+                    "srm_journal_link": "http://example.com",
                 },
                 "rek_issn_lookup": "Not found in Sherpa Romeo"
             }],
@@ -768,7 +768,7 @@ export default {
                     "srm_id": 71773,
                     "srm_issn": "0952-0481",
                     "srm_journal_name": "British journal of addiction",
-                    "srm_colour": ""
+                    "rek_issn_lookup": "Not found in Sherpa Romeo"
                 },
                 "rek_issn_lookup": ""
             }],
