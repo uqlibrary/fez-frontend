@@ -55,9 +55,9 @@ Cypress.Commands.add('killWindowUnloadHandler', () => {
 });
 
 Cypress.Commands.add('clickAutoSuggestion', (fieldName, ordinal) => {
-    cy.get(`#${fieldName}-menu`)
+    cy.get(`#${fieldName}-popup`)
         .should('exist');
-    cy.get(`#${fieldName}-item-${ordinal}`)
+    cy.get(`#${fieldName}-option-${ordinal}`)
         .as('menuItem')
         .should('exist');
     cy.wait(200);

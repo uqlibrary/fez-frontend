@@ -165,7 +165,7 @@ export const ContributorForm = ({
         (showRoleInput && contributor.creatorRole.length === 0) ||
         (isNtro &&
             contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
-                (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
+            (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
     const addButtonLabel = canEdit && !!initialContributor.nameAsPublished ? 'Change Details' : locale.addButton;
 
     useEffect(() => {
@@ -202,7 +202,7 @@ export const ContributorForm = ({
                 <Grid item xs={12} sm>
                     <TextField
                         fullWidth
-                        id="name-as-published"
+                        id={locale.nameAsPublishedFieldId || 'name-as-published'}
                         label={locale.nameAsPublishedLabel}
                         placeholder={locale.nameAsPublishedHint}
                         value={contributor.nameAsPublished}

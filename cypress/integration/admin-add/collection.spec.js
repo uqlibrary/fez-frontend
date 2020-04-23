@@ -32,7 +32,7 @@ context('As an admin,', () => {
         cy.get('#add-items')
             .click();
 
-        cy.get('.Keywords')
+        cy.get('#ListEditor-Keywords')
             .should('exist')
             .contains('p', 'testing');
 
