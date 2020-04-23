@@ -35,6 +35,7 @@ export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${get
     process.env.GOOGLE_MAPS_API_KEY,
 )}v=3.exp&libraries=geometry,drawing,places`;
 
+// these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
 export const PUBLICATION_TYPE_BOOK = 174;
 export const PUBLICATION_TYPE_BOOK_CHAPTER = 177;
@@ -145,7 +146,6 @@ export const DOCUMENT_TYPES_LOOKUP = {
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
-// these values must match what is in api at fez_core/src/config/fez_core.php
 export const NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
 export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';
 export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual Art';
