@@ -3,9 +3,9 @@ context('As an admin,', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection
-        cy.get('#Memberofcollections-input')
+        cy.get('#adminSectioncollections')
             .type('a');
-        cy.clickAutoSuggestion('Memberofcollections', 0);
+        cy.clickAutoSuggestion('adminSectioncollections', 0);
 
         // Choose display type
         cy.get('#rek-display-type')
@@ -41,7 +41,7 @@ context('As an admin,', () => {
         // Confirmation message
         cy.get('[role=dialog]')
             .should('exist')
-            .find('h6')
+            .find('h2')
             .should('contain', 'Work has been added');
     });
 });
