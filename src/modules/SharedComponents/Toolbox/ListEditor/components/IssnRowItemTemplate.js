@@ -9,6 +9,7 @@ import { default as globalLocale } from 'locale/global';
 
 export const IssnRowItemTemplate = ({
     actions,
+    hasPreload,
     item,
     loadingSherpaFromIssn,
     loadingUlrichsFromIssn,
@@ -50,10 +51,10 @@ export const IssnRowItemTemplate = ({
                     },
                 });
             } else {
-                !loadingSherpaFromIssn && actions.getSherpaFromIssn(issn.key);
+                !hasPreload && !loadingSherpaFromIssn && actions.getSherpaFromIssn(issn.key);
             }
         }
-    }, [actions, issn, loadingSherpaFromIssn, sherpaRomeo]);
+    }, [actions, hasPreload, issn, loadingSherpaFromIssn, sherpaRomeo]);
 
     React.useEffect(() => {
         if (!issn.value || !issn.value.ulrichs || !issn.value.ulrichs.link) {
@@ -66,10 +67,10 @@ export const IssnRowItemTemplate = ({
                     },
                 });
             } else {
-                !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(issn.key);
+                !hasPreload && !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(issn.key);
             }
         }
-    }, [actions, issn, loadingUlrichsFromIssn, ulrichs]);
+    }, [actions, hasPreload, issn, loadingUlrichsFromIssn, ulrichs]);
 
     return (
         <React.Fragment>
@@ -105,6 +106,7 @@ export const IssnRowItemTemplate = ({
 
 IssnRowItemTemplate.propTypes = {
     actions: PropTypes.object,
+    hasPreload: PropTypes.bool,
     item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     loadingSherpaFromIssn: PropTypes.bool,
     loadingUlrichsFromIssn: PropTypes.bool,
@@ -112,15 +114,12 @@ IssnRowItemTemplate.propTypes = {
     ulrichs: PropTypes.object,
 };
 
-export const getValidSherpa = (sherpaData, item) => {
-    const validSherpaKey = Object.keys(sherpaData).find(
-        issn =>
-            sherpaData[issn].srm_journal_name !== '' &&
-            sherpaData[issn].srm_journal_name !== 'Not found in Sherpa Romeo' &&
-            sherpaData[issn].srm_issn === (item && (item.key || item)),
-    );
-    return sherpaData[validSherpaKey];
-};
+export const getValidSherpa = (sherpaData, issn) =>
+    sherpaData[issn] &&
+    sherpaData[issn].srm_journal_name !== '' &&
+    sherpaData[issn].srm_journal_name !== 'Not found in Sherpa Romeo' &&
+    sherpaData[issn].srm_issn === issn &&
+    sherpaData[issn];
 
 export const getSherpaLink = sherpaEntry => {
     if (!sherpaEntry) {
@@ -136,30 +135,42 @@ export const getSherpaLink = sherpaEntry => {
     return '';
 };
 
-export const getValidUlrichs = (ulrichsData, item) => {
-    const validUlrichsKey = Object.keys(ulrichsData).find(
-        issn => ulrichsData[issn].ulr_title !== '' && ulrichsData[issn].ulr_issn === (item && (item.key || item)),
-    );
-    return ulrichsData[validUlrichsKey];
-};
+export const getValidUlrichs = (ulrichsData, issn) =>
+    ulrichsData[issn] && ulrichsData[issn].ulr_title !== '' && ulrichsData[issn].ulr_issn === issn && ulrichsData[issn];
 
 export const mapStateToProps = (state, props) => {
     const { item } = props;
+    const issn = item.key || item;
+    const { sherpaLoadFromIssnError, sherpaRomeo, ulrichs, ulrichsLoadFromIssnError } = state.get('issnLinksReducer');
+
     const {
-        loadingSherpaFromIssn,
-        loadingUlrichsFromIssn,
-        sherpaLoadFromIssnError,
-        sherpaRomeo,
-        ulrichs,
-        ulrichsLoadFromIssnError,
-    } = state.get('issnLinksReducer');
+        recordToView: { fez_record_search_key_issn: fsrkIssn },
+    } = state.get('viewRecordReducer');
+
+    const issnEntry = fsrkIssn.find(entry => entry.rek_issn === issn);
+    const hasPreload = !!issnEntry;
+
+    if (hasPreload) {
+        sherpaRomeo[issn] = issnEntry.fez_sherpa_romeo || {
+            // Presence of issn key prevents further lookup.
+            srm_issn: issn,
+        };
+        ulrichs[issn] = issnEntry.fez_ulrichs || {
+            ulr_issn: issn,
+        };
+    }
+
+    // Absence of issn key is used to indicate ongoing api call.
+    const loadingSherpaFromIssn = !!sherpaRomeo[issn] && !sherpaRomeo[issn].srm_issn;
+    const loadingUlrichsFromIssn = !!ulrichs[issn] && !ulrichs[issn].ulr_issn;
 
     const sherpaEntry =
-        !loadingSherpaFromIssn && !sherpaLoadFromIssnError && sherpaRomeo && getValidSherpa(sherpaRomeo, item);
+        !loadingSherpaFromIssn && !sherpaLoadFromIssnError[issn] && sherpaRomeo && getValidSherpa(sherpaRomeo, issn);
     const ulrichsEntry =
-        !loadingUlrichsFromIssn && !ulrichsLoadFromIssnError && ulrichs && getValidUlrichs(ulrichs, item);
+        !loadingUlrichsFromIssn && !ulrichsLoadFromIssnError[issn] && ulrichs && getValidUlrichs(ulrichs, issn);
 
     return {
+        hasPreload,
         loadingSherpaFromIssn,
         loadingUlrichsFromIssn,
         sherpaRomeo:
@@ -170,7 +181,7 @@ export const mapStateToProps = (state, props) => {
         ulrichs:
             (ulrichsEntry && {
                 link:
-                    ulrichsEntry.ulr_issn &&
+                    ulrichsEntry.ulr_title_id &&
                     globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsEntry.ulr_title_id),
                 title: ulrichsEntry.ulr_title || '',
             }) ||

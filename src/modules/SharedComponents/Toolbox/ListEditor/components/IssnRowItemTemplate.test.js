@@ -182,16 +182,14 @@ describe('IssnRowItemTemplate', () => {
                 },
             };
 
-            const item1 = {
-                key: '1234-0001',
-            };
+            const item1 = '1234-0001';
             expect(getValidSherpa(sherpaRomeo, item1)).toEqual(expected);
 
             const item2 = '1234-0001';
             expect(getValidSherpa(sherpaRomeo, item2)).toEqual(expected);
 
             const item3 = '1234-0003';
-            expect(getValidSherpa(sherpaRomeo, item3)).toBe(undefined);
+            expect(getValidSherpa(sherpaRomeo, item3)).toBe(false);
         });
 
         it('should use a fallback link for Sherpa Romeo', () => {
@@ -226,9 +224,7 @@ describe('IssnRowItemTemplate', () => {
                 },
             };
 
-            const item1 = {
-                key: '1234-0001',
-            };
+            const item1 = '1234-0001';
             expect(getValidUlrichs(ulrichsData, item1)).toEqual(expected);
 
             const item2 = '1234-0001';
@@ -248,14 +244,24 @@ describe('IssnRowItemTemplate', () => {
                 ulrichsLoadFromIssnError: false,
             };
 
+            const recordToView = {
+                fez_record_search_key_issn: [],
+            };
+
             // On initial render
             const state1 = {
-                get: () => stateObj,
+                get: key =>
+                    key === 'issnLinksReducer'
+                        ? stateObj
+                        : {
+                            recordToView,
+                        },
             };
             const props = {
                 item: '1234-0001',
             };
             expect(mapStateToProps(state1, props)).toEqual({
+                hasPreload: false,
                 loadingSherpaFromIssn: false,
                 loadingUlrichsFromIssn: false,
                 sherpaRomeo: null,
@@ -268,25 +274,39 @@ describe('IssnRowItemTemplate', () => {
                 'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
             const ulrichsTitleId = '12345678';
             const state2 = {
-                get: () => ({
-                    ...stateObj,
-                    sherpaRomeo: {
-                        '1234-0001': {
-                            srm_issn: '1234-0001',
-                            srm_journal_name: 'Testing 1',
-                            srm_journal_link: sherpaLink,
-                        },
-                    },
-                    ulrichs: {
-                        '1234-0001': {
-                            ulr_issn: '1234-0001',
-                            ulr_title: 'Testing 2',
-                            ulr_title_id: ulrichsTitleId,
-                        },
-                    },
-                }),
+                get: key => {
+                    switch (key) {
+                        case 'issnLinksReducer':
+                            return {
+                                ...stateObj,
+                                sherpaRomeo: {
+                                    '1234-0001': {
+                                        srm_issn: '1234-0001',
+                                        srm_journal_name: 'Testing 1',
+                                        srm_journal_link: sherpaLink,
+                                    },
+                                },
+                                ulrichs: {
+                                    '1234-0001': {
+                                        ulr_issn: '1234-0001',
+                                        ulr_title: 'Testing 2',
+                                        ulr_title_id: ulrichsTitleId,
+                                    },
+                                },
+                            };
+
+                        case 'viewRecordReducer':
+                            return {
+                                recordToView,
+                            };
+                        default:
+                            break;
+                    }
+                    return {};
+                },
             };
             expect(mapStateToProps(state2, props)).toEqual({
+                hasPreload: false,
                 loadingSherpaFromIssn: false,
                 loadingUlrichsFromIssn: false,
                 sherpaRomeo: {
@@ -300,22 +320,99 @@ describe('IssnRowItemTemplate', () => {
 
             // Empty Ulrichs title
             const state3 = {
-                get: () => ({
-                    ...stateObj,
-                    ulrichs: {
-                        '1234-0001': {
-                            ulr_issn: '1234-0001',
-                            ulr_title_id: ulrichsTitleId,
-                        },
-                    },
-                }),
+                get: key => {
+                    switch (key) {
+                        case 'issnLinksReducer':
+                            return {
+                                ...stateObj,
+                                ulrichs: {
+                                    '1234-0001': {
+                                        ulr_issn: '1234-0001',
+                                        ulr_title_id: ulrichsTitleId,
+                                    },
+                                },
+                            };
+
+                        case 'viewRecordReducer':
+                            return {
+                                recordToView,
+                            };
+                        default:
+                            break;
+                    }
+                    return {};
+                },
             };
             expect(mapStateToProps(state3, props)).toEqual({
+                hasPreload: false,
                 loadingSherpaFromIssn: false,
                 loadingUlrichsFromIssn: false,
                 sherpaRomeo: null,
                 ulrichs: {
                     link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                    title: '',
+                },
+            });
+
+            // With preloaded data
+            const state4 = {
+                get: key =>
+                    key === 'issnLinksReducer'
+                        ? stateObj
+                        : {
+                            recordToView: {
+                                fez_record_search_key_issn: [
+                                    {
+                                        rek_issn: props.item,
+                                        fez_sherpa_romeo: {
+                                            srm_issn: props.item,
+                                            srm_journal_link: sherpaLink,
+                                        },
+                                        fez_ulrichs: {
+                                            ulr_issn: props.item,
+                                            ulr_title_id: ulrichsTitleId,
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+            };
+            expect(mapStateToProps(state4, props)).toEqual({
+                hasPreload: true,
+                loadingSherpaFromIssn: false,
+                loadingUlrichsFromIssn: false,
+                sherpaRomeo: {
+                    link: sherpaLink,
+                },
+                ulrichs: {
+                    link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                    title: '',
+                },
+            });
+
+            // With empty preloaded data
+            const state5 = {
+                get: key =>
+                    key === 'issnLinksReducer'
+                        ? stateObj
+                        : {
+                            recordToView: {
+                                fez_record_search_key_issn: [
+                                    {
+                                        rek_issn: props.item,
+                                    },
+                                ],
+                            },
+                        },
+            };
+            expect(mapStateToProps(state5, props)).toEqual({
+                hasPreload: true,
+                loadingSherpaFromIssn: false,
+                loadingUlrichsFromIssn: false,
+                sherpaRomeo: {
+                    link: '',
+                },
+                ulrichs: {
                     title: '',
                 },
             });
