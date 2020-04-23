@@ -58,6 +58,7 @@ export class FilesClass extends Component {
                 previewMediaUrl: null,
                 mimeType: null,
                 checksums: {},
+                videoLoading: true,
             },
         };
     }
@@ -126,6 +127,8 @@ export class FilesClass extends Component {
                     mimeType,
                     securityStatus,
                     checksums,
+                    videoLoading: true,
+                    imageError: false,
                 },
             });
         }
@@ -342,6 +345,37 @@ export class FilesClass extends Component {
         return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
     };
 
+    handleImageFailed = () => {
+        this.setState(state => ({
+            ...state,
+            preview: {
+                ...state.preview,
+                imageError: true,
+            },
+        }));
+    };
+
+    handleVideoFailed = event => {
+        this.setState(state => ({
+            ...state,
+            preview: {
+                ...state.preview,
+                videoErrorCode: event.code,
+                videoErrorMsg: event.message,
+            },
+        }));
+    };
+
+    handleVideoLoad = () => {
+        this.setState(state => ({
+            ...state,
+            preview: {
+                ...state.preview,
+                videoLoading: false,
+            },
+        }));
+    };
+
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
@@ -448,7 +482,14 @@ export class FilesClass extends Component {
                             webMediaUrl={this.state.preview.webMediaUrl}
                             previewMediaUrl={this.state.preview.previewMediaUrl}
                             mimeType={this.state.preview.mimeType}
+                            videoErrorMsg={this.state.preview.videoErrorMsg}
+                            videoErrorCode={this.state.preview.videoErrorCode}
+                            videoLoading={this.state.preview.videoLoading}
+                            imageError={this.state.preview.imageError}
                             onClose={this.hidePreview}
+                            onVideoFailed={this.handleVideoFailed}
+                            onImageFailed={this.handleImageFailed}
+                            onVideoLoad={this.handleVideoLoad}
                         />
                     )}
                 </StandardCard>

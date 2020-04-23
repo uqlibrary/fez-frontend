@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import Grid from '@material-ui/core/Grid';
@@ -72,33 +72,27 @@ MediaPreviewButtons.propTypes = {
 };
 
 export const MediaPreview = ({ ...props }) => {
-    const { mediaUrl, previewMediaUrl, mimeType } = props;
+    const {
+        mediaUrl,
+        previewMediaUrl,
+        mimeType,
+        videoErrorMsg,
+        videoErrorCode,
+        videoLoading,
+        imageError,
+        onVideoLoad,
+        onVideoFailed,
+        onImageFailed,
+    } = props;
     const mediaPreviewRef = React.useRef();
-
-    const [videoErrorMsg, setVideoErrorMsg] = useState(null);
-    const [videoErrorCode, setVideoErrorCode] = useState(null);
-    const [videoLoading, setVideoLoading] = useState(true);
-    const [imageError, setImageError] = useState(null);
 
     const { videoTitle, imageTitle, videoLoadingMessage } = locale.viewRecord.sections.files.preview;
     const isVideo = mimeType.indexOf('video') >= 0;
     const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
     const title = isVideo ? videoTitle : imageTitle;
 
-    const videoLoaded = () => setVideoLoading(false);
-
-    const videoFailed = event => {
-        if (event.message && event.code) {
-            setVideoErrorCode(event.code);
-            setVideoErrorMsg(event.message);
-        }
-    };
-
-    const imageFailed = () => setImageError(true);
-
     React.useEffect(() => {
         if (imageError || (videoErrorCode && videoErrorMsg) || !videoLoading) {
-            /* istanbul ignore next */
             MediaPreviewUtils.scrollToPreview(mediaPreviewRef);
         }
     }, [imageError, videoErrorCode, videoErrorMsg, videoLoading]);
@@ -118,7 +112,6 @@ export const MediaPreview = ({ ...props }) => {
                     </Grid>
                 </Hidden>
             </Grid>
-            /* istanbul ignore next */
             {isVideo && videoErrorMsg && videoErrorCode && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
                     <Alert
@@ -127,7 +120,6 @@ export const MediaPreview = ({ ...props }) => {
                     />
                 </div>
             )}
-            /* istanbul ignore next */
             {isPreviewable && imageError && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
                     <Alert
@@ -140,9 +132,9 @@ export const MediaPreview = ({ ...props }) => {
                 <ReactJWPlayer
                     playerId="previewVideo"
                     playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-                    onVideoLoad={videoLoaded}
-                    onSetupError={videoFailed}
-                    onMediaError={videoFailed}
+                    onVideoLoad={onVideoLoad}
+                    onSetupError={onVideoFailed}
+                    onMediaError={onVideoFailed}
                     isAutoPlay
                     file={previewMediaUrl}
                     // TODO : Was put in for cloudfront not liking 'range' in request headers
@@ -171,7 +163,7 @@ export const MediaPreview = ({ ...props }) => {
                             alt={mediaUrl}
                             onLoad={MediaPreviewUtils.scrollToPreview(mediaPreviewRef)}
                             style={{ border: '5px solid black', maxWidth: '100%', marginTop: 32, marginBottom: 32 }}
-                            onError={imageFailed}
+                            onError={onImageFailed}
                         />
                     </Grid>
                     <Grid item xs />
@@ -193,6 +185,14 @@ MediaPreview.propTypes = {
     mediaUrl: PropTypes.string.isRequired,
     previewMediaUrl: PropTypes.string.isRequired,
     mimeType: PropTypes.string.isRequired,
+
+    videoErrorMsg: PropTypes.string,
+    videoErrorCode: PropTypes.number,
+    videoLoading: PropTypes.bool,
+    imageError: PropTypes.bool,
+    onVideoFailed: PropTypes.func,
+    onVideoLoad: PropTypes.func,
+    onImageFailed: PropTypes.func,
 };
 
 export default React.memo(MediaPreview);

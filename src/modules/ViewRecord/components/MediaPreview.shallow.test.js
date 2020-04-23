@@ -1,7 +1,6 @@
 import React from 'react';
 import MediaPreview from './MediaPreview';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
-import { act } from '@testing-library/react';
 
 jest.mock('react-jw-player');
 
@@ -37,7 +36,6 @@ describe('MediaPreview shallow test', () => {
 
         mockUseRef();
         mockUseRef();
-        scrollToPreview();
     });
 
     afterEach(() => {
@@ -64,53 +62,5 @@ describe('MediaPreview shallow test', () => {
 
         setup();
         expect(scrollToPreview).toHaveBeenCalled();
-    });
-
-    it("should call the ref's method for scrolling into view", () => {
-        const wrapper = setup({ mimeType: 'video/mp4' });
-
-        act(() => {
-            wrapper.find('ReactJWPlayer').simulate('videoLoad');
-            wrapper.update();
-        });
-    });
-
-    it('should render when scrolled to a loaded video', () => {
-        const wrapper = setup({ mimeType: 'video/mp4' });
-
-        act(() => {
-            wrapper.find('ReactJWPlayer').simulate('videoLoad');
-            wrapper.update();
-        });
-    });
-
-    it('should render when video fails', () => {
-        const wrapper = setup({ mimeType: 'video/mp4' });
-
-        jest.useFakeTimers();
-        act(() => {
-            wrapper.find('ReactJWPlayer').simulate('setupError', { message: 'test failure', code: 12345 });
-            wrapper.update();
-
-            jest.advanceTimersByTime(100);
-        });
-    });
-
-    it('should render when image fails 2', () => {
-        const wrapper = setup({ mimeType: 'image/jpeg' });
-
-        act(() => {
-            wrapper.find('img').simulate('error');
-            wrapper.update();
-        });
-    });
-
-    it('should render when video fails with no error codes', () => {
-        const wrapper = setup({ mimeType: 'video/mp4' });
-
-        act(() => {
-            wrapper.find('ReactJWPlayer').simulate('setupError', {});
-            wrapper.update();
-        });
     });
 });

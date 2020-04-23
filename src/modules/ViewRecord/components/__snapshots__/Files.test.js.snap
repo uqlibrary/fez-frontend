@@ -11907,6 +11907,92 @@ exports[`Files Component  should render icon for mimeType 6`] = `
 </WithStyles(ForwardRef(Grid))>
 `;
 
+exports[`Files Component  should set image error flag 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": 32,
+      }
+    }
+  >
+    <span />
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={true}
+    >
+      <WithStyles(ForwardRef(Typography))
+        component="h2"
+        id="medie-preview-title"
+        variant="h6"
+      >
+        Image preview
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+      >
+        <Memo()
+          fileName="http://localhost/view/UQ:185044/fileName"
+          id="media-preview-buttons-larger-screen"
+          imageError={true}
+          mediaUrl="mediaUrl"
+          mimeType="image/jpeg"
+          onClose={[Function]}
+          onImageFailed={[Function]}
+          onVideoFailed={[Function]}
+          onVideoLoad={[Function]}
+          previewMediaUrl="previewMediaUrl"
+          videoLoading={true}
+          webMediaUrl="webMediaUrl"
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </Hidden>
+  </WithStyles(ForwardRef(Grid))>
+  <div
+    style={
+      Object {
+        "marginBottom": 12,
+        "marginTop": 12,
+      }
+    }
+  >
+    <Alert
+      allowDismiss={false}
+      dismissTitle="Click to dismiss this alert"
+      message="You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format."
+      showLoader={false}
+      title="IMAGE FAILED TO LOAD"
+      type="error"
+    />
+  </div>
+  <Hidden
+    smUp={true}
+  >
+    <Memo()
+      fileName="http://localhost/view/UQ:185044/fileName"
+      id="media-preview-buttons-smaller-screen"
+      imageError={true}
+      mediaUrl="mediaUrl"
+      mimeType="image/jpeg"
+      onClose={[Function]}
+      onImageFailed={[Function]}
+      onVideoFailed={[Function]}
+      onVideoLoad={[Function]}
+      previewMediaUrl="previewMediaUrl"
+      videoLoading={true}
+      webMediaUrl="webMediaUrl"
+    />
+  </Hidden>
+</Fragment>
+`;
+
 exports[`Files Component  should show a blacklisted collection member when the user is an admin 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}

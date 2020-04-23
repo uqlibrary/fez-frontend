@@ -2,6 +2,8 @@ import React from 'react';
 import MediaPreview from './MediaPreview';
 import { rtlRender, fireEvent, act } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
+import * as MediaPreviewUtils from './MediaPreviewUtils';
+jest.mock('./MediaPreviewUtils');
 
 function createMatchMedia(width) {
     return query => ({
@@ -25,9 +27,16 @@ function setup(testProps = {}) {
 }
 
 describe('Media Preview Component ', () => {
+    let scrollToPreview;
+
     beforeAll(() => {
         window.matchMedia = createMatchMedia(window.innerWidth);
         window.open = jest.fn();
+    });
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+        scrollToPreview = jest.spyOn(MediaPreviewUtils, 'scrollToPreview');
     });
 
     it('should render component', () => {
@@ -86,86 +95,18 @@ describe('Media Preview Component ', () => {
         expect(open).toHaveBeenCalledTimes(2);
     });
 
-    // it('should show the preview onload', () => {
-    //     jest.useFakeTimers();
-    //     const onLoadFn = jest.fn();
-    //     window.Image.onLoad = onLoadFn;
+    it('should render when scrolled to a loaded video', () => {
+        const { getByText } = setup({ mimeType: 'video/mp4', imageError: false, videoLoading: true });
+        expect(getByText('Loading')).toBeInTheDocument();
+    });
 
-    //     setup({ mimeType: 'image/jpeg' });
+    it('should render when video fails', () => {
+        setup({ mimeType: 'video/mp4', videoErrorMsg: 'test failure', videoErrorCode: 12345 });
+        expect(scrollToPreview).toBeCalled();
+    });
 
-    //     jest.advanceTimersByTime(100);
-    //     expect(onLoadFn).toBeCalled();
-    // });
-
-    // it("should call the ref's method for scrolling into view", () => {
-    //     const wrapper = setup();
-    //     const testFn = jest.fn();
-
-    //     wrapper.instance().mediaPreviewRef = undefined;
-    //     wrapper.instance().scrollToMedia();
-
-    //     wrapper.instance().mediaPreviewRef = {
-    //         current: {
-    //             scrollIntoView: testFn,
-    //         },
-    //     };
-    //     wrapper.instance().scrollToMedia();
-    //     expect(testFn).toHaveBeenCalledWith({
-    //         behavior: 'smooth',
-    //         block: 'start',
-    //         inline: 'center',
-    //     });
-    // });
-
-    // it('should update state on change of URL', () => {
-    //     const wrapper = setup({ previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp4' });
-    //     const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
-    //     wrapper.setState({ videoErrorMsg: 'test', videoErrorCode: 1 });
-    //     const firstState = wrapper.state();
-    //     wrapper.setProps({ previewMediaUrl: 'http://www.test.com/test2.mov', mimeType: 'video/mp4' });
-    //     const secondState = wrapper.state();
-    //     expect(componentWillReceiveProps).toBeCalled();
-    //     expect(firstState).not.toEqual(secondState);
-    // });
-
-    // it('shouldnt update state on change of mimeType', () => {
-    //     const wrapper = setup({ previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp4' });
-    //     const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
-    //     wrapper.setState({ videoErrorMsg: 'test', videoErrorCode: 1 });
-    //     const firstState = wrapper.state();
-    //     wrapper.setProps({ previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp3' });
-    //     const secondState = wrapper.state();
-    //     expect(componentWillReceiveProps).toBeCalled();
-    //     expect(firstState).toEqual(secondState);
-    // });
-
-    // it('should render when scrolled to a loaded video', () => {
-    //     const wrapper = setup({ mimeType: 'video/mp4' });
-    //     wrapper.instance().videoLoaded();
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // });
-
-    // it('should render when video fails', () => {
-    //     const wrapper = setup({ mimeType: 'video/mp4' });
-    //     const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
-    //     wrapper.instance().videoFailed({ message: 'test failure', code: 12345 });
-    //     expect(scrollToPreview).toBeCalled();
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // });
-
-    // it('should render when video fails', () => {
-    //     const wrapper = setup({ mimeType: 'image/jpeg' });
-    //     const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
-    //     wrapper.instance().imageFailed();
-    //     expect(scrollToPreview).toBeCalled();
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // });
-
-    // it('should render when video fails with no error codes', () => {
-    //     const wrapper = setup({ mimeType: 'video/mp4' });
-    //     const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
-    //     wrapper.instance().videoFailed({});
-    //     expect(scrollToPreview).not.toBeCalled();
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // });
+    it('should render when image fails', () => {
+        setup({ mimeType: 'image/jpeg', imageError: true });
+        expect(scrollToPreview).toBeCalled();
+    });
 });
