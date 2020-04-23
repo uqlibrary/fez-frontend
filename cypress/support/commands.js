@@ -107,7 +107,7 @@ Cypress.Commands.add('setPartialDate', (selector, { day, month, year }) => {
     month &&
         (() => {
             cy.get(selector)
-                .find('#select-month')
+                .find('#month')
                 .click();
             cy.get('#menu-month')
                 .find(`li[role=option][data-value=${month - 1}]`)
