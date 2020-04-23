@@ -149,14 +149,20 @@ context('Audio admin edit', () => {
                     .click(); // date picker popup appears
             });
 
-        cy.get('[role="dialog"] > div:nth-child(2) > div')
+        cy.get('[role="presentation"] > div:nth-child(3) > div')
             .within(() => {
-                cy.get('div > div > h6')
+                cy.get('div > button:nth-child(1) > span > h6')
                     .should('have.text', '2099');
+            });
 
-                cy.get('> div:nth-child(2) > button:nth-child(1)')
-                    .should('have.text', 'Clear')
-                    .click(); // 'clear' button on date picker popup has been pressed
+        cy.get('[role="presentation"] > div:nth-child(1)')
+            .click();
+
+        cy.get('@filesTab')
+            .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
+            .within(() => {
+                cy.get('div > div > input')
+                    .clear();
             });
 
         cy.get('@filesTab')
