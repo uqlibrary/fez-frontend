@@ -131,7 +131,7 @@ export const AdminContainer = ({
         }
         return false;
     };
-    console.log(isMobileView);
+
     return (
         <React.Fragment>
             {createMode && showAddForm && (
@@ -140,7 +140,7 @@ export const AdminContainer = ({
             {!showAddForm && (
                 <TabbedContext.Provider
                     value={{
-                        tabbed: !isMobileView || tabbed,
+                        tabbed: isMobileView ? false : tabbed,
                         toggleTabbed: handleToggle,
                     }}
                 >
