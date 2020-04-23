@@ -96,11 +96,11 @@ describe('IssnRowItemTemplate', () => {
             setup({
                 item: '1234-1234',
                 actions: {
-                    getSherpaFromIssn: actionSherpa,
+                    // getSherpaFromIssn: actionSherpa,
                     getUlrichsFromIssn: actionUlrichs,
                 },
             });
-            expect(actionSherpa).toHaveBeenCalledWith('1234-1234');
+            // expect(actionSherpa).toHaveBeenCalledWith('1234-1234');
             expect(actionUlrichs).toHaveBeenCalledWith('1234-1234');
         });
 
@@ -132,34 +132,34 @@ describe('IssnRowItemTemplate', () => {
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
-        it('should attempt to get new link data after an edit', () => {
-            const wrapper = setup({
-                item: {
-                    key: '1234-1234',
-                    value: {
-                        sherpaRomeo: { link: '1234' },
-                        ulrichs: { link: '1234' },
-                    },
-                },
-                actions: {
-                    getSherpaFromIssn: actionSherpa,
-                    getUlrichsFromIssn: actionUlrichs,
-                },
-            });
-            wrapper.setProps({
-                item: {
-                    key: '1212-1212',
-                    value: {
-                        sherpaRomeo: { link: '1234' },
-                        ulrichs: { link: '1234' },
-                    },
-                },
-                sherpaRomeo: null,
-                ulrichs: null,
-            });
-            expect(actionSherpa).toHaveBeenCalledWith('1212-1212');
-            expect(actionUlrichs).toHaveBeenCalledWith('1212-1212');
-        });
+        // it('should attempt to get new link data after an edit', () => {
+        //     const wrapper = setup({
+        //         item: {
+        //             key: '1234-1234',
+        //             value: {
+        //                 sherpaRomeo: { link: '1234' },
+        //                 ulrichs: { link: '1234' },
+        //             },
+        //         },
+        //         actions: {
+        //             getSherpaFromIssn: actionSherpa,
+        //             getUlrichsFromIssn: actionUlrichs,
+        //         },
+        //     });
+        //     wrapper.setProps({
+        //         item: {
+        //             key: '1212-1212',
+        //             value: {
+        //                 sherpaRomeo: { link: '1234' },
+        //                 ulrichs: { link: '1234' },
+        //             },
+        //         },
+        //         sherpaRomeo: null,
+        //         ulrichs: null,
+        //     });
+        //     expect(actionSherpa).toHaveBeenCalledWith('1212-1212');
+        //     expect(actionUlrichs).toHaveBeenCalledWith('1212-1212');
+        // });
     });
 
     describe('helpers', () => {

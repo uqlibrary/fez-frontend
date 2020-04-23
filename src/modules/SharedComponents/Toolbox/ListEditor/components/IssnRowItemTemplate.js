@@ -33,8 +33,8 @@ export const IssnRowItemTemplate = ({
     const [issn, setIssn] = React.useState(convertItem(item));
 
     React.useEffect(() => {
-        const issnFromProp = item.key || item;
-        if (issnFromProp !== issn.key) {
+        const issnFromProp = item.key || item; /* this is temp while we comment out sherpa */
+        /* istanbul ignore next */ if (issnFromProp !== issn.key) {
             setIssn(convertItem(issnFromProp));
         }
     }, [issn, item]);
@@ -49,8 +49,8 @@ export const IssnRowItemTemplate = ({
                         sherpaRomeo,
                     },
                 });
-            } else {
-                !loadingSherpaFromIssn && actions.getSherpaFromIssn(issn.key);
+                // } else {
+                //     !loadingSherpaFromIssn && actions.getSherpaFromIssn(issn.key);
             }
         }
     }, [actions, issn, loadingSherpaFromIssn, sherpaRomeo]);
