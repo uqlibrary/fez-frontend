@@ -92,17 +92,17 @@ describe('IssnRowItemTemplate', () => {
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
-        it('should call actions as expected', () => {
-            setup({
-                item: '1234-1234',
-                actions: {
-                    // getSherpaFromIssn: actionSherpa,
-                    getUlrichsFromIssn: actionUlrichs,
-                },
-            });
-            // expect(actionSherpa).toHaveBeenCalledWith('1234-1234');
-            expect(actionUlrichs).toHaveBeenCalledWith('1234-1234');
-        });
+        // it('should call actions as expected', () => {
+        //     setup({
+        //         item: '1234-1234',
+        //         actions: {
+        //             getSherpaFromIssn: actionSherpa,
+        //             getUlrichsFromIssn: actionUlrichs,
+        //         },
+        //     });
+        //     expect(actionSherpa).toHaveBeenCalledWith('1234-1234');
+        //     expect(actionUlrichs).toHaveBeenCalledWith('1234-1234');
+        // });
 
         it('should init state as expected', () => {
             setup({

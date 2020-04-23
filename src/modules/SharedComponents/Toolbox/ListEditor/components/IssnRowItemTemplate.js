@@ -65,8 +65,8 @@ export const IssnRowItemTemplate = ({
                         ulrichs,
                     },
                 });
-            } else {
-                !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(issn.key);
+                // } else {
+                //     !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(issn.key);
             }
         }
     }, [actions, issn, loadingUlrichsFromIssn, ulrichs]);
