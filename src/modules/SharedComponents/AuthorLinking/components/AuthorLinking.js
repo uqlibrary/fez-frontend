@@ -175,8 +175,7 @@ export class AuthorLinking extends PureComponent {
      * @returns {[*]}
      */
     prepareOutput = ({ searchKey: { order } }, { selectedAuthor }, list) => {
-        const index = selectedAuthor[order] - 1;
-
+        const index = list.findIndex(data => data[order] === selectedAuthor[order]);
         return [...list.slice(0, index), selectedAuthor, ...list.slice(index + 1)];
     };
 
