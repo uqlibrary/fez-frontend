@@ -165,16 +165,6 @@ export default class CreativeWorkForm extends Component {
                                         validate={[validation.required]}
                                     />
                                 </Grid>
-                                <Grid item xs={12} sm={12}>
-                                    <Field
-                                        component={TextField}
-                                        disabled={this.props.submitting}
-                                        name="fez_record_search_key_project_name.rek_project_name"
-                                        type="text"
-                                        fullWidth
-                                        {...txt.information.fieldLabels.projectName}
-                                    />
-                                </Grid>
                                 <Grid item xs={12} sm={4}>
                                     <Field
                                         component={TextField}

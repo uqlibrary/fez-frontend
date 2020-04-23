@@ -364,21 +364,6 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
-          sm={12}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Project name"
-            name="fez_record_search_key_project_name.rek_project_name"
-            placeholder="Title of project"
-            type="text"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
           sm={4}
           xs={12}
         >
