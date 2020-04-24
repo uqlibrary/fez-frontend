@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IssnRowItemTemplate component should render a value 1`] = `
+exports[`IssnRowItemTemplate renderer should render a value 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
@@ -30,21 +30,19 @@ exports[`IssnRowItemTemplate component should render a value 1`] = `
 </Fragment>
 `;
 
-exports[`IssnRowItemTemplate component should render default view 1`] = `
+exports[`IssnRowItemTemplate renderer should render default view 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
     variant="body2"
   >
-    <span>
-      <Component />
-    </span>
+    <span />
      
   </WithStyles(Typography)>
 </Fragment>
 `;
 
-exports[`IssnRowItemTemplate component should render link data from API 1`] = `
+exports[`IssnRowItemTemplate renderer should render link data from API 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
@@ -74,7 +72,7 @@ exports[`IssnRowItemTemplate component should render link data from API 1`] = `
 </Fragment>
 `;
 
-exports[`IssnRowItemTemplate component should skip missing ulrichs or sherparomeo 1`] = `
+exports[`IssnRowItemTemplate renderer should skip missing ulrichs or sherparomeo 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"

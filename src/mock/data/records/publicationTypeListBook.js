@@ -633,14 +633,14 @@ export default {
                     "srm_id": 69421,
                     "srm_issn": "0302-9743",
                     "srm_journal_name": "Lecture Notes in Artificial Intelligence",
-                    "srm_colour": "green"
+                    "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/33095"
                 },
                 "fez_ulrichs": {
                     "ulr_issn": "0302-9743",
                     "ulr_title_id": "122527",
                     "ulr_title": "Lecture Notes in Computer Science"
                 },
-                "rek_issn_lookup": "green"
+                "rek_issn_lookup": ""
                 },
                 {
                 "rek_issn_id": 5536533,
@@ -670,7 +670,7 @@ export default {
                     "srm_id": 69424,
                     "srm_issn": "1611-3349",
                     "srm_journal_name": "Not found in Sherpa Romeo",
-                    "srm_colour": "Not found in Sherpa Romeo"
+                    "srm_journal_link": "http://example.com"
                 },
                 "fez_ulrichs": {
                     "ulr_issn": "1611-3349",

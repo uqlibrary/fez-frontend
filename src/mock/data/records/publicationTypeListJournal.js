@@ -249,9 +249,9 @@ export default {
                     "srm_id": 32188,
                     "srm_issn": "0312-2417",
                     "srm_journal_name": "Australian Archaeology",
-                    "srm_colour": "gray"
+                    "srm_journal_link": "http://example.com"
                 },
-                "rek_issn_lookup": "gray"
+                "rek_issn_lookup": ""
             }],
             "fez_record_search_key_issue_number": {
                 "rek_issue_number_id": 4454478,
@@ -557,9 +557,9 @@ export default {
                     "srm_id": 3305225,
                     "srm_issn": "0179-6437",
                     "srm_journal_name": "Zeitschrift f\u00fcr Personalforschung",
-                    "srm_colour": "blue"
+                    "srm_journal_link": "http://example.com"
                 },
-                "rek_issn_lookup": "blue"
+                "rek_issn_lookup": ""
             }, {
                 "rek_issn_id": 5177493,
                 "rek_issn_pid": "UQ:320299",
@@ -571,9 +571,9 @@ export default {
                     "srm_id": 4211829,
                     "srm_issn": "1862-0000",
                     "srm_journal_name": "Zeitschrift f\u00fcr Personalforschung",
-                    "srm_colour": "blue"
+                    "srm_journal_link": "http://example.com"
                 },
-                "rek_issn_lookup": "blue"
+                "rek_issn_lookup": ""
             }],
             "fez_record_search_key_issue_number": {
                 "rek_issue_number_id": 4454478,

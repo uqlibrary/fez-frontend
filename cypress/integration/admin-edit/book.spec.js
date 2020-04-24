@@ -1,4 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListBook';
+import { sherpaRomeo as sherpaMocks } from '../../../src/mock/data/sherpaRomeo';
 
 context('Book admin edit', () => {
     const record = recordList.data[0];
@@ -68,7 +69,6 @@ context('Book admin edit', () => {
 
     it('should render ISSN as expected', () => {
         const record = recordList.data[1];
-        const sherpaLinkPrefix = 'http://www.sherpa.ac.uk/romeo/search.php?issn=';
         const ulrichsLinkPrefix =
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
 
@@ -79,6 +79,9 @@ context('Book admin edit', () => {
             .as('bibliographicTab');
 
         const checkIssnLinks = (container, issn) => {
+            const sherpaLink =
+                (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
+                sherpaMocks[0].srm_journal_link;
             cy.wrap(container)
                 .find('span > span')
                 .should('contain', issn)
@@ -89,8 +92,18 @@ context('Book admin edit', () => {
                 .as('issnLinks')
                 // ...before finding 'nth'
                 .eq(0)
-                .should('have.attr', 'href', `${sherpaLinkPrefix}${issn}`);
-            const ulrichsID = issn === '0302-9743' ? '122527' : issn.replace('-', '');
+                .should('have.attr', 'href', sherpaLink);
+            let ulrichsID = issn.replace('-', '');
+            switch (issn) {
+                case '0302-9743':
+                    ulrichsID = '122527';
+                    break;
+                case '1611-3349':
+                    ulrichsID = '339301';
+                    break;
+                default:
+                    break;
+            }
             cy.get('@issnLinks')
                 .eq(1)
                 .should('have.attr', 'href', `${ulrichsLinkPrefix}${ulrichsID}`);
@@ -127,7 +140,7 @@ context('Book admin edit', () => {
                         cy.get('button[aria-label="Edit this item"]')
                             .click();
                     });
-                cy.log('Edit issn to one with valid data');
+                cy.log('Edit issn to a different one with valid data');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('{backspace}0{enter}');
