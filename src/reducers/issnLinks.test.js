@@ -10,8 +10,6 @@ import {
 import issnLinksReducer from './issnLinks';
 
 const initialState = {
-    loadingSherpaFromIssn: false,
-    loadingUlrichsFromIssn: false,
     sherpaLoadFromIssnError: false,
     sherpaRomeo: {},
     ulrichs: {},
@@ -22,21 +20,31 @@ describe('issnLinksReducer reducer', () => {
     it('sets sherpa loading state', () => {
         const previousState = {
             ...initialState,
-            sherpaRomeo: { test1: { srm_issn: 'test1' } },
         };
-        const expected = { ...previousState, loadingSherpaFromIssn: true };
-        const test = issnLinksReducer(previousState, { type: ISSN_SHERPA_LOADING });
+        const expected = {
+            ...previousState,
+            sherpaRomeo: {
+                test1: {},
+            },
+        };
+        const test = issnLinksReducer(previousState, { type: ISSN_SHERPA_LOADING, payload: 'test1' });
         expect(test).toEqual(expected);
     });
 
     it('sets sherpa loaded state on first load', () => {
         const previousState = {
             ...initialState,
+            sherpaRomeo: {
+                test1: {},
+            },
         };
-        const expected = { ...previousState, sherpaRomeo: { test1: { srm_issn: 'test1' } } };
+        const expected = {
+            ...previousState,
+            sherpaRomeo: { test1: { srm_issn: 'test1', srm_journal_link: 'https://example.com/1' } },
+        };
         const test = issnLinksReducer(previousState, {
             type: ISSN_SHERPA_LOADED,
-            payload: [{ srm_issn: 'test1' }],
+            payload: [{ srm_issn: 'test1', srm_journal_link: 'https://example.com/1' }],
         });
         expect(test).toEqual(expected);
     });
@@ -44,15 +52,21 @@ describe('issnLinksReducer reducer', () => {
     it('sets sherpa loaded state on subsequent load', () => {
         const previousState = {
             ...initialState,
-            sherpaRomeo: { test1: { srm_issn: 'test1' } },
+            sherpaRomeo: {
+                test1: { srm_issn: 'test1', srm_journal_link: 'https://example.com/1' },
+                test2: {},
+            },
         };
         const expected = {
             ...previousState,
-            sherpaRomeo: { test1: { srm_issn: 'test1' }, test2: { srm_issn: 'test2' } },
+            sherpaRomeo: {
+                ...previousState.sherpaRomeo,
+                test2: { srm_issn: 'test2', srm_journal_link: 'https://example.com/2' },
+            },
         };
         const test = issnLinksReducer(previousState, {
             type: ISSN_SHERPA_LOADED,
-            payload: [{ srm_issn: 'test2' }],
+            payload: [{ srm_issn: 'test2', srm_journal_link: 'https://example.com/2' }],
         });
         expect(test).toEqual(expected);
     });
@@ -61,10 +75,18 @@ describe('issnLinksReducer reducer', () => {
         const previousState = {
             ...initialState,
         };
-        const expected = { ...previousState, sherpaLoadFromIssnError: 'error' };
+        const expected = {
+            ...previousState,
+            sherpaLoadFromIssnError: {
+                test1: 'error',
+            },
+        };
         const test = issnLinksReducer(previousState, {
             type: ISSN_SHERPA_LOAD_FAILED,
-            payload: 'error',
+            payload: {
+                message: 'error',
+                issn: 'test1',
+            },
         });
         expect(test).toEqual(expected);
     });
@@ -72,21 +94,21 @@ describe('issnLinksReducer reducer', () => {
     it('sets ulrichs loading state', () => {
         const previousState = {
             ...initialState,
-            ulrichs: { test1: { ulr_issn: 'test1' } },
         };
-        const expected = { ...previousState, loadingUlrichsFromIssn: true };
-        const test = issnLinksReducer(previousState, { type: ISSN_ULRICHS_LOADING });
+        const expected = { ...previousState, ulrichs: { test1: {} } };
+        const test = issnLinksReducer(previousState, { type: ISSN_ULRICHS_LOADING, payload: 'test1' });
         expect(test).toEqual(expected);
     });
 
     it('sets ulrichs loaded state on first load', () => {
         const previousState = {
             ...initialState,
+            ulrichs: { test1: {} },
         };
-        const expected = { ...previousState, ulrichs: { test1: { ulr_issn: 'test1' } } };
+        const expected = { ...previousState, ulrichs: { test1: { ulr_issn: 'test1', ulr_title_id: '1' } } };
         const test = issnLinksReducer(previousState, {
             type: ISSN_ULRICHS_LOADED,
-            payload: [{ ulr_issn: 'test1' }],
+            payload: [{ ulr_issn: 'test1', ulr_title_id: '1' }],
         });
         expect(test).toEqual(expected);
     });
@@ -94,15 +116,15 @@ describe('issnLinksReducer reducer', () => {
     it('sets ulrichs loaded state on subsequent load', () => {
         const previousState = {
             ...initialState,
-            ulrichs: { test1: { ulr_issn: 'test1' } },
+            ulrichs: { test1: { ulr_issn: 'test1', ulr_title_id: '1' }, test2: {} },
         };
         const expected = {
             ...previousState,
-            ulrichs: { test1: { ulr_issn: 'test1' }, test2: { ulr_issn: 'test2' } },
+            ulrichs: { ...previousState.ulrichs, test2: { ulr_issn: 'test2', ulr_title_id: '2' } },
         };
         const test = issnLinksReducer(previousState, {
             type: ISSN_ULRICHS_LOADED,
-            payload: [{ ulr_issn: 'test2' }],
+            payload: [{ ulr_issn: 'test2', ulr_title_id: '2' }],
         });
         expect(test).toEqual(expected);
     });
@@ -110,11 +132,20 @@ describe('issnLinksReducer reducer', () => {
     it('sets ulrichs load failed state', () => {
         const previousState = {
             ...initialState,
+            ulrichs: { test1: {} },
         };
-        const expected = { ...previousState, ulrichsLoadFromIssnError: 'error' };
+        const expected = {
+            ...previousState,
+            ulrichsLoadFromIssnError: {
+                test1: 'error',
+            },
+        };
         const test = issnLinksReducer(previousState, {
             type: ISSN_ULRICHS_LOAD_FAILED,
-            payload: 'error',
+            payload: {
+                issn: 'test1',
+                message: 'error',
+            },
         });
         expect(test).toEqual(expected);
     });

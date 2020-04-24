@@ -695,7 +695,7 @@ exports[`ListEditor tests should add item and set state 2`] = `
       }
     }
     itemTemplate={[Function]}
-    key="0"
+    key="test"
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1103,7 +1103,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
       }
     }
     itemTemplate={[Function]}
-    key="0"
+    key="1234-1234"
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
@@ -1126,7 +1126,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
       }
     }
     itemTemplate={[Function]}
-    key="1"
+    key="1234-2222"
     onDelete={[Function]}
     onEdit={[Function]}
     onMoveDown={[Function]}
