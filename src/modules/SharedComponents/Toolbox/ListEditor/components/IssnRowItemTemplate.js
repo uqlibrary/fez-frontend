@@ -89,10 +89,8 @@ export const mapStateToProps = (state, props) => {
     const issn = item.key || item;
     const { sherpaLoadFromIssnError, sherpaRomeo, ulrichs, ulrichsLoadFromIssnError } = state.get('issnLinksReducer');
 
-    const {
-        recordToView: { fez_record_search_key_issn: fsrkIssn },
-    } = state.get('viewRecordReducer');
-
+    const currentRecord = state.get('viewRecordReducer').recordToView;
+    const fsrkIssn = (!!currentRecord && currentRecord.fez_record_search_key_issn) || [];
     const issnEntry = fsrkIssn.find(entry => entry.rek_issn === issn);
     const hasPreload = !!issnEntry;
 
