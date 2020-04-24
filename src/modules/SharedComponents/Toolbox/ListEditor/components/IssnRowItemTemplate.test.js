@@ -413,6 +413,27 @@ describe('IssnRowItemTemplate', () => {
                 loadingSherpaFromIssn: false,
                 loadingUlrichsFromIssn: false,
             });
+
+            // For a new record
+            const state6 = {
+                get: key => (key === 'issnLinksReducer' ? stateObj : {}),
+            };
+            expect(mapStateToProps(state6, props)).toEqual({
+                hasPreload: false,
+                item: {
+                    key: props.item,
+                    value: {
+                        sherpaRomeo: {
+                            link: '',
+                        },
+                        ulrichs: {
+                            title: '',
+                        },
+                    },
+                },
+                loadingSherpaFromIssn: false,
+                loadingUlrichsFromIssn: false,
+            });
         });
     });
 });
