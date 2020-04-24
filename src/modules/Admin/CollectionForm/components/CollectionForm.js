@@ -167,6 +167,7 @@ export default class CollectionForm extends Component {
                                                         value: 'rek_keywords',
                                                         order: 'rek_keywords_order',
                                                     }}
+                                                    listEditorId="keywords"
                                                     locale={txt.formLabels.keywords.field}
                                                     disabled={this.props.submitting}
                                                 />

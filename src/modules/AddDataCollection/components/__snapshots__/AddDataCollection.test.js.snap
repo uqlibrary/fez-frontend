@@ -621,6 +621,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -676,6 +677,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -745,6 +747,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -814,6 +817,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -883,6 +887,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="keywords"
                   locale={
                     Object {
                       "form": Object {
@@ -1869,6 +1874,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -1924,6 +1930,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -1993,6 +2000,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -2062,6 +2070,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -2131,6 +2140,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="keywords"
                   locale={
                     Object {
                       "form": Object {
@@ -3117,6 +3127,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -3172,6 +3183,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -3241,6 +3253,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -3310,6 +3323,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -3379,6 +3393,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="keywords"
                   locale={
                     Object {
                       "form": Object {
@@ -4365,6 +4380,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -4420,6 +4436,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -4489,6 +4506,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -4558,6 +4576,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -4627,6 +4646,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="keywords"
                   locale={
                     Object {
                       "form": Object {

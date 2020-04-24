@@ -313,6 +313,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -393,6 +394,7 @@ exports[`ResearchReportForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -849,6 +851,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -929,6 +932,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {

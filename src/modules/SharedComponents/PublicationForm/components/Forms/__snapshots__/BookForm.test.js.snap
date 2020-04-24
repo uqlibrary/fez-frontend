@@ -367,6 +367,7 @@ exports[`BookForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -447,6 +448,7 @@ exports[`BookForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -716,6 +718,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -796,6 +799,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -1278,6 +1282,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -1358,6 +1363,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -1968,6 +1974,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -2048,6 +2055,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -2414,6 +2422,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -2494,6 +2503,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -2976,6 +2986,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -3056,6 +3067,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {

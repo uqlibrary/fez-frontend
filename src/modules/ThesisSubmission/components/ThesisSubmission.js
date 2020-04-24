@@ -260,6 +260,7 @@ export default class ThesisSubmission extends Component {
                                             value: 'rek_keywords',
                                             order: 'rek_keywords_order',
                                         }}
+                                        listEditorId="keywords"
                                         locale={locale.components.keywordsForm.field}
                                         disabled={this.props.submitting}
                                     />

@@ -123,6 +123,7 @@ export default class JournalArticleForm extends Component {
                             maxCount={5}
                             locale={locale.components.issnForm.field}
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
+                            listEditorId="issn"
                             disabled={this.props.submitting}
                         />
                     </StandardCard>

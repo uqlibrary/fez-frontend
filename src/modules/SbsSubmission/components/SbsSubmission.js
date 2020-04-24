@@ -257,6 +257,7 @@ export default class SbsSubmission extends Component {
                                         maxCount={10}
                                         searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                         locale={locale.components.keywordsForm.field}
+                                        listEditorId="keywords"
                                         disabled={this.props.submitting}
                                     />
                                 </StandardCard>

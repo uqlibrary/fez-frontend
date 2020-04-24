@@ -231,6 +231,7 @@ exports[`JournalArticleForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {

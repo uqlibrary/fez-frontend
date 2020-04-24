@@ -314,6 +314,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -394,6 +395,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {

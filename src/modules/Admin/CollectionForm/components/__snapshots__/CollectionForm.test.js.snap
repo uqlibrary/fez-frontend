@@ -368,6 +368,7 @@ exports[`Collection form should render the full form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  listEditorId="keywords"
                   locale={
                     Object {
                       "form": Object {

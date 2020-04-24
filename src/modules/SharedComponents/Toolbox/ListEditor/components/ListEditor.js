@@ -33,6 +33,7 @@ export default class ListEditor extends Component {
         scrollListHeight: PropTypes.number,
         canEdit: PropTypes.bool,
         getItemSelectedToEdit: PropTypes.func,
+        listEditorId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
@@ -204,13 +205,6 @@ export default class ListEditor extends Component {
             ).replace(/\s+/g, '-');
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
-                form={
-                    (this.props.locale &&
-                        this.props.locale.form &&
-                        this.props.locale.form.locale &&
-                        this.props.locale.form.locale.inputFieldLabel) ||
-                    'NoLabel'
-                }
                 key={index}
                 index={index}
                 item={item}
@@ -225,10 +219,11 @@ export default class ListEditor extends Component {
                 disabled={this.props.disabled}
                 itemTemplate={this.props.rowItemTemplate}
                 canEdit={this.props.canEdit}
+                listRowId={`${this.props.listEditorId}-list-editor-row`}
             />
         ));
         return (
-            <div className={`${this.props.className} ${componentID}`} id={componentID}>
+            <div className={`${this.props.className} ${componentID}`} id={`${this.props.listEditorId}-list-editor`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={this.state.itemIndexSelectedToEdit + 1 || 'link-info-form'}
@@ -263,7 +258,7 @@ export default class ListEditor extends Component {
                 {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (
                     <div
                         className={'ListEditor-scrollable-list'}
-                        id={`${componentID}-List`}
+                        id={`${this.props.listEditorId}-list`}
                         style={{
                             width: '100%',
                             height: this.props.scrollListHeight,
@@ -274,7 +269,7 @@ export default class ListEditor extends Component {
                         {renderListsRows}
                     </div>
                 ) : (
-                    <div id={`${componentID}-List`}>{renderListsRows}</div>
+                    <div id={`${this.props.listEditorId}-list`}>{renderListsRows}</div>
                 )}
             </div>
         );

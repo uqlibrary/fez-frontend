@@ -28,7 +28,6 @@ export const ListRow = ({
     canMoveDown,
     canMoveUp,
     disabled,
-    form,
     hideReorder,
     index,
     item,
@@ -38,10 +37,10 @@ export const ListRow = ({
     onEdit,
     onMoveDown,
     onMoveUp,
+    listRowId,
 }) => {
     const classes = useStyles();
     const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation, editHint, editButtonId } = locale;
-    const componentID = form.replace(/\s+/g, '');
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const deleteRecord = useCallback(() => {
@@ -65,12 +64,7 @@ export const ListRow = ({
     }, []);
 
     return (
-        <div
-            style={{ flexGrow: 1, padding: 8 }}
-            className={`ListRow-${componentID} ListRow-${componentID}-${(item.value && item.value.replace(' ', '-')) ||
-                item}`}
-            id={`ListRow-${componentID}-${(item.value && item.value.replace(' ', '-')) || item}`}
-        >
+        <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}-${index}`}>
             <ConfirmationBox
                 onAction={deleteRecord}
                 onClose={hideConfirmation}
@@ -155,16 +149,16 @@ ListRow.propTypes = {
     canMoveDown: PropTypes.bool,
     canMoveUp: PropTypes.bool,
     disabled: PropTypes.bool,
-    form: PropTypes.string,
     hideReorder: PropTypes.bool,
     index: PropTypes.number.isRequired,
     item: PropTypes.any.isRequired,
-    itemTemplate: PropTypes.func,
+    itemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     locale: PropTypes.object,
     onDelete: PropTypes.func,
     onEdit: PropTypes.func,
     onMoveDown: PropTypes.func,
     onMoveUp: PropTypes.func,
+    listRowId: PropTypes.string.isRequired,
 };
 
 ListRow.defaultProps = {

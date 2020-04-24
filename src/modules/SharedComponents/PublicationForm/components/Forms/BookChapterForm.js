@@ -166,6 +166,7 @@ export default class BookChapterForm extends Component {
                             isValid={validation.isValidIsbn}
                             maxCount={5}
                             searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
+                            listEditorId="isbn"
                             locale={locale.components.isbnForm.field}
                             disabled={this.props.submitting}
                         />
@@ -181,6 +182,7 @@ export default class BookChapterForm extends Component {
                             name="fez_record_search_key_issn"
                             maxCount={5}
                             locale={locale.components.issnForm.field}
+                            listEditorId="issn"
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             disabled={this.props.submitting}
                         />

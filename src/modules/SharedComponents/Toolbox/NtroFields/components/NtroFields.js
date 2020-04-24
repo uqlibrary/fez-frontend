@@ -302,6 +302,7 @@ export default class NtroFields extends React.PureComponent {
                                             isValid={validation.isValidIsmn}
                                             maxCount={5}
                                             locale={{ ...componentLocale.components.ismnForm.field }}
+                                            listEditorId="ismn"
                                             searchKey={{ value: 'rek_ismn', order: 'rek_ismn_order' }}
                                             disabled={this.props.submitting}
                                             transformFunction={this.transformIsmn}
@@ -318,6 +319,7 @@ export default class NtroFields extends React.PureComponent {
                                             maxCount={5}
                                             searchKey={{ value: 'rek_isrc', order: 'rek_isrc_order' }}
                                             locale={{ ...componentLocale.components.isrcForm.field }}
+                                            listEditorId="isrc"
                                             disabled={this.props.submitting}
                                             inputNormalizer={this.normalizeIsrc}
                                             transformFunction={this.transformIsrc}

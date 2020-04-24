@@ -351,6 +351,7 @@ exports[`BookChapterForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -431,6 +432,7 @@ exports[`BookChapterForm renders  component 1`] = `
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {
@@ -959,6 +961,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="isbn"
         locale={
           Object {
             "form": Object {
@@ -1039,6 +1042,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
         component={[Function]}
         disabled={false}
         isValid={[Function]}
+        listEditorId="issn"
         locale={
           Object {
             "form": Object {

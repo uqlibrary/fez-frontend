@@ -144,6 +144,7 @@ export default class CommunityForm extends Component {
                                                     maxCount={10}
                                                     maxInputLength={111}
                                                     searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
+                                                    listEditorId="keywords"
                                                     locale={txt.formLabels.keywords.field}
                                                     disabled={this.props.submitting}
                                                 />

@@ -339,6 +339,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12}>
                                             <Field
                                                 component={ListEditorField}
+                                                listEditorId="grant-agency"
                                                 name="fez_record_search_key_grant_agency"
                                                 maxCount={10}
                                                 searchKey={{
@@ -352,6 +353,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12}>
                                             <Field
                                                 component={ListEditorField}
+                                                listEditorId="grant-id"
                                                 name="fez_record_search_key_grant_id"
                                                 maxCount={10}
                                                 searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
@@ -368,6 +370,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12}>
                                             <Field
                                                 component={ListEditorField}
+                                                listEditorId="type-of-data"
                                                 name="fez_record_search_key_type_of_data"
                                                 maxCount={10}
                                                 searchKey={{
@@ -384,6 +387,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12}>
                                             <Field
                                                 component={ListEditorField}
+                                                listEditorId="software-required"
                                                 name="fez_record_search_key_software_required"
                                                 maxCount={10}
                                                 searchKey={{
@@ -400,6 +404,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12}>
                                             <Field
                                                 component={ListEditorField}
+                                                listEditorId="keywords"
                                                 name="fez_record_search_key_keywords"
                                                 maxCount={10}
                                                 searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
