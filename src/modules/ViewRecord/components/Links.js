@@ -101,7 +101,9 @@ export class LinksClass extends PureComponent {
     getRDMLinkOAStatus = record => {
         const currentDate = moment().format();
         const openAccessStatusId = record.fez_record_search_key_access_conditions &&
-            record.fez_record_search_key_access_conditions.rek_access_conditions || null;
+            record.fez_record_search_key_access_conditions.rek_access_conditions
+            ? parseInt(record.fez_record_search_key_access_conditions.rek_access_conditions, 10)
+            : null;
         const embargoDate = openAccessStatusId === openAccessConfig.DATASET_OPEN_ACCESS_ID &&
             record.fez_record_search_key_embargo_to &&
             record.fez_record_search_key_embargo_to.rek_embargo_to &&
