@@ -209,7 +209,7 @@ export default class ListEditor extends Component {
                         this.props.locale.form.locale.inputFieldLabel) ||
                     'NoLabel'
                 }
-                key={index}
+                key={(!!item && item.key) || index}
                 index={index}
                 item={item}
                 canMoveDown={index !== this.state.itemList.length - 1}

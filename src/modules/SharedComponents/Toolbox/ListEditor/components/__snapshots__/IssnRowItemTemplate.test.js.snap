@@ -36,9 +36,7 @@ exports[`IssnRowItemTemplate renderer should render default view 1`] = `
     component="span"
     variant="body2"
   >
-    <span>
-      <Component />
-    </span>
+    <span />
      
   </WithStyles(Typography)>
 </Fragment>
