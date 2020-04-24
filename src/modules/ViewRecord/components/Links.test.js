@@ -264,4 +264,66 @@ describe('Component Links ', () => {
         };
         expect(wrapper.instance().getPublicationLink(link2, 1)).toMatchSnapshot();
     });
+
+    it('should render no oa icon and embargo dates for embargoed access rdm link', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_access_conditions: {
+                    rek_access_conditions: openAccessConfig.DATASET_OPEN_ACCESS_ID,
+                },
+                fez_record_search_key_embargo_to: {
+                    rek_embargo_to: '2100-01-01',
+                },
+            },
+        });
+        const link1 = {
+            rek_link: 'https://rdm.uq.edu.au/files/example123',
+        };
+        expect(wrapper.instance().getPublicationLink(link1, 0)).toMatchSnapshot();
+    });
+
+    it('should render no oa icon for mediated access rdm link', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_access_conditions: {
+                    rek_access_conditions: openAccessConfig.DATASET_MEDIATED_ACCESS_ID,
+                },
+            },
+        });
+        const link1 = {
+            rek_link: 'https://rdm.uq.edu.au/files/example123',
+        };
+        expect(wrapper.instance().getPublicationLink(link1, 0)).toMatchSnapshot();
+    });
+
+    it('should render oa icon for open access rdm link', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_access_conditions: {
+                    rek_access_conditions: openAccessConfig.DATASET_OPEN_ACCESS_ID,
+                },
+            },
+        });
+        const link1 = {
+            rek_link: 'https://rdm.uq.edu.au/files/example123',
+        };
+        expect(wrapper.instance().getPublicationLink(link1, 0)).toMatchSnapshot();
+    });
+
+    it('should render oa icon for past embargo date open access rdm link', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_access_conditions: {
+                    rek_access_conditions: openAccessConfig.DATASET_OPEN_ACCESS_ID,
+                },
+                fez_record_search_key_embargo_to: {
+                    rek_embargo_to: '1900-01-01',
+                },
+            },
+        });
+        const link1 = {
+            rek_link: 'https://rdm.uq.edu.au/files/example123',
+        };
+        expect(wrapper.instance().getPublicationLink(link1, 0)).toMatchSnapshot();
+    });
 });
