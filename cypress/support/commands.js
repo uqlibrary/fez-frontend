@@ -74,7 +74,7 @@ Cypress.Commands.add('checkPartialDate', (selector, { day, monthName, year }) =>
     monthName &&
         cy
             .get(selector)
-            .find('#select-month')
+            .find('#month')
             .should('have.text', monthName);
     year &&
         cy

@@ -21,6 +21,7 @@ const mapStateToProps = (state, props) => {
         getOptionLabel: () => '',
         filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] }),
         OptionTemplate: FoROptionTemplate,
+        id: 'field-of-research-field-input',
     };
 };
 
@@ -49,6 +50,7 @@ const filterFoRmapStateToProps = (state, props) => {
             });
         },
         OptionTemplate: FoROptionTemplate,
+        id: 'filtered-field-of-research-input',
     };
 };
 

@@ -15,6 +15,7 @@ const mapStateToProps = (state, props) => {
         getOptionLabel: item => (!!item && String(item.value)) || '',
         itemsList,
         itemsLoading,
+        id: 'series-field-input',
     };
 };
 

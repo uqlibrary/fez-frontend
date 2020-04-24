@@ -126,7 +126,7 @@ context('Conference Paper admin edit', () => {
                         record.fez_record_search_key_translated_journal_name.rek_translated_journal_name,
                     );
 
-                cy.get('#Series-input')
+                cy.get('#series-field-input')
                     .should('have.value', record.fez_record_search_key_series.rek_series);
 
                 cy.get('#Articlenumber')

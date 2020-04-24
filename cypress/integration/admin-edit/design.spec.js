@@ -59,13 +59,9 @@ context('Design admin edit', () => {
                     .should('have.length', 2);
             });
 
-        cy.get('@bibliographicCard')
-            .find('#Copyrightnotice')
-            .clear()
-            .parent()
-            .parent()
-            .parent()
-            .children('p')
+        cy.get('#Copyrightnotice')
+            .clear();
+        cy.get('#Copyrightnotice-helper-text')
             .should('have.text', 'This field is required');
 
         cy.get('@errorList')
