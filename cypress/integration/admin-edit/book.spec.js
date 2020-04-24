@@ -93,7 +93,17 @@ context('Book admin edit', () => {
                 // ...before finding 'nth'
                 .eq(0)
                 .should('have.attr', 'href', sherpaLink);
-            const ulrichsID = issn === '0302-9743' ? '122527' : issn.replace('-', '');
+            let ulrichsID = issn.replace('-', '');
+            switch (issn) {
+                case '0302-9743':
+                    ulrichsID = '122527';
+                    break;
+                case '1611-3349':
+                    ulrichsID = '339301';
+                    break;
+                default:
+                    break;
+            }
             cy.get('@issnLinks')
                 .eq(1)
                 .should('have.attr', 'href', `${ulrichsLinkPrefix}${ulrichsID}`);
@@ -130,7 +140,7 @@ context('Book admin edit', () => {
                         cy.get('button[aria-label="Edit this item"]')
                             .click();
                     });
-                cy.log('Edit issn to one with valid data');
+                cy.log('Edit issn to a different one with valid data');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('{backspace}0{enter}');

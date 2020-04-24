@@ -7,94 +7,42 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnRowItemTemplate = ({
-    actions,
-    hasPreload,
-    item,
-    loadingSherpaFromIssn,
-    loadingUlrichsFromIssn,
-    sherpaRomeo,
-    ulrichs,
-}) => {
-    const convertItem = theItem =>
-        !!theItem.key
-            ? theItem
-            : {
-                key: theItem,
-                value: {
-                    sherpaRomeo: {
-                        link: '',
-                    },
-                    ulrichs: {
-                        link: '',
-                    },
-                },
-            };
-
-    const [issn, setIssn] = React.useState(convertItem(item));
+export const IssnRowItemTemplate = ({ actions, hasPreload, item, loadingSherpaFromIssn, loadingUlrichsFromIssn }) => {
+    React.useEffect(() => {
+        if (!item.value || !item.value.sherpaRomeo || !item.value.sherpaRomeo.link) {
+            !hasPreload && !loadingSherpaFromIssn && actions.getSherpaFromIssn(item.key);
+        }
+    }, [actions, hasPreload, item, loadingSherpaFromIssn]);
 
     React.useEffect(() => {
-        const issnFromProp = item.key || item;
-        if (issnFromProp !== issn.key) {
-            setIssn(convertItem(issnFromProp));
+        if (!item.value || !item.value.ulrichs || !item.value.ulrichs.link) {
+            !hasPreload && !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(item.key);
         }
-    }, [issn, item]);
-
-    React.useEffect(() => {
-        if (!issn.value || !issn.value.sherpaRomeo || !issn.value.sherpaRomeo.link) {
-            if (sherpaRomeo) {
-                setIssn({
-                    ...issn,
-                    value: {
-                        ...issn.value,
-                        sherpaRomeo,
-                    },
-                });
-            } else {
-                !hasPreload && !loadingSherpaFromIssn && actions.getSherpaFromIssn(issn.key);
-            }
-        }
-    }, [actions, hasPreload, issn, loadingSherpaFromIssn, sherpaRomeo]);
-
-    React.useEffect(() => {
-        if (!issn.value || !issn.value.ulrichs || !issn.value.ulrichs.link) {
-            if (ulrichs) {
-                setIssn({
-                    ...issn,
-                    value: {
-                        ...issn.value,
-                        ulrichs,
-                    },
-                });
-            } else {
-                !hasPreload && !loadingUlrichsFromIssn && actions.getUlrichsFromIssn(issn.key);
-            }
-        }
-    }, [actions, hasPreload, issn, loadingUlrichsFromIssn, ulrichs]);
+    }, [actions, hasPreload, item, loadingUlrichsFromIssn]);
 
     return (
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
-                <span>{issn.key}</span>{' '}
-                {!!issn.value && !!issn.value.sherpaRomeo && !!issn.value.sherpaRomeo.link && (
+                <span>{item.key}</span>{' '}
+                {!!item.value && !!item.value.sherpaRomeo && !!item.value.sherpaRomeo.link && (
                     <ExternalLink
-                        href={issn.value.sherpaRomeo.link}
+                        href={item.value.sherpaRomeo.link}
                         aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
                         title={globalLocale.global.sherpaRomeoLink.title}
                     >
                         {globalLocale.global.sherpaRomeoLink.externalLinktext}
                     </ExternalLink>
                 )}
-                {!!issn.value &&
-                    !!issn.value.sherpaRomeo &&
-                    !!issn.value.sherpaRomeo.link &&
-                    !!issn.value.ulrichs &&
-                    !!issn.value.ulrichs.link && <span> &nbsp;</span>}
-                {!!issn.value && !!issn.value.ulrichs && !!issn.value.ulrichs.link && (
+                {!!item.value &&
+                    !!item.value.sherpaRomeo &&
+                    !!item.value.sherpaRomeo.link &&
+                    !!item.value.ulrichs &&
+                    !!item.value.ulrichs.link && <span> &nbsp;</span>}
+                {!!item.value && !!item.value.ulrichs && !!item.value.ulrichs.link && (
                     <ExternalLink
-                        href={issn.value.ulrichs.link}
+                        href={item.value.ulrichs.link}
                         aria-label={globalLocale.global.ulrichsLink.ariaLabel}
-                        title={issn.value.ulrichs.title}
+                        title={item.value.ulrichs.title}
                     >
                         {globalLocale.global.ulrichsLink.externalLinktext}
                     </ExternalLink>
@@ -107,11 +55,9 @@ export const IssnRowItemTemplate = ({
 IssnRowItemTemplate.propTypes = {
     actions: PropTypes.object,
     hasPreload: PropTypes.bool,
-    item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    item: PropTypes.object,
     loadingSherpaFromIssn: PropTypes.bool,
     loadingUlrichsFromIssn: PropTypes.bool,
-    sherpaRomeo: PropTypes.object,
-    ulrichs: PropTypes.object,
 };
 
 export const getValidSherpa = (sherpaData, issn) =>
@@ -173,19 +119,26 @@ export const mapStateToProps = (state, props) => {
         hasPreload,
         loadingSherpaFromIssn,
         loadingUlrichsFromIssn,
-        sherpaRomeo:
-            (sherpaEntry && {
-                link: getSherpaLink(sherpaEntry),
-            }) ||
-            null,
-        ulrichs:
-            (ulrichsEntry && {
-                link:
-                    ulrichsEntry.ulr_title_id &&
-                    globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsEntry.ulr_title_id),
-                title: ulrichsEntry.ulr_title || '',
-            }) ||
-            null,
+        item: {
+            ...((typeof item === 'object' && item) || {}),
+            key: issn,
+            value: {
+                ...(((typeof item === 'object' && item) || {}).value || {}),
+                sherpaRomeo:
+                    (sherpaEntry && {
+                        link: getSherpaLink(sherpaEntry),
+                    }) ||
+                    {},
+                ulrichs:
+                    (ulrichsEntry && {
+                        link:
+                            ulrichsEntry.ulr_title_id &&
+                            globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsEntry.ulr_title_id),
+                        title: ulrichsEntry.ulr_title || '',
+                    }) ||
+                    {},
+            },
+        },
     };
 };
 
