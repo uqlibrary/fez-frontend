@@ -171,6 +171,9 @@ exports[`DesignForm renders  component 1`] = `
       }
       title="Designer name"
     >
+      <WithStyles(Typography)>
+        Please provide a list of designers and then select your name from the list.
+      </WithStyles(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -310,6 +313,19 @@ exports[`DesignForm renders  component 1`] = `
                 [Function],
               ]
             }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Link description"
+            name="rek_link_description"
+            type="text"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -489,6 +505,9 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
       }
       title="Designer name"
     >
+      <WithStyles(Typography)>
+        Please provide a list of designers and then select your name from the list.
+      </WithStyles(Typography)>
       <Field
         component={[Function]}
         disabled={false}
@@ -772,6 +791,19 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
                 [Function],
               ]
             }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Link description"
+            name="rek_link_description"
+            type="text"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>

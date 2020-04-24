@@ -4,7 +4,7 @@ import { CONTENT_INDICATORS } from 'config/general';
 const moment = require('moment');
 
 describe('getRecordLinkSearchKey test', () => {
-    it('should return request object structure with link', () => {
+    it('should return request object structure with link and default description', () => {
         const data = {
             rek_link: 'http://google.com',
         };
@@ -22,6 +22,38 @@ describe('getRecordLinkSearchKey test', () => {
                 },
             ],
         };
+        const result = transformers.getRecordLinkSearchKey(data);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return request object structure with link and description', () => {
+        const data = {
+            rek_link: 'http://google.com',
+            rek_link_description: 'my link title',
+        };
+        const expected = {
+            fez_record_search_key_link: [
+                {
+                    rek_link: 'http://google.com',
+                    rek_link_order: 1,
+                },
+            ],
+            fez_record_search_key_link_description: [
+                {
+                    rek_link_description: 'my link title',
+                    rek_link_description_order: 1,
+                },
+            ],
+        };
+        const result = transformers.getRecordLinkSearchKey(data);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return empty object structure with description on missing link', () => {
+        const data = {
+            rek_link_description: 'my link title',
+        };
+        const expected = null;
         const result = transformers.getRecordLinkSearchKey(data);
         expect(result).toEqual(expected);
     });

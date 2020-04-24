@@ -14,6 +14,7 @@ import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 export default class DesignForm extends Component {
     static propTypes = {
@@ -133,6 +134,7 @@ export default class DesignForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                        <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
                             showContributorAssignment
@@ -182,6 +184,16 @@ export default class DesignForm extends Component {
                                     fullWidth
                                     {...txt.optional.fieldLabels.url}
                                     validate={[validation.url]}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_link_description"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    label={'Link description'}
                                 />
                             </Grid>
                         </Grid>
