@@ -129,7 +129,6 @@ export class LinksClass extends PureComponent {
                 this.props.publication.fez_record_search_key_link_description[index].rek_link_description) ||
             defaultDescription;
         const openAccessStatus = isRDM ? this.getRDMLinkOAStatus(this.props.publication) : {};
-        console.log(openAccessStatus);
         return {
             index: index,
             link: (
