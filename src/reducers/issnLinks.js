@@ -6,19 +6,21 @@ import {
     ISSN_ULRICHS_LOADED,
     ISSN_ULRICHS_LOAD_FAILED,
 } from 'actions/actionTypes';
+
 export const initialState = {
-    loadingSherpaFromIssn: false,
-    loadingUlrichsFromIssn: false,
-    sherpaLoadFromIssnError: false,
+    sherpaLoadFromIssnError: {},
     sherpaRomeo: {},
     ulrichs: {},
-    ulrichsLoadFromIssnError: false,
+    ulrichsLoadFromIssnError: {},
 };
 
 const handlers = {
-    [ISSN_SHERPA_LOADING]: state => ({
+    [ISSN_SHERPA_LOADING]: (state, action) => ({
         ...state,
-        loadingSherpaFromIssn: true,
+        sherpaRomeo: {
+            ...state.sherpaRomeo,
+            [action.payload]: state.sherpaRomeo[action.payload] || {},
+        },
     }),
 
     [ISSN_SHERPA_LOADED]: (state, action) => {
@@ -28,38 +30,44 @@ const handlers = {
         });
         return {
             ...state,
-            loadingSherpaFromIssn: false,
             sherpaRomeo: data,
         };
     },
 
     [ISSN_SHERPA_LOAD_FAILED]: (state, action) => ({
         ...state,
-        loadingSherpaFromIssn: false,
-        sherpaLoadFromIssnError: action.payload,
+        sherpaLoadFromIssnError: {
+            [action.payload.issn]: action.payload.message,
+        },
     }),
 
-    [ISSN_ULRICHS_LOADING]: state => ({
+    [ISSN_ULRICHS_LOADING]: (state, action) => ({
         ...state,
-        loadingUlrichsFromIssn: true,
+        ulrichs: {
+            ...state.ulrichs,
+            [action.payload]: state.ulrichs[action.payload] || {},
+        },
     }),
 
     [ISSN_ULRICHS_LOADED]: (state, action) => {
-        const data = { ...state.ulrichs };
+        const newData = {};
         action.payload.map(item => {
-            data[item.ulr_issn] = item;
+            newData[item.ulr_issn] = item;
         });
         return {
             ...state,
-            loadingUlrichsFromIssn: false,
-            ulrichs: data,
+            ulrichs: {
+                ...state.ulrichs,
+                ...newData,
+            },
         };
     },
 
     [ISSN_ULRICHS_LOAD_FAILED]: (state, action) => ({
         ...state,
-        loadingUlrichsFromIssn: false,
-        ulrichsLoadFromIssnError: action.payload,
+        ulrichsLoadFromIssnError: {
+            [action.payload.issn]: action.payload.message,
+        },
     }),
 };
 
