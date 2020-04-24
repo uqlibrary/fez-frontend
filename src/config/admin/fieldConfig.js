@@ -1202,10 +1202,20 @@ export default {
                 allowPartial: true,
             },
         },
-        fez_record_search_key_end_date: {
+        fez_record_search_key_end_date_admin: {
             component: PartialDateField,
             componentProps: {
-                name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
+                name: 'adminSection.fez_record_search_key_end_date_admin.rek_end_date',
+                label: 'End date',
+                floatingTitle: 'End date',
+                fullWidth: true,
+                allowPartial: true,
+            },
+        },
+        fez_record_search_key_end_date_biblio: {
+            component: PartialDateField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_end_date_biblio.rek_end_date',
                 label: 'End date',
                 floatingTitle: 'End date',
                 fullWidth: true,

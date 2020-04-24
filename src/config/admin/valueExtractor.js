@@ -632,7 +632,10 @@ export default {
     fez_record_search_key_start_date: {
         getValue: record => moment((record.fez_record_search_key_start_date || {}).rek_start_date),
     },
-    fez_record_search_key_end_date: {
+    fez_record_search_key_end_date_admin: {
+        getValue: record => moment((record.fez_record_search_key_end_date || {}).rek_end_date),
+    },
+    fez_record_search_key_end_date_biblio: {
         getValue: record => moment((record.fez_record_search_key_end_date || {}).rek_end_date),
     },
     fez_record_search_key_time_period_start_date: {
