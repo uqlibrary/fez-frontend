@@ -557,7 +557,7 @@ exports[`AddSection component should render default view 1`] = `
                   key="20"
                   value={316}
                 >
-                  Design
+                  Design (label TBC)
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
                   key="21"
@@ -1199,7 +1199,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                   key="20"
                   value={316}
                 >
-                  Design
+                  Design (label TBC)
                 </WithStyles(MenuItem)>
                 <WithStyles(MenuItem)
                   key="21"

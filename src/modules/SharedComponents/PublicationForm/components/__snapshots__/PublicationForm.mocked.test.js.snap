@@ -232,7 +232,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"

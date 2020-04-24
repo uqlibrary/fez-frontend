@@ -232,13 +232,13 @@ exports[`Component PublicationForm Shows an alert 1`] = `
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -666,13 +666,13 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -1193,13 +1193,13 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -1720,13 +1720,13 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -2154,13 +2154,13 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -2607,13 +2607,13 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -3073,13 +3073,13 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -3539,13 +3539,13 @@ exports[`Component PublicationForm should render component initialised with just
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -3974,13 +3974,13 @@ exports[`Component PublicationForm should render component initialised with two 
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -4429,13 +4429,13 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -4972,13 +4972,13 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -5512,13 +5512,13 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -6052,13 +6052,13 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -6591,13 +6591,13 @@ exports[`Component PublicationForm should render component with all fields disab
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"
@@ -7026,13 +7026,13 @@ exports[`Component PublicationForm should render form after selecting both publi
                 key="18"
                 value={316}
               >
-                Design
+                Design (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-0"
                 value={1003}
               >
-                Creative Work - Design/Architectural
+                Creative Work - Design/Architectural (label TBC)
               </WithStyles(MenuItem)>
               <WithStyles(MenuItem)
                 key="ntro-1"

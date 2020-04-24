@@ -15,7 +15,12 @@ import { createNewRecord } from 'actions';
 import { general, publicationTypes } from 'config';
 import { locale } from 'locale';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
+import {
+    DOCTYPE_SUBTYPE_MAPPING,
+    NEW_DOCTYPES_OPTIONS,
+    NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+    PUBLICATION_TYPE_DESIGN,
+} from 'config/general';
 import moment from 'moment';
 
 import * as recordForms from '../components/Forms';
@@ -136,6 +141,13 @@ const mapStateToProps = (state, props) => {
     if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
         hasDefaultDocTypeSubType = true;
         docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
+    } else if (displayType === PUBLICATION_TYPE_DESIGN) {
+        hasDefaultDocTypeSubType = true;
+        docTypeSubTypeCombo = {
+            docTypeId: PUBLICATION_TYPE_DESIGN,
+            subtype: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            name: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+        };
     }
 
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;

@@ -61,7 +61,7 @@ export const PUBLICATION_TYPE_THESIS = 187;
 export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 
-export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK = 1003;
+export const PUBLICATION_TYPE_DESIGN_CW_ARCHITECTURAL_WORK = 1003;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK = 1004;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER = 1005;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE = 1006;
@@ -146,7 +146,7 @@ export const DOCUMENT_TYPES_LOOKUP = {
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
-export const NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
+export const NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
 export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';
 export const NTRO_SUBTYPE_CW_VISUAL_WORK = 'Creative Work - Visual Art';
 export const NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION = 'Creative Work - Musical Composition';
@@ -174,7 +174,6 @@ export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 
 export const CW_NTRO_SUBTYPES = [
-    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     NTRO_SUBTYPE_CW_VISUAL_WORK,
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
@@ -205,24 +204,28 @@ export const LP_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_LP_OTHER,
 ];
 
-export const CREATIVE_WORK_NTRO_SUBTYPES = [
+const CREATIVE_WORK_NTRO_SUBTYPES = [
     ...CW_NTRO_SUBTYPES,
     ...LP_NTRO_SUBTYPES,
     ...RRW_NTRO_SUBTYPES,
     ...CPEE_NTRO_SUBTYPES,
 ];
 
-export const RESEARCH_REPORT_NTRO_SUBTYPES = [
+const RESEARCH_REPORT_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
     NTRO_SUBTYPE_RREB_INDUSTRY,
     NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
     NTRO_SUBTYPE_RREB_OTHER,
 ];
 
-export const NTRO_SUBTYPES = [...CREATIVE_WORK_NTRO_SUBTYPES, ...RESEARCH_REPORT_NTRO_SUBTYPES];
+export const NTRO_SUBTYPES = [
+    NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+    ...CREATIVE_WORK_NTRO_SUBTYPES,
+    ...RESEARCH_REPORT_NTRO_SUBTYPES,
+];
 
 export const NTRO_SUBTYPES_CATEGORY_CODE = {
-    [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK]: 'CW1',
+    [NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK]: 'CW1',
     [NTRO_SUBTYPE_CW_TEXTUAL_WORK]: 'CW1',
     [NTRO_SUBTYPE_CW_VISUAL_WORK]: 'CW1',
     [NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION]: 'CW1',
@@ -269,11 +272,8 @@ export const publicationTypes = components => ({
             'Textbook',
             SUBTYPE_EDITED_BOOK,
             'Reference work, encyclopaedia, manual or handbook',
-            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-            NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-            NTRO_SUBTYPE_CW_VISUAL_WORK,
-            NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-            NTRO_SUBTYPE_CW_OTHER,
+            NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            ...CW_NTRO_SUBTYPES,
             'Other',
         ],
     },
@@ -291,11 +291,8 @@ export const publicationTypes = components => ({
             'Chapter in textbook',
             'Chapter in reference work, encyclopaedia, manual or handbook',
             'Introduction, foreword, editorial or appendix',
-            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-            NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-            NTRO_SUBTYPE_CW_VISUAL_WORK,
-            NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-            NTRO_SUBTYPE_CW_OTHER,
+            NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            ...CW_NTRO_SUBTYPES,
             'Other',
         ],
     },
@@ -325,7 +322,7 @@ export const publicationTypes = components => ({
         formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
         hasFormComponent: true,
-        subtypes: CREATIVE_WORK_NTRO_SUBTYPES,
+        subtypes: [...CW_NTRO_SUBTYPES, ...LP_NTRO_SUBTYPES, ...RRW_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES],
     },
     [PUBLICATION_TYPE_DATA_COLLECTION]: {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -344,12 +341,12 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_DESIGN]: {
         id: PUBLICATION_TYPE_DESIGN,
-        name: DOCUMENT_TYPE_DESIGN,
+        name: `${DOCUMENT_TYPE_DESIGN} (label TBC)`,
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
         hasFormComponent: true,
-        subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK],
+        subtypes: [NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK],
     },
     [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
@@ -397,11 +394,8 @@ export const publicationTypes = components => ({
             'Correction/erratum',
             'Editorial',
             'Discussion - responses, round table/panel discussions, Q&A, reply',
-            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-            NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-            NTRO_SUBTYPE_CW_VISUAL_WORK,
-            NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
-            NTRO_SUBTYPE_CW_OTHER,
+            NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            ...CW_NTRO_SUBTYPES,
             'Other',
         ],
     },
@@ -817,7 +811,7 @@ export const ORG_AFFILIATION_TYPES = [
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
-    PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK,
+    PUBLICATION_TYPE_DESIGN_CW_ARCHITECTURAL_WORK,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER,
     PUBLICATION_TYPE_CW_TEXTUAL_WORK_JOURNAL_ARTICLE,
@@ -848,10 +842,10 @@ export const NEW_DOCTYPES_OPTIONS = [
 ];
 
 export const DOCTYPE_SUBTYPE_MAPPING = {
-    [PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK]: {
-        docTypeId: PUBLICATION_TYPE_CREATIVE_WORK,
-        subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-        name: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    [PUBLICATION_TYPE_DESIGN_CW_ARCHITECTURAL_WORK]: {
+        docTypeId: PUBLICATION_TYPE_DESIGN,
+        subtype: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+        name: `${NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK} (label TBC)`,
     },
     [PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK]: {
         docTypeId: PUBLICATION_TYPE_BOOK,
