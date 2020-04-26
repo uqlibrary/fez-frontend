@@ -1122,28 +1122,28 @@ export default {
                     order: 8,
                 },
                 {
-                    field: 'fez_record_search_key_license',
+                    field: 'fez_record_search_key_oa_status',
                     order: 9,
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_license',
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_doi',
+                    field: 'fez_record_search_key_subject',
                     order: 11,
                 },
                 {
-                    field: 'fez_record_search_key_grant_id',
+                    field: 'fez_record_search_key_doi',
                     order: 12,
                 },
                 {
-                    field: 'fez_record_search_key_type_of_data',
+                    field: 'fez_record_search_key_grant_id',
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_data_volume',
-                    order: 144,
+                    field: 'fez_record_search_key_type_of_data',
+                    order: 14,
                 },
                 {
                     field: 'fez_record_search_key_software_required',
@@ -1200,6 +1200,10 @@ export default {
                 {
                     field: 'fez_record_search_key_rights',
                     order: 28,
+                },
+                {
+                    field: 'fez_record_search_key_data_volume',
+                    order: 29,
                 },
             ],
             'Department Technical Report': [

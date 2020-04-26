@@ -1393,6 +1393,7 @@ export const OA_STATUS = [
     { value: '453698', text: 'Not Open Access' },
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
+    { value: '454116', text: 'RDM open' },
 ];
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
