@@ -7,6 +7,9 @@ export const OPEN_ACCESS_ID_OTHER = 453697;
 export const OPEN_ACCESS_ID_NOT_OPEN_ACCESS = 453698;
 export const OPEN_ACCESS_ID_MEDIATED_ACCESS = 453700;
 export const OPEN_ACCESS_ID_PMC = 453954;
+export const OPEN_ACCESS_ID_RDM = 454116;
+export const DATASET_OPEN_ACCESS_ID = 453619;
+export const DATASET_MEDIATED_ACCESS_ID = 453618;
 
 export const openAccessIds = [
     OPEN_ACCESS_ID_DOI,
@@ -15,6 +18,7 @@ export const openAccessIds = [
     OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT,
     OPEN_ACCESS_ID_OTHER,
     OPEN_ACCESS_ID_PMC,
+    OPEN_ACCESS_ID_RDM,
 ];
 export const notOpenAccessIds = [
     OPEN_ACCESS_ID_NOT_YET_ASSESSED,
@@ -38,4 +42,7 @@ export const labels = {
     [OPEN_ACCESS_ID_NOT_OPEN_ACCESS]: 'Not Open Access',
     [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
     [OPEN_ACCESS_ID_PMC]: 'PMC',
+    [OPEN_ACCESS_ID_RDM]: 'RDM open',
+    [DATASET_OPEN_ACCESS_ID]: 'Open Access',
+    [DATASET_MEDIATED_ACCESS_ID]: 'Mediated Access',
 };

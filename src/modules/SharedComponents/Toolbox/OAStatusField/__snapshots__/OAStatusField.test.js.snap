@@ -48,6 +48,10 @@ exports[`OAStatus component should render default view 1`] = `
         "text": "PMC",
         "value": "453954",
       },
+      Object {
+        "text": "RDM open",
+        "value": "454116",
+      },
     ]
   }
   locale={
@@ -115,6 +119,10 @@ exports[`OAStatus component should render immutable list as selected value with 
       Object {
         "text": "PMC",
         "value": "453954",
+      },
+      Object {
+        "text": "RDM open",
+        "value": "454116",
       },
     ]
   }
@@ -189,6 +197,10 @@ exports[`OAStatus component should render when given a default value field props
         "text": "PMC",
         "value": "453954",
       },
+      Object {
+        "text": "RDM open",
+        "value": "454116",
+      },
     ]
   }
   label="Test label"
@@ -262,6 +274,10 @@ exports[`OAStatus component should render with given field props 1`] = `
       Object {
         "text": "PMC",
         "value": "453954",
+      },
+      Object {
+        "text": "RDM open",
+        "value": "454116",
       },
     ]
   }

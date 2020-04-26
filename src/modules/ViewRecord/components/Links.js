@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 
 import locale from 'locale/viewRecord';
 import { openAccessConfig } from 'config';
+import moment from 'moment';
 
 const styles = theme => ({
     header: {
@@ -97,7 +98,29 @@ export class LinksClass extends PureComponent {
         };
     };
 
-    getPublicationLink = (link, index, openAccessStatus = {}) => {
+    getRDMLinkOAStatus = record => {
+        const currentDate = moment().format();
+        const openAccessStatusId = record.fez_record_search_key_access_conditions &&
+            record.fez_record_search_key_access_conditions.rek_access_conditions
+            ? parseInt(record.fez_record_search_key_access_conditions.rek_access_conditions, 10)
+            : null;
+        const embargoDate = openAccessStatusId === openAccessConfig.DATASET_OPEN_ACCESS_ID &&
+            record.fez_record_search_key_embargo_to &&
+            record.fez_record_search_key_embargo_to.rek_embargo_to &&
+            record.fez_record_search_key_embargo_to.rek_embargo_to > currentDate
+            ? record.fez_record_search_key_embargo_to.rek_embargo_to : null;
+        const isOpenAccess = !!openAccessStatusId
+            ? openAccessStatusId === openAccessConfig.DATASET_OPEN_ACCESS_ID && !embargoDate
+            : null;
+        return {
+            isOpenAccess: isOpenAccess,
+            embargoDate: embargoDate,
+            openAccessStatusId: openAccessStatusId,
+            showEmbargoText: !!(!isOpenAccess && embargoDate),
+        };
+    };
+
+    getPublicationLink = (link, index) => {
         const isRDM = !!link.rek_link.match(/^https?:\/\/[a-z0-9\-]*\.?rdm\.uq\.edu\.au/i);
         const defaultDescription = isRDM
             ? locale.viewRecord.sections.links.rdmLinkMissingDescriptionTitle
@@ -107,6 +130,7 @@ export class LinksClass extends PureComponent {
                 this.props.publication.fez_record_search_key_link_description[index] &&
                 this.props.publication.fez_record_search_key_link_description[index].rek_link_description) ||
             defaultDescription;
+        const openAccessStatus = isRDM ? this.getRDMLinkOAStatus(this.props.publication) : {};
         return {
             index: index,
             link: (
