@@ -220,6 +220,33 @@ describe('publication enhancer', () => {
                 rek_oa_status: 453693,
             },
         };
+        const publicationRDMOANoEmbargoDate = {
+            rek_created_date: '2019-12-25T00:00:00Z',
+            rek_pid: 'pid:111',
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 454116,
+            },
+        };
+        const publicationRDMOAWithEmbargoDate = {
+            fez_record_search_key_embargo_to: {
+                rek_embargo_to: '2050-12-31',
+            },
+            rek_created_date: '2019-12-25T00:00:00Z',
+            rek_pid: 'pid:111',
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 454116,
+            },
+        };
+        const publicationRDMOAWithEmbargoDateInPast = {
+            fez_record_search_key_embargo_to: {
+                rek_embargo_to: '2000-12-31',
+            },
+            rek_created_date: '2019-12-25T00:00:00Z',
+            rek_pid: 'pid:111',
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 454116,
+            },
+        };
         const publicationPMC = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
@@ -564,6 +591,13 @@ describe('publication enhancer', () => {
             isOpenAccess: false,
             openAccessStatusId: 453693,
         };
+        const expectOARDMNoEmbargoDate = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 454116 };
+        const expectOARDMWithEmbargoDate = {
+            embargoDate: '31st December 2050',
+            isOpenAccess: false,
+            openAccessStatusId: 454116,
+        };
+        const expectOARDMWithEmbargoDateInPast = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 454116 };
         const expectOAPMC = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 453954 };
         const expectNotOA = { embargoDate: null, isOpenAccess: false, openAccessStatusId: 453700 };
         const expectEmbargoOA = {
@@ -582,6 +616,9 @@ describe('publication enhancer', () => {
 
         expect(calculateOpenAccess(publicationDOIOANoEmbargoDate)).toEqual(expectOADoiNoEmbargoDate);
         expect(calculateOpenAccess(publicationDOIOAWithEmbargoDate)).toEqual(expectOADoiWithEmbargoDate);
+        expect(calculateOpenAccess(publicationRDMOANoEmbargoDate)).toEqual(expectOARDMNoEmbargoDate);
+        expect(calculateOpenAccess(publicationRDMOAWithEmbargoDate)).toEqual(expectOARDMWithEmbargoDate);
+        expect(calculateOpenAccess(publicationRDMOAWithEmbargoDateInPast)).toEqual(expectOARDMWithEmbargoDateInPast);
         expect(calculateOpenAccess(publicationPMC)).toEqual(expectOAPMC);
         expect(calculateOpenAccess(publicationNotOA)).toEqual(expectNotOA);
         expect(calculateOpenAccess(publicationEmbargoOAFile)).toEqual(expectEmbargoOA);
