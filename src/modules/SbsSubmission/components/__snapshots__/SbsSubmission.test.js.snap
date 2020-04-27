@@ -298,6 +298,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           >
             <Field
               component={[Function]}
+              contributorEditorId="supervisors"
               disabled={false}
               locale={
                 Object {
@@ -857,6 +858,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           >
             <Field
               component={[Function]}
+              contributorEditorId="supervisors"
               disabled={false}
               locale={
                 Object {

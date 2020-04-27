@@ -135,6 +135,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {
@@ -242,6 +243,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
+        contributorEditorId="contributors"
         disabled={false}
         locale={
           Object {
@@ -516,6 +518,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     >
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {
@@ -623,6 +626,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     >
       <Field
         component={[Function]}
+        contributorEditorId="contributors"
         disabled={false}
         locale={
           Object {

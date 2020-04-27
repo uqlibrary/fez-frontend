@@ -185,6 +185,7 @@ exports[`ThesisForm  should render component 1`] = `
     >
       <Field
         component={[Function]}
+        contributorEditorId="supervisors"
         disabled={false}
         locale={
           Object {

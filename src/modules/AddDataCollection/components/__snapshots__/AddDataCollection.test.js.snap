@@ -362,6 +362,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           >
             <Field
               component={[Function]}
+              contributorEditorId="authors"
               disabled={false}
               locale={
                 Object {
@@ -1615,6 +1616,7 @@ exports[`AddDataCollection test should render component with a valid collection 
           >
             <Field
               component={[Function]}
+              contributorEditorId="authors"
               disabled={false}
               locale={
                 Object {
@@ -2868,6 +2870,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
           >
             <Field
               component={[Function]}
+              contributorEditorId="authors"
               disabled={false}
               locale={
                 Object {
@@ -4121,6 +4124,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           >
             <Field
               component={[Function]}
+              contributorEditorId="authors"
               disabled={false}
               locale={
                 Object {

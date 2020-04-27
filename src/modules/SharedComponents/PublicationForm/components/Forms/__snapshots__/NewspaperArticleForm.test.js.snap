@@ -163,6 +163,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         locale={
           Object {

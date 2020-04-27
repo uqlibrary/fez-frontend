@@ -224,6 +224,7 @@ export default class SbsSubmission extends Component {
                                 <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                                     <Field
                                         component={ContributorsEditorField}
+                                        contributorEditorId="supervisors"
                                         required
                                         name="supervisors"
                                         validate={[validation.supervisorRequired]}

@@ -193,6 +193,7 @@ export const MyIncompleteRecord = props => {
                                 <Typography>{authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    contributorEditorId="authors"
                                     editMode
                                     canEdit
                                     hideDelete

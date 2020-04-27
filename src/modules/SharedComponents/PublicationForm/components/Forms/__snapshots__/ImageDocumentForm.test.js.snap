@@ -98,6 +98,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {

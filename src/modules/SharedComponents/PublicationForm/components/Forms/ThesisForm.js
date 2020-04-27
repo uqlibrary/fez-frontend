@@ -114,6 +114,7 @@ export default class ThesisForm extends Component {
                     <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="supervisors"
                             required
                             name="supervisors"
                             validate={[validation.supervisorRequired]}

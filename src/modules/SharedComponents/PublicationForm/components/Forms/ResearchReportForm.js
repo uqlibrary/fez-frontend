@@ -158,6 +158,7 @@ export default class ResearchReportForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             name="authors"
                             isNtro={this.props.isNtro}
                             locale={txt.authors.field}

@@ -223,6 +223,7 @@ export default {
                 floatingLabelText: 'Member of collections',
                 hintText: 'Begin typing to select and add collection(s)',
                 name: 'adminSection.collections',
+                id: 'member-of-collections-input',
                 required: true,
                 fullwidth: true,
                 validate: [validation.requiredList],
@@ -729,6 +730,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: formLocale.journalArticle.authors.field,
                 canEdit: true,
+                contributorEditorId: 'authors',
             },
         },
         editors: {
@@ -738,6 +740,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: formLocale.book.editors.field,
                 canEdit: true,
+                contributorEditorId: 'editors',
             },
         },
         files: {
@@ -1492,6 +1495,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.architects.field,
                 canEdit: true,
+                contributorEditorId: 'architects',
             },
         },
         creators: {
@@ -1501,6 +1505,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.designCreators.field,
                 canEdit: true,
+                contributorEditorId: 'creators',
             },
         },
         supervisors: {
@@ -1510,6 +1515,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.supervisors.field,
                 canEdit: true,
+                contributorEditorId: 'supervisors',
             },
         },
     },

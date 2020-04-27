@@ -171,22 +171,19 @@ context('Journal Article admin edit', () => {
                         const issns = record.fez_record_search_key_issn.map(item => item.rek_issn);
                         const ulrichsId = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title_id);
 
-                        cy.get('div.ISSNvalue')
+                        cy.get('#issn-list')
                             .within(() => {
                                 issns.forEach((issn, index) => {
-                                    cy.get('.ListRow-ISSNvalue span>span')
-                                        .eq(2 * index)
+                                    cy.get(`#issn-list-editor-row-${index}`)
                                         .should('contain.text', issn);
-                                    cy.get('.ListRow-ISSNvalue a')
-                                        .eq(2 * index)
+                                    cy.get(`#issn-list-editor-row-${index} > div > div > span > a:nth-child(2)`)
                                         .should('contain.text', 'SHERPA/RoMEO')
                                         .should(
                                             'have.attr',
                                             'href',
                                             'http://www.sherpa.ac.uk/romeo/search.php?issn=' + issn,
                                         );
-                                    cy.get('.ListRow-ISSNvalue a')
-                                        .eq(2 * index + 1)
+                                    cy.get(`#issn-list-editor-row-${index} > div > div > span > a:nth-child(4)`)
                                         .should('contain.text', 'Ulrichs')
                                         .should(
                                             'have.attr',
@@ -338,17 +335,13 @@ context('Journal Article admin edit', () => {
                                 : item.rek_author_affiliation_name;
                         });
                         authors.forEach((author, index) => {
-                            cy.get('p')
-                                .eq(2 * index)
-                                .should('have.text', author);
-                            cy.get('p')
-                                .eq(2 * index + 1)
+                            cy.get(`#authors-list-row-${index}-name-as-published`)
+                                .should('contain.text', author);
+                            cy.get(`#authors-list-row-${index}-uq-details`)
                                 .should('contain.text', authorNames[index]);
-
-                            cy.get('span')
-                                .eq(9 + 11 * index)
+                            cy.get(`#authors-list-row-${index}-uq-details`)
                                 .should(
-                                    'have.text',
+                                    'contain.text',
                                     `${authorAffs[index]} (${authorUsernames[index]} - ${authorIDs[index]})`,
                                 );
                         });
@@ -358,7 +351,7 @@ context('Journal Article admin edit', () => {
         cy.get('@authorsCard')
             .find('button[aria-label="Remove all items"]')
             .click();
-        cy.get('body > div[role=dialog]')
+        cy.get('body > div[role=presentation]')
             .contains('Yes')
             .click();
         cy.get('@authorsCard')
@@ -385,13 +378,14 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Member of collections');
-                        cy.get('#Memberofcollections-input-label')
+                        cy.get('#member-of-collections-input-label')
                             .should('contain', 'Member of collections');
-                        collections.forEach((collection, index) => {
-                            cy.get('[class*="MuiChip-label-"]')
-                                .eq(index)
-                                .should('have.text', collection);
-                        });
+                        cy.get('[class*="MuiAutocomplete-tag-"]')
+                            .eq(0)
+                            .should('have.text', 'Official 2013 Collection');
+                        cy.get('[class*="MuiAutocomplete-tag-"]')
+                            .eq(1)
+                            .should('have.text', 'School of Nursing, Midwifery and Social Work Publications');
                     });
 
                 cy.get('@cards')
@@ -455,11 +449,11 @@ context('Journal Article admin edit', () => {
         cy.get('@collectionsCard')
             .within(() => {
                 collections.forEach(() => {
-                    cy.get('[role=button] > svg')
+                    cy.get('[class*="MuiChip-deleteIcon-"]')
                         .eq(0)
                         .click();
                 });
-                cy.get('#Memberofcollections-input-helper-text')
+                cy.get('#member-of-collections-input-helper-text')
                     .should('exist')
                     .should('have.text', 'This field is required');
             });

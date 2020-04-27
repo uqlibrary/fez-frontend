@@ -158,6 +158,7 @@ exports[`DesignForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         locale={
           Object {

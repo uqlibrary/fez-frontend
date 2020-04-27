@@ -31,6 +31,7 @@ export class ContributorsEditor extends PureComponent {
         showRoleInput: PropTypes.bool,
         editMode: PropTypes.bool,
         canEdit: PropTypes.bool,
+        contributorEditorId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
@@ -154,7 +155,8 @@ export class ContributorsEditor extends PureComponent {
             contributors: this.state.contributors.filter((_, i) => i !== index),
             isCurrentAuthorSelected:
                 this.state.isCurrentAuthorSelected &&
-                this.props.author && contributor.aut_id !== this.props.author.aut_id,
+                this.props.author &&
+                contributor.aut_id !== this.props.author.aut_id,
         });
     };
 
@@ -189,6 +191,7 @@ export class ContributorsEditor extends PureComponent {
 
     renderContributorRows = () => {
         const {
+            contributorEditorId,
             canEdit,
             disabled,
             hideDelete,
@@ -200,7 +203,7 @@ export class ContributorsEditor extends PureComponent {
         } = this.props;
 
         const { contributors, isCurrentAuthorSelected } = this.state;
-
+        console.log(contributorEditorId);
         return contributors.map((contributor, index) => (
             <ContributorRow
                 {...(locale.row || {})}
@@ -224,6 +227,7 @@ export class ContributorsEditor extends PureComponent {
                 enableSelect={showContributorAssignment && !isCurrentAuthorSelected}
                 showIdentifierLookup={showIdentifierLookup}
                 showRoleInput={showRoleInput}
+                contributorRowId={`${contributorEditorId}-list-row`}
             />
         ));
     };
@@ -252,6 +256,7 @@ export class ContributorsEditor extends PureComponent {
     render() {
         const {
             classes,
+            contributorEditorId,
             disabled,
             editMode,
             hideDelete,
@@ -274,7 +279,7 @@ export class ContributorsEditor extends PureComponent {
         }
 
         return (
-            <div className={'contributorEditor'}>
+            <div className={'contributorEditor'} id={`${contributorEditorId}-list-editor`}>
                 <Grid container spacing={1}>
                     {errorMessage && (
                         <Grid item xs={12}>

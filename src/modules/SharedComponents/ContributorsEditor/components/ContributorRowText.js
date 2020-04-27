@@ -12,6 +12,7 @@ export const ContributorRowText = ({
     canEdit,
     classes,
     contributor,
+    contributorRowId,
     index,
     selectedClass,
     showRoleInput,
@@ -62,7 +63,7 @@ export const ContributorRowText = ({
 
     return (
         <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
-            <Grid item xs={10} sm={5} md={3}>
+            <Grid item xs={10} sm={5} md={3} id={`${contributorRowId}-name-as-published`}>
                 {getListItemTypography(
                     contributor.nameAsPublished,
                     contributorOrder,
@@ -71,7 +72,7 @@ export const ContributorRowText = ({
                 )}
             </Grid>
             {isUQAuthor(contributor) && haveFullAuthorDetails(contributor) && (
-                <Grid item xs={10} sm={5} md={idColWidth}>
+                <Grid item xs={10} sm={5} md={idColWidth} id={`${contributorRowId}-uq-details`}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
                         `${locale.global.orgTitle} (${contributor.aut_org_username ||
@@ -82,7 +83,7 @@ export const ContributorRowText = ({
                 </Grid>
             )}
             {!!contributor.affiliation && !(isUQAuthor(contributor) && haveFullAuthorDetails(contributor)) && (
-                <Grid item xs={12} sm={5} md={idColWidth}>
+                <Grid item xs={12} sm={5} md={idColWidth} id={`${contributorRowId}-affiliation`}>
                     {getListItemTypography(
                         `${contributor.orgaff}`,
                         `${(!!contributor.orgtype &&
@@ -95,7 +96,7 @@ export const ContributorRowText = ({
                 </Grid>
             )}
             {showRoleInput && (
-                <Grid item xs={12} sm={5} md={md}>
+                <Grid item xs={12} sm={5} md={md} id={`${contributorRowId}-role`}>
                     {getListItemTypography(
                         contributor.creatorRole,
                         '',
@@ -111,6 +112,7 @@ export const ContributorRowText = ({
 ContributorRowText.propTypes = {
     canEdit: PropTypes.bool,
     contributor: PropTypes.object,
+    contributorRowId: PropTypes.string.isRequired,
     classes: PropTypes.object,
     index: PropTypes.number,
     suffix: PropTypes.string,

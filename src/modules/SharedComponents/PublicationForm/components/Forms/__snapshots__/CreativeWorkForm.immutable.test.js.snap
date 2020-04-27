@@ -166,6 +166,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         locale={
           Object {

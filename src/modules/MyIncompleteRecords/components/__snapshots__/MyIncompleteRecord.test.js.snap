@@ -756,6 +756,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -1680,6 +1681,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -2618,6 +2620,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -3626,6 +3629,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -4550,6 +4554,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -5474,6 +5479,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -6398,6 +6404,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -7322,6 +7329,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -8255,6 +8263,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -9179,6 +9188,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}
@@ -10103,6 +10113,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             <Field
               canEdit={true}
               component={[Function]}
+              contributorEditorId="authors"
               editMode={true}
               hideDelete={true}
               hideReorder={true}

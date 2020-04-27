@@ -166,6 +166,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         locale={
           Object {
@@ -500,6 +501,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         isNtro={true}
         locale={
@@ -967,6 +969,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         isNtro={true}
         locale={
@@ -1416,6 +1419,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         isNtro={true}
         locale={

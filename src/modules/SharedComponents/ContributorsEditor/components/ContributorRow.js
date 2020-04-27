@@ -69,6 +69,7 @@ export const ContributorRow = ({
     canMoveDown,
     canMoveUp,
     contributor,
+    contributorRowId,
     disabled,
     hideDelete,
     hideReorder,
@@ -181,7 +182,7 @@ export const ContributorRow = ({
                 tabIndex={contributor.disabled || disabled ? -1 : 0}
                 onKeyDown={!contributor.disabled ? _onSelectKeyboard : () => {}}
                 aria-label={ariaLabel}
-                id={`contributor-editor-row-${index}`}
+                id={`${contributorRowId}-${index}`}
             >
                 <Hidden xsDown>
                     <ListItemIcon classes={{ root: selectedClass }}>{getRowIcon()}</ListItemIcon>
@@ -195,6 +196,7 @@ export const ContributorRow = ({
                     showRoleInput={showRoleInput}
                     selectedClass={selectedClass}
                     suffix={locale.suffix}
+                    contributorRowId={`${contributorRowId}-${index}`}
                 />
                 <ListItemSecondaryAction>
                     {canMoveUp && (
@@ -282,6 +284,7 @@ ContributorRow.propTypes = {
     canMoveDown: PropTypes.bool,
     canMoveUp: PropTypes.bool,
     contributor: PropTypes.object.isRequired,
+    contributorRowId: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     hideDelete: PropTypes.bool,
     hideReorder: PropTypes.bool,

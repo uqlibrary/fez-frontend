@@ -204,6 +204,7 @@ exports[`ResearchReportForm renders  component 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         locale={
           Object {
@@ -742,6 +743,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="authors"
         disabled={false}
         locale={
           Object {

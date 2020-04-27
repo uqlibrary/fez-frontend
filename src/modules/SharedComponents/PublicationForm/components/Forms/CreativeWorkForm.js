@@ -241,6 +241,7 @@ export default class CreativeWorkForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}
                             locale={txt.authors.field}

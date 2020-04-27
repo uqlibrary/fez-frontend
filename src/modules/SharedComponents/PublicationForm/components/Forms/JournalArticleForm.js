@@ -85,6 +85,7 @@ export default class JournalArticleForm extends Component {
                                 <Typography>{txt.authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    contributorEditorId="authors"
                                     showContributorAssignment
                                     name="authors"
                                     locale={txt.authors.field}

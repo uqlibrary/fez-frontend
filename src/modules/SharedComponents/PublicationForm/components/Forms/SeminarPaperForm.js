@@ -93,6 +93,7 @@ export default class SeminarPaperForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             showContributorAssignment
                             required
                             name="authors"

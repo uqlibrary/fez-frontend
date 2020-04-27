@@ -254,6 +254,7 @@ export default class AddDataCollection extends Component {
                                     <Field
                                         component={ContributorsEditorField}
                                         name="authors"
+                                        contributorEditorId="authors"
                                         showRoleInput
                                         locale={txt.information.creator.field}
                                         required

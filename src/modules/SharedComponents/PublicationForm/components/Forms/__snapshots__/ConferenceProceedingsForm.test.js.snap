@@ -178,6 +178,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="editors"
         disabled={false}
         locale={
           Object {

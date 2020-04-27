@@ -126,6 +126,7 @@ export default class ConferenceProceedingsForm extends Component {
                         <Typography>{txt.editors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}
                             showContributorAssignment

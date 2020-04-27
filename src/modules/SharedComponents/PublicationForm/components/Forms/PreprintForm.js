@@ -66,6 +66,7 @@ export default class PreprintForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             showContributorAssignment
                             required
                             name="authors"

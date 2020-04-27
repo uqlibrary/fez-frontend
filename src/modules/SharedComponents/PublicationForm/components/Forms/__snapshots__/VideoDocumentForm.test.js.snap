@@ -138,6 +138,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {
@@ -246,6 +247,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
       <WithStyles(ForwardRef(Typography)) />
       <Field
         component={[Function]}
+        contributorEditorId="contributors"
         disabled={false}
         locale={
           Object {
@@ -522,6 +524,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {
@@ -630,6 +633,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
       <WithStyles(ForwardRef(Typography)) />
       <Field
         component={[Function]}
+        contributorEditorId="contributors"
         disabled={false}
         locale={
           Object {

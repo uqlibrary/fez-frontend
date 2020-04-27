@@ -25,7 +25,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -93,6 +93,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           "nameAsPublished": "J. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -152,7 +153,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -220,6 +221,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           "nameAsPublished": "J. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -279,7 +281,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -318,6 +320,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "A. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -377,7 +380,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -416,6 +419,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "A. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -475,7 +479,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -543,6 +547,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "J. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -648,7 +653,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -688,6 +693,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "selected": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
@@ -747,7 +753,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -787,6 +793,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "selected": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
@@ -846,7 +853,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -914,6 +921,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "nameAsPublished": "J. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -973,7 +981,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1014,6 +1022,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           "selected": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
@@ -1073,7 +1082,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1114,6 +1123,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           "selected": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
@@ -1173,7 +1183,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1216,6 +1226,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
           "selected": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
@@ -1275,7 +1286,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1318,6 +1329,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
           "selected": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
@@ -1377,7 +1389,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
       }
     }
     divider={true}
-    id="contributor-editor-row-2"
+    id="undefined-2"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1416,6 +1428,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           "nameAsPublished": "A. Smith",
         }
       }
+      contributorRowId="undefined-2"
       index={2}
       selectedClass=""
       showRoleInput={false}
@@ -1498,7 +1511,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1541,6 +1554,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           "disabled": true,
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -1600,7 +1614,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1642,6 +1656,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           "orgtype": "NGO",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -1702,7 +1717,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="undefined-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1741,6 +1756,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           "nameAsPublished": "A. Smith",
         }
       }
+      contributorRowId="undefined-0"
       index={0}
       selectedClass=""
       showRoleInput={false}

@@ -11,12 +11,19 @@ const mapStateToProps = (state, props) => {
         getOptionLabel: item => item.rek_title,
         ...(!!((props || {}).meta || {}).form
             ? {
-                defaultValue: itemsList.filter(collection => props.input.value.includes(collection.rek_pid)),
+                defaultValue: itemsList.filter(collection =>
+                    (
+                        (props.input.value.toJS && props.input.value.toJS().map(value => value.id)) ||
+                          props.input.value
+                    ).includes(collection.rek_pid),
+                ),
                 error: !!props.meta.error,
                 errorText: props.meta.error || '',
             }
             : {
-                defaultValue: itemsList.filter(collection => props.value.includes(collection.rek_pid)),
+                defaultValue: itemsList.filter(collection =>
+                    props.value.map(value => value.id).includes(collection.rek_pid),
+                ),
                 error: props.error,
                 errorText: props.errorText || '',
             }),

@@ -303,6 +303,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           >
             <Field
               component={[Function]}
+              contributorEditorId="supervisors"
               disabled={false}
               locale={
                 Object {
@@ -852,6 +853,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           >
             <Field
               component={[Function]}
+              contributorEditorId="supervisors"
               disabled={false}
               locale={
                 Object {
