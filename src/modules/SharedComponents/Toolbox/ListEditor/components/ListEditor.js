@@ -74,6 +74,14 @@ export default class ListEditor extends Component {
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
         };
+
+        this.transformOutput = this.transformOutput.bind(this);
+        this.addItem = this.addItem.bind(this);
+        this.moveUpList = this.moveUpList.bind(this);
+        this.moveDownList = this.moveDownList.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
+        this.deleteAllItems = this.deleteAllItems.bind(this);
+        this.editItem = this.editItem.bind(this);
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -118,7 +126,7 @@ export default class ListEditor extends Component {
                 // Filter out empty array values
                 const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
                 const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
-                if (totalArray.length > this.props.maxCount) {
+                if (totalArray.length > this.props.maxCount && this.props.maxCount > 0) {
                     // If the final list is longer that maxCount, trim it back
                     totalArray.length = this.props.maxCount;
                 }
