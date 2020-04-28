@@ -215,7 +215,6 @@ context('Thesis admin edit', () => {
                             .should('contain', 'Member of collections');
                         cy.get('#member-of-collections-input-label')
                             .should('contain', 'Member of collections');
-                        // prettier-ignore
 
                         cy.get('[class*="MuiAutocomplete-tag-"]')
                             .eq(0)
