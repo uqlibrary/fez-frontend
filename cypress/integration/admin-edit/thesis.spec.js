@@ -221,7 +221,7 @@ context('Thesis admin edit', () => {
                             .should('have.text', 'UQ Theses (RHD) - Official');
                         cy.get('[class*="MuiAutocomplete-tag-"]')
                             .eq(1)
-                            .should('have.text', 'UQ Thesis (RHD) - Open Access');
+                            .should('have.text', 'UQ Theses (RHD) - Open Access');
                     });
 
                 cy.get('@cards')
