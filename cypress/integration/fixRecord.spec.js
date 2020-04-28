@@ -142,13 +142,13 @@ context('Request correction form', () => {
         cy.contains('button', 'Submit')
             .should('not.be.disabled')
             .click();
-        cy.get('[class*="Alert-info"] .alert-text')
+        cy.get('[class*="Alert"] .alert-text')
             .should('contain', fixFormLocale.progressAlert.title)
             .should('contain', fixFormLocale.progressAlert.message);
-        cy.get('[class*="Alert-done"] .alert-text')
+        cy.get('[class*="Alert"] .alert-text')
             .should('contain', fixFormLocale.successAlert.title)
             .should('contain', fixFormLocale.successAlert.message);
-        cy.contains('h6', fixFormLocale.successWorkflowConfirmation.confirmationTitle)
+        cy.contains('h2', fixFormLocale.successWorkflowConfirmation.confirmationTitle)
             .should('have.length', 1);
         cy.contains('button', fixFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();

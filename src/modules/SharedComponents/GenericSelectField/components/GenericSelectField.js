@@ -45,6 +45,7 @@ export class GenericSelectFieldClass extends Component {
         menuItemClassName: PropTypes.string,
         meta: PropTypes.object,
         multiple: PropTypes.bool,
+        name: PropTypes.string,
         onChange: PropTypes.func,
         parentItemsId: PropTypes.number,
         required: PropTypes.bool,

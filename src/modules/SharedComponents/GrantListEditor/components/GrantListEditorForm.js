@@ -152,7 +152,7 @@ export class GrantListEditorFormClass extends PureComponent {
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
-                            id="grantAgencyName"
+                            id="grant-agency-name"
                             label={grantAgencyNameLabel}
                             placeholder={grantAgencyNameHint}
                             value={grantAgencyName}
@@ -167,7 +167,7 @@ export class GrantListEditorFormClass extends PureComponent {
                     <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
                         <TextField
                             fullWidth
-                            id="grantId"
+                            id="grant-id"
                             label={grantIdLabel}
                             placeholder={grantIdHint}
                             value={grantId}
@@ -188,8 +188,9 @@ export class GrantListEditorFormClass extends PureComponent {
                                 </Typography>
                                 <Select
                                     SelectDisplayProps={{
-                                        id: 'grantType',
+                                        id: 'grant-type',
                                     }}
+                                    name="grant-type"
                                     label={grantAgencyType}
                                     placeholder={grantAgencyTypeHint}
                                     displayEmpty
@@ -216,7 +217,7 @@ export class GrantListEditorFormClass extends PureComponent {
                     )}
                     <Grid item xs={12}>
                         <Button
-                            id="grantAddButton"
+                            id={(!!grantSelectedToEdit && 'edit-grant') || 'add-grant'}
                             variant="contained"
                             fullWidth
                             color="primary"

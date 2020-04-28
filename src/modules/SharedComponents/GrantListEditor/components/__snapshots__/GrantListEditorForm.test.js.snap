@@ -23,7 +23,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="grantAgencyName"
+        id="grant-agency-name"
         onChange={[Function]}
         required={true}
         value=""
@@ -38,7 +38,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
       <TextField
         disabled={true}
         fullWidth={true}
-        id="grantId"
+        id="grant-id"
         onChange={[Function]}
         required={true}
         value=""
@@ -52,7 +52,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
-        id="grantAddButton"
+        id="add-grant"
         onClick={[Function]}
         variant="contained"
       >
@@ -804,7 +804,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                               error={true}
                               errorText="This field is required"
                               fullWidth={true}
-                              id="grantAgencyName"
+                              id="grant-agency-name"
                               onChange={[Function]}
                               required={true}
                               value=""
@@ -813,8 +813,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 InputLabelProps={
                                   Object {
                                     "hidden": false,
-                                    "htmlFor": "grantAgencyName",
-                                    "id": "grantAgencyName-label",
+                                    "htmlFor": "grant-agency-name",
+                                    "id": "grant-agency-name-label",
                                     "shrink": undefined,
                                   }
                                 }
@@ -823,12 +823,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 error={true}
                                 fullWidth={true}
                                 helperText="This field is required"
-                                id="grantAgencyName"
+                                id="grant-agency-name"
                                 inputProps={
                                   Object {
                                     "aria-label": undefined,
-                                    "aria-labelledby": "grantAgencyName-label",
-                                    "id": "grantAgencyName",
+                                    "aria-labelledby": "grant-agency-name-label",
+                                    "id": "grant-agency-name",
                                     "label": undefined,
                                   }
                                 }
@@ -840,8 +840,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   InputLabelProps={
                                     Object {
                                       "hidden": false,
-                                      "htmlFor": "grantAgencyName",
-                                      "id": "grantAgencyName-label",
+                                      "htmlFor": "grant-agency-name",
+                                      "id": "grant-agency-name-label",
                                       "shrink": undefined,
                                     }
                                   }
@@ -855,12 +855,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   error={true}
                                   fullWidth={true}
                                   helperText="This field is required"
-                                  id="grantAgencyName"
+                                  id="grant-agency-name"
                                   inputProps={
                                     Object {
                                       "aria-label": undefined,
-                                      "aria-labelledby": "grantAgencyName-label",
-                                      "id": "grantAgencyName",
+                                      "aria-labelledby": "grant-agency-name-label",
+                                      "id": "grant-agency-name",
                                       "label": undefined,
                                     }
                                   }
@@ -898,16 +898,16 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                       >
                                         <WithStyles(ForwardRef(Input))
-                                          aria-describedby="grantAgencyName-helper-text"
+                                          aria-describedby="grant-agency-name-helper-text"
                                           autoComplete="off"
                                           autoFocus={false}
                                           fullWidth={true}
-                                          id="grantAgencyName"
+                                          id="grant-agency-name"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
-                                              "aria-labelledby": "grantAgencyName-label",
-                                              "id": "grantAgencyName",
+                                              "aria-labelledby": "grant-agency-name-label",
+                                              "id": "grant-agency-name",
                                               "label": undefined,
                                             }
                                           }
@@ -916,7 +916,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                           value=""
                                         >
                                           <ForwardRef(Input)
-                                            aria-describedby="grantAgencyName-helper-text"
+                                            aria-describedby="grant-agency-name-helper-text"
                                             autoComplete="off"
                                             autoFocus={false}
                                             classes={
@@ -938,12 +938,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="grantAgencyName"
+                                            id="grant-agency-name"
                                             inputProps={
                                               Object {
                                                 "aria-label": undefined,
-                                                "aria-labelledby": "grantAgencyName-label",
-                                                "id": "grantAgencyName",
+                                                "aria-labelledby": "grant-agency-name-label",
+                                                "id": "grant-agency-name",
                                                 "label": undefined,
                                               }
                                             }
@@ -952,7 +952,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             value=""
                                           >
                                             <WithStyles(ForwardRef(InputBase))
-                                              aria-describedby="grantAgencyName-helper-text"
+                                              aria-describedby="grant-agency-name-helper-text"
                                               autoComplete="off"
                                               autoFocus={false}
                                               classes={
@@ -974,13 +974,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="grantAgencyName"
+                                              id="grant-agency-name"
                                               inputComponent="input"
                                               inputProps={
                                                 Object {
                                                   "aria-label": undefined,
-                                                  "aria-labelledby": "grantAgencyName-label",
-                                                  "id": "grantAgencyName",
+                                                  "aria-labelledby": "grant-agency-name-label",
+                                                  "id": "grant-agency-name",
                                                   "label": undefined,
                                                 }
                                               }
@@ -990,7 +990,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               value=""
                                             >
                                               <ForwardRef(InputBase)
-                                                aria-describedby="grantAgencyName-helper-text"
+                                                aria-describedby="grant-agency-name-helper-text"
                                                 autoComplete="off"
                                                 autoFocus={false}
                                                 classes={
@@ -1016,13 +1016,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="grantAgencyName"
+                                                id="grant-agency-name"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
                                                     "aria-label": undefined,
-                                                    "aria-labelledby": "grantAgencyName-label",
-                                                    "id": "grantAgencyName",
+                                                    "aria-labelledby": "grant-agency-name-label",
+                                                    "id": "grant-agency-name",
                                                     "label": undefined,
                                                   }
                                                 }
@@ -1036,14 +1036,14 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <input
-                                                    aria-describedby="grantAgencyName-helper-text"
+                                                    aria-describedby="grant-agency-name-helper-text"
                                                     aria-invalid={true}
-                                                    aria-labelledby="grantAgencyName-label"
+                                                    aria-labelledby="grant-agency-name-label"
                                                     autoComplete="off"
                                                     autoFocus={false}
                                                     className="MuiInputBase-input MuiInput-input"
                                                     disabled={false}
-                                                    id="grantAgencyName"
+                                                    id="grant-agency-name"
                                                     onAnimationStart={[Function]}
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
@@ -1058,7 +1058,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                           </ForwardRef(Input)>
                                         </WithStyles(ForwardRef(Input))>
                                         <WithStyles(ForwardRef(FormHelperText))
-                                          id="grantAgencyName-helper-text"
+                                          id="grant-agency-name-helper-text"
                                         >
                                           <ForwardRef(FormHelperText)
                                             classes={
@@ -1073,11 +1073,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "root": "MuiFormHelperText-root",
                                               }
                                             }
-                                            id="grantAgencyName-helper-text"
+                                            id="grant-agency-name-helper-text"
                                           >
                                             <p
                                               className="MuiFormHelperText-root Mui-error Mui-required"
-                                              id="grantAgencyName-helper-text"
+                                              id="grant-agency-name-helper-text"
                                             >
                                               This field is required
                                             </p>
@@ -1217,7 +1217,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                             <TextField
                               disabled={true}
                               fullWidth={true}
-                              id="grantId"
+                              id="grant-id"
                               onChange={[Function]}
                               required={true}
                               value=""
@@ -1226,19 +1226,19 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 InputLabelProps={
                                   Object {
                                     "hidden": false,
-                                    "htmlFor": "grantId",
-                                    "id": "grantId-label",
+                                    "htmlFor": "grant-id",
+                                    "id": "grant-id-label",
                                     "shrink": undefined,
                                   }
                                 }
                                 disabled={true}
                                 fullWidth={true}
-                                id="grantId"
+                                id="grant-id"
                                 inputProps={
                                   Object {
                                     "aria-label": undefined,
-                                    "aria-labelledby": "grantId-label",
-                                    "id": "grantId",
+                                    "aria-labelledby": "grant-id-label",
+                                    "id": "grant-id",
                                     "label": undefined,
                                   }
                                 }
@@ -1250,8 +1250,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   InputLabelProps={
                                     Object {
                                       "hidden": false,
-                                      "htmlFor": "grantId",
-                                      "id": "grantId-label",
+                                      "htmlFor": "grant-id",
+                                      "id": "grant-id-label",
                                       "shrink": undefined,
                                     }
                                   }
@@ -1262,12 +1262,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   }
                                   disabled={true}
                                   fullWidth={true}
-                                  id="grantId"
+                                  id="grant-id"
                                   inputProps={
                                     Object {
                                       "aria-label": undefined,
-                                      "aria-labelledby": "grantId-label",
-                                      "id": "grantId",
+                                      "aria-labelledby": "grant-id-label",
+                                      "id": "grant-id",
                                       "label": undefined,
                                     }
                                   }
@@ -1307,12 +1307,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         <WithStyles(ForwardRef(Input))
                                           autoFocus={false}
                                           fullWidth={true}
-                                          id="grantId"
+                                          id="grant-id"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
-                                              "aria-labelledby": "grantId-label",
-                                              "id": "grantId",
+                                              "aria-labelledby": "grant-id-label",
+                                              "id": "grant-id",
                                               "label": undefined,
                                             }
                                           }
@@ -1341,12 +1341,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="grantId"
+                                            id="grant-id"
                                             inputProps={
                                               Object {
                                                 "aria-label": undefined,
-                                                "aria-labelledby": "grantId-label",
-                                                "id": "grantId",
+                                                "aria-labelledby": "grant-id-label",
+                                                "id": "grant-id",
                                                 "label": undefined,
                                               }
                                             }
@@ -1375,13 +1375,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="grantId"
+                                              id="grant-id"
                                               inputComponent="input"
                                               inputProps={
                                                 Object {
                                                   "aria-label": undefined,
-                                                  "aria-labelledby": "grantId-label",
-                                                  "id": "grantId",
+                                                  "aria-labelledby": "grant-id-label",
+                                                  "id": "grant-id",
                                                   "label": undefined,
                                                 }
                                               }
@@ -1415,13 +1415,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="grantId"
+                                                id="grant-id"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
                                                     "aria-label": undefined,
-                                                    "aria-labelledby": "grantId-label",
-                                                    "id": "grantId",
+                                                    "aria-labelledby": "grant-id-label",
+                                                    "id": "grant-id",
                                                     "label": undefined,
                                                   }
                                                 }
@@ -1436,11 +1436,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 >
                                                   <input
                                                     aria-invalid={false}
-                                                    aria-labelledby="grantId-label"
+                                                    aria-labelledby="grant-id-label"
                                                     autoFocus={false}
                                                     className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
                                                     disabled={true}
-                                                    id="grantId"
+                                                    id="grant-id"
                                                     onAnimationStart={[Function]}
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
@@ -1674,19 +1674,20 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   <WithStyles(ForwardRef(Select))
                                     SelectDisplayProps={
                                       Object {
-                                        "id": "grantType",
+                                        "id": "grant-type",
                                       }
                                     }
                                     disabled={true}
                                     displayEmpty={true}
                                     label=""
+                                    name="grant-type"
                                     onChange={[Function]}
                                     value=""
                                   >
                                     <ForwardRef(Select)
                                       SelectDisplayProps={
                                         Object {
-                                          "id": "grantType",
+                                          "id": "grant-type",
                                         }
                                       }
                                       classes={
@@ -1706,6 +1707,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       disabled={true}
                                       displayEmpty={true}
                                       label=""
+                                      name="grant-type"
                                       onChange={[Function]}
                                       value=""
                                     >
@@ -1762,7 +1764,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             },
                                             "MenuProps": undefined,
                                             "SelectDisplayProps": Object {
-                                              "id": "grantType",
+                                              "id": "grant-type",
                                             },
                                             "autoWidth": false,
                                             "children": Array [
@@ -1837,6 +1839,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             "variant": "standard",
                                           }
                                         }
+                                        name="grant-type"
                                         onChange={[Function]}
                                         value=""
                                       >
@@ -1911,7 +1914,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               },
                                               "MenuProps": undefined,
                                               "SelectDisplayProps": Object {
-                                                "id": "grantType",
+                                                "id": "grant-type",
                                               },
                                               "autoWidth": false,
                                               "children": Array [
@@ -1986,6 +1989,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               "variant": "standard",
                                             }
                                           }
+                                          name="grant-type"
                                           onChange={[Function]}
                                           value=""
                                         >
@@ -2061,7 +2065,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 },
                                                 "MenuProps": undefined,
                                                 "SelectDisplayProps": Object {
-                                                  "id": "grantType",
+                                                  "id": "grant-type",
                                                 },
                                                 "autoWidth": false,
                                                 "children": Array [
@@ -2137,6 +2141,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                             }
                                             multiline={false}
+                                            name="grant-type"
                                             onChange={[Function]}
                                             type="text"
                                             value=""
@@ -2217,7 +2222,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   },
                                                   "MenuProps": undefined,
                                                   "SelectDisplayProps": Object {
-                                                    "id": "grantType",
+                                                    "id": "grant-type",
                                                   },
                                                   "autoWidth": false,
                                                   "children": Array [
@@ -2293,6 +2298,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               multiline={false}
+                                              name="grant-type"
                                               onChange={[Function]}
                                               type="text"
                                               value=""
@@ -2316,7 +2322,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   }
                                                   SelectDisplayProps={
                                                     Object {
-                                                      "id": "grantType",
+                                                      "id": "grant-type",
                                                     }
                                                   }
                                                   aria-invalid={false}
@@ -2340,6 +2346,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   displayEmpty={true}
                                                   inputRef={[Function]}
                                                   multiple={false}
+                                                  name="grant-type"
                                                   onAnimationStart={[Function]}
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
@@ -2351,9 +2358,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   <div
                                                     aria-disabled="true"
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby="grantType"
+                                                    aria-labelledby="grant-type"
                                                     className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                    id="grantType"
+                                                    id="grant-type"
                                                     onBlur={[Function]}
                                                     onFocus={[Function]}
                                                     onKeyDown={[Function]}
@@ -2370,6 +2377,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     />
                                                   </div>
                                                   <input
+                                                    name="grant-type"
                                                     onAnimationStart={[Function]}
                                                     type="hidden"
                                                     value=""
@@ -2428,9 +2436,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       <div
                                                         aria-disabled="true"
                                                         aria-haspopup="listbox"
-                                                        aria-labelledby="grantType"
+                                                        aria-labelledby="grant-type"
                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                        id="grantType"
+                                                        id="grant-type"
                                                         role="button"
                                                       >
                                                         <span>
@@ -2438,7 +2446,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                         </span>
                                                       </div>
                                                     }
-                                                    id="menu-"
+                                                    id="menu-grant-type"
                                                     onClose={[Function]}
                                                     open={false}
                                                   >
@@ -2461,9 +2469,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                         <div
                                                           aria-disabled="true"
                                                           aria-haspopup="listbox"
-                                                          aria-labelledby="grantType"
+                                                          aria-labelledby="grant-type"
                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                          id="grantType"
+                                                          id="grant-type"
                                                           role="button"
                                                         >
                                                           <span>
@@ -2477,7 +2485,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           "paper": "MuiMenu-paper",
                                                         }
                                                       }
-                                                      id="menu-"
+                                                      id="menu-grant-type"
                                                       onClose={[Function]}
                                                       open={false}
                                                     >
@@ -2496,9 +2504,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           <div
                                                             aria-disabled="true"
                                                             aria-haspopup="listbox"
-                                                            aria-labelledby="grantType"
+                                                            aria-labelledby="grant-type"
                                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                            id="grantType"
+                                                            id="grant-type"
                                                             role="button"
                                                           >
                                                             <span>
@@ -2513,7 +2521,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           }
                                                         }
                                                         getContentAnchorEl={[Function]}
-                                                        id="menu-"
+                                                        id="menu-grant-type"
                                                         onClose={[Function]}
                                                         onEntering={[Function]}
                                                         open={false}
@@ -2540,9 +2548,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                             <div
                                                               aria-disabled="true"
                                                               aria-haspopup="listbox"
-                                                              aria-labelledby="grantType"
+                                                              aria-labelledby="grant-type"
                                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                              id="grantType"
+                                                              id="grant-type"
                                                               role="button"
                                                             >
                                                               <span>
@@ -2563,7 +2571,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                             }
                                                           }
                                                           getContentAnchorEl={[Function]}
-                                                          id="menu-"
+                                                          id="menu-grant-type"
                                                           onClose={[Function]}
                                                           onEntering={[Function]}
                                                           open={false}
@@ -2583,7 +2591,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                             }
                                                             className="MuiPopover-root"
                                                             container={<body />}
-                                                            id="menu-"
+                                                            id="menu-grant-type"
                                                             onClose={[Function]}
                                                             open={false}
                                                           />
@@ -2727,7 +2735,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                               color="primary"
                               disabled={true}
                               fullWidth={true}
-                              id="grantAddButton"
+                              id="add-grant"
                               onClick={[Function]}
                               variant="contained"
                             >
@@ -2768,7 +2776,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 color="primary"
                                 disabled={true}
                                 fullWidth={true}
-                                id="grantAddButton"
+                                id="add-grant"
                                 onClick={[Function]}
                                 variant="contained"
                               >
@@ -2778,7 +2786,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   disabled={true}
                                   focusRipple={true}
                                   focusVisibleClassName="Mui-focusVisible"
-                                  id="grantAddButton"
+                                  id="add-grant"
                                   onClick={[Function]}
                                   type="button"
                                 >
@@ -2795,14 +2803,14 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     disabled={true}
                                     focusRipple={true}
                                     focusVisibleClassName="Mui-focusVisible"
-                                    id="grantAddButton"
+                                    id="add-grant"
                                     onClick={[Function]}
                                     type="button"
                                   >
                                     <button
                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                       disabled={true}
-                                      id="grantAddButton"
+                                      id="add-grant"
                                       onBlur={[Function]}
                                       onClick={[Function]}
                                       onDragLeave={[Function]}
@@ -3553,7 +3561,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                           error={true}
                           errorText="This field is required"
                           fullWidth={true}
-                          id="grantAgencyName"
+                          id="grant-agency-name"
                           onChange={[Function]}
                           required={true}
                           value=""
@@ -3562,8 +3570,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             InputLabelProps={
                               Object {
                                 "hidden": false,
-                                "htmlFor": "grantAgencyName",
-                                "id": "grantAgencyName-label",
+                                "htmlFor": "grant-agency-name",
+                                "id": "grant-agency-name-label",
                                 "shrink": undefined,
                               }
                             }
@@ -3572,12 +3580,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             error={true}
                             fullWidth={true}
                             helperText="This field is required"
-                            id="grantAgencyName"
+                            id="grant-agency-name"
                             inputProps={
                               Object {
                                 "aria-label": undefined,
-                                "aria-labelledby": "grantAgencyName-label",
-                                "id": "grantAgencyName",
+                                "aria-labelledby": "grant-agency-name-label",
+                                "id": "grant-agency-name",
                                 "label": undefined,
                               }
                             }
@@ -3589,8 +3597,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               InputLabelProps={
                                 Object {
                                   "hidden": false,
-                                  "htmlFor": "grantAgencyName",
-                                  "id": "grantAgencyName-label",
+                                  "htmlFor": "grant-agency-name",
+                                  "id": "grant-agency-name-label",
                                   "shrink": undefined,
                                 }
                               }
@@ -3604,12 +3612,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               error={true}
                               fullWidth={true}
                               helperText="This field is required"
-                              id="grantAgencyName"
+                              id="grant-agency-name"
                               inputProps={
                                 Object {
                                   "aria-label": undefined,
-                                  "aria-labelledby": "grantAgencyName-label",
-                                  "id": "grantAgencyName",
+                                  "aria-labelledby": "grant-agency-name-label",
+                                  "id": "grant-agency-name",
                                   "label": undefined,
                                 }
                               }
@@ -3647,16 +3655,16 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                   >
                                     <WithStyles(ForwardRef(Input))
-                                      aria-describedby="grantAgencyName-helper-text"
+                                      aria-describedby="grant-agency-name-helper-text"
                                       autoComplete="off"
                                       autoFocus={false}
                                       fullWidth={true}
-                                      id="grantAgencyName"
+                                      id="grant-agency-name"
                                       inputProps={
                                         Object {
                                           "aria-label": undefined,
-                                          "aria-labelledby": "grantAgencyName-label",
-                                          "id": "grantAgencyName",
+                                          "aria-labelledby": "grant-agency-name-label",
+                                          "id": "grant-agency-name",
                                           "label": undefined,
                                         }
                                       }
@@ -3665,7 +3673,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                       value=""
                                     >
                                       <ForwardRef(Input)
-                                        aria-describedby="grantAgencyName-helper-text"
+                                        aria-describedby="grant-agency-name-helper-text"
                                         autoComplete="off"
                                         autoFocus={false}
                                         classes={
@@ -3687,12 +3695,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                         }
                                         fullWidth={true}
-                                        id="grantAgencyName"
+                                        id="grant-agency-name"
                                         inputProps={
                                           Object {
                                             "aria-label": undefined,
-                                            "aria-labelledby": "grantAgencyName-label",
-                                            "id": "grantAgencyName",
+                                            "aria-labelledby": "grant-agency-name-label",
+                                            "id": "grant-agency-name",
                                             "label": undefined,
                                           }
                                         }
@@ -3701,7 +3709,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         value=""
                                       >
                                         <WithStyles(ForwardRef(InputBase))
-                                          aria-describedby="grantAgencyName-helper-text"
+                                          aria-describedby="grant-agency-name-helper-text"
                                           autoComplete="off"
                                           autoFocus={false}
                                           classes={
@@ -3723,13 +3731,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           fullWidth={true}
-                                          id="grantAgencyName"
+                                          id="grant-agency-name"
                                           inputComponent="input"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
-                                              "aria-labelledby": "grantAgencyName-label",
-                                              "id": "grantAgencyName",
+                                              "aria-labelledby": "grant-agency-name-label",
+                                              "id": "grant-agency-name",
                                               "label": undefined,
                                             }
                                           }
@@ -3739,7 +3747,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           value=""
                                         >
                                           <ForwardRef(InputBase)
-                                            aria-describedby="grantAgencyName-helper-text"
+                                            aria-describedby="grant-agency-name-helper-text"
                                             autoComplete="off"
                                             autoFocus={false}
                                             classes={
@@ -3765,13 +3773,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="grantAgencyName"
+                                            id="grant-agency-name"
                                             inputComponent="input"
                                             inputProps={
                                               Object {
                                                 "aria-label": undefined,
-                                                "aria-labelledby": "grantAgencyName-label",
-                                                "id": "grantAgencyName",
+                                                "aria-labelledby": "grant-agency-name-label",
+                                                "id": "grant-agency-name",
                                                 "label": undefined,
                                               }
                                             }
@@ -3785,14 +3793,14 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               onClick={[Function]}
                                             >
                                               <input
-                                                aria-describedby="grantAgencyName-helper-text"
+                                                aria-describedby="grant-agency-name-helper-text"
                                                 aria-invalid={true}
-                                                aria-labelledby="grantAgencyName-label"
+                                                aria-labelledby="grant-agency-name-label"
                                                 autoComplete="off"
                                                 autoFocus={false}
                                                 className="MuiInputBase-input MuiInput-input"
                                                 disabled={false}
-                                                id="grantAgencyName"
+                                                id="grant-agency-name"
                                                 onAnimationStart={[Function]}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -3807,7 +3815,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                       </ForwardRef(Input)>
                                     </WithStyles(ForwardRef(Input))>
                                     <WithStyles(ForwardRef(FormHelperText))
-                                      id="grantAgencyName-helper-text"
+                                      id="grant-agency-name-helper-text"
                                     >
                                       <ForwardRef(FormHelperText)
                                         classes={
@@ -3822,11 +3830,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "root": "MuiFormHelperText-root",
                                           }
                                         }
-                                        id="grantAgencyName-helper-text"
+                                        id="grant-agency-name-helper-text"
                                       >
                                         <p
                                           className="MuiFormHelperText-root Mui-error Mui-required"
-                                          id="grantAgencyName-helper-text"
+                                          id="grant-agency-name-helper-text"
                                         >
                                           This field is required
                                         </p>
@@ -3966,7 +3974,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                         <TextField
                           disabled={true}
                           fullWidth={true}
-                          id="grantId"
+                          id="grant-id"
                           onChange={[Function]}
                           required={true}
                           value=""
@@ -3975,19 +3983,19 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             InputLabelProps={
                               Object {
                                 "hidden": false,
-                                "htmlFor": "grantId",
-                                "id": "grantId-label",
+                                "htmlFor": "grant-id",
+                                "id": "grant-id-label",
                                 "shrink": undefined,
                               }
                             }
                             disabled={true}
                             fullWidth={true}
-                            id="grantId"
+                            id="grant-id"
                             inputProps={
                               Object {
                                 "aria-label": undefined,
-                                "aria-labelledby": "grantId-label",
-                                "id": "grantId",
+                                "aria-labelledby": "grant-id-label",
+                                "id": "grant-id",
                                 "label": undefined,
                               }
                             }
@@ -3999,8 +4007,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               InputLabelProps={
                                 Object {
                                   "hidden": false,
-                                  "htmlFor": "grantId",
-                                  "id": "grantId-label",
+                                  "htmlFor": "grant-id",
+                                  "id": "grant-id-label",
                                   "shrink": undefined,
                                 }
                               }
@@ -4011,12 +4019,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               }
                               disabled={true}
                               fullWidth={true}
-                              id="grantId"
+                              id="grant-id"
                               inputProps={
                                 Object {
                                   "aria-label": undefined,
-                                  "aria-labelledby": "grantId-label",
-                                  "id": "grantId",
+                                  "aria-labelledby": "grant-id-label",
+                                  "id": "grant-id",
                                   "label": undefined,
                                 }
                               }
@@ -4056,12 +4064,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     <WithStyles(ForwardRef(Input))
                                       autoFocus={false}
                                       fullWidth={true}
-                                      id="grantId"
+                                      id="grant-id"
                                       inputProps={
                                         Object {
                                           "aria-label": undefined,
-                                          "aria-labelledby": "grantId-label",
-                                          "id": "grantId",
+                                          "aria-labelledby": "grant-id-label",
+                                          "id": "grant-id",
                                           "label": undefined,
                                         }
                                       }
@@ -4090,12 +4098,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                         }
                                         fullWidth={true}
-                                        id="grantId"
+                                        id="grant-id"
                                         inputProps={
                                           Object {
                                             "aria-label": undefined,
-                                            "aria-labelledby": "grantId-label",
-                                            "id": "grantId",
+                                            "aria-labelledby": "grant-id-label",
+                                            "id": "grant-id",
                                             "label": undefined,
                                           }
                                         }
@@ -4124,13 +4132,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           fullWidth={true}
-                                          id="grantId"
+                                          id="grant-id"
                                           inputComponent="input"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
-                                              "aria-labelledby": "grantId-label",
-                                              "id": "grantId",
+                                              "aria-labelledby": "grant-id-label",
+                                              "id": "grant-id",
                                               "label": undefined,
                                             }
                                           }
@@ -4164,13 +4172,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="grantId"
+                                            id="grant-id"
                                             inputComponent="input"
                                             inputProps={
                                               Object {
                                                 "aria-label": undefined,
-                                                "aria-labelledby": "grantId-label",
-                                                "id": "grantId",
+                                                "aria-labelledby": "grant-id-label",
+                                                "id": "grant-id",
                                                 "label": undefined,
                                               }
                                             }
@@ -4185,11 +4193,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             >
                                               <input
                                                 aria-invalid={false}
-                                                aria-labelledby="grantId-label"
+                                                aria-labelledby="grant-id-label"
                                                 autoFocus={false}
                                                 className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
                                                 disabled={true}
-                                                id="grantId"
+                                                id="grant-id"
                                                 onAnimationStart={[Function]}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -4423,19 +4431,20 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               <WithStyles(ForwardRef(Select))
                                 SelectDisplayProps={
                                   Object {
-                                    "id": "grantType",
+                                    "id": "grant-type",
                                   }
                                 }
                                 disabled={true}
                                 displayEmpty={true}
                                 label=""
+                                name="grant-type"
                                 onChange={[Function]}
                                 value=""
                               >
                                 <ForwardRef(Select)
                                   SelectDisplayProps={
                                     Object {
-                                      "id": "grantType",
+                                      "id": "grant-type",
                                     }
                                   }
                                   classes={
@@ -4455,6 +4464,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   disabled={true}
                                   displayEmpty={true}
                                   label=""
+                                  name="grant-type"
                                   onChange={[Function]}
                                   value=""
                                 >
@@ -4511,7 +4521,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         },
                                         "MenuProps": undefined,
                                         "SelectDisplayProps": Object {
-                                          "id": "grantType",
+                                          "id": "grant-type",
                                         },
                                         "autoWidth": false,
                                         "children": Array [
@@ -4586,6 +4596,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         "variant": "standard",
                                       }
                                     }
+                                    name="grant-type"
                                     onChange={[Function]}
                                     value=""
                                   >
@@ -4660,7 +4671,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           },
                                           "MenuProps": undefined,
                                           "SelectDisplayProps": Object {
-                                            "id": "grantType",
+                                            "id": "grant-type",
                                           },
                                           "autoWidth": false,
                                           "children": Array [
@@ -4735,6 +4746,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           "variant": "standard",
                                         }
                                       }
+                                      name="grant-type"
                                       onChange={[Function]}
                                       value=""
                                     >
@@ -4810,7 +4822,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             },
                                             "MenuProps": undefined,
                                             "SelectDisplayProps": Object {
-                                              "id": "grantType",
+                                              "id": "grant-type",
                                             },
                                             "autoWidth": false,
                                             "children": Array [
@@ -4886,6 +4898,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                         }
                                         multiline={false}
+                                        name="grant-type"
                                         onChange={[Function]}
                                         type="text"
                                         value=""
@@ -4966,7 +4979,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               },
                                               "MenuProps": undefined,
                                               "SelectDisplayProps": Object {
-                                                "id": "grantType",
+                                                "id": "grant-type",
                                               },
                                               "autoWidth": false,
                                               "children": Array [
@@ -5042,6 +5055,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           multiline={false}
+                                          name="grant-type"
                                           onChange={[Function]}
                                           type="text"
                                           value=""
@@ -5065,7 +5079,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               }
                                               SelectDisplayProps={
                                                 Object {
-                                                  "id": "grantType",
+                                                  "id": "grant-type",
                                                 }
                                               }
                                               aria-invalid={false}
@@ -5089,6 +5103,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               displayEmpty={true}
                                               inputRef={[Function]}
                                               multiple={false}
+                                              name="grant-type"
                                               onAnimationStart={[Function]}
                                               onBlur={[Function]}
                                               onChange={[Function]}
@@ -5100,9 +5115,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               <div
                                                 aria-disabled="true"
                                                 aria-haspopup="listbox"
-                                                aria-labelledby="grantType"
+                                                aria-labelledby="grant-type"
                                                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                id="grantType"
+                                                id="grant-type"
                                                 onBlur={[Function]}
                                                 onFocus={[Function]}
                                                 onKeyDown={[Function]}
@@ -5119,6 +5134,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 />
                                               </div>
                                               <input
+                                                name="grant-type"
                                                 onAnimationStart={[Function]}
                                                 type="hidden"
                                                 value=""
@@ -5177,9 +5193,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   <div
                                                     aria-disabled="true"
                                                     aria-haspopup="listbox"
-                                                    aria-labelledby="grantType"
+                                                    aria-labelledby="grant-type"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                    id="grantType"
+                                                    id="grant-type"
                                                     role="button"
                                                   >
                                                     <span>
@@ -5187,7 +5203,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                     </span>
                                                   </div>
                                                 }
-                                                id="menu-"
+                                                id="menu-grant-type"
                                                 onClose={[Function]}
                                                 open={false}
                                               >
@@ -5210,9 +5226,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                     <div
                                                       aria-disabled="true"
                                                       aria-haspopup="listbox"
-                                                      aria-labelledby="grantType"
+                                                      aria-labelledby="grant-type"
                                                       class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                      id="grantType"
+                                                      id="grant-type"
                                                       role="button"
                                                     >
                                                       <span>
@@ -5226,7 +5242,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       "paper": "MuiMenu-paper",
                                                     }
                                                   }
-                                                  id="menu-"
+                                                  id="menu-grant-type"
                                                   onClose={[Function]}
                                                   open={false}
                                                 >
@@ -5245,9 +5261,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       <div
                                                         aria-disabled="true"
                                                         aria-haspopup="listbox"
-                                                        aria-labelledby="grantType"
+                                                        aria-labelledby="grant-type"
                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                        id="grantType"
+                                                        id="grant-type"
                                                         role="button"
                                                       >
                                                         <span>
@@ -5262,7 +5278,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       }
                                                     }
                                                     getContentAnchorEl={[Function]}
-                                                    id="menu-"
+                                                    id="menu-grant-type"
                                                     onClose={[Function]}
                                                     onEntering={[Function]}
                                                     open={false}
@@ -5289,9 +5305,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                         <div
                                                           aria-disabled="true"
                                                           aria-haspopup="listbox"
-                                                          aria-labelledby="grantType"
+                                                          aria-labelledby="grant-type"
                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                                          id="grantType"
+                                                          id="grant-type"
                                                           role="button"
                                                         >
                                                           <span>
@@ -5312,7 +5328,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                         }
                                                       }
                                                       getContentAnchorEl={[Function]}
-                                                      id="menu-"
+                                                      id="menu-grant-type"
                                                       onClose={[Function]}
                                                       onEntering={[Function]}
                                                       open={false}
@@ -5332,7 +5348,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                         }
                                                         className="MuiPopover-root"
                                                         container={<body />}
-                                                        id="menu-"
+                                                        id="menu-grant-type"
                                                         onClose={[Function]}
                                                         open={false}
                                                       />
@@ -5476,7 +5492,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                           color="primary"
                           disabled={true}
                           fullWidth={true}
-                          id="grantAddButton"
+                          id="add-grant"
                           onClick={[Function]}
                           variant="contained"
                         >
@@ -5517,7 +5533,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             color="primary"
                             disabled={true}
                             fullWidth={true}
-                            id="grantAddButton"
+                            id="add-grant"
                             onClick={[Function]}
                             variant="contained"
                           >
@@ -5527,7 +5543,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               disabled={true}
                               focusRipple={true}
                               focusVisibleClassName="Mui-focusVisible"
-                              id="grantAddButton"
+                              id="add-grant"
                               onClick={[Function]}
                               type="button"
                             >
@@ -5544,14 +5560,14 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 disabled={true}
                                 focusRipple={true}
                                 focusVisibleClassName="Mui-focusVisible"
-                                id="grantAddButton"
+                                id="add-grant"
                                 onClick={[Function]}
                                 type="button"
                               >
                                 <button
                                   className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                   disabled={true}
-                                  id="grantAddButton"
+                                  id="add-grant"
                                   onBlur={[Function]}
                                   onClick={[Function]}
                                   onDragLeave={[Function]}
@@ -5614,7 +5630,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         error={false}
         errorText={false}
         fullWidth={true}
-        id="grantAgencyName"
+        id="grant-agency-name"
         onChange={[Function]}
         required={false}
         value=""
@@ -5629,7 +5645,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       <TextField
         disabled={true}
         fullWidth={true}
-        id="grantId"
+        id="grant-id"
         onChange={[Function]}
         required={false}
         value=""
@@ -5661,12 +5677,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         <WithStyles(ForwardRef(Select))
           SelectDisplayProps={
             Object {
-              "id": "grantType",
+              "id": "grant-type",
             }
           }
           disabled={true}
           displayEmpty={true}
           label=""
+          name="grant-type"
           onChange={[Function]}
           value=""
         >
@@ -5733,7 +5750,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         color="primary"
         disabled={true}
         fullWidth={true}
-        id="grantAddButton"
+        id="add-grant"
         onClick={[Function]}
         variant="contained"
       >
@@ -5767,7 +5784,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         error={false}
         errorText={false}
         fullWidth={true}
-        id="grantAgencyName"
+        id="grant-agency-name"
         onChange={[Function]}
         required={false}
         value="test"
@@ -5782,7 +5799,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       <TextField
         disabled={false}
         fullWidth={true}
-        id="grantId"
+        id="grant-id"
         onChange={[Function]}
         required={false}
         value=""
@@ -5814,12 +5831,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         <WithStyles(ForwardRef(Select))
           SelectDisplayProps={
             Object {
-              "id": "grantType",
+              "id": "grant-type",
             }
           }
           disabled={false}
           displayEmpty={true}
           label=""
+          name="grant-type"
           onChange={[Function]}
           value=""
         >
@@ -5891,7 +5909,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         color="primary"
         disabled={true}
         fullWidth={true}
-        id="grantAddButton"
+        id="add-grant"
         onClick={[Function]}
         variant="contained"
       >
@@ -5925,7 +5943,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         error={false}
         errorText={false}
         fullWidth={true}
-        id="grantAgencyName"
+        id="grant-agency-name"
         onChange={[Function]}
         required={false}
         value="test"
@@ -5940,7 +5958,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       <TextField
         disabled={false}
         fullWidth={true}
-        id="grantId"
+        id="grant-id"
         onChange={[Function]}
         required={false}
         value="1234"
@@ -5972,12 +5990,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         <WithStyles(ForwardRef(Select))
           SelectDisplayProps={
             Object {
-              "id": "grantType",
+              "id": "grant-type",
             }
           }
           disabled={false}
           displayEmpty={true}
           label=""
+          name="grant-type"
           onChange={[Function]}
           value=""
         >
@@ -6049,7 +6068,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         color="primary"
         disabled={true}
         fullWidth={true}
-        id="grantAddButton"
+        id="add-grant"
         onClick={[Function]}
         variant="contained"
       >

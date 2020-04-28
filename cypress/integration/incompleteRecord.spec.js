@@ -50,7 +50,7 @@ context('Incomplete record form', () => {
 
     const checkNonDeletableAuthors = authorCount => {
         Array.from({ length: authorCount }, (x, i) => {
-            cy.get(`#delete-author-${i}`)
+            cy.get(`#authors-list-row-delete-${i}`)
                 .should('be.disabled');
         });
     };
@@ -60,7 +60,7 @@ context('Incomplete record form', () => {
     const validationErrorsSelector = 'form > div > div:last-of-type .Alert ul li';
 
     const editNonUQAuthor = (authorNumber, orgName, orgType) => {
-        cy.get(`#edit-author-${authorNumber}`)
+        cy.get(`#authors-list-row-edit-${authorNumber}`)
             .click()
             .parents('ul')
             .first()
@@ -76,7 +76,7 @@ context('Incomplete record form', () => {
         // Select affiliation type
         cy.get('#org-affiliation-type')
             .click();
-        cy.get('#menu-')
+        cy.get('#menu-org-affiliation-type')
             .find('li')
             .contains(orgType)
             .click();
@@ -87,17 +87,17 @@ context('Incomplete record form', () => {
             .should('not.have.attr', 'disabled');
         cy.get('#submit-author') // Re-select to get updated element
             .click();
-        cy.get(`#contributor-editor-row-${authorNumber}`)
+        cy.get(`#authors-list-row-${authorNumber}`)
             .should('contain', orgName)
             .should('contain', `Organisation type: ${orgType}`);
-        cy.get(`#edit-author-${authorNumber}`)
+        cy.get(`#authors-list-row-edit-${authorNumber}`)
             .parents('.StandardCard')
             .eq(0)
             .should('not.contain', authorEditInstruction);
     };
 
     const editUQAuthor = authorNumber => {
-        cy.get(`#edit-author-${authorNumber}`)
+        cy.get(`#authors-list-row-edit-${authorNumber}`)
             .click()
             .parents('ul')
             .first()
@@ -109,7 +109,7 @@ context('Incomplete record form', () => {
         // Mark as UQ author
         cy.get('#org-affiliation-selector')
             .click();
-        cy.get('#menu-')
+        cy.get('#menu-org-affiliation-selector')
             .find('li')
             .eq(1)
             .should('not.contain', 'Not')
@@ -123,10 +123,10 @@ context('Incomplete record form', () => {
             .should('not.have.attr', 'disabled');
         cy.get('#submit-author') // Re-select to get updated element
             .click();
-        cy.get(`#contributor-editor-row-${authorNumber}`)
+        cy.get(`#authors-list-row-${authorNumber}`)
             .should('contain', 'The University of Queensland')
             .should('contain', 'Organisation type: University');
-        cy.get(`#edit-author-${authorNumber}`)
+        cy.get(`#authors-list-row-edit-${authorNumber}`)
             .parents('.StandardCard')
             .eq(0)
             .should('not.contain', authorEditInstruction);
@@ -168,7 +168,7 @@ context('Incomplete record form', () => {
         checkQualityIndicators('Commissioned by external body');
         checkNonDeletableAuthors(4);
 
-        cy.get('#edit-author-0')
+        cy.get('#authors-list-row-edit-0')
             .should('be.disabled');
 
         editUQAuthor(1);
@@ -185,25 +185,25 @@ context('Incomplete record form', () => {
     });
 
     it('should have working tests for Grants editor', () => {
-        cy.get('#grantAgencyName')
+        cy.get('#grant-agency-name')
             .type('Grant name');
-        cy.get('#grantAddButton')
+        cy.get('button#add-grant')
             .should('be.disabled');
         cy.get(validationErrorsSelector)
             .as('validationMessage')
             .should('have.length', 2)
             .should('contain', grantMessage);
-        cy.get('#grantId')
+        cy.get('#grant-id')
             .type('0001');
-        cy.get('#grantType')
+        cy.get('#grant-type')
             .click();
         cy.get('body > [role=presentation]')
             .find('li')
             .contains('Commercial Gallery')
             .click();
-        cy.get('#grantType')
+        cy.get('#grant-type')
             .should('contain', 'Commercial Gallery');
-        cy.get('#grantAddButton')
+        cy.get('button#add-grant')
             .should('be.enabled')
             .click();
         cy.get('@validationMessage')
