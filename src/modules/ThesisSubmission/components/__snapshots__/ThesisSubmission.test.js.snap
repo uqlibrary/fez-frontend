@@ -1119,7 +1119,7 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
       >
         <WithStyles(Alert)
           action={[Function]}
-          actionButtonLabel="RESUBMIT YOUR THESIS"
+          actionButtonLabel="Resubmit your thesis"
           message="There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button."
           title="FILE UPLOAD ERROR"
           type="error"

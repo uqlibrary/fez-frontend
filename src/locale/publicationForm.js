@@ -25,7 +25,7 @@ export default {
                     </a>
                 </p>
             ),
-            buttonLabel: 'CLOSE',
+            buttonLabel: 'Close',
         },
     },
     publicationSubtype: {
@@ -49,7 +49,7 @@ export default {
                     </a>
                 </p>
             ),
-            buttonLabel: 'CLOSE',
+            buttonLabel: 'Close',
         },
         title: 'Optional: Content Indicators',
         description:
@@ -65,7 +65,7 @@ export default {
             // help: {
             //     title: 'General document information',
             //     text: 'Text...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -98,7 +98,7 @@ export default {
             // help: {
             //     title: 'Optional Information',
             //     text: 'Text...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -118,7 +118,7 @@ export default {
             // help: {
             //     title: 'Journal article information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -144,7 +144,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 volume: 'Volume',
@@ -163,7 +163,7 @@ export default {
             // help: {
             //     title: 'Book information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 bookTitle: 'Book title',
@@ -193,7 +193,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 articleNumber: 'Article number',
@@ -206,7 +206,7 @@ export default {
             // help: {
             //     title: 'Non-traditional Research Output details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // }
         },
     },
@@ -216,7 +216,7 @@ export default {
             // help: {
             //     title: 'Book chapter information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 bookChapterTitle: 'Book chapter title',
@@ -239,7 +239,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 edition: 'Edition',
@@ -256,7 +256,7 @@ export default {
             // help: {
             //     title: 'Conference paper information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 title: 'Title of paper',
@@ -282,7 +282,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 startPage: 'Start page',
@@ -298,7 +298,7 @@ export default {
             // help: {
             //     title: 'Research report information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -343,7 +343,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 abstract: {
@@ -378,7 +378,7 @@ export default {
                         </p>
                     </React.Fragment>
                 ),
-                buttonLabel: 'CLOSE',
+                buttonLabel: 'Close',
             },
             fieldLabels: {
                 documentTitle: {
@@ -412,7 +412,7 @@ export default {
             // help: {
             //     title: 'Optional information',
             //     text: 'help...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -432,7 +432,7 @@ export default {
             // help: {
             //     title: 'Patent information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 title: 'Title of patent',
@@ -453,7 +453,7 @@ export default {
             // help: {
             //     title: 'Other patent details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: 'Notes (not publicly viewable)',
@@ -467,7 +467,7 @@ export default {
             // help: {
             //     title: 'Seminar paper information',
             //     text: 'Some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -500,7 +500,7 @@ export default {
             // help: {
             //     title: 'Optional information help',
             //     text: 'Some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -520,7 +520,7 @@ export default {
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -558,7 +558,7 @@ export default {
             // help: {
             //     title: 'Field of research help',
             //     text: 'Some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             description: 'Select up to 3 Field of Research (FoR) codes',
         },
@@ -567,7 +567,7 @@ export default {
             // help: {
             //     title: 'Optional information help',
             //     text: 'Some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             description:
                 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
@@ -577,7 +577,7 @@ export default {
             // help: {
             //     title: 'Optional information help',
             //     text: 'Some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 doi: {
@@ -693,7 +693,7 @@ export default {
             // help: {
             //     title: 'Preprint information',
             //     text: 'Help...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -714,7 +714,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -778,7 +778,7 @@ export default {
             // help: {
             //     title: 'Optional information',
             //     text: 'Help...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -809,7 +809,7 @@ export default {
                         </p>
                     </div>
                 ),
-                buttonLabel: 'CLOSE',
+                buttonLabel: 'Close',
             },
             fieldLabels: {
                 documentTitle: {
@@ -843,7 +843,7 @@ export default {
             // help: {
             //     title: 'Optional information',
             //     text: 'text...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -863,7 +863,7 @@ export default {
             // help: {
             //     title: 'Image information',
             //     text: 'Some text.',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -888,7 +888,7 @@ export default {
             // help: {
             //     title: 'Optional information',
             //     text: 'Text...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -908,7 +908,7 @@ export default {
             // help: {
             //     title: 'Design information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 articleTitle: {
@@ -955,7 +955,7 @@ export default {
             // help: {
             //     title: 'Optional information',
             //     text: 'text...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -975,7 +975,7 @@ export default {
             // help: {
             //     title: 'Newspaper article information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -1008,7 +1008,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -1028,7 +1028,7 @@ export default {
             // help: {
             //     title: 'Department technical report information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -1073,7 +1073,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -1093,7 +1093,7 @@ export default {
             // help: {
             //     title: 'Working paper information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 documentTitle: {
@@ -1138,7 +1138,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -1158,7 +1158,7 @@ export default {
             // help: {
             //     title: 'Conference proceedings information',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 title: {
@@ -1203,7 +1203,7 @@ export default {
             // help: {
             //     title: 'Optional details',
             //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             fieldLabels: {
                 notes: {
@@ -1222,7 +1222,7 @@ export default {
         // help: {
         //     title: 'Upload files',
         //     text: 'file help...',
-        //     buttonLabel: 'CLOSE'
+        //     buttonLabel: 'Close'
         // }
     },
     cancelWorkflowConfirmation: {
@@ -1269,14 +1269,14 @@ export default {
             // help: {
             //     title: 'Upload files',
             //     text: 'file help...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             failedAlertLocale: {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
                 message:
                     "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                actionButtonLabel: 'RESUBMIT YOUR THESIS',
+                actionButtonLabel: 'Resubmit your thesis',
             },
             locale: {
                 instructions: '',
@@ -1329,11 +1329,8 @@ export default {
         afterSubmitLink:
             'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmit: 'Return to the Graduate School website',
-        afterFailedSubmit: 'Resubmit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
-        afterFailureTitle: 'Your thesis submission has failed',
         afterSubmitText: 'You will receive an email confirming your thesis deposit shortly.',
-        afterFailureText: 'There was an issue uploading your thesis files. You will need to resubmit your thesis.',
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
             confirmationMessage:
@@ -1366,7 +1363,7 @@ export default {
             // help: {
             //     title: 'Upload files',
             //     text: 'file help...',
-            //     buttonLabel: 'CLOSE'
+            //     buttonLabel: 'Close'
             // },
             locale: {
                 instructions: '',
