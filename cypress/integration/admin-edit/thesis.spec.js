@@ -84,12 +84,12 @@ context('Thesis admin edit', () => {
                             .siblings('[role=button]')
                             .should('have.text', record.rek_genre_type);
 
-                        cy.get('#Institution-input')
+                        cy.get('#org-name-field')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_org_name.rek_org_name,
                             );
-                        cy.get('#Schoolcentreorinstitute-input')
+                        cy.get('#org-unit-name-field')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_org_unit_name.rek_org_unit_name,
@@ -138,12 +138,14 @@ context('Thesis admin edit', () => {
                     });
             });
 
-        cy.get('#clear-input')
-            .click()
+        cy.get('#org-unit-name-field')
             .parent()
-            .parent()
-            .parent()
-            .children('p')
+            .within(() => {
+                cy.get('[title="Clear"]')
+                    .click({ force: true });
+            });
+
+        cy.get('#org-unit-name-field-helper-text')
             .should('have.text', 'This field is required');
 
         cy.adminEditVerifyAlerts(1, ['Enrolling unit is required']);
@@ -211,17 +213,16 @@ context('Thesis admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Member of collections');
-                        cy.get('#Memberofcollections-input-label')
+                        cy.get('#member-of-collections-input-label')
                             .should('contain', 'Member of collections');
                         // prettier-ignore
-                        const collections = record.fez_record_search_key_ismemberof.map(
-                            item => item.rek_ismemberof_lookup
-                        );
-                        collections.forEach((collection, index) => {
-                            cy.get('[class*="MuiChip-label-"]')
-                                .eq(index)
-                                .should('have.text', collection);
-                        });
+
+                        cy.get('[class*="MuiAutocomplete-tag-"]')
+                            .eq(0)
+                            .should('have.text', 'UQ Theses (RHD) - Official');
+                        cy.get('[class*="MuiAutocomplete-tag-"]')
+                            .eq(1)
+                            .should('have.text', 'UQ Thesis (RHD) - Open Access');
                     });
 
                 cy.get('@cards')

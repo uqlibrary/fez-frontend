@@ -13,6 +13,7 @@ const mapStateToProps = (state, props) => {
         allowFreeText: true,
         getOptionLabel: item => (!!item && String(item.value)) || '',
         filterOptions: options => options,
+        id: 'org-unit-name-field',
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
             ? {
                 defaultValue: (!!props.input.value && { value: props.input.value }) || null,
