@@ -283,6 +283,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
+                  partialDateFieldId="publication-year"
                   required={true}
                   validate={
                     Array [
@@ -309,6 +310,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="field-of-research"
               locale={
                 Object {
                   "form": Object {
@@ -362,7 +364,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           >
             <Field
               component={[Function]}
-              contributorEditorId="authors"
+              contributorEditorId="creators"
               disabled={false}
               locale={
                 Object {
@@ -968,6 +970,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
+                  partialDateFieldId="collection-start-date"
                   validate={
                     Array [
                       [Function],
@@ -994,6 +997,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
+                  partialDateFieldId="collection-end-date"
                   validate={
                     Array [
                       [Function],
@@ -1035,6 +1039,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               component={[Function]}
               disabled={false}
               height={50}
+              listEditorId="related-datasets"
               locale={
                 Object {
                   "form": Object {
@@ -1535,6 +1540,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
+                  partialDateFieldId="publication-year"
                   required={true}
                   validate={
                     Array [
@@ -1561,6 +1567,7 @@ exports[`AddDataCollection test should render component with a valid collection 
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="field-of-research"
               locale={
                 Object {
                   "form": Object {
@@ -1614,7 +1621,7 @@ exports[`AddDataCollection test should render component with a valid collection 
           >
             <Field
               component={[Function]}
-              contributorEditorId="authors"
+              contributorEditorId="creators"
               disabled={false}
               locale={
                 Object {
@@ -2220,6 +2227,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
+                  partialDateFieldId="collection-start-date"
                   validate={
                     Array [
                       [Function],
@@ -2246,6 +2254,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
+                  partialDateFieldId="collection-end-date"
                   validate={
                     Array [
                       [Function],
@@ -2287,6 +2296,7 @@ exports[`AddDataCollection test should render component with a valid collection 
               component={[Function]}
               disabled={false}
               height={50}
+              listEditorId="related-datasets"
               locale={
                 Object {
                   "form": Object {
@@ -2787,6 +2797,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
+                  partialDateFieldId="publication-year"
                   required={true}
                   validate={
                     Array [
@@ -2813,6 +2824,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="field-of-research"
               locale={
                 Object {
                   "form": Object {
@@ -2866,7 +2878,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
           >
             <Field
               component={[Function]}
-              contributorEditorId="authors"
+              contributorEditorId="creators"
               disabled={false}
               locale={
                 Object {
@@ -3472,6 +3484,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   hasError="Date range is not valid"
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
+                  partialDateFieldId="collection-start-date"
                   validate={
                     Array [
                       [Function],
@@ -3498,6 +3511,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   hasError="Date range is not valid"
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
+                  partialDateFieldId="collection-end-date"
                   validate={
                     Array [
                       [Function],
@@ -3539,6 +3553,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
               component={[Function]}
               disabled={false}
               height={50}
+              listEditorId="related-datasets"
               locale={
                 Object {
                   "form": Object {
@@ -4039,6 +4054,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
+                  partialDateFieldId="publication-year"
                   required={true}
                   validate={
                     Array [
@@ -4065,6 +4081,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="field-of-research"
               locale={
                 Object {
                   "form": Object {
@@ -4118,7 +4135,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           >
             <Field
               component={[Function]}
-              contributorEditorId="authors"
+              contributorEditorId="creators"
               disabled={false}
               locale={
                 Object {
@@ -4724,6 +4741,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
+                  partialDateFieldId="collection-start-date"
                   validate={
                     Array [
                       [Function],
@@ -4750,6 +4768,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
+                  partialDateFieldId="collection-end-date"
                   validate={
                     Array [
                       [Function],
@@ -4791,6 +4810,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               component={[Function]}
               disabled={false}
               height={50}
+              listEditorId="related-datasets"
               locale={
                 Object {
                   "form": Object {

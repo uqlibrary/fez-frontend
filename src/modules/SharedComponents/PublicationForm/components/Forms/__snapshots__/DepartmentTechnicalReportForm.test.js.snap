@@ -151,6 +151,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [

@@ -56,12 +56,12 @@ context('Working paper admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_report_number.rek_report_number,
                             );
-                        cy.get('#Institution-input')
+                        cy.get('#org-name-field')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_org_name.rek_org_name,
                             );
-                        cy.get('#Schooldepartmentorcentre-input')
+                        cy.get('#org-unit-name-field')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_org_unit_name.rek_org_unit_name,

@@ -51,6 +51,7 @@ export default class ImageDocumentForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial

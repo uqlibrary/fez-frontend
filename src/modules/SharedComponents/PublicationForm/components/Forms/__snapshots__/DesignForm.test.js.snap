@@ -122,6 +122,7 @@ exports[`DesignForm renders  component 1`] = `
             floatingTitle="Publication/Start date"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [

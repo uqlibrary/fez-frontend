@@ -3,7 +3,6 @@
 exports[`PartialDateForm component should display errors correctly 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -37,7 +36,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
         <WithStyles(ForwardRef(TextField))
           error={true}
           fullWidth={true}
-          id="day"
+          id="undefined-day"
           inputProps={
             Object {
               "label": "day",
@@ -63,7 +62,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
       >
         <WithStyles(ForwardRef(Select))
           error={true}
-          id="month"
+          id="undefined-month"
           inputProps={
             Object {
               "label": "month",
@@ -167,7 +166,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
         <WithStyles(ForwardRef(TextField))
           error={true}
           fullWidth={true}
-          id="year"
+          id="undefined-year"
           inputProps={
             Object {
               "label": "year",
@@ -191,7 +190,6 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
 exports[`PartialDateForm component should handle partial values 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -225,7 +223,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
         <WithStyles(ForwardRef(TextField))
           error={true}
           fullWidth={true}
-          id="day"
+          id="undefined-day"
           inputProps={
             Object {
               "label": "day",
@@ -251,7 +249,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
       >
         <WithStyles(ForwardRef(Select))
           error={true}
-          id="month"
+          id="undefined-month"
           inputProps={
             Object {
               "label": "month",
@@ -355,7 +353,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
         <WithStyles(ForwardRef(TextField))
           error={true}
           fullWidth={true}
-          id="year"
+          id="undefined-year"
           inputProps={
             Object {
               "label": "year",
@@ -379,7 +377,6 @@ exports[`PartialDateForm component should handle partial values 1`] = `
 exports[`PartialDateForm component should handle partial values 2`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -413,7 +410,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
         <WithStyles(ForwardRef(TextField))
           error={true}
           fullWidth={true}
-          id="day"
+          id="undefined-day"
           inputProps={
             Object {
               "label": "day",
@@ -439,7 +436,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
       >
         <WithStyles(ForwardRef(Select))
           error={true}
-          id="month"
+          id="undefined-month"
           inputProps={
             Object {
               "label": "month",
@@ -543,7 +540,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
         <WithStyles(ForwardRef(TextField))
           error={true}
           fullWidth={true}
-          id="year"
+          id="undefined-year"
           inputProps={
             Object {
               "label": "year",
@@ -567,7 +564,6 @@ exports[`PartialDateForm component should handle partial values 2`] = `
 exports[`PartialDateForm component should load existing values 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  id="PartialDate-Enter-a date"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))
@@ -601,7 +597,7 @@ exports[`PartialDateForm component should load existing values 1`] = `
         <WithStyles(ForwardRef(TextField))
           error={false}
           fullWidth={true}
-          id="day"
+          id="undefined-day"
           inputProps={
             Object {
               "label": "day",
@@ -622,7 +618,7 @@ exports[`PartialDateForm component should load existing values 1`] = `
       >
         <WithStyles(ForwardRef(Select))
           error={false}
-          id="month"
+          id="undefined-month"
           inputProps={
             Object {
               "label": "month",
@@ -726,7 +722,7 @@ exports[`PartialDateForm component should load existing values 1`] = `
         <WithStyles(ForwardRef(TextField))
           error={false}
           fullWidth={true}
-          id="year"
+          id="undefined-year"
           inputProps={
             Object {
               "label": "year",

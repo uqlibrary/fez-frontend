@@ -220,6 +220,7 @@ export default class AddDataCollection extends Component {
                                             <Field
                                                 component={PartialDateField}
                                                 disabled={this.props.submitting}
+                                                partialDateFieldId="publication-year"
                                                 name="rek_date"
                                                 allowPartial
                                                 required
@@ -240,6 +241,7 @@ export default class AddDataCollection extends Component {
                                     <Field
                                         component={FieldOfResearchListField}
                                         name="fieldOfResearch"
+                                        listEditorId="field-of-research"
                                         required
                                         validate={[validation.forRequired]}
                                         hideReorder
@@ -254,7 +256,7 @@ export default class AddDataCollection extends Component {
                                     <Field
                                         component={ContributorsEditorField}
                                         name="authors"
-                                        contributorEditorId="authors"
+                                        contributorEditorId="creators"
                                         showRoleInput
                                         locale={txt.information.creator.field}
                                         required
@@ -419,6 +421,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
                                             <Field
                                                 component={PartialDateField}
+                                                partialDateFieldId="collection-start-date"
                                                 disableFuture
                                                 autoOk
                                                 name="fez_record_search_key_start_date.rek_start_date"
@@ -435,6 +438,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
                                             <Field
                                                 component={PartialDateField}
+                                                partialDateFieldId="collection-end-date"
                                                 disableFuture
                                                 autoOk
                                                 floatingTitle={
@@ -477,6 +481,7 @@ export default class AddDataCollection extends Component {
                                 >
                                     <Field
                                         component={RelatedDatasetAndPublicationListField}
+                                        listEditorId="related-datasets"
                                         name="fez_record_search_key_isdatasetof"
                                         searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
                                         disabled={this.props.submitting}

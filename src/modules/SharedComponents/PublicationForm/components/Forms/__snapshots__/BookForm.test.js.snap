@@ -129,6 +129,7 @@ exports[`BookForm renders  component 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -691,6 +692,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -1042,6 +1044,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -1589,6 +1592,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -2294,6 +2298,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -2741,6 +2746,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [

@@ -198,6 +198,7 @@ export default class SbsSubmission extends Component {
                                             <Field
                                                 component={PartialDateField}
                                                 disabled={this.props.submitting}
+                                                partialDateFieldId="date"
                                                 name="rek_date"
                                                 allowPartial
                                                 className="requiredHintField"

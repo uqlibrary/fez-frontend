@@ -166,6 +166,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
             floatingTitle="Publication date"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [

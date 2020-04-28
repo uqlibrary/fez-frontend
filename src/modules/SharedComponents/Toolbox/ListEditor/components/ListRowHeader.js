@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder }) => {
+export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, listEditorId }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const { nameColumn, reorderColumn, deleteAll, deleteAllConfirmation } = locale;
@@ -46,7 +46,11 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder }) =>
                 <Grid item xs={2} sm={1} className={classes.center}>
                     <Tooltip title={deleteAll}>
                         <span>
-                            <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-items">
+                            <IconButton
+                                onClick={showConfirmation}
+                                disabled={disabled}
+                                id={`delete-all-${listEditorId}`}
+                            >
                                 <DeleteForever />
                             </IconButton>
                         </span>
@@ -62,6 +66,7 @@ ListRowHeader.propTypes = {
     locale: PropTypes.object,
     disabled: PropTypes.bool,
     hideReorder: PropTypes.bool,
+    listEditorId: PropTypes.string,
 };
 
 ListRowHeader.defaultProps = {

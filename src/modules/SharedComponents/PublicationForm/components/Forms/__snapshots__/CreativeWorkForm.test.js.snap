@@ -113,6 +113,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             floatingTitleRequired={true}
             hasError=""
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -133,6 +134,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
             floatingTitle="End date"
             hasError=""
             name="fez_record_search_key_end_date.rek_end_date"
+            partialDateFieldId="end-date"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -446,6 +448,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
             floatingTitle="Publication/Start date"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -466,6 +469,7 @@ exports[`CreativeWorkForm renders  should show architectural content correctly 1
             floatingTitle="End date"
             hasError=""
             name="fez_record_search_key_end_date.rek_end_date"
+            partialDateFieldId="end-date"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -912,6 +916,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
             floatingTitleRequired={true}
             hasError=""
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -932,6 +937,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
             floatingTitle="End date"
             hasError=""
             name="fez_record_search_key_end_date.rek_end_date"
+            partialDateFieldId="end-date"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -1360,6 +1366,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
             floatingTitleRequired={true}
             hasError=""
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -1380,6 +1387,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
             floatingTitle="End date"
             hasError=""
             name="fez_record_search_key_end_date.rek_end_date"
+            partialDateFieldId="end-date"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>

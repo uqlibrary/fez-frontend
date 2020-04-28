@@ -6,6 +6,7 @@ function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
         disabled: false,
+        listEditorId: 'test',
         ...testProps,
     };
     return rtlRender(<ListRowHeader {...props} />);
@@ -14,12 +15,12 @@ function setup(testProps = {}) {
 describe('ListRowHeader renders ', () => {
     it('header for contributor editor control with name and delete all button only', () => {
         const { getByTestId } = setup();
-        expect(getByTestId('delete-all-items')).toBeInTheDocument();
+        expect(getByTestId('delete-all-test')).toBeInTheDocument();
     });
 
     it('header for contributor editor control with delete all disabled', () => {
         const { getByTestId } = setup({ disabled: true });
-        expect(getByTestId('delete-all-items').disabled).toBeTruthy();
+        expect(getByTestId('delete-all-test').disabled).toBeTruthy();
     });
 
     it('should render larger grid item', () => {
@@ -33,7 +34,7 @@ describe('ListRowHeader renders ', () => {
         const onDeleteAllFn = jest.fn();
         const { getByTestId } = setup({ onDeleteAll: onDeleteAllFn });
 
-        fireEvent.click(getByTestId('delete-all-items'));
+        fireEvent.click(getByTestId('delete-all-test'));
         await waitFor(() => getByTestId('confirm-action'));
         fireEvent.click(getByTestId('confirm-action'));
 

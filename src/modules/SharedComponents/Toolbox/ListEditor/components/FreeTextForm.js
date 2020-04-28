@@ -31,6 +31,7 @@ export const FreeTextForm = ({
     normalize,
     required,
     itemSelectedToEdit,
+    listEditorId,
 }) => {
     const classes = useStyles();
     const [item, setItem] = useState(itemSelectedToEdit || '');
@@ -99,7 +100,7 @@ export const FreeTextForm = ({
             <Grid item xs={12} sm={2}>
                 <Button
                     fullWidth
-                    id="add-items"
+                    id={`add-${listEditorId}`}
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}
@@ -122,6 +123,7 @@ FreeTextForm.propTypes = {
     normalize: PropTypes.func,
     required: PropTypes.bool,
     itemSelectedToEdit: PropTypes.any,
+    listEditorId: PropTypes.string,
 };
 
 FreeTextForm.defaultProps = {

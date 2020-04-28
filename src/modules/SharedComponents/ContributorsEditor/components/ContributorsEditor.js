@@ -203,7 +203,6 @@ export class ContributorsEditor extends PureComponent {
         } = this.props;
 
         const { contributors, isCurrentAuthorSelected } = this.state;
-        console.log(contributorEditorId);
         return contributors.map((contributor, index) => (
             <ContributorRow
                 {...(locale.row || {})}

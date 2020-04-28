@@ -14,15 +14,16 @@ describe('FreeTextForm behaviour tests', () => {
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add',
                 }}
+                listEditorId="test"
                 normalize={jest.fn(value => value)}
             />,
         );
 
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
 
         fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
 
-        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).not.toHaveAttribute('disabled', '');
     });
 
     it('should display error message for ISBN if not valid, and it should enable add button only if valid ISBN is entered', () => {
@@ -35,21 +36,22 @@ describe('FreeTextForm behaviour tests', () => {
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add ISBN',
                 }}
+                listEditorId="test"
                 isValid={isValidIsbn}
                 normalize={jest.fn(value => value)}
             />,
         );
 
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
 
         fireEvent.change(getByTestId('free-text-isbn-input'), { target: { value: 'test' } });
 
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
         expect(getByText('ISBN value is not valid')).toBeVisible();
 
         fireEvent.change(getByTestId('free-text-isbn-input'), { target: { value: '1234567897' } });
 
-        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).not.toHaveAttribute('disabled', '');
         try {
             getByText('ISBN value is not valid');
         } catch (e) {
@@ -67,21 +69,22 @@ describe('FreeTextForm behaviour tests', () => {
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add',
                 }}
+                listEditorId="test"
                 maxInputLength={5}
                 normalize={jest.fn(value => value)}
             />,
         );
 
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
 
         fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing' } });
 
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
         expect(getByText('Limited to 5 characters')).toBeVisible();
 
         fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
 
-        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).not.toHaveAttribute('disabled', '');
         try {
             getByText('Limited to 5 characters');
         } catch (e) {
@@ -100,13 +103,14 @@ describe('FreeTextForm behaviour tests', () => {
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add',
                 }}
+                listEditorId="test"
                 normalize={value => value}
             />,
         );
 
         fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
         expect(getByTestId('free-text-input')).toHaveAttribute('value', 'test');
-        fireEvent.click(getByTestId('add-items'));
+        fireEvent.click(getByTestId('add-test'));
 
         expect(onAddFn).toHaveBeenCalledWith('test');
         expect(getByTestId('free-text-input')).toHaveAttribute('value', '');
@@ -123,6 +127,7 @@ describe('FreeTextForm behaviour tests', () => {
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add',
                 }}
+                listEditorId="test"
                 normalize={value => value}
             />,
         );
@@ -144,12 +149,13 @@ describe('FreeTextForm behaviour tests', () => {
                     addButtonLabel: 'Add',
                     editButtonLabel: 'Edit',
                 }}
+                listEditorId="test"
                 normalize={value => value}
             />,
         );
 
         expect(getByTestId('free-text-input')).toHaveAttribute('value', '');
-        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
         expect(getByText('Add')).toBeVisible();
 
         rtlRender(
@@ -162,6 +168,7 @@ describe('FreeTextForm behaviour tests', () => {
                     addButtonLabel: 'Add',
                     editButtonLabel: 'Edit',
                 }}
+                listEditorId="test"
                 normalize={value => value}
                 itemSelectedToEdit="Testing"
             />,
@@ -169,7 +176,7 @@ describe('FreeTextForm behaviour tests', () => {
         );
 
         expect(getByTestId('free-text-input')).toHaveAttribute('value', 'Testing');
-        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).not.toHaveAttribute('disabled', '');
         expect(getByText('Edit')).toBeVisible();
     });
 
@@ -185,6 +192,7 @@ describe('FreeTextForm behaviour tests', () => {
                     editButtonLabel: 'Edit',
                     remindToAddText: 'Please click "Add" button to add item to the list',
                 }}
+                listEditorId="test"
                 normalize={value => value}
                 remindToAdd
                 isValid={jest.fn(() => undefined)}
@@ -207,6 +215,7 @@ describe('FreeTextForm behaviour tests', () => {
                     editButtonLabel: 'Edit',
                     remindToAddText: 'Please click "Add" button to add item to the list',
                 }}
+                listEditorId="test"
                 normalize={value => value}
                 errorText="Some error text"
                 isValid={jest.fn(() => undefined)}

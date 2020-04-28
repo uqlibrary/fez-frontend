@@ -130,6 +130,7 @@ export default class ResearchReportForm extends Component {
                             <Grid item xs={12} sm={this.props.isNtro ? 6 : 4}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial

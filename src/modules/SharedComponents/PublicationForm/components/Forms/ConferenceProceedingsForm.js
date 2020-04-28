@@ -88,6 +88,7 @@ export default class ConferenceProceedingsForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial

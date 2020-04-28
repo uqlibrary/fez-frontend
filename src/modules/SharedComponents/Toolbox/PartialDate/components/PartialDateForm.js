@@ -52,6 +52,7 @@ export class PartialDateForm extends Component {
         meta: PropTypes.shape({
             initial: PropTypes.object,
         }),
+        partialDateFieldId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
@@ -249,7 +250,7 @@ export class PartialDateForm extends Component {
         ));
         const isError = this.errors.date || this.props.hasError || '';
         return (
-            <Grid container spacing={0} id={`PartialDate-${this.props.floatingTitle.replace(' ', '-')}`}>
+            <Grid container spacing={0} id={this.props.partialDateFieldId}>
                 <Grid item xs={12}>
                     <InputLabel error={!!isError} shrink required={this.props.required}>
                         {this.props.floatingTitle}
@@ -260,7 +261,7 @@ export class PartialDateForm extends Component {
                         <Grid item xs={4}>
                             <TextField
                                 name="day"
-                                id="day"
+                                id={`${this.props.partialDateFieldId}-day`}
                                 type="text"
                                 fullWidth
                                 disabled={this.props.disabled}
@@ -278,7 +279,7 @@ export class PartialDateForm extends Component {
                             <Select
                                 style={{ width: '100%' }}
                                 name="month"
-                                id="month"
+                                id={`${this.props.partialDateFieldId}-month`}
                                 error={!!isError}
                                 disabled={this.props.disabled}
                                 value={this.state.month === null ? -1 : this.state.month}
@@ -295,7 +296,7 @@ export class PartialDateForm extends Component {
                         <Grid item xs={4}>
                             <TextField
                                 name="year"
-                                id="year"
+                                id={`${this.props.partialDateFieldId}-year`}
                                 type="text"
                                 fullWidth
                                 disabled={this.props.disabled}

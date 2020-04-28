@@ -141,6 +141,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -678,6 +679,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [

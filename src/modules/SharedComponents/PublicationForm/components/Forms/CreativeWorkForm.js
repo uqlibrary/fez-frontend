@@ -123,6 +123,7 @@ export default class CreativeWorkForm extends Component {
                                 <Grid item xs={12} sm={6}>
                                     <Field
                                         component={PartialDateField}
+                                        partialDateFieldId="date"
                                         disabled={this.props.submitting}
                                         name="rek_date"
                                         allowPartial
@@ -137,6 +138,7 @@ export default class CreativeWorkForm extends Component {
                                 <Grid item xs={12} sm={6}>
                                     <Field
                                         component={PartialDateField}
+                                        partialDateFieldId="end-date"
                                         disabled={this.props.submitting}
                                         name="fez_record_search_key_end_date.rek_end_date"
                                         allowPartial
@@ -212,6 +214,7 @@ export default class CreativeWorkForm extends Component {
                                 <Grid item xs={12} sm={6}>
                                     <Field
                                         component={PartialDateField}
+                                        partialDateFieldId="date"
                                         disabled={this.props.submitting}
                                         name="rek_date"
                                         allowPartial
@@ -225,6 +228,7 @@ export default class CreativeWorkForm extends Component {
                                 <Grid item xs={12} sm={6}>
                                     <Field
                                         component={PartialDateField}
+                                        partialDateFieldId="end-date"
                                         disabled={this.props.submitting}
                                         name="fez_record_search_key_end_date.rek_end_date"
                                         allowPartial

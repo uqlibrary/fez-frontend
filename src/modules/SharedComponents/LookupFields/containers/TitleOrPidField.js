@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         itemsLoading: false,
     };
     return {
-        id: props.id,
+        id: 'title-or-pid-field',
         itemsList: itemsList.map(item => ({ id: item.rek_pid, value: item.rek_title, ...item })),
         itemsLoading,
         getOptionLabel: () => null,

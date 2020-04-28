@@ -219,7 +219,7 @@ export default class ListEditor extends Component {
                 disabled={this.props.disabled}
                 itemTemplate={this.props.rowItemTemplate}
                 canEdit={this.props.canEdit}
-                listRowId={`${this.props.listEditorId}-list-editor-row`}
+                listRowId={`${this.props.listEditorId}-list-row`}
             />
         ));
         return (
@@ -246,6 +246,7 @@ export default class ListEditor extends Component {
                         this.state.itemIndexSelectedToEdit,
                     )}
                     itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
+                    listEditorId={this.props.listEditorId}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader
@@ -253,6 +254,7 @@ export default class ListEditor extends Component {
                         onDeleteAll={this.deleteAllItems}
                         hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
                         disabled={this.props.disabled}
+                        listEditorId={this.props.listEditorId}
                     />
                 )}
                 {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (

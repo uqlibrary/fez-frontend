@@ -903,6 +903,7 @@ export default {
                 },
                 height: 50,
                 canEdit: true,
+                listEditorId: 'related-datasets',
             },
         },
         fez_record_search_key_location: {
@@ -1114,6 +1115,7 @@ export default {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
                 canEdit: true,
+                listEditorId: 'related-datasets',
             },
             height: 50,
         },

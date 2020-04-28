@@ -40,7 +40,7 @@ export const ListRow = ({
     listRowId,
 }) => {
     const classes = useStyles();
-    const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation, editHint, editButtonId } = locale;
+    const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation, editHint } = locale;
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const deleteRecord = useCallback(() => {
@@ -85,7 +85,7 @@ export const ListRow = ({
                                             <IconButton
                                                 onClick={_handleMoveUp}
                                                 disabled={disabled}
-                                                id={`move-up-${index}`}
+                                                id={`${listRowId}-move-up-${index}`}
                                             >
                                                 <KeyboardArrowUp />
                                             </IconButton>
@@ -100,7 +100,7 @@ export const ListRow = ({
                                             <IconButton
                                                 onClick={_handleMoveDown}
                                                 disabled={disabled}
-                                                id={`move-down-${index}`}
+                                                id={`${listRowId}-move-down-${index}`}
                                             >
                                                 <KeyboardArrowDown />
                                             </IconButton>
@@ -120,7 +120,7 @@ export const ListRow = ({
                                             aria-label={editHint}
                                             onClick={_handleEdit}
                                             disabled={disabled}
-                                            id={`${editButtonId}-${index}`}
+                                            id={`${listRowId}-edit-${index}`}
                                         >
                                             <Edit />
                                         </IconButton>
@@ -133,7 +133,11 @@ export const ListRow = ({
                 <Grid item xs={2} sm={1} className={classes.center}>
                     <Tooltip title={deleteHint}>
                         <span>
-                            <IconButton onClick={showConfirmation} disabled={disabled} id={`delete-${index}`}>
+                            <IconButton
+                                onClick={showConfirmation}
+                                disabled={disabled}
+                                id={`${listRowId}-delete-${index}`}
+                            >
                                 <Delete />
                             </IconButton>
                         </span>
@@ -167,7 +171,6 @@ ListRow.defaultProps = {
         moveDownHint: 'Move item down the order',
         deleteHint: 'Remove this item',
         editHint: 'Edit this item',
-        editButtonId: 'edit-item',
         deleteRecordConfirmation: {
             confirmationTitle: 'Delete item',
             confirmationMessage: 'Are you sure you want to delete this item?',

@@ -104,6 +104,7 @@ export default class BookChapterForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial

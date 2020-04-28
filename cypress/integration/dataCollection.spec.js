@@ -1,5 +1,5 @@
 context('Data Collection form', () => {
-    let errorCount = 13;
+    const errorCount = 13;
 
     before(() => {
         cy.visit('/data-collections/add');
@@ -56,7 +56,7 @@ context('Data Collection form', () => {
         // Contact name ID
         cy.get('input#contact-name-id-auto-complete')
             .type('David');
-        cy.get('div')
+        cy.get('#contact-name-id-auto-complete-popup')
             .contains('David Stevens')
             .click();
 
@@ -104,22 +104,19 @@ context('Data Collection form', () => {
             .should('have.length', errorCount);
 
         // Publication date
-        cy.get('div#PartialDate-Publication-year')
-            .find('input#day')
+        cy.get('#publication-year-day')
             .type('16');
         cy.get('@errors')
             .should('have.length', errorCount);
 
-        cy.get('div#PartialDate-Publication-year')
-            .find('div#month')
+        cy.get('#publication-year-month')
             .click();
         cy.get('li[data-value="11"]')
             .click();
         cy.get('@errors')
             .should('have.length', errorCount);
 
-        cy.get('div#PartialDate-Publication-year')
-            .find('input#year')
+        cy.get('#publication-year-year')
             .type('1976');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -129,8 +126,7 @@ context('Data Collection form', () => {
 
     it('validates FoR codes', () => {
         // Field of research
-        cy.get('div#ListEditor-Field-of-research')
-            .find('input')
+        cy.get('#field-of-research-field-input')
             .type('a');
         cy.get('li[role="option"]')
             .contains('010101')
@@ -139,7 +135,7 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('button#delete-0')
+        cy.get('button#field-of-research-list-row-delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -149,8 +145,7 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', ++errorCount);
 
-        cy.get('div#ListEditor-Field-of-research')
-            .find('input')
+        cy.get('#field-of-research-field-input')
             .type('a');
         cy.get('li[role="option"]')
             .contains('010101')
@@ -160,14 +155,13 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', --errorCount);
 
-        cy.get('div#ListEditor-Field-of-research')
-            .find('input')
+        cy.get('#field-of-research-field-input')
             .type('a');
         cy.get('li[role="option"]')
             .contains('010102')
             .click();
 
-        cy.get('button#delete-all-items')
+        cy.get('button#delete-all-field-of-research')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -177,8 +171,7 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', ++errorCount);
 
-        cy.get('div#ListEditor-Field-of-research')
-            .find('input')
+        cy.get('#field-of-research-field-input')
             .type('a');
         cy.get('li[role="option"]')
             .contains('010102')
@@ -191,8 +184,7 @@ context('Data Collection form', () => {
 
     it('validates creators', () => {
         // Creators
-        cy.get('div#contributorForm')
-            .find('input#name-as-published')
+        cy.get('#creators-name-as-published-field')
             .type('Ky Lane');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -207,8 +199,7 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('div#contributorForm')
-            .find('input#name-as-published')
+        cy.get('#creators-name-as-published-field')
             .type('Vishal Asai');
         cy.get('div#contributorForm')
             .find('input#creator-role-field')
@@ -217,7 +208,7 @@ context('Data Collection form', () => {
             .contains('Technician')
             .click();
 
-        cy.get('button#delete-creator-1')
+        cy.get('button#creators-list-row-delete-1')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -236,7 +227,7 @@ context('Data Collection form', () => {
             .should('have.length', ++errorCount);
         cy.get('input#creators-name-as-published-field')
             .type('Ky Lane');
-        cy.get('input#Entercreatorsrole-input')
+        cy.get('input#creator-role-field')
             .type('UX Developer');
         cy.get('button#submit-author')
             .click();
@@ -310,35 +301,29 @@ context('Data Collection form', () => {
         // Funding body
         cy.get('input#funding-body-input')
             .type('Funding body 1');
-        cy.get('div.Fundingbody')
-            .find('button#add-items')
+        cy.get('button#add-grant-agency')
             .click();
         cy.get('input#funding-body-input')
             .type('Funding body 2');
-        cy.get('div.Fundingbody')
-            .find('button#add-items')
+        cy.get('button#add-grant-agency')
             .click();
-        cy.get('div.Fundingbody')
-            .find('button[title="Move funding body up the order"]')
+        cy.get('#grant-agency-list-row-move-up-1')
             .click();
-        cy.get('div.Fundingbody')
-            .find('button#delete-0')
+        cy.get('#grant-agency-list-row-delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('[role="dialog"]')
             .should('not.exist');
-        cy.get('div.Fundingbody')
-            .find('button[title="Remove all funding bodies"]')
+        cy.get('#delete-all-grant-agency')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#funding-body-input')
             .type('Funding body 3');
-        cy.get('div.Fundingbody')
-            .find('button#add-items')
+        cy.get('button#add-grant-agency')
             .click();
         cy.get('@submitButton')
             .should('not.be.disabled');
@@ -348,33 +333,27 @@ context('Data Collection form', () => {
         // Grant ID
         cy.get('input#grant-id-input')
             .type('Grant ID 1');
-        cy.get('div.GrantIDs')
-            .find('button#add-items')
+        cy.get('button#add-grant-id')
             .click();
         cy.get('input#grant-id-input')
             .type('Grant ID 2');
-        cy.get('div.GrantIDs')
-            .find('button#add-items')
+        cy.get('button#add-grant-id')
             .click();
-        cy.get('div.GrantIDs')
-            .find('button[title="Move grant ID up the order"]')
+        cy.get('#grant-id-list-row-move-up-1')
             .click();
-        cy.get('div.GrantIDs')
-            .find('button#delete-0')
+        cy.get('#grant-id-list-row-delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('div.GrantIDs')
-            .find('button[title="Remove all grant IDs"]')
+        cy.get('#delete-all-grant-id')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#grant-id-input')
             .type('Grant ID 3');
-        cy.get('div.GrantIDs')
-            .find('button#add-items')
+        cy.get('button#add-grant-id')
             .click();
         cy.get('@submitButton')
             .should('not.be.disabled');
@@ -386,33 +365,27 @@ context('Data Collection form', () => {
         // Type of data
         cy.get('input#type-of-data-input')
             .type('Type of data 1');
-        cy.get('div.Typeofdata')
-            .find('button#add-items')
+        cy.get('button#add-type-of-data')
             .click();
         cy.get('input#type-of-data-input')
             .type('Type of data 2');
-        cy.get('div.Typeofdata')
-            .find('button#add-items')
+        cy.get('button#add-type-of-data')
             .click();
-        cy.get('div.Typeofdata')
-            .find('button[title="Move type of data up the order"]')
+        cy.get('#type-of-data-list-row-move-up-1')
             .click();
-        cy.get('div.Typeofdata')
-            .find('button#delete-0')
+        cy.get('#type-of-data-list-row-delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('div.Typeofdata')
-            .find('button[title="Remove all type of data"]')
+        cy.get('#delete-all-type-of-data')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#type-of-data-input')
             .type('Type of data 3');
-        cy.get('div.Typeofdata')
-            .find('button#add-items')
+        cy.get('button#add-type-of-data')
             .click();
         cy.get('@submitButton')
             .should('not.be.disabled');
@@ -422,33 +395,27 @@ context('Data Collection form', () => {
         // Software required
         cy.get('input#software-required-input')
             .type('Software required 1');
-        cy.get('div.Softwarerequired')
-            .find('button#add-items')
+        cy.get('button#add-software-required')
             .click();
         cy.get('input#software-required-input')
             .type('Software required 2');
-        cy.get('div.Softwarerequired')
-            .find('button#add-items')
+        cy.get('button#add-software-required')
             .click();
-        cy.get('div.Softwarerequired')
-            .find('button[title="Move software required up the order"]')
+        cy.get('#software-required-list-row-move-up-1')
             .click();
-        cy.get('div.Softwarerequired')
-            .find('button#delete-0')
+        cy.get('#software-required-list-row-delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('div.Softwarerequired')
-            .find('button[title="Remove all software required"]')
+        cy.get('#delete-all-software-required')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#software-required-input')
             .type('Software required 3');
-        cy.get('div.Softwarerequired')
-            .find('button#add-items')
+        cy.get('button#add-software-required')
             .click();
         cy.get('@submitButton')
             .should('not.be.disabled');
@@ -458,33 +425,27 @@ context('Data Collection form', () => {
         // Keywords
         cy.get('input#keywords-input')
             .type('Keywords 1');
-        cy.get('div.Keywords')
-            .find('button#add-items')
+        cy.get('button#add-keywords')
             .click();
         cy.get('input#keywords-input')
             .type('Keywords 2');
-        cy.get('div.Keywords')
-            .find('button#add-items')
+        cy.get('button#add-keywords')
             .click();
-        cy.get('div.Keywords')
-            .find('button[title="Move keyword up the order"]')
+        cy.get('#keywords-list-row-move-up-1')
             .click();
-        cy.get('div.Keywords')
-            .find('button#delete-0')
+        cy.get('#keywords-list-row-delete-0')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('div.Keywords')
-            .find('button[title="Remove all keywords"]')
+        cy.get('#delete-all-keywords')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#keywords-input')
             .type('Keywords 3');
-        cy.get('div.Keywords')
-            .find('button#add-items')
+        cy.get('button#add-keywords')
             .click();
         cy.get('@submitButton')
             .should('not.be.disabled');
@@ -494,9 +455,7 @@ context('Data Collection form', () => {
         // Collection Start date
         // the field is not required - if we focus on it, type something in, clear and click on a different field,
         // we do not get an error
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .find('input#day')
+        cy.get('#collection-start-date-day')
             .type('16')
             .clear();
         cy.get('input#keywords-input')
@@ -505,38 +464,28 @@ context('Data Collection form', () => {
             .should('not.be.visible');
 
         // an 31st of april is an invalid date
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .find('input#day')
+        cy.get('#collection-start-date-day')
             .type('31');
 
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .contains('Month')
+        cy.get('#collection-start-date-month')
             .parent()
             .click();
         cy.get('li[data-value="3"]')
             .click();
 
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .find('input#year')
+        cy.get('#collection-start-date-year')
             .type('2000');
 
         cy.contains('p', 'Invalid date')
             .should('be.visible');
 
         // now check valid dates
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .find('input#day')
+        cy.get('#collection-start-date-day')
             .clear()
             .type('16');
 
         // enter future date and see error
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .find('input#year')
+        cy.get('#collection-start-date-year')
             .clear()
             .type('2100');
 
@@ -544,9 +493,7 @@ context('Data Collection form', () => {
             .should('be.visible');
 
         // enter valid year
-        cy.contains('span', 'Collection start date')
-            .parent()
-            .find('input#year')
+        cy.get('#collection-start-date-year')
             .clear()
             .type('1976');
 
@@ -560,32 +507,24 @@ context('Data Collection form', () => {
             .should('not.be.disabled');
 
         // End Collection date
-        cy.contains('span', 'Collection end date')
-            .parent()
-            .find('input#day')
+        cy.get('#collection-end-date-day')
             .type('16');
 
-        cy.contains('span', 'Collection end date')
-            .parent()
-            .contains('Month')
+        cy.get('#collection-end-date-month')
             .parent()
             .click();
         cy.get('li[data-value="11"]')
             .click();
 
         // enter future date and see error
-        cy.contains('span', 'Collection end date')
-            .parent()
-            .find('input#year')
+        cy.get('#collection-end-date-year')
             .type('2100');
 
         cy.contains('p', 'Date must be before now')
             .should('be.visible');
 
         // enter end date before start date and see error
-        cy.contains('span', 'Collection end date')
-            .parent()
-            .find('input#year')
+        cy.get('#collection-end-date-year')
             .clear()
             .type('1974');
 
@@ -593,9 +532,7 @@ context('Data Collection form', () => {
             .should('be.visible');
 
         // finally, enter valid date
-        cy.contains('span', 'Collection end date')
-            .parent()
-            .find('input#year')
+        cy.get('#collection-end-date-year')
             .clear()
             .type('1976');
 
@@ -610,36 +547,31 @@ context('Data Collection form', () => {
 
     it('validates related datasets/work', () => {
         // Related datasets
-        cy.get('input#DatasetWorktitle-input')
+        cy.get('#title-or-pid-field')
             .type('a');
-        cy.clickAutoSuggestion('DatasetWorktitle', 0);
+        cy.clickAutoSuggestion('title-or-pid-field', 0);
         // cy.get('@submitButton').should('be.disabled');
         // cy.get('@errors').should('have.length', 1);
-        cy.get('input#DatasetWorktitle-input')
+        cy.get('input#title-or-pid-field')
             .type('a');
-        cy.clickAutoSuggestion('DatasetWorktitle', 1);
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
-            .first()
-            .get('p')
-            .should('contain', 'Vaccination day');
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
-            .last()
-            .get('p')
-            .should('contain', 'Early Onset Scoliosis');
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('button[title="Move item up the order"]')
+        cy.clickAutoSuggestion('title-or-pid-field', 1);
+
+        cy.get('#related-datasets-list-row-0')
+            .should('contain', 'A state-based vaccination register');
+        cy.get('#related-datasets-list-row-1')
+            .should(
+                'contain',
+                'Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity',
+            );
+        cy.get('#related-datasets-list-row-move-up-1')
             .click();
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
-            .last()
-            .get('p')
-            .should('contain', 'Vaccination day');
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
-            .first()
-            .get('p')
-            .should('contain', 'Early Onset Scoliosis');
+
+        cy.get('#related-datasets-list-row-0')
+            .should(
+                'contain',
+                'Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity',
+            );
+        cy.get('#related-datasets-list-row-1')
+            .should('contain', 'A state-based vaccination register');
     });
 });
