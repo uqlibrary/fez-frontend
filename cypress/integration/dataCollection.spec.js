@@ -1,5 +1,5 @@
 context('Data Collection form', () => {
-    const errorCount = 13;
+    let errorCount = 13;
 
     before(() => {
         cy.visit('/data-collections/add');
