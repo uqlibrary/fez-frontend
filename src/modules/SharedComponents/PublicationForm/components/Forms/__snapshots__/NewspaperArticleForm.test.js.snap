@@ -227,7 +227,6 @@ exports[`NewspaperArticleForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -235,7 +234,6 @@ exports[`NewspaperArticleForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-author",
                 "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",

@@ -72,7 +72,7 @@ Object {
 exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -121,7 +121,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -146,7 +146,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -171,7 +171,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -194,7 +194,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
 exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -243,7 +243,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -268,7 +268,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
               "selected": true,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -293,7 +293,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -334,6 +334,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
               "selected": true,
             }
           }
+          contributorEditorId="test"
           disableNameAsPublished={true}
           displayCancel={true}
           editMode={true}
@@ -387,7 +388,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
 exports[`ContributorsEditor chooses a contributor to edit 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -436,7 +437,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -461,7 +462,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -486,7 +487,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -509,7 +510,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
 exports[`ContributorsEditor chooses a contributor to edit 2`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -558,7 +559,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -583,7 +584,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": true,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -608,7 +609,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": false,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -649,6 +650,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": true,
             }
           }
+          contributorEditorId="test"
           disableNameAsPublished={true}
           displayCancel={true}
           editMode={true}
@@ -702,7 +704,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
 exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -736,6 +738,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -825,7 +828,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               "nameAsPublished": 1,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -849,7 +852,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               "nameAsPublished": 2,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -873,7 +876,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               "nameAsPublished": 3,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -896,7 +899,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
 exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite scroll 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -930,6 +933,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -1019,7 +1023,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 1,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -1043,7 +1047,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 2,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -1067,7 +1071,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 3,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -1091,7 +1095,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 4,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -1114,7 +1118,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
 exports[`ContributorsEditor renders component in edit mode 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -1164,7 +1168,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
               "selected": true,
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -1646,6 +1650,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                 "scroll": "scroll",
               }
             }
+            contributorEditorId="test"
             editMode={false}
             hideDelete={false}
             hideReorder={false}
@@ -1662,7 +1667,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
           >
             <div
               className="contributorEditor"
-              id="undefined-list-editor"
+              id="test-list-editor"
             >
               <WithStyles(ForwardRef(Grid))
                 container={true}
@@ -1924,6 +1929,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                 "uqUsername": "",
                               }
                             }
+                            contributorEditorId="test"
                             disableNameAsPublished={false}
                             displayCancel={true}
                             editMode={false}
@@ -4803,6 +4809,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 "scroll": "scroll",
               }
             }
+            contributorEditorId="test"
             editMode={false}
             hideDelete={false}
             hideReorder={false}
@@ -4819,7 +4826,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
           >
             <div
               className="contributorEditor"
-              id="undefined-list-editor"
+              id="test-list-editor"
             >
               <WithStyles(ForwardRef(Grid))
                 container={true}
@@ -5081,6 +5088,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                 "uqUsername": "",
                               }
                             }
+                            contributorEditorId="test"
                             disableNameAsPublished={false}
                             displayCancel={false}
                             editMode={false}
@@ -8075,7 +8083,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
 exports[`ContributorsEditor renders full component with a defined className 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8110,6 +8118,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8162,7 +8171,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
 exports[`ContributorsEditor renders full component with identifier lookup 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8196,6 +8205,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8248,7 +8258,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
 exports[`ContributorsEditor renders full component with role input 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8282,6 +8292,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8334,7 +8345,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
 exports[`ContributorsEditor renders no contributor rows with no infinite scroll 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8368,6 +8379,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -8443,6 +8455,7 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
       "uqUsername": "",
     }
   }
+  contributorEditorId="test"
   contributors={
     Array [
       Object {
@@ -8520,6 +8533,7 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
       "uqUsername": "",
     }
   }
+  contributorEditorId="test"
   contributors={
     Array [
       Object {
@@ -8558,7 +8572,7 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
 exports[`ContributorsEditor should get contributors from props and input value set as an Immutable list 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8592,6 +8606,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8693,7 +8708,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 1",
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -8717,7 +8732,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 2",
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -8740,7 +8755,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
 exports[`ContributorsEditor should get contributors from props and input value set as an array 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8774,6 +8789,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8875,7 +8891,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 1",
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -8899,7 +8915,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 2",
             }
           }
-          contributorRowId="undefined-list-row"
+          contributorRowId="test-list-row"
           enableSelect={false}
           hideDelete={false}
           hideReorder={false}
@@ -8937,7 +8953,7 @@ Object {
 exports[`ContributorsEditor should not move contributor down 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -8971,6 +8987,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9023,7 +9040,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
 exports[`ContributorsEditor should render error as html 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -9057,6 +9074,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9128,7 +9146,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
 exports[`ContributorsEditor should render error as one child 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -9162,6 +9180,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9227,7 +9246,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
 exports[`ContributorsEditor should show validation error 1`] = `
 <div
   className="contributorEditor"
-  id="undefined-list-editor"
+  id="test-list-editor"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -9261,6 +9280,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
             "uqUsername": "",
           }
         }
+        contributorEditorId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}

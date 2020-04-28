@@ -25,7 +25,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -93,7 +93,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           "nameAsPublished": "J. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -110,7 +110,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -153,7 +153,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -221,7 +221,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           "nameAsPublished": "J. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -238,7 +238,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -281,7 +281,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -320,7 +320,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "A. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -337,7 +337,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -380,7 +380,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -419,7 +419,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "A. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -436,7 +436,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -479,7 +479,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -547,7 +547,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "J. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -564,7 +564,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(ForwardRef(IconButton))
             aria-label="Move record up the order"
             disabled={false}
-            id="move-up-0"
+            id="test-list-row-move-up-0"
             onClick={[Function]}
           >
             <KeyboardArrowUpIcon
@@ -587,7 +587,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(ForwardRef(IconButton))
             aria-label="Move record down the order"
             disabled={false}
-            id="move-down-0"
+            id="test-list-row-move-down-0"
             onClick={[Function]}
           >
             <KeyboardArrowDownIcon
@@ -610,7 +610,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -653,7 +653,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -693,7 +693,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "selected": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
@@ -710,7 +710,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -753,7 +753,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -793,7 +793,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "selected": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
@@ -810,7 +810,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -853,7 +853,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -921,7 +921,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "nameAsPublished": "J. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -938,7 +938,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -981,7 +981,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1022,7 +1022,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           "selected": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
@@ -1039,7 +1039,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1082,7 +1082,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1123,7 +1123,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           "selected": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
@@ -1140,7 +1140,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1183,7 +1183,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1226,7 +1226,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
           "selected": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
@@ -1243,7 +1243,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1286,7 +1286,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1329,7 +1329,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
           "selected": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
@@ -1346,7 +1346,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1389,7 +1389,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
       }
     }
     divider={true}
-    id="undefined-2"
+    id="test-list-row-2"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1428,7 +1428,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           "nameAsPublished": "A. Smith",
         }
       }
-      contributorRowId="undefined-2"
+      contributorRowId="test-list-row-2"
       index={2}
       selectedClass=""
       showRoleInput={false}
@@ -1445,7 +1445,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           <WithStyles(ForwardRef(IconButton))
             aria-label="Edit this record"
             disabled={false}
-            id="edit-record-2"
+            id="test-list-row-edit-2"
             onClick={[Function]}
           >
             <EditIcon
@@ -1468,7 +1468,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-2"
+            id="test-list-row-delete-2"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1511,7 +1511,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1554,7 +1554,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           "disabled": true,
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -1571,7 +1571,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1614,7 +1614,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1656,7 +1656,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           "orgtype": "NGO",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -1673,7 +1673,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon
@@ -1717,7 +1717,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
       }
     }
     divider={true}
-    id="undefined-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1756,7 +1756,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           "nameAsPublished": "A. Smith",
         }
       }
-      contributorRowId="undefined-0"
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
@@ -1771,9 +1771,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
         <span>
           <WithStyles(ForwardRef(IconButton))
             disabled={false}
-            id="function deleteButtonId() {
-          return 'delete-record-0';
-        }-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
             <DeleteIcon

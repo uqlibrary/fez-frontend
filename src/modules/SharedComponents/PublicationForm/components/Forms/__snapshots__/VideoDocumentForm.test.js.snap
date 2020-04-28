@@ -204,7 +204,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-creator",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -212,7 +211,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-creator",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -310,7 +308,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-contributor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -318,7 +315,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-contributor",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -590,7 +586,6 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-creator",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -598,7 +593,6 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-creator",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -696,7 +690,6 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-contributor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -704,7 +697,6 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-contributor",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",

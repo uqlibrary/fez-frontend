@@ -42,9 +42,8 @@ function setup(testProps = {}, args = {}) {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes',
             },
-            deleteButtonId: 'delete-record',
-            editButtonId: 'edit-record',
         },
+        contributorRowId: 'test-list-row',
         ...testProps,
     };
     return getElement(ContributorRow, props, args);
@@ -66,7 +65,6 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({
             locale: {
                 selectHint: '',
-                deleteButtonId: () => 'delete-record-0',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -193,7 +191,7 @@ describe('Component ContributorRow', () => {
         const buttonDown = wrapper.find('KeyboardArrowDownIcon');
         expect(buttonDown.length).toBe(0);
 
-        wrapper.find('#move-up-0').simulate('click');
+        wrapper.find('#test-list-row-move-up-0').simulate('click');
         expect(testFunction).toBeCalled();
     });
 
@@ -211,7 +209,7 @@ describe('Component ContributorRow', () => {
         const button = wrapper.find('KeyboardArrowDownIcon');
         expect(button.length).toBe(1);
 
-        wrapper.find('#move-down-0').simulate('click');
+        wrapper.find('#test-list-row-move-down-0').simulate('click');
         expect(testFunction).toBeCalled();
 
         const buttonUp = wrapper.find('KeyboardArrowUpIcon');
@@ -412,13 +410,13 @@ describe('Component ContributorRow', () => {
             canMoveDown: true,
         });
 
-        wrapper.find('#move-up-0').simulate('click');
+        wrapper.find('#test-list-row-move-up-0').simulate('click');
         expect(onMoveUpFn).not.toBeCalled();
 
-        wrapper.find('#move-down-0').simulate('click');
+        wrapper.find('#test-list-row-move-down-0').simulate('click');
         expect(onMoveDownFn).not.toBeCalled();
 
-        wrapper.find('#delete-record-0').simulate('click');
+        wrapper.find('#test-list-row-delete-0').simulate('click');
         wrapper
             .find('ConfirmationBox')
             .props()

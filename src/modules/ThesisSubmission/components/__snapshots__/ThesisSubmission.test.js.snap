@@ -336,7 +336,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   },
                   "row": Object {
                     "locale": Object {
-                      "deleteButtonId": "delete-supervisor",
                       "deleteHint": "Remove this item",
                       "deleteRecordConfirmation": Object {
                         "cancelButtonLabel": "No",
@@ -344,7 +343,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                         "confirmationMessage": "Are you sure you want to delete this item?",
                         "confirmationTitle": "Delete item",
                       },
-                      "editButtonId": "edit-supervisor",
                       "editHint": "Edit this item",
                       "moveDownHint": "Move item down the order",
                       "moveUpHint": "Move item up the order",
@@ -886,7 +884,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   },
                   "row": Object {
                     "locale": Object {
-                      "deleteButtonId": "delete-supervisor",
                       "deleteHint": "Remove this item",
                       "deleteRecordConfirmation": Object {
                         "cancelButtonLabel": "No",
@@ -894,7 +891,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                         "confirmationMessage": "Are you sure you want to delete this item?",
                         "confirmationTitle": "Delete item",
                       },
-                      "editButtonId": "edit-supervisor",
                       "editHint": "Edit this item",
                       "moveDownHint": "Move item down the order",
                       "moveUpHint": "Move item up the order",

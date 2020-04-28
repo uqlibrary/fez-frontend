@@ -10,6 +10,7 @@ function setup(testProps = {}, args = {}) {
             list: 'list',
             scroll: 'scroll',
         },
+        contributorEditorId: 'test',
         ...testProps,
     };
     return getElement(ContributorsEditor, props, args);

@@ -74,17 +74,7 @@ export const ContributorRow = ({
     hideDelete,
     hideReorder,
     index,
-    locale: {
-        deleteRecordConfirmation,
-        moveUpHint,
-        moveDownHint,
-        deleteHint,
-        editHint,
-        selectHint,
-        deleteButtonId,
-        editButtonId,
-        lockedTooltip,
-    },
+    locale: { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, editHint, selectHint, lockedTooltip },
     onSelect,
     onDelete,
     onEdit,
@@ -208,7 +198,7 @@ export const ContributorRow = ({
                         >
                             <span>
                                 <IconButton
-                                    id={`move-up-${index}`}
+                                    id={`${contributorRowId}-move-up-${index}`}
                                     onClick={_onMoveUp}
                                     disabled={disabled || hideReorder}
                                     aria-label={moveUpHint}
@@ -227,7 +217,7 @@ export const ContributorRow = ({
                         >
                             <span>
                                 <IconButton
-                                    id={`move-down-${index}`}
+                                    id={`${contributorRowId}-move-down-${index}`}
                                     onClick={_onMoveDown}
                                     disabled={disabled || hideReorder}
                                     aria-label={moveDownHint}
@@ -249,7 +239,7 @@ export const ContributorRow = ({
                                     aria-label={editHint}
                                     onClick={_handleEdit}
                                     disabled={disabled || !!contributor.disabled}
-                                    id={`${editButtonId}-${index}`}
+                                    id={`${contributorRowId}-edit-${index}`}
                                 >
                                     <Edit classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
@@ -267,7 +257,7 @@ export const ContributorRow = ({
                                 aria-label={deleteHint}
                                 onClick={showConfirmation}
                                 disabled={disabled || hideDelete}
-                                id={`${deleteButtonId}-${index}`}
+                                id={`${contributorRowId}-delete-${index}`}
                             >
                                 <Delete classes={{ root: `${selectedClass}` }} />
                             </IconButton>
@@ -316,8 +306,6 @@ ContributorRow.defaultProps = {
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes',
         },
-        deleteButtonId: 'delete-record',
-        editButtonId: 'edit-record',
     },
     hideReorder: false,
     hideDelete: false,
