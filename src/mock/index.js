@@ -356,15 +356,25 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         return [200, { data }];
     });
 
+// Note: The existing records of all the mocked types below (regular records, collections and community)
+// are all patched via the same endpoint, so if you want to mock a failure of one of those,
+// you have to disable the other two variants so that it doesn't fall back to the next one.
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
+    // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
+
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
+    // .reply(500, { message: ['error - failed PUT EXISTING_RECORD_API'] })
+
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.collectionRecord } })
+    // .reply(500, { message: ['error - failed PUT EXISTING_COLLECTION_API'] })
+
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COMMUNITY_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.communityRecord } })
-    // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
+    // .reply(500, { message: ['error - failed PUT EXISTING_COMMUNITY_API'] })
+
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, { ...mockData.currentAuthor.uqresearcher })
     // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })

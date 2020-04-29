@@ -429,6 +429,25 @@ describe('Record action creators', () => {
         };
         const pidRequest = { pid: 'UQ:396321' };
 
+        it('dispatches expected actions on missing pid', async() => {
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record, rek_pid: '' } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', {})
+                .reply(200, { data: { ...record } });
+            const expectedActions = [actions.CREATE_RECORD_SAVING, actions.CREATE_RECORD_FAILED];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
         it('dispatches expected actions on failed RHD Thesis save', async() => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)

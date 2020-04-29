@@ -203,7 +203,7 @@ export function createNewRecord(data) {
 // }
 
 /**
- * Submit thesis involves two steps: create record - get signed url to upload files - upload files - patch record.
+ * Submit thesis involves four steps: create record - get signed url to upload files - upload files - patch record.
  * @param {object} data to be posted, refer to backend API
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
@@ -240,57 +240,67 @@ export function submitThesis(data) {
         });
 
         let newRecord = null;
+        let recordCreated = false;
+        let fileUploadFailed = false;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
         const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
-        return post(NEW_RECORD_API(), recordRequest)
-            .then(response => {
-                // save new record response
-                newRecord = response.data;
-                return response;
-            })
-            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() =>
-                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord,
-            )
-            .then(response => {
-                /* istanbul ignore next */
+        const onRecordCreationSuccess = response => {
+            // save new record response for issue reporting
+            newRecord = response.data;
+            recordCreated = !!newRecord && !!newRecord.rek_pid;
+            if (!recordCreated) {
+                throw new Error('API did not return valid PID');
+            }
+            return (hasFilesToUpload && putUploadFiles(response.data.rek_pid, data.files.queue, dispatch)) || response;
+        };
+        const onRecordCreationFailure = error => Promise.reject(error);
+
+        const onFileUploadSuccess = response =>
+            (hasFilesToUpload && patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch)) || response;
+        const onFileUploadFailure = error => {
+            fileUploadFailed = true;
+            return Promise.reject(error);
+        };
+
+        const onRecordPatchSuccess = response => {
+            dispatch({
+                type: actions.CREATE_RECORD_SUCCESS,
+                payload: {
+                    newRecord: response.data,
+                    fileUploadOrIssueFailed: fileUploadFailed,
+                },
+            });
+            return Promise.resolve(response.data);
+        };
+        const onRecordPatchFailure = error => {
+            if (recordCreated) {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
-                        newRecord: response.data ? response.data : newRecord,
-                        fileUploadOrIssueFailed: false,
+                        newRecord: newRecord,
+                        fileUploadOrIssueFailed: true,
                     },
                 });
-                /* istanbul ignore next */
-                return Promise.resolve(response.data ? response.data : newRecord);
-            })
-            .catch(error => {
-                // record was created, but file upload or record patch failed or issue post failed
-                if (!!newRecord && !!newRecord.rek_pid) {
-                    dispatch({
-                        type: actions.CREATE_RECORD_SUCCESS,
-                        payload: {
-                            newRecord: newRecord,
-                            fileUploadOrIssueFailed: true,
-                        },
-                    });
-                    return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                        issue: `The submitter had issues uploading files on this record: ${newRecord}`,
-                    }).then(
-                        /* istanbul ignore next */
-                        () => {
-                            return Promise.resolve(newRecord);
-                        },
-                    );
-                }
-
-                dispatch({
-                    type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message,
+                return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                    issue: `The submitter had issues uploading files on this record: ${newRecord.rek_pid}`,
                 });
-                return Promise.reject(error);
+            }
+            dispatch({
+                type: actions.CREATE_RECORD_FAILED,
+                payload: error.message,
             });
+            return onRecordCreationFailure(error);
+        };
+
+        const onIssueReportSuccess = () => recordCreated && Promise.resolve(newRecord);
+        const onIssueReportFailure = error => (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
+
+        return post(NEW_RECORD_API(), recordRequest)
+            .then(onRecordCreationSuccess, onRecordCreationFailure)
+            .then(onFileUploadSuccess, onFileUploadFailure)
+            .then(onRecordPatchSuccess, onRecordPatchFailure)
+            .then(onIssueReportSuccess, onIssueReportFailure);
     };
 }
 
