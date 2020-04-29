@@ -712,6 +712,51 @@ export const renameLocation = locations => ({
     })),
 });
 
+const cleanBlankEntries = data => {
+    // Clean out blanked fields
+    // * For a single-child-key, to delete, remove the key from the payload sent to api
+    // * For a many-child-key, where we want to end up with zero children (ie remove all),
+    //   also remove the key from the payload sent to api
+    // * For a many-child-key, where we only want to remove some of its children,
+    //   unset those children and re-number the order fields
+    const entries = Object.entries(data);
+    const keyPrefix = 'fez_record_search_key_';
+    const subkeyPrefix = 'rek_';
+    return entries
+        .filter(item => {
+            const [searchKeyName, values] = item;
+            if (!searchKeyName.startsWith(keyPrefix)) {
+                // keep all the base fez_record_seach_key fields
+                return true;
+            }
+
+            if (Array.isArray(values) && values.length === 0) {
+                // where a many-to-one child has no entries, remove it so API deletes the database record
+                return false;
+            }
+
+            if (Object.keys(values).length === 0 && values.constructor === Object) {
+                // eg fez_record_search_key_edition can return an empty object; remove this
+                return false;
+            }
+
+            const valueFieldName = searchKeyName.replace(keyPrefix, subkeyPrefix);
+            if (values[valueFieldName] === null) {
+                // where the field has been cleared, remove so API deletes the database record
+                return false;
+            }
+
+            // assume many-to-one children with blank entries have already been removed and reordered by, eg ListEditor
+
+            return true;
+        })
+        .reduce((accum, [k, v]) => {
+            // per https://stackoverflow.com/questions/49807489/reversing-an-object-entries-conversion
+            accum[k] = v;
+            return accum;
+        }, {});
+};
+
 export const getIdentifiersSectionSearchKeys = (data = {}) => {
     const {
         fez_record_search_key_doi: doi,
@@ -739,7 +784,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
         ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers) : {}),
-        ...rest,
+        ...cleanBlankEntries(rest),
     };
 };
 
@@ -803,7 +848,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
     } = data;
 
     return {
-        ...rest,
+        ...cleanBlankEntries(rest),
         rek_date: moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
@@ -898,7 +943,7 @@ export const getNtroSectionSearchKeys = (data = {}) => {
                 ),
             }
             : {}),
-        ...rest,
+        ...cleanBlankEntries(rest),
     };
 };
 
@@ -1052,14 +1097,14 @@ export const getAdminSectionSearchKeys = (data = {}) => {
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
-        ...rest,
+        ...cleanBlankEntries(rest),
     };
 };
 
 export const getFilesSectionSearchKeys = data => {
     const { advisoryStatement, ...rest } = data;
     return {
-        ...rest,
+        ...cleanBlankEntries(rest),
         ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
             ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
             : {}),
@@ -1070,7 +1115,7 @@ export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSecti
     const { dataStreams, ...rest } = data;
     const dataStreamsMap = (dataStreams || []).reduce((map, ds) => ({ ...map, [ds.dsi_dsid]: ds }), {});
     return {
-        ...rest,
+        ...cleanBlankEntries(rest),
         ...(!!dataStreams
             ? {
                 fez_datastream_info: dataStreamsFromFileSection.map(dataStream => ({
