@@ -784,8 +784,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_isderivationof: relatedPubs,
         fez_record_search_key_license_biblio: licenseDataBiblio,
         fez_record_search_key_location_biblio: locationDataBiblio,
-        // fez_record_search_key_isdatasetof: datasets,
-        issn,
+        fez_record_search_key_isdatasetof: datasets,
+        issnField,
         ...rest
     } = data;
 
@@ -853,16 +853,16 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...getRecordSubjectSearchKey(subjects),
         ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
         ...(!!locationDataBiblio ? renameLocation(locationDataBiblio) : {}),
-        ...(!!issn
+        ...(!!issnField
             ? {
-                fez_record_search_key_issn: issn.map(({ rek_value: value, rek_order: order }) => ({
+                fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
                     rek_issn: value.key || value,
                     rek_issn_order: order,
                 })),
             }
             : {}),
         ...getRecordIsDerivationOfSearchKey(relatedPubs),
-        // ...getRecordIsDatasetOfSearchKey(datasets),
+        ...getRecordIsDatasetOfSearchKey(datasets),
     };
 };
 
