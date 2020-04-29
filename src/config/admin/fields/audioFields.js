@@ -3,6 +3,37 @@ import { isAuthorOrEditorSelected } from 'config/validation';
 
 export default {
     ...commonFields,
+    identifiers: (
+        { displayAll, displayIdentifiers } = {
+            displayAll: false,
+            displayIdentifiers: true,
+        },
+    ) => [
+        {
+            title: 'Manage identifiers',
+            groups: [
+                ['fez_record_search_key_doi'],
+                ...((displayAll && [
+                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                    ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                ]) ||
+                    []),
+            ],
+        },
+        {
+            title: 'Manage links',
+            groups: [['links']],
+        },
+        ...(displayIdentifiers
+            ? [
+                {
+                    title: 'Identifiers',
+                    groups: [['fez_record_search_key_identifier']],
+                },
+            ]
+            : []),
+    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',
@@ -37,6 +68,10 @@ export default {
                 ['fez_record_search_key_transcript'],
                 ['fez_record_search_key_alternate_genre'],
             ],
+        },
+        {
+            title: 'Place(s) of recording',
+            groups: [['fez_record_search_key_location_biblio']],
         },
         {
             title: 'Geographic co-ordinates',

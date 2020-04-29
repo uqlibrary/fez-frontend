@@ -2512,6 +2512,18 @@ describe('getIdentifiersSectionSearchKeys', () => {
     });
 });
 
+describe('Journal document', () => {
+    it('should handle id section specific search keys', () => {
+        const data = {
+            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+        };
+
+        expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+        });
+    });
+});
+
 /**
  * List of all bibliographic section search keys
  *  - bibliographicSection.rek_title'
@@ -2698,6 +2710,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license_biblio: {
                     rek_license: '453610',
                 },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2720,6 +2733,53 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license: {
                     rek_license: '453610',
                 },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            });
+        });
+    });
+
+    describe('Search Key Structure', () => {
+        // these 2 tests are more about demonstrating how the API should be called than actually testing anything
+        // also useful for swapping search key names in to check they are properly handled
+
+        it('should only save the supplied key for a one-to-one search key', () => {
+            let data = {
+                fez_record_search_key_license_biblio: { rek_license: 123 },
+            };
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_license: { rek_license: 123 },
+            });
+
+            data = {};
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+            });
+        });
+
+        it('should only save the supplied key for a many-to-one search key', () => {
+            const dataMany = {
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
+            };
+            const dataOne = {
+                issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
+            };
+            expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_issn: [
+                    { rek_issn: '1212-1212', rek_issn_order: 1 },
+                    { rek_issn: '2323-2323', rek_issn_order: 2 },
+                ],
+            });
+
+            expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
+            });
+
+            const dataEmpty = {};
+            expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
             });
         });
     });

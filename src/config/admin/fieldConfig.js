@@ -897,16 +897,28 @@ export default {
                 canEdit: true,
             },
         },
-        fez_record_search_key_location: {
+        fez_record_search_key_location_identifiers: {
             component: ListEditorField,
             componentProps: {
-                name: 'identifiersSection.fez_record_search_key_location',
+                name: 'identifiersSection.fez_record_search_key_location_identifiers',
                 title: 'Locations',
                 searchKey: {
                     value: 'rek_location',
                     order: 'rek_location_order',
                 },
                 locale: locale.components.locationForm.field,
+            },
+        },
+        fez_record_search_key_location_biblio: {
+            component: ListEditorField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_location_biblio',
+                title: 'Locations',
+                searchKey: {
+                    value: 'rek_location',
+                    order: 'rek_location_order',
+                },
+                locale: locale.components.placeOfRecordingForm.field,
             },
         },
         fez_record_search_key_identifier: {
