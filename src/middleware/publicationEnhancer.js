@@ -8,8 +8,10 @@ export const calculateOpenAccess = record => {
         ? record.fez_record_search_key_oa_status.rek_oa_status
         : null;
 
-    if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI ||
-        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_RDM) {
+    if (
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI ||
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_RDM
+    ) {
         // OA with a possible embargo days - check now vs published date + OA embargo days
         // calculate embargo date
         const currentDate = moment().format();
@@ -17,15 +19,15 @@ export const calculateOpenAccess = record => {
             (record.fez_record_search_key_oa_embargo_days &&
                 record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days) ||
             0;
-        let embargoDate = (record.fez_record_search_key_embargo_to &&
-            record.fez_record_search_key_embargo_to.rek_embargo_to) ||
-            null;
+        let embargoDate =
+            (record.fez_record_search_key_embargo_to && record.fez_record_search_key_embargo_to.rek_embargo_to) || null;
         const publishedDate = record.rek_date;
-        embargoDate = !embargoDate && embargoDays
-            ? moment(publishedDate)
-                .add(embargoDays, 'days')
-                .format()
-            : embargoDate;
+        embargoDate =
+            !embargoDate && embargoDays
+                ? moment(publishedDate)
+                    .add(embargoDays, 'days')
+                    .format()
+                : embargoDate;
         const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
         const displayEmbargoDate =
             !!embargoDate && !pastEmgargoDate && embargoDate > currentDate

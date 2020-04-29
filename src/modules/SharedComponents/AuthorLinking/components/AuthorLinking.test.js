@@ -117,7 +117,7 @@ describe('AuthorLinking', () => {
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3 },
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
-            ]
+            ],
         );
 
         expect(preparedOutput).toEqual([
