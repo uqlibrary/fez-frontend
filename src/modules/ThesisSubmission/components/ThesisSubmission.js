@@ -60,11 +60,6 @@ export default class ThesisSubmission extends Component {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     };
 
-    afterFailedSubmit = () => {
-        // Clears the current state completely and reloads the form
-        window.location.reload();
-    };
-
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
@@ -90,24 +85,24 @@ export default class ThesisSubmission extends Component {
                 >
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            {this.props.newRecordFileUploadingOrIssueError ? (
-                                <Grid item xs={12}>
-                                    <Alert
-                                        {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
-                                        action={this.afterFailedSubmit}
-                                    />
-                                </Grid>
-                            ) : (
-                                <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                    <Grid container spacing={24}>
-                                        <Grid item xs={12}>
-                                            <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
-                                        </Grid>
+                            <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
+                                <Grid container spacing={24}>
+                                    <Grid item xs={12}>
+                                        <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
                                     </Grid>
-                                </StandardCard>
-                            )}
+                                </Grid>
+                            </StandardCard>
                         </Grid>
                     </Grid>
+                    {this.props.newRecordFileUploadingOrIssueError && (
+                        <Grid container spacing={24}>
+                            <Grid item xs={12}>
+                                <Grid item xs={12}>
+                                    <Alert {...formLocale.thesisSubmission.fileUpload.failedAlertLocale} />
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    )}
                     <Grid container spacing={16}>
                         <Grid item xs />
                         <Grid item>

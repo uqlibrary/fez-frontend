@@ -1275,8 +1275,7 @@ export default {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
                 message:
-                    "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                actionButtonLabel: 'Resubmit your thesis',
+                    'There was an issue uploading your thesis files. Please contact UQ Graduate School administrators.',
             },
             locale: {
                 instructions: '',
