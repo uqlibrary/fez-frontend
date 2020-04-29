@@ -1345,7 +1345,7 @@ export default {
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
-        depositFailedMessage: () =>
+        depositFailedMessage:
             'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     sbsSubmission: {
@@ -1427,7 +1427,7 @@ export default {
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
-        depositFailedMessage: () =>
+        depositFailedMessage:
             'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     addDataset: {

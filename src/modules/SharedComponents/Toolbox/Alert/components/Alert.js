@@ -78,7 +78,7 @@ export const styles = theme => ({
     error: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.error.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -98,7 +98,7 @@ export const styles = theme => ({
     error_outline: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.error.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -118,7 +118,7 @@ export const styles = theme => ({
     warning: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.warning.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -138,7 +138,7 @@ export const styles = theme => ({
     help: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.secondary.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -158,7 +158,7 @@ export const styles = theme => ({
     help_outline: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.secondary.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -178,7 +178,7 @@ export const styles = theme => ({
     info: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.accent.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -198,7 +198,7 @@ export const styles = theme => ({
     info_outline: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.accent.main,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {
@@ -218,7 +218,7 @@ export const styles = theme => ({
     done: {
         color: theme.palette.white.main,
         backgroundColor: theme.palette.success.light,
-        '& a:link, a:hover: a:visited': {
+        '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
         },
         '& .spinner': {

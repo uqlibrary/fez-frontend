@@ -132,7 +132,7 @@ export default class ThesisSubmission extends Component {
                 successAlert: { ...formLocale.successAlert },
                 errorAlert: {
                     ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage,
+                    message: () => formLocale.thesisSubmission.depositFailedMessage,
                 },
             },
         });
