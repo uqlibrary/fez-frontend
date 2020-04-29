@@ -226,7 +226,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 1);
         cy.get('input#keywords-input')
-            .type('Fourth Keyword, Fifth Keyword, Sixth Keyword{enter}', {
+            .type('Fourth Keyword|Fifth Keyword|Sixth Keyword{enter}', {
                 delay: 30,
             });
         cy.get('.ListRow-Keywords')
