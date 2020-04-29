@@ -174,16 +174,16 @@ context('Journal Article admin edit', () => {
                         cy.get('#issn-list')
                             .within(() => {
                                 issns.forEach((issn, index) => {
-                                    cy.get(`#issn-list-editor-row-${index}`)
+                                    cy.get(`#issn-list-row-${index}`)
                                         .should('contain.text', issn);
-                                    cy.get(`#issn-list-editor-row-${index} > div > div > span > a:nth-child(2)`)
+                                    cy.get(`#issn-list-row-${index} > div > div > span > a:nth-child(2)`)
                                         .should('contain.text', 'SHERPA/RoMEO')
                                         .should(
                                             'have.attr',
                                             'href',
                                             'http://www.sherpa.ac.uk/romeo/search.php?issn=' + issn,
                                         );
-                                    cy.get(`#issn-list-editor-row-${index} > div > div > span > a:nth-child(4)`)
+                                    cy.get(`#issn-list-row-${index} > div > div > span > a:nth-child(4)`)
                                         .should('contain.text', 'Ulrichs')
                                         .should(
                                             'have.attr',
@@ -234,7 +234,7 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.checkPartialDateFromRecordValue('Publication date', record.rek_date);
+                        cy.checkPartialDateFromRecordValue('date', record.rek_date);
                         cy.get('#Yearavailable')
                             .should(
                                 'have.value',

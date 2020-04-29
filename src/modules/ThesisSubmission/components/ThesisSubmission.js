@@ -236,6 +236,7 @@ export default class ThesisSubmission extends Component {
                                     <Typography>{txtFoR.text}</Typography>
                                     <Field
                                         component={FilteredFieldOfResearchListField}
+                                        listEditorId="filtered-field-of-research"
                                         name="fieldOfResearch"
                                         required
                                         validate={[validation.forRequired]}

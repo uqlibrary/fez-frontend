@@ -377,6 +377,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="filtered-field-of-research"
               locale={
                 Object {
                   "form": Object {
@@ -925,6 +926,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="filtered-field-of-research"
               locale={
                 Object {
                   "form": Object {

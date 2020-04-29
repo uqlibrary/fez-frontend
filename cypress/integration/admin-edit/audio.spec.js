@@ -36,7 +36,7 @@ context('Audio admin edit', () => {
                     },
                 ];
                 links.forEach((link, index) => {
-                    cy.get(`#link-info-list-editor-row-${index}`)
+                    cy.get(`#link-info-list-row-${index}`)
                         .find('p')
                         .should('have.text', `Link: ${link.url}`)
                         .siblings('span')
@@ -107,14 +107,12 @@ context('Audio admin edit', () => {
             });
 
         cy.get('@bibliographicCard')
-            .contains('label', 'Publication date')
-            .parent()
-            .siblings('div')
+            .find('#date')
             .as('pubDateBlock')
             .find('p')
             .should('exist')
             .should('have.text', 'Year required');
-        cy.setPartialDate('@pubDateBlock', { day: 1, month: 1, year: 2020 });
+        cy.setPartialDate('date', { day: 1, month: 1, year: 2020 });
         cy.get('@pubDateBlock')
             .find('p')
             .should('not.exist');

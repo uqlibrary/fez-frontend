@@ -16,7 +16,7 @@ context('As an admin,', () => {
 
         cy.get('#keywords-input')
             .type('testing');
-        cy.get('#add-items')
+        cy.get('button#add-keywords')
             .click();
 
         cy.contains('Add community')

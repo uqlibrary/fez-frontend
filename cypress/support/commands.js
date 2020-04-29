@@ -65,59 +65,37 @@ Cypress.Commands.add('clickAutoSuggestion', (fieldName, ordinal) => {
         .click();
 });
 
-Cypress.Commands.add('checkPartialDate', (selector, { day, monthName, year }) => {
-    day &&
-        cy
-            .get(selector)
-            .find('#day')
-            .should('have.value', day);
-    monthName &&
-        cy
-            .get(selector)
-            .find('#month')
-            .should('have.text', monthName);
-    year &&
-        cy
-            .get(selector)
-            .find('#year')
-            .should('have.value', year);
+Cypress.Commands.add('checkPartialDate', (id, { day, monthName, year }) => {
+    day && cy.get(`#${id}-day`)
+        .should('have.value', day);
+    monthName && cy.get(`#${id}-month`)
+        .should('have.text', monthName);
+    year && cy.get(`#${id}-year`)
+        .should('have.value', year);
 });
 
-Cypress.Commands.add('checkPartialDateFromRecordValue', (label, dateString) => {
-    cy.root()
-        .contains('label', label)
-        .parent()
-        .siblings('div')
-        .as('dateBlock');
-
+Cypress.Commands.add('checkPartialDateFromRecordValue', (id, dateString) => {
     const date = Cypress.moment(dateString);
-    cy.checkPartialDate('@dateBlock', {
+    cy.checkPartialDate(id, {
         day: date.format('D'),
         monthName: date.format('MMMM'),
         year: date.format('YYYY'),
     });
 });
 
-Cypress.Commands.add('setPartialDate', (selector, { day, month, year }) => {
-    day &&
-        cy
-            .get(selector)
-            .find('#day')
-            .type(`{selectall}${day}`);
+Cypress.Commands.add('setPartialDate', (id, { day, month, year }) => {
+    day && cy.get(`#${id}-day`)
+        .type(`{selectall}${day}`);
     month &&
         (() => {
-            cy.get(selector)
-                .find('#month')
+            cy.get(`#${id}-month`)
                 .click();
             cy.get('#menu-month')
                 .find(`li[role=option][data-value=${month - 1}]`)
                 .click();
         })();
-    year &&
-        cy
-            .get(selector)
-            .find('#year')
-            .type(`{selectall}${year}`);
+    year && cy.get(`#${id}-year`)
+        .type(`{selectall}${year}`);
 });
 
 /**

@@ -80,10 +80,12 @@ const mapDispatchToProps = dispatch => ({
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
 
-const ThesisSubmissionContainerWithReducer = () => (
+const ThesisSubmissionContainerWithReducer = props => (
     <ReloadReducerFromLocalStorage>
         <LocallyStoredReducerContext.Consumer>
-            {({ locallyStoredReducer }) => <ThesisSubmissionContainer locallyStoredReducer={locallyStoredReducer} />}
+            {({ locallyStoredReducer }) => (
+                <ThesisSubmissionContainer {...props} locallyStoredReducer={locallyStoredReducer} />
+            )}
         </LocallyStoredReducerContext.Consumer>
     </ReloadReducerFromLocalStorage>
 );

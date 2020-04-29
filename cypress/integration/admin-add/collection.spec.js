@@ -29,10 +29,10 @@ context('As an admin,', () => {
 
         cy.get('#keywords-input')
             .type('testing');
-        cy.get('#add-items')
+        cy.get('button#add-keywords')
             .click();
 
-        cy.get('#keywords-list-editor')
+        cy.get('#keywords-list')
             .should('exist')
             .contains('p', 'testing');
 

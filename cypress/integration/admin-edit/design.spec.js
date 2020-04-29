@@ -34,7 +34,7 @@ context('Design admin edit', () => {
                 cy.get('#Projectname')
                     .should('have.value', record.fez_record_search_key_project_name.rek_project_name);
                 cy.checkPartialDateFromRecordValue(
-                    'Publication date',
+                    'project-start-date',
                     record.fez_record_search_key_project_start_date.rek_project_start_date,
                 );
                 cy.get('#Scale')

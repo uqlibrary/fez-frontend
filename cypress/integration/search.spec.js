@@ -42,8 +42,8 @@ context('Search', () => {
         cy.get('input[name="searchField0"]')
             .should('have.value', 'cats and dogs')
             .type("{home}it's raining ");
-        cy.contains('label', 'Open access')
-            .find('[class*="MuiCheckbox"]')
+        cy.contains('label > span:nth-child(2)', 'Open access')
+            .get('#advanced-search-open-access')
             .should(
                 'have.attr',
                 'aria-label',
@@ -68,7 +68,7 @@ context('Search', () => {
         cy.contains('Select a field')
             .click();
         // Select author from the field dropdown
-        cy.contains('#menu- li', 'Author Name')
+        cy.contains('#menu-field-type-selector li', 'Author Name')
             .click();
         cy.get('button#advancedSearchButton')
             .should('be.disabled')
@@ -82,20 +82,22 @@ context('Search', () => {
             .click();
         cy.contains('Select a field')
             .click();
-        cy.contains('#menu- li', 'Collection')
+        cy.contains('#menu-field-type-selector li', 'Collection')
             .click();
         cy.get('button#advancedSearchButton')
             .should('be.disabled');
-        cy.contains('Select collections')
+        cy.get('[placeholder="Type a Collection title to search"]')
             .click();
-        cy.contains('#menu- li', '5th Australasian Congress on Applied Mechanics')
+        cy.contains('#searchField-popup li', '5th Australasian Congress on Applied Mechanics')
             .click();
-        cy.contains('#menu- li', 'Adaptive Interactive Profit Expectations')
+        cy.get('[placeholder="Type a Collection title to search"]')
             .click();
-        cy.contains('#menu- li', 'Admin only - CHRC')
+        cy.contains('#searchField-popup li', 'Adaptive Interactive Profit Expectations')
             .click();
-        cy.get('#menu-')
-            .click(10, 10);
+        cy.get('[placeholder="Type a Collection title to search"]')
+            .click();
+        cy.contains('#searchField-popup li', 'Admin only - CHRC')
+            .click();
         cy.get('#advancedSearchForm .searchQueryCaption')
             .should($caption => {
                 expect(cleanExtraSpaces($caption.text())).to.equal(
@@ -118,7 +120,7 @@ context('Search', () => {
             .click();
         cy.contains('Select a field')
             .click();
-        cy.contains('#menu- li', 'PID')
+        cy.contains('#menu-field-type-selector li', 'PID')
             .click();
         cy.get('#textfield-helper-text')
             .as('helpText')

@@ -109,7 +109,7 @@ context('Add missing record', () => {
             .type('test place of publication');
         cy.get('#rek-publisher')
             .type('test publisher');
-        cy.get('#year')
+        cy.get('#date-year')
             .type('2020');
         cy.get('@validationErrors')
             .should('have.length', 2);
@@ -123,7 +123,7 @@ context('Add missing record', () => {
         cy.get('#submit-work')
             .should('be.enabled');
 
-        cy.get('#delete-author-0')
+        cy.get('#authors-list-row-delete-0')
             .click();
         cy.get('button')
             .contains('Yes')

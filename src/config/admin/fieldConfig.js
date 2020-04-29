@@ -215,6 +215,7 @@ export default {
                 fullWidth: true,
                 validate: [validation.required],
                 allowPartial: true,
+                partialDateFieldId: 'date',
             },
         },
         collections: {
@@ -1192,6 +1193,7 @@ export default {
                 floatingTitle: 'Project start date',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'project-start-date',
             },
         },
         fez_record_search_key_start_date: {
@@ -1202,6 +1204,7 @@ export default {
                 floatingTitle: 'Start date',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'start-date',
             },
         },
         fez_record_search_key_end_date: {
@@ -1212,6 +1215,7 @@ export default {
                 floatingTitle: 'End date',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'end-date',
             },
         },
         fez_record_search_key_time_period_start_date: {
@@ -1222,6 +1226,7 @@ export default {
                 floatingTitle: 'Time coverage start date',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'time-coverage-start-date',
             },
         },
         fez_record_search_key_time_period_end_date: {
@@ -1232,6 +1237,7 @@ export default {
                 floatingTitle: 'Time coverage end date',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'time-coverage-end-date',
             },
         },
         fez_record_search_key_org_name: {
@@ -1404,6 +1410,7 @@ export default {
                 floatingTitle: 'Date photo taken',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'date-photo-taken',
             },
         },
         fez_record_search_key_date_scanned: {
@@ -1414,6 +1421,7 @@ export default {
                 floatingTitle: 'Date photo scanned',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'date-photo-scanned',
             },
         },
         fez_record_search_key_building_materials: {

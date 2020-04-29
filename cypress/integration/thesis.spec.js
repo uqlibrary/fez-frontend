@@ -11,20 +11,20 @@ context('Thesis', () => {
     it('Submitting a thesis successfully', () => {
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 8);
 
         // Title
         cy.typeCKEditor('editor1', '<p>This is a thesis title</p>');
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 7);
         // Abstract
         cy.typeCKEditor('editor2', '<p>This is the thesis abstract</p>');
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 6);
@@ -37,7 +37,7 @@ context('Thesis', () => {
         cy.get('div[id="menu-"]')
             .get('div[aria-hidden="true"]')
             .click({ force: true, multiple: true });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 5);
@@ -45,10 +45,10 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
 
         // Enrolling unit
-        cy.get('input[label="Enrolling unit"]')
+        cy.get('#org-unit-name-field')
             .type('a');
-        cy.clickAutoSuggestion('Enrollingunit', 0);
-        cy.get('.alert-text')
+        cy.clickAutoSuggestion('org-unit-name-field', 0);
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 4);
@@ -58,7 +58,7 @@ context('Thesis', () => {
         // Supervisors
         cy.get('input[id="supervisors-name-as-published-field"]')
             .type('Ky Lane', { delay: 30 });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 4);
@@ -66,7 +66,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
         cy.get('input[id="supervisors-name-as-published-field"]')
             .type('{enter}', { delay: 30 });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 3);
@@ -77,7 +77,7 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 4);
@@ -85,7 +85,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
         cy.get('input[id="supervisors-name-as-published-field"]')
             .type('Vishal Asai{enter}', { delay: 30 });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 3);
@@ -119,59 +119,60 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 4);
         cy.get('input[id="supervisors-name-as-published-field"]')
             .type('Ky Lane{enter}', { delay: 30 });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 3);
 
         // Field of Research
-        cy.get('input[label="Field of research"]')
+        cy.get('#filtered-field-of-research-input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 0);
-        cy.get('.alert-text')
+        cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 2);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('div[class="ListRow-Fieldofresearch ListRow-Fieldofresearch-0101 Pure Mathematics"]')
-            .get('button[title="Remove this item"]')
+        cy.get('#filtered-field-of-research-list-row-0')
+            .should('contain.text', '0101 Pure Mathematics')
+            .get('#filtered-field-of-research-list-row-delete-0')
             .click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 3);
-        cy.get('input[label="Field of research"]')
+        cy.get('#filtered-field-of-research-input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 0);
-        cy.get('.alert-text')
+        cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 2);
-        cy.get('button[title="Remove all items"]')
+        cy.get('#delete-all-filtered-field-of-research')
             .click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 3);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('input[label="Field of research"]')
+        cy.get('#filtered-field-of-research-input')
             .type('a');
-        cy.clickAutoSuggestion('Fieldofresearch', 0);
-        cy.get('.alert-text')
+        cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 2);
@@ -183,18 +184,18 @@ context('Thesis', () => {
             .type('First Keyword{enter}', {
                 delay: 30,
             });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 1);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('button[title="Remove this keyword"]')
+        cy.get('#keywords-list-row-delete-0')
             .click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 2);
@@ -202,16 +203,16 @@ context('Thesis', () => {
             .type('Second Keyword{enter}', {
                 delay: 30,
             });
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 1);
-        cy.get('button[title="Remove all keywords"]')
+        cy.get('#delete-all-keywords')
             .click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 2);
@@ -219,9 +220,9 @@ context('Thesis', () => {
             .type('Third Keyword{enter}', {
                 delay: 30,
             });
-        cy.get('.ListRow-Keywords')
+        cy.get('#keywords-list')
             .should('have.length', 1);
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 1);
@@ -229,7 +230,8 @@ context('Thesis', () => {
             .type('Fourth Keyword, Fifth Keyword, Sixth Keyword{enter}', {
                 delay: 30,
             });
-        cy.get('.ListRow-Keywords')
+        cy.get('#keywords-list')
+            .children()
             .should('have.length', 4);
 
         // Files?
@@ -247,7 +249,7 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 1);
@@ -266,7 +268,7 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.alert-text')
+        cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 1);
@@ -280,7 +282,7 @@ context('Thesis', () => {
                         { subjectType: 'drag-n-drop' },
                     );
             });
-        cy.get('div.alert-text')
+        cy.get('div.Alert')
             .should('have.length', 2);
         cy.fixture(fileName)
             .then(fileContent => {

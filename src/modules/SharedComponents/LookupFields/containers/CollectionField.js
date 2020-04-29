@@ -4,6 +4,7 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = state.get('collectionsReducer') || {};
+    console.log();
     return {
         id: props.id,
         itemsList: itemsList || [],
@@ -21,9 +22,7 @@ const mapStateToProps = (state, props) => {
                 errorText: props.meta.error || '',
             }
             : {
-                defaultValue: itemsList.filter(collection =>
-                    props.value.map(value => value.id).includes(collection.rek_pid),
-                ),
+                defaultValue: itemsList.filter(collection => (props.value || []).includes(collection.rek_pid)),
                 error: props.error,
                 errorText: props.errorText || '',
             }),
