@@ -515,7 +515,10 @@ export default {
     fez_record_search_key_alternate_genre: {
         getValue: record => record.fez_record_search_key_alternate_genre.map(genre => genre.rek_alternate_genre),
     },
-    fez_record_search_key_location: {
+    fez_record_search_key_location_biblio: {
+        getValue: record => [...record.fez_record_search_key_location],
+    },
+    fez_record_search_key_location_identifiers: {
         getValue: record => [...record.fez_record_search_key_location],
     },
     fez_record_search_key_identifier: {

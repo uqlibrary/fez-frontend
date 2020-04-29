@@ -29,7 +29,7 @@ export default {
             ? [
                 {
                     title: 'Location',
-                    groups: [['fez_record_search_key_location']],
+                    groups: [['fez_record_search_key_location_identifiers']],
                 },
             ]
             : []),

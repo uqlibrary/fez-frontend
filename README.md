@@ -41,7 +41,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 - `npm run start:url`
 
   - runs <http://dev-espace.library.uq.edu.au:3000/> (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
-  - uses staging data from the aws api (ie <https://api.library.uq.edu.au/staging/>) as a backend
+  - uses staging data from the aws api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
   - for a logged in session: `./scripts/dev-tools.sh start:staging-session` or `SESSION_COOKIE_NAME='mysessiontoken' npm run start:url`
 
     - you may need to block CORS errors - eg with [Allow CORS: Access-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) Chrome Extension, or by launching the browser with CORS disabled.
