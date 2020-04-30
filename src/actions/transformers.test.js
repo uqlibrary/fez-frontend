@@ -2290,6 +2290,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_license_additional: {
                 rek_license: '453607',
             },
+            fez_record_search_key_end_date_admin: {},
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
@@ -2349,6 +2350,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_license: {
                 rek_license: '453607',
             },
+            fez_record_search_key_end_date: {},
         });
     });
 
@@ -2686,6 +2688,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_license_biblio: {},
+                fez_record_search_key_end_date_biblio: {},
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2716,6 +2719,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_license: {},
+                fez_record_search_key_end_date: {},
             });
         });
 
