@@ -975,6 +975,35 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
         const result = transformers.getDatasetContactDetailSearchKeys(input);
         expect(result).toEqual(expected);
     });
+
+    it('should return search key with data transformed correctly with id set to 0 if contact ID is not entered', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactEmail: 'test@test.com',
+        };
+        const expected = {
+            fez_record_search_key_contributor: [
+                {
+                    rek_contributor: 'Test Contact',
+                    rek_contributor_order: 1,
+                },
+            ],
+            fez_record_search_key_contributor_id: [
+                {
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 1,
+                },
+            ],
+            fez_record_search_key_contact_details_email: [
+                {
+                    rek_contact_details_email: 'test@test.com',
+                    rek_contact_details_email_order: 1,
+                },
+            ],
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
 });
 
 describe('getGeographicAreaSearchKey tests', () => {
@@ -3285,6 +3314,48 @@ describe('getGrantInformationSectionSearchKeys', () => {
                 {
                     rek_grant_agency_type: 123,
                     rek_grant_agency_type_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getRecordIsDatasetOfSearchKey', () => {
+    it('should return empty object', () => {
+        expect(transformers.getRecordIsDatasetOfSearchKey()).toEqual({});
+    });
+
+    it('should get is dataset of search keys', () => {
+        expect(
+            transformers.getRecordIsDatasetOfSearchKey([
+                {
+                    rek_isdatasetof: 'UQ:111111',
+                    rek_isdatasetof_order: 1,
+                },
+            ]),
+        ).toEqual({
+            fez_record_search_key_isdatasetof: [
+                {
+                    rek_isdatasetof: 'UQ:111111',
+                    rek_isdatasetof_order: 1,
+                },
+            ],
+        });
+    });
+
+    it('should get is dataset of search keys from default values', () => {
+        expect(
+            transformers.getRecordIsDatasetOfSearchKey([
+                {
+                    rek_isdatasetof: { id: 'UQ:121212', value: 'Testing dataset' },
+                    rek_isdatasetof_order: 1,
+                },
+            ]),
+        ).toEqual({
+            fez_record_search_key_isdatasetof: [
+                {
+                    rek_isdatasetof: 'UQ:121212',
+                    rek_isdatasetof_order: 1,
                 },
             ],
         });

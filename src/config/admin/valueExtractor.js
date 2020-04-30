@@ -615,7 +615,7 @@ export default {
         }),
     },
     contactEmail: {
-        getValue: record => record.fez_record_search_key_contact_details_email[0].rek_contact_details_email,
+        getValue: record => (record.fez_record_search_key_contact_details_email[0] || {}).rek_contact_details_email,
     },
     fez_record_search_key_project_name: {
         getValue: record => ({ ...record.fez_record_search_key_project_name }),

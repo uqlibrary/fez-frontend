@@ -210,6 +210,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
               color="primary"
               disabled={true}
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
@@ -484,6 +485,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             <WithStyles(Button)
               color="primary"
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
@@ -711,6 +713,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             <WithStyles(Button)
               color="primary"
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
@@ -901,6 +904,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             <WithStyles(Button)
               color="primary"
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
@@ -1132,6 +1136,7 @@ exports[`AdminInterface component should render default view as a full form view
             <WithStyles(Button)
               color="primary"
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
@@ -1346,6 +1351,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             <WithStyles(Button)
               color="primary"
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
@@ -1565,6 +1571,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             <WithStyles(Button)
               color="primary"
               fullWidth={true}
+              id="admin-work-submit"
               onClick={[MockFunction]}
               style={
                 Object {
