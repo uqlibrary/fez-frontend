@@ -3,7 +3,7 @@ name: GitHub CI
 on:
   push:
     branches:
-      - feature-example
+      - feature-thesis-messages-171761003
 
     paths-ignore:
       - "**.md"
