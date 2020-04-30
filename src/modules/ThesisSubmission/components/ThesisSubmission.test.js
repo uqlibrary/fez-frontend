@@ -146,7 +146,7 @@ describe('ThesisSubmission', () => {
 
     it('should have a helper to generate alert props', () => {
         const wrapper = setup({ error: true });
-        expect(wrapper.instance().alertProps).toMatchSnapshot();
+        expect(wrapper.instance().getAlertProps()).toMatchSnapshot();
     });
 });
 

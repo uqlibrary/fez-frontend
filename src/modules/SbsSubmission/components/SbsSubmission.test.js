@@ -104,7 +104,7 @@ describe('SbsSubmission test', () => {
 
     it('should have a helper to generate alert props', () => {
         const wrapper = setup({ error: true });
-        expect(wrapper.instance().alertProps).toMatchSnapshot();
+        expect(wrapper.instance().getAlertProps()).toMatchSnapshot();
     });
 
     it('should redirect to after submit page', () => {

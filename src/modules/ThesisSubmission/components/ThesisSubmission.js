@@ -70,18 +70,19 @@ export default class ThesisSubmission extends Component {
     };
 
     // customise error for thesis submission
-    alertProps = validation.getErrorAlertProps({
-        ...this.props,
-        alertLocale: {
-            validationAlert: { ...formLocale.validationAlert },
-            progressAlert: { ...formLocale.progressAlert },
-            successAlert: { ...formLocale.successAlert },
-            errorAlert: {
-                ...formLocale.errorAlert,
-                message: () => formLocale.thesisSubmission.depositFailedMessage,
+    getAlertProps = () =>
+        validation.getErrorAlertProps({
+            ...this.props,
+            alertLocale: {
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
+                errorAlert: {
+                    ...formLocale.errorAlert,
+                    message: () => formLocale.thesisSubmission.depositFailedMessage,
+                },
             },
-        },
-    });
+        });
 
     render() {
         const txt = formLocale.thesis;
@@ -126,6 +127,8 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
+
+        const alertProps = this.getAlertProps();
 
         return (
             <StandardPage title={pageTitle}>
@@ -263,9 +266,9 @@ export default class ThesisSubmission extends Component {
                             </StandardCard>
                         </Grid>
 
-                        {this.alertProps && (
+                        {alertProps && (
                             <Grid item xs={12}>
-                                <Alert {...this.alertProps} />
+                                <Alert {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
