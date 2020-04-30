@@ -1603,8 +1603,8 @@ export default {
                     },
                     relatedDatasets: {
                         title: 'Related datasets/work',
-                        inputFieldLabel: 'Dataset/Work title',
-                        inputFieldHint: 'Please type the dataset or work title then select from the list',
+                        inputFieldLabel: 'Related datasets/works in eSpace',
+                        inputFieldHint: 'Begin typing to search for related works in eSpace and add it to the list',
                     },
                 },
             },
