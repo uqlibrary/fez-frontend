@@ -975,6 +975,35 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
         const result = transformers.getDatasetContactDetailSearchKeys(input);
         expect(result).toEqual(expected);
     });
+
+    it('should return search key with data transformed correctly with id set to 0 if contact ID is not entered', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactEmail: 'test@test.com',
+        };
+        const expected = {
+            fez_record_search_key_contributor: [
+                {
+                    rek_contributor: 'Test Contact',
+                    rek_contributor_order: 1,
+                },
+            ],
+            fez_record_search_key_contributor_id: [
+                {
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 1,
+                },
+            ],
+            fez_record_search_key_contact_details_email: [
+                {
+                    rek_contact_details_email: 'test@test.com',
+                    rek_contact_details_email_order: 1,
+                },
+            ],
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
 });
 
 describe('getGeographicAreaSearchKey tests', () => {
@@ -2759,10 +2788,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should only save the supplied key for a many-to-one search key', () => {
             const dataMany = {
-                issnField: [
-                    { rek_value: '1212-1212', rek_order: 1 },
-                    { rek_value: '2323-2323', rek_order: 2 },
-                ],
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
             };
             const dataOne = {
                 issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
@@ -2792,10 +2818,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
-                issnField: [
-                    { rek_value: '1212-1212', rek_order: 1 },
-                    { rek_value: '2323-2323', rek_order: 2 },
-                ],
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
