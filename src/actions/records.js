@@ -128,6 +128,39 @@ export function createNewRecord(data) {
     };
 }
 
+const prepareThesisSubmission = data => {
+    // set default values, links
+    const recordRequest = {
+        ...JSON.parse(JSON.stringify(data)),
+        ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
+        ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
+        ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+        ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+        ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+        rek_title: data.thesisTitle.plainText,
+        rek_formatted_title: data.thesisTitle.htmlText,
+        rek_description: data.thesisAbstract.plainText,
+        rek_formatted_abstract: data.thesisAbstract.htmlText,
+    };
+
+    // delete extra form values from request object
+    const keysToDelete = [
+        'authors',
+        'editors',
+        'currentAuthor',
+        'supervisors',
+        'fieldOfResearch',
+        'files',
+        'thesisTitle',
+        'thesisAbstract',
+    ];
+    keysToDelete.forEach(key => {
+        delete recordRequest[key];
+    });
+
+    return recordRequest;
+};
+
 /**
  * Submit thesis involves four steps: create record - get signed url to upload files - upload files - patch record.
  * @param {object} data to be posted, refer to backend API
@@ -135,41 +168,12 @@ export function createNewRecord(data) {
  */
 export function submitThesis(data) {
     return dispatch => {
-        dispatch({ type: actions.CREATE_RECORD_SAVING });
-        // set default values, links
-        const recordRequest = {
-            ...JSON.parse(JSON.stringify(data)),
-            ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
-            ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
-            ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
-            rek_title: data.thesisTitle.plainText,
-            rek_formatted_title: data.thesisTitle.htmlText,
-            rek_description: data.thesisAbstract.plainText,
-            rek_formatted_abstract: data.thesisAbstract.htmlText,
-        };
-
-        // delete extra form values from request object
-        const keysToDelete = [
-            'authors',
-            'editors',
-            'currentAuthor',
-            'supervisors',
-            'fieldOfResearch',
-            'files',
-            'thesisTitle',
-            'thesisAbstract',
-        ];
-        keysToDelete.forEach(key => {
-            delete recordRequest[key];
-        });
+        const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         let newRecord = null;
         let recordCreated = false;
         let fileUploadFailed = false;
-        const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         const onRecordCreationSuccess = response => {
             // save new record response for issue reporting
@@ -190,14 +194,17 @@ export function submitThesis(data) {
         };
 
         const onRecordPatchSuccess = response => {
+            if (hasFilesToUpload) {
+                newRecord = response.data;
+            }
             dispatch({
                 type: actions.CREATE_RECORD_SUCCESS,
                 payload: {
-                    newRecord: response.data,
+                    newRecord,
                     fileUploadOrIssueFailed: fileUploadFailed,
                 },
             });
-            return Promise.resolve(response.data);
+            return Promise.resolve(newRecord);
         };
         const onRecordPatchFailure = error => {
             if (recordCreated) {
@@ -222,7 +229,15 @@ export function submitThesis(data) {
         const onIssueReportSuccess = () => recordCreated && Promise.resolve(newRecord);
         const onIssueReportFailure = error => (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
 
-        return post(NEW_RECORD_API(), recordRequest)
+        const createRecord = recordData => {
+            const recordRequest = prepareThesisSubmission(recordData);
+            dispatch({ type: actions.CREATE_RECORD_SAVING });
+            return post(NEW_RECORD_API(), recordRequest);
+        };
+
+        const submission = createRecord(data);
+
+        return submission
             .then(onRecordCreationSuccess, onRecordCreationFailure)
             .then(onFileUploadSuccess, onFileUploadFailure)
             .then(onRecordPatchSuccess, onRecordPatchFailure)
