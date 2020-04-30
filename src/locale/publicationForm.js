@@ -1364,6 +1364,11 @@ export default {
             //     text: 'file help...',
             //     buttonLabel: 'Close'
             // },
+            failedAlertLocale: {
+                type: 'error',
+                title: 'FILE UPLOAD ERROR',
+                message: 'There was an issue uploading your thesis files. Please contact UQ eSpace administrators.',
+            },
             locale: {
                 instructions: '',
                 validation: {

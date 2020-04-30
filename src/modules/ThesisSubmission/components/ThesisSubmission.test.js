@@ -182,10 +182,4 @@ describe('ThesisSubmission form - redirections', () => {
             expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
         );
     });
-
-    it('should reload when told to', () => {
-        const wrapper = setup({ initialValues: {} });
-        wrapper.instance().afterFailedSubmit();
-        expect(window.location.reload).toHaveBeenCalled();
-    });
 });

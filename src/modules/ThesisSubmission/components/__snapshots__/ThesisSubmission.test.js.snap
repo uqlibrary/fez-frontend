@@ -1113,18 +1113,38 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
       item={true}
       xs={12}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
+      <StandardCard
+        title="Your thesis has been deposited"
       >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Resubmit your thesis"
-          message="There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button."
-          title="FILE UPLOAD ERROR"
-          type="error"
-        />
-      </WithStyles(Grid)>
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You will receive an email confirming your thesis deposit shortly.
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Alert)
+        message="There was an issue uploading your thesis files. Please contact UQ Graduate School administrators."
+        title="FILE UPLOAD ERROR"
+        type="error"
+      />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)

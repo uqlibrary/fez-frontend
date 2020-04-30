@@ -97,9 +97,7 @@ export default class ThesisSubmission extends Component {
                     {this.props.newRecordFileUploadingOrIssueError && (
                         <Grid container spacing={24}>
                             <Grid item xs={12}>
-                                <Grid item xs={12}>
-                                    <Alert {...formLocale.thesisSubmission.fileUpload.failedAlertLocale} />
-                                </Grid>
+                                <Alert {...formLocale.thesisSubmission.fileUpload.failedAlertLocale} />
                             </Grid>
                         </Grid>
                     )}
