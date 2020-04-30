@@ -39,12 +39,20 @@ const getIssuesRequest = text => ({
 /* getFixIssueRequest - returns fix record issue request object
  * @returns {Object} issue request
  */
-export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
+export const getFixIssueRequest = pipe(
+    getIssueValues,
+    templates.issues.fixRecord,
+    getIssuesRequest,
+);
 
 /* getClaimIssueRequest - returns claim record issue request object
  * @returns {Object} issue request
  */
-export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
+export const getClaimIssueRequest = pipe(
+    getIssueValues,
+    templates.issues.claimRecord,
+    getIssuesRequest,
+);
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
  * NOTE: link description is required to save link
@@ -465,7 +473,9 @@ export const getDatasetContactDetailSearchKeys = contact => {
         ],
         fez_record_search_key_contributor_id: [
             {
-                rek_contributor_id: isNaN(contact.contactNameId.id) ? 0 : parseInt(contact.contactNameId.id, 10),
+                rek_contributor_id: isNaN((contact.contactNameId || {}).id)
+                    ? 0
+                    : parseInt(contact.contactNameId.id, 10),
                 rek_contributor_id_order: 1,
             },
         ],
@@ -1027,7 +1037,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
             ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
             : {}),
         ...getContentIndicatorSearchKey(contentIndicators),
-        ...(!!contactName && !!contactNameId && !!contactEmail
+        ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
             : {}),
         ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
