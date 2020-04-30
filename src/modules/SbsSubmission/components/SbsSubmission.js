@@ -79,6 +79,20 @@ export default class SbsSubmission extends Component {
         window.location.reload();
     };
 
+    // customise error for thesis submission
+    alertProps = validation.getErrorAlertProps({
+        ...this.props,
+        alertLocale: {
+            validationAlert: { ...formLocale.validationAlert },
+            progressAlert: { ...formLocale.progressAlert },
+            successAlert: { ...formLocale.successAlert },
+            errorAlert: {
+                ...formLocale.errorAlert,
+                message: () => formLocale.thesisSubmission.depositFailedMessage,
+            },
+        },
+    });
+
     render() {
         const txt = formLocale.thesis;
         const txtFoR = locale.components.fieldOfResearchForm;
@@ -109,19 +123,7 @@ export default class SbsSubmission extends Component {
                 </StandardPage>
             );
         }
-        // customise error for thesis submission
-        const alertProps = validation.getErrorAlertProps({
-            ...this.props,
-            alertLocale: {
-                validationAlert: { ...formLocale.validationAlert },
-                progressAlert: { ...formLocale.progressAlert },
-                successAlert: { ...formLocale.successAlert },
-                errorAlert: {
-                    ...formLocale.errorAlert,
-                    message: () => formLocale.thesisSubmission.depositFailedMessage,
-                },
-            },
-        });
+
         return (
             <StandardPage title={thesisLocale.sbsTitle}>
                 <form>
@@ -289,9 +291,9 @@ export default class SbsSubmission extends Component {
                             </StandardCard>
                         </Grid>
 
-                        {alertProps && (
+                        {this.alertProps && (
                             <Grid item xs={12}>
-                                <Alert {...alertProps} />
+                                <Alert {...this.alertProps} />
                             </Grid>
                         )}
                     </Grid>
@@ -312,6 +314,7 @@ export default class SbsSubmission extends Component {
                                 color="primary"
                                 disabled={this.props.submitting || this.props.disableSubmit}
                                 fullWidth
+                                id="submit-thesis"
                                 onClick={this.deposit}
                                 variant="contained"
                             />

@@ -36,6 +36,14 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
 </StandardPage>
 `;
 
+exports[`SbsSubmission test should have a helper to generate alert props 1`] = `
+Object {
+  "message": "Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.",
+  "title": "Error",
+  "type": "error_outline",
+}
+`;
+
 exports[`SbsSubmission test should render sbs thesis submission acknowledgement 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
@@ -953,6 +961,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-thesis"
           onClick={[Function]}
           variant="contained"
         >
@@ -1845,6 +1854,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-thesis"
           onClick={[Function]}
           variant="contained"
         >

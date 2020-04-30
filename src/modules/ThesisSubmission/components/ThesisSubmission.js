@@ -69,6 +69,20 @@ export default class ThesisSubmission extends Component {
         this.depositConfirmationBox = ref;
     };
 
+    // customise error for thesis submission
+    alertProps = validation.getErrorAlertProps({
+        ...this.props,
+        alertLocale: {
+            validationAlert: { ...formLocale.validationAlert },
+            progressAlert: { ...formLocale.progressAlert },
+            successAlert: { ...formLocale.successAlert },
+            errorAlert: {
+                ...formLocale.errorAlert,
+                message: () => formLocale.thesisSubmission.depositFailedMessage,
+            },
+        },
+    });
+
     render() {
         const txt = formLocale.thesis;
         const txtFoR = locale.components.fieldOfResearchForm;
@@ -112,19 +126,7 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
-        // customise error for thesis submission
-        const alertProps = validation.getErrorAlertProps({
-            ...this.props,
-            alertLocale: {
-                validationAlert: { ...formLocale.validationAlert },
-                progressAlert: { ...formLocale.progressAlert },
-                successAlert: { ...formLocale.successAlert },
-                errorAlert: {
-                    ...formLocale.errorAlert,
-                    message: () => thesisLocale.depositFailedMessage,
-                },
-            },
-        });
+
         return (
             <StandardPage title={pageTitle}>
                 <form>
@@ -261,9 +263,9 @@ export default class ThesisSubmission extends Component {
                             </StandardCard>
                         </Grid>
 
-                        {alertProps && (
+                        {this.alertProps && (
                             <Grid item xs={12}>
-                                <Alert {...alertProps} />
+                                <Alert {...this.alertProps} />
                             </Grid>
                         )}
                     </Grid>
