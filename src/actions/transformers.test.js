@@ -2759,7 +2759,10 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should only save the supplied key for a many-to-one search key', () => {
             const dataMany = {
-                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
+                issnField: [
+                    { rek_value: '1212-1212', rek_order: 1 },
+                    { rek_value: '2323-2323', rek_order: 2 },
+                ],
             };
             const dataOne = {
                 issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
@@ -2789,7 +2792,10 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
-                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
+                issnField: [
+                    { rek_value: '1212-1212', rek_order: 1 },
+                    { rek_value: '2323-2323', rek_order: 2 },
+                ],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -3285,6 +3291,48 @@ describe('getGrantInformationSectionSearchKeys', () => {
                 {
                     rek_grant_agency_type: 123,
                     rek_grant_agency_type_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getRecordIsDatasetOfSearchKey', () => {
+    it('should return empty object', () => {
+        expect(transformers.getRecordIsDatasetOfSearchKey()).toEqual({});
+    });
+
+    it('should get is dataset of search keys', () => {
+        expect(
+            transformers.getRecordIsDatasetOfSearchKey([
+                {
+                    rek_isdatasetof: 'UQ:111111',
+                    rek_isdatasetof_order: 1,
+                },
+            ]),
+        ).toEqual({
+            fez_record_search_key_isdatasetof: [
+                {
+                    rek_isdatasetof: 'UQ:111111',
+                    rek_isdatasetof_order: 1,
+                },
+            ],
+        });
+    });
+
+    it('should get is dataset of search keys from default values', () => {
+        expect(
+            transformers.getRecordIsDatasetOfSearchKey([
+                {
+                    rek_isdatasetof: { id: 'UQ:121212', value: 'Testing dataset' },
+                    rek_isdatasetof_order: 1,
+                },
+            ]),
+        ).toEqual({
+            fez_record_search_key_isdatasetof: [
+                {
+                    rek_isdatasetof: 'UQ:121212',
+                    rek_isdatasetof_order: 1,
                 },
             ],
         });

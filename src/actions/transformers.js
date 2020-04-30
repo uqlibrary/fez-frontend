@@ -39,20 +39,12 @@ const getIssuesRequest = text => ({
 /* getFixIssueRequest - returns fix record issue request object
  * @returns {Object} issue request
  */
-export const getFixIssueRequest = pipe(
-    getIssueValues,
-    templates.issues.fixRecord,
-    getIssuesRequest,
-);
+export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
 /* getClaimIssueRequest - returns claim record issue request object
  * @returns {Object} issue request
  */
-export const getClaimIssueRequest = pipe(
-    getIssueValues,
-    templates.issues.claimRecord,
-    getIssuesRequest,
-);
+export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
  * NOTE: link description is required to save link
@@ -111,7 +103,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
             return {
                 rek_file_attachment_access_condition:
-                    item.access_condition_id === OPEN_ACCESS_ID && (item.date && moment(item.date).isAfter())
+                    item.access_condition_id === OPEN_ACCESS_ID && item.date && moment(item.date).isAfter()
                         ? CLOSED_ACCESS_ID
                         : item.access_condition_id,
                 rek_file_attachment_access_condition_order: initialCount + index + 1,
@@ -752,6 +744,30 @@ export const renameLicense = record => {
     };
 };
 
+export const getRecordIsDatasetOfSearchKey = datasets => {
+    if ((datasets || []).length === 0) return {};
+
+    return {
+        fez_record_search_key_isdatasetof: datasets.map(({ rek_isdatasetof: value, rek_isdatasetof_order: order }) => ({
+            rek_isdatasetof: value.id || value,
+            rek_isdatasetof_order: order,
+        })),
+    };
+};
+
+export const getRecordIsDerivationOfSearchKey = relatedPubs => {
+    if ((relatedPubs || []).length === 0) return {};
+
+    return {
+        fez_record_search_key_isderivationof: relatedPubs.map(
+            ({ rek_isderivationof: value, rek_isderivationof_order: order }) => ({
+                rek_isderivationof: value.id || value,
+                rek_isderivationof_order: order,
+            }),
+        ),
+    };
+};
+
 export const getBibliographicSectionSearchKeys = (data = {}) => {
     const {
         rek_title: title,
@@ -765,9 +781,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
-        fez_record_search_key_isderivationof: relatedPubsField,
+        fez_record_search_key_isderivationof: relatedPubs,
         fez_record_search_key_license_biblio: licenseDataBiblio,
         fez_record_search_key_location_biblio: locationDataBiblio,
+        fez_record_search_key_isdatasetof: datasets,
         issnField,
         ...rest
     } = data;
@@ -844,16 +861,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 })),
             }
             : {}),
-        ...(!!relatedPubsField
-            ? {
-                fez_record_search_key_isderivationof: relatedPubsField.map(
-                    ({ rek_isderivationof: value, rek_isderivationof_order: order }) => ({
-                        rek_isderivationof: value.id || value,
-                        rek_isderivationof_order: order,
-                    }),
-                ),
-            }
-            : {}),
+        ...getRecordIsDerivationOfSearchKey(relatedPubs),
+        ...getRecordIsDatasetOfSearchKey(datasets),
     };
 };
 
