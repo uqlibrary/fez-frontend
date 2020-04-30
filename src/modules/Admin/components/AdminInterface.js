@@ -273,6 +273,7 @@ export const AdminInterface = ({
                                 </Grid>
                                 <Grid item xs={12} sm={10}>
                                     <Button
+                                        id="admin-work-submit"
                                         style={{ whiteSpace: 'nowrap' }}
                                         disabled={submitting || disableSubmit}
                                         variant="contained"
