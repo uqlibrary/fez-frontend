@@ -1414,9 +1414,8 @@ export default {
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
-        afterSubmitText: (
-            <p>You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.</p>
-        ),
+        afterSubmitText:
+            'You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.',
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
             confirmationMessage:
