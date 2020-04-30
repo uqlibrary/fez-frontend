@@ -1595,6 +1595,10 @@ export default {
                 required: true,
                 validate: [validation.requiredList],
             }),
+            fez_record_search_key_license_additional: () => ({
+                required: true,
+                validate: [validation.required],
+            }),
         },
         [PUBLICATION_TYPE_DESIGN]: {
             fez_record_search_key_original_format: () => ({
