@@ -691,11 +691,14 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
-export const getLinkSearchKey = links => ({
-    fez_record_search_key_link: links.map(link => ({ rek_link: link.rek_value.key, rek_link_order: link.rek_order })),
+export const getLinkSearchKey = (links = []) => ({
+    fez_record_search_key_link: links.map(link => ({
+        rek_link: link.rek_value.key,
+        rek_link_order: link.rek_order,
+    })),
 });
 
-export const getLinkDescriptionSearchKey = links => ({
+export const getLinkDescriptionSearchKey = (links = []) => ({
     fez_record_search_key_link_description: links.map(link => ({
         rek_link_description: link.rek_value.value,
         rek_link_description_order: link.rek_order,
@@ -733,8 +736,8 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...(!!pubmedCentralId && pubmedCentralId.hasOwnProperty('rek_pubmed_central_id')
             ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
-        ...(!!links && links.length > 0 ? getLinkSearchKey(links) : {}),
-        ...(!!links && links.length > 0 ? getLinkDescriptionSearchKey(links) : {}),
+        ...getLinkSearchKey(links),
+        ...getLinkDescriptionSearchKey(links),
         ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers) : {}),
         ...rest,
     };

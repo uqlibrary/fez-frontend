@@ -120,9 +120,9 @@ describe('ListEditor tests', () => {
         expect(wrapper.state().itemList.length).toEqual(0);
         wrapper.instance().addItem('one');
         expect(wrapper.state().itemList.length).toEqual(1);
-        wrapper.instance().addItem('two,three,four');
+        wrapper.instance().addItem('two|three|four');
         expect(wrapper.state().itemList.length).toEqual(4);
-        wrapper.instance().addItem('two,three,four,,five,,');
+        wrapper.instance().addItem('two|three|four||five||');
         expect(wrapper.state().itemList.length).toEqual(5);
     });
 
