@@ -441,7 +441,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       }
       value={316}
     >
-      Design (label TBC)
+      Design
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -874,7 +874,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       }
       value={316}
     >
-      Design (label TBC)
+      Design
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -1312,7 +1312,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
       }
       value={316}
     >
-      Design (label TBC)
+      Design
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={true}

@@ -341,7 +341,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_DESIGN]: {
         id: PUBLICATION_TYPE_DESIGN,
-        name: `${DOCUMENT_TYPE_DESIGN} (label TBC)`,
+        name: DOCUMENT_TYPE_DESIGN,
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
@@ -845,7 +845,7 @@ export const DOCTYPE_SUBTYPE_MAPPING = {
     [PUBLICATION_TYPE_DESIGN_CW_ARCHITECTURAL_WORK]: {
         docTypeId: PUBLICATION_TYPE_DESIGN,
         subtype: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
-        name: `${NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK} (label TBC)`,
+        name: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
     },
     [PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK]: {
         docTypeId: PUBLICATION_TYPE_BOOK,
