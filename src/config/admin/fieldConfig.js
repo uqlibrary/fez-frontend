@@ -555,6 +555,7 @@ export default {
                 placeholder: '',
                 multiline: true,
                 floatingLabelText: 'Series',
+                showClear: true,
             },
         },
         fez_record_search_key_chapter_number: {
