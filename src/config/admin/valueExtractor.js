@@ -571,7 +571,6 @@ export default {
     },
     fez_record_search_key_related_datasets: {
         getValue: record => {
-            console.log(record);
             return {
                 plainText: (record.fez_record_search_key_related_datasets || {}).rek_related_datasets || '',
                 htmlText: (record.fez_record_search_key_related_datasets || {}).rek_related_datasets || '',
@@ -580,7 +579,6 @@ export default {
     },
     fez_record_search_key_related_publications: {
         getValue: record => {
-            console.log(record);
             return {
                 plainText: (record.fez_record_search_key_related_publications || {}).rek_related_publications || '',
                 htmlText: (record.fez_record_search_key_related_publications || {}).rek_related_publications || '',
