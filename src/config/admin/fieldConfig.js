@@ -555,6 +555,7 @@ export default {
                 placeholder: '',
                 multiline: true,
                 floatingLabelText: 'Series',
+                showClear: true,
             },
         },
         fez_record_search_key_chapter_number: {
@@ -1594,6 +1595,10 @@ export default {
             subjects: () => ({
                 required: true,
                 validate: [validation.requiredList],
+            }),
+            fez_record_search_key_license_additional: () => ({
+                required: true,
+                validate: [validation.required],
             }),
         },
         [PUBLICATION_TYPE_DESIGN]: {
