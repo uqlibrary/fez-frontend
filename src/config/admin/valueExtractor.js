@@ -570,10 +570,20 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_access_conditions }),
     },
     fez_record_search_key_related_datasets: {
-        getValue: record => ({ ...record.fez_record_search_key_related_datasets }),
+        getValue: record => {
+            return {
+                plainText: (record.fez_record_search_key_related_datasets || {}).rek_related_datasets || '',
+                htmlText: (record.fez_record_search_key_related_datasets || {}).rek_related_datasets || '',
+            };
+        },
     },
     fez_record_search_key_related_publications: {
-        getValue: record => ({ ...record.fez_record_search_key_related_publications }),
+        getValue: record => {
+            return {
+                plainText: (record.fez_record_search_key_related_publications || {}).rek_related_publications || '',
+                htmlText: (record.fez_record_search_key_related_publications || {}).rek_related_publications || '',
+            };
+        },
     },
     fez_record_search_key_software_required: {
         getValue: record =>

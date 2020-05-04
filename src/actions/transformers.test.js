@@ -2737,6 +2737,14 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_license_biblio: {},
+                fez_record_search_key_related_datasets: {
+                    plainText: 'A related dataset',
+                    htmlText: '<p>A related dataset</p>',
+                },
+                fez_record_search_key_related_publications: {
+                    plainText: 'A related publication',
+                    htmlText: '<p>A related publication</p>',
+                },
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2767,6 +2775,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_license: {},
+                fez_record_search_key_related_datasets: {
+                    rek_related_datasets: '<p>A related dataset</p>',
+                },
+                fez_record_search_key_related_publications: {
+                    rek_related_publications: '<p>A related publication</p>',
+                },
             });
         });
 
