@@ -8,6 +8,10 @@ exports[`WoSDocTypesField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
+        "text": "None",
+        "value": null,
+      },
+      Object {
         "text": "2 - Abstract of Published item",
         "value": "2",
       },
@@ -174,6 +178,10 @@ exports[`WoSDocTypesField component should render immutable list as selected val
   }
   itemsList={
     Array [
+      Object {
+        "text": "None",
+        "value": null,
+      },
       Object {
         "text": "2 - Abstract of Published item",
         "value": "2",
@@ -347,6 +355,10 @@ exports[`WoSDocTypesField component should render when given a default value fie
   itemsList={
     Array [
       Object {
+        "text": "None",
+        "value": null,
+      },
+      Object {
         "text": "2 - Abstract of Published item",
         "value": "2",
       },
@@ -519,6 +531,10 @@ exports[`WoSDocTypesField component should render with given field props 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "None",
+        "value": null,
+      },
       Object {
         "text": "2 - Abstract of Published item",
         "value": "2",

@@ -3457,7 +3457,7 @@ export const journalArticle = {
     "fez_record_search_key_alternative_title": [],
     "fez_record_search_key_ands_collection_type": null,
     "fez_record_search_key_architectural_features": [],
-    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_article_number": '1',
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
     "fez_record_search_key_author": [{

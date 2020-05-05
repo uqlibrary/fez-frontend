@@ -630,7 +630,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": "1",
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -1611,7 +1611,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "fez_record_search_key_alternative_title": Array [],
                     "fez_record_search_key_ands_collection_type": null,
                     "fez_record_search_key_architectural_features": Array [],
-                    "fez_record_search_key_article_number": null,
+                    "fez_record_search_key_article_number": "1",
                     "fez_record_search_key_assigned_group_id": Array [],
                     "fez_record_search_key_assigned_user_id": Array [],
                     "fez_record_search_key_author": Array [
@@ -2604,7 +2604,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       "fez_record_search_key_alternative_title": Array [],
                       "fez_record_search_key_ands_collection_type": null,
                       "fez_record_search_key_architectural_features": Array [],
-                      "fez_record_search_key_article_number": null,
+                      "fez_record_search_key_article_number": "1",
                       "fez_record_search_key_assigned_group_id": Array [],
                       "fez_record_search_key_assigned_user_id": Array [],
                       "fez_record_search_key_author": Array [
@@ -4150,7 +4150,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 className="citationArticleNumber"
                 prefix=" "
                 suffix=" "
-                value={null}
               >
                 <span
                   className="citationArticleNumber empty"
@@ -4243,7 +4242,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "fez_record_search_key_alternative_title": Array [],
                     "fez_record_search_key_ands_collection_type": null,
                     "fez_record_search_key_architectural_features": Array [],
-                    "fez_record_search_key_article_number": null,
+                    "fez_record_search_key_article_number": "1",
                     "fez_record_search_key_assigned_group_id": Array [],
                     "fez_record_search_key_assigned_user_id": Array [],
                     "fez_record_search_key_author": Array [
@@ -5238,7 +5237,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "fez_record_search_key_alternative_title": Array [],
                         "fez_record_search_key_ands_collection_type": null,
                         "fez_record_search_key_architectural_features": Array [],
-                        "fez_record_search_key_article_number": null,
+                        "fez_record_search_key_article_number": "1",
                         "fez_record_search_key_assigned_group_id": Array [],
                         "fez_record_search_key_assigned_user_id": Array [],
                         "fez_record_search_key_author": Array [
@@ -6230,7 +6229,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "fez_record_search_key_alternative_title": Array [],
                         "fez_record_search_key_ands_collection_type": null,
                         "fez_record_search_key_architectural_features": Array [],
-                        "fez_record_search_key_article_number": null,
+                        "fez_record_search_key_article_number": "1",
                         "fez_record_search_key_assigned_group_id": Array [],
                         "fez_record_search_key_assigned_user_id": Array [],
                         "fez_record_search_key_author": Array [
