@@ -55,8 +55,8 @@ export default {
             description: (
                 <span>
                     For each author marked with a <span style={{ color: '#e60000', weight: 'bold' }}>red</span> prompt,
-                    select the author name at Step 1, add the affiliation information as at time of publication at Step
-                    2, then click <b>UPDATE AUTHOR</b>.
+                    select the pencil edit icon to the right of the author name at Step 1, add the affiliation
+                    information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.
                 </span>
             ),
             field: {
