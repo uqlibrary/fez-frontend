@@ -50,7 +50,7 @@ export class PartialDateForm extends Component {
         disableFuture: PropTypes.bool,
         input: PropTypes.object,
         meta: PropTypes.shape({
-            initial: PropTypes.object,
+            initial: PropTypes.string,
         }),
     };
 
@@ -94,8 +94,8 @@ export class PartialDateForm extends Component {
 
     constructor(props) {
         super(props);
-        const dateValue = (props.meta && props.meta.initial) || null;
-        if (dateValue && dateValue.isValid()) {
+        const dateValue = (props.meta && props.meta.initial && moment(props.meta.initial)) || null;
+        if (!!dateValue && dateValue.isValid()) {
             this.state = {
                 day: dateValue.date(),
                 month: dateValue.month(),
