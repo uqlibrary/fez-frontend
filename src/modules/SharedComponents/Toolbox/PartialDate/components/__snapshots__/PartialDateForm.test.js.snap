@@ -786,3 +786,1182 @@ exports[`PartialDateForm component should load existing values 1`] = `
   </WithStyles(Grid)>
 </WithStyles(Grid)>
 `;
+
+exports[`PartialDateForm component with clearable flag should display an error on clearing one partial date field 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(WithFormControlContext(InputLabel))
+      error={true}
+      shrink={true}
+      style={
+        Object {
+          "zoom": "0.75",
+        }
+      }
+    >
+      Enter a date
+    </WithStyles(WithFormControlContext(InputLabel))>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": -12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={true}
+          fullWidth={true}
+          id="day"
+          inputProps={
+            Object {
+              "label": "day",
+              "maxLength": 2,
+            }
+          }
+          name="day"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Day"
+          required={false}
+          select={false}
+          type="text"
+          value=""
+          variant="standard"
+        />
+        <WithStyles(WithFormControlContext(FormHelperText))
+          error={true}
+        >
+          Invalid date
+        </WithStyles(WithFormControlContext(FormHelperText))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <WithStyles(WithFormControlContext(Select))
+          error={true}
+          id="month"
+          inputProps={
+            Object {
+              "label": "month",
+              "maxLength": 2,
+            }
+          }
+          name="month"
+          onChange={[Function]}
+          placeholder="Month"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+          value={1}
+        >
+          <WithStyles(MenuItem)
+            key="-1"
+            value={-1}
+          >
+            Month
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="0"
+            value={0}
+          >
+            January
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="1"
+            value={1}
+          >
+            February
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="2"
+            value={2}
+          >
+            March
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="3"
+            value={3}
+          >
+            April
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="4"
+            value={4}
+          >
+            May
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="5"
+            value={5}
+          >
+            June
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="6"
+            value={6}
+          >
+            July
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="7"
+            value={7}
+          >
+            August
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="8"
+            value={8}
+          >
+            September
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="9"
+            value={9}
+          >
+            October
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="10"
+            value={10}
+          >
+            November
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="11"
+            value={11}
+          >
+            December
+          </WithStyles(MenuItem)>
+        </WithStyles(WithFormControlContext(Select))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={true}
+          fullWidth={true}
+          id="year"
+          inputProps={
+            Object {
+              "label": "year",
+              "maxLength": 4,
+            }
+          }
+          name="year"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Year"
+          required={false}
+          select={false}
+          type="text"
+          value={2020}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`PartialDateForm component with clearable flag should display an error on entering future date 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(WithFormControlContext(InputLabel))
+      error={false}
+      shrink={true}
+      style={
+        Object {
+          "zoom": "0.75",
+        }
+      }
+    >
+      Enter a date
+    </WithStyles(WithFormControlContext(InputLabel))>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": -12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={false}
+          fullWidth={true}
+          id="day"
+          inputProps={
+            Object {
+              "label": "day",
+              "maxLength": 2,
+            }
+          }
+          name="day"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Day"
+          required={false}
+          select={false}
+          type="text"
+          value={2}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <WithStyles(WithFormControlContext(Select))
+          error={false}
+          id="month"
+          inputProps={
+            Object {
+              "label": "month",
+              "maxLength": 2,
+            }
+          }
+          name="month"
+          onChange={[Function]}
+          placeholder="Month"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+          value={1}
+        >
+          <WithStyles(MenuItem)
+            key="-1"
+            value={-1}
+          >
+            Month
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="0"
+            value={0}
+          >
+            January
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="1"
+            value={1}
+          >
+            February
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="2"
+            value={2}
+          >
+            March
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="3"
+            value={3}
+          >
+            April
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="4"
+            value={4}
+          >
+            May
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="5"
+            value={5}
+          >
+            June
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="6"
+            value={6}
+          >
+            July
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="7"
+            value={7}
+          >
+            August
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="8"
+            value={8}
+          >
+            September
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="9"
+            value={9}
+          >
+            October
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="10"
+            value={10}
+          >
+            November
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="11"
+            value={11}
+          >
+            December
+          </WithStyles(MenuItem)>
+        </WithStyles(WithFormControlContext(Select))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={false}
+          fullWidth={true}
+          id="year"
+          inputProps={
+            Object {
+              "label": "year",
+              "maxLength": 4,
+            }
+          }
+          name="year"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Year"
+          required={false}
+          select={false}
+          type="text"
+          value={2010}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`PartialDateForm component with clearable flag should display an error on entering future date 2`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(WithFormControlContext(InputLabel))
+      error={true}
+      shrink={true}
+      style={
+        Object {
+          "zoom": "0.75",
+        }
+      }
+    >
+      Enter a date
+    </WithStyles(WithFormControlContext(InputLabel))>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": -12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={true}
+          fullWidth={true}
+          id="day"
+          inputProps={
+            Object {
+              "label": "day",
+              "maxLength": 2,
+            }
+          }
+          name="day"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Day"
+          required={false}
+          select={false}
+          type="text"
+          value={29}
+          variant="standard"
+        />
+        <WithStyles(WithFormControlContext(FormHelperText))
+          error={true}
+        >
+          Invalid date
+        </WithStyles(WithFormControlContext(FormHelperText))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <WithStyles(WithFormControlContext(Select))
+          error={true}
+          id="month"
+          inputProps={
+            Object {
+              "label": "month",
+              "maxLength": 2,
+            }
+          }
+          name="month"
+          onChange={[Function]}
+          placeholder="Month"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+          value={1}
+        >
+          <WithStyles(MenuItem)
+            key="-1"
+            value={-1}
+          >
+            Month
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="0"
+            value={0}
+          >
+            January
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="1"
+            value={1}
+          >
+            February
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="2"
+            value={2}
+          >
+            March
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="3"
+            value={3}
+          >
+            April
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="4"
+            value={4}
+          >
+            May
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="5"
+            value={5}
+          >
+            June
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="6"
+            value={6}
+          >
+            July
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="7"
+            value={7}
+          >
+            August
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="8"
+            value={8}
+          >
+            September
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="9"
+            value={9}
+          >
+            October
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="10"
+            value={10}
+          >
+            November
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="11"
+            value={11}
+          >
+            December
+          </WithStyles(MenuItem)>
+        </WithStyles(WithFormControlContext(Select))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={true}
+          fullWidth={true}
+          id="year"
+          inputProps={
+            Object {
+              "label": "year",
+              "maxLength": 4,
+            }
+          }
+          name="year"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Year"
+          required={false}
+          select={false}
+          type="text"
+          value={2010}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`PartialDateForm component with clearable flag should display an error on entering invalid date 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(WithFormControlContext(InputLabel))
+      error={true}
+      shrink={true}
+      style={
+        Object {
+          "zoom": "0.75",
+        }
+      }
+    >
+      Enter a date
+    </WithStyles(WithFormControlContext(InputLabel))>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": -12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={true}
+          fullWidth={true}
+          id="day"
+          inputProps={
+            Object {
+              "label": "day",
+              "maxLength": 2,
+            }
+          }
+          name="day"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Day"
+          required={false}
+          select={false}
+          type="text"
+          value={29}
+          variant="standard"
+        />
+        <WithStyles(WithFormControlContext(FormHelperText))
+          error={true}
+        >
+          Invalid date
+        </WithStyles(WithFormControlContext(FormHelperText))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <WithStyles(WithFormControlContext(Select))
+          error={true}
+          id="month"
+          inputProps={
+            Object {
+              "label": "month",
+              "maxLength": 2,
+            }
+          }
+          name="month"
+          onChange={[Function]}
+          placeholder="Month"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+          value={1}
+        >
+          <WithStyles(MenuItem)
+            key="-1"
+            value={-1}
+          >
+            Month
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="0"
+            value={0}
+          >
+            January
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="1"
+            value={1}
+          >
+            February
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="2"
+            value={2}
+          >
+            March
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="3"
+            value={3}
+          >
+            April
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="4"
+            value={4}
+          >
+            May
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="5"
+            value={5}
+          >
+            June
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="6"
+            value={6}
+          >
+            July
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="7"
+            value={7}
+          >
+            August
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="8"
+            value={8}
+          >
+            September
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="9"
+            value={9}
+          >
+            October
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="10"
+            value={10}
+          >
+            November
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="11"
+            value={11}
+          >
+            December
+          </WithStyles(MenuItem)>
+        </WithStyles(WithFormControlContext(Select))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={true}
+          fullWidth={true}
+          id="year"
+          inputProps={
+            Object {
+              "label": "year",
+              "maxLength": 4,
+            }
+          }
+          name="year"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Year"
+          required={false}
+          select={false}
+          type="text"
+          value={2020}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`PartialDateForm component with clearable flag should not display an error on clearing whole partial date field 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(WithFormControlContext(InputLabel))
+      error={false}
+      shrink={true}
+      style={
+        Object {
+          "zoom": "0.75",
+        }
+      }
+    >
+      Enter a date
+    </WithStyles(WithFormControlContext(InputLabel))>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": -12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={false}
+          fullWidth={true}
+          id="day"
+          inputProps={
+            Object {
+              "label": "day",
+              "maxLength": 2,
+            }
+          }
+          name="day"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Day"
+          required={false}
+          select={false}
+          type="text"
+          value=""
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <WithStyles(WithFormControlContext(Select))
+          error={false}
+          id="month"
+          inputProps={
+            Object {
+              "label": "month",
+              "maxLength": 2,
+            }
+          }
+          name="month"
+          onChange={[Function]}
+          placeholder="Month"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+          value={-1}
+        >
+          <WithStyles(MenuItem)
+            key="-1"
+            value={-1}
+          >
+            Month
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="0"
+            value={0}
+          >
+            January
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="1"
+            value={1}
+          >
+            February
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="2"
+            value={2}
+          >
+            March
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="3"
+            value={3}
+          >
+            April
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="4"
+            value={4}
+          >
+            May
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="5"
+            value={5}
+          >
+            June
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="6"
+            value={6}
+          >
+            July
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="7"
+            value={7}
+          >
+            August
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="8"
+            value={8}
+          >
+            September
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="9"
+            value={9}
+          >
+            October
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="10"
+            value={10}
+          >
+            November
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="11"
+            value={11}
+          >
+            December
+          </WithStyles(MenuItem)>
+        </WithStyles(WithFormControlContext(Select))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={false}
+          fullWidth={true}
+          id="year"
+          inputProps={
+            Object {
+              "label": "year",
+              "maxLength": 4,
+            }
+          }
+          name="year"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Year"
+          required={false}
+          select={false}
+          type="text"
+          value=""
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`PartialDateForm component with clearable flag should not display an error on entering valid date 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(WithFormControlContext(InputLabel))
+      error={false}
+      shrink={true}
+      style={
+        Object {
+          "zoom": "0.75",
+        }
+      }
+    >
+      Enter a date
+    </WithStyles(WithFormControlContext(InputLabel))>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "marginTop": -12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={false}
+          fullWidth={true}
+          id="day"
+          inputProps={
+            Object {
+              "label": "day",
+              "maxLength": 2,
+            }
+          }
+          name="day"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Day"
+          required={false}
+          select={false}
+          type="text"
+          value={12}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <WithStyles(WithFormControlContext(Select))
+          error={false}
+          id="month"
+          inputProps={
+            Object {
+              "label": "month",
+              "maxLength": 2,
+            }
+          }
+          name="month"
+          onChange={[Function]}
+          placeholder="Month"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+          value={3}
+        >
+          <WithStyles(MenuItem)
+            key="-1"
+            value={-1}
+          >
+            Month
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="0"
+            value={0}
+          >
+            January
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="1"
+            value={1}
+          >
+            February
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="2"
+            value={2}
+          >
+            March
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="3"
+            value={3}
+          >
+            April
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="4"
+            value={4}
+          >
+            May
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="5"
+            value={5}
+          >
+            June
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="6"
+            value={6}
+          >
+            July
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="7"
+            value={7}
+          >
+            August
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="8"
+            value={8}
+          >
+            September
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="9"
+            value={9}
+          >
+            October
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="10"
+            value={10}
+          >
+            November
+          </WithStyles(MenuItem)>
+          <WithStyles(MenuItem)
+            key="11"
+            value={11}
+          >
+            December
+          </WithStyles(MenuItem)>
+        </WithStyles(WithFormControlContext(Select))>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          error={false}
+          fullWidth={true}
+          id="year"
+          inputProps={
+            Object {
+              "label": "year",
+              "maxLength": 4,
+            }
+          }
+          name="year"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Year"
+          required={false}
+          select={false}
+          type="text"
+          value={1990}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

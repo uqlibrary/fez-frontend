@@ -899,11 +899,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
-        ...(!!dateRecorded
+        ...(!!dateRecorded && moment(dateRecorded.rek_date_recorded, 'DD-MM-YYYY').year() > 0
             ? {
                 fez_record_search_key_date_recorded: {
                     ...dateRecorded,
-                    rek_date_recorded: moment(dateRecorded.rek_date_recorded, 'YYYY').format(),
                 },
             }
             : {}),
