@@ -71,4 +71,68 @@ describe('PartialDateForm component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    describe('with clearable flag', () => {
+        let wrapper;
+        beforeEach(() => {
+            wrapper = setup({
+                floatingTitleRequired: true,
+                allowPartial: false,
+                onChange: jest.fn(),
+                meta: {
+                    initial: {
+                        date: () => 2,
+                        month: () => 1,
+                        year: () => 2020,
+                        isValid: () => true,
+                    },
+                },
+                clearable: true,
+            });
+        });
+
+        it('should display an error on clearing one partial date field', () => {
+            // delete date and check for an error
+            wrapper.find('#day').simulate('change', { target: { value: '' } });
+            wrapper.update();
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+
+        it('should not display an error on clearing whole partial date field', () => {
+            // clear whole date and check for not an error
+            wrapper.find('#day').simulate('change', { target: { value: '' } });
+            wrapper.find('#year').simulate('change', { target: { value: '' } });
+            wrapper.find('#month').simulate('change', { target: { value: -1 } });
+            wrapper.update();
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+
+        it('should not display an error on entering valid date', () => {
+            // enter valid date and check for not an error
+            wrapper.find('#day').simulate('change', { target: { value: '12' } });
+            wrapper.find('#year').simulate('change', { target: { value: '1990' } });
+            wrapper.find('#month').simulate('change', { target: { value: 3 } });
+            wrapper.update();
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+
+        it('should display an error on entering future date', () => {
+            // enter future date and check for an error
+            wrapper.find('#year').simulate('change', { target: { value: '2010' } });
+            wrapper.update();
+            expect(toJson(wrapper)).toMatchSnapshot();
+
+            // enter invalid date and check for an error
+            wrapper.find('#month').simulate('change', { target: { value: 1 } });
+            wrapper.find('#day').simulate('change', { target: { value: '29' } });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+
+        it('should display an error on entering invalid date', () => {
+            // enter invalid date and check for an error
+            wrapper.find('#month').simulate('change', { target: { value: 1 } });
+            wrapper.find('#day').simulate('change', { target: { value: '29' } });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+    });
 });

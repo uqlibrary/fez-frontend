@@ -52,6 +52,7 @@ export class PartialDateForm extends Component {
         meta: PropTypes.shape({
             initial: PropTypes.object,
         }),
+        clearable: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -125,6 +126,7 @@ export class PartialDateForm extends Component {
      */
     _validate = state => {
         const { day, month: monthActual, year } = state;
+
         // moment validation doesn't recognise -1 as a valid date
         const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
         const hasRequired = !!year && (this.props.allowPartial || (!!day && month !== null));
@@ -145,6 +147,32 @@ export class PartialDateForm extends Component {
             }
         }
 
+        if (!this.props.allowPartial && !!this.props.clearable) {
+            if (!year && !day && !month) {
+                return STATUS_VALID;
+            }
+            if (
+                !!year &&
+                !!day &&
+                month !== MONTH_UNSELECTED &&
+                moment(momentDate).isValid() &&
+                moment(momentDate).isSameOrBefore()
+            ) {
+                return STATUS_VALID;
+            }
+            if (!!year && !!day && month !== MONTH_UNSELECTED && !moment(momentDate).isValid()) {
+                return STATUS_INVALID;
+            }
+            if (
+                !!year &&
+                !!day &&
+                month !== MONTH_UNSELECTED &&
+                moment(momentDate).isValid() &&
+                moment(momentDate).isSameOrAfter()
+            ) {
+                return STATUS_INVALID;
+            }
+        }
         return validationStatus;
     };
 
@@ -189,6 +217,8 @@ export class PartialDateForm extends Component {
                     this.errors.date = '';
                 } else if (allowPartialHere && !!year && this._isUnselected(month) && !day) {
                     // partial entry means they can get away with just a year
+                    this.errors.date = '';
+                } else if (!allowPartialHere && !!this.props.clearable && !year && !day && month === MONTH_UNSELECTED) {
                     this.errors.date = '';
                 } else {
                     this.errors.date = locale.validationMessage.date;

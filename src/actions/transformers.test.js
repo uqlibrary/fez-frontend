@@ -2742,7 +2742,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_date_available: '2015',
                 },
                 fez_record_search_key_date_recorded: {
-                    rek_date_recorded: '2016',
+                    rek_date_recorded: '01-10-2016',
                 },
                 fez_record_search_key_license_biblio: {
                     rek_license: '453610',
@@ -2765,7 +2765,46 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_date_available: '2015-01-01T00:00:00+10:00',
                 },
                 fez_record_search_key_date_recorded: {
-                    rek_date_recorded: '2016-01-01T00:00:00+10:00',
+                    rek_date_recorded: '01-10-2016',
+                },
+                fez_record_search_key_license: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            });
+        });
+
+        it('should remove frsk_date_recorded from the request payload', () => {
+            const data = {
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '01-01-0000',
+                },
+                fez_record_search_key_license_biblio: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.024504,-27.493017',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015-01-01T00:00:00+10:00',
                 },
                 fez_record_search_key_license: {
                     rek_license: '453610',

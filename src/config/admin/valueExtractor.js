@@ -489,8 +489,9 @@ export default {
                 record.fez_record_search_key_date_recorded &&
                 record.fez_record_search_key_date_recorded.rek_date_recorded && {
                     ...record.fez_record_search_key_date_recorded,
-                    rek_date_recorded: moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format(
-                        'YYYY',
+                    rek_date_recorded: moment(
+                        record.fez_record_search_key_date_recorded.rek_date_recorded,
+                        'YYYY-MM-DD',
                     ),
                 }
             );
