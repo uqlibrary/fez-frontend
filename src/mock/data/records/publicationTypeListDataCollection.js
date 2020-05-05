@@ -461,7 +461,12 @@ export default {
                 }
             },
             "fez_record_search_key_embargo_to": null,
-            "fez_record_search_key_end_date": null,
+            "fez_record_search_key_end_date": {
+                "rek_end_date_id": 1,
+                "rek_end_date_pid": "UQ:406908",
+                "rek_end_date_xsdmf_id": null,
+                "rek_end_date": "2000-01-01T00:00:00Z"
+            },
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [
