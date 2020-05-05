@@ -4146,6 +4146,16 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                   ) 
                 </span>
               </CitationView>
+              <CitationView
+                className="citationArticleNumber"
+                prefix=" "
+                suffix=" "
+                value={null}
+              >
+                <span
+                  className="citationArticleNumber empty"
+                />
+              </CitationView>
               <PageRangeCitationView
                 className="citationPageRange"
                 prefix=""
@@ -9153,6 +9163,16 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
               >
                 <span
                   className="citationIssueNumber empty"
+                />
+              </CitationView>
+              <CitationView
+                className="citationArticleNumber"
+                prefix=" "
+                suffix=" "
+                value={null}
+              >
+                <span
+                  className="citationArticleNumber empty"
                 />
               </CitationView>
               <PageRangeCitationView
