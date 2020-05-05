@@ -80,6 +80,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.error.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.error.dark,
@@ -100,6 +101,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.error.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.error.dark,
@@ -120,6 +122,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.warning.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.warning.dark,
@@ -140,6 +143,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.secondary.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.secondary.dark,
@@ -160,6 +164,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.secondary.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.secondary.dark,
@@ -180,6 +185,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.accent.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.accent.dark,
@@ -200,6 +206,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.accent.main,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.accent.dark,
@@ -220,6 +227,7 @@ export const styles = theme => ({
         backgroundColor: theme.palette.success.light,
         '& a:link, & a:hover, & a:visited': {
             color: theme.palette.white.main,
+            textDecoration: 'underline',
         },
         '& .spinner': {
             color: theme.palette.success.dark,

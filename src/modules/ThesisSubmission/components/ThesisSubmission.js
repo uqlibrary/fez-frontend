@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -69,8 +70,20 @@ export default class ThesisSubmission extends Component {
         this.depositConfirmationBox = ref;
     };
 
+    getfileUploadAlertProps = locale => {
+        const { type, title } = locale;
+        const emailSubject = locale.emailSubject
+            .replace('[studentFullName]', `${this.props.author.aut_fname} ${this.props.author.aut_lname}`)
+            .replace('[studentNumber]', this.props.author.aut_org_student_id);
+        const mailtoUri = `mailto:${locale.emailRecipient}?subject=${encodeURIComponent(emailSubject)}`;
+        const message = ReactHtmlParser(
+            locale.message.replace('[linkStart]', `<a href="${mailtoUri}">`).replace('[linkEnd]', '</a>'),
+        );
+        return { type, title, message };
+    };
+
     // customise error for thesis submission
-    getAlertProps = () =>
+    getFormSubmitAlertProps = () =>
         validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
@@ -108,7 +121,7 @@ export default class ThesisSubmission extends Component {
                     {this.props.newRecordFileUploadingOrIssueError && (
                         <Grid container spacing={24}>
                             <Grid item xs={12}>
-                                <Alert {...thesisLocale.fileUpload.failedAlertLocale} />
+                                <Alert {...this.getfileUploadAlertProps(thesisLocale.fileUpload.failedAlertLocale)} />
                             </Grid>
                         </Grid>
                     )}
@@ -128,7 +141,7 @@ export default class ThesisSubmission extends Component {
             );
         }
 
-        const alertProps = this.getAlertProps();
+        const alertProps = this.getFormSubmitAlertProps();
 
         return (
             <StandardPage title={pageTitle}>

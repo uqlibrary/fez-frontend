@@ -1275,7 +1275,9 @@ export default {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
                 message:
-                    'There was an issue uploading your thesis files. Please contact UQ Graduate School administrators.',
+                    'There was an issue uploading your thesis files. Please contact [linkStart]the Graduate School[linkEnd].',
+                emailRecipient: 'thesis@gradschool.uq.edu.au',
+                emailSubject: 'Problem with Submission to UQ eSpace - [studentFullName], [studentNumber]',
             },
             locale: {
                 instructions: '',

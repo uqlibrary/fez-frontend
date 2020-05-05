@@ -531,6 +531,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -551,6 +552,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -571,6 +573,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -591,6 +594,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": "#444",
     "color": "#eee",
@@ -611,6 +615,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": "#444",
     "color": "#eee",
@@ -641,6 +646,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -661,6 +667,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -691,6 +698,7 @@ Object {
     },
     "& a:link, & a:hover, & a:visited": Object {
       "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
