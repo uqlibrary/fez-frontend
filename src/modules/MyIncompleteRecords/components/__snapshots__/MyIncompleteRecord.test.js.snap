@@ -736,7 +736,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -1656,7 +1656,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -2601,7 +2601,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -3605,7 +3605,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -4525,7 +4525,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -5445,7 +5445,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -6365,7 +6365,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -7291,7 +7291,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
@@ -8211,7 +8211,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               </span>
                prompt, select the pencil edit icon to the right of the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
-                UPDATE AUTHOR
+                CHANGE DETAILS
               </b>
               .
             </span>
