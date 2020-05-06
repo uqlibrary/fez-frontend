@@ -228,7 +228,7 @@
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit:serial": "npm run test:unit -- --ci --runInBand",
         "test:unit:ci1": "npm run test:unit -- --ci --runInBand --testPathIgnorePatterns=SharedComponents --coveragePathIgnorePatterns=SharedComponents",
-        "test:unit:ci2": "npm run test:unit -- --ci --runInBand SharedComponents --collectCoverageFrom=['**/SharedComponents/**','!**/containers/**','!**/index.js']",
+        "test:unit:ci2": "npm run test:unit -- --ci --runInBand SharedComponents --collectCoverageFrom=\\'[\\\"**/SharedComponents/**\\\",\\\"!**/containers/**\\\",\\\"!**/index.js\\\"]\\'",
         "test:unit:serial:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage",
         "test:unit:ci1:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage --testPathIgnorePatterns=SharedComponents",
         "test:unit:ci2:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage SharedComponents",
