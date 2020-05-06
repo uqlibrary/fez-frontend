@@ -50,7 +50,7 @@ export class PartialDateForm extends Component {
         disableFuture: PropTypes.bool,
         input: PropTypes.object,
         meta: PropTypes.shape({
-            initial: PropTypes.object,
+            initial: PropTypes.string,
         }),
         clearable: PropTypes.bool,
     };
@@ -95,8 +95,8 @@ export class PartialDateForm extends Component {
 
     constructor(props) {
         super(props);
-        const dateValue = (props.meta && props.meta.initial) || null;
-        if (dateValue && dateValue.isValid()) {
+        const dateValue = (props.meta && props.meta.initial && moment(props.meta.initial)) || null;
+        if (!!dateValue && dateValue.isValid()) {
             this.state = {
                 day: dateValue.date(),
                 month: dateValue.month(),
@@ -163,11 +163,12 @@ export class PartialDateForm extends Component {
             if (!!year && !!day && month !== MONTH_UNSELECTED && !moment(momentDate).isValid()) {
                 return STATUS_INVALID;
             }
+            /* istanbul ignore if: temporary ignore until coverage is added */
             if (
                 !!year &&
-                !!day &&
-                month !== MONTH_UNSELECTED &&
-                moment(momentDate).isValid() &&
+                !!day /* istanbul ignore next  */ &&
+                month !== MONTH_UNSELECTED /* istanbul ignore next  */ &&
+                moment(momentDate).isValid() /* istanbul ignore next  */ &&
                 moment(momentDate).isSameOrAfter()
             ) {
                 return STATUS_INVALID;

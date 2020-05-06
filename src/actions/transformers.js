@@ -843,12 +843,28 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_license_biblio: licenseDataBiblio,
         fez_record_search_key_location_biblio: locationDataBiblio,
         fez_record_search_key_isdatasetof: datasets,
+        fez_record_search_key_related_datasets: relatedDatasets,
+        fez_record_search_key_related_publications: relatedPublications,
         issnField,
         ...rest
     } = data;
 
     return {
         ...cleanBlankEntries(rest),
+        ...(!!relatedDatasets && relatedDatasets.hasOwnProperty('htmlText')
+            ? {
+                fez_record_search_key_related_datasets: {
+                    rek_related_datasets: relatedDatasets.htmlText,
+                },
+            }
+            : {}),
+        ...(!!relatedPublications && relatedPublications.hasOwnProperty('htmlText')
+            ? {
+                fez_record_search_key_related_publications: {
+                    rek_related_publications: relatedPublications.htmlText,
+                },
+            }
+            : {}),
         rek_date: moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),

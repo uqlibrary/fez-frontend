@@ -1085,7 +1085,7 @@ export default {
             component: RichEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_related_datasets',
-                title: 'Related datasets',
+                title: 'Other related datasets',
                 titleProps: {
                     variant: 'caption',
                     style: {
@@ -1099,7 +1099,7 @@ export default {
             component: RichEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_related_publications',
-                title: 'Related publications',
+                title: 'Other related publications',
                 titleProps: {
                     variant: 'caption',
                     style: {

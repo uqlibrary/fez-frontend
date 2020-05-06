@@ -111,7 +111,7 @@ export default {
         }),
     },
     rek_date: {
-        getValue: record => moment(record.rek_date),
+        getValue: record => record.rek_date,
     },
     rek_subtype: {
         getValue: record => record.rek_subtype,
@@ -132,6 +132,7 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_conference_location }),
     },
     fez_record_search_key_conference_dates: {
+        // text string
         getValue: record => ({ ...record.fez_record_search_key_conference_dates }),
     },
     fez_record_search_key_proceedings_title: {
@@ -571,10 +572,20 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_access_conditions }),
     },
     fez_record_search_key_related_datasets: {
-        getValue: record => ({ ...record.fez_record_search_key_related_datasets }),
+        getValue: record => {
+            return {
+                plainText: (record.fez_record_search_key_related_datasets || {}).rek_related_datasets || '',
+                htmlText: (record.fez_record_search_key_related_datasets || {}).rek_related_datasets || '',
+            };
+        },
     },
     fez_record_search_key_related_publications: {
-        getValue: record => ({ ...record.fez_record_search_key_related_publications }),
+        getValue: record => {
+            return {
+                plainText: (record.fez_record_search_key_related_publications || {}).rek_related_publications || '',
+                htmlText: (record.fez_record_search_key_related_publications || {}).rek_related_publications || '',
+            };
+        },
     },
     fez_record_search_key_software_required: {
         getValue: record =>
@@ -628,20 +639,19 @@ export default {
         getValue: record => ({ ...(record.fez_record_search_key_project_id || {}) }),
     },
     fez_record_search_key_project_start_date: {
-        getValue: record => moment((record.fez_record_search_key_project_start_date || {}).rek_project_start_date),
+        getValue: record => ({ ...record.fez_record_search_key_project_start_date }),
     },
     fez_record_search_key_start_date: {
-        getValue: record => moment((record.fez_record_search_key_start_date || {}).rek_start_date),
+        getValue: record => ({ ...record.fez_record_search_key_start_date }),
     },
     fez_record_search_key_end_date: {
-        getValue: record => moment((record.fez_record_search_key_end_date || {}).rek_end_date),
+        getValue: record => ({ ...record.fez_record_search_key_end_date }),
     },
     fez_record_search_key_time_period_start_date: {
-        getValue: record =>
-            moment((record.fez_record_search_key_time_period_start_date || {}).rek_time_period_start_date),
+        getValue: record => ({ ...record.fez_record_search_key_time_period_start_date }),
     },
     fez_record_search_key_time_period_end_date: {
-        getValue: record => moment((record.fez_record_search_key_time_period_end_date || {}).rek_time_period_end_date),
+        getValue: record => ({ ...record.fez_record_search_key_time_period_end_date }),
     },
     fez_record_search_key_org_name: {
         getValue: record => ({ ...record.fez_record_search_key_org_name }),
@@ -671,10 +681,10 @@ export default {
         getValue: record => [...record.fez_record_search_key_interior_features],
     },
     fez_record_search_key_date_photo_taken: {
-        getValue: record => moment((record.fez_record_search_key_date_photo_taken || {}).rek_date_photo_taken),
+        getValue: record => ({ ...record.fez_record_search_key_date_photo_taken }),
     },
     fez_record_search_key_date_scanned: {
-        getValue: record => moment((record.fez_record_search_key_date_scanned || {}).rek_date_scanned),
+        getValue: record => ({ ...record.fez_record_search_key_date_scanned }),
     },
     fez_record_search_key_building_materials: {
         getValue: record => [...record.fez_record_search_key_building_materials],

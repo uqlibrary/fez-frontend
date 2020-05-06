@@ -315,7 +315,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .reply(() => [200, { data: mockData.collectionRecord }])
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
     .reply(() => [200, { data: mockData.communityRecord }])
-    .onPost(routes.ISSN_LINKS_API({ type: 'sherpa' }).apiUrl)
+    .onPost(routes.ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl)
     .reply(config => {
         const issn = JSON.parse(config.data).issn;
         const data = [];
@@ -340,6 +340,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         }
         return [200, { data }];
     })
+    // .reply(404)
     .onPost(routes.ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl)
     .reply(config => {
         const issn = JSON.parse(config.data).issn;
