@@ -1066,7 +1066,7 @@ describe('Record action creators', () => {
         it('dispatches expected actions on successful update', async() => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
 
-            mockApi.onPatch(url).reply(200, { data: record });
+            mockApi.onPut(url).reply(200, { data: record });
 
             const expectedActions = [actions.ADMIN_UPDATE_WORK_PROCESSING, actions.ADMIN_UPDATE_WORK_SUCCESS];
 
@@ -1085,7 +1085,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on missing data in response', async() => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
-            mockApi.onPatch(url).reply(200, {});
+            mockApi.onPut(url).reply(200, {});
 
             const expectedActions = [actions.ADMIN_UPDATE_WORK_PROCESSING, actions.ADMIN_UPDATE_WORK_SUCCESS];
 
@@ -1135,7 +1135,7 @@ describe('Record action creators', () => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
 
             mockApi
-                .onPatch(url)
+                .onPut(url)
                 .reply(200, { data: record })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
