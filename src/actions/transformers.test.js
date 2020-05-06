@@ -2488,7 +2488,7 @@ describe('getIdentifiersSectionSearchKeys', () => {
                     rek_order: 1,
                 },
             ],
-            rek_pubmed_doc_type: ' ',
+            rek_pubmed_doc_type: 'None',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '@',
         };
@@ -2521,7 +2521,7 @@ describe('getIdentifiersSectionSearchKeys', () => {
                     rek_link_description_order: 1,
                 },
             ],
-            rek_pubmed_doc_type: '',
+            rek_pubmed_doc_type: 'None',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '@',
         };
@@ -2545,9 +2545,9 @@ describe('getIdentifiersSectionSearchKeys', () => {
         ).toEqual({
             fez_record_search_key_link: [],
             fez_record_search_key_link_description: [],
-            rek_pubmed_doc_type: '',
-            rek_scopus_doc_type: '',
-            rek_wok_doc_type: '',
+            rek_pubmed_doc_type: ' ',
+            rek_scopus_doc_type: ' ',
+            rek_wok_doc_type: ' ',
         });
     });
 
@@ -2555,9 +2555,6 @@ describe('getIdentifiersSectionSearchKeys', () => {
         expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({
             fez_record_search_key_link: [],
             fez_record_search_key_link_description: [],
-            rek_pubmed_doc_type: '',
-            rek_scopus_doc_type: '',
-            rek_wok_doc_type: '',
         });
     });
 });

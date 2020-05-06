@@ -9,7 +9,7 @@ exports[`PubmedDocTypesField component should render default view 1`] = `
     Array [
       Object {
         "text": "None",
-        "value": " ",
+        "value": "None",
       },
       Object {
         "text": "Addresses",
@@ -220,7 +220,7 @@ exports[`PubmedDocTypesField component should render immutable list as selected 
     Array [
       Object {
         "text": "None",
-        "value": " ",
+        "value": "None",
       },
       Object {
         "text": "Addresses",
@@ -436,7 +436,7 @@ exports[`PubmedDocTypesField component should render when given a default value 
     Array [
       Object {
         "text": "None",
-        "value": " ",
+        "value": "None",
       },
       Object {
         "text": "Addresses",
@@ -653,7 +653,7 @@ exports[`PubmedDocTypesField component should render with given field props 1`] 
     Array [
       Object {
         "text": "None",
-        "value": " ",
+        "value": "None",
       },
       Object {
         "text": "Addresses",
