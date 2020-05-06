@@ -765,11 +765,21 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         fez_record_search_key_pubmed_id: pubmedId,
         fez_record_search_key_pubmed_central_id: pubmedCentralId,
         fez_record_search_key_location_identifiers: locationDataIdentifiers,
+        rek_pubmed_doc_type: pubmedDocType,
+        rek_scopus_doc_type: scopusDocType,
+        rek_wok_doc_type: wosDocType,
         links,
         ...rest
     } = data;
 
     return {
+        ...(!!pubmedDocType && pubmedDocType !== ' '
+            ? { rek_pubmed_doc_type: pubmedDocType }
+            : { rek_pubmed_doc_type: null }),
+        ...(!!scopusDocType && scopusDocType !== ' '
+            ? { rek_scopus_doc_type: scopusDocType }
+            : { rek_scopus_doc_type: null }),
+        ...(!!wosDocType && wosDocType !== ' ' ? { rek_wok_doc_type: wosDocType } : { rek_wok_doc_type: null }),
         ...(!!doi && doi.hasOwnProperty('rek_doi') ? { fez_record_search_key_doi: doi } : {}),
         ...(!!isiLoc && isiLoc.hasOwnProperty('rek_isi_loc') ? { fez_record_search_key_isi_loc: isiLoc } : {}),
         ...(!!scopusId && scopusId.hasOwnProperty('rek_scopus_id')
