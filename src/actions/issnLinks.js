@@ -13,7 +13,7 @@ export const getSherpaFromIssn = issn => {
     return dispatch => {
         dispatch({ type: ISSN_SHERPA_LOADING, payload: issn });
 
-        return post(ISSN_LINKS_API({ type: 'sherpa' }), { issn })
+        return post(ISSN_LINKS_API({ type: 'sherpa-romeo' }), { issn })
             .then(response => {
                 dispatch({
                     type: ISSN_SHERPA_LOADED,
