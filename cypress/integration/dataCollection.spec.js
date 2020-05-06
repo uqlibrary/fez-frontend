@@ -586,14 +586,14 @@ context('Data Collection form', () => {
 
     it('validates related datasets/work', () => {
         // Related datasets
-        cy.get('input#DatasetWorktitle-input')
+        cy.get('input#RelateddatasetsworksineSpace-input')
             .type('a');
-        cy.clickAutoSuggestion('DatasetWorktitle', 0);
+        cy.clickAutoSuggestion('RelateddatasetsworksineSpace', 0);
         // cy.get('@submitButton').should('be.disabled');
         // cy.get('@errors').should('have.length', 1);
-        cy.get('input#DatasetWorktitle-input')
+        cy.get('input#RelateddatasetsworksineSpace-input')
             .type('a');
-        cy.clickAutoSuggestion('DatasetWorktitle', 1);
+        cy.clickAutoSuggestion('RelateddatasetsworksineSpace', 1);
         cy.get('div[class*="Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .first()
