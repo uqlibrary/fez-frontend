@@ -54,12 +54,10 @@ context('Audio admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Bibliographic');
-                cy.get('#Yearrecorded')
-                    .should(
-                        'have.value',
-                        Cypress.moment(record.fez_record_search_key_date_recorded.rek_date_recorded)
-                            .format('YYYY'),
-                    );
+                cy.checkPartialDateFromRecordValue(
+                    'Recording date',
+                    record.fez_record_search_key_date_recorded.rek_date_recorded,
+                );
                 cy.get('#Acknowledgements')
                     .should(
                         'have.text',
