@@ -1039,10 +1039,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 13,
@@ -2107,10 +2107,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 13,
