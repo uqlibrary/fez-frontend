@@ -641,10 +641,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 13,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 14
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 14,
+                },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 15,
