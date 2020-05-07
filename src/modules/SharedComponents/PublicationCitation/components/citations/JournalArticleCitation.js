@@ -25,8 +25,7 @@ export default class JournalArticleCitation extends PureComponent {
             issueNumber: this.props.publication.fez_record_search_key_issue_number
                 ? this.props.publication.fez_record_search_key_issue_number.rek_issue_number
                 : null,
-            articleNumber: this.props.publication
-                .fez_record_search_key_article_number /* istanbul ignore next: temporary skip until coverage is added */
+            articleNumber: this.props.publication.fez_record_search_key_article_number
                 ? this.props.publication.fez_record_search_key_article_number.rek_article_number
                 : null,
             doi: this.props.publication.fez_record_search_key_doi

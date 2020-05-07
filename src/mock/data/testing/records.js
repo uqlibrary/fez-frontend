@@ -3457,7 +3457,11 @@ export const journalArticle = {
     "fez_record_search_key_alternative_title": [],
     "fez_record_search_key_ands_collection_type": null,
     "fez_record_search_key_architectural_features": [],
-    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_article_number": {
+        "rek_article_number_id": null,
+        "rek_article_number_pid": "UQ:676287",
+        "rek_article_number": "article 123"
+    },
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
     "fez_record_search_key_author": [{
