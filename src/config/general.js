@@ -1101,16 +1101,19 @@ export const RECORD_ACTION_URLS = [
         label: 'Edit selected record',
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}`,
         inApp: true,
+        options: null,
     },
     {
         label: 'Edit author affiliations',
         url: pid =>
             `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
         inApp: true,
+        options: null,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
+        options: null,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
     },
     {
@@ -1118,11 +1121,19 @@ export const RECORD_ACTION_URLS = [
         url: pid =>
             `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
         inApp: true,
+        options: null,
+    },
+    {
+        label: 'Detailed history',
+        url: pid => `${APP_URL}${PATH_PREFIX}history.php?pid=${pid}`,
+        inApp: false,
+        options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
     },
     {
         label: 'More options',
         url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
+        options: null,
     },
 ];
 
