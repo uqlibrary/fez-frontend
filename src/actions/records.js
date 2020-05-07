@@ -463,6 +463,7 @@ const getAdminRecordRequest = data => {
 
     return [
         {
+            ...data.publication,
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
