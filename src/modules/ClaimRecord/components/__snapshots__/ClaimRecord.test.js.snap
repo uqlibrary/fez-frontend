@@ -103,7 +103,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -2217,7 +2221,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -4309,7 +4317,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -5691,7 +5703,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -7073,7 +7089,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -8455,7 +8475,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -9837,7 +9861,11 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -10809,7 +10837,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -12206,7 +12238,11 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -13588,7 +13624,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -14983,7 +15023,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -16376,7 +16420,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -17770,7 +17818,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -19706,7 +19758,11 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
