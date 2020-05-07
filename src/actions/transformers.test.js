@@ -2488,7 +2488,7 @@ describe('getIdentifiersSectionSearchKeys', () => {
                     rek_order: 1,
                 },
             ],
-            rek_pubmed_doc_type: ' ',
+            rek_pubmed_doc_type: 'None',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '@',
         };
@@ -2538,9 +2538,9 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 fez_record_search_key_pubmed_id: {},
                 fez_record_search_key_pubmed_central_id: {},
                 links: [],
-                rek_pubmed_doc_type: ' ',
-                rek_scopus_doc_type: ' ',
-                rek_wok_doc_type: ' ',
+                rek_pubmed_doc_type: 'None',
+                rek_scopus_doc_type: 'None',
+                rek_wok_doc_type: 'None',
             }),
         ).toEqual({
             fez_record_search_key_link: [],
