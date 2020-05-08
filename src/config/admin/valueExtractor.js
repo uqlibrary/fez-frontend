@@ -135,28 +135,9 @@ export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSe
     return returnValue;
 };
 
-export const getValueSearchKeyDate = (record, dateKey) => {
-    let returnValue;
-
-    if (dateKey.indexOf('.') >= 0) {
-        const [primaryKey, subKey] = dateKey.split('.');
-
-        returnValue = {
-            ...record[primaryKey],
-            [subKey]: moment(((record || {})[primaryKey] || {})[subKey]),
-        };
-        delete record[primaryKey];
-    } else {
-        returnValue = moment((record || {})[dateKey]);
-        dateKey !== 'rek_date' && delete record[dateKey];
-    }
-
-    return returnValue;
-};
-
 export const getValueFromRekKey = (record, rekKey) => {
     const returnValue = record[rekKey];
-    delete record[rekKey];
+    rekKey !== 'rek_date' && delete record[rekKey];
     return returnValue;
 };
 
@@ -188,7 +169,7 @@ export default {
             getValueSearchKeyCKEditor(record, 'fez_internal_notes.ain_detail', 'fez_internal_notes.ain_detail'),
     },
     rek_date: {
-        getValue: record => getValueSearchKeyDate(record, 'rek_date'),
+        getValue: record => getValueFromRekKey(record, 'rek_date'),
     },
     rek_subtype: {
         getValue: record => getValueFromRekKey(record, 'rek_subtype'),
@@ -591,7 +572,7 @@ export default {
         },
     },
     fez_record_search_key_date_recorded: {
-        getValue: record => getValueSearchKeyDate(record, 'fez_record_search_key_date_recorded.rek_date_recorded'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_date_recorded'),
     },
     rek_copyright: {
         getValue: record => getValueFromRekKey(record, 'rek_copyright'),
@@ -673,10 +654,20 @@ export default {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_access_conditions'),
     },
     fez_record_search_key_related_datasets: {
-        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_related_datasets'),
+        getValue: record =>
+            getValueSearchKeyCKEditor(
+                record,
+                'fez_record_search_key_related_datasets.rek_related_datasets',
+                'fez_record_search_key_related_datasets.rek_related_datasets',
+            ),
     },
     fez_record_search_key_related_publications: {
-        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_related_publications'),
+        getValue: record =>
+            getValueSearchKeyCKEditor(
+                record,
+                'fez_record_search_key_related_publications.rek_related_publications',
+                'fez_record_search_key_related_publications.rek_related_publications',
+            ),
     },
     fez_record_search_key_software_required: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_software_required'),
@@ -740,22 +731,19 @@ export default {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_project_id'),
     },
     fez_record_search_key_project_start_date: {
-        getValue: record =>
-            getValueSearchKeyDate(record, 'fez_record_search_key_project_start_date.rek_project_start_date'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_project_start_date'),
     },
     fez_record_search_key_start_date: {
-        getValue: record => getValueSearchKeyDate(record, 'fez_record_search_key_start_date.rek_start_date'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_start_date'),
     },
     fez_record_search_key_end_date: {
-        getValue: record => getValueSearchKeyDate(record, 'fez_record_search_key_end_date.rek_end_date'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_end_date'),
     },
     fez_record_search_key_time_period_start_date: {
-        getValue: record =>
-            getValueSearchKeyDate(record, 'fez_record_search_key_time_period_start_date.rek_time_period_start_date'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_time_period_start_date'),
     },
     fez_record_search_key_time_period_end_date: {
-        getValue: record =>
-            getValueSearchKeyDate(record, 'fez_record_search_key_time_period_end_date.rek_time_period_end_date'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_time_period_end_date'),
     },
     fez_record_search_key_org_name: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_org_name'),
@@ -785,11 +773,10 @@ export default {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_interior_features'),
     },
     fez_record_search_key_date_photo_taken: {
-        getValue: record =>
-            getValueSearchKeyDate(record, 'fez_record_search_key_date_photo_taken.rek_date_photo_taken'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_date_photo_taken'),
     },
     fez_record_search_key_date_scanned: {
-        getValue: record => getValueSearchKeyDate(record, 'fez_record_search_key_date_scanned.rek_date_scanned'),
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_date_scanned'),
     },
     fez_record_search_key_building_materials: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_building_materials'),
