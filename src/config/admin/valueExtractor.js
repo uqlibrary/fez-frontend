@@ -145,7 +145,7 @@ export const getValueSearchKeyDate = (record, dateKey) => {
             ...record[primaryKey],
             [subKey]: moment(((record || {})[primaryKey] || {})[subKey]),
         };
-        delete record.primaryKey;
+        delete record[primaryKey];
     } else {
         returnValue = moment((record || {})[dateKey]);
         dateKey !== 'rek_date' && delete record[dateKey];
