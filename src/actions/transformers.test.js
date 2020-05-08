@@ -2533,17 +2533,11 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 fez_record_search_key_pubmed_central_id: {},
                 links: [],
             }),
-        ).toEqual({
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
-        });
+        ).toEqual({});
     });
 
     it('should use default data parameter', () => {
-        expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
-        });
+        expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({});
     });
 });
 
@@ -2555,8 +2549,6 @@ describe('Journal document', () => {
 
         expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
             fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
         });
     });
 });
@@ -2774,13 +2766,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_license: {},
-                fez_record_search_key_related_datasets: {
-                    rek_related_datasets: '<p>A related dataset</p>',
-                },
-                fez_record_search_key_related_publications: {
-                    rek_related_publications: '<p>A related publication</p>',
-                },
             });
         });
 

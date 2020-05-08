@@ -75,12 +75,7 @@ describe('PartialDateForm component', () => {
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {
-                    initial: {
-                        date: () => 2,
-                        month: () => 1,
-                        year: () => 2020,
-                        isValid: () => true,
-                    },
+                    initial: '2020-02-02',
                 },
                 clearable: true,
             });

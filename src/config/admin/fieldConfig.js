@@ -886,7 +886,7 @@ export default {
                 fullWidth: true,
                 allowPartial: false,
                 clearable: true,
-                dateFormate: 'DD-MM-YYYY',
+                dateFormate: 'YYYY-MM-DD',
             },
         },
         fez_record_search_key_isderivationof: {
