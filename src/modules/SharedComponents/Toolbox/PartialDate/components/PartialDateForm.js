@@ -164,12 +164,11 @@ export class PartialDateForm extends Component {
             if (!!year && !!day && month !== MONTH_UNSELECTED && !moment(momentDate).isValid()) {
                 return STATUS_INVALID;
             }
-            /* istanbul ignore if: temporary ignore until coverage is added */
             if (
                 !!year &&
-                !!day /* istanbul ignore next  */ &&
-                month !== MONTH_UNSELECTED /* istanbul ignore next  */ &&
-                moment(momentDate).isValid() /* istanbul ignore next  */ &&
+                !!day &&
+                month !== MONTH_UNSELECTED &&
+                moment(momentDate).isValid() &&
                 moment(momentDate).isSameOrAfter()
             ) {
                 return STATUS_INVALID;
