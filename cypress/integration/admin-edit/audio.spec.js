@@ -139,17 +139,7 @@ context('Audio admin edit', () => {
         cy.get('.StandardPage form > div > div')
             .get('.StandardCard')
             .eq(5)
-            .as('filesTab')
-            .within(() => {
-                cy.get('h4')
-                    .eq(0)
-                    .should('have.text', 'Attached files');
-                cy.get('.Alert .alert-text')
-                    .should(
-                        'have.text',
-                        record.fez_record_search_key_advisory_statement.rek_advisory_statement,
-                    );
-            });
+            .as('filesTab');
 
         // start: check embargo date can be cleared
         cy.get('@filesTab')
@@ -191,7 +181,7 @@ context('Audio admin edit', () => {
                     .should(text => {
                     // prettier-ignore
                         expect(text).to.contain(
-                            record.fez_record_search_key_advisory_statement.rek_advisory_statement
+                            'Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and or descendants of the people who participated in the Queensland Speech Survey by Elwyn Flint in the 1960s.'
                         );
                     });
             });

@@ -355,7 +355,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         return [200, { data }];
     });
 
-mock.onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
+mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.record } })
+    .onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.collectionRecord } })

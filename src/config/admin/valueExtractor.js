@@ -98,15 +98,20 @@ const editorsGetValue = record => {
     return returnValue;
 };
 
+export const deleteKey = (record, searchKey) => {
+    const skipDeleteForKeys = ['rek_date', 'rek_title', 'fez_record_search_key_oa_status'];
+    !skipDeleteForKeys.includes(searchKey) && delete (record || {})[searchKey];
+};
+
 export const getValueSearchKeyObject = (record, searchKey) => {
     const returnValue = { ...((record || {})[searchKey] || {}) };
-    delete record[searchKey];
+    deleteKey(record, searchKey);
     return returnValue;
 };
 
 export const getValueSearchKeyArray = (record, searchKey) => {
     const returnValue = [...((record || {})[searchKey] || [])];
-    delete record[searchKey];
+    deleteKey(record, searchKey);
     return returnValue;
 };
 
@@ -120,16 +125,16 @@ export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSe
             plainText: ((record || {})[primaryKey] || {})[subKey],
             htmlText: ((record || {})[primaryHtmlKey] || {})[subHtmlKey] || ((record || {})[primaryKey] || {})[subKey],
         };
-        delete (record || {})[primaryKey];
-        delete (record || {})[primaryHtmlKey];
+        deleteKey(primaryKey);
+        deleteKey(primaryHtmlKey);
     } else {
         returnValue = {
             plainText: (record || {})[plainTextSearchKey],
             htmlText: (record || {})[htmlTextSearchKey] || (record || {})[plainTextSearchKey],
         };
 
-        if (plainTextSearchKey !== 'rek_title') delete (record || {})[plainTextSearchKey];
-        delete (record || {})[htmlTextSearchKey];
+        deleteKey(plainTextSearchKey);
+        deleteKey(htmlTextSearchKey);
     }
 
     return returnValue;
@@ -137,7 +142,7 @@ export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSe
 
 export const getValueFromRekKey = (record, rekKey) => {
     const returnValue = record[rekKey];
-    rekKey !== 'rek_date' && delete record[rekKey];
+    deleteKey(rekKey);
     return returnValue;
 };
 
@@ -148,7 +153,7 @@ export const getValueSearchKeyRekValueList = (record, searchKey) => {
         const [primaryKey, subKey] = searchKey.split('.');
 
         returnValue = (record[primaryKey] || []).map(item => item[subKey]);
-        delete record[primaryKey];
+        deleteKey(primaryKey);
     }
 
     return returnValue;
@@ -271,7 +276,7 @@ export default {
                     },
                 };
             });
-            delete record.fez_record_search_key_issn;
+            // delete record.fez_record_search_key_issn;
             return returnValue;
         },
     },
@@ -698,7 +703,7 @@ export default {
     },
     contactName: {
         getValue: record => {
-            const returnValue = (record.fez_record_search_key_contributor[0] || {}).rek_contributor;
+            const returnValue = ((record.fez_record_search_key_contributor || [{}])[0] || {}).rek_contributor;
             delete record.fez_record_search_key_contributor;
             return returnValue;
         },
@@ -706,8 +711,8 @@ export default {
     contactNameId: {
         getValue: record => {
             const returnValue = {
-                id: (record.fez_record_search_key_contributor_id[0] || {}).rek_contributor_id,
-                value: (record.fez_record_search_key_contributor_id[0] || {}).rek_contributor_id,
+                id: ((record.fez_record_search_key_contributor_id || [{}])[0] || {}).rek_contributor_id,
+                value: ((record.fez_record_search_key_contributor_id || [{}])[0] || {}).rek_contributor_id,
             };
 
             delete record.fez_record_search_key_contributor_id;
@@ -716,7 +721,8 @@ export default {
     },
     contactEmail: {
         getValue: record => {
-            const returnValue = (record.fez_record_search_key_contact_details_email[0] || {}).rek_contact_details_email;
+            const returnValue = ((record.fez_record_search_key_contact_details_email || [{}])[0] || {})
+                .rek_contact_details_email;
             delete record.fez_record_search_key_contact_details_email;
             return returnValue;
         },
