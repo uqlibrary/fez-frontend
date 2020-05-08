@@ -1081,7 +1081,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                 "fez_record_search_key_alternative_title": Array [],
                 "fez_record_search_key_ands_collection_type": null,
                 "fez_record_search_key_architectural_features": Array [],
-                "fez_record_search_key_article_number": "1",
+                "fez_record_search_key_article_number": Object {
+                  "rek_article_number": "article 123",
+                  "rek_article_number_id": null,
+                  "rek_article_number_pid": "UQ:676287",
+                },
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
                 "fez_record_search_key_author": Array [
@@ -2066,7 +2070,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                   "fez_record_search_key_alternative_title": Array [],
                   "fez_record_search_key_ands_collection_type": null,
                   "fez_record_search_key_architectural_features": Array [],
-                  "fez_record_search_key_article_number": "1",
+                  "fez_record_search_key_article_number": Object {
+                    "rek_article_number": "article 123",
+                    "rek_article_number_id": null,
+                    "rek_article_number_pid": "UQ:676287",
+                  },
                   "fez_record_search_key_assigned_group_id": Array [],
                   "fez_record_search_key_assigned_user_id": Array [],
                   "fez_record_search_key_author": Array [
@@ -3055,7 +3063,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "fez_record_search_key_alternative_title": Array [],
                     "fez_record_search_key_ands_collection_type": null,
                     "fez_record_search_key_architectural_features": Array [],
-                    "fez_record_search_key_article_number": "1",
+                    "fez_record_search_key_article_number": Object {
+                      "rek_article_number": "article 123",
+                      "rek_article_number_id": null,
+                      "rek_article_number_pid": "UQ:676287",
+                    },
                     "fez_record_search_key_assigned_group_id": Array [],
                     "fez_record_search_key_assigned_user_id": Array [],
                     "fez_record_search_key_author": Array [
