@@ -141,7 +141,10 @@ export const getValueSearchKeyDate = (record, dateKey) => {
     if (dateKey.indexOf('.') >= 0) {
         const [primaryKey, subKey] = dateKey.split('.');
 
-        returnValue = moment(((record || {})[primaryKey] || {})[subKey]);
+        returnValue = {
+            ...record[primaryKey],
+            [subKey]: moment(((record || {})[primaryKey] || {})[subKey]),
+        };
         delete record.primaryKey;
     } else {
         returnValue = moment((record || {})[dateKey]);
