@@ -2766,6 +2766,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
+                fez_record_search_key_related_datasets: {
+                    rek_related_datasets: '<p>A related dataset</p>',
+                },
+                fez_record_search_key_related_publications: {
+                    rek_related_publications: '<p>A related publication</p>',
+                },
             });
         });
 
