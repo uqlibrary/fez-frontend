@@ -1198,6 +1198,7 @@ export const CONTENT_INDICATORS_COLLECTIONS_BLACKLIST = [
 ];
 
 export const WOS_DOC_TYPES = [
+    { value: 'None', text: 'None' },
     { value: '2', text: '2 - Abstract of Published item' },
     { value: 'A', text: 'A - Art Exhibit Review' },
     { value: '@', text: '@ - Article' },
@@ -1235,6 +1236,7 @@ export const WOS_DOC_TYPES = [
     { value: 'V', text: 'V - TV Review, Radio Review, Video Review' },
 ];
 export const SCOPUS_DOC_TYPES = [
+    { value: 'None', text: 'None' },
     { value: 'ab', text: 'ab - Abstract Report' },
     { value: 'ar', text: 'ar - Article' },
     { value: 'ip', text: 'ip - Article in Press' },
@@ -1253,6 +1255,7 @@ export const SCOPUS_DOC_TYPES = [
     { value: 'sh', text: 'sh - Short Survey' },
 ];
 export const PUBMED_DOC_TYPES = [
+    { value: 'None', text: 'None' },
     { value: 'Addresses', text: 'Addresses' },
     { value: 'Autobiography', text: 'Autobiography' },
     { value: 'Bibliography', text: 'Bibliography' },

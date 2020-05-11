@@ -27,14 +27,14 @@ const scrollWindowToTop = event => {
     document.getElementById('content-container').scrollTop = 0;
 };
 
-export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
+export const ScrollTop = ({ show, showAfter, classes }) => {
     /* istanbul ignore next */
-    const scrollableContainer = document.getElementById(containerId);
+    const scrollableContainer = document.getElementById('content-container');
     /* istanbul ignore next */
     if (
         !!show &&
         !!scrollableContainer &&
-        scrollableContainer.style &&
+        !!document &&
         !!document.getElementById('scrolltopbtn') &&
         !!document.getElementById('scrolltopbtn').style
     ) {
@@ -71,13 +71,11 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
 ScrollTop.propTypes = {
     show: PropTypes.bool,
     showAfter: PropTypes.number,
-    containerId: PropTypes.string,
 };
 
 ScrollTop.defaultProps = {
     show: false,
     showAfter: 100,
-    containerId: 'content-container',
 };
 
 export default withStyles(styles, { withTheme: false })(ScrollTop);

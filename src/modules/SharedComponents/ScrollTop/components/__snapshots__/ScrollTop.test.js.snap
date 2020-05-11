@@ -13,7 +13,6 @@ exports[`Component ScrollTop should not render component 2`] = `
       "scrollTop": "ScrollTop-scrollTop-1",
     }
   }
-  containerId="content-container"
   show={false}
   showAfter={100}
 />
@@ -52,7 +51,6 @@ exports[`Component ScrollTop should render component 2`] = `
       "scrollTop": "ScrollTop-scrollTop-1",
     }
   }
-  containerId="content-container"
   show={true}
   showAfter={100}
 />
