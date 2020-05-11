@@ -15,19 +15,9 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(Grid)
-          container={true}
-          spacing={24}
-        >
-          <WithStyles(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(Typography)>
-              You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(Typography)>
+          You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
+        </WithStyles(Typography)>
       </StandardCard>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -57,19 +47,9 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
       <StandardCard
         title="Your thesis has been deposited"
       >
-        <WithStyles(Grid)
-          container={true}
-          spacing={24}
-        >
-          <WithStyles(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(Typography)>
-              You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+        <WithStyles(Typography)>
+          You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
+        </WithStyles(Typography)>
       </StandardCard>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -1874,35 +1854,10 @@ exports[`SbsSubmission test should render sbs thesis submission form 3`] = `
       item={true}
       xs={12}
     >
-      <StandardCard
-        title="Your thesis has been deposited"
-      >
-        <WithStyles(Grid)
-          container={true}
-          spacing={24}
-        >
-          <WithStyles(Grid)
-            item={true}
-            xs={12}
-          >
-            <WithStyles(Typography)>
-              You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(Alert)
-        message="There was an issue uploading your thesis files. Please contact UQ eSpace administrators."
+        action={[Function]}
+        actionButtonLabel="RESUBMIT YOUR THESIS"
+        message="There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button."
         title="FILE UPLOAD ERROR"
         type="error"
       />

@@ -1367,9 +1367,11 @@ export default {
             //     buttonLabel: 'Close'
             // },
             failedAlertLocale: {
-                type: 'error',
                 title: 'FILE UPLOAD ERROR',
-                message: 'There was an issue uploading your thesis files. Please contact UQ eSpace administrators.',
+                type: 'error',
+                message:
+                    "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                actionButtonLabel: 'RESUBMIT YOUR THESIS',
             },
             locale: {
                 instructions: '',

@@ -102,25 +102,20 @@ export default class SbsSubmission extends Component {
 
         if (this.props.submitSucceeded) {
             return (
-                <StandardPage title={thesisLocale.sbsTitle}>
+                <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                     <Grid container spacing={24}>
-                        <Grid item xs={12}>
-                            <StandardCard title={thesisLocale.afterSubmitTitle}>
-                                <Grid container spacing={24}>
-                                    <Grid item xs={12}>
-                                        <Typography>{thesisLocale.afterSubmitText}</Typography>
-                                    </Grid>
-                                </Grid>
-                            </StandardCard>
-                        </Grid>
-                    </Grid>
-                    {this.props.newRecordFileUploadingOrIssueError && (
-                        <Grid container spacing={24}>
+                        {this.props.newRecordFileUploadingOrIssueError ? (
                             <Grid item xs={12}>
-                                <Alert {...thesisLocale.fileUpload.failedAlertLocale} />
+                                <Alert {...thesisLocale.fileUpload.failedAlertLocale} action={this.afterFailedSubmit} />
                             </Grid>
-                        </Grid>
-                    )}
+                        ) : (
+                            <Grid item xs={12}>
+                                <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
+                                    <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
+                                </StandardCard>
+                            </Grid>
+                        )}
+                    </Grid>
                 </StandardPage>
             );
         }
