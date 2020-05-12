@@ -16,6 +16,15 @@ import {
     PUBLICATION_TYPE_SEMINAR_PAPER,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
+    PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+    PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_REFERENCE_ENTRY,
+    PUBLICATION_TYPE_RESEARCH_REPORT,
+    PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
@@ -29,6 +38,17 @@ export const bibliographicParams = record =>
             record.fez_record_search_key_language[0].rek_language !== 'eng'));
 
 export const identifiersParams = record => ({
+    displayAll: [
+        PUBLICATION_TYPE_BOOK,
+        PUBLICATION_TYPE_BOOK_CHAPTER,
+        PUBLICATION_TYPE_CONFERENCE_PAPER,
+        PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+        PUBLICATION_TYPE_JOURNAL,
+        PUBLICATION_TYPE_JOURNAL_ARTICLE,
+        PUBLICATION_TYPE_REFERENCE_ENTRY,
+        PUBLICATION_TYPE_RESEARCH_REPORT,
+        PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    ].includes(record.rek_display_type),
     displayLocation: [PUBLICATION_TYPE_AUDIO_DOCUMENT, PUBLICATION_TYPE_SEMINAR_PAPER].includes(
         record.rek_display_type,
     ),

@@ -641,10 +641,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 13,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 14
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 14,
+                },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 15,
@@ -1039,10 +1039,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 13,
@@ -1788,16 +1788,20 @@ export default {
                     order: 18,
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_article_number',
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_place_of_publication',
+                    field: 'fez_record_search_key_contributor',
                     order: 20,
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 21,
+                },
+                {
+                    field: 'fez_record_search_key_publisher',
+                    order: 22,
                 },
                 // {
                 //     field: 'fez_record_search_key_language',
@@ -2103,10 +2107,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 13,
