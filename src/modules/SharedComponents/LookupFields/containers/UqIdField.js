@@ -8,11 +8,14 @@ const mapStateToProps = (state, props) => {
             state.get('authorsReducer') && state.get('authorsReducer')
                 ? state
                     .get('authorsReducer')
-                    .authorsList.filter(item => !!item.aut_org_username || !!item.aut_student_username)
+                    .authorsList.filter(
+                        item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
+                    )
                     .map(item => ({
-                        value: `${item.aut_title} ${item.aut_display_name} ${
-                            item.aut_org_username ? `(${item.aut_org_username})` : ''
-                        } ${item.aut_student_username ? `(${item.aut_student_username})` : ''}`,
+                        value: `${item.aut_title} ${item.aut_display_name}
+                        ${item.aut_org_username ? `(${item.aut_org_username})` : ''}
+                        ${item.aut_student_username ? `(${item.aut_student_username})` : ''}
+                        ${item.aut_ref_num ? `(${item.aut_ref_num})` : ''}`,
                         id: item.aut_id,
                         ...item,
                     }))
