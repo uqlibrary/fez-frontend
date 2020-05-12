@@ -2568,12 +2568,7 @@ describe('Journal document', () => {
         };
 
         expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
-            fez_record_search_key_location: [
-                {
-                    rek_location: 'Biloela',
-                    rek_location_order: 1,
-                },
-            ],
+            fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
             rek_pubmed_doc_type: '1',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '3',
@@ -2653,7 +2648,7 @@ describe('Sanitising empty data', () => {
  *  - bibliographicSection.fez_record_search_key_article_number.rek_article_number'
  *  - bibliographicSection.fez_record_search_key_patent_number.rek_patent_number'
  *  - bibliographicSection.fez_record_search_key_start_page.rek_start_page'
- *  - bibliographicSection.fez_recorßd_search_key_end_page.rek_end_page'
+ *  - bibliographicSection.fez_record_search_key_end_page.rek_end_page'
  *  - bibliographicSection.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days'
  *  - bibliographicSection.fez_record_search_key_keywords'
  *  - bibliographicSection.fez_record_search_key_issn'
