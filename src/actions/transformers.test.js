@@ -2543,8 +2543,6 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 rek_wok_doc_type: 'None',
             }),
         ).toEqual({
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
             rek_pubmed_doc_type: null,
             rek_scopus_doc_type: null,
             rek_wok_doc_type: null,
@@ -2553,8 +2551,6 @@ describe('getIdentifiersSectionSearchKeys', () => {
 
     it('should use default data parameter', () => {
         expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
             rek_pubmed_doc_type: null,
             rek_scopus_doc_type: null,
             rek_wok_doc_type: null,
@@ -2573,8 +2569,6 @@ describe('Journal document', () => {
 
         expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
             fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
             rek_pubmed_doc_type: '1',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '3',
@@ -2795,7 +2789,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_license: {},
                 fez_record_search_key_related_datasets: {
                     rek_related_datasets: '<p>A related dataset</p>',
                 },
@@ -2820,10 +2813,10 @@ describe('getBibliographicSectionSearchKeys', () => {
                 },
                 geoCoordinates: '153.024504,-27.493017',
                 fez_record_search_key_date_available: {
-                    rek_date_available: '2015',
+                    rek_date_available: '2015-10-01',
                 },
                 fez_record_search_key_date_recorded: {
-                    rek_date_recorded: '2016',
+                    rek_date_recorded: '2016-10-01',
                 },
                 fez_record_search_key_license_biblio: {
                     rek_license: '453610',
@@ -2843,10 +2836,49 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_date_available: {
-                    rek_date_available: '2015-01-01T00:00:00+10:00',
+                    rek_date_available: '2015-10-01',
                 },
                 fez_record_search_key_date_recorded: {
-                    rek_date_recorded: '2016-01-01T00:00:00+10:00',
+                    rek_date_recorded: '2016-10-01',
+                },
+                fez_record_search_key_license: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            });
+        });
+
+        it('should remove frsk_date_recorded from the request payload', () => {
+            const data = {
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015-01-01',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '01-01-0000',
+                },
+                fez_record_search_key_license_biblio: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.024504,-27.493017',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015-01-01',
                 },
                 fez_record_search_key_license: {
                     rek_license: '453610',
@@ -2932,6 +2964,45 @@ describe('getBibliographicSectionSearchKeys', () => {
                     { rek_issn: '1212-1212', rek_issn_order: 1 },
                     { rek_issn: '2323-2323', rek_issn_order: 2 },
                 ],
+            });
+        });
+
+        it('should remove frsk_date_available from the request payload', () => {
+            const data = {
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '2015-01-01',
+                },
+                fez_record_search_key_date_available: {
+                    rek_date_available: '01-01-0000',
+                },
+                fez_record_search_key_license_biblio: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.024504,-27.493017',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '2015-01-01',
+                },
+                fez_record_search_key_license: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
             });
         });
     });

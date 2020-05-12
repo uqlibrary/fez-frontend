@@ -117,7 +117,15 @@ export const pathConfig = {
         jobNumber: jobNumber => getSearchUrl({ searchQuery: { all: jobNumber } }),
         proceedingsTitle: proceedingsTitle => getSearchUrl({ searchQuery: { all: proceedingsTitle } }),
         // Exact match on Any Field
-        keyword: keyword => getSearchUrl({ searchQuery: { all: `"${keyword}"` } }),
+        keyword: keyword =>
+            getSearchUrl({
+                searchQuery: { all: '' },
+                activeFacets: {
+                    filters: {
+                        Keywords: keyword,
+                    },
+                },
+            }),
         herdcStatus: herdcStatus => getSearchUrl({ searchQuery: { all: herdcStatus } }),
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },

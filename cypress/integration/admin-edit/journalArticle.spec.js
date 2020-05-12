@@ -234,14 +234,18 @@ context('Journal Article admin edit', () => {
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
                         cy.checkPartialDateFromRecordValue('Publication date', record.rek_date);
-                        cy.get('#Yearavailable')
-                            .should(
-                                'have.value',
-                                Cypress.moment(record.fez_record_search_key_date_available.rek_date_available)
-                                    .format(
-                                        'YYYY',
-                                    ),
-                            );
+                        cy.checkPartialDateFromRecordValue(
+                            'Year available',
+                            record.fez_record_search_key_date_available.rek_date_available,
+                        );
+                        // cy.get('#Yearavailable')
+                        //     .should(
+                        //         'have.value',
+                        //         Cypress.moment(record.fez_record_search_key_date_available.rek_date_available)
+                        //             .format(
+                        //                 'YYYY',
+                        //             ),
+                        //     );
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Abstract / Description');

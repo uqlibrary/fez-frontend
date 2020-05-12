@@ -1,4 +1,4 @@
-import { post, patch } from 'repositories/generic';
+import { post, patch, put } from 'repositories/generic';
 import {
     NEW_RECORD_API,
     EXISTING_RECORD_API,
@@ -463,6 +463,7 @@ const getAdminRecordRequest = data => {
 
     return [
         {
+            ...data.publication,
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
@@ -500,11 +501,11 @@ export function adminUpdate(data) {
             .then(() => (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch) : null))
             .then(() =>
                 hasFilesToUpload
-                    ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
+                    ? put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
                         ...patchRecordRequest,
                         ...patchFilesRequest,
                     })
-                    : patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
+                    : put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
             .then(response => {
                 dispatch({

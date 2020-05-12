@@ -869,21 +869,27 @@ export default {
             },
         },
         fez_record_search_key_date_available: {
-            component: GenericTextField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_date_available.rek_date_available',
                 label: 'Year available',
+                floatingTitle: 'Year available',
                 fullWidth: true,
-                validate: [validation.dateTimeYear],
+                allowPartial: false,
+                clearable: true,
+                dateFormat: 'YYYY-MM-DD',
             },
         },
         fez_record_search_key_date_recorded: {
-            component: GenericTextField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_date_recorded.rek_date_recorded',
-                label: 'Year recorded',
+                label: 'Recording date',
+                floatingTitle: 'Recording date',
                 fullWidth: true,
-                validate: [validation.dateTimeYear],
+                allowPartial: false,
+                clearable: true,
+                dateFormat: 'YYYY-MM-DD',
             },
         },
         fez_record_search_key_isderivationof: {
