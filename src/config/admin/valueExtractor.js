@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
 import { default as globalLocale } from 'locale/global';
@@ -563,7 +564,17 @@ export default {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_oa_status'),
     },
     fez_record_search_key_date_available: {
-        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_date_available'),
+        getValue: record => {
+            const returnValue = record.fez_record_search_key_date_available &&
+                record.fez_record_search_key_date_available.rek_date_available && {
+                ...record.fez_record_search_key_date_available,
+                rek_date_available: moment(record.fez_record_search_key_date_available.rek_date_available).format(
+                    'YYYY',
+                ),
+            };
+            delete record.fez_record_search_key_date_available;
+            return returnValue;
+        },
     },
     fez_record_search_key_date_recorded: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_date_recorded'),

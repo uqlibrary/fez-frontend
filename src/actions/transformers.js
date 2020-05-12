@@ -923,10 +923,11 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 })),
             }
             : {}),
-        ...(!!dateAvailable && moment(dateAvailable.rek_date_available, 'YYYY-MM-DD').year() > 0
+        ...(!!dateAvailable && moment(dateAvailable.rek_date_available, 'YYYY').isValid()
             ? {
                 fez_record_search_key_date_available: {
                     ...dateAvailable,
+                    rek_date_available: moment(dateAvailable.rek_date_available, 'YYYY').format(),
                 },
             }
             : {}),
