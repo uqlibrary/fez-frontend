@@ -2543,8 +2543,6 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 rek_wok_doc_type: 'None',
             }),
         ).toEqual({
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
             rek_pubmed_doc_type: null,
             rek_scopus_doc_type: null,
             rek_wok_doc_type: null,
@@ -2553,8 +2551,6 @@ describe('getIdentifiersSectionSearchKeys', () => {
 
     it('should use default data parameter', () => {
         expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
             rek_pubmed_doc_type: null,
             rek_scopus_doc_type: null,
             rek_wok_doc_type: null,
@@ -2573,8 +2569,6 @@ describe('Journal document', () => {
 
         expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
             fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
-            fez_record_search_key_link: [],
-            fez_record_search_key_link_description: [],
             rek_pubmed_doc_type: '1',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '3',
