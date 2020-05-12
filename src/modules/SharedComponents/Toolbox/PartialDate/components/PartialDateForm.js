@@ -51,7 +51,7 @@ export class PartialDateForm extends Component {
         disableFuture: PropTypes.bool,
         input: PropTypes.object,
         meta: PropTypes.shape({
-            initial: PropTypes.object,
+            initial: PropTypes.string,
         }),
         clearable: PropTypes.bool,
     };

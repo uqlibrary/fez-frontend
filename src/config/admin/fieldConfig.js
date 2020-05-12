@@ -872,8 +872,8 @@ export default {
             component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_date_available.rek_date_available',
-                label: 'Date available',
-                floatingTitle: 'Date available',
+                label: 'Year available',
+                floatingTitle: 'Year available',
                 fullWidth: true,
                 allowPartial: false,
                 clearable: true,
