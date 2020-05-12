@@ -142,11 +142,11 @@ export const dateTimeDay = value =>
     value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31)
         ? locale.validationErrors.dateTimeDay
         : undefined;
-export const dateTimeYear = value => {
-    return moment(value, 'YYYY-MM-DD').year() > new Date().getFullYear()
+export const dateTimeYear = value =>
+    (value && value.length > 0 && (isNaN(value) || parseInt(value, 10) > new Date().getFullYear())) ||
+    (value && value.length < 4)
         ? locale.validationErrors.dateTimeYear
         : undefined;
-};
 export const validFileUpload = value => {
     return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
