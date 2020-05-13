@@ -56,18 +56,18 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
 };
 
 export const AdminInterface = ({
+    authorDetails,
     classes,
-    submitting,
+    createMode,
+    destroy,
+    disableSubmit,
+    formErrors,
     handleSubmit,
-    tabs,
     history,
     location,
     submitSucceeded,
-    createMode,
-    disableSubmit,
-    formErrors,
-    destroy,
-    authorDetails,
+    submitting,
+    tabs,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -293,18 +293,18 @@ export const AdminInterface = ({
 };
 
 AdminInterface.propTypes = {
+    authorDetails: PropTypes.object,
     classes: PropTypes.object,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    handleSubmit: PropTypes.func,
-    destroy: PropTypes.func,
-    location: PropTypes.object,
-    history: PropTypes.object,
-    tabs: PropTypes.object,
     createMode: PropTypes.bool,
+    destroy: PropTypes.func,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
-    authorDetails: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    history: PropTypes.object,
+    location: PropTypes.object,
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.bool,
+    tabs: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);
