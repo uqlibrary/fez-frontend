@@ -49,21 +49,21 @@ const styles = theme => ({
 });
 
 export const AdminContainer = ({
-    recordToView,
+    authorDetails,
+    classes,
+    clearRecordToView,
+    createMode,
+    destroy,
+    disableSubmit,
+    formErrors,
+    handleSubmit,
+    history,
     loadingRecordToView,
     loadRecordToView,
-    clearRecordToView,
-    classes,
-    submitting,
-    submitSucceeded,
-    disableSubmit,
-    handleSubmit,
     match,
-    history,
-    createMode,
-    formErrors,
-    destroy,
-    authorDetails,
+    recordToView,
+    submitSucceeded,
+    submitting,
 }) => {
     const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
     const [showAddForm, setShowAddForm] = useState(!match.params.pid);
@@ -210,23 +210,23 @@ export const AdminContainer = ({
 };
 
 AdminContainer.propTypes = {
+    actions: PropTypes.object,
+    authorDetails: PropTypes.object,
+    classes: PropTypes.object,
+    clearRecordToView: PropTypes.func,
+    createMode: PropTypes.bool,
+    destroy: PropTypes.func,
+    disableSubmit: PropTypes.any,
+    formErrors: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
-    clearRecordToView: PropTypes.func,
-    destroy: PropTypes.func,
-    createMode: PropTypes.bool,
-    recordToView: PropTypes.object,
-    actions: PropTypes.object,
-    classes: PropTypes.object,
-    submitting: PropTypes.any,
-    submitSucceeded: PropTypes.bool,
-    showAddForm: PropTypes.bool,
-    disableSubmit: PropTypes.any,
-    handleSubmit: PropTypes.func,
     match: PropTypes.object,
-    history: PropTypes.object,
-    formErrors: PropTypes.object,
-    authorDetails: PropTypes.object,
+    recordToView: PropTypes.object,
+    showAddForm: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.any,
 };
 
 export function isChanged(prevProps, nextProps) {
