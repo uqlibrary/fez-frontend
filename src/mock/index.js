@@ -142,7 +142,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         } else if (config.params.rule === 'possible') {
             // POSSIBLE_RECORDS_API
             return [200, mockData.possibleUnclaimedList];
-            // return [500, ['ERROR POSSIBLE_RECORDS_API']];
+            // return [500, { message: ['error - failed POSSIBLE_RECORDS_API'] }];
         } else if (config.params.rule === 'lookup') {
             // SEARCH_KEY_LOOKUP_API
             return [200, mockData.searchKeyList[config.params.search_key]];
@@ -263,8 +263,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }
         return [200, { data: { ...mockData.record } }];
     })
-    // .reply(401, '')
-    // .reply(500, ['ERROR in EXISTING_RECORD_API'])
+    // .reply(401, [''])
+    // .reply(500, { message: ['error - failed EXISTING_RECORD_API'] })
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
         const vocabIds = config.url
@@ -286,21 +286,22 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ),
     )
     .reply(200, { ...mockData.authorOrcidDetails })
-    // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
+    // .reply(500, { message: ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"] })
     .onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
+    // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
     .onGet(routes.ORCID_SYNC_API().apiUrl)
     .reply(200, mockData.orcidSyncStatus);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
-// .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
+// .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
 
 mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: '' })
-    // .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
+    // .reply(500, { message: ['error - failed POST RECORDS_ISSUES_API'] })
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
     .reply(200, { data: {} })
-    // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
+    // .reply(500, { message: ['error - failed HIDE_POSSIBLE_RECORD_API'] })
     .onPost(routes.BATCH_IMPORT_API().apiUrl)
     .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
@@ -309,8 +310,8 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     // .reply(400) // if current sync job exists
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
-    // .reply(500, {message: 'error - failed NEW_RECORD_API'})
-    // .reply(403, {message: 'Session expired'})
+    // .reply(500, { message: ['error - failed NEW_RECORD_API'] })
+    // .reply(403, {message: ['Session expired']})
     .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
     .reply(() => [200, { data: mockData.collectionRecord }])
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
@@ -355,18 +356,28 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         return [200, { data }];
     });
 
+// Note: The existing records of all the mocked types below (regular records, collections and community)
+// are all patched via the same endpoint, so if you want to mock a failure of one of those,
+// you have to disable the other two variants so that it doesn't fall back to the next one.
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
+    // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
+
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
+    // .reply(500, { message: ['error - failed PUT EXISTING_RECORD_API'] })
+
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.collectionRecord } })
+    // .reply(500, { message: ['error - failed PUT EXISTING_COLLECTION_API'] })
+
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COMMUNITY_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.communityRecord } })
-    // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
+    // .reply(500, { message: ['error - failed PUT EXISTING_COMMUNITY_API'] })
+
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, { ...mockData.currentAuthor.uqresearcher })
-    // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
+    // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
 
     .onAny()
     .reply(config => {
