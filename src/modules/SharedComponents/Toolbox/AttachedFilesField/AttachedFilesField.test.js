@@ -37,7 +37,8 @@ describe('AttachedFilesField callback factories', () => {
     it('should create delete callback', () => {
         const dataStreams = [1, 2, 3];
         const setDataStreams = jest.fn();
-        const callback = deleteCallbackFactory(dataStreams, setDataStreams)[0];
+        const onDeleteAttachedFile = jest.fn();
+        const callback = deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile)[0];
         callback(1);
         expect(setDataStreams).toHaveBeenCalledWith([1, 3]);
     });
