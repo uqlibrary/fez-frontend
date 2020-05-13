@@ -21,7 +21,7 @@ const onSubmit = (values, dispatch, props) => {
 let CommunityContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(CommunityForm, FORM_NAME));
+})(confirmDiscardFormChanges(CommunityForm));
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});

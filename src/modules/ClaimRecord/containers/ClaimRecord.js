@@ -20,7 +20,7 @@ let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
     onSubmit,
-})(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
+})(confirmDiscardFormChanges(ClaimRecord));
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});

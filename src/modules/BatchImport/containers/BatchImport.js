@@ -46,7 +46,7 @@ BatchImportContainer.propTypes = {
 BatchImportContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(React.memo(BatchImportContainer), FORM_NAME));
+})(confirmDiscardFormChanges(React.memo(BatchImportContainer)));
 
 const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});

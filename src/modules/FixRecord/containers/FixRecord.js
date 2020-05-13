@@ -46,7 +46,7 @@ let FixRecordContainer = reduxForm({
     enableReinitialize: true,
     validate,
     onSubmit,
-})(confirmDiscardFormChanges(FixRecord, FORM_NAME));
+})(confirmDiscardFormChanges(FixRecord));
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
