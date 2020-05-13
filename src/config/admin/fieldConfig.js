@@ -555,6 +555,7 @@ export default {
                 placeholder: '',
                 multiline: true,
                 floatingLabelText: 'Series',
+                showClear: true,
             },
         },
         fez_record_search_key_chapter_number: {
@@ -877,12 +878,15 @@ export default {
             },
         },
         fez_record_search_key_date_recorded: {
-            component: GenericTextField,
+            component: PartialDateField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_date_recorded.rek_date_recorded',
-                label: 'Year recorded',
+                label: 'Recording date',
+                floatingTitle: 'Recording date',
                 fullWidth: true,
-                validate: [validation.dateTimeYear],
+                allowPartial: false,
+                clearable: true,
+                dateFormat: 'YYYY-MM-DD',
             },
         },
         fez_record_search_key_isderivationof: {
@@ -1081,7 +1085,7 @@ export default {
             component: RichEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_related_datasets',
-                title: 'Related datasets',
+                title: 'Other related datasets',
                 titleProps: {
                     variant: 'caption',
                     style: {
@@ -1095,7 +1099,7 @@ export default {
             component: RichEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_related_publications',
-                title: 'Related publications',
+                title: 'Other related publications',
                 titleProps: {
                     variant: 'caption',
                     style: {
@@ -1604,6 +1608,10 @@ export default {
             subjects: () => ({
                 required: true,
                 validate: [validation.requiredList],
+            }),
+            fez_record_search_key_license_additional: () => ({
+                required: true,
+                validate: [validation.required],
             }),
         },
         [PUBLICATION_TYPE_DESIGN]: {

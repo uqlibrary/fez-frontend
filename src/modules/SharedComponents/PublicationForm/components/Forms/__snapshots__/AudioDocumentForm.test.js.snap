@@ -12,7 +12,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "CLOSE",
+          "buttonLabel": "Close",
           "text": <React.Fragment>
             <p>
               <b>
@@ -393,7 +393,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     <StandardCard
       help={
         Object {
-          "buttonLabel": "CLOSE",
+          "buttonLabel": "Close",
           "text": <React.Fragment>
             <p>
               <b>

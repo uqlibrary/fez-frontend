@@ -13,8 +13,8 @@ import { reloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadRe
 
 const FORM_NAME = 'SbsSubmission';
 
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(submitThesis({ ...values.toJS() }, props.author)).catch(error => {
+const onSubmit = (values, dispatch) => {
+    return dispatch(submitThesis({ ...values.toJS() })).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };

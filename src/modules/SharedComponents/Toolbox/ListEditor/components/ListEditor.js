@@ -120,9 +120,9 @@ export default class ListEditor extends Component {
                         itemList: [...this.state.itemList, item],
                     });
                 }
-            } else if (!!item && !item.key && !item.value && item.includes(',')) {
-                // Item is a string with commas in it - we will strip and separate the values to be individual keywords
-                const commaSepListToArray = item.split(','); // Convert the string to an array of values
+            } else if (!!item && !item.key && !item.value && item.includes('|')) {
+                // Item is a string with pipes in it - we will strip and separate the values to be individual keywords
+                const commaSepListToArray = item.split('|'); // Convert the string to an array of values
                 // Filter out empty array values
                 const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
                 const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list

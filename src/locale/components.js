@@ -178,7 +178,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Keywords',
-                        inputFieldHint: 'Type keywords',
+                        inputFieldHint: 'Type keywords (Add multiple using pipes eg: one|two|three)',
                         addButtonLabel: 'Add',
                         editButtonLabel: 'Update',
                         id: 'keywords-input',

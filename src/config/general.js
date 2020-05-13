@@ -1095,16 +1095,19 @@ export const RECORD_ACTION_URLS = [
         label: 'Edit selected record',
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}`,
         inApp: true,
+        options: null,
     },
     {
         label: 'Edit author affiliations',
         url: pid =>
             `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
         inApp: true,
+        options: null,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
+        options: null,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
     },
     {
@@ -1112,11 +1115,19 @@ export const RECORD_ACTION_URLS = [
         url: pid =>
             `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
         inApp: true,
+        options: null,
+    },
+    {
+        label: 'Detailed history',
+        url: pid => `${APP_URL}${PATH_PREFIX}history.php?pid=${pid}`,
+        inApp: false,
+        options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
     },
     {
         label: 'More options',
         url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
+        options: null,
     },
 ];
 
@@ -1181,6 +1192,7 @@ export const CONTENT_INDICATORS_COLLECTIONS_BLACKLIST = [
 ];
 
 export const WOS_DOC_TYPES = [
+    { value: 'None', text: 'None' },
     { value: '2', text: '2 - Abstract of Published item' },
     { value: 'A', text: 'A - Art Exhibit Review' },
     { value: '@', text: '@ - Article' },
@@ -1218,6 +1230,7 @@ export const WOS_DOC_TYPES = [
     { value: 'V', text: 'V - TV Review, Radio Review, Video Review' },
 ];
 export const SCOPUS_DOC_TYPES = [
+    { value: 'None', text: 'None' },
     { value: 'ab', text: 'ab - Abstract Report' },
     { value: 'ar', text: 'ar - Article' },
     { value: 'ip', text: 'ip - Article in Press' },
@@ -1236,6 +1249,7 @@ export const SCOPUS_DOC_TYPES = [
     { value: 'sh', text: 'sh - Short Survey' },
 ];
 export const PUBMED_DOC_TYPES = [
+    { value: 'None', text: 'None' },
     { value: 'Addresses', text: 'Addresses' },
     { value: 'Autobiography', text: 'Autobiography' },
     { value: 'Bibliography', text: 'Bibliography' },
@@ -1395,3 +1409,5 @@ export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
+
+export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';

@@ -529,6 +529,10 @@ Object {
     "& .spinner": Object {
       "color": "#123",
     },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
+    },
     "backgroundColor": undefined,
     "color": "#eee",
   },
@@ -545,6 +549,10 @@ Object {
     },
     "& .spinner": Object {
       "color": "#111",
+    },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -563,6 +571,10 @@ Object {
     "& .spinner": Object {
       "color": "#111",
     },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
+    },
     "backgroundColor": undefined,
     "color": "#eee",
   },
@@ -580,6 +592,10 @@ Object {
     "& .spinner": Object {
       "color": "#333",
     },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
+    },
     "backgroundColor": "#444",
     "color": "#eee",
   },
@@ -596,6 +612,10 @@ Object {
     },
     "& .spinner": Object {
       "color": "#333",
+    },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": "#444",
     "color": "#eee",
@@ -624,6 +644,10 @@ Object {
     "& .spinner": Object {
       "color": "#555",
     },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
+    },
     "backgroundColor": undefined,
     "color": "#eee",
   },
@@ -640,6 +664,10 @@ Object {
     },
     "& .spinner": Object {
       "color": "#555",
+    },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",
@@ -667,6 +695,10 @@ Object {
     },
     "& .spinner": Object {
       "color": "#222",
+    },
+    "& a:link, & a:hover, & a:visited": Object {
+      "color": "#eee",
+      "textDecoration": "underline",
     },
     "backgroundColor": undefined,
     "color": "#eee",

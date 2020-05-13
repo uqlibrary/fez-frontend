@@ -1,4 +1,4 @@
-import { post, patch } from 'repositories/generic';
+import { post, patch, put } from 'repositories/generic';
 import {
     NEW_RECORD_API,
     EXISTING_RECORD_API,
@@ -130,169 +130,120 @@ export function createNewRecord(data) {
     };
 }
 
-/**
- * Submit thesis involves two steps: upload files, create record with uploaded files.
- * This method has been deprecated - kept for posterity.
- * If error occurs on any stage failed action is dispatched
- * @param {object} data to be posted, refer to backend API
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
- */
-// export function submitThesisOld(data, author) {
-//     return dispatch => {
-//         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-//         if (!hasFilesToUpload) {
-//             // reject thesis submission, files are required
-//             return Promise.reject('Please attach files to proceed with thesis submission');
-//         }
-//         // set default values, links
-//         const recordRequest = {
-//             ...JSON.parse(JSON.stringify(data)),
-//             ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
-//             ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
-//             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-//             ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-//             ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
-//             rek_title: data.thesisTitle.plainText,
-//             rek_formatted_title: data.thesisTitle.htmlText,
-//             rek_description: data.thesisAbstract.plainText,
-//             rek_formatted_abstract: data.thesisAbstract.htmlText
-//         };
-//
-//         // delete extra form values from request object
-//         if (recordRequest.authors) delete recordRequest.authors;
-//         if (recordRequest.editors) delete recordRequest.editors;
-//         if (recordRequest.files) delete recordRequest.files;
-//         if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
-//         if (recordRequest.supervisors) delete recordRequest.supervisors;
-//         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
-//         if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
-//         if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
-//         let fileUploadSucceeded = false;
-//         dispatch({type: actions.CREATE_RECORD_SAVING});
-//         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
-//             .then((response) => {
-//                 fileUploadSucceeded = !!response;
-//                 return post(NEW_RECORD_API(), recordRequest);
-//             })
-//             .then(response => {
-//                 // if(process.env.ENABLE_LOG) {
-//                 //     Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
-//                 // }
-//                 dispatch({
-//                     type: actions.CREATE_RECORD_SUCCESS,
-//                     payload: {
-//                         newRecord: response
-//                     }
-//                 });
-//                 return response;
-//             })
-//             .catch(error => {
-//                 const specificError = !fileUploadSucceeded
-//                     ? 'Submit Thesis: File upload failed. '
-//                     : 'Submit Thesis: Error occurred while saving record to eSpace. ';
-//                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
-//
-//                 if(process.env.ENABLE_LOG) Raven.captureException(error, {message: specificError});
-//
-//                 dispatch({
-//                     type: actions.CREATE_RECORD_FAILED,
-//                     payload: compositeError
-//                 });
-//
-//                 return Promise.reject(compositeError);
-//             });
-//     };
-// }
+const prepareThesisSubmission = data => {
+    // set default values, links
+    const recordRequest = {
+        ...JSON.parse(JSON.stringify(data)),
+        ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
+        ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
+        ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+        ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+        ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+        rek_title: data.thesisTitle.plainText,
+        rek_formatted_title: data.thesisTitle.htmlText,
+        rek_description: data.thesisAbstract.plainText,
+        rek_formatted_abstract: data.thesisAbstract.htmlText,
+    };
+
+    // delete extra form values from request object
+    const keysToDelete = [
+        'authors',
+        'editors',
+        'currentAuthor',
+        'supervisors',
+        'fieldOfResearch',
+        'files',
+        'thesisTitle',
+        'thesisAbstract',
+    ];
+    keysToDelete.forEach(key => {
+        delete recordRequest[key];
+    });
+
+    return recordRequest;
+};
 
 /**
- * Submit thesis involves two steps: create record - get signed url to upload files - upload files - patch record.
+ * Submit thesis involves four steps: create record - get signed url to upload files - upload files - patch record.
  * @param {object} data to be posted, refer to backend API
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function submitThesis(data) {
     return dispatch => {
-        dispatch({ type: actions.CREATE_RECORD_SAVING });
-        // set default values, links
-        const recordRequest = {
-            ...JSON.parse(JSON.stringify(data)),
-            ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
-            ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
-            ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
-            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
-            rek_title: data.thesisTitle.plainText,
-            rek_formatted_title: data.thesisTitle.htmlText,
-            rek_description: data.thesisAbstract.plainText,
-            rek_formatted_abstract: data.thesisAbstract.htmlText,
-        };
-
-        // delete extra form values from request object
-        const keysToDelete = [
-            'authors',
-            'editors',
-            'currentAuthor',
-            'supervisors',
-            'fieldOfResearch',
-            'files',
-            'thesisTitle',
-            'thesisAbstract',
-        ];
-        keysToDelete.forEach(key => {
-            delete recordRequest[key];
-        });
-
-        let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
         const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
-        return post(NEW_RECORD_API(), recordRequest)
-            .then(response => {
-                // save new record response
+        let newRecord = null;
+        let recordCreated = false;
+        let fileUploadFailed = false;
+
+        const onRecordCreationSuccess = response => {
+            // save new record response for issue reporting
+            newRecord = response.data;
+            recordCreated = !!newRecord && !!newRecord.rek_pid;
+            if (!recordCreated) {
+                throw new Error('API did not return valid PID');
+            }
+            return (hasFilesToUpload && putUploadFiles(response.data.rek_pid, data.files.queue, dispatch)) || response;
+        };
+        const onRecordCreationFailure = error => Promise.reject(error);
+
+        const onFileUploadSuccess = response =>
+            (hasFilesToUpload && patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch)) || response;
+        const onFileUploadFailure = error => {
+            fileUploadFailed = true;
+            return Promise.reject(error);
+        };
+
+        const onRecordPatchSuccess = response => {
+            if (hasFilesToUpload) {
                 newRecord = response.data;
-                return response;
-            })
-            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() =>
-                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord,
-            )
-            .then(response => {
-                /* istanbul ignore next */
+            }
+            dispatch({
+                type: actions.CREATE_RECORD_SUCCESS,
+                payload: {
+                    newRecord,
+                    fileUploadOrIssueFailed: fileUploadFailed,
+                },
+            });
+            return Promise.resolve(newRecord);
+        };
+        const onRecordPatchFailure = error => {
+            if (recordCreated) {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
-                        newRecord: response.data ? response.data : newRecord,
-                        fileUploadOrIssueFailed: false,
+                        newRecord: newRecord,
+                        fileUploadOrIssueFailed: true,
                     },
                 });
-                /* istanbul ignore next */
-                return Promise.resolve(response.data ? response.data : newRecord);
-            })
-            .catch(error => {
-                // record was created, but file upload or record patch failed or issue post failed
-                if (!!newRecord && !!newRecord.rek_pid) {
-                    dispatch({
-                        type: actions.CREATE_RECORD_SUCCESS,
-                        payload: {
-                            newRecord: newRecord,
-                            fileUploadOrIssueFailed: true,
-                        },
-                    });
-                    return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                        issue: `The submitter had issues uploading files on this record: ${newRecord}`,
-                    }).then(
-                        /* istanbul ignore next */
-                        () => {
-                            return Promise.resolve(newRecord);
-                        },
-                    );
-                }
-
-                dispatch({
-                    type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message,
+                return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                    issue: `The submitter had issues uploading files on this record: ${newRecord.rek_pid}`,
                 });
-                return Promise.reject(error);
+            }
+            dispatch({
+                type: actions.CREATE_RECORD_FAILED,
+                payload: error.message,
             });
+            return onRecordCreationFailure(error);
+        };
+
+        const onIssueReportSuccess = () => recordCreated && Promise.resolve(newRecord);
+        const onIssueReportFailure = error => (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
+
+        const createRecord = recordData => {
+            const recordRequest = prepareThesisSubmission(recordData);
+            dispatch({ type: actions.CREATE_RECORD_SAVING });
+            return post(NEW_RECORD_API(), recordRequest);
+        };
+
+        const submission = createRecord(data);
+
+        return submission
+            .then(onRecordCreationSuccess, onRecordCreationFailure)
+            .then(onFileUploadSuccess, onFileUploadFailure)
+            .then(onRecordPatchSuccess, onRecordPatchFailure)
+            .then(onIssueReportSuccess, onIssueReportFailure);
     };
 }
 
@@ -465,6 +416,7 @@ const getAdminRecordRequest = data => {
 
     return [
         {
+            ...data.publication,
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
@@ -502,11 +454,11 @@ export function adminUpdate(data) {
             .then(() => (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch) : null))
             .then(() =>
                 hasFilesToUpload
-                    ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
+                    ? put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
                         ...patchRecordRequest,
                         ...patchFilesRequest,
                     })
-                    : patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
+                    : put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
             .then(response => {
                 dispatch({

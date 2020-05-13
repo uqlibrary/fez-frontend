@@ -22,7 +22,7 @@ describe('ISSN Lookup actions', () => {
     });
 
     it('should call sherpa loading/loaded actions on successful load', async() => {
-        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa' }).apiUrl).reply(200, sherpaRomeo);
+        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl).reply(200, sherpaRomeo);
 
         const expectedActions = [ISSN_SHERPA_LOADING, ISSN_SHERPA_LOADED];
 
@@ -31,7 +31,7 @@ describe('ISSN Lookup actions', () => {
     });
 
     it('should call sherpa loading/load failed actions on failed load', async() => {
-        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa' }).apiUrl).reply(500);
+        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl).reply(500);
 
         const expectedActions = [ISSN_SHERPA_LOADING, ISSN_SHERPA_LOAD_FAILED];
 
