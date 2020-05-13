@@ -554,3 +554,12 @@ export function adminCreate(data) {
             });
     };
 }
+
+export const deleteAttachedFile = file => {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DELETE_ATTACHED_FILE,
+            payload: file,
+        });
+    };
+};

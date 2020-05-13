@@ -13,6 +13,7 @@ import * as plugins from './reducers/formReducerPlugins';
 const rootReducer = combineReducers({
     form: formReducer.plugin({
         PublicationForm: plugins.resetValue,
+        AdminWorkForm: plugins.deleteFileFromSecuritySection,
     }),
     helpDrawer: helpDrawerReducer,
     fileUpload: fileUploadReducer,

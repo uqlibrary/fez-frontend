@@ -1042,4 +1042,13 @@ describe('Record action creators', () => {
             }
         });
     });
+
+    describe('deleteAttachedFile()', () => {
+        it('dispatches expected actions', async() => {
+            const expectedActions = [actions.ADMIN_DELETE_ATTACHED_FILE];
+
+            await mockActionsStore.dispatch(recordActions.deleteAttachedFile({ dsi_dsid: 'test.jpg' }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
 });

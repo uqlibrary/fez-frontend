@@ -6,6 +6,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         formValues: {
             toJS: jest.fn(() => ({})),
         },
+        onDeleteAttachedFile: jest.fn(),
         ...testProps,
     };
 
