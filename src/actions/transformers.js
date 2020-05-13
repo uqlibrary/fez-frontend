@@ -691,19 +691,27 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
-export const getLinkSearchKey = (links = []) => ({
-    fez_record_search_key_link: links.map(link => ({
-        rek_link: link.rek_value.key,
-        rek_link_order: link.rek_order,
-    })),
-});
+export const getLinkSearchKey = (links = []) => {
+    if (!links || links.length === 0) return {};
 
-export const getLinkDescriptionSearchKey = (links = []) => ({
-    fez_record_search_key_link_description: links.map(link => ({
-        rek_link_description: link.rek_value.value,
-        rek_link_description_order: link.rek_order,
-    })),
-});
+    return {
+        fez_record_search_key_link: links.map(link => ({
+            rek_link: link.rek_value.key,
+            rek_link_order: link.rek_order,
+        })),
+    };
+};
+
+export const getLinkDescriptionSearchKey = (links = []) => {
+    if (!links || links.length === 0) return {};
+
+    return {
+        fez_record_search_key_link_description: links.map(link => ({
+            rek_link_description: link.rek_value.value,
+            rek_link_description_order: link.rek_order,
+        })),
+    };
+};
 
 export const renameLocation = locations => ({
     fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
@@ -801,11 +809,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
 };
 
 export const renameLicense = record => {
-    if (!!record && !record.rek_license) {
-        return {
-            fez_record_search_key_license: {},
-        };
-    }
+    if (!!record && !record.rek_license) return {};
 
     return {
         fez_record_search_key_license: {
@@ -919,7 +923,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 })),
             }
             : {}),
-        ...(!!dateAvailable
+        ...(!!dateAvailable && moment(dateAvailable.rek_date_available, 'YYYY').isValid()
             ? {
                 fez_record_search_key_date_available: {
                     ...dateAvailable,
@@ -927,11 +931,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
-        ...(!!dateRecorded
+        ...(!!dateRecorded && moment(dateRecorded.rek_date_recorded, 'YYYY-MM-DD').year() > 0
             ? {
                 fez_record_search_key_date_recorded: {
                     ...dateRecorded,
-                    rek_date_recorded: moment(dateRecorded.rek_date_recorded, 'YYYY').format(),
                 },
             }
             : {}),

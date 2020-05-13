@@ -19957,6 +19957,14 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                               className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
                                                             >
                                                               <Field
+                                                                attachedDataStreams={
+                                                                  Array [
+                                                                    Object {
+                                                                      "dsi_dsid": "test7.txt",
+                                                                      "dsi_security_policy": 1,
+                                                                    },
+                                                                  ]
+                                                                }
                                                                 collections={
                                                                   Array [
                                                                     Object {
@@ -19976,6 +19984,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                                   }
                                                                 }
                                                                 disabled={false}
+                                                                key="1"
                                                                 name="securitySection.dataStreams"
                                                                 text={
                                                                   Object {

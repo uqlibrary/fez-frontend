@@ -101,13 +101,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                 ...(recordType === RECORD_TYPE_RECORD
                     ? {
                         rek_security_inherited: recordToView.rek_security_inherited,
-                        dataStreams: validDataStreams.map(
-                            ({ dsi_dsid: name, dsi_security_inherited: inherited, dsi_security_policy: policy }) => ({
-                                dsi_dsid: name,
-                                dsi_security_inherited: inherited,
-                                dsi_security_policy: policy,
-                            }),
-                        ),
+                        dataStreams: validDataStreams,
                     }
                     : []),
             },

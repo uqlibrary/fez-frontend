@@ -81,24 +81,14 @@ describe('ThesisSubmission', () => {
 
     it('should disable submit button if invalid form data before submit', () => {
         const wrapper = setup({ disableSubmit: true });
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
-
-        wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label === formLocale.thesisSubmission.submit) {
-                expect(field.props().disabled).toEqual(true);
-            }
-        });
+        const submitButton = wrapper.find('#submit-thesis');
+        expect(submitButton.props().disabled).toEqual(true);
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({ submitFailed: true });
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
-
-        wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label === formLocale.thesisSubmission.submit) {
-                expect(field.props().disabled).toEqual(false);
-            }
-        });
+        const wrapper = setup({ error: true });
+        const submitButton = wrapper.find('#submit-thesis');
+        expect(submitButton.props().disabled).toBeFalsy();
     });
 
     it('should ask when redirecting from form with data (even if submit failed)', () => {
@@ -150,8 +140,17 @@ describe('ThesisSubmission', () => {
     });
 
     it('should show the file upload alert', () => {
-        const wrapper = setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true });
+        const wrapper = setup({
+            author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
+            newRecordFileUploadingOrIssueError: true,
+            submitSucceeded: true,
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a helper to generate alert props', () => {
+        const wrapper = setup({ error: true });
+        expect(wrapper.instance().getFormSubmitAlertProps()).toMatchSnapshot();
     });
 });
 
@@ -181,11 +180,5 @@ describe('ThesisSubmission form - redirections', () => {
         expect(window.location.assign).toBeCalledWith(
             expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
         );
-    });
-
-    it('should reload when told to', () => {
-        const wrapper = setup({ initialValues: {} });
-        wrapper.instance().afterFailedSubmit();
-        expect(window.location.reload).toHaveBeenCalled();
     });
 });

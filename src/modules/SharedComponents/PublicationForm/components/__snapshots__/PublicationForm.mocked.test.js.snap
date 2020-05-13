@@ -26,7 +26,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
       <StandardCard
         help={
           Object {
-            "buttonLabel": "CLOSE",
+            "buttonLabel": "Close",
             "text": <p>
               For more information about each type, click
                
