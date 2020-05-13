@@ -2609,10 +2609,10 @@ describe('Sanitising empty data', () => {
         });
     });
 
-    it('should remove null value', () => {
+    it('should remove blank value', () => {
         const data = {
             fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
-            fez_record_search_key_volume_number: { rek_volume_number: null },
+            fez_record_search_key_volume_number: { rek_volume_number: '' },
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
