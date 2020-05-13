@@ -6,11 +6,13 @@ import { getFormValues } from 'redux-form/immutable';
 
 import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
+import { deleteAttachedFile } from 'actions/records';
+
 import FilesSection from './FilesSection';
 
-export const FilesSectionContainer = ({ disabled, formValues }) => {
+export const FilesSectionContainer = ({ disabled, formValues, onDeleteAttachedFile }) => {
     return (
-        <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
+        <FormValuesContext.Provider value={{ formValues: formValues.toJS(), onDeleteAttachedFile }}>
             <FilesSection disabled={disabled} />
         </FormValuesContext.Provider>
     );
@@ -19,6 +21,7 @@ export const FilesSectionContainer = ({ disabled, formValues }) => {
 FilesSectionContainer.propTypes = {
     disabled: PropTypes.bool,
     formValues: PropTypes.object,
+    onDeleteAttachedFile: PropTypes.func,
 };
 
 export const mapStateToProps = (state, ownProps) => {
@@ -29,4 +32,12 @@ export const mapStateToProps = (state, ownProps) => {
     };
 };
 
-export default connect(mapStateToProps)(React.memo(FilesSectionContainer));
+/* istanbul ignore next */
+export const mapDispatchToProps = dispatch => ({
+    onDeleteAttachedFile: file => dispatch(deleteAttachedFile(file)),
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(React.memo(FilesSectionContainer));
