@@ -25,7 +25,7 @@ import { useTabbedContext, useRecordContext } from 'context';
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
 import { validation, publicationTypes } from 'config';
-import { RECORD_TYPE_RECORD } from 'config/general';
+import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
@@ -271,7 +271,33 @@ export const AdminInterface = ({
                                         onClick={handleCancel}
                                     />
                                 </Grid>
-                                <Grid item xs={12} sm={10}>
+                                {(objectType === RECORD_TYPE_RECORD && record.rek_status) === UNPUBLISHED && (
+                                    <Grid item xs={12} sm={3}>
+                                        <Button
+                                            id="admin-work-publish"
+                                            disabled={submitting || disableSubmit}
+                                            variant="contained"
+                                            color="secondary"
+                                            fullWidth
+                                            children="Publish"
+                                            onClick={handlePublish}
+                                        />
+                                    </Grid>
+                                )}
+                                {objectType === RECORD_TYPE_RECORD && record.rek_status === PUBLISHED && (
+                                    <Grid item xs={12} sm={3}>
+                                        <Button
+                                            id="admin-work-unpublish"
+                                            disabled={submitting || disableSubmit}
+                                            variant="contained"
+                                            color="secondary"
+                                            fullWidth
+                                            children="Unpublish"
+                                            onClick={handleUnpublish}
+                                        />
+                                    </Grid>
+                                )}
+                                <Grid item xs={12} sm={objectType === RECORD_TYPE_RECORD ? 7 : 10}>
                                     <Button
                                         id="admin-work-submit"
                                         style={{ whiteSpace: 'nowrap' }}
@@ -279,7 +305,7 @@ export const AdminInterface = ({
                                         variant="contained"
                                         color="primary"
                                         fullWidth
-                                        children=" Submit "
+                                        children="Save"
                                         onClick={handleSubmit}
                                     />
                                 </Grid>
