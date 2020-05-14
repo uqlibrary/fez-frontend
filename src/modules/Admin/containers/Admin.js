@@ -1,6 +1,7 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 import { destroy, reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { change } from 'redux-form';
 import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
@@ -200,8 +201,8 @@ const mapStateToProps = (state, props) => {
     }
 
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
+        formValues,
+        formErrors,
         disableSubmit:
             !!recordToView &&
             !!recordToView.rek_display_type &&
@@ -212,7 +213,7 @@ const mapStateToProps = (state, props) => {
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
         recordToView,
-        ...(!!initialFormValues ? initialFormValues : {}),
+        ...initialFormValues,
     };
 };
 
@@ -222,6 +223,9 @@ function mapDispatchToProps(dispatch) {
         loadRecordToView,
         clearRecordToView,
         destroy,
+        changeFieldValue: (field, value) => {
+            dispatch(change(FORM_NAME, field, value));
+        },
     };
 }
 

@@ -57,6 +57,7 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
 
 export const AdminInterface = ({
     authorDetails,
+    changeFieldValue,
     classes,
     createMode,
     destroy,
@@ -141,6 +142,7 @@ export const AdminInterface = ({
             </StandardPage>
         );
     }
+
     const navigateToViewRecord = pid => {
         if (!!pid && validation.isValidPid(pid)) {
             history.push(routes.pathConfig.records.view(pid));
@@ -160,6 +162,15 @@ export const AdminInterface = ({
     const saveConfirmationLocale = createMode
         ? txt.current.successAddWorkflowConfirmation
         : txt.current.successWorkflowConfirmation;
+
+    const handlePublish = () => {
+        changeFieldValue('identifiersSection.rek_status', PUBLISHED);
+    };
+
+    const handleUnpublish = () => {
+        changeFieldValue('identifiersSection.rek_status', UNPUBLISHED);
+    };
+
     return (
         <StandardPage>
             <React.Fragment>
@@ -320,6 +331,7 @@ export const AdminInterface = ({
 
 AdminInterface.propTypes = {
     authorDetails: PropTypes.object,
+    changeFieldValue: PropTypes.func,
     classes: PropTypes.object,
     createMode: PropTypes.bool,
     destroy: PropTypes.func,
