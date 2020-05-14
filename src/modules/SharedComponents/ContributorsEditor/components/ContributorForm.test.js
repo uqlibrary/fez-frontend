@@ -241,7 +241,7 @@ describe('Component ContributorForm', () => {
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
-            value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+            value: 'Professor Del Mar, Christopher B. (mdcmar)',
             affiliation: '',
             creatorRole: '',
             nameAsPublished: 'Testing, UqId',
@@ -297,7 +297,7 @@ describe('Component ContributorForm', () => {
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
-            value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+            value: 'Professor Del Mar, Christopher B. (mdcmar)',
             affiliation: '',
             creatorRole: '',
             nameAsPublished: 'Del Mar, Christopher',
@@ -384,7 +384,7 @@ describe('Component ContributorForm', () => {
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
-            value: 'Professor Del Mar, Christopher B.  (smdcmar)',
+            value: 'Professor Del Mar, Christopher B. (smdcmar)',
             affiliation: '',
             creatorRole: '',
             nameAsPublished: 'Del Mar, Christopher',

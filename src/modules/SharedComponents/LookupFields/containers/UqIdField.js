@@ -5,6 +5,12 @@ import matchSorter from 'match-sorter';
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const mapStateToProps = (state, props) => {
+    const getUqUsername = item => {
+        if (item.aut_org_username) return ` (${item.aut_org_username})`;
+        else if (item.aut_student_username) return ` (${item.aut_student_username})`;
+        else if (item.aut_ref_num) return ` (${item.aut_ref_num})`;
+        else return '';
+    };
     return {
         itemsList:
             state.get('authorsReducer') && state.get('authorsReducer')
@@ -14,10 +20,7 @@ const mapStateToProps = (state, props) => {
                         item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
                     )
                     .map(item => ({
-                        value: `${item.aut_title} ${item.aut_display_name}
-                        ${item.aut_org_username ? `(${item.aut_org_username})` : ''}
-                        ${item.aut_student_username ? `(${item.aut_student_username})` : ''}
-                        ${item.aut_ref_num ? `(${item.aut_ref_num})` : ''}`,
+                        value: `${item.aut_title} ${item.aut_display_name}${getUqUsername(item)}`,
                         id: item.aut_id,
                         ...item,
                     }))
@@ -40,4 +43,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: props.onClear,
 });
 
-export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const UqIdField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);
