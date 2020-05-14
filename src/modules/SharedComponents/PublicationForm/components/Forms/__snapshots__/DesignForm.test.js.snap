@@ -119,10 +119,10 @@ exports[`DesignForm renders  component 1`] = `
             className="requiredHintField"
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication/Start date"
+            floatingTitle="Project start date"
             floatingTitleRequired={true}
             hasError=""
-            name="rek_date"
+            name="fez_record_search_key_project_start_date.rek_project_start_date"
             required={true}
             validate={
               Array [
@@ -453,10 +453,10 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             className="requiredHintField"
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication/Start date"
+            floatingTitle="Project start date"
             floatingTitleRequired={true}
             hasError=""
-            name="rek_date"
+            name="fez_record_search_key_project_start_date.rek_project_start_date"
             required={true}
             validate={
               Array [

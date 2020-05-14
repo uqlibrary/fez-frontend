@@ -109,12 +109,12 @@ export default class DesignForm extends Component {
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
-                                    name="rek_date"
+                                    name="fez_record_search_key_project_start_date.rek_project_start_date"
                                     allowPartial
                                     required
                                     className="requiredHintField"
                                     validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
+                                    floatingTitle={txt.information.fieldLabels.projectStartDate.title}
                                     floatingTitleRequired
                                     hasError={dateError}
                                 />

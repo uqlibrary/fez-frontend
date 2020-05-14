@@ -580,6 +580,7 @@ export const NEW_RECORD_DEFAULT_VALUES = {
             rek_ismemberof_order: 1,
         },
     ],
+    rek_date: '1000-01-01',
 };
 
 export const NEW_COMMUNITY_DEFAULT_VALUES = {
