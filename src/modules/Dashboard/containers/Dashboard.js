@@ -19,6 +19,7 @@ const mapStateToProps = state => {
         showLatestPublicationsTab: loadingLatestPublications || latestPublicationsList.length > 0,
         showTrendingPublicationsTab: loadingTrendingPublications || trendingPublicationsList.length > 0,
         orcidSyncEnabled:
+            !!account.author &&
             !!account.author.aut_is_orcid_sync_enabled &&
             account.authorDetails &&
             account.authorDetails.espace.doc_count > 0,

@@ -8545,6 +8545,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
                                                               fullWidth={true}
+                                                              id="admin-work-cancel"
                                                               onClick={[Function]}
                                                               style={
                                                                 Object {
@@ -8589,6 +8590,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="secondary"
                                                                 fullWidth={true}
+                                                                id="admin-work-cancel"
                                                                 onClick={[Function]}
                                                                 style={
                                                                   Object {
@@ -8603,6 +8605,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
+                                                                  id="admin-work-cancel"
                                                                   onClick={[Function]}
                                                                   style={
                                                                     Object {
@@ -8624,6 +8627,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
+                                                                    id="admin-work-cancel"
                                                                     onClick={[Function]}
                                                                     style={
                                                                       Object {
@@ -8635,6 +8639,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     <button
                                                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                       disabled={false}
+                                                                      id="admin-work-cancel"
                                                                       onBlur={[Function]}
                                                                       onClick={[Function]}
                                                                       onDragLeave={[Function]}
@@ -8819,6 +8824,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="primary"
                                                               fullWidth={true}
+                                                              id="admin-work-submit"
                                                               style={
                                                                 Object {
                                                                   "whiteSpace": "nowrap",
@@ -8862,6 +8868,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="primary"
                                                                 fullWidth={true}
+                                                                id="admin-work-submit"
                                                                 style={
                                                                   Object {
                                                                     "whiteSpace": "nowrap",
@@ -8875,6 +8882,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
+                                                                  id="admin-work-submit"
                                                                   style={
                                                                     Object {
                                                                       "whiteSpace": "nowrap",
@@ -8895,6 +8903,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
+                                                                    id="admin-work-submit"
                                                                     style={
                                                                       Object {
                                                                         "whiteSpace": "nowrap",
@@ -8905,6 +8914,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     <button
                                                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
                                                                       disabled={false}
+                                                                      id="admin-work-submit"
                                                                       onBlur={[Function]}
                                                                       onDragLeave={[Function]}
                                                                       onFocus={[Function]}

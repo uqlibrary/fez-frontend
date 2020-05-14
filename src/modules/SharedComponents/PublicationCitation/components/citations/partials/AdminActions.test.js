@@ -41,13 +41,19 @@ describe('AdminActions component', () => {
         const expectedActions = defaultActions.map(action => ({
             ...action,
             url: action.url('UQ:111111'),
+            inApp: action.inApp,
+            options: action.options,
         }));
         expectedActions[0].url = legacyEditUrl;
 
         expectedActions.map(action => {
             fireEvent.click(getByText(action.label, menu));
             expect(global.window.open).toHaveBeenCalledTimes(1);
-            expect(global.window.open).toHaveBeenCalledWith(action.url, '_self');
+            expect(global.window.open).toHaveBeenCalledWith(
+                action.url,
+                action.inApp ? '_self' : '_blank',
+                action.options,
+            );
             windowOpenSpy.mockClear();
         });
     });
@@ -68,7 +74,7 @@ describe('AdminActions component', () => {
 
         fireEvent.click(getByText(/edit selected record/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(legacyEditUrl, '_blank');
+        expect(global.window.open).toHaveBeenCalledWith(legacyEditUrl, '_blank', null);
     });
 
     it('should have helper to append referral URL', () => {
@@ -77,11 +83,13 @@ describe('AdminActions component', () => {
             `${APP_URL}admin/edit/UQ:111111`,
             '_blank',
             '/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+            null,
         )();
         expect(global.window.open).toHaveBeenCalledTimes(1);
         expect(global.window.open).toHaveBeenCalledWith(
             `${APP_URL}admin/edit/UQ:111111?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc`,
             '_blank',
+            null,
         );
         windowOpenSpy.mockClear();
 
@@ -91,6 +99,7 @@ describe('AdminActions component', () => {
         expect(global.window.open).toHaveBeenCalledWith(
             `${APP_URL}admin/edit/UQ:111111?tab=security&navigatedFrom=%2Frecords%2Fmine`,
             '_blank',
+            undefined,
         );
         windowOpenSpy.mockClear();
 
@@ -98,7 +107,7 @@ describe('AdminActions component', () => {
         const legacyUrl = `${APP_URL}workflow/update.php?pid=UQ:3A111111&cat=select_workflow&xdis_id=11&wft_id=291&href=%2Fcommunity%2FUQ%3A111111`;
         navigateToUrl(legacyUrl, '_self', false)();
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(legacyUrl, '_self');
+        expect(global.window.open).toHaveBeenCalledWith(legacyUrl, '_self', undefined);
     });
 
     it('should open the new edit url if user is whitelisted', () => {
@@ -114,7 +123,11 @@ describe('AdminActions component', () => {
         fireEvent.click(getByText(/edit selected record/i, menu));
 
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(`${APP_URL}admin/edit/UQ:111111?navigatedFrom=test`, '_self');
+        expect(global.window.open).toHaveBeenCalledWith(
+            `${APP_URL}admin/edit/UQ:111111?navigatedFrom=test`,
+            '_self',
+            null,
+        );
     });
 
     it('should have helper to create legacy edit URL for other object types', () => {

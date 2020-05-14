@@ -30,7 +30,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -469,7 +469,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -866,7 +866,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about content indicators, click
                  
@@ -1004,7 +1004,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -1401,7 +1401,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about content indicators, click
                  
@@ -1539,7 +1539,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -1978,7 +1978,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -2436,7 +2436,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -2907,7 +2907,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -3378,7 +3378,7 @@ exports[`Component PublicationForm should render component initialised with just
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -3817,7 +3817,7 @@ exports[`Component PublicationForm should render component initialised with two 
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -4277,7 +4277,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -4701,7 +4701,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about content indicators, click
                  
@@ -4825,7 +4825,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -5246,7 +5246,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about content indicators, click
                  
@@ -5370,7 +5370,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -5791,7 +5791,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about content indicators, click
                  
@@ -5915,7 +5915,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -6336,7 +6336,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about content indicators, click
                  
@@ -6460,7 +6460,7 @@ exports[`Component PublicationForm should render component with all fields disab
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  
@@ -6899,7 +6899,7 @@ exports[`Component PublicationForm should render form after selecting both publi
         <StandardCard
           help={
             Object {
-              "buttonLabel": "CLOSE",
+              "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
                  

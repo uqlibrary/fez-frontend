@@ -1009,121 +1009,16 @@ exports[`Component Links  Full mount render 1`] = `
                       },
                     ],
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 18:06:16",
                       "srm_id": 13663,
                       "srm_issn": "1460-2083",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Human Molecular Genetics",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1460-2083</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:06:16</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Human Molecular Genetics</jtitle>
-      <issn>0964-6906</issn>
-      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>
-      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"1475\\"  parentid=\\"55\\">
-      <name>Oxford University Press (OUP)</name>
-      <alias>Policy B - Oxford Open Option B</alias>
-      <homeurl>http://www.oxfordjournals.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Pre-print can only be posted prior to acceptance</condition>
-        <condition>Pre-print must be accompanied by set statement (see link)</condition>
-        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>
-        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>
-        <condition>Post-print on author's personal website immediately</condition>
-        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Published source must be acknowledged</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Set phrase to accompany archived copy (see policy)</condition>
-        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>
-        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>
-        <condition>Publisher last contacted on 19/02/2015</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>
-        <paidaccessname>Oxford Open</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Policy B</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>publication rights</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>NIH policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Other funding agencies</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2013-03-26 15:23:36</dateadded>
-      <dateupdated>2017-05-30 10:16:55</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "1460-2083",
                     "rek_issn_id": 5023871,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 1,
                     "rek_issn_pid": "UQ:396321",
                     "rek_issn_xsdmf_id": null,
@@ -1146,121 +1041,16 @@ exports[`Component Links  Full mount render 1`] = `
                       "jni_jnl_id": 7489,
                     },
                     "fez_sherpa_romeo": Object {
-                      "srm_colour": "green",
                       "srm_date_updated": "2017-09-30 16:50:58",
                       "srm_id": 13662,
                       "srm_issn": "0964-6906",
+                      "srm_journal_link": "http://example.com",
                       "srm_journal_name": "Human Molecular Genetics",
-                      "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0964-6906</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:17:50:58</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Human Molecular Genetics</jtitle>
-      <issn>0964-6906</issn>
-      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>
-      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"1475\\"  parentid=\\"55\\">
-      <name>Oxford University Press (OUP)</name>
-      <alias>Policy B - Oxford Open Option B</alias>
-      <homeurl>http://www.oxfordjournals.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Pre-print can only be posted prior to acceptance</condition>
-        <condition>Pre-print must be accompanied by set statement (see link)</condition>
-        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>
-        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>
-        <condition>Post-print on author's personal website immediately</condition>
-        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Published source must be acknowledged</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Set phrase to accompany archived copy (see policy)</condition>
-        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>
-        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>
-        <condition>Publisher last contacted on 19/02/2015</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>
-        <paidaccessname>Oxford Open</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Policy B</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>publication rights</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>NIH policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Other funding agencies</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2013-03-26 15:23:36</dateadded>
-      <dateupdated>2017-05-30 10:16:55</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                      "srm_json": "{}",
                     },
                     "rek_issn": "0964-6906",
                     "rek_issn_id": 5023872,
-                    "rek_issn_lookup": "green",
+                    "rek_issn_lookup": "",
                     "rek_issn_order": 2,
                     "rek_issn_pid": "UQ:396321",
                     "rek_issn_xsdmf_id": null,
@@ -2052,121 +1842,16 @@ exports[`Component Links  Full mount render 1`] = `
                         },
                       ],
                       "fez_sherpa_romeo": Object {
-                        "srm_colour": "green",
                         "srm_date_updated": "2017-09-30 18:06:16",
                         "srm_id": 13663,
                         "srm_issn": "1460-2083",
+                        "srm_journal_link": "http://example.com",
                         "srm_journal_name": "Human Molecular Genetics",
-                        "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1460-2083</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:06:16</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Human Molecular Genetics</jtitle>
-      <issn>0964-6906</issn>
-      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>
-      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"1475\\"  parentid=\\"55\\">
-      <name>Oxford University Press (OUP)</name>
-      <alias>Policy B - Oxford Open Option B</alias>
-      <homeurl>http://www.oxfordjournals.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Pre-print can only be posted prior to acceptance</condition>
-        <condition>Pre-print must be accompanied by set statement (see link)</condition>
-        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>
-        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>
-        <condition>Post-print on author's personal website immediately</condition>
-        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Published source must be acknowledged</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Set phrase to accompany archived copy (see policy)</condition>
-        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>
-        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>
-        <condition>Publisher last contacted on 19/02/2015</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>
-        <paidaccessname>Oxford Open</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Policy B</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>publication rights</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>NIH policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Other funding agencies</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2013-03-26 15:23:36</dateadded>
-      <dateupdated>2017-05-30 10:16:55</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                        "srm_json": "{}",
                       },
                       "rek_issn": "1460-2083",
                       "rek_issn_id": 5023871,
-                      "rek_issn_lookup": "green",
+                      "rek_issn_lookup": "",
                       "rek_issn_order": 1,
                       "rek_issn_pid": "UQ:396321",
                       "rek_issn_xsdmf_id": null,
@@ -2189,121 +1874,16 @@ exports[`Component Links  Full mount render 1`] = `
                         "jni_jnl_id": 7489,
                       },
                       "fez_sherpa_romeo": Object {
-                        "srm_colour": "green",
                         "srm_date_updated": "2017-09-30 16:50:58",
                         "srm_id": 13662,
                         "srm_issn": "0964-6906",
+                        "srm_journal_link": "http://example.com",
                         "srm_journal_name": "Human Molecular Genetics",
-                        "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0964-6906</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:17:50:58</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Human Molecular Genetics</jtitle>
-      <issn>0964-6906</issn>
-      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>
-      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"1475\\"  parentid=\\"55\\">
-      <name>Oxford University Press (OUP)</name>
-      <alias>Policy B - Oxford Open Option B</alias>
-      <homeurl>http://www.oxfordjournals.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Pre-print can only be posted prior to acceptance</condition>
-        <condition>Pre-print must be accompanied by set statement (see link)</condition>
-        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>
-        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>
-        <condition>Post-print on author's personal website immediately</condition>
-        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Published source must be acknowledged</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Set phrase to accompany archived copy (see policy)</condition>
-        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>
-        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>
-        <condition>Publisher last contacted on 19/02/2015</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>
-        <paidaccessname>Oxford Open</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Policy B</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>publication rights</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>NIH policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Other funding agencies</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2013-03-26 15:23:36</dateadded>
-      <dateupdated>2017-05-30 10:16:55</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                        "srm_json": "{}",
                       },
                       "rek_issn": "0964-6906",
                       "rek_issn_id": 5023872,
-                      "rek_issn_lookup": "green",
+                      "rek_issn_lookup": "",
                       "rek_issn_order": 2,
                       "rek_issn_pid": "UQ:396321",
                       "rek_issn_xsdmf_id": null,
@@ -3102,121 +2682,16 @@ exports[`Component Links  Full mount render 1`] = `
                           },
                         ],
                         "fez_sherpa_romeo": Object {
-                          "srm_colour": "green",
                           "srm_date_updated": "2017-09-30 18:06:16",
                           "srm_id": 13663,
                           "srm_issn": "1460-2083",
+                          "srm_journal_link": "http://example.com",
                           "srm_journal_name": "Human Molecular Genetics",
-                          "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>1460-2083</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:19:06:16</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Human Molecular Genetics</jtitle>
-      <issn>0964-6906</issn>
-      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>
-      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"1475\\"  parentid=\\"55\\">
-      <name>Oxford University Press (OUP)</name>
-      <alias>Policy B - Oxford Open Option B</alias>
-      <homeurl>http://www.oxfordjournals.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Pre-print can only be posted prior to acceptance</condition>
-        <condition>Pre-print must be accompanied by set statement (see link)</condition>
-        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>
-        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>
-        <condition>Post-print on author's personal website immediately</condition>
-        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Published source must be acknowledged</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Set phrase to accompany archived copy (see policy)</condition>
-        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>
-        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>
-        <condition>Publisher last contacted on 19/02/2015</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>
-        <paidaccessname>Oxford Open</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Policy B</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>publication rights</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>NIH policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Other funding agencies</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2013-03-26 15:23:36</dateadded>
-      <dateupdated>2017-05-30 10:16:55</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                          "srm_json": "{}",
                         },
                         "rek_issn": "1460-2083",
                         "rek_issn_id": 5023871,
-                        "rek_issn_lookup": "green",
+                        "rek_issn_lookup": "",
                         "rek_issn_order": 1,
                         "rek_issn_pid": "UQ:396321",
                         "rek_issn_xsdmf_id": null,
@@ -3239,121 +2714,16 @@ exports[`Component Links  Full mount render 1`] = `
                           "jni_jnl_id": 7489,
                         },
                         "fez_sherpa_romeo": Object {
-                          "srm_colour": "green",
                           "srm_date_updated": "2017-09-30 16:50:58",
                           "srm_id": 13662,
                           "srm_issn": "0964-6906",
+                          "srm_journal_link": "http://example.com",
                           "srm_journal_name": "Human Molecular Genetics",
-                          "srm_xml": "<?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" ?>
-<!DOCTYPE romeoapi SYSTEM \\"http://www.sherpa.ac.uk/romeo/romeoapi293.dtd\\">
-<romeoapi version=\\"2.9.9\\">
-  <header>
-    <parameters>
-      <parameter source=\\"specified\\">
-        <parametername>issn</parametername>
-        <parametervalue>0964-6906</parametervalue>
-      </parameter>
-      <parameter source=\\"specified\\">
-        <parametername>versions</parametername>
-        <parametervalue>all</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>showfunder</parametername>
-        <parametervalue>none</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>fIDnum</parametername>
-        <parametervalue>|</parametervalue>
-      </parameter>
-      <parameter source=\\"default\\">
-        <parametername>la</parametername>
-        <parametervalue>en</parametervalue>
-      </parameter>
-    </parameters>
-    <numhits>1</numhits>
-    <apicontrol>journal</apicontrol>
-    <outcome>singleJournal</outcome>
-    <message />
-    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the 'conditions for re-use' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>
-    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>
-    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>
-    <timestamp>30-Sep-2017:17:50:58</timestamp>
-  </header>
-  <journals>
-    <journal>
-      <jtitle>Human Molecular Genetics</jtitle>
-      <issn>0964-6906</issn>
-      <zetocpub>Oxford University Press (OUP): Policy B - Oxford Open Option B</zetocpub>
-      <romeopub>Oxford University Press (OUP): Policy B - Oxford Open Option B</romeopub>
-    </journal>
-  </journals>
-  <publishers>
-    <publisher id=\\"1475\\"  parentid=\\"55\\">
-      <name>Oxford University Press (OUP)</name>
-      <alias>Policy B - Oxford Open Option B</alias>
-      <homeurl>http://www.oxfordjournals.org/</homeurl>
-      <preprints>
-        <prearchiving>can</prearchiving>
-        <prerestrictions />
-      </preprints>
-      <postprints>
-        <postarchiving>can</postarchiving>
-        <postrestrictions />
-      </postprints>
-      <pdfversion>
-        <pdfarchiving>cannot</pdfarchiving>
-        <pdfrestrictions />
-      </pdfversion>
-      <conditions>
-        <condition>Pre-print can only be posted prior to acceptance</condition>
-        <condition>Pre-print must be accompanied by set statement (see link)</condition>
-        <condition>Pre-print must not be replaced with post-print, instead a link to published version with amended set statement should be made</condition>
-        <condition>Pre-print on author's personal website, employer website, free public server or pre-prints in subject area</condition>
-        <condition>Post-print on author's personal website immediately</condition>
-        <condition>Post-print in Institutional repositories or Central repositories after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo</condition>
-        <condition>Publisher's version/PDF cannot be used</condition>
-        <condition>Published source must be acknowledged</condition>
-        <condition>Must link to publisher version</condition>
-        <condition>Set phrase to accompany archived copy (see policy)</condition>
-        <condition>Eligible authors may deposit in &lt;a href=&quot;http://opendepot.org/&quot; target=&quot;_blank&quot;&gt;OpenDepot&lt;/a&gt;</condition>
-        <condition>The publisher will deposit in PubMed Central on behalf of NIH authors</condition>
-        <condition>Publisher last contacted on 19/02/2015</condition>
-      </conditions>
-      <mandates />
-      <paidaccess>
-        <paidaccessurl>http://www.oxfordjournals.org/oxfordopen/</paidaccessurl>
-        <paidaccessname>Oxford Open</paidaccessname>
-        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>
-      </paidaccess>
-      <copyrightlinks>
-        <copyrightlink>
-          <copyrightlinktext>Policy B</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/en/access-purchase/rights-and-permissions/self-archiving-policyb.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>publication rights</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/access_purchase/publication_rights.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>NIH policy</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/news/2008/08/04/nih_deposits.html</copyrightlinkurl>
-        </copyrightlink>
-        <copyrightlink>
-          <copyrightlinktext>Other funding agencies</copyrightlinktext>
-          <copyrightlinkurl>http://www.oxfordjournals.org/for_authors/repositories.html</copyrightlinkurl>
-        </copyrightlink>
-      </copyrightlinks>
-      <romeocolour>green</romeocolour>
-      <dateadded>2013-03-26 15:23:36</dateadded>
-      <dateupdated>2017-05-30 10:16:55</dateupdated>
-    </publisher>
-  </publishers>
-</romeoapi>
-",
+                          "srm_json": "{}",
                         },
                         "rek_issn": "0964-6906",
                         "rek_issn_id": 5023872,
-                        "rek_issn_lookup": "green",
+                        "rek_issn_lookup": "",
                         "rek_issn_order": 2,
                         "rek_issn_pid": "UQ:396321",
                         "rek_issn_xsdmf_id": null,
@@ -42924,6 +42294,82 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
 </Provider>
 `;
 
+exports[`Component Links  should render no oa icon and embargo dates for embargoed access rdm link 1`] = `
+Object {
+  "description": "Access this dataset",
+  "index": 0,
+  "link": <WithStyles(ExternalLink)
+    href="https://rdm.uq.edu.au/files/example123"
+    title="Access this dataset"
+  >
+    https://rdm.uq.edu.au/files/example123
+  </WithStyles(ExternalLink)>,
+  "openAccessStatus": Object {
+    "embargoDate": "2100-01-01",
+    "isOpenAccess": false,
+    "openAccessStatusId": 453619,
+    "showEmbargoText": true,
+  },
+}
+`;
+
+exports[`Component Links  should render no oa icon for mediated access rdm link 1`] = `
+Object {
+  "description": "Access this dataset",
+  "index": 0,
+  "link": <WithStyles(ExternalLink)
+    href="https://rdm.uq.edu.au/files/example123"
+    title="Access this dataset"
+  >
+    https://rdm.uq.edu.au/files/example123
+  </WithStyles(ExternalLink)>,
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": false,
+    "openAccessStatusId": 453618,
+    "showEmbargoText": false,
+  },
+}
+`;
+
+exports[`Component Links  should render oa icon for open access rdm link 1`] = `
+Object {
+  "description": "Access this dataset",
+  "index": 0,
+  "link": <WithStyles(ExternalLink)
+    href="https://rdm.uq.edu.au/files/example123"
+    title="Access this dataset"
+  >
+    https://rdm.uq.edu.au/files/example123
+  </WithStyles(ExternalLink)>,
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": true,
+    "openAccessStatusId": 453619,
+    "showEmbargoText": false,
+  },
+}
+`;
+
+exports[`Component Links  should render oa icon for past embargo date open access rdm link 1`] = `
+Object {
+  "description": "Access this dataset",
+  "index": 0,
+  "link": <WithStyles(ExternalLink)
+    href="https://rdm.uq.edu.au/files/example123"
+    title="Access this dataset"
+  >
+    https://rdm.uq.edu.au/files/example123
+  </WithStyles(ExternalLink)>,
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": true,
+    "openAccessStatusId": 453619,
+    "showEmbargoText": false,
+  },
+}
+`;
+
 exports[`Component Links  should use special default description if the link has the RDM hostname 1`] = `
 Object {
   "description": "Provided description",
@@ -42934,7 +42380,12 @@ Object {
   >
     https://rdm.uq.edu.au/files/example123
   </WithStyles(ExternalLink)>,
-  "openAccessStatus": Object {},
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": null,
+    "openAccessStatusId": null,
+    "showEmbargoText": false,
+  },
 }
 `;
 
@@ -42948,6 +42399,11 @@ Object {
   >
     https://uat.rdm.uq.edu.au/files/example123
   </WithStyles(ExternalLink)>,
-  "openAccessStatus": Object {},
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": null,
+    "openAccessStatusId": null,
+    "showEmbargoText": false,
+  },
 }
 `;

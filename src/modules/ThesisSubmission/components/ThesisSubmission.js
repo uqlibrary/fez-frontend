@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -31,12 +32,12 @@ export default class ThesisSubmission extends Component {
         ...propTypes, // all redux-form props
         actions: PropTypes.object.isRequired,
         author: PropTypes.object,
-        isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
+        isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         isSessionValid: PropTypes.bool,
-        newRecordFileUploadingOrIssueError: PropTypes.bool,
         newRecord: PropTypes.object,
+        newRecordFileUploadingOrIssueError: PropTypes.bool,
     };
 
     constructor(props) {
@@ -61,11 +62,6 @@ export default class ThesisSubmission extends Component {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     };
 
-    afterFailedSubmit = () => {
-        // Clears the current state completely and reloads the form
-        window.location.reload();
-    };
-
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
@@ -75,57 +71,21 @@ export default class ThesisSubmission extends Component {
         this.depositConfirmationBox = ref;
     };
 
-    render() {
-        const txt = formLocale.thesis;
-        const txtFoR = locale.components.fieldOfResearchForm;
-        const txtSupervisors = locale.components.thesisSubmissionSupervisors;
+    getfileUploadAlertProps = locale => {
+        const { type, title } = locale;
+        const emailSubject = locale.emailSubject
+            .replace('[studentFullName]', `${this.props.author.aut_fname} ${this.props.author.aut_lname}`)
+            .replace('[studentNumber]', this.props.author.aut_org_student_id);
+        const mailtoUri = `mailto:${locale.emailRecipient}?subject=${encodeURIComponent(emailSubject)}`;
+        const message = ReactHtmlParser(
+            locale.message.replace('[linkStart]', `<a href="${mailtoUri}">`).replace('[linkEnd]', '</a>'),
+        );
+        return { type, title, message };
+    };
 
-        if (this.props.submitSucceeded) {
-            return (
-                <StandardPage
-                    title={
-                        this.props.isHdrThesis
-                            ? formLocale.thesisSubmission.hdrTitle
-                            : formLocale.thesisSubmission.sbsTitle
-                    }
-                >
-                    <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            {this.props.newRecordFileUploadingOrIssueError ? (
-                                <Grid item xs={12}>
-                                    <Alert
-                                        {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
-                                        action={this.afterFailedSubmit}
-                                    />
-                                </Grid>
-                            ) : (
-                                <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                    <Grid container spacing={3}>
-                                        <Grid item xs={12}>
-                                            <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
-                                        </Grid>
-                                    </Grid>
-                                </StandardCard>
-                            )}
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={2}>
-                        <Grid item xs />
-                        <Grid item>
-                            <Button
-                                variant={'contained'}
-                                color={!this.props.newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
-                                fullWidth
-                                children={formLocale.thesisSubmission.afterSubmit}
-                                onClick={this.afterSubmit}
-                            />
-                        </Grid>
-                    </Grid>
-                </StandardPage>
-            );
-        }
-        // customise error for thesis submission
-        const alertProps = validation.getErrorAlertProps({
+    // customise error for thesis submission
+    getFormSubmitAlertProps = () =>
+        validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
                 validationAlert: { ...formLocale.validationAlert },
@@ -133,16 +93,59 @@ export default class ThesisSubmission extends Component {
                 successAlert: { ...formLocale.successAlert },
                 errorAlert: {
                     ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage,
+                    message: () => formLocale.thesisSubmission.depositFailedMessage,
                 },
             },
         });
+
+    render() {
+        const txt = formLocale.thesis;
+        const txtFoR = locale.components.fieldOfResearchForm;
+        const txtSupervisors = locale.components.thesisSubmissionSupervisors;
+        const thesisLocale = formLocale.thesisSubmission;
+        const pageTitle = this.props.isHdrThesis ? thesisLocale.hdrTitle : thesisLocale.sbsTitle;
+
+        if (this.props.submitSucceeded) {
+            return (
+                <StandardPage title={pageTitle}>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                            <StandardCard title={thesisLocale.afterSubmitTitle}>
+                                <Grid container spacing={3}>
+                                    <Grid item xs={12}>
+                                        <Typography>{thesisLocale.afterSubmitText}</Typography>
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                    </Grid>
+                    {this.props.newRecordFileUploadingOrIssueError && (
+                        <Grid container spacing={3}>
+                            <Grid item xs={12}>
+                                <Alert {...this.getfileUploadAlertProps(thesisLocale.fileUpload.failedAlertLocale)} />
+                            </Grid>
+                        </Grid>
+                    )}
+                    <Grid container spacing={2}>
+                        <Grid item xs />
+                        <Grid item>
+                            <Button
+                                children={thesisLocale.afterSubmit}
+                                color={!this.props.newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
+                                fullWidth
+                                onClick={this.afterSubmit}
+                                variant={'contained'}
+                            />
+                        </Grid>
+                    </Grid>
+                </StandardPage>
+            );
+        }
+
+        const alertProps = this.getFormSubmitAlertProps();
+
         return (
-            <StandardPage
-                title={
-                    this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle
-                }
-            >
+            <StandardPage title={pageTitle}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                     <form>
                         <NavigationDialogBox

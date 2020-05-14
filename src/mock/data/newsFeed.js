@@ -17,7 +17,7 @@ export const newsFeed = {
             "nws_usr_id": 187,
             "nws_created_date": "2014-12-10 06:42:07",
             "nws_title": "eSpace download and page view statistics",
-            "nws_message": "The file download and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.",
+            "nws_message": "The <a href='http://www.uq.edu.au' target='_blank'>file download</a> and page view statistics for publications in eSpace currently may not be accurate and are being reviewed by our development team. Until this issue is resolved eSpace statistics should not be considered reliable.",
             "nws_status": "active",
             "nws_published_date": "2014-12-10 06:42:53",
             "nws_updated_date": "2014-12-10 06:42:53",

@@ -896,7 +896,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "keywords-input",
-                          "inputFieldHint": "Type keywords",
+                          "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
                           "inputFieldLabel": "Keywords",
                         },
                       },
@@ -1043,8 +1043,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               locale={
                 Object {
                   "form": Object {
-                    "inputFieldHint": "Please type the dataset or work title then select from the list",
-                    "inputFieldLabel": "Dataset/Work title",
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
                     "title": "Related datasets/work",
                   },
                 }
@@ -2153,7 +2153,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "keywords-input",
-                          "inputFieldHint": "Type keywords",
+                          "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
                           "inputFieldLabel": "Keywords",
                         },
                       },
@@ -2300,8 +2300,8 @@ exports[`AddDataCollection test should render component with a valid collection 
               locale={
                 Object {
                   "form": Object {
-                    "inputFieldHint": "Please type the dataset or work title then select from the list",
-                    "inputFieldLabel": "Dataset/Work title",
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
                     "title": "Related datasets/work",
                   },
                 }
@@ -3410,7 +3410,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "keywords-input",
-                          "inputFieldHint": "Type keywords",
+                          "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
                           "inputFieldLabel": "Keywords",
                         },
                       },
@@ -3557,8 +3557,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
               locale={
                 Object {
                   "form": Object {
-                    "inputFieldHint": "Please type the dataset or work title then select from the list",
-                    "inputFieldLabel": "Dataset/Work title",
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
                     "title": "Related datasets/work",
                   },
                 }
@@ -4667,7 +4667,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "keywords-input",
-                          "inputFieldHint": "Type keywords",
+                          "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
                           "inputFieldLabel": "Keywords",
                         },
                       },
@@ -4814,8 +4814,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
               locale={
                 Object {
                   "form": Object {
-                    "inputFieldHint": "Please type the dataset or work title then select from the list",
-                    "inputFieldLabel": "Dataset/Work title",
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
                     "title": "Related datasets/work",
                   },
                 }

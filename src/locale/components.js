@@ -178,7 +178,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Keywords',
-                        inputFieldHint: 'Type keywords',
+                        inputFieldHint: 'Type keywords (Add multiple using pipes eg: one|two|three)',
                         addButtonLabel: 'Add',
                         editButtonLabel: 'Update',
                         id: 'keywords-input',
@@ -320,6 +320,44 @@ export default {
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete Location',
                             confirmationMessage: 'Are you sure you want to delete this Location?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        placeOfRecordingForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Place of recording',
+                        inputFieldHint: 'Type of Place of recording',
+                        addButtonLabel: 'Add',
+                        id: 'Location-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Place of recording',
+                        reorderColumn: 'Reorder Place of recording',
+                        deleteAll: 'Remove all Place of recording',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Places of recording?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Place of recording up the order',
+                        moveDownHint: 'Move Place of recording down the order',
+                        deleteHint: 'Remove this Place of recording',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Place of recording',
+                            confirmationMessage: 'Are you sure you want to delete this Place of recording?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },

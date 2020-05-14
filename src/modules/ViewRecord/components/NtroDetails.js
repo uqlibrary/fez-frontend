@@ -8,8 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { general } from 'config';
 import ReactHtmlParser from 'react-html-parser';
-import { pathConfig } from 'config/routes';
-import { Link } from 'react-router-dom';
 import {
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     DOCUMENT_TYPE_JOURNAL_ARTICLE,
@@ -179,21 +177,6 @@ export class NtroDetailsClass extends PureComponent {
                                     </span>
                                 );
                             })}
-                        />
-                    )}
-                    {/* Series */}
-                    {/* getSearchUrl({searchQuery: {'rek_series': {'value': series}}}) */}
-                    {publication.fez_record_search_key_series &&
-                        publication.fez_record_search_key_series.rek_series && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_series}
-                            data={
-                                <Link
-                                    to={pathConfig.list.series(publication.fez_record_search_key_series.rek_series)}
-                                >
-                                    {publication.fez_record_search_key_series.rek_series}
-                                </Link>
-                            }
                         />
                     )}
                     {/* Volume number */}

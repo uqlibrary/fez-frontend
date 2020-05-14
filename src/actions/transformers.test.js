@@ -975,6 +975,35 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
         const result = transformers.getDatasetContactDetailSearchKeys(input);
         expect(result).toEqual(expected);
     });
+
+    it('should return search key with data transformed correctly with id set to 0 if contact ID is not entered', () => {
+        const input = {
+            contactName: 'Test Contact',
+            contactEmail: 'test@test.com',
+        };
+        const expected = {
+            fez_record_search_key_contributor: [
+                {
+                    rek_contributor: 'Test Contact',
+                    rek_contributor_order: 1,
+                },
+            ],
+            fez_record_search_key_contributor_id: [
+                {
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 1,
+                },
+            ],
+            fez_record_search_key_contact_details_email: [
+                {
+                    rek_contact_details_email: 'test@test.com',
+                    rek_contact_details_email_order: 1,
+                },
+            ],
+        };
+        const result = transformers.getDatasetContactDetailSearchKeys(input);
+        expect(result).toEqual(expected);
+    });
 });
 
 describe('getGeographicAreaSearchKey tests', () => {
@@ -2459,6 +2488,9 @@ describe('getIdentifiersSectionSearchKeys', () => {
                     rek_order: 1,
                 },
             ],
+            rek_pubmed_doc_type: 'None',
+            rek_scopus_doc_type: '2',
+            rek_wok_doc_type: '@',
         };
 
         const expected = {
@@ -2489,6 +2521,9 @@ describe('getIdentifiersSectionSearchKeys', () => {
                     rek_link_description_order: 1,
                 },
             ],
+            rek_pubmed_doc_type: null,
+            rek_scopus_doc_type: '2',
+            rek_wok_doc_type: '@',
         };
 
         expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual(expected);
@@ -2503,12 +2538,87 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 fez_record_search_key_pubmed_id: {},
                 fez_record_search_key_pubmed_central_id: {},
                 links: [],
+                rek_pubmed_doc_type: 'None',
+                rek_scopus_doc_type: 'None',
+                rek_wok_doc_type: 'None',
             }),
-        ).toEqual({});
+        ).toEqual({
+            rek_pubmed_doc_type: null,
+            rek_scopus_doc_type: null,
+            rek_wok_doc_type: null,
+        });
     });
 
     it('should use default data parameter', () => {
-        expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({});
+        expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({
+            rek_pubmed_doc_type: null,
+            rek_scopus_doc_type: null,
+            rek_wok_doc_type: null,
+        });
+    });
+});
+
+describe('Journal document', () => {
+    it('should handle id section specific search keys', () => {
+        const data = {
+            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            rek_pubmed_doc_type: '1',
+            rek_scopus_doc_type: '2',
+            rek_wok_doc_type: '3',
+        };
+
+        expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            rek_pubmed_doc_type: '1',
+            rek_scopus_doc_type: '2',
+            rek_wok_doc_type: '3',
+        });
+    });
+});
+
+describe('Sanitising empty data', () => {
+    it('should handle empty record', () => {
+        const data = {};
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '2016-01-01 00:00:00',
+        });
+    });
+
+    it('should remove empty array', () => {
+        const data = {
+            fez_record_search_key_location_identifiers: [],
+            fez_record_search_key_volume_number: { rek_volume_number: '17' },
+        };
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '2016-01-01 00:00:00',
+            fez_record_search_key_volume_number: { rek_volume_number: '17' },
+        });
+    });
+
+    it('should remove empty object', () => {
+        const data = {
+            fez_record_search_key_edition: {},
+            fez_record_search_key_volume_number: { rek_volume_number: '17' },
+        };
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '2016-01-01 00:00:00',
+            fez_record_search_key_volume_number: { rek_volume_number: '17' },
+        });
+    });
+
+    it('should remove null value', () => {
+        const data = {
+            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            fez_record_search_key_volume_number: { rek_volume_number: null },
+        };
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '2016-01-01 00:00:00',
+            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+        });
     });
 });
 
@@ -2642,6 +2752,14 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_license_biblio: {},
+                fez_record_search_key_related_datasets: {
+                    plainText: 'A related dataset',
+                    htmlText: '<p>A related dataset</p>',
+                },
+                fez_record_search_key_related_publications: {
+                    plainText: 'A related publication',
+                    htmlText: '<p>A related publication</p>',
+                },
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2671,7 +2789,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_license: {},
+                fez_record_search_key_related_datasets: {
+                    rek_related_datasets: '<p>A related dataset</p>',
+                },
+                fez_record_search_key_related_publications: {
+                    rek_related_publications: '<p>A related publication</p>',
+                },
             });
         });
 
@@ -2693,11 +2816,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_date_available: '2015',
                 },
                 fez_record_search_key_date_recorded: {
-                    rek_date_recorded: '2016',
+                    rek_date_recorded: '01-10-2016',
                 },
                 fez_record_search_key_license_biblio: {
                     rek_license: '453610',
                 },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2715,11 +2839,136 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_date_available: '2015-01-01T00:00:00+10:00',
                 },
                 fez_record_search_key_date_recorded: {
-                    rek_date_recorded: '2016-01-01T00:00:00+10:00',
+                    rek_date_recorded: '01-10-2016',
                 },
                 fez_record_search_key_license: {
                     rek_license: '453610',
                 },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            });
+        });
+
+        it('should get all bibliographic section search keys except rek_date_available', () => {
+            const data = {
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_available: {
+                    rek_date_available: '',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '01-10-2016',
+                },
+                fez_record_search_key_license_biblio: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.024504,-27.493017',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '01-10-2016',
+                },
+                fez_record_search_key_license: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            });
+        });
+
+        it('should remove frsk_date_recorded from the request payload', () => {
+            const data = {
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '01-01-0000',
+                },
+                fez_record_search_key_license_biblio: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.024504,-27.493017',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015-01-01T00:00:00+10:00',
+                },
+                fez_record_search_key_license: {
+                    rek_license: '453610',
+                },
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
+            });
+        });
+    });
+
+    describe('Search Key Structure', () => {
+        // these 2 tests are more about demonstrating how the API should be called than actually testing anything
+        // also useful for swapping search key names in to check they are properly handled
+
+        it('should only save the supplied key for a one-to-one search key', () => {
+            let data = {
+                fez_record_search_key_license_biblio: { rek_license: 123 },
+            };
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_license: { rek_license: 123 },
+            });
+
+            data = {};
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+            });
+        });
+
+        it('should only save the supplied key for a many-to-one search key', () => {
+            const dataMany = {
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
+            };
+            const dataOne = {
+                issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
+            };
+            expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_issn: [
+                    { rek_issn: '1212-1212', rek_issn_order: 1 },
+                    { rek_issn: '2323-2323', rek_issn_order: 2 },
+                ],
+            });
+
+            expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+                fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
+            });
+
+            const dataEmpty = {};
+            expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
             });
         });
     });
@@ -3228,6 +3477,48 @@ describe('getGrantInformationSectionSearchKeys', () => {
                 {
                     rek_grant_agency_type: 123,
                     rek_grant_agency_type_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getRecordIsDatasetOfSearchKey', () => {
+    it('should return empty object', () => {
+        expect(transformers.getRecordIsDatasetOfSearchKey()).toEqual({});
+    });
+
+    it('should get is dataset of search keys', () => {
+        expect(
+            transformers.getRecordIsDatasetOfSearchKey([
+                {
+                    rek_isdatasetof: 'UQ:111111',
+                    rek_isdatasetof_order: 1,
+                },
+            ]),
+        ).toEqual({
+            fez_record_search_key_isdatasetof: [
+                {
+                    rek_isdatasetof: 'UQ:111111',
+                    rek_isdatasetof_order: 1,
+                },
+            ],
+        });
+    });
+
+    it('should get is dataset of search keys from default values', () => {
+        expect(
+            transformers.getRecordIsDatasetOfSearchKey([
+                {
+                    rek_isdatasetof: { id: 'UQ:121212', value: 'Testing dataset' },
+                    rek_isdatasetof_order: 1,
+                },
+            ]),
+        ).toEqual({
+            fez_record_search_key_isdatasetof: [
+                {
+                    rek_isdatasetof: 'UQ:121212',
+                    rek_isdatasetof_order: 1,
                 },
             ],
         });

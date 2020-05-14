@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { withStyles } from '@material-ui/core/styles';
+import { PLACEHOLDER_DATE } from 'config/general';
 
 const moment = require('moment');
 
@@ -50,9 +51,10 @@ export class PartialDateForm extends Component {
         disableFuture: PropTypes.bool,
         input: PropTypes.object,
         meta: PropTypes.shape({
-            initial: PropTypes.object,
+            initial: PropTypes.string,
         }),
         partialDateFieldId: PropTypes.string.isRequired,
+        clearable: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -95,8 +97,8 @@ export class PartialDateForm extends Component {
 
     constructor(props) {
         super(props);
-        const dateValue = (props.meta && props.meta.initial) || null;
-        if (dateValue && dateValue.isValid()) {
+        const dateValue = (props.meta && props.meta.initial && moment(props.meta.initial)) || null;
+        if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_DATE)) {
             this.state = {
                 day: dateValue.date(),
                 month: dateValue.month(),
@@ -126,6 +128,7 @@ export class PartialDateForm extends Component {
      */
     _validate = state => {
         const { day, month: monthActual, year } = state;
+
         // moment validation doesn't recognise -1 as a valid date
         const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
         const hasRequired = !!year && (this.props.allowPartial || (!!day && month !== null));
@@ -146,6 +149,32 @@ export class PartialDateForm extends Component {
             }
         }
 
+        if (!this.props.allowPartial && !!this.props.clearable) {
+            if (!year && !day && !month) {
+                return STATUS_VALID;
+            }
+            if (
+                !!year &&
+                !!day &&
+                month !== MONTH_UNSELECTED &&
+                moment(momentDate).isValid() &&
+                moment(momentDate).isSameOrBefore()
+            ) {
+                return STATUS_VALID;
+            }
+            if (!!year && !!day && month !== MONTH_UNSELECTED && !moment(momentDate).isValid()) {
+                return STATUS_INVALID;
+            }
+            if (
+                !!year &&
+                !!day &&
+                month !== MONTH_UNSELECTED &&
+                moment(momentDate).isValid() &&
+                moment(momentDate).isSameOrAfter()
+            ) {
+                return STATUS_INVALID;
+            }
+        }
         return validationStatus;
     };
 
@@ -190,6 +219,8 @@ export class PartialDateForm extends Component {
                     this.errors.date = '';
                 } else if (allowPartialHere && !!year && this._isUnselected(month) && !day) {
                     // partial entry means they can get away with just a year
+                    this.errors.date = '';
+                } else if (!allowPartialHere && !!this.props.clearable && !year && !day && month === MONTH_UNSELECTED) {
                     this.errors.date = '';
                 } else {
                     this.errors.date = locale.validationMessage.date;

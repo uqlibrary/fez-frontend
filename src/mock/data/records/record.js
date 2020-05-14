@@ -797,9 +797,9 @@
                 "srm_id": 13663,
                 "srm_issn": "1460-2083",
                 "srm_journal_name": "Human Molecular Genetics",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         },
         {
             "rek_issn_id": 5023872,
@@ -877,9 +877,9 @@
                 "srm_id": 13662,
                 "srm_issn": "0964-6906",
                 "srm_journal_name": "Human Molecular Genetics",
-                "srm_colour": "green"
+                "srm_journal_link": "http://example.com"
             },
-            "rek_issn_lookup": "green"
+            "rek_issn_lookup": ""
         }
     ],
     "fez_record_search_key_issue_number": {

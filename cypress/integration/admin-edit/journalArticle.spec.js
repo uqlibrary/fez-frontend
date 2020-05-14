@@ -168,21 +168,17 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'ISSN');
-                        const issns = record.fez_record_search_key_issn.map(item => item.rek_issn);
+                        const issns = record.fez_record_search_key_issn;
                         const ulrichsId = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title_id);
 
                         cy.get('#issn-list')
                             .within(() => {
                                 issns.forEach((issn, index) => {
                                     cy.get(`#issn-list-row-${index}`)
-                                        .should('contain.text', issn);
+                                        .should('contain.text', issn.rek_issn);
                                     cy.get(`#issn-list-row-${index} > div > div > span > a:nth-child(2)`)
                                         .should('contain.text', 'SHERPA/RoMEO')
-                                        .should(
-                                            'have.attr',
-                                            'href',
-                                            'http://www.sherpa.ac.uk/romeo/search.php?issn=' + issn,
-                                        );
+                                        .should('have.attr', 'href', issn.fez_sherpa_romeo.srm_journal_link);
                                     cy.get(`#issn-list-row-${index} > div > div > span > a:nth-child(4)`)
                                         .should('contain.text', 'Ulrichs')
                                         .should(

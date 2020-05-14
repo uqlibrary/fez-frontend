@@ -465,7 +465,9 @@ export const getDatasetContactDetailSearchKeys = contact => {
         ],
         fez_record_search_key_contributor_id: [
             {
-                rek_contributor_id: isNaN(contact.contactNameId.id) ? 0 : parseInt(contact.contactNameId.id, 10),
+                rek_contributor_id: isNaN((contact.contactNameId || {}).id)
+                    ? 0
+                    : parseInt(contact.contactNameId.id, 10),
                 rek_contributor_id_order: 1,
             },
         ],
@@ -681,16 +683,79 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
-export const getLinkSearchKey = links => ({
-    fez_record_search_key_link: links.map(link => ({ rek_link: link.rek_value.key, rek_link_order: link.rek_order })),
-});
+export const getLinkSearchKey = (links = []) => {
+    if (!links || links.length === 0) return {};
 
-export const getLinkDescriptionSearchKey = links => ({
-    fez_record_search_key_link_description: links.map(link => ({
-        rek_link_description: link.rek_value.value,
-        rek_link_description_order: link.rek_order,
+    return {
+        fez_record_search_key_link: links.map(link => ({
+            rek_link: link.rek_value.key,
+            rek_link_order: link.rek_order,
+        })),
+    };
+};
+
+export const getLinkDescriptionSearchKey = (links = []) => {
+    if (!links || links.length === 0) return {};
+
+    return {
+        fez_record_search_key_link_description: links.map(link => ({
+            rek_link_description: link.rek_value.value,
+            rek_link_description_order: link.rek_order,
+        })),
+    };
+};
+
+export const renameLocation = locations => ({
+    fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
+        rek_location: value.key || value,
+        rek_location_order: order,
     })),
 });
+
+const cleanBlankEntries = data => {
+    // Clean out blanked fields
+    // * For a single-child-key, to delete, remove the key from the payload sent to api
+    // * For a many-child-key, where we want to end up with zero children (ie remove all),
+    //   also remove the key from the payload sent to api
+    // * For a many-child-key, where we only want to remove some of its children,
+    //   unset those children and re-number the order fields
+    const entries = Object.entries(data);
+    const keyPrefix = 'fez_record_search_key_';
+    const subkeyPrefix = 'rek_';
+    return entries
+        .filter(item => {
+            const [searchKeyName, values] = item;
+            if (!searchKeyName.startsWith(keyPrefix)) {
+                // keep all the base fez_record_seach_key fields
+                return true;
+            }
+
+            if (Array.isArray(values) && values.length === 0) {
+                // where a many-to-one child has no entries, remove it so API deletes the database record
+                return false;
+            }
+
+            if (Object.keys(values).length === 0 && values.constructor === Object) {
+                // eg fez_record_search_key_edition can return an empty object; remove this
+                return false;
+            }
+
+            const valueFieldName = searchKeyName.replace(keyPrefix, subkeyPrefix);
+            if (values[valueFieldName] === null) {
+                // where the field has been cleared, remove so API deletes the database record
+                return false;
+            }
+
+            // assume many-to-one children with blank entries have already been removed and reordered by, eg ListEditor
+
+            return true;
+        })
+        .reduce((accum, [k, v]) => {
+            // per https://stackoverflow.com/questions/49807489/reversing-an-object-entries-conversion
+            accum[k] = v;
+            return accum;
+        }, {});
+};
 
 export const getIdentifiersSectionSearchKeys = (data = {}) => {
     const {
@@ -699,11 +764,24 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         fez_record_search_key_scopus_id: scopusId,
         fez_record_search_key_pubmed_id: pubmedId,
         fez_record_search_key_pubmed_central_id: pubmedCentralId,
+        fez_record_search_key_location_identifiers: locationDataIdentifiers,
+        rek_pubmed_doc_type: pubmedDocType,
+        rek_scopus_doc_type: scopusDocType,
+        rek_wok_doc_type: wosDocType,
         links,
         ...rest
     } = data;
 
     return {
+        ...(!!pubmedDocType && pubmedDocType !== 'None' && pubmedDocType !== null
+            ? { rek_pubmed_doc_type: pubmedDocType }
+            : { rek_pubmed_doc_type: null }),
+        ...(!!scopusDocType && scopusDocType !== 'None' && scopusDocType !== null
+            ? { rek_scopus_doc_type: scopusDocType }
+            : { rek_scopus_doc_type: null }),
+        ...(!!wosDocType && wosDocType !== 'None' && wosDocType !== null
+            ? { rek_wok_doc_type: wosDocType }
+            : { rek_wok_doc_type: null }),
         ...(!!doi && doi.hasOwnProperty('rek_doi') ? { fez_record_search_key_doi: doi } : {}),
         ...(!!isiLoc && isiLoc.hasOwnProperty('rek_isi_loc') ? { fez_record_search_key_isi_loc: isiLoc } : {}),
         ...(!!scopusId && scopusId.hasOwnProperty('rek_scopus_id')
@@ -715,23 +793,44 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...(!!pubmedCentralId && pubmedCentralId.hasOwnProperty('rek_pubmed_central_id')
             ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
-        ...(!!links && links.length > 0 ? getLinkSearchKey(links) : {}),
-        ...(!!links && links.length > 0 ? getLinkDescriptionSearchKey(links) : {}),
-        ...rest,
+        ...getLinkSearchKey(links),
+        ...getLinkDescriptionSearchKey(links),
+        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers) : {}),
+        ...cleanBlankEntries(rest),
     };
 };
 
 export const renameLicense = record => {
-    if (!!record && !record.rek_license) {
-        return {
-            fez_record_search_key_license: {},
-        };
-    }
+    if (!!record && !record.rek_license) return {};
 
     return {
         fez_record_search_key_license: {
             rek_license: record.rek_license,
         },
+    };
+};
+
+export const getRecordIsDatasetOfSearchKey = datasets => {
+    if ((datasets || []).length === 0) return {};
+
+    return {
+        fez_record_search_key_isdatasetof: datasets.map(({ rek_isdatasetof: value, rek_isdatasetof_order: order }) => ({
+            rek_isdatasetof: value.id || value,
+            rek_isdatasetof_order: order,
+        })),
+    };
+};
+
+export const getRecordIsDerivationOfSearchKey = relatedPubs => {
+    if ((relatedPubs || []).length === 0) return {};
+
+    return {
+        fez_record_search_key_isderivationof: relatedPubs.map(
+            ({ rek_isderivationof: value, rek_isderivationof_order: order }) => ({
+                rek_isderivationof: value.id || value,
+                rek_isderivationof_order: order,
+            }),
+        ),
     };
 };
 
@@ -748,14 +847,32 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
-        fez_record_search_key_isderivationof: relatedPubsField,
-        fez_record_search_key_license_biblio: licenseData,
+        fez_record_search_key_isderivationof: relatedPubs,
+        fez_record_search_key_license_biblio: licenseDataBiblio,
+        fez_record_search_key_location_biblio: locationDataBiblio,
+        fez_record_search_key_isdatasetof: datasets,
+        fez_record_search_key_related_datasets: relatedDatasets,
+        fez_record_search_key_related_publications: relatedPublications,
         issnField,
         ...rest
     } = data;
 
     return {
-        ...rest,
+        ...cleanBlankEntries(rest),
+        ...(!!relatedDatasets && relatedDatasets.hasOwnProperty('htmlText')
+            ? {
+                fez_record_search_key_related_datasets: {
+                    rek_related_datasets: relatedDatasets.htmlText,
+                },
+            }
+            : {}),
+        ...(!!relatedPublications && relatedPublications.hasOwnProperty('htmlText')
+            ? {
+                fez_record_search_key_related_publications: {
+                    rek_related_publications: relatedPublications.htmlText,
+                },
+            }
+            : {}),
         rek_date: moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
@@ -798,7 +915,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 })),
             }
             : {}),
-        ...(!!dateAvailable
+        ...(!!dateAvailable && moment(dateAvailable.rek_date_available, 'YYYY').isValid()
             ? {
                 fez_record_search_key_date_available: {
                     ...dateAvailable,
@@ -806,17 +923,17 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
-        ...(!!dateRecorded
+        ...(!!dateRecorded && moment(dateRecorded.rek_date_recorded, 'YYYY-MM-DD').year() > 0
             ? {
                 fez_record_search_key_date_recorded: {
                     ...dateRecorded,
-                    rek_date_recorded: moment(dateRecorded.rek_date_recorded, 'YYYY').format(),
                 },
             }
             : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!licenseData ? renameLicense(licenseData) : {}),
+        ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
+        ...(!!locationDataBiblio ? renameLocation(locationDataBiblio) : {}),
         ...(!!issnField
             ? {
                 fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
@@ -825,16 +942,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 })),
             }
             : {}),
-        ...(!!relatedPubsField
-            ? {
-                fez_record_search_key_isderivationof: relatedPubsField.map(
-                    ({ rek_isderivationof: value, rek_isderivationof_order: order }) => ({
-                        rek_isderivationof: value.id || value,
-                        rek_isderivationof_order: order,
-                    }),
-                ),
-            }
-            : {}),
+        ...getRecordIsDerivationOfSearchKey(relatedPubs),
+        ...getRecordIsDatasetOfSearchKey(datasets),
     };
 };
 
@@ -857,7 +966,7 @@ export const getNtroSectionSearchKeys = (data = {}) => {
                 ),
             }
             : {}),
-        ...rest,
+        ...cleanBlankEntries(rest),
     };
 };
 
@@ -988,7 +1097,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
-        fez_record_search_key_license_additional: licenseData,
+        fez_record_search_key_license_additional: licenseDataAdmin,
         rek_herdc_notes: herdcNotes,
         ...rest
     } = data;
@@ -999,26 +1108,26 @@ export const getAdminSectionSearchKeys = (data = {}) => {
             ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
             : {}),
         ...getContentIndicatorSearchKey(contentIndicators),
-        ...(!!contactName && !!contactNameId && !!contactEmail
+        ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
             : {}),
         ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
-        ...(!!licenseData ? renameLicense(licenseData) : {}),
+        ...(!!licenseDataAdmin ? renameLicense(licenseDataAdmin) : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
-        ...rest,
+        ...cleanBlankEntries(rest),
     };
 };
 
 export const getFilesSectionSearchKeys = data => {
     const { advisoryStatement, ...rest } = data;
     return {
-        ...rest,
+        ...cleanBlankEntries(rest),
         ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
             ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
             : {}),
@@ -1029,7 +1138,7 @@ export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSecti
     const { dataStreams, ...rest } = data;
     const dataStreamsMap = (dataStreams || []).reduce((map, ds) => ({ ...map, [ds.dsi_dsid]: ds }), {});
     return {
-        ...rest,
+        ...cleanBlankEntries(rest),
         ...(!!dataStreams
             ? {
                 fez_datastream_info: dataStreamsFromFileSection.map(dataStream => ({

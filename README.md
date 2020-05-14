@@ -28,20 +28,20 @@ UQ's branding for Fez is UQ eSpace.
 This project is using `npm` for dependency management. Make sure `npm` is installed on your machine.
 
 - make sure to create a .env file based on example.env
-- `npm install` - initial setup
+- `nvm use 11.10.1 && npm i -g npm@6 jest webpack-dev-server` - initial setup
 - `npm ci` - when weird errors happen your local npm probably doesnt match the latest project requirements, this
   clears & reinstalls npm packages
 - `npm run start`
-  - runs `http://localhost:3000/`
+  - runs <http://localhost:3000/>
   - uses dev api for backend (<http://dev-api.library.uq.edu.au:8050/>) (requires additional setup of uqlibrary/api
     project)
 - `npm run start:mock`
-  - runs `http://localhost:3000/`
+  - runs <http://localhost:3000/>
   - uses mock data from src/mock
 - `npm run start:url`
 
-  - runs `http://dev-espace.library.uq.edu.au:3000/` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
-  - uses staging data from the aws api (ie <https://api.library.uq.edu.au/staging/>) as a backend
+  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+  - uses staging data from the aws api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
   - for a logged in session: `./scripts/dev-tools.sh start:staging-session` or `SESSION_COOKIE_NAME='mysessiontoken' npm run start:url`
 
     - you may need to block CORS errors - eg with [Allow CORS: Access-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) Chrome Extension, or by launching the browser with CORS disabled.
@@ -57,10 +57,10 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
 
 - `npm run start:build`
-  - runs production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000/`
-  - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/>) as a backend!! Careful!!
+  - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
+  - uses PRODUCTION DATA from the aws api (ie `https://api.library.uq.edu.au/v1/1) as a backend!! Careful!!
 - `npm run start:build:e2e`
-  - runs production build version on `http://localhost:9000/`
+  - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock
   - async loading is not working since chuncks are not saved, navigate directly to required routes
 - `npm run test:cs`

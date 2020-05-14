@@ -68,6 +68,10 @@ const useStyles = makeStyles(
         error: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.error.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.error.dark,
             },
@@ -85,6 +89,10 @@ const useStyles = makeStyles(
         error_outline: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.error.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.error.dark,
             },
@@ -102,6 +110,10 @@ const useStyles = makeStyles(
         warning: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.warning.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.warning.dark,
             },
@@ -119,6 +131,10 @@ const useStyles = makeStyles(
         help: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.secondary.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.secondary.dark,
             },
@@ -136,6 +152,10 @@ const useStyles = makeStyles(
         help_outline: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.secondary.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.secondary.dark,
             },
@@ -153,6 +173,10 @@ const useStyles = makeStyles(
         info: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.accent.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.accent.dark,
             },
@@ -170,6 +194,10 @@ const useStyles = makeStyles(
         info_outline: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.accent.main,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.accent.dark,
             },
@@ -187,6 +215,10 @@ const useStyles = makeStyles(
         done: {
             color: theme.palette.white.main,
             backgroundColor: theme.palette.success.light,
+            '& a:link, & a:hover, & a:visited': {
+                color: theme.palette.white.main,
+                textDecoration: 'underline',
+            },
             '& .spinner': {
                 color: theme.palette.success.dark,
             },

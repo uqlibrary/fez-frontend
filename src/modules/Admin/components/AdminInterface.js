@@ -266,6 +266,7 @@ export const AdminInterface = ({
                                 <Grid container spacing={1} style={{ marginTop: 8 }}>
                                     <Grid item xs={12} sm={2}>
                                         <Button
+                                            id="admin-work-cancel"
                                             style={{ whiteSpace: 'nowrap' }}
                                             variant="contained"
                                             color="secondary"
@@ -276,6 +277,7 @@ export const AdminInterface = ({
                                     </Grid>
                                     <Grid item xs={12} sm={10}>
                                         <Button
+                                            id="admin-work-submit"
                                             style={{ whiteSpace: 'nowrap' }}
                                             disabled={submitting || disableSubmit}
                                             variant="contained"

@@ -646,10 +646,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 13,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 14
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 14,
+                },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 15,
@@ -1044,10 +1044,10 @@ export default {
                     field: 'fez_record_search_key_date_available',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_edition',
                     order: 13,
@@ -1127,28 +1127,28 @@ export default {
                     order: 8,
                 },
                 {
-                    field: 'fez_record_search_key_license',
+                    field: 'fez_record_search_key_oa_status',
                     order: 9,
                 },
                 {
-                    field: 'fez_record_search_key_subject',
+                    field: 'fez_record_search_key_license',
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_doi',
+                    field: 'fez_record_search_key_subject',
                     order: 11,
                 },
                 {
-                    field: 'fez_record_search_key_grant_id',
+                    field: 'fez_record_search_key_doi',
                     order: 12,
                 },
                 {
-                    field: 'fez_record_search_key_type_of_data',
+                    field: 'fez_record_search_key_grant_id',
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_data_volume',
-                    order: 144,
+                    field: 'fez_record_search_key_type_of_data',
+                    order: 14,
                 },
                 {
                     field: 'fez_record_search_key_software_required',
@@ -1205,6 +1205,10 @@ export default {
                 {
                     field: 'fez_record_search_key_rights',
                     order: 28,
+                },
+                {
+                    field: 'fez_record_search_key_data_volume',
+                    order: 29,
                 },
             ],
             'Department Technical Report': [
@@ -1789,16 +1793,20 @@ export default {
                     order: 18,
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_article_number',
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_place_of_publication',
+                    field: 'fez_record_search_key_contributor',
                     order: 20,
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 21,
+                },
+                {
+                    field: 'fez_record_search_key_publisher',
+                    order: 22,
                 },
                 // {
                 //     field: 'fez_record_search_key_language',
@@ -2104,10 +2112,10 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 13,

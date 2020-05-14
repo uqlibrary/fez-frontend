@@ -11,9 +11,9 @@ import { ISSN_LINKS_API } from 'repositories/routes';
 
 export const getSherpaFromIssn = issn => {
     return dispatch => {
-        dispatch({ type: ISSN_SHERPA_LOADING });
+        dispatch({ type: ISSN_SHERPA_LOADING, payload: issn });
 
-        return post(ISSN_LINKS_API({ type: 'sherpa' }), { issn })
+        return post(ISSN_LINKS_API({ type: 'sherpa-romeo' }), { issn })
             .then(response => {
                 dispatch({
                     type: ISSN_SHERPA_LOADED,
@@ -23,7 +23,10 @@ export const getSherpaFromIssn = issn => {
             .catch(error => {
                 dispatch({
                     type: ISSN_SHERPA_LOAD_FAILED,
-                    payload: error.message,
+                    payload: {
+                        issn,
+                        message: error.message,
+                    },
                 });
             });
     };
@@ -31,7 +34,7 @@ export const getSherpaFromIssn = issn => {
 
 export const getUlrichsFromIssn = issn => {
     return dispatch => {
-        dispatch({ type: ISSN_ULRICHS_LOADING });
+        dispatch({ type: ISSN_ULRICHS_LOADING, payload: issn });
 
         return post(ISSN_LINKS_API({ type: 'ulrichs' }), { issn })
             .then(response => {
@@ -43,7 +46,10 @@ export const getUlrichsFromIssn = issn => {
             .catch(error => {
                 dispatch({
                     type: ISSN_ULRICHS_LOAD_FAILED,
-                    payload: error.message,
+                    payload: {
+                        issn,
+                        message: error.message,
+                    },
                 });
             });
     };

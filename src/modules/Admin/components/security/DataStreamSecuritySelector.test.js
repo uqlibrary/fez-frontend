@@ -12,11 +12,7 @@ function setup(testProps = {}) {
         input: {
             onChange: jest.fn(),
         },
-        meta: {
-            initial: {
-                toJS: () => [],
-            },
-        },
+        attachedDataStreams: [],
         text: {
             overridePolicyPrompt: 'Override datastream security policy',
         },
@@ -47,16 +43,12 @@ describe('DataStreamSecuritySelector component', () => {
 
     it('should render default view', () => {
         const { asFragment, getByText } = setup({
-            meta: {
-                initial: {
-                    toJS: () => [
-                        {
-                            dsi_dsid: 'test4.txt',
-                            dsi_security_policy: 1,
-                        },
-                    ],
+            attachedDataStreams: [
+                {
+                    dsi_dsid: 'test4.txt',
+                    dsi_security_policy: 1,
                 },
-            },
+            ],
         });
         expect(asFragment()).toMatchSnapshot();
         expect(getByText(/test4.txt/)).toHaveAttribute('title', 'test4.txt');
@@ -66,16 +58,12 @@ describe('DataStreamSecuritySelector component', () => {
 
     it('should change security value for the file', async() => {
         const { getByText, getByTestId } = setup({
-            meta: {
-                initial: {
-                    toJS: () => [
-                        {
-                            dsi_dsid: 'test5.txt',
-                            dsi_security_policy: 1,
-                        },
-                    ],
+            attachedDataStreams: [
+                {
+                    dsi_dsid: 'test5.txt',
+                    dsi_security_policy: 1,
                 },
-            },
+            ],
         });
 
         fireEvent.mouseDown(getByText(/Administrator/i));
@@ -87,17 +75,13 @@ describe('DataStreamSecuritySelector component', () => {
 
     it('should not display datastream security selected in dropdown', () => {
         const { asFragment } = setup({
-            meta: {
-                initial: {
-                    toJS: () => [
-                        {
-                            dsi_dsid: 'test6.txt',
-                            dsi_security_policy: 1,
-                            dsi_embargo_date: '2015-12-01',
-                        },
-                    ],
+            attachedDataStreams: [
+                {
+                    dsi_dsid: 'test6.txt',
+                    dsi_security_policy: 1,
+                    dsi_embargo_date: '2015-12-01',
                 },
-            },
+            ],
             collections: [
                 {
                     parent: {
@@ -116,18 +100,14 @@ describe('DataStreamSecuritySelector component', () => {
 
     it('should hide derivative datastreams', () => {
         const { asFragment } = setup({
-            meta: {
-                initial: {
-                    toJS: () => [
-                        {
-                            dsi_dsid: 'preview_test8.txt',
-                        },
-                        {
-                            dsi_dsid: 'testA.txt',
-                        },
-                    ],
+            attachedDataStreams: [
+                {
+                    dsi_dsid: 'preview_test8.txt',
                 },
-            },
+                {
+                    dsi_dsid: 'testA.txt',
+                },
+            ],
             collections: [
                 {
                     parent: {
@@ -145,15 +125,11 @@ describe('DataStreamSecuritySelector component', () => {
 
     it('should show non-derivative datastreams', () => {
         const { asFragment } = setup({
-            meta: {
-                initial: {
-                    toJS: () => [
-                        {
-                            dsi_dsid: 'test9.txt',
-                        },
-                    ],
+            attachedDataStreams: [
+                {
+                    dsi_dsid: 'test9.txt',
                 },
-            },
+            ],
             collections: [
                 {
                     parent: {
@@ -171,11 +147,30 @@ describe('DataStreamSecuritySelector component', () => {
 
     describe('isSame callback function', () => {
         it('should return true if current props are same as previous props', () => {
-            expect(isSame({ disabled: true }, { disabled: true })).toBeTruthy();
+            expect(
+                isSame(
+                    { disabled: true, attachedDataStreams: [{ dsi_dsid: 'test.jpg' }] },
+                    { disabled: true, attachedDataStreams: [{ dsi_dsid: 'test.jpg' }] },
+                ),
+            ).toBeTruthy();
+        });
+
+        it('should return false if current props attachedDataStreams does not previous props', () => {
+            expect(
+                isSame(
+                    { disabled: true, attachedDataStreams: [{ dsi_dsid: 'test.jpg' }] },
+                    { disabled: true, attachedDataStreams: [] },
+                ),
+            ).toBeFalsy();
         });
 
         it('should return false if props do not match', () => {
-            expect(isSame({ disabled: true }, { disabled: false })).toBeFalsy();
+            expect(
+                isSame(
+                    { disabled: true, attachedDataStreams: [{ dsi_dsid: 'test.jpg' }] },
+                    { disabled: false, attachedDataStreams: [{ dsi_dsid: 'test.jpg' }] },
+                ),
+            ).toBeFalsy();
         });
     });
 });

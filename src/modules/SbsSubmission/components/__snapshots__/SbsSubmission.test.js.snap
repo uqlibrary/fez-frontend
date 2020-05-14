@@ -16,14 +16,20 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
         title="Your thesis has been deposited"
       >
         <WithStyles(ForwardRef(Typography))>
-          <p>
-            You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
-          </p>
+          You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
         </WithStyles(ForwardRef(Typography))>
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </StandardPage>
+`;
+
+exports[`SbsSubmission test should have a helper to generate alert props 1`] = `
+Object {
+  "message": "Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.",
+  "title": "Error",
+  "type": "error_outline",
+}
 `;
 
 exports[`SbsSubmission test should render sbs thesis submission acknowledgement 1`] = `
@@ -42,9 +48,7 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
         title="Your thesis has been deposited"
       >
         <WithStyles(ForwardRef(Typography))>
-          <p>
-            You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
-          </p>
+          You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
         </WithStyles(ForwardRef(Typography))>
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -438,7 +442,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                       "addButtonLabel": "Add",
                       "editButtonLabel": "Update",
                       "id": "keywords-input",
-                      "inputFieldHint": "Type keywords",
+                      "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
                       "inputFieldLabel": "Keywords",
                     },
                   },
@@ -599,6 +603,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           <WithStyles(ForwardRef(Button))
             color="primary"
             fullWidth={true}
+            id="submit-thesis"
             onClick={[Function]}
             variant="contained"
           >
@@ -997,7 +1002,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                       "addButtonLabel": "Add",
                       "editButtonLabel": "Update",
                       "id": "keywords-input",
-                      "inputFieldHint": "Type keywords",
+                      "inputFieldHint": "Type keywords (Add multiple using pipes eg: one|two|three)",
                       "inputFieldLabel": "Keywords",
                     },
                   },
@@ -1158,6 +1163,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           <WithStyles(ForwardRef(Button))
             color="primary"
             fullWidth={true}
+            id="submit-thesis"
             onClick={[Function]}
             variant="contained"
           >

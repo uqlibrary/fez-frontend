@@ -69,7 +69,6 @@ export class FilesClass extends Component {
         fileName,
         thumbnailFileName,
         previewFileName,
-        allowDownload,
         webFileName,
         securityStatus,
         checksums,
@@ -187,15 +186,10 @@ export class FilesClass extends Component {
         return this.getSecurityAccess(dataStream) && !isDerivative(dataStream) && isAdded(dataStream);
     };
 
-    checkArrayForObjectValue = value => {
-        const datastream = this.props.publication.fez_datastream_info;
-        let resolvedFilename = null;
-        for (let i = 0; i < datastream.length; i++) {
-            if (datastream[i].dsi_dsid === value) {
-                resolvedFilename = datastream[i].dsi_dsid;
-            }
-        }
-        return resolvedFilename;
+    getMatchingFilename = names => {
+        const datastreamFileNames = this.props.publication.fez_datastream_info.map(item => item.dsi_dsid);
+        const findMatch = (nameMatch, name) => nameMatch || (datastreamFileNames.includes(name) && name);
+        return names.reduce(findMatch, false) || null;
     };
 
     untranscodedItem = filename => {
@@ -217,44 +211,44 @@ export class FilesClass extends Component {
 
     checkForThumbnail = filename => {
         const file = this.untranscodedItem(filename);
-        return (
-            this.checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`) ||
-            this.checkArrayForObjectValue(`thumbnail_${file}_t.jpg`) ||
-            this.checkArrayForObjectValue(`thumbnail_${file}.jpg`) ||
-            this.checkArrayForObjectValue(`${file}_t.jpg`) ||
-            null
-        );
+        const names = [
+            `thumbnail_${file}_compressed_t.jpg`,
+            `thumbnail_${file}_t.jpg`,
+            `thumbnail_${file}.jpg`,
+            `${file}_t.jpg`,
+        ];
+        return this.getMatchingFilename(names);
     };
 
     checkForPreview = filename => {
         const file = this.untranscodedItem(filename);
-        return (
-            this.checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`) ||
-            this.checkArrayForObjectValue(`preview_${file}_t.jpg`) ||
-            this.checkArrayForObjectValue(`preview_${file}.jpg`) ||
-            this.checkArrayForObjectValue(`${file}_t.jpg`) ||
-            this.checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`) ||
-            this.checkArrayForObjectValue(`preview_${file}_t.mp4`) ||
-            this.checkArrayForObjectValue(`${file}_t.mp4`) ||
-            this.checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`) ||
-            this.checkArrayForObjectValue(`preview_${file}_t.mp3`) ||
-            this.checkArrayForObjectValue(`${file}_t.mp3`) ||
-            null
-        );
+        const names = [
+            `preview_${file}_compressed_t.jpg`,
+            `preview_${file}_t.jpg`,
+            `preview_${file}.jpg`,
+            `${file}_t.jpg`,
+            `preview_${file}_compressed_t.mp4`,
+            `preview_${file}_t.mp4`,
+            `${file}_t.mp4`,
+            `preview_${file}_compressed_t.mp3`,
+            `preview_${file}_t.mp3`,
+            `${file}_t.mp3`,
+        ];
+        return this.getMatchingFilename(names);
     };
 
     checkForWeb = filename => {
         const file = this.untranscodedItem(filename);
-        return (
-            this.checkArrayForObjectValue(`web_${file}_compressed_t.jpg`) ||
-            this.checkArrayForObjectValue(`web_${file}_t.jpg`) ||
-            this.checkArrayForObjectValue(`web_${file}.jpg`) ||
-            this.checkArrayForObjectValue(`web_${file}_compressed_t.mp4`) ||
-            this.checkArrayForObjectValue(`web_${file}_t.mp4`) ||
-            this.checkArrayForObjectValue(`web_${file}_compressed_t.mp3`) ||
-            this.checkArrayForObjectValue(`web_${file}_t.mp3`) ||
-            null
-        );
+        const names = [
+            `web_${file}_compressed_t.jpg`,
+            `web_${file}_t.jpg`,
+            `web_${file}.jpg`,
+            `web_${file}_compressed_t.mp4`,
+            `web_${file}_t.mp4`,
+            `web_${file}_compressed_t.mp3`,
+            `web_${file}_t.mp3`,
+        ];
+        return this.getMatchingFilename(names);
     };
 
     getChecksums = (dataStream, thumbnailFileName, previewFileName, webFileName, dataStreams) => {
@@ -316,7 +310,6 @@ export class FilesClass extends Component {
                         fileName,
                         thumbnailFileName,
                         previewFileName,
-                        openAccessStatus.isOpenAccess || this.props.isAuthor || this.props.isAdmin,
                         webFileName,
                         securityAccess,
                         checksums,

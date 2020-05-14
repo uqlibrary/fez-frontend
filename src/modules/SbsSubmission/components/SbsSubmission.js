@@ -34,15 +34,14 @@ import Typography from '@material-ui/core/Typography';
 export default class SbsSubmission extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        actions: PropTypes.object,
         author: PropTypes.object,
-        isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
-        actions: PropTypes.object,
         history: PropTypes.object,
         isSessionValid: PropTypes.bool,
-        newRecordFileUploadingOrIssueError: PropTypes.bool,
         newRecord: PropTypes.object,
+        newRecordFileUploadingOrIssueError: PropTypes.bool,
     };
 
     static contextTypes = {
@@ -81,10 +80,26 @@ export default class SbsSubmission extends Component {
         window.location.reload();
     };
 
+    // customise error for thesis submission
+    getAlertProps = () =>
+        validation.getErrorAlertProps({
+            ...this.props,
+            alertLocale: {
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
+                errorAlert: {
+                    ...formLocale.errorAlert,
+                    message: () => formLocale.thesisSubmission.depositFailedMessage,
+                },
+            },
+        });
+
     render() {
         const txt = formLocale.thesis;
         const txtFoR = locale.components.fieldOfResearchForm;
         const txtSupervisors = locale.components.thesisSubmissionSupervisors;
+        const thesisLocale = formLocale.sbsSubmission;
 
         if (this.props.submitSucceeded) {
             return (
@@ -92,10 +107,7 @@ export default class SbsSubmission extends Component {
                     <Grid container spacing={3}>
                         {this.props.newRecordFileUploadingOrIssueError ? (
                             <Grid item xs={12}>
-                                <Alert
-                                    {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
-                                    action={this.afterFailedSubmit}
-                                />
+                                <Alert {...thesisLocale.fileUpload.failedAlertLocale} action={this.afterFailedSubmit} />
                             </Grid>
                         ) : (
                             <Grid item xs={12}>
@@ -108,19 +120,9 @@ export default class SbsSubmission extends Component {
                 </StandardPage>
             );
         }
-        // customise error for thesis submission
-        const alertProps = validation.getErrorAlertProps({
-            ...this.props,
-            alertLocale: {
-                validationAlert: { ...formLocale.validationAlert },
-                progressAlert: { ...formLocale.progressAlert },
-                successAlert: { ...formLocale.successAlert },
-                errorAlert: {
-                    ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage,
-                },
-            },
-        });
+
+        const alertProps = this.getAlertProps();
+
         return (
             <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
@@ -305,21 +307,22 @@ export default class SbsSubmission extends Component {
                             <Grid item xs={false} sm />
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
-                                    variant={'contained'}
-                                    fullWidth
                                     children={formLocale.thesisSubmission.cancel}
                                     disabled={this.props.submitting}
+                                    fullWidth
                                     onClick={this.cancelSubmit}
+                                    variant="contained"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
-                                    variant={'contained'}
-                                    color={'primary'}
-                                    fullWidth
                                     children={formLocale.thesisSubmission.submit}
-                                    onClick={this.deposit}
+                                    color="primary"
                                     disabled={this.props.submitting || this.props.disableSubmit}
+                                    fullWidth
+                                    id="submit-thesis"
+                                    onClick={this.deposit}
+                                    variant="contained"
                                 />
                             </Grid>
                         </Grid>

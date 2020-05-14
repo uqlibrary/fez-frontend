@@ -13,8 +13,8 @@ import { LocallyStoredReducerContext } from 'context';
 
 const FORM_NAME = 'ThesisSubmission';
 
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(submitThesis({ ...values.toJS() }, props.author)).catch(error => {
+const onSubmit = (values, dispatch) => {
+    return dispatch(submitThesis({ ...values.toJS() })).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
