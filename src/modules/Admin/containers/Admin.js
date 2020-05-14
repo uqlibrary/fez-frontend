@@ -164,7 +164,7 @@ const PrototypeContainer = reduxForm({
     onSubmit,
     validate,
     destroyOnUnmount: false,
-})(confirmDiscardFormChanges(AdminContainer));
+})(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});

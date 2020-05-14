@@ -21,7 +21,7 @@ const onSubmit = (values, dispatch, props) => {
 let CollectionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(CollectionForm));
+})(confirmDiscardFormChanges(CollectionForm, FORM_NAME));
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
