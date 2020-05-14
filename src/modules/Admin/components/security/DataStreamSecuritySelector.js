@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
-import { useFormValuesContext } from 'context';
 import { isDerivative } from 'helpers/datastreams';
 
 export const styles = () => ({
@@ -20,24 +19,14 @@ export const styles = () => ({
     },
 });
 
-export const DataStreamSecuritySelector = ({
-    classes,
-    collections,
-    disabled,
-    meta: { initial: dataStreams },
-    text,
-    ...props
-}) => {
-    const { formValues } = useFormValuesContext();
-
+export const DataStreamSecuritySelector = ({ attachedDataStreams, classes, collections, disabled, text, ...props }) => {
     const canDisplay = dataStream => {
         return !isDerivative(dataStream);
     };
 
-    const [initialDataStreams] = useState(() => dataStreams.toJS());
+    const [initialDataStreams] = useState(() => attachedDataStreams);
     const [dataStreamSecurity, setDataStreamSecurity] = useState(() => {
-        const result = !!formValues.dataStreams ? formValues.dataStreams : dataStreams.toJS();
-        return result.filter(dataStream => canDisplay(dataStream));
+        return attachedDataStreams.filter(dataStream => canDisplay(dataStream));
     });
     const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
@@ -109,16 +98,15 @@ DataStreamSecuritySelector.propTypes = {
     collections: PropTypes.array,
     disabled: PropTypes.bool,
     input: PropTypes.object,
-    meta: PropTypes.shape({
-        initial: PropTypes.shape({
-            toJS: PropTypes.func.isRequired,
-        }).isRequired,
-    }).isRequired,
+    attachedDataStreams: PropTypes.array,
     text: PropTypes.object,
 };
 
 export function isSame(prevProps, nextProps) {
-    return prevProps.disabled === nextProps.disabled;
+    return (
+        prevProps.disabled === nextProps.disabled &&
+        prevProps.attachedDataStreams.length === nextProps.attachedDataStreams.length
+    );
 }
 
 export default React.memo(withStyles(styles)(DataStreamSecuritySelector), isSame);

@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
 
-export const deleteCallbackFactory = (dataStreams, setDataStreams) => {
+export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
     const callback = index => {
+        const fileToDelete = dataStreams[index];
         const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
+        onDeleteAttachedFile(fileToDelete);
         setDataStreams(newDataStreams);
     };
-    return [callback, [dataStreams, setDataStreams]];
+    return [callback, [dataStreams, setDataStreams, onDeleteAttachedFile]];
 };
 
 export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
@@ -29,7 +31,7 @@ export const onChangeCallbackFactory = (dataStreams, onChange) => {
 };
 
 export const AttachedFilesField = ({ input, ...props }) => {
-    const { formValues } = useFormValuesContext();
+    const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
     const [dataStreams, setDataStreams] = useState(
         !!formValues.fez_datastream_info
@@ -38,7 +40,7 @@ export const AttachedFilesField = ({ input, ...props }) => {
     );
     const { onChange } = input;
 
-    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams));
+    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
     const handleDataStreamChange = useCallback(...datastreamChangeCallbackFactory(dataStreams, setDataStreams));
     useEffect(...onChangeCallbackFactory(dataStreams, onChange));
 
