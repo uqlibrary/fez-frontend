@@ -541,16 +541,26 @@ exports[`AdminContainer component should full mount the component 1`] = `
           }
         >
           <AdminContainer
-            actions={
-              Object {
-                "loadRecordToView": [MockFunction],
-              }
-            }
             classes={
               Object {
                 "badgeMargin": "badgemargin",
                 "helpIcon": "helpicon",
                 "tabIndicator": "tabindicator",
+              }
+            }
+            loadRecordToView={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    "UQ:111111",
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
+                ],
               }
             }
             loadingRecordToView={false}
