@@ -282,7 +282,9 @@ export const AdminInterface = ({
                                         onClick={handleCancel}
                                     />
                                 </Grid>
-                                {(objectType === RECORD_TYPE_RECORD && record.rek_status) === UNPUBLISHED && (
+                                {!!record.rek_pid &&
+                                    objectType === RECORD_TYPE_RECORD &&
+                                    record.rek_status === UNPUBLISHED && (
                                     <Grid item xs={12} sm={3}>
                                         <Button
                                             id="admin-work-publish"
@@ -295,7 +297,9 @@ export const AdminInterface = ({
                                         />
                                     </Grid>
                                 )}
-                                {objectType === RECORD_TYPE_RECORD && record.rek_status === PUBLISHED && (
+                                {!!record.rek_pid &&
+                                    objectType === RECORD_TYPE_RECORD &&
+                                    record.rek_status === PUBLISHED && (
                                     <Grid item xs={12} sm={3}>
                                         <Button
                                             id="admin-work-unpublish"
@@ -308,7 +312,7 @@ export const AdminInterface = ({
                                         />
                                     </Grid>
                                 )}
-                                <Grid item xs={12} sm={objectType === RECORD_TYPE_RECORD ? 7 : 10}>
+                                <Grid item xs={12} sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD ? 7 : 10}>
                                     <Button
                                         id="admin-work-submit"
                                         style={{ whiteSpace: 'nowrap' }}

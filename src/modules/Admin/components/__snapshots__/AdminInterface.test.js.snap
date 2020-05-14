@@ -1565,7 +1565,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
           </WithStyles(Grid)>
           <WithStyles(Grid)
             item={true}
-            sm={7}
+            sm={10}
             xs={12}
           >
             <WithStyles(Button)
