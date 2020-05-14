@@ -13,5 +13,5 @@ import { confirmDiscardFormChanges } from '/ConfirmDiscardFormChanges';
 
 let YourFormContainer = reduxForm({
     form: FORM_NAME
-})(confirmDiscardFormChanges(YourForm, 'YourFormName'));
+})(confirmDiscardFormChanges(YourForm));
 ```

@@ -34,8 +34,8 @@ context('As an admin,', () => {
             .click();
 
         // Submit form
-        cy.get('button')
-            .contains('Submit')
+        cy.get('#admin-work-submit')
+            .should('contain', 'Save')
             .click();
 
         // Confirmation message

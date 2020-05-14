@@ -22,7 +22,7 @@ const onSubmit = (values, dispatch) => {
 let SbsSubmissionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(SbsSubmission, FORM_NAME));
+})(confirmDiscardFormChanges(SbsSubmission));
 
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;

@@ -118,7 +118,7 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit,
-})(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
+})(confirmDiscardFormChanges(PublicationForm));
 
 const selector = formValueSelector(FORM_NAME);
 

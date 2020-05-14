@@ -21,7 +21,7 @@ const onSubmit = (values, dispatch) => {
 let ThesisSubmissionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
+})(confirmDiscardFormChanges(ThesisSubmission));
 
 const mapStateToProps = (state, props) => {
     //  Get any initial values set during redux store initialisation
