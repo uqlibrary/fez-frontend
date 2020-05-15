@@ -216,16 +216,6 @@ export default {
                 allowPartial: true,
             },
         },
-        rek_status: {
-            component: GenericTextField,
-            componentProps: {
-                name: 'identifiersSection.rek_status',
-                label: 'Publication status',
-                style: {
-                    display: 'none',
-                },
-            },
-        },
         collections: {
             component: CollectionField,
             componentProps: {
