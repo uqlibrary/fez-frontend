@@ -74,15 +74,10 @@ export default {
     ntro: () => [],
 };
 
-export const validateJournal = ({ filesSection: fs, authorsSection: as }, { validationErrorsSummary: summary }) => ({
+export const validateJournal = ({ filesSection: fs }, { validationErrorsSummary: summary }) => ({
     filesSection: {
         ...((fs || {}).rek_copyright !== 'on' && {
             rek_copyright: summary.rek_copyright,
-        }),
-    },
-    authorsSection: {
-        ...(((as || {}).editors || []).length === 0 && {
-            editors: summary.editors,
         }),
     },
 });
