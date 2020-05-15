@@ -30,6 +30,7 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 import { adminInterfaceConfig } from 'config/admin';
+import { onSubmit } from '../containers/Admin';
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -162,9 +163,10 @@ export const AdminInterface = ({
         ? txt.current.successAddWorkflowConfirmation
         : txt.current.successWorkflowConfirmation;
 
-    const handlePublish = () => {};
-
-    const handleUnpublish = () => {};
+    const setPublicationStatusAndSubmit = status =>
+        handleSubmit((values, dispatch, props) =>
+            onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
+        );
 
     return (
         <StandardPage>
@@ -288,7 +290,7 @@ export const AdminInterface = ({
                                             color="secondary"
                                             fullWidth
                                             children="Publish"
-                                            onClick={handlePublish}
+                                            onClick={setPublicationStatusAndSubmit(PUBLISHED)}
                                         />
                                     </Grid>
                                 )}
@@ -303,7 +305,7 @@ export const AdminInterface = ({
                                             color="secondary"
                                             fullWidth
                                             children="Unpublish"
-                                            onClick={handleUnpublish}
+                                            onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
                                         />
                                     </Grid>
                                 )}
