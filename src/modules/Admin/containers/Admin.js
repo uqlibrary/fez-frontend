@@ -1,7 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 import { destroy, reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
-import { change } from 'redux-form';
 import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
@@ -223,9 +222,6 @@ function mapDispatchToProps(dispatch) {
         loadRecordToView,
         clearRecordToView,
         destroy,
-        changeFieldValue: (field, value) => {
-            dispatch(change(FORM_NAME, field, value));
-        },
     };
 }
 

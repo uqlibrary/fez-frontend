@@ -57,7 +57,6 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
 
 export const AdminInterface = ({
     authorDetails,
-    changeFieldValue,
     classes,
     createMode,
     destroy,
@@ -163,13 +162,9 @@ export const AdminInterface = ({
         ? txt.current.successAddWorkflowConfirmation
         : txt.current.successWorkflowConfirmation;
 
-    const handlePublish = () => {
-        changeFieldValue('identifiersSection.rek_status', PUBLISHED);
-    };
+    const handlePublish = () => {};
 
-    const handleUnpublish = () => {
-        changeFieldValue('identifiersSection.rek_status', UNPUBLISHED);
-    };
+    const handleUnpublish = () => {};
 
     return (
         <StandardPage>
@@ -335,7 +330,6 @@ export const AdminInterface = ({
 
 AdminInterface.propTypes = {
     authorDetails: PropTypes.object,
-    changeFieldValue: PropTypes.func,
     classes: PropTypes.object,
     createMode: PropTypes.bool,
     destroy: PropTypes.func,
