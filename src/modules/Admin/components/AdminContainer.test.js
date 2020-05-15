@@ -1,7 +1,9 @@
 import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
-
+jest.mock('../submitHandler', () => ({
+    onSubmit: jest.fn(),
+}));
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
     set: jest.fn(),
@@ -39,6 +41,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         location: {
             search: '',
         },
+        handleSubmit: jest.fn(),
         ...testProps,
     };
 

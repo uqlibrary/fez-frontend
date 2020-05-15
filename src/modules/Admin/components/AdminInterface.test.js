@@ -3,6 +3,10 @@ import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
+import { onSubmit } from '../submitHandler';
+jest.mock('../submitHandler', () => ({
+    onSubmit: jest.fn(),
+}));
 jest.mock('../../../context');
 
 jest.mock('redux-form/immutable');
@@ -584,5 +588,58 @@ describe('AdminInterface component', () => {
             .props()
             .onCancelAction();
         expect(push).toHaveBeenCalledTimes(0);
+    });
+
+    it('should render unpublish button for published record', () => {
+        onSubmit.mockImplementation(() => {});
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_status: 2,
+                rek_title: 'This is test record',
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_display_type: 179,
+            },
+        }));
+        const handleSubmit = jest.fn(data => onSubmit(data));
+        const wrapper = setup({
+            handleSubmit,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(wrapper.find('#admin-work-unpublish').length).toEqual(1);
+        wrapper.find('#admin-work-unpublish').simulate('click');
+
+        expect(handleSubmit).toHaveBeenCalledTimes(1);
+        expect(onSubmit).toHaveBeenCalledTimes(1);
+    });
+
+    it('should render publish button for unpublished record', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_status: 1,
+                rek_title: 'This is test record',
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_display_type: 179,
+            },
+        }));
+        const wrapper = setup({
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
     });
 });
