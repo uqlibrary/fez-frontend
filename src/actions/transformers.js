@@ -749,7 +749,7 @@ const cleanBlankEntries = data => {
             }
 
             const valueFieldName = searchKeyName.replace(keyPrefix, subkeyPrefix);
-            if (values[valueFieldName] === '') {
+            if (values[valueFieldName] === null || values[valueFieldName] === '') {
                 // where the field has been cleared, remove so API deletes the database record
                 return false;
             }
