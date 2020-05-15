@@ -548,6 +548,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 "tabIndicator": "tabindicator",
               }
             }
+            handleSubmit={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
+                ],
+              }
+            }
             loadRecordToView={
               [MockFunction] {
                 "calls": Array [
@@ -1430,6 +1445,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                   "badgeMargin": "badgemargin",
                   "helpIcon": "helpicon",
                   "tabIndicator": "tabindicator",
+                }
+              }
+              handleSubmit={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
                 }
               }
               location={
@@ -16862,7 +16892,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             color="secondary"
                                                             fullWidth={true}
                                                             id="admin-work-unpublish"
-                                                            onClick={[Function]}
                                                             variant="contained"
                                                           >
                                                             <Button
@@ -16903,7 +16932,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                               fullWidth={true}
                                                               id="admin-work-unpublish"
                                                               mini={false}
-                                                              onClick={[Function]}
                                                               size="medium"
                                                               type="button"
                                                               variant="contained"
@@ -16915,7 +16943,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 focusRipple={true}
                                                                 focusVisibleClassName="MuiButton-focusVisible-215"
                                                                 id="admin-work-unpublish"
-                                                                onClick={[Function]}
                                                                 type="button"
                                                               >
                                                                 <ButtonBase
@@ -16935,7 +16962,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="MuiButton-focusVisible-215"
                                                                   id="admin-work-unpublish"
-                                                                  onClick={[Function]}
                                                                   tabIndex="0"
                                                                   type="button"
                                                                 >
@@ -16944,7 +16970,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     disabled={false}
                                                                     id="admin-work-unpublish"
                                                                     onBlur={[Function]}
-                                                                    onClick={[Function]}
                                                                     onContextMenu={[Function]}
                                                                     onFocus={[Function]}
                                                                     onKeyDown={[Function]}
@@ -17137,6 +17162,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             color="primary"
                                                             fullWidth={true}
                                                             id="admin-work-submit"
+                                                            onClick={
+                                                              [MockFunction] {
+                                                                "calls": Array [
+                                                                  Array [
+                                                                    [Function],
+                                                                  ],
+                                                                ],
+                                                                "results": Array [
+                                                                  Object {
+                                                                    "type": "return",
+                                                                    "value": undefined,
+                                                                  },
+                                                                ],
+                                                              }
+                                                            }
                                                             style={
                                                               Object {
                                                                 "whiteSpace": "nowrap",
@@ -17182,6 +17222,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                               fullWidth={true}
                                                               id="admin-work-submit"
                                                               mini={false}
+                                                              onClick={
+                                                                [MockFunction] {
+                                                                  "calls": Array [
+                                                                    Array [
+                                                                      [Function],
+                                                                    ],
+                                                                  ],
+                                                                  "results": Array [
+                                                                    Object {
+                                                                      "type": "return",
+                                                                      "value": undefined,
+                                                                    },
+                                                                  ],
+                                                                }
+                                                              }
                                                               size="medium"
                                                               style={
                                                                 Object {
@@ -17198,6 +17253,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 focusRipple={true}
                                                                 focusVisibleClassName="MuiButton-focusVisible-215"
                                                                 id="admin-work-submit"
+                                                                onClick={
+                                                                  [MockFunction] {
+                                                                    "calls": Array [
+                                                                      Array [
+                                                                        [Function],
+                                                                      ],
+                                                                    ],
+                                                                    "results": Array [
+                                                                      Object {
+                                                                        "type": "return",
+                                                                        "value": undefined,
+                                                                      },
+                                                                    ],
+                                                                  }
+                                                                }
                                                                 style={
                                                                   Object {
                                                                     "whiteSpace": "nowrap",
@@ -17222,6 +17292,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="MuiButton-focusVisible-215"
                                                                   id="admin-work-submit"
+                                                                  onClick={
+                                                                    [MockFunction] {
+                                                                      "calls": Array [
+                                                                        Array [
+                                                                          [Function],
+                                                                        ],
+                                                                      ],
+                                                                      "results": Array [
+                                                                        Object {
+                                                                          "type": "return",
+                                                                          "value": undefined,
+                                                                        },
+                                                                      ],
+                                                                    }
+                                                                  }
                                                                   style={
                                                                     Object {
                                                                       "whiteSpace": "nowrap",
@@ -17235,6 +17320,21 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     disabled={false}
                                                                     id="admin-work-submit"
                                                                     onBlur={[Function]}
+                                                                    onClick={
+                                                                      [MockFunction] {
+                                                                        "calls": Array [
+                                                                          Array [
+                                                                            [Function],
+                                                                          ],
+                                                                        ],
+                                                                        "results": Array [
+                                                                          Object {
+                                                                            "type": "return",
+                                                                            "value": undefined,
+                                                                          },
+                                                                        ],
+                                                                      }
+                                                                    }
                                                                     onContextMenu={[Function]}
                                                                     onFocus={[Function]}
                                                                     onKeyDown={[Function]}
@@ -17362,6 +17462,7 @@ exports[`AdminContainer component should not render non-security errors for comm
           }
         }
         formErrors={false}
+        handleSubmit={[MockFunction]}
         location={
           Location {
             "assign": [Function],
@@ -18380,6 +18481,7 @@ exports[`AdminContainer component should render default view 1`] = `
             "tabIndicator": "tabindicator",
           }
         }
+        handleSubmit={[MockFunction]}
         location={
           Location {
             "assign": [Function],
