@@ -603,7 +603,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
-        const handleSubmit = jest.fn(data => onSubmit(data));
+        const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
         const wrapper = setup({
             handleSubmit,
             tabs: {

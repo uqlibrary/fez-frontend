@@ -1,3 +1,4 @@
+import React from 'react';
 import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
@@ -196,6 +197,38 @@ describe('AdminContainer component', () => {
                     { disableSubmit: false, loadRecordToView: false },
                 ),
             ).toBeTruthy();
+        });
+    });
+
+    describe('React hooks', () => {
+        it('should call clearRecordToView() prop on unload', () => {
+            const mockUseEffect = jest.spyOn(React, 'useEffect');
+            const mockUseCallback = jest.spyOn(React, 'useCallback');
+            const cleanupFns = [];
+
+            mockUseEffect.mockImplementation(f => {
+                const hookReturn = f();
+                if (typeof hookReturn === 'function') {
+                    cleanupFns.push(hookReturn);
+                }
+            });
+
+            // mock once each for each instance of useCallback
+            mockUseCallback.mockImplementationOnce(f => f()).mockImplementationOnce(f => f());
+
+            const clearRecordToView = jest.fn();
+            setup({
+                clearRecordToView,
+            });
+
+            while (cleanupFns.length > 0) {
+                cleanupFns.pop()();
+            }
+
+            mockUseEffect.mockRestore();
+            mockUseCallback.mockRestore();
+
+            expect(clearRecordToView).toHaveBeenCalled();
         });
     });
 });
