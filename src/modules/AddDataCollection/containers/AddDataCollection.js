@@ -71,7 +71,7 @@ const AddDataCollectionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
     validate,
-})(confirmDiscardFormChanges(AddDataCollection));
+})(confirmDiscardFormChanges(AddDataCollection, FORM_NAME));
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});

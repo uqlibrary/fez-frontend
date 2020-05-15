@@ -1,9 +1,10 @@
 import React from 'react';
-import MemoizedAdminContainer, { AdminContainer, isSame, getPublicationStatus } from './AdminContainer';
+import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
-
+jest.mock('../submitHandler', () => ({
+    onSubmit: jest.fn(),
+}));
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
     set: jest.fn(),
@@ -41,6 +42,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         location: {
             search: '',
         },
+        handleSubmit: jest.fn(),
         ...testProps,
     };
 
@@ -178,7 +180,7 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    describe('isChanged callback function', () => {
+    describe('isSame callback function', () => {
         it('should return true if props are not changed', () => {
             expect(
                 isSame(
@@ -196,68 +198,37 @@ describe('AdminContainer component', () => {
                 ),
             ).toBeTruthy();
         });
-    });
-
-    it('should have helper to get rek_status from form state', () => {
-        const formValues = Immutable.Map({
-            identifiersSection: Immutable.Map({
-                rek_status: '1',
-            }),
-        });
-        expect(getPublicationStatus(formValues)).toBe('1');
     });
 
     describe('React hooks', () => {
-        let mockUseEffect;
-        let mockUseCallback;
-        const cleanupFns = [];
+        it('should call clearRecordToView() prop on unload', () => {
+            const mockUseEffect = jest.spyOn(React, 'useEffect');
+            const mockUseCallback = jest.spyOn(React, 'useCallback');
+            const cleanupFns = [];
 
-        beforeAll(() => {
-            mockUseEffect = jest.spyOn(React, 'useEffect');
-            mockUseCallback = jest.spyOn(React, 'useCallback');
-        });
-
-        beforeEach(() => {
             mockUseEffect.mockImplementation(f => {
                 const hookReturn = f();
                 if (typeof hookReturn === 'function') {
                     cleanupFns.push(hookReturn);
                 }
             });
+
             // mock once each for each instance of useCallback
             mockUseCallback.mockImplementationOnce(f => f()).mockImplementationOnce(f => f());
-        });
 
-        afterEach(() => {
+            const clearRecordToView = jest.fn();
+            setup({
+                clearRecordToView,
+            });
+
             while (cleanupFns.length > 0) {
                 cleanupFns.pop()();
             }
-        });
 
-        afterAll(() => {
             mockUseEffect.mockRestore();
             mockUseCallback.mockRestore();
-        });
 
-        it('should update local state when form value for rek_status changes', () => {
-            const formValuesPublished = Immutable.Map({
-                identifiersSection: Immutable.Map({
-                    rek_status: PUBLISHED,
-                }),
-            });
-            const formValuesUnpublished = Immutable.Map({
-                identifiersSection: Immutable.Map({
-                    rek_status: UNPUBLISHED,
-                }),
-            });
-            const testFn = jest.fn();
-            const wrapper = setup({
-                formValues: formValuesPublished,
-                handleSubmit: testFn,
-                clearRecordToView: jest.fn(),
-            });
-            wrapper.setProps({ formValues: formValuesUnpublished });
-            expect(testFn).toHaveBeenCalledTimes(1);
+            expect(clearRecordToView).toHaveBeenCalled();
         });
     });
 });

@@ -179,9 +179,6 @@ export default {
     rek_subtype: {
         getValue: record => getValueFromRekKey(record, 'rek_subtype'),
     },
-    rek_status: {
-        getValue: record => getValueFromRekKey(record, 'rek_status'),
-    },
     languages: {
         getValue: record => getValueSearchKeyRekValueList(record, 'fez_record_search_key_language.rek_language'),
     },
