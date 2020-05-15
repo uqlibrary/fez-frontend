@@ -490,7 +490,7 @@ export default {
                     order: 29,
                 },
             ],
-            Book: [
+            'Book': [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,
@@ -2395,7 +2395,7 @@ export default {
             'Video Document': [
                 {
                     field: 'fez_record_search_key_oa_status',
-                    order: 1,
+                    order: 3.75,
                 },
                 {
                     field: 'fez_record_search_key_author',
