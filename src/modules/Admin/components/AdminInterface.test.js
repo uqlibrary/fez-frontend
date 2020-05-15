@@ -1,7 +1,7 @@
 import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
+import { RECORD_TYPE_RECORD } from 'config/general';
 
 jest.mock('../../../context');
 
@@ -395,64 +395,6 @@ describe('AdminInterface component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should update rek_status on clicking Publish', () => {
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'Test',
-                rek_object_type_lookup: RECORD_TYPE_RECORD,
-                rek_display_type_lookup: 'Journal Article',
-                rek_display_type: 179,
-                rek_status: UNPUBLISHED,
-            },
-        }));
-        const testFn = jest.fn();
-        const wrapper = setup({
-            changeFieldValue: testFn,
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
-                },
-            },
-        });
-        wrapper
-            .find('#admin-work-publish')
-            .props()
-            .onClick();
-        expect(testFn).toHaveBeenCalledWith('identifiersSection.rek_status', PUBLISHED);
-    });
-
-    it('should update rek_status on clicking Unpublish', () => {
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'Test',
-                rek_object_type_lookup: RECORD_TYPE_RECORD,
-                rek_display_type_lookup: 'Journal Article',
-                rek_display_type: 179,
-                rek_status: PUBLISHED,
-            },
-        }));
-        const testFn = jest.fn();
-        const wrapper = setup({
-            changeFieldValue: testFn,
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
-                },
-            },
-        });
-        wrapper
-            .find('#admin-work-unpublish')
-            .props()
-            .onClick();
-        expect(testFn).toHaveBeenCalledWith('identifiersSection.rek_status', UNPUBLISHED);
-    });
-
     it('should render a title with html correctly', () => {
         const rekTitle =
             'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;' +
@@ -476,7 +418,9 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // prettier-ignore
+        expect(toJson(wrapper))
+            .toMatchSnapshot();
     });
 
     it('should display an alert if editing of a pubtype is not supported', () => {
