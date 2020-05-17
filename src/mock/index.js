@@ -105,7 +105,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.incompleteNTROlist];
         } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
-        } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
+        } else if (config.params.rule === 'mine' && config.params['filters[facets][Display type]'] === 371) {
             // CURRENT_USER_RECORDS_API - myDataset
             const totalRecords = mockData.myDatasetList.data.length;
             const fromRecord = 1;
@@ -117,7 +117,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
                     ...mockData.myDatasetList,
                     current_page: config.params.page,
                     data: mockData.myDatasetList.data.slice(
-                        fromRecord,
+                        fromRecord -1,
                         totalRecords > toRecord ? toRecord : totalRecords,
                     ),
                 },
