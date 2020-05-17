@@ -30,6 +30,7 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 import { adminInterfaceConfig } from 'config/admin';
+import { onSubmit } from '../submitHandler';
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -57,7 +58,6 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
 
 export const AdminInterface = ({
     authorDetails,
-    changeFieldValue,
     classes,
     createMode,
     destroy,
@@ -163,13 +163,10 @@ export const AdminInterface = ({
         ? txt.current.successAddWorkflowConfirmation
         : txt.current.successWorkflowConfirmation;
 
-    const handlePublish = () => {
-        changeFieldValue('identifiersSection.rek_status', PUBLISHED);
-    };
-
-    const handleUnpublish = () => {
-        changeFieldValue('identifiersSection.rek_status', UNPUBLISHED);
-    };
+    const setPublicationStatusAndSubmit = status =>
+        handleSubmit((values, dispatch, props) =>
+            onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
+        );
 
     return (
         <StandardPage>
@@ -293,7 +290,7 @@ export const AdminInterface = ({
                                             color="secondary"
                                             fullWidth
                                             children="Publish"
-                                            onClick={handlePublish}
+                                            onClick={setPublicationStatusAndSubmit(PUBLISHED)}
                                         />
                                     </Grid>
                                 )}
@@ -308,7 +305,7 @@ export const AdminInterface = ({
                                             color="secondary"
                                             fullWidth
                                             children="Unpublish"
-                                            onClick={handleUnpublish}
+                                            onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
                                         />
                                     </Grid>
                                 )}
@@ -335,7 +332,6 @@ export const AdminInterface = ({
 
 AdminInterface.propTypes = {
     authorDetails: PropTypes.object,
-    changeFieldValue: PropTypes.func,
     classes: PropTypes.object,
     createMode: PropTypes.bool,
     destroy: PropTypes.func,

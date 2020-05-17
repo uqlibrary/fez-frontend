@@ -47,7 +47,7 @@ export default {
         },
         {
             title: 'Manage links',
-            groups: [['links'], ['rek_status']],
+            groups: [['links']],
         },
         ...(displayIdentifiers
             ? [

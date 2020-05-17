@@ -48,19 +48,14 @@ const styles = theme => ({
     },
 });
 
-export const getPublicationStatus = formValues =>
-    !!formValues && !!formValues.get('identifiersSection') && formValues.get('identifiersSection').get('rek_status');
-
 export const AdminContainer = ({
     authorDetails,
-    changeFieldValue,
     classes,
     clearRecordToView,
     createMode,
     destroy,
     disableSubmit,
     formErrors,
-    formValues,
     handleSubmit,
     history,
     loadingRecordToView,
@@ -76,15 +71,6 @@ export const AdminContainer = ({
     const [showAddForm, setShowAddForm] = React.useState(!match.params.pid);
     const theme = useTheme();
     const tabErrors = React.useRef(null);
-
-    const [rekStatus, setStatus] = React.useState(getPublicationStatus(formValues));
-    React.useEffect(() => {
-        const status = getPublicationStatus(formValues);
-        if (!!status && status !== rekStatus) {
-            setStatus(status);
-            status !== recordToView.rek_status && handleSubmit();
-        }
-    }, [formValues, rekStatus, setStatus, handleSubmit, recordToView]);
 
     tabErrors.current = Object.entries(
         (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
@@ -165,7 +151,6 @@ export const AdminContainer = ({
                             createMode={createMode}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
-                            changeFieldValue={changeFieldValue}
                             tabs={{
                                 identifiers: {
                                     component: IdentifiersSection,
@@ -222,14 +207,12 @@ export const AdminContainer = ({
 AdminContainer.propTypes = {
     actions: PropTypes.object,
     authorDetails: PropTypes.object,
-    changeFieldValue: PropTypes.func,
     classes: PropTypes.object,
     clearRecordToView: PropTypes.func,
     createMode: PropTypes.bool,
     destroy: PropTypes.func,
     disableSubmit: PropTypes.any,
     formErrors: PropTypes.object,
-    formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
@@ -248,7 +231,6 @@ export const isSame = (prevProps, nextProps) =>
     (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
     (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
     (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
-    getPublicationStatus(prevProps.formValues) === getPublicationStatus(nextProps.formValues) &&
     prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
     prevProps.showAddForm === nextProps.showAddForm &&
     prevProps.formErrors === nextProps.formErrors;
