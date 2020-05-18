@@ -43,7 +43,7 @@ export class FileUploadEmbargoDate extends PureComponent {
                 InputProps={inputProps}
                 allowKeyboardControl
                 autoOk
-                clearable={this.props.canBeCleared}
+                {...(this.props.canBeCleared ? { clearable: true } : {})}
             />
         );
     }

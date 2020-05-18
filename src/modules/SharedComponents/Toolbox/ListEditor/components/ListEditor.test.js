@@ -16,6 +16,7 @@ function setup(testProps = {}, args = {}) {
         errorText: '',
         scrollList: testProps.scrollList || false,
         scrollListHeight: testProps.scrollListHeight || 250,
+        listEditorId: 'test-list-editor',
         ...testProps,
     };
     return getElement(ListEditor, props, args);
