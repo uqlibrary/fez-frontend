@@ -86,7 +86,6 @@ export const AutoCompleteAsynchronousField = ({
         <Autocomplete
             id={id}
             clearOnEscape
-            disableOpenOnFocus
             disabled={disabled}
             onOpen={() => {
                 setOpen(true);

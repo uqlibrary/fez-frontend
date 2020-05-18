@@ -591,6 +591,7 @@ export default {
                 distinctOnly: true,
                 category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
                 canEdit: true,
+                listEditorId: 'subjects',
             },
         },
         fez_record_search_key_refereed_source: {

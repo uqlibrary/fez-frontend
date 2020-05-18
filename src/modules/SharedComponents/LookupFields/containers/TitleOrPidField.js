@@ -15,7 +15,7 @@ const mapStateToProps = (state, props) => {
         id: 'title-or-pid-field',
         itemsList: itemsList.map(item => ({ id: item.rek_pid, value: item.rek_title, ...item })),
         itemsLoading,
-        getOptionLabel: () => null,
+        getOptionLabel: () => '',
         filterOptions: (options, { inputValue }) =>
             matchSorter(options, inputValue, { keys: ['rek_pid', 'rek_title'] }),
         OptionTemplate: TitleOrPidOptionTemplate,
@@ -32,4 +32,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const TitleOrPidField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const TitleOrPidField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);

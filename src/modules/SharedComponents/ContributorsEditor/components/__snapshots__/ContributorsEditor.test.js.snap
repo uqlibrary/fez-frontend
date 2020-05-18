@@ -2742,7 +2742,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Autocomplete))
                                               clearOnEscape={true}
-                                              disableOpenOnFocus={true}
                                               disabled={false}
                                               filterOptions={[Function]}
                                               getOptionLabel={[Function]}
@@ -2788,7 +2787,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   }
                                                 }
                                                 clearOnEscape={true}
-                                                disableOpenOnFocus={true}
                                                 disabled={false}
                                                 filterOptions={[Function]}
                                                 getOptionLabel={[Function]}
@@ -2809,7 +2807,6 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   aria-expanded={false}
                                                   aria-owns={null}
                                                   className="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon"
-                                                  disableOpenOnFocus={true}
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   onMouseDown={[Function]}
@@ -6951,7 +6948,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Autocomplete))
                                               clearOnEscape={true}
-                                              disableOpenOnFocus={true}
                                               disabled={true}
                                               filterOptions={[Function]}
                                               getOptionLabel={[Function]}
@@ -6997,7 +6993,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   }
                                                 }
                                                 clearOnEscape={true}
-                                                disableOpenOnFocus={true}
                                                 disabled={true}
                                                 filterOptions={[Function]}
                                                 getOptionLabel={[Function]}
@@ -7018,7 +7013,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   aria-expanded={false}
                                                   aria-owns={null}
                                                   className="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon"
-                                                  disableOpenOnFocus={true}
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   onMouseDown={[Function]}
