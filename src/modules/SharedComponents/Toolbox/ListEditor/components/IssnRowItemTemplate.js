@@ -10,7 +10,10 @@ import { default as globalLocale } from 'locale/global';
 export const IssnRowItemTemplate = ({ actions, hasPreload, item, loadingSherpaFromIssn, loadingUlrichsFromIssn }) => {
     React.useEffect(() => {
         if (!item.value || !item.value.sherpaRomeo || !item.value.sherpaRomeo.link) {
-            !hasPreload && !loadingSherpaFromIssn && actions.getSherpaFromIssn(item.key);
+            !hasPreload &&
+                !loadingSherpaFromIssn &&
+                item.value.sherpaRomeo.link !== null &&
+                actions.getSherpaFromIssn(item.key);
         }
     }, [actions, hasPreload, item, loadingSherpaFromIssn]);
 
@@ -61,15 +64,20 @@ IssnRowItemTemplate.propTypes = {
 };
 
 export const getValidSherpa = (sherpaData, issn) =>
-    sherpaData[issn] &&
-    sherpaData[issn].srm_journal_name !== '' &&
-    sherpaData[issn].srm_journal_name !== 'Not found in Sherpa Romeo' &&
-    sherpaData[issn].srm_issn === issn &&
-    sherpaData[issn];
+    sherpaData[issn] && sherpaData[issn].srm_issn === issn && sherpaData[issn];
 
+/**
+ * Returns false if data is missing, and needs to be loaded.
+ * Returns null if data in invalid, so data should not be loaded.
+ * Returns non-empty journal link for valid records, or link to legacy site if
+ * colour is found.
+ */
 export const getSherpaLink = sherpaEntry => {
     if (!sherpaEntry) {
-        return '';
+        return false;
+    }
+    if (sherpaEntry.srm_journal_name === 'Not found in Sherpa Romeo') {
+        return null;
     }
     if (!!sherpaEntry.srm_journal_link) {
         return sherpaEntry.srm_journal_link;
@@ -78,7 +86,7 @@ export const getSherpaLink = sherpaEntry => {
     if (validOldColours.includes(sherpaEntry.srm_colour) && !!sherpaEntry.srm_issn) {
         return globalLocale.global.sherpaRomeoLink.externalUrl.replace('[id]', sherpaEntry.srm_issn);
     }
-    return '';
+    return false;
 };
 
 export const getValidUlrichs = (ulrichsData, issn) =>
@@ -122,11 +130,9 @@ export const mapStateToProps = (state, props) => {
             key: issn,
             value: {
                 ...(((typeof item === 'object' && item) || {}).value || {}),
-                sherpaRomeo:
-                    (sherpaEntry && {
-                        link: getSherpaLink(sherpaEntry),
-                    }) ||
-                    {},
+                sherpaRomeo: {
+                    link: getSherpaLink(sherpaEntry),
+                },
                 ulrichs:
                     (ulrichsEntry && {
                         link:
