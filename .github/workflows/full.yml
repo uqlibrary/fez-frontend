@@ -3,7 +3,7 @@ name: GitHub CI
 on:
   push:
     branches:
-      - feature-thesis-messages-171761003
+      - feature-sherpa-loop-172882019
 
     paths-ignore:
       - "**.md"
