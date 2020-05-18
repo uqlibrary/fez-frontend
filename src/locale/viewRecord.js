@@ -13,7 +13,7 @@ export default {
                 licenseLinkText: 'View licence details',
             },
             relatedPublications: {
-                title: 'Related works and datasets',
+                title: 'Related works and datasets in eSpace',
                 depositedBy: 'deposited',
                 currentRecord: 'Current Record',
             },
@@ -194,6 +194,7 @@ export default {
                 fez_record_search_key_report_number: 'Report number',
                 fez_record_search_key_parent_publication: 'Parent work',
                 fez_record_search_key_related_publications: 'Related works',
+                fez_record_search_key_related_datasets: 'Related datasets',
                 fez_record_search_key_time_period_start_date: 'Time coverage start date',
                 fez_record_search_key_time_period_end_date: 'Time coverage end date',
                 fez_record_search_key_start_date: 'Collection start date',
@@ -275,6 +276,8 @@ export default {
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
+                fez_record_search_key_related_publications: 'Link to related publications',
+                fez_record_search_key_related_datasets: 'Link to related datasets',
             },
             'Department Technical Report': {},
             Design: {
@@ -1204,6 +1207,14 @@ export default {
                 {
                     field: 'fez_record_search_key_data_volume',
                     order: 29,
+                },
+                {
+                    field: 'fez_record_search_key_related_publications',
+                    order: 30,
+                },
+                {
+                    field: 'fez_record_search_key_related_datasets',
+                    order: 31,
                 },
             ],
             'Department Technical Report': [
