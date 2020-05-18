@@ -896,6 +896,7 @@ export default {
                 allowPartial: false,
                 clearable: true,
                 dateFormat: 'YYYY-MM-DD',
+                partialDateFieldId: 'recording-date',
             },
         },
         fez_record_search_key_isderivationof: {

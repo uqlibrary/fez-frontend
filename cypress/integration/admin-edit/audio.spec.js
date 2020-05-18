@@ -54,7 +54,7 @@ context('Audio admin edit', () => {
                 cy.get('h4')
                     .should('contain', 'Bibliographic');
                 cy.checkPartialDateFromRecordValue(
-                    'Recording date',
+                    'recording-date',
                     record.fez_record_search_key_date_recorded.rek_date_recorded,
                 );
                 cy.get('#Acknowledgements')
@@ -124,7 +124,7 @@ context('Audio admin edit', () => {
                         .should('have.text', location);
                 });
             });
-        cy.setPartialDate('@pubDateBlock', { day: 1, month: 1, year: 2020 });
+        cy.setPartialDate('date', { day: 1, month: 1, year: 2020 });
         cy.get('@pubDateBlock')
             .find('p')
             .should('not.exist');
