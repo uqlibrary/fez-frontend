@@ -203,23 +203,23 @@ context('Book admin edit', () => {
                     .within(row => {
                         checkIssnLinks(row, '4444-4444');
                     });
-                cy.log('New entry with sherpa placeholder data');
-                cy.get('@issnBlock')
-                    .find('input')
-                    .type('00000000{enter}');
-                cy.get('#issn-list-row-5')
-                    .should('contain', '0000-0000')
-                    .find('a')
-                    .should('not.contain', 'SHERPA/RoMEO')
-                    .should('contain', 'Ulrichs');
-                cy.log('New entry with unknown sherpa status');
-                cy.get('@issnBlock')
-                    .find('input')
-                    .type('66666666{enter}');
-                cy.get('#issn-list-row-6')
-                    .within(row => {
-                        checkIssnLinks(row, '6666-6666');
-                    });
+            // cy.log('New entry with sherpa placeholder data');
+            // cy.get('@issnBlock')
+            //     .find('input')
+            //     .type('00000000{enter}');
+            // cy.get('#issn-list-row-5')
+            //     .should('contain', '0000-0000')
+            //     .find('a')
+            //     .should('not.contain', 'SHERPA/RoMEO')
+            //     .should('contain', 'Ulrichs');
+            // cy.log('New entry with unknown sherpa status');
+            // cy.get('@issnBlock')
+            //     .find('input')
+            //     .type('66666666{enter}');
+            // cy.get('#issn-list-row-6')
+            //     .within(row => {
+            //         checkIssnLinks(row, '6666-6666');
+            //     });
             });
 
         cy.adminEditCleanup();
