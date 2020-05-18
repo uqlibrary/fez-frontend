@@ -115,5 +115,6 @@ export default {
         rek_rights: 'Rights is required',
         rek_ands_collection_type: 'Dataset collection type is required',
         rek_date_available: 'Invalid year',
+        rek_project_start_date: 'Project start date is required',
     },
 };

@@ -1194,6 +1194,7 @@ export default {
                 floatingTitle: 'Project start date',
                 fullWidth: true,
                 allowPartial: true,
+                required: true,
             },
         },
         fez_record_search_key_start_date: {
