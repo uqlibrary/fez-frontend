@@ -2798,9 +2798,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     plainText: 'A related publication',
                     htmlText: '<p>A related publication</p>',
                 },
-                fez_record_search_key_end_date_biblio: {
-                    rek_end_date: '2010-02-05',
-                },
+                fez_record_search_key_end_date_biblio: {},
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2837,9 +2835,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_related_publications: {
                     rek_related_publications: '<p>A related publication</p>',
                 },
-                fez_record_search_key_end_date: {
-                    rek_end_date: '2010-02-05',
-                },
+                fez_record_search_key_end_date: {},
             });
         });
 

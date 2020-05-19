@@ -809,17 +809,30 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
     };
 };
 
-// generic method for saving single search keys (ie no order field)
-export const renameSingleChild = (record, keyName, fieldName) => {
-    if (!!record && !record[fieldName]) {
+export const renameEndDate = record => {
+    if (!!record && !record.rek_end_date) {
         return {
-            [keyName]: {},
+            fez_record_search_key_end_date: {},
         };
     }
 
     return {
-        [keyName]: {
-            [fieldName]: record[fieldName],
+        fez_record_search_key_end_date: {
+            rek_end_date: record.rek_end_date,
+        },
+    };
+};
+
+export const renameLicense = record => {
+    if (!!record && !record.rek_license) {
+        return {
+            fez_record_search_key_license: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_license: {
+            rek_license: record.rek_license,
         },
     };
 };
@@ -948,12 +961,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
-        ...(!!endDateBiblio ? renameSingleChild(endDateBiblio, 'fez_record_search_key_end_date', 'rek_end_date') : {}),
+        ...(!!endDateBiblio ? renameEndDate(endDateBiblio) : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!licenseDataBiblio
-            ? renameSingleChild(licenseDataBiblio, 'fez_record_search_key_license', 'rek_license')
-            : {}),
+        ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
         ...(!!locationDataBiblio ? renameLocation(locationDataBiblio) : {}),
         ...(!!issnField
             ? {
@@ -1137,16 +1148,12 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
-        ...(!!licenseDataAdmin
-            ? renameSingleChild(licenseDataAdmin, 'fez_record_search_key_license', 'rek_license')
-            : {}),
+        ...(!!licenseDataAdmin ? renameLicense(licenseDataAdmin) : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
-        ...(!!endDateAdditional
-            ? renameSingleChild(endDateAdditional, 'fez_record_search_key_end_date', 'rek_end_date')
-            : {}),
+        ...(!!endDateAdditional ? renameEndDate(endDateAdditional) : {}),
         ...rest,
         ...cleanBlankEntries(rest),
     };
