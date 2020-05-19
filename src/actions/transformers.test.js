@@ -2619,7 +2619,7 @@ describe('Sanitising empty data', () => {
         const data = {};
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
         });
     });
 
@@ -2630,7 +2630,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         });
     });
@@ -2642,7 +2642,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         });
     });
@@ -2654,7 +2654,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
@@ -2845,7 +2845,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should use default parameter value', () => {
             expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
     });
@@ -2870,7 +2870,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2912,7 +2912,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2951,7 +2951,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2981,13 +2981,13 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license_biblio: { rek_license: 123 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_license: { rek_license: 123 },
             });
 
             data = {};
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
 
@@ -2999,7 +2999,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
             };
             expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_issn: [
                     { rek_issn: '1212-1212', rek_issn_order: 1 },
                     { rek_issn: '2323-2323', rek_issn_order: 2 },
@@ -3007,13 +3007,13 @@ describe('getBibliographicSectionSearchKeys', () => {
             });
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
             });
 
             const dataEmpty = {};
             expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
     });
@@ -3027,7 +3027,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_language_of_title: [
                     {
                         rek_language_of_title: 'eng',
@@ -3060,7 +3060,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_language_of_proceedings_title: [
                     {
                         rek_language_of_proceedings_title: 'eng',
@@ -3157,7 +3157,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_project_name: 'Flats for Mr. and Mrs. A Franchin',
                 },
                 fez_record_search_key_project_start_date: {
-                    rek_project_start_date: '2016-01-01',
+                    rek_project_start_date: '2017-01-01',
                 },
             };
 
@@ -3214,7 +3214,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_project_name: 'Flats for Mr. and Mrs. A Franchin',
                 },
                 fez_record_search_key_project_start_date: {
-                    rek_project_start_date: '2016-01-01',
+                    rek_project_start_date: '2017-01-01',
                 },
                 rek_title:
                     'Flats for Mr. and Mrs. A Franchin, Wavell Heights, ground floor and basement plan blueprints, Nov 1960',
@@ -3249,6 +3249,34 @@ describe('getBibliographicSectionSearchKeys', () => {
                 ],
             });
         });
+
+        it('should save a null pub date as the placeholder date', () => {
+            const data = {
+                rek_date: null,
+                fez_record_search_key_subject: [
+                    {
+                        rek_subject: 111111,
+                        rek_subject_order: 1,
+                    },
+                ],
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2017-01-01',
+                },
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_subject: [
+                    {
+                        rek_subject: 111111,
+                        rek_subject_order: 1,
+                    },
+                ],
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2017-01-01',
+                },
+            });
+        });
     });
 
     describe('Department Technical Report', () => {
@@ -3266,7 +3294,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_isderivationof: [
                     {
                         rek_isderivationof: 'UQ:734361',
@@ -3285,7 +3313,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_isderivationof: [
                     {
                         rek_isderivationof: 'UQ:734361',

@@ -888,7 +888,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
-        rek_date: moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
+        rek_date:
+            !data.rek_date || !moment(data.rek_date).isValid()
+                ? '1000-01-01 00:00:00'
+                : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
         ...(!!description && description.hasOwnProperty('plainText') ? { rek_description: description.plainText } : {}),
