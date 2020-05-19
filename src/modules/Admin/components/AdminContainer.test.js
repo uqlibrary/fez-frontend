@@ -1,4 +1,4 @@
-import MemoizedAdminContainer, { AdminContainer, isChanged } from './AdminContainer';
+import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
 
@@ -33,9 +33,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
                 pid: 'UQ:111111',
             },
         },
-        actions: {
-            loadRecordToView: jest.fn(),
-        },
+        loadRecordToView: jest.fn(),
         loadingRecordToView: false,
         recordToView: recordWithDatastreams,
         location: {
@@ -178,10 +176,10 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    describe('isChanged callback function', () => {
+    describe('isSame callback function', () => {
         it('should return true if props are not changed', () => {
             expect(
-                isChanged(
+                isSame(
                     { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
                     { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
                 ),
@@ -190,7 +188,7 @@ describe('AdminContainer component', () => {
 
         it('should return true if props are not changed', () => {
             expect(
-                isChanged(
+                isSame(
                     { disableSubmit: false, loadRecordToView: false },
                     { disableSubmit: false, loadRecordToView: false },
                 ),

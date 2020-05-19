@@ -27,10 +27,8 @@ Cypress.Commands.add('adminEditNoAlerts', () => {
                 .should('not.exist');
         });
 
-    cy.get('.StandardPage form button')
-        .contains('Submit')
+    cy.get('#admin-work-submit')
         .should('exist')
-        .parent()
         .should('be.enabled');
 });
 
@@ -50,10 +48,8 @@ Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
             });
         });
 
-    cy.get('.StandardPage form button')
-        .contains('Submit')
+    cy.get('#admin-work-submit')
         .should('exist')
-        .parent()
         .should('be.disabled');
 });
 

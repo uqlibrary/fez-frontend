@@ -200,8 +200,8 @@ const mapStateToProps = (state, props) => {
     }
 
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
+        formValues,
+        formErrors,
         disableSubmit:
             !!recordToView &&
             !!recordToView.rek_display_type &&
@@ -212,7 +212,7 @@ const mapStateToProps = (state, props) => {
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
         recordToView,
-        ...(!!initialFormValues ? initialFormValues : {}),
+        ...initialFormValues,
     };
 };
 
