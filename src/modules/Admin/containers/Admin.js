@@ -1,7 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { destroy, reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
-import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
+import { destroy, reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -28,8 +27,8 @@ import {
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
-import { detailedDiff } from 'deep-object-diff';
 import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
+import { onSubmit } from '../submitHandler';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&
@@ -79,7 +78,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
-    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true));
+    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
 
     return {
         initialValues: {
@@ -118,44 +117,6 @@ const getInitialFormValues = (recordToView, recordType) => {
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
         },
     };
-};
-
-export const onSubmit = (values, dispatch, { initialValues, match }) => {
-    const data = (values && values.toJS()) || null;
-    const initialData = (initialValues && initialValues.toJS()) || null;
-    const changes = detailedDiff(initialData, data);
-    console.log(changes);
-
-    const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
-
-    let action = null;
-    let requestObject = isEdit
-        ? {
-            // This is ignored for regular records.
-            ...changes,
-            pid: data.publication.rek_pid,
-            // The fallback to rek_created_date for rek_date may only be used for
-            // collections and communities. Legacy omits rek_date when creating
-            // them, but it's required by API.
-            date: data.publication.rek_date || data.publication.rek_created_date,
-        }
-        : data;
-    switch ((!!data.publication && data.publication.rek_object_type_lookup) || '') {
-        case 'Collection':
-            action = isEdit ? updateCollection : null;
-            break;
-        case 'Community':
-            action = isEdit ? updateCommunity : null;
-            break;
-        default:
-            requestObject = data;
-            action = isEdit ? adminUpdate : adminCreate;
-            break;
-    }
-
-    return dispatch(action(requestObject)).catch(error => {
-        throw new SubmissionError({ _error: error });
-    });
 };
 
 const PrototypeContainer = reduxForm({
@@ -200,8 +161,8 @@ const mapStateToProps = (state, props) => {
     }
 
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
+        formValues,
+        formErrors,
         disableSubmit:
             !!recordToView &&
             !!recordToView.rek_display_type &&
@@ -212,7 +173,7 @@ const mapStateToProps = (state, props) => {
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
         recordToView,
-        ...(!!initialFormValues ? initialFormValues : {}),
+        ...initialFormValues,
     };
 };
 

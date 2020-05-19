@@ -651,6 +651,7 @@ export const IN_REVIEW = 5;
 export const RETRACTED = 7;
 export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
+export const PUBLISHED = 2;
 
 export const UNPUBLISHED_STATUS = [
     {

@@ -761,7 +761,7 @@ const cleanBlankEntries = data => {
     // Clean out blanked fields
     // * For a single-child-key, to delete, remove the key from the payload sent to api
     // * For a many-child-key, where we want to end up with zero children (ie remove all),
-    //   also remove the key from the payload sent to api
+    //   ditto: remove the key from the payload sent to api
     // * For a many-child-key, where we only want to remove some of its children,
     //   unset those children and re-number the order fields
     const entries = Object.entries(data);

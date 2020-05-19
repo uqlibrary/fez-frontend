@@ -43,8 +43,7 @@ context('Video admin edit', () => {
 
     it('should submit successfully', () => {
         const baseUrl = Cypress.config('baseUrl');
-        cy.get('button')
-            .contains('Submit')
+        cy.get('#admin-work-submit')
             .click();
         cy.get('[role=dialog]')
             .should('exist')
