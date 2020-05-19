@@ -54,6 +54,7 @@ import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { AndsCollectionTypesField } from 'modules/SharedComponents/Toolbox/AndsCollectionTypesField';
 import {
+    IssnListEditorField,
     LinkInfoListEditorField,
     ListEditorField,
     ScaleOfSignificanceListEditorField,
@@ -497,7 +498,7 @@ export default {
             },
         },
         issnField: {
-            component: ListEditorField,
+            component: IssnListEditorField,
             componentProps: {
                 remindToAdd: true,
                 name: 'bibliographicSection.issnField',

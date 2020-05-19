@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssnListEditorField function should return <ListEditor> 1`] = `
+<ListEditor
+  canEdit={false}
+  distinctOnly={false}
+  errorText={null}
+  formComponent={[Function]}
+  getItemSelectedToEdit={[Function]}
+  hideReorder={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  inputNormalizer={[Function]}
+  locale={
+    Object {
+      "form": Object {
+        "locale": Object {
+          "inputFieldLabel": "NoLabel",
+        },
+      },
+    }
+  }
+  maxCount={0}
+  onChange={[MockFunction]}
+  required={false}
+  rowItemTemplate={[Function]}
+  scrollList={false}
+  scrollListHeight={250}
+  searchKey={
+    Object {
+      "order": "rek_order",
+      "value": "rek_value",
+    }
+  }
+  transformFunction={[Function]}
+/>
+`;
+
+exports[`IssnListEditorField function should return <ListEditor> with error attributes 1`] = `
+<ListEditor
+  canEdit={false}
+  distinctOnly={false}
+  error="test"
+  errorText="test"
+  formComponent={[Function]}
+  getItemSelectedToEdit={[Function]}
+  hideReorder={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  inputNormalizer={[Function]}
+  locale={
+    Object {
+      "form": Object {
+        "locale": Object {
+          "inputFieldLabel": "NoLabel",
+        },
+      },
+    }
+  }
+  maxCount={0}
+  meta={
+    Object {
+      "error": "test",
+    }
+  }
+  onChange={[MockFunction]}
+  required={false}
+  rowItemTemplate={[Function]}
+  scrollList={false}
+  scrollListHeight={250}
+  searchKey={
+    Object {
+      "order": "rek_order",
+      "value": "rek_value",
+    }
+  }
+  transformFunction={[Function]}
+/>
+`;

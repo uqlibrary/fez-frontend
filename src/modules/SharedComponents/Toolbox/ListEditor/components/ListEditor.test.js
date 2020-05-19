@@ -140,6 +140,10 @@ describe('ListEditor tests', () => {
                     },
                 ],
             },
+            searchKey: {
+                order: 'rek_order',
+                value: 'rek_value',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -156,6 +160,10 @@ describe('ListEditor tests', () => {
                         rek_value: 'test 2',
                     },
                 ]),
+            },
+            searchKey: {
+                order: 'rek_order',
+                value: 'rek_value',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -201,19 +201,9 @@ export default class ListEditor extends Component {
     };
 
     render() {
-        const componentID =
-            'ListEditor-' +
-            (
-                (this.props.locale.form && this.props.locale.form.title) ||
-                (this.props.locale.form && this.props.locale.form.inputFieldLabel) ||
-                (this.props.locale.form &&
-                    this.props.locale.form.locale &&
-                    this.props.locale.form.locale.inputFieldLabel) ||
-                ''
-            ).replace(/\s+/g, '-');
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
-                key={index}
+                key={item.key || item.id || item}
                 index={index}
                 item={item}
                 canMoveDown={index !== this.state.itemList.length - 1}
@@ -231,7 +221,7 @@ export default class ListEditor extends Component {
             />
         ));
         return (
-            <div className={`${this.props.className} ${componentID}`} id={`${this.props.listEditorId}-list-editor`}>
+            <div className={`${this.props.className}`} id={`${this.props.listEditorId}-list-editor`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={this.state.itemIndexSelectedToEdit + 1 || 'link-info-form'}

@@ -46,22 +46,22 @@ export const ListRow = ({
     const deleteRecord = useCallback(() => {
         !disabled && !!onDelete && onDelete(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [index]);
 
     const _handleEdit = useCallback(() => {
         !!onEdit && onEdit(index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [index]);
 
     const _handleMoveUp = useCallback(() => {
         !disabled && !!onMoveUp && onMoveUp(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [index]);
 
     const _handleMoveDown = useCallback(() => {
         !disabled && !!onMoveDown && onMoveDown(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [index]);
 
     return (
         <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}-${index}`}>
