@@ -104,9 +104,9 @@ export class NtroDetailsClass extends PureComponent {
                                 (this.props.account && this.props.account.canMasquerade) ||
                                 (item.rek_creator_contribution_statement &&
                                     item.rek_creator_contribution_statement !== '' &&
-                                        item.rek_creator_contribution_statement.length > 0 &&
-                                        item.rek_creator_contribution_statement.trim().length !== 0) ||
-                                    item.rek_creator_contribution_statement === null
+                                    item.rek_creator_contribution_statement.length > 0 &&
+                                    item.rek_creator_contribution_statement.trim().length !== 0) ||
+                                item.rek_creator_contribution_statement === null
                             ) {
                                 return (
                                     <this.ViewNtroRow
@@ -223,7 +223,8 @@ export class NtroDetailsClass extends PureComponent {
                     )}
                     {/* Total pages */}
                     {docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
-                        docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
+                        docType !== DOCUMENT_TYPE_BOOK &&
+                        subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         docType !== DOCUMENT_TYPE_RESEARCH_REPORT &&
                         publication.fez_record_search_key_total_pages &&
                         publication.fez_record_search_key_total_pages.rek_total_pages && (

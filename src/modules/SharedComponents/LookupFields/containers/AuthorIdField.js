@@ -46,7 +46,4 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-export const AuthorIdField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

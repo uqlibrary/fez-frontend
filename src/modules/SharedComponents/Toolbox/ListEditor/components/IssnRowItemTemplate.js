@@ -151,9 +151,6 @@ export const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
-const IssnRowItemTemplateContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(IssnRowItemTemplate);
+const IssnRowItemTemplateContainer = connect(mapStateToProps, mapDispatchToProps)(IssnRowItemTemplate);
 
 export default IssnRowItemTemplateContainer;

@@ -498,7 +498,7 @@ export default {
                     order: 29,
                 },
             ],
-            'Book': [
+            Book: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,

@@ -43,7 +43,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: props.onClear,
 });
 
-export const UqIdField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsynchronousField);
+export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
