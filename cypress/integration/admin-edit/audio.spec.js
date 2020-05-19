@@ -106,8 +106,7 @@ context('Audio admin edit', () => {
                 cy.get('#Placeofrecording')
                     .should(
                         'have.value',
-                        record.fez_record_search_key_location
-                            .map(item => item.rek_location)
+                        record.fez_record_search_key_location.map(item => item.rek_location)
                             .join(''), // only has a single entry
                     );
             });
