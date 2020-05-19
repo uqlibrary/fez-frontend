@@ -32102,7 +32102,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="32"
       style={
         Object {
           "padding": 8,
@@ -56880,7 +56880,7 @@ exports[`Additional Information Component  should render component with video do
     title="Additional information"
   >
     <div
-      key="1"
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -57222,7 +57222,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="2"
+      key="1"
       style={
         Object {
           "padding": 8,
@@ -57269,7 +57269,7 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="3"
+      key="2"
       style={
         Object {
           "padding": 8,

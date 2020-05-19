@@ -2609,10 +2609,24 @@ describe('Sanitising empty data', () => {
         });
     });
 
+    // test the `volume` key is removed when set to blank
+    it('should remove blank value', () => {
+        const data = {
+            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            fez_record_search_key_volume_number: { rek_volume_number: '' },
+        };
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '2016-01-01 00:00:00',
+            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+        });
+    });
+
+    // test the `series` key is removed when set to null
     it('should remove null value', () => {
         const data = {
             fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
-            fez_record_search_key_volume_number: { rek_volume_number: null },
+            fez_record_search_key_series: { rek_series: null },
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({

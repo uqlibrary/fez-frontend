@@ -9,7 +9,12 @@ import React from 'react';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
-        item: {},
+        item: {
+            value: {
+                sherpaRomeo: {},
+                ulrichs: {},
+            },
+        },
         actions: {
             getSherpaFromIssn: jest.fn(),
             getUlrichsFromIssn: jest.fn(),
@@ -99,6 +104,7 @@ describe('IssnRowItemTemplate', () => {
                 },
             });
             expect(toJson(wrapper)).toMatchSnapshot();
+            expect(actionSherpa).toHaveBeenCalledTimes(0);
         });
 
         it('should attempt to get new link data after an edit', () => {
@@ -118,10 +124,31 @@ describe('IssnRowItemTemplate', () => {
             wrapper.setProps({
                 item: {
                     key: '1212-1212',
+                    value: {
+                        sherpaRomeo: {},
+                        ulrichs: {},
+                    },
                 },
             });
             expect(actionSherpa).toHaveBeenCalledWith('1212-1212');
             expect(actionUlrichs).toHaveBeenCalledWith('1212-1212');
+        });
+
+        it('should not attempt to get sherpa data if invalid data has been set', () => {
+            setup({
+                item: {
+                    key: '1234-1234',
+                    value: {
+                        sherpaRomeo: { link: null },
+                        ulrichs: {},
+                    },
+                },
+                actions: {
+                    getSherpaFromIssn: actionSherpa,
+                    getUlrichsFromIssn: actionUlrichs,
+                },
+            });
+            expect(actionSherpa).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -139,12 +166,7 @@ describe('IssnRowItemTemplate', () => {
                     ...expected,
                 },
                 '1234-0002': {
-                    srm_issn: '1234-0002',
-                    srm_journal_name: '',
-                },
-                '1234-0003': {
                     srm_issn: '1234-0003',
-                    srm_journal_name: 'Not found in Sherpa Romeo',
                 },
             };
 
@@ -153,23 +175,21 @@ describe('IssnRowItemTemplate', () => {
 
             const item2 = '1234-0002';
             expect(getValidSherpa(sherpaRomeo, item2)).toEqual(false);
-
-            const item3 = '1234-0003';
-            expect(getValidSherpa(sherpaRomeo, item3)).toBe(false);
         });
 
         it('should use a fallback link for Sherpa Romeo', () => {
-            expect(getSherpaLink()).toBe('');
+            expect(getSherpaLink()).toBe(false);
 
             const sherpaData = {
                 srm_colour: 'green',
+                srm_journal_name: 'Testing',
                 srm_journal_link: '',
                 srm_issn: '1234-5678',
             };
             expect(getSherpaLink(sherpaData)).toBe('http://www.sherpa.ac.uk/romeo/search.php?issn=1234-5678');
 
             sherpaData.srm_colour = 'gray';
-            expect(getSherpaLink(sherpaData)).toBe('');
+            expect(getSherpaLink(sherpaData)).toBe(false);
 
             sherpaData.srm_journal_link = 'http://example.com';
             expect(getSherpaLink(sherpaData)).toBe('http://example.com');
@@ -226,7 +246,9 @@ describe('IssnRowItemTemplate', () => {
                 item: {
                     key: props.item,
                     value: {
-                        sherpaRomeo: {},
+                        sherpaRomeo: {
+                            link: false,
+                        },
                         ulrichs: {},
                     },
                 },
@@ -319,7 +341,9 @@ describe('IssnRowItemTemplate', () => {
                 item: {
                     key: props.item,
                     value: {
-                        sherpaRomeo: {},
+                        sherpaRomeo: {
+                            link: false,
+                        },
                         ulrichs: {
                             link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
                             title: '',
@@ -403,9 +427,10 @@ describe('IssnRowItemTemplate', () => {
                     key: props.item,
                     value: {
                         sherpaRomeo: {
-                            link: '',
+                            link: false,
                         },
                         ulrichs: {
+                            link: undefined,
                             title: '',
                         },
                     },
@@ -424,11 +449,54 @@ describe('IssnRowItemTemplate', () => {
                     key: props.item,
                     value: {
                         sherpaRomeo: {
-                            link: '',
+                            link: false,
                         },
                         ulrichs: {
+                            link: undefined,
                             title: '',
                         },
+                    },
+                },
+                loadingSherpaFromIssn: false,
+                loadingUlrichsFromIssn: false,
+            });
+
+            // For an entry marked "Not found in Sherpa Romeo"
+            const state7 = {
+                get: key => {
+                    switch (key) {
+                        case 'issnLinksReducer':
+                            return {
+                                ...stateObj,
+                                sherpaRomeo: {
+                                    [props.item]: {
+                                        srm_issn: props.item,
+                                        srm_journal_name: 'Not found in Sherpa Romeo',
+                                        srm_journal_link: '',
+                                    },
+                                },
+                                ulrichs: {},
+                            };
+
+                        case 'viewRecordReducer':
+                            return {
+                                recordToView,
+                            };
+                        default:
+                            break;
+                    }
+                    return {};
+                },
+            };
+            expect(mapStateToProps(state7, props)).toEqual({
+                hasPreload: false,
+                item: {
+                    key: props.item,
+                    value: {
+                        sherpaRomeo: {
+                            link: null,
+                        },
+                        ulrichs: {},
                     },
                 },
                 loadingSherpaFromIssn: false,
