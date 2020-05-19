@@ -4,6 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
 import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
@@ -13,6 +14,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import { locale } from 'locale';
 import { routes, publicationTypes } from 'config';
+import { PUBLISHED } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -313,6 +315,15 @@ export class PublicationCitation extends PureComponent {
                                     <Typography variant="h6" component="h6" className={classes.citationTitle}>
                                         {this.renderTitle()}
                                     </Typography>
+                                    {showAdminActions &&
+                                        publication.rek_status !== PUBLISHED &&
+                                        !!publication.rek_status_lookup && (
+                                        <Chip
+                                            label={publication.rek_status_lookup}
+                                            size="small"
+                                            variant="outlined"
+                                        />
+                                    )}
                                 </Grid>
                             ) : (
                                 <Grid item xs />

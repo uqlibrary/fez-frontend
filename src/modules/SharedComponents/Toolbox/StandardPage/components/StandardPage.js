@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -22,27 +23,40 @@ const styles = theme => ({
             margin: '0 auto 12px auto',
         },
     },
+    status: {
+        maxWidth: 1200,
+        width: '90%',
+        margin: '12px auto',
+    },
 });
 
 export class Page extends Component {
     static propTypes = {
         title: PropTypes.any,
+        status: PropTypes.string,
         help: PropTypes.object,
         children: PropTypes.any,
         classes: PropTypes.object,
     };
 
     render() {
-        const { classes, title, children, help } = this.props;
+        const { classes, title, status, children, help } = this.props;
         return (
             <Grid container className="StandardPage">
-                {title && (
-                    <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>
-                        {title}
-                    </Typography>
+                <Grid item xs={12}>
+                    {title && (
+                        <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>
+                            {title}
+                        </Typography>
+                    )}
+                    {help && <HelpIcon {...help} />}
+                </Grid>
+                {status && (
+                    <Grid item xs={12} className={classes.status}>
+                        <Chip label={status} variant="outlined" />
+                    </Grid>
                 )}
-                {help && <HelpIcon {...help} />}
-                <Grid item className={classes.layoutCard}>
+                <Grid item xs={12} className={classes.layoutCard}>
                     {children}
                 </Grid>
             </Grid>

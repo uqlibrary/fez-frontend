@@ -74,7 +74,11 @@ export default class ViewRecord extends PureComponent {
             this.props.authorDetails &&
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
-            <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
+            <StandardPage
+                className="viewRecord"
+                title={ReactHtmlParser(recordToView.rek_title)}
+                status={isAdmin && recordToView.rek_status !== general.PUBLISHED && recordToView.rek_status_lookup}
+            >
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
                         <PublicationCitation
