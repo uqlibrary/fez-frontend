@@ -713,18 +713,34 @@ export const getLinkDescriptionSearchKey = (links = []) => {
     };
 };
 
-export const renameLocation = locations => ({
-    fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
-        rek_location: value.key || value,
-        rek_location_order: order,
-    })),
-});
+export const renameLocation = (locations, keepClearedFields) => {
+    // biblio locations only have one entry (order=1); admin have possibly multiple (order=1,2,3)
+    // we need to remove the key when they clear the field, so the BE removes the db entry
+    if (!keepClearedFields) {
+        const location = locations
+            .filter(item => {
+                return item.rek_location !== '';
+            })
+            .map(({ rek_location: value }) => ({
+                rek_location: value.key || value,
+                rek_location_order: 1,
+            }));
+        return !!location && location.length > 0 ? { fez_record_search_key_location: location } : {};
+    } else {
+        return {
+            fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
+                rek_location: value.key || value,
+                rek_location_order: order,
+            })),
+        };
+    }
+};
 
 const cleanBlankEntries = data => {
     // Clean out blanked fields
     // * For a single-child-key, to delete, remove the key from the payload sent to api
     // * For a many-child-key, where we want to end up with zero children (ie remove all),
-    //   also remove the key from the payload sent to api
+    //   ditto: remove the key from the payload sent to api
     // * For a many-child-key, where we only want to remove some of its children,
     //   unset those children and re-number the order fields
     const entries = Object.entries(data);
@@ -803,7 +819,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
             : {}),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
-        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers) : {}),
+        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers, true) : {}),
         ...cleanBlankEntries(rest),
     };
 };
@@ -941,7 +957,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
         ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
-        ...(!!locationDataBiblio ? renameLocation(locationDataBiblio) : {}),
+        ...(!!locationDataBiblio ? renameLocation(locationDataBiblio, false) : {}),
         ...(!!issnField
             ? {
                 fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({

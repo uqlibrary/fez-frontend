@@ -276,8 +276,8 @@ export default {
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
-                fez_record_search_key_related_publications: 'Link to related publications',
-                fez_record_search_key_related_datasets: 'Link to related datasets',
+                fez_record_search_key_related_publications: 'Additional related publication(s)',
+                fez_record_search_key_related_datasets: 'Additional related dataset(s)',
             },
             'Department Technical Report': {},
             Design: {
