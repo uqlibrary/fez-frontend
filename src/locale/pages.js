@@ -40,13 +40,13 @@ export default {
                     </p>
                     <h3>Staff contact</h3>
                     <p>
-                        Mary-Anne Marrington
+                        Andrew Heath
                         <br />
                         Manager, UQ eSpace
                         <br />
                         Tel: 07 334 69981
                         <br />
-                        Email: <a href="mailto:m.marrington@library.uq.edu.au">m.marrington@library.uq.edu.au</a>
+                        Email: <a href="mailto:a.heath@library.uq.edu.au">a.heath@library.uq.edu.au</a>
                         <br />
                     </p>
                     <h3>About UQ eSpace</h3>
