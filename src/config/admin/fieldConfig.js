@@ -914,14 +914,12 @@ export default {
             },
         },
         fez_record_search_key_location_biblio: {
-            component: ListEditorField,
+            component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_location_biblio',
+                name: 'bibliographicSection.fez_record_search_key_location_biblio[0].rek_location',
                 title: 'Locations',
-                searchKey: {
-                    value: 'rek_location',
-                    order: 'rek_location_order',
-                },
+                fullWidth: true,
+                label: locale.components.placeOfRecordingForm.field.form.locale.inputFieldLabel,
                 locale: locale.components.placeOfRecordingForm.field,
             },
         },
