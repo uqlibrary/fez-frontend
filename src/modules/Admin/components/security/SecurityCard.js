@@ -111,8 +111,10 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Field
+                                        key={dataStreams.length}
                                         component={DataStreamSecuritySelector}
                                         name="securitySection.dataStreams"
+                                        attachedDataStreams={dataStreams}
                                         {...{
                                             disabled,
                                             text: text.dataStream,

@@ -714,12 +714,48 @@ export const getLinkDescriptionSearchKey = (links = []) => {
     };
 };
 
-export const renameLocation = locations => ({
-    fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
-        rek_location: value.key || value,
-        rek_location_order: order,
-    })),
-});
+export const renameEndDate = record => {
+    if (!!record && !record.rek_end_date) return {};
+
+    return {
+        fez_record_search_key_end_date: {
+            rek_end_date: record.rek_end_date,
+        },
+    };
+};
+
+export const renameLicense = record => {
+    if (!!record && !record.rek_license) return {};
+
+    return {
+        fez_record_search_key_license: {
+            rek_license: record.rek_license,
+        },
+    };
+};
+
+export const renameLocation = (locations, keepClearedFields) => {
+    // biblio locations only have one entry (order=1); admin have possibly multiple (order=1,2,3)
+    // we need to remove the key when they clear the field, so the BE removes the db entry
+    if (!keepClearedFields) {
+        const location = locations
+            .filter(item => {
+                return item.rek_location !== '';
+            })
+            .map(({ rek_location: value }) => ({
+                rek_location: value.key || value,
+                rek_location_order: 1,
+            }));
+        return !!location && location.length > 0 ? { fez_record_search_key_location: location } : {};
+    } else {
+        return {
+            fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
+                rek_location: value.key || value,
+                rek_location_order: order,
+            })),
+        };
+    }
+};
 
 const cleanBlankEntries = data => {
     // Clean out blanked fields
@@ -750,7 +786,7 @@ const cleanBlankEntries = data => {
             }
 
             const valueFieldName = searchKeyName.replace(keyPrefix, subkeyPrefix);
-            if (values[valueFieldName] === null) {
+            if (values[valueFieldName] === null || values[valueFieldName] === '') {
                 // where the field has been cleared, remove so API deletes the database record
                 return false;
             }
@@ -804,36 +840,8 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
             : {}),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
-        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers) : {}),
+        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers, true) : {}),
         ...cleanBlankEntries(rest),
-    };
-};
-
-export const renameEndDate = record => {
-    if (!!record && !record.rek_end_date) {
-        return {
-            fez_record_search_key_end_date: {},
-        };
-    }
-
-    return {
-        fez_record_search_key_end_date: {
-            rek_end_date: record.rek_end_date,
-        },
-    };
-};
-
-export const renameLicense = record => {
-    if (!!record && !record.rek_license) {
-        return {
-            fez_record_search_key_license: {},
-        };
-    }
-
-    return {
-        fez_record_search_key_license: {
-            rek_license: record.rek_license,
-        },
     };
 };
 
@@ -965,7 +973,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
         ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
-        ...(!!locationDataBiblio ? renameLocation(locationDataBiblio) : {}),
+        ...(!!locationDataBiblio ? renameLocation(locationDataBiblio, false) : {}),
         ...(!!issnField
             ? {
                 fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
@@ -1154,7 +1162,6 @@ export const getAdminSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
         ...(!!endDateAdditional ? renameEndDate(endDateAdditional) : {}),
-        ...rest,
         ...cleanBlankEntries(rest),
     };
 };

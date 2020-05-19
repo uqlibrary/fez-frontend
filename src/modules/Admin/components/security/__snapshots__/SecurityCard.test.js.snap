@@ -331,6 +331,14 @@ exports[`SecurityCard component should render security card correctly for record
           xs={12}
         >
           <Field
+            attachedDataStreams={
+              Array [
+                Object {
+                  "dsi_dsid": "test1.txt",
+                  "dsi_security_policy": 1,
+                },
+              ]
+            }
             collections={
               Array [
                 Object {
@@ -350,6 +358,7 @@ exports[`SecurityCard component should render security card correctly for record
               }
             }
             disabled={false}
+            key="1"
             name="securitySection.dataStreams"
             text={
               Object {
@@ -516,6 +525,14 @@ exports[`SecurityCard component should render security card correctly for record
           xs={12}
         >
           <Field
+            attachedDataStreams={
+              Array [
+                Object {
+                  "dsi_dsid": "test2.txt",
+                  "dsi_security_policy": 1,
+                },
+              ]
+            }
             collections={
               Array [
                 Object {
@@ -535,6 +552,7 @@ exports[`SecurityCard component should render security card correctly for record
               }
             }
             disabled={false}
+            key="1"
             name="securitySection.dataStreams"
             text={
               Object {
@@ -701,6 +719,14 @@ exports[`SecurityCard component should render security card with disabled inputs
           xs={12}
         >
           <Field
+            attachedDataStreams={
+              Array [
+                Object {
+                  "dsi_dsid": "test3.txt",
+                  "dsi_security_policy": 1,
+                },
+              ]
+            }
             collections={
               Array [
                 Object {
@@ -720,6 +746,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               }
             }
             disabled={true}
+            key="1"
             name="securitySection.dataStreams"
             text={
               Object {
