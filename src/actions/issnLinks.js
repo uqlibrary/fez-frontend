@@ -17,15 +17,14 @@ export const getSherpaFromIssn = issn => {
             .then(response => {
                 dispatch({
                     type: ISSN_SHERPA_LOADED,
-                    payload: response.data,
+                    payload: response.data.length > 0 ? { [issn]: response.data[0] } : {},
                 });
             })
             .catch(error => {
                 dispatch({
                     type: ISSN_SHERPA_LOAD_FAILED,
                     payload: {
-                        issn,
-                        message: error.message,
+                        [issn]: error.message,
                     },
                 });
             });
@@ -40,15 +39,14 @@ export const getUlrichsFromIssn = issn => {
             .then(response => {
                 dispatch({
                     type: ISSN_ULRICHS_LOADED,
-                    payload: response.data,
+                    payload: response.data.length > 0 ? { [issn]: response.data[0] } : {},
                 });
             })
             .catch(error => {
                 dispatch({
                     type: ISSN_ULRICHS_LOAD_FAILED,
                     payload: {
-                        issn,
-                        message: error.message,
+                        [issn]: error.message,
                     },
                 });
             });

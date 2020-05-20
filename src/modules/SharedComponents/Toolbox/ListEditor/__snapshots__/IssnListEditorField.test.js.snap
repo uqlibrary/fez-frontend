@@ -14,6 +14,7 @@ exports[`IssnListEditorField function should return <ListEditor> 1`] = `
     }
   }
   inputNormalizer={[Function]}
+  listEditorId="issn-list-editor"
   locale={
     Object {
       "form": Object {
@@ -54,6 +55,7 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
     }
   }
   inputNormalizer={[Function]}
+  listEditorId="issn-list-editor"
   locale={
     Object {
       "form": Object {
