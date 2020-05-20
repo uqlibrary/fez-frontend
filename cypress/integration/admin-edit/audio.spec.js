@@ -102,6 +102,12 @@ context('Audio admin edit', () => {
                             .map(item => item.rek_alternate_genre_lookup)
                             .join(','),
                     );
+                cy.get('#Placeofrecording')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_location.map(item => item.rek_location)
+                            .join(''), // only has a single entry
+                    );
             });
 
         cy.get('@bibliographicCard')
@@ -110,21 +116,7 @@ context('Audio admin edit', () => {
             .find('p')
             .should('exist')
             .should('have.text', 'Year required');
-        cy.get('@bibliographicCard')
-            .contains('label', 'Place of recording')
-            .parent()
-            .parent()
-            .parent()
-            .parent()
-            .within(() => {
-                const locations = record.fez_record_search_key_location.map(item => item.rek_location);
-                locations.forEach((location, index) => {
-                    cy.get('p')
-                        .eq(index)
-                        .should('have.text', location);
-                });
-            });
-        cy.setPartialDate('date', { day: 1, month: 1, year: 2020 });
+        cy.setPartialDate('@pubDateBlock', { day: 1, month: 1, year: 2020 });
         cy.get('@pubDateBlock')
             .find('p')
             .should('not.exist');

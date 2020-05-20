@@ -2939,6 +2939,16 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
             });
         });
+
+        it('should clear a removed place of recording (frsk_location)', () => {
+            const data = {
+                fez_record_search_key_location_biblio: [{ rek_location: '', rek_location_order: 1 }],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01 00:00:00',
+            });
+        });
     });
 
     describe('Search Key Structure', () => {
