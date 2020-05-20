@@ -116,7 +116,7 @@ context('Audio admin edit', () => {
             .find('p')
             .should('exist')
             .should('have.text', 'Year required');
-        cy.setPartialDate('@pubDateBlock', { day: 1, month: 1, year: 2020 });
+        cy.setPartialDate('date', { day: 1, month: 1, year: 2020 });
         cy.get('@pubDateBlock')
             .find('p')
             .should('not.exist');
