@@ -273,6 +273,7 @@ export default {
                                 link: sherpaRomeoLink,
                             },
                         },
+                        hasPreload: true,
                     },
                 };
             });

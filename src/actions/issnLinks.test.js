@@ -22,7 +22,16 @@ describe('ISSN Lookup actions', () => {
     });
 
     it('should call sherpa loading/loaded actions on successful load', async() => {
-        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl).reply(200, sherpaRomeo);
+        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl).reply(200, { data: [sherpaRomeo[0]] });
+
+        const expectedActions = [ISSN_SHERPA_LOADING, ISSN_SHERPA_LOADED];
+
+        await mockActionsStore.dispatch(getSherpaFromIssn());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should call sherpa loading/loaded actions on successful load with empty data', async() => {
+        mockApi.onPost(ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl).reply(200, { data: [] });
 
         const expectedActions = [ISSN_SHERPA_LOADING, ISSN_SHERPA_LOADED];
 
@@ -40,7 +49,16 @@ describe('ISSN Lookup actions', () => {
     });
 
     it('should call ulrichs loading/loaded actions on successful load', async() => {
-        mockApi.onPost(ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl).reply(200, ulrichs);
+        mockApi.onPost(ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl).reply(200, { data: [ulrichs[0]] });
+
+        const expectedActions = [ISSN_ULRICHS_LOADING, ISSN_ULRICHS_LOADED];
+
+        await mockActionsStore.dispatch(getUlrichsFromIssn());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should call ulrichs loading/loaded actions on successful load with empty data', async() => {
+        mockApi.onPost(ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl).reply(200, { data: [] });
 
         const expectedActions = [ISSN_ULRICHS_LOADING, ISSN_ULRICHS_LOADED];
 
