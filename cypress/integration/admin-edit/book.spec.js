@@ -83,15 +83,11 @@ context('Book admin edit', () => {
                 (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
                 sherpaMocks[0].srm_journal_link;
             cy.wrap(container)
-                .find('span > span')
                 .should('contain', issn)
-                .siblings('a')
                 // Make sure the data has loaded...
                 .should('contain', 'SHERPA/RoMEO')
                 .should('contain', 'Ulrichs')
-                .as('issnLinks')
-                // ...before finding 'nth'
-                .eq(0)
+                .get('#external-link-sherparomeo')
                 .should('have.attr', 'href', sherpaLink);
             let ulrichsID = issn.replace('-', '');
             switch (issn) {
@@ -104,8 +100,7 @@ context('Book admin edit', () => {
                 default:
                     break;
             }
-            cy.get('@issnLinks')
-                .eq(1)
+            cy.get('#external-link-ulrichs')
                 .should('have.attr', 'href', `${ulrichsLinkPrefix}${ulrichsID}`);
         };
 
@@ -123,7 +118,7 @@ context('Book admin edit', () => {
 
                 cy.log('Find existing entry with placeholder data');
                 cy.get('#issn-list-row-1')
-                    .should('contain', '1611-3349 Ulrichs')
+                    .should('contain', '1611-3349')
                     .within(() => {
                         cy.get('a')
                             .should('have.length', 1)

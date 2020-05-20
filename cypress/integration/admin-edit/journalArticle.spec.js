@@ -176,17 +176,23 @@ context('Journal Article admin edit', () => {
                                 issns.forEach((issn, index) => {
                                     cy.get(`#issn-list-row-${index}`)
                                         .should('contain.text', issn.rek_issn);
-                                    cy.get(`#issn-list-row-${index} > div > div > span > a:nth-child(2)`)
-                                        .should('contain.text', 'SHERPA/RoMEO')
-                                        .should('have.attr', 'href', issn.fez_sherpa_romeo.srm_journal_link);
-                                    cy.get(`#issn-list-row-${index} > div > div > span > a:nth-child(4)`)
-                                        .should('contain.text', 'Ulrichs')
-                                        .should(
-                                            'have.attr',
-                                            'href',
-                                            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
-                                            ulrichsId[index],
-                                        );
+                                    cy.get(`#issn-list-row-${index}`)
+                                        .within(() => {
+                                            cy.get('#external-link-sherparomeo')
+                                                .should('contain.text', 'SHERPA/RoMEO')
+                                                .should('have.attr', 'href', issn.fez_sherpa_romeo.srm_journal_link);
+                                        });
+                                    cy.get(`#issn-list-row-${index}`)
+                                        .within(() => {
+                                            cy.get('#external-link-ulrichs')
+                                                .should('contain.text', 'Ulrichs')
+                                                .should(
+                                                    'have.attr',
+                                                    'href',
+                                                    'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
+                                                ulrichsId[index],
+                                                );
+                                        });
                                 });
                             });
                     });
