@@ -148,6 +148,12 @@ export default {
             },
             "fez_record_search_key_doi": null,
             "fez_record_search_key_end_page": null,
+            "fez_record_search_key_end_date": {
+                "rek_end_date_id": 1,
+                "rek_end_date_pid": "UQ:00222bb",
+                "rek_end_date_xsdmf_id": null,
+                "rek_end_date": "1894-01-01 00:00:00"
+            },
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [
@@ -311,7 +317,7 @@ export default {
                 "rek_project_start_date_id": 1,
                 "rek_project_start_date_pid": "UQ:00222bb",
                 "rek_project_start_date_xsdmf_id": null,
-                "rek_project_start_date": "1893-10-16 00:00:00"
+                "rek_project_start_date": "1893-11-16 00:00:00"
             },
             "fez_record_search_key_publisher": null,
             "fez_record_search_key_quality_indicator": [],

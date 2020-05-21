@@ -28,8 +28,6 @@ export default {
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_acknowledgements'],
-                ['fez_record_search_key_project_name'],
-                ['fez_record_search_key_project_start_date'],
                 ['fez_record_search_key_scale', 'fez_record_search_key_job_number'],
             ],
         },
@@ -109,6 +107,12 @@ export const validateDesign = (
         ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
             fez_record_search_key_publisher: {
                 rek_publisher: summary.rek_publisher,
+            },
+        }) ||
+            {}),
+        ...((!((bs || {}).fez_record_search_key_project_start_date || {}).rek_project_start_date && {
+            fez_record_search_key_project_start_date: {
+                rek_project_start_date: summary.rek_project_start_date,
             },
         }) ||
             {}),

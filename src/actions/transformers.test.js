@@ -2319,6 +2319,9 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_license_additional: {
                 rek_license: '453607',
             },
+            fez_record_search_key_end_date_admin: {
+                rek_end_date: '2019-03-14',
+            },
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
@@ -2377,6 +2380,9 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_license: {
                 rek_license: '453607',
+            },
+            fez_record_search_key_end_date: {
+                rek_end_date: '2019-03-14',
             },
         });
     });
@@ -2613,7 +2619,7 @@ describe('Sanitising empty data', () => {
         const data = {};
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
         });
     });
 
@@ -2624,7 +2630,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         });
     });
@@ -2636,7 +2642,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         });
     });
@@ -2649,7 +2655,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
@@ -2662,7 +2668,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '2016-01-01 00:00:00',
+            rek_date: '1000-01-01 00:00:00',
             fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
@@ -2806,6 +2812,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     plainText: 'A related publication',
                     htmlText: '<p>A related publication</p>',
                 },
+                fez_record_search_key_end_date_biblio: {},
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2846,7 +2853,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should use default parameter value', () => {
             expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
     });
@@ -2871,7 +2878,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2913,7 +2920,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2952,7 +2959,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2978,7 +2985,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
     });
@@ -2992,13 +2999,13 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license_biblio: { rek_license: 123 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_license: { rek_license: 123 },
             });
 
             data = {};
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
 
@@ -3010,7 +3017,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
             };
             expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_issn: [
                     { rek_issn: '1212-1212', rek_issn_order: 1 },
                     { rek_issn: '2323-2323', rek_issn_order: 2 },
@@ -3018,13 +3025,13 @@ describe('getBibliographicSectionSearchKeys', () => {
             });
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
             });
 
             const dataEmpty = {};
             expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
             });
         });
     });
@@ -3038,7 +3045,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_language_of_title: [
                     {
                         rek_language_of_title: 'eng',
@@ -3071,7 +3078,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_language_of_proceedings_title: [
                     {
                         rek_language_of_proceedings_title: 'eng',
@@ -3085,6 +3092,207 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_of_journal_name: 'fre',
                     },
                 ],
+            });
+        });
+    });
+
+    describe('Design', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                fez_record_search_key_end_page: {
+                    rek_end_page: '11',
+                },
+                fez_record_search_key_rights: {
+                    rek_rights:
+                        'This work is made available by the UQ Library for your personal research or study. For further information and access please contact the Fryer Library, The University of Queensland Library.',
+                },
+                fez_record_search_key_series: {
+                    rek_series: 'Karl Langer Collection, UQFL158',
+                },
+                fez_record_search_key_acknowledgements: {
+                    rek_acknowledgements: 'Digitisation made possible from donations to the UQ Library.',
+                },
+                subjects: [
+                    {
+                        rek_value: {
+                            key: 111111,
+                            value: 'Test subject',
+                        },
+                        rek_order: 1,
+                    },
+                ],
+                fez_record_search_key_source: {
+                    rek_source: 'Karl Langer Collection, UQFL158, job no. 1127-2, item 7',
+                },
+                fez_record_search_key_place_of_publication: {
+                    rek_place_of_publication: 'somewwhere',
+                },
+                geoCoordinates: '153.050925,-27.396682',
+                fez_record_search_key_publisher: {
+                    rek_publisher: 'fasd',
+                },
+                rek_title: {
+                    plainText:
+                        'Flats for Mr. and Mrs. A Franchin, Wavell Heights, ground floor and basement plan blueprints, Nov 1960',
+                    htmlText:
+                        'Flats for Mr. and Mrs. A Franchin, Wavell Heights, ground floor and basement plan blueprints, Nov 1960',
+                },
+                rek_description: {
+                    plainText: 'something something',
+                    htmlText: 'The Karl Langer collection consists of _snip_',
+                },
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_keywords: [
+                    {
+                        rek_keywords: 'Langer, Karl, 1903-1969',
+                        rek_keywords_order: 1,
+                    },
+                    {
+                        rek_keywords: 'Architectural drawings',
+                        rek_keywords_order: 2,
+                    },
+                ],
+                fez_record_search_key_end_date_biblio: {
+                    rek_end_date: '2020-01-01',
+                },
+                fez_record_search_key_job_number: {
+                    rek_job_number: 'UQFL158, job no. 1127-2',
+                },
+                fez_record_search_key_original_format: {
+                    rek_original_format: 'Architectural drawing; blueprint; 49 x 73 cm.',
+                },
+                fez_record_search_key_start_page: {
+                    rek_start_page: '4',
+                },
+                languages: ['eng', 'pol'],
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: '4',
+                },
+                fez_record_search_key_scale: {
+                    rek_scale: '451662',
+                },
+                fez_record_search_key_project_name: {
+                    rek_project_name: 'Flats for Mr. and Mrs. A Franchin',
+                },
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2017-01-01',
+                },
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_end_page: {
+                    rek_end_page: '11',
+                },
+                fez_record_search_key_rights: {
+                    rek_rights:
+                        'This work is made available by the UQ Library for your personal research or study. For further information and access please contact the Fryer Library, The University of Queensland Library.',
+                },
+                fez_record_search_key_series: {
+                    rek_series: 'Karl Langer Collection, UQFL158',
+                },
+                fez_record_search_key_acknowledgements: {
+                    rek_acknowledgements: 'Digitisation made possible from donations to the UQ Library.',
+                },
+                fez_record_search_key_source: {
+                    rek_source: 'Karl Langer Collection, UQFL158, job no. 1127-2, item 7',
+                },
+                fez_record_search_key_place_of_publication: {
+                    rek_place_of_publication: 'somewwhere',
+                },
+                fez_record_search_key_publisher: {
+                    rek_publisher: 'fasd',
+                },
+                fez_record_search_key_keywords: [
+                    {
+                        rek_keywords: 'Langer, Karl, 1903-1969',
+                        rek_keywords_order: 1,
+                    },
+                    {
+                        rek_keywords: 'Architectural drawings',
+                        rek_keywords_order: 2,
+                    },
+                ],
+                fez_record_search_key_job_number: {
+                    rek_job_number: 'UQFL158, job no. 1127-2',
+                },
+                fez_record_search_key_original_format: {
+                    rek_original_format: 'Architectural drawing; blueprint; 49 x 73 cm.',
+                },
+                fez_record_search_key_start_page: {
+                    rek_start_page: '4',
+                },
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: '4',
+                },
+                fez_record_search_key_scale: {
+                    rek_scale: '451662',
+                },
+                fez_record_search_key_project_name: {
+                    rek_project_name: 'Flats for Mr. and Mrs. A Franchin',
+                },
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2017-01-01',
+                },
+                rek_title:
+                    'Flats for Mr. and Mrs. A Franchin, Wavell Heights, ground floor and basement plan blueprints, Nov 1960',
+                rek_formatted_title:
+                    'Flats for Mr. and Mrs. A Franchin, Wavell Heights, ground floor and basement plan blueprints, Nov 1960',
+                rek_description: 'something something',
+                rek_formatted_abstract: 'The Karl Langer collection consists of _snip_',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        // rek_language_order: 1,
+                    },
+                    {
+                        rek_language: 'pol',
+                        // rek_language_order: 2,
+                    },
+                ],
+                fez_record_search_key_end_date: {
+                    rek_end_date: '2020-01-01',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.050925,-27.396682',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_subject: [
+                    {
+                        rek_subject: 111111,
+                        rek_subject_order: 1,
+                    },
+                ],
+            });
+        });
+
+        it('should save a null pub date as the placeholder date', () => {
+            const data = {
+                rek_date: null,
+                fez_record_search_key_subject: [
+                    {
+                        rek_subject: 111111,
+                        rek_subject_order: 1,
+                    },
+                ],
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2017-01-01',
+                },
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_subject: [
+                    {
+                        rek_subject: 111111,
+                        rek_subject_order: 1,
+                    },
+                ],
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2017-01-01',
+                },
             });
         });
     });
@@ -3104,7 +3312,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_isderivationof: [
                     {
                         rek_isderivationof: 'UQ:734361',
@@ -3123,7 +3331,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
-                rek_date: '2016-01-01 00:00:00',
+                rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_isderivationof: [
                     {
                         rek_isderivationof: 'UQ:734361',
