@@ -52,8 +52,10 @@ export class Page extends Component {
                     {help && <HelpIcon {...help} />}
                 </Grid>
                 {status && (
-                    <Grid item xs={12} className={classes.status}>
-                        <Chip label={status} variant="outlined" />
+                    <Grid item xs={12}>
+                        <div className={classes.status}>
+                            <Chip label={status} variant="outlined" />
+                        </div>
                     </Grid>
                 )}
                 <Grid item xs={12} className={classes.layoutCard}>
