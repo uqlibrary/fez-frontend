@@ -24,7 +24,6 @@ export default class DesignForm extends Component {
         isNtro: PropTypes.bool,
         isAuthorSelected: PropTypes.bool,
     };
-
     constructor(props) {
         super(props);
     }
