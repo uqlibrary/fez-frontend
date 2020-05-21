@@ -68,6 +68,8 @@ export function createNewRecord(data) {
             'significance',
             'supervisors',
             'contentIndicators',
+            'rek_link',
+            'rek_link_description',
         ];
         keysToDelete.forEach(key => {
             delete recordRequest[key];

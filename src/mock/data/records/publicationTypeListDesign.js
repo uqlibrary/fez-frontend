@@ -17,7 +17,7 @@ export default {
             "rek_status_xsdmf_id": 16816,
             "rek_status": 2,
             "rek_date_xsdmf_id": 16739,
-            "rek_date": "1893-10-16T00:00:00Z",
+            "rek_date": "1000-01-01T00:00:00Z",
             "rek_object_type_xsdmf_id": 16811,
             "rek_object_type": 3,
             "rek_depositor_xsdmf_id": 16818,

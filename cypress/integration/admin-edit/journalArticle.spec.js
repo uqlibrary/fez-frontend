@@ -3,7 +3,7 @@ import { default as recordList } from '../../../src/mock/data/records/publicatio
 context('Journal Article admin edit', () => {
     const record = recordList.data[0];
 
-    it('should load with specifed elements', () => {
+    it('should load with specified elements', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.get('h2')
             .should('have.length', 1)

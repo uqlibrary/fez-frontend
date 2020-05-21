@@ -71,7 +71,8 @@ export const getRecordLinkSearchKey = data => {
         ],
         fez_record_search_key_link_description: [
             {
-                rek_link_description: locale.global.defaultLinkDescription,
+                rek_link_description:
+                    (!!data.rek_link_description && data.rek_link_description) || locale.global.defaultLinkDescription,
                 rek_link_description_order: 1,
             },
         ],
