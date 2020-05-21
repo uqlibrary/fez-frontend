@@ -6,10 +6,10 @@ on:
       - feature-example
 
     paths-ignore:
-      - "**.md"
-      - ".idea/**"
-      - ".vscode/**"
-      - "cypress/examples/**"
+      - '**.md'
+      - '.idea/**'
+      - '.vscode/**'
+      - 'cypress/examples/**'
 
 jobs:
   unit-n-codestyles:
@@ -37,7 +37,7 @@ jobs:
       - name: Jest tests
         run: npm run test:unit:ci${{ matrix.pipe }}
         env:
-          TZ: "Australia/Brisbane"
+          TZ: 'Australia/Brisbane'
 
       - name: Upload code coverage
         uses: codecov/codecov-action@v1
