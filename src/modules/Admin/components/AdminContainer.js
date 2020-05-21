@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import Immutable from 'immutable';
@@ -52,27 +52,29 @@ const useStyles = makeStyles(
 );
 
 export const AdminContainer = ({
-    recordToView,
+    authorDetails,
+    clearRecordToView,
+    createMode,
+    destroy,
+    dirty,
+    disableSubmit,
+    formErrors,
+    handleSubmit,
+    history,
     loadingRecordToView,
     loadRecordToView,
-    clearRecordToView,
-    dirty,
-    submitting,
-    submitSucceeded,
-    disableSubmit,
-    handleSubmit,
     match,
-    history,
-    createMode,
-    formErrors,
-    destroy,
-    authorDetails,
+    recordToView,
+    submitSucceeded,
+    submitting,
 }) => {
-    const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
-    const [showAddForm, setShowAddForm] = useState(!match.params.pid);
+    const [tabbed, setTabbed] = React.useState(
+        Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
+    );
+    const [showAddForm, setShowAddForm] = React.useState(!match.params.pid);
     const classes = useStyles();
     const theme = useTheme();
-    const tabErrors = useRef(null);
+    const tabErrors = React.useRef(null);
 
     tabErrors.current = Object.entries(
         (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
@@ -99,19 +101,12 @@ export const AdminContainer = ({
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
-    /* istanbul ignore next */
-    const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
+    const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
-    /* istanbul ignore next */
-    const handleAddFormDisplay = useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
+    const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
-    /* istanbul ignore next */
-    /* Enzyme's shallow render doesn't support useEffect hook yet */
-    useEffect(() => {
-        if (!!match.params.pid && !!loadRecordToView) {
-            loadRecordToView(match.params.pid);
-        }
-
+    React.useEffect(() => {
+        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid);
         return () => {
             clearRecordToView();
         };
@@ -216,26 +211,26 @@ export const AdminContainer = ({
 };
 
 AdminContainer.propTypes = {
-    loadingRecordToView: PropTypes.bool,
-    loadRecordToView: PropTypes.func,
+    actions: PropTypes.object,
+    authorDetails: PropTypes.object,
     clearRecordToView: PropTypes.func,
+    createMode: PropTypes.bool,
     destroy: PropTypes.func,
     dirty: PropTypes.bool,
-    createMode: PropTypes.bool,
-    recordToView: PropTypes.object,
-    actions: PropTypes.object,
-    submitting: PropTypes.any,
-    submitSucceeded: PropTypes.bool,
-    showAddForm: PropTypes.bool,
     disableSubmit: PropTypes.any,
-    handleSubmit: PropTypes.func,
-    match: PropTypes.object,
-    history: PropTypes.object,
     formErrors: PropTypes.object,
-    authorDetails: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    history: PropTypes.object,
+    loadingRecordToView: PropTypes.bool,
+    loadRecordToView: PropTypes.func,
+    match: PropTypes.object,
+    recordToView: PropTypes.object,
+    showAddForm: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.any,
 };
 
-export function isChanged(prevProps, nextProps) {
+export function isSame(prevProps, nextProps) {
     return (
         prevProps.disableSubmit === nextProps.disableSubmit &&
         prevProps.submitting === nextProps.submitting &&
@@ -249,4 +244,4 @@ export function isChanged(prevProps, nextProps) {
     );
 }
 
-export default React.memo(AdminContainer, isChanged);
+export default React.memo(AdminContainer, isSame);

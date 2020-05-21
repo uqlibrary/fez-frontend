@@ -1,4 +1,5 @@
-import MemoizedAdminContainer, { AdminContainer, isChanged } from './AdminContainer';
+import React from 'react';
+import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
 
@@ -6,6 +7,9 @@ jest.mock('@material-ui/core/useMediaQuery');
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 jest.mock('js-cookie');
+jest.mock('../submitHandler', () => ({
+    onSubmit: jest.fn(),
+}));
 import Cookies from 'js-cookie';
 
 jest.mock('redux-form/immutable');
@@ -30,14 +34,13 @@ function setup(testProps = {}, args = { isShallow: true }) {
                 pid: 'UQ:111111',
             },
         },
-        actions: {
-            loadRecordToView: jest.fn(),
-        },
+        loadRecordToView: jest.fn(),
         loadingRecordToView: false,
         recordToView: recordWithDatastreams,
         location: {
             search: '',
         },
+        handleSubmit: jest.fn(),
         ...testProps,
     };
 
@@ -181,10 +184,10 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    describe('isChanged callback function', () => {
+    describe('isSame callback function', () => {
         it('should return true if props are not changed', () => {
             expect(
-                isChanged(
+                isSame(
                     { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
                     { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
                 ),
@@ -193,11 +196,43 @@ describe('AdminContainer component', () => {
 
         it('should return true if props are not changed', () => {
             expect(
-                isChanged(
+                isSame(
                     { disableSubmit: false, loadRecordToView: false },
                     { disableSubmit: false, loadRecordToView: false },
                 ),
             ).toBeTruthy();
+        });
+    });
+
+    describe('React hooks', () => {
+        it('should call clearRecordToView() prop on unload', () => {
+            const mockUseEffect = jest.spyOn(React, 'useEffect');
+            const mockUseCallback = jest.spyOn(React, 'useCallback');
+            const cleanupFns = [];
+
+            mockUseEffect.mockImplementation(f => {
+                const hookReturn = f();
+                if (typeof hookReturn === 'function') {
+                    cleanupFns.push(hookReturn);
+                }
+            });
+
+            // mock once each for each instance of useCallback
+            mockUseCallback.mockImplementationOnce(f => f()).mockImplementationOnce(f => f());
+
+            const clearRecordToView = jest.fn();
+            setup({
+                clearRecordToView,
+            });
+
+            while (cleanupFns.length > 0) {
+                cleanupFns.pop()();
+            }
+
+            mockUseEffect.mockRestore();
+            mockUseCallback.mockRestore();
+
+            expect(clearRecordToView).toHaveBeenCalled();
         });
     });
 });

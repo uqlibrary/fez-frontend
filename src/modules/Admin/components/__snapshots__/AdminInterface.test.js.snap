@@ -190,7 +190,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={10}
+              sm={7}
               xs={12}
             >
               <WithStyles(ForwardRef(Button))
@@ -206,7 +206,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -430,7 +430,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={10}
+              sm={7}
               xs={12}
             >
               <WithStyles(ForwardRef(Button))
@@ -445,7 +445,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -646,7 +646,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={10}
+              sm={7}
               xs={12}
             >
               <WithStyles(ForwardRef(Button))
@@ -661,7 +661,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -823,7 +823,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={10}
+              sm={7}
               xs={12}
             >
               <WithStyles(ForwardRef(Button))
@@ -838,7 +838,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -1036,7 +1036,7 @@ exports[`AdminInterface component should render default view as a full form view
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={10}
+              sm={7}
               xs={12}
             >
               <WithStyles(ForwardRef(Button))
@@ -1051,7 +1051,7 @@ exports[`AdminInterface component should render default view as a full form view
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -1237,7 +1237,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={10}
+              sm={7}
               xs={12}
             >
               <WithStyles(ForwardRef(Button))
@@ -1252,7 +1252,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -1458,7 +1458,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 }
                 variant="contained"
               >
-                 Submit 
+                Save
               </WithStyles(ForwardRef(Button))>
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
