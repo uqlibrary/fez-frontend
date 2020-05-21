@@ -1,3 +1,5 @@
+import { NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK } from 'config/general';
+
 jest.dontMock('./DesignForm');
 
 import DesignForm from './DesignForm';
@@ -16,9 +18,9 @@ describe('DesignForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 9 input fields', () => {
+    it('component with 11 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(9);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with all fields disabled', () => {
@@ -36,5 +38,14 @@ describe('DesignForm renders ', () => {
                 .dive()
                 .find('Field').length,
         ).toEqual(7);
+    });
+
+    it('should show architectural content correctly', () => {
+        const testProps = {
+            subtype: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            isNtro: true,
+        };
+        const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
+import moment from 'moment';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -13,9 +14,11 @@ import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 export default class DesignForm extends Component {
     static propTypes = {
+        formValues: PropTypes.any,
         submitting: PropTypes.bool,
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
@@ -29,6 +32,17 @@ export default class DesignForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.design;
+
+        const formValues = this.props.formValues && this.props.formValues.toJS();
+        const startDate = formValues && formValues.rek_date;
+        const endDate =
+            formValues &&
+            formValues.fez_record_search_key_end_date &&
+            formValues.fez_record_search_key_end_date.rek_end_date;
+        const dateError =
+            !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+                ? 'Date range is not valid'
+                : '';
 
         return (
             <Grid container spacing={3}>
@@ -58,7 +72,7 @@ export default class DesignForm extends Component {
                                     {...txt.information.fieldLabels.projectName}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -68,7 +82,7 @@ export default class DesignForm extends Component {
                                     {...txt.information.fieldLabels.location}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -80,7 +94,7 @@ export default class DesignForm extends Component {
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -97,13 +111,24 @@ export default class DesignForm extends Component {
                                     component={PartialDateField}
                                     partialDateFieldId="date"
                                     disabled={this.props.submitting}
-                                    name="rek_date"
+                                    name="fez_record_search_key_project_start_date.rek_project_start_date"
                                     allowPartial
                                     required
                                     className="requiredHintField"
                                     validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
+                                    floatingTitle={txt.information.fieldLabels.projectStartDate.title}
                                     floatingTitleRequired
+                                    hasError={dateError}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={PartialDateField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_end_date.rek_end_date"
+                                    allowPartial
+                                    floatingTitle={txt.information.fieldLabels.endDate.title}
+                                    hasError={dateError}
                                 />
                             </Grid>
                         </Grid>
@@ -111,6 +136,7 @@ export default class DesignForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                        <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
                             contributorEditorId="authors"
@@ -161,6 +187,16 @@ export default class DesignForm extends Component {
                                     fullWidth
                                     {...txt.optional.fieldLabels.url}
                                     validate={[validation.url]}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_link_description"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    label={'Link description'}
                                 />
                             </Grid>
                         </Grid>

@@ -37,6 +37,7 @@ context('Design admin edit', () => {
                     'project-start-date',
                     record.fez_record_search_key_project_start_date.rek_project_start_date,
                 );
+                cy.checkPartialDateFromRecordValue('End date', record.fez_record_search_key_end_date.rek_end_date);
                 cy.get('#Scale')
                     .should('have.value', record.fez_record_search_key_scale.rek_scale);
                 cy.get('#Jobnumber')
