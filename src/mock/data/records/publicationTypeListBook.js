@@ -670,7 +670,9 @@ export default {
                     "srm_id": 69424,
                     "srm_issn": "1611-3349",
                     "srm_journal_name": "Not found in Sherpa Romeo",
-                    "srm_journal_link": "http://example.com"
+                    "srm_colour": "Not found in Sherpa Romeo",
+                    "srm_json": null,
+                    "srm_journal_link": null
                 },
                 "fez_ulrichs": {
                     "ulr_issn": "1611-3349",
