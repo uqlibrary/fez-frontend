@@ -941,6 +941,12 @@ export default {
                     month: 'Month',
                     year: 'Year',
                 },
+                projectStartDate: {
+                    title: 'Project start date',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year',
+                },
                 endDate: {
                     title: 'End date',
                     day: 'Day',

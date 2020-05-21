@@ -284,6 +284,7 @@ export default {
                 rek_date: 'Date',
                 rek_description: 'Abstract/Description',
                 fez_record_search_key_date_available: 'Year available',
+                fez_record_search_key_end_date: 'End date',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_contributor: 'Consultant(s)',

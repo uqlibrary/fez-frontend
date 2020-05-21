@@ -11,7 +11,7 @@ context('Newspaper Article admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it('should load with specifed elements', () => {
+    it('should load with specified elements', () => {
         cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
