@@ -87,7 +87,6 @@ export const getSherpaLink = sherpaEntry => {
 export const getValidUlrichs = (ulrichsData, issn) =>
     ulrichsData[issn] && ulrichsData[issn].ulr_title !== '' && ulrichsData[issn].ulr_issn === issn && ulrichsData[issn];
 
-/* istanbul ignore next */
 export const mapStateToProps = (state, props) => {
     const { item } = props;
     const issn = item.key || item;
