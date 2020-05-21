@@ -50,7 +50,7 @@ context('Video admin edit', () => {
         // Confirmation message
         cy.get('[role=dialog]')
             .should('exist')
-            .find('h6')
+            .find('h2')
             .should('contain', 'Work has been updated')
             .parent()
             .siblings('div')
