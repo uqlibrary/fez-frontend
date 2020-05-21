@@ -166,6 +166,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
+        } else if (config.params.key && !!config.params.key.rek_status) {
+            return [200, mockData.unpublishedSearchList];
         }
         // return [404, ['Request not found']];
         return [200, mockData.internalTitleSearchList];
@@ -258,6 +260,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListVideo.data,
             ...mockData.publicationTypeListWorkingPaper.data,
             ...mockData.mockRecordToFix,
+            ...mockData.unpublishedSearchList.data,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
