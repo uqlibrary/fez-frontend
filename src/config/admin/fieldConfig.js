@@ -1233,6 +1233,7 @@ export default {
                 floatingTitle: 'End date',
                 fullWidth: true,
                 allowPartial: true,
+                partialDateFieldId: 'end-date',
             },
         },
         fez_record_search_key_end_date_biblio: {

@@ -50,7 +50,7 @@ context('Data Collection admin edit', () => {
                     .siblings('[role=button]')
                     .invoke('text')
                     .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
-                cy.checkPartialDateFromRecordValue('End date', record.fez_record_search_key_end_date.rek_end_date);
+                cy.checkPartialDateFromRecordValue('end-date', record.fez_record_search_key_end_date.rek_end_date);
             });
     });
 });

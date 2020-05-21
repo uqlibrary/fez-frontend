@@ -35112,14 +35112,14 @@ exports[`Additional Information Component  should render component with design d
         className="gridRow"
         container={true}
         key="additional-info-End date"
-        spacing={16}
+        spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={3}
           xs={12}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             classes={
               Object {
                 "root": "header",
@@ -35129,15 +35129,15 @@ exports[`Additional Information Component  should render component with design d
             variant="body2"
           >
             End date
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           className="data"
           item={true}
           sm={9}
           xs={12}
         >
-          <WithStyles(Typography)
+          <WithStyles(ForwardRef(Typography))
             component="span"
             variant="body2"
           >
@@ -35149,9 +35149,9 @@ exports[`Additional Information Component  should render component with design d
               prefix=""
               suffix=""
             />
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </div>
     <div
       key="7"
@@ -35161,7 +35161,7 @@ exports[`Additional Information Component  should render component with design d
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
         className="gridRow"
         container={true}
