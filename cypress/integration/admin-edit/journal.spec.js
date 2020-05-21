@@ -55,6 +55,23 @@ context('Journal admin edit', () => {
                                 record.fez_record_search_key_issue_number.rek_issue_number,
                             );
                     });
+
+                cy.get('.AdminCard')
+                    .contains('h4', 'ISSN')
+                    .parents('.AdminCard')
+                    .as('issnBlock');
+
+                const issn = record.fez_record_search_key_issn[0].rek_issn;
+                const sherpaLink = `http://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
+
+                cy.get('#issn-list-row-0')
+                    .within(row => {
+                        cy.wrap(row)
+                            .should('contain', issn)
+                            .should('contain', 'SHERPA/RoMEO')
+                            .get('#external-link-sherparomeo')
+                            .should('have.attr', 'href', sherpaLink);
+                    });
             });
     });
 });
