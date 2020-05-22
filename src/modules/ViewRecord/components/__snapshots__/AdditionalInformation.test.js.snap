@@ -35165,60 +35165,6 @@ exports[`Additional Information Component  should render component with design d
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-End date"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            End date
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(Typography)
-            component="span"
-            variant="body2"
-          >
-            <DateCitationView
-              className="citationDate"
-              date="2005-01-05 00:00:00"
-              format="YYYY-MM-DD"
-              isLocalised={false}
-              prefix=""
-              suffix=""
-            />
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="7"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
         key="additional-info-Year available"
         spacing={2}
       >
