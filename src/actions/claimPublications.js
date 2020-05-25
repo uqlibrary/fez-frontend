@@ -1,6 +1,6 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import { NEW_RECORD_DEFAULT_VALUES } from 'config/general';
+import { NEW_RECORD_DEFAULT_VALUES, UNPROCESSED_RECORDS_COLLECTION } from 'config/general';
 import { get, post, patch } from 'repositories/generic';
 import {
     EXISTING_RECORD_API,
@@ -246,8 +246,10 @@ export function claimPublication(data) {
         // claim record from external source
         const createRecordRequest = !data.publication.rek_pid
             ? {
-                ...data.publication,
                 ...NEW_RECORD_DEFAULT_VALUES,
+                ...data.publication,
+                // remove any other Collection eg WOS Import in favour of Unprocessed Record
+                ...UNPROCESSED_RECORDS_COLLECTION,
                 ...transformers.getRecordLinkSearchKey(data),
                 ...transformers.getRecordFileAttachmentSearchKey(
                     data.files ? data.files.queue : [],

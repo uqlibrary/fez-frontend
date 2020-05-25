@@ -570,16 +570,21 @@ export const ORG_UNITS_VOCAB_ID = 453703;
 export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
 export const AIATSIS_CODES_VOCAB_ID = 453669;
 
-// Default values for createNewRecord
-export const NEW_RECORD_DEFAULT_VALUES = {
-    rek_object_type: 3,
-    rek_status: 2,
+export const UNPROCESSED_RECORDS_COLLECTION = {
     fez_record_search_key_ismemberof: [
         {
             rek_ismemberof: 'UQ:218198',
             rek_ismemberof_order: 1,
         },
     ],
+    rek_date: '1000-01-01',
+};
+
+// Default values for createNewRecord
+export const NEW_RECORD_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    ...UNPROCESSED_RECORDS_COLLECTION,
     rek_date: '1000-01-01',
 };
 
