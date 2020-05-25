@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
+exports[`DesignForm validation  should validate dates correctly 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={3}
@@ -10,7 +10,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
     xs={12}
   >
     <StandardCard
-      title="Creative work information"
+      title="Design information"
     >
       <WithStyles(ForwardRef(Grid))
         container={true}
@@ -27,7 +27,58 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
             fullWidth={true}
             label="Title"
             name="rek_title"
-            placeholder="Title of creative work"
+            placeholder="Title of design"
+            required={true}
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={12}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Project name"
+            name="fez_record_search_key_project_name.rek_project_name"
+            placeholder="Title of project"
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Location"
+            name="fez_record_search_key_location[0].rek_location"
+            placeholder="Type the geographical location for the design itself."
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Publisher"
+            name="fez_record_search_key_publisher.rek_publisher"
+            placeholder="Enter the name of the client, builder or curator of the work."
             required={true}
             type="text"
             validate={
@@ -48,49 +99,8 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
             fullWidth={true}
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-            placeholder="Enter place of publication, location or venue"
+            placeholder="Enter the geographical location for the client, builder or curator of the work."
             required={true}
-            type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={4}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="Publisher"
-            name="fez_record_search_key_publisher.rek_publisher"
-            placeholder="Enter the name of the publisher or producer"
-            required={true}
-            type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={4}
-          xs={12}
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            label="DOI"
-            name="fez_record_search_key_doi.rek_doi"
-            placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
             type="text"
             validate={
               Array [
@@ -109,10 +119,11 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
             className="requiredHintField"
             component={[Function]}
             disabled={false}
-            floatingTitle="Publication/Start date"
+            floatingTitle="Project start date"
             floatingTitleRequired={true}
             hasError="Date range is not valid"
-            name="rek_date"
+            name="fez_record_search_key_project_start_date.rek_project_start_date"
+            partialDateFieldId="date"
             required={true}
             validate={
               Array [
@@ -156,13 +167,13 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
               here
             </a>
           </p>,
-          "title": "Authors/Designers name",
+          "title": "Designers",
         }
       }
-      title="Authors"
+      title="Designer name"
     >
       <WithStyles(ForwardRef(Typography))>
-        Please provide a list of authors and then select your name from the list.
+        Please provide a list of designers and then select your name from the list.
       </WithStyles(ForwardRef(Typography))>
       <Field
         component={[Function]}
@@ -170,10 +181,9 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
         disabled={false}
         locale={
           Object {
-            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
-                "addButton": "Add author",
+                "addButton": "Add designer",
                 "descriptionStep1": <div>
                   <span
                     className="authorSteps"
@@ -183,21 +193,21 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add to a list of designers below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "descriptionStep1NoStep2": <div>
                   Please 
                   <b>
-                    add to a list of authors below
+                    add to a list of designers below
                   </b>
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
-                "nameAsPublishedFieldId": "authors-name-as-published-field",
+                "nameAsPublishedFieldId": "designers-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Enter each designer's name as published (eg. Smith, John)",
               },
             },
             "header": Object {
@@ -223,8 +233,8 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier / Organisation",
-                "nameColumn": "Author's name as published",
+                "identifierColumn": "UQ identifier",
+                "nameColumn": "Designers name as published",
                 "reorderColumn": "Reorder items",
               },
             },
@@ -238,13 +248,12 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
                   "confirmationTitle": "Delete item",
                 },
                 "editHint": "Edit this item",
-                "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
-                "selectHint": "Select this author ([name]) to assign it as you",
+                "selectHint": "Select this designer ([name]) to assign it as you",
                 "selectedHint": "This is you",
-                "suffix": " listed author",
-                "unselectedHint": "Select this to confirm [identifier] is you",
+                "suffix": " listed designer",
+                "unselectedHint": "Select this to confirm this designer is you",
               },
             },
           }
@@ -283,6 +292,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
             multiline={true}
             name="comments"
             placeholder="Add any additional information here."
+            rows={1}
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -296,7 +306,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
             fullWidth={true}
             label="Link"
             name="rek_link"
-            placeholder="Enter a valid URL to the work, or information about this work."
+            placeholder="Enter URL for this work."
             type="text"
             validate={
               Array [

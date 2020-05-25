@@ -1211,6 +1211,7 @@ export default {
                 fullWidth: true,
                 allowPartial: true,
                 partialDateFieldId: 'project-start-date',
+                required: true,
             },
         },
         fez_record_search_key_start_date: {
@@ -1227,7 +1228,7 @@ export default {
         fez_record_search_key_end_date: {
             component: PartialDateField,
             componentProps: {
-                name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
+                name: 'bibliographicSection.fez_record_search_key_end_date.rek_end_date',
                 label: 'End date',
                 floatingTitle: 'End date',
                 fullWidth: true,
@@ -1615,6 +1616,7 @@ export default {
             }),
             fez_record_search_key_end_date: () => ({
                 label: 'Collection end date',
+                name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
             }),
             authors: () => ({
                 showRoleInput: true,

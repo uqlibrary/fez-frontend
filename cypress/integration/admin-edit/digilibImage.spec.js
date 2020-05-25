@@ -11,7 +11,7 @@ context('Digilib Image admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it('should load with specifed elements', () => {
+    it('should load with specified elements', () => {
         cy.adminEditCountCards(7);
         cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
         cy.adminEditTabbedView();

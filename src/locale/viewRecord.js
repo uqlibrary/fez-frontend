@@ -289,6 +289,7 @@ export default {
                 rek_date: 'Date',
                 rek_description: 'Abstract/Description',
                 fez_record_search_key_date_available: 'Year available',
+                fez_record_search_key_end_date: 'End date',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_contributor: 'Consultant(s)',
@@ -1322,48 +1323,52 @@ export default {
                     order: 5,
                 },
                 {
-                    field: 'fez_record_search_key_date_available',
+                    field: 'fez_record_search_key_end_date',
                     order: 6,
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_date_available',
                     order: 7,
                 },
                 {
-                    field: 'fez_record_search_key_place_of_publication',
+                    field: 'fez_record_search_key_publisher',
                     order: 8,
                 },
                 {
-                    field: 'fez_record_search_key_start_page',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 9,
                 },
                 {
-                    field: 'fez_record_search_key_end_page',
+                    field: 'fez_record_search_key_start_page',
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_total_pages',
+                    field: 'fez_record_search_key_end_page',
                     order: 11,
                 },
                 {
-                    field: 'fez_record_search_key_oa_status',
+                    field: 'fez_record_search_key_total_pages',
                     order: 12,
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_oa_status',
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_location',
+                    field: 'rek_date',
                     order: 14,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_location',
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'rek_genre',
                     order: 16,
+                },
+                {
+                    field: 'fez_record_search_key_contributor',
+                    order: 17,
                 },
                 // {
                 //     field: 'fez_record_search_key_language',

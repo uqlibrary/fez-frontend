@@ -69,7 +69,6 @@ export default class JournalArticleForm extends Component {
                                     name="rek_date"
                                     allowPartial
                                     required
-                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}

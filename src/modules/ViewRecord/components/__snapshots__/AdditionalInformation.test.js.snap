@@ -35111,6 +35111,60 @@ exports[`Additional Information Component  should render component with design d
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-End date"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            variant="body2"
+          >
+            End date
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <DateCitationView
+              className="citationDate"
+              date="2005-01-05 00:00:00"
+              format="YYYY-MM-DD"
+              isLocalised={false}
+              prefix=""
+              suffix=""
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="7"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Year available"
         spacing={2}
       >
@@ -35154,7 +35208,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -35201,7 +35255,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -35248,7 +35302,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -35302,7 +35356,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -35358,7 +35412,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -35405,7 +35459,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -35871,7 +35925,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -35942,7 +35996,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -36038,7 +36092,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
