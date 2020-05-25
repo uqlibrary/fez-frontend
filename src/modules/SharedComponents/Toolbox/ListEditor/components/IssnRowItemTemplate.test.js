@@ -237,7 +237,7 @@ describe('IssnRowItemTemplate', () => {
             expect(getSherpaLink(sherpaData)).toBe('http://www.sherpa.ac.uk/romeo/search.php?issn=1234-5678');
 
             sherpaData.srm_colour = 'gray';
-            expect(getSherpaLink(sherpaData)).toBe(false);
+            expect(getSherpaLink(sherpaData)).toBe('');
 
             sherpaData.srm_journal_link = 'http://example.com';
             expect(getSherpaLink(sherpaData)).toBe('http://example.com');
@@ -286,9 +286,18 @@ describe('IssnRowItemTemplate', () => {
                     get: () => stateObj,
                 };
                 expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
                     item: {
                         key: props.item,
-                        value: {},
+                        value: {
+                            sherpaRomeo: {
+                                link: '',
+                            },
+                            ulrichs: {
+                                link: '',
+                                title: '',
+                            },
+                        },
                     },
                 });
             });
@@ -314,6 +323,7 @@ describe('IssnRowItemTemplate', () => {
                     }),
                 };
                 expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
                     item: {
                         key: props.item,
                         value: {
@@ -342,9 +352,13 @@ describe('IssnRowItemTemplate', () => {
                     }),
                 };
                 expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
                     item: {
                         key: props.item,
                         value: {
+                            sherpaRomeo: {
+                                link: '',
+                            },
                             ulrichs: {
                                 link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
                                 title: '',
@@ -371,11 +385,16 @@ describe('IssnRowItemTemplate', () => {
                     }),
                 };
                 expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
                     item: {
                         key: props.item,
                         value: {
                             sherpaRomeo: {
-                                link: false,
+                                link: '',
+                            },
+                            ulrichs: {
+                                link: '',
+                                title: '',
                             },
                         },
                     },
@@ -386,29 +405,37 @@ describe('IssnRowItemTemplate', () => {
                 const state = {
                     get: () => stateObj,
                 };
-                const value = {
-                    ulrichs: {
-                        link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
-                        linkText: 'Testing 1',
-                        title: 'Testing 2',
-                    },
-                    sherpaRomeo: {
-                        link: sherpaLink,
-                    },
-                };
                 const preloadedProps = {
                     item: {
-                        hasPreload: true,
                         key: props.item,
-                        value,
+                        value: {
+                            fez_sherpa_romeo: {
+                                srm_issn: props.item,
+                                srm_journal_link: sherpaLink,
+                                srm_journal_name: 'Testing 1',
+                            },
+                            fez_ulrichs: {
+                                ulr_issn: props.item,
+                                ulr_title_id: ulrichsTitleId,
+                                ulr_title: 'Testing 2',
+                            },
+                        },
+                        hasPreload: true,
                     },
                 };
                 expect(mapStateToProps(state, preloadedProps)).toEqual({
                     hasPreload: true,
                     item: {
-                        hasPreload: true,
                         key: props.item,
-                        value,
+                        value: {
+                            sherpaRomeo: {
+                                link: sherpaLink,
+                            },
+                            ulrichs: {
+                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                title: 'Testing 2',
+                            },
+                        },
                     },
                 });
             });
