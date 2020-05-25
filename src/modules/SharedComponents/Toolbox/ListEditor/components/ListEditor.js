@@ -254,8 +254,8 @@ export default class ListEditor extends Component {
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={
-                        (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
-                        'list-editor-form'
+                        (!!this.state.itemIndexSelectedToEdit && this.state.itemIndexSelectedToEdit + 1) ||
+                        'link-info-form'
                     }
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}

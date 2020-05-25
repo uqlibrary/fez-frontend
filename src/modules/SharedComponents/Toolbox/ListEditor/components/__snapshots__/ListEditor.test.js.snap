@@ -11,7 +11,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -212,7 +212,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -401,7 +401,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -590,7 +590,7 @@ exports[`ListEditor tests should add an object item and set state 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
@@ -610,7 +610,7 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
@@ -656,7 +656,7 @@ exports[`ListEditor tests should add item and set state 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
@@ -676,7 +676,7 @@ exports[`ListEditor tests should add item and set state 2`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
@@ -722,7 +722,7 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
@@ -742,7 +742,7 @@ exports[`ListEditor tests should move down an item 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -819,7 +819,7 @@ exports[`ListEditor tests should move up an item 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -896,7 +896,7 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -920,7 +920,7 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -944,7 +944,7 @@ exports[`ListEditor tests should render full component with a defined className 
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -968,7 +968,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -1027,7 +1027,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -1086,7 +1086,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
@@ -1161,7 +1161,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
     itemSelectedToEdit={null}
-    key="list-editor-form"
+    key="link-info-form"
     locale={
       Object {
         "inputFieldLabel": "NoLabel",
