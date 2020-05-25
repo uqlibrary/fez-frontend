@@ -165,6 +165,7 @@ module.exports = {
     },
     optimization: {
         splitChunks: {
+            minChunks: 6,
             cacheGroups: {
                 commons: {
                     chunks: 'all',
