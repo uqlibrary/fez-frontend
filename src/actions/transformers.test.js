@@ -2319,7 +2319,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_license_additional: {
                 rek_license: '453607',
             },
-            fez_record_search_key_end_date_admin: {
+            fez_record_search_key_end_date: {
                 rek_end_date: '2019-03-14',
             },
         };
@@ -2812,7 +2812,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     plainText: 'A related publication',
                     htmlText: '<p>A related publication</p>',
                 },
-                fez_record_search_key_end_date_biblio: {},
+                fez_record_search_key_end_date: {},
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -3158,7 +3158,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_end_date_biblio: {
+                fez_record_search_key_end_date: {
                     rek_end_date: '2020-01-01',
                 },
                 fez_record_search_key_job_number: {
