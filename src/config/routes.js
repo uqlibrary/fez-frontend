@@ -120,12 +120,7 @@ export const pathConfig = {
         // Exact match on Any Field
         keyword: keyword =>
             getSearchUrl({
-                searchQuery: { all: '' },
-                activeFacets: {
-                    filters: {
-                        Keywords: keyword,
-                    },
-                },
+                searchQuery: { rek_keywords: keyword },
             }),
         herdcStatus: herdcStatus => getSearchUrl({ searchQuery: { all: herdcStatus } }),
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),

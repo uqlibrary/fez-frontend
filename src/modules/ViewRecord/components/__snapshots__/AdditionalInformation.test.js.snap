@@ -18351,14 +18351,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-0"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Akt&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Akt&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Akt&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           Akt
@@ -18370,14 +18370,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-1"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Breast+cancer&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Breast+cancer&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Breast+cancer&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           Breast cancer
@@ -18389,14 +18389,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-2"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Ca2%2B&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Ca2%2B&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Ca2%2B&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           Ca2+
@@ -18408,14 +18408,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-3"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hypoxia&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hypoxia&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hypoxia&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           Hypoxia
@@ -18427,14 +18427,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-4"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=PTEN&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=PTEN&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=PTEN&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           PTEN
@@ -18446,14 +18446,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-5"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Signal+transduction&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Signal+transduction&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Signal+transduction&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           Signal transduction
@@ -18465,14 +18465,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     key="rek_keywords-6"
                                                                   >
                                                                     <Link
-                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+                                                                      to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=TRPC1&searchMode=advanced"
                                                                     >
                                                                       <LinkAnchor
-                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+                                                                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=TRPC1&searchMode=advanced"
                                                                         navigate={[Function]}
                                                                       >
                                                                         <a
-                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+                                                                          href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=TRPC1&searchMode=advanced"
                                                                           onClick={[Function]}
                                                                         >
                                                                           TRPC1
@@ -24144,7 +24144,7 @@ exports[`Additional Information Component  should render component with book cha
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Breast+cancer&searchMode=advanced"
                 >
                   Breast cancer
                 </Link>
@@ -24153,7 +24153,7 @@ exports[`Additional Information Component  should render component with book cha
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=EMT&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=EMT&searchMode=advanced"
                 >
                   EMT
                 </Link>
@@ -24162,7 +24162,7 @@ exports[`Additional Information Component  should render component with book cha
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Epithelial+cell+differentiation&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Epithelial+cell+differentiation&searchMode=advanced"
                 >
                   Epithelial cell differentiation
                 </Link>
@@ -24171,7 +24171,7 @@ exports[`Additional Information Component  should render component with book cha
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Epithelial-stromal+interactions&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Epithelial-stromal+interactions&searchMode=advanced"
                 >
                   Epithelial-stromal interactions
                 </Link>
@@ -24180,7 +24180,7 @@ exports[`Additional Information Component  should render component with book cha
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hormonal+regulation&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hormonal+regulation&searchMode=advanced"
                 >
                   Hormonal regulation
                 </Link>
@@ -24189,7 +24189,7 @@ exports[`Additional Information Component  should render component with book cha
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signalling+pathways&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Signalling+pathways&searchMode=advanced"
                 >
                   Signalling pathways
                 </Link>
@@ -27397,7 +27397,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sewers&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Sewers&searchMode=advanced"
                 >
                   Sewers
                 </Link>
@@ -27406,7 +27406,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Measurements&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Measurements&searchMode=advanced"
                 >
                   Measurements
                 </Link>
@@ -27415,7 +27415,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hydraulics&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hydraulics&searchMode=advanced"
                 >
                   Hydraulics
                 </Link>
@@ -27424,7 +27424,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Open+channel+flows&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Open+channel+flows&searchMode=advanced"
                 >
                   Open channel flows
                 </Link>
@@ -27433,7 +27433,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sediments&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Sediments&searchMode=advanced"
                 >
                   Sediments
                 </Link>
@@ -27442,7 +27442,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Turbidity&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Turbidity&searchMode=advanced"
                 >
                   Turbidity
                 </Link>
@@ -27451,7 +27451,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hydrodynamics&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hydrodynamics&searchMode=advanced"
                 >
                   Hydrodynamics
                 </Link>
@@ -27460,7 +27460,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-7"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sedimentation&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Sedimentation&searchMode=advanced"
                 >
                   Sedimentation
                 </Link>
@@ -27469,7 +27469,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-8"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=design&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=design&searchMode=advanced"
                 >
                   design
                 </Link>
@@ -27478,7 +27478,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-9"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=operation&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=operation&searchMode=advanced"
                 >
                   operation
                 </Link>
@@ -27487,7 +27487,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-10"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rehabilitation&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=rehabilitation&searchMode=advanced"
                 >
                   rehabilitation
                 </Link>
@@ -27496,7 +27496,7 @@ exports[`Additional Information Component  should render component with conferen
                 key="rek_keywords-11"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=urban+environment&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=urban+environment&searchMode=advanced"
                 >
                   urban environment
                 </Link>
@@ -28507,7 +28507,7 @@ exports[`Additional Information Component  should render component with creative
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchMode=advanced"
                 >
                   Original Creative Works - Design/Architectural work
                 </Link>
@@ -31726,7 +31726,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Isolates&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Isolates&searchMode=advanced"
                 >
                   Isolates
                 </Link>
@@ -31735,7 +31735,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Single+cells&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Single+cells&searchMode=advanced"
                 >
                   Single cells
                 </Link>
@@ -31744,7 +31744,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Metagenomic+data&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Metagenomic+data&searchMode=advanced"
                 >
                   Metagenomic data
                 </Link>
@@ -31753,7 +31753,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Genome+quality&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Genome+quality&searchMode=advanced"
                 >
                   Genome quality
                 </Link>
@@ -31762,7 +31762,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=CheckM&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=CheckM&searchMode=advanced"
                 >
                   CheckM
                 </Link>
@@ -34069,7 +34069,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Habitat+Mapping&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Habitat+Mapping&searchMode=advanced"
                 >
                   Habitat Mapping
                 </Link>
@@ -34078,7 +34078,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Remote+Sensing&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Remote+Sensing&searchMode=advanced"
                 >
                   Remote Sensing
                 </Link>
@@ -34087,7 +34087,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Kubulau&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Kubulau&searchMode=advanced"
                 >
                   Kubulau
                 </Link>
@@ -34096,7 +34096,7 @@ exports[`Additional Information Component  should render component with data col
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Environmental+Management&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Environmental+Management&searchMode=advanced"
                 >
                   Environmental Management
                 </Link>
@@ -36045,7 +36045,7 @@ exports[`Additional Information Component  should render component with design d
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Architecture&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Architecture&searchMode=advanced"
                 >
                   Architecture
                 </Link>
@@ -36054,7 +36054,7 @@ exports[`Additional Information Component  should render component with design d
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Landscape+design&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Landscape+design&searchMode=advanced"
                 >
                   Landscape design
                 </Link>
@@ -36063,7 +36063,7 @@ exports[`Additional Information Component  should render component with design d
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Restoration&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Restoration&searchMode=advanced"
                 >
                   Restoration
                 </Link>
@@ -36072,7 +36072,7 @@ exports[`Additional Information Component  should render component with design d
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Interior+and+Environmental+Design&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Interior+and+Environmental+Design&searchMode=advanced"
                 >
                   Interior and Environmental Design
                 </Link>
@@ -36081,7 +36081,7 @@ exports[`Additional Information Component  should render component with design d
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchMode=advanced"
                 >
                   Original Creative Works - Design/Architectural work
                 </Link>
@@ -37314,7 +37314,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Partial+Differential+Equations+(PDEs)&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Partial+Differential+Equations+(PDEs)&searchMode=advanced"
                 >
                   Partial Differential Equations (PDEs)
                 </Link>
@@ -37323,7 +37323,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Parabolic&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Parabolic&searchMode=advanced"
                 >
                   Parabolic
                 </Link>
@@ -37332,7 +37332,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hyperbolic&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hyperbolic&searchMode=advanced"
                 >
                   Hyperbolic
                 </Link>
@@ -37341,7 +37341,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+difference&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Finite+difference&searchMode=advanced"
                 >
                   Finite difference
                 </Link>
@@ -37350,7 +37350,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Spectral+method&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Spectral+method&searchMode=advanced"
                 >
                   Spectral method
                 </Link>
@@ -37359,7 +37359,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+element+method&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Finite+element+method&searchMode=advanced"
                 >
                   Finite element method
                 </Link>
@@ -37368,7 +37368,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Iterative+methods&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Iterative+methods&searchMode=advanced"
                 >
                   Iterative methods
                 </Link>
@@ -37377,7 +37377,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="rek_keywords-7"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Nonlinear+Partial+Differential+Equations&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Nonlinear+Partial+Differential+Equations&searchMode=advanced"
                 >
                   Nonlinear Partial Differential Equations
                 </Link>
@@ -39602,7 +39602,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Knowledge&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Knowledge&searchMode=advanced"
                 >
                   Knowledge
                 </Link>
@@ -39611,7 +39611,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Multinational+corporations&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Multinational+corporations&searchMode=advanced"
                 >
                   Multinational corporations
                 </Link>
@@ -42478,7 +42478,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Akt&searchMode=advanced"
                 >
                   Akt
                 </Link>
@@ -42487,7 +42487,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Breast+cancer&searchMode=advanced"
                 >
                   Breast cancer
                 </Link>
@@ -42496,7 +42496,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Ca2%2B&searchMode=advanced"
                 >
                   Ca2+
                 </Link>
@@ -42505,7 +42505,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hypoxia&searchMode=advanced"
                 >
                   Hypoxia
                 </Link>
@@ -42514,7 +42514,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=PTEN&searchMode=advanced"
                 >
                   PTEN
                 </Link>
@@ -42523,7 +42523,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Signal+transduction&searchMode=advanced"
                 >
                   Signal transduction
                 </Link>
@@ -42532,7 +42532,7 @@ exports[`Additional Information Component  should render component with journal 
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=TRPC1&searchMode=advanced"
                 >
                   TRPC1
                 </Link>
@@ -44174,7 +44174,7 @@ exports[`Additional Information Component  should render component with manuscri
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Archives&searchMode=advanced"
                 >
                   Hayes, Edward Leo, 1889-1967 -- Archives
                 </Link>
@@ -44183,7 +44183,7 @@ exports[`Additional Information Component  should render component with manuscri
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hayes%2C+Edward+Leo%2C+1889-1967+--+Manuscripts&searchMode=advanced"
                 >
                   Hayes, Edward Leo, 1889-1967 -- Manuscripts
                 </Link>
@@ -44192,7 +44192,7 @@ exports[`Additional Information Component  should render component with manuscri
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Astley%2C+Thea%2C+1925-2004+--+Correspondence&searchMode=advanced"
                 >
                   Astley, Thea, 1925-2004 -- Correspondence
                 </Link>
@@ -44201,7 +44201,7 @@ exports[`Additional Information Component  should render component with manuscri
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Grano%2C+Paul%2C+1894-1975+--+Correspondence&searchMode=advanced"
                 >
                   Grano, Paul, 1894-1975 -- Correspondence
                 </Link>
@@ -44210,7 +44210,7 @@ exports[`Additional Information Component  should render component with manuscri
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Authors%2C+Australian+--+20th+century&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Authors%2C+Australian+--+20th+century&searchMode=advanced"
                 >
                   Authors, Australian -- 20th century
                 </Link>
@@ -45665,7 +45665,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=communication&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=communication&searchMode=advanced"
                 >
                   communication
                 </Link>
@@ -45674,7 +45674,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=patient&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=patient&searchMode=advanced"
                 >
                   patient
                 </Link>
@@ -45683,7 +45683,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Doctor&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Doctor&searchMode=advanced"
                 >
                   Doctor
                 </Link>
@@ -45692,7 +45692,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=English&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=English&searchMode=advanced"
                 >
                   English
                 </Link>
@@ -45701,7 +45701,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Chinese&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Chinese&searchMode=advanced"
                 >
                   Chinese
                 </Link>
@@ -45710,7 +45710,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=multicultural&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=multicultural&searchMode=advanced"
                 >
                   multicultural
                 </Link>
@@ -45719,7 +45719,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Multilingualism&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Multilingualism&searchMode=advanced"
                 >
                   Multilingualism
                 </Link>
@@ -45728,7 +45728,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-7"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Interpreters&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Interpreters&searchMode=advanced"
                 >
                   Interpreters
                 </Link>
@@ -45737,7 +45737,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-8"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Translation&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Translation&searchMode=advanced"
                 >
                   Translation
                 </Link>
@@ -45746,7 +45746,7 @@ exports[`Additional Information Component  should render component with newspape
                 key="rek_keywords-9"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Bilinguals&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Bilinguals&searchMode=advanced"
                 >
                   Bilinguals
                 </Link>
@@ -46664,7 +46664,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Algorithmic+complexity&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Algorithmic+complexity&searchMode=advanced"
                 >
                   Algorithmic complexity
                 </Link>
@@ -46673,7 +46673,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cross-entropy&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=cross-entropy&searchMode=advanced"
                 >
                   cross-entropy
                 </Link>
@@ -46682,7 +46682,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=GI%2FG%2F1+queue&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=GI%2FG%2F1+queue&searchMode=advanced"
                 >
                   GI/G/1 queue
                 </Link>
@@ -46691,7 +46691,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=importance+sampling&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=importance+sampling&searchMode=advanced"
                 >
                   importance sampling
                 </Link>
@@ -46700,7 +46700,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=maximum+likelihood&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=maximum+likelihood&searchMode=advanced"
                 >
                   maximum likelihood
                 </Link>
@@ -46709,7 +46709,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pareto+distribution&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Pareto+distribution&searchMode=advanced"
                 >
                   Pareto distribution
                 </Link>
@@ -46718,7 +46718,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pollaczek-Khintchine+formula&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Pollaczek-Khintchine+formula&searchMode=advanced"
                 >
                   Pollaczek-Khintchine formula
                 </Link>
@@ -46727,7 +46727,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-7"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=random+walk&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=random+walk&searchMode=advanced"
                 >
                   random walk
                 </Link>
@@ -46736,7 +46736,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-8"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rare+event&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=rare+event&searchMode=advanced"
                 >
                   rare event
                 </Link>
@@ -46745,7 +46745,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-9"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=subexponential+distribution&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=subexponential+distribution&searchMode=advanced"
                 >
                   subexponential distribution
                 </Link>
@@ -46754,7 +46754,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-10"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Weibull+distribution&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Weibull+distribution&searchMode=advanced"
                 >
                   Weibull distribution
                 </Link>
@@ -47363,7 +47363,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Algorithmic+complexity&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Algorithmic+complexity&searchMode=advanced"
                 >
                   Algorithmic complexity
                 </Link>
@@ -47372,7 +47372,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cross-entropy&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=cross-entropy&searchMode=advanced"
                 >
                   cross-entropy
                 </Link>
@@ -47381,7 +47381,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=GI%2FG%2F1+queue&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=GI%2FG%2F1+queue&searchMode=advanced"
                 >
                   GI/G/1 queue
                 </Link>
@@ -47390,7 +47390,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=importance+sampling&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=importance+sampling&searchMode=advanced"
                 >
                   importance sampling
                 </Link>
@@ -47399,7 +47399,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=maximum+likelihood&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=maximum+likelihood&searchMode=advanced"
                 >
                   maximum likelihood
                 </Link>
@@ -47408,7 +47408,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pareto+distribution&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Pareto+distribution&searchMode=advanced"
                 >
                   Pareto distribution
                 </Link>
@@ -47417,7 +47417,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Pollaczek-Khintchine+formula&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Pollaczek-Khintchine+formula&searchMode=advanced"
                 >
                   Pollaczek-Khintchine formula
                 </Link>
@@ -47426,7 +47426,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-7"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=random+walk&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=random+walk&searchMode=advanced"
                 >
                   random walk
                 </Link>
@@ -47435,7 +47435,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-8"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=rare+event&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=rare+event&searchMode=advanced"
                 >
                   rare event
                 </Link>
@@ -47444,7 +47444,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-9"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=subexponential+distribution&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=subexponential+distribution&searchMode=advanced"
                 >
                   subexponential distribution
                 </Link>
@@ -47453,7 +47453,7 @@ exports[`Additional Information Component  should render component with preprint
                 key="rek_keywords-10"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Weibull+distribution&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Weibull+distribution&searchMode=advanced"
                 >
                   Weibull distribution
                 </Link>
@@ -49759,7 +49759,7 @@ exports[`Additional Information Component  should render component with proceedi
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Trafficking&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Trafficking&searchMode=advanced"
                 >
                   Trafficking
                 </Link>
@@ -49768,7 +49768,7 @@ exports[`Additional Information Component  should render component with proceedi
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Bacterial+toxins&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Bacterial+toxins&searchMode=advanced"
                 >
                   Bacterial toxins
                 </Link>
@@ -49777,7 +49777,7 @@ exports[`Additional Information Component  should render component with proceedi
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Neurons&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Neurons&searchMode=advanced"
                 >
                   Neurons
                 </Link>
@@ -51082,7 +51082,7 @@ exports[`Additional Information Component  should render component with referenc
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Japanese+culture&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Japanese+culture&searchMode=advanced"
                 >
                   Japanese culture
                 </Link>
@@ -51091,7 +51091,7 @@ exports[`Additional Information Component  should render component with referenc
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Popular+culture+-+Japan+-+Encyclopedias&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Popular+culture+-+Japan+-+Encyclopedias&searchMode=advanced"
                 >
                   Popular culture - Japan - Encyclopedias
                 </Link>
@@ -51100,7 +51100,7 @@ exports[`Additional Information Component  should render component with referenc
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Japan+-+Civilization+-+1945-+-+Encyclopedia&searchMode=advanced"
                 >
                   Japan - Civilization - 1945- - Encyclopedia
                 </Link>
@@ -53967,7 +53967,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Akt&searchMode=advanced"
                 >
                   Akt
                 </Link>
@@ -53976,7 +53976,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Breast+cancer&searchMode=advanced"
                 >
                   Breast cancer
                 </Link>
@@ -53985,7 +53985,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Ca2%2B&searchMode=advanced"
                 >
                   Ca2+
                 </Link>
@@ -53994,7 +53994,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Hypoxia&searchMode=advanced"
                 >
                   Hypoxia
                 </Link>
@@ -54003,7 +54003,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-4"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=PTEN&searchMode=advanced"
                 >
                   PTEN
                 </Link>
@@ -54012,7 +54012,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-5"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Signal+transduction&searchMode=advanced"
                 >
                   Signal transduction
                 </Link>
@@ -54021,7 +54021,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 key="rek_keywords-6"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=TRPC1&searchMode=advanced"
                 >
                   TRPC1
                 </Link>
@@ -55260,7 +55260,7 @@ exports[`Additional Information Component  should render component with rek_star
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Original+Creative+Works+-+Design%2FArchitectural+work&searchMode=advanced"
                 >
                   Original Creative Works - Design/Architectural work
                 </Link>
@@ -56864,7 +56864,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business&searchMode=advanced"
                 >
                   Sustainable development; graziers; farmers; agriculture; land management; business
                 </Link>
@@ -58923,7 +58923,7 @@ exports[`Additional Information Component  should render component with working 
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=European+Union&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=European+Union&searchMode=advanced"
                 >
                   European Union
                 </Link>
@@ -58932,7 +58932,7 @@ exports[`Additional Information Component  should render component with working 
                 key="rek_keywords-1"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Education&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Education&searchMode=advanced"
                 >
                   Education
                 </Link>
@@ -58941,7 +58941,7 @@ exports[`Additional Information Component  should render component with working 
                 key="rek_keywords-2"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Employment&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Employment&searchMode=advanced"
                 >
                   Employment
                 </Link>
@@ -58950,7 +58950,7 @@ exports[`Additional Information Component  should render component with working 
                 key="rek_keywords-3"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Social+inclusion&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Social+inclusion&searchMode=advanced"
                 >
                   Social inclusion
                 </Link>
@@ -59863,7 +59863,7 @@ exports[`Additional Information Component  should render oa status value link in
                 key="rek_keywords-0"
               >
                 <Link
-                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business&searchQueryParams%5Ball%5D="
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_keywords%5D=Sustainable+development%3B+graziers%3B+farmers%3B+agriculture%3B+land+management%3B+business&searchMode=advanced"
                 >
                   Sustainable development; graziers; farmers; agriculture; land management; business
                 </Link>
