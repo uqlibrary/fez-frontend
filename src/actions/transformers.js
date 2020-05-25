@@ -706,16 +706,6 @@ export const getLinkDescriptionSearchKey = (links = []) => {
     };
 };
 
-export const renameEndDate = record => {
-    if (!!record && !record.rek_end_date) return {};
-
-    return {
-        fez_record_search_key_end_date: {
-            rek_end_date: record.rek_end_date,
-        },
-    };
-};
-
 export const renameLocation = (locations, keepClearedFields) => {
     // biblio locations only have one entry (order=1); admin have possibly multiple (order=1,2,3)
     // we need to remove the key when they clear the field, so the BE removes the db entry
@@ -874,7 +864,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
-        fez_record_search_key_end_date_biblio: endDateBiblio,
+        fez_record_search_key_end_date: endDate,
         fez_record_search_key_isderivationof: relatedPubs,
         fez_record_search_key_license_biblio: licenseDataBiblio,
         fez_record_search_key_location_biblio: locationDataBiblio,
@@ -961,7 +951,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
-        ...(!!endDateBiblio ? renameEndDate(endDateBiblio) : {}),
+        ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
         ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
@@ -1130,7 +1120,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
         fez_record_search_key_license_additional: licenseDataAdmin,
-        fez_record_search_key_end_date_admin: endDateAdditional,
+        fez_record_search_key_end_date: endDate,
         rek_herdc_notes: herdcNotes,
         ...rest
     } = data;
@@ -1153,7 +1143,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
-        ...(!!endDateAdditional ? renameEndDate(endDateAdditional) : {}),
+        ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...cleanBlankEntries(rest),
     };
 };

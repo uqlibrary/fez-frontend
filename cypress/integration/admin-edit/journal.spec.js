@@ -61,7 +61,7 @@ context('Journal admin edit', () => {
                     .parents('.AdminCard')
                     .as('issnBlock');
 
-                const issn = record.fez_record_search_key_issn.rek_issn;
+                const issn = record.fez_record_search_key_issn[0].rek_issn;
                 const sherpaLink = `http://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
 
                 cy.get('#issn-list-row-0')

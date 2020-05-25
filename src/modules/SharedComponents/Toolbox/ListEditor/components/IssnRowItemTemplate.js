@@ -65,15 +65,22 @@ IssnRowItemTemplate.propTypes = {
 };
 
 export const getValidSherpa = (sherpaData, issn) =>
-    sherpaData[issn] && sherpaData[issn].srm_issn === issn && sherpaData[issn];
+    sherpaData[issn] &&
+    sherpaData.srm_journal_name !== 'Not found in Sherpa Romeo' &&
+    sherpaData[issn].srm_issn === issn &&
+    sherpaData[issn];
+
+export const getValidUlrichs = (ulrichsData, issn) =>
+    ulrichsData[issn] && ulrichsData[issn].ulr_title !== '' && ulrichsData[issn].ulr_issn === issn && ulrichsData[issn];
 
 /**
- * Returns false if data is missing, and needs to be loaded.
- * Returns null if data in invalid, so data should not be loaded.
  * Returns non-empty journal link for valid records, or link to legacy site if
  * colour is found.
  */
 export const getSherpaLink = sherpaEntry => {
+    if (!sherpaEntry) {
+        return '';
+    }
     if (!!sherpaEntry.srm_journal_link) {
         return sherpaEntry.srm_journal_link;
     }
@@ -81,11 +88,14 @@ export const getSherpaLink = sherpaEntry => {
     if (validOldColours.includes(sherpaEntry.srm_colour) && !!sherpaEntry.srm_issn) {
         return globalLocale.global.sherpaRomeoLink.externalUrl.replace('[id]', sherpaEntry.srm_issn);
     }
-    return false;
+    return '';
 };
 
-export const getValidUlrichs = (ulrichsData, issn) =>
-    ulrichsData[issn] && ulrichsData[issn].ulr_title !== '' && ulrichsData[issn].ulr_issn === issn && ulrichsData[issn];
+export const getUlrichsLink = ulrichsEntry =>
+    (!!ulrichsEntry &&
+        !!ulrichsEntry.ulr_title_id &&
+        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsEntry.ulr_title_id)) ||
+    '';
 
 export const mapStateToProps = (state, props) => {
     const { item } = props;
@@ -100,38 +110,24 @@ export const mapStateToProps = (state, props) => {
     } = state.get('issnLinksReducer');
 
     const sherpaEntry =
-        !item.hasPreload &&
-        !loadingSherpaFromIssn &&
-        !sherpaLoadFromIssnError[issn] &&
-        getValidSherpa(sherpaRomeo, issn);
+        (!!item.hasPreload && getValidSherpa({ [issn]: item.value.fez_sherpa_romeo }, issn)) ||
+        (!loadingSherpaFromIssn && !sherpaLoadFromIssnError[issn] && getValidSherpa(sherpaRomeo, issn));
     const ulrichsEntry =
-        !item.hasPreload &&
-        !loadingUlrichsFromIssn &&
-        !ulrichsLoadFromIssnError[issn] &&
-        getValidUlrichs(ulrichs, issn);
+        (!!item.hasPreload && getValidUlrichs({ [issn]: item.value.fez_ulrichs }, issn)) ||
+        (!loadingUlrichsFromIssn && !ulrichsLoadFromIssnError[issn] && getValidUlrichs(ulrichs, issn));
 
     return {
-        hasPreload: item.hasPreload,
+        hasPreload: !!item.hasPreload,
         item: {
-            ...((typeof item === 'object' && item) || {}),
             key: issn,
             value: {
-                ...(((typeof item === 'object' && item) || {}).value || {}),
-                ...((!!sherpaEntry && {
-                    sherpaRomeo: {
-                        link: getSherpaLink(sherpaEntry),
-                    },
-                }) ||
-                    {}),
-                ...((!!ulrichsEntry && {
-                    ulrichs: {
-                        link:
-                            ulrichsEntry.ulr_title_id &&
-                            globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichsEntry.ulr_title_id),
-                        title: ulrichsEntry.ulr_title || '',
-                    },
-                }) ||
-                    {}),
+                sherpaRomeo: {
+                    link: getSherpaLink(sherpaEntry),
+                },
+                ulrichs: {
+                    link: getUlrichsLink(ulrichsEntry),
+                    title: (!!ulrichsEntry && ulrichsEntry.ulr_title) || '',
+                },
             },
         },
     };
