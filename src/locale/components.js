@@ -1696,6 +1696,16 @@ export default {
                         validation: ['maxLength500'],
                         ariaLabel: 'Type a value to search all fields for',
                     },
+                    rek_keywords: {
+                        order: 1.5,
+                        map: 'Keywords',
+                        title: 'Keywords',
+                        combiner: 'contains',
+                        type: 'TextField',
+                        hint: 'Add keywords',
+                        validation: ['required', 'maxLength255'],
+                        ariaLabel: 'Type keywords to search for',
+                    },
                     rek_title: {
                         order: 2,
                         map: 'Title',
