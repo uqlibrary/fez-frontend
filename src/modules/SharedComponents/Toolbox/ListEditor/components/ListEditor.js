@@ -74,6 +74,7 @@ export default class ListEditor extends Component {
             ((props.input || {}).name && props.input.value);
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
+            itemIndexSelectedToEdit: null,
         };
 
         this.transformOutput = this.transformOutput.bind(this);
@@ -96,11 +97,26 @@ export default class ListEditor extends Component {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     };
 
+    isItemInTheList = (item, list) => {
+        if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
+            return (
+                list.filter(listItem => {
+                    return (!!listItem.key && listItem.key === item.key) || (!!listItem.id && listItem.id === item.id);
+                }).length > 0
+            );
+        } else {
+            return list.indexOf(item) !== -1;
+        }
+    };
+
     addItem = item => {
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
-            (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)
+            ((this.props.distinctOnly &&
+                this.state.itemIndexSelectedToEdit === null &&
+                !this.isItemInTheList(item, this.state.itemList)) ||
+                (!this.props.distinctOnly && this.state.itemList.indexOf(item) === -1))
         ) {
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
@@ -224,7 +240,10 @@ export default class ListEditor extends Component {
             <div className={`${this.props.className}`} id={`${this.props.listEditorId}-list-editor`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
-                    key={this.state.itemIndexSelectedToEdit + 1 || 'link-info-form'}
+                    key={
+                        (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
+                        'list-editor-form'
+                    }
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
                     locale={{ ...(this.props.locale && this.props.locale.form ? this.props.locale.form : {}) }}
