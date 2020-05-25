@@ -298,4 +298,64 @@ describe('ListEditor tests', () => {
         wrapper.instance().editItem(1);
         expect(wrapper.state().itemIndexSelectedToEdit).toEqual(1);
     });
+
+    it('should not add duplicate item with the same "key" in the list', () => {
+        const wrapper = setup({
+            distinctOnly: true,
+        });
+
+        wrapper.setState({
+            itemList: [
+                { key: '1234-1234', value: { ulrichs: {} } },
+                { key: '1234-1111', value: { ulrichs: {} } },
+            ],
+        });
+
+        wrapper.instance().addItem({ key: '1234-1234', value: { sherpaRomeo: {}, ulrichs: {} } });
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        wrapper.instance().addItem({ key: '1234-1235', value: { sherpaRomeo: {}, ulrichs: {} } });
+
+        expect(wrapper.state().itemList.length).toEqual(3);
+    });
+
+    it('should not add duplicate item with the same "id" in the list', () => {
+        const wrapper = setup({
+            distinctOnly: true,
+        });
+
+        wrapper.setState({
+            itemList: [
+                { id: 1234, value: 'test' },
+                { id: 2345, value: 'testing' },
+            ],
+        });
+
+        wrapper.instance().addItem({ id: 1234, value: 'test' });
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        wrapper.instance().addItem({ id: 1235, value: 'testing testing' });
+
+        expect(wrapper.state().itemList.length).toEqual(3);
+    });
+
+    it('should not add duplicate item with the same text in the list', () => {
+        const wrapper = setup({
+            distinctOnly: true,
+        });
+
+        wrapper.setState({
+            itemList: ['test', 'testing'],
+        });
+
+        wrapper.instance().addItem('test');
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        wrapper.instance().addItem('testing testing');
+
+        expect(wrapper.state().itemList.length).toEqual(3);
+    });
 });
