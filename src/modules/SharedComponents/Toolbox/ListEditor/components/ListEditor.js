@@ -141,10 +141,7 @@ export default class ListEditor extends Component {
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
-            (this.state.itemIndexSelectedToEdit !== null ||
-                (this.props.distinctOnly &&
-                    this.state.itemIndexSelectedToEdit === null &&
-                    !this.isItemInTheList(item, this.state.itemList)) ||
+            ((this.props.distinctOnly && !this.isItemInTheList(item, this.state.itemList)) ||
                 (!this.props.distinctOnly && this.state.itemList.indexOf(item) === -1))
         ) {
             // If when the item is submitted, there is no maxCount,
