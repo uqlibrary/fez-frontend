@@ -9,7 +9,10 @@ const category = FIELD_OF_RESEARCH_VOCAB_ID;
 
 const mapStateToProps = (state, props) => {
     const { itemsKeyValueList, itemsLoading } = (state.get('controlledVocabulariesReducer') &&
-        state.get('controlledVocabulariesReducer')[category]) || { itemsKeyValueList: [], itemsLoading: false };
+        state.get('controlledVocabulariesReducer')[props.category || category]) || {
+        itemsKeyValueList: [],
+        itemsLoading: false,
+    };
     return {
         onChange: props.input.onChange,
         onClear: () => {},
@@ -27,7 +30,11 @@ const mapStateToProps = (state, props) => {
 
 const filterFoRmapStateToProps = (state, props) => {
     const { itemsKeyValueList, itemsLoading } = (state.get('controlledVocabulariesReducer') &&
-        state.get('controlledVocabulariesReducer')[category]) || { itemsKeyValueList: [], itemsLoading: false };
+        state.get('controlledVocabulariesReducer')[props.category || category]) || {
+        itemsKeyValueList: [],
+        itemsLoading: false,
+    };
+
     return {
         onChange: props.input.onChange,
         onClear: () => {},
