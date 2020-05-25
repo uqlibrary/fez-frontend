@@ -577,7 +577,6 @@ export const UNPROCESSED_RECORDS_COLLECTION = {
             rek_ismemberof_order: 1,
         },
     ],
-    rek_date: '1000-01-01',
 };
 
 // Default values for createNewRecord
