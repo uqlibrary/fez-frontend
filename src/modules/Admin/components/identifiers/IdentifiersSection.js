@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
-import { identifiersParams } from 'modules/Admin/containers/Admin';
+import { identifiersParams } from 'modules/Admin/helpers';
 
 export const IdentifiersSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
