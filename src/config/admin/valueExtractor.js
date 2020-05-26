@@ -242,8 +242,8 @@ export default {
         },
     },
     issnField: {
-        getValue: record =>
-            (record.fez_record_search_key_issn || []).map(issn => ({
+        getValue: record => {
+            const returnValue = (record.fez_record_search_key_issn || []).map(issn => ({
                 rek_order: issn.rek_issn_order,
                 rek_value: {
                     key: issn.rek_issn,
@@ -253,7 +253,11 @@ export default {
                     },
                     hasPreload: true,
                 },
-            })),
+            }));
+
+            delete record.fez_record_search_key_issn;
+            return returnValue;
+        },
     },
     fez_record_search_key_isbn: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_isbn'),
