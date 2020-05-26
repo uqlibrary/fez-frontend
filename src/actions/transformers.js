@@ -706,27 +706,14 @@ export const getLinkDescriptionSearchKey = (links = []) => {
     };
 };
 
-export const renameLocation = (locations, keepClearedFields) => {
-    // biblio locations only have one entry (order=1); admin have possibly multiple (order=1,2,3)
-    // we need to remove the key when they clear the field, so the BE removes the db entry
-    if (!keepClearedFields) {
-        const location = locations
-            .filter(item => {
-                return item.rek_location !== '';
-            })
-            .map(({ rek_location: value }) => ({
-                rek_location: value.key || value,
-                rek_location_order: 1,
-            }));
-        return !!location && location.length > 0 ? { fez_record_search_key_location: location } : {};
-    } else {
-        return {
-            fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
-                rek_location: value.key || value,
-                rek_location_order: order,
-            })),
-        };
-    }
+export const getRecordLocationSearchKey = locations => {
+    if (!locations || locations.length === 0) return {};
+
+    return {
+        fez_record_search_key_location: locations.map(location => ({
+            ...location,
+        })),
+    };
 };
 
 const cleanBlankEntries = data => {
@@ -781,7 +768,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         fez_record_search_key_scopus_id: scopusId,
         fez_record_search_key_pubmed_id: pubmedId,
         fez_record_search_key_pubmed_central_id: pubmedCentralId,
-        fez_record_search_key_location_identifiers: locationDataIdentifiers,
+        locations,
         rek_pubmed_doc_type: pubmedDocType,
         rek_scopus_doc_type: scopusDocType,
         rek_wok_doc_type: wosDocType,
@@ -812,7 +799,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
             : {}),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
-        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers, true) : {}),
+        ...(!!locations ? getRecordLocationSearchKey(locations) : {}),
         ...cleanBlankEntries(rest),
     };
 };

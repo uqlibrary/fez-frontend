@@ -578,7 +578,7 @@ export default {
     fez_record_search_key_location: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
-    fez_record_search_key_location_identifiers: {
+    locations: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
     fez_record_search_key_identifier: {

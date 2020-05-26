@@ -914,10 +914,10 @@ export default {
                 listEditorId: 'related-datasets',
             },
         },
-        fez_record_search_key_location_identifiers: {
+        locations: {
             component: ListEditorField,
             componentProps: {
-                name: 'identifiersSection.fez_record_search_key_location_identifiers',
+                name: 'identifiersSection.locations',
                 title: 'Locations',
                 searchKey: {
                     value: 'rek_location',

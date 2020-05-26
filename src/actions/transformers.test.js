@@ -2579,6 +2579,8 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 rek_pubmed_doc_type: 'None',
                 rek_scopus_doc_type: 'None',
                 rek_wok_doc_type: 'None',
+                fez_record_search_key_link: [],
+                fez_record_search_key_link_description: [],
             }),
         ).toEqual({
             rek_pubmed_doc_type: null,
@@ -2599,7 +2601,7 @@ describe('getIdentifiersSectionSearchKeys', () => {
 describe('Journal document', () => {
     it('should handle id section specific search keys', () => {
         const data = {
-            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
             rek_pubmed_doc_type: '1',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '3',
@@ -2607,6 +2609,21 @@ describe('Journal document', () => {
 
         expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
             fez_record_search_key_location: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            rek_pubmed_doc_type: '1',
+            rek_scopus_doc_type: '2',
+            rek_wok_doc_type: '3',
+        });
+    });
+
+    it('should handle id section specific search keys and remove empty ones', () => {
+        const data = {
+            locations: [],
+            rek_pubmed_doc_type: '1',
+            rek_scopus_doc_type: '2',
+            rek_wok_doc_type: '3',
+        };
+
+        expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual({
             rek_pubmed_doc_type: '1',
             rek_scopus_doc_type: '2',
             rek_wok_doc_type: '3',
@@ -2625,7 +2642,7 @@ describe('Sanitising empty data', () => {
 
     it('should remove empty array', () => {
         const data = {
-            fez_record_search_key_location_identifiers: [],
+            fez_record_search_key_location: [],
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         };
 
@@ -2650,26 +2667,26 @@ describe('Sanitising empty data', () => {
     // test the `volume` key is removed when set to blank
     it('should remove blank value', () => {
         const data = {
-            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
             fez_record_search_key_volume_number: { rek_volume_number: '' },
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
-            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
 
     // test the `series` key is removed when set to null
     it('should remove null value', () => {
         const data = {
-            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
             fez_record_search_key_series: { rek_series: null },
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
-            fez_record_search_key_location_identifiers: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
 });
