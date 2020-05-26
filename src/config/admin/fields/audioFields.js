@@ -3,36 +3,6 @@ import { isAuthorOrEditorSelected } from 'config/validation';
 
 export default {
     ...commonFields,
-    identifiers: (
-        { displayAll, displayIdentifiers } = {
-            displayAll: false,
-            displayIdentifiers: true,
-        },
-    ) => [
-        {
-            title: 'Manage identifiers',
-            groups: [
-                ['fez_record_search_key_doi'],
-                ...((displayAll && [
-                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
-                    ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                ]) ||
-                    []),
-            ],
-        },
-        {
-            title: 'Manage links',
-            groups: [['links']],
-        },
-        ...(displayIdentifiers
-            ? [
-                {
-                    title: 'Identifiers',
-                    groups: [['fez_record_search_key_identifier']],
-                },
-            ]
-            : []),
-    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',
@@ -61,7 +31,7 @@ export default {
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_length', 'rek_genre'],
                 ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_license_biblio'],
+                ['fez_record_search_key_license'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
@@ -70,7 +40,7 @@ export default {
         },
         {
             title: 'Place(s) of recording',
-            groups: [['fez_record_search_key_location_biblio']],
+            groups: [['fez_record_search_key_location']],
         },
         {
             title: 'Geographic co-ordinates',

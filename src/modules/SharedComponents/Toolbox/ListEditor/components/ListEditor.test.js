@@ -358,4 +358,60 @@ describe('ListEditor tests', () => {
 
         expect(wrapper.state().itemList.length).toEqual(3);
     });
+
+    it('should add edited item with the same "id" but different "value"', () => {
+        const wrapper = setup({
+            distinctOnly: true,
+        });
+
+        wrapper.setState({
+            itemList: [
+                { id: 1234, value: 'test' },
+                { id: 2345, value: 'testing' },
+            ],
+        });
+
+        wrapper.instance().addItem({ id: 1234, value: 'test' });
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        wrapper.instance().editItem(1);
+
+        wrapper.instance().addItem({ id: 2345, value: 'testing testing' });
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        expect(wrapper.state().itemList).toEqual([
+            { id: 1234, value: 'test' },
+            { id: 2345, value: 'testing testing' },
+        ]);
+    });
+
+    it('should add edited item with the same "key" but different "value"', () => {
+        const wrapper = setup({
+            distinctOnly: true,
+        });
+
+        wrapper.setState({
+            itemList: [
+                { key: 'http://www.test.com', value: 'test site' },
+                { key: 'http://www.testing.com', value: 'testing site' },
+            ],
+        });
+
+        wrapper.instance().addItem({ key: 'http://www.test.com', value: 'test site' });
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        wrapper.instance().editItem(0);
+
+        wrapper.instance().addItem({ key: 'http://www.test.com', value: 'test link' });
+
+        expect(wrapper.state().itemList.length).toEqual(2);
+
+        expect(wrapper.state().itemList).toEqual([
+            { key: 'http://www.test.com', value: 'test link' },
+            { key: 'http://www.testing.com', value: 'testing site' },
+        ]);
+    });
 });
