@@ -241,6 +241,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test1",
               "selected": false,
+              "uqUsername": undefined,
             }
           }
           contributorRowId="test-list-row"
@@ -266,6 +267,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test2",
               "selected": true,
+              "uqUsername": undefined,
             }
           }
           contributorRowId="test-list-row"
@@ -291,6 +293,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test3",
               "selected": false,
+              "uqUsername": undefined,
             }
           }
           contributorRowId="test-list-row"
@@ -332,6 +335,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test2",
               "selected": true,
+              "uqUsername": undefined,
             }
           }
           contributorEditorId="test"
@@ -345,6 +349,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
           isContributorAssigned={true}
           isNtro={false}
           key="1"
+          loadSuggetions={[MockFunction]}
           locale={
             Object {
               "addButton": "Add author",
@@ -558,6 +563,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test1",
               "selected": false,
+              "uqUsername": undefined,
             }
           }
           contributorRowId="test-list-row"
@@ -583,6 +589,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test2",
               "selected": true,
+              "uqUsername": undefined,
             }
           }
           contributorRowId="test-list-row"
@@ -608,6 +615,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test3",
               "selected": false,
+              "uqUsername": undefined,
             }
           }
           contributorRowId="test-list-row"
@@ -649,6 +657,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             Object {
               "nameAsPublished": "test2",
               "selected": true,
+              "uqUsername": undefined,
             }
           }
           contributorEditorId="test"
@@ -662,6 +671,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           isContributorAssigned={true}
           isNtro={false}
           key="1"
+          loadSuggetions={[MockFunction]}
           locale={
             Object {
               "addButton": "Add author",
@@ -752,6 +762,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         isContributorAssigned={true}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -948,6 +959,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         isContributorAssigned={true}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -1659,6 +1671,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             hideDelete={false}
             hideReorder={false}
             isNtro={false}
+            loadSuggetions={[MockFunction]}
             locale={
               Object {
                 "errorMessage": "Unable to add an item with the same identifier.",
@@ -1944,6 +1957,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             isContributorAssigned={false}
                             isNtro={false}
                             key="null"
+                            loadSuggetions={[MockFunction]}
                             locale={
                               Object {
                                 "addButton": "Add author",
@@ -4857,6 +4871,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             hideDelete={false}
             hideReorder={false}
             isNtro={true}
+            loadSuggetions={[MockFunction]}
             locale={
               Object {
                 "errorMessage": "Unable to add an item with the same identifier.",
@@ -5142,6 +5157,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             isContributorAssigned={false}
                             isNtro={true}
                             key="null"
+                            loadSuggetions={[MockFunction]}
                             locale={
                               Object {
                                 "addButton": "Add author",
@@ -8211,6 +8227,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -8299,6 +8316,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -8387,6 +8405,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -8476,6 +8495,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -8558,6 +8578,7 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
   hideReorder={false}
   isContributorAssigned={false}
   isNtro={false}
+  loadSuggetions={[MockFunction]}
   locale={
     Object {
       "addButton": "Add author",
@@ -8637,6 +8658,7 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
   hideReorder={false}
   isContributorAssigned={false}
   isNtro={false}
+  loadSuggetions={[MockFunction]}
   locale={
     Object {
       "addButton": "test",
@@ -8718,6 +8740,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         isContributorAssigned={true}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -8902,6 +8925,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         isContributorAssigned={true}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -9088,6 +9112,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -9176,6 +9201,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -9283,6 +9309,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",
@@ -9385,6 +9412,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
         isContributorAssigned={false}
         isNtro={false}
         key="null"
+        loadSuggetions={[MockFunction]}
         locale={
           Object {
             "addButton": "Add author",

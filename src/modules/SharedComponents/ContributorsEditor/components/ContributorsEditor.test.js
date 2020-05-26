@@ -11,6 +11,7 @@ function setup(testProps = {}, args = {}) {
             scroll: 'scroll',
         },
         contributorEditorId: 'test',
+        loadSuggetions: jest.fn(),
         ...testProps,
     };
     return getElement(ContributorsEditor, props, args);
@@ -562,4 +563,22 @@ describe('ContributorsEditor', () => {
             author: null,
         });
     });
+
+    // it.only('calls action prop when a contributor with id 0 is chosen for editing', async() => {
+    //     const testFn = jest.fn();
+    //     const authorName = 'Test Author';
+    //     const wrapper = setup({
+    //         loadSuggetions: testFn,
+    //         input: {
+    //             name: 'test',
+    //             value: Immutable.List([{ nameAsPublished: authorName, aut_id: 0 }]),
+    //         },
+    //     });
+    //     wrapper
+    //         .find('Memo(ContributorRow)')
+    //         .props()
+    //         .onEdit(0);
+    //     wrapper.update();
+    //     expect(testFn).toHaveBeenCalledWith(authorName);
+    // });
 });
