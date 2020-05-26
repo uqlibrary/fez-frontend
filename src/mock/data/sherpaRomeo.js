@@ -10,9 +10,9 @@ export const sherpaRomeo = [
     {
         "srm_id": 69424,
         "srm_issn": "1611-3349",
-        "srm_json": "{}",
+        "srm_json": null,
         "srm_journal_name":"Not found in Sherpa Romeo",
-        "srm_journal_link": "",
+        "srm_journal_link": null,
         "srm_date_updated":"2017-09-30 19:12:05"
     },
     {

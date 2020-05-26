@@ -249,7 +249,8 @@ export default {
                     "srm_id": 32188,
                     "srm_issn": "0312-2417",
                     "srm_journal_name": "Australian Archaeology",
-                    "srm_journal_link": "http://example.com"
+                    "srm_journal_link": null,
+                    "srm_colour": "green"
                 },
                 "rek_issn_lookup": ""
             }],

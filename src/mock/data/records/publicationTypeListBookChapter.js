@@ -707,7 +707,9 @@ export default {
                         "srm_id": 9203899,
                         "srm_issn": "2214-9791",
                         "srm_journal_name": "Not found in Sherpa Romeo",
-                        "srm_colour": "Not found in Sherpa Romeo"
+                        "srm_colour": "Not found in Sherpa Romeo",
+                        "srm_json": null,
+                        "srm_journal_link": null
                     },
                     "fez_ulrichs": {
                         "ulr_issn": "2214-9791",
@@ -727,7 +729,9 @@ export default {
                         "srm_id": 3584389,
                         "srm_issn": "1573-5397",
                         "srm_journal_name": "Not found in Sherpa Romeo",
-                        "srm_colour": "Not found in Sherpa Romeo"
+                        "srm_colour": "Not found in Sherpa Romeo",
+                        "srm_json": null,
+                        "srm_journal_link": null
                     },
                     "fez_ulrichs": {
                         "ulr_issn": "1573-5397",
