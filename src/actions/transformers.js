@@ -706,6 +706,16 @@ export const getLinkDescriptionSearchKey = (links = []) => {
     };
 };
 
+export const renameLicense = record => {
+    if (!!record && !record.rek_license) return {};
+
+    return {
+        fez_record_search_key_license: {
+            rek_license: record.rek_license,
+        },
+    };
+};
+
 export const renameLocation = (locations, keepClearedFields) => {
     // biblio locations only have one entry (order=1); admin have possibly multiple (order=1,2,3)
     // we need to remove the key when they clear the field, so the BE removes the db entry
