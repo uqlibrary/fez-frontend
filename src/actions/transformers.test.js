@@ -2316,7 +2316,7 @@ describe('getAdminSectionSearchKeys', () => {
                 rek_oa_status_pid: 'UQ:113765',
                 rek_oa_status: '453694',
             },
-            fez_record_search_key_license_additional: {
+            fez_record_search_key_license: {
                 rek_license: '453607',
             },
             fez_record_search_key_end_date: {
@@ -2803,7 +2803,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_license_biblio: {},
+                fez_record_search_key_license: {},
                 fez_record_search_key_related_datasets: {
                     plainText: 'A related dataset',
                     htmlText: '<p>A related dataset</p>',
@@ -2871,7 +2871,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_date_recorded: {
                     rek_date_recorded: '01-10-2016',
                 },
-                fez_record_search_key_license_biblio: {
+                fez_record_search_key_license: {
                     rek_license: '453610',
                 },
                 fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
@@ -2913,7 +2913,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_date_recorded: {
                     rek_date_recorded: '01-10-2016',
                 },
-                fez_record_search_key_license_biblio: {
+                fez_record_search_key_license: {
                     rek_license: '453610',
                 },
                 fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
@@ -2952,7 +2952,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_date_recorded: {
                     rek_date_recorded: '01-01-0000',
                 },
-                fez_record_search_key_license_biblio: {
+                fez_record_search_key_license: {
                     rek_license: '453610',
                 },
                 fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
@@ -2996,7 +2996,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should only save the supplied key for a one-to-one search key', () => {
             let data = {
-                fez_record_search_key_license_biblio: { rek_license: 123 },
+                fez_record_search_key_license: { rek_license: 123 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',

@@ -817,16 +817,6 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const renameLicense = record => {
-    if (!!record && !record.rek_license) return {};
-
-    return {
-        fez_record_search_key_license: {
-            rek_license: record.rek_license,
-        },
-    };
-};
-
 export const getRecordIsDatasetOfSearchKey = datasets => {
     if ((datasets || []).length === 0) return {};
 
@@ -866,7 +856,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_date_recorded: dateRecorded,
         fez_record_search_key_end_date: endDate,
         fez_record_search_key_isderivationof: relatedPubs,
-        fez_record_search_key_license_biblio: licenseDataBiblio,
+        fez_record_search_key_license: license,
         fez_record_search_key_location_biblio: locationDataBiblio,
         fez_record_search_key_isdatasetof: datasets,
         fez_record_search_key_related_datasets: relatedDatasets,
@@ -954,7 +944,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
+        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!locationDataBiblio ? renameLocation(locationDataBiblio, false) : {}),
         ...(!!issnField
             ? {
@@ -1119,7 +1109,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
-        fez_record_search_key_license_additional: licenseDataAdmin,
+        fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
         rek_herdc_notes: herdcNotes,
         ...rest
@@ -1138,7 +1128,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
-        ...(!!licenseDataAdmin ? renameLicense(licenseDataAdmin) : {}),
+        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),

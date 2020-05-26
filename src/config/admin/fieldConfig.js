@@ -991,18 +991,10 @@ export default {
                 placeholder: '',
             },
         },
-        fez_record_search_key_license_biblio: {
+        fez_record_search_key_license: {
             component: LicenceSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
-                label: 'Licence',
-                isAdmin: true,
-            },
-        },
-        fez_record_search_key_license_additional: {
-            component: LicenceSelectorField,
-            componentProps: {
-                name: 'adminSection.fez_record_search_key_license_additional.rek_license',
+                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
                 label: 'Licence',
                 isAdmin: true,
             },
@@ -1638,8 +1630,9 @@ export default {
                 required: true,
                 validate: [validation.requiredList],
             }),
-            fez_record_search_key_license_additional: () => ({
+            fez_record_search_key_license: () => ({
                 required: true,
+                name: 'adminSection.fez_record_search_key_license.rek_license',
                 validate: [validation.required],
             }),
         },
