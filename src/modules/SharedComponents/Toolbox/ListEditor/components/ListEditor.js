@@ -97,13 +97,42 @@ export default class ListEditor extends Component {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     };
 
+    /**
+     *  if item is not selected to edit
+     *      then check for existing key/id in the list
+     *  else
+     *      check for existing key/id & value both
+     *
+     * @param item object
+     * @param list array
+     * @returns bool
+     */
     isItemInTheList = (item, list) => {
         if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
-            return (
-                list.filter(listItem => {
-                    return (!!listItem.key && listItem.key === item.key) || (!!listItem.id && listItem.id === item.id);
-                }).length > 0
-            );
+            if (this.state.itemIndexSelectedToEdit === null) {
+                return (
+                    list.filter(listItem => {
+                        return (
+                            (!!listItem.key && listItem.key === item.key) || (!!listItem.id && listItem.id === item.id)
+                        );
+                    }).length > 0
+                );
+            } else {
+                return (
+                    list.filter(listItem => {
+                        return (
+                            (!!listItem.key &&
+                                listItem.key === item.key &&
+                                !!listItem.value &&
+                                listItem.value === item.value) ||
+                            (!!listItem.id &&
+                                listItem.id === item.id &&
+                                !!listItem.value &&
+                                listItem.value === item.value)
+                        );
+                    }).length > 0
+                );
+            }
         } else {
             return list.indexOf(item) !== -1;
         }
@@ -113,9 +142,7 @@ export default class ListEditor extends Component {
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
-            ((this.props.distinctOnly &&
-                this.state.itemIndexSelectedToEdit === null &&
-                !this.isItemInTheList(item, this.state.itemList)) ||
+            ((this.props.distinctOnly && !this.isItemInTheList(item, this.state.itemList)) ||
                 (!this.props.distinctOnly && this.state.itemList.indexOf(item) === -1))
         ) {
             // If when the item is submitted, there is no maxCount,

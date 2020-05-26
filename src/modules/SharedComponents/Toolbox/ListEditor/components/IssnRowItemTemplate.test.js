@@ -1,5 +1,11 @@
 import React from 'react';
-import { IssnRowItemTemplate, getValidSherpa, getSherpaLink, getValidUlrichs } from './IssnRowItemTemplate';
+import {
+    IssnRowItemTemplate,
+    getValidSherpa,
+    getSherpaLink,
+    getValidUlrichs,
+    mapStateToProps,
+} from './IssnRowItemTemplate';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
@@ -231,7 +237,7 @@ describe('IssnRowItemTemplate', () => {
             expect(getSherpaLink(sherpaData)).toBe('http://www.sherpa.ac.uk/romeo/search.php?issn=1234-5678');
 
             sherpaData.srm_colour = 'gray';
-            expect(getSherpaLink(sherpaData)).toBe(false);
+            expect(getSherpaLink(sherpaData)).toBe('');
 
             sherpaData.srm_journal_link = 'http://example.com';
             expect(getSherpaLink(sherpaData)).toBe('http://example.com');
@@ -260,6 +266,179 @@ describe('IssnRowItemTemplate', () => {
 
             const item3 = '1234-0003';
             expect(getValidUlrichs(ulrichsData, item3)).toBe(undefined);
+        });
+
+        describe('mapStateToProps', () => {
+            const stateObj = {
+                sherpaLoadFromIssnError: {},
+                sherpaRomeo: {},
+                ulrichs: {},
+                ulrichsLoadFromIssnError: {},
+            };
+
+            const sherpaLink = 'http://v2.sherpa.ac.uk/id/publication/9999999';
+            const ulrichsLinkPrefix =
+                'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
+            const ulrichsTitleId = '12345678';
+
+            it('should return props for initial render', () => {
+                const state = {
+                    get: () => stateObj,
+                };
+                expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
+                    item: {
+                        key: props.item,
+                        value: {
+                            sherpaRomeo: {
+                                link: '',
+                            },
+                            ulrichs: {
+                                link: '',
+                                title: '',
+                            },
+                        },
+                    },
+                });
+            });
+
+            it('should return props after api return', () => {
+                const state = {
+                    get: () => ({
+                        ...stateObj,
+                        sherpaRomeo: {
+                            [props.item]: {
+                                srm_issn: props.item,
+                                srm_journal_name: 'Testing 1',
+                                srm_journal_link: sherpaLink,
+                            },
+                        },
+                        ulrichs: {
+                            [props.item]: {
+                                ulr_issn: props.item,
+                                ulr_title: 'Testing 2',
+                                ulr_title_id: ulrichsTitleId,
+                            },
+                        },
+                    }),
+                };
+                expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
+                    item: {
+                        key: props.item,
+                        value: {
+                            sherpaRomeo: {
+                                link: sherpaLink,
+                            },
+                            ulrichs: {
+                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                title: 'Testing 2',
+                            },
+                        },
+                    },
+                });
+            });
+
+            it('should render props for empty Ulrichs title', () => {
+                const state = {
+                    get: () => ({
+                        ...stateObj,
+                        ulrichs: {
+                            [props.item]: {
+                                ulr_issn: props.item,
+                                ulr_title_id: ulrichsTitleId,
+                            },
+                        },
+                    }),
+                };
+                expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
+                    item: {
+                        key: props.item,
+                        value: {
+                            sherpaRomeo: {
+                                link: '',
+                            },
+                            ulrichs: {
+                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                title: '',
+                            },
+                        },
+                    },
+                });
+            });
+
+            it('should return props for an entry marked "Not found in Sherpa Romeo"', () => {
+                const state = {
+                    get: () => ({
+                        ...stateObj,
+                        sherpaRomeo: {
+                            [props.item]: {
+                                srm_issn: props.item,
+                                srm_journal_name: 'Not found in Sherpa Romeo',
+                                srm_colour: 'Not found in Sherpa Romeo',
+                                srm_journal_link: null,
+                                srm_json: null,
+                            },
+                        },
+                        ulrichs: {},
+                    }),
+                };
+                expect(mapStateToProps(state, props)).toEqual({
+                    hasPreload: false,
+                    item: {
+                        key: props.item,
+                        value: {
+                            sherpaRomeo: {
+                                link: '',
+                            },
+                            ulrichs: {
+                                link: '',
+                                title: '',
+                            },
+                        },
+                    },
+                });
+            });
+
+            it('should return props for preloaded data', () => {
+                const state = {
+                    get: () => stateObj,
+                };
+                const preloadedProps = {
+                    item: {
+                        key: props.item,
+                        value: {
+                            fez_sherpa_romeo: {
+                                srm_issn: props.item,
+                                srm_journal_link: sherpaLink,
+                                srm_journal_name: 'Testing 1',
+                            },
+                            fez_ulrichs: {
+                                ulr_issn: props.item,
+                                ulr_title_id: ulrichsTitleId,
+                                ulr_title: 'Testing 2',
+                            },
+                        },
+                        hasPreload: true,
+                    },
+                };
+                expect(mapStateToProps(state, preloadedProps)).toEqual({
+                    hasPreload: true,
+                    item: {
+                        key: props.item,
+                        value: {
+                            sherpaRomeo: {
+                                link: sherpaLink,
+                            },
+                            ulrichs: {
+                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                title: 'Testing 2',
+                            },
+                        },
+                    },
+                });
+            });
         });
     });
 });
