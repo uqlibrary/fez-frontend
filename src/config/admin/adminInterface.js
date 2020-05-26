@@ -53,8 +53,11 @@ import {
 } from './fields';
 
 export const USER_IDS_WITH_LEGACY_LINK = [
+    // Test accounts
     'uqstaff',
     'admin_test',
+
+    // eSpace Admins
     'uqaheath',
     'uqmmarr1',
     'uqmfeen1',
@@ -62,6 +65,9 @@ export const USER_IDS_WITH_LEGACY_LINK = [
     'uqfyu',
     'uqayeate',
     'uqcokeef',
+    'uqchesle',
+
+    // eSpace Devs
     'uqamartl',
     'uqldegro',
     'uqklane1',
