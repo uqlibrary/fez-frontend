@@ -6,22 +6,6 @@ import * as actions from 'actions';
 
 const mapStateToProps = state => {
     const viewRecordReducer = state.get('viewRecordReducer');
-    if (!!viewRecordReducer && !!viewRecordReducer.recordToView) {
-        viewRecordReducer.recordToView.fez_record_search_key_isdatasetof_siblings = [];
-        !!viewRecordReducer.recordToView &&
-            !!viewRecordReducer.recordToView.fez_record_search_key_isdatasetof &&
-            viewRecordReducer.recordToView.fez_record_search_key_isdatasetof.map(item => {
-                !!item.datasetSiblings &&
-                    item.datasetSiblings.map(sibling => {
-                        viewRecordReducer.recordToView.fez_record_search_key_isdatasetof_siblings.findIndex(
-                            item => item.rek_pid === sibling.rek_pid,
-                        ) < 0 &&
-                            viewRecordReducer.recordToView.fez_record_search_key_isdatasetof_siblings.push(sibling);
-                    });
-                delete item.datasetSiblings;
-            });
-    }
-
     return {
         ...viewRecordReducer,
         ...state.get('accountReducer'),

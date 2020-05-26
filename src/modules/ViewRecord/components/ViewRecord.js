@@ -123,21 +123,7 @@ export default class ViewRecord extends PureComponent {
                         isAuthor={!!isAuthor}
                     />
                     <Links publication={recordToView} />
-                    <RelatedPublications
-                        publication={recordToView}
-                        childrenSearchKey={{
-                            key: 'fez_record_search_key_isdatasetof',
-                            pid: 'rek_isdatasetof',
-                            title: 'rek_isdatasetof_lookup',
-                            order: 'rek_isdatasetof_order',
-                        }}
-                        parentSearchKey={{
-                            key: 'fez_record_search_key_isdatasetof_siblings',
-                            pid: 'rek_pid',
-                            title: 'rek_title',
-                            order: 'rek_pid', // order is undefined
-                        }}
-                    />
+                    <RelatedPublications publication={recordToView} />
                     <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
                     {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
                     <GrantInformation publication={recordToView} />
