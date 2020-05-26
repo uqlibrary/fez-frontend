@@ -2874,7 +2874,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license: {
                     rek_license: '453610',
                 },
-                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2916,7 +2916,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license: {
                     rek_license: '453610',
                 },
-                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2955,7 +2955,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license: {
                     rek_license: '453610',
                 },
-                fez_record_search_key_location_biblio: [{ rek_location: 'Perth', rek_location_order: 1 }],
+                fez_record_search_key_location: [{ rek_location: 'Perth', rek_location_order: 1 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2981,7 +2981,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should clear a removed place of recording (frsk_location)', () => {
             const data = {
-                fez_record_search_key_location_biblio: [{ rek_location: '', rek_location_order: 1 }],
+                fez_record_search_key_location: [{ rek_location: '', rek_location_order: 1 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({

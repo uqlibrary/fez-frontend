@@ -575,7 +575,7 @@ export default {
         getValue: record =>
             getValueSearchKeyRekValueList(record, 'fez_record_search_key_alternate_genre.rek_alternate_genre'),
     },
-    fez_record_search_key_location_biblio: {
+    fez_record_search_key_location: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
     fez_record_search_key_location_identifiers: {

@@ -47,10 +47,20 @@ export const identifiersParams = record => ({
         PUBLICATION_TYPE_RESEARCH_REPORT,
         PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
     ].includes(record.rek_display_type),
-    displayLocation: [PUBLICATION_TYPE_AUDIO_DOCUMENT, PUBLICATION_TYPE_SEMINAR_PAPER].includes(
-        record.rek_display_type,
-    ),
+    displayLocation: [PUBLICATION_TYPE_SEMINAR_PAPER].includes(record.rek_display_type),
     displayIdentifiers: PUBLICATION_TYPE_AUDIO_DOCUMENT === record.rek_display_type,
+    // hide pubmed fields from PUBLICATION_TYPE_RESEARCH_REPORT
+    displayPubmed: [
+        PUBLICATION_TYPE_BOOK,
+        PUBLICATION_TYPE_BOOK_CHAPTER,
+        PUBLICATION_TYPE_CONFERENCE_PAPER,
+        PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+        PUBLICATION_TYPE_JOURNAL,
+        PUBLICATION_TYPE_JOURNAL_ARTICLE,
+        PUBLICATION_TYPE_REFERENCE_ENTRY,
+        PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    ].includes(record.rek_display_type),
+    displayPubmedCentral: record.rek_display_type === PUBLICATION_TYPE_JOURNAL_ARTICLE,
 });
 
 export const filesParams = record => ({
