@@ -316,7 +316,9 @@ export default class ListEditor extends Component {
                         {renderListsRows}
                     </div>
                 ) : (
-                    <div id={`${this.props.listEditorId}-list`}>{renderListsRows}</div>
+                    <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
+                        {renderListsRows}
+                    </div>
                 )}
             </div>
         );
