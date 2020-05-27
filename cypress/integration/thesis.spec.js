@@ -152,7 +152,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 3);
         cy.get('#filtered-field-of-research-input')
-            .type('a');
+            .type('b');
         cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
         cy.get('.Alert')
             .find('ul')
