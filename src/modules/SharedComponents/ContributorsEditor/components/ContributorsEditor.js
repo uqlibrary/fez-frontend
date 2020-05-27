@@ -12,7 +12,6 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import * as actions from 'actions';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -26,7 +25,6 @@ export class ContributorsEditor extends PureComponent {
         hideReorder: PropTypes.bool,
         input: PropTypes.object,
         isNtro: PropTypes.bool,
-        loadSuggestions: PropTypes.func,
         locale: PropTypes.object,
         meta: PropTypes.object,
         onChange: PropTypes.func,
@@ -183,23 +181,18 @@ export class ContributorsEditor extends PureComponent {
 
     selectContributor = index => {
         let searchQuery = '';
-        this.setState(
-            prevState => ({
-                contributors: prevState.contributors.map((contributor, itemIndex) => {
-                    searchQuery = contributor.aut_id === 0 ? contributor.nameAsPublished : '';
-                    return {
-                        ...contributor,
-                        selected: index === itemIndex,
-                        uqUsername: searchQuery ? searchQuery : contributor.uqUsername,
-                    };
-                }),
-                contributorIndexSelectedToEdit: index,
+        this.setState(prevState => ({
+            contributors: prevState.contributors.map((contributor, itemIndex) => {
+                const isEditedContributor = index === itemIndex;
+                searchQuery = isEditedContributor && contributor.aut_id === 0 ? contributor.nameAsPublished : '';
+                return {
+                    ...contributor,
+                    selected: isEditedContributor,
+                    uqUsername: searchQuery ? searchQuery : contributor.uqUsername,
+                };
             }),
-            () => {
-                !!searchQuery && this.props.loadSuggestions && this.props.loadSuggestions(searchQuery);
-                searchQuery = '';
-            },
-        );
+            contributorIndexSelectedToEdit: index,
+        }));
     };
 
     renderContributorRows = () => {
@@ -246,12 +239,13 @@ export class ContributorsEditor extends PureComponent {
 
     renderContributorForm = (editProps = {}) => {
         const { contributorIndexSelectedToEdit } = this.state;
+        const contributor = this.state.contributors[contributorIndexSelectedToEdit];
         const formProps = {
             ...this.props,
             ...editProps,
             isContributorAssigned: !!this.state.contributors.length,
             locale: (this.props.locale.form || {}).locale,
-            contributor: this.state.contributors[contributorIndexSelectedToEdit],
+            contributor,
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
         };
@@ -355,11 +349,6 @@ export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
 });
 
-/* istanbul ignore next */
-export const mapDispatchToProps = dispatch => ({
-    loadSuggestions: (searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
-});
-
 export const styles = () => ({
     list: {
         width: '100%',
@@ -373,5 +362,4 @@ export const styles = () => ({
     },
 });
 
-// prettier-ignore
-export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(ContributorsEditor));
+export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));
