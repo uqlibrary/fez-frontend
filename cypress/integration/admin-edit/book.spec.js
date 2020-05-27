@@ -187,7 +187,7 @@ context('Book admin edit', () => {
                     .within(row => {
                         checkIssnLinks(row, '5555-5555');
                     });
-                cy.get('#issn-list-row-move-up-4')
+                cy.get('#issn-list-row-4-move-up')
                     .click();
                 cy.log('Ensure 4th and 5th entries have swapped properly');
                 cy.get('#issn-list-row-3')

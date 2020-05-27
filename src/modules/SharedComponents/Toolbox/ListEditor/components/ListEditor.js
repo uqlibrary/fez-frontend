@@ -260,7 +260,7 @@ export default class ListEditor extends Component {
                 disabled={this.props.disabled}
                 itemTemplate={this.props.rowItemTemplate}
                 canEdit={this.props.canEdit}
-                listRowId={`${this.props.listEditorId}-list-row`}
+                listRowId={`${this.props.listEditorId}-list-row-${index}`}
             />
         ));
         return (
@@ -305,6 +305,7 @@ export default class ListEditor extends Component {
                     <div
                         className={'ListEditor-scrollable-list'}
                         id={`${this.props.listEditorId}-list`}
+                        data-testid={`${this.props.listEditorId}-list`}
                         style={{
                             width: '100%',
                             height: this.props.scrollListHeight,

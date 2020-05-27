@@ -135,7 +135,7 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('button#field-of-research-list-row-delete-0')
+        cy.get('button#field-of-research-list-row-0-delete')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -371,9 +371,9 @@ context('Data Collection form', () => {
             .type('Type of data 2');
         cy.get('button#add-type-of-data')
             .click();
-        cy.get('#type-of-data-list-row-move-up-1')
+        cy.get('#type-of-data-list-row-1-move-up')
             .click();
-        cy.get('#type-of-data-list-row-delete-0')
+        cy.get('#type-of-data-list-row-0-delete')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -401,9 +401,9 @@ context('Data Collection form', () => {
             .type('Software required 2');
         cy.get('button#add-software-required')
             .click();
-        cy.get('#software-required-list-row-move-up-1')
+        cy.get('#software-required-list-row-1-move-up')
             .click();
-        cy.get('#software-required-list-row-delete-0')
+        cy.get('#software-required-list-row-0-delete')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -431,9 +431,9 @@ context('Data Collection form', () => {
             .type('Keywords 2');
         cy.get('button#add-keywords')
             .click();
-        cy.get('#keywords-list-row-move-up-1')
+        cy.get('#keywords-list-row-1-move-up')
             .click();
-        cy.get('#keywords-list-row-delete-0')
+        cy.get('#keywords-list-row-0-delete')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -563,7 +563,7 @@ context('Data Collection form', () => {
                 'contain',
                 'Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity',
             );
-        cy.get('#related-datasets-list-row-move-up-1')
+        cy.get('#related-datasets-list-row-1-move-up')
             .click();
 
         cy.get('#related-datasets-list-row-0')

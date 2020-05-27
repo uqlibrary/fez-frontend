@@ -72,6 +72,7 @@ export const FreeTextForm = ({
                 <TextField
                     fullWidth
                     id={id}
+                    data-testid={`${listEditorId}-input`}
                     inputProps={{
                         ref: textField,
                     }}
@@ -101,6 +102,7 @@ export const FreeTextForm = ({
                 <Button
                     fullWidth
                     id={`add-${listEditorId}`}
+                    data-testid={`${listEditorId}-add`}
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}

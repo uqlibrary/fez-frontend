@@ -69,12 +69,12 @@ export default class CommunityForm extends Component {
                     <Grid container spacing={2}>
                         <Grid item xs />
                         <Grid item>
-                            <Button variant={'contained'} fullWidth onClick={this.afterSubmit}>
+                            <Button variant="contained" fullWidth onClick={this.afterSubmit}>
                                 {txt.afterSubmitButton}
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button variant={'contained'} color={'primary'} fullWidth onClick={this.reloadForm}>
+                            <Button variant="contained" color="primary" fullWidth onClick={this.reloadForm}>
                                 {txt.AddAnotherButton}
                             </Button>
                         </Grid>
@@ -110,6 +110,7 @@ export default class CommunityForm extends Component {
                                         <Grid container spacing={3}>
                                             <Grid item xs={12}>
                                                 <Field
+                                                    data-testid="rek-title-input"
                                                     component={TextField}
                                                     disabled={this.props.submitting}
                                                     autoFocus
@@ -124,6 +125,7 @@ export default class CommunityForm extends Component {
 
                                             <Grid item xs={12}>
                                                 <Field
+                                                    data-testid="rek-description-input"
                                                     component={TextField}
                                                     disabled={this.props.submitting}
                                                     name="rek_description"
@@ -144,7 +146,7 @@ export default class CommunityForm extends Component {
                                                     maxCount={10}
                                                     maxInputLength={111}
                                                     searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
-                                                    listEditorId="keywords"
+                                                    listEditorId="rek-keywords"
                                                     locale={txt.formLabels.keywords.field}
                                                     disabled={this.props.submitting}
                                                 />
@@ -161,9 +163,10 @@ export default class CommunityForm extends Component {
 
                             <Grid container spacing={2}>
                                 <Grid item xs={false} sm />
-                                <Grid item xs={12} sm={'auto'}>
+                                <Grid item xs={12} sm="auto">
                                     <Button
-                                        variant={'contained'}
+                                        data-testid="cancel-community"
+                                        variant="contained"
                                         fullWidth
                                         disabled={this.props.submitting}
                                         onClick={this.cancelSubmit}
@@ -172,10 +175,11 @@ export default class CommunityForm extends Component {
                                     </Button>
                                 </Grid>
 
-                                <Grid item xs={12} sm={'auto'}>
+                                <Grid item xs={12} sm="auto">
                                     <Button
-                                        variant={'contained'}
-                                        color={'primary'}
+                                        data-testid="submit-community"
+                                        variant="contained"
+                                        color="primary"
                                         fullWidth
                                         onClick={this.props.handleSubmit}
                                         disabled={this.props.submitting || this.props.disableSubmit}

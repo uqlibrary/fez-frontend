@@ -1,5 +1,5 @@
 context('As an admin,', () => {
-    it('I can create a collection', () => {
+    it('I can create a community', () => {
         cy.visit('/admin/community?user=uqstaff');
 
         cy.get('h2')
@@ -8,18 +8,18 @@ context('As an admin,', () => {
         cy.get('h3')
             .should('contain', 'Community details');
 
-        cy.get('#Titleofcommunity')
+        cy.get('[data-testid=rek-title-input]')
             .type('Fez E2E Test Community');
 
-        cy.get('#Communitydescription')
+        cy.get('[data-testid=rek-description-input]')
             .type('Fez E2E Test Community description');
 
-        cy.get('#keywords-input')
+        cy.get('[data-testid=rek-keywords-input]')
             .type('testing');
-        cy.get('button#add-keywords')
+        cy.get('[data-testid=rek-keywords-add]')
             .click();
 
-        cy.contains('Add community')
+        cy.get('[data-testid=submit-community]')
             .click();
 
         cy.get('h3')

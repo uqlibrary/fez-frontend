@@ -142,7 +142,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
         cy.get('#filtered-field-of-research-list-row-0')
             .should('contain.text', '0101 Pure Mathematics')
-            .get('#filtered-field-of-research-list-row-delete-0')
+            .get('#filtered-field-of-research-list-row-0-delete')
             .click();
         cy.get('button')
             .contains('Yes')
@@ -190,7 +190,7 @@ context('Thesis', () => {
             .should('have.length', 1);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('#keywords-list-row-delete-0')
+        cy.get('#keywords-list-row-0-delete')
             .click();
         cy.get('button')
             .contains('Yes')
