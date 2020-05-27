@@ -39,6 +39,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                   <Field
                     autoFocus={true}
                     component={[Function]}
+                    data-testid="rek-title-input"
                     disabled={false}
                     fullWidth={true}
                     label="Title of community"
@@ -59,6 +60,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                 >
                   <Field
                     component={[Function]}
+                    data-testid="rek-description-input"
                     disabled={false}
                     fullWidth={true}
                     label="Community description"
@@ -84,7 +86,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                   <Field
                     component={[Function]}
                     disabled={false}
-                    listEditorId="keywords"
+                    listEditorId="rek-keywords"
                     locale={
                       Object {
                         "form": Object {
@@ -166,6 +168,7 @@ exports[`Community form should display successfull submission screen 1`] = `
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
+              data-testid="cancel-community"
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
@@ -181,6 +184,7 @@ exports[`Community form should display successfull submission screen 1`] = `
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
+              data-testid="submit-community"
               fullWidth={true}
               onClick={[MockFunction]}
               variant="contained"
@@ -234,6 +238,7 @@ exports[`Community form should render form 1`] = `
                   <Field
                     autoFocus={true}
                     component={[Function]}
+                    data-testid="rek-title-input"
                     disabled={false}
                     fullWidth={true}
                     label="Title of community"
@@ -254,6 +259,7 @@ exports[`Community form should render form 1`] = `
                 >
                   <Field
                     component={[Function]}
+                    data-testid="rek-description-input"
                     disabled={false}
                     fullWidth={true}
                     label="Community description"
@@ -279,7 +285,7 @@ exports[`Community form should render form 1`] = `
                   <Field
                     component={[Function]}
                     disabled={false}
-                    listEditorId="keywords"
+                    listEditorId="rek-keywords"
                     locale={
                       Object {
                         "form": Object {
@@ -348,6 +354,7 @@ exports[`Community form should render form 1`] = `
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
+              data-testid="cancel-community"
               disabled={false}
               fullWidth={true}
               onClick={[Function]}
@@ -363,6 +370,7 @@ exports[`Community form should render form 1`] = `
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
+              data-testid="submit-community"
               fullWidth={true}
               onClick={[MockFunction]}
               variant="contained"

@@ -64,7 +64,7 @@ export const ListRow = ({
     }, [index]);
 
     return (
-        <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}-${index}`}>
+        <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}`} data-testid={`${listRowId}`}>
             <ConfirmationBox
                 onAction={deleteRecord}
                 onClose={hideConfirmation}
@@ -85,7 +85,8 @@ export const ListRow = ({
                                             <IconButton
                                                 onClick={_handleMoveUp}
                                                 disabled={disabled}
-                                                id={`${listRowId}-move-up-${index}`}
+                                                id={`${listRowId}-move-up`}
+                                                data-testid={`${listRowId}-move-up`}
                                             >
                                                 <KeyboardArrowUp />
                                             </IconButton>
@@ -100,7 +101,8 @@ export const ListRow = ({
                                             <IconButton
                                                 onClick={_handleMoveDown}
                                                 disabled={disabled}
-                                                id={`${listRowId}-move-down-${index}`}
+                                                id={`${listRowId}-move-down`}
+                                                data-testid={`${listRowId}-move-down`}
                                             >
                                                 <KeyboardArrowDown />
                                             </IconButton>
@@ -120,7 +122,8 @@ export const ListRow = ({
                                             aria-label={editHint}
                                             onClick={_handleEdit}
                                             disabled={disabled}
-                                            id={`${listRowId}-edit-${index}`}
+                                            id={`${listRowId}-edit`}
+                                            data-testid={`${listRowId}-edit`}
                                         >
                                             <Edit />
                                         </IconButton>
@@ -136,7 +139,8 @@ export const ListRow = ({
                             <IconButton
                                 onClick={showConfirmation}
                                 disabled={disabled}
-                                id={`${listRowId}-delete-${index}`}
+                                id={`${listRowId}-delete`}
+                                data-testid={`${listRowId}-delete`}
                             >
                                 <Delete />
                             </IconButton>

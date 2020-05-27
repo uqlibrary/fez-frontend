@@ -575,10 +575,10 @@ export default {
         getValue: record =>
             getValueSearchKeyRekValueList(record, 'fez_record_search_key_alternate_genre.rek_alternate_genre'),
     },
-    fez_record_search_key_location_biblio: {
+    fez_record_search_key_location: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
-    fez_record_search_key_location_identifiers: {
+    locations: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
     fez_record_search_key_identifier: {
@@ -599,10 +599,7 @@ export default {
     fez_record_search_key_length: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_length'),
     },
-    fez_record_search_key_license_biblio: {
-        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_license'),
-    },
-    fez_record_search_key_license_additional: {
+    fez_record_search_key_license: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_license'),
     },
     fez_record_search_key_original_format: {

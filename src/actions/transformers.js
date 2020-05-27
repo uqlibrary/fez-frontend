@@ -706,37 +706,14 @@ export const getLinkDescriptionSearchKey = (links = []) => {
     };
 };
 
-export const renameLicense = record => {
-    if (!!record && !record.rek_license) return {};
+export const getRecordLocationSearchKey = locations => {
+    if (!locations || locations.length === 0) return {};
 
     return {
-        fez_record_search_key_license: {
-            rek_license: record.rek_license,
-        },
+        fez_record_search_key_location: locations.map(location => ({
+            ...location,
+        })),
     };
-};
-
-export const renameLocation = (locations, keepClearedFields) => {
-    // biblio locations only have one entry (order=1); admin have possibly multiple (order=1,2,3)
-    // we need to remove the key when they clear the field, so the BE removes the db entry
-    if (!keepClearedFields) {
-        const location = locations
-            .filter(item => {
-                return item.rek_location !== '';
-            })
-            .map(({ rek_location: value }) => ({
-                rek_location: value.key || value,
-                rek_location_order: 1,
-            }));
-        return !!location && location.length > 0 ? { fez_record_search_key_location: location } : {};
-    } else {
-        return {
-            fez_record_search_key_location: locations.map(({ rek_location: value, rek_location_order: order }) => ({
-                rek_location: value.key || value,
-                rek_location_order: order,
-            })),
-        };
-    }
 };
 
 const cleanBlankEntries = data => {
@@ -791,7 +768,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         fez_record_search_key_scopus_id: scopusId,
         fez_record_search_key_pubmed_id: pubmedId,
         fez_record_search_key_pubmed_central_id: pubmedCentralId,
-        fez_record_search_key_location_identifiers: locationDataIdentifiers,
+        locations,
         rek_pubmed_doc_type: pubmedDocType,
         rek_scopus_doc_type: scopusDocType,
         rek_wok_doc_type: wosDocType,
@@ -822,7 +799,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
             : {}),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
-        ...(!!locationDataIdentifiers ? renameLocation(locationDataIdentifiers, true) : {}),
+        ...(!!locations ? getRecordLocationSearchKey(locations) : {}),
         ...cleanBlankEntries(rest),
     };
 };
@@ -866,8 +843,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_date_recorded: dateRecorded,
         fez_record_search_key_end_date: endDate,
         fez_record_search_key_isderivationof: relatedPubs,
-        fez_record_search_key_license_biblio: licenseDataBiblio,
-        fez_record_search_key_location_biblio: locationDataBiblio,
+        fez_record_search_key_license: license,
+        fez_record_search_key_location: location,
         fez_record_search_key_isdatasetof: datasets,
         fez_record_search_key_related_datasets: relatedDatasets,
         fez_record_search_key_related_publications: relatedPublications,
@@ -954,8 +931,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!licenseDataBiblio ? renameLicense(licenseDataBiblio) : {}),
-        ...(!!locationDataBiblio ? renameLocation(locationDataBiblio, false) : {}),
+        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
+        ...(!!location && location.length === 1 && !!location[0].rek_location
+            ? { fez_record_search_key_location: [...location] }
+            : {}),
         ...(!!issnField
             ? {
                 fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
@@ -1119,7 +1098,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
-        fez_record_search_key_license_additional: licenseDataAdmin,
+        fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
         rek_herdc_notes: herdcNotes,
         ...rest
@@ -1138,7 +1117,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
-        ...(!!licenseDataAdmin ? renameLicense(licenseDataAdmin) : {}),
+        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
