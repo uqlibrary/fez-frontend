@@ -339,9 +339,9 @@ context('Data Collection form', () => {
             .type('Grant ID 2');
         cy.get('button#add-grant-id')
             .click();
-        cy.get('#grant-id-list-row-move-up-1')
+        cy.get('#grant-id-list-row-1-move-up')
             .click();
-        cy.get('#grant-id-list-row-delete-0')
+        cy.get('#grant-id-list-row-0-delete')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
