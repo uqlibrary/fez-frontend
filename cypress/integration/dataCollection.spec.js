@@ -307,9 +307,9 @@ context('Data Collection form', () => {
             .type('Funding body 2');
         cy.get('button#add-grant-agency')
             .click();
-        cy.get('#grant-agency-list-row-move-up-1')
+        cy.get('#grant-agency-list-row-1-move-up')
             .click();
-        cy.get('#grant-agency-list-row-delete-0')
+        cy.get('#grant-agency-list-row-0-delete')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
