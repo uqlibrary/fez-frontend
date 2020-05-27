@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { throttle } from 'throttle-debounce';
 import TextField from '@material-ui/core/TextField';
@@ -29,7 +29,7 @@ export const AutoCompleteAsynchronousField = ({
     const [value, setValue] = useState(defaultValue);
 
     const loading = itemsLoading;
-    const throttledLoadSuggestions = React.useMemo(() => throttle(1000, loadSuggestions), [loadSuggestions]);
+    const throttledLoadSuggestions = useRef(throttle(1000, newValue => loadSuggestions(newValue)));
 
     const handleSearchTextChange = useCallback(event => {
         setInputValue(event.target.value);
@@ -58,9 +58,9 @@ export const AutoCompleteAsynchronousField = ({
 
     useEffect(() => {
         if (inputValue && throttledLoadSuggestions) {
-            throttledLoadSuggestions(inputValue);
+            throttledLoadSuggestions.current(inputValue);
         }
-    }, [inputValue, throttledLoadSuggestions]);
+    }, [inputValue]);
 
     useEffect(() => {
         let active = true;
