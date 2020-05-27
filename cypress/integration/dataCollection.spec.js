@@ -146,7 +146,7 @@ context('Data Collection form', () => {
             .should('have.length', ++errorCount);
 
         cy.get('#field-of-research-field-input')
-            .type('a');
+            .type('b');
         cy.get('li[role="option"]')
             .contains('010101')
             .click();
@@ -172,7 +172,7 @@ context('Data Collection form', () => {
             .should('have.length', ++errorCount);
 
         cy.get('#field-of-research-field-input')
-            .type('a');
+            .type('b');
         cy.get('li[role="option"]')
             .contains('010102')
             .click();
