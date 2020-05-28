@@ -252,6 +252,16 @@ You can watch video recordings of any failed test runs and view some debug messa
 
 If you want Codeship to run cypress tests before you merge to master, include the text `cypress` in the branch name and push and cypress tests will be run on that branch (set up in bin/codeship-test.sh).
 
+#### Standardised selectors to target elements
+
+- We are following the best practice recommended by cypress to target elements using `data-testid` attribute
+
+- Please have a look at below table for some current examples in eSpace frontend:
+
+| Element   | prop for ID               | ID attached to native elements for targetting                   |
+| --------- | ------------------------- | --------------------------------------------------------------- |
+| TextField | `textFieldId="rek-title"` | `<input id="rek-title-input"/>` `<label id="rek-title-label"/>` |
+
 #### Some tricks and tips
 
 - When simulating clicks which result in non-trivial DOM changes, you might need to `cy.wait(1000);` to wait 1 second after the click before posing any expectations. If possible, use `cy.waitUntil()` instead to wait for a particular condition to be true.

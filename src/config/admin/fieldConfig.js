@@ -679,6 +679,7 @@ export default {
                 label: 'Language of title',
                 placeholder: '',
                 multiple: true,
+                genericSelectFieldId: 'rek-language-of-title',
             },
         },
         fez_record_search_key_native_script_journal_name: {

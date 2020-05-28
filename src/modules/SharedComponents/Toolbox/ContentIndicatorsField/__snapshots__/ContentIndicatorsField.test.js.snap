@@ -5,6 +5,7 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
   disabled={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-content-indicator"
   hideLabel={false}
   itemsList={
     Array [
@@ -57,6 +58,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
   disabled={false}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-content-indicator"
   hideLabel={false}
   itemsList={
     Array [
@@ -91,6 +93,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
   disabled={false}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-content-indicator"
   hideLabel={false}
   input={
     Object {
@@ -147,6 +150,7 @@ exports[`ContentIndicatorsField component should render with given field props 2
   disabled={false}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-content-indicator"
   hideLabel={false}
   input={
     Object {

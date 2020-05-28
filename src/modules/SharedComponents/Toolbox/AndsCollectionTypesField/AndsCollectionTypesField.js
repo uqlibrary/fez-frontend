@@ -21,6 +21,7 @@ export default function AndsCollectionTypesField(fieldProps) {
             ]}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-ands-collection-type"
             {...fieldProps}
         />
     );

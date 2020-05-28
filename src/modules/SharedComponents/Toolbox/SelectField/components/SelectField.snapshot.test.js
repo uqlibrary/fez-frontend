@@ -8,6 +8,7 @@ function setup(testProps, isShallow = true) {
         type: 'text',
         fullWidth: true,
         floatingLabelText: 'test selectfield component',
+        selectFieldId: 'test',
         ...testProps,
     };
     const consolidatedProps = filterProps(props, SelectField.propTypes);

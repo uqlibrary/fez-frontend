@@ -45,7 +45,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
+          aria-labelledby="dsi-security-policy-0-select"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           data-testid="dsi-security-policy-0-select"
           id="dsi-security-policy-0-select"
@@ -123,7 +123,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
+          aria-labelledby="dsi-security-policy-0-select"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           data-testid="dsi-security-policy-0-select"
           id="dsi-security-policy-0-select"
@@ -201,7 +201,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="dsi-security-policy-2-label dsi-security-policy-2-select"
+          aria-labelledby="dsi-security-policy-2-select"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
           data-testid="dsi-security-policy-2-select"
           id="dsi-security-policy-2-select"

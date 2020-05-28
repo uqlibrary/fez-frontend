@@ -2,23 +2,10 @@
 
 exports[`PolicyDropdown component should hide policies that the user cant select 1`] = `
 <SelectFieldWrapper
-  MenuProps={
-    Object {
-      "data-testid": "test-policy-options",
-      "id": "test-policy-options",
-    }
-  }
-  SelectDisplayProps={
-    Object {
-      "data-testid": "test-policy-select",
-      "id": "test-policy-select",
-    }
-  }
-  inputId="test-policy-input"
   label="Record level policy to apply to this PID"
-  labelId="test-policy-label"
   name="test"
   required={true}
+  selectFieldId="test-policy"
   validation={
     Array [
       [Function],
@@ -65,23 +52,10 @@ exports[`PolicyDropdown component should hide policies that the user cant select
 
 exports[`PolicyDropdown component should render properly 1`] = `
 <SelectFieldWrapper
-  MenuProps={
-    Object {
-      "data-testid": "test-policy-options",
-      "id": "test-policy-options",
-    }
-  }
-  SelectDisplayProps={
-    Object {
-      "data-testid": "test-policy-select",
-      "id": "test-policy-select",
-    }
-  }
-  inputId="test-policy-input"
   label="Record level policy to apply to this PID"
-  labelId="test-policy-label"
   name="test"
   required={true}
+  selectFieldId="test-policy"
   validation={
     Array [
       [Function],

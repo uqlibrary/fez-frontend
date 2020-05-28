@@ -232,16 +232,7 @@ export default class NtroFields extends React.PureComponent {
                                                 label={contributionStatement.fields.scaleOfWork.label}
                                                 required
                                                 validate={[validation.required]}
-                                                inputId="rek-significance-input"
-                                                labelId="rek-significance-label"
-                                                SelectDisplayProps={{
-                                                    id: 'rek-significance-select',
-                                                    'data-testid': 'rek-significance-select',
-                                                }}
-                                                MenuProps={{
-                                                    id: 'rek-significance-options',
-                                                    'data-testid': 'rek-significance-options',
-                                                }}
+                                                selectFieldId="rek-significance"
                                             >
                                                 {SIGNIFICANCE.map(item => (
                                                     <MenuItem key={item.value} value={item.value}>
@@ -428,16 +419,7 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.audienceSize.label}
                                             required
                                             validate={[validation.required]}
-                                            inputId="rek-audience-size-input"
-                                            labelId="rek-audience-size-label"
-                                            SelectDisplayProps={{
-                                                id: 'rek-audience-size-select',
-                                                'data-testid': 'rek-audience-size-select',
-                                            }}
-                                            MenuProps={{
-                                                id: 'rek-audience-size-options',
-                                                'data-testid': 'rek-audience-size-options',
-                                            }}
+                                            selectFieldId="rek-audience-size"
                                         >
                                             {AUDIENCE_SIZE.map(item => (
                                                 <MenuItem key={item.value} value={item.value}>

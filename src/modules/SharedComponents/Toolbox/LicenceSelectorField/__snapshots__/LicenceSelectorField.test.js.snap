@@ -4,6 +4,7 @@ exports[`LicenceSelectorField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-license"
   hideLabel={false}
   input={
     Object {
@@ -53,6 +54,7 @@ exports[`LicenceSelectorField component should render error and error message 1`
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-license"
   hideLabel={false}
   input={
     Object {
@@ -107,6 +109,7 @@ exports[`LicenceSelectorField component should render with deprecated list 1`] =
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-license"
   hideLabel={false}
   input={
     Object {

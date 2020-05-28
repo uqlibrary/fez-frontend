@@ -73,9 +73,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                 <GenericSelectField
                     fullWidth
                     name="key"
-                    SelectDisplayProps={{
-                        id: 'scaleOfSignificance',
-                    }}
+                    genericSelectFieldId="rek-significance"
                     label={significanceInputFieldLabel}
                     placeholder={significanceInputFieldHint}
                     onChange={handleSignificance}

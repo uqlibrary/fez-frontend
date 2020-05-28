@@ -37,5 +37,7 @@ const _onChange = fieldProps => {
  * @constructor
  */
 export default function DocumentTypeSingleField(fieldProps) {
-    return <SingleDocumentTypeList onChange={_onChange(fieldProps)} {...fieldProps} />;
+    return (
+        <SingleDocumentTypeList onChange={_onChange(fieldProps)} genericSelectFieldId="doc-type-id" {...fieldProps} />
+    );
 }

@@ -124,16 +124,7 @@ export default class PublicationForm extends Component {
                                             label={txt.publicationType.inputLabelText}
                                             required
                                             placeholder={txt.publicationType.hintText}
-                                            inputId="rek-display-type-input"
-                                            labelId="rek-display-type-label"
-                                            SelectDisplayProps={{
-                                                id: 'rek-display-type-select',
-                                                'data-testid': 'rek-display-type-select',
-                                            }}
-                                            MenuProps={{
-                                                id: 'rek-display-type-options',
-                                                'data-testid': 'rek-display-type-options',
-                                            }}
+                                            selectFieldId="rek-display-type"
                                         >
                                             {this.publicationTypeItems}
                                         </Field>
@@ -149,16 +140,7 @@ export default class PublicationForm extends Component {
                                                 label={txt.publicationSubtype.inputLabelText}
                                                 required
                                                 placeholder={txt.publicationSubtype.hintText}
-                                                inputId="rek-subtype-input"
-                                                labelId="rek-subtype-label"
-                                                SelectDisplayProps={{
-                                                    id: 'rek-subtype-select',
-                                                    'data-testid': 'rek-subtype-select',
-                                                }}
-                                                MenuProps={{
-                                                    id: 'rek-subtype-options',
-                                                    'data-testid': 'rek-subtype-options',
-                                                }}
+                                                selectFieldId="rek-subtype"
                                             >
                                                 {this.publicationSubtypeItems}
                                             </Field>

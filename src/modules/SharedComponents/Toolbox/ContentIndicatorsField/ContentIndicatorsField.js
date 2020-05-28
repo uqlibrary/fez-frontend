@@ -58,6 +58,7 @@ export const ContentIndicatorsField = props => (
                 !!props.meta.initial.toJS &&
                 props.meta.initial.toJS().length === CONTENT_INDICATORS.length)
         }
+        genericSelectFieldId="rek-content-indicator"
     />
 );
 

@@ -25,16 +25,7 @@ export const PolicyDropdown = ({
         label={fieldLabel}
         required
         validation={[validation.required]}
-        inputId={`${policyDropdownId}-input`}
-        labelId={`${policyDropdownId}-label`}
-        SelectDisplayProps={{
-            id: `${policyDropdownId}-select`,
-            'data-testid': `${policyDropdownId}-select`,
-        }}
-        MenuProps={{
-            id: `${policyDropdownId}-options`,
-            'data-testid': `${policyDropdownId}-options`,
-        }}
+        selectFieldId={`${policyDropdownId}`}
         {...props}
     >
         {displayPrompt && (

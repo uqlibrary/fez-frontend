@@ -31,9 +31,7 @@ context('Book admin edit', () => {
                 const langCodes = record.fez_record_search_key_language_of_title.map(
                     lang => lang.rek_language_of_title,
                 );
-                cy.get('label[id="Language of title-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
+                cy.get('[data-testid=rek-language-of-title-input]')
                     .should('have.value', langCodes.join(','))
                     .siblings('[role=button] span')
                     .should('have.length', 0); // If no matching codes found, there is a span present
