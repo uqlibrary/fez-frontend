@@ -256,6 +256,16 @@ export default {
                 name: 'ntroSection.fez_record_search_key_audience_size.rek_audience_size',
                 fullWidth: true,
                 label: 'Audience size',
+                inputId: 'rek-audience-size-input',
+                labelId: 'rek-audience-size-label',
+                SelectDisplayProps: {
+                    id: 'rek-audience-size-select',
+                    'data-testid': 'rek-audience-size-select',
+                },
+                MenuProps: {
+                    id: 'rek-audience-size-options',
+                    'data-testid': 'rek-audience-size-options',
+                },
             },
         },
         fez_record_search_key_journal_name: {

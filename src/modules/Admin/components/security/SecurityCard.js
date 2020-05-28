@@ -76,6 +76,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                     fieldName="securitySection.rek_security_policy"
                                     recordType={recordType}
                                     securityPolicy={securityPolicy}
+                                    securitySelectorId="rek-security-policy"
                                 />
                             </Grid>
                         )}
@@ -91,6 +92,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                     fieldName="securitySection.rek_datastream_policy"
                                     recordType={recordType}
                                     securityPolicy={dataStreamPolicy}
+                                    securitySelectorId="rek-datastream-policy"
                                 />
                             </Grid>
                         )}

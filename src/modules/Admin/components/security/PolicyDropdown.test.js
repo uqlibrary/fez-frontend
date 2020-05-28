@@ -3,6 +3,7 @@ import { PolicyDropdown } from './PolicyDropdown';
 function setup(testProps = {}) {
     const props = {
         fieldName: 'test',
+        policyDropdownId: 'test-policy',
         ...testProps,
     };
     return getElement(PolicyDropdown, props);

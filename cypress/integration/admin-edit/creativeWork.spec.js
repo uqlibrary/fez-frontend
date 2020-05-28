@@ -80,9 +80,9 @@ context('Creative Work admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Audience size');
-                        cy.get('#audienceSize')
+                        cy.get('[data-testid=rek-audience-size-select]')
                             .should('have.text', record.fez_record_search_key_audience_size.rek_audience_size_lookup)
-                            .siblings('input')
+                            .get('[data-testid=rek-audience-size-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_audience_size.rek_audience_size.toString(),

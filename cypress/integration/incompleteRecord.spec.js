@@ -4,14 +4,12 @@ context('Incomplete record form', () => {
     });
 
     const checkSignificance = significance => {
-        cy.get('#significance')
+        cy.get('[data-testid=rek-significance-select]')
             .click();
-        cy.get('#menu-significance')
-            .should('exist')
-            .find('li')
+        cy.get('[data-testid=rek-significance-options]')
             .contains(significance)
             .click();
-        cy.get('#significance')
+        cy.get('[data-testid=rek-significance-select]')
             .should('contain', significance);
     };
 
@@ -25,13 +23,12 @@ context('Incomplete record form', () => {
     };
 
     const checkAudienceSize = sizeText => {
-        cy.get('#rek-audience-size')
+        cy.get('[data-testid=rek-audience-size-select]')
             .click();
-        cy.get('body > [role=presentation]')
-            .find('li')
+        cy.get('[data-testid=rek-audience-size-options]')
             .contains(sizeText)
             .click();
-        cy.get('#rek-audience-size')
+        cy.get('[data-testid=rek-audience-size-select]')
             .should('contain', sizeText);
     };
 
