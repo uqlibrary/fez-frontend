@@ -52,7 +52,7 @@ describe('DataStreamSecuritySelector component', () => {
         });
         expect(asFragment()).toMatchSnapshot();
         expect(getByText(/test4.txt/)).toHaveAttribute('title', 'test4.txt');
-        expect(getByText(/Administrator/i)).toHaveAttribute('id', 'Override datastream security policy');
+        expect(getByText(/Administrator/i)).toHaveAttribute('id', 'dsi-security-policy-0-select');
         expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
     });
 
@@ -67,7 +67,7 @@ describe('DataStreamSecuritySelector component', () => {
         });
 
         fireEvent.mouseDown(getByText(/Administrator/i));
-        const menu = await waitFor(() => getByTestId('menu-test5.txt'));
+        const menu = await waitFor(() => getByTestId('dsi-security-policy-0-options'));
 
         expect(getByText(/public/i, menu)).toHaveAttribute('role', 'option');
         fireEvent.click(getByText(/public/i, menu));

@@ -182,8 +182,15 @@ export default class FixRecord extends PureComponent {
                                         validate={[validation.required]}
                                         onChange={this._actionSelected}
                                         required
+                                        inputId="fix-action-input"
+                                        labelId="fix-action-label"
                                         SelectDisplayProps={{
-                                            id: 'fixAction',
+                                            id: 'fix-action-select',
+                                            'data-testid': 'fix-action-select',
+                                        }}
+                                        MenuProps={{
+                                            id: 'fix-action-options',
+                                            'data-testid': 'fix-action-options',
                                         }}
                                     >
                                         {fixOptions}

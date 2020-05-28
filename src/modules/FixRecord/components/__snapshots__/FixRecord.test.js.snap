@@ -435,14 +435,23 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}
@@ -929,14 +938,23 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}
@@ -1437,14 +1455,23 @@ exports[`Component FixRecord should render fix record form 1`] = `
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}
@@ -2128,14 +2155,23 @@ exports[`Component FixRecord should render record citation, two actions in selec
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}
@@ -2622,14 +2658,23 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}
@@ -3305,14 +3350,23 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}
@@ -3980,14 +4034,23 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               }
             />
             <Field
+              MenuProps={
+                Object {
+                  "data-testid": "fix-action-options",
+                  "id": "fix-action-options",
+                }
+              }
               SelectDisplayProps={
                 Object {
-                  "id": "fixAction",
+                  "data-testid": "fix-action-select",
+                  "id": "fix-action-select",
                 }
               }
               component={[Function]}
               disabled={false}
+              inputId="fix-action-input"
               label="Select an action"
+              labelId="fix-action-label"
               name="fixAction"
               onChange={[Function]}
               required={true}

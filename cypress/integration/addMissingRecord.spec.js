@@ -9,22 +9,22 @@ context('Add missing record', () => {
 
     it('should enable the submit button on form render only', () => {
         // Journal article requires subtype selection
-        cy.get('#rek-display-type')
+        cy.get('[data-testid=rek-display-type-select]')
             .should('exist')
             .click();
         cy.get('#submit-work')
             .should('not.exist');
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Journal Article')
             .click();
         cy.get('#submit-work')
             .should('not.exist');
 
-        cy.get('#rek-subtype')
+        cy.get('[data-testid=rek-subtype-select]')
             .should('exist')
             .click();
-        cy.get('#menu-rek_subtype')
+        cy.get('[data-testid=rek-subtype-options]')
             .find('li[role=option]')
             .contains('Editorial')
             .click();
@@ -37,9 +37,9 @@ context('Add missing record', () => {
         cy.reload();
 
         // Dept. Tech. report has no subtypes
-        cy.get('#rek-display-type')
+        cy.get('[data-testid=rek-display-type-select]')
             .click();
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Department Technical Report')
             .click();
@@ -50,16 +50,16 @@ context('Add missing record', () => {
 
     it('should validate form as expected', () => {
         // Choose Book > Textbook
-        cy.get('#rek-display-type')
+        cy.get('[data-testid=rek-display-type-select]')
             .click();
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Book')
             .eq(0)
             .click();
-        cy.get('#rek-subtype')
+        cy.get('[data-testid=rek-subtype-select]')
             .click();
-        cy.get('#menu-rek_subtype')
+        cy.get('[data-testid=rek-subtype-options]')
             .find('li[role=option]')
             .contains('Textbook')
             .click();

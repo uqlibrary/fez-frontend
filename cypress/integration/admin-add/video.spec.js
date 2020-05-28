@@ -8,9 +8,9 @@ context('As an admin,', () => {
         cy.clickAutoSuggestion('adminSectioncollections', 0);
 
         // Choose display type
-        cy.get('#rek-display-type')
+        cy.get('[data-testid=rek-display-type-select]')
             .click();
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-options]')
             .contains('li', 'Video')
             .click();
 

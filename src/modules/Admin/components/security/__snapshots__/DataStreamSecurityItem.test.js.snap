@@ -27,7 +27,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
         data-shrink="true"
-        id="Test Policy Dropdown Label-label"
+        id="dsi-security-policy-0-label"
       >
         Test Policy Dropdown Label
         <span
@@ -45,17 +45,19 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="Test Policy Dropdown Label"
+          aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-          id="Test Policy Dropdown Label"
+          data-testid="dsi-security-policy-0-select"
+          id="dsi-security-policy-0-select"
           role="button"
           tabindex="0"
         >
           Theses Assessors
         </div>
         <input
-          aria-labelledby="Test Policy Dropdown Label-label"
-          id="Test Policy Dropdown Label"
+          aria-labelledby="dsi-security-policy-0-label"
+          data-testid="dsi-security-policy-0-input"
+          id="dsi-security-policy-0-input"
           name="test.jpg"
           type="hidden"
           value="2"
@@ -103,7 +105,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
         data-shrink="true"
-        id="Test Policy Dropdown Label-label"
+        id="dsi-security-policy-0-label"
       >
         Test Policy Dropdown Label
         <span
@@ -121,17 +123,19 @@ exports[`DataStreamSecurityItem component should render default view with overri
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="Test Policy Dropdown Label"
+          aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-          id="Test Policy Dropdown Label"
+          data-testid="dsi-security-policy-0-select"
+          id="dsi-security-policy-0-select"
           role="button"
           tabindex="0"
         >
           Theses Assessors
         </div>
         <input
-          aria-labelledby="Test Policy Dropdown Label-label"
-          id="Test Policy Dropdown Label"
+          aria-labelledby="dsi-security-policy-0-label"
+          data-testid="dsi-security-policy-0-input"
+          id="dsi-security-policy-0-input"
           name="test.jpg"
           type="hidden"
           value="2"
@@ -179,7 +183,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
         data-shrink="true"
-        id="Test Policy Dropdown Label-label"
+        id="dsi-security-policy-2-label"
       >
         Test Policy Dropdown Label
         <span
@@ -197,17 +201,19 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="Test Policy Dropdown Label"
+          aria-labelledby="dsi-security-policy-2-label dsi-security-policy-2-select"
           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-          id="Test Policy Dropdown Label"
+          data-testid="dsi-security-policy-2-select"
+          id="dsi-security-policy-2-select"
           role="button"
           tabindex="0"
         >
           Theses Assessors
         </div>
         <input
-          aria-labelledby="Test Policy Dropdown Label-label"
-          id="Test Policy Dropdown Label"
+          aria-labelledby="dsi-security-policy-2-label"
+          data-testid="dsi-security-policy-2-input"
+          id="dsi-security-policy-2-input"
           name="test.jpg"
           type="hidden"
           value="2"

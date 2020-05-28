@@ -232,8 +232,15 @@ export default class NtroFields extends React.PureComponent {
                                                 label={contributionStatement.fields.scaleOfWork.label}
                                                 required
                                                 validate={[validation.required]}
+                                                inputId="rek-significance-input"
+                                                labelId="rek-significance-label"
                                                 SelectDisplayProps={{
-                                                    id: 'significance',
+                                                    id: 'rek-significance-select',
+                                                    'data-testid': 'rek-significance-select',
+                                                }}
+                                                MenuProps={{
+                                                    id: 'rek-significance-options',
+                                                    'data-testid': 'rek-significance-options',
                                                 }}
                                             >
                                                 {SIGNIFICANCE.map(item => (
@@ -421,8 +428,15 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.audienceSize.label}
                                             required
                                             validate={[validation.required]}
+                                            inputId="rek-audience-size-input"
+                                            labelId="rek-audience-size-label"
                                             SelectDisplayProps={{
-                                                id: 'rek-audience-size',
+                                                id: 'rek-audience-size-select',
+                                                'data-testid': 'rek-audience-size-select',
+                                            }}
+                                            MenuProps={{
+                                                id: 'rek-audience-size-options',
+                                                'data-testid': 'rek-audience-size-options',
                                             }}
                                         >
                                             {AUDIENCE_SIZE.map(item => (

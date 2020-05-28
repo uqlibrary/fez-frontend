@@ -51,6 +51,7 @@ const DataStreamSecurityItem = ({
                         },
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
+                    policyDropdownId={`dsi-security-policy-${index}`}
                 />
             </Grid>
         </React.Fragment>

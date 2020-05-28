@@ -55,9 +55,9 @@ describe('DataStreamSecurityItem component', () => {
             },
         });
 
-        fireEvent.mouseDown(getByText(/Administrator/i));
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
 
-        const menu = await waitFor(() => getByTestId('menu-test.jpg'));
+        const menu = await waitFor(() => getByTestId('dsi-security-policy-0-options'));
 
         fireEvent.click(getByText(/public/i, menu));
 
@@ -73,9 +73,9 @@ describe('DataStreamSecurityItem component', () => {
             },
         });
 
-        fireEvent.mouseDown(getByText(/administrator/i));
+        fireEvent.mouseDown(getByTestId('dsi-security-policy-0-select'));
 
-        const menu = await waitFor(() => getByTestId('menu-test.jpg'));
+        const menu = await waitFor(() => getByTestId('dsi-security-policy-0-options'));
 
         fireEvent.click(getByText(/Theses Assessors/i, menu));
 

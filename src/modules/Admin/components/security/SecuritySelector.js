@@ -7,7 +7,7 @@ import { Typography } from '@material-ui/core';
 import { PolicyDropdown } from './PolicyDropdown';
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
 
-export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName }) => (
+export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, securitySelectorId }) => (
     <Grid container spacing={1}>
         {!!text.description && (
             <Grid item xs={12}>
@@ -24,6 +24,7 @@ export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName }) 
                 displayPrompt
                 prompt={text.prompt}
                 disabled={disabled}
+                policyDropdownId={`${securitySelectorId}`}
             />
         </Grid>
         {!!securityPolicy && (
@@ -37,6 +38,7 @@ SecuritySelector.propTypes = {
     fieldName: PropTypes.string,
     text: PropTypes.object,
     securityPolicy: PropTypes.number,
+    securitySelectorId: PropTypes.string.isRequired,
 };
 
 export default React.memo(SecuritySelector);
