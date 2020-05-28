@@ -195,6 +195,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 disabled={true}
                 fullWidth={true}
                 id="admin-work-submit"
@@ -435,6 +436,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -651,6 +653,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -828,6 +831,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -1041,6 +1045,7 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -1242,6 +1247,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -1448,6 +1454,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
+                data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
