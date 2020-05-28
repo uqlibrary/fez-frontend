@@ -105,6 +105,7 @@ exports[`SecurityCard component should render security card correctly for collec
             fieldName="securitySection.rek_security_policy"
             recordType="collection"
             securityPolicy={5}
+            securitySelectorId="rek-security-policy"
             text={
               Object {
                 "cardTitle": [Function],
@@ -139,6 +140,7 @@ exports[`SecurityCard component should render security card correctly for collec
             fieldName="securitySection.rek_datastream_policy"
             recordType="collection"
             securityPolicy={5}
+            securitySelectorId="rek-datastream-policy"
             text={
               Object {
                 "fieldLabel": <span>
@@ -201,6 +203,7 @@ exports[`SecurityCard component should render security card correctly for commun
             fieldName="securitySection.rek_security_policy"
             recordType="community"
             securityPolicy={5}
+            securitySelectorId="rek-security-policy"
             text={
               Object {
                 "cardTitle": [Function],
@@ -749,6 +752,7 @@ exports[`SecurityCard component should render security card correctly for record
             fieldName="securitySection.rek_security_policy"
             recordType="record"
             securityPolicy={5}
+            securitySelectorId="rek-security-policy"
             text={
               Object {
                 "cardTitle": [Function],
@@ -1243,6 +1247,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             fieldName="securitySection.rek_security_policy"
             recordType="record"
             securityPolicy={5}
+            securitySelectorId="rek-security-policy"
             text={
               Object {
                 "cardTitle": [Function],

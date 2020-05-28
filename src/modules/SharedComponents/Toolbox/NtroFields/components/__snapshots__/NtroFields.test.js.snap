@@ -48,13 +48,21 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             Select the option that best describes the significance of the work.
           </WithStyles(ForwardRef(Typography))>
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-significance-options",
+                "id": "rek-significance-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "significance",
+                "data-testid": "rek-significance-select",
+                "id": "rek-significance-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-significance-input"
             label={
               <span>
                 Scale/Significance of work*
@@ -69,6 +77,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
                 </span>
               </span>
             }
+            labelId="rek-significance-label"
             name="significance"
             required={true}
             validate={
@@ -165,13 +174,21 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             Select the option that best describes the significance of the work.
           </WithStyles(ForwardRef(Typography))>
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-significance-options",
+                "id": "rek-significance-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "significance",
+                "data-testid": "rek-significance-select",
+                "id": "rek-significance-select",
               }
             }
             component={[Function]}
             disabled={true}
+            inputId="rek-significance-input"
             label={
               <span>
                 Scale/Significance of work*
@@ -186,6 +203,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                 </span>
               </span>
             }
+            labelId="rek-significance-label"
             name="significance"
             required={true}
             validate={
@@ -596,14 +614,23 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-audience-size-options",
+                "id": "rek-audience-size-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "rek-audience-size",
+                "data-testid": "rek-audience-size-select",
+                "id": "rek-audience-size-select",
               }
             }
             component={[Function]}
             disabled={true}
+            inputId="rek-audience-size-input"
             label="Audience size"
+            labelId="rek-audience-size-label"
             name="fez_record_search_key_audience_size.rek_audience_size"
             required={true}
             validate={
@@ -745,13 +772,21 @@ exports[`Component NtroFields should render contribution statement fields as wel
             Select the option that best describes the significance of the work.
           </WithStyles(ForwardRef(Typography))>
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-significance-options",
+                "id": "rek-significance-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "significance",
+                "data-testid": "rek-significance-select",
+                "id": "rek-significance-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-significance-input"
             label={
               <span>
                 Scale/Significance of work*
@@ -766,6 +801,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                 </span>
               </span>
             }
+            labelId="rek-significance-label"
             name="significance"
             required={true}
             validate={
@@ -1176,14 +1212,23 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-audience-size-options",
+                "id": "rek-audience-size-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "rek-audience-size",
+                "data-testid": "rek-audience-size-select",
+                "id": "rek-audience-size-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-audience-size-input"
             label="Audience size"
+            labelId="rek-audience-size-label"
             name="fez_record_search_key_audience_size.rek_audience_size"
             required={true}
             validate={
@@ -1625,14 +1670,23 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-audience-size-options",
+                "id": "rek-audience-size-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "rek-audience-size",
+                "data-testid": "rek-audience-size-select",
+                "id": "rek-audience-size-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-audience-size-input"
             label="Audience size"
+            labelId="rek-audience-size-label"
             name="fez_record_search_key_audience_size.rek_audience_size"
             required={true}
             validate={
@@ -1774,13 +1828,21 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             Select the option that best describes the significance of the work.
           </WithStyles(ForwardRef(Typography))>
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-significance-options",
+                "id": "rek-significance-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "significance",
+                "data-testid": "rek-significance-select",
+                "id": "rek-significance-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-significance-input"
             label={
               <span>
                 Scale/Significance of work*
@@ -1795,6 +1857,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                 </span>
               </span>
             }
+            labelId="rek-significance-label"
             name="significance"
             required={true}
             validate={
@@ -2205,14 +2268,23 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-audience-size-options",
+                "id": "rek-audience-size-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "rek-audience-size",
+                "data-testid": "rek-audience-size-select",
+                "id": "rek-audience-size-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-audience-size-input"
             label="Audience size"
+            labelId="rek-audience-size-label"
             name="fez_record_search_key_audience_size.rek_audience_size"
             required={true}
             validate={
@@ -2334,13 +2406,21 @@ exports[`Component NtroFields should show significance field even if contributio
             Select the option that best describes the significance of the work.
           </WithStyles(ForwardRef(Typography))>
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-significance-options",
+                "id": "rek-significance-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "significance",
+                "data-testid": "rek-significance-select",
+                "id": "rek-significance-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-significance-input"
             label={
               <span>
                 Scale/Significance of work*
@@ -2355,6 +2435,7 @@ exports[`Component NtroFields should show significance field even if contributio
                 </span>
               </span>
             }
+            labelId="rek-significance-label"
             name="significance"
             required={true}
             validate={
@@ -2726,14 +2807,23 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
+            MenuProps={
+              Object {
+                "data-testid": "rek-audience-size-options",
+                "id": "rek-audience-size-options",
+              }
+            }
             SelectDisplayProps={
               Object {
-                "id": "rek-audience-size",
+                "data-testid": "rek-audience-size-select",
+                "id": "rek-audience-size-select",
               }
             }
             component={[Function]}
             disabled={false}
+            inputId="rek-audience-size-input"
             label="Audience size"
+            labelId="rek-audience-size-label"
             name="fez_record_search_key_audience_size.rek_audience_size"
             required={true}
             validate={

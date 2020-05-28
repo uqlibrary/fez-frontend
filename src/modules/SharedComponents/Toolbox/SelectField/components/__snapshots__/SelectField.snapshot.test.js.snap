@@ -11,16 +11,16 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
     }
   >
     <WithStyles(ForwardRef(InputLabel))
-      id="undefined-label"
+      id="undefined"
     />
     <WithStyles(ForwardRef(Select))
       autoWidth={true}
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
-      id="undefined"
       inputProps={
         Object {
-          "aria-labelledby": "undefined-label",
+          "aria-labelledby": "undefined",
+          "data-testid": undefined,
           "id": undefined,
         }
       }
@@ -44,17 +44,17 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
     }
   >
     <WithStyles(ForwardRef(InputLabel))
-      id="undefined-label"
+      id="undefined"
     />
     <WithStyles(ForwardRef(Select))
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
       fullWidth={true}
-      id="undefined"
       inputProps={
         Object {
-          "aria-labelledby": "undefined-label",
+          "aria-labelledby": "undefined",
+          "data-testid": undefined,
           "id": undefined,
         }
       }

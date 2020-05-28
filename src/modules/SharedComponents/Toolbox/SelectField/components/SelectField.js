@@ -15,13 +15,17 @@ const SelectFieldWrapper = props => {
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     delete filteredProps.errorText;
+
     return (
         <React.Fragment>
             <FormControl error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <InputLabel id={`${filteredProps.label}-label`}>{filteredProps.label}</InputLabel>
+                <InputLabel id={`${filteredProps.labelId}`}>{filteredProps.label}</InputLabel>
                 <Select
-                    id={`${filteredProps.label}`}
-                    inputProps={{ 'aria-labelledby': `${filteredProps.label}-label`, id: filteredProps.label }}
+                    inputProps={{
+                        'aria-labelledby': `${filteredProps.labelId}`,
+                        id: props.inputId,
+                        'data-testid': props.inputId,
+                    }}
                     {...filteredProps}
                     autoWidth
                 />

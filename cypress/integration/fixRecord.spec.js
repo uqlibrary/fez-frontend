@@ -36,9 +36,9 @@ context('Request correction form', () => {
     });
 
     it('should show expected fields on confirming authorship', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         cy.get('.StandardCard h3')
@@ -51,9 +51,9 @@ context('Request correction form', () => {
     });
 
     it('should show expected message on denying authorship', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am not the author')
             .click();
         cy.get('.StandardCard h3')
@@ -67,9 +67,9 @@ context('Request correction form', () => {
     });
 
     it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         cy.contains(fixFormLocale.contentIndicators.title)
@@ -99,9 +99,9 @@ context('Request correction form', () => {
     });
 
     it('will detect and prevent submission of invalid URLs', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         // Enter invalid data triggers validation errors
@@ -126,9 +126,9 @@ context('Request correction form', () => {
     });
 
     it('Can choose a content indicator, then submit the form', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         cy.get('#content-indicators')

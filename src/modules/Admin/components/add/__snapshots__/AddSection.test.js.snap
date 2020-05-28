@@ -57,14 +57,23 @@ exports[`AddSection component should render default view 1`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -330,14 +339,23 @@ exports[`AddSection component should render with subtypes 1`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}

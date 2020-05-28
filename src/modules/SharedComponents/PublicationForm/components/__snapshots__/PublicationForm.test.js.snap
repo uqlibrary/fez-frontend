@@ -61,15 +61,24 @@ exports[`Component PublicationForm Shows an alert 1`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -500,15 +509,24 @@ exports[`Component PublicationForm Shows an alert 2`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -1035,15 +1053,24 @@ exports[`Component PublicationForm Shows an alert 3`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -1570,15 +1597,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -2009,15 +2045,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -2361,15 +2406,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -2467,15 +2521,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -2819,15 +2882,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -2938,15 +3010,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -3290,15 +3371,24 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -3409,15 +3499,24 @@ exports[`Component PublicationForm should render component initialised with just
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -3848,15 +3947,24 @@ exports[`Component PublicationForm should render component initialised with two 
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -4308,15 +4416,24 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -4661,15 +4778,24 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -4856,15 +4982,24 @@ exports[`Component PublicationForm should render component with GenericDocument 
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -5209,15 +5344,24 @@ exports[`Component PublicationForm should render component with GenericDocument 
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -5401,15 +5545,24 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -5754,15 +5907,24 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -5946,15 +6108,24 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -6299,15 +6470,24 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
@@ -6491,15 +6671,24 @@ exports[`Component PublicationForm should render component with all fields disab
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={true}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -6930,15 +7119,24 @@ exports[`Component PublicationForm should render form after selecting both publi
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-display-type-options",
+                    "id": "rek-display-type-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-display-type",
+                    "data-testid": "rek-display-type-select",
+                    "id": "rek-display-type-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
+                inputId="rek-display-type-input"
                 label="Work type"
+                labelId="rek-display-type-label"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
@@ -7283,15 +7481,24 @@ exports[`Component PublicationForm should render form after selecting both publi
               xs={12}
             >
               <Field
+                MenuProps={
+                  Object {
+                    "data-testid": "rek-subtype-options",
+                    "id": "rek-subtype-options",
+                  }
+                }
                 SelectDisplayProps={
                   Object {
-                    "id": "rek-subtype",
+                    "data-testid": "rek-subtype-select",
+                    "id": "rek-subtype-select",
                   }
                 }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
+                inputId="rek-subtype-input"
                 label="Work subtype"
+                labelId="rek-subtype-label"
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}

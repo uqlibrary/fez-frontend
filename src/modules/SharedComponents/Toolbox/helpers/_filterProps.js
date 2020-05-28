@@ -4,6 +4,7 @@ export default function filterProps(props) {
     delete validProps.meta;
     delete validProps.help;
     delete validProps.forceError;
+    delete validProps.inputId;
 
     validProps.error =
         !!props.error ||

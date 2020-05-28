@@ -72,15 +72,22 @@ export const AddSection = ({
                                     <Field
                                         component={SelectField}
                                         disabled={disabled}
-                                        name="rek_display_type"
-                                        value={selectedPublicationType}
+                                        inputId="rek-display-type-input"
                                         label={locale.pages.adminAdd.formLabels.rek_display_type.inputLabelText}
-                                        required
-                                        validate={[validation.required]}
-                                        placeholder={locale.pages.adminAdd.formLabels.rek_display_type.hintText}
-                                        SelectDisplayProps={{
-                                            id: 'rek-display-type',
+                                        labelId="rek-display-type-label"
+                                        MenuProps={{
+                                            id: 'rek-display-type-options',
+                                            'data-testid': 'rek-display-type-options',
                                         }}
+                                        name="rek_display_type"
+                                        placeholder={locale.pages.adminAdd.formLabels.rek_display_type.hintText}
+                                        required
+                                        SelectDisplayProps={{
+                                            id: 'rek-display-type-select',
+                                            'data-testid': 'rek-display-type-select',
+                                        }}
+                                        validate={[validation.required]}
+                                        value={selectedPublicationType}
                                     >
                                         {publicationTypeItems}
                                     </Field>
