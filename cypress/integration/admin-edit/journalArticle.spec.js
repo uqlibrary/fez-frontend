@@ -134,7 +134,7 @@ context('Journal Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Language of work & Journal name');
                         const langCodes = record.fez_record_search_key_language.map(lang => lang.rek_language);
-                        cy.get('[data-testid=rek-language-of-work-input]')
+                        cy.get('[data-testid=rek-language-input]')
                             .should('have.value', langCodes.join(','));
 
                         cy.get('#Journalname')
