@@ -123,7 +123,7 @@ describe('AttachedFiles component', () => {
         fireEvent.click(getByTestId('delete-file-3'));
         expect(onDeleteFn).toHaveBeenCalledWith(3);
 
-        fireEvent.change(getByTestId('file-description-input-2'), { target: { value: 'test file description' } });
+        fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
         expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
     });
 

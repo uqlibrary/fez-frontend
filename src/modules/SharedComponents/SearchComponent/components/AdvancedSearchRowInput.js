@@ -57,6 +57,7 @@ const getInputProps = (inputField, value, onChange, label) => {
     const textFieldMui1Props = {
         placeholder: inputField.hint,
         id: inputField.id || inputField.label || 'textfield',
+        textFieldId: inputField.id,
         'aria-label': inputField.ariaLabel,
         error: !!runValidationRules(inputField, value),
         errorText: runValidationRules(inputField, value),

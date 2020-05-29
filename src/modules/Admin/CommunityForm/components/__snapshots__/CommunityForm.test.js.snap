@@ -39,13 +39,13 @@ exports[`Community form should display successfull submission screen 1`] = `
                   <Field
                     autoFocus={true}
                     component={[Function]}
-                    data-testid="rek-title-input"
                     disabled={false}
                     fullWidth={true}
                     label="Title of community"
                     name="rek_title"
                     placeholder="Type a title for this community"
                     required={true}
+                    textFieldId="rek-title"
                     type="text"
                     validate={
                       Array [
@@ -60,7 +60,6 @@ exports[`Community form should display successfull submission screen 1`] = `
                 >
                   <Field
                     component={[Function]}
-                    data-testid="rek-description-input"
                     disabled={false}
                     fullWidth={true}
                     label="Community description"
@@ -69,6 +68,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                     placeholder="Type a description of this community."
                     required={true}
                     rows={5}
+                    textFieldId="rek-description"
                     validate={
                       Array [
                         [Function],
@@ -238,13 +238,13 @@ exports[`Community form should render form 1`] = `
                   <Field
                     autoFocus={true}
                     component={[Function]}
-                    data-testid="rek-title-input"
                     disabled={false}
                     fullWidth={true}
                     label="Title of community"
                     name="rek_title"
                     placeholder="Type a title for this community"
                     required={true}
+                    textFieldId="rek-title"
                     type="text"
                     validate={
                       Array [
@@ -259,7 +259,6 @@ exports[`Community form should render form 1`] = `
                 >
                   <Field
                     component={[Function]}
-                    data-testid="rek-description-input"
                     disabled={false}
                     fullWidth={true}
                     label="Community description"
@@ -268,6 +267,7 @@ exports[`Community form should render form 1`] = `
                     placeholder="Type a description of this community."
                     required={true}
                     rows={5}
+                    textFieldId="rek-description"
                     validate={
                       Array [
                         [Function],

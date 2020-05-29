@@ -5,6 +5,7 @@ export default function filterProps(props) {
     delete validProps.help;
     delete validProps.forceError;
     delete validProps.selectFieldId;
+    delete validProps.textFieldId;
 
     validProps.error =
         !!props.error ||

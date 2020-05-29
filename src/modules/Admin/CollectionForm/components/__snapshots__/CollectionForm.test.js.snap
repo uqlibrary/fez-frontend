@@ -330,13 +330,13 @@ exports[`Collection form should render the full form 1`] = `
                 <Field
                   autoFocus={true}
                   component={[Function]}
-                  data-testid="rek-title-input"
                   disabled={false}
                   fullWidth={true}
                   label="Title of collection"
                   name="rek_title"
                   placeholder="Type a title for this collection"
                   required={true}
+                  textFieldId="rek-title"
                   type="text"
                   validate={
                     Array [
@@ -351,7 +351,6 @@ exports[`Collection form should render the full form 1`] = `
               >
                 <Field
                   component={[Function]}
-                  data-testid="rek-description-input"
                   disabled={false}
                   fullWidth={true}
                   label="Collection description"
@@ -360,6 +359,7 @@ exports[`Collection form should render the full form 1`] = `
                   placeholder="Type a description of this collection."
                   required={true}
                   rows={5}
+                  textFieldId="rek-description"
                   validate={
                     Array [
                       [Function],
