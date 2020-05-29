@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudienceSizeField component should render default view 1`] = `
-<Field
-  SelectDisplayProps={
-    Object {
-      "id": "audienceSize",
-    }
-  }
-  component={[Function]}
+<SelectFieldWrapper
   label="Audience size"
   name="audienceSize"
+  selectFieldId="rek-audience-size"
 >
   <WithStyles(ForwardRef(MenuItem))
     key="453992"
@@ -29,5 +24,5 @@ exports[`AudienceSizeField component should render default view 1`] = `
   >
     Greater than 500
   </WithStyles(ForwardRef(MenuItem))>
-</Field>
+</SelectFieldWrapper>
 `;

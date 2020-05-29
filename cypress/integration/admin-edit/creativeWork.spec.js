@@ -48,21 +48,10 @@ context('Creative Work admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Additional information');
-                cy.get('label[id="Content Indicators-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
-                    .should(
-                        'have.value',
-                        record.fez_record_search_key_content_indicator
-                            .map(indicator => indicator.rek_content_indicator)
-                            .join(','),
-                    )
-                    .siblings('[role=button]')
+                cy.get('[data-testid="rek-content-indicator-select"]')
                     .should(
                         'have.text',
-                        record.fez_record_search_key_content_indicator
-                            .map(indicator => indicator.rek_content_indicator_lookup)
-                            .join(', '),
+                        'Scholarship of Teaching and Learning',
                     );
             });
 
@@ -123,13 +112,10 @@ context('Creative Work admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Quality indicators');
                         const qualityIndicators = record.fez_record_search_key_quality_indicator;
-                        cy.get('[id="Quality indicators-label"]')
-                            .should('have.text', 'Quality indicators')
-                            .siblings('div')
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid="rek-quality-indicator-input"]')
                             .should('have.value', qualityIndicators.map(item => item.rek_quality_indicator)
                                 .join(','))
-                            .siblings('div')
+                            .get('[data-testid=rek-quality-indicator-select]')
                             .should(
                                 'have.text',
                                 qualityIndicators.map(item => item.rek_quality_indicator_lookup)

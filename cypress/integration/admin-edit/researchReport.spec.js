@@ -74,11 +74,9 @@ context('Research Report admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Additional information');
 
-                        cy.get('label[id="Refereed source-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-refereed-source-input]')
                             .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-refereed-source-select]')
                             .should(
                                 'have.text',
                                 record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,

@@ -51,12 +51,8 @@ context('Thesis admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Language of work');
                         const langCodes = record.fez_record_search_key_language.map(lang => lang.rek_language);
-                        cy.get('label[id="Language of work-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
-                            .should('have.value', langCodes.join(','))
-                            .siblings('[role=button] span')
-                            .should('have.length', 0); // If no matching codes found, there is a span present
+                        cy.get('[data-testid=rek-language-input]')
+                            .should('have.value', langCodes.join(','));
                     });
 
                 cy.get('@cards')
@@ -77,11 +73,9 @@ context('Thesis admin edit', () => {
                             .eq(0)
                             .should('have.text', 'Abstract / Description');
 
-                        cy.get('label[id="Thesis type-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-genre-type-input]')
                             .should('have.value', record.rek_genre_type)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-genre-type-select]')
                             .should('have.text', record.rek_genre_type);
 
                         cy.get('#org-name-field')
@@ -229,11 +223,9 @@ context('Thesis admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Additional information');
-                        cy.get('label[id="OA status-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-oa-status-input]')
                             .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-oa-status-select]')
                             .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
                         cy.get('span span')
                             .eq(0)

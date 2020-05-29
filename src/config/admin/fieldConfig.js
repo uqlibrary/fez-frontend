@@ -248,6 +248,7 @@ export default {
                 label: 'Language of work',
                 placeholder: 'Language of work',
                 multiple: true,
+                genericSelectFieldId: 'rek-language',
             },
         },
         fez_record_search_key_audience_size: {
@@ -256,16 +257,6 @@ export default {
                 name: 'ntroSection.fez_record_search_key_audience_size.rek_audience_size',
                 fullWidth: true,
                 label: 'Audience size',
-                inputId: 'rek-audience-size-input',
-                labelId: 'rek-audience-size-label',
-                SelectDisplayProps: {
-                    id: 'rek-audience-size-select',
-                    'data-testid': 'rek-audience-size-select',
-                },
-                MenuProps: {
-                    id: 'rek-audience-size-options',
-                    'data-testid': 'rek-audience-size-options',
-                },
             },
         },
         fez_record_search_key_journal_name: {
@@ -619,6 +610,7 @@ export default {
                 label: 'Language of journal name',
                 placeholder: '',
                 multiple: true,
+                genericSelectFieldId: 'rek-language-of-journal-name',
             },
         },
         languageOfBookTitle: {
@@ -628,6 +620,7 @@ export default {
                 label: 'Language of book title',
                 placeholder: '',
                 multiple: true,
+                genericSelectFieldId: 'rek-language-of-book-title',
             },
         },
         languageOfConferenceName: {
@@ -638,6 +631,7 @@ export default {
                 placeholder: 'Language of conference name',
                 multiple: true,
                 fullWidth: true,
+                genericSelectFieldId: 'rek-language-of-conference-name',
             },
         },
         languageOfProceedingsTitle: {
@@ -648,6 +642,7 @@ export default {
                 placeholder: 'Language of proceedings title',
                 multiple: true,
                 fullWidth: true,
+                genericSelectFieldId: 'rek-language-of-proceedings-title',
             },
         },
         fez_record_search_key_conference_location: {

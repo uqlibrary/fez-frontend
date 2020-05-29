@@ -36,13 +36,11 @@ context('Book Chapter admin edit', () => {
                     .should('contain', 'Book title');
                 cy.get('#Booktitle')
                     .should('have.value', record.fez_record_search_key_book_title.rek_book_title);
-                const langCodes = record.fez_record_search_key_language_of_book_title.map(
-                    lang => lang.rek_language_of_book_title,
-                );
-                cy.get('label[id="Language of book title-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
-                    .should('have.value', langCodes.join(','))
+                // const langCodes = record.fez_record_search_key_language_of_book_title.map(
+                //     lang => lang.rek_language_of_book_title,
+                // );
+                cy.get('[data-testid=rek-language-of-book-title-select]')
+                    .should('have.text', 'Japanese')
                     .siblings('[role=button] span')
                     .should('have.length', 0); // If no matching codes found, there is a span present
                 cy.get('#Nativescriptbooktitle')

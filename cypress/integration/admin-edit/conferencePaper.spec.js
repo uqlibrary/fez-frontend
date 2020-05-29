@@ -72,13 +72,9 @@ context('Conference Paper admin edit', () => {
                         'have.value',
                         record.fez_record_search_key_proceedings_title.rek_proceedings_title,
                     );
-                const langCodes = record.fez_record_search_key_language_of_proceedings_title.map(
-                    lang => lang.rek_language_of_proceedings_title,
-                );
-                cy.get('label[id="Language of proceedings title-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
-                    .should('have.value', langCodes.join(','))
+
+                cy.get('[data-testid=rek-language-of-proceedings-title-select]')
+                    .should('have.text', 'German')
                     .siblings('[role=button] span')
                     .should('have.length', 0);
                 cy.get('#Nativescriptproceedingstitle')
@@ -104,10 +100,8 @@ context('Conference Paper admin edit', () => {
                     );
                 cy.get('#Journalname')
                     .should('have.value', record.fez_record_search_key_journal_name.rek_journal_name);
-                cy.get('label[id="Language of journal name-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
-                    .should('have.value', langCodes.join(','))
+                cy.get('[data-testid=rek-language-of-journal-name-select]')
+                    .should('have.text', 'German')
                     .siblings('[role=button] span')
                     .should('have.length', 0);
                 cy.get('#Nativescriptjournalname')
