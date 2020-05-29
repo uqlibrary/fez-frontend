@@ -30,7 +30,7 @@ describe('AdvancedSearchRow', () => {
             value: 'i feel lucky',
             disabledFields: ['0'],
         });
-        expect(getByTestId('textfield').value).toEqual('i feel lucky');
+        expect(getByTestId('any-field-input').value).toEqual('i feel lucky');
         fireEvent.keyDown(getByTestId('field-type-selector'), { key: 'Enter', code: 13 });
         const list = await waitFor(() => getByTestId('menu-field-type-selector'));
         expect(getByText(/select a field/i, list)).toHaveClass('Mui-disabled');
@@ -48,7 +48,7 @@ describe('AdvancedSearchRow', () => {
     it('should handle search field text change', () => {
         const testFn = jest.fn();
         const { getByTestId } = setup({ rowIndex: 1, onSearchRowChange: testFn });
-        fireEvent.change(getByTestId('textfield'), { target: { value: 'i feel lucky' } });
+        fireEvent.change(getByTestId('initial-input'), { target: { value: 'i feel lucky' } });
         expect(testFn).toHaveBeenCalledWith(1, { searchField: '0', value: 'i feel lucky', label: '' });
     });
 

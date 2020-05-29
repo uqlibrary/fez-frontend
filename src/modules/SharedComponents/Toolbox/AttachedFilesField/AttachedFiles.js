@@ -347,6 +347,7 @@ export const AttachedFiles = ({
                                                         name="fileDescription"
                                                         defaultValue={item.description}
                                                         id={`file-description-input-${index}`}
+                                                        textFieldId={`dsi-label-${index}`}
                                                     />
                                                 ) : (
                                                     <Typography variant="body2" noWrap>

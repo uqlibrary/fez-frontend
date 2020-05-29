@@ -16,6 +16,7 @@ function setup(testProps = {}) {
             addButton: 'Add author',
             nameAsPublishedLabel: 'Please enter author name',
         },
+        contributorFormId: 'rek-contributor',
         ...testProps,
     };
     return rtlRender(withRedux()(<ContributorForm {...props} />));
@@ -35,25 +36,25 @@ describe('Component ContributorForm', () => {
 
     it('should render display name field only', () => {
         const { getByTestId } = setup();
-        expect(getByTestId('name-as-published')).toBeInTheDocument();
+        expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
         expect(getByTestId('submit-author').disabled).toBeTruthy();
     });
 
     it('should render display name field and identifier field', () => {
         const { getByTestId } = setup({ showIdentifierLookup: true });
-        expect(getByTestId('name-as-published')).toBeInTheDocument();
+        expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
         expect(getByTestId('identifier-field')).toBeInTheDocument();
     });
 
     it('should render display name field and role field', () => {
         const { getByTestId } = setup({ showRoleInput: true });
-        expect(getByTestId('name-as-published')).toBeInTheDocument();
+        expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
         expect(getByTestId('creator-role-field')).toBeInTheDocument();
     });
 
     it('should render NTRO fields', () => {
         const { getByTestId, getByLabelText } = setup({ isNtro: true });
-        expect(getByTestId('name-as-published')).toBeInTheDocument();
+        expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
         expect(getByLabelText('Org affiliation')).toBeInTheDocument();
         expect(getByTestId('identifier-field')).toBeInTheDocument();
     });
@@ -91,7 +92,7 @@ describe('Component ContributorForm', () => {
             onSubmit: testFn,
             showRoleInput: true,
         });
-        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Test Author' } });
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
         fireEvent.change(getByTestId('creator-role-field'), { target: { value: 'C' } });
         const list = await waitFor(() => getByRole('presentation'));
         fireEvent.click(getByText('Co-investigator'), list);
@@ -112,8 +113,8 @@ describe('Component ContributorForm', () => {
             onAdd: onAddFn,
         });
 
-        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Test Author' } });
-        fireEvent.keyDown(getByTestId('name-as-published'), { key: 'Esc', code: 27 });
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
+        fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Esc', code: 27 });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -123,7 +124,7 @@ describe('Component ContributorForm', () => {
             onAdd: onAddFn,
         });
 
-        fireEvent.keyDown(getByTestId('name-as-published'), { key: 'Enter', code: 13 });
+        fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -133,8 +134,8 @@ describe('Component ContributorForm', () => {
             onAdd: onAddFn,
             showRoleInput: true,
         });
-        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Test Author' } });
-        fireEvent.keyDown(getByTestId('name-as-published'), { key: 'Enter', code: 13 });
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
+        fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -145,10 +146,10 @@ describe('Component ContributorForm', () => {
             isNtro: true,
         });
 
-        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Test Author' } });
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
         fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
         fireEvent.click(getByText('Not UQ'));
-        fireEvent.keyDown(getByTestId('name-as-published'), { key: 'Enter', code: 13 });
+        fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -190,7 +191,7 @@ describe('Component ContributorForm', () => {
             required: true,
             isContributorAssigned: false,
         });
-        expect(getByTestId('name-as-published-label')).toHaveClass('Mui-error');
+        expect(getByTestId('rek-contributor-label')).toHaveClass('Mui-error');
     });
 
     it('should display org affiliation selector if affiliation is NotUQ', () => {
@@ -211,7 +212,7 @@ describe('Component ContributorForm', () => {
 
         expect(getByTestId('submit-author').disabled).toBeTruthy();
 
-        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'testing' } });
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'testing' } });
         expect(getByTestId('submit-author').disabled).toBeFalsy();
     });
 
@@ -234,7 +235,7 @@ describe('Component ContributorForm', () => {
             onSubmit: testFn,
         });
 
-        fireEvent.change(getByTestId('name-as-published'), { target: { value: 'Testing, UqId' } });
+        fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Testing, UqId' } });
         fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
 
         const list = await waitFor(() => getByTestId('identifier-field-popup'));

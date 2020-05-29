@@ -27,7 +27,7 @@ describe('AdvancedSearchComponent', () => {
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
         expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
-        expect(getByTestId('textfield').disabled).toBeTruthy();
+        expect(getByTestId('initial-input').disabled).toBeTruthy();
         expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
     });
 
@@ -46,7 +46,7 @@ describe('AdvancedSearchComponent', () => {
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
         expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
-        expect(getByTestId('textfield').disabled).toBeTruthy();
+        expect(getByTestId('initial-input').disabled).toBeTruthy();
         expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
         expect(getByText('open access/full text')).toBeInTheDocument();
 
@@ -60,7 +60,7 @@ describe('AdvancedSearchComponent', () => {
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
         expect(getByText(/advanced search/i)).toBeInTheDocument();
-        expect(getByTestId('textfield').value).toEqual('i feel lucky');
+        expect(getByTestId('any-field-input').value).toEqual('i feel lucky');
         expect(getByTestId('add-another-search-row').disabled).toBeFalsy();
         expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
         expect(getByText('open access/full text')).toBeInTheDocument();
@@ -130,7 +130,7 @@ describe('AdvancedSearchComponent', () => {
             fieldRows: [{ value: '', searchField: 'all' }],
         });
 
-        fireEvent.change(getByTestId('textfield'), { target: { value: 'testing' } });
+        fireEvent.change(getByTestId('any-field-input'), { target: { value: 'testing' } });
         expect(testFn).toHaveBeenCalledWith(0, { searchField: 'all', value: 'testing', label: '' });
     });
 

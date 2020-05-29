@@ -11,23 +11,24 @@ export const TextFieldWrapper = props => {
     const hideLabel = !!filteredProps.hideLabel;
     delete filteredProps.errorText;
     delete filteredProps.hideLabel;
-    const ariaLabel = filteredProps.id || (filteredProps.label && filteredProps.label.replace(/\s+/g, '')) || '';
     return (
         <Fragment>
             <TextField
                 {...filteredProps}
                 helperText={helperText}
-                id={ariaLabel}
+                id={props.textFieldId}
                 inputProps={{
-                    id: ariaLabel,
+                    id: `${props.textFieldId}-input`,
+                    'data-testid': `${props.textFieldId}-input`,
                     label: filteredProps.label,
                     'aria-label': filteredProps.label,
-                    'aria-labelledby': `${ariaLabel}-label`,
+                    'aria-labelledby': `${props.textFieldId}-label`,
                 }}
                 InputLabelProps={{
                     shrink: filteredProps.floatinglabelfixed ? true : undefined,
-                    id: `${ariaLabel}-label`,
-                    htmlFor: ariaLabel,
+                    id: `${props.textFieldId}-label`,
+                    'data-testid': `${props.textFieldId}-label`,
+                    htmlFor: `${props.textFieldId}-input`,
                     hidden: hideLabel,
                 }}
             />
@@ -37,6 +38,7 @@ export const TextFieldWrapper = props => {
 
 TextFieldWrapper.propTypes = {
     ...TextField.propTypes,
+    textFieldId: PropTypes.string.isRequired,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,
