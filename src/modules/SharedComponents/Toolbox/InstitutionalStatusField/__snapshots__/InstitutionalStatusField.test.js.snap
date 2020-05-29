@@ -5,6 +5,7 @@ exports[`InstitutionalStatusField component should render default view 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-institutional-status"
   hideLabel={false}
   itemsList={
     Array [
@@ -40,6 +41,7 @@ exports[`InstitutionalStatusField component should render immutable list as sele
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-institutional-status"
   hideLabel={false}
   input={
     Object {
@@ -98,6 +100,7 @@ exports[`InstitutionalStatusField component should render when given a default v
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-institutional-status"
   hideLabel={false}
   itemsList={
     Array [
@@ -139,6 +142,7 @@ exports[`InstitutionalStatusField component should render with given field props
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-institutional-status"
   hideLabel={false}
   input={
     Object {

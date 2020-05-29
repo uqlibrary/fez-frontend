@@ -29,13 +29,9 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     xs={12}
   >
     <GenericSelectField
-      SelectDisplayProps={
-        Object {
-          "id": "scaleOfSignificance",
-        }
-      }
       error={false}
       fullWidth={true}
+      genericSelectFieldId="rek-significance"
       itemsList={
         Array [
           Object {

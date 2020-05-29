@@ -31,7 +31,7 @@ context('Data Collection form', () => {
     it('validates Dataset information', () => {
         // Dataset name
         cy.get('#Datasetname')
-            .type('Name of Dataset', { force: true });
+            .type('Name of Dataset');
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -39,7 +39,7 @@ context('Data Collection form', () => {
 
         // Dataset description
         cy.get('#Datasetdescription')
-            .type('Description of Dataset', { force: true });
+            .type('Description of Dataset');
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -239,7 +239,7 @@ context('Data Collection form', () => {
 
     it('validates access and licensing info', () => {
         // Access conditions
-        cy.get('div#data-collection-access-selector')
+        cy.get('[data-testid=rek-access-conditions-select]')
             .click();
         cy.get('li[data-value="453618"]')
             .click();
@@ -248,7 +248,7 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', --errorCount);
 
-        cy.get('div#data-collection-access-selector')
+        cy.get('[data-testid=rek-access-conditions-select]')
             .click();
         cy.get('li[data-value="453619"]')
             .click();
@@ -258,7 +258,7 @@ context('Data Collection form', () => {
             .should('have.length', errorCount);
 
         // Licensing and terms of access
-        cy.get('div#data-collection-licence-selector')
+        cy.get('[data-testid=rek-license-select]')
             .click();
         cy.get('li[data-value="454104"]')
             .click();
@@ -279,7 +279,7 @@ context('Data Collection form', () => {
     it('validates project information', () => {
         // Project name
         cy.get('#Projectname')
-            .type('This is the project name', { force: true });
+            .type('This is the project name');
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -289,9 +289,6 @@ context('Data Collection form', () => {
         cy.get('#Projectdescription')
             .type(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
-                {
-                    force: true,
-                },
             );
         cy.get('@submitButton')
             .should('not.be.disabled');

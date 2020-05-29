@@ -5,6 +5,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -85,6 +86,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -165,6 +167,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -249,6 +252,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   itemsList={
     Array [
@@ -324,6 +328,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -422,6 +427,7 @@ exports[`HerdcCodeField component should render when given a default value field
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   itemsList={
     Array [
@@ -503,6 +509,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {

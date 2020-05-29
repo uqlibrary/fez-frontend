@@ -66,9 +66,7 @@ context('Audio admin edit', () => {
                     .should('have.value', record.fez_record_search_key_length.rek_length);
                 cy.get('#Type')
                     .should('have.value', record.rek_genre);
-                cy.get('label[id="Licence-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
+                cy.get('[data-testid=rek-license-input]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
                     .siblings('[role=button]')
                     .invoke('text')
@@ -86,9 +84,7 @@ context('Audio admin edit', () => {
                     .should(text => {
                         expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                     });
-                cy.get('label[id="Alternate genre-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
+                cy.get('[data-testid=rek-alternate-genre-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_alternate_genre.map(item => item.rek_alternate_genre)

@@ -87,6 +87,7 @@ export const BatchImport = ({
                                     <Grid item xs={12}>
                                         <Field
                                             component={CommunitiesSelectField}
+                                            communitiesSelectFieldId="community-pid"
                                             disabled={submitting}
                                             error={formErrors.communityID}
                                             id="communityPID"

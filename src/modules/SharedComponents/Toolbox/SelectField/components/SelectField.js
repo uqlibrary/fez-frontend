@@ -19,12 +19,20 @@ const SelectFieldWrapper = props => {
     return (
         <React.Fragment>
             <FormControl error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <InputLabel id={`${filteredProps.labelId}`}>{filteredProps.label}</InputLabel>
+                <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>
                 <Select
                     inputProps={{
-                        'aria-labelledby': `${filteredProps.labelId}`,
-                        id: props.inputId,
-                        'data-testid': props.inputId,
+                        'aria-labelledby': `${props.selectFieldId}-label`,
+                        'data-testid': `${props.selectFieldId}-input`,
+                        id: `${props.selectFieldId}-input`,
+                    }}
+                    SelectDisplayProps={{
+                        id: `${props.selectFieldId}-select`,
+                        'data-testid': `${props.selectFieldId}-select`,
+                    }}
+                    MenuProps={{
+                        id: `${props.selectFieldId}-options`,
+                        'data-testid': `${props.selectFieldId}-options`,
                     }}
                     {...filteredProps}
                     autoWidth
@@ -37,6 +45,7 @@ const SelectFieldWrapper = props => {
 
 SelectFieldWrapper.propTypes = {
     ...Select.propTypes,
+    selectFieldId: PropTypes.string.isRequired,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,

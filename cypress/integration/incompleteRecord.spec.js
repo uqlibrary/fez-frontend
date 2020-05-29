@@ -33,15 +33,15 @@ context('Incomplete record form', () => {
     };
 
     const checkQualityIndicators = indicator => {
-        cy.get('#quality-indicators')
+        cy.get('[data-testid=rek-quality-indicator-select]')
             .click();
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-quality-indicator-options]')
             .find('li')
             .contains(indicator)
             .click();
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-quality-indicator-options]')
             .click(10, 10);
-        cy.get('#quality-indicators')
+        cy.get('[data-testid=rek-quality-indicator-select]')
             .should('contain', indicator);
     };
 

@@ -14,6 +14,7 @@ const mapStateToProps = (state, props) => {
         itemsLoadingHint: props.loadingHint || 'Loading..',
         errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText && props.errorText) || '',
         error: (!!props.meta && !!props.meta.error) || props.error || false,
+        genericSelectFieldId: 'rek-genre-type',
         ...props,
     };
 };

@@ -31,12 +31,14 @@ function mapDispatchToProps(dispatch) {
 const CommunitiesList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 export default function CommunitiesSelectField(fieldProps) {
+    const { communitiesSelectFieldId } = fieldProps;
     return (
         <CommunitiesList
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
             id="rek_ismemberof"
+            genericSelectFieldId={communitiesSelectFieldId}
             {...fieldProps}
         />
     );

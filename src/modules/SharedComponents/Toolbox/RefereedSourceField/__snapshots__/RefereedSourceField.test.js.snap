@@ -4,6 +4,7 @@ exports[`RefereedSourceField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-refereed-source"
   hideLabel={false}
   itemsList={
     Array [
@@ -54,6 +55,7 @@ exports[`RefereedSourceField component should render immutable list as selected 
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-refereed-source"
   hideLabel={false}
   input={
     Object {
@@ -127,6 +129,7 @@ exports[`RefereedSourceField component should render when given a default value 
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-refereed-source"
   hideLabel={false}
   itemsList={
     Array [
@@ -183,6 +186,7 @@ exports[`RefereedSourceField component should render with given field props 1`] 
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-refereed-source"
   hideLabel={false}
   input={
     Object {

@@ -434,6 +434,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
           utils={[Function]}
         >
           <GenericSelectField
+            genericSelectFieldId="generic-test"
             loadItemsList={
               [MockFunction] {
                 "calls": Array [
@@ -452,6 +453,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
             parentItemsId={1234}
           >
             <WithStyles(GenericSelectFieldClass)
+              genericSelectFieldId="generic-test"
               loadItemsList={
                 [MockFunction] {
                   "calls": Array [
@@ -478,6 +480,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                   }
                 }
                 fullWidth={false}
+                genericSelectFieldId="generic-test"
                 hintText={null}
                 itemsList={Array []}
                 loadItemsList={
@@ -874,7 +877,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                       className="MuiFormControl-root MuiFormControl-fullWidth"
                     >
                       <WithStyles(ForwardRef(InputLabel))
-                        id="undefined-label"
+                        id="generic-test-label"
                       >
                         <ForwardRef(InputLabel)
                           classes={
@@ -893,7 +896,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                               "shrink": "MuiInputLabel-shrink",
                             }
                           }
-                          id="undefined-label"
+                          id="generic-test-label"
                         >
                           <WithStyles(ForwardRef(FormLabel))
                             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -907,7 +910,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                               }
                             }
                             data-shrink={false}
-                            id="undefined-label"
+                            id="generic-test-label"
                           >
                             <ForwardRef(FormLabel)
                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -924,28 +927,37 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                 }
                               }
                               data-shrink={false}
-                              id="undefined-label"
+                              id="generic-test-label"
                             >
                               <label
                                 className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                 data-shrink={false}
-                                id="undefined-label"
+                                id="generic-test-label"
                               />
                             </ForwardRef(FormLabel)>
                           </WithStyles(ForwardRef(FormLabel))>
                         </ForwardRef(InputLabel)>
                       </WithStyles(ForwardRef(InputLabel))>
                       <WithStyles(ForwardRef(Select))
+                        MenuProps={
+                          Object {
+                            "data-testid": "generic-test-options",
+                            "id": "generic-test-options",
+                          }
+                        }
                         SelectDisplayProps={
                           Object {
-                            "id": undefined,
+                            "data-testid": "generic-test-select",
+                            "id": "generic-test-select",
                           }
                         }
                         autoWidth={false}
                         disabled={false}
                         inputProps={
                           Object {
-                            "aria-labelledby": "Select item-label",
+                            "aria-labelledby": "generic-test-label",
+                            "data-testid": "generic-test-input",
+                            "id": "generic-test-input",
                           }
                         }
                         multiple={false}
@@ -953,9 +965,16 @@ exports[`GenericSelectField Full mount should render 1`] = `
                         value=""
                       >
                         <ForwardRef(Select)
+                          MenuProps={
+                            Object {
+                              "data-testid": "generic-test-options",
+                              "id": "generic-test-options",
+                            }
+                          }
                           SelectDisplayProps={
                             Object {
-                              "id": undefined,
+                              "data-testid": "generic-test-select",
+                              "id": "generic-test-select",
                             }
                           }
                           autoWidth={false}
@@ -976,7 +995,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                           disabled={false}
                           inputProps={
                             Object {
-                              "aria-labelledby": "Select item-label",
+                              "aria-labelledby": "generic-test-label",
+                              "data-testid": "generic-test-input",
+                              "id": "generic-test-input",
                             }
                           }
                           multiple={false}
@@ -1034,11 +1055,15 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     "render": [Function],
                                   },
                                 },
-                                "MenuProps": undefined,
-                                "SelectDisplayProps": Object {
-                                  "id": undefined,
+                                "MenuProps": Object {
+                                  "data-testid": "generic-test-options",
+                                  "id": "generic-test-options",
                                 },
-                                "aria-labelledby": "Select item-label",
+                                "SelectDisplayProps": Object {
+                                  "data-testid": "generic-test-select",
+                                  "id": "generic-test-select",
+                                },
+                                "aria-labelledby": "generic-test-label",
                                 "autoWidth": false,
                                 "children": Array [
                                   undefined,
@@ -1055,7 +1080,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   "select": "MuiSelect-select",
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
+                                "data-testid": "generic-test-input",
                                 "displayEmpty": false,
+                                "id": "generic-test-input",
                                 "labelId": undefined,
                                 "multiple": false,
                                 "onClose": undefined,
@@ -1138,11 +1165,15 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
-                                  "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "generic-test-options",
+                                    "id": "generic-test-options",
                                   },
-                                  "aria-labelledby": "Select item-label",
+                                  "SelectDisplayProps": Object {
+                                    "data-testid": "generic-test-select",
+                                    "id": "generic-test-select",
+                                  },
+                                  "aria-labelledby": "generic-test-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     undefined,
@@ -1159,7 +1190,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "generic-test-input",
                                   "displayEmpty": false,
+                                  "id": "generic-test-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -1243,11 +1276,15 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         "render": [Function],
                                       },
                                     },
-                                    "MenuProps": undefined,
-                                    "SelectDisplayProps": Object {
-                                      "id": undefined,
+                                    "MenuProps": Object {
+                                      "data-testid": "generic-test-options",
+                                      "id": "generic-test-options",
                                     },
-                                    "aria-labelledby": "Select item-label",
+                                    "SelectDisplayProps": Object {
+                                      "data-testid": "generic-test-select",
+                                      "id": "generic-test-select",
+                                    },
+                                    "aria-labelledby": "generic-test-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       undefined,
@@ -1264,7 +1301,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
+                                    "data-testid": "generic-test-input",
                                     "displayEmpty": false,
+                                    "id": "generic-test-input",
                                     "labelId": undefined,
                                     "multiple": false,
                                     "onClose": undefined,
@@ -1354,11 +1393,15 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           "render": [Function],
                                         },
                                       },
-                                      "MenuProps": undefined,
-                                      "SelectDisplayProps": Object {
-                                        "id": undefined,
+                                      "MenuProps": Object {
+                                        "data-testid": "generic-test-options",
+                                        "id": "generic-test-options",
                                       },
-                                      "aria-labelledby": "Select item-label",
+                                      "SelectDisplayProps": Object {
+                                        "data-testid": "generic-test-select",
+                                        "id": "generic-test-select",
+                                      },
+                                      "aria-labelledby": "generic-test-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         undefined,
@@ -1375,7 +1418,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         "select": "MuiSelect-select",
                                         "selectMenu": "MuiSelect-selectMenu",
                                       },
+                                      "data-testid": "generic-test-input",
                                       "displayEmpty": false,
+                                      "id": "generic-test-input",
                                       "labelId": undefined,
                                       "multiple": false,
                                       "onClose": undefined,
@@ -1408,13 +1453,20 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           },
                                         }
                                       }
+                                      MenuProps={
+                                        Object {
+                                          "data-testid": "generic-test-options",
+                                          "id": "generic-test-options",
+                                        }
+                                      }
                                       SelectDisplayProps={
                                         Object {
-                                          "id": undefined,
+                                          "data-testid": "generic-test-select",
+                                          "id": "generic-test-select",
                                         }
                                       }
                                       aria-invalid={false}
-                                      aria-labelledby="Select item-label"
+                                      aria-labelledby="generic-test-label"
                                       autoWidth={false}
                                       className="MuiInputBase-input MuiInput-input"
                                       classes={
@@ -1431,8 +1483,10 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           "selectMenu": "MuiSelect-selectMenu",
                                         }
                                       }
+                                      data-testid="generic-test-input"
                                       disabled={false}
                                       displayEmpty={false}
+                                      id="generic-test-input"
                                       inputRef={[Function]}
                                       multiple={false}
                                       onAnimationStart={[Function]}
@@ -1445,7 +1499,10 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     >
                                       <div
                                         aria-haspopup="listbox"
+                                        aria-labelledby="generic-test-select"
                                         className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                        data-testid="generic-test-select"
+                                        id="generic-test-select"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onKeyDown={[Function]}
@@ -1462,7 +1519,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         />
                                       </div>
                                       <input
-                                        aria-labelledby="Select item-label"
+                                        aria-labelledby="generic-test-label"
+                                        data-testid="generic-test-input"
+                                        id="generic-test-input"
                                         onAnimationStart={[Function]}
                                         type="hidden"
                                         value=""
@@ -1520,7 +1579,10 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         anchorEl={
                                           <div
                                             aria-haspopup="listbox"
+                                            aria-labelledby="generic-test-select"
                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                            data-testid="generic-test-select"
+                                            id="generic-test-select"
                                             role="button"
                                             tabindex="0"
                                           >
@@ -1529,7 +1591,8 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                             </span>
                                           </div>
                                         }
-                                        id="menu-"
+                                        data-testid="generic-test-options"
+                                        id="generic-test-options"
                                         onClose={[Function]}
                                         open={false}
                                       >
@@ -1551,7 +1614,10 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
+                                              aria-labelledby="generic-test-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                              data-testid="generic-test-select"
+                                              id="generic-test-select"
                                               role="button"
                                               tabindex="0"
                                             >
@@ -1566,7 +1632,8 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                               "paper": "MuiMenu-paper",
                                             }
                                           }
-                                          id="menu-"
+                                          data-testid="generic-test-options"
+                                          id="generic-test-options"
                                           onClose={[Function]}
                                           open={false}
                                         >
@@ -1584,7 +1651,10 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
+                                                aria-labelledby="generic-test-select"
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                data-testid="generic-test-select"
+                                                id="generic-test-select"
                                                 role="button"
                                                 tabindex="0"
                                               >
@@ -1599,8 +1669,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                                 "vertical": "top",
                                               }
                                             }
+                                            data-testid="generic-test-options"
                                             getContentAnchorEl={[Function]}
-                                            id="menu-"
+                                            id="generic-test-options"
                                             onClose={[Function]}
                                             onEntering={[Function]}
                                             open={false}
@@ -1626,7 +1697,10 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
+                                                  aria-labelledby="generic-test-select"
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                  data-testid="generic-test-select"
+                                                  id="generic-test-select"
                                                   role="button"
                                                   tabindex="0"
                                                 >
@@ -1647,8 +1721,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                                   "root": "MuiPopover-root",
                                                 }
                                               }
+                                              data-testid="generic-test-options"
                                               getContentAnchorEl={[Function]}
-                                              id="menu-"
+                                              id="generic-test-options"
                                               onClose={[Function]}
                                               onEntering={[Function]}
                                               open={false}
@@ -1668,7 +1743,8 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                                 }
                                                 className="MuiPopover-root"
                                                 container={<body />}
-                                                id="menu-"
+                                                data-testid="generic-test-options"
+                                                id="generic-test-options"
                                                 onClose={[Function]}
                                                 open={false}
                                               />
@@ -1704,19 +1780,28 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
 >
   <WithStyles(ForwardRef(InputLabel))
     hidden={false}
-    id="undefined-label"
+    id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "generic-test-options",
+        "id": "generic-test-options",
+      }
+    }
     SelectDisplayProps={
       Object {
-        "id": undefined,
+        "data-testid": "generic-test-select",
+        "id": "generic-test-select",
       }
     }
     autoWidth={false}
     disabled={false}
     inputProps={
       Object {
-        "aria-labelledby": "Select item-label",
+        "aria-labelledby": "generic-test-label",
+        "data-testid": "generic-test-input",
+        "id": "generic-test-input",
       }
     }
     multiple={false}
@@ -2027,19 +2112,28 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
-    id="undefined-label"
+    id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "generic-test-options",
+        "id": "generic-test-options",
+      }
+    }
     SelectDisplayProps={
       Object {
-        "id": undefined,
+        "data-testid": "generic-test-select",
+        "id": "generic-test-select",
       }
     }
     autoWidth={false}
     disabled={true}
     inputProps={
       Object {
-        "aria-labelledby": "Select item-label",
+        "aria-labelledby": "generic-test-label",
+        "data-testid": "generic-test-input",
+        "id": "generic-test-input",
       }
     }
     multiple={false}
@@ -2111,19 +2205,28 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
 >
   <WithStyles(ForwardRef(InputLabel))
     hidden={true}
-    id="undefined-label"
+    id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "generic-test-options",
+        "id": "generic-test-options",
+      }
+    }
     SelectDisplayProps={
       Object {
-        "id": undefined,
+        "data-testid": "generic-test-select",
+        "id": "generic-test-select",
       }
     }
     autoWidth={false}
     disabled={false}
     inputProps={
       Object {
-        "aria-labelledby": "Select item-label",
+        "aria-labelledby": "generic-test-label",
+        "data-testid": "generic-test-input",
+        "id": "generic-test-input",
       }
     }
     multiple={false}
@@ -2204,19 +2307,28 @@ exports[`GenericSelectField should render snapshots for no items 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
-    id="undefined-label"
+    id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "generic-test-options",
+        "id": "generic-test-options",
+      }
+    }
     SelectDisplayProps={
       Object {
-        "id": undefined,
+        "data-testid": "generic-test-select",
+        "id": "generic-test-select",
       }
     }
     autoWidth={false}
     disabled={false}
     inputProps={
       Object {
-        "aria-labelledby": "Select item-label",
+        "aria-labelledby": "generic-test-label",
+        "data-testid": "generic-test-input",
+        "id": "generic-test-input",
       }
     }
     multiple={false}
@@ -2232,19 +2344,28 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
-    id="undefined-label"
+    id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "generic-test-options",
+        "id": "generic-test-options",
+      }
+    }
     SelectDisplayProps={
       Object {
-        "id": undefined,
+        "data-testid": "generic-test-select",
+        "id": "generic-test-select",
       }
     }
     autoWidth={false}
     disabled={false}
     inputProps={
       Object {
-        "aria-labelledby": "Select item-label",
+        "aria-labelledby": "generic-test-label",
+        "data-testid": "generic-test-input",
+        "id": "generic-test-input",
       }
     }
     multiple={false}

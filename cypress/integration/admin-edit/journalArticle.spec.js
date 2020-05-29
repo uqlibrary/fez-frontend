@@ -76,25 +76,19 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id,
                             );
-                        cy.get('label[id="WoS doc type(s)-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-wok-doc-type-input]')
                             .should('have.value', record.rek_wok_doc_type)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-wok-doc-type-select]')
                             .invoke('text')
                             .should('match', new RegExp(`^${record.rek_wok_doc_type}`));
-                        cy.get('label[id="Scopus doc type(s)-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-scopus-doc-type-input]')
                             .should('have.value', record.rek_scopus_doc_type)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-scopus-doc-type-select]')
                             .invoke('text')
                             .should('match', new RegExp(`^${record.rek_scopus_doc_type}`));
-                        cy.get('label[id="PubMed doc type(s)-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-pubmed-doc-type-input]')
                             .should('have.value', record.rek_pubmed_doc_type)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-pubmed-doc-type-select]')
                             .should('have.text', record.rek_pubmed_doc_type);
                     });
 
@@ -140,12 +134,8 @@ context('Journal Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Language of work & Journal name');
                         const langCodes = record.fez_record_search_key_language.map(lang => lang.rek_language);
-                        cy.get('label[id="Language of work-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
-                            .should('have.value', langCodes.join(','))
-                            .siblings('[role=button] span')
-                            .should('have.length', 0); // If no matching codes found, there is a span present
+                        cy.get('[data-testid=rek-language-of-work-input]')
+                            .should('have.value', langCodes.join(','));
 
                         cy.get('#Journalname')
                             .should(
@@ -395,45 +385,35 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Additional information');
-                        cy.get('label[id="Work sub-type-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-subtype-input]')
                             .should('have.value', record.rek_subtype)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-subtype-select]')
                             .should('have.text', record.rek_subtype);
-                        cy.get('label[id="Category code-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-herdc-code-input]')
                             .should('have.value', record.fez_record_search_key_herdc_code.rek_herdc_code.toString())
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-herdc-code-select]')
                             .invoke('text')
                             .should(
                                 'match',
                                 new RegExp(`^${record.fez_record_search_key_herdc_code.rek_herdc_code_lookup}`),
                             );
-                        cy.get('label[id="Category code status-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-herdc-status-input]')
                             .should('have.value', record.fez_record_search_key_herdc_status.rek_herdc_status.toString())
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-herdc-status-select]')
                             .should('have.text', record.fez_record_search_key_herdc_status.rek_herdc_status_lookup);
-                        cy.get('label[id="Institutional status-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-institutional-status-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_institutional_status.rek_institutional_status.toString(),
                             )
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-institutional-status-select]')
                             .should(
                                 'have.text',
                                 record.fez_record_search_key_institutional_status.rek_institutional_status_lookup,
                             );
-                        cy.get('label[id="OA status-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-oa-status-input]')
                             .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-oa-status-select]')
                             .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
                         // No content indicators selected in mock
                         cy.get('span span')

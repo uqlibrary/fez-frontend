@@ -5,8 +5,8 @@ context('Batch import', () => {
     // const baseUrl = Cypress.config('baseUrl');
     const locale = componentsLocale.components.digiTeam.batchImport;
     const validationErrors = validationErrorsLocale.validationErrorsSummary;
-    const initialFieldIDs = ['#communityPID', '#doctypePID', '#directory'];
-    const allFieldIDs = [...initialFieldIDs, '#collectionPID'];
+    const initialFieldIDs = ['community-pid', 'doc-type-id', 'directory'];
+    const allFieldIDs = [...initialFieldIDs, 'collection-pid'];
 
     beforeEach(() => {
         cy.visit('/batch-import?user=digiteamMember');
@@ -33,7 +33,7 @@ context('Batch import', () => {
         cy.get('@formElements')
             .within(() => {
                 initialFieldIDs.forEach(fieldID => {
-                    cy.get(`[role="button"]${fieldID}`)
+                    cy.get(`[data-testid=${fieldID}-select]`)
                         .should('exist');
                 });
             });
@@ -53,19 +53,18 @@ context('Batch import', () => {
     });
 
     it('should show collections filtered by selected community', () => {
-        cy.waitUntil(() => cy.get('#communityPID')
-            .then($el => $el.attr('class')
-                .indexOf('-disabled') === -1));
-        cy.get('#communityPID')
+        cy.waitUntil(() =>
+            cy.get('[data-testid=community-pid-select]')
+                .then($el => $el.attr('class')
+                    .indexOf('-disabled') === -1),
+        );
+        cy.get('[data-testid=community-pid-select]')
             .click();
-        cy.get('#menu-')
-            .find('li[role=option]')
-            .should('have.length', 4)
+        cy.get('[data-testid=community-pid-options]')
             .first()
             .click();
 
-        cy.get('.content-container form > div > div:nth-of-type(1)')
-            .find('[role="button"]#collectionPID')
+        cy.get('[data-testid=collection-pid-select]')
             .should('exist');
         cy.get('.content-container form > div > div:nth-of-type(2)')
             .find('.Alert')
@@ -78,12 +77,14 @@ context('Batch import', () => {
             cy.get('.content-container form .Alert .alert-text li')
                 .should('exist');
 
-            cy.waitUntil(() => cy.get(item)
-                .then($el => $el.attr('class')
-                    .indexOf('-disabled') === -1));
-            cy.get(item)
+            cy.waitUntil(() =>
+                cy.get(`[data-testid=${item}-select]`)
+                    .then($el => $el.attr('class')
+                        .indexOf('-disabled') === -1),
+            );
+            cy.get(`[data-testid=${item}-select]`)
                 .click();
-            cy.get('#menu- li[role=option]:first-of-type')
+            cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
         });
@@ -96,12 +97,14 @@ context('Batch import', () => {
     it('should be able to reset the form on successful form submission', () => {
         // select the first entry from each of the 4 drop downs
         allFieldIDs.forEach(item => {
-            cy.waitUntil(() => cy.get(item)
-                .then($el => $el.attr('class')
-                    .indexOf('-disabled') === -1));
-            cy.get(item)
+            cy.waitUntil(() =>
+                cy.get(`[data-testid=${item}-select]`)
+                    .then($el => $el.attr('class')
+                        .indexOf('-disabled') === -1),
+            );
+            cy.get(`[data-testid=${item}-select]`)
                 .click();
-            cy.get('#menu- li[role=option]:first-of-type')
+            cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
         });

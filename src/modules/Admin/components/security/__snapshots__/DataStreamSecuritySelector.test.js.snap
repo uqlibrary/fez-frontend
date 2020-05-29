@@ -54,7 +54,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
+              aria-labelledby="dsi-security-policy-0-select"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
@@ -150,7 +150,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
+              aria-labelledby="dsi-security-policy-0-select"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
@@ -239,7 +239,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
+              aria-labelledby="dsi-security-policy-0-select"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"

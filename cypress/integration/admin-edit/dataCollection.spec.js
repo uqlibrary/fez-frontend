@@ -43,11 +43,9 @@ context('Data Collection admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Additional information');
-                cy.get('label[id="Licence-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
+                cy.get('[data-testid=rek-license-input]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
-                    .siblings('[role=button]')
+                    .get('[data-testid=rek-license-select]')
                     .invoke('text')
                     .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
                 cy.checkPartialDateFromRecordValue('end-date', record.fez_record_search_key_end_date.rek_end_date);

@@ -21,6 +21,7 @@ export default function AccessSelectorField(fieldProps) {
             ]}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-access-conditions"
             {...fieldProps}
         />
     );
