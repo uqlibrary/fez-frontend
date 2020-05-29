@@ -627,21 +627,23 @@ exports[`AdvancedSearchRowInput should call onChange from input props for TextFi
   <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
+        "data-testid": "text-field-label",
         "hidden": true,
-        "htmlFor": "textfield",
-        "id": "textfield-label",
+        "htmlFor": "text-field-input",
+        "id": "text-field-label",
         "shrink": undefined,
       }
     }
     autoComplete="search"
     error={true}
     helperText="This field is required"
-    id="textfield"
+    id="text-field"
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "textfield-label",
-        "id": "textfield",
+        "aria-labelledby": "text-field-label",
+        "data-testid": "text-field-input",
+        "id": "text-field-input",
         "label": undefined,
       }
     }
@@ -655,21 +657,23 @@ exports[`AdvancedSearchRowInput should call onChange from input props for TextFi
   <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
+        "data-testid": "text-field-label",
         "hidden": true,
-        "htmlFor": "textfield",
-        "id": "textfield-label",
+        "htmlFor": "text-field-input",
+        "id": "text-field-label",
         "shrink": undefined,
       }
     }
     autoComplete="search"
     error={true}
     helperText="This field is required"
-    id="textfield"
+    id="text-field"
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "textfield-label",
-        "id": "textfield",
+        "aria-labelledby": "text-field-label",
+        "data-testid": "text-field-input",
+        "id": "text-field-input",
         "label": undefined,
       }
     }

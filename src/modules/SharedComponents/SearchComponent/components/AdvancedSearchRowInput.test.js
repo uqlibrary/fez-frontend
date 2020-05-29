@@ -301,6 +301,7 @@ describe('AdvancedSearchRowInput', () => {
             render: renderFn,
             inputField: {
                 type: 'TextField',
+                id: 'text-field',
                 validation: ['required'],
             },
             value: null,

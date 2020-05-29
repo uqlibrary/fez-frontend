@@ -110,8 +110,8 @@ export default class CommunityForm extends Component {
                                         <Grid container spacing={3}>
                                             <Grid item xs={12}>
                                                 <Field
-                                                    data-testid="rek-title-input"
                                                     component={TextField}
+                                                    textFieldId="rek-title"
                                                     disabled={this.props.submitting}
                                                     autoFocus
                                                     name="rek_title"
@@ -125,8 +125,8 @@ export default class CommunityForm extends Component {
 
                                             <Grid item xs={12}>
                                                 <Field
-                                                    data-testid="rek-description-input"
                                                     component={TextField}
+                                                    textFieldId="rek-description"
                                                     disabled={this.props.submitting}
                                                     name="rek_description"
                                                     fullWidth

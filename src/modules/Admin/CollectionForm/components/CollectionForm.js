@@ -131,7 +131,7 @@ export default class CollectionForm extends Component {
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
-                                                    data-testid="rek-title-input"
+                                                    textFieldId="rek-title"
                                                     disabled={this.props.submitting}
                                                     autoFocus
                                                     name="rek_title"
@@ -146,7 +146,7 @@ export default class CollectionForm extends Component {
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
-                                                    data-testid="rek-description-input"
+                                                    textFieldId="rek-description"
                                                     disabled={this.props.submitting}
                                                     name="rek_description"
                                                     fullWidth
