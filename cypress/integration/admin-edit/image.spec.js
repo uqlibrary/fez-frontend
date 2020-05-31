@@ -35,17 +35,23 @@ context('Image admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
 
-                        cy.get('#Type')
+                        cy.get('[data-testid=rek-genre-input]')
                             .should('have.value', record.rek_genre);
-                        cy.get('#Originalformat')
+                        cy.get('[data-testid=rek-original-format-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_original_format.rek_original_format,
                             );
-                        cy.get('#Source')
-                            .should('have.value', record.fez_record_search_key_source.rek_source);
-                        cy.get('#Copyrightnotice')
-                            .should('have.value', record.fez_record_search_key_rights.rek_rights);
+                        cy.get('[data-testid=rek-source-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_source.rek_source,
+                            );
+                        cy.get('[data-testid=rek-rights-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_rights.rek_rights,
+                            );
 
                         cy.get('[data-testid=rek-license-input]')
                             .should('have.value', record.fez_record_search_key_license.rek_license)

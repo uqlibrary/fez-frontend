@@ -24,7 +24,7 @@ context('As an admin,', () => {
 
         cy.get('[data-testid=rek-title-input]')
             .type('E2E Testing Collection');
-        cy.get('#Collectiondescription')
+        cy.get('[data-testid=rek-description-input]')
             .type('This collection is created through automated testing.');
 
         cy.get('[data-testid=rek-keywords-input]')

@@ -30,7 +30,7 @@ context('Data Collection form', () => {
 
     it('validates Dataset information', () => {
         // Dataset name
-        cy.get('#Datasetname')
+        cy.get('[data-testid=rek-title-input]')
             .type('Name of Dataset');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -38,7 +38,7 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Dataset description
-        cy.get('#Datasetdescription')
+        cy.get('[data-testid=rek-description-input]')
             .type('Description of Dataset');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -46,7 +46,7 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Contact name
-        cy.get('input#Contactname')
+        cy.get('[data-testid=rek-contributor-input]')
             .type('Ky Lane');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -66,37 +66,40 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Contact email
-        cy.get('input#Contactemail')
+        cy.get('[data-testid=rek-contact-details-email-input]')
             .type('k.lane@');
-        cy.get('p#Contactemail-helper-text')
+        cy.get('#rek-contact-details-email-helper-text')
             .contains('Email address is not valid')
             .should('have.length', 1);
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', errorCount);
-        cy.get('input#Contactemail')
+        cy.get('[data-testid=rek-contact-details-email-input]')
             .type('uq.edu.au');
         cy.get('@errors')
             .should('have.length', --errorCount);
 
         // DOI
-        cy.get('input#DOI')
+        cy.get('[data-testid=rek-doi-input]')
             .type('test');
-        cy.get('p#DOI-helper-text')
+        cy.get('#rek-doi-helper-text')
             .contains('DOI is not valid')
             .should('have.length', 1);
-        cy.get('input#DOI')
-            .type('{backspace}{backspace}{backspace}{backspace}{backspace}10.1037/a0028240', {
-                delay: 30,
-            });
+        cy.get('[data-testid=rek-doi-input]')
+            .type(
+                '{backspace}{backspace}{backspace}{backspace}{backspace}10.1037/a0028240',
+                {
+                    delay: 30,
+                },
+            );
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', errorCount);
 
         // Publisher
-        cy.get('input#Publisher')
+        cy.get('[data-testid=rek-publisher-input]')
             .type('A publisher');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -184,7 +187,7 @@ context('Data Collection form', () => {
 
     it('validates creators', () => {
         // Creators
-        cy.get('#creators-name-as-published-field')
+        cy.get('#creators-input')
             .type('Ky Lane');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -199,7 +202,7 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('#creators-name-as-published-field')
+        cy.get('#creators-input')
             .type('Vishal Asai');
         cy.get('div#contributorForm')
             .find('input#creator-role-field')
@@ -225,7 +228,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('@errors')
             .should('have.length', ++errorCount);
-        cy.get('input#creators-name-as-published-field')
+        cy.get('input#creators-input')
             .type('Ky Lane');
         cy.get('input#creator-role-field')
             .type('UX Developer');
@@ -268,7 +271,7 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Copyright notice
-        cy.get('input#Copyrightnotice')
+        cy.get('[data-testid=rek-rights-input]')
             .type('This is a copyright notice');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -278,7 +281,7 @@ context('Data Collection form', () => {
 
     it('validates project information', () => {
         // Project name
-        cy.get('#Projectname')
+        cy.get('[data-testid=rek-project-name-input]')
             .type('This is the project name');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -286,7 +289,7 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Project description
-        cy.get('#Projectdescription')
+        cy.get('[data-testid=rek-project-description-input]')
             .type(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
             );

@@ -34,22 +34,22 @@ context('Journal admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
 
-                        cy.get('#Placeofpublication')
+                        cy.get('[data-testid=rek-place-of-publication-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_place_of_publication.rek_place_of_publication,
                             );
-                        cy.get('#Publishername')
+                        cy.get('[data-testid=rek-publisher-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_publisher.rek_publisher,
                             );
-                        cy.get('#Volume')
+                        cy.get('[data-testid=rek-volume-number-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_volume_number.rek_volume_number,
                             );
-                        cy.get('#Issue')
+                        cy.get('[data-testid=rek-issue-number-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_issue_number.rek_issue_number,

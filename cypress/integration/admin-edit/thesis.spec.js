@@ -61,7 +61,7 @@ context('Thesis admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
 
-                        cy.get('[id="Totalpages/Extent"]')
+                        cy.get('[data-testid=rek-total-pages-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,

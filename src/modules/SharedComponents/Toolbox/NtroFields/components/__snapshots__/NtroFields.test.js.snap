@@ -500,6 +500,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Volume"
             name="fez_record_search_key_volume_number.rek_volume_number"
+            textFieldId="rek-volume-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -514,6 +515,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Issue"
             name="fez_record_search_key_issue_number.rek_issue_number"
+            textFieldId="rek-issue-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -528,6 +530,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
+            textFieldId="rek-start-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -542,6 +545,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"
+            textFieldId="rek-end-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -559,6 +563,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
             required={true}
+            textFieldId="rek-total-pages"
             type="text"
             validate={
               Array [
@@ -579,6 +584,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
             placeholder="Building, Exhibition, Performance, Composition"
+            textFieldId="rek-original-format"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1072,6 +1078,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Volume"
             name="fez_record_search_key_volume_number.rek_volume_number"
+            textFieldId="rek-volume-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1086,6 +1093,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Issue"
             name="fez_record_search_key_issue_number.rek_issue_number"
+            textFieldId="rek-issue-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1100,6 +1108,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
+            textFieldId="rek-start-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1114,6 +1123,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"
+            textFieldId="rek-end-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1131,6 +1141,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
             required={true}
+            textFieldId="rek-total-pages"
             type="text"
             validate={
               Array [
@@ -1151,6 +1162,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
             placeholder="Building, Exhibition, Performance, Composition"
+            textFieldId="rek-original-format"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1517,6 +1529,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="Volume"
             name="fez_record_search_key_volume_number.rek_volume_number"
+            textFieldId="rek-volume-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1531,6 +1544,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="Issue"
             name="fez_record_search_key_issue_number.rek_issue_number"
+            textFieldId="rek-issue-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1545,6 +1559,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
+            textFieldId="rek-start-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1559,6 +1574,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"
+            textFieldId="rek-end-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1576,6 +1592,7 @@ exports[`Component NtroFields should render default view 1`] = `
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
             required={true}
+            textFieldId="rek-total-pages"
             type="text"
             validate={
               Array [
@@ -1596,6 +1613,7 @@ exports[`Component NtroFields should render default view 1`] = `
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
             placeholder="Building, Exhibition, Performance, Composition"
+            textFieldId="rek-original-format"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2089,6 +2107,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Volume"
             name="fez_record_search_key_volume_number.rek_volume_number"
+            textFieldId="rek-volume-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2103,6 +2122,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Issue"
             name="fez_record_search_key_issue_number.rek_issue_number"
+            textFieldId="rek-issue-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2117,6 +2137,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
+            textFieldId="rek-start-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2131,6 +2152,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"
+            textFieldId="rek-end-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2148,6 +2170,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
             required={true}
+            textFieldId="rek-total-pages"
             type="text"
             validate={
               Array [
@@ -2168,6 +2191,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
             placeholder="Building, Exhibition, Performance, Composition"
+            textFieldId="rek-original-format"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2602,6 +2626,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             label="Volume"
             name="fez_record_search_key_volume_number.rek_volume_number"
+            textFieldId="rek-volume-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2616,6 +2641,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             label="Issue"
             name="fez_record_search_key_issue_number.rek_issue_number"
+            textFieldId="rek-issue-number"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2630,6 +2656,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
+            textFieldId="rek-start-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2644,6 +2671,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"
+            textFieldId="rek-end-page"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2661,6 +2689,7 @@ exports[`Component NtroFields should show significance field even if contributio
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
             required={true}
+            textFieldId="rek-total-pages"
             type="text"
             validate={
               Array [
@@ -2681,6 +2710,7 @@ exports[`Component NtroFields should show significance field even if contributio
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
             placeholder="Building, Exhibition, Performance, Composition"
+            textFieldId="rek-original-format"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>

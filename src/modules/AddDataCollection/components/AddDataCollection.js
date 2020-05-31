@@ -139,6 +139,7 @@ export default class AddDataCollection extends Component {
                                             <Field
                                                 component={TextField}
                                                 disabled={this.props.submitting}
+                                                textFieldId="rek-title"
                                                 name="rek_title"
                                                 required
                                                 fullWidth
@@ -153,6 +154,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="rek_description"
+                                                textFieldId="rek-description"
                                                 required
                                                 fullWidth
                                                 multiline
@@ -166,6 +168,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="contact.contactName"
+                                                textFieldId="rek-contributor"
                                                 required
                                                 fullWidth
                                                 {...txt.information.dataset.fieldLabels.contactName}
@@ -189,6 +192,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="contact.contactEmail"
+                                                textFieldId="rek-contact-details-email"
                                                 required
                                                 fullWidth
                                                 {...txt.information.dataset.fieldLabels.contactEmail}
@@ -200,6 +204,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="fez_record_search_key_doi.rek_doi"
+                                                textFieldId="rek-doi"
                                                 type="text"
                                                 fullWidth
                                                 {...txt.information.dataset.fieldLabels.doi}
@@ -211,6 +216,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="fez_record_search_key_publisher.rek_publisher"
+                                                textFieldId="rek-publisher"
                                                 type="text"
                                                 fullWidth
                                                 {...txt.information.dataset.fieldLabels.publisher}
@@ -299,6 +305,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="fez_record_search_key_rights.rek_rights"
+                                                textFieldId="rek-rights"
                                                 type="text"
                                                 fullWidth
                                                 {...txt.information.accessAndLicensing.fieldLabels.copyrightNotice}
@@ -315,6 +322,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="fez_record_search_key_project_name.rek_project_name"
+                                                textFieldId="rek-project-name"
                                                 required
                                                 type="text"
                                                 fullWidth
@@ -329,6 +337,7 @@ export default class AddDataCollection extends Component {
                                                 component={TextField}
                                                 disabled={this.props.submitting}
                                                 name="fez_record_search_key_project_description.rek_project_description"
+                                                textFieldId="rek-project-description"
                                                 required
                                                 type="text"
                                                 fullWidth
@@ -499,6 +508,7 @@ export default class AddDataCollection extends Component {
                                             <Field
                                                 component={TextField}
                                                 name="fez_record_search_key_additional_notes.rek_additional_notes"
+                                                textFieldId="rek-additional-notes"
                                                 type="text"
                                                 disabled={this.props.submitting}
                                                 fullWidth
@@ -510,6 +520,7 @@ export default class AddDataCollection extends Component {
                                             <Field
                                                 component={TextField}
                                                 name="rek_link"
+                                                textFieldId="rek-link"
                                                 type="text"
                                                 disabled={this.props.submitting}
                                                 fullWidth

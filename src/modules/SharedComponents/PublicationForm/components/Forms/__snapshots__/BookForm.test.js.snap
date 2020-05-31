@@ -31,6 +31,7 @@ exports[`BookForm renders  component 1`] = `
             name="rek_title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -52,6 +53,7 @@ exports[`BookForm renders  component 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
+            textFieldId="rek-place-of-publication"
             type="text"
             validate={
               Array [
@@ -73,6 +75,7 @@ exports[`BookForm renders  component 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
+            textFieldId="rek-publisher"
             type="text"
             validate={
               Array [
@@ -93,6 +96,7 @@ exports[`BookForm renders  component 1`] = `
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -108,6 +112,7 @@ exports[`BookForm renders  component 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -166,7 +171,7 @@ exports[`BookForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="authors"
+        contributorEditorId="rek-author"
         disabled={false}
         isNtro={false}
         locale={
@@ -265,7 +270,7 @@ exports[`BookForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="editors"
+        contributorEditorId="rek-contributor"
         disabled={false}
         id="editors-name-as-published-field"
         locale={
@@ -536,6 +541,7 @@ exports[`BookForm renders  component 1`] = `
             label="Notes (not publicly viewable)"
             multiline={true}
             name="comments"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -549,6 +555,7 @@ exports[`BookForm renders  component 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [
@@ -594,6 +601,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             name="rek_title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -615,6 +623,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
+            textFieldId="rek-place-of-publication"
             type="text"
             validate={
               Array [
@@ -636,6 +645,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
+            textFieldId="rek-publisher"
             type="text"
             validate={
               Array [
@@ -656,6 +666,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -671,6 +682,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -888,6 +900,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             label="Notes (not publicly viewable)"
             multiline={true}
             name="comments"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -901,6 +914,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [
@@ -946,6 +960,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             name="rek_title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -967,6 +982,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
+            textFieldId="rek-place-of-publication"
             type="text"
             validate={
               Array [
@@ -988,6 +1004,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
+            textFieldId="rek-publisher"
             type="text"
             validate={
               Array [
@@ -1008,6 +1025,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1023,6 +1041,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -1081,7 +1100,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="authors"
+        contributorEditorId="rek-author"
         disabled={false}
         isNtro={false}
         locale={
@@ -1180,7 +1199,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="editors"
+        contributorEditorId="rek-contributor"
         disabled={false}
         id="editors-name-as-published-field"
         locale={
@@ -1451,6 +1470,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             label="Notes (not publicly viewable)"
             multiline={true}
             name="comments"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -1464,6 +1484,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [
@@ -1509,6 +1530,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             name="rek_title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -1530,6 +1552,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
+            textFieldId="rek-place-of-publication"
             type="text"
             validate={
               Array [
@@ -1551,6 +1574,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
+            textFieldId="rek-publisher"
             type="text"
             validate={
               Array [
@@ -1571,6 +1595,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -1629,7 +1654,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="authors"
+        contributorEditorId="rek-author"
         disabled={false}
         isNtro={true}
         locale={
@@ -1728,7 +1753,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="editors"
+        contributorEditorId="rek-contributor"
         disabled={false}
         id="editors-name-as-published-field"
         locale={
@@ -2142,6 +2167,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             label="Notes (not publicly viewable)"
             multiline={true}
             name="comments"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2155,6 +2181,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [
@@ -2200,6 +2227,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             name="rek_title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -2221,6 +2249,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
+            textFieldId="rek-place-of-publication"
             type="text"
             validate={
               Array [
@@ -2242,6 +2271,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
+            textFieldId="rek-publisher"
             type="text"
             validate={
               Array [
@@ -2262,6 +2292,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2277,6 +2308,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -2319,7 +2351,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="editors"
+        contributorEditorId="rek-contributor"
         disabled={false}
         id="editors-name-as-published-field"
         locale={
@@ -2590,6 +2622,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             label="Notes (not publicly viewable)"
             multiline={true}
             name="comments"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2603,6 +2636,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [
@@ -2648,6 +2682,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             name="rek_title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -2669,6 +2704,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
+            textFieldId="rek-place-of-publication"
             type="text"
             validate={
               Array [
@@ -2690,6 +2726,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
+            textFieldId="rek-publisher"
             type="text"
             validate={
               Array [
@@ -2710,6 +2747,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             label="Total pages"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -2725,6 +2763,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -2783,7 +2822,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="authors"
+        contributorEditorId="rek-author"
         disabled={false}
         isNtro={false}
         locale={
@@ -2882,7 +2921,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
     >
       <Field
         component={[Function]}
-        contributorEditorId="editors"
+        contributorEditorId="rek-contributor"
         disabled={false}
         id="editors-name-as-published-field"
         locale={
@@ -3153,6 +3192,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             label="Notes (not publicly viewable)"
             multiline={true}
             name="comments"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -3166,6 +3206,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             fullWidth={true}
             label="Link (URL)"
             name="rek_link"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [

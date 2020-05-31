@@ -31,21 +31,30 @@ context('Design admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Bibliographic');
-                cy.get('#Projectname')
-                    .should('have.value', record.fez_record_search_key_project_name.rek_project_name);
+                cy.get('[data-testid=rek-project-name-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_project_name.rek_project_name,
+                    );
                 cy.checkPartialDateFromRecordValue(
                     'project-start-date',
                     record.fez_record_search_key_project_start_date.rek_project_start_date,
                 );
                 cy.checkPartialDateFromRecordValue('end-date', record.fez_record_search_key_end_date.rek_end_date);
-                cy.get('#Scale')
-                    .should('have.value', record.fez_record_search_key_scale.rek_scale);
-                cy.get('#Jobnumber')
-                    .should('have.value', record.fez_record_search_key_job_number.rek_job_number);
+                cy.get('[data-testid=rek-scale-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_scale.rek_scale,
+                    );
+                cy.get('[data-testid=rek-job-number-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_job_number.rek_job_number,
+                    );
             });
 
         cy.get('@bibliographicCard')
-            .find('#Publishername')
+            .find('[data-testid=rek-publisher-input]')
             .type('Publisher')
             .parent()
             .parent()
@@ -60,9 +69,9 @@ context('Design admin edit', () => {
                     .should('have.length', 2);
             });
 
-        cy.get('#Copyrightnotice')
+        cy.get('[data-testid=rek-rights-input]')
             .clear();
-        cy.get('#Copyrightnotice-helper-text')
+        cy.get('#rek-rights-helper-text')
             .should('have.text', 'This field is required');
 
         cy.get('@errorList')
