@@ -5,6 +5,7 @@ exports[`OAStatus component should render default view 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-oa-status"
   hideLabel={false}
   itemsList={
     Array [
@@ -68,6 +69,7 @@ exports[`OAStatus component should render immutable list as selected value with 
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-oa-status"
   hideLabel={false}
   input={
     Object {
@@ -154,6 +156,7 @@ exports[`OAStatus component should render when given a default value field props
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-oa-status"
   hideLabel={false}
   itemsList={
     Array [
@@ -223,6 +226,7 @@ exports[`OAStatus component should render with given field props 1`] = `
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-oa-status"
   hideLabel={false}
   input={
     Object {

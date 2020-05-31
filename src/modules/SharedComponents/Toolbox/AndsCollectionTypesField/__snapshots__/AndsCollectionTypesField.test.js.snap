@@ -4,6 +4,7 @@ exports[`AndsCollectionTypesField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-ands-collection-type"
   hideLabel={false}
   input={
     Object {
@@ -38,6 +39,7 @@ exports[`AndsCollectionTypesField component should render error and error messag
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-ands-collection-type"
   hideLabel={false}
   input={
     Object {

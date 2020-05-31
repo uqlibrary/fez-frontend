@@ -11,17 +11,29 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
     }
   >
     <WithStyles(ForwardRef(InputLabel))
-      id="undefined-label"
+      id="test-label"
     />
     <WithStyles(ForwardRef(Select))
+      MenuProps={
+        Object {
+          "data-testid": "test-options",
+          "id": "test-options",
+        }
+      }
+      SelectDisplayProps={
+        Object {
+          "data-testid": "test-select",
+          "id": "test-select",
+        }
+      }
       autoWidth={true}
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
-      id="undefined"
       inputProps={
         Object {
-          "aria-labelledby": "undefined-label",
-          "id": undefined,
+          "aria-labelledby": "test-label",
+          "data-testid": "test-input",
+          "id": "test-input",
         }
       }
       name="selectfield"
@@ -44,18 +56,30 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
     }
   >
     <WithStyles(ForwardRef(InputLabel))
-      id="undefined-label"
+      id="test-label"
     />
     <WithStyles(ForwardRef(Select))
+      MenuProps={
+        Object {
+          "data-testid": "test-options",
+          "id": "test-options",
+        }
+      }
+      SelectDisplayProps={
+        Object {
+          "data-testid": "test-select",
+          "id": "test-select",
+        }
+      }
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
       fullWidth={true}
-      id="undefined"
       inputProps={
         Object {
-          "aria-labelledby": "undefined-label",
-          "id": undefined,
+          "aria-labelledby": "test-label",
+          "data-testid": "test-input",
+          "id": "test-input",
         }
       }
       name="selectfield"

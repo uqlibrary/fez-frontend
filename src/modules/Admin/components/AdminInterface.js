@@ -320,6 +320,7 @@ export const AdminInterface = ({
                                     >
                                         <Button
                                             id="admin-work-submit"
+                                            data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
                                             disabled={submitting || disableSubmit}
                                             variant="contained"

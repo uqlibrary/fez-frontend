@@ -36,6 +36,7 @@ const useContributorState = initialContributor => {
 export const ContributorForm = ({
     canEdit,
     contributor: initialContributor,
+    contributorFormId,
     disabled,
     disableNameAsPublished,
     displayCancel,
@@ -203,6 +204,7 @@ export const ContributorForm = ({
                     <TextField
                         fullWidth
                         id={locale.nameAsPublishedFieldId || 'name-as-published'}
+                        textFieldId={contributorFormId}
                         label={locale.nameAsPublishedLabel}
                         placeholder={locale.nameAsPublishedHint}
                         value={contributor.nameAsPublished}
@@ -308,6 +310,7 @@ export const ContributorForm = ({
 ContributorForm.propTypes = {
     canEdit: PropTypes.bool,
     contributor: PropTypes.object,
+    contributorFormId: PropTypes.string,
     disabled: PropTypes.bool,
     disableNameAsPublished: PropTypes.bool,
     displayCancel: PropTypes.bool,

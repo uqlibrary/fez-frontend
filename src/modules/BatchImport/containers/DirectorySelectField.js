@@ -30,6 +30,7 @@ export default function DirectorySelectField(fieldProps) {
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
+            genericSelectFieldId="directory"
             {...fieldProps}
         />
     );

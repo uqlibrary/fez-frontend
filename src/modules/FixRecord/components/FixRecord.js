@@ -182,9 +182,7 @@ export default class FixRecord extends PureComponent {
                                         validate={[validation.required]}
                                         onChange={this._actionSelected}
                                         required
-                                        SelectDisplayProps={{
-                                            id: 'fixAction',
-                                        }}
+                                        selectFieldId="fix-action"
                                     >
                                         {fixOptions}
                                     </Field>

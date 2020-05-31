@@ -4,6 +4,7 @@ exports[`UnpublishedStatusField component should have working helper which sets 
 Object {
   "error": true,
   "errorText": true,
+  "genericSelectFieldId": "rek-status",
   "hideLabel": false,
   "itemsList": Array [
     Object {
@@ -499,6 +500,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
             <GenericSelectField
               error={false}
               errorText=""
+              genericSelectFieldId="rek-status"
               hideLabel={false}
               itemsList={
                 Array [
@@ -538,6 +540,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
               <WithStyles(GenericSelectFieldClass)
                 error={false}
                 errorText=""
+                genericSelectFieldId="rek-status"
                 hideLabel={false}
                 itemsList={
                   Array [
@@ -585,6 +588,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                   error={false}
                   errorText=""
                   fullWidth={false}
+                  genericSelectFieldId="rek-status"
                   hideLabel={false}
                   hintText={null}
                   itemsList={
@@ -1000,7 +1004,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                       >
                         <WithStyles(ForwardRef(InputLabel))
                           hidden={false}
-                          id="undefined-label"
+                          id="rek-status-label"
                         >
                           <ForwardRef(InputLabel)
                             classes={
@@ -1020,7 +1024,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                               }
                             }
                             hidden={false}
-                            id="undefined-label"
+                            id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1035,7 +1039,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                               }
                               data-shrink={false}
                               hidden={false}
-                              id="undefined-label"
+                              id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
                                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -1053,29 +1057,38 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 }
                                 data-shrink={false}
                                 hidden={false}
-                                id="undefined-label"
+                                id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                   data-shrink={false}
                                   hidden={false}
-                                  id="undefined-label"
+                                  id="rek-status-label"
                                 />
                               </ForwardRef(FormLabel)>
                             </WithStyles(ForwardRef(FormLabel))>
                           </ForwardRef(InputLabel)>
                         </WithStyles(ForwardRef(InputLabel))>
                         <WithStyles(ForwardRef(Select))
+                          MenuProps={
+                            Object {
+                              "data-testid": "rek-status-options",
+                              "id": "rek-status-options",
+                            }
+                          }
                           SelectDisplayProps={
                             Object {
-                              "id": undefined,
+                              "data-testid": "rek-status-select",
+                              "id": "rek-status-select",
                             }
                           }
                           autoWidth={false}
                           disabled={false}
                           inputProps={
                             Object {
-                              "aria-labelledby": "Select item-label",
+                              "aria-labelledby": "rek-status-label",
+                              "data-testid": "rek-status-input",
+                              "id": "rek-status-input",
                             }
                           }
                           multiple={false}
@@ -1083,9 +1096,16 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                           value=""
                         >
                           <ForwardRef(Select)
+                            MenuProps={
+                              Object {
+                                "data-testid": "rek-status-options",
+                                "id": "rek-status-options",
+                              }
+                            }
                             SelectDisplayProps={
                               Object {
-                                "id": undefined,
+                                "data-testid": "rek-status-select",
+                                "id": "rek-status-select",
                               }
                             }
                             autoWidth={false}
@@ -1106,7 +1126,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             disabled={false}
                             inputProps={
                               Object {
-                                "aria-labelledby": "Select item-label",
+                                "aria-labelledby": "rek-status-label",
+                                "data-testid": "rek-status-input",
+                                "id": "rek-status-input",
                               }
                             }
                             multiple={false}
@@ -1164,11 +1186,15 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
-                                  "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "rek-status-options",
+                                    "id": "rek-status-options",
                                   },
-                                  "aria-labelledby": "Select item-label",
+                                  "SelectDisplayProps": Object {
+                                    "data-testid": "rek-status-select",
+                                    "id": "rek-status-select",
+                                  },
+                                  "aria-labelledby": "rek-status-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
@@ -1304,7 +1330,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "rek-status-input",
                                   "displayEmpty": false,
+                                  "id": "rek-status-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -1387,11 +1415,15 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "render": [Function],
                                       },
                                     },
-                                    "MenuProps": undefined,
-                                    "SelectDisplayProps": Object {
-                                      "id": undefined,
+                                    "MenuProps": Object {
+                                      "data-testid": "rek-status-options",
+                                      "id": "rek-status-options",
                                     },
-                                    "aria-labelledby": "Select item-label",
+                                    "SelectDisplayProps": Object {
+                                      "data-testid": "rek-status-select",
+                                      "id": "rek-status-select",
+                                    },
+                                    "aria-labelledby": "rek-status-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -1527,7 +1559,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
+                                    "data-testid": "rek-status-input",
                                     "displayEmpty": false,
+                                    "id": "rek-status-input",
                                     "labelId": undefined,
                                     "multiple": false,
                                     "onClose": undefined,
@@ -1611,11 +1645,15 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "render": [Function],
                                         },
                                       },
-                                      "MenuProps": undefined,
-                                      "SelectDisplayProps": Object {
-                                        "id": undefined,
+                                      "MenuProps": Object {
+                                        "data-testid": "rek-status-options",
+                                        "id": "rek-status-options",
                                       },
-                                      "aria-labelledby": "Select item-label",
+                                      "SelectDisplayProps": Object {
+                                        "data-testid": "rek-status-select",
+                                        "id": "rek-status-select",
+                                      },
+                                      "aria-labelledby": "rek-status-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -1751,7 +1789,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "select": "MuiSelect-select",
                                         "selectMenu": "MuiSelect-selectMenu",
                                       },
+                                      "data-testid": "rek-status-input",
                                       "displayEmpty": false,
+                                      "id": "rek-status-input",
                                       "labelId": undefined,
                                       "multiple": false,
                                       "onClose": undefined,
@@ -1841,11 +1881,15 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "render": [Function],
                                           },
                                         },
-                                        "MenuProps": undefined,
-                                        "SelectDisplayProps": Object {
-                                          "id": undefined,
+                                        "MenuProps": Object {
+                                          "data-testid": "rek-status-options",
+                                          "id": "rek-status-options",
                                         },
-                                        "aria-labelledby": "Select item-label",
+                                        "SelectDisplayProps": Object {
+                                          "data-testid": "rek-status-select",
+                                          "id": "rek-status-select",
+                                        },
+                                        "aria-labelledby": "rek-status-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -1981,7 +2025,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "select": "MuiSelect-select",
                                           "selectMenu": "MuiSelect-selectMenu",
                                         },
+                                        "data-testid": "rek-status-input",
                                         "displayEmpty": false,
+                                        "id": "rek-status-input",
                                         "labelId": undefined,
                                         "multiple": false,
                                         "onClose": undefined,
@@ -2014,13 +2060,20 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             },
                                           }
                                         }
+                                        MenuProps={
+                                          Object {
+                                            "data-testid": "rek-status-options",
+                                            "id": "rek-status-options",
+                                          }
+                                        }
                                         SelectDisplayProps={
                                           Object {
-                                            "id": undefined,
+                                            "data-testid": "rek-status-select",
+                                            "id": "rek-status-select",
                                           }
                                         }
                                         aria-invalid={false}
-                                        aria-labelledby="Select item-label"
+                                        aria-labelledby="rek-status-label"
                                         autoWidth={false}
                                         className="MuiInputBase-input MuiInput-input"
                                         classes={
@@ -2037,8 +2090,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selectMenu": "MuiSelect-selectMenu",
                                           }
                                         }
+                                        data-testid="rek-status-input"
                                         disabled={false}
                                         displayEmpty={false}
+                                        id="rek-status-input"
                                         inputRef={[Function]}
                                         multiple={false}
                                         onAnimationStart={[Function]}
@@ -2051,7 +2106,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       >
                                         <div
                                           aria-haspopup="listbox"
+                                          aria-labelledby="rek-status-select"
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                          data-testid="rek-status-select"
+                                          id="rek-status-select"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
@@ -2068,7 +2126,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           />
                                         </div>
                                         <input
-                                          aria-labelledby="Select item-label"
+                                          aria-labelledby="rek-status-label"
+                                          data-testid="rek-status-input"
+                                          id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
                                           value=""
@@ -2126,7 +2186,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
+                                              aria-labelledby="rek-status-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                              data-testid="rek-status-select"
+                                              id="rek-status-select"
                                               role="button"
                                               tabindex="0"
                                             >
@@ -2135,7 +2198,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               </span>
                                             </div>
                                           }
-                                          id="menu-"
+                                          data-testid="rek-status-options"
+                                          id="rek-status-options"
                                           onClose={[Function]}
                                           open={false}
                                         >
@@ -2157,7 +2221,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
+                                                aria-labelledby="rek-status-select"
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                data-testid="rek-status-select"
+                                                id="rek-status-select"
                                                 role="button"
                                                 tabindex="0"
                                               >
@@ -2172,7 +2239,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "paper": "MuiMenu-paper",
                                               }
                                             }
-                                            id="menu-"
+                                            data-testid="rek-status-options"
+                                            id="rek-status-options"
                                             onClose={[Function]}
                                             open={false}
                                           >
@@ -2190,7 +2258,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
+                                                  aria-labelledby="rek-status-select"
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                  data-testid="rek-status-select"
+                                                  id="rek-status-select"
                                                   role="button"
                                                   tabindex="0"
                                                 >
@@ -2205,8 +2276,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                   "vertical": "top",
                                                 }
                                               }
+                                              data-testid="rek-status-options"
                                               getContentAnchorEl={[Function]}
-                                              id="menu-"
+                                              id="rek-status-options"
                                               onClose={[Function]}
                                               onEntering={[Function]}
                                               open={false}
@@ -2232,7 +2304,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
+                                                    aria-labelledby="rek-status-select"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                    data-testid="rek-status-select"
+                                                    id="rek-status-select"
                                                     role="button"
                                                     tabindex="0"
                                                   >
@@ -2253,8 +2328,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                     "root": "MuiPopover-root",
                                                   }
                                                 }
+                                                data-testid="rek-status-options"
                                                 getContentAnchorEl={[Function]}
-                                                id="menu-"
+                                                id="rek-status-options"
                                                 onClose={[Function]}
                                                 onEntering={[Function]}
                                                 open={false}
@@ -2274,7 +2350,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                   }
                                                   className="MuiPopover-root"
                                                   container={<body />}
-                                                  id="menu-"
+                                                  data-testid="rek-status-options"
+                                                  id="rek-status-options"
                                                   onClose={[Function]}
                                                   open={false}
                                                 />
@@ -2765,6 +2842,7 @@ exports[`UnpublishedStatusField component should render error message from redux
             <GenericSelectField
               error={true}
               errorText="This field is required"
+              genericSelectFieldId="rek-status"
               hideLabel={false}
               itemsList={
                 Array [
@@ -2809,6 +2887,7 @@ exports[`UnpublishedStatusField component should render error message from redux
               <WithStyles(GenericSelectFieldClass)
                 error={true}
                 errorText="This field is required"
+                genericSelectFieldId="rek-status"
                 hideLabel={false}
                 itemsList={
                   Array [
@@ -2861,6 +2940,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                   error={true}
                   errorText="This field is required"
                   fullWidth={false}
+                  genericSelectFieldId="rek-status"
                   hideLabel={false}
                   hintText={null}
                   itemsList={
@@ -3281,7 +3361,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                       >
                         <WithStyles(ForwardRef(InputLabel))
                           hidden={false}
-                          id="undefined-label"
+                          id="rek-status-label"
                         >
                           <ForwardRef(InputLabel)
                             classes={
@@ -3301,7 +3381,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                               }
                             }
                             hidden={false}
-                            id="undefined-label"
+                            id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -3316,7 +3396,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                               }
                               data-shrink={false}
                               hidden={false}
-                              id="undefined-label"
+                              id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
                                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -3334,29 +3414,38 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 }
                                 data-shrink={false}
                                 hidden={false}
-                                id="undefined-label"
+                                id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-error Mui-error"
                                   data-shrink={false}
                                   hidden={false}
-                                  id="undefined-label"
+                                  id="rek-status-label"
                                 />
                               </ForwardRef(FormLabel)>
                             </WithStyles(ForwardRef(FormLabel))>
                           </ForwardRef(InputLabel)>
                         </WithStyles(ForwardRef(InputLabel))>
                         <WithStyles(ForwardRef(Select))
+                          MenuProps={
+                            Object {
+                              "data-testid": "rek-status-options",
+                              "id": "rek-status-options",
+                            }
+                          }
                           SelectDisplayProps={
                             Object {
-                              "id": undefined,
+                              "data-testid": "rek-status-select",
+                              "id": "rek-status-select",
                             }
                           }
                           autoWidth={false}
                           disabled={false}
                           inputProps={
                             Object {
-                              "aria-labelledby": "Select item-label",
+                              "aria-labelledby": "rek-status-label",
+                              "data-testid": "rek-status-input",
+                              "id": "rek-status-input",
                             }
                           }
                           multiple={false}
@@ -3364,9 +3453,16 @@ exports[`UnpublishedStatusField component should render error message from redux
                           value=""
                         >
                           <ForwardRef(Select)
+                            MenuProps={
+                              Object {
+                                "data-testid": "rek-status-options",
+                                "id": "rek-status-options",
+                              }
+                            }
                             SelectDisplayProps={
                               Object {
-                                "id": undefined,
+                                "data-testid": "rek-status-select",
+                                "id": "rek-status-select",
                               }
                             }
                             autoWidth={false}
@@ -3387,7 +3483,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                             disabled={false}
                             inputProps={
                               Object {
-                                "aria-labelledby": "Select item-label",
+                                "aria-labelledby": "rek-status-label",
+                                "data-testid": "rek-status-input",
+                                "id": "rek-status-input",
                               }
                             }
                             multiple={false}
@@ -3445,11 +3543,15 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
-                                  "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "rek-status-options",
+                                    "id": "rek-status-options",
                                   },
-                                  "aria-labelledby": "Select item-label",
+                                  "SelectDisplayProps": Object {
+                                    "data-testid": "rek-status-select",
+                                    "id": "rek-status-select",
+                                  },
+                                  "aria-labelledby": "rek-status-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
@@ -3585,7 +3687,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "rek-status-input",
                                   "displayEmpty": false,
+                                  "id": "rek-status-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -3668,11 +3772,15 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "render": [Function],
                                       },
                                     },
-                                    "MenuProps": undefined,
-                                    "SelectDisplayProps": Object {
-                                      "id": undefined,
+                                    "MenuProps": Object {
+                                      "data-testid": "rek-status-options",
+                                      "id": "rek-status-options",
                                     },
-                                    "aria-labelledby": "Select item-label",
+                                    "SelectDisplayProps": Object {
+                                      "data-testid": "rek-status-select",
+                                      "id": "rek-status-select",
+                                    },
+                                    "aria-labelledby": "rek-status-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -3808,7 +3916,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
+                                    "data-testid": "rek-status-input",
                                     "displayEmpty": false,
+                                    "id": "rek-status-input",
                                     "labelId": undefined,
                                     "multiple": false,
                                     "onClose": undefined,
@@ -3892,11 +4002,15 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "render": [Function],
                                         },
                                       },
-                                      "MenuProps": undefined,
-                                      "SelectDisplayProps": Object {
-                                        "id": undefined,
+                                      "MenuProps": Object {
+                                        "data-testid": "rek-status-options",
+                                        "id": "rek-status-options",
                                       },
-                                      "aria-labelledby": "Select item-label",
+                                      "SelectDisplayProps": Object {
+                                        "data-testid": "rek-status-select",
+                                        "id": "rek-status-select",
+                                      },
+                                      "aria-labelledby": "rek-status-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -4032,7 +4146,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "select": "MuiSelect-select",
                                         "selectMenu": "MuiSelect-selectMenu",
                                       },
+                                      "data-testid": "rek-status-input",
                                       "displayEmpty": false,
+                                      "id": "rek-status-input",
                                       "labelId": undefined,
                                       "multiple": false,
                                       "onClose": undefined,
@@ -4122,11 +4238,15 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "render": [Function],
                                           },
                                         },
-                                        "MenuProps": undefined,
-                                        "SelectDisplayProps": Object {
-                                          "id": undefined,
+                                        "MenuProps": Object {
+                                          "data-testid": "rek-status-options",
+                                          "id": "rek-status-options",
                                         },
-                                        "aria-labelledby": "Select item-label",
+                                        "SelectDisplayProps": Object {
+                                          "data-testid": "rek-status-select",
+                                          "id": "rek-status-select",
+                                        },
+                                        "aria-labelledby": "rek-status-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -4262,7 +4382,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "select": "MuiSelect-select",
                                           "selectMenu": "MuiSelect-selectMenu",
                                         },
+                                        "data-testid": "rek-status-input",
                                         "displayEmpty": false,
+                                        "id": "rek-status-input",
                                         "labelId": undefined,
                                         "multiple": false,
                                         "onClose": undefined,
@@ -4295,13 +4417,20 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             },
                                           }
                                         }
+                                        MenuProps={
+                                          Object {
+                                            "data-testid": "rek-status-options",
+                                            "id": "rek-status-options",
+                                          }
+                                        }
                                         SelectDisplayProps={
                                           Object {
-                                            "id": undefined,
+                                            "data-testid": "rek-status-select",
+                                            "id": "rek-status-select",
                                           }
                                         }
                                         aria-invalid={true}
-                                        aria-labelledby="Select item-label"
+                                        aria-labelledby="rek-status-label"
                                         autoWidth={false}
                                         className="MuiInputBase-input MuiInput-input"
                                         classes={
@@ -4318,8 +4447,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selectMenu": "MuiSelect-selectMenu",
                                           }
                                         }
+                                        data-testid="rek-status-input"
                                         disabled={false}
                                         displayEmpty={false}
+                                        id="rek-status-input"
                                         inputRef={[Function]}
                                         multiple={false}
                                         onAnimationStart={[Function]}
@@ -4332,7 +4463,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       >
                                         <div
                                           aria-haspopup="listbox"
+                                          aria-labelledby="rek-status-select"
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                          data-testid="rek-status-select"
+                                          id="rek-status-select"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
@@ -4349,7 +4483,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           />
                                         </div>
                                         <input
-                                          aria-labelledby="Select item-label"
+                                          aria-labelledby="rek-status-label"
+                                          data-testid="rek-status-input"
+                                          id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
                                           value=""
@@ -4407,7 +4543,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
+                                              aria-labelledby="rek-status-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                              data-testid="rek-status-select"
+                                              id="rek-status-select"
                                               role="button"
                                               tabindex="0"
                                             >
@@ -4416,7 +4555,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               </span>
                                             </div>
                                           }
-                                          id="menu-"
+                                          data-testid="rek-status-options"
+                                          id="rek-status-options"
                                           onClose={[Function]}
                                           open={false}
                                         >
@@ -4438,7 +4578,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
+                                                aria-labelledby="rek-status-select"
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                data-testid="rek-status-select"
+                                                id="rek-status-select"
                                                 role="button"
                                                 tabindex="0"
                                               >
@@ -4453,7 +4596,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "paper": "MuiMenu-paper",
                                               }
                                             }
-                                            id="menu-"
+                                            data-testid="rek-status-options"
+                                            id="rek-status-options"
                                             onClose={[Function]}
                                             open={false}
                                           >
@@ -4471,7 +4615,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
+                                                  aria-labelledby="rek-status-select"
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                  data-testid="rek-status-select"
+                                                  id="rek-status-select"
                                                   role="button"
                                                   tabindex="0"
                                                 >
@@ -4486,8 +4633,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                   "vertical": "top",
                                                 }
                                               }
+                                              data-testid="rek-status-options"
                                               getContentAnchorEl={[Function]}
-                                              id="menu-"
+                                              id="rek-status-options"
                                               onClose={[Function]}
                                               onEntering={[Function]}
                                               open={false}
@@ -4513,7 +4661,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
+                                                    aria-labelledby="rek-status-select"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                    data-testid="rek-status-select"
+                                                    id="rek-status-select"
                                                     role="button"
                                                     tabindex="0"
                                                   >
@@ -4534,8 +4685,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                     "root": "MuiPopover-root",
                                                   }
                                                 }
+                                                data-testid="rek-status-options"
                                                 getContentAnchorEl={[Function]}
-                                                id="menu-"
+                                                id="rek-status-options"
                                                 onClose={[Function]}
                                                 onEntering={[Function]}
                                                 open={false}
@@ -4555,7 +4707,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                   }
                                                   className="MuiPopover-root"
                                                   container={<body />}
-                                                  id="menu-"
+                                                  data-testid="rek-status-options"
+                                                  id="rek-status-options"
                                                   onClose={[Function]}
                                                   open={false}
                                                 />
@@ -5067,6 +5220,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
             <GenericSelectField
               error={false}
               errorText=""
+              genericSelectFieldId="rek-status"
               hideLabel={false}
               itemsList={
                 Array [
@@ -5106,6 +5260,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
               <WithStyles(GenericSelectFieldClass)
                 error={false}
                 errorText=""
+                genericSelectFieldId="rek-status"
                 hideLabel={false}
                 itemsList={
                   Array [
@@ -5153,6 +5308,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                   error={false}
                   errorText=""
                   fullWidth={false}
+                  genericSelectFieldId="rek-status"
                   hideLabel={false}
                   hintText={null}
                   itemsList={
@@ -5568,7 +5724,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                       >
                         <WithStyles(ForwardRef(InputLabel))
                           hidden={false}
-                          id="undefined-label"
+                          id="rek-status-label"
                         >
                           <ForwardRef(InputLabel)
                             classes={
@@ -5588,7 +5744,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                               }
                             }
                             hidden={false}
-                            id="undefined-label"
+                            id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -5603,7 +5759,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                               }
                               data-shrink={false}
                               hidden={false}
-                              id="undefined-label"
+                              id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
                                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -5621,29 +5777,38 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 }
                                 data-shrink={false}
                                 hidden={false}
-                                id="undefined-label"
+                                id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                   data-shrink={false}
                                   hidden={false}
-                                  id="undefined-label"
+                                  id="rek-status-label"
                                 />
                               </ForwardRef(FormLabel)>
                             </WithStyles(ForwardRef(FormLabel))>
                           </ForwardRef(InputLabel)>
                         </WithStyles(ForwardRef(InputLabel))>
                         <WithStyles(ForwardRef(Select))
+                          MenuProps={
+                            Object {
+                              "data-testid": "rek-status-options",
+                              "id": "rek-status-options",
+                            }
+                          }
                           SelectDisplayProps={
                             Object {
-                              "id": undefined,
+                              "data-testid": "rek-status-select",
+                              "id": "rek-status-select",
                             }
                           }
                           autoWidth={false}
                           disabled={false}
                           inputProps={
                             Object {
-                              "aria-labelledby": "Select item-label",
+                              "aria-labelledby": "rek-status-label",
+                              "data-testid": "rek-status-input",
+                              "id": "rek-status-input",
                             }
                           }
                           multiple={false}
@@ -5651,9 +5816,16 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                           value=""
                         >
                           <ForwardRef(Select)
+                            MenuProps={
+                              Object {
+                                "data-testid": "rek-status-options",
+                                "id": "rek-status-options",
+                              }
+                            }
                             SelectDisplayProps={
                               Object {
-                                "id": undefined,
+                                "data-testid": "rek-status-select",
+                                "id": "rek-status-select",
                               }
                             }
                             autoWidth={false}
@@ -5674,7 +5846,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             disabled={false}
                             inputProps={
                               Object {
-                                "aria-labelledby": "Select item-label",
+                                "aria-labelledby": "rek-status-label",
+                                "data-testid": "rek-status-input",
+                                "id": "rek-status-input",
                               }
                             }
                             multiple={false}
@@ -5732,11 +5906,15 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
-                                  "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "rek-status-options",
+                                    "id": "rek-status-options",
                                   },
-                                  "aria-labelledby": "Select item-label",
+                                  "SelectDisplayProps": Object {
+                                    "data-testid": "rek-status-select",
+                                    "id": "rek-status-select",
+                                  },
+                                  "aria-labelledby": "rek-status-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
@@ -5872,7 +6050,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "rek-status-input",
                                   "displayEmpty": false,
+                                  "id": "rek-status-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -5955,11 +6135,15 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "render": [Function],
                                       },
                                     },
-                                    "MenuProps": undefined,
-                                    "SelectDisplayProps": Object {
-                                      "id": undefined,
+                                    "MenuProps": Object {
+                                      "data-testid": "rek-status-options",
+                                      "id": "rek-status-options",
                                     },
-                                    "aria-labelledby": "Select item-label",
+                                    "SelectDisplayProps": Object {
+                                      "data-testid": "rek-status-select",
+                                      "id": "rek-status-select",
+                                    },
+                                    "aria-labelledby": "rek-status-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -6095,7 +6279,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
+                                    "data-testid": "rek-status-input",
                                     "displayEmpty": false,
+                                    "id": "rek-status-input",
                                     "labelId": undefined,
                                     "multiple": false,
                                     "onClose": undefined,
@@ -6179,11 +6365,15 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "render": [Function],
                                         },
                                       },
-                                      "MenuProps": undefined,
-                                      "SelectDisplayProps": Object {
-                                        "id": undefined,
+                                      "MenuProps": Object {
+                                        "data-testid": "rek-status-options",
+                                        "id": "rek-status-options",
                                       },
-                                      "aria-labelledby": "Select item-label",
+                                      "SelectDisplayProps": Object {
+                                        "data-testid": "rek-status-select",
+                                        "id": "rek-status-select",
+                                      },
+                                      "aria-labelledby": "rek-status-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -6319,7 +6509,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "select": "MuiSelect-select",
                                         "selectMenu": "MuiSelect-selectMenu",
                                       },
+                                      "data-testid": "rek-status-input",
                                       "displayEmpty": false,
+                                      "id": "rek-status-input",
                                       "labelId": undefined,
                                       "multiple": false,
                                       "onClose": undefined,
@@ -6409,11 +6601,15 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "render": [Function],
                                           },
                                         },
-                                        "MenuProps": undefined,
-                                        "SelectDisplayProps": Object {
-                                          "id": undefined,
+                                        "MenuProps": Object {
+                                          "data-testid": "rek-status-options",
+                                          "id": "rek-status-options",
                                         },
-                                        "aria-labelledby": "Select item-label",
+                                        "SelectDisplayProps": Object {
+                                          "data-testid": "rek-status-select",
+                                          "id": "rek-status-select",
+                                        },
+                                        "aria-labelledby": "rek-status-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -6549,7 +6745,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "select": "MuiSelect-select",
                                           "selectMenu": "MuiSelect-selectMenu",
                                         },
+                                        "data-testid": "rek-status-input",
                                         "displayEmpty": false,
+                                        "id": "rek-status-input",
                                         "labelId": undefined,
                                         "multiple": false,
                                         "onClose": undefined,
@@ -6582,13 +6780,20 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             },
                                           }
                                         }
+                                        MenuProps={
+                                          Object {
+                                            "data-testid": "rek-status-options",
+                                            "id": "rek-status-options",
+                                          }
+                                        }
                                         SelectDisplayProps={
                                           Object {
-                                            "id": undefined,
+                                            "data-testid": "rek-status-select",
+                                            "id": "rek-status-select",
                                           }
                                         }
                                         aria-invalid={false}
-                                        aria-labelledby="Select item-label"
+                                        aria-labelledby="rek-status-label"
                                         autoWidth={false}
                                         className="MuiInputBase-input MuiInput-input"
                                         classes={
@@ -6605,8 +6810,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selectMenu": "MuiSelect-selectMenu",
                                           }
                                         }
+                                        data-testid="rek-status-input"
                                         disabled={false}
                                         displayEmpty={false}
+                                        id="rek-status-input"
                                         inputRef={[Function]}
                                         multiple={false}
                                         onAnimationStart={[Function]}
@@ -6619,7 +6826,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       >
                                         <div
                                           aria-haspopup="listbox"
+                                          aria-labelledby="rek-status-select"
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                          data-testid="rek-status-select"
+                                          id="rek-status-select"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
@@ -6636,7 +6846,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           />
                                         </div>
                                         <input
-                                          aria-labelledby="Select item-label"
+                                          aria-labelledby="rek-status-label"
+                                          data-testid="rek-status-input"
+                                          id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
                                           value=""
@@ -6694,7 +6906,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
+                                              aria-labelledby="rek-status-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                              data-testid="rek-status-select"
+                                              id="rek-status-select"
                                               role="button"
                                               tabindex="0"
                                             >
@@ -6703,7 +6918,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               </span>
                                             </div>
                                           }
-                                          id="menu-"
+                                          data-testid="rek-status-options"
+                                          id="rek-status-options"
                                           onClose={[Function]}
                                           open={false}
                                         >
@@ -6725,7 +6941,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
+                                                aria-labelledby="rek-status-select"
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                data-testid="rek-status-select"
+                                                id="rek-status-select"
                                                 role="button"
                                                 tabindex="0"
                                               >
@@ -6740,7 +6959,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "paper": "MuiMenu-paper",
                                               }
                                             }
-                                            id="menu-"
+                                            data-testid="rek-status-options"
+                                            id="rek-status-options"
                                             onClose={[Function]}
                                             open={false}
                                           >
@@ -6758,7 +6978,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
+                                                  aria-labelledby="rek-status-select"
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                  data-testid="rek-status-select"
+                                                  id="rek-status-select"
                                                   role="button"
                                                   tabindex="0"
                                                 >
@@ -6773,8 +6996,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                   "vertical": "top",
                                                 }
                                               }
+                                              data-testid="rek-status-options"
                                               getContentAnchorEl={[Function]}
-                                              id="menu-"
+                                              id="rek-status-options"
                                               onClose={[Function]}
                                               onEntering={[Function]}
                                               open={false}
@@ -6800,7 +7024,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
+                                                    aria-labelledby="rek-status-select"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                    data-testid="rek-status-select"
+                                                    id="rek-status-select"
                                                     role="button"
                                                     tabindex="0"
                                                   >
@@ -6821,8 +7048,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                     "root": "MuiPopover-root",
                                                   }
                                                 }
+                                                data-testid="rek-status-options"
                                                 getContentAnchorEl={[Function]}
-                                                id="menu-"
+                                                id="rek-status-options"
                                                 onClose={[Function]}
                                                 onEntering={[Function]}
                                                 open={false}
@@ -6842,7 +7070,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                   }
                                                   className="MuiPopover-root"
                                                   container={<body />}
-                                                  id="menu-"
+                                                  data-testid="rek-status-options"
+                                                  id="rek-status-options"
                                                   onClose={[Function]}
                                                   open={false}
                                                 />
@@ -7333,6 +7562,7 @@ exports[`UnpublishedStatusField component should render with value selected from
             <GenericSelectField
               error={false}
               errorText=""
+              genericSelectFieldId="rek-status"
               hideLabel={false}
               input={
                 Object {
@@ -7378,6 +7608,7 @@ exports[`UnpublishedStatusField component should render with value selected from
               <WithStyles(GenericSelectFieldClass)
                 error={false}
                 errorText=""
+                genericSelectFieldId="rek-status"
                 hideLabel={false}
                 input={
                   Object {
@@ -7431,6 +7662,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                   error={false}
                   errorText=""
                   fullWidth={false}
+                  genericSelectFieldId="rek-status"
                   hideLabel={false}
                   hintText={null}
                   input={
@@ -7852,7 +8084,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                       >
                         <WithStyles(ForwardRef(InputLabel))
                           hidden={false}
-                          id="undefined-label"
+                          id="rek-status-label"
                         >
                           <ForwardRef(InputLabel)
                             classes={
@@ -7872,7 +8104,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                               }
                             }
                             hidden={false}
-                            id="undefined-label"
+                            id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
                               className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
@@ -7887,7 +8119,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                               }
                               data-shrink={true}
                               hidden={false}
-                              id="undefined-label"
+                              id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
                                 className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
@@ -7905,29 +8137,38 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 }
                                 data-shrink={true}
                                 hidden={false}
-                                id="undefined-label"
+                                id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
                                   data-shrink={true}
                                   hidden={false}
-                                  id="undefined-label"
+                                  id="rek-status-label"
                                 />
                               </ForwardRef(FormLabel)>
                             </WithStyles(ForwardRef(FormLabel))>
                           </ForwardRef(InputLabel)>
                         </WithStyles(ForwardRef(InputLabel))>
                         <WithStyles(ForwardRef(Select))
+                          MenuProps={
+                            Object {
+                              "data-testid": "rek-status-options",
+                              "id": "rek-status-options",
+                            }
+                          }
                           SelectDisplayProps={
                             Object {
-                              "id": undefined,
+                              "data-testid": "rek-status-select",
+                              "id": "rek-status-select",
                             }
                           }
                           autoWidth={false}
                           disabled={false}
                           inputProps={
                             Object {
-                              "aria-labelledby": "Select item-label",
+                              "aria-labelledby": "rek-status-label",
+                              "data-testid": "rek-status-input",
+                              "id": "rek-status-input",
                             }
                           }
                           multiple={false}
@@ -7935,9 +8176,16 @@ exports[`UnpublishedStatusField component should render with value selected from
                           value="Any unpublished"
                         >
                           <ForwardRef(Select)
+                            MenuProps={
+                              Object {
+                                "data-testid": "rek-status-options",
+                                "id": "rek-status-options",
+                              }
+                            }
                             SelectDisplayProps={
                               Object {
-                                "id": undefined,
+                                "data-testid": "rek-status-select",
+                                "id": "rek-status-select",
                               }
                             }
                             autoWidth={false}
@@ -7958,7 +8206,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                             disabled={false}
                             inputProps={
                               Object {
-                                "aria-labelledby": "Select item-label",
+                                "aria-labelledby": "rek-status-label",
+                                "data-testid": "rek-status-input",
+                                "id": "rek-status-input",
                               }
                             }
                             multiple={false}
@@ -8016,11 +8266,15 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
-                                  "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "rek-status-options",
+                                    "id": "rek-status-options",
                                   },
-                                  "aria-labelledby": "Select item-label",
+                                  "SelectDisplayProps": Object {
+                                    "data-testid": "rek-status-select",
+                                    "id": "rek-status-select",
+                                  },
+                                  "aria-labelledby": "rek-status-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     false,
@@ -8156,7 +8410,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "rek-status-input",
                                   "displayEmpty": false,
+                                  "id": "rek-status-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -8239,11 +8495,15 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "render": [Function],
                                       },
                                     },
-                                    "MenuProps": undefined,
-                                    "SelectDisplayProps": Object {
-                                      "id": undefined,
+                                    "MenuProps": Object {
+                                      "data-testid": "rek-status-options",
+                                      "id": "rek-status-options",
                                     },
-                                    "aria-labelledby": "Select item-label",
+                                    "SelectDisplayProps": Object {
+                                      "data-testid": "rek-status-select",
+                                      "id": "rek-status-select",
+                                    },
+                                    "aria-labelledby": "rek-status-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -8379,7 +8639,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
+                                    "data-testid": "rek-status-input",
                                     "displayEmpty": false,
+                                    "id": "rek-status-input",
                                     "labelId": undefined,
                                     "multiple": false,
                                     "onClose": undefined,
@@ -8463,11 +8725,15 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "render": [Function],
                                         },
                                       },
-                                      "MenuProps": undefined,
-                                      "SelectDisplayProps": Object {
-                                        "id": undefined,
+                                      "MenuProps": Object {
+                                        "data-testid": "rek-status-options",
+                                        "id": "rek-status-options",
                                       },
-                                      "aria-labelledby": "Select item-label",
+                                      "SelectDisplayProps": Object {
+                                        "data-testid": "rek-status-select",
+                                        "id": "rek-status-select",
+                                      },
+                                      "aria-labelledby": "rek-status-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -8603,7 +8869,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "select": "MuiSelect-select",
                                         "selectMenu": "MuiSelect-selectMenu",
                                       },
+                                      "data-testid": "rek-status-input",
                                       "displayEmpty": false,
+                                      "id": "rek-status-input",
                                       "labelId": undefined,
                                       "multiple": false,
                                       "onClose": undefined,
@@ -8693,11 +8961,15 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "render": [Function],
                                           },
                                         },
-                                        "MenuProps": undefined,
-                                        "SelectDisplayProps": Object {
-                                          "id": undefined,
+                                        "MenuProps": Object {
+                                          "data-testid": "rek-status-options",
+                                          "id": "rek-status-options",
                                         },
-                                        "aria-labelledby": "Select item-label",
+                                        "SelectDisplayProps": Object {
+                                          "data-testid": "rek-status-select",
+                                          "id": "rek-status-select",
+                                        },
+                                        "aria-labelledby": "rek-status-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -8833,7 +9105,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "select": "MuiSelect-select",
                                           "selectMenu": "MuiSelect-selectMenu",
                                         },
+                                        "data-testid": "rek-status-input",
                                         "displayEmpty": false,
+                                        "id": "rek-status-input",
                                         "labelId": undefined,
                                         "multiple": false,
                                         "onClose": undefined,
@@ -8866,13 +9140,20 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             },
                                           }
                                         }
+                                        MenuProps={
+                                          Object {
+                                            "data-testid": "rek-status-options",
+                                            "id": "rek-status-options",
+                                          }
+                                        }
                                         SelectDisplayProps={
                                           Object {
-                                            "id": undefined,
+                                            "data-testid": "rek-status-select",
+                                            "id": "rek-status-select",
                                           }
                                         }
                                         aria-invalid={false}
-                                        aria-labelledby="Select item-label"
+                                        aria-labelledby="rek-status-label"
                                         autoWidth={false}
                                         className="MuiInputBase-input MuiInput-input"
                                         classes={
@@ -8889,8 +9170,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selectMenu": "MuiSelect-selectMenu",
                                           }
                                         }
+                                        data-testid="rek-status-input"
                                         disabled={false}
                                         displayEmpty={false}
+                                        id="rek-status-input"
                                         inputRef={[Function]}
                                         multiple={false}
                                         onAnimationStart={[Function]}
@@ -8903,7 +9186,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       >
                                         <div
                                           aria-haspopup="listbox"
+                                          aria-labelledby="rek-status-select"
                                           className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                          data-testid="rek-status-select"
+                                          id="rek-status-select"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
@@ -8914,7 +9200,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           Any unpublished
                                         </div>
                                         <input
-                                          aria-labelledby="Select item-label"
+                                          aria-labelledby="rek-status-label"
+                                          data-testid="rek-status-input"
+                                          id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
                                           value="Any unpublished"
@@ -8972,14 +9260,18 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           anchorEl={
                                             <div
                                               aria-haspopup="listbox"
+                                              aria-labelledby="rek-status-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                              data-testid="rek-status-select"
+                                              id="rek-status-select"
                                               role="button"
                                               tabindex="0"
                                             >
                                               Any unpublished
                                             </div>
                                           }
-                                          id="menu-"
+                                          data-testid="rek-status-options"
+                                          id="rek-status-options"
                                           onClose={[Function]}
                                           open={false}
                                         >
@@ -9001,7 +9293,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             anchorEl={
                                               <div
                                                 aria-haspopup="listbox"
+                                                aria-labelledby="rek-status-select"
                                                 class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                data-testid="rek-status-select"
+                                                id="rek-status-select"
                                                 role="button"
                                                 tabindex="0"
                                               >
@@ -9014,7 +9309,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "paper": "MuiMenu-paper",
                                               }
                                             }
-                                            id="menu-"
+                                            data-testid="rek-status-options"
+                                            id="rek-status-options"
                                             onClose={[Function]}
                                             open={false}
                                           >
@@ -9032,7 +9328,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               anchorEl={
                                                 <div
                                                   aria-haspopup="listbox"
+                                                  aria-labelledby="rek-status-select"
                                                   class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                  data-testid="rek-status-select"
+                                                  id="rek-status-select"
                                                   role="button"
                                                   tabindex="0"
                                                 >
@@ -9045,8 +9344,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                   "vertical": "top",
                                                 }
                                               }
+                                              data-testid="rek-status-options"
                                               getContentAnchorEl={[Function]}
-                                              id="menu-"
+                                              id="rek-status-options"
                                               onClose={[Function]}
                                               onEntering={[Function]}
                                               open={false}
@@ -9072,7 +9372,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 anchorEl={
                                                   <div
                                                     aria-haspopup="listbox"
+                                                    aria-labelledby="rek-status-select"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                                                    data-testid="rek-status-select"
+                                                    id="rek-status-select"
                                                     role="button"
                                                     tabindex="0"
                                                   >
@@ -9091,8 +9394,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                     "root": "MuiPopover-root",
                                                   }
                                                 }
+                                                data-testid="rek-status-options"
                                                 getContentAnchorEl={[Function]}
-                                                id="menu-"
+                                                id="rek-status-options"
                                                 onClose={[Function]}
                                                 onEntering={[Function]}
                                                 open={false}
@@ -9112,7 +9416,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                   }
                                                   className="MuiPopover-root"
                                                   container={<body />}
-                                                  id="menu-"
+                                                  data-testid="rek-status-options"
+                                                  id="rek-status-options"
                                                   onClose={[Function]}
                                                   open={false}
                                                 />

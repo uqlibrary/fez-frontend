@@ -24,5 +24,5 @@ const _onChange = fieldProps => {
 };
 
 export default function CollectionSelectField(fieldProps) {
-    return <CollectionSelect onChange={_onChange(fieldProps)} {...fieldProps} />;
+    return <CollectionSelect onChange={_onChange(fieldProps)} genericSelectFieldId="collection-pid" {...fieldProps} />;
 }

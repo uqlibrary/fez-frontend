@@ -153,6 +153,7 @@ export class GrantListEditorFormClass extends PureComponent {
                         <TextField
                             fullWidth
                             id="grant-agency-name"
+                            textFieldId="rek-grant-agency-name"
                             label={grantAgencyNameLabel}
                             placeholder={grantAgencyNameHint}
                             value={grantAgencyName}
@@ -168,6 +169,7 @@ export class GrantListEditorFormClass extends PureComponent {
                         <TextField
                             fullWidth
                             id="grant-id"
+                            textFieldId="rek-grant-id"
                             label={grantIdLabel}
                             placeholder={grantIdHint}
                             value={grantId}

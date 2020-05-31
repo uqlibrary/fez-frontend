@@ -4,7 +4,7 @@ import filterProps from '../../helpers/_filterProps';
 function setup(testProps, isShallow = true) {
     const props = { ...testProps };
     const consolidatedProps = filterProps(props, TextFieldWrapper.propTypes);
-    return getElement(TextFieldWrapper, consolidatedProps, isShallow);
+    return getElement(TextFieldWrapper, { ...consolidatedProps, textFieldId: 'test' }, isShallow);
 }
 
 describe('TextFieldWrapper snapshots tests', () => {

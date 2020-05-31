@@ -18,6 +18,7 @@ export default function PubmedDocTypesField(fieldProps) {
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-pubmed-doc-type"
             {...fieldProps}
         />
     );

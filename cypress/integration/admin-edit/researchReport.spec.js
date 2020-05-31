@@ -34,25 +34,28 @@ context('Research Report admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
 
-                        cy.get('#ParentPublication')
+                        cy.get('[data-testid=rek-parent-publication-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_parent_publication.rek_parent_publication,
                             );
 
-                        cy.get('#Startpage')
+                        cy.get('[data-testid=rek-start-page-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_start_page.rek_start_page,
                             );
-                        cy.get('#Endpage')
-                            .should('have.value', record.fez_record_search_key_end_page.rek_end_page);
-                        cy.get('[id="Totalpages/Extent"]')
+                        cy.get('[data-testid=rek-end-page-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_end_page.rek_end_page,
+                            );
+                        cy.get('[data-testid=rek-total-pages-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.get('#Reportnumber')
+                        cy.get('[data-testid=rek-report-number-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_report_number.rek_report_number,
@@ -74,11 +77,9 @@ context('Research Report admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Additional information');
 
-                        cy.get('label[id="Refereed source-label"]')
-                            .parent()
-                            .find('input[type=hidden]')
+                        cy.get('[data-testid=rek-refereed-source-input]')
                             .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
-                            .siblings('[role=button]')
+                            .get('[data-testid=rek-refereed-source-select]')
                             .should(
                                 'have.text',
                                 record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,

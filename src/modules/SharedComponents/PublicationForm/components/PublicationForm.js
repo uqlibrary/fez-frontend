@@ -119,14 +119,12 @@ export default class PublicationForm extends Component {
                                             component={SelectField}
                                             disabled={this.props.submitting}
                                             name="rek_display_type"
-                                            id="rek_display_type"
+                                            id="rek-display-type"
                                             value={this.props.formValues.get('rek_display_type')}
                                             label={txt.publicationType.inputLabelText}
                                             required
                                             placeholder={txt.publicationType.hintText}
-                                            SelectDisplayProps={{
-                                                id: 'rek-display-type',
-                                            }}
+                                            selectFieldId="rek-display-type"
                                         >
                                             {this.publicationTypeItems}
                                         </Field>
@@ -142,9 +140,7 @@ export default class PublicationForm extends Component {
                                                 label={txt.publicationSubtype.inputLabelText}
                                                 required
                                                 placeholder={txt.publicationSubtype.hintText}
-                                                SelectDisplayProps={{
-                                                    id: 'rek-subtype',
-                                                }}
+                                                selectFieldId="rek-subtype"
                                             >
                                                 {this.publicationSubtypeItems}
                                             </Field>

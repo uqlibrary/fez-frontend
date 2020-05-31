@@ -34,10 +34,13 @@ context('Digilib Image admin edit', () => {
                 cy.get('h4')
                     .should('contain', 'Bibliographic');
 
-                cy.get('#Copyrightnotice')
-                    .should('have.value', record.fez_record_search_key_rights.rek_rights);
+                cy.get('[data-testid=rek-rights-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_rights.rek_rights,
+                    );
 
-                cy.get('[placeholder="Construction date"]')
+                cy.get('[data-testid=rek-construction-date-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_construction_date.rek_construction_date,

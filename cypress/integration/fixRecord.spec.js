@@ -36,9 +36,9 @@ context('Request correction form', () => {
     });
 
     it('should show expected fields on confirming authorship', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         cy.get('.StandardCard h3')
@@ -51,9 +51,9 @@ context('Request correction form', () => {
     });
 
     it('should show expected message on denying authorship', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am not the author')
             .click();
         cy.get('.StandardCard h3')
@@ -67,41 +67,41 @@ context('Request correction form', () => {
     });
 
     it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         cy.contains(fixFormLocale.contentIndicators.title)
             .scrollIntoView();
-        cy.get('#content-indicators')
+        cy.get('[data-testid=rek-content-indicator-select]')
             .click();
         // Click new item in multiselect modal
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-content-indicator-options]')
             .contains('Protocol')
             .click();
         // Click outside the multiselect
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-content-indicator-options]')
             .click(10, 10);
-        cy.get('#content-indicators')
+        cy.get('[data-testid=rek-content-indicator-select]')
             .contains('Scholarship of Teaching and Learning, Protocol')
             .click();
         // Preselected item in multiselect modal should be unclickable
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-content-indicator-options]')
             .contains('Scholarship of Teaching and Learning')
             .should('have.css', 'pointer-events', 'none');
         // Click outside the multiselect
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-content-indicator-options]')
             .click(10, 10);
         // Selection has not changed
-        cy.get('#content-indicators')
+        cy.get('[data-testid=rek-content-indicator-select]')
             .contains('Scholarship of Teaching and Learning, Protocol');
     });
 
     it('will detect and prevent submission of invalid URLs', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
         // Enter invalid data triggers validation errors
@@ -126,18 +126,18 @@ context('Request correction form', () => {
     });
 
     it('Can choose a content indicator, then submit the form', () => {
-        cy.get('#fixAction')
+        cy.get('[data-testid=fix-action-select]')
             .click();
-        cy.get('#menu-fixAction')
+        cy.get('[data-testid=fix-action-options]')
             .contains('I am the author')
             .click();
-        cy.get('#content-indicators')
+        cy.get('[data-testid=rek-content-indicator-select]')
             .click();
         // Click new item in multiselect modal
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-content-indicator-options]')
             .contains('Protocol')
             .click();
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-content-indicator-options]')
             .click(10, 10);
         cy.contains('button', 'Submit')
             .should('not.be.disabled')

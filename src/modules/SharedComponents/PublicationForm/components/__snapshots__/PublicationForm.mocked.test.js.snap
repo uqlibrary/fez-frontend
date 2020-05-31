@@ -61,18 +61,14 @@ exports[`Component PublicationForm should render properly with non-matching doct
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}

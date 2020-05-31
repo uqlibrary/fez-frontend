@@ -4,6 +4,7 @@ exports[`QualityIndicatorField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-quality-indicator"
   hideLabel={false}
   itemsList={
     Array [
@@ -63,6 +64,7 @@ exports[`QualityIndicatorField component should render immutable list as selecte
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-quality-indicator"
   hideLabel={false}
   input={
     Object {
@@ -145,6 +147,7 @@ exports[`QualityIndicatorField component should render when given a default valu
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-quality-indicator"
   hideLabel={false}
   itemsList={
     Array [
@@ -210,6 +213,7 @@ exports[`QualityIndicatorField component should render with given field props 1`
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-quality-indicator"
   hideLabel={false}
   input={
     Object {

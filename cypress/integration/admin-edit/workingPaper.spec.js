@@ -51,7 +51,7 @@ context('Working paper admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
-                        cy.get('#Reportnumber')
+                        cy.get('[data-testid=rek-report-number-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_report_number.rek_report_number,

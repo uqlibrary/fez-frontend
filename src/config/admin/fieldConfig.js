@@ -123,6 +123,7 @@ export default {
         fez_record_search_key_isi_loc: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-isi-loc',
                 name: 'identifiersSection.fez_record_search_key_isi_loc.rek_isi_loc',
                 fullWidth: true,
                 label: 'WoS ID',
@@ -132,6 +133,7 @@ export default {
         fez_record_search_key_scopus_id: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-scopus-id',
                 name: 'identifiersSection.fez_record_search_key_scopus_id.rek_scopus_id',
                 fullWidth: true,
                 label: 'Scopus ID',
@@ -141,6 +143,7 @@ export default {
         fez_record_search_key_pubmed_id: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-pubmed-id',
                 name: 'identifiersSection.fez_record_search_key_pubmed_id.rek_pubmed_id',
                 fullWidth: true,
                 label: 'PubMed ID',
@@ -150,6 +153,7 @@ export default {
         fez_record_search_key_pubmed_central_id: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-pubmed-central-id',
                 name: 'identifiersSection.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id',
                 fullWidth: true,
                 label: 'PubMed Central ID',
@@ -248,6 +252,7 @@ export default {
                 label: 'Language of work',
                 placeholder: 'Language of work',
                 multiple: true,
+                genericSelectFieldId: 'rek-language',
             },
         },
         fez_record_search_key_audience_size: {
@@ -261,6 +266,7 @@ export default {
         fez_record_search_key_journal_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-journal-name',
                 name: 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
                 fullWidth: true,
                 label: 'Journal name',
@@ -272,6 +278,7 @@ export default {
         fez_record_search_key_book_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-book-title',
                 name: 'bibliographicSection.fez_record_search_key_book_title.rek_book_title',
                 fullWidth: true,
                 label: 'Book title',
@@ -283,6 +290,7 @@ export default {
         fez_record_search_key_conference_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-conference-name',
                 name: 'bibliographicSection.fez_record_search_key_conference_name.rek_conference_name',
                 fullWidth: true,
                 label: 'Conference name',
@@ -294,6 +302,7 @@ export default {
         fez_record_search_key_proceedings_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-proceedings-title',
                 name: 'bibliographicSection.fez_record_search_key_proceedings_title.rek_proceedings_title',
                 fullWidth: true,
                 label: 'Proceedings title',
@@ -303,6 +312,7 @@ export default {
         fez_record_search_key_native_script_book_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-native-script-book-title',
                 name:
                     'bibliographicSection.fez_record_search_key_native_script_book_title.rek_native_script_book_title',
                 fullWidth: true,
@@ -313,6 +323,7 @@ export default {
         fez_record_search_key_roman_script_book_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-roman-script-book-title',
                 name: 'bibliographicSection.fez_record_search_key_roman_script_book_title.rek_roman_script_book_title',
                 fullWidth: true,
                 label: 'Roman script book title',
@@ -322,6 +333,7 @@ export default {
         fez_record_search_key_translated_book_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-translated-book-title',
                 name: 'bibliographicSection.fez_record_search_key_translated_book_title.rek_translated_book_title',
                 fullWidth: true,
                 label: 'Translated book title',
@@ -331,6 +343,7 @@ export default {
         fez_record_search_key_native_script_conference_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-native-script-conference-name',
                 name:
                     'bibliographicSection.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name',
                 fullWidth: true,
@@ -341,6 +354,7 @@ export default {
         fez_record_search_key_roman_script_conference_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-roman-script-conference-name',
                 name:
                     'bibliographicSection.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name',
                 fullWidth: true,
@@ -351,6 +365,7 @@ export default {
         fez_record_search_key_translated_conference_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-translated-conference-name',
                 name:
                     'bibliographicSection.fez_record_search_key_translated_conference_name.rek_translated_conference_name',
                 fullWidth: true,
@@ -361,6 +376,7 @@ export default {
         fez_record_search_key_native_script_proceedings_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-native-script-proceedings-title',
                 name:
                     'bibliographicSection.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title',
                 fullWidth: true,
@@ -371,6 +387,7 @@ export default {
         fez_record_search_key_roman_script_proceedings_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-roman-script-proceedings-title',
                 name:
                     'bibliographicSection.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title',
                 fullWidth: true,
@@ -381,6 +398,7 @@ export default {
         fez_record_search_key_translated_proceedings_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-translated-proceedings-title',
                 name:
                     'bibliographicSection.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title',
                 fullWidth: true,
@@ -391,6 +409,7 @@ export default {
         fez_record_search_key_doi: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-doi',
                 name: 'identifiersSection.fez_record_search_key_doi.rek_doi',
                 fullWidth: true,
                 label: 'DOI',
@@ -401,6 +420,7 @@ export default {
         fez_record_search_key_place_of_publication: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-place-of-publication',
                 name: 'bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication',
                 fullWidth: true,
                 label: 'Place of publication',
@@ -410,6 +430,7 @@ export default {
         fez_record_search_key_publisher: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-publisher',
                 name: 'bibliographicSection.fez_record_search_key_publisher.rek_publisher',
                 fullWidth: true,
                 label: 'Publisher name',
@@ -419,6 +440,7 @@ export default {
         fez_record_search_key_volume_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-volume-number',
                 name: 'bibliographicSection.fez_record_search_key_volume_number.rek_volume_number',
                 fullWidth: true,
                 label: 'Volume',
@@ -428,6 +450,7 @@ export default {
         fez_record_search_key_issue_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-issue-number',
                 name: 'bibliographicSection.fez_record_search_key_issue_number.rek_issue_number',
                 fullWidth: true,
                 label: 'Issue',
@@ -437,6 +460,7 @@ export default {
         fez_record_search_key_article_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-article-number',
                 name: 'bibliographicSection.fez_record_search_key_article_number.rek_article_number',
                 fullWidth: true,
                 label: 'Article number',
@@ -446,6 +470,7 @@ export default {
         fez_record_search_key_patent_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-patent-number',
                 name: 'bibliographicSection.fez_record_search_key_patent_number.rek_patent_number',
                 fullWidth: true,
                 label: 'Patent number',
@@ -455,6 +480,7 @@ export default {
         fez_record_search_key_start_page: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-start-page',
                 name: 'bibliographicSection.fez_record_search_key_start_page.rek_start_page',
                 fullWidth: true,
                 label: 'Start page',
@@ -464,6 +490,7 @@ export default {
         fez_record_search_key_end_page: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-end-page',
                 name: 'bibliographicSection.fez_record_search_key_end_page.rek_end_page',
                 fullWidth: true,
                 label: 'End page',
@@ -473,6 +500,7 @@ export default {
         fez_record_search_key_oa_embargo_days: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-oa-embargo-days',
                 name: 'bibliographicSection.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days',
                 fullWidth: true,
                 label: 'DOI embargo days',
@@ -548,6 +576,7 @@ export default {
         fez_record_search_key_edition: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-edition',
                 name: 'bibliographicSection.fez_record_search_key_edition.rek_edition',
                 fullWidth: true,
                 label: 'Edition',
@@ -569,6 +598,7 @@ export default {
         fez_record_search_key_chapter_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-chapter-number',
                 name: 'bibliographicSection.fez_record_search_key_chapter_number.rek_chapter_number',
                 fullWidth: true,
                 label: 'Chapter number',
@@ -578,6 +608,7 @@ export default {
         fez_record_search_key_total_pages: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-total-pages',
                 name: 'bibliographicSection.fez_record_search_key_total_pages.rek_total_pages',
                 fullWidth: true,
                 label: 'Total pages / Extent',
@@ -609,6 +640,7 @@ export default {
                 label: 'Language of journal name',
                 placeholder: '',
                 multiple: true,
+                genericSelectFieldId: 'rek-language-of-journal-name',
             },
         },
         languageOfBookTitle: {
@@ -618,6 +650,7 @@ export default {
                 label: 'Language of book title',
                 placeholder: '',
                 multiple: true,
+                genericSelectFieldId: 'rek-language-of-book-title',
             },
         },
         languageOfConferenceName: {
@@ -628,6 +661,7 @@ export default {
                 placeholder: 'Language of conference name',
                 multiple: true,
                 fullWidth: true,
+                genericSelectFieldId: 'rek-language-of-conference-name',
             },
         },
         languageOfProceedingsTitle: {
@@ -638,11 +672,13 @@ export default {
                 placeholder: 'Language of proceedings title',
                 multiple: true,
                 fullWidth: true,
+                genericSelectFieldId: 'rek-language-of-proceedings-title',
             },
         },
         fez_record_search_key_conference_location: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-conference-location',
                 name: 'bibliographicSection.fez_record_search_key_conference_location.rek_conference_location',
                 label: 'Conference location',
                 placeholder: 'Conference location',
@@ -654,6 +690,7 @@ export default {
         fez_record_search_key_conference_dates: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-conference-dates',
                 name: 'bibliographicSection.fez_record_search_key_conference_dates.rek_conference_dates',
                 label: 'Conference dates',
                 placeholder: 'Conference dates',
@@ -669,11 +706,13 @@ export default {
                 label: 'Language of title',
                 placeholder: '',
                 multiple: true,
+                genericSelectFieldId: 'rek-language-of-title',
             },
         },
         fez_record_search_key_native_script_journal_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-native-script-journal-name',
                 name:
                     'bibliographicSection.fez_record_search_key_native_script_journal_name.rek_native_script_journal_name',
                 label: 'Native script journal name',
@@ -684,6 +723,7 @@ export default {
         fez_record_search_key_roman_script_journal_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-roman-script-journal-name',
                 name:
                     'bibliographicSection.fez_record_search_key_roman_script_journal_name.rek_roman_script_journal_name',
                 label: 'Roman script journal name',
@@ -694,6 +734,7 @@ export default {
         fez_record_search_key_translated_journal_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-translated-journal-name',
                 name: 'bibliographicSection.fez_record_search_key_translated_journal_name.rek_translated_journal_name',
                 label: 'Translated journal name',
                 placeholder: '',
@@ -703,6 +744,7 @@ export default {
         fez_record_search_key_native_script_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-native-script-title',
                 name: 'bibliographicSection.fez_record_search_key_native_script_title.rek_native_script_title',
                 label: 'Native script title',
                 placeholder: '',
@@ -712,6 +754,7 @@ export default {
         fez_record_search_key_roman_script_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-roman-script-title',
                 name: 'bibliographicSection.fez_record_search_key_roman_script_title.rek_roman_script_title',
                 label: 'Roman script title',
                 placeholder: '',
@@ -721,6 +764,7 @@ export default {
         fez_record_search_key_translated_title: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-translated-title',
                 name: 'bibliographicSection.fez_record_search_key_translated_title.rek_translated_title',
                 label: 'Translated title',
                 placeholder: '',
@@ -882,6 +926,7 @@ export default {
         fez_record_search_key_date_available: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-date-available',
                 name: 'bibliographicSection.fez_record_search_key_date_available.rek_date_available',
                 label: 'Year available',
                 fullWidth: true,
@@ -930,6 +975,7 @@ export default {
         fez_record_search_key_location: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-location',
                 name: 'bibliographicSection.fez_record_search_key_location[0].rek_location',
                 title: 'Locations',
                 fullWidth: true,
@@ -953,6 +999,7 @@ export default {
         fez_record_search_key_source: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-source',
                 name: 'bibliographicSection.fez_record_search_key_source.rek_source',
                 fullWidth: true,
                 label: 'Source',
@@ -963,6 +1010,7 @@ export default {
         fez_record_search_key_rights: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-rights',
                 name: 'bibliographicSection.fez_record_search_key_rights.rek_rights',
                 fullWidth: true,
                 label: 'Copyright notice',
@@ -975,6 +1023,7 @@ export default {
         fez_record_search_key_acknowledgements: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-acknowledgements',
                 name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
                 fullWidth: true,
                 label: 'Acknowledgements',
@@ -985,6 +1034,7 @@ export default {
         fez_record_search_key_length: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-length',
                 name: 'bibliographicSection.fez_record_search_key_length.rek_length',
                 fullWidth: true,
                 label: 'Length',
@@ -1002,6 +1052,7 @@ export default {
         fez_record_search_key_original_format: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-original-format',
                 name: 'bibliographicSection.fez_record_search_key_original_format.rek_original_format',
                 fullWidth: true,
                 label: 'Original format',
@@ -1020,6 +1071,7 @@ export default {
         rek_genre: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-genre',
                 name: 'bibliographicSection.rek_genre',
                 fullWidth: true,
                 label: 'Type',
@@ -1070,6 +1122,7 @@ export default {
         fez_record_search_key_data_volume: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-data-volume',
                 name: 'bibliographicSection.fez_record_search_key_data_volume.rek_data_volume',
                 fullWidth: true,
                 label: 'Data volume',
@@ -1132,6 +1185,7 @@ export default {
         contactName: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-contributor',
                 name: 'adminSection.contactName',
                 fullWidth: true,
                 required: true,
@@ -1151,6 +1205,7 @@ export default {
         contactEmail: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-contact-details-email',
                 name: 'adminSection.contactEmail',
                 fullWidth: true,
                 required: true,
@@ -1168,6 +1223,7 @@ export default {
         fez_record_search_key_project_name: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-project-name',
                 name: 'adminSection.fez_record_search_key_project_name.rek_project_name',
                 fullWidth: true,
                 ...formLocale.addDataset.information.project.fieldLabels.projectName,
@@ -1176,6 +1232,7 @@ export default {
         fez_record_search_key_project_id: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-project-id',
                 name: 'adminSection.fez_record_search_key_project_id.rek_project_id',
                 fullWidth: true,
                 ...formLocale.addDataset.information.project.fieldLabels.projectId,
@@ -1184,6 +1241,7 @@ export default {
         fez_record_search_key_project_description: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-project-description',
                 name: 'adminSection.fez_record_search_key_project_description.rek_project_description',
                 fullWidth: true,
                 height: 100,
@@ -1273,6 +1331,7 @@ export default {
         fez_record_search_key_report_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-report-number',
                 fullWidth: true,
                 label: 'Report number',
                 name: 'bibliographicSection.fez_record_search_key_report_number.rek_report_number',
@@ -1282,6 +1341,7 @@ export default {
         fez_record_search_key_parent_publication: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-parent-publication',
                 fullWidth: true,
                 label: 'Parent Publication',
                 name: 'bibliographicSection.fez_record_search_key_parent_publication.rek_parent_publication',
@@ -1292,6 +1352,7 @@ export default {
         fez_record_search_key_newspaper: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-newspaper',
                 fullWidth: true,
                 label: 'Newspaper',
                 name: 'bibliographicSection.fez_record_search_key_newspaper.rek_newspaper',
@@ -1301,6 +1362,7 @@ export default {
         fez_record_search_key_section: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-section',
                 fullWidth: true,
                 label: 'Section',
                 name: 'bibliographicSection.fez_record_search_key_section.rek_section',
@@ -1310,6 +1372,7 @@ export default {
         fez_record_search_key_translated_newspaper: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-translated-newspaper',
                 fullWidth: true,
                 label: 'Translated newspaper',
                 name: 'bibliographicSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
@@ -1319,6 +1382,7 @@ export default {
         fez_record_search_key_scale: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-scale',
                 fullWidth: true,
                 label: 'Scale',
                 name: 'bibliographicSection.fez_record_search_key_scale.rek_scale',
@@ -1328,6 +1392,7 @@ export default {
         fez_record_search_key_job_number: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-job-number',
                 fullWidth: true,
                 label: 'Job number',
                 name: 'bibliographicSection.fez_record_search_key_job_number.rek_job_number',
@@ -1476,6 +1541,7 @@ export default {
         fez_record_search_key_construction_date: {
             component: GenericTextField,
             componentProps: {
+                textFieldId: 'rek-construction-date',
                 name: 'bibliographicSection.fez_record_search_key_construction_date.rek_construction_date',
                 label: 'Construction date',
                 placeholder: 'Construction date',

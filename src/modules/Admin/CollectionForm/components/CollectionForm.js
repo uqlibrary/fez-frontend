@@ -70,12 +70,12 @@ export default class CollectionForm extends Component {
                     <Grid container spacing={2}>
                         <Grid item xs />
                         <Grid item>
-                            <Button variant={'contained'} fullWidth onClick={this.reloadForm}>
+                            <Button variant="contained" fullWidth onClick={this.reloadForm}>
                                 {txt.reloadFormButton}
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button variant={'contained'} color={'primary'} fullWidth onClick={this.afterSubmit}>
+                            <Button variant="contained" color="primary" fullWidth onClick={this.afterSubmit}>
                                 {txt.afterSubmitButton}
                             </Button>
                         </Grid>
@@ -112,6 +112,7 @@ export default class CollectionForm extends Component {
                                             <Field
                                                 component={CommunitiesSelectField}
                                                 disabled={this.props.submitting}
+                                                communitiesSelectFieldId="rek-ismemberof"
                                                 name="fez_record_search_key_ismemberof"
                                                 label={txt.formLabels.ismemberof.label}
                                                 placeholder={txt.formLabels.ismemberof.placeholder}
@@ -130,6 +131,7 @@ export default class CollectionForm extends Component {
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
+                                                    textFieldId="rek-title"
                                                     disabled={this.props.submitting}
                                                     autoFocus
                                                     name="rek_title"
@@ -144,6 +146,7 @@ export default class CollectionForm extends Component {
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
+                                                    textFieldId="rek-description"
                                                     disabled={this.props.submitting}
                                                     name="rek_description"
                                                     fullWidth
@@ -167,7 +170,7 @@ export default class CollectionForm extends Component {
                                                         value: 'rek_keywords',
                                                         order: 'rek_keywords_order',
                                                     }}
-                                                    listEditorId="keywords"
+                                                    listEditorId="rek-keywords"
                                                     locale={txt.formLabels.keywords.field}
                                                     disabled={this.props.submitting}
                                                 />
@@ -184,9 +187,10 @@ export default class CollectionForm extends Component {
                         </Grid>
                         <Grid container spacing={2}>
                             <Grid item xs={false} sm />
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid item xs={12} sm="auto">
                                 <Button
-                                    variant={'contained'}
+                                    data-testid="cancel-collection"
+                                    variant="contained"
                                     fullWidth
                                     disabled={this.props.submitting}
                                     onClick={this.cancelSubmit}
@@ -194,10 +198,11 @@ export default class CollectionForm extends Component {
                                     {txt.cancel}
                                 </Button>
                             </Grid>
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid item xs={12} sm="auto">
                                 <Button
-                                    variant={'contained'}
-                                    color={'primary'}
+                                    data-testid="submit-collection"
+                                    variant="contained"
+                                    color="primary"
                                     fullWidth
                                     onClick={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.disableSubmit}

@@ -24,6 +24,7 @@ export default function LicenceSelectorField(fieldProps) {
             itemsList={licences}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-license"
             {...fieldProps}
         />
     );

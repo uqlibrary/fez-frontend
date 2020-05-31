@@ -13,6 +13,7 @@ export const mapStateToProps = (state, props) => {
         required: props.required,
         errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText) || '',
         error: (!!props.meta && !!props.meta.error) || props.error || false,
+        genericSelectFieldId: 'rek-status',
     };
 };
 

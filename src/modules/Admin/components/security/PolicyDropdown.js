@@ -16,6 +16,7 @@ export const PolicyDropdown = ({
     policyList,
     prompt,
     inheritedSecurity,
+    policyDropdownId,
     ...props
 }) => (
     <SelectField
@@ -24,6 +25,7 @@ export const PolicyDropdown = ({
         label={fieldLabel}
         required
         validation={[validation.required]}
+        selectFieldId={`${policyDropdownId}`}
         {...props}
     >
         {displayPrompt && (
@@ -47,6 +49,7 @@ PolicyDropdown.propTypes = {
     policyList: PropTypes.array,
     prompt: PropTypes.string,
     inheritedSecurity: PropTypes.number,
+    policyDropdownId: PropTypes.string.isRequired,
 };
 
 PolicyDropdown.defaultProps = {

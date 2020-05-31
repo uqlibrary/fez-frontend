@@ -4,14 +4,12 @@ context('Incomplete record form', () => {
     });
 
     const checkSignificance = significance => {
-        cy.get('#significance')
+        cy.get('[data-testid=rek-significance-select]')
             .click();
-        cy.get('#menu-significance')
-            .should('exist')
-            .find('li')
+        cy.get('[data-testid=rek-significance-options]')
             .contains(significance)
             .click();
-        cy.get('#significance')
+        cy.get('[data-testid=rek-significance-select]')
             .should('contain', significance);
     };
 
@@ -25,26 +23,25 @@ context('Incomplete record form', () => {
     };
 
     const checkAudienceSize = sizeText => {
-        cy.get('#rek-audience-size')
+        cy.get('[data-testid=rek-audience-size-select]')
             .click();
-        cy.get('body > [role=presentation]')
-            .find('li')
+        cy.get('[data-testid=rek-audience-size-options]')
             .contains(sizeText)
             .click();
-        cy.get('#rek-audience-size')
+        cy.get('[data-testid=rek-audience-size-select]')
             .should('contain', sizeText);
     };
 
     const checkQualityIndicators = indicator => {
-        cy.get('#quality-indicators')
+        cy.get('[data-testid=rek-quality-indicator-select]')
             .click();
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-quality-indicator-options]')
             .find('li')
             .contains(indicator)
             .click();
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-quality-indicator-options]')
             .click(10, 10);
-        cy.get('#quality-indicators')
+        cy.get('[data-testid=rek-quality-indicator-select]')
             .should('contain', indicator);
     };
 
@@ -68,7 +65,7 @@ context('Incomplete record form', () => {
             .contains(authorEditInstruction);
         cy.get('#submit-author')
             .should('have.attr', 'disabled');
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .should('have.attr', 'disabled');
         cy.get('#org-affiliation-name')
             .type(orgName);
@@ -103,7 +100,7 @@ context('Incomplete record form', () => {
             .first()
             .siblings('div')
             .contains(authorEditInstruction);
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .should('have.attr', 'disabled');
 
         // Mark as UQ author
@@ -114,7 +111,7 @@ context('Incomplete record form', () => {
             .eq(1)
             .should('not.contain', 'Not')
             .click();
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .should('have.attr', 'disabled');
 
         // Apply changes
@@ -161,7 +158,7 @@ context('Incomplete record form', () => {
         checkSignificance('Major');
         checkResearchStatement('Creator research statement');
 
-        cy.get('#rek-total-pages')
+        cy.get('#rek-total-pages-input')
             .type('10');
 
         checkAudienceSize('Less than 100');
@@ -185,7 +182,7 @@ context('Incomplete record form', () => {
     });
 
     it('should have working tests for Grants editor', () => {
-        cy.get('#grant-agency-name')
+        cy.get('[data-testid=rek-grant-agency-name-input]')
             .type('Grant name');
         cy.get('button#add-grant')
             .should('be.disabled');
@@ -193,7 +190,7 @@ context('Incomplete record form', () => {
             .as('validationMessage')
             .should('have.length', 2)
             .should('contain', grantMessage);
-        cy.get('#grant-id')
+        cy.get('[data-testid=rek-grant-id-input]')
             .type('0001');
         cy.get('#grant-type')
             .click();

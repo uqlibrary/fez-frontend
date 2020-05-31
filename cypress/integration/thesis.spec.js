@@ -30,13 +30,10 @@ context('Thesis', () => {
             .should('have.length', 6);
 
         // Thesis subtype
-        cy.get('#thesis-subtype')
+        cy.get('[data-testid=rek-genre-type-select]')
             .click();
         cy.get('li[data-value="MPhil Thesis"]')
             .click();
-        cy.get('div[id="menu-"]')
-            .get('div[aria-hidden="true"]')
-            .click({ force: true, multiple: true });
         cy.get('.Alert')
             .find('ul')
             .children()
@@ -152,7 +149,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 3);
         cy.get('#filtered-field-of-research-input')
-            .type('a');
+            .type('b');
         cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
         cy.get('.Alert')
             .find('ul')

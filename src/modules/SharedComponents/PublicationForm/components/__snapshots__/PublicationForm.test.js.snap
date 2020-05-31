@@ -61,18 +61,14 @@ exports[`Component PublicationForm Shows an alert 1`] = `
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -500,18 +496,14 @@ exports[`Component PublicationForm Shows an alert 2`] = `
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -1035,18 +1027,14 @@ exports[`Component PublicationForm Shows an alert 3`] = `
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -1570,18 +1558,14 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -2009,18 +1993,14 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -2361,11 +2341,6 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -2373,6 +2348,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               />
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -2467,18 +2443,14 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -2819,11 +2791,6 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -2831,6 +2798,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   key="0"
@@ -2938,18 +2906,14 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -3290,11 +3254,6 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -3302,6 +3261,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   key="0"
@@ -3409,18 +3369,14 @@ exports[`Component PublicationForm should render component initialised with just
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -3848,18 +3804,14 @@ exports[`Component PublicationForm should render component initialised with two 
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
                 value={179}
               >
                 <WithStyles(ForwardRef(MenuItem))
@@ -4308,18 +4260,14 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
                 value={174}
               >
                 <WithStyles(ForwardRef(MenuItem))
@@ -4661,11 +4609,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -4673,6 +4616,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               />
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -4856,18 +4800,14 @@ exports[`Component PublicationForm should render component with GenericDocument 
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
                 value={202}
               >
                 <WithStyles(ForwardRef(MenuItem))
@@ -5209,11 +5149,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -5221,6 +5156,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               />
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -5401,18 +5337,14 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
                 value={179}
               >
                 <WithStyles(ForwardRef(MenuItem))
@@ -5754,11 +5686,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -5766,6 +5693,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               />
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -5946,18 +5874,14 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
                 value={275}
               >
                 <WithStyles(ForwardRef(MenuItem))
@@ -6299,11 +6223,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -6311,6 +6230,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
               />
             </WithStyles(ForwardRef(Grid))>
           </WithStyles(ForwardRef(Grid))>
@@ -6491,18 +6411,14 @@ exports[`Component PublicationForm should render component with all fields disab
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={true}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
               >
                 <WithStyles(ForwardRef(MenuItem))
                   disabled={false}
@@ -6930,18 +6846,14 @@ exports[`Component PublicationForm should render form after selecting both publi
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-display-type",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
-                id="rek_display_type"
+                id="rek-display-type"
                 label="Work type"
                 name="rek_display_type"
                 placeholder="Select a Work type from the dropdown list"
                 required={true}
+                selectFieldId="rek-display-type"
                 value={179}
               >
                 <WithStyles(ForwardRef(MenuItem))
@@ -7283,11 +7195,6 @@ exports[`Component PublicationForm should render form after selecting both publi
               xs={12}
             >
               <Field
-                SelectDisplayProps={
-                  Object {
-                    "id": "rek-subtype",
-                  }
-                }
                 component={[Function]}
                 disabled={false}
                 id="rek-subtype"
@@ -7295,6 +7202,7 @@ exports[`Component PublicationForm should render form after selecting both publi
                 name="rek_subtype"
                 placeholder="Select a work subtype from the dropdown list"
                 required={true}
+                selectFieldId="rek-subtype"
                 value="Editorial"
               />
             </WithStyles(ForwardRef(Grid))>

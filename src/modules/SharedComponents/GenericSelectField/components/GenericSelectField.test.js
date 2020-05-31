@@ -5,6 +5,7 @@ function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: {},
+        genericSelectFieldId: 'generic-test',
         ...testProps,
     };
     return getElement(GenericSelectFieldClass, props);
@@ -278,6 +279,7 @@ describe('GenericSelectField', () => {
                 {
                     loadItemsList: jest.fn(),
                     parentItemsId: 1234,
+                    genericSelectFieldId: 'generic-test',
                 },
                 { isShallow: false },
             );

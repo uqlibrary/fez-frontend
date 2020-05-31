@@ -5,6 +5,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
   label="Record level policy to apply to this PID"
   name="test"
   required={true}
+  selectFieldId="test-policy"
   validation={
     Array [
       [Function],
@@ -54,6 +55,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
   label="Record level policy to apply to this PID"
   name="test"
   required={true}
+  selectFieldId="test-policy"
   validation={
     Array [
       [Function],

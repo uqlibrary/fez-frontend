@@ -31,23 +31,21 @@ context('Book admin edit', () => {
                 const langCodes = record.fez_record_search_key_language_of_title.map(
                     lang => lang.rek_language_of_title,
                 );
-                cy.get('label[id="Language of title-label"]')
-                    .parent()
-                    .find('input[type=hidden]')
+                cy.get('[data-testid=rek-language-of-title-input]')
                     .should('have.value', langCodes.join(','))
                     .siblings('[role=button] span')
                     .should('have.length', 0); // If no matching codes found, there is a span present
-                cy.get('#Nativescripttitle')
+                cy.get('[data-testid=rek-native-script-title-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_native_script_title.rek_native_script_title,
                     );
-                cy.get('#Romanscripttitle')
+                cy.get('[data-testid=rek-roman-script-title-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_roman_script_title.rek_roman_script_title,
                     );
-                cy.get('#Translatedtitle')
+                cy.get('[data-testid=rek-translated-title-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_translated_title.rek_translated_title,
@@ -55,7 +53,7 @@ context('Book admin edit', () => {
             });
 
         cy.get('@bibliographicTab')
-            .find('#Placeofpublication')
+            .find('[data-testid=rek-place-of-publication-input]')
             .clear()
             .parent()
             .parent()

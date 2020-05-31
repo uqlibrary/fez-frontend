@@ -4,6 +4,7 @@ exports[`ScopusDocTypesField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-scopus-doc-type"
   hideLabel={false}
   itemsList={
     Array [
@@ -90,6 +91,7 @@ exports[`ScopusDocTypesField component should render immutable list as selected 
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-scopus-doc-type"
   hideLabel={false}
   input={
     Object {
@@ -199,6 +201,7 @@ exports[`ScopusDocTypesField component should render when given a default value 
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-scopus-doc-type"
   hideLabel={false}
   itemsList={
     Array [
@@ -291,6 +294,7 @@ exports[`ScopusDocTypesField component should render with given field props 1`] 
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-scopus-doc-type"
   hideLabel={false}
   input={
     Object {

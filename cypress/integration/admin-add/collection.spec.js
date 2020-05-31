@@ -7,7 +7,7 @@ context('As an admin,', () => {
             .should('exist')
             .parents('.StandardCard')
             .should('contain', 'Select community')
-            .find('#rek_ismemberof')
+            .find('[data-testid=rek-ismemberof-select]')
             .as('communitySelector')
             .should('exist');
 
@@ -15,24 +15,24 @@ context('As an admin,', () => {
         cy.get('@communitySelector')
             .click();
 
-        cy.get('#menu-')
+        cy.get('[data-testid=rek-ismemberof-options]')
             .contains('li', 'Advanced Computational')
             .click();
 
         cy.get('h3')
             .contains('Collection details');
 
-        cy.get('#Titleofcollection')
+        cy.get('[data-testid=rek-title-input]')
             .type('E2E Testing Collection');
-        cy.get('#Collectiondescription')
+        cy.get('[data-testid=rek-description-input]')
             .type('This collection is created through automated testing.');
 
-        cy.get('#keywords-input')
+        cy.get('[data-testid=rek-keywords-input]')
             .type('testing');
-        cy.get('button#add-keywords')
+        cy.get('[data-testid=rek-keywords-add]')
             .click();
 
-        cy.get('#keywords-list')
+        cy.get('[data-testid=rek-keywords-list]')
             .should('exist')
             .contains('p', 'testing');
 

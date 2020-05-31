@@ -335,6 +335,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             }
           }
           contributorEditorId="test"
+          contributorFormId="test"
           disableNameAsPublished={true}
           displayCancel={true}
           editMode={true}
@@ -651,6 +652,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             }
           }
           contributorEditorId="test"
+          contributorFormId="test"
           disableNameAsPublished={true}
           displayCancel={true}
           editMode={true}
@@ -739,6 +741,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -934,6 +937,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -1930,6 +1934,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                               }
                             }
                             contributorEditorId="test"
+                            contributorFormId="test"
                             disableNameAsPublished={false}
                             displayCancel={true}
                             editMode={false}
@@ -2248,26 +2253,29 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           onKeyDown={[Function]}
                                           placeholder="Please type the name exactly as published"
                                           required={false}
+                                          textFieldId="test"
                                           value=""
                                         >
                                           <WithStyles(ForwardRef(TextField))
                                             InputLabelProps={
                                               Object {
+                                                "data-testid": "test-label",
                                                 "hidden": false,
-                                                "htmlFor": "name-as-published",
-                                                "id": "name-as-published-label",
+                                                "htmlFor": "test-input",
+                                                "id": "test-label",
                                                 "shrink": undefined,
                                               }
                                             }
                                             autoComplete="off"
                                             disabled={false}
                                             fullWidth={true}
-                                            id="name-as-published"
+                                            id="test"
                                             inputProps={
                                               Object {
                                                 "aria-label": "Name as published",
-                                                "aria-labelledby": "name-as-published-label",
-                                                "id": "name-as-published",
+                                                "aria-labelledby": "test-label",
+                                                "data-testid": "test-input",
+                                                "id": "test-input",
                                                 "label": "Name as published",
                                               }
                                             }
@@ -2281,9 +2289,10 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             <ForwardRef(TextField)
                                               InputLabelProps={
                                                 Object {
+                                                  "data-testid": "test-label",
                                                   "hidden": false,
-                                                  "htmlFor": "name-as-published",
-                                                  "id": "name-as-published-label",
+                                                  "htmlFor": "test-input",
+                                                  "id": "test-label",
                                                   "shrink": undefined,
                                                 }
                                               }
@@ -2295,12 +2304,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               }
                                               disabled={false}
                                               fullWidth={true}
-                                              id="name-as-published"
+                                              id="test"
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Name as published",
-                                                  "aria-labelledby": "name-as-published-label",
-                                                  "id": "name-as-published",
+                                                  "aria-labelledby": "test-label",
+                                                  "data-testid": "test-input",
+                                                  "id": "test-input",
                                                   "label": "Name as published",
                                                 }
                                               }
@@ -2344,9 +2354,10 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     onKeyDown={[Function]}
                                                   >
                                                     <WithStyles(ForwardRef(InputLabel))
+                                                      data-testid="test-label"
                                                       hidden={false}
-                                                      htmlFor="name-as-published"
-                                                      id="name-as-published-label"
+                                                      htmlFor="test-input"
+                                                      id="test-label"
                                                     >
                                                       <ForwardRef(InputLabel)
                                                         classes={
@@ -2365,9 +2376,10 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             "shrink": "MuiInputLabel-shrink",
                                                           }
                                                         }
+                                                        data-testid="test-label"
                                                         hidden={false}
-                                                        htmlFor="name-as-published"
-                                                        id="name-as-published-label"
+                                                        htmlFor="test-input"
+                                                        id="test-label"
                                                       >
                                                         <WithStyles(ForwardRef(FormLabel))
                                                           className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -2381,9 +2393,10 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             }
                                                           }
                                                           data-shrink={false}
+                                                          data-testid="test-label"
                                                           hidden={false}
-                                                          htmlFor="name-as-published"
-                                                          id="name-as-published-label"
+                                                          htmlFor="test-input"
+                                                          id="test-label"
                                                         >
                                                           <ForwardRef(FormLabel)
                                                             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -2400,16 +2413,18 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               }
                                                             }
                                                             data-shrink={false}
+                                                            data-testid="test-label"
                                                             hidden={false}
-                                                            htmlFor="name-as-published"
-                                                            id="name-as-published-label"
+                                                            htmlFor="test-input"
+                                                            id="test-label"
                                                           >
                                                             <label
                                                               className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                                               data-shrink={false}
+                                                              data-testid="test-label"
                                                               hidden={false}
-                                                              htmlFor="name-as-published"
-                                                              id="name-as-published-label"
+                                                              htmlFor="test-input"
+                                                              id="test-label"
                                                             >
                                                               Name as published
                                                             </label>
@@ -2421,12 +2436,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                       autoComplete="off"
                                                       autoFocus={false}
                                                       fullWidth={true}
-                                                      id="name-as-published"
+                                                      id="test"
                                                       inputProps={
                                                         Object {
                                                           "aria-label": "Name as published",
-                                                          "aria-labelledby": "name-as-published-label",
-                                                          "id": "name-as-published",
+                                                          "aria-labelledby": "test-label",
+                                                          "data-testid": "test-input",
+                                                          "id": "test-input",
                                                           "label": "Name as published",
                                                         }
                                                       }
@@ -2457,12 +2473,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                           }
                                                         }
                                                         fullWidth={true}
-                                                        id="name-as-published"
+                                                        id="test"
                                                         inputProps={
                                                           Object {
                                                             "aria-label": "Name as published",
-                                                            "aria-labelledby": "name-as-published-label",
-                                                            "id": "name-as-published",
+                                                            "aria-labelledby": "test-label",
+                                                            "data-testid": "test-input",
+                                                            "id": "test-input",
                                                             "label": "Name as published",
                                                           }
                                                         }
@@ -2493,13 +2510,14 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             }
                                                           }
                                                           fullWidth={true}
-                                                          id="name-as-published"
+                                                          id="test"
                                                           inputComponent="input"
                                                           inputProps={
                                                             Object {
                                                               "aria-label": "Name as published",
-                                                              "aria-labelledby": "name-as-published-label",
-                                                              "id": "name-as-published",
+                                                              "aria-labelledby": "test-label",
+                                                              "data-testid": "test-input",
+                                                              "id": "test-input",
                                                               "label": "Name as published",
                                                             }
                                                           }
@@ -2535,13 +2553,14 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               }
                                                             }
                                                             fullWidth={true}
-                                                            id="name-as-published"
+                                                            id="test"
                                                             inputComponent="input"
                                                             inputProps={
                                                               Object {
                                                                 "aria-label": "Name as published",
-                                                                "aria-labelledby": "name-as-published-label",
-                                                                "id": "name-as-published",
+                                                                "aria-labelledby": "test-label",
+                                                                "data-testid": "test-input",
+                                                                "id": "test-input",
                                                                 "label": "Name as published",
                                                               }
                                                             }
@@ -2558,12 +2577,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               <input
                                                                 aria-invalid={false}
                                                                 aria-label="Name as published"
-                                                                aria-labelledby="name-as-published-label"
+                                                                aria-labelledby="test-label"
                                                                 autoComplete="off"
                                                                 autoFocus={false}
                                                                 className="MuiInputBase-input MuiInput-input"
+                                                                data-testid="test-input"
                                                                 disabled={false}
-                                                                id="name-as-published"
+                                                                id="test-input"
                                                                 label="Name as published"
                                                                 onAnimationStart={[Function]}
                                                                 onBlur={[Function]}
@@ -5086,6 +5106,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                               }
                             }
                             contributorEditorId="test"
+                            contributorFormId="test"
                             disableNameAsPublished={false}
                             displayCancel={false}
                             editMode={false}
@@ -6454,26 +6475,29 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           onKeyDown={[Function]}
                                           placeholder="Please type the name exactly as published"
                                           required={false}
+                                          textFieldId="test"
                                           value=""
                                         >
                                           <WithStyles(ForwardRef(TextField))
                                             InputLabelProps={
                                               Object {
+                                                "data-testid": "test-label",
                                                 "hidden": false,
-                                                "htmlFor": "name-as-published",
-                                                "id": "name-as-published-label",
+                                                "htmlFor": "test-input",
+                                                "id": "test-label",
                                                 "shrink": undefined,
                                               }
                                             }
                                             autoComplete="off"
                                             disabled={true}
                                             fullWidth={true}
-                                            id="name-as-published"
+                                            id="test"
                                             inputProps={
                                               Object {
                                                 "aria-label": "Name as published",
-                                                "aria-labelledby": "name-as-published-label",
-                                                "id": "name-as-published",
+                                                "aria-labelledby": "test-label",
+                                                "data-testid": "test-input",
+                                                "id": "test-input",
                                                 "label": "Name as published",
                                               }
                                             }
@@ -6487,9 +6511,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             <ForwardRef(TextField)
                                               InputLabelProps={
                                                 Object {
+                                                  "data-testid": "test-label",
                                                   "hidden": false,
-                                                  "htmlFor": "name-as-published",
-                                                  "id": "name-as-published-label",
+                                                  "htmlFor": "test-input",
+                                                  "id": "test-label",
                                                   "shrink": undefined,
                                                 }
                                               }
@@ -6501,12 +6526,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               }
                                               disabled={true}
                                               fullWidth={true}
-                                              id="name-as-published"
+                                              id="test"
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Name as published",
-                                                  "aria-labelledby": "name-as-published-label",
-                                                  "id": "name-as-published",
+                                                  "aria-labelledby": "test-label",
+                                                  "data-testid": "test-input",
+                                                  "id": "test-input",
                                                   "label": "Name as published",
                                                 }
                                               }
@@ -6550,9 +6576,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     onKeyDown={[Function]}
                                                   >
                                                     <WithStyles(ForwardRef(InputLabel))
+                                                      data-testid="test-label"
                                                       hidden={false}
-                                                      htmlFor="name-as-published"
-                                                      id="name-as-published-label"
+                                                      htmlFor="test-input"
+                                                      id="test-label"
                                                     >
                                                       <ForwardRef(InputLabel)
                                                         classes={
@@ -6571,9 +6598,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "shrink": "MuiInputLabel-shrink",
                                                           }
                                                         }
+                                                        data-testid="test-label"
                                                         hidden={false}
-                                                        htmlFor="name-as-published"
-                                                        id="name-as-published-label"
+                                                        htmlFor="test-input"
+                                                        id="test-label"
                                                       >
                                                         <WithStyles(ForwardRef(FormLabel))
                                                           className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -6587,9 +6615,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                           }
                                                           data-shrink={false}
+                                                          data-testid="test-label"
                                                           hidden={false}
-                                                          htmlFor="name-as-published"
-                                                          id="name-as-published-label"
+                                                          htmlFor="test-input"
+                                                          id="test-label"
                                                         >
                                                           <ForwardRef(FormLabel)
                                                             className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -6606,16 +6635,18 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               }
                                                             }
                                                             data-shrink={false}
+                                                            data-testid="test-label"
                                                             hidden={false}
-                                                            htmlFor="name-as-published"
-                                                            id="name-as-published-label"
+                                                            htmlFor="test-input"
+                                                            id="test-label"
                                                           >
                                                             <label
                                                               className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
                                                               data-shrink={false}
+                                                              data-testid="test-label"
                                                               hidden={false}
-                                                              htmlFor="name-as-published"
-                                                              id="name-as-published-label"
+                                                              htmlFor="test-input"
+                                                              id="test-label"
                                                             >
                                                               Name as published
                                                             </label>
@@ -6627,12 +6658,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       autoComplete="off"
                                                       autoFocus={false}
                                                       fullWidth={true}
-                                                      id="name-as-published"
+                                                      id="test"
                                                       inputProps={
                                                         Object {
                                                           "aria-label": "Name as published",
-                                                          "aria-labelledby": "name-as-published-label",
-                                                          "id": "name-as-published",
+                                                          "aria-labelledby": "test-label",
+                                                          "data-testid": "test-input",
+                                                          "id": "test-input",
                                                           "label": "Name as published",
                                                         }
                                                       }
@@ -6663,12 +6695,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           }
                                                         }
                                                         fullWidth={true}
-                                                        id="name-as-published"
+                                                        id="test"
                                                         inputProps={
                                                           Object {
                                                             "aria-label": "Name as published",
-                                                            "aria-labelledby": "name-as-published-label",
-                                                            "id": "name-as-published",
+                                                            "aria-labelledby": "test-label",
+                                                            "data-testid": "test-input",
+                                                            "id": "test-input",
                                                             "label": "Name as published",
                                                           }
                                                         }
@@ -6699,13 +6732,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                           }
                                                           fullWidth={true}
-                                                          id="name-as-published"
+                                                          id="test"
                                                           inputComponent="input"
                                                           inputProps={
                                                             Object {
                                                               "aria-label": "Name as published",
-                                                              "aria-labelledby": "name-as-published-label",
-                                                              "id": "name-as-published",
+                                                              "aria-labelledby": "test-label",
+                                                              "data-testid": "test-input",
+                                                              "id": "test-input",
                                                               "label": "Name as published",
                                                             }
                                                           }
@@ -6741,13 +6775,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               }
                                                             }
                                                             fullWidth={true}
-                                                            id="name-as-published"
+                                                            id="test"
                                                             inputComponent="input"
                                                             inputProps={
                                                               Object {
                                                                 "aria-label": "Name as published",
-                                                                "aria-labelledby": "name-as-published-label",
-                                                                "id": "name-as-published",
+                                                                "aria-labelledby": "test-label",
+                                                                "data-testid": "test-input",
+                                                                "id": "test-input",
                                                                 "label": "Name as published",
                                                               }
                                                             }
@@ -6764,12 +6799,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               <input
                                                                 aria-invalid={false}
                                                                 aria-label="Name as published"
-                                                                aria-labelledby="name-as-published-label"
+                                                                aria-labelledby="test-label"
                                                                 autoComplete="off"
                                                                 autoFocus={false}
                                                                 className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
+                                                                data-testid="test-input"
                                                                 disabled={true}
-                                                                id="name-as-published"
+                                                                id="test-input"
                                                                 label="Name as published"
                                                                 onAnimationStart={[Function]}
                                                                 onBlur={[Function]}
@@ -8113,6 +8149,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8200,6 +8237,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8287,6 +8325,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8374,6 +8413,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}
@@ -8450,6 +8490,7 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
     }
   }
   contributorEditorId="test"
+  contributorFormId="test"
   contributors={
     Array [
       Object {
@@ -8528,6 +8569,7 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
     }
   }
   contributorEditorId="test"
+  contributorFormId="test"
   contributors={
     Array [
       Object {
@@ -8601,6 +8643,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8784,6 +8827,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -8982,6 +9026,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9069,6 +9114,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9175,6 +9221,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         disableNameAsPublished={false}
         displayCancel={false}
         editMode={false}
@@ -9275,6 +9322,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
           }
         }
         contributorEditorId="test"
+        contributorFormId="test"
         contributors={Array []}
         disableNameAsPublished={false}
         displayCancel={false}

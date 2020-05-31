@@ -51,6 +51,7 @@ export class GenericSelectFieldClass extends Component {
         required: PropTypes.bool,
         value: PropTypes.any,
         style: PropTypes.object,
+        genericSelectFieldId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
@@ -139,19 +140,28 @@ export class GenericSelectFieldClass extends Component {
     render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
-                <InputLabel hidden={this.props.hideLabel} id={`${this.props.label}-label`}>
+                <InputLabel hidden={this.props.hideLabel} id={`${this.props.genericSelectFieldId}-label`}>
                     {this.props.label}
                 </InputLabel>
                 <Select
                     autoWidth={this.props.autoWidth}
                     disabled={this.props.disabled || !!this.props.itemsLoading}
                     displayEmpty={this.props.displayEmpty}
-                    inputProps={{ 'aria-labelledby': `${this.props.locale.label}-label` }}
+                    inputProps={{
+                        'aria-labelledby': `${this.props.genericSelectFieldId}-label`,
+                        'data-testid': `${this.props.genericSelectFieldId}-input`,
+                        id: `${this.props.genericSelectFieldId}-input`,
+                    }}
                     multiple={this.props.multiple}
+                    MenuProps={{
+                        id: `${this.props.genericSelectFieldId}-options`,
+                        'data-testid': `${this.props.genericSelectFieldId}-options`,
+                    }}
                     onChange={this._itemSelected}
                     style={this.props.style}
                     SelectDisplayProps={{
-                        id: this.props.id,
+                        id: `${this.props.genericSelectFieldId}-select`,
+                        'data-testid': `${this.props.genericSelectFieldId}-select`,
                     }}
                     value={this.newValue()}
                 >

@@ -36,7 +36,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
             data-shrink="false"
-            id="Override datastream security policy-label"
+            id="dsi-security-policy-0-label"
           >
             Override datastream security policy
             <span
@@ -54,9 +54,10 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="Override datastream security policy"
+              aria-labelledby="dsi-security-policy-0-select"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-              id="Override datastream security policy"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
               role="button"
               tabindex="0"
             >
@@ -65,8 +66,9 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
               </span>
             </div>
             <input
-              aria-labelledby="Override datastream security policy-label"
-              id="Override datastream security policy"
+              aria-labelledby="dsi-security-policy-0-label"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
               name="testA.txt"
               type="hidden"
               value=""
@@ -130,7 +132,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
             data-shrink="true"
-            id="Override datastream security policy-label"
+            id="dsi-security-policy-0-label"
           >
             Override datastream security policy
             <span
@@ -148,17 +150,19 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="Override datastream security policy"
+              aria-labelledby="dsi-security-policy-0-select"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-              id="Override datastream security policy"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
               role="button"
               tabindex="0"
             >
               Administrators
             </div>
             <input
-              aria-labelledby="Override datastream security policy-label"
-              id="Override datastream security policy"
+              aria-labelledby="dsi-security-policy-0-label"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
               name="test4.txt"
               type="hidden"
               value="1"
@@ -217,7 +221,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
             data-shrink="false"
-            id="Override datastream security policy-label"
+            id="dsi-security-policy-0-label"
           >
             Override datastream security policy
             <span
@@ -235,9 +239,10 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="Override datastream security policy"
+              aria-labelledby="dsi-security-policy-0-select"
               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-              id="Override datastream security policy"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
               role="button"
               tabindex="0"
             >
@@ -246,8 +251,9 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
               </span>
             </div>
             <input
-              aria-labelledby="Override datastream security policy-label"
-              id="Override datastream security policy"
+              aria-labelledby="dsi-security-policy-0-label"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
               name="test9.txt"
               type="hidden"
               value=""
