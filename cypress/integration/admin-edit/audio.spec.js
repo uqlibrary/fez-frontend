@@ -57,24 +57,33 @@ context('Audio admin edit', () => {
                     'recording-date',
                     record.fez_record_search_key_date_recorded.rek_date_recorded,
                 );
-                cy.get('#Acknowledgements')
+                cy.get('[data-testid=rek-acknowledgements-input]')
                     .should(
                         'have.text',
                         record.fez_record_search_key_acknowledgements.rek_acknowledgements,
                     );
-                cy.get('#Length')
-                    .should('have.value', record.fez_record_search_key_length.rek_length);
-                cy.get('#Type')
+                cy.get('[data-testid=rek-length-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_length.rek_length,
+                    );
+                cy.get('[data-testid=rek-genre-input]')
                     .should('have.value', record.rek_genre);
                 cy.get('[data-testid=rek-license-input]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
                     .siblings('[role=button]')
                     .invoke('text')
                     .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
-                cy.get('#Source')
-                    .should('have.text', record.fez_record_search_key_source.rek_source);
-                cy.get('#Copyrightnotice')
-                    .should('have.text', record.fez_record_search_key_rights.rek_rights);
+                cy.get('[data-testid=rek-source-input]')
+                    .should(
+                        'have.text',
+                        record.fez_record_search_key_source.rek_source,
+                    );
+                cy.get('[data-testid=rek-rights-input]')
+                    .should(
+                        'have.text',
+                        record.fez_record_search_key_rights.rek_rights,
+                    );
                 cy.get('div:nth-child(15) span span')
                     .eq(0)
                     .should('have.text', 'Transcript');
@@ -98,7 +107,7 @@ context('Audio admin edit', () => {
                             .map(item => item.rek_alternate_genre_lookup)
                             .join(','),
                     );
-                cy.get('#Placeofrecording')
+                cy.get('[data-testid=rek-location-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_location.map(item => item.rek_location)

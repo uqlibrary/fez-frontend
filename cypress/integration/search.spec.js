@@ -122,7 +122,7 @@ context('Search', () => {
             .click();
         cy.contains('#menu-field-type-selector li', 'PID')
             .click();
-        cy.get('#textfield-helper-text')
+        cy.get('#rek-pid-helper-text')
             .as('helpText')
             .should('contain', 'This field is required');
         cy.get('button#advancedSearchButton')

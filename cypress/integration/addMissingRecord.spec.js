@@ -103,18 +103,18 @@ context('Add missing record', () => {
                 .contains(invalidFieldName);
         });
 
-        cy.get('#rek-title')
+        cy.get('[data-testid=rek-title-input]')
             .type('book title');
-        cy.get('#rek-place-of-publication')
+        cy.get('[data-testid=rek-place-of-publication-input]')
             .type('test place of publication');
-        cy.get('#rek-publisher')
+        cy.get('[data-testid=rek-publisher-input]')
             .type('test publisher');
         cy.get('#date-year')
             .type('2020');
         cy.get('@validationErrors')
             .should('have.length', 2);
 
-        cy.get('#authors-name-as-published-field')
+        cy.get('[data-testid=rek-author-input]')
             .type('New Author');
         cy.get('#submit-author:enabled')
             .click();
@@ -123,7 +123,7 @@ context('Add missing record', () => {
         cy.get('#submit-work')
             .should('be.enabled');
 
-        cy.get('#authors-list-row-delete-0')
+        cy.get('#rek-author-list-row-delete-0')
             .click();
         cy.get('button')
             .contains('Yes')
@@ -133,7 +133,7 @@ context('Add missing record', () => {
         cy.get('@validationErrors')
             .should('have.length', 2);
 
-        cy.get('#editors-name-as-published-field')
+        cy.get('#rek-contributor-input')
             .type('New Editor');
         cy.get('#submit-author:enabled')
             .click();

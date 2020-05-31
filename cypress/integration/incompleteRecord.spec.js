@@ -65,7 +65,7 @@ context('Incomplete record form', () => {
             .contains(authorEditInstruction);
         cy.get('#submit-author')
             .should('have.attr', 'disabled');
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .should('have.attr', 'disabled');
         cy.get('#org-affiliation-name')
             .type(orgName);
@@ -100,7 +100,7 @@ context('Incomplete record form', () => {
             .first()
             .siblings('div')
             .contains(authorEditInstruction);
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .should('have.attr', 'disabled');
 
         // Mark as UQ author
@@ -111,7 +111,7 @@ context('Incomplete record form', () => {
             .eq(1)
             .should('not.contain', 'Not')
             .click();
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .should('have.attr', 'disabled');
 
         // Apply changes
@@ -158,7 +158,7 @@ context('Incomplete record form', () => {
         checkSignificance('Major');
         checkResearchStatement('Creator research statement');
 
-        cy.get('#rek-total-pages')
+        cy.get('#rek-total-pages-input')
             .type('10');
 
         checkAudienceSize('Less than 100');
@@ -182,7 +182,7 @@ context('Incomplete record form', () => {
     });
 
     it('should have working tests for Grants editor', () => {
-        cy.get('#grant-agency-name')
+        cy.get('[data-testid=rek-grant-agency-name-input]')
             .type('Grant name');
         cy.get('button#add-grant')
             .should('be.disabled');
@@ -190,7 +190,7 @@ context('Incomplete record form', () => {
             .as('validationMessage')
             .should('have.length', 2)
             .should('contain', grantMessage);
-        cy.get('#grant-id')
+        cy.get('[data-testid=rek-grant-id-input]')
             .type('0001');
         cy.get('#grant-type')
             .click();
