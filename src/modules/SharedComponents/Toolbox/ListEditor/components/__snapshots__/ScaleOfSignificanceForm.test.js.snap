@@ -13,10 +13,13 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   >
     <Alert
       allowDismiss={false}
+      customIcon={null}
+      customType={null}
       dismissTitle="Click to dismiss this alert"
       message="Unexpected error"
       showLoader={false}
       type="error"
+      wiggle={null}
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))

@@ -930,12 +930,15 @@ exports[`Component PublicationForm Shows an alert 2`] = `
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Error has occurred during request and request cannot be processed. There is an error Please contact eSpace administrators or try again later."
           pushToTop={true}
           showLoader={false}
           title="Error"
           type="error_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1461,12 +1464,15 @@ exports[`Component PublicationForm Shows an alert 3`] = `
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="New work has been saved successfully."
           pushToTop={true}
           showLoader={false}
           title="Success"
           type="done"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
-
+import LockIcon from '@material-ui/icons/Lock';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
@@ -71,6 +71,8 @@ export const AdminInterface = ({
     submitSucceeded,
     submitting,
     tabs,
+    locked,
+    disabled,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -155,7 +157,7 @@ export const AdminInterface = ({
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <ScrollToSection scrollToSection={!tabbed && tab === currentTabValue}>
                 <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                    <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
+                    <Field component={tabs[tab].component} disabled={submitting || disabled} name={`${tab}Section`} />
                 </StandardCard>
             </ScrollToSection>
         </TabContainer>
@@ -207,6 +209,23 @@ export const AdminInterface = ({
                             </Grid>
                         </Grid>
                     )}
+                    {/* Admin lock alert */}
+                    {
+                        !!locked &&
+                        <Grid container style={{ marginTop: 12, marginBottom: 12 }}>
+                            <Grid item xs={12}>
+                                <Alert title={'THIS RECORD IS LOCKED'}
+                                    message={'This record is currently being edited by uqklane1'}
+                                    type={'custom'}
+                                    customIcon={<LockIcon id="locked-icon" className="icon"/>}
+                                    customType={'error'}
+                                    action={() => null}
+                                    actionButtonLabel={'OVERRIDE LOCK'}
+                                    wiggle
+                                />
+                            </Grid>
+                        </Grid>
+                    }
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
@@ -289,7 +308,7 @@ export const AdminInterface = ({
                                         <Grid item xs={12} sm={3}>
                                             <Button
                                                 id="admin-work-publish"
-                                                disabled={submitting || disableSubmit}
+                                                disabled={submitting || disableSubmit || disabled}
                                                 variant="contained"
                                                 color="secondary"
                                                 fullWidth
@@ -310,6 +329,7 @@ export const AdminInterface = ({
                                                 fullWidth
                                                 children="Unpublish"
                                                 onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
+                                                disabled={submitting || disableSubmit | disabled}
                                             />
                                         </Grid>
                                     )}
@@ -322,7 +342,7 @@ export const AdminInterface = ({
                                             id="admin-work-submit"
                                             data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
-                                            disabled={submitting || disableSubmit}
+                                            disabled={submitting || disableSubmit | disabled}
                                             variant="contained"
                                             color="primary"
                                             fullWidth
@@ -353,6 +373,8 @@ AdminInterface.propTypes = {
     location: PropTypes.object,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
+    locked: PropTypes.bool,
+    disabled: PropTypes.bool,
     tabs: PropTypes.object,
 };
 

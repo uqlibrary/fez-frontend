@@ -24,11 +24,14 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               >
                 <Alert
                   allowDismiss={false}
+                  customIcon={null}
+                  customType={null}
                   dismissTitle="Click to dismiss this alert"
                   message="lorem ipsum"
                   showLoader={false}
                   title="File upload and/or notes post failed"
                   type="warning"
+                  wiggle={null}
                 />
               </WithStyles(ForwardRef(Grid))>
             </WithStyles(ForwardRef(Grid))>,

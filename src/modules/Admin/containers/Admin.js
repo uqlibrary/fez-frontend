@@ -103,6 +103,8 @@ const mapStateToProps = (state, props) => {
     const newRecord = state.get('createAdminRecordReducer') && state.get('createAdminRecordReducer').newRecord;
     let initialFormValues = {};
     let recordToView = {};
+    let locked = false;
+    let disabled = false;
 
     if (props.createMode) {
         const displayType = formValues && formValues.get('rek_display_type');
@@ -125,6 +127,8 @@ const mapStateToProps = (state, props) => {
             },
         };
     } else {
+        locked = true;
+        disabled = true;
         recordToView = state.get('viewRecordReducer').recordToView;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =
@@ -145,6 +149,8 @@ const mapStateToProps = (state, props) => {
         author: state.get('accountReducer').author,
         recordToView,
         ...initialFormValues,
+        locked,
+        disabled,
     };
 };
 

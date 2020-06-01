@@ -67,6 +67,7 @@ export const AdminContainer = ({
     recordToView,
     submitSucceeded,
     submitting,
+    locked,
 }) => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
@@ -157,6 +158,8 @@ export const AdminContainer = ({
                             createMode={createMode}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
+                            locked={locked}
+                            disabled
                             tabs={{
                                 identifiers: {
                                     component: IdentifiersSection,
@@ -227,6 +230,7 @@ AdminContainer.propTypes = {
     recordToView: PropTypes.object,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
+    locked: PropTypes.bool,
     submitting: PropTypes.any,
 };
 

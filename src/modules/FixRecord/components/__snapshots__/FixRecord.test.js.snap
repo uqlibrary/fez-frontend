@@ -959,12 +959,15 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="Fix record request has been submitted successfully."
             pushToTop={true}
             showLoader={false}
             title="Success"
             type="done"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -2653,11 +2656,14 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               "confirmationMessage": <React.Fragment>
                 <Alert
                   allowDismiss={false}
+                  customIcon={null}
+                  customType={null}
                   dismissTitle="Click to dismiss this alert"
                   message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                   showLoader={false}
                   title="File upload failed"
                   type="info"
+                  wiggle={null}
                 />
                 <span
                   style={
@@ -3993,11 +3999,14 @@ exports[`Component FixRecord should render unclaim form 1`] = `
           >
             <Alert
               allowDismiss={false}
+              customIcon={null}
+              customType={null}
               dismissTitle="Click to dismiss this alert"
               message="You are about to remove this publication from your eSpace profile."
               showLoader={false}
               title="WARNING"
               type="warning"
+              wiggle={null}
             />
             <WithStyles(ConfirmDialogBox)
               locale={

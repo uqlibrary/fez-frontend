@@ -148,11 +148,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
           />
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="Request is being processed."
             showLoader={true}
             title="Saving"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -229,10 +232,13 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
     >
       <Alert
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="Editing of record is not yet supported."
         showLoader={false}
         type="info"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -365,7 +371,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -389,11 +394,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
           />
           <Alert
             allowDismiss={true}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="Work has been saved successfully"
             showLoader={false}
             title="Success"
             type="done"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -437,6 +445,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={0}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -582,7 +591,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -606,11 +614,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
           />
           <Alert
             allowDismiss={true}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="Work has been saved successfully"
             showLoader={false}
             title="Success"
             type="done"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -654,6 +665,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={0}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -780,7 +792,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -832,6 +843,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={0}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -948,7 +960,6 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -971,7 +982,6 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="filesSection"
               />
             </StandardCard>
@@ -994,7 +1004,6 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="securitySection"
               />
             </StandardCard>
@@ -1046,6 +1055,7 @@ exports[`AdminInterface component should render default view as a full form view
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={0}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -1196,7 +1206,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -1248,6 +1257,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={0}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
@@ -1403,7 +1413,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -1455,6 +1464,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={0}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}

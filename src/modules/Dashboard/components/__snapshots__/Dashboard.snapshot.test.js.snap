@@ -147,11 +147,14 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -389,11 +392,14 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -925,11 +931,14 @@ exports[`Dashboard test Should only render barChart 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -1360,11 +1369,14 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -1474,11 +1486,14 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
         action={[Function]}
         actionButtonLabel="View and Complete"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We have found 1 work(s) that requires more information."
         showLoader={false}
         title="NTRO Data Required"
         type="warning"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -1622,11 +1637,14 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -1652,11 +1670,14 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
         action={[Function]}
         actionButtonLabel="View and Complete"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We have found 2 work(s) that require more information."
         showLoader={false}
         title="NTRO Data Required"
         type="warning"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -1800,11 +1821,14 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -1958,11 +1982,14 @@ exports[`Dashboard test does render latest and trending publications tabs correc
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -2177,11 +2204,14 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -2380,11 +2410,14 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -2863,11 +2896,14 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -3206,11 +3242,14 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -3502,11 +3541,14 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -3654,11 +3696,14 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -4129,11 +4174,14 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -4279,11 +4327,14 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -4429,11 +4480,14 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -4587,11 +4641,14 @@ exports[`Dashboard test renders dashboard header only 1`] = `
         action={[Function]}
         actionButtonLabel="Add a missing work"
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We found nothing new for you to claim, but you may add a work any time."
         showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -4745,11 +4802,14 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
         action={[Function]}
         actionButtonLabel="Claim your works now"
         allowDismiss={true}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="We have found 5 record(s) that could possibly be your works."
         showLoader={false}
         title="Claim now!"
         type="info_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -12658,11 +12718,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                             action={[Function]}
                                             actionButtonLabel="Add a missing work"
                                             allowDismiss={false}
+                                            customIcon={null}
+                                            customType={null}
                                             dismissTitle="Click to dismiss this alert"
                                             message="We found nothing new for you to claim, but you may add a work any time."
                                             showLoader={false}
                                             title="Add your work to eSpace"
                                             type="info_outline"
+                                            wiggle={null}
                                           >
                                             <div
                                               className="Alert"
@@ -12675,7 +12738,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
                                                 alignItems="flex-start"
-                                                className="makeStyles-info_outline-195 makeStyles-common-183"
+                                                className="makeStyles-info_outline-197 makeStyles-common-183"
                                                 container={true}
                                                 justify="center"
                                                 spacing={3}
@@ -12683,7 +12746,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                 <ForwardRef(Grid)
                                                   alignContent="center"
                                                   alignItems="flex-start"
-                                                  className="makeStyles-info_outline-195 makeStyles-common-183"
+                                                  className="makeStyles-info_outline-197 makeStyles-common-183"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -12796,16 +12859,16 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   spacing={3}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root makeStyles-info_outline-195 makeStyles-common-183 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
+                                                    className="MuiGrid-root makeStyles-info_outline-197 makeStyles-common-183 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-linked-188"
+                                                      className="makeStyles-linked-190"
                                                       item={true}
                                                       sm={true}
                                                       xs={12}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-linked-188"
+                                                        className="makeStyles-linked-190"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -12918,7 +12981,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={12}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-linked-188 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
+                                                          className="MuiGrid-root makeStyles-linked-190 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
                                                         >
                                                           <WithStyles(ForwardRef(Grid))
                                                             alignContent="center"
@@ -13043,13 +13106,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                 className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                               >
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-icon-184 alert-icon"
+                                                                  className="makeStyles-icon-186 alert-icon "
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-icon-184 alert-icon"
+                                                                    className="makeStyles-icon-186 alert-icon "
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -13162,7 +13225,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     onKeyDown={[Function]}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-icon-184 alert-icon MuiGrid-item"
+                                                                      className="MuiGrid-root makeStyles-icon-186 alert-icon  MuiGrid-item"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -13209,14 +13272,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                   </ForwardRef(Grid)>
                                                                 </WithStyles(ForwardRef(Grid))>
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-text-185 alert-text"
+                                                                  className="makeStyles-text-187 alert-text"
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                   xs={true}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-text-185 alert-text"
+                                                                    className="makeStyles-text-187 alert-text"
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -13330,7 +13393,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     xs={true}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-text-185 alert-text MuiGrid-item MuiGrid-grid-xs-true"
+                                                                      className="MuiGrid-root makeStyles-text-187 alert-text MuiGrid-item MuiGrid-grid-xs-true"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -13348,13 +13411,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-actionButton-186"
+                                                      className="makeStyles-actionButton-188"
                                                       item={true}
                                                       sm="auto"
                                                       xs={true}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-actionButton-186"
+                                                        className="makeStyles-actionButton-188"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -13467,7 +13530,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={true}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-actionButton-186 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
+                                                          className="MuiGrid-root makeStyles-actionButton-188 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"

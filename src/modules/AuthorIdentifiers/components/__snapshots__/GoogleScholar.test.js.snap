@@ -97,11 +97,14 @@ exports[`Component GoogleScholar  should display submission error if saving fail
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Error has occurred during request and request cannot be processed. failed! Please contact eSpace administrators or try again later."
           showLoader={false}
           title="Error"
           type="error_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -249,11 +252,14 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Request is being processed."
           showLoader={true}
           title="Saving"
           type="info_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
