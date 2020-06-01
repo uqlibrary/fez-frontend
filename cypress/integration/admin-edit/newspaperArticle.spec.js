@@ -34,23 +34,32 @@ context('Newspaper Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
 
-                        cy.get('#Placeofpublication')
+                        cy.get('[data-testid=rek-place-of-publication-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_place_of_publication.rek_place_of_publication,
                             );
-                        cy.get('#Publishername')
+                        cy.get('[data-testid=rek-publisher-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_publisher.rek_publisher,
                             );
-                        cy.get('#Edition')
-                            .should('have.value', record.fez_record_search_key_edition.rek_edition);
-                        cy.get('#Newspaper')
-                            .should('have.value', record.fez_record_search_key_newspaper.rek_newspaper);
-                        cy.get('#Section')
-                            .should('have.value', record.fez_record_search_key_section.rek_section);
-                        cy.get('#Translatednewspaper')
+                        cy.get('[data-testid=rek-edition-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_edition.rek_edition,
+                            );
+                        cy.get('[data-testid=rek-newspaper-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_newspaper.rek_newspaper,
+                            );
+                        cy.get('[data-testid=rek-section-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_section.rek_section,
+                            );
+                        cy.get('[data-testid=rek-translated-newspaper-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_translated_newspaper.rek_translated_newspaper,

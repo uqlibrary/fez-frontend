@@ -63,15 +63,27 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Manage identifiers');
-                        cy.get('#DOI')
-                            .should('have.value', record.fez_record_search_key_doi.rek_doi);
-                        cy.get('#WoSID')
-                            .should('have.value', record.fez_record_search_key_isi_loc.rek_isi_loc);
-                        cy.get('#ScopusID')
-                            .should('have.value', record.fez_record_search_key_scopus_id.rek_scopus_id);
-                        cy.get('#PubMedID')
-                            .should('have.value', record.fez_record_search_key_pubmed_id.rek_pubmed_id);
-                        cy.get('#PubMedCentralID')
+                        cy.get('[data-testid=rek-doi-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_doi.rek_doi,
+                            );
+                        cy.get('[data-testid=rek-isi-loc-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_isi_loc.rek_isi_loc,
+                            );
+                        cy.get('[data-testid=rek-scopus-id-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_scopus_id.rek_scopus_id,
+                            );
+                        cy.get('[data-testid=rek-pubmed-id-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_pubmed_id.rek_pubmed_id,
+                            );
+                        cy.get('[data-testid=rek-pubmed-central-id-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id,
@@ -137,7 +149,7 @@ context('Journal Article admin edit', () => {
                         cy.get('[data-testid=rek-language-input]')
                             .should('have.value', langCodes.join(','));
 
-                        cy.get('#Journalname')
+                        cy.get('[data-testid=rek-journal-name-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_journal_name.rek_journal_name,
@@ -193,41 +205,44 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
-                        cy.get('#Placeofpublication')
+                        cy.get('[data-testid=rek-place-of-publication-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_place_of_publication.rek_place_of_publication,
                             );
-                        cy.get('#Publishername')
+                        cy.get('[data-testid=rek-publisher-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_publisher.rek_publisher,
                             );
-                        cy.get('#Volume')
+                        cy.get('[data-testid=rek-volume-number-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_volume_number.rek_volume_number,
                             );
-                        cy.get('#Issue')
+                        cy.get('[data-testid=rek-issue-number-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_issue_number.rek_issue_number,
                             );
                         // No value for Article number in mock
-                        cy.get('#Startpage')
+                        cy.get('[data-testid=rek-start-page-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_start_page.rek_start_page,
                             );
-                        cy.get('#Endpage')
-                            .should('have.value', record.fez_record_search_key_end_page.rek_end_page);
-                        cy.get('[id="Totalpages/Extent"]')
+                        cy.get('[data-testid=rek-end-page-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_end_page.rek_end_page,
+                            );
+                        cy.get('[data-testid=rek-total-pages-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
                         cy.checkPartialDateFromRecordValue('date', record.rek_date);
-                        cy.get('#Yearavailable')
+                        cy.get('[data-testid=rek-date-available-input]')
                             .should(
                                 'have.value',
                                 Cypress.moment(record.fez_record_search_key_date_available.rek_date_available)
@@ -281,16 +296,16 @@ context('Journal Article admin edit', () => {
                     });
             });
 
-        cy.get('#Journalname')
+        cy.get('[data-testid=rek-journal-name-input]')
             .clear()
             .parent()
             .siblings('p')
-            .should('have.id', 'Journalname-helper-text')
+            .should('have.id', 'rek-journal-name-helper-text')
             .should('have.text', 'This field is required');
 
         cy.adminEditVerifyAlerts(1, ['Journal name is required']);
 
-        cy.get('#Journalname')
+        cy.get('[data-testid=rek-journal-name-input]')
             .type('Test');
 
         cy.adminEditNoAlerts();

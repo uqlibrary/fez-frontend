@@ -339,6 +339,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_volume_number.rek_volume_number"
+                                            textFieldId="rek-volume-number"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -351,6 +352,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_issue_number.rek_issue_number"
+                                            textFieldId="rek-issue-number"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -363,6 +365,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_start_page.rek_start_page"
+                                            textFieldId="rek-start-page"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -375,6 +378,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_end_page.rek_end_page"
+                                            textFieldId="rek-end-page"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -388,6 +392,7 @@ export default class NtroFields extends React.PureComponent {
                                             component={TextField}
                                             id="rek-total-pages"
                                             name="fez_record_search_key_total_pages.rek_total_pages"
+                                            textFieldId="rek-total-pages"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -403,6 +408,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_original_format.rek_original_format"
+                                            textFieldId="rek-original-format"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}

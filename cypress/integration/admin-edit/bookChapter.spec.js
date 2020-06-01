@@ -27,15 +27,18 @@ context('Book Chapter admin edit', () => {
             .eq(1)
             .as('bibliographicTab')
             .within(() => {
-                cy.get('#Chapternumber')
+                cy.get('[data-testid=rek-chapter-number-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_chapter_number.rek_chapter_number,
                     );
                 cy.get('label')
                     .should('contain', 'Book title');
-                cy.get('#Booktitle')
-                    .should('have.value', record.fez_record_search_key_book_title.rek_book_title);
+                cy.get('[data-testid=rek-book-title-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_book_title.rek_book_title,
+                    );
                 // const langCodes = record.fez_record_search_key_language_of_book_title.map(
                 //     lang => lang.rek_language_of_book_title,
                 // );
@@ -43,17 +46,17 @@ context('Book Chapter admin edit', () => {
                     .should('have.text', 'Japanese')
                     .siblings('[role=button] span')
                     .should('have.length', 0); // If no matching codes found, there is a span present
-                cy.get('#Nativescriptbooktitle')
+                cy.get('[data-testid=rek-native-script-book-title-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_native_script_book_title.rek_native_script_book_title,
                     );
-                cy.get('#Romanscriptbooktitle')
+                cy.get('[data-testid=rek-roman-script-book-title-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_roman_script_book_title.rek_roman_script_book_title,
                     );
-                cy.get('#Translatedbooktitle')
+                cy.get('[data-testid=rek-translated-book-title-input]')
                     .should(
                         'have.value',
                         record.fez_record_search_key_translated_book_title.rek_translated_book_title,
