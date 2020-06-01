@@ -261,7 +261,7 @@ context('Thesis admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Copyright agreement');
-                        cy.get('#deposit-agreement')
+                        cy.get('[data-testid=rek-copyright-input]')
                             .should($checkbox => {
                                 if (record.rek_copyright === 'on') {
                                     expect($checkbox).to.be.checked;

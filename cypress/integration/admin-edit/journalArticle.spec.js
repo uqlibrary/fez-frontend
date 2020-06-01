@@ -569,7 +569,7 @@ context('Journal Article admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Copyright agreement');
-                cy.get('#deposit-agreement')
+                cy.get('[data-testid=rek-copyright-input]')
                     .should($checkbox => {
                         if (record.rek_copyright === 'on') {
                             expect($checkbox).to.be.checked;
@@ -578,7 +578,7 @@ context('Journal Article admin edit', () => {
                         }
                     });
             });
-        cy.get('#deposit-agreement')
+        cy.get('[data-testid=rek-copyright-input]')
             .click();
 
         cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);

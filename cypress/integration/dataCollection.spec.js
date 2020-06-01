@@ -20,7 +20,7 @@ context('Data Collection form', () => {
 
     it('validates deposit agreement', () => {
         // Accept the agreement
-        cy.get('input#deposit-agreement')
+        cy.get('[data-testid=rek-copyright-input]')
             .click();
         cy.get('@submitButton')
             .should('be.disabled');

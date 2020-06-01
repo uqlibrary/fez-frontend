@@ -30,7 +30,7 @@ context('As an admin,', () => {
             .type('Test author');
         cy.get('#submit-author')
             .click();
-        cy.get('#deposit-agreement')
+        cy.get('[data-testid=rek-copyright-input]')
             .click();
 
         // Submit form

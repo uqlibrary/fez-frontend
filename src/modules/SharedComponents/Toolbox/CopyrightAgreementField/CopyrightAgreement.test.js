@@ -6,6 +6,7 @@ function setup(testProps) {
         isCopyrightAgreementAccepted: false,
         onChange: jest.fn(),
         copyrightAgreement: 'test deposit agreement',
+        copyrightAgreementFieldId: 'test',
         classes: {
             label: '',
             error: '',
