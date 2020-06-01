@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export const AutoCompleteMultiSelectField = ({
+    autoCompleteMultiSelectFieldId,
     defaultValue,
     error,
     errorText,
@@ -31,7 +32,7 @@ export const AutoCompleteMultiSelectField = ({
 
     return (
         <Autocomplete
-            id={id}
+            id={autoCompleteMultiSelectFieldId}
             ChipProps={{
                 id: `${id}-selected`,
             }}
@@ -51,8 +52,17 @@ export const AutoCompleteMultiSelectField = ({
                     label={floatingLabelText}
                     placeholder={hintText}
                     required={required}
+                    inputProps={{
+                        ...params.inputProps,
+                        id: `${autoCompleteMultiSelectFieldId}-input`,
+                        'data-testid': `${autoCompleteMultiSelectFieldId}-input`,
+                    }}
                 />
             )}
+            ListboxProps={{
+                id: `${autoCompleteMultiSelectFieldId}-options`,
+                'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
+            }}
             {...(!!OptionTemplate ? { renderOption: option => <OptionTemplate option={option} /> } : {})}
             {...((!!defaultValue && { value: defaultValue }) || {})}
         />
@@ -60,6 +70,7 @@ export const AutoCompleteMultiSelectField = ({
 };
 
 AutoCompleteMultiSelectField.propTypes = {
+    autoCompleteMultiSelectFieldId: PropTypes.string.isRequired,
     defaultValue: PropTypes.array,
     error: PropTypes.bool,
     errorText: PropTypes.string,

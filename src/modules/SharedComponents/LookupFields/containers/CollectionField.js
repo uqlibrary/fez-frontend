@@ -4,7 +4,7 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = state.get('collectionsReducer') || {};
-    console.log();
+
     return {
         id: props.id,
         itemsList: itemsList || [],
@@ -26,6 +26,7 @@ const mapStateToProps = (state, props) => {
                 error: props.error,
                 errorText: props.errorText || '',
             }),
+        autoCompleteMultiSelectFieldId: props.collectionFieldId,
     };
 };
 
