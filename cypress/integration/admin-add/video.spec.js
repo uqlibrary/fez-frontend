@@ -24,9 +24,9 @@ context('As an admin,', () => {
         cy.typeCKEditor('editor1', 'Test title');
         cy.get('#date-year')
             .type('2020');
-        cy.get('#Copyrightnotice')
+        cy.get('[data-testid=rek-rights-input]')
             .type('All rights reserved');
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .type('Test author');
         cy.get('#submit-author')
             .click();
