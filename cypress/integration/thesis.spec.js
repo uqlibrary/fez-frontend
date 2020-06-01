@@ -53,7 +53,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
 
         // Supervisors
-        cy.get('input[id="supervisors-name-as-published-field"]')
+        cy.get('[data-testid=supervisors-input]')
             .type('Ky Lane', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -61,7 +61,7 @@ context('Thesis', () => {
             .should('have.length', 4);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('input[id="supervisors-name-as-published-field"]')
+        cy.get('[data-testid=supervisors-input]')
             .type('{enter}', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -80,7 +80,7 @@ context('Thesis', () => {
             .should('have.length', 4);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('input[id="supervisors-name-as-published-field"]')
+        cy.get('[data-testid=supervisors-input]')
             .type('Vishal Asai{enter}', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -88,7 +88,7 @@ context('Thesis', () => {
             .should('have.length', 3);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('input[id="supervisors-name-as-published-field"]')
+        cy.get('[data-testid=supervisors-input]')
             .type('Ky Lane{enter}', { delay: 30 });
         cy.get('ul.ContributorList')
             .children()
@@ -120,7 +120,7 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 4);
-        cy.get('input[id="supervisors-name-as-published-field"]')
+        cy.get('[data-testid=supervisors-input]')
             .type('Ky Lane{enter}', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
