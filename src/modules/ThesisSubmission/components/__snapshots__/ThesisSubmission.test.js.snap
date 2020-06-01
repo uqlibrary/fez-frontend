@@ -414,7 +414,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           title="Keywords"
         >
           <WithStyles(Typography)>
-            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
+            Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -937,7 +937,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           title="Keywords"
         >
           <WithStyles(Typography)>
-            Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
+            Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
           </WithStyles(Typography)>
           <Field
             component={[Function]}
