@@ -233,6 +233,7 @@ export default {
                 required: true,
                 fullwidth: true,
                 validate: [validation.requiredList],
+                collectionFieldId: 'rek-ismemberof',
             },
         },
         rek_subtype: {

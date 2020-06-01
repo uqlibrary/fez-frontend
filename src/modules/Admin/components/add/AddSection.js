@@ -58,7 +58,6 @@ export const AddSection = ({
                                         component={CollectionField}
                                         disabled={disabled}
                                         name="adminSection.collections"
-                                        id="adminSectioncollections"
                                         floatingLabelText={
                                             locale.pages.adminAdd.formLabels.ismemberof.floatingLabelText
                                         }
@@ -66,6 +65,7 @@ export const AddSection = ({
                                         required
                                         validate={[validation.requiredList]}
                                         fullwidth
+                                        collectionFieldId="rek-ismemberof"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>

@@ -3,9 +3,9 @@ context('As an admin,', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection
-        cy.get('#adminSectioncollections')
+        cy.get('[data-testid=rek-ismemberof-input]')
             .type('a');
-        cy.clickAutoSuggestion('adminSectioncollections', 0);
+        cy.clickAutoSuggestion('rek-ismemberof', 0);
 
         // Choose display type
         cy.get('[data-testid=rek-display-type-select]')
