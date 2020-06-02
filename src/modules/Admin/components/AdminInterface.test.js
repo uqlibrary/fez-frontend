@@ -621,25 +621,34 @@ describe('AdminInterface component', () => {
     });
 
     it('should render publish button for unpublished record', () => {
+        const record = {
+            rek_pid: 'UQ:123456',
+            rek_status: 1,
+            rek_title: 'This is test record',
+            rek_object_type_lookup: 'Record',
+            rek_display_type_lookup: 'Journal Article',
+            rek_display_type: 179,
+        };
+        const tabs = {
+            bibliographic: {
+                activated: true,
+                component: () => 'BibliographySectionComponent',
+            },
+        };
+
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({ record }));
+        const wrapper = setup({ tabs });
+        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
+        useRecordContext.mockReset();
+
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:123456',
-                rek_status: 1,
-                rek_title: 'This is test record',
-                rek_object_type_lookup: 'Record',
-                rek_display_type_lookup: 'Journal Article',
-                rek_display_type: 179,
+                ...record,
+                rek_status: 3,
             },
         }));
-        const wrapper = setup({
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
-                },
-            },
-        });
-        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
+        const wrapper2 = setup({ tabs });
+        expect(wrapper2.find('#admin-work-publish').length).toEqual(1);
     });
 });
