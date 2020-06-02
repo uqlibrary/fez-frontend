@@ -127,6 +127,7 @@ export default class AddDataCollection extends Component {
                                                 required
                                                 validate={[validation.requireChecked]}
                                                 disabled={this.props.submitting}
+                                                depositAgreementFieldId="rek-copyright"
                                             />
                                         </Grid>
                                     </Grid>

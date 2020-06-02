@@ -94,6 +94,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -1363,6 +1364,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -2632,6 +2634,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -3901,6 +3904,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}

@@ -129,9 +129,9 @@ context('Data Collection form', () => {
 
     it('validates FoR codes', () => {
         // Field of research
-        cy.get('#field-of-research-field-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('a');
-        cy.get('li[role="option"]')
+        cy.get('[data-testid=rek-subject-options]')
             .contains('010101')
             .click();
         cy.get('@submitButton')
@@ -148,9 +148,9 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', ++errorCount);
 
-        cy.get('#field-of-research-field-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('b');
-        cy.get('li[role="option"]')
+        cy.get('[data-testid=rek-subject-options]')
             .contains('010101')
             .click();
         cy.get('@submitButton')
@@ -158,9 +158,9 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', --errorCount);
 
-        cy.get('#field-of-research-field-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('a');
-        cy.get('li[role="option"]')
+        cy.get('[data-testid=rek-subject-options]')
             .contains('010102')
             .click();
 
@@ -174,9 +174,9 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', ++errorCount);
 
-        cy.get('#field-of-research-field-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('b');
-        cy.get('li[role="option"]')
+        cy.get('[data-testid=rek-subject-options]')
             .contains('010102')
             .click();
         cy.get('@submitButton')
@@ -547,14 +547,14 @@ context('Data Collection form', () => {
 
     it('validates related datasets/work', () => {
         // Related datasets
-        cy.get('#title-or-pid-field')
+        cy.get('[data-testid=rek-isdatasetof-input]')
             .type('a');
-        cy.clickAutoSuggestion('title-or-pid-field', 0);
+        cy.clickAutoSuggestion('rek-isdatasetof', 0);
         // cy.get('@submitButton').should('be.disabled');
         // cy.get('@errors').should('have.length', 1);
-        cy.get('input#title-or-pid-field')
+        cy.get('[data-testid=rek-isdatasetof-input]')
             .type('a');
-        cy.clickAutoSuggestion('title-or-pid-field', 1);
+        cy.clickAutoSuggestion('rek-isdatasetof', 1);
 
         cy.get('#related-datasets-list-row-0')
             .should('contain', 'A state-based vaccination register');
