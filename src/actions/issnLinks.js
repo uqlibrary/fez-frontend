@@ -6,14 +6,19 @@ import {
     ISSN_ULRICHS_LOADED,
     ISSN_ULRICHS_LOAD_FAILED,
 } from './actionTypes';
-import { post } from 'repositories/generic';
+import { get } from 'repositories/generic';
 import { ISSN_LINKS_API } from 'repositories/routes';
 
+/**
+ * Returns the sherpa romeo details, cached in our db, for a specific issn
+ * @param {string} issn
+ * @returns {action}
+ */
 export const getSherpaFromIssn = issn => {
     return dispatch => {
         dispatch({ type: ISSN_SHERPA_LOADING, payload: issn });
 
-        return post(ISSN_LINKS_API({ type: 'sherpa-romeo' }), { issn })
+        return get(ISSN_LINKS_API({ type: 'sherpa-romeo', issn: issn }))
             .then(response => {
                 dispatch({
                     type: ISSN_SHERPA_LOADED,
@@ -31,11 +36,16 @@ export const getSherpaFromIssn = issn => {
     };
 };
 
+/**
+ * Returns the ulrichs details, cached in our db, for a specific issn
+ * @param {string} issn
+ * @returns {action}
+ */
 export const getUlrichsFromIssn = issn => {
     return dispatch => {
         dispatch({ type: ISSN_ULRICHS_LOADING, payload: issn });
 
-        return post(ISSN_LINKS_API({ type: 'ulrichs' }), { issn })
+        return get(ISSN_LINKS_API({ type: 'ulrichs', issn: issn }))
             .then(response => {
                 dispatch({
                     type: ISSN_ULRICHS_LOADED,

@@ -3,9 +3,9 @@ context('As an admin,', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection
-        cy.get('#adminSectioncollections')
+        cy.get('[data-testid=rek-ismemberof-input]')
             .type('a');
-        cy.clickAutoSuggestion('adminSectioncollections', 0);
+        cy.clickAutoSuggestion('rek-ismemberof', 0);
 
         // Choose display type
         cy.get('[data-testid=rek-display-type-select]')
@@ -24,13 +24,13 @@ context('As an admin,', () => {
         cy.typeCKEditor('editor1', 'Test title');
         cy.get('#date-year')
             .type('2020');
-        cy.get('#Copyrightnotice')
+        cy.get('[data-testid=rek-rights-input]')
             .type('All rights reserved');
-        cy.get('#authors-name-as-published-field')
+        cy.get('#authors-input')
             .type('Test author');
         cy.get('#submit-author')
             .click();
-        cy.get('#deposit-agreement')
+        cy.get('[data-testid=rek-copyright-input]')
             .click();
 
         // Submit form

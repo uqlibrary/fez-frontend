@@ -58,7 +58,12 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
           "root": undefined,
         }
       }
-      id="deposit-agreement"
+      inputProps={
+        Object {
+          "data-testid": "test-input",
+          "id": "test-input",
+        }
+      }
       onChange={[Function]}
     />
   }
@@ -72,6 +77,8 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       }
       color="secondary"
       component="div"
+      data-testid="test-label"
+      id="test-label"
     >
       test deposit agreement
     </WithStyles(ForwardRef(Typography))>
@@ -95,7 +102,12 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
           "root": undefined,
         }
       }
-      id="deposit-agreement"
+      inputProps={
+        Object {
+          "data-testid": "test-input",
+          "id": "test-input",
+        }
+      }
       onChange={[Function]}
     />
   }
@@ -109,6 +121,8 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       }
       color="error"
       component="div"
+      data-testid="test-label"
+      id="test-label"
     >
       test deposit agreement
     </WithStyles(ForwardRef(Typography))>

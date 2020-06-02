@@ -233,6 +233,7 @@ export default {
                 required: true,
                 fullwidth: true,
                 validate: [validation.requiredList],
+                collectionFieldId: 'rek-ismemberof',
             },
         },
         rek_subtype: {
@@ -919,6 +920,7 @@ export default {
                 label: 'Copyright Agreement',
                 placeholder: '',
                 validate: [validation.required],
+                copyrightAgreementFieldId: 'rek-copyright',
                 copyrightAgreement:
                     'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure awaiting redesign of the deposit process].',
             },

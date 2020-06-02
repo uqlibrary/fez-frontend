@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         itemsLoading: false,
     };
     return {
-        id: 'title-or-pid-field',
+        autoCompleteAsynchronousFieldId: props.titleOrPidFieldId || 'rek-isdatasetof',
         itemsList: itemsList.map(item => ({ id: item.rek_pid, value: item.rek_title, ...item })),
         itemsLoading,
         getOptionLabel: () => '',

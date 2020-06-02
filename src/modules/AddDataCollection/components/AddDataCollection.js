@@ -127,6 +127,7 @@ export default class AddDataCollection extends Component {
                                                 required
                                                 validate={[validation.requireChecked]}
                                                 disabled={this.props.submitting}
+                                                depositAgreementFieldId="rek-copyright"
                                             />
                                         </Grid>
                                     </Grid>
@@ -185,6 +186,7 @@ export default class AddDataCollection extends Component {
                                                 required
                                                 {...txt.information.dataset.fieldLabels.contactId}
                                                 validate={[validation.required]}
+                                                authorIdFieldId="rek-contributor-id"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={12}>

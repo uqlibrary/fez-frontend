@@ -7,6 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
+    autoCompleteAsynchronousFieldId,
     defaultValue,
     disabled,
     error,
@@ -14,7 +15,6 @@ export const AutoCompleteAsynchronousField = ({
     filterOptions,
     floatingLabelText,
     getOptionLabel,
-    id,
     itemsList,
     itemsLoading,
     loadSuggestions,
@@ -84,7 +84,7 @@ export const AutoCompleteAsynchronousField = ({
 
     return (
         <Autocomplete
-            id={id}
+            id={autoCompleteAsynchronousFieldId}
             clearOnEscape
             disabled={disabled}
             onOpen={() => {
@@ -120,11 +120,20 @@ export const AutoCompleteAsynchronousField = ({
                             </React.Fragment>
                         ),
                     }}
+                    inputProps={{
+                        ...params.inputProps,
+                        id: `${autoCompleteAsynchronousFieldId}-input`,
+                        'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
+                    }}
                     value={inputValue}
                     onChange={handleSearchTextChange}
                     required={required}
                 />
             )}
+            ListboxProps={{
+                id: `${autoCompleteAsynchronousFieldId}-options`,
+                'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
+            }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
         />
@@ -133,6 +142,7 @@ export const AutoCompleteAsynchronousField = ({
 
 AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
+    autoCompleteAsynchronousFieldId: PropTypes.string.isRequired,
     defaultValue: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
@@ -140,7 +150,6 @@ AutoCompleteAsynchronousField.propTypes = {
     filterOptions: PropTypes.func.isRequired,
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
-    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     itemsLoading: PropTypes.bool,
     loadSuggestions: PropTypes.func,

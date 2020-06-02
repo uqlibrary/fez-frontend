@@ -123,8 +123,11 @@ context('Conference Paper admin edit', () => {
                         record.fez_record_search_key_translated_journal_name.rek_translated_journal_name,
                     );
 
-                cy.get('#series-field-input')
-                    .should('have.value', record.fez_record_search_key_series.rek_series);
+                cy.get('[data-testid=rek-series-input]')
+                    .should(
+                        'have.value',
+                        record.fez_record_search_key_series.rek_series,
+                    );
 
                 cy.get('[data-testid=rek-article-number-input]')
                     .should(

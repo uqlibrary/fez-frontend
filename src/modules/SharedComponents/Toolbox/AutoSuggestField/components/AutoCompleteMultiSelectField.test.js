@@ -6,7 +6,8 @@ function setup(testProps = {}) {
     const props = {
         floatingLabelText: 'Autocomplete multi select field',
         getOptionLabel: option => option,
-        id: 'autocomplete-multi-select-field',
+        id: 'test-autocomplete',
+        autoCompleteMultiSelectFieldId: 'test-autocomplete',
         itemsList: [],
         onChange: jest.fn(),
         OptionTemplate: null,
@@ -30,12 +31,12 @@ describe('AutoCompleteMultiSelectField component', () => {
     });
 
     it('should render component and display options as you type', async() => {
-        const { getByTestId, getByRole, getAllByRole } = setup({
+        const { getByTestId, getAllByRole } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
 
-        fireEvent.change(getByTestId('autocomplete-multi-select-field'), { target: { value: 'apple' } });
-        const suggestions = await waitFor(() => getByRole('presentation'));
+        fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
+        const suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
 
         expect(getAllByRole('option', suggestions).length).toBe(3);
         expect(getAllByRole('option')[0]).toHaveTextContent('apple');
@@ -44,23 +45,23 @@ describe('AutoCompleteMultiSelectField component', () => {
     });
 
     it('should render component and select options', async() => {
-        const { getByTestId, getByRole, getAllByTestId } = setup({
+        const { getByTestId, getAllByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
 
-        fireEvent.change(getByTestId('autocomplete-multi-select-field'), { target: { value: 'apple' } });
-        let suggestions = await waitFor(() => getByRole('presentation'));
+        fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
+        let suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         act(() => {
-            fireEvent.click(getByTestId('autocomplete-multi-select-field-option-0', suggestions));
+            fireEvent.click(getByTestId('test-autocomplete-option-0', suggestions));
         });
 
-        fireEvent.change(getByTestId('autocomplete-multi-select-field'), { target: { value: 'apple' } });
-        suggestions = await waitFor(() => getByRole('presentation'));
+        fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
+        suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         act(() => {
-            fireEvent.click(getByTestId('autocomplete-multi-select-field-option-1', suggestions));
+            fireEvent.click(getByTestId('test-autocomplete-option-1', suggestions));
         });
 
-        const chips = getAllByTestId('autocomplete-multi-select-field-selected');
+        const chips = getAllByTestId('test-autocomplete-selected');
 
         expect(chips.length).toBe(2);
         expect(chips[0]).toHaveTextContent('apple');
@@ -70,13 +71,13 @@ describe('AutoCompleteMultiSelectField component', () => {
     it('should render give option template for options', async() => {
         // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
-        const { getByTestId, getByRole, getAllByTestId } = setup({
+        const { getByTestId, getAllByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
             OptionTemplate,
         });
 
-        fireEvent.change(getByTestId('autocomplete-multi-select-field'), { target: { value: 'apple' } });
-        const suggestions = await waitFor(() => getByRole('presentation'));
+        fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
+        const suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
         expect(getAllByTestId('option-template', suggestions).length).toBe(3);
     });
 
@@ -96,7 +97,7 @@ describe('AutoCompleteMultiSelectField component', () => {
             defaultValue: ['orange', 'apple'],
         });
 
-        const chips = getAllByTestId('autocomplete-multi-select-field-selected');
+        const chips = getAllByTestId('test-autocomplete-selected');
         expect(chips.length).toBe(2);
         expect(chips[0]).toHaveTextContent('orange');
         expect(chips[1]).toHaveTextContent('apple');

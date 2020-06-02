@@ -78,12 +78,12 @@ context('Thesis admin edit', () => {
                             .get('[data-testid=rek-genre-type-select]')
                             .should('have.text', record.rek_genre_type);
 
-                        cy.get('#org-name-field')
+                        cy.get('[data-testid=rek-org-name-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_org_name.rek_org_name,
                             );
-                        cy.get('#org-unit-name-field')
+                        cy.get('[data-testid=rek-org-unit-name-input]')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_org_unit_name.rek_org_unit_name,
@@ -131,18 +131,6 @@ context('Thesis admin edit', () => {
                         });
                     });
             });
-
-        cy.get('#org-unit-name-field')
-            .parent()
-            .within(() => {
-                cy.get('[title="Clear"]')
-                    .click({ force: true });
-            });
-
-        cy.get('#org-unit-name-field-helper-text')
-            .should('have.text', 'This field is required');
-
-        cy.adminEditVerifyAlerts(1, ['Enrolling unit is required']);
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
@@ -207,7 +195,7 @@ context('Thesis admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Member of collections');
-                        cy.get('#member-of-collections-input-label')
+                        cy.get('#rek-ismemberof-label')
                             .should('contain', 'Member of collections');
 
                         cy.get('[class*="MuiAutocomplete-tag-"]')
@@ -261,7 +249,7 @@ context('Thesis admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Copyright agreement');
-                        cy.get('#deposit-agreement')
+                        cy.get('[data-testid=rek-copyright-input]')
                             .should($checkbox => {
                                 if (record.rek_copyright === 'on') {
                                     expect($checkbox).to.be.checked;
