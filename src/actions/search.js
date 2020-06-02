@@ -12,9 +12,9 @@ import { exportPublications } from './exportPublications';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
-        return get(SEARCH_INTERNAL_RECORDS_API({ searchQuery: searchQuery, pageSize: 5, sortBy: 'score' }));
+        return get(SEARCH_INTERNAL_RECORDS_API({ searchQuery, pageSize: 5, sortBy: 'score' }));
     } else {
-        return get(SEARCH_EXTERNAL_RECORDS_API({ source: source, searchQuery: searchQuery }));
+        return get(SEARCH_EXTERNAL_RECORDS_API({ source, searchQuery }));
     }
 }
 
@@ -155,9 +155,9 @@ export function searchPublications(searchQuery) {
 
 export function getSearchLookupApi(searchQuery, searchKey) {
     if (searchKey === 'author') {
-        return SEARCH_AUTHOR_LOOKUP_API({ searchQuery: searchQuery });
+        return SEARCH_AUTHOR_LOOKUP_API({ searchQuery });
     } else {
-        return SEARCH_KEY_LOOKUP_API({ searchQuery: searchQuery, searchKey: searchKey });
+        return SEARCH_KEY_LOOKUP_API({ searchQuery, searchKey });
     }
 }
 
