@@ -39,20 +39,12 @@ const getIssuesRequest = text => ({
 /* getFixIssueRequest - returns fix record issue request object
  * @returns {Object} issue request
  */
-export const getFixIssueRequest = pipe(
-    getIssueValues,
-    templates.issues.fixRecord,
-    getIssuesRequest,
-);
+export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
 /* getClaimIssueRequest - returns claim record issue request object
  * @returns {Object} issue request
  */
-export const getClaimIssueRequest = pipe(
-    getIssueValues,
-    templates.issues.claimRecord,
-    getIssuesRequest,
-);
+export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
  * NOTE: link description is required to save link
@@ -152,16 +144,22 @@ export const getRecordAuthorsSearchKey = authors => {
 
 export const getDatasetCreatorRolesSearchKey = creators => {
     if (!creators || creators.length === 0) return {};
-    return {
-        fez_record_search_key_author_role: creators.map(
+    const creatorRoles = creators
+        .map(
             (item, index) =>
                 (!!item.creatorRole && {
                     rek_author_role: item.creatorRole,
                     rek_author_role_order: index + 1,
                 }) ||
                 {},
-        ),
-    };
+        )
+        .filter(creator => !!creator.rek_author_role);
+
+    return creatorRoles.length > 0
+        ? {
+            fez_record_search_key_author_role: creatorRoles,
+        }
+        : {};
 };
 
 export const getRecordSupervisorsSearchKey = supervisors => {
@@ -1019,6 +1017,7 @@ export const getAuthorsSearchKeys = authors => ({
     ...getRecordAuthorsIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
     ...getRecordAuthorAffiliationTypeSearchKey(authors),
+    ...getDatasetCreatorRolesSearchKey(authors),
 });
 
 export const getContributorsSearchKeys = editors => ({
