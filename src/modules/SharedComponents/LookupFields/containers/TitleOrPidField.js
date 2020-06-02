@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         itemsLoading: false,
     };
     return {
-        id: 'title-or-pid-field',
+        autoCompleteAsynchronousFieldId: props.orgNameFieldId || 'rek-org-name',
         itemsList: itemsList.map(item => ({ id: item.rek_pid, value: item.rek_title, ...item })),
         itemsLoading,
         getOptionLabel: () => '',
@@ -32,4 +32,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const TitleOrPidField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const TitleOrPidField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);

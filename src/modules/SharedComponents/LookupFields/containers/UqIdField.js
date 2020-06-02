@@ -12,6 +12,7 @@ const mapStateToProps = (state, props) => {
         else return '';
     };
     return {
+        autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
         itemsList:
             state.get('authorsReducer') && state.get('authorsReducer')
                 ? state

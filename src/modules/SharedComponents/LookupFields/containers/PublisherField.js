@@ -7,6 +7,7 @@ const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
+        autoCompleteAsynchronousFieldId: props.publisherFieldId || 'rek-publisher',
         category: category,
         itemsList,
         itemsLoading,
@@ -40,4 +41,7 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-export const PublisherField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const PublisherField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);
