@@ -47,6 +47,7 @@ export {
     recordWithDatastreams,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    unpublishedSearchList,
     UQ716942uqagrinb,
 } from './records';
 
