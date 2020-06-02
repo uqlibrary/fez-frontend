@@ -867,9 +867,7 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
 
     it('should return empty object in entry if creatorRole key is not set for it', () => {
         const input = [{ test: 'test1' }];
-        const expected = {
-            fez_record_search_key_author_role: [{}],
-        };
+        const expected = {};
         expect(transformers.getDatasetCreatorRolesSearchKey(input)).toEqual(expected);
     });
 
@@ -898,9 +896,7 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
         const result = transformers.getDatasetCreatorRolesSearchKey(input);
         expect(result).toEqual(expected);
 
-        expect(transformers.getDatasetCreatorRolesSearchKey([{}])).toEqual({
-            fez_record_search_key_author_role: [{}],
-        });
+        expect(transformers.getDatasetCreatorRolesSearchKey([{}])).toEqual({});
     });
 });
 
@@ -3028,6 +3024,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should only save the supplied key for a many-to-one search key', () => {
             const dataMany = {
+                // prettier-ignore
                 issnField: [
                     { rek_value: '1212-1212', rek_order: 1 },
                     { rek_value: '2323-2323', rek_order: 2 },
@@ -3061,6 +3058,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
+                // prettier-ignore
                 issnField: [
                     { rek_value: '1212-1212', rek_order: 1 },
                     { rek_value: '2323-2323', rek_order: 2 },
@@ -3535,6 +3533,209 @@ describe('getAuthorsSectionSearchKeys', () => {
                 { rek_supervisor: 'Smith B.', rek_supervisor_order: 2 },
                 { rek_supervisor: 'Smith C.', rek_supervisor_order: 3 },
                 { rek_supervisor: 'Smith D.', rek_supervisor_order: 4 },
+            ],
+        });
+    });
+
+    it('should get creator role search key correctly', () => {
+        const data = {
+            authors: [
+                {
+                    nameAsPublished: 'Smith A.',
+                    creatorRole: 'Scientist',
+                    disabled: false,
+                    selected: false,
+                    authorId: null,
+                },
+                {
+                    nameAsPublished: 'Smith B.',
+                    creatorRole: 'Scientist test',
+                    disabled: false,
+                    selected: true,
+                    authorId: 100,
+                },
+                {
+                    nameAsPublished: 'Smith C.',
+                    creatorRole: 'Scientist testing',
+                    disabled: false,
+                    selected: false,
+                    authorId: null,
+                },
+                {
+                    nameAsPublished: 'Smith D.',
+                    creatorRole: 'Scientist tester',
+                    disabled: false,
+                    selected: false,
+                    aut_id: 1001,
+                },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_author: [
+                { rek_author: 'Smith A.', rek_author_order: 1 },
+                { rek_author: 'Smith B.', rek_author_order: 2 },
+                { rek_author: 'Smith C.', rek_author_order: 3 },
+                { rek_author: 'Smith D.', rek_author_order: 4 },
+            ],
+            fez_record_search_key_author_id: [
+                { rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id: 100, rek_author_id_order: 2 },
+                { rek_author_id: 0, rek_author_id_order: 3 },
+                { rek_author_id: 1001, rek_author_id_order: 4 },
+            ],
+            fez_record_search_key_author_affiliation_name: [
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 1,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 2,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 3,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 4,
+                },
+            ],
+            fez_record_search_key_author_affiliation_type: [
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 1,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 2,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 3,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 4,
+                },
+            ],
+            fez_record_search_key_author_role: [
+                {
+                    rek_author_role: 'Scientist',
+                    rek_author_role_order: 1,
+                },
+                {
+                    rek_author_role: 'Scientist test',
+                    rek_author_role_order: 2,
+                },
+                {
+                    rek_author_role: 'Scientist testing',
+                    rek_author_role_order: 3,
+                },
+                {
+                    rek_author_role: 'Scientist tester',
+                    rek_author_role_order: 4,
+                },
+            ],
+        });
+    });
+
+    it('should get creator role search key correctly with correct order', () => {
+        const data = {
+            authors: [
+                {
+                    nameAsPublished: 'Smith A.',
+                    creatorRole: 'Scientist',
+                    disabled: false,
+                    selected: false,
+                    authorId: null,
+                },
+                {
+                    nameAsPublished: 'Smith B.',
+                    creatorRole: 'Scientist test',
+                    disabled: false,
+                    selected: true,
+                    authorId: 100,
+                },
+                {
+                    nameAsPublished: 'Smith C.',
+                    disabled: false,
+                    selected: false,
+                    authorId: null,
+                },
+                {
+                    nameAsPublished: 'Smith D.',
+                    creatorRole: 'Scientist tester',
+                    disabled: false,
+                    selected: false,
+                    aut_id: 1001,
+                },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_author: [
+                { rek_author: 'Smith A.', rek_author_order: 1 },
+                { rek_author: 'Smith B.', rek_author_order: 2 },
+                { rek_author: 'Smith C.', rek_author_order: 3 },
+                { rek_author: 'Smith D.', rek_author_order: 4 },
+            ],
+            fez_record_search_key_author_id: [
+                { rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id: 100, rek_author_id_order: 2 },
+                { rek_author_id: 0, rek_author_id_order: 3 },
+                { rek_author_id: 1001, rek_author_id_order: 4 },
+            ],
+            fez_record_search_key_author_affiliation_name: [
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 1,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 2,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 3,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 4,
+                },
+            ],
+            fez_record_search_key_author_affiliation_type: [
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 1,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 2,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 3,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 4,
+                },
+            ],
+            fez_record_search_key_author_role: [
+                {
+                    rek_author_role: 'Scientist',
+                    rek_author_role_order: 1,
+                },
+                {
+                    rek_author_role: 'Scientist test',
+                    rek_author_role_order: 2,
+                },
+                {
+                    rek_author_role: 'Scientist tester',
+                    rek_author_role_order: 4,
+                },
             ],
         });
     });

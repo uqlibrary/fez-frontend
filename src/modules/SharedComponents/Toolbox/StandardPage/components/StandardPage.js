@@ -22,6 +22,10 @@ const styles = theme => ({
             margin: '0 auto 12px auto',
         },
     },
+    helpIcon: {
+        position: 'absolute',
+        right: '10px',
+    },
 });
 
 export class Page extends Component {
@@ -37,11 +41,18 @@ export class Page extends Component {
         return (
             <Grid container className="StandardPage">
                 {title && (
-                    <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>
-                        {title}
-                    </Typography>
+                    <Grid item xs>
+                        <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>
+                            {title}
+                        </Typography>
+                    </Grid>
                 )}
-                {help && <HelpIcon {...help} />}
+                {help && (
+                    <div className={classes.helpIcon}>
+                        <HelpIcon {...help} />
+                    </div>
+                )}
+                <Grid item xs={12} />
                 <Grid item className={classes.layoutCard}>
                     {children}
                 </Grid>
