@@ -1819,6 +1819,7 @@ export default {
                         validation: ['requiredList'],
                         ariaLabel: 'Select multiple collections to search for',
                         label: 'Collections',
+                        collectionFieldId: 'rek-ismemberof',
                     },
                     rek_genre_type: {
                         order: 14,

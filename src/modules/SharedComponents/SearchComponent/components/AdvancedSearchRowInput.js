@@ -120,6 +120,7 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'CollectionsLookup':
             return {
                 ...selectDefaultProps,
+                collectionFieldId: inputField.collectionFieldId,
                 onChange: onChange,
                 disableClearable: true,
             };
