@@ -185,6 +185,7 @@ export default class AddDataCollection extends Component {
                                                 required
                                                 {...txt.information.dataset.fieldLabels.contactId}
                                                 validate={[validation.required]}
+                                                authorIdFieldId="rek-contributor-id"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={12}>

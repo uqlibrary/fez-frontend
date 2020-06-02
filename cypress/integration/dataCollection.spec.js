@@ -54,9 +54,9 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Contact name ID
-        cy.get('input#contact-name-id-auto-complete')
+        cy.get('[data-testid=rek-contributor-id-input]')
             .type('David');
-        cy.get('#contact-name-id-auto-complete-popup')
+        cy.get('[data-testid=rek-contributor-id-options]')
             .contains('David Stevens')
             .click();
 
