@@ -1,8 +1,13 @@
 #!/bin/bash
 
 #export CI_BRANCH="$CODEBUILD_SOURCE_VERSION"
-export CI_COMMIT_ID="$CODEBUILD_RESOLVED_SOURCE_VERSION"
-export CI_BUILD_NUMBER="$CODEBUILD_BUILD_ID"
+#export CI_COMMIT_ID="$CODEBUILD_RESOLVED_SOURCE_VERSION"
+#export CI_BUILD_NUMBER="$CODEBUILD_BUILD_ID"
+
+if [[ -z $CI_BUILD_NUMBER ]]; then
+  printf "(CI_BUILD_NUMBER is not defined. Build stopped.)\n"
+  exit 1
+fi
 
 if [[ -z $CI_BRANCH ]]; then
   CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
