@@ -570,7 +570,7 @@ export default {
             //     buttonLabel: 'Close'
             // },
             description:
-                'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
+                'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
         },
         optional: {
             title: 'Optional information',
@@ -657,7 +657,7 @@ export default {
             //     buttonLabel: 'OK'
             // },
             description:
-                'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
+                'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
         },
         optional: {
             title: 'Optional information',
@@ -1674,7 +1674,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {
@@ -1740,7 +1740,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {
