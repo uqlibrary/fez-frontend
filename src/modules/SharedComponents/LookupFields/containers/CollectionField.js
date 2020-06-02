@@ -7,6 +7,7 @@ const mapStateToProps = (state, props) => {
 
     return {
         id: props.id,
+        autoCompleteAsynchronousFieldId: 'rek-ismemberof',
         itemsList: itemsList || [],
         itemsLoading,
         getOptionLabel: item => item.rek_title,

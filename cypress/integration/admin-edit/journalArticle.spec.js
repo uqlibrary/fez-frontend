@@ -385,7 +385,7 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Member of collections');
-                        cy.get('#member-of-collections-input-label')
+                        cy.get('#rek-ismemberof-label')
                             .should('contain', 'Member of collections');
                         cy.get('[class*="MuiAutocomplete-tag-"]')
                             .eq(0)
@@ -450,7 +450,7 @@ context('Journal Article admin edit', () => {
                         .eq(0)
                         .click();
                 });
-                cy.get('#member-of-collections-input-helper-text')
+                cy.get('#rek-ismemberof-helper-text')
                     .should('exist')
                     .should('have.text', 'This field is required');
             });

@@ -230,7 +230,7 @@ export const ContributorForm = ({
                             disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
                             floatingLabelText="UQ Author ID"
                             hintText="Type UQ author name to search"
-                            id="identifier-field"
+                            uqIdFieldId="aut-id"
                             key={contributor.uqUsername}
                             onChange={_onUQIdentifierSelected}
                             onClear={_onUQIdentifierCleared}

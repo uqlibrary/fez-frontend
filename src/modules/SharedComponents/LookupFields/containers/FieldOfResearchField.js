@@ -14,6 +14,7 @@ const mapStateToProps = (state, props) => {
         itemsLoading: false,
     };
     return {
+        autoCompleteAsynchronousFieldId: 'rek-subject',
         onChange: props.input.onChange,
         onClear: () => {},
         errorText: props.meta ? props.meta.error : props.errorText,
@@ -36,6 +37,7 @@ const filterFoRmapStateToProps = (state, props) => {
     };
 
     return {
+        autoCompleteAsynchronousFieldId: 'rek-subject',
         onChange: props.input.onChange,
         onClear: () => {},
         errorText: props.meta ? props.meta.error : props.errorText,

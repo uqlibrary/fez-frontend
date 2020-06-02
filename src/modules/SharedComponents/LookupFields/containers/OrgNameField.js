@@ -7,13 +7,13 @@ const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
+        autoCompleteAsynchronousFieldId: props.orgNameFieldId || 'rek-org-name',
         category: category,
         itemsList,
         itemsLoading,
         allowFreeText: true,
         getOptionLabel: item => (!!item && String(item.value)) || '',
         filterOptions: options => options,
-        id: 'org-name-field',
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
             ? {
                 defaultValue: (!!props.input.value && { value: props.input.value }) || null,
@@ -41,4 +41,7 @@ const mapDispatchToProps = (dispatch, props) => ({
         }),
 });
 
-export const OrgNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const OrgNameField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);
