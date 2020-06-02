@@ -488,11 +488,6 @@ exports[`AddSection component should render with subtypes 1`] = `
                 xs={12}
               >
                 <Field
-                  SelectDisplayProps={
-                    Object {
-                      "id": "rek-subtype",
-                    }
-                  }
                   component={[Function]}
                   disabled={false}
                   id="rek-subtype"
@@ -500,6 +495,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                   name="adminSection.rek_subtype"
                   placeholder="Select a work subtype from the dropdown list"
                   required={true}
+                  selectFieldId="rek-subtype"
                   validate={
                     Array [
                       [Function],

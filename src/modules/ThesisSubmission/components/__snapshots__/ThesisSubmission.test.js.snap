@@ -438,7 +438,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             title="Keywords"
           >
             <WithStyles(ForwardRef(Typography))>
-              Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
+              Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
             </WithStyles(ForwardRef(Typography))>
             <Field
               component={[Function]}
@@ -524,10 +524,10 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
-                    Maximum file size is 8GB.
+                    Maximum file size is 8GB. 
                     <br />
                     PDF files must be saved using the following naming structure
-
+                     
                     <b>
                       &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                     </b>
@@ -540,9 +540,9 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                         s1234567_phd_abstract.pdf
                       </li>
                     </ul>
-                    Supplementary audio files are to be in MP 3 format.
+                    Supplementary audio files are to be in MP 3 format. 
                     <br />
-                    Supplementary video files are to be in WMV or AVI format.
+                    Supplementary video files are to be in WMV or AVI format. 
                     <br />
                   </div>,
                   "instructions": "",
@@ -987,7 +987,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             title="Keywords"
           >
             <WithStyles(ForwardRef(Typography))>
-              Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.
+              Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
             </WithStyles(ForwardRef(Typography))>
             <Field
               component={[Function]}
@@ -1073,10 +1073,10 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
-                    Maximum file size is 8GB.
+                    Maximum file size is 8GB. 
                     <br />
                     PDF files must be saved using the following naming structure
-
+                     
                     <b>
                       &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                     </b>
@@ -1089,9 +1089,9 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                         s1234567_phd_abstract.pdf
                       </li>
                     </ul>
-                    Supplementary audio files are to be in MP 3 format.
+                    Supplementary audio files are to be in MP 3 format. 
                     <br />
-                    Supplementary video files are to be in WMV or AVI format.
+                    Supplementary video files are to be in WMV or AVI format. 
                     <br />
                   </div>,
                   "instructions": "",

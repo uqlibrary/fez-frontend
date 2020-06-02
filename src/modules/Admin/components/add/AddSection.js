@@ -96,9 +96,7 @@ export const AddSection = ({
                                                 required
                                                 validate={[validation.required]}
                                                 placeholder={locale.pages.adminAdd.formLabels.rek_subtype.hintText}
-                                                SelectDisplayProps={{
-                                                    id: 'rek-subtype',
-                                                }}
+                                                selectFieldId="rek-subtype"
                                             >
                                                 {publicationSubtypeItems}
                                             </Field>
