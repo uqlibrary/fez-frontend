@@ -1,12 +1,16 @@
 #!/bin/bash
 
+export CI_BRANCH="$CODEBUILD_SOURCE_VERSION"
+export CI_COMMIT_ID="$CODEBUILD_RESOLVED_SOURCE_VERSION"
+export CI_BUILD_NUMBER="$CODEBUILD_BUILD_ID"
+
 if [[ -z $CI_BRANCH ]]; then
   CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 fi
 
 # Not running code coverage check for feature branches.
 BRANCH_INCLUDES_CC=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "codebuild") ]]; then
     BRANCH_INCLUDES_CC=true
 fi
 
@@ -15,14 +19,8 @@ export TZ='Australia/Brisbane'
 # Run e2e tests if in master branch, or if the branch name includes 'cypress'
 # Putting * around the test-string gives a test for inclusion of the substring rather than exact match
 BRANCH_RUNS_E2E=false
-if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == *"cypress"* ]]; then
+if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
     BRANCH_RUNS_E2E=true
-fi
-
-# Bypass usual tests in codeship if this is the codebuild branch
-if [[ $CI_BRANCH == "codebuild" ]]; then
-    printf "(\"$CI_BRANCH\" build only needs to check e2e dashboard isn't broken)\n"
-    PIPE_NUM=3
 fi
 
 if [[ -z $PIPE_NUM ]]; then
