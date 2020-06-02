@@ -48,6 +48,17 @@ describe('Component ViewRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should have status prop in the header for admins', () => {
+        const wrapper = setup({
+            recordToView: { ...mockRecordToFix, rek_status: 1, rek_status_lookup: 'Unpublished' },
+            authorDetails: {
+                is_administrator: 1,
+                is_super_administrator: 0,
+            },
+        });
+        expect(wrapper.find('WithStyles(Chip)').props().label).toEqual('Unpublished');
+    });
+
     it('should not render components for empty record', () => {
         const wrapper = setup({ recordToView: {} });
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -15,6 +15,7 @@ import Links from './Links';
 import NtroDetails from './NtroDetails';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
+import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 import { general } from 'config';
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
@@ -87,7 +88,11 @@ export default class ViewRecord extends PureComponent {
                     {!!this.props.recordToView && (
                         <Grid item xs={12}>
                             <Grid container spacing={16} style={{ marginBottom: 4 }}>
-                                <Grid item xs />
+                                <Grid item xs>
+                                    {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
+                                        <Chip label={recordToView.rek_status_lookup} variant="outlined" />
+                                    )}
+                                </Grid>
                                 <Grid item>
                                     <SocialShare
                                         publication={this.props.recordToView}
