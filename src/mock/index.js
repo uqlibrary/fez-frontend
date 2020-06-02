@@ -318,9 +318,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .reply(() => [200, { data: mockData.collectionRecord }])
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
     .reply(() => [200, { data: mockData.communityRecord }])
-    .onPost(routes.ISSN_LINKS_API({ type: 'sherpa-romeo' }).apiUrl)
+    .onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'sherpa-romeo', issn: '.*' }).apiUrl)))
     .reply(config => {
-        const issn = JSON.parse(config.data).issn;
+        const issn = config.url.split(/[\s,\/]+/).pop();
         const data = [];
         switch (issn) {
             case '0000-0000':
@@ -344,9 +344,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         return [200, { data }];
     })
     // .reply(404)
-    .onPost(routes.ISSN_LINKS_API({ type: 'ulrichs' }).apiUrl)
+    .onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'ulrichs', issn: '.*' }).apiUrl)))
     .reply(config => {
-        const issn = JSON.parse(config.data).issn;
+        const issn = config.url.split(/[\s\/]+/).pop();
         const data = [];
         if (!issn.match(/^1111-1111|2222-2222$/)) {
             data.push({
@@ -383,6 +383,6 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onAny()
     .reply(config => {
-        console.log('url not found...');
+        console.log('url not found...', config);
         return [404, { message: `MOCK URL NOT FOUND: ${config.url}` }];
     });
