@@ -315,8 +315,8 @@ export const BATCH_IMPORT_API = () => {
     };
 };
 
-export const ISSN_LINKS_API = ({ type }) => ({
-    apiUrl: `tool/lookup/${type}`,
+export const ISSN_LINKS_API = ({ type, issn }) => ({
+    apiUrl: `tool/lookup/local/${type}/${issn}`,
 });
 
 export const ORCID_SYNC_API = () => {
