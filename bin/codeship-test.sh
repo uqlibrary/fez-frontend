@@ -22,6 +22,7 @@ fi
 # Bypass usual tests in codeship if this is the codebuild branch
 if [[ $CI_BRANCH == "codebuild" ]]; then
     printf "(\"$CI_BRANCH\" build only needs to check e2e dashboard isn't broken)\n"
+    BRANCH_RUNS_E2E=true
     PIPE_NUM=3
 fi
 
