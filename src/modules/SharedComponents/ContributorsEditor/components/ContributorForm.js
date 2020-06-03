@@ -175,14 +175,19 @@ export class ContributorForm extends PureComponent {
                             `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`) ||
                         '',
                     uqIdentifier: `${selectedItem.aut_id}`,
-                    uqUsername: `${selectedItem.aut_org_username || selectedItem.aut_student_username} - ${
-                        selectedItem.aut_id
-                    }`,
+                    uqUsername: `${selectedItem.aut_org_username ||
+                        selectedItem.aut_student_username ||
+                        selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
                     ...selectedItem,
                 },
             }),
             () => {
-                (!this.props.canEdit || (this.props.canEdit && !this.props.showRoleInput)) && this._onSubmit();
+                (!this.props.canEdit ||
+                    (this.props.canEdit && !this.props.showIdentifierLookup && !this.props.showRoleInput) ||
+                    (this.props.canEdit &&
+                        this.props.showIdentifierLookup &&
+                        this.state.contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ)) &&
+                    this._onSubmit();
             },
         );
     };
@@ -264,8 +269,8 @@ export class ContributorForm extends PureComponent {
             (contributor.nameAsPublished || '').trim().length === 0 ||
             (showRoleInput && contributor.creatorRole.length === 0) ||
             (isNtro &&
-                (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
-                    (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0)));
+                contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
+                (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
         const addButtonLabel =
             canEdit && !!this.props.contributor.nameAsPublished ? 'Change Details' : locale.addButton;
 
@@ -308,7 +313,8 @@ export class ContributorForm extends PureComponent {
                     </Grid>
                     {(((showIdentifierLookup || isNtro) &&
                         (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
-                        (!isNtro && canEdit)) && (
+                        (!isNtro && canEdit) ||
+                        (showIdentifierLookup && canEdit)) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 disabled={

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { userIsAdmin } from 'hooks';
 import locale from 'locale/global';
 import { numberToWords } from 'config';
-import { AFFILIATION_TYPE_UQ, ORG_TYPES_LOOKUP } from 'config/general';
+import { AFFILIATION_TYPE_UQ, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 import Grid from '@material-ui/core/Grid';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
@@ -70,18 +70,20 @@ export const ContributorRowText = ({
                     `${selectedClass}`,
                 )}
             </Grid>
-            {isUQAuthor(contributor) && haveFullAuthorDetails(contributor) && (
+            {contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ &&
+                isUQAuthor(contributor) &&
+                haveFullAuthorDetails(contributor) && (
                 <Grid item xs={10} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
                         `${locale.global.orgTitle} (${contributor.aut_org_username ||
-                            contributor.aut_student_username} - ${contributor.aut_id})`,
+                                contributor.aut_student_username} - ${contributor.aut_id})`,
                         `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                         `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                     )}
                 </Grid>
             )}
-            {!!contributor.affiliation && !(isUQAuthor(contributor) && haveFullAuthorDetails(contributor)) && (
+            {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
                 <Grid item xs={12} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.orgaff}`,
