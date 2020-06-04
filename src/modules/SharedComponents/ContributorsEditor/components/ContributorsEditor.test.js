@@ -184,6 +184,7 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state()).toMatchSnapshot();
     });
 
+    // prettier-ignore
     it('assigns a contributor to current author', async() => {
         const wrapper = setup({
             author: {
@@ -241,6 +242,32 @@ describe('ContributorsEditor', () => {
         ]);
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('sets the uqUsername state to contributor nameAsPublished if author id is 0', () => {
+        const wrapper = setup({
+            editMode: true,
+            canEdit: true,
+        });
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test1',
+                    selected: false,
+                    aut_id: 0,
+                    uqUsername: null,
+                },
+            ],
+        });
+        wrapper.instance().selectContributor(0);
+        expect(wrapper.state().contributors).toEqual([
+            {
+                nameAsPublished: 'test1',
+                selected: true,
+                aut_id: 0,
+                uqUsername: 'test1',
+            },
+        ]);
     });
 
     it('chooses a architectural contributor to edit', () => {
