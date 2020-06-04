@@ -237,10 +237,10 @@ exports[`AddSection component should render default view 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="secondary"
+                    data-testid="cancel-work"
                     fullWidth={true}
                     id="cancel-work"
                     onClick={[Function]}
-                    test-dataid="cancel-work"
                     variant="contained"
                   >
                     Cancel
@@ -253,9 +253,9 @@ exports[`AddSection component should render default view 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="primary"
+                    data-testid="submit-work"
                     fullWidth={true}
                     id="submit-work"
-                    test-dataid="submit-work"
                     variant="contained"
                   >
                     Create record
@@ -529,10 +529,10 @@ exports[`AddSection component should render with subtypes 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="secondary"
+                    data-testid="cancel-work"
                     fullWidth={true}
                     id="cancel-work"
                     onClick={[Function]}
-                    test-dataid="cancel-work"
                     variant="contained"
                   >
                     Cancel
@@ -545,9 +545,9 @@ exports[`AddSection component should render with subtypes 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="primary"
+                    data-testid="submit-work"
                     fullWidth={true}
                     id="submit-work"
-                    test-dataid="submit-work"
                     variant="contained"
                   >
                     Create record

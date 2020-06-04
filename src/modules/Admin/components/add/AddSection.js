@@ -111,7 +111,7 @@ export const AddSection = ({
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="cancel-work"
-                                                test-dataid="cancel-work"
+                                                data-testid="cancel-work"
                                                 variant="contained"
                                                 color="secondary"
                                                 fullWidth
@@ -122,7 +122,7 @@ export const AddSection = ({
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="submit-work"
-                                                test-dataid="submit-work"
+                                                data-testid="submit-work"
                                                 variant="contained"
                                                 color="primary"
                                                 fullWidth
