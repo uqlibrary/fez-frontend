@@ -29,6 +29,7 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_scale', 'fez_record_search_key_job_number'],
+                ['fez_record_search_key_location_biblio'],
             ],
         },
         {

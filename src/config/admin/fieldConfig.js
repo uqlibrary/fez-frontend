@@ -1621,6 +1621,9 @@ export default {
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            fez_record_search_key_location_biblio: () => ({
+                label: locale.components.locationForm.field.form.locale.inputFieldLabel,
+            }),
         },
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({

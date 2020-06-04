@@ -3007,10 +3007,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should only save the supplied key for a many-to-one search key', () => {
             const dataMany = {
-                issnField: [
-                    { rek_value: '1212-1212', rek_order: 1 },
-                    { rek_value: '2323-2323', rek_order: 2 },
-                ],
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
             };
             const dataOne = {
                 issnField: [{ rek_value: '2323-2323', rek_order: 1 }],
@@ -3040,10 +3037,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
-                issnField: [
-                    { rek_value: '1212-1212', rek_order: 1 },
-                    { rek_value: '2323-2323', rek_order: 2 },
-                ],
+                issnField: [{ rek_value: '1212-1212', rek_order: 1 }, { rek_value: '2323-2323', rek_order: 2 }],
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
