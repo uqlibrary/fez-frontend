@@ -4,6 +4,7 @@ import { DATA_COLLECTION_CREATOR_ROLES } from 'config/general';
 
 const mapStateToProps = (state, props) => {
     return {
+        autoCompleteAsynchronousFieldId: 'rek-creator-role',
         itemsList: DATA_COLLECTION_CREATOR_ROLES,
         allowFreeText: true,
         clearOnSelect: props.clearInput,

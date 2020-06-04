@@ -11,6 +11,7 @@ const mapStateToProps = (state, props) => {
     };
     return {
         id: props.id,
+        autoCompleteAsynchronousFieldId: props.authorIdFieldId,
         itemsList: itemsList.filter(item => !!item.id && item.id !== 0),
         itemsLoading,
         getOptionLabel: item => (!!item && !!item.id && String(`${item.id} (${item.value})`)) || '',

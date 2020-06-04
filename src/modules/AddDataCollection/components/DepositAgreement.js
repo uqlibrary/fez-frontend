@@ -27,7 +27,13 @@ export const useStyles = makeStyles(
     { withTheme: true },
 );
 
-const DepositAgreement = ({ isDepositAgreementAccepted, onChange, depositAgreement, disabled }) => {
+const DepositAgreement = ({
+    isDepositAgreementAccepted,
+    onChange,
+    depositAgreement,
+    depositAgreementFieldId,
+    disabled,
+}) => {
     const classes = useStyles();
 
     const _handleChange = event => {
@@ -42,7 +48,10 @@ const DepositAgreement = ({ isDepositAgreementAccepted, onChange, depositAgreeme
             disabled={disabled}
             control={
                 <Checkbox
-                    id="deposit-agreement"
+                    inputProps={{
+                        'data-testid': `${depositAgreementFieldId}-input`,
+                        id: `${depositAgreementFieldId}-input`,
+                    }}
                     checked={isDepositAgreementAccepted}
                     onChange={_handleChange}
                     classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
@@ -55,6 +64,8 @@ const DepositAgreement = ({ isDepositAgreementAccepted, onChange, depositAgreeme
                     }}
                     color={!isDepositAgreementAccepted ? 'error' : 'secondary'}
                     component="div"
+                    id={`${depositAgreementFieldId}-label`}
+                    data-testid={`${depositAgreementFieldId}-label`}
                 >
                     {depositAgreement}
                 </Typography>
@@ -68,6 +79,7 @@ DepositAgreement.propTypes = {
     onChange: PropTypes.func,
     classes: PropTypes.object,
     depositAgreement: PropTypes.node,
+    depositAgreementFieldId: PropTypes.string,
     disabled: PropTypes.bool,
 };
 

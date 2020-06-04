@@ -7,6 +7,7 @@ const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
+        autoCompleteAsynchronousFieldId: props.seriesFieldId || 'rek-series',
         allowFreeText: true,
         defaultValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
         errorText: props.meta ? props.meta.error : null,
@@ -25,4 +26,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const SeriesField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const SeriesField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);

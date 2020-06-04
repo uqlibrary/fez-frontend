@@ -8,6 +8,7 @@ const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
+        autoCompleteAsynchronousFieldId: props.reportNumberFieldId || 'rek-report-number',
         itemsList,
         itemsLoading,
         allowFreeText: true,
@@ -24,4 +25,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: () => props.input.onChange(null),
 });
 
-export const ReportNumberField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+export const ReportNumberField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsynchronousField);

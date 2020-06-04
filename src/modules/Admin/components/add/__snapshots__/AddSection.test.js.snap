@@ -240,6 +240,7 @@ exports[`AddSection component should render default view 1`] = `
                     fullWidth={true}
                     id="cancel-work"
                     onClick={[Function]}
+                    test-dataid="cancel-work"
                     variant="contained"
                   >
                     Cancel
@@ -254,6 +255,7 @@ exports[`AddSection component should render default view 1`] = `
                     color="primary"
                     fullWidth={true}
                     id="submit-work"
+                    test-dataid="submit-work"
                     variant="contained"
                   >
                     Create record
@@ -530,6 +532,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                     fullWidth={true}
                     id="cancel-work"
                     onClick={[Function]}
+                    test-dataid="cancel-work"
                     variant="contained"
                   >
                     Cancel
@@ -544,6 +547,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                     color="primary"
                     fullWidth={true}
                     id="submit-work"
+                    test-dataid="submit-work"
                     variant="contained"
                   >
                     Create record

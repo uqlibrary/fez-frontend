@@ -42,9 +42,9 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
 
         // Enrolling unit
-        cy.get('#org-unit-name-field')
+        cy.get('[data-testid=rek-org-unit-name-input]')
             .type('a');
-        cy.clickAutoSuggestion('org-unit-name-field', 0);
+        cy.clickAutoSuggestion('rek-org-unit-name', 0);
         cy.get('.Alert')
             .find('ul')
             .children()
@@ -128,9 +128,9 @@ context('Thesis', () => {
             .should('have.length', 3);
 
         // Field of Research
-        cy.get('#filtered-field-of-research-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('a');
-        cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
+        cy.clickAutoSuggestion('rek-subject', 0);
         cy.get('.Alert')
             .find('ul')
             .children()
@@ -148,9 +148,9 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 3);
-        cy.get('#filtered-field-of-research-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('b');
-        cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
+        cy.clickAutoSuggestion('rek-subject', 0);
         cy.get('.Alert')
             .find('ul')
             .children()
@@ -166,9 +166,9 @@ context('Thesis', () => {
             .should('have.length', 3);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('#filtered-field-of-research-input')
+        cy.get('[data-testid=rek-subject-input]')
             .type('a');
-        cy.clickAutoSuggestion('filtered-field-of-research-input', 0);
+        cy.clickAutoSuggestion('rek-subject', 0);
         cy.get('.Alert')
             .find('ul')
             .children()
