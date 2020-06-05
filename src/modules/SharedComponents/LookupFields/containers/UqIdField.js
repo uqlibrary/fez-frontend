@@ -13,19 +13,18 @@ const mapStateToProps = (state, props) => {
     };
     return {
         autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
-        itemsList:
-            state.get('authorsReducer') && state.get('authorsReducer')
-                ? state
-                    .get('authorsReducer')
-                    .authorsList.filter(
-                        item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
-                    )
-                    .map(item => ({
-                        value: `${item.aut_title} ${item.aut_display_name}${getUqUsername(item)}`,
-                        id: item.aut_id,
-                        ...item,
-                    }))
-                : [],
+        itemsList: state.get('authorsReducer')
+            ? state
+                .get('authorsReducer')
+                .authorsList.filter(
+                    item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
+                )
+                .map(item => ({
+                    value: `${item.aut_title} ${item.aut_display_name}${getUqUsername(item)}`,
+                    id: item.aut_id,
+                    ...item,
+                }))
+            : [],
         itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         defaultValue: (!!props.value && { value: props.value }) || '',
         getOptionLabel: option => option.value || '',
@@ -44,4 +43,5 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: props.onClear,
 });
 
+// prettier-ignore
 export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
