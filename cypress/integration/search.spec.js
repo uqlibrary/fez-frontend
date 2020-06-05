@@ -88,21 +88,24 @@ context('Search', () => {
             .should('be.disabled');
         cy.get('[data-testid=rek-ismemberof-input]')
             .click();
-        cy.contains('[data-testid=rek-ismemberof-options]', '5th Australasian Congress on Applied Mechanics')
+        cy.contains(
+            '[data-testid=rek-ismemberof-options] li',
+            '5th Australasian Congress on Applied Mechanics',
+        )
             .click();
         cy.get('[data-testid=rek-ismemberof-input]')
             .click();
-        cy.contains('[data-testid=rek-ismemberof-options]', 'Adaptive Interactive Profit Expectations')
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'Adaptive Interactive Profit Expectations')
             .click();
         cy.get('[data-testid=rek-ismemberof-input]')
             .click();
-        cy.contains('[data-testid=rek-ismemberof-options]', 'Admin only - CHRC')
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC')
             .click();
         cy.get('#advancedSearchForm .searchQueryCaption')
             .should($caption => {
                 expect(cleanExtraSpaces($caption.text())).to.equal(
                     "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
-                    ' is one of UQ:217419, UQ:217422 or UQ:217423 AND is open access/full text',
+                    ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text',
                 );
             });
         cy.get('button#advancedSearchButton')
