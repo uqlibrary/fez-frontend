@@ -38,7 +38,13 @@ export const AutoCompleteAsynchronousField = ({
 
     const handleInputChange = useCallback(
         (event, newInputValue, reason) => {
-            if (reason === 'reset' && !!newInputValue && !!itemsList && newInputValue.indexOf(' - ') === -1) {
+            if (
+                autoCompleteAsynchronousFieldId === 'uq-id' &&
+                reason === 'reset' &&
+                !!newInputValue &&
+                !!itemsList &&
+                newInputValue.indexOf(' - ') === -1
+            ) {
                 setInputValue(newInputValue);
                 setOpen(true);
             } else if (reason === 'clear') {
@@ -49,7 +55,7 @@ export const AutoCompleteAsynchronousField = ({
                 onChange({ value: newInputValue });
             }
         },
-        [allowFreeText, onChange, onClear, itemsList],
+        [allowFreeText, autoCompleteAsynchronousFieldId, onChange, onClear, itemsList],
     );
 
     const handleChange = useCallback(
