@@ -184,7 +184,11 @@ export class ContributorsEditor extends PureComponent {
         this.setState(prevState => ({
             contributors: prevState.contributors.map((contributor, itemIndex) => {
                 const isEditedContributor = index === itemIndex;
-                searchQuery = isEditedContributor && contributor.aut_id === 0 ? contributor.nameAsPublished : '';
+                searchQuery =
+                    isEditedContributor &&
+                    (contributor.aut_id === 0 || !contributor.uqUsername || contributor.uqUsername === '0')
+                        ? contributor.nameAsPublished
+                        : '';
                 return {
                     ...contributor,
                     selected: isEditedContributor,
