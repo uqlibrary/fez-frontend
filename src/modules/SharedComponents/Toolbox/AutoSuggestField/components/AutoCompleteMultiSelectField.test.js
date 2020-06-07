@@ -23,6 +23,7 @@ describe('AutoCompleteMultiSelectField component', () => {
         document.createRange = () => ({
             setStart: () => {},
             setEnd: () => {},
+            toLowerCase: () => {},
             commonAncestorContainer: {
                 nodeName: 'BODY',
                 ownerDocument: document,
@@ -45,7 +46,7 @@ describe('AutoCompleteMultiSelectField component', () => {
     });
 
     it('should render component and select options', async() => {
-        const { getByTestId, getAllByTestId } = setup({
+        const { getByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
 
@@ -61,11 +62,36 @@ describe('AutoCompleteMultiSelectField component', () => {
             fireEvent.click(getByTestId('test-autocomplete-option-1', suggestions));
         });
 
-        const chips = getAllByTestId('test-autocomplete-selected');
+        expect(getByTestId('test-autocomplete-0')).toHaveTextContent('apple');
+        expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple juice');
+    });
 
-        expect(chips.length).toBe(2);
-        expect(chips[0]).toHaveTextContent('apple');
-        expect(chips[1]).toHaveTextContent('apple juice');
+    it('should render component and select options when the options are objects', async() => {
+        const { getByTestId } = setup({
+            itemsList: [
+                { rek_title: 'apple' },
+                { rek_title: 'orange' },
+                { rek_title: 'pineapple' },
+                { rek_title: 'orange juice' },
+                { rek_title: 'apple juice' },
+            ],
+            getOptionLabel: option => option.rek_title,
+        });
+
+        fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
+        let suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
+        act(() => {
+            fireEvent.click(getByTestId('test-autocomplete-option-0', suggestions));
+        });
+
+        fireEvent.change(getByTestId('test-autocomplete-input'), { target: { value: 'apple' } });
+        suggestions = await waitFor(() => getByTestId('test-autocomplete-options'));
+        act(() => {
+            fireEvent.click(getByTestId('test-autocomplete-option-1', suggestions));
+        });
+
+        expect(getByTestId('test-autocomplete-0')).toHaveTextContent('apple');
+        expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple juice');
     });
 
     it('should render give option template for options', async() => {
@@ -92,15 +118,13 @@ describe('AutoCompleteMultiSelectField component', () => {
     });
 
     it('should display selected options as chips from default value given', () => {
-        const { getAllByTestId } = setup({
+        const { getByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
             defaultValue: ['orange', 'apple'],
         });
 
-        const chips = getAllByTestId('test-autocomplete-selected');
-        expect(chips.length).toBe(2);
-        expect(chips[0]).toHaveTextContent('orange');
-        expect(chips[1]).toHaveTextContent('apple');
+        expect(getByTestId('test-autocomplete-0')).toHaveTextContent('orange');
+        expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple');
     });
 
     it('should load suggestions as soon as component loads', () => {

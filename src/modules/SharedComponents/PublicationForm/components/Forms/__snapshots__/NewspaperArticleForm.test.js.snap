@@ -124,7 +124,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
             floatingTitle="Publication Date"
             floatingTitleRequired={true}
             name="rek_date"
-            partialDateFieldId="date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [

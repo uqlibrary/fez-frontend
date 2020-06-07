@@ -67,7 +67,7 @@ context('Thesis admin edit', () => {
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
 
-                        cy.checkPartialDateFromRecordValue('date', record.rek_date);
+                        cy.checkPartialDateFromRecordValue('rek-date', record.rek_date);
 
                         cy.get('span span')
                             .eq(0)

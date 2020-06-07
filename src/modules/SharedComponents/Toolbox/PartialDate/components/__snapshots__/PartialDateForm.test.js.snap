@@ -40,6 +40,8 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -62,10 +64,24 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={true}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -170,6 +186,8 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -228,6 +246,8 @@ exports[`PartialDateForm component should handle partial values 1`] = `
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -250,10 +270,24 @@ exports[`PartialDateForm component should handle partial values 1`] = `
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={true}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -358,6 +392,8 @@ exports[`PartialDateForm component should handle partial values 1`] = `
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -416,6 +452,8 @@ exports[`PartialDateForm component should handle partial values 2`] = `
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -438,10 +476,24 @@ exports[`PartialDateForm component should handle partial values 2`] = `
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={true}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -546,6 +598,8 @@ exports[`PartialDateForm component should handle partial values 2`] = `
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -604,6 +658,8 @@ exports[`PartialDateForm component should load existing values 1`] = `
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -621,10 +677,24 @@ exports[`PartialDateForm component should load existing values 1`] = `
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={false}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -729,6 +799,8 @@ exports[`PartialDateForm component should load existing values 1`] = `
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -787,6 +859,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -810,10 +884,24 @@ exports[`PartialDateForm component with clearable flag should display an error o
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={true}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -918,6 +1006,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -976,6 +1066,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -994,10 +1086,24 @@ exports[`PartialDateForm component with clearable flag should display an error o
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={false}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -1102,6 +1208,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -1160,6 +1268,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -1183,10 +1293,24 @@ exports[`PartialDateForm component with clearable flag should display an error o
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={true}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -1291,6 +1415,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -1349,6 +1475,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -1372,10 +1500,24 @@ exports[`PartialDateForm component with clearable flag should display an error o
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={true}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -1480,6 +1622,8 @@ exports[`PartialDateForm component with clearable flag should display an error o
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -1538,6 +1682,8 @@ exports[`PartialDateForm component with clearable flag should not display an err
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -1556,10 +1702,24 @@ exports[`PartialDateForm component with clearable flag should not display an err
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={false}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -1664,6 +1824,8 @@ exports[`PartialDateForm component with clearable flag should not display an err
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
@@ -1722,6 +1884,8 @@ exports[`PartialDateForm component with clearable flag should not display an err
           id="test-day"
           inputProps={
             Object {
+              "data-testid": "test-day-input",
+              "id": "test-day-input",
               "label": "day",
               "maxLength": 2,
             }
@@ -1740,10 +1904,24 @@ exports[`PartialDateForm component with clearable flag should not display an err
         xs={4}
       >
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "test-month-options",
+              "id": "test-month-options",
+            }
+          }
+          SelectDisplayProps={
+            Object {
+              "data-testid": "test-month-select",
+              "id": "test-month-select",
+            }
+          }
           error={false}
           id="test-month"
           inputProps={
             Object {
+              "data-testid": "test-month-input",
+              "id": "test-month-input",
               "label": "month",
               "maxLength": 2,
             }
@@ -1848,6 +2026,8 @@ exports[`PartialDateForm component with clearable flag should not display an err
           id="test-year"
           inputProps={
             Object {
+              "data-testid": "test-year-input",
+              "id": "test-year-input",
               "label": "year",
               "maxLength": 4,
             }
