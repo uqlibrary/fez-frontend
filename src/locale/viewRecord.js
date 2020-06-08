@@ -995,10 +995,10 @@ export default {
                 },
             ],
             'Creative Work': [
-                {
-                    field: 'rek_genre',
-                    order: 1,
-                },
+                // {
+                //     field: 'rek_genre',
+                //     order: 1,
+                // },
                 {
                     field: 'fez_record_search_key_translated_title',
                     order: 2,
