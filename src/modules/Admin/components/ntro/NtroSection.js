@@ -20,6 +20,7 @@ import {
     NTRO_SUBTYPE_RRW_INTERARTS,
     NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
     NTRO_SUBTYPE_RRW_OTHER,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
 } from 'config/general';
 
 export const NtroSection = ({ disabled = false }) => {
@@ -46,7 +47,11 @@ export const NtroSection = ({ disabled = false }) => {
         NTRO_SUBTYPE_RRW_OTHER,
     ].includes(record.rek_subtype);
 
-    const cards = useRef(adminInterfaceConfig[record.rek_display_type].ntro(displayAudienceSize, displayIsrc));
+    const displayIsmn = !![NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION].includes(record.rek_subtype);
+
+    const cards = useRef(
+        adminInterfaceConfig[record.rek_display_type].ntro(displayAudienceSize, displayIsrc, displayIsmn),
+    );
 
     return <Section cards={cards.current} disabled={disabled} />;
 };

@@ -86,7 +86,7 @@ export default {
             groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
-    ntro: (displayAudienceSize = false, displayIsrc = false) => {
+    ntro: (displayAudienceSize = false, displayIsrc = false, displayIsmn = false) => {
         return [
             !!displayAudienceSize && {
                 title: 'Audience size',
@@ -96,7 +96,7 @@ export default {
                 title: 'Scale/Significance of work & Creator research statement',
                 groups: [['significanceAndContributionStatement']],
             },
-            {
+            !!displayIsmn && {
                 title: 'ISMN',
                 groups: [['fez_record_search_key_ismn']],
             },
