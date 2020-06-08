@@ -5481,7 +5481,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 className="MuiFormControl-root MuiFormControl-fullWidth"
                                               >
                                                 <WithStyles(ForwardRef(InputLabel))
-                                                  id="org-affiliation-selector-label"
+                                                  id="org-affiliation-label"
                                                 >
                                                   <ForwardRef(InputLabel)
                                                     classes={
@@ -5500,7 +5500,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "shrink": "MuiInputLabel-shrink",
                                                       }
                                                     }
-                                                    id="org-affiliation-selector-label"
+                                                    id="org-affiliation-label"
                                                   >
                                                     <WithStyles(ForwardRef(FormLabel))
                                                       className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -5514,7 +5514,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         }
                                                       }
                                                       data-shrink={false}
-                                                      id="org-affiliation-selector-label"
+                                                      id="org-affiliation-label"
                                                     >
                                                       <ForwardRef(FormLabel)
                                                         className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -5531,12 +5531,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           }
                                                         }
                                                         data-shrink={false}
-                                                        id="org-affiliation-selector-label"
+                                                        id="org-affiliation-label"
                                                       >
                                                         <label
                                                           className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                                           data-shrink={false}
-                                                          id="org-affiliation-selector-label"
+                                                          id="org-affiliation-label"
                                                         >
                                                           Org affiliation
                                                         </label>
@@ -5545,21 +5545,35 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   </ForwardRef(InputLabel)>
                                                 </WithStyles(ForwardRef(InputLabel))>
                                                 <WithStyles(ForwardRef(Select))
-                                                  SelectDisplayProps={
+                                                  MenuProps={
                                                     Object {
-                                                      "id": "org-affiliation-selector",
+                                                      "data-testid": "org-affiliation-options",
+                                                      "id": "org-affiliation-options",
                                                     }
                                                   }
-                                                  labelId="org-affiliation-selector-label"
-                                                  name="org-affiliation-selector"
+                                                  SelectDisplayProps={
+                                                    Object {
+                                                      "data-testid": "org-affiliation-select",
+                                                      "id": "org-affiliation-select",
+                                                    }
+                                                  }
+                                                  labelId="org-affiliation-label"
+                                                  name="org-affiliation"
                                                   onChange={[Function]}
                                                   required={true}
                                                   value=""
                                                 >
                                                   <ForwardRef(Select)
+                                                    MenuProps={
+                                                      Object {
+                                                        "data-testid": "org-affiliation-options",
+                                                        "id": "org-affiliation-options",
+                                                      }
+                                                    }
                                                     SelectDisplayProps={
                                                       Object {
-                                                        "id": "org-affiliation-selector",
+                                                        "data-testid": "org-affiliation-select",
+                                                        "id": "org-affiliation-select",
                                                       }
                                                     }
                                                     classes={
@@ -5576,8 +5590,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "selectMenu": "MuiSelect-selectMenu",
                                                       }
                                                     }
-                                                    labelId="org-affiliation-selector-label"
-                                                    name="org-affiliation-selector"
+                                                    labelId="org-affiliation-label"
+                                                    name="org-affiliation"
                                                     onChange={[Function]}
                                                     required={true}
                                                     value=""
@@ -5632,9 +5646,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "render": [Function],
                                                             },
                                                           },
-                                                          "MenuProps": undefined,
+                                                          "MenuProps": Object {
+                                                            "data-testid": "org-affiliation-options",
+                                                            "id": "org-affiliation-options",
+                                                          },
                                                           "SelectDisplayProps": Object {
-                                                            "id": "org-affiliation-selector",
+                                                            "data-testid": "org-affiliation-select",
+                                                            "id": "org-affiliation-select",
                                                           },
                                                           "autoWidth": false,
                                                           "children": Array [
@@ -5670,7 +5688,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "selectMenu": "MuiSelect-selectMenu",
                                                           },
                                                           "displayEmpty": false,
-                                                          "labelId": "org-affiliation-selector-label",
+                                                          "labelId": "org-affiliation-label",
                                                           "multiple": false,
                                                           "onClose": undefined,
                                                           "onOpen": undefined,
@@ -5680,7 +5698,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           "variant": "standard",
                                                         }
                                                       }
-                                                      name="org-affiliation-selector"
+                                                      name="org-affiliation"
                                                       onChange={[Function]}
                                                       required={true}
                                                       value=""
@@ -5753,9 +5771,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "render": [Function],
                                                               },
                                                             },
-                                                            "MenuProps": undefined,
+                                                            "MenuProps": Object {
+                                                              "data-testid": "org-affiliation-options",
+                                                              "id": "org-affiliation-options",
+                                                            },
                                                             "SelectDisplayProps": Object {
-                                                              "id": "org-affiliation-selector",
+                                                              "data-testid": "org-affiliation-select",
+                                                              "id": "org-affiliation-select",
                                                             },
                                                             "autoWidth": false,
                                                             "children": Array [
@@ -5791,7 +5813,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "selectMenu": "MuiSelect-selectMenu",
                                                             },
                                                             "displayEmpty": false,
-                                                            "labelId": "org-affiliation-selector-label",
+                                                            "labelId": "org-affiliation-label",
                                                             "multiple": false,
                                                             "onClose": undefined,
                                                             "onOpen": undefined,
@@ -5801,7 +5823,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "variant": "standard",
                                                           }
                                                         }
-                                                        name="org-affiliation-selector"
+                                                        name="org-affiliation"
                                                         onChange={[Function]}
                                                         required={true}
                                                         value=""
@@ -5875,9 +5897,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "render": [Function],
                                                                 },
                                                               },
-                                                              "MenuProps": undefined,
+                                                              "MenuProps": Object {
+                                                                "data-testid": "org-affiliation-options",
+                                                                "id": "org-affiliation-options",
+                                                              },
                                                               "SelectDisplayProps": Object {
-                                                                "id": "org-affiliation-selector",
+                                                                "data-testid": "org-affiliation-select",
+                                                                "id": "org-affiliation-select",
                                                               },
                                                               "autoWidth": false,
                                                               "children": Array [
@@ -5913,7 +5939,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "selectMenu": "MuiSelect-selectMenu",
                                                               },
                                                               "displayEmpty": false,
-                                                              "labelId": "org-affiliation-selector-label",
+                                                              "labelId": "org-affiliation-label",
                                                               "multiple": false,
                                                               "onClose": undefined,
                                                               "onOpen": undefined,
@@ -5924,7 +5950,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             }
                                                           }
                                                           multiline={false}
-                                                          name="org-affiliation-selector"
+                                                          name="org-affiliation"
                                                           onChange={[Function]}
                                                           required={true}
                                                           type="text"
@@ -6003,9 +6029,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     "render": [Function],
                                                                   },
                                                                 },
-                                                                "MenuProps": undefined,
+                                                                "MenuProps": Object {
+                                                                  "data-testid": "org-affiliation-options",
+                                                                  "id": "org-affiliation-options",
+                                                                },
                                                                 "SelectDisplayProps": Object {
-                                                                  "id": "org-affiliation-selector",
+                                                                  "data-testid": "org-affiliation-select",
+                                                                  "id": "org-affiliation-select",
                                                                 },
                                                                 "autoWidth": false,
                                                                 "children": Array [
@@ -6041,7 +6071,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "selectMenu": "MuiSelect-selectMenu",
                                                                 },
                                                                 "displayEmpty": false,
-                                                                "labelId": "org-affiliation-selector-label",
+                                                                "labelId": "org-affiliation-label",
                                                                 "multiple": false,
                                                                 "onClose": undefined,
                                                                 "onOpen": undefined,
@@ -6052,7 +6082,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               }
                                                             }
                                                             multiline={false}
-                                                            name="org-affiliation-selector"
+                                                            name="org-affiliation"
                                                             onChange={[Function]}
                                                             required={true}
                                                             type="text"
@@ -6076,9 +6106,16 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     },
                                                                   }
                                                                 }
+                                                                MenuProps={
+                                                                  Object {
+                                                                    "data-testid": "org-affiliation-options",
+                                                                    "id": "org-affiliation-options",
+                                                                  }
+                                                                }
                                                                 SelectDisplayProps={
                                                                   Object {
-                                                                    "id": "org-affiliation-selector",
+                                                                    "data-testid": "org-affiliation-select",
+                                                                    "id": "org-affiliation-select",
                                                                   }
                                                                 }
                                                                 aria-invalid={false}
@@ -6101,9 +6138,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 disabled={false}
                                                                 displayEmpty={false}
                                                                 inputRef={[Function]}
-                                                                labelId="org-affiliation-selector-label"
+                                                                labelId="org-affiliation-label"
                                                                 multiple={false}
-                                                                name="org-affiliation-selector"
+                                                                name="org-affiliation"
                                                                 onAnimationStart={[Function]}
                                                                 onBlur={[Function]}
                                                                 onChange={[Function]}
@@ -6114,9 +6151,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               >
                                                                 <div
                                                                   aria-haspopup="listbox"
-                                                                  aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
+                                                                  aria-labelledby="org-affiliation-label org-affiliation-select"
                                                                   className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-                                                                  id="org-affiliation-selector"
+                                                                  data-testid="org-affiliation-select"
+                                                                  id="org-affiliation-select"
                                                                   onBlur={[Function]}
                                                                   onFocus={[Function]}
                                                                   onKeyDown={[Function]}
@@ -6133,7 +6171,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   />
                                                                 </div>
                                                                 <input
-                                                                  name="org-affiliation-selector"
+                                                                  name="org-affiliation"
                                                                   onAnimationStart={[Function]}
                                                                   type="hidden"
                                                                   value=""
@@ -6176,7 +6214,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 <WithStyles(ForwardRef(Menu))
                                                                   MenuListProps={
                                                                     Object {
-                                                                      "aria-labelledby": "org-affiliation-selector-label",
+                                                                      "aria-labelledby": "org-affiliation-label",
                                                                       "disableListWrap": true,
                                                                       "role": "listbox",
                                                                     }
@@ -6191,9 +6229,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   anchorEl={
                                                                     <div
                                                                       aria-haspopup="listbox"
-                                                                      aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
+                                                                      aria-labelledby="org-affiliation-label org-affiliation-select"
                                                                       class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-                                                                      id="org-affiliation-selector"
+                                                                      data-testid="org-affiliation-select"
+                                                                      id="org-affiliation-select"
                                                                       role="button"
                                                                       tabindex="0"
                                                                     >
@@ -6202,14 +6241,15 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       </span>
                                                                     </div>
                                                                   }
-                                                                  id="menu-org-affiliation-selector"
+                                                                  data-testid="org-affiliation-options"
+                                                                  id="org-affiliation-options"
                                                                   onClose={[Function]}
                                                                   open={false}
                                                                 >
                                                                   <ForwardRef(Menu)
                                                                     MenuListProps={
                                                                       Object {
-                                                                        "aria-labelledby": "org-affiliation-selector-label",
+                                                                        "aria-labelledby": "org-affiliation-label",
                                                                         "disableListWrap": true,
                                                                         "role": "listbox",
                                                                       }
@@ -6224,9 +6264,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     anchorEl={
                                                                       <div
                                                                         aria-haspopup="listbox"
-                                                                        aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
+                                                                        aria-labelledby="org-affiliation-label org-affiliation-select"
                                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-                                                                        id="org-affiliation-selector"
+                                                                        data-testid="org-affiliation-select"
+                                                                        id="org-affiliation-select"
                                                                         role="button"
                                                                         tabindex="0"
                                                                       >
@@ -6241,7 +6282,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         "paper": "MuiMenu-paper",
                                                                       }
                                                                     }
-                                                                    id="menu-org-affiliation-selector"
+                                                                    data-testid="org-affiliation-options"
+                                                                    id="org-affiliation-options"
                                                                     onClose={[Function]}
                                                                     open={false}
                                                                   >
@@ -6259,9 +6301,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       anchorEl={
                                                                         <div
                                                                           aria-haspopup="listbox"
-                                                                          aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
+                                                                          aria-labelledby="org-affiliation-label org-affiliation-select"
                                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-                                                                          id="org-affiliation-selector"
+                                                                          data-testid="org-affiliation-select"
+                                                                          id="org-affiliation-select"
                                                                           role="button"
                                                                           tabindex="0"
                                                                         >
@@ -6276,8 +6319,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           "vertical": "top",
                                                                         }
                                                                       }
+                                                                      data-testid="org-affiliation-options"
                                                                       getContentAnchorEl={[Function]}
-                                                                      id="menu-org-affiliation-selector"
+                                                                      id="org-affiliation-options"
                                                                       onClose={[Function]}
                                                                       onEntering={[Function]}
                                                                       open={false}
@@ -6303,9 +6347,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         anchorEl={
                                                                           <div
                                                                             aria-haspopup="listbox"
-                                                                            aria-labelledby="org-affiliation-selector-label org-affiliation-selector"
+                                                                            aria-labelledby="org-affiliation-label org-affiliation-select"
                                                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-                                                                            id="org-affiliation-selector"
+                                                                            data-testid="org-affiliation-select"
+                                                                            id="org-affiliation-select"
                                                                             role="button"
                                                                             tabindex="0"
                                                                           >
@@ -6326,8 +6371,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                             "root": "MuiPopover-root",
                                                                           }
                                                                         }
+                                                                        data-testid="org-affiliation-options"
                                                                         getContentAnchorEl={[Function]}
-                                                                        id="menu-org-affiliation-selector"
+                                                                        id="org-affiliation-options"
                                                                         onClose={[Function]}
                                                                         onEntering={[Function]}
                                                                         open={false}
@@ -6347,7 +6393,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           }
                                                                           className="MuiPopover-root"
                                                                           container={<body />}
-                                                                          id="menu-org-affiliation-selector"
+                                                                          data-testid="org-affiliation-options"
+                                                                          id="org-affiliation-options"
                                                                           onClose={[Function]}
                                                                           open={false}
                                                                         />

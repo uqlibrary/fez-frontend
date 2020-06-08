@@ -117,7 +117,7 @@ describe('ContributorRowText', () => {
         expect(contributorRow.children.length).toBe(2);
     });
 
-    it('should render two columns for researcher while adding new NTRO work (NonUQ affiliation)', () => {
+    it('should render two columns for researcher while adding new NTRO work (NotUQ affiliation)', () => {
         userIsAdmin.mockImplementation(() => false);
 
         const { getByTestId } = rtlRender(
@@ -126,7 +126,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                     orgtype: '453989',
                 }}
@@ -144,7 +144,7 @@ describe('ContributorRowText', () => {
         expect(contributorRow.children.length).toBe(2);
     });
 
-    it('should render two columns for researcher while adding new NTRO work (NonUQ affiliation) for smaller screen size', () => {
+    it('should render two columns for researcher while adding new NTRO work (NotUQ affiliation) for smaller screen size', () => {
         userIsAdmin.mockImplementation(() => false);
 
         const { getByTestId } = rtlRender(
@@ -153,7 +153,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                 }}
                 index={0}
@@ -229,7 +229,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                     orgtype: '453989',
                 }}
@@ -256,7 +256,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                     orgtype: '453989',
                     creatorRole: 'Some creator role',
