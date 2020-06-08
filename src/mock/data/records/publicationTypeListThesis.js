@@ -80,6 +80,14 @@ export default {
             ],
             "fez_record_search_key_author_id": [
                 {
+                    author: {
+
+                        aut_id: 91159,
+                        aut_orcid_id: null,
+                        aut_org_username: null,
+                        aut_student_username: "s42542573",
+                        aut_title: "",
+                    },
                     "rek_author_id_id": 29437216,
                     "rek_author_id_pid": "UQ:327650",
                     "rek_author_id_xsdmf_id": null,
@@ -87,11 +95,20 @@ export default {
                     "rek_author_id_order": 1,
                     "rek_author_id_lookup": "Simon, Bruno"
                 }, {
+
+                    author: {
+
+                        aut_id: 91159,
+                        aut_orcid_id: null,
+                        aut_org_username: null,
+                        aut_student_username: "s1234568",
+                        aut_title: "",
+                    },
                     "rek_author_id_id": 29437217,
                     "rek_author_id_pid": "UQ:327650",
                     "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 91158,
-                    "rek_author_id_order": 1,
+                    "rek_author_id_order": 2,
                     "rek_author_id_lookup": "Some Other Guy"
                 }
             ],

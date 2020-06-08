@@ -54,7 +54,10 @@ const authorsGetValue = record => {
         aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
-        affiliation: (!!(authorIds[order] || {}).rek_author_id && AFFILIATION_TYPE_UQ) || AFFILIATION_TYPE_NOT_UQ,
+        affiliation:
+            (authorAffiliationNames[order] || {}).rek_author_affiliation_name === globalLocale.global.orgTitle
+                ? AFFILIATION_TYPE_UQ
+                : AFFILIATION_TYPE_NOT_UQ,
         aut_org_username: ((authorIds[order] || {}).author || {}).aut_org_username || '',
         aut_student_username: ((authorIds[order] || {}).author || {}).aut_student_username || '',
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,

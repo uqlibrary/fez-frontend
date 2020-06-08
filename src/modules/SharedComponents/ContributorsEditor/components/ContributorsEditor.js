@@ -154,7 +154,8 @@ export class ContributorsEditor extends PureComponent {
             contributors: this.state.contributors.filter((_, i) => i !== index),
             isCurrentAuthorSelected:
                 this.state.isCurrentAuthorSelected &&
-                (this.props.author && contributor.aut_id !== this.props.author.aut_id),
+                this.props.author &&
+                contributor.aut_id !== this.props.author.aut_id,
         });
     };
 
