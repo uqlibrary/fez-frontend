@@ -86,8 +86,12 @@ export default {
             groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
-    ntro: (displayAudienceSize = true) => {
-        const commonNtroFields = [
+    ntro: (displayAudienceSize = false, displayIsrc = false) => {
+        return [
+            !!displayAudienceSize && {
+                title: 'Audience size',
+                groups: [['fez_record_search_key_audience_size']],
+            },
             {
                 title: 'Scale/Significance of work & Creator research statement',
                 groups: [['significanceAndContributionStatement']],
@@ -96,20 +100,15 @@ export default {
                 title: 'ISMN',
                 groups: [['fez_record_search_key_ismn']],
             },
+            !!displayIsrc && {
+                title: 'ISRC',
+                groups: [['fez_record_search_key_isrc']],
+            },
             {
                 title: 'Quality indicators',
                 groups: [['qualityIndicators']],
             },
-        ];
-        return displayAudienceSize
-            ? [
-                {
-                    title: 'Audience size',
-                    groups: [['fez_record_search_key_audience_size']],
-                },
-                ...commonNtroFields,
-            ]
-            : [...commonNtroFields];
+        ].filter(Boolean);
     },
 };
 

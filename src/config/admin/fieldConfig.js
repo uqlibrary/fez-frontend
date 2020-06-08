@@ -537,6 +537,20 @@ export default {
                 canEdit: true,
             },
         },
+        fez_record_search_key_isrc: {
+            component: ListEditorField,
+            componentProps: {
+                remindToAdd: true,
+                name: 'ntroSection.fez_record_search_key_isrc',
+                isValid: validation.isValidIsrc,
+                searchKey: {
+                    value: 'rek_isrc',
+                    order: 'rek_isrc_order',
+                },
+                locale: locale.components.isrcForm.field,
+                canEdit: true,
+            },
+        },
         fez_record_search_key_edition: {
             component: GenericTextField,
             componentProps: {

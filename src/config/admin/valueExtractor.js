@@ -289,6 +289,9 @@ export default {
     fez_record_search_key_ismn: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_ismn'),
     },
+    fez_record_search_key_isrc: {
+        getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_isrc'),
+    },
     fez_record_search_key_edition: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_edition'),
     },
