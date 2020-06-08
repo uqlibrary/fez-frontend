@@ -86,24 +86,31 @@ export default {
             groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
-    ntro: () => [
-        {
-            title: 'Audience size',
-            groups: [['fez_record_search_key_audience_size']],
-        },
-        {
-            title: 'Scale/Significance of work & Creator research statement',
-            groups: [['significanceAndContributionStatement']],
-        },
-        {
-            title: 'ISMN',
-            groups: [['fez_record_search_key_ismn']],
-        },
-        {
-            title: 'Quality indicators',
-            groups: [['qualityIndicators']],
-        },
-    ],
+    ntro: (displayAudienceSize = true) => {
+        const commonNtroFields = [
+            {
+                title: 'Scale/Significance of work & Creator research statement',
+                groups: [['significanceAndContributionStatement']],
+            },
+            {
+                title: 'ISMN',
+                groups: [['fez_record_search_key_ismn']],
+            },
+            {
+                title: 'Quality indicators',
+                groups: [['qualityIndicators']],
+            },
+        ];
+        return displayAudienceSize
+            ? [
+                {
+                    title: 'Audience size',
+                    groups: [['fez_record_search_key_audience_size']],
+                },
+                ...commonNtroFields,
+            ]
+            : [...commonNtroFields];
+    },
 };
 
 export const validateCreativeWork = (
