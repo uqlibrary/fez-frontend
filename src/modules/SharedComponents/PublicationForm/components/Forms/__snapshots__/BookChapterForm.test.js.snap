@@ -111,7 +111,7 @@ exports[`BookChapterForm renders  component 1`] = `
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
-            partialDateFieldId="date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [
@@ -720,7 +720,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
             floatingTitle="Date published"
             floatingTitleRequired={true}
             name="rek_date"
-            partialDateFieldId="date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [

@@ -210,14 +210,14 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {
-                        !!locked &&
+                    {!!locked && (
                         <Grid container style={{ marginTop: 12, marginBottom: 12 }}>
                             <Grid item xs={12}>
-                                <Alert title={'THIS RECORD IS LOCKED'}
+                                <Alert
+                                    title={'THIS RECORD IS LOCKED'}
                                     message={'This record is currently being edited by uqklane1'}
                                     type={'custom'}
-                                    customIcon={<LockIcon id="locked-icon" className="icon"/>}
+                                    customIcon={<LockIcon id="locked-icon" className="icon" />}
                                     customType={'error'}
                                     action={() => null}
                                     actionButtonLabel={'OVERRIDE LOCK'}
@@ -225,7 +225,7 @@ export const AdminInterface = ({
                                 />
                             </Grid>
                         </Grid>
-                    }
+                    )}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (

@@ -8,6 +8,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         getOptionLabel: option => option,
         loadSuggestions: jest.fn(),
         id: 'autocomplete-asynchronous-field',
+        autoCompleteAsynchronousFieldId: 'autocomplete-asynchronous-field',
         itemsList: [],
         itemsLoading: false,
         onChange: jest.fn(),
@@ -41,7 +42,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: 'apple' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'apple' } });
         });
 
         expect(loadSuggestionsFn).toHaveBeenCalledWith('apple');
@@ -58,7 +59,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: 'ap' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
         });
 
         setup({ itemsLoading: true, onChange: onChangeFn }, rerender);
@@ -75,6 +76,18 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onChangeFn).toHaveBeenCalledWith('apple');
     });
 
+    it('should open suggestions for uq-id', async() => {
+        const { getByTestId, getByRole } = setup({
+            autoCompleteAsynchronousFieldId: 'uq-id',
+            itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],
+            defaultValue: 'test',
+        });
+        act(() => {
+            fireEvent.change(getByTestId('uq-id-input'), { target: { value: 'ap', reason: 'reset' } });
+        });
+        await waitFor(() => getByRole('presentation'));
+    });
+
     it('should allow free text', async() => {
         const onChangeFn = jest.fn();
 
@@ -84,13 +97,13 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: 'cherry' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
         });
 
         setup({ itemsList: [], onChange: onChangeFn }, rerender);
 
         act(() => {
-            fireEvent.keyDown(getByTestId('autocomplete-asynchronous-field'), { key: 'Enter', code: 13 });
+            fireEvent.keyDown(getByTestId('autocomplete-asynchronous-field-input'), { key: 'Enter', code: 13 });
         });
 
         expect(onChangeFn).toHaveBeenCalledWith({ value: 'cherry' });
@@ -103,7 +116,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: 'cherry' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
@@ -120,24 +133,24 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: 'cherry' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: '' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
         });
 
         expect(onClearFn).toBeCalled();
     });
 
-    it('should render give option template for options', async() => {
+    it('should render given option template for options', async() => {
         // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
 
         const { getByTestId, getByRole, getAllByTestId, rerender } = setup({});
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-asynchronous-field'), { target: { value: 'ap' } });
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
         });
 
         setup({ itemsLoading: true }, rerender);

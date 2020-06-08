@@ -48,7 +48,7 @@ export default class PreprintForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
-                                    partialDateFieldId="date"
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial

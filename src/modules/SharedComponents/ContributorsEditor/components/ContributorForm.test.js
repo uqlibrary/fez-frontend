@@ -43,7 +43,7 @@ describe('Component ContributorForm', () => {
     it('should render display name field and identifier field', () => {
         const { getByTestId } = setup({ showIdentifierLookup: true });
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
-        expect(getByTestId('identifier-field')).toBeInTheDocument();
+        expect(getByTestId('aut-id-input')).toBeInTheDocument();
     });
 
     it('should render display name field and role field', () => {
@@ -56,7 +56,7 @@ describe('Component ContributorForm', () => {
         const { getByTestId, getByLabelText } = setup({ isNtro: true });
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
         expect(getByLabelText('Org affiliation')).toBeInTheDocument();
-        expect(getByTestId('identifier-field')).toBeInTheDocument();
+        expect(getByTestId('aut-id-input')).toBeInTheDocument();
     });
 
     it('should call event handler on submit if all checks pass', () => {
@@ -236,9 +236,9 @@ describe('Component ContributorForm', () => {
         });
 
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Testing, UqId' } });
-        fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('identifier-field-popup'));
+        const list = await waitFor(() => getByTestId('aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -292,9 +292,9 @@ describe('Component ContributorForm', () => {
             onSubmit: testFn,
         });
 
-        fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('identifier-field-popup'));
+        const list = await waitFor(() => getByTestId('aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -379,9 +379,9 @@ describe('Component ContributorForm', () => {
             onSubmit: testFn,
         });
 
-        fireEvent.change(getByTestId('identifier-field'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('identifier-field-popup'));
+        const list = await waitFor(() => getByTestId('aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,

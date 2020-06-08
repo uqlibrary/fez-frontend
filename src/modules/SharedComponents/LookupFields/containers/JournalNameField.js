@@ -8,6 +8,7 @@ const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
         state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
     return {
+        autoCompleteAsynchronousFieldId: props.journalNameFieldId || 'rek-journal-name',
         itemsList,
         itemsLoading,
         allowFreeText: true,

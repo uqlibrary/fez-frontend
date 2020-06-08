@@ -81,7 +81,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                   xs={12}
                 >
                   <WithStyles(ForwardRef(Typography))>
-                    Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.
+                    Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
                   </WithStyles(ForwardRef(Typography))>
                   <Field
                     component={[Function]}
@@ -283,7 +283,7 @@ exports[`Community form should render form 1`] = `
                   xs={12}
                 >
                   <WithStyles(ForwardRef(Typography))>
-                    Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.
+                    Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
                   </WithStyles(ForwardRef(Typography))>
                   <Field
                     component={[Function]}

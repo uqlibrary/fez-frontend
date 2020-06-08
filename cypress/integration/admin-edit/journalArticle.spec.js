@@ -241,7 +241,7 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.checkPartialDateFromRecordValue('date', record.rek_date);
+                        cy.checkPartialDateFromRecordValue('rek-date', record.rek_date);
                         cy.get('[data-testid=rek-date-available-input]')
                             .should(
                                 'have.value',
@@ -385,7 +385,7 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Member of collections');
-                        cy.get('#member-of-collections-input-label')
+                        cy.get('#rek-ismemberof-label')
                             .should('contain', 'Member of collections');
                         cy.get('[class*="MuiAutocomplete-tag-"]')
                             .eq(0)
@@ -450,7 +450,7 @@ context('Journal Article admin edit', () => {
                         .eq(0)
                         .click();
                 });
-                cy.get('#member-of-collections-input-helper-text')
+                cy.get('#rek-ismemberof-helper-text')
                     .should('exist')
                     .should('have.text', 'This field is required');
             });
@@ -569,7 +569,7 @@ context('Journal Article admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Copyright agreement');
-                cy.get('#deposit-agreement')
+                cy.get('[data-testid=rek-copyright-input]')
                     .should($checkbox => {
                         if (record.rek_copyright === 'on') {
                             expect($checkbox).to.be.checked;
@@ -578,7 +578,7 @@ context('Journal Article admin edit', () => {
                         }
                     });
             });
-        cy.get('#deposit-agreement')
+        cy.get('[data-testid=rek-copyright-input]')
             .click();
 
         cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);

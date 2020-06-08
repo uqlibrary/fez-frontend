@@ -28,11 +28,6 @@ const initialContributorState = {
     uqUsername: '',
 };
 
-const useContributorState = initialContributor => {
-    const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
-    return [contributor, setContributor];
-};
-
 export const ContributorForm = ({
     canEdit,
     contributor: initialContributor,
@@ -49,7 +44,7 @@ export const ContributorForm = ({
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput,
 }) => {
-    const [contributor, setContributor] = useContributorState(initialContributor);
+    const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
     const [uqIdentifierUpdatedFlag, setUqIdentifierUpdatedFlag] = useState(false);
@@ -230,7 +225,7 @@ export const ContributorForm = ({
                             disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
                             floatingLabelText="UQ Author ID"
                             hintText="Type UQ author name to search"
-                            id="identifier-field"
+                            uqIdFieldId="aut-id"
                             key={contributor.uqUsername}
                             onChange={_onUQIdentifierSelected}
                             onClear={_onUQIdentifierCleared}

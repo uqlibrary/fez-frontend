@@ -299,8 +299,12 @@ export const Alert = ({
             >
                 <Grid item xs={12} sm className={action && classes.linked}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
-                        <Grid item className={`${classes.icon} alert-icon ${wiggle ? classes.wriggler : ''}`}
-                            onClick={action} onKeyDown={action}>
+                        <Grid
+                            item
+                            className={`${classes.icon} alert-icon ${wiggle ? classes.wriggler : ''}`}
+                            onClick={action}
+                            onKeyDown={action}
+                        >
                             {showLoader ? (
                                 <CircularProgress id="spinner" className="spinner" size={38} thickness={3} />
                             ) : (

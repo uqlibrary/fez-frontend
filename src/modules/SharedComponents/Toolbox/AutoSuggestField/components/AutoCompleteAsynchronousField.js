@@ -7,6 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
+    autoCompleteAsynchronousFieldId,
     defaultValue,
     disabled,
     error,
@@ -14,7 +15,6 @@ export const AutoCompleteAsynchronousField = ({
     filterOptions,
     floatingLabelText,
     getOptionLabel,
-    id,
     itemsList,
     itemsLoading,
     loadSuggestions,
@@ -27,6 +27,7 @@ export const AutoCompleteAsynchronousField = ({
     const [options, setOptions] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [value, setValue] = useState(defaultValue);
+    const active = useRef(true);
 
     const loading = itemsLoading;
     const throttledLoadSuggestions = useRef(throttle(1000, newValue => loadSuggestions(newValue)));
@@ -36,22 +37,32 @@ export const AutoCompleteAsynchronousField = ({
     }, []);
 
     const handleInputChange = useCallback(
-        (event, value, reason) => {
-            if (reason === 'clear') {
+        (event, newInputValue, reason) => {
+            if (
+                autoCompleteAsynchronousFieldId === 'uq-id' &&
+                reason === 'reset' &&
+                !!newInputValue &&
+                !!itemsList &&
+                newInputValue.indexOf(' - ') === -1
+            ) {
+                setInputValue(newInputValue);
+                setOpen(true);
+            } else if (reason === 'clear') {
                 onClear();
-            } else if (!value && reason === 'input') {
+            } else if (!newInputValue && reason === 'input') {
                 onClear();
-            } else if (!!allowFreeText && !!value && reason === 'input') {
-                onChange({ value });
+            } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
+                onChange({ value: newInputValue });
             }
         },
-        [allowFreeText, onChange, onClear],
+        [allowFreeText, autoCompleteAsynchronousFieldId, onChange, onClear, itemsList],
     );
 
     const handleChange = useCallback(
         (event, newValue) => {
             setValue(newValue);
             !!newValue && onChange(newValue);
+            throttledLoadSuggestions.current('');
         },
         [onChange],
     );
@@ -63,16 +74,12 @@ export const AutoCompleteAsynchronousField = ({
     }, [inputValue]);
 
     useEffect(() => {
-        let active = true;
+        active.current = !loading && itemsList.length > 0;
 
-        if (!loading && itemsList.length === 0) {
-            return undefined;
-        }
-
-        !!active && setOptions(itemsList);
+        !!active.current && setOptions(itemsList);
 
         return () => {
-            active = false;
+            active.current = false;
         };
     }, [itemsList, loading]);
 
@@ -84,9 +91,10 @@ export const AutoCompleteAsynchronousField = ({
 
     return (
         <Autocomplete
-            id={id}
+            id={autoCompleteAsynchronousFieldId}
             clearOnEscape
             disabled={disabled}
+            open={open}
             onOpen={() => {
                 setOpen(true);
             }}
@@ -120,11 +128,20 @@ export const AutoCompleteAsynchronousField = ({
                             </React.Fragment>
                         ),
                     }}
+                    inputProps={{
+                        ...params.inputProps,
+                        id: `${autoCompleteAsynchronousFieldId}-input`,
+                        'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
+                    }}
                     value={inputValue}
                     onChange={handleSearchTextChange}
                     required={required}
                 />
             )}
+            ListboxProps={{
+                id: `${autoCompleteAsynchronousFieldId}-options`,
+                'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
+            }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
         />
@@ -133,6 +150,7 @@ export const AutoCompleteAsynchronousField = ({
 
 AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
+    autoCompleteAsynchronousFieldId: PropTypes.string.isRequired,
     defaultValue: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
@@ -140,7 +158,6 @@ AutoCompleteAsynchronousField.propTypes = {
     filterOptions: PropTypes.func.isRequired,
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
-    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     itemsLoading: PropTypes.bool,
     loadSuggestions: PropTypes.func,

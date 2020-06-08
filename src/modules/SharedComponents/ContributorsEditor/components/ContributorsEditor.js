@@ -16,8 +16,11 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
+        canEdit: PropTypes.bool,
         classes: PropTypes.object,
+        contributorEditorId: PropTypes.string.isRequired,
         disabled: PropTypes.bool,
+        editMode: PropTypes.bool,
         hideDelete: PropTypes.bool,
         hideReorder: PropTypes.bool,
         input: PropTypes.object,
@@ -29,12 +32,11 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        editMode: PropTypes.bool,
-        canEdit: PropTypes.bool,
-        contributorEditorId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
+        canEdit: false,
+        editMode: false,
         hideDelete: false,
         hideReorder: false,
         isNtro: false,
@@ -45,8 +47,6 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
-        editMode: false,
-        canEdit: false,
     };
 
     constructor(props) {
@@ -180,11 +180,21 @@ export class ContributorsEditor extends PureComponent {
     };
 
     selectContributor = index => {
+        let searchQuery = '';
         this.setState(prevState => ({
-            contributors: prevState.contributors.map((contributor, itemIndex) => ({
-                ...contributor,
-                selected: index === itemIndex,
-            })),
+            contributors: prevState.contributors.map((contributor, itemIndex) => {
+                const isEditedContributor = index === itemIndex;
+                searchQuery =
+                    isEditedContributor &&
+                    (contributor.aut_id === 0 || !contributor.uqUsername || contributor.uqUsername === '0')
+                        ? contributor.nameAsPublished
+                        : '';
+                return {
+                    ...contributor,
+                    selected: isEditedContributor,
+                    uqUsername: searchQuery ? searchQuery : contributor.uqUsername,
+                };
+            }),
             contributorIndexSelectedToEdit: index,
         }));
     };
@@ -233,12 +243,13 @@ export class ContributorsEditor extends PureComponent {
 
     renderContributorForm = (editProps = {}) => {
         const { contributorIndexSelectedToEdit } = this.state;
+        const contributor = this.state.contributors[contributorIndexSelectedToEdit];
         const formProps = {
             ...this.props,
             ...editProps,
             isContributorAssigned: !!this.state.contributors.length,
             locale: (this.props.locale.form || {}).locale,
-            contributor: this.state.contributors[contributorIndexSelectedToEdit],
+            contributor,
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
         };
@@ -338,11 +349,9 @@ export class ContributorsEditor extends PureComponent {
     }
 }
 
-export const mapStateToProps = state => {
-    return {
-        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
-    };
-};
+export const mapStateToProps = state => ({
+    author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
+});
 
 export const styles = () => ({
     list: {

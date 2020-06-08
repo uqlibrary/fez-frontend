@@ -47,12 +47,12 @@ context('Digilib Image admin edit', () => {
                     );
 
                 cy.checkPartialDateFromRecordValue(
-                    'date-photo-taken',
+                    'rek-date-photo-taken',
                     record.fez_record_search_key_date_photo_taken.rek_date_photo_taken,
                 );
 
                 cy.checkPartialDateFromRecordValue(
-                    'date-photo-scanned',
+                    'rek-date-scanned',
                     record.fez_record_search_key_date_scanned.rek_date_scanned,
                 );
 

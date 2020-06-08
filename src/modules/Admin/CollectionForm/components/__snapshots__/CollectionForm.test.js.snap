@@ -375,7 +375,7 @@ exports[`Collection form should render the full form 1`] = `
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.
+                  Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
                 </WithStyles(ForwardRef(Typography))>
                 <Field
                   component={[Function]}

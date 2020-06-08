@@ -37,10 +37,10 @@ context('Design admin edit', () => {
                         record.fez_record_search_key_project_name.rek_project_name,
                     );
                 cy.checkPartialDateFromRecordValue(
-                    'project-start-date',
+                    'rek-project-start-date',
                     record.fez_record_search_key_project_start_date.rek_project_start_date,
                 );
-                cy.checkPartialDateFromRecordValue('end-date', record.fez_record_search_key_end_date.rek_end_date);
+                cy.checkPartialDateFromRecordValue('rek-end-date', record.fez_record_search_key_end_date.rek_end_date);
                 cy.get('[data-testid=rek-scale-input]')
                     .should(
                         'have.value',

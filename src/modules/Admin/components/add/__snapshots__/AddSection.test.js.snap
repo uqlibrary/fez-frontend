@@ -25,6 +25,7 @@ exports[`AddSection component should render default view 1`] = `
               xs={12}
             >
               <Field
+                collectionFieldId="rek-ismemberof"
                 component={
                   Object {
                     "$$typeof": Symbol(react.memo),
@@ -42,7 +43,6 @@ exports[`AddSection component should render default view 1`] = `
                 floatingLabelText="Member of collections"
                 fullwidth={true}
                 hintText="Begin typing to select and add record to a list of collection(s)"
-                id="adminSectioncollections"
                 name="adminSection.collections"
                 required={true}
                 validate={
@@ -237,6 +237,7 @@ exports[`AddSection component should render default view 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="secondary"
+                    data-testid="cancel-work"
                     fullWidth={true}
                     id="cancel-work"
                     onClick={[Function]}
@@ -252,6 +253,7 @@ exports[`AddSection component should render default view 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="primary"
+                    data-testid="submit-work"
                     fullWidth={true}
                     id="submit-work"
                     variant="contained"
@@ -294,6 +296,7 @@ exports[`AddSection component should render with subtypes 1`] = `
               xs={12}
             >
               <Field
+                collectionFieldId="rek-ismemberof"
                 component={
                   Object {
                     "$$typeof": Symbol(react.memo),
@@ -311,7 +314,6 @@ exports[`AddSection component should render with subtypes 1`] = `
                 floatingLabelText="Member of collections"
                 fullwidth={true}
                 hintText="Begin typing to select and add record to a list of collection(s)"
-                id="adminSectioncollections"
                 name="adminSection.collections"
                 required={true}
                 validate={
@@ -488,11 +490,6 @@ exports[`AddSection component should render with subtypes 1`] = `
                 xs={12}
               >
                 <Field
-                  SelectDisplayProps={
-                    Object {
-                      "id": "rek-subtype",
-                    }
-                  }
                   component={[Function]}
                   disabled={false}
                   id="rek-subtype"
@@ -500,6 +497,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                   name="adminSection.rek_subtype"
                   placeholder="Select a work subtype from the dropdown list"
                   required={true}
+                  selectFieldId="rek-subtype"
                   validate={
                     Array [
                       [Function],
@@ -531,6 +529,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="secondary"
+                    data-testid="cancel-work"
                     fullWidth={true}
                     id="cancel-work"
                     onClick={[Function]}
@@ -546,6 +545,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                 >
                   <WithStyles(ForwardRef(Button))
                     color="primary"
+                    data-testid="submit-work"
                     fullWidth={true}
                     id="submit-work"
                     variant="contained"

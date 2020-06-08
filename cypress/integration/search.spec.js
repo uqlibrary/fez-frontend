@@ -86,17 +86,20 @@ context('Search', () => {
             .click();
         cy.get('button#advancedSearchButton')
             .should('be.disabled');
-        cy.get('[placeholder="Type a Collection title to search"]')
+        cy.get('[data-testid=rek-ismemberof-input]')
             .click();
-        cy.contains('#searchField-popup li', '5th Australasian Congress on Applied Mechanics')
+        cy.contains(
+            '[data-testid=rek-ismemberof-options] li',
+            '5th Australasian Congress on Applied Mechanics',
+        )
             .click();
-        cy.get('[placeholder="Type a Collection title to search"]')
+        cy.get('[data-testid=rek-ismemberof-input]')
             .click();
-        cy.contains('#searchField-popup li', 'Adaptive Interactive Profit Expectations')
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'Adaptive Interactive Profit Expectations')
             .click();
-        cy.get('[placeholder="Type a Collection title to search"]')
+        cy.get('[data-testid=rek-ismemberof-input]')
             .click();
-        cy.contains('#searchField-popup li', 'Admin only - CHRC')
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC')
             .click();
         cy.get('#advancedSearchForm .searchQueryCaption')
             .should($caption => {

@@ -2,15 +2,16 @@ import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import Chip from '@material-ui/core/Chip';
 
 export const AutoCompleteMultiSelectField = ({
+    autoCompleteMultiSelectFieldId,
     defaultValue,
     error,
     errorText,
     hintText,
     floatingLabelText,
     getOptionLabel,
-    id,
     itemsList,
     loadSuggestions,
     onChange,
@@ -31,10 +32,7 @@ export const AutoCompleteMultiSelectField = ({
 
     return (
         <Autocomplete
-            id={id}
-            ChipProps={{
-                id: `${id}-selected`,
-            }}
+            id={autoCompleteMultiSelectFieldId}
             multiple
             getOptionLabel={getOptionLabel}
             options={itemsList}
@@ -51,8 +49,27 @@ export const AutoCompleteMultiSelectField = ({
                     label={floatingLabelText}
                     placeholder={hintText}
                     required={required}
+                    inputProps={{
+                        ...params.inputProps,
+                        id: `${autoCompleteMultiSelectFieldId}-input`,
+                        'data-testid': `${autoCompleteMultiSelectFieldId}-input`,
+                    }}
                 />
             )}
+            renderTags={(value, getTagProps) =>
+                value.map((option, index) => (
+                    <Chip
+                        label={!!option.rek_title ? option.rek_title : option}
+                        id={`${autoCompleteMultiSelectFieldId}-${index}`}
+                        data-testid={`${autoCompleteMultiSelectFieldId}-${index}`}
+                        {...getTagProps({ index })}
+                    />
+                ))
+            }
+            ListboxProps={{
+                id: `${autoCompleteMultiSelectFieldId}-options`,
+                'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
+            }}
             {...(!!OptionTemplate ? { renderOption: option => <OptionTemplate option={option} /> } : {})}
             {...((!!defaultValue && { value: defaultValue }) || {})}
         />
@@ -60,13 +77,13 @@ export const AutoCompleteMultiSelectField = ({
 };
 
 AutoCompleteMultiSelectField.propTypes = {
+    autoCompleteMultiSelectFieldId: PropTypes.string.isRequired,
     defaultValue: PropTypes.array,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
     hintText: PropTypes.string,
-    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,

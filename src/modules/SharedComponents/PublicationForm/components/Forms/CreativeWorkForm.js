@@ -116,6 +116,7 @@ export default class CreativeWorkForm extends Component {
                                     floatingTitle={txt.information.fieldLabels.date.title}
                                     floatingTitleRequired
                                     hasError={dateError}
+                                    partialDateFieldId="rek-date"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -126,6 +127,7 @@ export default class CreativeWorkForm extends Component {
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.endDate.title}
                                     hasError={dateError}
+                                    partialDateFieldId="rek-end-date"
                                 />
                             </Grid>
                         </Grid>

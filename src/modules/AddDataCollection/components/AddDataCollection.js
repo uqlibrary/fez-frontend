@@ -127,6 +127,7 @@ export default class AddDataCollection extends Component {
                                                 required
                                                 validate={[validation.requireChecked]}
                                                 disabled={this.props.submitting}
+                                                depositAgreementFieldId="rek-copyright"
                                             />
                                         </Grid>
                                     </Grid>
@@ -185,6 +186,7 @@ export default class AddDataCollection extends Component {
                                                 required
                                                 {...txt.information.dataset.fieldLabels.contactId}
                                                 validate={[validation.required]}
+                                                authorIdFieldId="rek-contributor-id"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={12}>
@@ -226,7 +228,7 @@ export default class AddDataCollection extends Component {
                                             <Field
                                                 component={PartialDateField}
                                                 disabled={this.props.submitting}
-                                                partialDateFieldId="publication-year"
+                                                partialDateFieldId="rek-date"
                                                 name="rek_date"
                                                 allowPartial
                                                 required
@@ -430,7 +432,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
                                             <Field
                                                 component={PartialDateField}
-                                                partialDateFieldId="collection-start-date"
+                                                partialDateFieldId="rek-start-date"
                                                 disableFuture
                                                 autoOk
                                                 name="fez_record_search_key_start_date.rek_start_date"
@@ -447,7 +449,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
                                             <Field
                                                 component={PartialDateField}
-                                                partialDateFieldId="collection-end-date"
+                                                partialDateFieldId="rek-end-date"
                                                 disableFuture
                                                 autoOk
                                                 floatingTitle={

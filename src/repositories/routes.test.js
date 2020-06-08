@@ -788,8 +788,8 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for ISSN_LINKS_API', () => {
-        expect(routes.ISSN_LINKS_API({ type: 'test' })).toEqual({
-            apiUrl: 'tool/lookup/test',
+        expect(routes.ISSN_LINKS_API({ type: 'test', issn: '1234-1234' })).toEqual({
+            apiUrl: 'tool/lookup/local/test/1234-1234',
         });
     });
 

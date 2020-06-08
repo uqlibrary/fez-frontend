@@ -97,6 +97,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -194,6 +195,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
+                  authorIdFieldId="rek-contributor-id"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -292,7 +294,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
-                  partialDateFieldId="publication-year"
+                  partialDateFieldId="rek-date"
                   required={true}
                   validate={
                     Array [
@@ -982,7 +984,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
-                  partialDateFieldId="collection-start-date"
+                  partialDateFieldId="rek-start-date"
                   validate={
                     Array [
                       [Function],
@@ -1009,7 +1011,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
-                  partialDateFieldId="collection-end-date"
+                  partialDateFieldId="rek-end-date"
                   validate={
                     Array [
                       [Function],
@@ -1365,6 +1367,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -1462,6 +1465,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
+                  authorIdFieldId="rek-contributor-id"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -1560,7 +1564,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
-                  partialDateFieldId="publication-year"
+                  partialDateFieldId="rek-date"
                   required={true}
                   validate={
                     Array [
@@ -2250,7 +2254,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
-                  partialDateFieldId="collection-start-date"
+                  partialDateFieldId="rek-start-date"
                   validate={
                     Array [
                       [Function],
@@ -2277,7 +2281,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
-                  partialDateFieldId="collection-end-date"
+                  partialDateFieldId="rek-end-date"
                   validate={
                     Array [
                       [Function],
@@ -2633,6 +2637,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -2730,6 +2735,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
+                  authorIdFieldId="rek-contributor-id"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -2828,7 +2834,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
-                  partialDateFieldId="publication-year"
+                  partialDateFieldId="rek-date"
                   required={true}
                   validate={
                     Array [
@@ -3518,7 +3524,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   hasError="Date range is not valid"
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
-                  partialDateFieldId="collection-start-date"
+                  partialDateFieldId="rek-start-date"
                   validate={
                     Array [
                       [Function],
@@ -3545,7 +3551,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   hasError="Date range is not valid"
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
-                  partialDateFieldId="collection-end-date"
+                  partialDateFieldId="rek-end-date"
                   validate={
                     Array [
                       [Function],
@@ -3901,6 +3907,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       </p>
                     </div>
                   }
+                  depositAgreementFieldId="rek-copyright"
                   disabled={false}
                   name="rek_copyright"
                   required={true}
@@ -3998,6 +4005,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
+                  authorIdFieldId="rek-contributor-id"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -4096,7 +4104,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   floatingTitle="Publication year"
                   floatingTitleRequired={true}
                   name="rek_date"
-                  partialDateFieldId="publication-year"
+                  partialDateFieldId="rek-date"
                   required={true}
                   validate={
                     Array [
@@ -4786,7 +4794,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   hasError=""
                   id="rek_start_date"
                   name="fez_record_search_key_start_date.rek_start_date"
-                  partialDateFieldId="collection-start-date"
+                  partialDateFieldId="rek-start-date"
                   validate={
                     Array [
                       [Function],
@@ -4813,7 +4821,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   hasError=""
                   id="rek_end_date"
                   name="fez_record_search_key_end_date.rek_end_date"
-                  partialDateFieldId="collection-end-date"
+                  partialDateFieldId="rek-end-date"
                   validate={
                     Array [
                       [Function],
