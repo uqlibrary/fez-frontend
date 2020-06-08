@@ -187,7 +187,7 @@ context('Data Collection form', () => {
 
     it('validates creators', () => {
         // Creators
-        cy.get('#creators-input')
+        cy.get('[data-testid=rek-author-input]')
             .type('Ky Lane');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -202,7 +202,7 @@ context('Data Collection form', () => {
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
-        cy.get('#creators-input')
+        cy.get('[data-testid=rek-author-input]')
             .type('Vishal Asai');
         cy.get('div#contributorForm')
             .find('input#creator-role-field')
@@ -211,7 +211,7 @@ context('Data Collection form', () => {
             .contains('Technician')
             .click();
 
-        cy.get('button#creators-list-row-delete-1')
+        cy.get('button#rek-author-list-row-delete-1')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
@@ -228,7 +228,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('@errors')
             .should('have.length', ++errorCount);
-        cy.get('input#creators-input')
+        cy.get('[data-testid=rek-author-input]')
             .type('Ky Lane');
         cy.get('input#creator-role-field')
             .type('UX Developer');

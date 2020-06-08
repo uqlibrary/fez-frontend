@@ -779,7 +779,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: formLocale.journalArticle.authors.field,
                 canEdit: true,
-                contributorEditorId: 'authors',
+                contributorEditorId: 'rek-author',
             },
         },
         editors: {
@@ -789,7 +789,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: formLocale.book.editors.field,
                 canEdit: true,
-                contributorEditorId: 'editors',
+                contributorEditorId: 'rek-contributor',
             },
         },
         files: {
@@ -1583,7 +1583,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.architects.field,
                 canEdit: true,
-                contributorEditorId: 'architects',
+                contributorEditorId: 'rek-architect-name',
             },
         },
         creators: {
@@ -1593,7 +1593,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.designCreators.field,
                 canEdit: true,
-                contributorEditorId: 'creators',
+                contributorEditorId: 'rek-creator-name',
             },
         },
         supervisors: {
@@ -1603,7 +1603,7 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.supervisors.field,
                 canEdit: true,
-                contributorEditorId: 'supervisors',
+                contributorEditorId: 'rek-supervisor',
             },
         },
     },

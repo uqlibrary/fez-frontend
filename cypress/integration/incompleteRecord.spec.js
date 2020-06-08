@@ -47,7 +47,7 @@ context('Incomplete record form', () => {
 
     const checkNonDeletableAuthors = authorCount => {
         Array.from({ length: authorCount }, (x, i) => {
-            cy.get(`#authors-list-row-delete-${i}`)
+            cy.get(`#rek-author-list-row-delete-${i}`)
                 .should('be.disabled');
         });
     };
@@ -57,7 +57,7 @@ context('Incomplete record form', () => {
     const validationErrorsSelector = 'form > div > div:last-of-type .Alert ul li';
 
     const editNonUQAuthor = (authorNumber, orgName, orgType) => {
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .click()
             .parents('ul')
             .first()
@@ -65,7 +65,7 @@ context('Incomplete record form', () => {
             .contains(authorEditInstruction);
         cy.get('#submit-author')
             .should('have.attr', 'disabled');
-        cy.get('#authors-input')
+        cy.get('[data-testid=rek-author-input]')
             .should('have.attr', 'disabled');
         cy.get('#org-affiliation-name')
             .type(orgName);
@@ -84,23 +84,23 @@ context('Incomplete record form', () => {
             .should('not.have.attr', 'disabled');
         cy.get('#submit-author') // Re-select to get updated element
             .click();
-        cy.get(`#authors-list-row-${authorNumber}`)
+        cy.get(`#rek-author-list-row-${authorNumber}`)
             .should('contain', orgName)
             .should('contain', `Organisation type: ${orgType}`);
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .parents('.StandardCard')
             .eq(0)
             .should('not.contain', authorEditInstruction);
     };
 
     const editUQAuthor = authorNumber => {
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .click()
             .parents('ul')
             .first()
             .siblings('div')
             .contains(authorEditInstruction);
-        cy.get('#authors-input')
+        cy.get('[data-testid=rek-author-input]')
             .should('have.attr', 'disabled');
 
         // Mark as UQ author
@@ -111,7 +111,7 @@ context('Incomplete record form', () => {
             .eq(1)
             .should('not.contain', 'Not')
             .click();
-        cy.get('#authors-input')
+        cy.get('[data-testid=rek-author-input]')
             .should('have.attr', 'disabled');
 
         // Apply changes
@@ -120,10 +120,10 @@ context('Incomplete record form', () => {
             .should('not.have.attr', 'disabled');
         cy.get('#submit-author') // Re-select to get updated element
             .click();
-        cy.get(`#authors-list-row-${authorNumber}`)
+        cy.get(`#rek-author-list-row-${authorNumber}`)
             .should('contain', 'The University of Queensland')
             .should('contain', 'Organisation type: University');
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .parents('.StandardCard')
             .eq(0)
             .should('not.contain', authorEditInstruction);
@@ -165,7 +165,7 @@ context('Incomplete record form', () => {
         checkQualityIndicators('Commissioned by external body');
         checkNonDeletableAuthors(4);
 
-        cy.get('#authors-list-row-edit-0')
+        cy.get('#rek-author-list-row-edit-0')
             .should('be.disabled');
 
         editUQAuthor(1);
