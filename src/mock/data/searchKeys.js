@@ -118,15 +118,15 @@ export const searchKeyList = {
             "aut_mname": "",
             "aut_title": "Associate Professor"
         }, {
-            "id": 2746,
-            "value": "Meunier, Frederic A. (uqfmeun1)",
-            "aut_id": 2746,
-            "aut_org_staff_id": "0042394",
-            "aut_display_name": "Meunier, Frederic A.",
-            "aut_org_username": "uqfmeun1",
-            "aut_fname": "Frederic",
-            "aut_lname": "Meunier",
-            "aut_title": "Professor",
+            "id": 75875,
+            "value": "Wallis, Steven C. (uqswallis)",
+            "aut_id": 2113632,
+            "aut_org_staff_id": "0123039",
+            "aut_display_name": "Wallis, Steven C.",
+            "aut_org_username": "uqlstev4",
+            "aut_fname": "Steven C.",
+            "aut_lname": "Wallis",
+            "aut_title": "Mr"
         }, {
             "id": 88113,
             "value": "David Stevens (uqdstev1)",

@@ -6,7 +6,7 @@ export default {
     "from": 1,
     "to": 20,
     "data": [{
-        "rek_pid": "UQ:678728",
+        "rek_pid": "UQ:67abc8",
         "rek_title_xsdmf_id": 10588,
         "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
         "rek_description_xsdmf_id": 11441,
@@ -276,6 +276,13 @@ export default {
             "rek_author_id": 745,
             "rek_author_id_order": 6,
             "rek_author_id_lookup": "Martin, Sally"
+        }, {
+            "rek_author_id_id": 29597415,
+            "rek_author_id_pid": "UQ:678728",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 2746,
+            "rek_author_id_order": 7,
+            "rek_author_id_lookup": "Meunier, Frederic A."
         }],
         "fez_record_search_key_biosis_id": null,
         "fez_record_search_key_content_indicator": [{

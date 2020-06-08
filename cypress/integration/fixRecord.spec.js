@@ -1,7 +1,6 @@
 import formsLocale from '../../src/locale/forms';
 // import { default as pagesLocale } from '../../src/locale/pages';
 import { myRecordsList } from '../../src/mock/data/records';
-const record = myRecordsList.data[0];
 
 context('Request correction form', () => {
     const baseUrl = Cypress.config('baseUrl');
@@ -10,7 +9,7 @@ context('Request correction form', () => {
     // const fixPageLocale = pagesLocale.pages.fixRecord;
 
     beforeEach(() => {
-        cy.visit(`/records/${record.rek_pid}/fix`);
+        cy.visit('/records/UQ:67abc8/fix');
     });
 
     afterEach(() => {
@@ -28,7 +27,7 @@ context('Request correction form', () => {
             .should('have.length', 1)
             // .contains('h3', fixPageLocale.subTitle);
             .contains('h3', 'Work to be amended');
-        cy.contains('.StandardCard .publicationCitation h6 a', record.rek_title);
+        cy.contains('.StandardCard .publicationCitation h6 a', myRecordsList.data[0].rek_title);
         cy.get('[class*="PublicationCitation-divider"] + div')
             .contains('Scholarship of Teaching and Learning');
         cy.contains('Select an action');
