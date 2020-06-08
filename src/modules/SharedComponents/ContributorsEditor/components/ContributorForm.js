@@ -186,6 +186,26 @@ export const ContributorForm = ({
         }
     }, [_onSubmit, contributor.creatorRole, contributor.nameAsPublished]);
 
+    const renderUqIdField = () => {
+        const prefilledSearch = !!contributor && contributor.uqIdentifier === '0';
+        if (prefilledSearch) {
+            contributor.uqUsername = contributor.nameAsPublished;
+        }
+        return (
+            <UqIdField
+                disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
+                floatingLabelText="UQ Author ID"
+                hintText="Type UQ author name to search"
+                uqIdFieldId="aut-id"
+                key={contributor.uqUsername}
+                onChange={_onUQIdentifierSelected}
+                onClear={_onUQIdentifierCleared}
+                value={contributor.uqUsername || contributor.uqIdentifier || ''}
+                prefilledSearch={prefilledSearch}
+            />
+        );
+    };
+
     return (
         <React.Fragment>
             {description}
@@ -227,16 +247,7 @@ export const ContributorForm = ({
                     (!isNtro && canEdit) ||
                     (showIdentifierLookup && canEdit)) && (
                     <Grid item xs={12} sm={3}>
-                        <UqIdField
-                            disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
-                            floatingLabelText="UQ Author ID"
-                            hintText="Type UQ author name to search"
-                            uqIdFieldId="aut-id"
-                            key={contributor.uqUsername}
-                            onChange={_onUQIdentifierSelected}
-                            onClear={_onUQIdentifierCleared}
-                            value={contributor.uqUsername || contributor.uqIdentifier || ''}
-                        />
+                        {renderUqIdField()}
                     </Grid>
                 )}
                 {showRoleInput && (
