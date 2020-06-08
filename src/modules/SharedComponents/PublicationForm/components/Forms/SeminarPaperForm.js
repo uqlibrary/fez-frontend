@@ -75,7 +75,7 @@ export default class SeminarPaperForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
-                                    partialDateFieldId="seminar-date"
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial

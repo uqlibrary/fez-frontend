@@ -2,6 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import Chip from '@material-ui/core/Chip';
 
 export const AutoCompleteMultiSelectField = ({
     autoCompleteMultiSelectFieldId,
@@ -11,7 +12,6 @@ export const AutoCompleteMultiSelectField = ({
     hintText,
     floatingLabelText,
     getOptionLabel,
-    id,
     itemsList,
     loadSuggestions,
     onChange,
@@ -33,9 +33,6 @@ export const AutoCompleteMultiSelectField = ({
     return (
         <Autocomplete
             id={autoCompleteMultiSelectFieldId}
-            ChipProps={{
-                id: `${id}-selected`,
-            }}
             multiple
             getOptionLabel={getOptionLabel}
             options={itemsList}
@@ -59,6 +56,16 @@ export const AutoCompleteMultiSelectField = ({
                     }}
                 />
             )}
+            renderTags={(value, getTagProps) =>
+                value.map((option, index) => (
+                    <Chip
+                        label={!!option.rek_title ? option.rek_title : option}
+                        id={`${autoCompleteMultiSelectFieldId}-${index}`}
+                        data-testid={`${autoCompleteMultiSelectFieldId}-${index}`}
+                        {...getTagProps({ index })}
+                    />
+                ))
+            }
             ListboxProps={{
                 id: `${autoCompleteMultiSelectFieldId}-options`,
                 'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
@@ -77,7 +84,6 @@ AutoCompleteMultiSelectField.propTypes = {
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
     hintText: PropTypes.string,
-    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
     loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,

@@ -123,7 +123,7 @@ exports[`DesignForm validation  should validate dates correctly 1`] = `
             floatingTitleRequired={true}
             hasError="Date range is not valid"
             name="fez_record_search_key_project_start_date.rek_project_start_date"
-            partialDateFieldId="date"
+            partialDateFieldId="rek-project-start-date"
             required={true}
             validate={
               Array [
@@ -144,6 +144,7 @@ exports[`DesignForm validation  should validate dates correctly 1`] = `
             floatingTitle="End date"
             hasError="Date range is not valid"
             name="fez_record_search_key_end_date.rek_end_date"
+            partialDateFieldId="rek-end-date"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>

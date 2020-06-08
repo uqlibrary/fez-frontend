@@ -220,7 +220,7 @@ export default {
                 fullWidth: true,
                 validate: [validation.required],
                 allowPartial: true,
-                partialDateFieldId: 'date',
+                partialDateFieldId: 'rek-date',
             },
         },
         collections: {
@@ -945,7 +945,7 @@ export default {
                 allowPartial: false,
                 clearable: true,
                 dateFormat: 'YYYY-MM-DD',
-                partialDateFieldId: 'recording-date',
+                partialDateFieldId: 'rek-date-recorded',
             },
         },
         fez_record_search_key_isderivationof: {
@@ -1262,7 +1262,7 @@ export default {
                 floatingTitle: 'Project start date',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'project-start-date',
+                partialDateFieldId: 'rek-project-start-date',
                 required: true,
             },
         },
@@ -1274,7 +1274,7 @@ export default {
                 floatingTitle: 'Start date',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'start-date',
+                partialDateFieldId: 'rek-start-date',
             },
         },
         fez_record_search_key_end_date: {
@@ -1285,7 +1285,7 @@ export default {
                 floatingTitle: 'End date',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'end-date',
+                partialDateFieldId: 'rek-end-date',
             },
         },
         fez_record_search_key_time_period_start_date: {
@@ -1296,7 +1296,7 @@ export default {
                 floatingTitle: 'Time coverage start date',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'time-coverage-start-date',
+                partialDateFieldId: 'rek-time-period-start-date',
             },
         },
         fez_record_search_key_time_period_end_date: {
@@ -1307,7 +1307,7 @@ export default {
                 floatingTitle: 'Time coverage end date',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'time-coverage-end-date',
+                partialDateFieldId: 'rek-time-period-end-date',
             },
         },
         fez_record_search_key_org_name: {
@@ -1487,7 +1487,7 @@ export default {
                 floatingTitle: 'Date photo taken',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'date-photo-taken',
+                partialDateFieldId: 'rek-date-photo-taken',
             },
         },
         fez_record_search_key_date_scanned: {
@@ -1498,7 +1498,7 @@ export default {
                 floatingTitle: 'Date photo scanned',
                 fullWidth: true,
                 allowPartial: true,
-                partialDateFieldId: 'date-photo-scanned',
+                partialDateFieldId: 'rek-date-scanned',
             },
         },
         fez_record_search_key_building_materials: {

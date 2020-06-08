@@ -109,7 +109,7 @@ context('Add missing record', () => {
             .type('test place of publication');
         cy.get('[data-testid=rek-publisher-input]')
             .type('test publisher');
-        cy.get('#date-year')
+        cy.get('[data-testid=rek-date-year-input]')
             .type('2020');
         cy.get('@validationErrors')
             .should('have.length', 2);

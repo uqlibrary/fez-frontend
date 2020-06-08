@@ -107,19 +107,19 @@ context('Data Collection form', () => {
             .should('have.length', errorCount);
 
         // Publication date
-        cy.get('#publication-year-day')
+        cy.get('[data-testid=rek-date-day-input]')
             .type('16');
         cy.get('@errors')
             .should('have.length', errorCount);
 
-        cy.get('#publication-year-month')
+        cy.get('[data-testid=rek-date-month-select]')
             .click();
         cy.get('li[data-value="11"]')
             .click();
         cy.get('@errors')
             .should('have.length', errorCount);
 
-        cy.get('#publication-year-year')
+        cy.get('[data-testid=rek-date-year-input]')
             .type('1976');
         cy.get('@submitButton')
             .should('be.disabled');
@@ -455,7 +455,7 @@ context('Data Collection form', () => {
         // Collection Start date
         // the field is not required - if we focus on it, type something in, clear and click on a different field,
         // we do not get an error
-        cy.get('#collection-start-date-day')
+        cy.get('[data-testid=rek-start-date-day-input]')
             .type('16')
             .clear();
         cy.get('input#keywords-input')
@@ -464,28 +464,27 @@ context('Data Collection form', () => {
             .should('not.be.visible');
 
         // an 31st of april is an invalid date
-        cy.get('#collection-start-date-day')
+        cy.get('[data-testid=rek-start-date-day-input]')
             .type('31');
 
-        cy.get('#collection-start-date-month')
-            .parent()
+        cy.get('[data-testid=rek-start-date-month-select]')
             .click();
         cy.get('li[data-value="3"]')
             .click();
 
-        cy.get('#collection-start-date-year')
+        cy.get('[data-testid=rek-start-date-year-input]')
             .type('2000');
 
         cy.contains('p', 'Invalid date')
             .should('be.visible');
 
         // now check valid dates
-        cy.get('#collection-start-date-day')
+        cy.get('[data-testid=rek-start-date-day-input]')
             .clear()
             .type('16');
 
         // enter future date and see error
-        cy.get('#collection-start-date-year')
+        cy.get('[data-testid=rek-start-date-year-input]')
             .clear()
             .type('2100');
 
@@ -493,7 +492,7 @@ context('Data Collection form', () => {
             .should('be.visible');
 
         // enter valid year
-        cy.get('#collection-start-date-year')
+        cy.get('[data-testid=rek-start-date-year-input]')
             .clear()
             .type('1976');
 
@@ -507,24 +506,24 @@ context('Data Collection form', () => {
             .should('not.be.disabled');
 
         // End Collection date
-        cy.get('#collection-end-date-day')
+        cy.get('[data-testid=rek-end-date-day-input]')
             .type('16');
 
-        cy.get('#collection-end-date-month')
+        cy.get('[data-testid=rek-end-date-month-select]')
             .parent()
             .click();
         cy.get('li[data-value="11"]')
             .click();
 
         // enter future date and see error
-        cy.get('#collection-end-date-year')
+        cy.get('[data-testid=rek-end-date-year-input]')
             .type('2100');
 
         cy.contains('p', 'Date must be before now')
             .should('be.visible');
 
         // enter end date before start date and see error
-        cy.get('#collection-end-date-year')
+        cy.get('[data-testid=rek-end-date-year-input]')
             .clear()
             .type('1974');
 
@@ -532,7 +531,7 @@ context('Data Collection form', () => {
             .should('be.visible');
 
         // finally, enter valid date
-        cy.get('#collection-end-date-year')
+        cy.get('[data-testid=rek-end-date-year-input]')
             .clear()
             .type('1976');
 

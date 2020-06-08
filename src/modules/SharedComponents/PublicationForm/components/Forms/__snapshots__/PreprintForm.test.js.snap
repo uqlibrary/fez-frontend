@@ -51,7 +51,7 @@ exports[`PreprintForm renders  component 1`] = `
             floatingTitle="Preprint date"
             floatingTitleRequired={true}
             name="rek_date"
-            partialDateFieldId="date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [

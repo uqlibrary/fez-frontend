@@ -54,7 +54,7 @@ context('Audio admin edit', () => {
                 cy.get('h4')
                     .should('contain', 'Bibliographic');
                 cy.checkPartialDateFromRecordValue(
-                    'recording-date',
+                    'rek-date-recorded',
                     record.fez_record_search_key_date_recorded.rek_date_recorded,
                 );
                 cy.get('[data-testid=rek-acknowledgements-input]')
@@ -116,12 +116,12 @@ context('Audio admin edit', () => {
             });
 
         cy.get('@bibliographicCard')
-            .find('#date')
+            .find('[id=rek-date]')
             .as('pubDateBlock')
             .find('p')
             .should('exist')
             .should('have.text', 'Year required');
-        cy.setPartialDate('date', { day: 1, month: 1, year: 2020 });
+        cy.setPartialDate('rek-date', { day: 1, month: 1, year: 2020 });
         cy.get('@pubDateBlock')
             .find('p')
             .should('not.exist');

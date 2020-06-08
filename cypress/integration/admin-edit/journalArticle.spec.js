@@ -241,7 +241,7 @@ context('Journal Article admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_total_pages.rek_total_pages,
                             );
-                        cy.checkPartialDateFromRecordValue('date', record.rek_date);
+                        cy.checkPartialDateFromRecordValue('rek-date', record.rek_date);
                         cy.get('[data-testid=rek-date-available-input]')
                             .should(
                                 'have.value',

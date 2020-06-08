@@ -22,7 +22,7 @@ context('As an admin,', () => {
 
         // Fill required fields
         cy.typeCKEditor('editor1', 'Test title');
-        cy.get('#date-year')
+        cy.get('[data-testid=rek-date-year-input]')
             .type('2020');
         cy.get('[data-testid=rek-rights-input]')
             .type('All rights reserved');

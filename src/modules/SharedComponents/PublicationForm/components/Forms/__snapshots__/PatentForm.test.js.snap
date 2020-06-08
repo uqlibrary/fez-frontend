@@ -65,7 +65,7 @@ exports[`PatentForm renders  component 1`] = `
             floatingTitle="Date patent issued"
             floatingTitleRequired={true}
             name="rek_date"
-            partialDateFieldId="date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [

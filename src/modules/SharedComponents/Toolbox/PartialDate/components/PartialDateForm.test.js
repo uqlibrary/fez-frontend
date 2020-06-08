@@ -3,7 +3,7 @@ import { PartialDateForm } from './PartialDateForm';
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        partialDateFieldId: 'test',
+        partialDateFormId: 'test',
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
