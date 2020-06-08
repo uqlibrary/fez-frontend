@@ -45,7 +45,7 @@ context('Conference Proceedings admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Authors');
-                cy.get('[data-testid=authors-input]')
+                cy.get('[data-testid=rek-author-input]')
                     .type('Author{enter}');
             });
         cy.adminEditNoAlerts();

@@ -76,18 +76,6 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onChangeFn).toHaveBeenCalledWith('apple');
     });
 
-    it('should open suggestions for uq-id', async() => {
-        const { getByTestId, getByRole } = setup({
-            autoCompleteAsynchronousFieldId: 'uq-id',
-            itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],
-            defaultValue: 'test',
-        });
-        act(() => {
-            fireEvent.change(getByTestId('uq-id-input'), { target: { value: 'ap', reason: 'reset' } });
-        });
-        await waitFor(() => getByRole('presentation'));
-    });
-
     it('should allow free text', async() => {
         const onChangeFn = jest.fn();
 
@@ -143,7 +131,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onClearFn).toBeCalled();
     });
 
-    it('should render given option template for options', async() => {
+    it('should render give option template for options', async() => {
         // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
 

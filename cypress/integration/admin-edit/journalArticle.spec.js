@@ -342,11 +342,14 @@ context('Journal Article admin edit', () => {
                                 : item.rek_author_affiliation_name;
                         });
                         authors.forEach((author, index) => {
-                            cy.get(`#authors-list-row-${index}-name-as-published`)
+                            cy.get(`#rek-author-list-row-${index}-name-as-published`)
                                 .should('contain.text', author);
-                            cy.get(`#authors-list-row-${index}-uq-details`)
-                                .should('contain.text', authorNames[index]);
-                            cy.get(`#authors-list-row-${index}-uq-details`)
+                            cy.get(`#rek-author-list-row-${index}-uq-details`)
+                                .should(
+                                    'contain.text',
+                                    authorNames[index],
+                                );
+                            cy.get(`#rek-author-list-row-${index}-uq-details`)
                                 .should(
                                     'contain.text',
                                     `${authorAffs[index]} (${authorUsernames[index]} - ${authorIDs[index]})`,

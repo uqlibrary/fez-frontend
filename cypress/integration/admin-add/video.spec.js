@@ -26,7 +26,7 @@ context('As an admin,', () => {
             .type('2020');
         cy.get('[data-testid=rek-rights-input]')
             .type('All rights reserved');
-        cy.get('#authors-input')
+        cy.get('[data-testid=rek-author-input]')
             .type('Test author');
         cy.get('#submit-author')
             .click();

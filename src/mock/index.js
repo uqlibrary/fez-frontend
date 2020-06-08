@@ -262,8 +262,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListWorkingPaper.data,
             ...mockData.unpublishedSearchList.data,
         ];
-        // const mockedPids = mockRecords.map(record => record.rek_pid);
-        // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
             return [200, { data: { ...matchedRecord } }];

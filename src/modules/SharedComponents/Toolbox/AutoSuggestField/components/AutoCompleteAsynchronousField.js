@@ -27,7 +27,6 @@ export const AutoCompleteAsynchronousField = ({
     const [options, setOptions] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [value, setValue] = useState(defaultValue);
-    const active = useRef(true);
 
     const loading = itemsLoading;
     const throttledLoadSuggestions = useRef(throttle(1000, newValue => loadSuggestions(newValue)));
@@ -37,32 +36,22 @@ export const AutoCompleteAsynchronousField = ({
     }, []);
 
     const handleInputChange = useCallback(
-        (event, newInputValue, reason) => {
-            if (
-                autoCompleteAsynchronousFieldId === 'uq-id' &&
-                reason === 'reset' &&
-                !!newInputValue &&
-                !!itemsList &&
-                newInputValue.indexOf(' - ') === -1
-            ) {
-                setInputValue(newInputValue);
-                setOpen(true);
-            } else if (reason === 'clear') {
+        (event, value, reason) => {
+            if (reason === 'clear') {
                 onClear();
-            } else if (!newInputValue && reason === 'input') {
+            } else if (!value && reason === 'input') {
                 onClear();
-            } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
-                onChange({ value: newInputValue });
+            } else if (!!allowFreeText && !!value && reason === 'input') {
+                onChange({ value });
             }
         },
-        [allowFreeText, autoCompleteAsynchronousFieldId, onChange, onClear, itemsList],
+        [allowFreeText, onChange, onClear],
     );
 
     const handleChange = useCallback(
         (event, newValue) => {
             setValue(newValue);
             !!newValue && onChange(newValue);
-            throttledLoadSuggestions.current('');
         },
         [onChange],
     );
@@ -74,12 +63,16 @@ export const AutoCompleteAsynchronousField = ({
     }, [inputValue]);
 
     useEffect(() => {
-        active.current = !loading && itemsList.length > 0;
+        let active = true;
 
-        !!active.current && setOptions(itemsList);
+        if (!loading && itemsList.length === 0) {
+            return undefined;
+        }
+
+        !!active && setOptions(itemsList);
 
         return () => {
-            active.current = false;
+            active = false;
         };
     }, [itemsList, loading]);
 
@@ -94,7 +87,6 @@ export const AutoCompleteAsynchronousField = ({
             id={autoCompleteAsynchronousFieldId}
             clearOnEscape
             disabled={disabled}
-            open={open}
             onOpen={() => {
                 setOpen(true);
             }}

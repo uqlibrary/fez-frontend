@@ -300,6 +300,14 @@ exports[`PublicationsList renders component with items 1`] = `
             "rek_author_id_pid": "UQ:678728",
             "rek_author_id_xsdmf_id": null,
           },
+          Object {
+            "rek_author_id": 2746,
+            "rek_author_id_id": 29597415,
+            "rek_author_id_lookup": "Meunier, Frederic A.",
+            "rek_author_id_order": 7,
+            "rek_author_id_pid": "UQ:678728",
+            "rek_author_id_xsdmf_id": null,
+          },
         ],
         "fez_record_search_key_biosis_id": null,
         "fez_record_search_key_content_indicator": Array [
@@ -830,7 +838,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_object_type": 3,
         "rek_object_type_lookup": "Record",
         "rek_object_type_xsdmf_id": 3674,
-        "rek_pid": "UQ:678728",
+        "rek_pid": "UQ:67abc8",
         "rek_pubmed_doc_type": null,
         "rek_pubmed_doc_type_lookup": null,
         "rek_pubmed_doc_type_xsdmf_id": null,

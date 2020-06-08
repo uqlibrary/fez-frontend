@@ -28,6 +28,11 @@ const initialContributorState = {
     uqUsername: '',
 };
 
+const useContributorState = initialContributor => {
+    const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
+    return [contributor, setContributor];
+};
+
 export const ContributorForm = ({
     canEdit,
     contributor: initialContributor,
@@ -44,7 +49,7 @@ export const ContributorForm = ({
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput,
 }) => {
-    const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
+    const [contributor, setContributor] = useContributorState(initialContributor);
     const [clearRoleInput, setClearRoleInput] = useState(true);
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
     const [uqIdentifierUpdatedFlag, setUqIdentifierUpdatedFlag] = useState(false);
