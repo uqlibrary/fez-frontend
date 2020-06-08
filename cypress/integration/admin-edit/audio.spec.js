@@ -116,7 +116,7 @@ context('Audio admin edit', () => {
             });
 
         cy.get('@bibliographicCard')
-            .find('#date')
+            .find('[id=rek-date]')
             .as('pubDateBlock')
             .find('p')
             .should('exist')
