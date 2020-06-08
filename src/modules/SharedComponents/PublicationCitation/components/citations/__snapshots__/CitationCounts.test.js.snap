@@ -6410,14 +6410,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_author_id_pid": "UQ:678728",
                     "rek_author_id_xsdmf_id": null,
                   },
-                  Object {
-                    "rek_author_id": 2746,
-                    "rek_author_id_id": 29597415,
-                    "rek_author_id_lookup": "Meunier, Frederic A.",
-                    "rek_author_id_order": 7,
-                    "rek_author_id_pid": "UQ:678728",
-                    "rek_author_id_xsdmf_id": null,
-                  },
                 ],
                 "fez_record_search_key_biosis_id": null,
                 "fez_record_search_key_content_indicator": Array [
@@ -6950,7 +6942,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 "rek_object_type": 3,
                 "rek_object_type_lookup": "Record",
                 "rek_object_type_xsdmf_id": 3674,
-                "rek_pid": "UQ:67abc8",
+                "rek_pid": "UQ:678728",
                 "rek_pubmed_doc_type": null,
                 "rek_pubmed_doc_type_lookup": null,
                 "rek_pubmed_doc_type_xsdmf_id": null,
@@ -7273,14 +7265,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_author_id_id": 29597414,
                       "rek_author_id_lookup": "Martin, Sally",
                       "rek_author_id_order": 6,
-                      "rek_author_id_pid": "UQ:678728",
-                      "rek_author_id_xsdmf_id": null,
-                    },
-                    Object {
-                      "rek_author_id": 2746,
-                      "rek_author_id_id": 29597415,
-                      "rek_author_id_lookup": "Meunier, Frederic A.",
-                      "rek_author_id_order": 7,
                       "rek_author_id_pid": "UQ:678728",
                       "rek_author_id_xsdmf_id": null,
                     },
@@ -7816,7 +7800,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "rek_object_type": 3,
                   "rek_object_type_lookup": "Record",
                   "rek_object_type_xsdmf_id": 3674,
-                  "rek_pid": "UQ:67abc8",
+                  "rek_pid": "UQ:678728",
                   "rek_pubmed_doc_type": null,
                   "rek_pubmed_doc_type_lookup": null,
                   "rek_pubmed_doc_type_xsdmf_id": null,
@@ -11890,7 +11874,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                         >
                           <WithStyles(ExternalLink)
                             className="CitationCounts-statsLink-1"
-                            href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
+                            href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
                             title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                           >
                             <ExternalLink
@@ -11901,7 +11885,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
                                 }
                               }
-                              href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
+                              href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
                               openInNewIcon={true}
                               rel="noopener noreferrer"
                               target="_blank"
@@ -12258,7 +12242,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <a
                                 className="CitationCounts-statsLink-1 ExternalLink-externalLink-109"
-                                href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
+                                href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
                                 target="_blank"
