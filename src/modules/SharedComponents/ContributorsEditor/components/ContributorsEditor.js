@@ -310,6 +310,8 @@ export class ContributorsEditor extends PureComponent {
                                 />
                             </List>
                             <List
+                                id={`${contributorEditorId}-list`}
+                                data-testid={`${contributorEditorId}-list`}
                                 classes={{
                                     root: `ContributorList ${classes.list} ${
                                         contributors.length > 3 ? classes.scroll : ''

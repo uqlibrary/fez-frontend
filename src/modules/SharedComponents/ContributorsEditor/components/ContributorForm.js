@@ -196,7 +196,7 @@ export const ContributorForm = ({
                 disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
                 floatingLabelText="UQ Author ID"
                 hintText="Type UQ author name to search"
-                uqIdFieldId="aut-id"
+                uqIdFieldId={`${contributorFormId}-aut-id`}
                 key={contributor.uqUsername}
                 onChange={_onUQIdentifierSelected}
                 onClear={_onUQIdentifierCleared}
@@ -295,7 +295,7 @@ export const ContributorForm = ({
                         color="primary"
                         disabled={buttonDisabled}
                         onClick={_onSubmit}
-                        id="submit-author"
+                        id={`${contributorFormId}-add`}
                         data-testid={`${contributorFormId}-add`}
                     >
                         {addButtonLabel}
@@ -309,7 +309,7 @@ export const ContributorForm = ({
                             color="primary"
                             disabled={!contributor.nameAsPublished}
                             onClick={_onCancel}
-                            id="cancel-submit-author"
+                            id={`${contributorFormId}-cancel`}
                             data-testid={`${contributorFormId}-cancel`}
                         >
                             {locale.cancelButton || 'Cancel'}
