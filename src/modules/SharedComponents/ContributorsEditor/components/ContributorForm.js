@@ -290,6 +290,7 @@ export const ContributorForm = ({
                         disabled={buttonDisabled}
                         onClick={_onSubmit}
                         id="submit-author"
+                        data-testid={`${contributorFormId}-add`}
                     >
                         {addButtonLabel}
                     </Button>
@@ -303,6 +304,7 @@ export const ContributorForm = ({
                             disabled={!contributor.nameAsPublished}
                             onClick={_onCancel}
                             id="cancel-submit-author"
+                            data-testid={`${contributorFormId}-cancel`}
                         >
                             {locale.cancelButton || 'Cancel'}
                         </Button>
