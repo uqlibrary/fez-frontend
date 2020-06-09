@@ -15,7 +15,7 @@ const mapStateToProps = (state, props) => {
         autoCompleteAsynchronousFieldId: props.titleOrPidFieldId || 'rek-isdatasetof',
         itemsList: itemsList.map(item => ({ id: item.rek_pid, value: item.rek_title, ...item })),
         itemsLoading,
-        getOptionLabel: () => '',
+        getOptionLabel: item => (!!item.rek_title ? '' : item),
         filterOptions: (options, { inputValue }) =>
             matchSorter(options, inputValue, { keys: ['rek_pid', 'rek_title'] }),
         OptionTemplate: TitleOrPidOptionTemplate,
