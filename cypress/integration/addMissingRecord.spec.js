@@ -116,7 +116,7 @@ context('Add missing record', () => {
 
         cy.get('[data-testid=rek-author-input]')
             .type('New Author');
-        cy.get('[data-testid=rek-author-add]:enabled')
+        cy.get('[data-testid=rek-author-add]')
             .click();
         cy.contains('New Author')
             .click();
@@ -135,7 +135,7 @@ context('Add missing record', () => {
 
         cy.get('#rek-contributor-input')
             .type('New Editor');
-        cy.get('[data-testid=rek-author-add]:enabled')
+        cy.get('[data-testid=rek-contributor-add]')
             .click();
         cy.contains('New Editor')
             .click();
