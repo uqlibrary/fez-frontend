@@ -597,7 +597,7 @@ describe('Component ContributorForm', () => {
             orgaff: 'Missing',
             orgtype: '',
             uqIdentifier: '0',
-            uqUsername: '',
+            uqUsername: 'Test',
         });
     });
 
