@@ -57,7 +57,6 @@ export const AutoCompleteAsynchronousField = ({
         (event, newValue) => {
             setValue(newValue);
             !!newValue && onChange(newValue);
-            throttledLoadSuggestions.current('');
         },
         [onChange],
     );
