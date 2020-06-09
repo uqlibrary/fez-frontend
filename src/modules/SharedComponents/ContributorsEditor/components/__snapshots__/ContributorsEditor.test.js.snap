@@ -109,6 +109,8 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={true}
@@ -231,6 +233,8 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={true}
@@ -426,6 +430,8 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={true}
@@ -548,6 +554,8 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={true}
@@ -820,6 +828,8 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={false}
@@ -1016,6 +1026,8 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
             "root": "ContributorList list scroll",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={false}
@@ -1161,6 +1173,8 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={true}
@@ -2735,7 +2749,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           key=""
                                           onChange={[Function]}
                                           onClear={[Function]}
-                                          uqIdFieldId="aut-id"
+                                          prefilledSearch={false}
+                                          uqIdFieldId="test-aut-id"
                                           value=""
                                         >
                                           <Memo(AutoCompleteAsynchronousField)
@@ -2746,7 +2761,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 "type": [Function],
                                               }
                                             }
-                                            autoCompleteAsynchronousFieldId="aut-id"
+                                            autoCompleteAsynchronousFieldId="test-aut-id"
                                             defaultValue=""
                                             disabled={false}
                                             filterOptions={[Function]}
@@ -2758,14 +2773,15 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             loadSuggestions={[Function]}
                                             onChange={[Function]}
                                             onClear={[Function]}
-                                            uqIdFieldId="aut-id"
+                                            prefilledSearch={false}
+                                            uqIdFieldId="test-aut-id"
                                             value=""
                                           >
                                             <WithStyles(ForwardRef(Autocomplete))
                                               ListboxProps={
                                                 Object {
-                                                  "data-testid": "aut-id-options",
-                                                  "id": "aut-id-options",
+                                                  "data-testid": "test-aut-id-options",
+                                                  "id": "test-aut-id-options",
                                                 }
                                               }
                                               clearOnEscape={true}
@@ -2773,12 +2789,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               filterOptions={[Function]}
                                               getOptionLabel={[Function]}
                                               getOptionSelected={[Function]}
-                                              id="aut-id"
+                                              id="test-aut-id"
                                               loading={false}
                                               onChange={[Function]}
                                               onClose={[Function]}
                                               onInputChange={[Function]}
                                               onOpen={[Function]}
+                                              open={false}
                                               options={Array []}
                                               popupIcon={false}
                                               renderInput={[Function]}
@@ -2788,8 +2805,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               <ForwardRef(Autocomplete)
                                                 ListboxProps={
                                                   Object {
-                                                    "data-testid": "aut-id-options",
-                                                    "id": "aut-id-options",
+                                                    "data-testid": "test-aut-id-options",
+                                                    "id": "test-aut-id-options",
                                                   }
                                                 }
                                                 classes={
@@ -2824,12 +2841,13 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 filterOptions={[Function]}
                                                 getOptionLabel={[Function]}
                                                 getOptionSelected={[Function]}
-                                                id="aut-id"
+                                                id="test-aut-id"
                                                 loading={false}
                                                 onChange={[Function]}
                                                 onClose={[Function]}
                                                 onInputChange={[Function]}
                                                 onOpen={[Function]}
+                                                open={false}
                                                 options={Array []}
                                                 popupIcon={false}
                                                 renderInput={[Function]}
@@ -2848,8 +2866,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   <WithStyles(ForwardRef(TextField))
                                                     InputLabelProps={
                                                       Object {
-                                                        "htmlFor": "aut-id",
-                                                        "id": "aut-id-label",
+                                                        "htmlFor": "test-aut-id",
+                                                        "id": "test-aut-id-label",
                                                       }
                                                     }
                                                     InputProps={
@@ -2887,7 +2905,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     disabled={false}
                                                     fullWidth={true}
                                                     helperText=""
-                                                    id="aut-id"
+                                                    id="test-aut-id"
                                                     inputProps={
                                                       Object {
                                                         "aria-activedescendant": null,
@@ -2896,9 +2914,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                         "autoCapitalize": "none",
                                                         "autoComplete": "off",
                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                        "data-testid": "aut-id-input",
+                                                        "data-testid": "test-aut-id-input",
                                                         "disabled": false,
-                                                        "id": "aut-id-input",
+                                                        "id": "test-aut-id-input",
                                                         "onBlur": [Function],
                                                         "onChange": [Function],
                                                         "onFocus": [Function],
@@ -2910,8 +2928,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             autocapitalize="none"
                                                             autocomplete="off"
                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                            data-testid="aut-id-input"
-                                                            id="aut-id-input"
+                                                            data-testid="test-aut-id-input"
+                                                            id="test-aut-id-input"
                                                             spellcheck="false"
                                                             type="text"
                                                             value=""
@@ -2928,8 +2946,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     <ForwardRef(TextField)
                                                       InputLabelProps={
                                                         Object {
-                                                          "htmlFor": "aut-id",
-                                                          "id": "aut-id-label",
+                                                          "htmlFor": "test-aut-id",
+                                                          "id": "test-aut-id-label",
                                                         }
                                                       }
                                                       InputProps={
@@ -2972,7 +2990,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                       disabled={false}
                                                       fullWidth={true}
                                                       helperText=""
-                                                      id="aut-id"
+                                                      id="test-aut-id"
                                                       inputProps={
                                                         Object {
                                                           "aria-activedescendant": null,
@@ -2981,9 +2999,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                           "autoCapitalize": "none",
                                                           "autoComplete": "off",
                                                           "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                          "data-testid": "aut-id-input",
+                                                          "data-testid": "test-aut-id-input",
                                                           "disabled": false,
-                                                          "id": "aut-id-input",
+                                                          "id": "test-aut-id-input",
                                                           "onBlur": [Function],
                                                           "onChange": [Function],
                                                           "onFocus": [Function],
@@ -2995,8 +3013,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               autocapitalize="none"
                                                               autocomplete="off"
                                                               class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                              data-testid="aut-id-input"
-                                                              id="aut-id-input"
+                                                              data-testid="test-aut-id-input"
+                                                              id="test-aut-id-input"
                                                               spellcheck="false"
                                                               type="text"
                                                               value=""
@@ -3040,8 +3058,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                                           >
                                                             <WithStyles(ForwardRef(InputLabel))
-                                                              htmlFor="aut-id"
-                                                              id="aut-id-label"
+                                                              htmlFor="test-aut-id"
+                                                              id="test-aut-id-label"
                                                             >
                                                               <ForwardRef(InputLabel)
                                                                 classes={
@@ -3060,8 +3078,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     "shrink": "MuiInputLabel-shrink",
                                                                   }
                                                                 }
-                                                                htmlFor="aut-id"
-                                                                id="aut-id-label"
+                                                                htmlFor="test-aut-id"
+                                                                id="test-aut-id-label"
                                                               >
                                                                 <WithStyles(ForwardRef(FormLabel))
                                                                   className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -3075,8 +3093,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     }
                                                                   }
                                                                   data-shrink={false}
-                                                                  htmlFor="aut-id"
-                                                                  id="aut-id-label"
+                                                                  htmlFor="test-aut-id"
+                                                                  id="test-aut-id-label"
                                                                 >
                                                                   <ForwardRef(FormLabel)
                                                                     className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -3093,14 +3111,14 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       }
                                                                     }
                                                                     data-shrink={false}
-                                                                    htmlFor="aut-id"
-                                                                    id="aut-id-label"
+                                                                    htmlFor="test-aut-id"
+                                                                    id="test-aut-id-label"
                                                                   >
                                                                     <label
                                                                       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                                                       data-shrink={false}
-                                                                      htmlFor="aut-id"
-                                                                      id="aut-id-label"
+                                                                      htmlFor="test-aut-id"
+                                                                      id="test-aut-id-label"
                                                                     >
                                                                       UQ Author ID
                                                                     </label>
@@ -3139,7 +3157,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                 </React.Fragment>
                                                               }
                                                               fullWidth={true}
-                                                              id="aut-id"
+                                                              id="test-aut-id"
                                                               inputProps={
                                                                 Object {
                                                                   "aria-activedescendant": null,
@@ -3148,9 +3166,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                   "autoCapitalize": "none",
                                                                   "autoComplete": "off",
                                                                   "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                  "data-testid": "aut-id-input",
+                                                                  "data-testid": "test-aut-id-input",
                                                                   "disabled": false,
-                                                                  "id": "aut-id-input",
+                                                                  "id": "test-aut-id-input",
                                                                   "onBlur": [Function],
                                                                   "onChange": [Function],
                                                                   "onFocus": [Function],
@@ -3162,8 +3180,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       autocapitalize="none"
                                                                       autocomplete="off"
                                                                       class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                      data-testid="aut-id-input"
-                                                                      id="aut-id-input"
+                                                                      data-testid="test-aut-id-input"
+                                                                      id="test-aut-id-input"
                                                                       spellcheck="false"
                                                                       type="text"
                                                                       value=""
@@ -3226,7 +3244,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                   </React.Fragment>
                                                                 }
                                                                 fullWidth={true}
-                                                                id="aut-id"
+                                                                id="test-aut-id"
                                                                 inputProps={
                                                                   Object {
                                                                     "aria-activedescendant": null,
@@ -3235,9 +3253,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     "autoCapitalize": "none",
                                                                     "autoComplete": "off",
                                                                     "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                    "data-testid": "aut-id-input",
+                                                                    "data-testid": "test-aut-id-input",
                                                                     "disabled": false,
-                                                                    "id": "aut-id-input",
+                                                                    "id": "test-aut-id-input",
                                                                     "onBlur": [Function],
                                                                     "onChange": [Function],
                                                                     "onFocus": [Function],
@@ -3249,8 +3267,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         autocapitalize="none"
                                                                         autocomplete="off"
                                                                         class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                        data-testid="aut-id-input"
-                                                                        id="aut-id-input"
+                                                                        data-testid="test-aut-id-input"
+                                                                        id="test-aut-id-input"
                                                                         spellcheck="false"
                                                                         type="text"
                                                                         value=""
@@ -3313,7 +3331,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     </React.Fragment>
                                                                   }
                                                                   fullWidth={true}
-                                                                  id="aut-id"
+                                                                  id="test-aut-id"
                                                                   inputComponent="input"
                                                                   inputProps={
                                                                     Object {
@@ -3323,9 +3341,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       "autoCapitalize": "none",
                                                                       "autoComplete": "off",
                                                                       "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                      "data-testid": "aut-id-input",
+                                                                      "data-testid": "test-aut-id-input",
                                                                       "disabled": false,
-                                                                      "id": "aut-id-input",
+                                                                      "id": "test-aut-id-input",
                                                                       "onBlur": [Function],
                                                                       "onChange": [Function],
                                                                       "onFocus": [Function],
@@ -3337,8 +3355,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                           autocapitalize="none"
                                                                           autocomplete="off"
                                                                           class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                          data-testid="aut-id-input"
-                                                                          id="aut-id-input"
+                                                                          data-testid="test-aut-id-input"
+                                                                          id="test-aut-id-input"
                                                                           spellcheck="false"
                                                                           type="text"
                                                                           value=""
@@ -3406,7 +3424,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       </React.Fragment>
                                                                     }
                                                                     fullWidth={true}
-                                                                    id="aut-id"
+                                                                    id="test-aut-id"
                                                                     inputComponent="input"
                                                                     inputProps={
                                                                       Object {
@@ -3416,9 +3434,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         "autoCapitalize": "none",
                                                                         "autoComplete": "off",
                                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                        "data-testid": "aut-id-input",
+                                                                        "data-testid": "test-aut-id-input",
                                                                         "disabled": false,
-                                                                        "id": "aut-id-input",
+                                                                        "id": "test-aut-id-input",
                                                                         "onBlur": [Function],
                                                                         "onChange": [Function],
                                                                         "onFocus": [Function],
@@ -3430,8 +3448,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                             autocapitalize="none"
                                                                             autocomplete="off"
                                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                            data-testid="aut-id-input"
-                                                                            id="aut-id-input"
+                                                                            data-testid="test-aut-id-input"
+                                                                            id="test-aut-id-input"
                                                                             spellcheck="false"
                                                                             type="text"
                                                                             value=""
@@ -3459,9 +3477,9 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         autoComplete="off"
                                                                         autoFocus={false}
                                                                         className="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
-                                                                        data-testid="aut-id-input"
+                                                                        data-testid="test-aut-id-input"
                                                                         disabled={false}
-                                                                        id="aut-id-input"
+                                                                        id="test-aut-id-input"
                                                                         onAnimationStart={[Function]}
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
@@ -4026,7 +4044,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           data-testid="test-add"
                                           disabled={true}
                                           fullWidth={true}
-                                          id="submit-author"
+                                          id="test-add"
                                           onClick={[Function]}
                                           variant="contained"
                                         >
@@ -4068,7 +4086,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             data-testid="test-add"
                                             disabled={true}
                                             fullWidth={true}
-                                            id="submit-author"
+                                            id="test-add"
                                             onClick={[Function]}
                                             variant="contained"
                                           >
@@ -4079,7 +4097,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               disabled={true}
                                               focusRipple={true}
                                               focusVisibleClassName="Mui-focusVisible"
-                                              id="submit-author"
+                                              id="test-add"
                                               onClick={[Function]}
                                               type="button"
                                             >
@@ -4097,7 +4115,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 disabled={true}
                                                 focusRipple={true}
                                                 focusVisibleClassName="Mui-focusVisible"
-                                                id="submit-author"
+                                                id="test-add"
                                                 onClick={[Function]}
                                                 type="button"
                                               >
@@ -4105,7 +4123,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                                   data-testid="test-add"
                                                   disabled={true}
-                                                  id="submit-author"
+                                                  id="test-add"
                                                   onBlur={[Function]}
                                                   onClick={[Function]}
                                                   onDragLeave={[Function]}
@@ -4272,7 +4290,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           data-testid="test-cancel"
                                           disabled={true}
                                           fullWidth={true}
-                                          id="cancel-submit-author"
+                                          id="test-cancel"
                                           onClick={[Function]}
                                           variant="contained"
                                         >
@@ -4314,7 +4332,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             data-testid="test-cancel"
                                             disabled={true}
                                             fullWidth={true}
-                                            id="cancel-submit-author"
+                                            id="test-cancel"
                                             onClick={[Function]}
                                             variant="contained"
                                           >
@@ -4325,7 +4343,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               disabled={true}
                                               focusRipple={true}
                                               focusVisibleClassName="Mui-focusVisible"
-                                              id="cancel-submit-author"
+                                              id="test-cancel"
                                               onClick={[Function]}
                                               type="button"
                                             >
@@ -4343,7 +4361,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 disabled={true}
                                                 focusRipple={true}
                                                 focusVisibleClassName="Mui-focusVisible"
-                                                id="cancel-submit-author"
+                                                id="test-cancel"
                                                 onClick={[Function]}
                                                 type="button"
                                               >
@@ -4351,7 +4369,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                   className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                                   data-testid="test-cancel"
                                                   disabled={true}
-                                                  id="cancel-submit-author"
+                                                  id="test-cancel"
                                                   onBlur={[Function]}
                                                   onClick={[Function]}
                                                   onDragLeave={[Function]}
@@ -7040,7 +7058,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           key=""
                                           onChange={[Function]}
                                           onClear={[Function]}
-                                          uqIdFieldId="aut-id"
+                                          prefilledSearch={false}
+                                          uqIdFieldId="test-aut-id"
                                           value=""
                                         >
                                           <Memo(AutoCompleteAsynchronousField)
@@ -7051,7 +7070,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 "type": [Function],
                                               }
                                             }
-                                            autoCompleteAsynchronousFieldId="aut-id"
+                                            autoCompleteAsynchronousFieldId="test-aut-id"
                                             defaultValue=""
                                             disabled={true}
                                             filterOptions={[Function]}
@@ -7063,14 +7082,15 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             loadSuggestions={[Function]}
                                             onChange={[Function]}
                                             onClear={[Function]}
-                                            uqIdFieldId="aut-id"
+                                            prefilledSearch={false}
+                                            uqIdFieldId="test-aut-id"
                                             value=""
                                           >
                                             <WithStyles(ForwardRef(Autocomplete))
                                               ListboxProps={
                                                 Object {
-                                                  "data-testid": "aut-id-options",
-                                                  "id": "aut-id-options",
+                                                  "data-testid": "test-aut-id-options",
+                                                  "id": "test-aut-id-options",
                                                 }
                                               }
                                               clearOnEscape={true}
@@ -7078,12 +7098,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               filterOptions={[Function]}
                                               getOptionLabel={[Function]}
                                               getOptionSelected={[Function]}
-                                              id="aut-id"
+                                              id="test-aut-id"
                                               loading={false}
                                               onChange={[Function]}
                                               onClose={[Function]}
                                               onInputChange={[Function]}
                                               onOpen={[Function]}
+                                              open={false}
                                               options={Array []}
                                               popupIcon={false}
                                               renderInput={[Function]}
@@ -7093,8 +7114,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               <ForwardRef(Autocomplete)
                                                 ListboxProps={
                                                   Object {
-                                                    "data-testid": "aut-id-options",
-                                                    "id": "aut-id-options",
+                                                    "data-testid": "test-aut-id-options",
+                                                    "id": "test-aut-id-options",
                                                   }
                                                 }
                                                 classes={
@@ -7129,12 +7150,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 filterOptions={[Function]}
                                                 getOptionLabel={[Function]}
                                                 getOptionSelected={[Function]}
-                                                id="aut-id"
+                                                id="test-aut-id"
                                                 loading={false}
                                                 onChange={[Function]}
                                                 onClose={[Function]}
                                                 onInputChange={[Function]}
                                                 onOpen={[Function]}
+                                                open={false}
                                                 options={Array []}
                                                 popupIcon={false}
                                                 renderInput={[Function]}
@@ -7153,8 +7175,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   <WithStyles(ForwardRef(TextField))
                                                     InputLabelProps={
                                                       Object {
-                                                        "htmlFor": "aut-id",
-                                                        "id": "aut-id-label",
+                                                        "htmlFor": "test-aut-id",
+                                                        "id": "test-aut-id-label",
                                                       }
                                                     }
                                                     InputProps={
@@ -7181,7 +7203,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     disabled={true}
                                                     fullWidth={true}
                                                     helperText=""
-                                                    id="aut-id"
+                                                    id="test-aut-id"
                                                     inputProps={
                                                       Object {
                                                         "aria-activedescendant": null,
@@ -7190,9 +7212,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "autoCapitalize": "none",
                                                         "autoComplete": "off",
                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                        "data-testid": "aut-id-input",
+                                                        "data-testid": "test-aut-id-input",
                                                         "disabled": true,
-                                                        "id": "aut-id-input",
+                                                        "id": "test-aut-id-input",
                                                         "onBlur": [Function],
                                                         "onChange": [Function],
                                                         "onFocus": [Function],
@@ -7204,9 +7226,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             autocapitalize="none"
                                                             autocomplete="off"
                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                            data-testid="aut-id-input"
+                                                            data-testid="test-aut-id-input"
                                                             disabled=""
-                                                            id="aut-id-input"
+                                                            id="test-aut-id-input"
                                                             spellcheck="false"
                                                             type="text"
                                                             value=""
@@ -7223,8 +7245,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     <ForwardRef(TextField)
                                                       InputLabelProps={
                                                         Object {
-                                                          "htmlFor": "aut-id",
-                                                          "id": "aut-id-label",
+                                                          "htmlFor": "test-aut-id",
+                                                          "id": "test-aut-id-label",
                                                         }
                                                       }
                                                       InputProps={
@@ -7256,7 +7278,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       disabled={true}
                                                       fullWidth={true}
                                                       helperText=""
-                                                      id="aut-id"
+                                                      id="test-aut-id"
                                                       inputProps={
                                                         Object {
                                                           "aria-activedescendant": null,
@@ -7265,9 +7287,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           "autoCapitalize": "none",
                                                           "autoComplete": "off",
                                                           "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                          "data-testid": "aut-id-input",
+                                                          "data-testid": "test-aut-id-input",
                                                           "disabled": true,
-                                                          "id": "aut-id-input",
+                                                          "id": "test-aut-id-input",
                                                           "onBlur": [Function],
                                                           "onChange": [Function],
                                                           "onFocus": [Function],
@@ -7279,9 +7301,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               autocapitalize="none"
                                                               autocomplete="off"
                                                               class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                              data-testid="aut-id-input"
+                                                              data-testid="test-aut-id-input"
                                                               disabled=""
-                                                              id="aut-id-input"
+                                                              id="test-aut-id-input"
                                                               spellcheck="false"
                                                               type="text"
                                                               value=""
@@ -7325,8 +7347,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                                           >
                                                             <WithStyles(ForwardRef(InputLabel))
-                                                              htmlFor="aut-id"
-                                                              id="aut-id-label"
+                                                              htmlFor="test-aut-id"
+                                                              id="test-aut-id-label"
                                                             >
                                                               <ForwardRef(InputLabel)
                                                                 classes={
@@ -7345,8 +7367,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     "shrink": "MuiInputLabel-shrink",
                                                                   }
                                                                 }
-                                                                htmlFor="aut-id"
-                                                                id="aut-id-label"
+                                                                htmlFor="test-aut-id"
+                                                                id="test-aut-id-label"
                                                               >
                                                                 <WithStyles(ForwardRef(FormLabel))
                                                                   className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -7360,8 +7382,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     }
                                                                   }
                                                                   data-shrink={false}
-                                                                  htmlFor="aut-id"
-                                                                  id="aut-id-label"
+                                                                  htmlFor="test-aut-id"
+                                                                  id="test-aut-id-label"
                                                                 >
                                                                   <ForwardRef(FormLabel)
                                                                     className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
@@ -7378,14 +7400,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       }
                                                                     }
                                                                     data-shrink={false}
-                                                                    htmlFor="aut-id"
-                                                                    id="aut-id-label"
+                                                                    htmlFor="test-aut-id"
+                                                                    id="test-aut-id-label"
                                                                   >
                                                                     <label
                                                                       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-disabled Mui-disabled"
                                                                       data-shrink={false}
-                                                                      htmlFor="aut-id"
-                                                                      id="aut-id-label"
+                                                                      htmlFor="test-aut-id"
+                                                                      id="test-aut-id-label"
                                                                     >
                                                                       UQ Author ID
                                                                     </label>
@@ -7413,7 +7435,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 </React.Fragment>
                                                               }
                                                               fullWidth={true}
-                                                              id="aut-id"
+                                                              id="test-aut-id"
                                                               inputProps={
                                                                 Object {
                                                                   "aria-activedescendant": null,
@@ -7422,9 +7444,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "autoCapitalize": "none",
                                                                   "autoComplete": "off",
                                                                   "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                  "data-testid": "aut-id-input",
+                                                                  "data-testid": "test-aut-id-input",
                                                                   "disabled": true,
-                                                                  "id": "aut-id-input",
+                                                                  "id": "test-aut-id-input",
                                                                   "onBlur": [Function],
                                                                   "onChange": [Function],
                                                                   "onFocus": [Function],
@@ -7436,9 +7458,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       autocapitalize="none"
                                                                       autocomplete="off"
                                                                       class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                                      data-testid="aut-id-input"
+                                                                      data-testid="test-aut-id-input"
                                                                       disabled=""
-                                                                      id="aut-id-input"
+                                                                      id="test-aut-id-input"
                                                                       spellcheck="false"
                                                                       type="text"
                                                                       value=""
@@ -7490,7 +7512,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   </React.Fragment>
                                                                 }
                                                                 fullWidth={true}
-                                                                id="aut-id"
+                                                                id="test-aut-id"
                                                                 inputProps={
                                                                   Object {
                                                                     "aria-activedescendant": null,
@@ -7499,9 +7521,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     "autoCapitalize": "none",
                                                                     "autoComplete": "off",
                                                                     "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                    "data-testid": "aut-id-input",
+                                                                    "data-testid": "test-aut-id-input",
                                                                     "disabled": true,
-                                                                    "id": "aut-id-input",
+                                                                    "id": "test-aut-id-input",
                                                                     "onBlur": [Function],
                                                                     "onChange": [Function],
                                                                     "onFocus": [Function],
@@ -7513,9 +7535,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         autocapitalize="none"
                                                                         autocomplete="off"
                                                                         class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                                        data-testid="aut-id-input"
+                                                                        data-testid="test-aut-id-input"
                                                                         disabled=""
-                                                                        id="aut-id-input"
+                                                                        id="test-aut-id-input"
                                                                         spellcheck="false"
                                                                         type="text"
                                                                         value=""
@@ -7567,7 +7589,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     </React.Fragment>
                                                                   }
                                                                   fullWidth={true}
-                                                                  id="aut-id"
+                                                                  id="test-aut-id"
                                                                   inputComponent="input"
                                                                   inputProps={
                                                                     Object {
@@ -7577,9 +7599,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       "autoCapitalize": "none",
                                                                       "autoComplete": "off",
                                                                       "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                      "data-testid": "aut-id-input",
+                                                                      "data-testid": "test-aut-id-input",
                                                                       "disabled": true,
-                                                                      "id": "aut-id-input",
+                                                                      "id": "test-aut-id-input",
                                                                       "onBlur": [Function],
                                                                       "onChange": [Function],
                                                                       "onFocus": [Function],
@@ -7591,9 +7613,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           autocapitalize="none"
                                                                           autocomplete="off"
                                                                           class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                                          data-testid="aut-id-input"
+                                                                          data-testid="test-aut-id-input"
                                                                           disabled=""
-                                                                          id="aut-id-input"
+                                                                          id="test-aut-id-input"
                                                                           spellcheck="false"
                                                                           type="text"
                                                                           value=""
@@ -7650,7 +7672,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       </React.Fragment>
                                                                     }
                                                                     fullWidth={true}
-                                                                    id="aut-id"
+                                                                    id="test-aut-id"
                                                                     inputComponent="input"
                                                                     inputProps={
                                                                       Object {
@@ -7660,9 +7682,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         "autoCapitalize": "none",
                                                                         "autoComplete": "off",
                                                                         "className": "MuiAutocomplete-input MuiAutocomplete-inputFocused",
-                                                                        "data-testid": "aut-id-input",
+                                                                        "data-testid": "test-aut-id-input",
                                                                         "disabled": true,
-                                                                        "id": "aut-id-input",
+                                                                        "id": "test-aut-id-input",
                                                                         "onBlur": [Function],
                                                                         "onChange": [Function],
                                                                         "onFocus": [Function],
@@ -7674,9 +7696,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                             autocapitalize="none"
                                                                             autocomplete="off"
                                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                                            data-testid="aut-id-input"
+                                                                            data-testid="test-aut-id-input"
                                                                             disabled=""
-                                                                            id="aut-id-input"
+                                                                            id="test-aut-id-input"
                                                                             spellcheck="false"
                                                                             type="text"
                                                                             value=""
@@ -7704,9 +7726,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         autoComplete="off"
                                                                         autoFocus={false}
                                                                         className="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused Mui-disabled Mui-disabled MuiInputBase-inputAdornedEnd"
-                                                                        data-testid="aut-id-input"
+                                                                        data-testid="test-aut-id-input"
                                                                         disabled={true}
-                                                                        id="aut-id-input"
+                                                                        id="test-aut-id-input"
                                                                         onAnimationStart={[Function]}
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
@@ -8097,7 +8119,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           data-testid="test-add"
                                           disabled={true}
                                           fullWidth={true}
-                                          id="submit-author"
+                                          id="test-add"
                                           onClick={[Function]}
                                           variant="contained"
                                         >
@@ -8139,7 +8161,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             data-testid="test-add"
                                             disabled={true}
                                             fullWidth={true}
-                                            id="submit-author"
+                                            id="test-add"
                                             onClick={[Function]}
                                             variant="contained"
                                           >
@@ -8150,7 +8172,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               disabled={true}
                                               focusRipple={true}
                                               focusVisibleClassName="Mui-focusVisible"
-                                              id="submit-author"
+                                              id="test-add"
                                               onClick={[Function]}
                                               type="button"
                                             >
@@ -8168,7 +8190,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 disabled={true}
                                                 focusRipple={true}
                                                 focusVisibleClassName="Mui-focusVisible"
-                                                id="submit-author"
+                                                id="test-add"
                                                 onClick={[Function]}
                                                 type="button"
                                               >
@@ -8176,7 +8198,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                                   data-testid="test-add"
                                                   disabled={true}
-                                                  id="submit-author"
+                                                  id="test-add"
                                                   onBlur={[Function]}
                                                   onClick={[Function]}
                                                   onDragLeave={[Function]}
@@ -8848,6 +8870,8 @@ exports[`ContributorsEditor should get contributors from props and input value s
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={false}
@@ -9032,6 +9056,8 @@ exports[`ContributorsEditor should get contributors from props and input value s
             "root": "ContributorList list ",
           }
         }
+        data-testid="test-list"
+        id="test-list"
       >
         <Memo(ContributorRow)
           canEdit={false}

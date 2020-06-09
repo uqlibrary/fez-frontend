@@ -37,13 +37,13 @@ describe('Component ContributorForm', () => {
     it('should render display name field only', () => {
         const { getByTestId } = setup();
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
-        expect(getByTestId('submit-author').disabled).toBeTruthy();
+        expect(getByTestId('rek-contributor-add').disabled).toBeTruthy();
     });
 
     it('should render display name field and identifier field', () => {
         const { getByTestId } = setup({ showIdentifierLookup: true });
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
-        expect(getByTestId('aut-id-input')).toBeInTheDocument();
+        expect(getByTestId('rek-contributor-aut-id-input')).toBeInTheDocument();
     });
 
     it('should render display name field and role field', () => {
@@ -56,7 +56,7 @@ describe('Component ContributorForm', () => {
         const { getByTestId, getByLabelText } = setup({ isNtro: true });
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
         expect(getByLabelText('Org affiliation')).toBeInTheDocument();
-        expect(getByTestId('aut-id-input')).toBeInTheDocument();
+        expect(getByTestId('rek-contributor-aut-id-input')).toBeInTheDocument();
     });
 
     it('should call event handler on submit if all checks pass', () => {
@@ -73,7 +73,7 @@ describe('Component ContributorForm', () => {
             },
         });
 
-        fireEvent.click(getByTestId('submit-author'));
+        fireEvent.click(getByTestId('rek-contributor-add'));
 
         expect(testFn).toBeCalledWith({
             nameAsPublished: 'Firstname Lastname',
@@ -210,10 +210,10 @@ describe('Component ContributorForm', () => {
         fireEvent.click(getByText('NGO'));
         expect(getByTestId('org-affiliation-type-label')).not.toHaveClass('Mui-error');
 
-        expect(getByTestId('submit-author').disabled).toBeTruthy();
+        expect(getByTestId('rek-contributor-add').disabled).toBeTruthy();
 
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'testing' } });
-        expect(getByTestId('submit-author').disabled).toBeFalsy();
+        expect(getByTestId('rek-contributor-add').disabled).toBeFalsy();
     });
 
     it('should show contributor assignment', () => {
@@ -236,9 +236,9 @@ describe('Component ContributorForm', () => {
         });
 
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Testing, UqId' } });
-        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('aut-id-options'));
+        const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -292,9 +292,9 @@ describe('Component ContributorForm', () => {
             onSubmit: testFn,
         });
 
-        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('aut-id-options'));
+        const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -380,9 +380,9 @@ describe('Component ContributorForm', () => {
             onSubmit: testFn,
         });
 
-        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('aut-id-options'));
+        const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -475,9 +475,9 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByText('Not UQ'), affiliationOptions);
 
-        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('aut-id-options'));
+        const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
         expect(testFn).not.toBeCalled();
     });
@@ -533,9 +533,9 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByText('UQ'), affiliationOptions);
 
-        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+        fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
-        const list = await waitFor(() => getByTestId('aut-id-options'));
+        const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
         expect(testFn).toBeCalledWith({
             id: 553,
@@ -597,7 +597,7 @@ describe('Component ContributorForm', () => {
             orgaff: 'Missing',
             orgtype: '',
             uqIdentifier: '0',
-            uqUsername: '',
+            uqUsername: 'Test',
         });
     });
 
@@ -614,7 +614,7 @@ describe('Component ContributorForm', () => {
                 creatorRole: '',
             },
         });
-        fireEvent.click(getByTestId('cancel-submit-author'));
+        fireEvent.click(getByTestId('rek-contributor-cancel'));
         expect(testFn).toBeCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',

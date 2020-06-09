@@ -63,7 +63,7 @@ context('Incomplete record form', () => {
             .first()
             .siblings('div')
             .contains(authorEditInstruction);
-        cy.get('#submit-author')
+        cy.get('[data-testid=rek-author-add]')
             .should('have.attr', 'disabled');
         cy.get('[data-testid=rek-author-input]')
             .should('have.attr', 'disabled');
@@ -79,10 +79,10 @@ context('Incomplete record form', () => {
             .click();
 
         // Apply changes
-        cy.get('#submit-author')
+        cy.get('[data-testid=rek-author-add]')
             .should('have.attr', 'tabindex', '0')
             .should('not.have.attr', 'disabled');
-        cy.get('#submit-author') // Re-select to get updated element
+        cy.get('[data-testid=rek-author-add]') // Re-select to get updated element
             .click();
         cy.get(`#rek-author-list-row-${authorNumber}`)
             .should('contain', orgName)
@@ -115,10 +115,10 @@ context('Incomplete record form', () => {
             .should('have.attr', 'disabled');
 
         // Apply changes
-        cy.get('#submit-author')
+        cy.get('[data-testid=rek-author-add]')
             .should('have.attr', 'tabindex', '0')
             .should('not.have.attr', 'disabled');
-        cy.get('#submit-author') // Re-select to get updated element
+        cy.get('[data-testid=rek-author-add]') // Re-select to get updated element
             .click();
         cy.get(`#rek-author-list-row-${authorNumber}`)
             .should('contain', 'The University of Queensland')

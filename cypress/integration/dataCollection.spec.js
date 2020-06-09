@@ -196,7 +196,7 @@ context('Data Collection form', () => {
         cy.get('div#contributorForm')
             .find('input#creator-role-field')
             .type('Custom role');
-        cy.get('button#submit-author')
+        cy.get('button[data-testid=rek-author-add]')
             .click();
         cy.get('@submitButton')
             .should('be.disabled');
@@ -232,7 +232,7 @@ context('Data Collection form', () => {
             .type('Ky Lane');
         cy.get('input#creator-role-field')
             .type('UX Developer');
-        cy.get('button#submit-author')
+        cy.get('button[data-testid=rek-author-add]')
             .click();
         cy.get('@submitButton')
             .should('be.disabled');
