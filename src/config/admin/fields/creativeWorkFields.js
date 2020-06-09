@@ -2,6 +2,51 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
+    identifiers: (
+        { displayAll, displayIdentifiers, displayLocation, displayIsmn, displayIsrc } = {
+            displayAll: false,
+            displayIdentifiers: false,
+            displayLocation: false,
+            displayIsmn: false,
+            displayIsrc: false,
+        },
+    ) => [
+        {
+            title: 'Manage identifiers',
+            groups: [
+                [
+                    'fez_record_search_key_doi',
+                    displayIsmn && 'fez_record_search_key_ismn',
+                    displayIsrc && 'fez_record_search_key_isrc',
+                ].filter(Boolean),
+                displayAll && [
+                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                    ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                ],
+            ].filter(Boolean),
+        },
+        {
+            title: 'Manage links',
+            groups: [['links']],
+        },
+        ...(displayIdentifiers
+            ? [
+                {
+                    title: 'Identifiers',
+                    groups: [['fez_record_search_key_identifier']],
+                },
+            ]
+            : []),
+        ...(displayLocation
+            ? [
+                {
+                    title: 'Location',
+                    groups: [['fez_record_search_key_location_identifiers']],
+                },
+            ]
+            : []),
+    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',

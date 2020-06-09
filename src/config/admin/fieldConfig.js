@@ -527,7 +527,7 @@ export default {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'ntroSection.fez_record_search_key_ismn',
+                name: 'identifiersSection.fez_record_search_key_ismn',
                 isValid: validation.isValidIsmn,
                 searchKey: {
                     value: 'rek_ismn',
@@ -541,7 +541,7 @@ export default {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'ntroSection.fez_record_search_key_isrc',
+                name: 'identifiersSection.fez_record_search_key_isrc',
                 isValid: validation.isValidIsrc,
                 searchKey: {
                     value: 'rek_isrc',
