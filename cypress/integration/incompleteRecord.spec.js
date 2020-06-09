@@ -104,9 +104,9 @@ context('Incomplete record form', () => {
             .should('have.attr', 'disabled');
 
         // Mark as UQ author
-        cy.get('#org-affiliation-selector')
+        cy.get('#org-affiliation-select')
             .click();
-        cy.get('#menu-org-affiliation-selector')
+        cy.get('#org-affiliation-options')
             .find('li')
             .eq(1)
             .should('not.contain', 'Not')

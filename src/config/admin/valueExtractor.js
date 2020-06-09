@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
+import locale from 'locale/global';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -53,7 +54,10 @@ const authorsGetValue = record => {
         aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
-        affiliation: (!!(authorIds[order] || {}).rek_author_id && AFFILIATION_TYPE_UQ) || AFFILIATION_TYPE_NOT_UQ,
+        affiliation:
+            (authorAffiliationNames[order] || {}).rek_author_affiliation_name === locale.global.orgTitle
+                ? AFFILIATION_TYPE_UQ
+                : AFFILIATION_TYPE_NOT_UQ,
         aut_org_username: ((authorIds[order] || {}).author || {}).aut_org_username || '',
         aut_student_username: ((authorIds[order] || {}).author || {}).aut_student_username || '',
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,
@@ -481,6 +485,7 @@ export default {
                 };
             });
 
+            delete record.fez_record_search_key_author;
             delete record.fez_record_search_key_significance;
             delete record.fez_record_search_key_creator_contribution_statement;
 

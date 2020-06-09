@@ -147,7 +147,7 @@ describe('Component ContributorForm', () => {
         });
 
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
-        fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
         fireEvent.click(getByText('Not UQ'));
         fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
         expect(onAddFn).not.toBeCalled();
@@ -158,24 +158,24 @@ describe('Component ContributorForm', () => {
             isNtro: true,
         });
 
-        fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
 
-        let options = await waitFor(() => getByTestId('menu-org-affiliation-selector'));
+        let options = await waitFor(() => getByTestId('org-affiliation-options'));
 
         act(() => {
             fireEvent.click(getByText('Not UQ', options));
         });
 
-        expect(getByTestId('org-affiliation-selector')).toHaveTextContent('Not UQ');
+        expect(getByTestId('org-affiliation-select')).toHaveTextContent('Not UQ');
 
-        fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
-        options = await waitFor(() => getByTestId('menu-org-affiliation-selector'));
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
+        options = await waitFor(() => getByTestId('org-affiliation-options'));
 
         act(() => {
             fireEvent.click(getByText('UQ', options));
         });
 
-        expect(getByTestId('org-affiliation-selector')).toHaveTextContent('UQ');
+        expect(getByTestId('org-affiliation-select')).toHaveTextContent('UQ');
     });
 
     it('should show affiliation type selector in error state', () => {
@@ -183,7 +183,7 @@ describe('Component ContributorForm', () => {
             isNtro: true,
             required: true,
         });
-        expect(getByTestId('org-affiliation-selector-label')).toHaveClass('Mui-error');
+        expect(getByTestId('org-affiliation-label')).toHaveClass('Mui-error');
     });
 
     it('should show error regarding name field', () => {
@@ -197,7 +197,7 @@ describe('Component ContributorForm', () => {
     it('should display org affiliation selector if affiliation is NotUQ', () => {
         const { getByTestId, getByText } = setup({ isNtro: true });
 
-        fireEvent.mouseDown(getByTestId('org-affiliation-selector'));
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
         fireEvent.click(getByText('Not UQ'));
 
         expect(getByTestId('org-affiliation-name-label')).toHaveClass('Mui-error');
@@ -335,6 +335,7 @@ describe('Component ContributorForm', () => {
             uqUsername: 'mdcmar - 553',
         });
     });
+
     it('should be able to set uqUsername on the contributor object from selected author student username', async() => {
         const testParam = 'christ';
         const testRequest = { query: testParam };
@@ -422,6 +423,160 @@ describe('Component ContributorForm', () => {
             uqUsername: 'smdcmar - 553',
         });
     });
+
+    it('should not submit contributor form if admin user is linking NotUQ user with identifier lookup', async() => {
+        const testParam = 'christ';
+        const testRequest = { query: testParam };
+
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, {
+            data: [
+                {
+                    aut_id: 553,
+                    aut_org_username: null,
+                    aut_org_staff_id: null,
+                    aut_org_student_id: null,
+                    aut_email: null,
+                    aut_display_name: 'Del Mar, Christopher B.',
+                    aut_fname: 'Christopher',
+                    aut_mname: 'Bernard',
+                    aut_lname: 'Del Mar',
+                    aut_title: 'Professor',
+                    aut_position: '',
+                    aut_homepage_link: '',
+                    aut_created_date: null,
+                    aut_update_date: '2010-10-08',
+                    aut_external_id: '0000041362',
+                    aut_ref_num: '123456',
+                    aut_researcher_id: null,
+                    aut_scopus_id: '',
+                    aut_mypub_url: '',
+                    aut_rid_password: null,
+                    aut_people_australia_id: null,
+                    aut_description: null,
+                    aut_orcid_id: null,
+                    aut_google_scholar_id: null,
+                    aut_rid_last_updated: null,
+                    aut_publons_id: null,
+                    aut_student_username: null,
+                },
+            ],
+        });
+        const testFn = jest.fn();
+
+        const { getByTestId, getByText } = setup({
+            canEdit: true,
+            showIdentifierLookup: true,
+            onSubmit: testFn,
+            isNtro: true,
+        });
+
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
+        const affiliationOptions = await waitFor(() => getByTestId('org-affiliation-options'));
+
+        fireEvent.click(getByText('Not UQ'), affiliationOptions);
+
+        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+
+        const list = await waitFor(() => getByTestId('aut-id-options'));
+        fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
+        expect(testFn).not.toBeCalled();
+    });
+
+    it('should submit contributor form if admin user is linking UQ user with identifier lookup', async() => {
+        const testParam = 'christ';
+        const testRequest = { query: testParam };
+
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, {
+            data: [
+                {
+                    aut_id: 553,
+                    aut_org_username: null,
+                    aut_org_staff_id: null,
+                    aut_org_student_id: null,
+                    aut_email: null,
+                    aut_display_name: 'Del Mar, Christopher B.',
+                    aut_fname: 'Christopher',
+                    aut_mname: 'Bernard',
+                    aut_lname: 'Del Mar',
+                    aut_title: 'Professor',
+                    aut_position: '',
+                    aut_homepage_link: '',
+                    aut_created_date: null,
+                    aut_update_date: '2010-10-08',
+                    aut_external_id: '0000041362',
+                    aut_ref_num: '123456',
+                    aut_researcher_id: null,
+                    aut_scopus_id: '',
+                    aut_mypub_url: '',
+                    aut_rid_password: null,
+                    aut_people_australia_id: null,
+                    aut_description: null,
+                    aut_orcid_id: null,
+                    aut_google_scholar_id: null,
+                    aut_rid_last_updated: null,
+                    aut_publons_id: null,
+                    aut_student_username: null,
+                },
+            ],
+        });
+        const testFn = jest.fn();
+
+        const { getByTestId, getByText } = setup({
+            canEdit: true,
+            showIdentifierLookup: true,
+            onSubmit: testFn,
+            isNtro: true,
+        });
+
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
+        const affiliationOptions = await waitFor(() => getByTestId('org-affiliation-options'));
+
+        fireEvent.click(getByText('UQ'), affiliationOptions);
+
+        fireEvent.change(getByTestId('aut-id-input'), { target: { value: 'christ' } });
+
+        const list = await waitFor(() => getByTestId('aut-id-options'));
+        fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
+        expect(testFn).toBeCalledWith({
+            id: 553,
+            value: 'Professor Del Mar, Christopher B. (123456)',
+            affiliation: 'UQ',
+            creatorRole: '',
+            nameAsPublished: 'Del Mar, Christopher',
+            orgaff: 'The University of Queensland',
+            orgtype: '453989',
+            uqIdentifier: '553',
+            aut_id: 553,
+            aut_org_username: null,
+            aut_org_staff_id: null,
+            aut_org_student_id: null,
+            aut_email: null,
+            aut_display_name: 'Del Mar, Christopher B.',
+            aut_fname: 'Christopher',
+            aut_mname: 'Bernard',
+            aut_lname: 'Del Mar',
+            aut_title: 'Professor',
+            aut_position: '',
+            aut_homepage_link: '',
+            aut_created_date: null,
+            aut_update_date: '2010-10-08',
+            aut_external_id: '0000041362',
+            aut_ref_num: '123456',
+            aut_researcher_id: null,
+            aut_scopus_id: '',
+            aut_mypub_url: '',
+            aut_rid_password: null,
+            aut_people_australia_id: null,
+            aut_description: null,
+            aut_orcid_id: null,
+            aut_google_scholar_id: null,
+            aut_rid_last_updated: null,
+            aut_publons_id: null,
+            aut_student_username: null,
+            uqUsername: '123456 - 553',
+        });
+    });
+
     it('should set state properly when UQ identifier is cleared', () => {
         const testFn = jest.fn();
         const { getByTitle } = setup({
@@ -486,5 +641,24 @@ describe('Component ContributorForm', () => {
         });
         fireEvent.click(getByTitle('Clear'));
         expect(testFn).not.toBeCalled();
+    });
+
+    it('should clear contributor form on clearing from UQ ID and submit for admins', () => {
+        const testFn = jest.fn();
+        const { getByTitle } = setup({
+            canEdit: true,
+            onSubmit: testFn,
+            showRoleInput: false,
+            showIdentifierLookup: false,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+        });
+        fireEvent.click(getByTitle('Clear'));
+        expect(testFn).toBeCalled();
     });
 });
