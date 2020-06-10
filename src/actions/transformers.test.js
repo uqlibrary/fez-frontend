@@ -2276,14 +2276,7 @@ describe('getAdminSectionSearchKeys', () => {
 
     it('should transform all search keys for additional information section', () => {
         const data = {
-            collections: [
-                {
-                    id: 12344,
-                },
-                {
-                    id: 22343,
-                },
-            ],
+            collections: [12344, 22343],
             additionalNotes: {
                 htmlText: '<p>Test additional notes</p>',
                 plainText: 'Test additional notes',
