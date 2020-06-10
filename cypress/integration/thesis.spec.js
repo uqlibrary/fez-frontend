@@ -53,7 +53,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
 
         // Supervisors
-        cy.get('[data-testid=supervisors-input]')
+        cy.get('[data-testid=rek-supervisor-input]')
             .type('Ky Lane', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -61,7 +61,7 @@ context('Thesis', () => {
             .should('have.length', 4);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('[data-testid=supervisors-input]')
+        cy.get('[data-testid=rek-supervisor-input]')
             .type('{enter}', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -80,7 +80,7 @@ context('Thesis', () => {
             .should('have.length', 4);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('[data-testid=supervisors-input]')
+        cy.get('[data-testid=rek-supervisor-input]')
             .type('Vishal Asai{enter}', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -88,7 +88,7 @@ context('Thesis', () => {
             .should('have.length', 3);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('[data-testid=supervisors-input]')
+        cy.get('[data-testid=rek-supervisor-input]')
             .type('Ky Lane{enter}', { delay: 30 });
         cy.get('ul.ContributorList')
             .children()
@@ -120,7 +120,7 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 4);
-        cy.get('[data-testid=supervisors-input]')
+        cy.get('[data-testid=rek-supervisor-input]')
             .type('Ky Lane{enter}', { delay: 30 });
         cy.get('.Alert')
             .find('ul')
@@ -137,9 +137,9 @@ context('Thesis', () => {
             .should('have.length', 2);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('#filtered-field-of-research-list-row-0')
+        cy.get('#rek-subject-list-row-0')
             .should('contain.text', '0101 Pure Mathematics')
-            .get('#filtered-field-of-research-list-row-0-delete')
+            .get('#rek-subject-list-row-0-delete')
             .click();
         cy.get('button')
             .contains('Yes')
@@ -155,7 +155,7 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 2);
-        cy.get('#delete-all-filtered-field-of-research')
+        cy.get('#delete-all-rek-subject')
             .click();
         cy.get('button')
             .contains('Yes')
@@ -177,7 +177,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
 
         // Keywords
-        cy.get('input#keywords-input')
+        cy.get('[data-testid=rek-keywords-input]')
             .type('First Keyword{enter}', {
                 delay: 30,
             });
@@ -187,7 +187,7 @@ context('Thesis', () => {
             .should('have.length', 1);
         cy.get('button#submit-thesis')
             .should('to.have.attr', 'disabled');
-        cy.get('#keywords-list-row-0-delete')
+        cy.get('#rek-keywords-list-row-0-delete')
             .click();
         cy.get('button')
             .contains('Yes')
@@ -196,7 +196,7 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 2);
-        cy.get('input#keywords-input')
+        cy.get('[data-testid=rek-keywords-input]')
             .type('Second Keyword{enter}', {
                 delay: 30,
             });
@@ -204,7 +204,7 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 1);
-        cy.get('#delete-all-keywords')
+        cy.get('#delete-all-rek-keywords')
             .click();
         cy.get('button')
             .contains('Yes')
@@ -213,21 +213,21 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 2);
-        cy.get('input#keywords-input')
+        cy.get('[data-testid=rek-keywords-input]')
             .type('Third Keyword{enter}', {
                 delay: 30,
             });
-        cy.get('#keywords-list')
+        cy.get('#rek-keywords-list')
             .should('have.length', 1);
         cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 1);
-        cy.get('input#keywords-input')
+        cy.get('[data-testid=rek-keywords-input]')
             .type('Fourth Keyword|Fifth Keyword|Sixth Keyword{enter}', {
                 delay: 30,
             });
-        cy.get('#keywords-list')
+        cy.get('#rek-keywords-list')
             .children()
             .should('have.length', 4);
 

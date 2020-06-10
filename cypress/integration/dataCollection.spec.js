@@ -194,7 +194,7 @@ context('Data Collection form', () => {
         cy.get('@errors')
             .should('have.length', errorCount);
         cy.get('div#contributorForm')
-            .find('input#creator-role-field')
+            .find('[data-testid=rek-author-role-input]')
             .type('Custom role');
         cy.get('button[data-testid=rek-author-add]')
             .click();
@@ -205,7 +205,7 @@ context('Data Collection form', () => {
         cy.get('[data-testid=rek-author-input]')
             .type('Vishal Asai');
         cy.get('div#contributorForm')
-            .find('input#creator-role-field')
+            .find('[data-testid=rek-author-role-input]')
             .click();
         cy.get('li[role="option"]')
             .contains('Technician')
@@ -230,7 +230,7 @@ context('Data Collection form', () => {
             .should('have.length', ++errorCount);
         cy.get('[data-testid=rek-author-input]')
             .type('Ky Lane');
-        cy.get('input#creator-role-field')
+        cy.get('[data-testid=rek-author-role-input]')
             .type('UX Developer');
         cy.get('button[data-testid=rek-author-add]')
             .click();

@@ -109,13 +109,13 @@ context('Book admin edit', () => {
                     .parents('.AdminCard')
                     .as('issnBlock');
                 cy.log('Find existing entry');
-                cy.get('#issn-list-row-0')
+                cy.get('#rek-issn-list-row-0')
                     .within(row => {
                         checkIssnLinks(row, '0302-9743');
                     });
 
                 cy.log('Find existing entry with placeholder data');
-                cy.get('#issn-list-row-1')
+                cy.get('#rek-issn-list-row-1')
                     .should('contain', '1611-3349')
                     .within(() => {
                         cy.get('a')
@@ -134,7 +134,7 @@ context('Book admin edit', () => {
                 cy.get('@issnBlock')
                     .find('input')
                     .type('{backspace}0{enter}');
-                cy.get('#issn-list-row-1')
+                cy.get('#rek-issn-list-row-1')
                     .within(row => {
                         checkIssnLinks(row, '1611-3340');
                     });
@@ -142,7 +142,7 @@ context('Book admin edit', () => {
                 cy.get('@issnBlock')
                     .find('input')
                     .type('11111111{enter}');
-                cy.get('#issn-list-row-2')
+                cy.get('#rek-issn-list-row-2')
                     .should('contain', '1111-1111')
                 // Mock returns no sherpa/ulrichs data for issn 1111-1111 or 2222-2222.
                     .should('not.contain', 'SHERPA/RoMEO')
@@ -152,7 +152,7 @@ context('Book admin edit', () => {
                 cy.get('@issnBlock')
                     .find('input')
                     .type('33333333{enter}');
-                cy.get('#issn-list-row-3')
+                cy.get('#rek-issn-list-row-3')
                     .within(row => {
                         checkIssnLinks(row, '3333-3333');
                         cy.get('span > a')
@@ -164,14 +164,14 @@ context('Book admin edit', () => {
                                 'Source publisher name/place and alternate ISSNs in a new window',
                             );
                     })
-                    .parents('#issn-list-row-3')
+                    .parents('#rek-issn-list-row-3')
                     .find('button[aria-label="Edit this item"]')
                     .click();
                 cy.log('Edit the 4th entry');
                 cy.get('@issnBlock')
                     .find('input')
                     .type('{selectall}{del}44444444{enter}');
-                cy.get('#issn-list-row-3')
+                cy.get('#rek-issn-list-row-3')
                     .should('not.contain', '3333-3333')
                     .within(row => {
                         checkIssnLinks(row, '4444-4444');
@@ -181,18 +181,18 @@ context('Book admin edit', () => {
                     .find('input')
                     .type('55555555{enter}');
                 cy.log('Verify and move up the 5th entry');
-                cy.get('#issn-list-row-4')
+                cy.get('#rek-issn-list-row-4')
                     .within(row => {
                         checkIssnLinks(row, '5555-5555');
                     });
-                cy.get('#issn-list-row-4-move-up')
+                cy.get('#rek-issn-list-row-4-move-up')
                     .click();
                 cy.log('Ensure 4th and 5th entries have swapped properly');
-                cy.get('#issn-list-row-3')
+                cy.get('#rek-issn-list-row-3')
                     .within(row => {
                         checkIssnLinks(row, '5555-5555');
                     });
-                cy.get('#issn-list-row-4')
+                cy.get('#rek-issn-list-row-4')
                     .within(row => {
                         checkIssnLinks(row, '4444-4444');
                     });
@@ -200,7 +200,7 @@ context('Book admin edit', () => {
                 cy.get('@issnBlock')
                     .find('input')
                     .type('00000000{enter}');
-                cy.get('#issn-list-row-5')
+                cy.get('#rek-issn-list-row-5')
                     .should('contain', '0000-0000')
                     .find('a')
                     .should('not.contain', 'SHERPA/RoMEO')
@@ -209,7 +209,7 @@ context('Book admin edit', () => {
                 cy.get('@issnBlock')
                     .find('input')
                     .type('66666666{enter}');
-                cy.get('#issn-list-row-6')
+                cy.get('#rek-issn-list-row-6')
                     .within(row => {
                         checkIssnLinks(row, '6666-6666');
                     });
