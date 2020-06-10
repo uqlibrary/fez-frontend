@@ -27,7 +27,6 @@ import {
 
 export const IdentifiersSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    console.log('subtype:', record.rek_subtype);
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].identifiers({
             displayAll: [
@@ -56,8 +55,6 @@ export const IdentifiersSection = ({ disabled = false }) => {
             ].includes(record.rek_subtype),
         }),
     );
-    console.log('cards', cards);
-
     return <Section cards={cards.current} disabled={disabled} />;
 };
 
