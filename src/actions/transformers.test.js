@@ -3737,6 +3737,30 @@ describe('getFilesSectionSearchKeys', () => {
             },
         });
     });
+
+    it('should return empty object', () => {
+        expect(transformers.getFilesSectionSearchKeys({} )).toEqual({});
+    });
+
+    it('should return rest of the file section search keys', () => {
+        const data = {
+            fez_datastream_info: [ { dsi_dsid: 'file 1' } ],
+        };
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual(data);
+    });
+
+    it('should be able to remove advisory search key', () => {
+        const data = {
+            advisoryStatement: {
+                htmlText: null,
+                plainText: null,
+            },
+        };
+
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_advisory_statement: null,
+        });
+    });
 });
 
 describe('getRecordCreatorsIdSearchKey test', () => {

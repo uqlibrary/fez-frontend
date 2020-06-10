@@ -1167,12 +1167,14 @@ export const getAdminSectionSearchKeys = (data = {}) => {
 
 export const getFilesSectionSearchKeys = data => {
     const { advisoryStatement, ...rest } = data;
-    return {
-        ...cleanBlankEntries(rest),
-        ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
-            ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
-            : {}),
-    };
+    return !data.hasOwnProperty('advisoryStatement')
+        ? { ...cleanBlankEntries(rest) }
+        : {
+            ...cleanBlankEntries(rest),
+            ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
+                ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
+                : { fez_record_search_key_advisory_statement: null } ),
+        };
 };
 
 export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
