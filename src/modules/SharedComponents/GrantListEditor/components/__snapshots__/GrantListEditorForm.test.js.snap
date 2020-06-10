@@ -1694,21 +1694,41 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     </ForwardRef(Typography)>
                                   </WithStyles(ForwardRef(Typography))>
                                   <WithStyles(ForwardRef(Select))
+                                    MenuProps={
+                                      Object {
+                                        "data-testid": "rek-grant-type-options",
+                                        "id": "rek-grant-type-options",
+                                      }
+                                    }
                                     SelectDisplayProps={
                                       Object {
+                                        "data-testid": "rek-grant-type-select",
                                         "id": "grant-type",
                                       }
                                     }
                                     disabled={true}
                                     displayEmpty={true}
+                                    inputProps={
+                                      Object {
+                                        "data-testid": "rek-grant-type-input",
+                                        "id": "rek-grant-type-input",
+                                      }
+                                    }
                                     label=""
                                     name="grant-type"
                                     onChange={[Function]}
                                     value=""
                                   >
                                     <ForwardRef(Select)
+                                      MenuProps={
+                                        Object {
+                                          "data-testid": "rek-grant-type-options",
+                                          "id": "rek-grant-type-options",
+                                        }
+                                      }
                                       SelectDisplayProps={
                                         Object {
+                                          "data-testid": "rek-grant-type-select",
                                           "id": "grant-type",
                                         }
                                       }
@@ -1728,6 +1748,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       }
                                       disabled={true}
                                       displayEmpty={true}
+                                      inputProps={
+                                        Object {
+                                          "data-testid": "rek-grant-type-input",
+                                          "id": "rek-grant-type-input",
+                                        }
+                                      }
                                       label=""
                                       name="grant-type"
                                       onChange={[Function]}
@@ -1784,8 +1810,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "render": [Function],
                                               },
                                             },
-                                            "MenuProps": undefined,
+                                            "MenuProps": Object {
+                                              "data-testid": "rek-grant-type-options",
+                                              "id": "rek-grant-type-options",
+                                            },
                                             "SelectDisplayProps": Object {
+                                              "data-testid": "rek-grant-type-select",
                                               "id": "grant-type",
                                             },
                                             "autoWidth": false,
@@ -1850,7 +1880,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               "select": "MuiSelect-select",
                                               "selectMenu": "MuiSelect-selectMenu",
                                             },
+                                            "data-testid": "rek-grant-type-input",
                                             "displayEmpty": true,
+                                            "id": "rek-grant-type-input",
                                             "labelId": undefined,
                                             "multiple": false,
                                             "onClose": undefined,
@@ -1934,8 +1966,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "render": [Function],
                                                 },
                                               },
-                                              "MenuProps": undefined,
+                                              "MenuProps": Object {
+                                                "data-testid": "rek-grant-type-options",
+                                                "id": "rek-grant-type-options",
+                                              },
                                               "SelectDisplayProps": Object {
+                                                "data-testid": "rek-grant-type-select",
                                                 "id": "grant-type",
                                               },
                                               "autoWidth": false,
@@ -2000,7 +2036,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "select": "MuiSelect-select",
                                                 "selectMenu": "MuiSelect-selectMenu",
                                               },
+                                              "data-testid": "rek-grant-type-input",
                                               "displayEmpty": true,
+                                              "id": "rek-grant-type-input",
                                               "labelId": undefined,
                                               "multiple": false,
                                               "onClose": undefined,
@@ -2085,8 +2123,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     "render": [Function],
                                                   },
                                                 },
-                                                "MenuProps": undefined,
+                                                "MenuProps": Object {
+                                                  "data-testid": "rek-grant-type-options",
+                                                  "id": "rek-grant-type-options",
+                                                },
                                                 "SelectDisplayProps": Object {
+                                                  "data-testid": "rek-grant-type-select",
                                                   "id": "grant-type",
                                                 },
                                                 "autoWidth": false,
@@ -2151,7 +2193,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "select": "MuiSelect-select",
                                                   "selectMenu": "MuiSelect-selectMenu",
                                                 },
+                                                "data-testid": "rek-grant-type-input",
                                                 "displayEmpty": true,
+                                                "id": "rek-grant-type-input",
                                                 "labelId": undefined,
                                                 "multiple": false,
                                                 "onClose": undefined,
@@ -2242,8 +2286,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       "render": [Function],
                                                     },
                                                   },
-                                                  "MenuProps": undefined,
+                                                  "MenuProps": Object {
+                                                    "data-testid": "rek-grant-type-options",
+                                                    "id": "rek-grant-type-options",
+                                                  },
                                                   "SelectDisplayProps": Object {
+                                                    "data-testid": "rek-grant-type-select",
                                                     "id": "grant-type",
                                                   },
                                                   "autoWidth": false,
@@ -2308,7 +2356,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     "select": "MuiSelect-select",
                                                     "selectMenu": "MuiSelect-selectMenu",
                                                   },
+                                                  "data-testid": "rek-grant-type-input",
                                                   "displayEmpty": true,
+                                                  "id": "rek-grant-type-input",
                                                   "labelId": undefined,
                                                   "multiple": false,
                                                   "onClose": undefined,
@@ -2342,8 +2392,15 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       },
                                                     }
                                                   }
+                                                  MenuProps={
+                                                    Object {
+                                                      "data-testid": "rek-grant-type-options",
+                                                      "id": "rek-grant-type-options",
+                                                    }
+                                                  }
                                                   SelectDisplayProps={
                                                     Object {
+                                                      "data-testid": "rek-grant-type-select",
                                                       "id": "grant-type",
                                                     }
                                                   }
@@ -2364,8 +2421,10 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       "selectMenu": "MuiSelect-selectMenu",
                                                     }
                                                   }
+                                                  data-testid="rek-grant-type-input"
                                                   disabled={true}
                                                   displayEmpty={true}
+                                                  id="rek-grant-type-input"
                                                   inputRef={[Function]}
                                                   multiple={false}
                                                   name="grant-type"
@@ -2382,6 +2441,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     aria-haspopup="listbox"
                                                     aria-labelledby="grant-type"
                                                     className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                    data-testid="rek-grant-type-select"
                                                     id="grant-type"
                                                     onBlur={[Function]}
                                                     onFocus={[Function]}
@@ -2399,6 +2459,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     />
                                                   </div>
                                                   <input
+                                                    data-testid="rek-grant-type-input"
+                                                    id="rek-grant-type-input"
                                                     name="grant-type"
                                                     onAnimationStart={[Function]}
                                                     type="hidden"
@@ -2460,6 +2522,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                         aria-haspopup="listbox"
                                                         aria-labelledby="grant-type"
                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                        data-testid="rek-grant-type-select"
                                                         id="grant-type"
                                                         role="button"
                                                       >
@@ -2468,7 +2531,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                         </span>
                                                       </div>
                                                     }
-                                                    id="menu-grant-type"
+                                                    data-testid="rek-grant-type-options"
+                                                    id="rek-grant-type-options"
                                                     onClose={[Function]}
                                                     open={false}
                                                   >
@@ -2493,6 +2557,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           aria-haspopup="listbox"
                                                           aria-labelledby="grant-type"
                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                          data-testid="rek-grant-type-select"
                                                           id="grant-type"
                                                           role="button"
                                                         >
@@ -2507,7 +2572,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           "paper": "MuiMenu-paper",
                                                         }
                                                       }
-                                                      id="menu-grant-type"
+                                                      data-testid="rek-grant-type-options"
+                                                      id="rek-grant-type-options"
                                                       onClose={[Function]}
                                                       open={false}
                                                     >
@@ -2528,6 +2594,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                             aria-haspopup="listbox"
                                                             aria-labelledby="grant-type"
                                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                            data-testid="rek-grant-type-select"
                                                             id="grant-type"
                                                             role="button"
                                                           >
@@ -2542,8 +2609,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                             "vertical": "top",
                                                           }
                                                         }
+                                                        data-testid="rek-grant-type-options"
                                                         getContentAnchorEl={[Function]}
-                                                        id="menu-grant-type"
+                                                        id="rek-grant-type-options"
                                                         onClose={[Function]}
                                                         onEntering={[Function]}
                                                         open={false}
@@ -2572,6 +2640,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                               aria-haspopup="listbox"
                                                               aria-labelledby="grant-type"
                                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                              data-testid="rek-grant-type-select"
                                                               id="grant-type"
                                                               role="button"
                                                             >
@@ -2592,8 +2661,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                               "root": "MuiPopover-root",
                                                             }
                                                           }
+                                                          data-testid="rek-grant-type-options"
                                                           getContentAnchorEl={[Function]}
-                                                          id="menu-grant-type"
+                                                          id="rek-grant-type-options"
                                                           onClose={[Function]}
                                                           onEntering={[Function]}
                                                           open={false}
@@ -2613,7 +2683,8 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                             }
                                                             className="MuiPopover-root"
                                                             container={<body />}
-                                                            id="menu-grant-type"
+                                                            data-testid="rek-grant-type-options"
+                                                            id="rek-grant-type-options"
                                                             onClose={[Function]}
                                                             open={false}
                                                           />
@@ -4471,21 +4542,41 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 </ForwardRef(Typography)>
                               </WithStyles(ForwardRef(Typography))>
                               <WithStyles(ForwardRef(Select))
+                                MenuProps={
+                                  Object {
+                                    "data-testid": "rek-grant-type-options",
+                                    "id": "rek-grant-type-options",
+                                  }
+                                }
                                 SelectDisplayProps={
                                   Object {
+                                    "data-testid": "rek-grant-type-select",
                                     "id": "grant-type",
                                   }
                                 }
                                 disabled={true}
                                 displayEmpty={true}
+                                inputProps={
+                                  Object {
+                                    "data-testid": "rek-grant-type-input",
+                                    "id": "rek-grant-type-input",
+                                  }
+                                }
                                 label=""
                                 name="grant-type"
                                 onChange={[Function]}
                                 value=""
                               >
                                 <ForwardRef(Select)
+                                  MenuProps={
+                                    Object {
+                                      "data-testid": "rek-grant-type-options",
+                                      "id": "rek-grant-type-options",
+                                    }
+                                  }
                                   SelectDisplayProps={
                                     Object {
+                                      "data-testid": "rek-grant-type-select",
                                       "id": "grant-type",
                                     }
                                   }
@@ -4505,6 +4596,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   }
                                   disabled={true}
                                   displayEmpty={true}
+                                  inputProps={
+                                    Object {
+                                      "data-testid": "rek-grant-type-input",
+                                      "id": "rek-grant-type-input",
+                                    }
+                                  }
                                   label=""
                                   name="grant-type"
                                   onChange={[Function]}
@@ -4561,8 +4658,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "render": [Function],
                                           },
                                         },
-                                        "MenuProps": undefined,
+                                        "MenuProps": Object {
+                                          "data-testid": "rek-grant-type-options",
+                                          "id": "rek-grant-type-options",
+                                        },
                                         "SelectDisplayProps": Object {
+                                          "data-testid": "rek-grant-type-select",
                                           "id": "grant-type",
                                         },
                                         "autoWidth": false,
@@ -4627,7 +4728,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           "select": "MuiSelect-select",
                                           "selectMenu": "MuiSelect-selectMenu",
                                         },
+                                        "data-testid": "rek-grant-type-input",
                                         "displayEmpty": true,
+                                        "id": "rek-grant-type-input",
                                         "labelId": undefined,
                                         "multiple": false,
                                         "onClose": undefined,
@@ -4711,8 +4814,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "render": [Function],
                                             },
                                           },
-                                          "MenuProps": undefined,
+                                          "MenuProps": Object {
+                                            "data-testid": "rek-grant-type-options",
+                                            "id": "rek-grant-type-options",
+                                          },
                                           "SelectDisplayProps": Object {
+                                            "data-testid": "rek-grant-type-select",
                                             "id": "grant-type",
                                           },
                                           "autoWidth": false,
@@ -4777,7 +4884,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "select": "MuiSelect-select",
                                             "selectMenu": "MuiSelect-selectMenu",
                                           },
+                                          "data-testid": "rek-grant-type-input",
                                           "displayEmpty": true,
+                                          "id": "rek-grant-type-input",
                                           "labelId": undefined,
                                           "multiple": false,
                                           "onClose": undefined,
@@ -4862,8 +4971,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 "render": [Function],
                                               },
                                             },
-                                            "MenuProps": undefined,
+                                            "MenuProps": Object {
+                                              "data-testid": "rek-grant-type-options",
+                                              "id": "rek-grant-type-options",
+                                            },
                                             "SelectDisplayProps": Object {
+                                              "data-testid": "rek-grant-type-select",
                                               "id": "grant-type",
                                             },
                                             "autoWidth": false,
@@ -4928,7 +5041,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "select": "MuiSelect-select",
                                               "selectMenu": "MuiSelect-selectMenu",
                                             },
+                                            "data-testid": "rek-grant-type-input",
                                             "displayEmpty": true,
+                                            "id": "rek-grant-type-input",
                                             "labelId": undefined,
                                             "multiple": false,
                                             "onClose": undefined,
@@ -5019,8 +5134,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   "render": [Function],
                                                 },
                                               },
-                                              "MenuProps": undefined,
+                                              "MenuProps": Object {
+                                                "data-testid": "rek-grant-type-options",
+                                                "id": "rek-grant-type-options",
+                                              },
                                               "SelectDisplayProps": Object {
+                                                "data-testid": "rek-grant-type-select",
                                                 "id": "grant-type",
                                               },
                                               "autoWidth": false,
@@ -5085,7 +5204,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 "select": "MuiSelect-select",
                                                 "selectMenu": "MuiSelect-selectMenu",
                                               },
+                                              "data-testid": "rek-grant-type-input",
                                               "displayEmpty": true,
+                                              "id": "rek-grant-type-input",
                                               "labelId": undefined,
                                               "multiple": false,
                                               "onClose": undefined,
@@ -5119,8 +5240,15 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   },
                                                 }
                                               }
+                                              MenuProps={
+                                                Object {
+                                                  "data-testid": "rek-grant-type-options",
+                                                  "id": "rek-grant-type-options",
+                                                }
+                                              }
                                               SelectDisplayProps={
                                                 Object {
+                                                  "data-testid": "rek-grant-type-select",
                                                   "id": "grant-type",
                                                 }
                                               }
@@ -5141,8 +5269,10 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   "selectMenu": "MuiSelect-selectMenu",
                                                 }
                                               }
+                                              data-testid="rek-grant-type-input"
                                               disabled={true}
                                               displayEmpty={true}
+                                              id="rek-grant-type-input"
                                               inputRef={[Function]}
                                               multiple={false}
                                               name="grant-type"
@@ -5159,6 +5289,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 aria-haspopup="listbox"
                                                 aria-labelledby="grant-type"
                                                 className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                data-testid="rek-grant-type-select"
                                                 id="grant-type"
                                                 onBlur={[Function]}
                                                 onFocus={[Function]}
@@ -5176,6 +5307,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 />
                                               </div>
                                               <input
+                                                data-testid="rek-grant-type-input"
+                                                id="rek-grant-type-input"
                                                 name="grant-type"
                                                 onAnimationStart={[Function]}
                                                 type="hidden"
@@ -5237,6 +5370,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                     aria-haspopup="listbox"
                                                     aria-labelledby="grant-type"
                                                     class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                    data-testid="rek-grant-type-select"
                                                     id="grant-type"
                                                     role="button"
                                                   >
@@ -5245,7 +5379,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                     </span>
                                                   </div>
                                                 }
-                                                id="menu-grant-type"
+                                                data-testid="rek-grant-type-options"
+                                                id="rek-grant-type-options"
                                                 onClose={[Function]}
                                                 open={false}
                                               >
@@ -5270,6 +5405,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       aria-haspopup="listbox"
                                                       aria-labelledby="grant-type"
                                                       class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                      data-testid="rek-grant-type-select"
                                                       id="grant-type"
                                                       role="button"
                                                     >
@@ -5284,7 +5420,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       "paper": "MuiMenu-paper",
                                                     }
                                                   }
-                                                  id="menu-grant-type"
+                                                  data-testid="rek-grant-type-options"
+                                                  id="rek-grant-type-options"
                                                   onClose={[Function]}
                                                   open={false}
                                                 >
@@ -5305,6 +5442,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                         aria-haspopup="listbox"
                                                         aria-labelledby="grant-type"
                                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                        data-testid="rek-grant-type-select"
                                                         id="grant-type"
                                                         role="button"
                                                       >
@@ -5319,8 +5457,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                         "vertical": "top",
                                                       }
                                                     }
+                                                    data-testid="rek-grant-type-options"
                                                     getContentAnchorEl={[Function]}
-                                                    id="menu-grant-type"
+                                                    id="rek-grant-type-options"
                                                     onClose={[Function]}
                                                     onEntering={[Function]}
                                                     open={false}
@@ -5349,6 +5488,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                           aria-haspopup="listbox"
                                                           aria-labelledby="grant-type"
                                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                          data-testid="rek-grant-type-select"
                                                           id="grant-type"
                                                           role="button"
                                                         >
@@ -5369,8 +5509,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                           "root": "MuiPopover-root",
                                                         }
                                                       }
+                                                      data-testid="rek-grant-type-options"
                                                       getContentAnchorEl={[Function]}
-                                                      id="menu-grant-type"
+                                                      id="rek-grant-type-options"
                                                       onClose={[Function]}
                                                       onEntering={[Function]}
                                                       open={false}
@@ -5390,7 +5531,8 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                         }
                                                         className="MuiPopover-root"
                                                         container={<body />}
-                                                        id="menu-grant-type"
+                                                        data-testid="rek-grant-type-options"
+                                                        id="rek-grant-type-options"
                                                         onClose={[Function]}
                                                         open={false}
                                                       />
@@ -5719,13 +5861,26 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
            
         </WithStyles(ForwardRef(Typography))>
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "rek-grant-type-options",
+              "id": "rek-grant-type-options",
+            }
+          }
           SelectDisplayProps={
             Object {
+              "data-testid": "rek-grant-type-select",
               "id": "grant-type",
             }
           }
           disabled={true}
           displayEmpty={true}
+          inputProps={
+            Object {
+              "data-testid": "rek-grant-type-input",
+              "id": "rek-grant-type-input",
+            }
+          }
           label=""
           name="grant-type"
           onChange={[Function]}
@@ -5875,13 +6030,26 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
            
         </WithStyles(ForwardRef(Typography))>
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "rek-grant-type-options",
+              "id": "rek-grant-type-options",
+            }
+          }
           SelectDisplayProps={
             Object {
+              "data-testid": "rek-grant-type-select",
               "id": "grant-type",
             }
           }
           disabled={false}
           displayEmpty={true}
+          inputProps={
+            Object {
+              "data-testid": "rek-grant-type-input",
+              "id": "rek-grant-type-input",
+            }
+          }
           label=""
           name="grant-type"
           onChange={[Function]}
@@ -6036,13 +6204,26 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
            
         </WithStyles(ForwardRef(Typography))>
         <WithStyles(ForwardRef(Select))
+          MenuProps={
+            Object {
+              "data-testid": "rek-grant-type-options",
+              "id": "rek-grant-type-options",
+            }
+          }
           SelectDisplayProps={
             Object {
+              "data-testid": "rek-grant-type-select",
               "id": "grant-type",
             }
           }
           disabled={false}
           displayEmpty={true}
+          inputProps={
+            Object {
+              "data-testid": "rek-grant-type-input",
+              "id": "rek-grant-type-input",
+            }
+          }
           label=""
           name="grant-type"
           onChange={[Function]}
