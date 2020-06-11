@@ -3733,12 +3733,12 @@ describe('getFilesSectionSearchKeys', () => {
     });
 
     it('should return empty object', () => {
-        expect(transformers.getFilesSectionSearchKeys({} )).toEqual({});
+        expect(transformers.getFilesSectionSearchKeys({})).toEqual({});
     });
 
     it('should return rest of the file section search keys', () => {
         const data = {
-            fez_datastream_info: [ { dsi_dsid: 'file 1' } ],
+            fez_datastream_info: [{ dsi_dsid: 'file 1' }],
         };
         expect(transformers.getFilesSectionSearchKeys(data)).toEqual(data);
     });

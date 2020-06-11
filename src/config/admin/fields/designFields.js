@@ -91,12 +91,6 @@ export const validateDesign = (
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
-        ...((!((bs || {}).fez_record_search_key_rights || {}).rek_rights && {
-            fez_record_search_key_rights: {
-                rek_rights: summary.rek_rights,
-            },
-        }) ||
-            {}),
         ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
             fez_record_search_key_publisher: {
                 rek_publisher: summary.rek_publisher,

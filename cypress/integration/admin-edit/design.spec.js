@@ -13,11 +13,11 @@ context('Design admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.adminEditCountCards(7);
-        cy.adminEditVerifyAlerts(4, ['Publisher is required', 'Work subtype is required']);
+        cy.adminEditVerifyAlerts(3, ['Publisher is required', 'Work subtype is required']);
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1, '2');
+        cy.adminEditCheckTabErrorBadge(1, '1');
         cy.adminEditCheckTabErrorBadge(3, '1');
     });
 
@@ -53,7 +53,7 @@ context('Design admin edit', () => {
                 cy.get('.Alert ul')
                     .as('errorList')
                     .find('li')
-                    .should('have.length', 3);
+                    .should('have.length', 2);
             });
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
