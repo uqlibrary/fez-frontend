@@ -49,7 +49,7 @@ describe('Component ContributorForm', () => {
     it('should render display name field and role field', () => {
         const { getByTestId } = setup({ showRoleInput: true });
         expect(getByTestId('rek-contributor-input')).toBeInTheDocument();
-        expect(getByTestId('creator-role-field')).toBeInTheDocument();
+        expect(getByTestId('rek-author-role-input')).toBeInTheDocument();
     });
 
     it('should render NTRO fields', () => {
@@ -93,7 +93,7 @@ describe('Component ContributorForm', () => {
             showRoleInput: true,
         });
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
-        fireEvent.change(getByTestId('creator-role-field'), { target: { value: 'C' } });
+        fireEvent.change(getByTestId('rek-author-role-input'), { target: { value: 'C' } });
         const list = await waitFor(() => getByRole('presentation'));
         fireEvent.click(getByText('Co-investigator'), list);
         expect(testFn).toHaveBeenCalledWith({

@@ -107,6 +107,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                 <Button
                     fullWidth
                     id="add-items"
+                    data-testid="rek-significance-add"
                     color="primary"
                     variant="contained"
                     children={addButtonLabel}

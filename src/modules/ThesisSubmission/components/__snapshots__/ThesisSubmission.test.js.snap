@@ -311,7 +311,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           >
             <Field
               component={[Function]}
-              contributorEditorId="supervisors"
+              contributorEditorId="rek-supervisor"
               disabled={false}
               locale={
                 Object {
@@ -385,7 +385,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
-              listEditorId="filtered-field-of-research"
+              listEditorId="rek-subject"
               locale={
                 Object {
                   "form": Object {
@@ -443,7 +443,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             <Field
               component={[Function]}
               disabled={false}
-              listEditorId="keywords"
+              listEditorId="rek-keywords"
               locale={
                 Object {
                   "form": Object {
@@ -860,7 +860,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           >
             <Field
               component={[Function]}
-              contributorEditorId="supervisors"
+              contributorEditorId="rek-supervisor"
               disabled={false}
               locale={
                 Object {
@@ -934,7 +934,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
-              listEditorId="filtered-field-of-research"
+              listEditorId="rek-subject"
               locale={
                 Object {
                   "form": Object {
@@ -992,7 +992,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             <Field
               component={[Function]}
               disabled={false}
-              listEditorId="keywords"
+              listEditorId="rek-keywords"
               locale={
                 Object {
                   "form": Object {

@@ -64,7 +64,7 @@ context('Journal admin edit', () => {
                 const issn = record.fez_record_search_key_issn[0].rek_issn;
                 const sherpaLink = `http://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
 
-                cy.get('#issn-list-row-0')
+                cy.get('#rek-issn-list-row-0')
                     .within(row => {
                         cy.wrap(row)
                             .should('contain', issn)

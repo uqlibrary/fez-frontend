@@ -1022,7 +1022,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
     return {
         fez_record_search_key_ismemberof: collections.map((collection, index) => ({
-            rek_ismemberof: collection.id,
+            rek_ismemberof: !!collection.id ? collection.id : collection,
             rek_ismemberof_order: index + 1,
         })),
     };
