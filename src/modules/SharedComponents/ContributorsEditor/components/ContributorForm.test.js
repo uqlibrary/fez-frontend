@@ -86,7 +86,7 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should add contributor if nameAsPublished is not empty and role from the dropdown is selected', async() => {
+    it('should add contributor if nameAsPublished is not empty and role from the dropdown is selected', async () => {
         const testFn = jest.fn();
         const { getByTestId, getByText, getByRole } = setup({
             onSubmit: testFn,
@@ -153,7 +153,7 @@ describe('Component ContributorForm', () => {
         expect(onAddFn).not.toBeCalled();
     });
 
-    it('should handle affiliation change', async() => {
+    it('should handle affiliation change', async () => {
         const { getByTestId, getByText } = setup({
             isNtro: true,
         });
@@ -223,7 +223,7 @@ describe('Component ContributorForm', () => {
         expect(getByText('Step 1 description')).toBeInTheDocument();
     });
 
-    it('should be able to set uqIdentifier on the contributor object', async() => {
+    it('should be able to set uqIdentifier on the contributor object', async () => {
         const testParam = 'christ';
         const testRequest = { query: testParam };
 
@@ -246,8 +246,8 @@ describe('Component ContributorForm', () => {
             affiliation: '',
             creatorRole: '',
             nameAsPublished: 'Testing, UqId',
-            orgaff: '',
-            orgtype: '',
+            orgaff: 'The University of Queensland',
+            orgtype: '453989',
             uqIdentifier: '553',
             aut_id: 553,
             aut_org_username: 'mdcmar',
@@ -280,7 +280,7 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should be able to set nameAsPublished on the contributor object from selected author', async() => {
+    it('should be able to set nameAsPublished on the contributor object from selected author', async () => {
         const testParam = 'christ';
         const testRequest = { query: testParam };
 
@@ -302,8 +302,8 @@ describe('Component ContributorForm', () => {
             affiliation: '',
             creatorRole: '',
             nameAsPublished: 'Del Mar, Christopher',
-            orgaff: '',
-            orgtype: '',
+            orgaff: 'The University of Queensland',
+            orgtype: '453989',
             uqIdentifier: '553',
             aut_id: 553,
             aut_org_username: 'mdcmar',
@@ -336,7 +336,7 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should be able to set uqUsername on the contributor object from selected author student username', async() => {
+    it('should be able to set uqUsername on the contributor object from selected author student username', async () => {
         const testParam = 'christ';
         const testRequest = { query: testParam };
 
@@ -390,8 +390,8 @@ describe('Component ContributorForm', () => {
             affiliation: '',
             creatorRole: '',
             nameAsPublished: 'Del Mar, Christopher',
-            orgaff: '',
-            orgtype: '',
+            orgaff: 'The University of Queensland',
+            orgtype: '453989',
             uqIdentifier: '553',
             aut_id: 553,
             aut_org_username: null,
@@ -424,7 +424,7 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should not submit contributor form if admin user is linking NotUQ user with identifier lookup', async() => {
+    it('should not submit contributor form if admin user is linking NotUQ user with identifier lookup', async () => {
         const testParam = 'christ';
         const testRequest = { query: testParam };
 
@@ -482,7 +482,7 @@ describe('Component ContributorForm', () => {
         expect(testFn).not.toBeCalled();
     });
 
-    it('should submit contributor form if admin user is linking UQ user with identifier lookup', async() => {
+    it('should submit contributor form if admin user is linking UQ user with identifier lookup', async () => {
         const testParam = 'christ';
         const testRequest = { query: testParam };
 

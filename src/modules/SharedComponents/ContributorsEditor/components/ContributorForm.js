@@ -112,6 +112,11 @@ export const ContributorForm = ({
                 contributor.nameAsPublished ||
                 (selectedItem && selectedItem.aut_lname && `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
             uqIdentifier: `${selectedItem.aut_id}`,
+            orgaff:
+                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
+                contributor.orgaff,
+            orgtype:
+                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
             uqUsername: `${selectedItem.aut_org_username ||
                 selectedItem.aut_student_username ||
                 selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
