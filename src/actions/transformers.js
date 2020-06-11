@@ -1140,7 +1140,7 @@ export const getFilesSectionSearchKeys = data => {
         ...cleanBlankEntries(rest),
         ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
             ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
-            : {}),
+            : { fez_record_search_key_advisory_statement: null }),
     };
 };
 
