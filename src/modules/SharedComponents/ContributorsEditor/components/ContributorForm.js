@@ -168,8 +168,8 @@ export const ContributorForm = ({
         if (
             uqIdentifierUpdatedFlag &&
             (!canEdit ||
-                (canEdit && !showIdentifierLookup && !showRoleInput) ||
-                (canEdit && showIdentifierLookup && isNtro && contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ))
+                (canEdit && !isNtro && !showRoleInput) ||
+                (canEdit && isNtro && contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ))
         ) {
             _onSubmit();
         }
