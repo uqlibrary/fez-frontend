@@ -3033,6 +3033,17 @@ describe('getBibliographicSectionSearchKeys', () => {
                 rek_date: '1000-01-01 00:00:00',
             });
         });
+
+        it('should be able to delete search key', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_isderivationof: [],
+            });
+        });
     });
 
     describe('Book chapter/Book', () => {
