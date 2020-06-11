@@ -1610,8 +1610,8 @@ export default {
                             grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
                             grantIdLabel: 'Grant ID',
                             grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Grant type',
-                            grantAgencyTypeHint: 'Select grant type',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
                             addButton: 'Add grant',
                             editButton: 'Edit grant',
                             description:
@@ -1623,7 +1623,7 @@ export default {
                         locale: {
                             GrantAgencyName: 'Funder/Sponsor name',
                             GrantID: 'Grant ID',
-                            GrantAgencyType: 'Grant type',
+                            GrantAgencyType: 'Funder/Sponsor type',
                             reorderColumn: 'Reorder entries',
                             deleteAll: 'Remove all entries',
                             deleteAllConfirmation: {
@@ -1710,8 +1710,8 @@ export default {
                             grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
                             grantIdLabel: 'Grant ID',
                             grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Grant type',
-                            grantAgencyTypeHint: 'Select grant type',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
                             addButton: 'Add grant',
                             editButton: 'Edit grant',
                             description:
@@ -1723,7 +1723,7 @@ export default {
                         locale: {
                             GrantAgencyName: 'Funder/Sponsor name',
                             GrantID: 'Grant ID',
-                            GrantAgencyType: 'Grant type',
+                            GrantAgencyType: 'Funder/Sponsor type',
                             reorderColumn: 'Reorder entries',
                             deleteAll: 'Remove all entries',
                             deleteAllConfirmation: {
@@ -1746,8 +1746,8 @@ export default {
                             grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
                             grantIdLabel: 'Grant ID',
                             grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Grant type',
-                            grantAgencyTypeHint: 'Select grant type',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
                             addButton: 'Add grant',
                             editButton: 'Edit grant',
                             description:
@@ -1759,7 +1759,7 @@ export default {
                         locale: {
                             GrantAgencyName: 'Funder/Sponsor name',
                             GrantID: 'Grant ID',
-                            GrantAgencyType: 'Grant type',
+                            GrantAgencyType: 'Funder/Sponsor type',
                             reorderColumn: 'Reorder entries',
                             deleteAll: 'Remove all entries',
                             deleteAllConfirmation: {
@@ -1933,8 +1933,8 @@ export default {
                             grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
                             grantIdLabel: 'Grant ID',
                             grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Grant type',
-                            grantAgencyTypeHint: 'Select grant type',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
                             addButton: 'Add grant',
                             editButton: 'Edit grant',
                             description:
@@ -1946,7 +1946,7 @@ export default {
                         locale: {
                             GrantAgencyName: 'Funder/Sponsor name',
                             GrantID: 'Grant ID',
-                            GrantAgencyType: 'Grant type',
+                            GrantAgencyType: 'Funder/Sponsor type',
                             reorderColumn: 'Reorder entries',
                             deleteAll: 'Remove all entries',
                             deleteAllConfirmation: {
@@ -2031,8 +2031,8 @@ export default {
                             grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
                             grantIdLabel: 'Grant ID',
                             grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Grant type',
-                            grantAgencyTypeHint: 'Select grant type',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
                             addButton: 'Add grant',
                             editButton: 'Edit grant',
                             description:
@@ -2044,7 +2044,7 @@ export default {
                         locale: {
                             GrantAgencyName: 'Funder/Sponsor name',
                             GrantID: 'Grant ID',
-                            GrantAgencyType: 'Grant type',
+                            GrantAgencyType: 'Funder/Sponsor type',
                             reorderColumn: 'Reorder entries',
                             deleteAll: 'Remove all entries',
                             deleteAllConfirmation: {
@@ -2141,8 +2141,8 @@ export default {
                             grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
                             grantIdLabel: 'Grant ID',
                             grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Grant type',
-                            grantAgencyTypeHint: 'Select grant type',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
                             addButton: 'Add grant',
                             editButton: 'Edit grant',
                             description:
@@ -2154,7 +2154,7 @@ export default {
                         locale: {
                             GrantAgencyName: 'Funder/Sponsor name',
                             GrantID: 'Grant ID',
-                            GrantAgencyType: 'Grant type',
+                            GrantAgencyType: 'Funder/Sponsor type',
                             reorderColumn: 'Reorder entries',
                             deleteAll: 'Remove all entries',
                             deleteAllConfirmation: {
