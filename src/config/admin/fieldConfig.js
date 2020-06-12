@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import Immutable from 'immutable';
-
 import { validation } from 'config';
-
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -1877,7 +1875,13 @@ export default {
             fez_record_search_key_project_name: () => ({
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
             }),
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro }) => ({
+                isNtro,
+                locale: { ...locale.components.designers.field },
+            }),
+            editors: () => ({
+                locale: { ...locale.components.contributors.field },
+            }),
             significanceAndContributionStatement: () => ({
                 locale: {
                     form: {
