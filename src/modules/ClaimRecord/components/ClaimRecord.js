@@ -225,54 +225,54 @@ export default class ClaimRecord extends PureComponent {
                                     {publication.fez_record_search_key_author &&
                                         publication.fez_record_search_key_author.length > 0 &&
                                         !authorLinked && (
-                                        <Grid item xs={12}>
-                                            <StandardCard
-                                                title={txt.authorLinking.title}
-                                                help={txt.authorLinking.help}
-                                                className="requiredField"
-                                            >
-                                                <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
-                                                <Field
-                                                    name="authorLinking"
-                                                    component={AuthorLinkingField}
-                                                    loggedInAuthor={author}
-                                                    authorList={publication.fez_record_search_key_author}
-                                                    linkedAuthorIdList={publication.fez_record_search_key_author_id}
-                                                    disabled={this.props.submitting}
+                                            <Grid item xs={12}>
+                                                <StandardCard
+                                                    title={txt.authorLinking.title}
+                                                    help={txt.authorLinking.help}
                                                     className="requiredField"
-                                                    validate={[validation.required, validation.isValidAuthorLink]}
-                                                />
-                                            </StandardCard>
-                                        </Grid>
-                                    )}
+                                                >
+                                                    <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                                                    <Field
+                                                        name="authorLinking"
+                                                        component={AuthorLinkingField}
+                                                        loggedInAuthor={author}
+                                                        authorList={publication.fez_record_search_key_author}
+                                                        linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                                        disabled={this.props.submitting}
+                                                        className="requiredField"
+                                                        validate={[validation.required, validation.isValidAuthorLink]}
+                                                    />
+                                                </StandardCard>
+                                            </Grid>
+                                        )}
                                     {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
                                         publication.fez_record_search_key_contributor &&
                                         publication.fez_record_search_key_contributor.length > 0 &&
                                         !contributorLinked && (
-                                        <Grid item xs={12}>
-                                            <StandardCard
-                                                title={txt.contributorLinking.title}
-                                                help={txt.contributorLinking.help}
-                                                className={contributorClassName}
-                                            >
-                                                <label htmlFor="contributorLinking">
-                                                    {txt.contributorLinking.text}
-                                                </label>
-                                                <Field
-                                                    name="contributorLinking"
-                                                    component={ContributorLinkingField}
-                                                    loggedInAuthor={author}
-                                                    authorList={publication.fez_record_search_key_contributor}
-                                                    linkedAuthorIdList={
-                                                        publication.fez_record_search_key_contributor_id
-                                                    }
-                                                    disabled={this.props.submitting}
+                                            <Grid item xs={12}>
+                                                <StandardCard
+                                                    title={txt.contributorLinking.title}
+                                                    help={txt.contributorLinking.help}
                                                     className={contributorClassName}
-                                                    validate={this._contributorValidation}
-                                                />
-                                            </StandardCard>
-                                        </Grid>
-                                    )}
+                                                >
+                                                    <label htmlFor="contributorLinking">
+                                                        {txt.contributorLinking.text}
+                                                    </label>
+                                                    <Field
+                                                        name="contributorLinking"
+                                                        component={ContributorLinkingField}
+                                                        loggedInAuthor={author}
+                                                        authorList={publication.fez_record_search_key_contributor}
+                                                        linkedAuthorIdList={
+                                                            publication.fez_record_search_key_contributor_id
+                                                        }
+                                                        disabled={this.props.submitting}
+                                                        className={contributorClassName}
+                                                        validate={this._contributorValidation}
+                                                    />
+                                                </StandardCard>
+                                            </Grid>
+                                        )}
                                     <Grid item xs={12}>
                                         <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                             <Grid container spacing={2}>
@@ -361,18 +361,18 @@ export default class ClaimRecord extends PureComponent {
                             </Grid>
                             {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                                 !(!publication.rek_pid && this.props.submitFailed) && (
-                                <Grid item xs={12} sm={'auto'}>
-                                    <Button
-                                        variant={'contained'}
-                                        color={'primary'}
-                                        fullWidth
-                                        children={txt.submit}
-                                        onClick={this.props.handleSubmit}
-                                        disabled={this.props.submitting || this.props.disableSubmit}
-                                        id="claimSubmit"
-                                    />
-                                </Grid>
-                            )}
+                                    <Grid item xs={12} sm={'auto'}>
+                                        <Button
+                                            variant={'contained'}
+                                            color={'primary'}
+                                            fullWidth
+                                            children={txt.submit}
+                                            onClick={this.props.handleSubmit}
+                                            disabled={this.props.submitting || this.props.disableSubmit}
+                                            id="claimSubmit"
+                                        />
+                                    </Grid>
+                                )}
                         </Grid>
                     </form>
                 </ConfirmDiscardFormChanges>

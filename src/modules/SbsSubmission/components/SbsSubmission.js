@@ -163,6 +163,7 @@ export default class SbsSubmission extends Component {
                                                 {...txt.information.fieldLabels.author}
                                                 required
                                                 validate={[validation.required]}
+                                                textFieldId="rek-author"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
@@ -227,7 +228,7 @@ export default class SbsSubmission extends Component {
                                 <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                                     <Field
                                         component={ContributorsEditorField}
-                                        contributorEditorId="supervisors"
+                                        contributorEditorId="rek-supervisor"
                                         required
                                         name="supervisors"
                                         validate={[validation.supervisorRequired]}
@@ -241,6 +242,7 @@ export default class SbsSubmission extends Component {
                                     <Typography>{txtFoR.text}</Typography>
                                     <Field
                                         component={FilteredFieldOfResearchListField}
+                                        listEditorId="rek-subject"
                                         name="fieldOfResearch"
                                         required
                                         validate={[validation.forRequired]}
@@ -261,7 +263,7 @@ export default class SbsSubmission extends Component {
                                         maxCount={10}
                                         searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                         locale={locale.components.keywordsForm.field}
-                                        listEditorId="keywords"
+                                        listEditorId="rek-keywords"
                                         disabled={this.props.submitting}
                                     />
                                 </StandardCard>
@@ -305,7 +307,7 @@ export default class SbsSubmission extends Component {
                         </Grid>
                         <Grid container spacing={2}>
                             <Grid item xs={false} sm />
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid item xs={12} sm="auto">
                                 <Button
                                     children={formLocale.thesisSubmission.cancel}
                                     disabled={this.props.submitting}
@@ -314,7 +316,7 @@ export default class SbsSubmission extends Component {
                                     variant="contained"
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid item xs={12} sm="auto">
                                 <Button
                                     children={formLocale.thesisSubmission.submit}
                                     color="primary"

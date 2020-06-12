@@ -184,6 +184,7 @@ export default class ThesisSubmission extends Component {
                                                 {...txt.information.fieldLabels.author}
                                                 required
                                                 validate={[validation.required]}
+                                                textFieldId="rek-author"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>

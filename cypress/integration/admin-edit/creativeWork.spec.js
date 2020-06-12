@@ -26,8 +26,7 @@ context('Creative Work admin edit', () => {
             .eq(1)
             .as('bibliographicTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Related publications');
+                cy.get('h4').should('contain', 'Related publications');
                 // prettier-ignore
                 const pubList = record.fez_record_search_key_isderivationof.map(
                     item => item.rek_isderivationof_lookup
@@ -46,13 +45,11 @@ context('Creative Work admin edit', () => {
             .eq(3)
             .as('additionalInformationTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Additional information');
-                cy.get('[data-testid="rek-content-indicator-select"]')
-                    .should(
-                        'have.text',
-                        'Scholarship of Teaching and Learning',
-                    );
+                cy.get('h4').should('contain', 'Additional information');
+                cy.get('[data-testid="rek-content-indicator-select"]').should(
+                    'have.text',
+                    'Scholarship of Teaching and Learning',
+                );
             });
 
         // ---------------------------------------------- NTRO TAB ---------------------------------------------------
@@ -61,14 +58,12 @@ context('Creative Work admin edit', () => {
             .get('.StandardCard')
             .eq(4)
             .within(() => {
-                cy.get('h3')
-                    .should('contain', 'NTRO');
+                cy.get('h3').should('contain', 'NTRO');
 
                 cy.get('.AdminCard')
                     .eq(0)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Audience size');
+                        cy.get('h4').should('contain', 'Audience size');
                         cy.get('[data-testid=rek-audience-size-select]')
                             .should('have.text', record.fez_record_search_key_audience_size.rek_audience_size_lookup)
                             .get('[data-testid=rek-audience-size-input]')
@@ -81,8 +76,7 @@ context('Creative Work admin edit', () => {
                 cy.get('.AdminCard')
                     .eq(1)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Scale/Significance of work & Creator research statement');
+                        cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
                         const significanceList = record.fez_record_search_key_significance.map(
                             item => item.rek_significance_lookup,
@@ -109,17 +103,14 @@ context('Creative Work admin edit', () => {
                 cy.get('.AdminCard')
                     .eq(3)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Quality indicators');
+                        cy.get('h4').should('contain', 'Quality indicators');
                         const qualityIndicators = record.fez_record_search_key_quality_indicator;
                         cy.get('[data-testid="rek-quality-indicator-input"]')
-                            .should('have.value', qualityIndicators.map(item => item.rek_quality_indicator)
-                                .join(','))
+                            .should('have.value', qualityIndicators.map(item => item.rek_quality_indicator).join(','))
                             .get('[data-testid=rek-quality-indicator-select]')
                             .should(
                                 'have.text',
-                                qualityIndicators.map(item => item.rek_quality_indicator_lookup)
-                                    .join(', '),
+                                qualityIndicators.map(item => item.rek_quality_indicator_lookup).join(', '),
                             );
                     });
             });

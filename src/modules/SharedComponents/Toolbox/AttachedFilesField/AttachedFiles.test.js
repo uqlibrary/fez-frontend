@@ -127,7 +127,7 @@ describe('AttachedFiles component', () => {
         expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
     });
 
-    it('should render embargo date field for open access file with embargo date in future', async() => {
+    it('should render embargo date field for open access file with embargo date in future', async () => {
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },

@@ -18,7 +18,7 @@ describe('Audio Player Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should set playing state via audioPlayerPlay()', async() => {
+    it('should set playing state via audioPlayerPlay()', async () => {
         const wrapper = setup();
 
         // Without promise

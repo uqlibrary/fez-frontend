@@ -24,7 +24,7 @@ describe('AdvancedSearchRow', () => {
         expect(getByText('Please select a field to search')).toBeInTheDocument();
     });
 
-    it('should render search field row with given disabled options', async() => {
+    it('should render search field row with given disabled options', async () => {
         const { getByTestId, getByText } = setup({
             searchField: 'all',
             value: 'i feel lucky',
@@ -36,7 +36,7 @@ describe('AdvancedSearchRow', () => {
         expect(getByText(/select a field/i, list)).toHaveClass('Mui-disabled');
     });
 
-    it('should handle search field dropdown change', async() => {
+    it('should handle search field dropdown change', async () => {
         const testFn = jest.fn();
         const { getByTestId, getByText } = setup({ rowIndex: 1, onSearchRowChange: testFn });
         fireEvent.keyDown(getByTestId('field-type-selector'), { key: 'Enter', code: 13 });

@@ -1920,12 +1920,12 @@ export default {
                             (value.from &&
                                 value.to &&
                                 value.from.isBefore(value.to) && {
-                                title: 'Created',
-                                combiner: 'between',
-                                value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY',
-                                )}`,
-                            }) ||
+                                    title: 'Created',
+                                    combiner: 'between',
+                                    value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
+                                        'Do MMMM, YYYY',
+                                    )}`,
+                                }) ||
                             null,
                     },
                     rek_updated_date: {
@@ -1941,12 +1941,12 @@ export default {
                             (value.from &&
                                 value.to &&
                                 value.from.isBefore(value.to) && {
-                                title: 'Updated',
-                                combiner: 'between',
-                                value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY',
-                                )}`,
-                            }) ||
+                                    title: 'Updated',
+                                    combiner: 'between',
+                                    value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
+                                        'Do MMMM, YYYY',
+                                    )}`,
+                                }) ||
                             null,
                     },
                 },

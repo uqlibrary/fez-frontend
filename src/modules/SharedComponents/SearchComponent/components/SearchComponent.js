@@ -146,10 +146,10 @@ export default class SearchComponent extends PureComponent {
                             return (
                                 (this.props.isAdmin &&
                                     this.props.isUnpublishedBufferPage && {
-                                    searchField: key,
-                                    value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key].value],
-                                    label: '',
-                                }) ||
+                                        searchField: key,
+                                        value: UNPUBLISHED_STATUS_TEXT_MAP[searchQueryParams[key].value],
+                                        label: '',
+                                    }) ||
                                 null
                             );
                         case 'rek_created_date':
@@ -157,12 +157,12 @@ export default class SearchComponent extends PureComponent {
                             return (
                                 (this.props.isAdmin &&
                                     this.props.isUnpublishedBufferPage && {
-                                    searchField: key,
-                                    value: searchQueryParams[key].hasOwnProperty('label')
-                                        ? this.parseDateRange(searchQueryParams[key].label)
-                                        : {},
-                                    label: '',
-                                }) ||
+                                        searchField: key,
+                                        value: searchQueryParams[key].hasOwnProperty('label')
+                                            ? this.parseDateRange(searchQueryParams[key].label)
+                                            : {},
+                                        label: '',
+                                    }) ||
                                 null
                             );
                         default:

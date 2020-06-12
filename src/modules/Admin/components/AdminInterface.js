@@ -184,8 +184,8 @@ export const AdminInterface = ({
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
                             {!createMode
                                 ? ReactHtmlParser(
-                                    `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
-                                )
+                                      `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+                                  )
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
@@ -259,8 +259,8 @@ export const AdminInterface = ({
                         <Grid container spacing={0}>
                             {!tabbed
                                 ? Object.keys(tabs)
-                                    .filter(tab => tabs[tab].activated)
-                                    .map(renderTabContainer)
+                                      .filter(tab => tabs[tab].activated)
+                                      .map(renderTabContainer)
                                 : renderTabContainer(currentTabValue)}
                         </Grid>
                         <Grid container spacing={1}>
@@ -286,33 +286,33 @@ export const AdminInterface = ({
                                     {!!record.rek_pid &&
                                         objectType === RECORD_TYPE_RECORD &&
                                         record.rek_status === UNPUBLISHED && (
-                                        <Grid item xs={12} sm={3}>
-                                            <Button
-                                                id="admin-work-publish"
-                                                disabled={submitting || disableSubmit}
-                                                variant="contained"
-                                                color="secondary"
-                                                fullWidth
-                                                children="Publish"
-                                                onClick={setPublicationStatusAndSubmit(PUBLISHED)}
-                                            />
-                                        </Grid>
-                                    )}
+                                            <Grid item xs={12} sm={3}>
+                                                <Button
+                                                    id="admin-work-publish"
+                                                    disabled={submitting || disableSubmit}
+                                                    variant="contained"
+                                                    color="secondary"
+                                                    fullWidth
+                                                    children="Publish"
+                                                    onClick={setPublicationStatusAndSubmit(PUBLISHED)}
+                                                />
+                                            </Grid>
+                                        )}
                                     {!!record.rek_pid &&
                                         objectType === RECORD_TYPE_RECORD &&
                                         record.rek_status === PUBLISHED && (
-                                        <Grid item xs={12} sm={3}>
-                                            <Button
-                                                id="admin-work-unpublish"
-                                                disabled={submitting || disableSubmit}
-                                                variant="contained"
-                                                color="secondary"
-                                                fullWidth
-                                                children="Unpublish"
-                                                onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
-                                            />
-                                        </Grid>
-                                    )}
+                                            <Grid item xs={12} sm={3}>
+                                                <Button
+                                                    id="admin-work-unpublish"
+                                                    disabled={submitting || disableSubmit}
+                                                    variant="contained"
+                                                    color="secondary"
+                                                    fullWidth
+                                                    children="Unpublish"
+                                                    onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
+                                                />
+                                            </Grid>
+                                        )}
                                     <Grid
                                         item
                                         xs={12}

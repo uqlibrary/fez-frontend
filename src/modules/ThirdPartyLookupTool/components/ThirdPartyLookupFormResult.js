@@ -39,7 +39,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
                             {txt.thisForm.primaryFieldHeading} - {this.props.primaryValue}
                         </p>
                         {// not all forms will have a second field; some of them shouldn't be reported
-                            !!txt.thisForm.secondaryFieldHeading &&
+                        !!txt.thisForm.secondaryFieldHeading &&
                             !!txt.thisForm.reportSecondaryFieldInOutput &&
                             this.props.secondaryValue && (
                                 <p>

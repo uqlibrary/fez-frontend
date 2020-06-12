@@ -281,51 +281,51 @@ export class FilesClass extends Component {
         const dataStreams = publication.fez_datastream_info;
         return this.isViewableByUser(publication, dataStreams)
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
-                const pid = publication.rek_pid;
-                const fileName = dataStream.dsi_dsid;
-                const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                const thumbnailFileName = this.checkForThumbnail(fileName);
-                const previewFileName = this.checkForPreview(fileName);
-                const webFileName = this.checkForWeb(fileName);
-                const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
-                const securityAccess = this.getSecurityAccess(dataStream);
-                const checksums = this.getChecksums(
-                    dataStream,
-                    thumbnailFileName,
-                    previewFileName,
-                    webFileName,
-                    dataStreams,
-                );
+                  const pid = publication.rek_pid;
+                  const fileName = dataStream.dsi_dsid;
+                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                  const thumbnailFileName = this.checkForThumbnail(fileName);
+                  const previewFileName = this.checkForPreview(fileName);
+                  const webFileName = this.checkForWeb(fileName);
+                  const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
+                  const securityAccess = this.getSecurityAccess(dataStream);
+                  const checksums = this.getChecksums(
+                      dataStream,
+                      thumbnailFileName,
+                      previewFileName,
+                      webFileName,
+                      dataStreams,
+                  );
 
-                return {
-                    pid: pid,
-                    fileName: fileName,
-                    description: dataStream.dsi_label,
-                    mimeType: mimeType,
-                    calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload: !openAccessStatus.embargoDate,
-                    icon: this.renderFileIcon(
-                        pid,
-                        mimeType,
-                        fileName,
-                        thumbnailFileName,
-                        previewFileName,
-                        webFileName,
-                        securityAccess,
-                        checksums,
-                    ),
-                    openAccessStatus: openAccessStatus,
-                    previewMediaUrl: this.getUrl(
-                        pid,
-                        previewFileName ? previewFileName : fileName,
-                        checksums && checksums.preview,
-                    ),
-                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
-                    mediaUrl: this.getUrl(pid, fileName, checksums.media),
-                    securityStatus: this.getSecurityAccess(dataStream),
-                    checksums: checksums,
-                };
-            })
+                  return {
+                      pid: pid,
+                      fileName: fileName,
+                      description: dataStream.dsi_label,
+                      mimeType: mimeType,
+                      calculatedSize: this.formatBytes(dataStream.dsi_size),
+                      allowDownload: !openAccessStatus.embargoDate,
+                      icon: this.renderFileIcon(
+                          pid,
+                          mimeType,
+                          fileName,
+                          thumbnailFileName,
+                          previewFileName,
+                          webFileName,
+                          securityAccess,
+                          checksums,
+                      ),
+                      openAccessStatus: openAccessStatus,
+                      previewMediaUrl: this.getUrl(
+                          pid,
+                          previewFileName ? previewFileName : fileName,
+                          checksums && checksums.preview,
+                      ),
+                      webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                      mediaUrl: this.getUrl(pid, fileName, checksums.media),
+                      securityStatus: this.getSecurityAccess(dataStream),
+                      checksums: checksums,
+                  };
+              })
             : [];
     };
 
@@ -378,15 +378,15 @@ export class FilesClass extends Component {
                 <StandardCard title={locale.viewRecord.sections.files.title}>
                     {!!publication.fez_record_search_key_advisory_statement &&
                         !this.props.hideCulturalSensitivityStatement && (
-                        <Alert
-                            allowDismiss
-                            type={'info'}
-                            message={stripHtml(
-                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
-                            )}
-                            dismissAction={this.props.setHideCulturalSensitivityStatement}
-                        />
-                    )}
+                            <Alert
+                                allowDismiss
+                                type={'info'}
+                                message={stripHtml(
+                                    publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                                )}
+                                dismissAction={this.props.setHideCulturalSensitivityStatement}
+                            />
+                        )}
                     <div style={{ padding: 8 }}>
                         <Grid
                             container

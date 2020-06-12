@@ -34,7 +34,7 @@ describe('Lookup action creators', () => {
         mockApi.reset();
     });
 
-    it('should dispatch 2 actions on successful fetch of lookup data', async() => {
+    it('should dispatch 2 actions on successful fetch of lookup data', async () => {
         mockApi.onAny().reply(200, mockLookupResult);
 
         const expectedActions = [actions.THIRD_PARTY_LOOKUP_TOOL_LOADING, actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS];
@@ -43,7 +43,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on receiving an empty result', async() => {
+    it('should dispatch 2 actions on receiving an empty result', async () => {
         mockApi.onAny().reply(200, { data: [] });
 
         const expectedActions = [actions.THIRD_PARTY_LOOKUP_TOOL_LOADING, actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED];
@@ -52,7 +52,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on error 403 while fetching a lookup', async() => {
+    it('should dispatch 2 actions on error 403 while fetching a lookup', async () => {
         mockApi
             .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({ type: 'incites', field1: 'dummyUT' }).apiUrl)
             .reply(403, { data: '[I006] The API Key was invalid. Please use a different key.' });
@@ -63,7 +63,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on non-403 error', async() => {
+    it('should dispatch 2 actions on non-403 error', async () => {
         mockApi
             .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({ type: 'incites', field1: 'dummyUT' }).apiUrl)
             .reply(500, { data: '[I008] Incites is not currently available. Support have been advised.' });
@@ -74,7 +74,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on unexpected error', async() => {
+    it('should dispatch 2 actions on unexpected error', async () => {
         mockApi
             .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({ type: 'incites', field1: 'dummyUT' }).apiUrl)
             .reply(500, 'unformatted response was received from Incites');
@@ -85,7 +85,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on missing error message', async() => {
+    it('should dispatch 2 actions on missing error message', async () => {
         mockApi
             .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({ type: 'incites', field1: 'dummuUT' }).apiUrl)
             .reply(500);
@@ -96,7 +96,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on successful fetch of lookup data for a 2-field call', async() => {
+    it('should dispatch 2 actions on successful fetch of lookup data for a 2-field call', async () => {
         mockApi.onAny().reply(200, mockLookupResult);
 
         const expectedActions = [actions.THIRD_PARTY_LOOKUP_TOOL_LOADING, actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS];
@@ -107,7 +107,7 @@ describe('Lookup action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch clear action on clear', async() => {
+    it('should dispatch clear action on clear', async () => {
         mockApi.onAny().reply(200, {}, {});
 
         const expectedActions = [actions.THIRD_PARTY_LOOKUP_TOOL_CLEAR];

@@ -65,14 +65,14 @@ const getInitialFormValues = (recordToView, recordType) => {
                 rek_security_policy: recordToView.rek_security_policy,
                 ...(recordType === RECORD_TYPE_COLLECTION
                     ? {
-                        rek_datastream_policy: recordToView.rek_datastream_policy,
-                    }
+                          rek_datastream_policy: recordToView.rek_datastream_policy,
+                      }
                     : {}),
                 ...(recordType === RECORD_TYPE_RECORD
                     ? {
-                        rek_security_inherited: recordToView.rek_security_inherited,
-                        dataStreams: validDataStreams,
-                    }
+                          rek_security_inherited: recordToView.rek_security_inherited,
+                          dataStreams: validDataStreams,
+                      }
                     : []),
             },
             bibliographicSection:

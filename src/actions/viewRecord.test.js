@@ -17,7 +17,7 @@ describe('View record actions', () => {
     });
 
     describe('loadRecordToView action', () => {
-        it('dispatches expected actions when loading a record to view from API successfully', async() => {
+        it('dispatches expected actions when loading a record to view from API successfully', async () => {
             mockApi
                 .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
                 .reply(200, { data: { ...mockData.record } });
@@ -32,7 +32,7 @@ describe('View record actions', () => {
             }
         });
 
-        it('dispatches expected actions when loading a record to view from API failed', async() => {
+        it('dispatches expected actions when loading a record to view from API failed', async () => {
             mockApi.onAny().reply(500);
 
             const expectedActions = [
@@ -49,7 +49,7 @@ describe('View record actions', () => {
             });
         });
 
-        it('dispatches expected actions when loading a record to view from API for anon user', async() => {
+        it('dispatches expected actions when loading a record to view from API for anon user', async () => {
             mockApi.onAny().reply(403);
 
             const expectedActions = [
@@ -66,7 +66,7 @@ describe('View record actions', () => {
             });
         });
 
-        it('dispatches expected actions when loading a non-exist record to view from API', async() => {
+        it('dispatches expected actions when loading a non-exist record to view from API', async () => {
             mockApi.onAny().reply(404);
 
             const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOAD_FAILED];
@@ -88,7 +88,7 @@ describe('View record actions', () => {
     });
 
     describe('setting/clearing record to view action', () => {
-        it('dispatches expected actions when clearing a loaded record to view', async() => {
+        it('dispatches expected actions when clearing a loaded record to view', async () => {
             const expectedActions = [actions.VIEW_RECORD_CLEAR];
 
             try {

@@ -12,25 +12,19 @@ context('As an admin,', () => {
             .should('exist');
 
         cy.wait(1000); // Wait for event handlers to attach
-        cy.get('@communitySelector')
-            .click();
+        cy.get('@communitySelector').click();
 
         cy.get('[data-testid=rek-ismemberof-options]')
             .contains('li', 'Advanced Computational')
             .click();
 
-        cy.get('h3')
-            .contains('Collection details');
+        cy.get('h3').contains('Collection details');
 
-        cy.get('[data-testid=rek-title-input]')
-            .type('E2E Testing Collection');
-        cy.get('[data-testid=rek-description-input]')
-            .type('This collection is created through automated testing.');
+        cy.get('[data-testid=rek-title-input]').type('E2E Testing Collection');
+        cy.get('[data-testid=rek-description-input]').type('This collection is created through automated testing.');
 
-        cy.get('[data-testid=rek-keywords-input]')
-            .type('testing');
-        cy.get('[data-testid=rek-keywords-add]')
-            .click();
+        cy.get('[data-testid=rek-keywords-input]').type('testing');
+        cy.get('[data-testid=rek-keywords-add]').click();
 
         cy.get('[data-testid=rek-keywords-list]')
             .should('exist')
@@ -40,8 +34,7 @@ context('As an admin,', () => {
             .contains('Add collection')
             .click();
 
-        cy.get('h3')
-            .should('contain', 'Collection added successfully');
+        cy.get('h3').should('contain', 'Collection added successfully');
 
         cy.get('button')
             .contains('Add another collection')

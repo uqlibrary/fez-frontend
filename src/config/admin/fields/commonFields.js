@@ -9,11 +9,11 @@ export default {
         },
         ...(displayAdvisoryStatement
             ? [
-                {
-                    title: 'Advisory statement',
-                    groups: [['advisoryStatement']],
-                },
-            ]
+                  {
+                      title: 'Advisory statement',
+                      groups: [['advisoryStatement']],
+                  },
+              ]
             : []),
         {
             title: isDataset ? 'Deposit agreement' : 'Copyright agreement',
@@ -54,19 +54,19 @@ export default {
         },
         ...(displayIdentifiers
             ? [
-                {
-                    title: 'Identifiers',
-                    groups: [['fez_record_search_key_identifier']],
-                },
-            ]
+                  {
+                      title: 'Identifiers',
+                      groups: [['fez_record_search_key_identifier']],
+                  },
+              ]
             : []),
         ...(displayLocation
             ? [
-                {
-                    title: 'Location',
-                    groups: [['locations']],
-                },
-            ]
+                  {
+                      title: 'Location',
+                      groups: [['locations']],
+                  },
+              ]
             : []),
     ],
 };

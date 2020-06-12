@@ -15,15 +15,15 @@ const mapStateToProps = (state, props) => {
         autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
         itemsList: state.get('authorsReducer')
             ? state
-                .get('authorsReducer')
-                .authorsList.filter(
-                    item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
-                )
-                .map(item => ({
-                    value: `${item.aut_title} ${item.aut_display_name}${getUqUsername(item)}`,
-                    id: item.aut_id,
-                    ...item,
-                }))
+                  .get('authorsReducer')
+                  .authorsList.filter(
+                      item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
+                  )
+                  .map(item => ({
+                      value: `${item.aut_title} ${item.aut_display_name}${getUqUsername(item)}`,
+                      id: item.aut_id,
+                      ...item,
+                  }))
             : [],
         itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         defaultValue: (!!props.value && { value: props.value }) || '',

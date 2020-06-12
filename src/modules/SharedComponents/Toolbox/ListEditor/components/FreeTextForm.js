@@ -85,8 +85,8 @@ export const FreeTextForm = ({
                     helperText={
                         validationErrorText || inputLengthText
                             ? `${!!validationErrorText ? validationErrorText : ''}${
-                                !!validationErrorText && !!inputLengthText ? ' - ' : ''
-                            }${!!inputLengthText ? inputLengthText : ''}`
+                                  !!validationErrorText && !!inputLengthText ? ' - ' : ''
+                              }${!!inputLengthText ? inputLengthText : ''}`
                             : null
                     }
                     disabled={disabled}

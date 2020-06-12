@@ -3851,6 +3851,19 @@ describe('getFilesSectionSearchKeys', () => {
             },
         });
     });
+
+    it('should be able to remove advisory search key', () => {
+        const data = {
+            advisoryStatement: {
+                htmlText: null,
+                plainText: null,
+            },
+        };
+
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_advisory_statement: null,
+        });
+    });
 });
 
 describe('getRecordCreatorsIdSearchKey test', () => {

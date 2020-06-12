@@ -36,42 +36,35 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
         .contains('Home')
         .click();
     // Say yes to 'Are you sure' if it does trigger
-    cy.url()
-        .then($url => {
-            if ($url !== `${baseUrl}/`) {
-                cy.contains(locale.confirmationTitle)
-                    .closest('[role="dialog"]')
-                    .contains(locale.confirmButtonLabel)
-                    .click();
-            }
-        });
+    cy.url().then($url => {
+        if ($url !== `${baseUrl}/`) {
+            cy.contains(locale.confirmationTitle)
+                .closest('[role="dialog"]')
+                .contains(locale.confirmButtonLabel)
+                .click();
+        }
+    });
 });
 
 Cypress.Commands.add('killWindowUnloadHandler', () => {
-    cy.window()
-        .then(win => {
-            win.onbeforeunload = undefined;
-        });
+    cy.window().then(win => {
+        win.onbeforeunload = undefined;
+    });
 });
 
 Cypress.Commands.add('clickAutoSuggestion', (fieldName, ordinal) => {
-    cy.get(`[data-testid=${fieldName}-options]`)
-        .should('exist');
+    cy.get(`[data-testid=${fieldName}-options]`).should('exist');
     cy.get(`#${fieldName}-option-${ordinal}`)
         .as('menuItem')
         .should('exist');
     cy.wait(200);
-    cy.get('@menuItem')
-        .click();
+    cy.get('@menuItem').click();
 });
 
 Cypress.Commands.add('checkPartialDate', (id, { day, monthName, year }) => {
-    day && cy.get(`[data-testid=${id}-day-input]`)
-        .should('have.value', day);
-    monthName && cy.get(`[data-testid=${id}-month-select]`)
-        .should('have.text', monthName);
-    year && cy.get(`[data-testid=${id}-year-input]`)
-        .should('have.value', year);
+    day && cy.get(`[data-testid=${id}-day-input]`).should('have.value', day);
+    monthName && cy.get(`[data-testid=${id}-month-select]`).should('have.text', monthName);
+    year && cy.get(`[data-testid=${id}-year-input]`).should('have.value', year);
 });
 
 Cypress.Commands.add('checkPartialDateFromRecordValue', (id, dateString) => {
@@ -84,18 +77,15 @@ Cypress.Commands.add('checkPartialDateFromRecordValue', (id, dateString) => {
 });
 
 Cypress.Commands.add('setPartialDate', (id, { day, month, year }) => {
-    day && cy.get(`[data-testid=${id}-day-input]`)
-        .type(`{selectall}${day}`);
+    day && cy.get(`[data-testid=${id}-day-input]`).type(`{selectall}${day}`);
     month &&
         (() => {
-            cy.get(`[data-testid=${id}-month-select]`)
-                .click();
+            cy.get(`[data-testid=${id}-month-select]`).click();
             cy.get(`[data-testid=${id}-month-options]`)
                 .find(`li[role=option][data-value=${month - 1}]`)
                 .click();
         })();
-    year && cy.get(`[data-testid=${id}-year-input]`)
-        .type(`{selectall}${year}`);
+    year && cy.get(`[data-testid=${id}-year-input]`).type(`{selectall}${year}`);
 });
 
 /**
@@ -108,6 +98,5 @@ Cypress.Commands.add('setPartialDate', (id, { day, month, year }) => {
  *      });
  */
 Cypress.Commands.add('store', () => {
-    return cy.window()
-        .its('__store__');
+    return cy.window().its('__store__');
 });

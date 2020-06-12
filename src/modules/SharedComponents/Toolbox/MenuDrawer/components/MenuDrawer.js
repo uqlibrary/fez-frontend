@@ -227,26 +227,26 @@ export class MenuDrawer extends Component {
                                 </Hidden>
                             </Grid>
                             {// Skip nav section
-                                docked && (
-                                    <div
-                                        type="button"
-                                        className={classes.skipNav}
-                                        id="skipNav"
+                            docked && (
+                                <div
+                                    type="button"
+                                    className={classes.skipNav}
+                                    id="skipNav"
+                                    onClick={this.skipMenuItems}
+                                    onKeyPress={this.skipMenuItems}
+                                    tabIndex={1}
+                                    aria-label={locale.skipNavAriaLabel}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
                                         onClick={this.skipMenuItems}
-                                        onKeyPress={this.skipMenuItems}
-                                        tabIndex={1}
-                                        aria-label={locale.skipNavAriaLabel}
-                                    >
-                                        <Button
-                                            variant="contained"
-                                            color="primary"
-                                            onClick={this.skipMenuItems}
-                                            className="skipNavButton"
-                                            children={locale.skipNavTitle}
-                                            tabIndex={-1}
-                                        />
-                                    </div>
-                                )}
+                                        className="skipNavButton"
+                                        children={locale.skipNavTitle}
+                                        tabIndex={-1}
+                                    />
+                                </div>
+                            )}
                             {this.renderMenuItems(menuItems)}
                         </List>
                         <div id="afterMenuDrawer" tabIndex={-1} />

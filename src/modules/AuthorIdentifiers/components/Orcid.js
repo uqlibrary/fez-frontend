@@ -189,8 +189,8 @@ export default class Orcid extends Component {
     createOrcidStateId = account => {
         return account
             ? createHash('md5')
-                .update(`${account.id}/${account.mail}/${new Date().setHours(0, 0, 0, 0)}`)
-                .digest('hex')
+                  .update(`${account.id}/${account.mail}/${new Date().setHours(0, 0, 0, 0)}`)
+                  .digest('hex')
             : '';
     };
 

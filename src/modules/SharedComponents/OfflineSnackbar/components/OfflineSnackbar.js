@@ -69,9 +69,9 @@ export class OfflineSnackbar extends PureComponent {
         const snackbarProps = this.state.online
             ? { ...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success} />) }
             : {
-                ...txt.offline,
-                message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error} />),
-            };
+                  ...txt.offline,
+                  message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error} />),
+              };
 
         return (
             <div className="offlineSnackbar">

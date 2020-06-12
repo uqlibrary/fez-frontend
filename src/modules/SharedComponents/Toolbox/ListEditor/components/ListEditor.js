@@ -181,9 +181,9 @@ export default class ListEditor extends Component {
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
                     const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
                         ? {
-                            ...this.state.itemList[this.state.itemIndexSelectedToEdit],
-                            key: item,
-                        }
+                              ...this.state.itemList[this.state.itemIndexSelectedToEdit],
+                              key: item,
+                          }
                         : item;
 
                     this.setState({

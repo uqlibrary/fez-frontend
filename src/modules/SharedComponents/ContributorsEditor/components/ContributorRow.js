@@ -74,7 +74,16 @@ export const ContributorRow = ({
     hideDelete,
     hideReorder,
     index,
-    locale: { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, editHint, selectHint, lockedTooltip },
+    locale: {
+        deleteRecordConfirmation,
+        moveUpHint,
+        moveDownHint,
+        deleteHint,
+        editHint,
+        selectHint,
+        lockedTooltip,
+        suffix,
+    },
     onSelect,
     onDelete,
     onEdit,
@@ -185,7 +194,7 @@ export const ContributorRow = ({
                     width={width}
                     showRoleInput={showRoleInput}
                     selectedClass={selectedClass}
-                    suffix={locale.suffix}
+                    suffix={suffix}
                     contributorRowId={`${contributorRowId}-${index}`}
                 />
                 <ListItemSecondaryAction>

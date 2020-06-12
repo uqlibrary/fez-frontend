@@ -111,7 +111,7 @@ describe('AdvancedSearchComponent', () => {
         expect(testFn).toHaveBeenCalled();
     });
 
-    it('should handle changes in advanced search row when field selector is changed', async() => {
+    it('should handle changes in advanced search row when field selector is changed', async () => {
         const testFn = jest.fn();
         const { getByTestId, getByText } = setup({
             onAdvancedSearchRowChange: testFn,
@@ -165,7 +165,7 @@ describe('AdvancedSearchComponent', () => {
         expect(getByTestId('advancedSearchButton').disabled).toBeFalsy();
     });
 
-    it('should render advanced search docTypes with checked values based on props', async() => {
+    it('should render advanced search docTypes with checked values based on props', async () => {
         const { getByTestId, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: [179, 202],
@@ -181,7 +181,7 @@ describe('AdvancedSearchComponent', () => {
         expect(options[12].checked).toBeTruthy(); // Generic document
     });
 
-    it('should render advanced search docTypes with checked values based on fixed invalid props', async() => {
+    it('should render advanced search docTypes with checked values based on fixed invalid props', async () => {
         const { getByTestId, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: ['179', '202'],
@@ -195,7 +195,7 @@ describe('AdvancedSearchComponent', () => {
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document
     });
 
-    it('should render advanced search with no valid checked docTypes based on invalid props', async() => {
+    it('should render advanced search with no valid checked docTypes based on invalid props', async () => {
         const { getByTestId, getAllByRole } = setup({
             isOpenAccess: true,
             docTypes: ['test', 202],

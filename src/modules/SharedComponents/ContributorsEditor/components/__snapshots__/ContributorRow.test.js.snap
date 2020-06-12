@@ -97,6 +97,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -225,6 +226,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -324,6 +326,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -423,6 +426,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -551,6 +555,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -697,6 +702,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -797,6 +803,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -925,6 +932,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1026,6 +1034,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1127,6 +1136,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1230,6 +1240,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1333,6 +1344,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       index={0}
       selectedClass="makeStyles-selected-6"
       showRoleInput={true}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1432,6 +1444,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
       index={2}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1558,6 +1571,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
@@ -1660,6 +1674,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
       index={0}
       selectedClass=""
       showRoleInput={false}
+      suffix=" listed contributor"
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
