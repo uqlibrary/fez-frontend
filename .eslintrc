@@ -110,11 +110,7 @@
     /**
      * Style
      */
-    "indent": [
-      2,
-      4,
-      { "SwitchCase": 1 }
-    ],                               // http://eslint.org/docs/rules/indent
+    "prettier/prettier": "error",
     "brace-style": [
       2,
       "1tbs", {
@@ -188,7 +184,10 @@
     }],
     "space-before-blocks": 2,        // http://eslint.org/docs/rules/space-before-blocks
     "space-before-function-paren": [2,
-       "never"
+       {
+         "named": "never",
+         "asyncArrow": "always"
+       }
     ],                               // http://eslint.org/docs/rules/space-before-function-paren
     "space-infix-ops": 2,            // http://eslint.org/docs/rules/space-infix-ops
     "spaced-comment": [2,
@@ -232,7 +231,6 @@
     "jsx-a11y/onclick-has-focus" : "off",
     "jsx-a11y/href-no-hash": "off",
     "uqlibrary/no-uql-token": 2,
-    "prettier/prettier": "error",
   },
   "plugins": [
     "react",

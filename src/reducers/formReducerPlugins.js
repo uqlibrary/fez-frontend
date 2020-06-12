@@ -12,9 +12,9 @@ export const resetValue = (state, action) => {
 
             return state
                 ? state
-                    .deleteIn(['values', key])
-                    .deleteIn(['registeredFields', action.payload.name])
-                    .deleteIn(['fields', key])
+                      .deleteIn(['values', key])
+                      .deleteIn(['registeredFields', action.payload.name])
+                      .deleteIn(['fields', key])
                 : null;
         case actionTypes.CHANGE:
             const field = action.meta.field;

@@ -69,12 +69,12 @@ export default class RichEditor extends PureComponent {
         this.props.onChange(
             textValue.length > 0
                 ? {
-                    htmlText: evt.editor.getData(),
-                    plainText: evt.editor.document
-                        .getBody()
-                        .getText()
-                        .trim(),
-                }
+                      htmlText: evt.editor.getData(),
+                      plainText: evt.editor.document
+                          .getBody()
+                          .getText()
+                          .trim(),
+                  }
                 : null,
         );
     };

@@ -34,7 +34,7 @@ describe('AutoCompleteSelectField component', () => {
         });
     });
 
-    it('should render component and display options when user types in the input', async() => {
+    it('should render component and display options when user types in the input', async () => {
         const { getByTestId, getByRole, getAllByRole } = setup({
             itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],
         });
@@ -49,7 +49,7 @@ describe('AutoCompleteSelectField component', () => {
         expect(getByTestId('autocomplete-select-field-option-1')).toHaveTextContent('pineapple');
     });
 
-    it('should render component and select options', async() => {
+    it('should render component and select options', async () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByRole } = setup({
@@ -70,7 +70,7 @@ describe('AutoCompleteSelectField component', () => {
         expect(onChangeFn).toHaveBeenCalledWith('orange');
     });
 
-    it('should allow free text', async() => {
+    it('should allow free text', async () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId } = setup({

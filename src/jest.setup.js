@@ -46,14 +46,14 @@ const extensions = {
         const pass = actualValue === valueToVerify;
         return pass
             ? {
-                message: () => `${element.tagName} has attribute "${attributeName}" set to "${valueToVerify}"`,
-                pass: true,
-            }
+                  message: () => `${element.tagName} has attribute "${attributeName}" set to "${valueToVerify}"`,
+                  pass: true,
+              }
             : {
-                message: () =>
-                    `expected ${element.tagName} to have attribute "${attributeName}" set to "${valueToVerify}", received "${actualValue}"`,
-                pass: false,
-            };
+                  message: () =>
+                      `expected ${element.tagName} to have attribute "${attributeName}" set to "${valueToVerify}", received "${actualValue}"`,
+                  pass: false,
+              };
     },
     toMatchDiffSnapshot,
 };

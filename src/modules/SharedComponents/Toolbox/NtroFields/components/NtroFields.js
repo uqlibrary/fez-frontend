@@ -219,29 +219,29 @@ export default class NtroFields extends React.PureComponent {
                             <Grid container spacing={1}>
                                 {// In theory, we should show them separately.
                                 // In practice, they are always incomplete together
-                                    (this.props.showContributionStatement || this.props.showSignificance) && (
-                                        <Grid item xs={12}>
-                                            { /* prettier-ignore */ }
-                                            <Typography>
+                                (this.props.showContributionStatement || this.props.showSignificance) && (
+                                    <Grid item xs={12}>
+                                        { /* prettier-ignore */ }
+                                        <Typography>
 	                                            {contributionStatement.fields.scaleOfWork.description}
 	                                        </Typography>
-                                            <Field
-                                                component={SelectField}
-                                                disabled={this.props.submitting}
-                                                name="significance"
-                                                label={contributionStatement.fields.scaleOfWork.label}
-                                                required
-                                                validate={[validation.required]}
-                                                selectFieldId="rek-significance"
-                                            >
-                                                {SIGNIFICANCE.map(item => (
-                                                    <MenuItem key={item.value} value={item.value}>
-                                                        {item.text}
-                                                    </MenuItem>
-                                                ))}
-                                            </Field>
-                                        </Grid>
-                                    )}
+                                        <Field
+                                            component={SelectField}
+                                            disabled={this.props.submitting}
+                                            name="significance"
+                                            label={contributionStatement.fields.scaleOfWork.label}
+                                            required
+                                            validate={[validation.required]}
+                                            selectFieldId="rek-significance"
+                                        >
+                                            {SIGNIFICANCE.map(item => (
+                                                <MenuItem key={item.value} value={item.value}>
+                                                    {item.text}
+                                                </MenuItem>
+                                            ))}
+                                        </Field>
+                                    </Grid>
+                                )}
                                 {this.props.showContributionStatement && (
                                     <Grid item xs={12} style={{ marginTop: 24 }}>
                                         <Field

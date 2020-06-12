@@ -92,8 +92,8 @@ export function createNewRecord(data) {
             .then(() =>
                 data.comments
                     ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                        issue: 'Notes from creator of the new record: ' + data.comments,
-                    })
+                          issue: `Notes from creator of the new record: ${data.comments}`,
+                      })
                     : newRecord,
             )
             .then(response => {
@@ -455,9 +455,9 @@ export function adminUpdate(data) {
             .then(() =>
                 hasFilesToUpload
                     ? put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
-                        ...patchRecordRequest,
-                        ...patchFilesRequest,
-                    })
+                          ...patchRecordRequest,
+                          ...patchFilesRequest,
+                      })
                     : put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
             .then(response => {

@@ -23,10 +23,10 @@ const DataStreamSecurityItem = ({
             value === initialDataStream.dsi_security_policy
                 ? initialDataStream
                 : {
-                    ...dataStream,
-                    dsi_security_inherited: 0,
-                    dsi_security_policy: value,
-                },
+                      ...dataStream,
+                      dsi_security_inherited: 0,
+                      dsi_security_policy: value,
+                  },
         );
     };
 

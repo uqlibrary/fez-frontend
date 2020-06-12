@@ -14,7 +14,7 @@ describe('Academic action creators', () => {
         mockApi.reset();
     });
 
-    it('should dispatch 5 actions on successful fetch of academic stats for current author', async() => {
+    it('should dispatch 5 actions on successful fetch of academic stats for current author', async () => {
         mockApi.onAny().reply(200, currentAuthorStats);
 
         const expectedActions = [
@@ -32,7 +32,7 @@ describe('Academic action creators', () => {
     it(
         'should dispatch 5 actions on successful fetch of academic stats ' +
             '(missing facets_count) on response for current author',
-        async() => {
+        async () => {
             delete currentAuthorStats.facets;
 
             mockApi.onAny().reply(200, currentAuthorStats);
@@ -50,7 +50,7 @@ describe('Academic action creators', () => {
         },
     );
 
-    it('should dispatch 3 actions on error 403 while fetching current author stats data', async() => {
+    it('should dispatch 3 actions on error 403 while fetching current author stats data', async () => {
         mockApi.onAny().reply(403);
 
         const expectedActions = [
@@ -66,7 +66,7 @@ describe('Academic action creators', () => {
     it(
         "should dispatch 5 actions on successful fetch of author's " +
             'publication stats data and successful hindex api call',
-        async() => {
+        async () => {
             mockApi
                 .onGet(repositories.routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({ userId: 'testuser' }).apiUrl)
                 .reply(200, currentAuthorStats)
@@ -89,7 +89,7 @@ describe('Academic action creators', () => {
     it(
         "should dispatch 5 actions on error with stats while fetching author's " +
             'publication stats data but error on hindex api call',
-        async() => {
+        async () => {
             mockApi
                 .onGet(repositories.routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({ userId: 'testuser' }).apiUrl)
                 .reply(200, currentAuthorStats)
@@ -113,7 +113,7 @@ describe('Academic action creators', () => {
     it(
         "should dispatch 2 actions on success with empty response while fetching author's " +
             'publication stats data but error on hindex api call',
-        async() => {
+        async () => {
             mockApi
                 .onGet(repositories.routes.AUTHOR_PUBLICATIONS_STATS_ONLY_API({ userId: 'testuser' }).apiUrl)
                 .reply(200)

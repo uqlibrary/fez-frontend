@@ -146,13 +146,13 @@ export default class Meta extends PureComponent {
             : filteredRoutes.length > 0 && filteredRoutes[0].pageTitle;
         const linkProps = !!publication
             ? {
-                link: [
-                    {
-                        rel: 'schema.DC',
-                        href: 'http://purl.org/DC/elements/1.0/',
-                    },
-                ],
-            }
+                  link: [
+                      {
+                          rel: 'schema.DC',
+                          href: 'http://purl.org/DC/elements/1.0/',
+                      },
+                  ],
+              }
             : {};
         const metaTagsProps =
             (metaTags.length > 0 && {

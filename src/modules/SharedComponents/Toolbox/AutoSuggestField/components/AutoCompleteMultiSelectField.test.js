@@ -31,7 +31,7 @@ describe('AutoCompleteMultiSelectField component', () => {
         });
     });
 
-    it('should render component and display options as you type', async() => {
+    it('should render component and display options as you type', async () => {
         const { getByTestId, getAllByRole } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
@@ -45,7 +45,7 @@ describe('AutoCompleteMultiSelectField component', () => {
         expect(getAllByRole('option')[2]).toHaveTextContent('apple juice');
     });
 
-    it('should render component and select options', async() => {
+    it('should render component and select options', async () => {
         const { getByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
         });
@@ -66,7 +66,7 @@ describe('AutoCompleteMultiSelectField component', () => {
         expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple juice');
     });
 
-    it('should render component and select options when the options are objects', async() => {
+    it('should render component and select options when the options are objects', async () => {
         const { getByTestId } = setup({
             itemsList: [
                 { rek_title: 'apple' },
@@ -94,7 +94,7 @@ describe('AutoCompleteMultiSelectField component', () => {
         expect(getByTestId('test-autocomplete-1')).toHaveTextContent('apple juice');
     });
 
-    it('should render give option template for options', async() => {
+    it('should render give option template for options', async () => {
         // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
         const { getByTestId, getAllByTestId } = setup({

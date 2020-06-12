@@ -34,7 +34,7 @@ describe('Export publications actions', () => {
             facets: {},
         });
 
-        it('dispatches expected actions on successful search export', async() => {
+        it('dispatches expected actions on successful search export', async () => {
             // mock promptForDownload
             promptForDownload.mockImplementation(() => exportPublicationsFormat);
 
@@ -46,7 +46,7 @@ describe('Export publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed search export', async() => {
+        it('dispatches expected actions on failed search export', async () => {
             // mock promptForDownload
             promptForDownload.mockImplementation(() => {
                 throw 'Error';
@@ -60,7 +60,7 @@ describe('Export publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions for anon user', async() => {
+        it('dispatches expected actions for anon user', async () => {
             mockApi.onAny().reply(403, {});
 
             const expectedActions = [
@@ -73,7 +73,7 @@ describe('Export publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions if API fails', async() => {
+        it('dispatches expected actions if API fails', async () => {
             mockApi.onAny().reply(500, {});
 
             const expectedActions = [

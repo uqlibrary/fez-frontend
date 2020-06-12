@@ -25,7 +25,7 @@ describe('batch import creators', () => {
         mockApi.reset();
     });
 
-    it('should dispatch 2 actions on successful creation of batch request', async() => {
+    it('should dispatch 2 actions on successful creation of batch request', async () => {
         mockApi.onAny().reply(201, successfulCreationResponse);
 
         const expectedActions = [actions.BATCH_IMPORT_REQUESTING, actions.BATCH_IMPORT_REQUESTED];
@@ -34,7 +34,7 @@ describe('batch import creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on error 422 on creation of batch request', async() => {
+    it('should dispatch 2 actions on error 422 on creation of batch request', async () => {
         const invalidResponse = {
             message: 'The given data was invalid.',
             errors: {
@@ -56,7 +56,7 @@ describe('batch import creators', () => {
         }
     });
 
-    it('should dispatch 2 actions on error 500 on creation of batch request', async() => {
+    it('should dispatch 2 actions on error 500 on creation of batch request', async () => {
         mockApi.onAny().reply(500, { data: '' });
 
         const expectedActions = [
@@ -84,7 +84,7 @@ describe('batch import request directory', () => {
         mockApi.reset();
     });
 
-    it('should dispatch 2 actions on successful directory request', async() => {
+    it('should dispatch 2 actions on successful directory request', async () => {
         mockApi.onAny().reply(200, successfulDirectoryRequest);
 
         const expectedActions = [actions.DIRECTORY_LIST_LOADING, actions.DIRECTORY_LIST_LOADED];
@@ -93,7 +93,7 @@ describe('batch import request directory', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch 2 actions on error 500 on directory request', async() => {
+    it('should dispatch 2 actions on error 500 on directory request', async () => {
         mockApi.onAny().reply(500, { data: '' });
 
         const expectedActions = [actions.DIRECTORY_LIST_LOADING, actions.APP_ALERT_SHOW, actions.DIRECTORY_LIST_FAILED];

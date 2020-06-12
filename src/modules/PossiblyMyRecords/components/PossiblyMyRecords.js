@@ -214,7 +214,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
                 {// first time loading my possible publications - account hasn't
                 // been loaded or any my publications haven't been loaded
-                    !this.state.hasPublications &&
+                !this.state.hasPublications &&
                     (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts) && (
                         <Grid container>
                             <Grid item xs />
@@ -233,7 +233,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 )}
                 <Grid container spacing={3}>
                     {// no results to display
-                        !this.props.loadingPossibleCounts &&
+                    !this.props.loadingPossibleCounts &&
                         !this.props.loadingPossiblePublicationsList &&
                         this.props.possiblePublicationsList.length === 0 && (
                             <Grid item xs={12}>
@@ -241,7 +241,7 @@ export default class PossiblyMyRecords extends PureComponent {
                             </Grid>
                         )}
                     {// results to display or loading if user is filtering/paging
-                        this.state.hasPublications &&
+                    this.state.hasPublications &&
                         (this.props.loadingPossiblePublicationsList ||
                             this.props.possiblePublicationsList.length > 0) && (
                             <Grid item xs={12} md={9}>
@@ -257,80 +257,80 @@ export default class PossiblyMyRecords extends PureComponent {
                                     )}
                                     {!this.props.loadingPossiblePublicationsList &&
                                         this.props.possiblePublicationsList.length > 0 && (
-                                        <React.Fragment>
-                                            <Grid item xs>
-                                                <Typography>
-                                                    {txt.searchResults.text
-                                                        .replace(
-                                                            '[resultsCount]',
-                                                            this.props.possiblePublicationsList.length,
-                                                        )
-                                                        .replace('[totalCount]', totalPossiblePubs)}
-                                                </Typography>
-                                            </Grid>
-                                            <Grid item xs style={{ marginTop: 16 }}>
-                                                {totalPossiblePubs > this.initState.pageSize && (
-                                                    <React.Fragment>
-                                                        <Grid item xs>
-                                                            <PublicationsListSorting
-                                                                initPageLength={this.initState.pageSize}
-                                                                sortBy={this.state.sortBy}
-                                                                sortDirection={this.state.sortDirection}
-                                                                pageSize={this.state.pageSize}
-                                                                pagingData={pagingData}
-                                                                onSortByChanged={this.sortByChanged}
-                                                                onPageSizeChanged={this.pageSizeChanged}
-                                                                onExportPublications={this.handleExportPublications}
-                                                                disabled={
-                                                                    this.props.loadingPossiblePublicationsList
-                                                                }
-                                                                canUseExport={this.props.canUseExport}
-                                                            />
-                                                        </Grid>
+                                            <React.Fragment>
+                                                <Grid item xs>
+                                                    <Typography>
+                                                        {txt.searchResults.text
+                                                            .replace(
+                                                                '[resultsCount]',
+                                                                this.props.possiblePublicationsList.length,
+                                                            )
+                                                            .replace('[totalCount]', totalPossiblePubs)}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs style={{ marginTop: 16 }}>
+                                                    {totalPossiblePubs > this.initState.pageSize && (
+                                                        <React.Fragment>
+                                                            <Grid item xs>
+                                                                <PublicationsListSorting
+                                                                    initPageLength={this.initState.pageSize}
+                                                                    sortBy={this.state.sortBy}
+                                                                    sortDirection={this.state.sortDirection}
+                                                                    pageSize={this.state.pageSize}
+                                                                    pagingData={pagingData}
+                                                                    onSortByChanged={this.sortByChanged}
+                                                                    onPageSizeChanged={this.pageSizeChanged}
+                                                                    onExportPublications={this.handleExportPublications}
+                                                                    disabled={
+                                                                        this.props.loadingPossiblePublicationsList
+                                                                    }
+                                                                    canUseExport={this.props.canUseExport}
+                                                                />
+                                                            </Grid>
+                                                            <Grid item xs>
+                                                                <PublicationsListPaging
+                                                                    loading={this.props.loadingPossiblePublicationsList}
+                                                                    pagingData={pagingData}
+                                                                    onPageChanged={this.pageChanged}
+                                                                    disabled={
+                                                                        this.props.loadingPossiblePublicationsList
+                                                                    }
+                                                                />
+                                                            </Grid>
+                                                        </React.Fragment>
+                                                    )}
+                                                    <Grid item xs>
+                                                        <PublicationsList
+                                                            publicationsLoading={
+                                                                this.props.loadingPossiblePublicationsList ||
+                                                                this.props.loadingPossibleCounts
+                                                            }
+                                                            publicationsList={this.props.possiblePublicationsList}
+                                                            publicationsListSubset={
+                                                                this.props.publicationsClaimedInProgress
+                                                            }
+                                                            subsetCustomActions={inProgress}
+                                                            customActions={actions}
+                                                        />
+                                                    </Grid>
+                                                    {totalPossiblePubs > this.initState.pageSize && (
                                                         <Grid item xs>
                                                             <PublicationsListPaging
                                                                 loading={this.props.loadingPossiblePublicationsList}
                                                                 pagingData={pagingData}
                                                                 onPageChanged={this.pageChanged}
-                                                                disabled={
-                                                                    this.props.loadingPossiblePublicationsList
-                                                                }
+                                                                disabled={this.props.loadingPossiblePublicationsList}
                                                             />
                                                         </Grid>
-                                                    </React.Fragment>
-                                                )}
-                                                <Grid item xs>
-                                                    <PublicationsList
-                                                        publicationsLoading={
-                                                            this.props.loadingPossiblePublicationsList ||
-                                                                this.props.loadingPossibleCounts
-                                                        }
-                                                        publicationsList={this.props.possiblePublicationsList}
-                                                        publicationsListSubset={
-                                                            this.props.publicationsClaimedInProgress
-                                                        }
-                                                        subsetCustomActions={inProgress}
-                                                        customActions={actions}
-                                                    />
+                                                    )}
                                                 </Grid>
-                                                {totalPossiblePubs > this.initState.pageSize && (
-                                                    <Grid item xs>
-                                                        <PublicationsListPaging
-                                                            loading={this.props.loadingPossiblePublicationsList}
-                                                            pagingData={pagingData}
-                                                            onPageChanged={this.pageChanged}
-                                                            disabled={this.props.loadingPossiblePublicationsList}
-                                                        />
-                                                    </Grid>
-                                                )}
-                                            </Grid>
-                                        </React.Fragment>
-                                    )}
+                                            </React.Fragment>
+                                        )}
                                 </StandardCard>
                             </Grid>
                         )}
                     {// show available filters or selected filters (even if there are no results)
-                        ((this.props.possiblePublicationsFacets &&
+                    ((this.props.possiblePublicationsFacets &&
                         Object.keys(this.props.possiblePublicationsFacets).length > 0) ||
                         (this.state.activeFacets &&
                             this.state.activeFacets.filters &&
@@ -338,22 +338,22 @@ export default class PossiblyMyRecords extends PureComponent {
                         (this.state.activeFacets &&
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0)) && (
-                            <Hidden smDown>
-                                <Grid item sm={3}>
-                                    <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                        <FacetsFilter
-                                            facetsData={this.props.possiblePublicationsFacets}
-                                            onFacetsChanged={this._facetsChanged}
-                                            activeFacets={this.state.activeFacets}
-                                            disabled={this.props.loadingPossiblePublicationsList}
-                                            excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                            renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                            lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                        />
-                                    </StandardRighthandCard>
-                                </Grid>
-                            </Hidden>
-                        )}
+                        <Hidden smDown>
+                            <Grid item sm={3}>
+                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                    <FacetsFilter
+                                        facetsData={this.props.possiblePublicationsFacets}
+                                        onFacetsChanged={this._facetsChanged}
+                                        activeFacets={this.state.activeFacets}
+                                        disabled={this.props.loadingPossiblePublicationsList}
+                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                    />
+                                </StandardRighthandCard>
+                            </Grid>
+                        </Hidden>
+                    )}
                 </Grid>
             </StandardPage>
         );

@@ -181,43 +181,43 @@ const checkForWeb = (filename, dataStreams) => {
 export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
-            const pid = dataStream.dsi_pid;
-            const fileName = dataStream.dsi_dsid;
-            const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+              const pid = dataStream.dsi_pid;
+              const fileName = dataStream.dsi_dsid;
+              const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
 
-            const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-            const previewFileName = checkForPreview(fileName, dataStreams);
-            const webFileName = checkForWeb(fileName, dataStreams);
+              const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+              const previewFileName = checkForPreview(fileName, dataStreams);
+              const webFileName = checkForWeb(fileName, dataStreams);
 
-            const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
-            const securityAccess = getSecurityAccess(dataStream);
+              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
+              const securityAccess = getSecurityAccess(dataStream);
 
-            return {
-                pid,
-                fileName,
-                description: dataStream.dsi_label,
-                mimeType,
-                thumbnailFileName,
-                calculatedSize: formatBytes(dataStream.dsi_size),
-                allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
-                iconProps: {
-                    pid,
-                    mimeType,
-                    fileName,
-                    thumbnailFileName,
-                    previewFileName,
-                    allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
-                    webFileName,
-                    securityAccess,
-                },
-                openAccessStatus,
-                previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
-                webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
-                mediaUrl: getUrl(pid, fileName),
-                securityStatus: getSecurityAccess(dataStream),
-                embargoDate: dataStream.dsi_embargo_date,
-            };
-        })
+              return {
+                  pid,
+                  fileName,
+                  description: dataStream.dsi_label,
+                  mimeType,
+                  thumbnailFileName,
+                  calculatedSize: formatBytes(dataStream.dsi_size),
+                  allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
+                  iconProps: {
+                      pid,
+                      mimeType,
+                      fileName,
+                      thumbnailFileName,
+                      previewFileName,
+                      allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
+                      webFileName,
+                      securityAccess,
+                  },
+                  openAccessStatus,
+                  previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
+                  webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
+                  mediaUrl: getUrl(pid, fileName),
+                  securityStatus: getSecurityAccess(dataStream),
+                  embargoDate: dataStream.dsi_embargo_date,
+              };
+          })
         : [];
 };
 

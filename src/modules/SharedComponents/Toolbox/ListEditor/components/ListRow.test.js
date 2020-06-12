@@ -55,7 +55,7 @@ describe('ListRow renders ', () => {
         expect(testFunction).toHaveBeenCalled();
     });
 
-    it('a row with index and item set calls delete function', async() => {
+    it('a row with index and item set calls delete function', async () => {
         const testFunction = jest.fn();
         const { getByTestId } = setup({ onDelete: testFunction });
         expect(getByTestId('test-list-row-0-delete')).toBeInTheDocument();

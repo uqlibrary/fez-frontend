@@ -22,7 +22,7 @@ describe('Publications actions', () => {
     });
 
     describe('searchLatestPublications()', () => {
-        it('dispatches expected actions on successful load', async() => {
+        it('dispatches expected actions on successful load', async () => {
             mockApi.onGet(repositories.routes.CURRENT_USER_RECORDS_API({ pageSize: 5 }).apiUrl).reply(200, {});
 
             const expectedActions = [actions.LATEST_PUBLICATIONS_LOADING, actions.LATEST_PUBLICATIONS_LOADED];
@@ -31,7 +31,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions for anon user', async() => {
+        it('dispatches expected actions for anon user', async () => {
             mockApi.onAny().reply(403, {});
 
             const expectedActions = [
@@ -44,7 +44,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions if API fails', async() => {
+        it('dispatches expected actions if API fails', async () => {
             mockApi.onAny().reply(500, {});
 
             const expectedActions = [
@@ -60,7 +60,7 @@ describe('Publications actions', () => {
 
     describe('searchAuthorPublications()', () => {
         describe('type: mine', () => {
-            it('dispatches expected actions on successful search', async() => {
+            it('dispatches expected actions on successful search', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -81,7 +81,7 @@ describe('Publications actions', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
-            it('dispatches expected actions for anon user', async() => {
+            it('dispatches expected actions for anon user', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -103,7 +103,7 @@ describe('Publications actions', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
-            it('dispatches expected actions if api fails', async() => {
+            it('dispatches expected actions if api fails', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -125,7 +125,7 @@ describe('Publications actions', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
-            it('handles defaults', async() => {
+            it('handles defaults', async () => {
                 mockApi.onAny().reply(200, {});
 
                 const expectedActions = [
@@ -138,7 +138,7 @@ describe('Publications actions', () => {
         });
 
         describe('type: incomplete', () => {
-            it('dispatches expected actions on successful search', async() => {
+            it('dispatches expected actions on successful search', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -161,7 +161,7 @@ describe('Publications actions', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
-            it('dispatches expected actions for anon user', async() => {
+            it('dispatches expected actions for anon user', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -185,7 +185,7 @@ describe('Publications actions', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
-            it('dispatches expected actions if api fails', async() => {
+            it('dispatches expected actions if api fails', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -209,7 +209,7 @@ describe('Publications actions', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
-            it('handles defaults', async() => {
+            it('handles defaults', async () => {
                 mockApi.onAny().reply(200, {});
 
                 const expectedActions = [
@@ -222,7 +222,7 @@ describe('Publications actions', () => {
         });
 
         describe('type: null', () => {
-            it('dispatches expected actions', async() => {
+            it('dispatches expected actions', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -246,7 +246,7 @@ describe('Publications actions', () => {
         });
 
         describe('default type: mine', () => {
-            it('dispatches expected actions on successful search', async() => {
+            it('dispatches expected actions on successful search', async () => {
                 const testRequest = {
                     userName: 'uqresearcher',
                     page: 1,
@@ -270,7 +270,7 @@ describe('Publications actions', () => {
     });
 
     describe('searchTrendingPublications()', () => {
-        it('dispatches expected actions on successful request', async() => {
+        it('dispatches expected actions on successful request', async () => {
             mockApi
                 .onGet(repositories.routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
                 .reply(200, mockData.trendingPublications);
@@ -286,7 +286,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions for anon user', async() => {
+        it('dispatches expected actions for anon user', async () => {
             mockApi.onAny().reply(403, {});
 
             const expectedActions = [
@@ -299,7 +299,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions if api fails', async() => {
+        it('dispatches expected actions if api fails', async () => {
             mockApi.onAny().reply(500, {});
 
             const expectedActions = [
@@ -312,7 +312,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions if api return 0 publications', async() => {
+        it('dispatches expected actions if api return 0 publications', async () => {
             mockApi.onAny().reply(200, { total: 0, data: [], filters: [] });
 
             const expectedActions = [actions.TRENDING_PUBLICATIONS_LOADING, actions.TRENDING_PUBLICATIONS_LOADED];
@@ -323,7 +323,7 @@ describe('Publications actions', () => {
     });
 
     describe('searchTopCitedPublications()', () => {
-        it('dispatches expected actions on successful request', async() => {
+        it('dispatches expected actions on successful request', async () => {
             mockApi
                 .onGet(repositories.routes.TRENDING_PUBLICATIONS_API().apiUrl)
                 .reply(200, mockData.trendingPublications);
@@ -339,7 +339,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions if api fails', async() => {
+        it('dispatches expected actions if api fails', async () => {
             mockApi.onAny().reply(500, {});
 
             const expectedActions = [
@@ -352,7 +352,7 @@ describe('Publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions if api return 0 publications', async() => {
+        it('dispatches expected actions if api return 0 publications', async () => {
             mockApi.onAny().reply(200, { total: 0, data: [], filters: [] });
 
             const expectedActions = [actions.TOP_CITED_PUBLICATIONS_LOADING, actions.TOP_CITED_PUBLICATIONS_LOADED];
@@ -363,7 +363,7 @@ describe('Publications actions', () => {
     });
 
     describe('exportAuthorPublications()', () => {
-        it('calls exportPublications with expected params', async() => {
+        it('calls exportPublications with expected params', async () => {
             const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
             const testRequest = {
                 exportPublicationsFormat,

@@ -184,7 +184,7 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state()).toMatchSnapshot();
     });
 
-    it('assigns a contributor to current author', async() => {
+    it('assigns a contributor to current author', async () => {
         const wrapper = setup({
             author: {
                 aut_id: 101,

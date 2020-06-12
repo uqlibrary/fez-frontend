@@ -142,9 +142,9 @@ export const FacetsFilter = ({
 
     const dataRangeValueProps = activeFacetsRanges.hasOwnProperty(yearPublishedCategory)
         ? {
-            value: activeFacetsRanges[yearPublishedCategory],
-            isActive: true,
-        }
+              value: activeFacetsRanges[yearPublishedCategory],
+              isActive: true,
+          }
         : { isActive: false };
 
     const _handleFacetClick = (category, facet) => () => {

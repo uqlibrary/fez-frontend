@@ -16,7 +16,7 @@ describe('Claim publication actions tests ', () => {
         mockActionsStore.clearActions();
     });
 
-    it('dispatches expected actions when loading a record to fix from API successfully', async() => {
+    it('dispatches expected actions when loading a record to fix from API successfully', async () => {
         const testPid = 'UQ: 12345';
         mockApi
             .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
@@ -32,7 +32,7 @@ describe('Claim publication actions tests ', () => {
         }
     });
 
-    it('dispatches expected actions when loading a record to fix from API fails', async() => {
+    it('dispatches expected actions when loading a record to fix from API fails', async () => {
         const testPid = 'UQ: 12345';
         mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl).reply(500);
 
@@ -50,7 +50,7 @@ describe('Claim publication actions tests ', () => {
         }
     });
 
-    it('dispatches an action to set publication to claim', async() => {
+    it('dispatches an action to set publication to claim', async () => {
         const input = { rek_pid: 'PID:11111' };
 
         const expectedActions = [actions.PUBLICATION_TO_CLAIM_SET];
@@ -59,14 +59,14 @@ describe('Claim publication actions tests ', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches an action to clear a publication to claim', async() => {
+    it('dispatches an action to clear a publication to claim', async () => {
         const expectedActions = [actions.PUBLICATION_TO_CLAIM_CLEAR];
 
         await mockActionsStore.dispatch(claimActions.clearClaimPublication());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatched expected actions to get count of publications', async() => {
+    it('dispatched expected actions to get count of publications', async () => {
         mockApi.onAny().reply(200, { data: { ...possibleUnclaimedList } });
 
         const expectedActions = [
@@ -82,7 +82,7 @@ describe('Claim publication actions tests ', () => {
     });
 
     describe('searchPossiblyYourPublications()', () => {
-        it('dispatched expected actions to get a list of publications', async() => {
+        it('dispatched expected actions to get a list of publications', async () => {
             const testParams = {};
 
             mockApi.onAny().reply(200, { data: { ...possibleUnclaimedList } });
@@ -99,7 +99,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions to get a list of publications filtered with facets', async() => {
+        it('dispatched expected actions to get a list of publications filtered with facets', async () => {
             const testParams = { facets: { facetOne: 'Facet' } };
             mockApi.onAny().reply(200, { data: { ...possibleUnclaimedList } });
 
@@ -115,7 +115,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions to get a list of publications for anon user', async() => {
+        it('dispatched expected actions to get a list of publications for anon user', async () => {
             const testParams = {};
 
             mockApi.onAny().reply(403, {});
@@ -132,7 +132,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions to get a list of publications if API fails', async() => {
+        it('dispatched expected actions to get a list of publications if API fails', async () => {
             const testParams = {};
 
             mockApi.onAny().reply(500, {});
@@ -149,7 +149,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('handles active facets', async() => {
+        it('handles active facets', async () => {
             const testParams = {
                 activeFacets: {
                     facet1: 'facet',
@@ -169,7 +169,7 @@ describe('Claim publication actions tests ', () => {
     });
 
     describe('hideRecord()', () => {
-        it('dispatched expected actions when hiding a publication', async() => {
+        it('dispatched expected actions when hiding a publication', async () => {
             const testPid = 'UQ:12345';
             const testRecord = { pid: testPid };
 
@@ -189,7 +189,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions when hiding a publication with facets', async() => {
+        it('dispatched expected actions when hiding a publication with facets', async () => {
             const testPid = 'UQ:12345';
             const testRecord = { pid: testPid };
             const testFacets = { facets: { facetOne: 'Facet' } };
@@ -210,7 +210,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions when hiding a publication for anon user', async() => {
+        it('dispatched expected actions when hiding a publication for anon user', async () => {
             const testPid = 'UQ:12345';
             const testRecord = { pid: testPid };
 
@@ -230,7 +230,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions when hiding a publication if API fails', async() => {
+        it('dispatched expected actions when hiding a publication if API fails', async () => {
             const testPid = 'UQ:12345';
             const testRecord = { pid: testPid };
 
@@ -250,7 +250,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions when hideRecordErrorReset is called', async() => {
+        it('dispatches expected actions when hideRecordErrorReset is called', async () => {
             const expectedActions = [actions.HIDE_PUBLICATIONS_FAILED_RESET];
             try {
                 await mockActionsStore.dispatch(claimActions.hideRecordErrorReset());
@@ -272,7 +272,7 @@ describe('Claim publication actions tests ', () => {
         it(
             'dispatched expected actions when claiming a publication ' +
                 'by author who is assigned to publication already',
-            async() => {
+            async () => {
                 const testRequest = {
                     ...testClaimRequest,
                     publication: {
@@ -299,7 +299,7 @@ describe('Claim publication actions tests ', () => {
         it(
             'dispatched expected actions when claiming a publication by author who ' +
                 'is assigned to publication already with some author linked',
-            async() => {
+            async () => {
                 const testRequest = {
                     ...testClaimRequest,
                     publication: {
@@ -346,7 +346,7 @@ describe('Claim publication actions tests ', () => {
         it(
             'dispatched expected actions when claiming a publication by contributor ' +
                 'who is assigned to publication already',
-            async() => {
+            async () => {
                 const testRequest = {
                     ...testClaimRequest,
                     publication: {
@@ -370,7 +370,7 @@ describe('Claim publication actions tests ', () => {
             },
         );
 
-        it('dispatched expected actions when claiming a publication', async() => {
+        it('dispatched expected actions when claiming a publication', async () => {
             mockApi.onAny().reply(200, {});
 
             const expectedActions = [
@@ -382,7 +382,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions when claiming a publication if API fails', async() => {
+        it('dispatched expected actions when claiming a publication if API fails', async () => {
             mockApi.onAny().reply(500, {});
 
             const expectedActions = [
@@ -399,7 +399,7 @@ describe('Claim publication actions tests ', () => {
             }
         });
 
-        it('dispatched expected actions when claiming a publication for anon user', async() => {
+        it('dispatched expected actions when claiming a publication for anon user', async () => {
             mockApi.onAny().reply(403, {});
 
             const expectedActions = [
@@ -416,7 +416,7 @@ describe('Claim publication actions tests ', () => {
             }
         });
 
-        it('dispatched expected actions when claiming a publication from external source', async() => {
+        it('dispatched expected actions when claiming a publication from external source', async () => {
             const testRequest = {
                 ...testClaimRequest,
                 publication: {
@@ -444,7 +444,7 @@ describe('Claim publication actions tests ', () => {
             }
         });
 
-        it('should include external source IDs when claiming a publication from external source', async() => {
+        it('should include external source IDs when claiming a publication from external source', async () => {
             const testRequest = {
                 ...testClaimRequest,
                 publication: {
@@ -473,7 +473,7 @@ describe('Claim publication actions tests ', () => {
             await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
         });
 
-        it('dispatched expected actions claiming a publication with files', async() => {
+        it('dispatched expected actions claiming a publication with files', async () => {
             const files = {
                 files: {
                     queue: [
@@ -499,7 +499,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('should get file attachment search key when file attachments are present', async() => {
+        it('should get file attachment search key when file attachments are present', async () => {
             const testFn = jest.spyOn(transformers, 'getRecordFileAttachmentSearchKey');
             const publication = {
                 rek_pid: null,
@@ -536,7 +536,7 @@ describe('Claim publication actions tests ', () => {
             expect(testFn).toBeCalledWith(files.files.queue, publication);
         });
 
-        it('dispatched expected actions claiming a publication with comments', async() => {
+        it('dispatched expected actions claiming a publication with comments', async () => {
             const testParams = { pid: testClaimRequest.publication.rek_pid };
 
             mockApi
@@ -556,7 +556,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions claiming a publication with comments with issue api failure', async() => {
+        it('dispatched expected actions claiming a publication with comments with issue api failure', async () => {
             const testParams = { pid: testClaimRequest.publication.rek_pid };
 
             mockApi
@@ -576,7 +576,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions claiming a publication with files with file upload failed', async() => {
+        it('dispatched expected actions claiming a publication with files with file upload failed', async () => {
             const testParams = { pid: testClaimRequest.publication.rek_pid };
             const files = {
                 files: {
@@ -616,7 +616,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions claiming a publication with files with file upload failed at AWS', async() => {
+        it('dispatched expected actions claiming a publication with files with file upload failed at AWS', async () => {
             const testParams = { pid: testClaimRequest.publication.rek_pid };
             const files = {
                 files: {
@@ -657,7 +657,7 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatched expected actions when claiming a publication as a solo contributor', async() => {
+        it('dispatched expected actions when claiming a publication as a solo contributor', async () => {
             const testRequest = {
                 ...testClaimRequest,
                 publication: {
@@ -692,7 +692,7 @@ describe('Claim publication actions tests ', () => {
             }
         });
 
-        it('dispatched expected actions when claiming a publication as a solo author', async() => {
+        it('dispatched expected actions when claiming a publication as a solo author', async () => {
             const testRequest = {
                 ...testClaimRequest,
                 publication: {

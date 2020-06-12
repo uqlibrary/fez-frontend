@@ -26,13 +26,13 @@ describe('Component Links ', () => {
         },
         ...(oaStatus === openAccessConfig.OPEN_ACCESS_ID_DOI
             ? {
-                fez_record_search_key_doi: {
-                    rek_doi_id: 1706266,
-                    rek_doi_pid: 'UQ:795721',
-                    rek_doi_xsdmf_id: 16514,
-                    rek_doi: '10.1016/j.pnsc.2012.12.004',
-                },
-            }
+                  fez_record_search_key_doi: {
+                      rek_doi_id: 1706266,
+                      rek_doi_pid: 'UQ:795721',
+                      rek_doi_xsdmf_id: 16514,
+                      rek_doi: '10.1016/j.pnsc.2012.12.004',
+                  },
+              }
             : {}),
         fez_record_search_key_link: [
             {

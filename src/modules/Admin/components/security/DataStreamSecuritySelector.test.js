@@ -56,7 +56,7 @@ describe('DataStreamSecuritySelector component', () => {
         expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
     });
 
-    it('should change security value for the file', async() => {
+    it('should change security value for the file', async () => {
         const { getByText, getByTestId } = setup({
             attachedDataStreams: [
                 {

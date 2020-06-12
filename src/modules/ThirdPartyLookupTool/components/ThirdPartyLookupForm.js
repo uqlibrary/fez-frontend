@@ -129,34 +129,34 @@ export class ThirdPartyLookupForm extends PureComponent {
                                     />
                                 </div>
                                 {// not all forms will have a second field
-                                    !!txt.thisForm.secondaryField && (
-                                        <div>
-                                            <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                            { /* prettier-ignore */ }
-                                            <p>{
+                                !!txt.thisForm.secondaryField && (
+                                    <div>
+                                        <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                        { /* prettier-ignore */ }
+                                        <p>{
                                                 txt.thisForm.secondaryField.tip
                                                     ? txt.thisForm.secondaryField.tip
                                                     : ''
                                             }</p>
-                                            <TextField
-                                                fullWidth
-                                                name={'secondaryValue'}
-                                                placeholder={
-                                                    txt.thisForm.secondaryField.inputPlaceholder
-                                                        ? txt.thisForm.secondaryField.inputPlaceholder
-                                                        : ''
-                                                }
-                                                aria-label={
-                                                    txt.thisForm.secondaryField.fromAria
-                                                        ? txt.thisForm.secondaryField.fromAria
-                                                        : ''
-                                                }
-                                                value={secondaryValue}
-                                                onChange={this._onChange}
-                                                className={'secondaryValue'}
-                                            />
-                                        </div>
-                                    )}
+                                        <TextField
+                                            fullWidth
+                                            name={'secondaryValue'}
+                                            placeholder={
+                                                txt.thisForm.secondaryField.inputPlaceholder
+                                                    ? txt.thisForm.secondaryField.inputPlaceholder
+                                                    : ''
+                                            }
+                                            aria-label={
+                                                txt.thisForm.secondaryField.fromAria
+                                                    ? txt.thisForm.secondaryField.fromAria
+                                                    : ''
+                                            }
+                                            value={secondaryValue}
+                                            onChange={this._onChange}
+                                            className={'secondaryValue'}
+                                        />
+                                    </div>
+                                )}
                                 <p>{txt.thisForm.bottomTip ? txt.thisForm.bottomTip : ''}</p>
                                 <Button
                                     children={

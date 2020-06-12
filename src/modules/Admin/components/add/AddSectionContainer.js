@@ -27,10 +27,10 @@ export const mapStateToProps = (state, ownProps) => {
     }
     const publicationSubtypeItems = subtypes
         ? subtypes.map((item, index) => (
-            <MenuItem value={item} key={index}>
-                {item}
-            </MenuItem>
-        ))
+              <MenuItem value={item} key={index}>
+                  {item}
+              </MenuItem>
+          ))
         : [];
 
     return {
