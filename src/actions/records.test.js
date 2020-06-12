@@ -634,6 +634,10 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(
                 recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
                     publication: {
                         rek_pid: 'UQ:396321',
                     },
@@ -653,6 +657,10 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(
                 recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
                     publication: {
                         rek_pid: 'UQ:396321',
                     },
@@ -677,6 +685,10 @@ describe('Record action creators', () => {
             try {
                 await mockActionsStore.dispatch(
                     recordActions.adminUpdate({
+                        rek_display_type: 174,
+                        adminSection: {
+                            rek_subtype: 'Textbook',
+                        },
                         publication: {
                             rek_pid: 'UQ:396321',
                         },
@@ -713,6 +725,10 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(
                 recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
                     publication: {
                         rek_pid: 'UQ:396321',
                     },
@@ -740,6 +756,10 @@ describe('Record action creators', () => {
 
     describe('adminCreate()', () => {
         const testInput = {
+            rek_display_type: 174,
+            adminSection: {
+                rek_subtype: 'Textbook',
+            },
             authorsSection: {
                 authors: [
                     {
