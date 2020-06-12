@@ -7,6 +7,7 @@ import {
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_RESEARCH_REPORT,
+    PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
 export const publicationTypeHasAdvisoryStatement = record => {
@@ -19,6 +20,7 @@ export const publicationTypeHasAdvisoryStatement = record => {
         PUBLICATION_TYPE_RESEARCH_REPORT,
         PUBLICATION_TYPE_IMAGE,
         PUBLICATION_TYPE_MANUSCRIPT,
+        PUBLICATION_TYPE_VIDEO_DOCUMENT,
     ];
     return publicationTypesWithAdvisoryStatement.includes(record.rek_display_type);
 };
