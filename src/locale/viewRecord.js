@@ -1142,10 +1142,6 @@ export default {
                     order: 12,
                 },
                 {
-                    field: 'fez_record_search_key_grant_id',
-                    order: 13,
-                },
-                {
                     field: 'fez_record_search_key_type_of_data',
                     order: 14,
                 },
