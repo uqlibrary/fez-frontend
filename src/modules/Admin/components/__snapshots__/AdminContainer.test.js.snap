@@ -8984,6 +8984,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
+                                                              data-testid="unpublish-admin"
                                                               fullWidth={true}
                                                               id="admin-work-unpublish"
                                                               variant="contained"
@@ -9023,6 +9024,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   }
                                                                 }
                                                                 color="secondary"
+                                                                data-testid="unpublish-admin"
                                                                 fullWidth={true}
                                                                 id="admin-work-unpublish"
                                                                 variant="contained"
@@ -9030,6 +9032,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 <WithStyles(ForwardRef(ButtonBase))
                                                                   className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                   component="button"
+                                                                  data-testid="unpublish-admin"
                                                                   disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
@@ -9046,6 +9049,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     }
                                                                     component="button"
+                                                                    data-testid="unpublish-admin"
                                                                     disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
@@ -9054,6 +9058,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   >
                                                                     <button
                                                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                      data-testid="unpublish-admin"
                                                                       disabled={false}
                                                                       id="admin-work-unpublish"
                                                                       onBlur={[Function]}

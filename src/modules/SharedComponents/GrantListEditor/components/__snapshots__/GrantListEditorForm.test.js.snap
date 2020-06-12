@@ -26,7 +26,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
         id="grant-agency-name"
         onChange={[Function]}
         required={true}
-        textFieldId="rek-grant-agency-name"
+        textFieldId="rek-grant-agency"
         value=""
       />
     </WithStyles(ForwardRef(Grid))>
@@ -809,16 +809,16 @@ exports[`GrantListEditorForm should render default view 1`] = `
                               id="grant-agency-name"
                               onChange={[Function]}
                               required={true}
-                              textFieldId="rek-grant-agency-name"
+                              textFieldId="rek-grant-agency"
                               value=""
                             >
                               <WithStyles(ForwardRef(TextField))
                                 InputLabelProps={
                                   Object {
-                                    "data-testid": "rek-grant-agency-name-label",
+                                    "data-testid": "rek-grant-agency-label",
                                     "hidden": false,
-                                    "htmlFor": "rek-grant-agency-name-input",
-                                    "id": "rek-grant-agency-name-label",
+                                    "htmlFor": "rek-grant-agency-input",
+                                    "id": "rek-grant-agency-label",
                                     "shrink": undefined,
                                   }
                                 }
@@ -827,13 +827,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 error={true}
                                 fullWidth={true}
                                 helperText="This field is required"
-                                id="rek-grant-agency-name"
+                                id="rek-grant-agency"
                                 inputProps={
                                   Object {
                                     "aria-label": undefined,
-                                    "aria-labelledby": "rek-grant-agency-name-label",
-                                    "data-testid": "rek-grant-agency-name-input",
-                                    "id": "rek-grant-agency-name-input",
+                                    "aria-labelledby": "rek-grant-agency-label",
+                                    "data-testid": "rek-grant-agency-input",
+                                    "id": "rek-grant-agency-input",
                                     "label": undefined,
                                   }
                                 }
@@ -844,10 +844,10 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 <ForwardRef(TextField)
                                   InputLabelProps={
                                     Object {
-                                      "data-testid": "rek-grant-agency-name-label",
+                                      "data-testid": "rek-grant-agency-label",
                                       "hidden": false,
-                                      "htmlFor": "rek-grant-agency-name-input",
-                                      "id": "rek-grant-agency-name-label",
+                                      "htmlFor": "rek-grant-agency-input",
+                                      "id": "rek-grant-agency-label",
                                       "shrink": undefined,
                                     }
                                   }
@@ -861,13 +861,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   error={true}
                                   fullWidth={true}
                                   helperText="This field is required"
-                                  id="rek-grant-agency-name"
+                                  id="rek-grant-agency"
                                   inputProps={
                                     Object {
                                       "aria-label": undefined,
-                                      "aria-labelledby": "rek-grant-agency-name-label",
-                                      "data-testid": "rek-grant-agency-name-input",
-                                      "id": "rek-grant-agency-name-input",
+                                      "aria-labelledby": "rek-grant-agency-label",
+                                      "data-testid": "rek-grant-agency-input",
+                                      "id": "rek-grant-agency-input",
                                       "label": undefined,
                                     }
                                   }
@@ -905,17 +905,17 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                       >
                                         <WithStyles(ForwardRef(Input))
-                                          aria-describedby="rek-grant-agency-name-helper-text"
+                                          aria-describedby="rek-grant-agency-helper-text"
                                           autoComplete="off"
                                           autoFocus={false}
                                           fullWidth={true}
-                                          id="rek-grant-agency-name"
+                                          id="rek-grant-agency"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
-                                              "aria-labelledby": "rek-grant-agency-name-label",
-                                              "data-testid": "rek-grant-agency-name-input",
-                                              "id": "rek-grant-agency-name-input",
+                                              "aria-labelledby": "rek-grant-agency-label",
+                                              "data-testid": "rek-grant-agency-input",
+                                              "id": "rek-grant-agency-input",
                                               "label": undefined,
                                             }
                                           }
@@ -924,7 +924,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                           value=""
                                         >
                                           <ForwardRef(Input)
-                                            aria-describedby="rek-grant-agency-name-helper-text"
+                                            aria-describedby="rek-grant-agency-helper-text"
                                             autoComplete="off"
                                             autoFocus={false}
                                             classes={
@@ -946,13 +946,13 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="rek-grant-agency-name"
+                                            id="rek-grant-agency"
                                             inputProps={
                                               Object {
                                                 "aria-label": undefined,
-                                                "aria-labelledby": "rek-grant-agency-name-label",
-                                                "data-testid": "rek-grant-agency-name-input",
-                                                "id": "rek-grant-agency-name-input",
+                                                "aria-labelledby": "rek-grant-agency-label",
+                                                "data-testid": "rek-grant-agency-input",
+                                                "id": "rek-grant-agency-input",
                                                 "label": undefined,
                                               }
                                             }
@@ -961,7 +961,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             value=""
                                           >
                                             <WithStyles(ForwardRef(InputBase))
-                                              aria-describedby="rek-grant-agency-name-helper-text"
+                                              aria-describedby="rek-grant-agency-helper-text"
                                               autoComplete="off"
                                               autoFocus={false}
                                               classes={
@@ -983,14 +983,14 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="rek-grant-agency-name"
+                                              id="rek-grant-agency"
                                               inputComponent="input"
                                               inputProps={
                                                 Object {
                                                   "aria-label": undefined,
-                                                  "aria-labelledby": "rek-grant-agency-name-label",
-                                                  "data-testid": "rek-grant-agency-name-input",
-                                                  "id": "rek-grant-agency-name-input",
+                                                  "aria-labelledby": "rek-grant-agency-label",
+                                                  "data-testid": "rek-grant-agency-input",
+                                                  "id": "rek-grant-agency-input",
                                                   "label": undefined,
                                                 }
                                               }
@@ -1000,7 +1000,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               value=""
                                             >
                                               <ForwardRef(InputBase)
-                                                aria-describedby="rek-grant-agency-name-helper-text"
+                                                aria-describedby="rek-grant-agency-helper-text"
                                                 autoComplete="off"
                                                 autoFocus={false}
                                                 classes={
@@ -1026,14 +1026,14 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="rek-grant-agency-name"
+                                                id="rek-grant-agency"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
                                                     "aria-label": undefined,
-                                                    "aria-labelledby": "rek-grant-agency-name-label",
-                                                    "data-testid": "rek-grant-agency-name-input",
-                                                    "id": "rek-grant-agency-name-input",
+                                                    "aria-labelledby": "rek-grant-agency-label",
+                                                    "data-testid": "rek-grant-agency-input",
+                                                    "id": "rek-grant-agency-input",
                                                     "label": undefined,
                                                   }
                                                 }
@@ -1047,15 +1047,15 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   onClick={[Function]}
                                                 >
                                                   <input
-                                                    aria-describedby="rek-grant-agency-name-helper-text"
+                                                    aria-describedby="rek-grant-agency-helper-text"
                                                     aria-invalid={true}
-                                                    aria-labelledby="rek-grant-agency-name-label"
+                                                    aria-labelledby="rek-grant-agency-label"
                                                     autoComplete="off"
                                                     autoFocus={false}
                                                     className="MuiInputBase-input MuiInput-input"
-                                                    data-testid="rek-grant-agency-name-input"
+                                                    data-testid="rek-grant-agency-input"
                                                     disabled={false}
-                                                    id="rek-grant-agency-name-input"
+                                                    id="rek-grant-agency-input"
                                                     onAnimationStart={[Function]}
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
@@ -1070,7 +1070,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                           </ForwardRef(Input)>
                                         </WithStyles(ForwardRef(Input))>
                                         <WithStyles(ForwardRef(FormHelperText))
-                                          id="rek-grant-agency-name-helper-text"
+                                          id="rek-grant-agency-helper-text"
                                         >
                                           <ForwardRef(FormHelperText)
                                             classes={
@@ -1085,11 +1085,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "root": "MuiFormHelperText-root",
                                               }
                                             }
-                                            id="rek-grant-agency-name-helper-text"
+                                            id="rek-grant-agency-helper-text"
                                           >
                                             <p
                                               className="MuiFormHelperText-root Mui-error Mui-required"
-                                              id="rek-grant-agency-name-helper-text"
+                                              id="rek-grant-agency-helper-text"
                                             >
                                               This field is required
                                             </p>
@@ -3657,16 +3657,16 @@ exports[`GrantListEditorForm should render default view 2`] = `
                           id="grant-agency-name"
                           onChange={[Function]}
                           required={true}
-                          textFieldId="rek-grant-agency-name"
+                          textFieldId="rek-grant-agency"
                           value=""
                         >
                           <WithStyles(ForwardRef(TextField))
                             InputLabelProps={
                               Object {
-                                "data-testid": "rek-grant-agency-name-label",
+                                "data-testid": "rek-grant-agency-label",
                                 "hidden": false,
-                                "htmlFor": "rek-grant-agency-name-input",
-                                "id": "rek-grant-agency-name-label",
+                                "htmlFor": "rek-grant-agency-input",
+                                "id": "rek-grant-agency-label",
                                 "shrink": undefined,
                               }
                             }
@@ -3675,13 +3675,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             error={true}
                             fullWidth={true}
                             helperText="This field is required"
-                            id="rek-grant-agency-name"
+                            id="rek-grant-agency"
                             inputProps={
                               Object {
                                 "aria-label": undefined,
-                                "aria-labelledby": "rek-grant-agency-name-label",
-                                "data-testid": "rek-grant-agency-name-input",
-                                "id": "rek-grant-agency-name-input",
+                                "aria-labelledby": "rek-grant-agency-label",
+                                "data-testid": "rek-grant-agency-input",
+                                "id": "rek-grant-agency-input",
                                 "label": undefined,
                               }
                             }
@@ -3692,10 +3692,10 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             <ForwardRef(TextField)
                               InputLabelProps={
                                 Object {
-                                  "data-testid": "rek-grant-agency-name-label",
+                                  "data-testid": "rek-grant-agency-label",
                                   "hidden": false,
-                                  "htmlFor": "rek-grant-agency-name-input",
-                                  "id": "rek-grant-agency-name-label",
+                                  "htmlFor": "rek-grant-agency-input",
+                                  "id": "rek-grant-agency-label",
                                   "shrink": undefined,
                                 }
                               }
@@ -3709,13 +3709,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               error={true}
                               fullWidth={true}
                               helperText="This field is required"
-                              id="rek-grant-agency-name"
+                              id="rek-grant-agency"
                               inputProps={
                                 Object {
                                   "aria-label": undefined,
-                                  "aria-labelledby": "rek-grant-agency-name-label",
-                                  "data-testid": "rek-grant-agency-name-input",
-                                  "id": "rek-grant-agency-name-input",
+                                  "aria-labelledby": "rek-grant-agency-label",
+                                  "data-testid": "rek-grant-agency-input",
+                                  "id": "rek-grant-agency-input",
                                   "label": undefined,
                                 }
                               }
@@ -3753,17 +3753,17 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
                                   >
                                     <WithStyles(ForwardRef(Input))
-                                      aria-describedby="rek-grant-agency-name-helper-text"
+                                      aria-describedby="rek-grant-agency-helper-text"
                                       autoComplete="off"
                                       autoFocus={false}
                                       fullWidth={true}
-                                      id="rek-grant-agency-name"
+                                      id="rek-grant-agency"
                                       inputProps={
                                         Object {
                                           "aria-label": undefined,
-                                          "aria-labelledby": "rek-grant-agency-name-label",
-                                          "data-testid": "rek-grant-agency-name-input",
-                                          "id": "rek-grant-agency-name-input",
+                                          "aria-labelledby": "rek-grant-agency-label",
+                                          "data-testid": "rek-grant-agency-input",
+                                          "id": "rek-grant-agency-input",
                                           "label": undefined,
                                         }
                                       }
@@ -3772,7 +3772,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                       value=""
                                     >
                                       <ForwardRef(Input)
-                                        aria-describedby="rek-grant-agency-name-helper-text"
+                                        aria-describedby="rek-grant-agency-helper-text"
                                         autoComplete="off"
                                         autoFocus={false}
                                         classes={
@@ -3794,13 +3794,13 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                         }
                                         fullWidth={true}
-                                        id="rek-grant-agency-name"
+                                        id="rek-grant-agency"
                                         inputProps={
                                           Object {
                                             "aria-label": undefined,
-                                            "aria-labelledby": "rek-grant-agency-name-label",
-                                            "data-testid": "rek-grant-agency-name-input",
-                                            "id": "rek-grant-agency-name-input",
+                                            "aria-labelledby": "rek-grant-agency-label",
+                                            "data-testid": "rek-grant-agency-input",
+                                            "id": "rek-grant-agency-input",
                                             "label": undefined,
                                           }
                                         }
@@ -3809,7 +3809,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         value=""
                                       >
                                         <WithStyles(ForwardRef(InputBase))
-                                          aria-describedby="rek-grant-agency-name-helper-text"
+                                          aria-describedby="rek-grant-agency-helper-text"
                                           autoComplete="off"
                                           autoFocus={false}
                                           classes={
@@ -3831,14 +3831,14 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           fullWidth={true}
-                                          id="rek-grant-agency-name"
+                                          id="rek-grant-agency"
                                           inputComponent="input"
                                           inputProps={
                                             Object {
                                               "aria-label": undefined,
-                                              "aria-labelledby": "rek-grant-agency-name-label",
-                                              "data-testid": "rek-grant-agency-name-input",
-                                              "id": "rek-grant-agency-name-input",
+                                              "aria-labelledby": "rek-grant-agency-label",
+                                              "data-testid": "rek-grant-agency-input",
+                                              "id": "rek-grant-agency-input",
                                               "label": undefined,
                                             }
                                           }
@@ -3848,7 +3848,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           value=""
                                         >
                                           <ForwardRef(InputBase)
-                                            aria-describedby="rek-grant-agency-name-helper-text"
+                                            aria-describedby="rek-grant-agency-helper-text"
                                             autoComplete="off"
                                             autoFocus={false}
                                             classes={
@@ -3874,14 +3874,14 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="rek-grant-agency-name"
+                                            id="rek-grant-agency"
                                             inputComponent="input"
                                             inputProps={
                                               Object {
                                                 "aria-label": undefined,
-                                                "aria-labelledby": "rek-grant-agency-name-label",
-                                                "data-testid": "rek-grant-agency-name-input",
-                                                "id": "rek-grant-agency-name-input",
+                                                "aria-labelledby": "rek-grant-agency-label",
+                                                "data-testid": "rek-grant-agency-input",
+                                                "id": "rek-grant-agency-input",
                                                 "label": undefined,
                                               }
                                             }
@@ -3895,15 +3895,15 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               onClick={[Function]}
                                             >
                                               <input
-                                                aria-describedby="rek-grant-agency-name-helper-text"
+                                                aria-describedby="rek-grant-agency-helper-text"
                                                 aria-invalid={true}
-                                                aria-labelledby="rek-grant-agency-name-label"
+                                                aria-labelledby="rek-grant-agency-label"
                                                 autoComplete="off"
                                                 autoFocus={false}
                                                 className="MuiInputBase-input MuiInput-input"
-                                                data-testid="rek-grant-agency-name-input"
+                                                data-testid="rek-grant-agency-input"
                                                 disabled={false}
-                                                id="rek-grant-agency-name-input"
+                                                id="rek-grant-agency-input"
                                                 onAnimationStart={[Function]}
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -3918,7 +3918,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                       </ForwardRef(Input)>
                                     </WithStyles(ForwardRef(Input))>
                                     <WithStyles(ForwardRef(FormHelperText))
-                                      id="rek-grant-agency-name-helper-text"
+                                      id="rek-grant-agency-helper-text"
                                     >
                                       <ForwardRef(FormHelperText)
                                         classes={
@@ -3933,11 +3933,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "root": "MuiFormHelperText-root",
                                           }
                                         }
-                                        id="rek-grant-agency-name-helper-text"
+                                        id="rek-grant-agency-helper-text"
                                       >
                                         <p
                                           className="MuiFormHelperText-root Mui-error Mui-required"
-                                          id="rek-grant-agency-name-helper-text"
+                                          id="rek-grant-agency-helper-text"
                                         >
                                           This field is required
                                         </p>
@@ -5817,7 +5817,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         id="grant-agency-name"
         onChange={[Function]}
         required={false}
-        textFieldId="rek-grant-agency-name"
+        textFieldId="rek-grant-agency"
         value=""
       />
     </WithStyles(ForwardRef(Grid))>
@@ -5986,7 +5986,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         id="grant-agency-name"
         onChange={[Function]}
         required={false}
-        textFieldId="rek-grant-agency-name"
+        textFieldId="rek-grant-agency"
         value="test"
       />
     </WithStyles(ForwardRef(Grid))>
@@ -6160,7 +6160,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         id="grant-agency-name"
         onChange={[Function]}
         required={false}
-        textFieldId="rek-grant-agency-name"
+        textFieldId="rek-grant-agency"
         value="test"
       />
     </WithStyles(ForwardRef(Grid))>
