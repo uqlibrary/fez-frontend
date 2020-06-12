@@ -289,6 +289,7 @@ export const AdminInterface = ({
                                             <Grid item xs={12} sm={3}>
                                                 <Button
                                                     id="admin-work-publish"
+                                                    data-testid="publish-admin"
                                                     disabled={submitting || disableSubmit}
                                                     variant="contained"
                                                     color="secondary"
@@ -304,6 +305,7 @@ export const AdminInterface = ({
                                             <Grid item xs={12} sm={3}>
                                                 <Button
                                                     id="admin-work-unpublish"
+                                                    data-testid="unpublish-admin"
                                                     disabled={submitting || disableSubmit}
                                                     variant="contained"
                                                     color="secondary"
