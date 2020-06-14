@@ -855,16 +855,16 @@ export const getRecordIsDatasetOfSearchKey = datasets => {
 };
 
 export const getRecordIsDerivationOfSearchKey = relatedPubs => {
-    if ((relatedPubs || []).length === 0) return {};
-
-    return {
-        fez_record_search_key_isderivationof: relatedPubs.map(
-            ({ rek_isderivationof: value, rek_isderivationof_order: order }) => ({
-                rek_isderivationof: value.id || value,
-                rek_isderivationof_order: order,
-            }),
-        ),
-    };
+    return (relatedPubs.length === 0)
+        ? { fez_record_search_key_isderivationof: [] }
+        : {
+            fez_record_search_key_isderivationof: relatedPubs.map(
+                ({ rek_isderivationof: value, rek_isderivationof_order: order }) => ({
+                    rek_isderivationof: value.id || value,
+                    rek_isderivationof_order: order,
+                }),
+            ),
+        };
 };
 
 export const getBibliographicSectionSearchKeys = (data = {}) => {
@@ -980,7 +980,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 })),
             }
             : {}),
-        ...getRecordIsDerivationOfSearchKey(relatedPubs),
+        ...(!!relatedPubs ? getRecordIsDerivationOfSearchKey(relatedPubs) : {}),
         ...getRecordIsDatasetOfSearchKey(datasets),
     };
 };
