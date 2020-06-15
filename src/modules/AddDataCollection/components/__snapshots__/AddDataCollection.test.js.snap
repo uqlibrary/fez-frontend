@@ -1011,7 +1011,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Related datasets/work"
+        >
           <Field
             component={[Function]}
             disabled={false}
@@ -1052,6 +1054,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "moveUpHint": "Move Related datasets/work up the order",
                   },
                 },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"
@@ -2275,7 +2278,9 @@ exports[`AddDataCollection test should render component with a valid collection 
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Related datasets/work"
+        >
           <Field
             component={[Function]}
             disabled={false}
@@ -2316,6 +2321,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "moveUpHint": "Move Related datasets/work up the order",
                   },
                 },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"
@@ -3539,7 +3545,9 @@ exports[`AddDataCollection test should render component with an invalid collecti
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Related datasets/work"
+        >
           <Field
             component={[Function]}
             disabled={false}
@@ -3580,6 +3588,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "moveUpHint": "Move Related datasets/work up the order",
                   },
                 },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"
@@ -4803,7 +4812,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Related datasets/work"
+        >
           <Field
             component={[Function]}
             disabled={false}
@@ -4844,6 +4855,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "moveUpHint": "Move Related datasets/work up the order",
                   },
                 },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"

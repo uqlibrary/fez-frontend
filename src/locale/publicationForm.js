@@ -1612,6 +1612,7 @@ export default {
                         description: 'Use this tool to specify the geographic co-ordinates the data relates to',
                     },
                     relatedDatasets: {
+                        title: 'Related datasets/work',
                         form: {
                             locale: {
                                 title: 'Related datasets/work',
