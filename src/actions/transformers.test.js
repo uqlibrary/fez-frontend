@@ -2188,11 +2188,13 @@ describe('getSecuritySectionSearchKeys', () => {
             fez_datastream_info: [
                 {
                     dsi_dsid: 'test.png',
+                    dsi_label: 'test.png new label',
                     dsi_security_policy: 2,
                     dsi_security_inherited: 1,
                 },
                 {
                     dsi_dsid: 'test1.txt',
+                    dsi_label: 'test.txt new label',
                     dsi_security_policy: 3,
                     dsi_security_inherited: 0,
                 },
@@ -2204,11 +2206,13 @@ describe('getSecuritySectionSearchKeys', () => {
                     dataStreams: [
                         {
                             dsi_dsid: 'test.png',
+                            dsi_label: 'test.png old label',
                             dsi_security_policy: 2,
                             dsi_security_inherited: 1,
                         },
                         {
                             dsi_dsid: 'test1.txt',
+                            dsi_label: 'test.txt old label',
                             dsi_security_policy: 3,
                             dsi_security_inherited: 0,
                         },
@@ -2218,11 +2222,13 @@ describe('getSecuritySectionSearchKeys', () => {
                 [
                     {
                         dsi_dsid: 'test.png',
+                        dsi_label: 'test.png new label',
                         dsi_security_policy: 2,
                         dsi_security_inherited: 1,
                     },
                     {
                         dsi_dsid: 'test1.txt',
+                        dsi_label: 'test.txt new label',
                         dsi_security_policy: 1,
                         dsi_security_inherited: 1,
                     },
@@ -3031,6 +3037,17 @@ describe('getBibliographicSectionSearchKeys', () => {
             const dataEmpty = {};
             expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+            });
+        });
+
+        it('should be able to delete search key', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_isderivationof: [],
             });
         });
     });

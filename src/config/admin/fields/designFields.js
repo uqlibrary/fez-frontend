@@ -43,6 +43,10 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
+        {
+            title: 'Related publications',
+            groups: [['fez_record_search_key_isderivationof']],
+        },
     ],
     authors: () => [
         {
