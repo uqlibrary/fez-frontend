@@ -1146,7 +1146,16 @@ export const getFilesSectionSearchKeys = data => {
 
 export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
     const { dataStreams, ...rest } = data;
-    const dataStreamsMap = (dataStreams || []).reduce((map, ds) => ({ ...map, [ds.dsi_dsid]: ds }), {});
+    const dataStreamsMap = (dataStreams || []).reduce((map, ds) => (
+        {
+            ...map,
+            [ds.dsi_dsid]:
+                {
+                    dsi_security_inherited: ds.dsi_security_inherited,
+                    dsi_security_policy: ds.dsi_security_policy,
+                },
+        }
+    ), {});
     return {
         ...cleanBlankEntries(rest),
         ...(!!dataStreams

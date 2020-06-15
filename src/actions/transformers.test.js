@@ -2188,11 +2188,13 @@ describe('getSecuritySectionSearchKeys', () => {
             fez_datastream_info: [
                 {
                     dsi_dsid: 'test.png',
+                    dsi_label: 'test.png new label',
                     dsi_security_policy: 2,
                     dsi_security_inherited: 1,
                 },
                 {
                     dsi_dsid: 'test1.txt',
+                    dsi_label: 'test1.txt new label',
                     dsi_security_policy: 3,
                     dsi_security_inherited: 0,
                 },
@@ -2204,11 +2206,13 @@ describe('getSecuritySectionSearchKeys', () => {
                     dataStreams: [
                         {
                             dsi_dsid: 'test.png',
+                            dsi_label: 'test.png old label',
                             dsi_security_policy: 2,
                             dsi_security_inherited: 1,
                         },
                         {
                             dsi_dsid: 'test1.txt',
+                            dsi_label: 'test.txt old label',
                             dsi_security_policy: 3,
                             dsi_security_inherited: 0,
                         },
@@ -2218,11 +2222,13 @@ describe('getSecuritySectionSearchKeys', () => {
                 [
                     {
                         dsi_dsid: 'test.png',
+                        dsi_label: 'test.png new label',
                         dsi_security_policy: 2,
                         dsi_security_inherited: 1,
                     },
                     {
                         dsi_dsid: 'test1.txt',
+                        dsi_label: 'test.txt new label',
                         dsi_security_policy: 1,
                         dsi_security_inherited: 1,
                     },
