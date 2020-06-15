@@ -47,7 +47,7 @@ export default {
             ]
             : []),
     ],
-    bibliographic: (isLote = false) => [
+    bibliographic: (isLote = false, displayEndDate = false) => [
         {
             title: 'Title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
@@ -79,7 +79,7 @@ export default {
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['rek_date'],
+                ['rek_date', displayEndDate && 'fez_record_search_key_end_date_biblio'].filter(Boolean),
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['fez_record_search_key_original_format'],
