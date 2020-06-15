@@ -589,33 +589,26 @@ context('Data Collection form', () => {
         cy.get('input#RelateddatasetsworksineSpace-input')
             .type('a');
         cy.clickAutoSuggestion('RelateddatasetsworksineSpace', 0);
-        // cy.get('@submitButton').should('be.disabled');
-        // cy.get('@errors').should('have.length', 1);
         cy.get('input#RelateddatasetsworksineSpace-input')
             .type('a');
         cy.clickAutoSuggestion('RelateddatasetsworksineSpace', 1);
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
-            .first()
-            .get('p')
-            .should('contain', 'Vaccination day');
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
+
+        cy.get('div[class*="ListRow-Relateddatasets/worksineSpace"]')
             .last()
-            .get('p')
+            .should('contain', 'Vaccination day');
+        cy.get('div[class*="ListRow-Relateddatasets/worksineSpace"]')
+            .first()
             .should('contain', 'Early Onset Scoliosis');
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('button[title="Move item up the order"]')
+
+        cy.get('div[class*="Relateddatasets/worksineSpace"]')
+            .get('button[title="Move Related datasets/work up the order"]')
             .click();
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
-            .last()
-            .get('p')
-            .should('contain', 'Vaccination day');
-        cy.get('div[class*="Relateddatasets/work"]')
-            .get('div.ListRow-NoLabel')
+
+        cy.get('div[class*="ListRow-Relateddatasets/worksineSpace"]')
             .first()
-            .get('p')
+            .should('contain', 'Vaccination day');
+        cy.get('div[class*="ListRow-Relateddatasets/worksineSpace"]')
+            .last()
             .should('contain', 'Early Onset Scoliosis');
     });
 });

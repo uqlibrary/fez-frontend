@@ -1612,10 +1612,41 @@ export default {
                         description: 'Use this tool to specify the geographic co-ordinates the data relates to',
                     },
                     relatedDatasets: {
-                        title: 'Related datasets/work',
-                        inputFieldLabel: 'Related datasets/works in eSpace',
-                        inputFieldHint:
-                            'Begin searching by title or PID for related works in eSpace and add it to the list',
+                        form: {
+                            locale: {
+                                title: 'Related datasets/work',
+                                inputFieldLabel: 'Related datasets/works in eSpace',
+                                inputFieldHint:
+                                    'Begin searching by title or PID for related works in eSpace and add it to the list',
+                            },
+                        },
+                        header: {
+                            locale: {
+                                nameColumn: 'Related datasets/work',
+                                reorderColumn: 'Reorder Related datasets/work',
+                                deleteAll: 'Remove all Related datasets/work',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all Related datasets/work?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes',
+                                },
+                            },
+                        },
+                        row: {
+                            locale: {
+                                editHint: 'Edit this item',
+                                moveUpHint: 'Move Related datasets/work up the order',
+                                moveDownHint: 'Move Related datasets/work down the order',
+                                deleteHint: 'Remove this Related datasets/work',
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete Related datasets/work',
+                                    confirmationMessage: 'Are you sure you want to delete this Related datasets/work?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes',
+                                },
+                            },
+                        },
                     },
                 },
             },

@@ -863,7 +863,7 @@ export const getRecordIsDatasetOfSearchKey = datasets => {
 };
 
 export const getRecordIsDerivationOfSearchKey = relatedPubs => {
-    return (relatedPubs.length === 0)
+    return relatedPubs.length === 0
         ? { fez_record_search_key_isderivationof: [] }
         : {
             fez_record_search_key_isderivationof: relatedPubs.map(
@@ -1187,16 +1187,16 @@ export const getFilesSectionSearchKeys = data => {
 
 export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
     const { dataStreams, ...rest } = data;
-    const dataStreamsMap = (dataStreams || []).reduce((map, ds) => (
-        {
+    const dataStreamsMap = (dataStreams || []).reduce(
+        (map, ds) => ({
             ...map,
-            [ds.dsi_dsid]:
-                {
-                    dsi_security_inherited: ds.dsi_security_inherited,
-                    dsi_security_policy: ds.dsi_security_policy,
-                },
-        }
-    ), {});
+            [ds.dsi_dsid]: {
+                dsi_security_inherited: ds.dsi_security_inherited,
+                dsi_security_policy: ds.dsi_security_policy,
+            },
+        }),
+        {},
+    );
     return {
         ...cleanBlankEntries(rest),
         ...(!!dataStreams

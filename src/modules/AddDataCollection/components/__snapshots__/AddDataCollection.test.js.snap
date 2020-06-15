@@ -1011,9 +1011,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         item={true}
         xs={12}
       >
-        <StandardCard
-          title="Related datasets/work"
-        >
+        <StandardCard>
           <Field
             component={[Function]}
             disabled={false}
@@ -1021,9 +1019,33 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                  },
                 },
               }
             }
@@ -2248,9 +2270,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         item={true}
         xs={12}
       >
-        <StandardCard
-          title="Related datasets/work"
-        >
+        <StandardCard>
           <Field
             component={[Function]}
             disabled={false}
@@ -2258,9 +2278,33 @@ exports[`AddDataCollection test should render component with a valid collection 
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                  },
                 },
               }
             }
@@ -3485,9 +3529,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         item={true}
         xs={12}
       >
-        <StandardCard
-          title="Related datasets/work"
-        >
+        <StandardCard>
           <Field
             component={[Function]}
             disabled={false}
@@ -3495,9 +3537,33 @@ exports[`AddDataCollection test should render component with an invalid collecti
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                  },
                 },
               }
             }
@@ -4722,9 +4788,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         item={true}
         xs={12}
       >
-        <StandardCard
-          title="Related datasets/work"
-        >
+        <StandardCard>
           <Field
             component={[Function]}
             disabled={false}
@@ -4732,9 +4796,33 @@ exports[`AddDataCollection test should render data set form 1`] = `
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                  },
                 },
               }
             }
