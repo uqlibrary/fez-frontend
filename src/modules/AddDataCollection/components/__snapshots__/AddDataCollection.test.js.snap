@@ -1021,10 +1021,40 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
                 },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all Related datasets/work",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all Related datasets/work?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "nameColumn": "Related datasets/work",
+                    "reorderColumn": "Reorder Related datasets/work",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this Related datasets/work",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this Related datasets/work?",
+                      "confirmationTitle": "Delete Related datasets/work",
+                    },
+                    "editHint": "Edit this item",
+                    "moveDownHint": "Move Related datasets/work down the order",
+                    "moveUpHint": "Move Related datasets/work up the order",
+                  },
+                },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"
@@ -2258,10 +2288,40 @@ exports[`AddDataCollection test should render component with a valid collection 
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
                 },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all Related datasets/work",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all Related datasets/work?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "nameColumn": "Related datasets/work",
+                    "reorderColumn": "Reorder Related datasets/work",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this Related datasets/work",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this Related datasets/work?",
+                      "confirmationTitle": "Delete Related datasets/work",
+                    },
+                    "editHint": "Edit this item",
+                    "moveDownHint": "Move Related datasets/work down the order",
+                    "moveUpHint": "Move Related datasets/work up the order",
+                  },
+                },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"
@@ -3495,10 +3555,40 @@ exports[`AddDataCollection test should render component with an invalid collecti
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
                 },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all Related datasets/work",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all Related datasets/work?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "nameColumn": "Related datasets/work",
+                    "reorderColumn": "Reorder Related datasets/work",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this Related datasets/work",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this Related datasets/work?",
+                      "confirmationTitle": "Delete Related datasets/work",
+                    },
+                    "editHint": "Edit this item",
+                    "moveDownHint": "Move Related datasets/work down the order",
+                    "moveUpHint": "Move Related datasets/work up the order",
+                  },
+                },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"
@@ -4732,10 +4822,40 @@ exports[`AddDataCollection test should render data set form 1`] = `
             locale={
               Object {
                 "form": Object {
-                  "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
-                  "inputFieldLabel": "Related datasets/works in eSpace",
-                  "title": "Related datasets/work",
+                  "locale": Object {
+                    "inputFieldHint": "Begin searching by title or PID for related works in eSpace and add it to the list",
+                    "inputFieldLabel": "Related datasets/works in eSpace",
+                    "title": "Related datasets/work",
+                  },
                 },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all Related datasets/work",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all Related datasets/work?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "nameColumn": "Related datasets/work",
+                    "reorderColumn": "Reorder Related datasets/work",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this Related datasets/work",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this Related datasets/work?",
+                      "confirmationTitle": "Delete Related datasets/work",
+                    },
+                    "editHint": "Edit this item",
+                    "moveDownHint": "Move Related datasets/work down the order",
+                    "moveUpHint": "Move Related datasets/work up the order",
+                  },
+                },
+                "title": "Related datasets/work",
               }
             }
             name="fez_record_search_key_isdatasetof"

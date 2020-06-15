@@ -460,9 +460,7 @@ export default class AddDataCollection extends Component {
                                     name="fez_record_search_key_isdatasetof"
                                     searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
                                     disabled={this.props.submitting}
-                                    locale={{
-                                        form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
-                                    }}
+                                    locale={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}
                                     height={50}
                                 />
                             </StandardCard>

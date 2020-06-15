@@ -17,8 +17,8 @@ context('Design admin edit', () => {
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1);
-        cy.adminEditCheckTabErrorBadge(3);
+        cy.adminEditCheckTabErrorBadge(1, '1');
+        cy.adminEditCheckTabErrorBadge(3, '1');
     });
 
     it('should render the different sections as expected', () => {
@@ -38,10 +38,6 @@ context('Design admin edit', () => {
                     record.fez_record_search_key_project_start_date.rek_project_start_date,
                 );
                 cy.checkPartialDateFromRecordValue('End date', record.fez_record_search_key_end_date.rek_end_date);
-                cy.get('#Scale')
-                    .should('have.value', record.fez_record_search_key_scale.rek_scale);
-                cy.get('#Jobnumber')
-                    .should('have.value', record.fez_record_search_key_job_number.rek_job_number);
             });
 
         cy.get('@bibliographicCard')
@@ -59,21 +55,6 @@ context('Design admin edit', () => {
                     .find('li')
                     .should('have.length', 2);
             });
-
-        cy.get('@bibliographicCard')
-            .find('#Copyrightnotice')
-            .clear()
-            .parent()
-            .parent()
-            .parent()
-            .children('p')
-            .should('have.text', 'This field is required');
-
-        cy.get('@errorList')
-            .find('li')
-            .should('have.length', 3)
-            .eq(0)
-            .should('have.text', 'Rights is required');
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');

@@ -39,12 +39,20 @@ const getIssuesRequest = text => ({
 /* getFixIssueRequest - returns fix record issue request object
  * @returns {Object} issue request
  */
-export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
+export const getFixIssueRequest = pipe(
+    getIssueValues,
+    templates.issues.fixRecord,
+    getIssuesRequest,
+);
 
 /* getClaimIssueRequest - returns claim record issue request object
  * @returns {Object} issue request
  */
-export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
+export const getClaimIssueRequest = pipe(
+    getIssueValues,
+    templates.issues.claimRecord,
+    getIssuesRequest,
+);
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
  * NOTE: link description is required to save link
@@ -855,7 +863,7 @@ export const getRecordIsDatasetOfSearchKey = datasets => {
 };
 
 export const getRecordIsDerivationOfSearchKey = relatedPubs => {
-    return (relatedPubs.length === 0)
+    return relatedPubs.length === 0
         ? { fez_record_search_key_isderivationof: [] }
         : {
             fez_record_search_key_isderivationof: relatedPubs.map(
@@ -1173,22 +1181,22 @@ export const getFilesSectionSearchKeys = data => {
             ...cleanBlankEntries(rest),
             ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
                 ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
-                : { fez_record_search_key_advisory_statement: null } ),
+                : { fez_record_search_key_advisory_statement: null }),
         };
 };
 
 export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
     const { dataStreams, ...rest } = data;
-    const dataStreamsMap = (dataStreams || []).reduce((map, ds) => (
-        {
+    const dataStreamsMap = (dataStreams || []).reduce(
+        (map, ds) => ({
             ...map,
-            [ds.dsi_dsid]:
-                {
-                    dsi_security_inherited: ds.dsi_security_inherited,
-                    dsi_security_policy: ds.dsi_security_policy,
-                },
-        }
-    ), {});
+            [ds.dsi_dsid]: {
+                dsi_security_inherited: ds.dsi_security_inherited,
+                dsi_security_policy: ds.dsi_security_policy,
+            },
+        }),
+        {},
+    );
     return {
         ...cleanBlankEntries(rest),
         ...(!!dataStreams

@@ -71,30 +71,32 @@ context('Creative Work admin edit', () => {
         cy.get('.StandardPage form >div > div')
             .get('.StandardCard')
             .eq(4)
+            .as('NTRO')
             .within(() => {
                 cy.get('h3')
                     .should('contain', 'NTRO');
+
+                // https://www.pivotaltracker.com/story/show/173121745
+                // cy.get('.AdminCard')
+                //     .eq(0)
+                //     .within(() => {
+                //         cy.get('h4')
+                //             .should('contain', 'Audience size');
+                //         cy.get('#audienceSize')
+                //             .should('have.text', record.fez_record_search_key_audience_size.rek_audience_size_lookup)
+                //             .siblings('input')
+                //             .should(
+                //                 'have.value',
+                //                 record.fez_record_search_key_audience_size.rek_audience_size.toString(),
+                //             );
+                //     });
 
                 cy.get('.AdminCard')
                     .eq(0)
                     .within(() => {
                         cy.get('h4')
-                            .should('contain', 'Audience size');
-                        cy.get('#audienceSize')
-                            .should('have.text', record.fez_record_search_key_audience_size.rek_audience_size_lookup)
-                            .siblings('input')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_audience_size.rek_audience_size.toString(),
-                            );
-                    });
-
-                cy.get('.AdminCard')
-                    .eq(1)
-                    .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Scale/Significance of work & Creator research statement');
-
+                            .eq(0)
+                            .contains('Scale/Significance of work & Creator research statement');
                         const significanceList = record.fez_record_search_key_significance.map(
                             item => item.rek_significance_lookup,
                         );
@@ -118,7 +120,7 @@ context('Creative Work admin edit', () => {
                     });
 
                 cy.get('.AdminCard')
-                    .eq(3)
+                    .eq(1)
                     .within(() => {
                         cy.get('h4')
                             .should('contain', 'Quality indicators');

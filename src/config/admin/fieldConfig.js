@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import Immutable from 'immutable';
-
 import { validation } from 'config';
-
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -527,13 +525,27 @@ export default {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'ntroSection.fez_record_search_key_ismn',
+                name: 'identifiersSection.fez_record_search_key_ismn',
                 isValid: validation.isValidIsmn,
                 searchKey: {
                     value: 'rek_ismn',
                     order: 'rek_ismn_order',
                 },
                 locale: locale.components.ismnForm.field,
+                canEdit: true,
+            },
+        },
+        fez_record_search_key_isrc: {
+            component: ListEditorField,
+            componentProps: {
+                remindToAdd: true,
+                name: 'identifiersSection.fez_record_search_key_isrc',
+                isValid: validation.isValidIsrc,
+                searchKey: {
+                    value: 'rek_isrc',
+                    order: 'rek_isrc_order',
+                },
+                locale: locale.components.isrcForm.field,
                 canEdit: true,
             },
         },
@@ -1541,6 +1553,87 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            significanceAndContributionStatement: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            significanceInputFieldLabel: 'Scale/Significance of work',
+                            significanceInputFieldHint: 'Please select scale of significance',
+                            contributionStatementInputFieldLabel: 'Creator research statement',
+                            contributionStatementFieldHint: 'Enter description',
+                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                            authorOrderAlert: {
+                                message:
+                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                                type: 'info',
+                            },
+                        },
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Scale/significance of work - Creator research statement',
+                            reorderColumn: 'Reorder items',
+                            deleteAll: 'Remove all items',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all items?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move item up the order',
+                            moveDownHint: 'Move item down the order',
+                            deleteHint: 'Remove this item',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete item',
+                                confirmationMessage: 'Are you sure you want to delete this item?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            fez_record_search_key_original_format: () => ({
+                label: 'Physical description',
+            }),
+            grants: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            grantAgencyNameLabel: 'Funder/Sponsor name',
+                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                            grantIdLabel: 'Grant ID',
+                            grantIdHint: 'Enter grant number for this work, if available',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                            addButton: 'Add grant',
+                            editButton: 'Edit grant',
+                            description:
+                                "Add the grant's name, ID and type - " +
+                                'then click the ADD GRANT button to add each to the list',
+                        },
+                    },
+                    header: {
+                        locale: {
+                            GrantAgencyName: 'Funder/Sponsor name',
+                            GrantID: 'Grant ID',
+                            GrantAgencyType: 'Funder/Sponsor type',
+                            reorderColumn: 'Reorder entries',
+                            deleteAll: 'Remove all entries',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all entries?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
         },
         [PUBLICATION_TYPE_BOOK_CHAPTER]: {
             fez_record_search_key_publisher: () => ({
@@ -1560,8 +1653,170 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            significanceAndContributionStatement: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            significanceInputFieldLabel: 'Scale/Significance of work',
+                            significanceInputFieldHint: 'Please select scale of significance',
+                            contributionStatementInputFieldLabel: 'Creator research statement',
+                            contributionStatementFieldHint: 'Enter description',
+                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                            authorOrderAlert: {
+                                message:
+                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                                type: 'info',
+                            },
+                        },
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Scale/significance of work - Creator research statement',
+                            reorderColumn: 'Reorder items',
+                            deleteAll: 'Remove all items',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all items?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move item up the order',
+                            moveDownHint: 'Move item down the order',
+                            deleteHint: 'Remove this item',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete item',
+                                confirmationMessage: 'Are you sure you want to delete this item?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            fez_record_search_key_original_format: () => ({
+                label: 'Physical description',
+            }),
+            grants: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            grantAgencyNameLabel: 'Funder/Sponsor name',
+                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                            grantIdLabel: 'Grant ID',
+                            grantIdHint: 'Enter grant number for this work, if available',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                            addButton: 'Add grant',
+                            editButton: 'Edit grant',
+                            description:
+                                "Add the grant's name, ID and type - " +
+                                'then click the ADD GRANT button to add each to the list',
+                        },
+                    },
+                    header: {
+                        locale: {
+                            GrantAgencyName: 'Funder/Sponsor name',
+                            GrantID: 'Grant ID',
+                            GrantAgencyType: 'Funder/Sponsor type',
+                            reorderColumn: 'Reorder entries',
+                            deleteAll: 'Remove all entries',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all entries?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
         },
         [PUBLICATION_TYPE_CREATIVE_WORK]: {
+            grants: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            grantAgencyNameLabel: 'Funder/Sponsor name',
+                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                            grantIdLabel: 'Grant ID',
+                            grantIdHint: 'Enter grant number for this work, if available',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                            addButton: 'Add grant',
+                            editButton: 'Edit grant',
+                            description:
+                                "Add the grant's name, ID and type - " +
+                                'then click the ADD GRANT button to add each to the list',
+                        },
+                    },
+                    header: {
+                        locale: {
+                            GrantAgencyName: 'Funder/Sponsor name',
+                            GrantID: 'Grant ID',
+                            GrantAgencyType: 'Funder/Sponsor type',
+                            reorderColumn: 'Reorder entries',
+                            deleteAll: 'Remove all entries',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all entries?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            significanceAndContributionStatement: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            significanceInputFieldLabel: 'Scale/Significance of work',
+                            significanceInputFieldHint: 'Please select scale of significance',
+                            contributionStatementInputFieldLabel: 'Creator research statement',
+                            contributionStatementFieldHint: 'Enter description',
+                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                            authorOrderAlert: {
+                                message:
+                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                                type: 'info',
+                            },
+                        },
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Scale/significance of work - Creator research statement',
+                            reorderColumn: 'Reorder items',
+                            deleteAll: 'Remove all items',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all items?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move item up the order',
+                            moveDownHint: 'Move item down the order',
+                            deleteHint: 'Remove this item',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete item',
+                                confirmationMessage: 'Are you sure you want to delete this item?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            fez_record_search_key_original_format: () => ({
+                label: 'Physical description',
+            }),
             fez_record_search_key_place_of_publication: () => ({
                 required: true,
                 validate: [validation.required],
@@ -1620,7 +1875,94 @@ export default {
             fez_record_search_key_project_name: () => ({
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
             }),
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro }) => ({
+                isNtro,
+                locale: { ...locale.components.designers.field },
+            }),
+            editors: () => ({
+                locale: { ...locale.components.contributors.field },
+            }),
+            significanceAndContributionStatement: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            significanceInputFieldLabel: 'Scale/Significance of work',
+                            significanceInputFieldHint: 'Please select scale of significance',
+                            contributionStatementInputFieldLabel: 'Creator research statement',
+                            contributionStatementFieldHint: 'Enter description',
+                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                            authorOrderAlert: {
+                                message:
+                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                                type: 'info',
+                            },
+                        },
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Scale/significance of work - Creator research statement',
+                            reorderColumn: 'Reorder items',
+                            deleteAll: 'Remove all items',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all items?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move item up the order',
+                            moveDownHint: 'Move item down the order',
+                            deleteHint: 'Remove this item',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete item',
+                                confirmationMessage: 'Are you sure you want to delete this item?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            fez_record_search_key_location_biblio: () => ({
+                label: locale.components.locationForm.field.form.locale.inputFieldLabel,
+            }),
+            grants: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            grantAgencyNameLabel: 'Funder/Sponsor name',
+                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                            grantIdLabel: 'Grant ID',
+                            grantIdHint: 'Enter grant number for this work, if available',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                            addButton: 'Add grant',
+                            editButton: 'Edit grant',
+                            description:
+                                "Add the grant's name, ID and type - " +
+                                'then click the ADD GRANT button to add each to the list',
+                        },
+                    },
+                    header: {
+                        locale: {
+                            GrantAgencyName: 'Funder/Sponsor name',
+                            GrantID: 'Grant ID',
+                            GrantAgencyType: 'Funder/Sponsor type',
+                            reorderColumn: 'Reorder entries',
+                            deleteAll: 'Remove all entries',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all entries?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
         },
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({
@@ -1641,6 +1983,84 @@ export default {
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
             authors: ({ isNtro }) => ({ isNtro }),
+            significanceAndContributionStatement: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            significanceInputFieldLabel: 'Scale/Significance of work',
+                            significanceInputFieldHint: 'Please select scale of significance',
+                            contributionStatementInputFieldLabel: 'Creator research statement',
+                            contributionStatementFieldHint: 'Enter description',
+                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                            authorOrderAlert: {
+                                message:
+                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                                type: 'info',
+                            },
+                        },
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Scale/significance of work - Creator research statement',
+                            reorderColumn: 'Reorder items',
+                            deleteAll: 'Remove all items',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all items?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move item up the order',
+                            moveDownHint: 'Move item down the order',
+                            deleteHint: 'Remove this item',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete item',
+                                confirmationMessage: 'Are you sure you want to delete this item?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            grants: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            grantAgencyNameLabel: 'Funder/Sponsor name',
+                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                            grantIdLabel: 'Grant ID',
+                            grantIdHint: 'Enter grant number for this work, if available',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                            addButton: 'Add grant',
+                            editButton: 'Edit grant',
+                            description:
+                                "Add the grant's name, ID and type - " +
+                                'then click the ADD GRANT button to add each to the list',
+                        },
+                    },
+                    header: {
+                        locale: {
+                            GrantAgencyName: 'Funder/Sponsor name',
+                            GrantID: 'Grant ID',
+                            GrantAgencyType: 'Funder/Sponsor type',
+                            reorderColumn: 'Reorder entries',
+                            deleteAll: 'Remove all entries',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all entries?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
         },
         [PUBLICATION_TYPE_MANUSCRIPT]: {
             rek_date: () => ({
@@ -1670,6 +2090,87 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            significanceAndContributionStatement: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            significanceInputFieldLabel: 'Scale/Significance of work',
+                            significanceInputFieldHint: 'Please select scale of significance',
+                            contributionStatementInputFieldLabel: 'Creator research statement',
+                            contributionStatementFieldHint: 'Enter description',
+                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                            authorOrderAlert: {
+                                message:
+                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                                type: 'info',
+                            },
+                        },
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Scale/significance of work - Creator research statement',
+                            reorderColumn: 'Reorder items',
+                            deleteAll: 'Remove all items',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all items?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move item up the order',
+                            moveDownHint: 'Move item down the order',
+                            deleteHint: 'Remove this item',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete item',
+                                confirmationMessage: 'Are you sure you want to delete this item?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
+            fez_record_search_key_location_biblio: () => ({
+                label: locale.components.locationForm.field.form.locale.inputFieldLabel,
+            }),
+            grants: () => ({
+                locale: {
+                    form: {
+                        locale: {
+                            grantAgencyNameLabel: 'Funder/Sponsor name',
+                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                            grantIdLabel: 'Grant ID',
+                            grantIdHint: 'Enter grant number for this work, if available',
+                            grantAgencyTypeLabel: 'Funder/Sponsor type',
+                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                            addButton: 'Add grant',
+                            editButton: 'Edit grant',
+                            description:
+                                "Add the grant's name, ID and type - " +
+                                'then click the ADD GRANT button to add each to the list',
+                        },
+                    },
+                    header: {
+                        locale: {
+                            GrantAgencyName: 'Funder/Sponsor name',
+                            GrantID: 'Grant ID',
+                            GrantAgencyType: 'Funder/Sponsor type',
+                            reorderColumn: 'Reorder entries',
+                            deleteAll: 'Remove all entries',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all entries?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            }),
         },
         [PUBLICATION_TYPE_THESIS]: {
             fez_record_search_key_org_unit_name: () => ({

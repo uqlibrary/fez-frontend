@@ -5,11 +5,17 @@ import { Section } from '../common/Section';
 
 import { useRecordContext, useFormValuesContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
-// import {
-//     PUBLICATION_TYPE_CREATIVE_WORK,
-//     PUBLICATION_TYPE_DESIGN,
-//     NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
-// } from 'config/general';
+import {
+    NTRO_SUBTYPE_LP_MUSIC,
+    NTRO_SUBTYPE_LP_DANCE,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    NTRO_SUBTYPE_LP_INTERARTS,
+    NTRO_SUBTYPE_LP_OTHER,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CPEE_FESTIVAL,
+    NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    NTRO_SUBTYPE_CPEE_OTHER,
+} from 'config/general';
 
 export const BibliographicSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
@@ -27,7 +33,19 @@ export const BibliographicSection = ({ disabled = false }) => {
     //     record.rek_subtype === NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK
     //         ? PUBLICATION_TYPE_DESIGN
     //         : record.rek_display_type;
-    const cards = adminInterfaceConfig[record.rek_display_type].bibliographic(isLote);
+
+    const displayEndDate = [
+        NTRO_SUBTYPE_LP_MUSIC,
+        NTRO_SUBTYPE_LP_DANCE,
+        NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+        NTRO_SUBTYPE_LP_INTERARTS,
+        NTRO_SUBTYPE_LP_OTHER,
+        NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+        NTRO_SUBTYPE_CPEE_FESTIVAL,
+        NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+        NTRO_SUBTYPE_CPEE_OTHER,
+    ].includes(record.rek_subtype);
+    const cards = adminInterfaceConfig[record.rek_display_type].bibliographic(isLote, displayEndDate);
 
     return <Section cards={cards} disabled={disabled} />;
 };
