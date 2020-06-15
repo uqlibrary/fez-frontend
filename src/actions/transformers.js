@@ -886,39 +886,39 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!languageOfTitle
             ? {
-                  fez_record_search_key_language_of_title: languageOfTitle.map(lang => ({
+                  fez_record_search_key_language_of_title: languageOfTitle.map((lang, index) => ({
                       rek_language_of_title: lang,
+                      rek_language_of_title_order: index + 1,
                   })),
               }
             : {}),
         ...(!!languageOfBookTitle
             ? {
-                  fez_record_search_key_language_of_book_title: languageOfBookTitle.map(lang => ({
+                  fez_record_search_key_language_of_book_title: languageOfBookTitle.map((lang, index) => ({
                       rek_language_of_book_title: lang,
+                      rek_language_of_book_title_order: index + 1,
                   })),
               }
             : {}),
         ...(!!languageOfProceedingsTitle
             ? {
-                  fez_record_search_key_language_of_proceedings_title: languageOfProceedingsTitle.map(lang => ({
-                      rek_language_of_proceedings_title: lang,
-                  })),
+                  fez_record_search_key_language_of_proceedings_title: languageOfProceedingsTitle.map(
+                      (lang, index) => ({
+                          rek_language_of_proceedings_title: lang,
+                          rek_language_of_proceedings_title_order: index + 1,
+                      }),
+                  ),
               }
             : {}),
         ...(!!languageOfJournalName
             ? {
-                  fez_record_search_key_language_of_journal_name: languageOfJournalName.map(lang => ({
+                  fez_record_search_key_language_of_journal_name: languageOfJournalName.map((lang, index) => ({
                       rek_language_of_journal_name: lang,
+                      rek_language_of_journal_name_order: index + 1,
                   })),
               }
             : {}),
-        ...(!!languages
-            ? {
-                  fez_record_search_key_language: languages.map(lang => ({
-                      rek_language: lang,
-                  })),
-              }
-            : {}),
+        ...getLanguageSearchKey(languages),
         ...(!!dateAvailable && moment(dateAvailable.rek_date_available, 'YYYY').isValid()
             ? {
                   fez_record_search_key_date_available: {
