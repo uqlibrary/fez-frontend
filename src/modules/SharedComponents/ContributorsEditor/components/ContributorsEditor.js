@@ -267,7 +267,6 @@ export class ContributorsEditor extends PureComponent {
             showIdentifierLookup,
             showRoleInput,
         } = this.props;
-        console.log(this.props.locale);
 
         const { contributors, errorMessage, contributorIndexSelectedToEdit } = this.state;
 
