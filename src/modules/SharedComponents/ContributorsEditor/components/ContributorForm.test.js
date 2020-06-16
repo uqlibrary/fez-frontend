@@ -577,32 +577,6 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should be able to set nameAsPublished on the contributor object from selected author', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({
-            onSubmit: testFn,
-        });
-        wrapper.instance()._onUQIdentifierSelected({
-            aut_id: 111,
-            aut_lname: 'Test',
-            aut_fname: 'Testing',
-            aut_ref_num: 1234567,
-        });
-        expect(testFn).toBeCalledWith({
-            affiliation: '',
-            creatorRole: '',
-            nameAsPublished: 'Test, Testing',
-            orgaff: '',
-            orgtype: '',
-            uqIdentifier: '111',
-            aut_id: 111,
-            aut_lname: 'Test',
-            aut_fname: 'Testing',
-            aut_ref_num: 1234567,
-            uqUsername: '1234567 - 111',
-        });
-    });
-
     it('should set state properly when UQ identifier is cleared', () => {
         const testFn = jest.fn();
         const { getByTitle } = setup({
@@ -686,27 +660,5 @@ describe('Component ContributorForm', () => {
         });
         fireEvent.click(getByTitle('Clear'));
         expect(testFn).toBeCalled();
-    });
-
-    it('should not submit contributor form if admin user is linking NonUQ user with identifier lookup', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({
-            onSubmit: testFn,
-            contributor: {
-                nameAsPublished: 'Firstname Lastname',
-                affiliation: 'NotUQ',
-                orgaff: '',
-                orgtype: '',
-                creatorRole: '',
-            },
-            canEdit: true,
-            showIdentifierLookup: true,
-            showRoleInput: false,
-        });
-        wrapper.instance()._onUQIdentifierSelected({
-            aut_id: 1,
-            aut_org_username: 'uqtest',
-        });
-        expect(testFn).not.toBeCalledWith();
     });
 });
