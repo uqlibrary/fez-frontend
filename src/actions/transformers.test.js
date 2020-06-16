@@ -3267,6 +3267,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_isderivationof: [],
             });
         });
