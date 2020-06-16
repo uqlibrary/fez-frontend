@@ -16,15 +16,15 @@ const mapStateToProps = (state, props) => {
         filterOptions: options => options,
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
             ? {
-                defaultValue: (!!props.input.value && { value: props.input.value }) || null,
-                error: !!props.meta.error,
-                errorText: props.meta.error || '',
-            }
+                  defaultValue: (!!props.input.value && { value: props.input.value }) || null,
+                  error: !!props.meta.error,
+                  errorText: props.meta.error || '',
+              }
             : {
-                defaultValue: (!!props.value && { value: props.value }) || '',
-                error: props.error,
-                errorText: props.errorText || '',
-            }),
+                  defaultValue: (!!props.value && { value: props.value }) || '',
+                  error: props.error,
+                  errorText: props.errorText || '',
+              }),
     };
 };
 
@@ -32,13 +32,13 @@ const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
     ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
         ? {
-            onChange: item => props.input.onChange(item.value),
-            onClear: () => props.input.onChange(null),
-        }
+              onChange: item => props.input.onChange(item.value),
+              onClear: () => props.input.onChange(null),
+          }
         : {
-            onChange: item => props.onChange(item),
-            onClear: () => props.onChange({ value: null }),
-        }),
+              onChange: item => props.onChange(item),
+              onClear: () => props.onChange({ value: null }),
+          }),
 });
 
 export const OrgNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

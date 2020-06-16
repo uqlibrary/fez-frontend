@@ -25,35 +25,29 @@ context('Journal admin edit', () => {
             .get('.StandardCard')
             .eq(1)
             .within(() => {
-                cy.get('h3')
-                    .should('have.text', 'Bibliographic');
+                cy.get('h3').should('have.text', 'Bibliographic');
 
                 cy.get('.AdminCard')
                     .eq(4)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Bibliographic');
+                        cy.get('h4').should('contain', 'Bibliographic');
 
-                        cy.get('[data-testid=rek-place-of-publication-input]')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_place_of_publication.rek_place_of_publication,
-                            );
-                        cy.get('[data-testid=rek-publisher-input]')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_publisher.rek_publisher,
-                            );
-                        cy.get('[data-testid=rek-volume-number-input]')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_volume_number.rek_volume_number,
-                            );
-                        cy.get('[data-testid=rek-issue-number-input]')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_issue_number.rek_issue_number,
-                            );
+                        cy.get('[data-testid=rek-place-of-publication-input]').should(
+                            'have.value',
+                            record.fez_record_search_key_place_of_publication.rek_place_of_publication,
+                        );
+                        cy.get('[data-testid=rek-publisher-input]').should(
+                            'have.value',
+                            record.fez_record_search_key_publisher.rek_publisher,
+                        );
+                        cy.get('[data-testid=rek-volume-number-input]').should(
+                            'have.value',
+                            record.fez_record_search_key_volume_number.rek_volume_number,
+                        );
+                        cy.get('[data-testid=rek-issue-number-input]').should(
+                            'have.value',
+                            record.fez_record_search_key_issue_number.rek_issue_number,
+                        );
                     });
 
                 cy.get('.AdminCard')
@@ -64,14 +58,13 @@ context('Journal admin edit', () => {
                 const issn = record.fez_record_search_key_issn[0].rek_issn;
                 const sherpaLink = `http://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
 
-                cy.get('#issn-list-row-0')
-                    .within(row => {
-                        cy.wrap(row)
-                            .should('contain', issn)
-                            .should('contain', 'SHERPA/RoMEO')
-                            .get('#external-link-sherparomeo')
-                            .should('have.attr', 'href', sherpaLink);
-                    });
+                cy.get('#rek-issn-list-row-0').within(row => {
+                    cy.wrap(row)
+                        .should('contain', issn)
+                        .should('contain', 'SHERPA/RoMEO')
+                        .get('#external-link-sherparomeo')
+                        .should('have.attr', 'href', sherpaLink);
+                });
             });
     });
 });

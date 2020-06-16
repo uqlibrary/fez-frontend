@@ -3,7 +3,7 @@
         "newline-per-chained-call": [
             2,
             {
-                "ignoreChainWithDepth": 1
+                "ignoreChainWithDepth": 2
             }
         ]
     }

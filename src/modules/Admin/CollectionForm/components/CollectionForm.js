@@ -125,60 +125,60 @@ export default class CollectionForm extends Component {
                             </Grid>
                             {this.props.formValues.get('fez_record_search_key_ismemberof') &&
                                 this.props.formValues.get('fez_record_search_key_ismemberof').length > 0 && (
-                                <Grid item xs={12}>
-                                    <StandardCard title={txt.details.title} help={txt.details.help}>
-                                        <Grid container spacing={3}>
-                                            <Grid item xs={12}>
-                                                <Field
-                                                    component={TextField}
-                                                    textFieldId="rek-title"
-                                                    disabled={this.props.submitting}
-                                                    autoFocus
-                                                    name="rek_title"
-                                                    type="text"
-                                                    fullWidth
-                                                    {...txt.formLabels.title}
-                                                    required
-                                                    validate={[validation.required]}
-                                                />
-                                            </Grid>
+                                    <Grid item xs={12}>
+                                        <StandardCard title={txt.details.title} help={txt.details.help}>
+                                            <Grid container spacing={3}>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={TextField}
+                                                        textFieldId="rek-title"
+                                                        disabled={this.props.submitting}
+                                                        autoFocus
+                                                        name="rek_title"
+                                                        type="text"
+                                                        fullWidth
+                                                        {...txt.formLabels.title}
+                                                        required
+                                                        validate={[validation.required]}
+                                                    />
+                                                </Grid>
 
-                                            <Grid item xs={12}>
-                                                <Field
-                                                    component={TextField}
-                                                    textFieldId="rek-description"
-                                                    disabled={this.props.submitting}
-                                                    name="rek_description"
-                                                    fullWidth
-                                                    multiline
-                                                    rows={5}
-                                                    {...txt.formLabels.description}
-                                                    validate={[validation.required]}
-                                                    required
-                                                />
-                                            </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={TextField}
+                                                        textFieldId="rek-description"
+                                                        disabled={this.props.submitting}
+                                                        name="rek_description"
+                                                        fullWidth
+                                                        multiline
+                                                        rows={5}
+                                                        {...txt.formLabels.description}
+                                                        validate={[validation.required]}
+                                                        required
+                                                    />
+                                                </Grid>
 
-                                            <Grid item xs={12}>
-                                                <Typography>{txt.formLabels.keywords.description}</Typography>
-                                                <Field
-                                                    component={ListEditorField}
-                                                    name="fez_record_search_key_keywords"
-                                                    maxCount={10}
-                                                    // validate={[validation.requiredList]}
-                                                    maxInputLength={111}
-                                                    searchKey={{
-                                                        value: 'rek_keywords',
-                                                        order: 'rek_keywords_order',
-                                                    }}
-                                                    listEditorId="rek-keywords"
-                                                    locale={txt.formLabels.keywords.field}
-                                                    disabled={this.props.submitting}
-                                                />
+                                                <Grid item xs={12}>
+                                                    <Typography>{txt.formLabels.keywords.description}</Typography>
+                                                    <Field
+                                                        component={ListEditorField}
+                                                        name="fez_record_search_key_keywords"
+                                                        maxCount={10}
+                                                        // validate={[validation.requiredList]}
+                                                        maxInputLength={111}
+                                                        searchKey={{
+                                                            value: 'rek_keywords',
+                                                            order: 'rek_keywords_order',
+                                                        }}
+                                                        listEditorId="rek-keywords"
+                                                        locale={txt.formLabels.keywords.field}
+                                                        disabled={this.props.submitting}
+                                                    />
+                                                </Grid>
                                             </Grid>
-                                        </Grid>
-                                    </StandardCard>
-                                </Grid>
-                            )}
+                                        </StandardCard>
+                                    </Grid>
+                                )}
                             {alertProps && (
                                 <Grid item xs={12}>
                                     <Alert {...alertProps} />

@@ -4,8 +4,7 @@
 
 const waitForCKEditorInstance = instanceName =>
     cy.waitUntil(() =>
-        cy.window()
-            .then(win => (((win.CKEDITOR || {}).instances || {})[instanceName] || {}).status === 'ready'),
+        cy.window().then(win => (((win.CKEDITOR || {}).instances || {})[instanceName] || {}).status === 'ready'),
     );
 
 // Allows the targeting of CKEditors
@@ -39,11 +38,10 @@ Cypress.Commands.add('killCKEditor', () => {
     cy.window()
         .its('CKEDITOR.instances')
         .then(instances =>
-            Object.keys(instances)
-                .forEach(instance => {
-                    instances[instance].removeAllListeners();
-                    instances[instance].destroy(false);
-                }),
+            Object.keys(instances).forEach(instance => {
+                instances[instance].removeAllListeners();
+                instances[instance].destroy(false);
+            }),
         )
         .then(() =>
             cy

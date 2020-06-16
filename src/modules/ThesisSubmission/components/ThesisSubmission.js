@@ -184,6 +184,7 @@ export default class ThesisSubmission extends Component {
                                                 {...txt.information.fieldLabels.author}
                                                 required
                                                 validate={[validation.required]}
+                                                textFieldId="rek-author"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
@@ -225,7 +226,7 @@ export default class ThesisSubmission extends Component {
                                 <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                                     <Field
                                         component={ContributorsEditorField}
-                                        contributorEditorId="supervisors"
+                                        contributorEditorId="rek-supervisor"
                                         required
                                         name="supervisors"
                                         validate={[validation.supervisorRequired]}
@@ -239,7 +240,7 @@ export default class ThesisSubmission extends Component {
                                     <Typography>{txtFoR.text}</Typography>
                                     <Field
                                         component={FilteredFieldOfResearchListField}
-                                        listEditorId="filtered-field-of-research"
+                                        listEditorId="rek-subject"
                                         name="fieldOfResearch"
                                         required
                                         validate={[validation.forRequired]}
@@ -265,7 +266,7 @@ export default class ThesisSubmission extends Component {
                                             value: 'rek_keywords',
                                             order: 'rek_keywords_order',
                                         }}
-                                        listEditorId="keywords"
+                                        listEditorId="rek-keywords"
                                         locale={locale.components.keywordsForm.field}
                                         disabled={this.props.submitting}
                                     />

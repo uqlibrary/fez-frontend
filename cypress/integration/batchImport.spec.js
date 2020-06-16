@@ -30,13 +30,11 @@ context('Batch import', () => {
             .should('contain', locale.formLabels.docType.label)
             .should('contain', locale.formLabels.directory.label);
 
-        cy.get('@formElements')
-            .within(() => {
-                initialFieldIDs.forEach(fieldID => {
-                    cy.get(`[data-testid=${fieldID}-select]`)
-                        .should('exist');
-                });
+        cy.get('@formElements').within(() => {
+            initialFieldIDs.forEach(fieldID => {
+                cy.get(`[data-testid=${fieldID}-select]`).should('exist');
             });
+        });
 
         cy.get('.content-container form > div > div:nth-of-type(2)')
             .find('.Alert')
@@ -54,18 +52,14 @@ context('Batch import', () => {
 
     it('should show collections filtered by selected community', () => {
         cy.waitUntil(() =>
-            cy.get('[data-testid=community-pid-select]')
-                .then($el => $el.attr('class')
-                    .indexOf('-disabled') === -1),
+            cy.get('[data-testid=community-pid-select]').then($el => $el.attr('class').indexOf('-disabled') === -1),
         );
-        cy.get('[data-testid=community-pid-select]')
-            .click();
+        cy.get('[data-testid=community-pid-select]').click();
         cy.get('[data-testid=community-pid-options]')
             .first()
             .click();
 
-        cy.get('[data-testid=collection-pid-select]')
-            .should('exist');
+        cy.get('[data-testid=collection-pid-select]').should('exist');
         cy.get('.content-container form > div > div:nth-of-type(2)')
             .find('.Alert')
             .should('not.contain', validationErrors.communityID)
@@ -74,36 +68,27 @@ context('Batch import', () => {
 
     it('should have enabled form submit button once all fields have been filled', () => {
         allFieldIDs.forEach(item => {
-            cy.get('.content-container form .Alert .alert-text li')
-                .should('exist');
+            cy.get('.content-container form .Alert .alert-text li').should('exist');
 
             cy.waitUntil(() =>
-                cy.get(`[data-testid=${item}-select]`)
-                    .then($el => $el.attr('class')
-                        .indexOf('-disabled') === -1),
+                cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
-            cy.get(`[data-testid=${item}-select]`)
-                .click();
+            cy.get(`[data-testid=${item}-select]`).click();
             cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
         });
-        cy.get('.content-container form .Alert')
-            .should('not.exist');
-        cy.get('#submitBatchImport')
-            .should('not.be.disabled');
+        cy.get('.content-container form .Alert').should('not.exist');
+        cy.get('#submitBatchImport').should('not.be.disabled');
     });
 
     it('should be able to reset the form on successful form submission', () => {
         // select the first entry from each of the 4 drop downs
         allFieldIDs.forEach(item => {
             cy.waitUntil(() =>
-                cy.get(`[data-testid=${item}-select]`)
-                    .then($el => $el.attr('class')
-                        .indexOf('-disabled') === -1),
+                cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
-            cy.get(`[data-testid=${item}-select]`)
-                .click();
+            cy.get(`[data-testid=${item}-select]`).click();
             cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
@@ -128,7 +113,6 @@ context('Batch import', () => {
             .find('li')
             .should('have.length', 3);
 
-        cy.get('#submitBatchImport')
-            .should('be.disabled');
+        cy.get('#submitBatchImport').should('be.disabled');
     });
 });

@@ -4,51 +4,41 @@ context('Incomplete record form', () => {
     });
 
     const checkSignificance = significance => {
-        cy.get('[data-testid=rek-significance-select]')
-            .click();
+        cy.get('[data-testid=rek-significance-select]').click();
         cy.get('[data-testid=rek-significance-options]')
             .contains(significance)
             .click();
-        cy.get('[data-testid=rek-significance-select]')
-            .should('contain', significance);
+        cy.get('[data-testid=rek-significance-select]').should('contain', significance);
     };
 
     const checkResearchStatement = statement => {
         cy.typeCKEditor('editor1', statement);
-        cy.readCKEditor('editor1')
-            .then(text => {
-                cy.wrap(text)
-                    .should('eq', statement);
-            });
+        cy.readCKEditor('editor1').then(text => {
+            cy.wrap(text).should('eq', statement);
+        });
     };
 
     const checkAudienceSize = sizeText => {
-        cy.get('[data-testid=rek-audience-size-select]')
-            .click();
+        cy.get('[data-testid=rek-audience-size-select]').click();
         cy.get('[data-testid=rek-audience-size-options]')
             .contains(sizeText)
             .click();
-        cy.get('[data-testid=rek-audience-size-select]')
-            .should('contain', sizeText);
+        cy.get('[data-testid=rek-audience-size-select]').should('contain', sizeText);
     };
 
     const checkQualityIndicators = indicator => {
-        cy.get('[data-testid=rek-quality-indicator-select]')
-            .click();
+        cy.get('[data-testid=rek-quality-indicator-select]').click();
         cy.get('[data-testid=rek-quality-indicator-options]')
             .find('li')
             .contains(indicator)
             .click();
-        cy.get('[data-testid=rek-quality-indicator-options]')
-            .click(10, 10);
-        cy.get('[data-testid=rek-quality-indicator-select]')
-            .should('contain', indicator);
+        cy.get('[data-testid=rek-quality-indicator-options]').click(10, 10);
+        cy.get('[data-testid=rek-quality-indicator-select]').should('contain', indicator);
     };
 
     const checkNonDeletableAuthors = authorCount => {
         Array.from({ length: authorCount }, (x, i) => {
-            cy.get(`#authors-list-row-delete-${i}`)
-                .should('be.disabled');
+            cy.get(`#rek-author-list-row-delete-${i}`).should('be.disabled');
         });
     };
 
@@ -57,73 +47,66 @@ context('Incomplete record form', () => {
     const validationErrorsSelector = 'form > div > div:last-of-type .Alert ul li';
 
     const editNonUQAuthor = (authorNumber, orgName, orgType) => {
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .click()
             .parents('ul')
             .first()
             .siblings('div')
             .contains(authorEditInstruction);
-        cy.get('#submit-author')
-            .should('have.attr', 'disabled');
-        cy.get('#authors-input')
-            .should('have.attr', 'disabled');
-        cy.get('#org-affiliation-name')
-            .type(orgName);
+        cy.get('[data-testid=rek-author-add]').should('have.attr', 'disabled');
+        cy.get('[data-testid=rek-author-input]').should('have.attr', 'disabled');
+        cy.get('#org-affiliation-name').type(orgName);
 
         // Select affiliation type
-        cy.get('#org-affiliation-type')
-            .click();
+        cy.get('#org-affiliation-type').click();
         cy.get('#menu-org-affiliation-type')
             .find('li')
             .contains(orgType)
             .click();
 
         // Apply changes
-        cy.get('#submit-author')
+        cy.get('[data-testid=rek-author-add]')
             .should('have.attr', 'tabindex', '0')
             .should('not.have.attr', 'disabled');
-        cy.get('#submit-author') // Re-select to get updated element
+        cy.get('[data-testid=rek-author-add]') // Re-select to get updated element
             .click();
-        cy.get(`#authors-list-row-${authorNumber}`)
+        cy.get(`#rek-author-list-row-${authorNumber}`)
             .should('contain', orgName)
             .should('contain', `Organisation type: ${orgType}`);
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .parents('.StandardCard')
             .eq(0)
             .should('not.contain', authorEditInstruction);
     };
 
     const editUQAuthor = authorNumber => {
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .click()
             .parents('ul')
             .first()
             .siblings('div')
             .contains(authorEditInstruction);
-        cy.get('#authors-input')
-            .should('have.attr', 'disabled');
+        cy.get('[data-testid=rek-author-input]').should('have.attr', 'disabled');
 
         // Mark as UQ author
-        cy.get('#org-affiliation-selector')
-            .click();
-        cy.get('#menu-org-affiliation-selector')
+        cy.get('#org-affiliation-select').click();
+        cy.get('#org-affiliation-options')
             .find('li')
             .eq(1)
             .should('not.contain', 'Not')
             .click();
-        cy.get('#authors-input')
-            .should('have.attr', 'disabled');
+        cy.get('[data-testid=rek-author-input]').should('have.attr', 'disabled');
 
         // Apply changes
-        cy.get('#submit-author')
+        cy.get('[data-testid=rek-author-add]')
             .should('have.attr', 'tabindex', '0')
             .should('not.have.attr', 'disabled');
-        cy.get('#submit-author') // Re-select to get updated element
+        cy.get('[data-testid=rek-author-add]') // Re-select to get updated element
             .click();
-        cy.get(`#authors-list-row-${authorNumber}`)
+        cy.get(`#rek-author-list-row-${authorNumber}`)
             .should('contain', 'The University of Queensland')
             .should('contain', 'Organisation type: University');
-        cy.get(`#authors-list-row-edit-${authorNumber}`)
+        cy.get(`#rek-author-list-row-edit-${authorNumber}`)
             .parents('.StandardCard')
             .eq(0)
             .should('not.contain', authorEditInstruction);
@@ -158,15 +141,13 @@ context('Incomplete record form', () => {
         checkSignificance('Major');
         checkResearchStatement('Creator research statement');
 
-        cy.get('#rek-total-pages-input')
-            .type('10');
+        cy.get('#rek-total-pages-input').type('10');
 
         checkAudienceSize('Less than 100');
         checkQualityIndicators('Commissioned by external body');
         checkNonDeletableAuthors(4);
 
-        cy.get('#authors-list-row-edit-0')
-            .should('be.disabled');
+        cy.get('#rek-author-list-row-edit-0').should('be.disabled');
 
         editUQAuthor(1);
         editNonUQAuthor(2, 'Test org type', 'Government');
@@ -182,24 +163,19 @@ context('Incomplete record form', () => {
     });
 
     it('should have working tests for Grants editor', () => {
-        cy.get('[data-testid=rek-grant-agency-name-input]')
-            .type('Grant name');
-        cy.get('button#add-grant')
-            .should('be.disabled');
+        cy.get('[data-testid=rek-grant-agency-input]').type('Grant name');
+        cy.get('button#add-grant').should('be.disabled');
         cy.get(validationErrorsSelector)
             .as('validationMessage')
             .should('have.length', 2)
             .should('contain', grantMessage);
-        cy.get('[data-testid=rek-grant-id-input]')
-            .type('0001');
-        cy.get('#grant-type')
-            .click();
+        cy.get('[data-testid=rek-grant-id-input]').type('0001');
+        cy.get('#grant-type').click();
         cy.get('body > [role=presentation]')
             .find('li')
             .contains('Commercial Gallery')
             .click();
-        cy.get('#grant-type')
-            .should('contain', 'Commercial Gallery');
+        cy.get('#grant-type').should('contain', 'Commercial Gallery');
         cy.get('button#add-grant')
             .should('be.enabled')
             .click();

@@ -35,7 +35,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
     });
 
-    it('should render component and trigger callback when user types some value in the input', async() => {
+    it('should render component and trigger callback when user types some value in the input', async () => {
         const loadSuggestionsFn = jest.fn();
         const { getByTestId } = setup({
             loadSuggestions: loadSuggestionsFn,
@@ -48,7 +48,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(loadSuggestionsFn).toHaveBeenCalledWith('apple');
     });
 
-    it('should render component and select options', async() => {
+    it('should render component and select options', async () => {
         const loadSuggestionsFn = jest.fn();
 
         const onChangeFn = jest.fn();
@@ -76,19 +76,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onChangeFn).toHaveBeenCalledWith('apple');
     });
 
-    it('should open suggestions for uq-id', async() => {
-        const { getByTestId, getByRole } = setup({
-            autoCompleteAsynchronousFieldId: 'uq-id',
-            itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],
-            defaultValue: 'test',
-        });
-        act(() => {
-            fireEvent.change(getByTestId('uq-id-input'), { target: { value: 'ap', reason: 'reset' } });
-        });
-        await waitFor(() => getByRole('presentation'));
-    });
-
-    it('should allow free text', async() => {
+    it('should allow free text', async () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, rerender } = setup({
@@ -143,7 +131,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onClearFn).toBeCalled();
     });
 
-    it('should render given option template for options', async() => {
+    it('should render give option template for options', async () => {
         // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
 

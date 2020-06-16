@@ -30,8 +30,7 @@ context('Data Collection admin edit', () => {
             .eq(1)
             .as('bibliographicTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Dataset name');
+                cy.get('h4').should('contain', 'Dataset name');
             });
 
         // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
@@ -41,8 +40,7 @@ context('Data Collection admin edit', () => {
             .eq(3)
             .as('additionalInformationTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Additional information');
+                cy.get('h4').should('contain', 'Additional information');
                 cy.get('[data-testid=rek-license-input]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
                     .get('[data-testid=rek-license-select]')

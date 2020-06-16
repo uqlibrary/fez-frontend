@@ -112,9 +112,14 @@ export const ContributorForm = ({
                 contributor.nameAsPublished ||
                 (selectedItem && selectedItem.aut_lname && `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
             uqIdentifier: `${selectedItem.aut_id}`,
-            uqUsername: `${selectedItem.aut_org_username || selectedItem.aut_student_username} - ${
-                selectedItem.aut_id
-            }`,
+            orgaff:
+                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
+                contributor.orgaff,
+            orgtype:
+                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
+            uqUsername: `${selectedItem.aut_org_username ||
+                selectedItem.aut_student_username ||
+                selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
             ...selectedItem,
         });
         setUqIdentifierUpdatedFlag(true);
@@ -165,7 +170,12 @@ export const ContributorForm = ({
     const addButtonLabel = canEdit && !!initialContributor.nameAsPublished ? 'Change Details' : locale.addButton;
 
     useEffect(() => {
-        if (uqIdentifierUpdatedFlag && (!canEdit || (canEdit && !showRoleInput))) {
+        if (
+            uqIdentifierUpdatedFlag &&
+            (!canEdit ||
+                (canEdit && !isNtro && !showRoleInput) ||
+                (canEdit && isNtro && contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ))
+        ) {
             _onSubmit();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -180,6 +190,26 @@ export const ContributorForm = ({
             _onSubmit();
         }
     }, [_onSubmit, contributor.creatorRole, contributor.nameAsPublished]);
+
+    const renderUqIdField = () => {
+        const prefilledSearch = !!contributor && contributor.uqIdentifier === '0';
+        if (prefilledSearch) {
+            contributor.uqUsername = contributor.nameAsPublished;
+        }
+        return (
+            <UqIdField
+                disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
+                floatingLabelText="UQ Author ID"
+                hintText="Type UQ author name to search"
+                uqIdFieldId={`${contributorFormId}-aut-id`}
+                key={contributor.uqUsername}
+                onChange={_onUQIdentifierSelected}
+                onClear={_onUQIdentifierCleared}
+                value={contributor.uqUsername || contributor.uqIdentifier || ''}
+                prefilledSearch={prefilledSearch}
+            />
+        );
+    };
 
     return (
         <React.Fragment>
@@ -219,18 +249,10 @@ export const ContributorForm = ({
                 </Grid>
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
-                    (!isNtro && canEdit)) && (
+                    (!isNtro && canEdit) ||
+                    (showIdentifierLookup && canEdit)) && (
                     <Grid item xs={12} sm={3}>
-                        <UqIdField
-                            disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
-                            floatingLabelText="UQ Author ID"
-                            hintText="Type UQ author name to search"
-                            uqIdFieldId="aut-id"
-                            key={contributor.uqUsername}
-                            onChange={_onUQIdentifierSelected}
-                            onClear={_onUQIdentifierCleared}
-                            value={contributor.uqUsername || contributor.uqIdentifier || ''}
-                        />
+                        {renderUqIdField()}
                     </Grid>
                 )}
                 {showRoleInput && (
@@ -278,7 +300,8 @@ export const ContributorForm = ({
                         color="primary"
                         disabled={buttonDisabled}
                         onClick={_onSubmit}
-                        id="submit-author"
+                        id={`${contributorFormId}-add`}
+                        data-testid={`${contributorFormId}-add`}
                     >
                         {addButtonLabel}
                     </Button>
@@ -291,7 +314,8 @@ export const ContributorForm = ({
                             color="primary"
                             disabled={!contributor.nameAsPublished}
                             onClick={_onCancel}
-                            id="cancel-submit-author"
+                            id={`${contributorFormId}-cancel`}
+                            data-testid={`${contributorFormId}-cancel`}
                         >
                             {locale.cancelButton || 'Cancel'}
                         </Button>

@@ -6,18 +6,25 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
-    id="org-affiliation-selector-label"
+    id="org-affiliation-label"
   >
     Org affiliation
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
-    SelectDisplayProps={
+    MenuProps={
       Object {
-        "id": "org-affiliation-selector",
+        "data-testid": "org-affiliation-options",
+        "id": "org-affiliation-options",
       }
     }
-    labelId="org-affiliation-selector-label"
-    name="org-affiliation-selector"
+    SelectDisplayProps={
+      Object {
+        "data-testid": "org-affiliation-select",
+        "id": "org-affiliation-select",
+      }
+    }
+    labelId="org-affiliation-label"
+    name="org-affiliation"
     onChange={[MockFunction]}
     required={true}
     value="NotUQ"
@@ -50,18 +57,25 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
-    id="org-affiliation-selector-label"
+    id="org-affiliation-label"
   >
     Org affiliation
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
-    SelectDisplayProps={
+    MenuProps={
       Object {
-        "id": "org-affiliation-selector",
+        "data-testid": "org-affiliation-options",
+        "id": "org-affiliation-options",
       }
     }
-    labelId="org-affiliation-selector-label"
-    name="org-affiliation-selector"
+    SelectDisplayProps={
+      Object {
+        "data-testid": "org-affiliation-select",
+        "id": "org-affiliation-select",
+      }
+    }
+    labelId="org-affiliation-label"
+    name="org-affiliation"
     onChange={[MockFunction]}
     required={true}
     value="UQ"
@@ -94,18 +108,25 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
-    id="org-affiliation-selector-label"
+    id="org-affiliation-label"
   >
     Org affiliation
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
-    SelectDisplayProps={
+    MenuProps={
       Object {
-        "id": "org-affiliation-selector",
+        "data-testid": "org-affiliation-options",
+        "id": "org-affiliation-options",
       }
     }
-    labelId="org-affiliation-selector-label"
-    name="org-affiliation-selector"
+    SelectDisplayProps={
+      Object {
+        "data-testid": "org-affiliation-select",
+        "id": "org-affiliation-select",
+      }
+    }
+    labelId="org-affiliation-label"
+    name="org-affiliation"
     onChange={[MockFunction]}
     required={true}
     value=""

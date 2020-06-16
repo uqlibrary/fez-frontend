@@ -30,7 +30,7 @@ describe('ListRowHeader renders ', () => {
         expect(queryByText(container, 'Reorder items')).toBeNull();
     });
 
-    it('should show confirmation box', async() => {
+    it('should show confirmation box', async () => {
         const onDeleteAllFn = jest.fn();
         const { getByTestId } = setup({ onDeleteAll: onDeleteAllFn });
 

@@ -3,13 +3,11 @@ context('As an admin,', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection
-        cy.get('[data-testid=rek-ismemberof-input]')
-            .type('a');
+        cy.get('[data-testid=rek-ismemberof-input]').type('a');
         cy.clickAutoSuggestion('rek-ismemberof', 0);
 
         // Choose display type
-        cy.get('[data-testid=rek-display-type-select]')
-            .click();
+        cy.get('[data-testid=rek-display-type-select]').click();
         cy.get('[data-testid=rek-display-type-options]')
             .contains('li', 'Video')
             .click();
@@ -22,16 +20,11 @@ context('As an admin,', () => {
 
         // Fill required fields
         cy.typeCKEditor('editor1', 'Test title');
-        cy.get('#date-year')
-            .type('2020');
-        cy.get('[data-testid=rek-rights-input]')
-            .type('All rights reserved');
-        cy.get('#authors-input')
-            .type('Test author');
-        cy.get('#submit-author')
-            .click();
-        cy.get('[data-testid=rek-copyright-input]')
-            .click();
+        cy.get('[data-testid=rek-date-year-input]').type('2020');
+        cy.get('[data-testid=rek-rights-input]').type('All rights reserved');
+        cy.get('[data-testid=rek-author-input]').type('Test author');
+        cy.get('[data-testid=rek-author-add]').click();
+        cy.get('[data-testid=rek-copyright-input]').click();
 
         // Submit form
         cy.get('#admin-work-submit')

@@ -135,6 +135,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   placeholder=""
                   required={true}
                   rows={1}
+                  textFieldId="rek-author"
                   type="text"
                   validate={
                     Array [
@@ -303,7 +304,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           >
             <Field
               component={[Function]}
-              contributorEditorId="supervisors"
+              contributorEditorId="rek-supervisor"
               disabled={false}
               locale={
                 Object {
@@ -377,6 +378,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="rek-subject"
               locale={
                 Object {
                   "form": Object {
@@ -434,7 +436,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             <Field
               component={[Function]}
               disabled={false}
-              listEditorId="keywords"
+              listEditorId="rek-keywords"
               locale={
                 Object {
                   "form": Object {
@@ -695,6 +697,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   placeholder=""
                   required={true}
                   rows={1}
+                  textFieldId="rek-author"
                   type="text"
                   validate={
                     Array [
@@ -863,7 +866,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           >
             <Field
               component={[Function]}
-              contributorEditorId="supervisors"
+              contributorEditorId="rek-supervisor"
               disabled={false}
               locale={
                 Object {
@@ -937,6 +940,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
               disabled={false}
               distinctOnly={true}
               hideReorder={true}
+              listEditorId="rek-subject"
               locale={
                 Object {
                   "form": Object {
@@ -994,7 +998,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             <Field
               component={[Function]}
               disabled={false}
-              listEditorId="keywords"
+              listEditorId="rek-keywords"
               locale={
                 Object {
                   "form": Object {

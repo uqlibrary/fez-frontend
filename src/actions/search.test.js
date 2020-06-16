@@ -23,7 +23,7 @@ describe('Search action creators', () => {
         mockApi.reset();
     });
 
-    it('should dispatch series of search actions for search publications', async() => {
+    it('should dispatch series of search actions for search publications', async () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({
@@ -93,7 +93,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for search publications with one failure', async() => {
+    it('should dispatch series of search actions for search publications with one failure', async () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({
@@ -164,7 +164,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for search publications with all failure', async() => {
+    it('should dispatch series of search actions for search publications with all failure', async () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({
@@ -239,7 +239,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for search publications with crossref returns no data', async() => {
+    it('should dispatch series of search actions for search publications with crossref returns no data', async () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({
@@ -309,7 +309,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of actions for anon user', async() => {
+    it('should dispatch series of actions for anon user', async () => {
         mockApi.onAny().reply(403);
 
         const expectedActions = [
@@ -337,7 +337,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch events for successful search key lookup api call', async() => {
+    it('should dispatch events for successful search key lookup api call', async () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).apiUrl,
@@ -354,7 +354,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch events on error for search key lookup api call', async() => {
+    it('should dispatch events on error for search key lookup api call', async () => {
         mockApi.onAny().reply(404, {});
 
         const expectedActions = [
@@ -366,7 +366,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch events for successful author lookup up api call', async() => {
+    it('should dispatch events for successful author lookup up api call', async () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).apiUrl,
@@ -383,7 +383,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for eSpace only search', async() => {
+    it('should dispatch series of search actions for eSpace only search', async () => {
         const searchParams = { title: 'abc' };
         const params = { searchQueryParams: searchParams, sortBy: 'score2' };
         mockApi
@@ -399,7 +399,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for eSpace only search when search fails', async() => {
+    it('should dispatch series of search actions for eSpace only search when search fails', async () => {
         const searchParams = { title: 'abc' };
         const params = { searchParams: searchParams, sortBy: 'score' };
         mockApi
@@ -420,7 +420,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispath search key lookup actions on success', async() => {
+    it('should dispath search key lookup actions on success', async () => {
         const searchKey = 'collection';
         const searchQuery = 'test';
         const params = {
@@ -446,7 +446,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispath search key lookup actions on error', async() => {
+    it('should dispath search key lookup actions on error', async () => {
         const searchKey = 'collection';
         const searchQuery = 'test';
         const params = {
@@ -473,7 +473,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for eSpace only search when searching', async() => {
+    it('should dispatch series of search actions for eSpace only search when searching', async () => {
         const searchQuery = 'test';
         const searchKey = 'publications';
         const params = { searchQueryParams: { all: searchQuery } };
@@ -488,7 +488,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of search actions for eSpace only search failed when searching', async() => {
+    it('should dispatch series of search actions for eSpace only search failed when searching', async () => {
         const searchQuery = 'test';
         const searchKey = 'publications';
         const params = { searchQueryParams: { all: searchQuery } };
@@ -510,7 +510,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of actions on collection list', async() => {
+    it('should dispatch series of actions on collection list', async () => {
         mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(200, { data: [1, 2, 3] });
 
         const expectedActions = [actions.SEARCH_COLLECTION_LOADING, actions.SEARCH_COLLECTION_LOADED];
@@ -519,7 +519,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of actions on collection list fetch error', async() => {
+    it('should dispatch series of actions on collection list fetch error', async () => {
         mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(404, {});
 
         const expectedActions = [actions.SEARCH_COLLECTION_LOADING, actions.SEARCH_COLLECTION_FAILED];
@@ -528,7 +528,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of actions on community list', async() => {
+    it('should dispatch series of actions on community list', async () => {
         mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(200, { data: [1, 2, 3] });
 
         const expectedActions = [actions.SEARCH_COMMUNITIES_LOADING, actions.SEARCH_COMMUNITIES_LOADED];
@@ -537,7 +537,7 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    it('should dispatch series of actions on community list fetch error', async() => {
+    it('should dispatch series of actions on community list fetch error', async () => {
         mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(404, {});
 
         const expectedActions = [actions.SEARCH_COMMUNITIES_LOADING, actions.SEARCH_COMMUNITIES_FAILED];
@@ -547,7 +547,7 @@ describe('Search action creators', () => {
     });
 
     describe('exportSearchPublications()', () => {
-        it('calls exportPublications with expected params', async() => {
+        it('calls exportPublications with expected params', async () => {
             const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
             const testRequest = {
                 exportPublicationsFormat,
@@ -604,7 +604,7 @@ describe('Search action creators', () => {
             },
         };
 
-        it('should dispatch 2 actions on successful collectionsList request', async() => {
+        it('should dispatch 2 actions on successful collectionsList request', async () => {
             mockApi.onAny().reply(200, successfulCollectionRequest);
 
             const expectedActions = [actions.SEARCH_COLLECTION_LOADING, actions.SEARCH_COLLECTION_LOADED];
@@ -613,7 +613,7 @@ describe('Search action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('should dispatch 3 actions on error 500 on collectionsList request', async() => {
+        it('should dispatch 3 actions on error 500 on collectionsList request', async () => {
             mockApi.onAny().reply(500, { data: '' });
 
             const expectedActions = [

@@ -7,7 +7,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         floatingLabelText: 'Autocomplete select field',
         getOptionLabel: option => option,
         loadSuggestions: jest.fn(),
-        id: 'autocomplete-select-field',
+        autoCompleteSelectFieldId: 'autocomplete-select-field',
         itemsList: [],
         itemsLoading: false,
         onChange: jest.fn(),
@@ -34,13 +34,13 @@ describe('AutoCompleteSelectField component', () => {
         });
     });
 
-    it('should render component and display options when user types in the input', async() => {
+    it('should render component and display options when user types in the input', async () => {
         const { getByTestId, getByRole, getAllByRole } = setup({
             itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-select-field'), { target: { value: 'apple' } });
+            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'apple' } });
         });
 
         const suggestions = await waitFor(() => getByRole('presentation'));
@@ -49,7 +49,7 @@ describe('AutoCompleteSelectField component', () => {
         expect(getByTestId('autocomplete-select-field-option-1')).toHaveTextContent('pineapple');
     });
 
-    it('should render component and select options', async() => {
+    it('should render component and select options', async () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByRole } = setup({
@@ -58,7 +58,7 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-select-field'), { target: { value: 'an' } });
+            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'an' } });
         });
 
         const suggestions = await waitFor(() => getByRole('presentation'));
@@ -70,7 +70,7 @@ describe('AutoCompleteSelectField component', () => {
         expect(onChangeFn).toHaveBeenCalledWith('orange');
     });
 
-    it('should allow free text', async() => {
+    it('should allow free text', async () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId } = setup({
@@ -79,11 +79,11 @@ describe('AutoCompleteSelectField component', () => {
         });
 
         act(() => {
-            fireEvent.change(getByTestId('autocomplete-select-field'), { target: { value: 'cherry' } });
+            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'cherry' } });
         });
 
         act(() => {
-            fireEvent.keyDown(getByTestId('autocomplete-select-field'), { key: 'Enter', code: 13 });
+            fireEvent.keyDown(getByTestId('autocomplete-select-field-input'), { key: 'Enter', code: 13 });
         });
 
         expect(onChangeFn).toHaveBeenCalledWith({ value: 'cherry' });

@@ -153,7 +153,7 @@ export class GrantListEditorFormClass extends PureComponent {
                         <TextField
                             fullWidth
                             id="grant-agency-name"
-                            textFieldId="rek-grant-agency-name"
+                            textFieldId="rek-grant-agency"
                             label={grantAgencyNameLabel}
                             placeholder={grantAgencyNameHint}
                             value={grantAgencyName}
@@ -191,6 +191,15 @@ export class GrantListEditorFormClass extends PureComponent {
                                 <Select
                                     SelectDisplayProps={{
                                         id: 'grant-type',
+                                        'data-testid': 'rek-grant-type-select',
+                                    }}
+                                    MenuProps={{
+                                        id: 'rek-grant-type-options',
+                                        'data-testid': 'rek-grant-type-options',
+                                    }}
+                                    inputProps={{
+                                        id: 'rek-grant-type-input',
+                                        'data-testid': 'rek-grant-type-input',
                                     }}
                                     name="grant-type"
                                     label={grantAgencyType}

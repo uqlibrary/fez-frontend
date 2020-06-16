@@ -184,8 +184,7 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state()).toMatchSnapshot();
     });
 
-    // prettier-ignore
-    it('assigns a contributor to current author', async() => {
+    it('assigns a contributor to current author', async () => {
         const wrapper = setup({
             author: {
                 aut_id: 101,
@@ -230,77 +229,18 @@ describe('ContributorsEditor', () => {
             {
                 nameAsPublished: 'test1',
                 selected: false,
-                uqUsername: undefined,
             },
             {
                 nameAsPublished: 'test2',
                 selected: true,
-                uqUsername: 'test2',
             },
             {
                 nameAsPublished: 'test3',
                 selected: false,
-                uqUsername: undefined,
             },
         ]);
-    });
-
-    it('sets the uqUsername state to contributor nameAsPublished if author id is 0', () => {
-        const wrapper = setup({
-            editMode: true,
-            canEdit: true,
-        });
-        wrapper.setState({
-            contributors: [
-                {
-                    nameAsPublished: 'test1',
-                    selected: false,
-                    aut_id: 0,
-                    uqUsername: null,
-                },
-            ],
-        });
-        wrapper.instance().selectContributor(0);
-        expect(wrapper.state().contributors).toEqual([
-            {
-                nameAsPublished: 'test1',
-                selected: true,
-                aut_id: 0,
-                uqUsername: 'test1',
-            },
-        ]);
-    });
-
-    it('sets the uqUsername state to contributor nameAsPublished if uqUsername is missing or "0"', () => {
-        const wrapper = setup({
-            editMode: true,
-            canEdit: true,
-        });
-        wrapper.setState({
-            contributors: [
-                {
-                    nameAsPublished: 'test1',
-                    selected: false,
-                },
-                {
-                    nameAsPublished: 'test2',
-                    selected: false,
-                    uqUsername: '0',
-                },
-            ],
-        });
-        wrapper.instance().selectContributor(0);
-        expect(wrapper.state().contributors[0]).toEqual({
-            nameAsPublished: 'test1',
-            selected: true,
-            uqUsername: 'test1',
-        });
-        wrapper.instance().selectContributor(1);
-        expect(wrapper.state().contributors[1]).toEqual({
-            nameAsPublished: 'test2',
-            selected: true,
-            uqUsername: 'test2',
-        });
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('chooses a architectural contributor to edit', () => {
@@ -332,19 +272,18 @@ describe('ContributorsEditor', () => {
             {
                 nameAsPublished: 'test1',
                 selected: false,
-                uqUsername: undefined,
             },
             {
                 nameAsPublished: 'test2',
                 selected: true,
-                uqUsername: 'test2',
             },
             {
                 nameAsPublished: 'test3',
                 selected: false,
-                uqUsername: undefined,
             },
         ]);
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('deletes a contributor from the list', () => {

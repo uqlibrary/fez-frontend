@@ -46,7 +46,7 @@ describe('DataStreamSecurityItem component', () => {
         expect(asFragment()).toMatchSnapshot();
     });
 
-    it('should change security value for the file', async() => {
+    it('should change security value for the file', async () => {
         const { getByText, getByTestId } = setup({
             dataStream: {
                 dsi_dsid: 'test.jpg',
@@ -64,7 +64,7 @@ describe('DataStreamSecurityItem component', () => {
         expect(getByText('Public')).toBeInTheDocument();
     });
 
-    it('should change security value for the file back to inherited', async() => {
+    it('should change security value for the file back to inherited', async () => {
         const { getByText, getByTestId } = setup({
             dataStream: {
                 dsi_dsid: 'test.jpg',

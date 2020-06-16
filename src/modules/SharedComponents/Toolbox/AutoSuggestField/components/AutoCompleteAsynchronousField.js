@@ -21,6 +21,7 @@ export const AutoCompleteAsynchronousField = ({
     onChange,
     onClear,
     OptionTemplate,
+    prefilledSearch,
     required,
 }) => {
     const [open, setOpen] = useState(false);
@@ -38,13 +39,7 @@ export const AutoCompleteAsynchronousField = ({
 
     const handleInputChange = useCallback(
         (event, newInputValue, reason) => {
-            if (
-                autoCompleteAsynchronousFieldId === 'uq-id' &&
-                reason === 'reset' &&
-                !!newInputValue &&
-                !!itemsList &&
-                newInputValue.indexOf(' - ') === -1
-            ) {
+            if (reason === 'reset' && prefilledSearch && !!newInputValue) {
                 setInputValue(newInputValue);
                 setOpen(true);
             } else if (reason === 'clear') {
@@ -55,14 +50,13 @@ export const AutoCompleteAsynchronousField = ({
                 onChange({ value: newInputValue });
             }
         },
-        [allowFreeText, autoCompleteAsynchronousFieldId, onChange, onClear, itemsList],
+        [allowFreeText, prefilledSearch, onChange, onClear],
     );
 
     const handleChange = useCallback(
         (event, newValue) => {
             setValue(newValue);
             !!newValue && onChange(newValue);
-            throttledLoadSuggestions.current('');
         },
         [onChange],
     );
@@ -164,6 +158,7 @@ AutoCompleteAsynchronousField.propTypes = {
     onChange: PropTypes.func,
     onClear: PropTypes.func,
     OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+    prefilledSearch: PropTypes.bool,
     required: PropTypes.bool,
 };
 

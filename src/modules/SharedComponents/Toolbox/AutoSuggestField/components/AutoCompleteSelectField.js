@@ -5,13 +5,13 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export const AutoCompleteSelectField = ({
     allowFreeText,
+    autoCompleteSelectFieldId,
     defaultValue,
     disabled,
     error,
     errorText,
     floatingLabelText,
     getOptionLabel,
-    id,
     itemsList,
     onChange,
     required,
@@ -51,7 +51,7 @@ export const AutoCompleteSelectField = ({
 
     return (
         <Autocomplete
-            id={id}
+            id={autoCompleteSelectFieldId}
             open={open}
             clearOnEscape
             disableClearable
@@ -78,8 +78,17 @@ export const AutoCompleteSelectField = ({
                     value={inputValue}
                     onChange={handleSearchTextChange}
                     required={required}
+                    inputProps={{
+                        ...params.inputProps,
+                        id: `${autoCompleteSelectFieldId}-input`,
+                        'data-testid': `${autoCompleteSelectFieldId}-input`,
+                    }}
                 />
             )}
+            ListboxProps={{
+                id: `${autoCompleteSelectFieldId}-options`,
+                'data-testid': `${autoCompleteSelectFieldId}-options`,
+            }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
         />
     );
@@ -87,6 +96,7 @@ export const AutoCompleteSelectField = ({
 
 AutoCompleteSelectField.propTypes = {
     allowFreeText: PropTypes.bool,
+    autoCompleteSelectFieldId: PropTypes.string.isRequired,
     defaultValue: PropTypes.object,
     disabled: PropTypes.bool,
     error: PropTypes.bool,

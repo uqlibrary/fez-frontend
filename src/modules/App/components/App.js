@@ -132,10 +132,10 @@ export class AppClass extends PureComponent {
                 fullWidth: this.state.isMobile,
                 menuItemStyle: this.state.isMobile
                     ? {
-                        whiteSpace: 'normal',
-                        lineHeight: '18px',
-                        paddingBottom: '8px',
-                    }
+                          whiteSpace: 'normal',
+                          lineHeight: '18px',
+                          paddingBottom: '8px',
+                      }
                     : {},
             },
         };

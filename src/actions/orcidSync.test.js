@@ -13,7 +13,7 @@ describe('OrcidSync actions', () => {
         mockApi.reset();
     });
 
-    it('should call loading/loaded actions on successful load of sync status', async() => {
+    it('should call loading/loaded actions on successful load of sync status', async () => {
         mockApi.onGet(repositories.routes.ORCID_SYNC_API().apiUrl).reply(200, orcidSyncStatus);
 
         const expectedActions = [actions.ORCID_SYNC_STATUS_LOADING, actions.ORCID_SYNC_STATUS_LOADED];
@@ -22,7 +22,7 @@ describe('OrcidSync actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/loaded actions when user has never had any sync jobs', async() => {
+    it('should call loading/loaded actions when user has never had any sync jobs', async () => {
         mockApi.onAny().reply(404);
 
         const expectedActions = [actions.ORCID_SYNC_STATUS_LOADING, actions.ORCID_SYNC_STATUS_LOADED];
@@ -31,7 +31,7 @@ describe('OrcidSync actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/load failed actions on failed load of sync status', async() => {
+    it('should call loading/load failed actions on failed load of sync status', async () => {
         mockApi.onAny().reply(500);
 
         const expectedActions = [
@@ -44,7 +44,7 @@ describe('OrcidSync actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/loaded actions on successful sync request', async() => {
+    it('should call loading/loaded actions on successful sync request', async () => {
         mockApi.onPost(repositories.routes.ORCID_SYNC_API().apiUrl).reply(201, orcidSyncResponse);
 
         const expectedActions = [
@@ -57,7 +57,7 @@ describe('OrcidSync actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/load failed actions on failed sync request', async() => {
+    it('should call loading/load failed actions on failed sync request', async () => {
         mockApi.onAny().reply(400);
 
         const expectedActions = [

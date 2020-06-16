@@ -46,7 +46,7 @@ describe('Component FileUploadRowHeader', () => {
         expect(getByTestId('delete-all-files').disabled).toBeTruthy();
     });
 
-    it('should render confirmation on delete all', async() => {
+    it('should render confirmation on delete all', async () => {
         const onDeleteAllFn = jest.fn();
         const { getByTestId } = setup({ requireOpenAccessStatus: true, onDeleteAll: onDeleteAllFn });
 

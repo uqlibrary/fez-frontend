@@ -57,17 +57,17 @@ export const BatchImport = ({
         });
         const actionProps = submitSucceeded /* istanbul ignore next */ // Branch tested in cypress
             ? {
-                actionButtonLabel: batchImportTxt.postSubmitPrompt.confirmButtonLabel,
-                action: reset,
-            }
+                  actionButtonLabel: batchImportTxt.postSubmitPrompt.confirmButtonLabel,
+                  action: reset,
+              }
             : {};
 
         setValidationErrors(
             alertProps /* istanbul ignore next */ // Branch tested in cypress
                 ? {
-                    ...alertProps,
-                    ...actionProps,
-                }
+                      ...alertProps,
+                      ...actionProps,
+                  }
                 : null,
         );
     }, [batchImportTxt, formErrors, reset, submitSucceeded, submitting]);

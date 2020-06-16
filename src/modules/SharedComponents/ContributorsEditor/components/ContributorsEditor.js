@@ -180,21 +180,11 @@ export class ContributorsEditor extends PureComponent {
     };
 
     selectContributor = index => {
-        let searchQuery = '';
         this.setState(prevState => ({
-            contributors: prevState.contributors.map((contributor, itemIndex) => {
-                const isEditedContributor = index === itemIndex;
-                searchQuery =
-                    isEditedContributor &&
-                    (contributor.aut_id === 0 || !contributor.uqUsername || contributor.uqUsername === '0')
-                        ? contributor.nameAsPublished
-                        : '';
-                return {
-                    ...contributor,
-                    selected: isEditedContributor,
-                    uqUsername: searchQuery ? searchQuery : contributor.uqUsername,
-                };
-            }),
+            contributors: prevState.contributors.map((contributor, itemIndex) => ({
+                ...contributor,
+                selected: index === itemIndex,
+            })),
             contributorIndexSelectedToEdit: index,
         }));
     };
@@ -320,6 +310,8 @@ export class ContributorsEditor extends PureComponent {
                                 />
                             </List>
                             <List
+                                id={`${contributorEditorId}-list`}
+                                data-testid={`${contributorEditorId}-list`}
                                 classes={{
                                     root: `ContributorList ${classes.list} ${
                                         contributors.length > 3 ? classes.scroll : ''
