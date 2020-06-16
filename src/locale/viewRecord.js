@@ -1000,10 +1000,10 @@ export default {
                 },
             ],
             'Creative Work': [
-                {
-                    field: 'rek_genre',
-                    order: 1,
-                },
+                // {
+                //     field: 'rek_genre',
+                //     order: 1,
+                // },
                 {
                     field: 'fez_record_search_key_translated_title',
                     order: 2,
@@ -1145,10 +1145,6 @@ export default {
                 {
                     field: 'fez_record_search_key_doi',
                     order: 12,
-                },
-                {
-                    field: 'fez_record_search_key_grant_id',
-                    order: 13,
                 },
                 {
                     field: 'fez_record_search_key_type_of_data',

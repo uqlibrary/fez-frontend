@@ -285,7 +285,7 @@ export const AdminInterface = ({
                                     </Grid>
                                     {!!record.rek_pid &&
                                         objectType === RECORD_TYPE_RECORD &&
-                                        record.rek_status === UNPUBLISHED && (
+                                        record.rek_status !== PUBLISHED && (
                                             <Grid item xs={12} sm={3}>
                                                 <Button
                                                     id="admin-work-publish"
