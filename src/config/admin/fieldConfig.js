@@ -1199,6 +1199,7 @@ export default {
             component: AuthorIdField,
             componentProps: {
                 name: 'adminSection.contactNameId',
+                authorIdFieldId: 'rek-contributor-id',
                 fullWidth: true,
                 showClear: true,
                 ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
