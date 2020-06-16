@@ -32,19 +32,19 @@ export default {
         },
         ...(displayIdentifiers
             ? [
-                {
-                    title: 'Identifiers',
-                    groups: [['fez_record_search_key_identifier']],
-                },
-            ]
+                  {
+                      title: 'Identifiers',
+                      groups: [['fez_record_search_key_identifier']],
+                  },
+              ]
             : []),
         ...(displayLocation
             ? [
-                {
-                    title: 'Location',
-                    groups: [['fez_record_search_key_location_identifiers']],
-                },
-            ]
+                  {
+                      title: 'Location',
+                      groups: [['fez_record_search_key_location_identifiers']],
+                  },
+              ]
             : []),
     ],
     bibliographic: (isLote = false, displayEndDate = false) => [
