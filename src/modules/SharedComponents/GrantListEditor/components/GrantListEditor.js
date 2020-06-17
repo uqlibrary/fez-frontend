@@ -173,7 +173,7 @@ export class GrantListEditor extends PureComponent {
                     required={required}
                     disabled={disabled}
                     hideType={this.props.hideType}
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    {...((this.props.locale && this.props.locale.form) || {})}
                     {...(grantIndexSelectedToEdit !== null && grantIndexSelectedToEdit > -1
                         ? { grantSelectedToEdit: grantSelectedToEdit }
                         : {})}
@@ -186,6 +186,7 @@ export class GrantListEditor extends PureComponent {
                                     onDeleteAll={this.deleteAllGrants}
                                     disabled={disabled || disableDeleteAllGrants}
                                     hideType={this.props.hideType}
+                                    {...((this.props.locale && this.props.locale.header) || {})}
                                 />
                             </List>
                         </Grid>

@@ -2188,11 +2188,13 @@ describe('getSecuritySectionSearchKeys', () => {
             fez_datastream_info: [
                 {
                     dsi_dsid: 'test.png',
+                    dsi_label: 'test.png new label',
                     dsi_security_policy: 2,
                     dsi_security_inherited: 1,
                 },
                 {
                     dsi_dsid: 'test1.txt',
+                    dsi_label: 'test.txt new label',
                     dsi_security_policy: 3,
                     dsi_security_inherited: 0,
                 },
@@ -2204,11 +2206,13 @@ describe('getSecuritySectionSearchKeys', () => {
                     dataStreams: [
                         {
                             dsi_dsid: 'test.png',
+                            dsi_label: 'test.png old label',
                             dsi_security_policy: 2,
                             dsi_security_inherited: 1,
                         },
                         {
                             dsi_dsid: 'test1.txt',
+                            dsi_label: 'test.txt old label',
                             dsi_security_policy: 3,
                             dsi_security_inherited: 0,
                         },
@@ -2218,11 +2222,13 @@ describe('getSecuritySectionSearchKeys', () => {
                 [
                     {
                         dsi_dsid: 'test.png',
+                        dsi_label: 'test.png new label',
                         dsi_security_policy: 2,
                         dsi_security_inherited: 1,
                     },
                     {
                         dsi_dsid: 'test1.txt',
+                        dsi_label: 'test.txt new label',
                         dsi_security_policy: 1,
                         dsi_security_inherited: 1,
                     },
@@ -2728,6 +2734,12 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
         });
     });
 
@@ -2739,6 +2751,12 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         });
     });
@@ -2751,6 +2769,12 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
         });
     });
@@ -2764,6 +2788,12 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
             locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
@@ -2777,6 +2807,12 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
             locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
         });
     });
@@ -2932,6 +2968,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
+                        rek_language_order: 1,
                     },
                 ],
                 fez_record_search_key_subject: [
@@ -2962,6 +2999,12 @@ describe('getBibliographicSectionSearchKeys', () => {
         it('should use default parameter value', () => {
             expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
             });
         });
     });
@@ -2987,6 +3030,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -3029,6 +3078,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -3068,6 +3123,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -3094,6 +3155,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
             });
         });
     });
@@ -3109,11 +3176,23 @@ describe('getBibliographicSectionSearchKeys', () => {
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
                 fez_record_search_key_license: { rek_license: 123 },
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
             });
 
             data = {};
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
             });
         });
 
@@ -3130,6 +3209,12 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
             expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_issn: [
                     { rek_issn: '1212-1212', rek_issn_order: 1 },
                     { rek_issn: '2323-2323', rek_issn_order: 2 },
@@ -3138,12 +3223,58 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
             });
 
             const dataEmpty = {};
             expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
+            });
+        });
+
+        it('should be able to delete search key', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
+                fez_record_search_key_isderivationof: [],
+            });
+        });
+
+        it('should be able to delete search key', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
+                fez_record_search_key_isderivationof: [],
             });
         });
     });
@@ -3162,20 +3293,30 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_language_of_title: [
                     {
                         rek_language_of_title: 'eng',
+                        rek_language_of_title_order: 1,
                     },
                     {
                         rek_language_of_title: 'pol',
+                        rek_language_of_title_order: 2,
                     },
                 ],
                 fez_record_search_key_language_of_book_title: [
                     {
                         rek_language_of_book_title: 'eng',
+                        rek_language_of_book_title_order: 1,
                     },
                     {
                         rek_language_of_book_title: 'fre',
+                        rek_language_of_book_title_order: 2,
                     },
                 ],
                 fez_record_search_key_issn: [
@@ -3195,17 +3336,26 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_language_of_proceedings_title: [
                     {
                         rek_language_of_proceedings_title: 'eng',
+                        rek_language_of_proceedings_title_order: 1,
                     },
                     {
                         rek_language_of_proceedings_title: 'pol',
+                        rek_language_of_proceedings_title_order: 2,
                     },
                 ],
                 fez_record_search_key_language_of_journal_name: [
                     {
                         rek_language_of_journal_name: 'fre',
+                        rek_language_of_journal_name_order: 1,
                     },
                 ],
             });
@@ -3359,11 +3509,11 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
-                        // rek_language_order: 1,
+                        rek_language_order: 1,
                     },
                     {
                         rek_language: 'pol',
-                        // rek_language_order: 2,
+                        rek_language_order: 2,
                     },
                 ],
                 fez_record_search_key_end_date: {
@@ -3400,6 +3550,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_subject: [
                     {
                         rek_subject: 111111,
@@ -3429,6 +3585,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_isderivationof: [
                     {
                         rek_isderivationof: 'UQ:734361',
@@ -3448,6 +3610,12 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
                 fez_record_search_key_isderivationof: [
                     {
                         rek_isderivationof: 'UQ:734361',
@@ -3850,6 +4018,17 @@ describe('getFilesSectionSearchKeys', () => {
                 rek_advisory_statement: '<p>Test advisory statement</p>',
             },
         });
+    });
+
+    it('should return empty object', () => {
+        expect(transformers.getFilesSectionSearchKeys({})).toEqual({});
+    });
+
+    it('should return rest of the file section search keys', () => {
+        const data = {
+            fez_datastream_info: [{ dsi_dsid: 'file 1' }],
+        };
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual(data);
     });
 
     it('should be able to remove advisory search key', () => {
