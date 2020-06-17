@@ -2018,7 +2018,7 @@ export default {
                     },
                 },
             }),
-            fez_record_search_key_location_biblio: () => ({
+            fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),
             grants: () => ({
@@ -2226,7 +2226,7 @@ export default {
                     },
                 },
             }),
-            fez_record_search_key_location_biblio: () => ({
+            fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),
             grants: () => ({
