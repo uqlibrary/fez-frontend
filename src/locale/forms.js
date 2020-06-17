@@ -286,7 +286,7 @@ export default {
             },
             progressAlert: {
                 type: 'info_outline',
-                title: 'Saving',
+                title: 'Deleting',
                 message: 'Request is being processed.',
                 showLoader: true,
             },
