@@ -4,6 +4,7 @@ import Async from 'modules/SharedComponents/Async';
 // lazy loaded components
 export const FixRecord = () => <Async load={import('modules/FixRecord/containers/FixRecord')} />;
 export const ClaimRecord = () => <Async load={import('modules/ClaimRecord/containers/ClaimRecord')} />;
+export const DeleteRecord = () => <Async load={import('modules/DeleteRecord/containers/DeleteRecord')} />;
 export const PossiblyMyRecords = () => (
     <Async load={import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')} />
 );

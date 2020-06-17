@@ -254,5 +254,47 @@ export default {
                 message: 'Fix record request has been submitted successfully.',
             },
         },
+        deleteRecordForm: {
+            reasons: {
+                title: 'Describe the reason to delete this record',
+                fieldLabels: {
+                    reasons: 'Please enter a reason why you are deleting this record',
+                },
+            },
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel delete',
+                confirmationMessage: 'Are you sure you want to cancel delete this record?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Record has been deleted',
+                confirmationMessage: (
+                    <span style={{ display: 'block', margin: '1em 0' }} />
+                ),
+                cancelButtonLabel: 'Go to search page',
+                confirmButtonLabel: 'Go back to view page',
+            },
+            uqDoiAlert: {
+                message: pid => `This pid ${pid} cannot be deleted because it has a UQ DOI attached. Remove the DOI from this record first before deleting. If this record is the original source of the DOI, it must also be be de-activated on Crossref.`,
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message =>
+                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Request is being processed.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Record has been deleted',
+            },
+        },
     },
 };

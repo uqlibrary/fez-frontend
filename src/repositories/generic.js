@@ -46,3 +46,15 @@ export function patch({ apiUrl, options = {} }, data, config = {}) {
 export function get({ apiUrl, options = {} }, config = {}) {
     return api.get(apiUrl, { ...config, ...options });
 }
+
+/**
+ * Send a delete request
+ * @param {string} apiUrl
+ * @param {object} options any query string parameters (defined in routes with apiUrl)
+ * @param {object} data any additional options (headers, responseType, etc)
+ * @param {object} config any additional options (headers, responseType, etc)
+ * @returns {Promise}
+ */
+export function destory({ apiUrl, options = {} }, data, config = {}) {
+    return api.delete(apiUrl, data, { ...config, ...options });
+}

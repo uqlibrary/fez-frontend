@@ -935,6 +935,13 @@ export default {
                 },
             },
         },
+        deleteRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Delete record',
+            subTitle: 'Work to be deleted',
+            cancel: 'Cancel',
+            submit: 'Delete',
+        },
         adminAdd: {
             title: 'Add a new record',
             step1: 'Identify your new record',
