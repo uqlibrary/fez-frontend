@@ -104,7 +104,6 @@ const mapStateToProps = (state, props) => {
     let initialFormValues = {};
     let recordToView = {};
     let locked = false;
-    let disabled = false;
 
     if (props.createMode) {
         const displayType = formValues && formValues.get('rek_display_type');
@@ -128,7 +127,6 @@ const mapStateToProps = (state, props) => {
         };
     } else {
         locked = true;
-        disabled = true;
         recordToView = state.get('viewRecordReducer').recordToView;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =
@@ -150,7 +148,6 @@ const mapStateToProps = (state, props) => {
         recordToView,
         ...initialFormValues,
         locked,
-        disabled,
     };
 };
 

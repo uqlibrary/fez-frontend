@@ -72,7 +72,6 @@ export const AdminInterface = ({
     submitting,
     tabs,
     locked,
-    disabled,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -157,7 +156,7 @@ export const AdminInterface = ({
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <ScrollToSection scrollToSection={!tabbed && tab === currentTabValue}>
                 <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                    <Field component={tabs[tab].component} disabled={submitting || disabled} name={`${tab}Section`} />
+                    <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
                 </StandardCard>
             </ScrollToSection>
         </TabContainer>
@@ -172,6 +171,7 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
+    console.log('locked', locked);
     return (
         <StandardPage>
             <React.Fragment>
@@ -309,7 +309,7 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-publish"
                                                     data-testid="publish-admin"
-                                                    disabled={submitting || disableSubmit || disabled}
+                                                    disabled={!!submitting || !!disableSubmit || !!locked}
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -325,7 +325,7 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-unpublish"
                                                     data-testid="unpublish-admin"
-                                                    disabled={submitting || disableSubmit | disabled}
+                                                    disabled={!!submitting || !!disableSubmit | !!locked}
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -343,7 +343,7 @@ export const AdminInterface = ({
                                             id="admin-work-submit"
                                             data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
-                                            disabled={submitting || disableSubmit | disabled}
+                                            disabled={!!submitting || !!disableSubmit | !!locked}
                                             variant="contained"
                                             color="primary"
                                             fullWidth
@@ -375,7 +375,6 @@ AdminInterface.propTypes = {
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
     locked: PropTypes.bool,
-    disabled: PropTypes.bool,
     tabs: PropTypes.object,
 };
 
