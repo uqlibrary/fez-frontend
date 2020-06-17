@@ -76,7 +76,6 @@ export function deleteRecord(data) {
         return Promise.resolve([])
             .then(() => destory(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), reasons))
             .then(responses => {
-                console.log(responses);
                 dispatch({
                     type: DELETE_RECORD_SUCCESS,
                 });

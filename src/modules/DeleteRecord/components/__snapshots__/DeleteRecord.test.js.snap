@@ -433,6 +433,14 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel delete this record?",
+            "confirmationTitle": "Cancel delete",
+          }
+        }
         when={false}
       />
       <WithStyles(ConfirmDialogBox)
@@ -460,7 +468,7 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Describe the reason to delete the record"
+          title="Describe the reason to delete this record"
         >
           <WithStyles(Grid)
             container={true}
@@ -1449,6 +1457,14 @@ exports[`Component DeleteRecord should render delete record form with record cit
         </StandardCard>
       </WithStyles(Grid)>
       <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel delete this record?",
+            "confirmationTitle": "Cancel delete",
+          }
+        }
         when={true}
       />
       <WithStyles(ConfirmDialogBox)
@@ -1476,7 +1492,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
         xs={12}
       >
         <StandardCard
-          title="Describe the reason to delete the record"
+          title="Describe the reason to delete this record"
         >
           <WithStyles(Grid)
             container={true}

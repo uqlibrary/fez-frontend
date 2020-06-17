@@ -6139,6 +6139,16 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": "Delete record",
+          "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Edit community",
           "path": "/communities/:pid(UQ:[a-z0-9]+)/edit",
         },
@@ -6796,6 +6806,19 @@ exports[`Application component should render app for account with fez author wit
           component={[Function]}
           exact={true}
           key="route_21"
+          pageTitle="Delete record"
+          path="/admin/delete/:pid(UQ:[a-z0-9]+)"
+          regExPath="/admin/delete/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_22"
           pageTitle="Edit community"
           path="/communities/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -6807,7 +6830,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_22"
+          key="route_23"
           pageTitle="Edit collection"
           path="/collections/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -6819,7 +6842,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_23"
+          key="route_24"
           pageTitle="Edit record"
           path="/records/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -6830,7 +6853,7 @@ exports[`Application component should render app for account with fez author wit
             ]
           }
           exact={true}
-          key="route_24"
+          key="route_25"
           pageTitle="Unpublished buffer"
           path="/admin/unpublished"
           render={[Function]}
@@ -6843,7 +6866,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_25"
+          key="route_26"
           path="/tool/lookup"
         />
         <Route
@@ -6854,19 +6877,19 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_26"
+          key="route_27"
           pageTitle="CSV ingest"
           path="/batch-import"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_27"
+          key="route_28"
           pageTitle="eSpace"
           path="/"
         />
         <Route
-          key="route_28"
+          key="route_29"
           pageTitle="Contact UQ eSpace"
           path="/contact"
           render={[Function]}
@@ -6874,26 +6897,26 @@ exports[`Application component should render app for account with fez author wit
         <Route
           component={[Function]}
           exact={true}
-          key="route_29"
+          key="route_30"
           path="/view/:pid(UQ:[a-z0-9]+)"
           regExPath="/view/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_30"
+          key="route_31"
           path="/view_new/:pid(UQ:[a-z0-9]+)"
           regExPath="/view_new/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_31"
+          key="route_32"
           pageTitle="eSpace search"
           path="/records/search"
         />
         <Route
-          key="route_32"
+          key="route_33"
           pageTitle="Page not found"
           render={[Function]}
         />
@@ -7860,6 +7883,16 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": "Delete record",
+          "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Edit community",
           "path": "/communities/:pid(UQ:[a-z0-9]+)/edit",
         },
@@ -8546,6 +8579,19 @@ exports[`Application component should render app for account with fez author wit
           component={[Function]}
           exact={true}
           key="route_21"
+          pageTitle="Delete record"
+          path="/admin/delete/:pid(UQ:[a-z0-9]+)"
+          regExPath="/admin/delete/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_22"
           pageTitle="Edit community"
           path="/communities/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -8557,7 +8603,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_22"
+          key="route_23"
           pageTitle="Edit collection"
           path="/collections/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -8569,7 +8615,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_23"
+          key="route_24"
           pageTitle="Edit record"
           path="/records/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -8580,7 +8626,7 @@ exports[`Application component should render app for account with fez author wit
             ]
           }
           exact={true}
-          key="route_24"
+          key="route_25"
           pageTitle="Unpublished buffer"
           path="/admin/unpublished"
           render={[Function]}
@@ -8593,7 +8639,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_25"
+          key="route_26"
           path="/tool/lookup"
         />
         <Route
@@ -8604,19 +8650,19 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_26"
+          key="route_27"
           pageTitle="CSV ingest"
           path="/batch-import"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_27"
+          key="route_28"
           pageTitle="eSpace"
           path="/"
         />
         <Route
-          key="route_28"
+          key="route_29"
           pageTitle="Contact UQ eSpace"
           path="/contact"
           render={[Function]}
@@ -8624,26 +8670,26 @@ exports[`Application component should render app for account with fez author wit
         <Route
           component={[Function]}
           exact={true}
-          key="route_29"
+          key="route_30"
           path="/view/:pid(UQ:[a-z0-9]+)"
           regExPath="/view/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_30"
+          key="route_31"
           path="/view_new/:pid(UQ:[a-z0-9]+)"
           regExPath="/view_new/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_31"
+          key="route_32"
           pageTitle="eSpace search"
           path="/records/search"
         />
         <Route
-          key="route_32"
+          key="route_33"
           pageTitle="Page not found"
           render={[Function]}
         />
@@ -8850,6 +8896,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Edit record",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Delete record",
+          "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -9514,6 +9570,19 @@ exports[`Application component should render app for account with fez author wit
           component={[Function]}
           exact={true}
           key="route_21"
+          pageTitle="Delete record"
+          path="/admin/delete/:pid(UQ:[a-z0-9]+)"
+          regExPath="/admin/delete/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_22"
           pageTitle="Edit community"
           path="/communities/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -9525,7 +9594,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_22"
+          key="route_23"
           pageTitle="Edit collection"
           path="/collections/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -9537,7 +9606,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_23"
+          key="route_24"
           pageTitle="Edit record"
           path="/records/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -9548,7 +9617,7 @@ exports[`Application component should render app for account with fez author wit
             ]
           }
           exact={true}
-          key="route_24"
+          key="route_25"
           pageTitle="Unpublished buffer"
           path="/admin/unpublished"
           render={[Function]}
@@ -9561,7 +9630,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_25"
+          key="route_26"
           path="/tool/lookup"
         />
         <Route
@@ -9572,19 +9641,19 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_26"
+          key="route_27"
           pageTitle="CSV ingest"
           path="/batch-import"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_27"
+          key="route_28"
           pageTitle="eSpace"
           path="/"
         />
         <Route
-          key="route_28"
+          key="route_29"
           pageTitle="Contact UQ eSpace"
           path="/contact"
           render={[Function]}
@@ -9592,26 +9661,26 @@ exports[`Application component should render app for account with fez author wit
         <Route
           component={[Function]}
           exact={true}
-          key="route_29"
+          key="route_30"
           path="/view/:pid(UQ:[a-z0-9]+)"
           regExPath="/view/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_30"
+          key="route_31"
           path="/view_new/:pid(UQ:[a-z0-9]+)"
           regExPath="/view_new/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_31"
+          key="route_32"
           pageTitle="eSpace search"
           path="/records/search"
         />
         <Route
-          key="route_32"
+          key="route_33"
           pageTitle="Page not found"
           render={[Function]}
         />
@@ -9818,6 +9887,16 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Edit record",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Delete record",
+          "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -10511,6 +10590,19 @@ exports[`Application component should render app for account with fez author wit
           component={[Function]}
           exact={true}
           key="route_21"
+          pageTitle="Delete record"
+          path="/admin/delete/:pid(UQ:[a-z0-9]+)"
+          regExPath="/admin/delete/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_22"
           pageTitle="Edit community"
           path="/communities/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -10522,7 +10614,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_22"
+          key="route_23"
           pageTitle="Edit collection"
           path="/collections/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -10534,7 +10626,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_23"
+          key="route_24"
           pageTitle="Edit record"
           path="/records/:pid(UQ:[a-z0-9]+)/edit"
         />
@@ -10545,7 +10637,7 @@ exports[`Application component should render app for account with fez author wit
             ]
           }
           exact={true}
-          key="route_24"
+          key="route_25"
           pageTitle="Unpublished buffer"
           path="/admin/unpublished"
           render={[Function]}
@@ -10558,7 +10650,7 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_25"
+          key="route_26"
           path="/tool/lookup"
         />
         <Route
@@ -10569,19 +10661,19 @@ exports[`Application component should render app for account with fez author wit
           }
           component={[Function]}
           exact={true}
-          key="route_26"
+          key="route_27"
           pageTitle="CSV ingest"
           path="/batch-import"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_27"
+          key="route_28"
           pageTitle="eSpace"
           path="/"
         />
         <Route
-          key="route_28"
+          key="route_29"
           pageTitle="Contact UQ eSpace"
           path="/contact"
           render={[Function]}
@@ -10589,26 +10681,26 @@ exports[`Application component should render app for account with fez author wit
         <Route
           component={[Function]}
           exact={true}
-          key="route_29"
+          key="route_30"
           path="/view/:pid(UQ:[a-z0-9]+)"
           regExPath="/view/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_30"
+          key="route_31"
           path="/view_new/:pid(UQ:[a-z0-9]+)"
           regExPath="/view_new/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_31"
+          key="route_32"
           pageTitle="eSpace search"
           path="/records/search"
         />
         <Route
-          key="route_32"
+          key="route_33"
           pageTitle="Page not found"
           render={[Function]}
         />
@@ -17210,6 +17302,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
                                                             "clearClaimPublication": [Function],
+                                                            "clearDeleteRecord": [Function],
                                                             "clearFixRecord": [Function],
                                                             "clearNewRecord": [Function],
                                                             "clearRecordToView": [Function],
@@ -17226,6 +17319,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "deleteAttachedFile": [Function],
+                                                            "deleteRecord": [Function],
                                                             "dismissAppAlert": [Function],
                                                             "exportAuthorPublications": [Function],
                                                             "exportEspacePublications": [Function],
@@ -17248,6 +17342,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadNewsFeed": [Function],
                                                             "loadOrcidSyncStatus": [Function],
                                                             "loadPublicationList": [Function],
+                                                            "loadRecordToDelete": [Function],
                                                             "loadRecordToFix": [Function],
                                                             "loadRecordToView": [Function],
                                                             "loadSearchKeyList": [Function],
@@ -17265,6 +17360,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "searchTopCitedPublications": [Function],
                                                             "searchTrendingPublications": [Function],
                                                             "setClaimPublication": [Function],
+                                                            "setDeleteRecord": [Function],
                                                             "setFixRecord": [Function],
                                                             "setHideCulturalSensitivityStatement": [Function],
                                                             "setRedirectPath": [Function],
@@ -23257,6 +23353,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "checkSession": [Function],
                                 "claimPublication": [Function],
                                 "clearClaimPublication": [Function],
+                                "clearDeleteRecord": [Function],
                                 "clearFixRecord": [Function],
                                 "clearNewRecord": [Function],
                                 "clearRecordToView": [Function],
@@ -23273,6 +23370,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "createNewRecord": [Function],
                                 "createSearchPromise": [Function],
                                 "deleteAttachedFile": [Function],
+                                "deleteRecord": [Function],
                                 "dismissAppAlert": [Function],
                                 "exportAuthorPublications": [Function],
                                 "exportEspacePublications": [Function],
@@ -23295,6 +23393,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadNewsFeed": [Function],
                                 "loadOrcidSyncStatus": [Function],
                                 "loadPublicationList": [Function],
+                                "loadRecordToDelete": [Function],
                                 "loadRecordToFix": [Function],
                                 "loadRecordToView": [Function],
                                 "loadSearchKeyList": [Function],
@@ -23312,6 +23411,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "searchTopCitedPublications": [Function],
                                 "searchTrendingPublications": [Function],
                                 "setClaimPublication": [Function],
+                                "setDeleteRecord": [Function],
                                 "setFixRecord": [Function],
                                 "setHideCulturalSensitivityStatement": [Function],
                                 "setRedirectPath": [Function],
@@ -25063,6 +25163,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "checkSession": [Function],
                                                                           "claimPublication": [Function],
                                                                           "clearClaimPublication": [Function],
+                                                                          "clearDeleteRecord": [Function],
                                                                           "clearFixRecord": [Function],
                                                                           "clearNewRecord": [Function],
                                                                           "clearRecordToView": [Function],
@@ -25079,6 +25180,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "createNewRecord": [Function],
                                                                           "createSearchPromise": [Function],
                                                                           "deleteAttachedFile": [Function],
+                                                                          "deleteRecord": [Function],
                                                                           "dismissAppAlert": [Function],
                                                                           "exportAuthorPublications": [Function],
                                                                           "exportEspacePublications": [Function],
@@ -25101,6 +25203,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadNewsFeed": [Function],
                                                                           "loadOrcidSyncStatus": [Function],
                                                                           "loadPublicationList": [Function],
+                                                                          "loadRecordToDelete": [Function],
                                                                           "loadRecordToFix": [Function],
                                                                           "loadRecordToView": [Function],
                                                                           "loadSearchKeyList": [Function],
@@ -25118,6 +25221,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "searchTopCitedPublications": [Function],
                                                                           "searchTrendingPublications": [Function],
                                                                           "setClaimPublication": [Function],
+                                                                          "setDeleteRecord": [Function],
                                                                           "setFixRecord": [Function],
                                                                           "setHideCulturalSensitivityStatement": [Function],
                                                                           "setRedirectPath": [Function],
@@ -25186,6 +25290,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
                                                                             "clearClaimPublication": [Function],
+                                                                            "clearDeleteRecord": [Function],
                                                                             "clearFixRecord": [Function],
                                                                             "clearNewRecord": [Function],
                                                                             "clearRecordToView": [Function],
@@ -25202,6 +25307,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "deleteAttachedFile": [Function],
+                                                                            "deleteRecord": [Function],
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
                                                                             "exportEspacePublications": [Function],
@@ -25224,6 +25330,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadNewsFeed": [Function],
                                                                             "loadOrcidSyncStatus": [Function],
                                                                             "loadPublicationList": [Function],
+                                                                            "loadRecordToDelete": [Function],
                                                                             "loadRecordToFix": [Function],
                                                                             "loadRecordToView": [Function],
                                                                             "loadSearchKeyList": [Function],
@@ -25241,6 +25348,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "searchTopCitedPublications": [Function],
                                                                             "searchTrendingPublications": [Function],
                                                                             "setClaimPublication": [Function],
+                                                                            "setDeleteRecord": [Function],
                                                                             "setFixRecord": [Function],
                                                                             "setHideCulturalSensitivityStatement": [Function],
                                                                             "setRedirectPath": [Function],
@@ -25316,6 +25424,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "checkSession": [Function],
                                                                               "claimPublication": [Function],
                                                                               "clearClaimPublication": [Function],
+                                                                              "clearDeleteRecord": [Function],
                                                                               "clearFixRecord": [Function],
                                                                               "clearNewRecord": [Function],
                                                                               "clearRecordToView": [Function],
@@ -25332,6 +25441,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "createNewRecord": [Function],
                                                                               "createSearchPromise": [Function],
                                                                               "deleteAttachedFile": [Function],
+                                                                              "deleteRecord": [Function],
                                                                               "dismissAppAlert": [Function],
                                                                               "exportAuthorPublications": [Function],
                                                                               "exportEspacePublications": [Function],
@@ -25354,6 +25464,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadNewsFeed": [Function],
                                                                               "loadOrcidSyncStatus": [Function],
                                                                               "loadPublicationList": [Function],
+                                                                              "loadRecordToDelete": [Function],
                                                                               "loadRecordToFix": [Function],
                                                                               "loadRecordToView": [Function],
                                                                               "loadSearchKeyList": [Function],
@@ -25371,6 +25482,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "searchTopCitedPublications": [Function],
                                                                               "searchTrendingPublications": [Function],
                                                                               "setClaimPublication": [Function],
+                                                                              "setDeleteRecord": [Function],
                                                                               "setFixRecord": [Function],
                                                                               "setHideCulturalSensitivityStatement": [Function],
                                                                               "setRedirectPath": [Function],
@@ -25880,6 +25992,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "checkSession": [Function],
                                                                                 "claimPublication": [Function],
                                                                                 "clearClaimPublication": [Function],
+                                                                                "clearDeleteRecord": [Function],
                                                                                 "clearFixRecord": [Function],
                                                                                 "clearNewRecord": [Function],
                                                                                 "clearRecordToView": [Function],
@@ -25896,6 +26009,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "createNewRecord": [Function],
                                                                                 "createSearchPromise": [Function],
                                                                                 "deleteAttachedFile": [Function],
+                                                                                "deleteRecord": [Function],
                                                                                 "dismissAppAlert": [Function],
                                                                                 "exportAuthorPublications": [Function],
                                                                                 "exportEspacePublications": [Function],
@@ -25918,6 +26032,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadNewsFeed": [Function],
                                                                                 "loadOrcidSyncStatus": [Function],
                                                                                 "loadPublicationList": [Function],
+                                                                                "loadRecordToDelete": [Function],
                                                                                 "loadRecordToFix": [Function],
                                                                                 "loadRecordToView": [Function],
                                                                                 "loadSearchKeyList": [Function],
@@ -25935,6 +26050,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "searchTopCitedPublications": [Function],
                                                                                 "searchTrendingPublications": [Function],
                                                                                 "setClaimPublication": [Function],
+                                                                                "setDeleteRecord": [Function],
                                                                                 "setFixRecord": [Function],
                                                                                 "setHideCulturalSensitivityStatement": [Function],
                                                                                 "setRedirectPath": [Function],
@@ -29355,6 +29471,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "checkSession": [Function],
                                                                                     "claimPublication": [Function],
                                                                                     "clearClaimPublication": [Function],
+                                                                                    "clearDeleteRecord": [Function],
                                                                                     "clearFixRecord": [Function],
                                                                                     "clearNewRecord": [Function],
                                                                                     "clearRecordToView": [Function],
@@ -29371,6 +29488,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "createNewRecord": [Function],
                                                                                     "createSearchPromise": [Function],
                                                                                     "deleteAttachedFile": [Function],
+                                                                                    "deleteRecord": [Function],
                                                                                     "dismissAppAlert": [Function],
                                                                                     "exportAuthorPublications": [Function],
                                                                                     "exportEspacePublications": [Function],
@@ -29393,6 +29511,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadNewsFeed": [Function],
                                                                                     "loadOrcidSyncStatus": [Function],
                                                                                     "loadPublicationList": [Function],
+                                                                                    "loadRecordToDelete": [Function],
                                                                                     "loadRecordToFix": [Function],
                                                                                     "loadRecordToView": [Function],
                                                                                     "loadSearchKeyList": [Function],
@@ -29410,6 +29529,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "searchTopCitedPublications": [Function],
                                                                                     "searchTrendingPublications": [Function],
                                                                                     "setClaimPublication": [Function],
+                                                                                    "setDeleteRecord": [Function],
                                                                                     "setFixRecord": [Function],
                                                                                     "setHideCulturalSensitivityStatement": [Function],
                                                                                     "setRedirectPath": [Function],
@@ -29432,6 +29552,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],
                                                                                       "clearClaimPublication": [Function],
+                                                                                      "clearDeleteRecord": [Function],
                                                                                       "clearFixRecord": [Function],
                                                                                       "clearNewRecord": [Function],
                                                                                       "clearRecordToView": [Function],
@@ -29448,6 +29569,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "deleteAttachedFile": [Function],
+                                                                                      "deleteRecord": [Function],
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
                                                                                       "exportEspacePublications": [Function],
@@ -29470,6 +29592,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadNewsFeed": [Function],
                                                                                       "loadOrcidSyncStatus": [Function],
                                                                                       "loadPublicationList": [Function],
+                                                                                      "loadRecordToDelete": [Function],
                                                                                       "loadRecordToFix": [Function],
                                                                                       "loadRecordToView": [Function],
                                                                                       "loadSearchKeyList": [Function],
@@ -29487,6 +29610,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "searchTopCitedPublications": [Function],
                                                                                       "searchTrendingPublications": [Function],
                                                                                       "setClaimPublication": [Function],
+                                                                                      "setDeleteRecord": [Function],
                                                                                       "setFixRecord": [Function],
                                                                                       "setHideCulturalSensitivityStatement": [Function],
                                                                                       "setRedirectPath": [Function],
