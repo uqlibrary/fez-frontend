@@ -494,11 +494,9 @@ export default class AddDataCollection extends Component {
                                         component={RelatedDatasetAndPublicationListField}
                                         listEditorId="related-datasets"
                                         name="fez_record_search_key_isdatasetof"
+                                        locale={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}
                                         searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
                                         disabled={this.props.submitting}
-                                        locale={{
-                                            form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
-                                        }}
                                         height={50}
                                     />
                                 </StandardCard>

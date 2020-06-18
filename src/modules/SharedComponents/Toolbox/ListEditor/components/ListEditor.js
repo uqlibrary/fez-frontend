@@ -242,7 +242,6 @@ export default class ListEditor extends Component {
             itemIndexSelectedToEdit: index,
         });
     };
-
     render() {
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
@@ -255,7 +254,7 @@ export default class ListEditor extends Component {
                 onMoveDown={this.moveDownList}
                 onDelete={this.deleteItem}
                 onEdit={this.editItem}
-                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
+                {...((this.props.locale && this.props.locale.row) || {})}
                 hideReorder={this.props.hideReorder}
                 disabled={this.props.disabled}
                 itemTemplate={this.props.rowItemTemplate}
@@ -273,8 +272,7 @@ export default class ListEditor extends Component {
                     }
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
-                    locale={{ ...(this.props.locale && this.props.locale.form ? this.props.locale.form : {}) }}
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    {...((this.props.locale && this.props.locale.form) || {})}
                     isValid={this.props.isValid}
                     disabled={
                         this.props.disabled ||
@@ -294,11 +292,11 @@ export default class ListEditor extends Component {
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader
-                        {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                         onDeleteAll={this.deleteAllItems}
                         hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
                         disabled={this.props.disabled}
                         listEditorId={this.props.listEditorId}
+                        {...((this.props.locale && this.props.locale.header) || {})}
                     />
                 )}
                 {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (

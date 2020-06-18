@@ -3259,6 +3259,23 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_isderivationof: [],
             });
         });
+
+        it('should be able to delete search key', () => {
+            const data = {
+                fez_record_search_key_isderivationof: [],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
+                fez_record_search_key_isderivationof: [],
+            });
+        });
     });
 
     describe('Book chapter/Book', () => {
@@ -3999,6 +4016,17 @@ describe('getFilesSectionSearchKeys', () => {
                 rek_advisory_statement: '<p>Test advisory statement</p>',
             },
         });
+    });
+
+    it('should return empty object', () => {
+        expect(transformers.getFilesSectionSearchKeys({})).toEqual({});
+    });
+
+    it('should return rest of the file section search keys', () => {
+        const data = {
+            fez_datastream_info: [{ dsi_dsid: 'file 1' }],
+        };
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual(data);
     });
 
     it('should be able to remove advisory search key', () => {

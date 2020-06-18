@@ -40,6 +40,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -105,6 +106,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -200,6 +202,7 @@ exports[`GrantListEditor should delete grant 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -283,6 +286,7 @@ exports[`GrantListEditor should delete grant 2`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -361,6 +365,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -444,6 +449,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -527,6 +533,7 @@ exports[`GrantListEditor should move the grant down 3`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -610,6 +617,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -693,6 +701,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -776,6 +785,7 @@ exports[`GrantListEditor should move the grant up 3`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -859,6 +869,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -924,6 +935,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -989,6 +1001,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -1074,6 +1087,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -1216,6 +1230,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             "root": "undefined scroll-class",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -1353,6 +1368,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -1418,6 +1434,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
@@ -1483,6 +1500,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
         <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}

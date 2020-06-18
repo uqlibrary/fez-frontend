@@ -29,7 +29,9 @@ const mapStateToProps = (state, props) => {
         defaultValue: (!!props.value && { value: props.value }) || '',
         getOptionLabel: option => option.value || '',
         filterOptions: (options, { inputValue }) =>
-            matchSorter(options, inputValue, { keys: ['aut_id', 'aut_display_name'] }),
+            matchSorter(options, inputValue, {
+                keys: ['aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
+            }),
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
         hintText: props.hintText || 'Enter a value to search',
         OptionTemplate: GenericOptionTemplate,

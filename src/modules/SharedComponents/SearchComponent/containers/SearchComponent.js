@@ -17,7 +17,7 @@ export const mapStateToProps = (state, ownProps) => {
     const isAdvancedSearch =
         (!!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced') ||
         ownProps.isAdvancedSearch;
-    const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList.length > 0;
+    const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList && publicationsList.length > 0;
 
     return {
         searchQueryParams: (!!searchQuery && searchQuery.searchQueryParams) || {},
