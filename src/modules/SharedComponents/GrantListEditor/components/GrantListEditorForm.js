@@ -229,7 +229,7 @@ export class GrantListEditorFormClass extends PureComponent {
                     <Grid item xs={12}>
                         <Button
                             id={(!!grantSelectedToEdit && 'edit-grant') || 'add-grant'}
-                            data-testid={(!!grantSelectedToEdit && 'rek-grant-agency-update') || 'rek-grant-agency-add'}
+                            data-testid={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}
                             variant="contained"
                             fullWidth
                             color="primary"

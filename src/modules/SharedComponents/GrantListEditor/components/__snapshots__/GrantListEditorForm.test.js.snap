@@ -52,7 +52,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
-        data-testid="rek-grant-agency-add"
+        data-testid="rek-grant-add"
         disabled={true}
         fullWidth={true}
         id="add-grant"
@@ -2827,7 +2827,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                           >
                             <WithStyles(ForwardRef(Button))
                               color="primary"
-                              data-testid="rek-grant-agency-add"
+                              data-testid="rek-grant-add"
                               disabled={true}
                               fullWidth={true}
                               id="add-grant"
@@ -2869,7 +2869,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   }
                                 }
                                 color="primary"
-                                data-testid="rek-grant-agency-add"
+                                data-testid="rek-grant-add"
                                 disabled={true}
                                 fullWidth={true}
                                 id="add-grant"
@@ -2879,7 +2879,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 <WithStyles(ForwardRef(ButtonBase))
                                   className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                   component="button"
-                                  data-testid="rek-grant-agency-add"
+                                  data-testid="rek-grant-add"
                                   disabled={true}
                                   focusRipple={true}
                                   focusVisibleClassName="Mui-focusVisible"
@@ -2897,7 +2897,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       }
                                     }
                                     component="button"
-                                    data-testid="rek-grant-agency-add"
+                                    data-testid="rek-grant-add"
                                     disabled={true}
                                     focusRipple={true}
                                     focusVisibleClassName="Mui-focusVisible"
@@ -2907,7 +2907,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   >
                                     <button
                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
-                                      data-testid="rek-grant-agency-add"
+                                      data-testid="rek-grant-add"
                                       disabled={true}
                                       id="add-grant"
                                       onBlur={[Function]}
@@ -5680,7 +5680,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                       >
                         <WithStyles(ForwardRef(Button))
                           color="primary"
-                          data-testid="rek-grant-agency-add"
+                          data-testid="rek-grant-add"
                           disabled={true}
                           fullWidth={true}
                           id="add-grant"
@@ -5722,7 +5722,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               }
                             }
                             color="primary"
-                            data-testid="rek-grant-agency-add"
+                            data-testid="rek-grant-add"
                             disabled={true}
                             fullWidth={true}
                             id="add-grant"
@@ -5732,7 +5732,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             <WithStyles(ForwardRef(ButtonBase))
                               className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                               component="button"
-                              data-testid="rek-grant-agency-add"
+                              data-testid="rek-grant-add"
                               disabled={true}
                               focusRipple={true}
                               focusVisibleClassName="Mui-focusVisible"
@@ -5750,7 +5750,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   }
                                 }
                                 component="button"
-                                data-testid="rek-grant-agency-add"
+                                data-testid="rek-grant-add"
                                 disabled={true}
                                 focusRipple={true}
                                 focusVisibleClassName="Mui-focusVisible"
@@ -5760,7 +5760,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               >
                                 <button
                                   className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
-                                  data-testid="rek-grant-agency-add"
+                                  data-testid="rek-grant-add"
                                   disabled={true}
                                   id="add-grant"
                                   onBlur={[Function]}
@@ -5958,7 +5958,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
-        data-testid="rek-grant-agency-add"
+        data-testid="rek-grant-add"
         disabled={true}
         fullWidth={true}
         id="add-grant"
@@ -6133,7 +6133,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
-        data-testid="rek-grant-agency-add"
+        data-testid="rek-grant-add"
         disabled={true}
         fullWidth={true}
         id="add-grant"
@@ -6308,7 +6308,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
-        data-testid="rek-grant-agency-add"
+        data-testid="rek-grant-add"
         disabled={true}
         fullWidth={true}
         id="add-grant"

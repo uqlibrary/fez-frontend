@@ -191,7 +191,10 @@ export class GrantListEditor extends PureComponent {
                             </List>
                         </Grid>
                         <Grid item xs={12} style={{ marginTop: -8 }}>
-                            <List classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}>
+                            <List
+                                classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}
+                                data-testid="rek-grant-list"
+                            >
                                 {renderGrantsRows}
                             </List>
                         </Grid>
