@@ -118,18 +118,18 @@ export default class DeleteRecord extends PureComponent {
                                     locale={saveConfirmationLocale}
                                 />
                                 <Grid item xs={12}>
-                                    <StandardCard title={txtDeleteForm.reasons.title}>
+                                    <StandardCard title={txtDeleteForm.reason.title}>
                                         <Grid container spacing={8}>
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
                                                     disabled={this.props.submitting}
-                                                    name="reasons"
+                                                    name="reason"
                                                     type="text"
                                                     fullWidth
                                                     multiline
                                                     rows={3}
-                                                    label={txtDeleteForm.reasons.fieldLabels.reasons}
+                                                    label={txtDeleteForm.reason.fieldLabels.reason}
                                                 />
                                             </Grid>
                                         </Grid>

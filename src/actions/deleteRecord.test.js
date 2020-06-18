@@ -119,12 +119,12 @@ describe('Delete record actions', () => {
             }
         });
 
-        it('dispatches expected actions for successful delete a record with reasons', async() => {
+        it('dispatches expected actions for successful delete a record with reason', async() => {
             const testInput = {
                 publication: {
                     ...mockData.mockRecordToDelete,
                 },
-                reasons: 'reasons',
+                reason: 'reason',
             };
 
             const expectedActions = [actions.DELETE_RECORD_PROCESSING, actions.DELETE_RECORD_SUCCESS];

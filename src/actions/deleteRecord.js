@@ -66,15 +66,15 @@ export function clearDeleteRecord() {
 /**
  * Delete record request:
  * If error occurs on any stage failed action is displayed
- * @param {object} data to be posted: {reasons: reasons}
+ * @param {object} data to be posted: {reason: reason}
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function deleteRecord(data) {
-    const reasons = !!data.reasons ? { reasons: data.reasons } : {};
+    const reason = !!data.reason ? { reason: data.reason } : {};
     return dispatch => {
         dispatch({ type: DELETE_RECORD_PROCESSING });
         return Promise.resolve([])
-            .then(() => destory(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), reasons))
+            .then(() => destory(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), reason))
             .then(responses => {
                 dispatch({
                     type: DELETE_RECORD_SUCCESS,

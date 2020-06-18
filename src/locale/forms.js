@@ -255,10 +255,10 @@ export default {
             },
         },
         deleteRecordForm: {
-            reasons: {
+            reason: {
                 title: 'Describe the reason to delete this record',
                 fieldLabels: {
-                    reasons: 'Please enter a reason why you are deleting this record',
+                    reason: 'Please enter a reason why you are deleting this record',
                 },
             },
             cancelWorkflowConfirmation: {

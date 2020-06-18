@@ -484,7 +484,7 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
                 fullWidth={true}
                 label="Please enter a reason why you are deleting this record"
                 multiline={true}
-                name="reasons"
+                name="reason"
                 rows={3}
                 type="text"
               />
@@ -1508,7 +1508,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                 fullWidth={true}
                 label="Please enter a reason why you are deleting this record"
                 multiline={true}
-                name="reasons"
+                name="reason"
                 rows={3}
                 type="text"
               />
