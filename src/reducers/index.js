@@ -11,6 +11,7 @@ export { default as createCollectionReducer } from './createCollection';
 export { default as createCommunityReducer } from './createCommunity';
 export { default as createRecordReducer } from './createRecord';
 export { default as createAdminRecordReducer } from './createAdminRecord';
+export { default as doiReducer } from './doi';
 export { default as exportPublicationsReducer } from './exportPublications';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
