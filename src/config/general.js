@@ -117,6 +117,13 @@ export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
 
 export const DOCUMENT_TYPES_EDIT_ONLY = [PUBLICATION_TYPE_REFERENCE_ENTRY];
 
+export const PUBLICATION_TYPES_WITH_DOI = [
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_WORKING_PAPER,
+];
+
 export const DOCUMENT_TYPES_LOOKUP = {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: DOCUMENT_TYPE_AUDIO_DOCUMENT,
     [PUBLICATION_TYPE_BOOK]: DOCUMENT_TYPE_BOOK,
@@ -1103,6 +1110,7 @@ export const RECORD_ACTION_URLS = [
         inApp: true,
         showInDeleted: true,
         options: null,
+        isRecordEdit: true,
     },
     {
         label: 'Edit author affiliations',
@@ -1118,6 +1126,13 @@ export const RECORD_ACTION_URLS = [
         showInDeleted: false,
         options: null,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
+    },
+    {
+        label: hasDoi => `${hasDoi ? 'Update' : 'Create'} DOI`,
+        inApp: true,
+        options: null,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/doi/${pid}`,
+        isDoi: true,
     },
     {
         label: 'Delete selected record',
