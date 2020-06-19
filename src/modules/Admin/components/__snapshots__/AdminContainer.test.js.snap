@@ -2365,6 +2365,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                               "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-113",
                                             }
                                           }
+                                          confirmDialogBoxId="dialog-box"
                                           hideCancelButton={false}
                                           locale={
                                             Object {

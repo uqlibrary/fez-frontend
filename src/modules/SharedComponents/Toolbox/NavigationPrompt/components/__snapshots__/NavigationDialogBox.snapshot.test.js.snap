@@ -86,6 +86,7 @@ exports[`NavigationDialogBox component should render 1`] = `
                 "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-1",
               }
             }
+            confirmDialogBoxId="dialog-box"
             hideCancelButton={false}
             locale={
               Object {
