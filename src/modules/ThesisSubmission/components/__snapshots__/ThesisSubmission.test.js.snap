@@ -599,6 +599,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="primary"
+            data-testid="deposit-thesis"
             fullWidth={true}
             id="submit-thesis"
             onClick={[Function]}
@@ -1149,6 +1150,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="primary"
+            data-testid="deposit-thesis"
             fullWidth={true}
             id="submit-thesis"
             onClick={[Function]}

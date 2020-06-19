@@ -189,7 +189,7 @@ export default {
                 label: 'Link',
                 placeholder: '',
                 locale: locale.components.linkListForm.field,
-                listEditorId: 'link-info',
+                listEditorId: 'rek-link',
                 canEdit: true,
             },
         },
