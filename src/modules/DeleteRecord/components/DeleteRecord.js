@@ -45,8 +45,8 @@ export default class DeleteRecord extends PureComponent {
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox &&
-            this.successConfirmationBox.showConfirmation &&
-            this.successConfirmationBox.showConfirmation();
+                this.successConfirmationBox.showConfirmation &&
+                this.successConfirmationBox.showConfirmation();
         }
     }
 
@@ -56,10 +56,13 @@ export default class DeleteRecord extends PureComponent {
     }
 
     _hasUQDOI = () => {
-        return this.props.recordToDelete && this.props.recordToDelete.fez_record_search_key_doi &&
+        return (
+            this.props.recordToDelete &&
+            this.props.recordToDelete.fez_record_search_key_doi &&
             this.props.recordToDelete.fez_record_search_key_doi.rek_doi &&
-            this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(UQDOIPrefix);
-    }
+            this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(UQDOIPrefix)
+        );
+    };
 
     _navigateToSearchPage = () => {
         this.props.history.push(routes.pathConfig.records.search);
@@ -144,7 +147,7 @@ export default class DeleteRecord extends PureComponent {
                         )}
                         {hasUQDOI && (
                             <Grid item xs={12}>
-                                <Alert  message={txtDeleteForm.uqDoiAlert.message(this.props.recordToDelete.rek_pid)} />
+                                <Alert message={txtDeleteForm.uqDoiAlert.message(this.props.recordToDelete.rek_pid)} />
                             </Grid>
                         )}
                     </Grid>

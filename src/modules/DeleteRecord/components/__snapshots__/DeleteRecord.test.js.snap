@@ -7,11 +7,11 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -431,7 +431,7 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
       <NavigationDialogBox
         txt={
           Object {
@@ -463,18 +463,18 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Describe the reason to delete this record"
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={8}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -488,46 +488,49 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
                 rows={3}
                 type="text"
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
-        <WithStyles(Alert)
+        <Alert
+          allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="Record has been deleted"
           pushToTop={true}
+          showLoader={false}
           title="Success"
           type="done"
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
           fullWidth={true}
           id="deleteSubmit"
@@ -535,9 +538,9 @@ exports[`Component DeleteRecord componentWillReceiveProps() 1`] = `
           variant="contained"
         >
           Delete
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </form>
 </StandardPage>
 `;
@@ -549,11 +552,11 @@ exports[`Component DeleteRecord should display alert and disable delete button o
   <form
     onSubmit={[Function]}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -975,40 +978,44 @@ exports[`Component DeleteRecord should display alert and disable delete button o
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
-        <WithStyles(Alert)
+        <Alert
+          allowDismiss={false}
+          dismissTitle="Click to dismiss this alert"
           message="This pid UQ:41878 cannot be deleted because it has a UQ DOI attached. Remove the DOI from this record first before deleting. If this record is the original source of the DOI, it must also be be de-activated on Crossref."
+          showLoader={false}
+          type="error"
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
           disabled={true}
           fullWidth={true}
@@ -1017,9 +1024,9 @@ exports[`Component DeleteRecord should display alert and disable delete button o
           variant="contained"
         >
           Delete
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </form>
 </StandardPage>
 `;
@@ -1031,11 +1038,11 @@ exports[`Component DeleteRecord should render delete record form with record cit
   <form
     onSubmit={[Function]}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
@@ -1455,7 +1462,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
             }
           />
         </StandardCard>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
       <NavigationDialogBox
         txt={
           Object {
@@ -1487,18 +1494,18 @@ exports[`Component DeleteRecord should render delete record form with record cit
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={12}
       >
         <StandardCard
           title="Describe the reason to delete this record"
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={8}
           >
-            <WithStyles(Grid)
+            <WithStyles(ForwardRef(Grid))
               item={true}
               xs={12}
             >
@@ -1512,35 +1519,35 @@ exports[`Component DeleteRecord should render delete record form with record cit
                 rows={3}
                 type="text"
               />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
         </StandardCard>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
           fullWidth={true}
           id="deleteSubmit"
@@ -1548,9 +1555,9 @@ exports[`Component DeleteRecord should render delete record form with record cit
           variant="contained"
         >
           Delete
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </form>
 </StandardPage>
 `;

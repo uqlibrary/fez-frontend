@@ -269,14 +269,13 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Record has been deleted',
-                confirmationMessage: (
-                    <span style={{ display: 'block', margin: '1em 0' }} />
-                ),
+                confirmationMessage: <span style={{ display: 'block', margin: '1em 0' }} />,
                 cancelButtonLabel: 'Go to search page',
                 confirmButtonLabel: 'Go back to view page',
             },
             uqDoiAlert: {
-                message: pid => `This pid ${pid} cannot be deleted because it has a UQ DOI attached. Remove the DOI from this record first before deleting. If this record is the original source of the DOI, it must also be be de-activated on Crossref.`,
+                message: pid =>
+                    `This pid ${pid} cannot be deleted because it has a UQ DOI attached. Remove the DOI from this record first before deleting. If this record is the original source of the DOI, it must also be be de-activated on Crossref.`,
             },
             errorAlert: {
                 type: 'error_outline',

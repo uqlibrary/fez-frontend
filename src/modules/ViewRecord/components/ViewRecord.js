@@ -89,11 +89,11 @@ export default class ViewRecord extends PureComponent {
                     </Grid>
                     {!!isDeleted && (
                         <Grid item xs={12} style={{ marginBottom: 24 }}>
-                            <Alert  {...txt.deletedAlert} />
+                            <Alert {...txt.deletedAlert} />
                         </Grid>
                     )}
                     {!isDeleted && !!this.props.recordToView && (
-                        <Grid item xs={12} >
+                        <Grid item xs={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
                                 <Grid item xs>
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (

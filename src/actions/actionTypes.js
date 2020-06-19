@@ -196,7 +196,9 @@ ${POSSIBLY_YOUR_PUBLICATIONS_LOADED}|\
 ${TRENDING_PUBLICATIONS_LOADED}(@\\w+)|\
 ${TOP_CITED_PUBLICATIONS_LOADED}(@\\w+)\
 )$`);
-export const loadPublicationActions = new RegExp(`^(${FIX_RECORD_LOADED}|${VIEW_RECORD_LOADED}|${DELETE_RECORD_LOADED})$`);
+export const loadPublicationActions = new RegExp(
+    `^(${FIX_RECORD_LOADED}|${VIEW_RECORD_LOADED}|${DELETE_RECORD_LOADED})$`,
+);
 
 // digiteam batch import - fetch list of directories for importing
 export const DIRECTORY_LIST_LOADING = 'DIRECTORY_LIST_LOADING';
