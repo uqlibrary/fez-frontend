@@ -552,6 +552,10 @@ describe('Backend routes method', () => {
         expect(routes.RECORDS_ISSUES_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001/issues' });
     });
 
+    it('should construct url for DOI_API', () => {
+        expect(routes.DOI_API({ pid: 'UQ:1234567' })).toEqual({ apiUrl: 'records/UQ:1234567/doi' });
+    });
+
     it('should construct url for NEW_COLLECTION_API', () => {
         expect(routes.NEW_COLLECTION_API()).toEqual({ apiUrl: 'collections' });
     });
