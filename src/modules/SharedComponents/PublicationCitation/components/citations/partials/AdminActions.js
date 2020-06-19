@@ -5,7 +5,14 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-import { RECORD_ACTION_URLS as defaultActions, APP_URL, STAGING_URL, PATH_PREFIX } from 'config/general';
+import {
+    APP_URL,
+    PATH_PREFIX,
+    PUBLICATION_TYPES_WITH_DOI,
+    RECORD_ACTION_URLS as defaultActions,
+    STAGING_URL,
+} from 'config/general';
+import { DOI_ORG_PREFIX } from 'config/doi';
 
 export const getLegacyEditUrl = (pid, type, urlPrefix) => {
     let wftID;
@@ -47,15 +54,20 @@ export const navigateToUrl = (uri, target, navigatedFrom, options) => () => {
 };
 
 export const AdminActions = ({
-    pid,
-    navigatedFrom = '',
-    userHasNewAdminEdit = false,
-    recordType,
-    isRecordDeleted = false,
     adminActions = [...defaultActions],
+    isRecordDeleted = false,
+    navigatedFrom = '',
+    publication,
+    userHasNewAdminEdit = false,
 }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+
+    const pid = publication.rek_pid;
+    const displayType = publication.rek_display_type;
+    const recordType = (publication.rek_object_type_lookup && publication.rek_object_type_lookup.toLowerCase()) || '';
+    const doi = !!publication.fez_record_search_key_doi && publication.fez_record_search_key_doi.rek_doi;
+    const hasUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) === 0;
 
     const handleClick = event => {
         setAnchorEl(event.currentTarget);
@@ -66,18 +78,31 @@ export const AdminActions = ({
         setAnchorEl(null);
     };
 
-    let menuOptions = isRecordDeleted ? adminActions.filter(action => action.showInDeleted) : adminActions;
-    menuOptions = menuOptions.map((action, index) => {
+    // Remove actions which should not be shown for deleted records, if specified
+    let filteredActions = isRecordDeleted ? adminActions.filter(action => action.showInDeleted) : adminActions;
+
+    // Restrict DOI option to restricted types
+    const isRecord = !['community', 'collection'].includes(recordType);
+    const isDoiType = isRecord && PUBLICATION_TYPES_WITH_DOI.includes(displayType);
+    filteredActions = filteredActions.filter(action => !action.isDoi || (isDoiType && (!doi || hasUQDoi)));
+
+    const menuOptions = filteredActions.map(action => {
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
-        const isEditUrl = index === 0;
         const url =
-            isEditUrl && !userHasNewAdminEdit
+            !!action.isRecordEdit && !userHasNewAdminEdit
                 ? getLegacyEditUrl(pid, recordType, `${APP_URL}${PATH_PREFIX}`)
                 : action.url(pid);
-        const clickHandler = navigateToUrl(url, linkTarget, isEditUrl && userHasNewAdminEdit && navigatedFrom, options);
+        const clickHandler = navigateToUrl(
+            url,
+            linkTarget,
+            !!action.isRecordEdit && userHasNewAdminEdit && navigatedFrom,
+            options,
+        );
+
+        const label = action.isDoi ? action.label(!!doi) : action.label;
         return {
-            label: action.label,
+            label,
             clickHandler,
         };
     });
@@ -98,12 +123,11 @@ export const AdminActions = ({
 };
 
 AdminActions.propTypes = {
-    pid: PropTypes.string,
-    navigatedFrom: PropTypes.string,
     adminActions: PropTypes.array,
-    userHasNewAdminEdit: PropTypes.bool,
-    recordType: PropTypes.string,
     isRecordDeleted: PropTypes.bool,
+    navigatedFrom: PropTypes.string,
+    publication: PropTypes.object,
+    userHasNewAdminEdit: PropTypes.bool,
 };
 
 export default React.memo(AdminActions);

@@ -395,17 +395,12 @@ export class PublicationCitation extends PureComponent {
                                         {!!showAdminActions && (
                                             <Grid item>
                                                 <AdminActions
-                                                    pid={publication.rek_pid}
+                                                    publication={publication}
+                                                    isRecordDeleted={isPublicationDeleted}
                                                     navigatedFrom={
                                                         (location.hash && location.hash.replace('#', '')) ||
                                                         `${location.pathname}${location.search}`
                                                     }
-                                                    recordType={
-                                                        (publication.rek_object_type_lookup &&
-                                                            publication.rek_object_type_lookup.toLowerCase()) ||
-                                                        ''
-                                                    }
-                                                    isRecordDeleted={isPublicationDeleted}
                                                     {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>
