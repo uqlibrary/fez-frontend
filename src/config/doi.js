@@ -1,11 +1,16 @@
-import { PUBLICATION_TYPE_RESEARCH_REPORT } from './general';
+import {
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_RESEARCH_REPORT,
+    PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_WORKING_PAPER,
+} from './general';
 
 export const DOI_ORG_PREFIX = '10.14264';
 
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
 export const doiFields = {
     [PUBLICATION_TYPE_RESEARCH_REPORT]: {
-        crossRefType: 'report-paper',
         fields: [
             {
                 field: 'fez_record_search_key_author',
@@ -28,6 +33,11 @@ export const doiFields = {
                 order: 8,
             },
             {
+                // Manually added (not found in locale file mentioned above)
+                field: 'fez_record_search_key_org_name',
+                order: 10.5,
+            },
+            {
                 field: 'fez_record_search_key_publisher',
                 order: 11,
             },
@@ -46,6 +56,147 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_report_number',
                 order: 20,
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_title',
+                order: 2,
+            },
+            {
+                field: 'fez_record_search_key_conference_name',
+                order: 5,
+            },
+            {
+                field: 'fez_record_search_key_conference_location',
+                order: 7,
+            },
+            {
+                field: 'fez_record_search_key_proceedings_title',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 18,
+            },
+            {
+                field: 'rek_date',
+                order: 19,
+            },
+            {
+                field: 'fez_record_search_key_isbn',
+                order: 23,
+            },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 24,
+            },
+            {
+                field: 'fez_record_search_key_start_page',
+                order: 28,
+            },
+            {
+                field: 'fez_record_search_key_end_page',
+                order: 29,
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_DATA_COLLECTION]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 5,
+            },
+            {
+                field: 'rek_title',
+                order: 7,
+            },
+            {
+                field: 'rek_description',
+                order: 7.5,
+            },
+            {
+                field: 'rek_date',
+                order: 27,
+                format: 'YYYY',
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_WORKING_PAPER]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_title',
+                order: 2,
+            },
+            {
+                field: 'fez_record_search_key_org_unit_name',
+                order: 5,
+            },
+            {
+                field: 'fez_record_search_key_org_name',
+                order: 6,
+            },
+            {
+                field: 'fez_record_search_key_series',
+                order: 8,
+            },
+            {
+                field: 'rek_date',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 12,
+            },
+            {
+                field: 'fez_record_search_key_start_page',
+                order: 14,
+            },
+            {
+                field: 'fez_record_search_key_end_page',
+                order: 15,
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_THESIS]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_title',
+                order: 2,
+            },
+            {
+                field: 'fez_record_search_key_org_unit_name',
+                order: 4,
+            },
+            {
+                field: 'fez_record_search_key_org_name',
+                order: 5,
+            },
+            {
+                field: 'rek_date',
+                order: 7,
+            },
+            {
+                field: 'rek_genre_type',
+                order: 8,
             },
         ],
     },

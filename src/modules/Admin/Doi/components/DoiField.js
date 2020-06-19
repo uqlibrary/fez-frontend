@@ -51,6 +51,7 @@ export const DoiField = ({ data, field, heading }) => {
             break;
 
         case 'rek_title':
+        case 'rek_description':
             value = ReactHtmlParser(data);
             break;
 
@@ -66,16 +67,23 @@ export const DoiField = ({ data, field, heading }) => {
             break;
 
         // Single values
+        case 'fez_record_search_key_conference_location':
+        case 'fez_record_search_key_conference_name':
         case 'fez_record_search_key_end_page':
+        case 'fez_record_search_key_org_name':
+        case 'fez_record_search_key_org_unit_name':
         case 'fez_record_search_key_place_of_publication':
+        case 'fez_record_search_key_proceedings_title':
         case 'fez_record_search_key_publisher':
         case 'fez_record_search_key_report_number':
+        case 'fez_record_search_key_series':
         case 'fez_record_search_key_start_page':
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
             break;
 
         case 'doi':
         case 'depositorName':
+        case 'rek_genre_type':
             value = data;
             break;
 
