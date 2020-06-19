@@ -266,7 +266,7 @@ exports[`LanguageField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={Array []}
+  value={null}
 />
 `;
 
