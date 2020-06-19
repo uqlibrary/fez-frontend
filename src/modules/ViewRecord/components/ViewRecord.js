@@ -94,7 +94,7 @@ export default class ViewRecord extends PureComponent {
                     )}
                     {!isDeleted && !!this.props.recordToView && (
                         <Grid item xs={12} >
-                            <Grid container spacing={16} style={{ marginBottom: 4 }}>
+                            <Grid container spacing={2} style={{ marginBottom: 4 }}>
                                 <Grid item xs>
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
@@ -120,7 +120,7 @@ export default class ViewRecord extends PureComponent {
                         </Grid>
                     )}
                 </Grid>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     {!isDeleted && (
                         <React.Fragment>
                             <Files

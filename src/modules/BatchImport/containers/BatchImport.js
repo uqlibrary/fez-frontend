@@ -9,7 +9,6 @@ import BatchImport, { FORM_NAME } from '../components/BatchImport';
 
 import * as actions from 'actions';
 import { FormErrorsContext } from 'context';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
@@ -18,7 +17,6 @@ const onSubmit = (values, dispatch) => {
             if (!response || !response.data) {
                 throw new SubmissionError();
             }
-            // console.log(`Success: ${response.data}`);
         })
         .catch(error => {
             throw new SubmissionError({ _error: error.message });
@@ -46,7 +44,7 @@ BatchImportContainer.propTypes = {
 BatchImportContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(React.memo(BatchImportContainer), FORM_NAME));
+})(React.memo(BatchImportContainer));
 
 const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
@@ -66,9 +64,6 @@ const mapDispatchToProps = dispatch => ({
     },
 });
 
-BatchImportContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(BatchImportContainer);
+BatchImportContainer = connect(mapStateToProps, mapDispatchToProps)(BatchImportContainer);
 
 export default withRouter(BatchImportContainer);

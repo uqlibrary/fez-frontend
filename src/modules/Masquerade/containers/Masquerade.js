@@ -17,10 +17,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let MasqueradeContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(Masquerade);
+let MasqueradeContainer = connect(mapStateToProps, mapDispatchToProps)(Masquerade);
 MasqueradeContainer = withRouter(MasqueradeContainer);
 
 export default MasqueradeContainer;

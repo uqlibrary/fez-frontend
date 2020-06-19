@@ -28,6 +28,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -50,6 +51,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -78,6 +80,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -107,6 +110,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -133,6 +137,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -158,6 +163,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -182,6 +188,7 @@ describe('ContributorRowText', () => {
                 showRoleInput
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -206,6 +213,7 @@ describe('ContributorRowText', () => {
                 showRoleInput
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -232,6 +240,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -259,6 +268,7 @@ describe('ContributorRowText', () => {
                 showRoleInput
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 

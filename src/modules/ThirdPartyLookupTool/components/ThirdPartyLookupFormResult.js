@@ -32,14 +32,14 @@ export class ThirdPartyLookupFormResult extends PureComponent {
             thisForm: this.props.formDisplay,
         };
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.thisForm.lookupLabel}>
                         <p>
                             {txt.thisForm.primaryFieldHeading} - {this.props.primaryValue}
                         </p>
                         {// not all forms will have a second field; some of them shouldn't be reported
-                            !!txt.thisForm.secondaryFieldHeading &&
+                        !!txt.thisForm.secondaryFieldHeading &&
                             !!txt.thisForm.reportSecondaryFieldInOutput &&
                             this.props.secondaryValue && (
                                 <p>

@@ -13,6 +13,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { AuthorLinkingField, ContributorLinkingField } from 'modules/SharedComponents/AuthorLinking';
@@ -199,180 +200,182 @@ export default class ClaimRecord extends PureComponent {
 
         return (
             <StandardPage title={txt.title}>
-                <form onSubmit={this._handleDefaultSubmit}>
-                    <Grid container spacing={24}>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
-                                <PublicationCitation publication={publication} />
-                            </StandardCard>
-                        </Grid>
-                        {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
-                            <React.Fragment>
-                                <ConfirmDialogBox
-                                    locale={saveConfirmationLocale}
-                                    onRef={this._setSuccessConfirmation}
-                                    onAction={this._navigateToMyResearch}
-                                    onAlternateAction={this._navigateToFixRecord}
-                                    onCancelAction={this._claimAnother}
-                                    showAlternateActionButton={this.props.publicationToClaimFileUploadingError}
-                                />
-                                <NavigationDialogBox
-                                    when={this.props.dirty && !this.props.submitSucceeded}
-                                    txt={txt.cancelWorkflowConfirmation}
-                                />
-                                {publication.fez_record_search_key_author &&
-                                    publication.fez_record_search_key_author.length > 0 &&
-                                    !authorLinked && (
-                                    <Grid item xs={12}>
-                                        <StandardCard
-                                            title={txt.authorLinking.title}
-                                            help={txt.authorLinking.help}
-                                            className="requiredField"
-                                        >
-                                            <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
-                                            <Field
-                                                name="authorLinking"
-                                                component={AuthorLinkingField}
-                                                loggedInAuthor={author}
-                                                authorList={publication.fez_record_search_key_author}
-                                                linkedAuthorIdList={publication.fez_record_search_key_author_id}
-                                                disabled={this.props.submitting}
-                                                className="requiredField"
-                                                validate={[validation.required, validation.isValidAuthorLink]}
-                                            />
-                                        </StandardCard>
-                                    </Grid>
-                                )}
-                                {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
-                                    publication.fez_record_search_key_contributor &&
-                                    publication.fez_record_search_key_contributor.length > 0 &&
-                                    !contributorLinked && (
-                                    <Grid item xs={12}>
-                                        <StandardCard
-                                            title={txt.contributorLinking.title}
-                                            help={txt.contributorLinking.help}
-                                            className={contributorClassName}
-                                        >
-                                            <label htmlFor="contributorLinking">
-                                                {txt.contributorLinking.text}
-                                            </label>
-                                            <Field
-                                                name="contributorLinking"
-                                                component={ContributorLinkingField}
-                                                loggedInAuthor={author}
-                                                authorList={publication.fez_record_search_key_contributor}
-                                                linkedAuthorIdList={
-                                                    publication.fez_record_search_key_contributor_id
-                                                }
-                                                disabled={this.props.submitting}
-                                                className={contributorClassName}
-                                                validate={this._contributorValidation}
-                                            />
-                                        </StandardCard>
-                                    </Grid>
-                                )}
-                                <Grid item xs={12}>
-                                    <StandardCard title={txt.comments.title} help={txt.comments.help}>
-                                        <Grid container spacing={16}>
+                <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
+                    <form onSubmit={this._handleDefaultSubmit}>
+                        <Grid container spacing={3}>
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
+                                    <PublicationCitation publication={publication} />
+                                </StandardCard>
+                            </Grid>
+                            {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
+                                <React.Fragment>
+                                    <ConfirmDialogBox
+                                        locale={saveConfirmationLocale}
+                                        onRef={this._setSuccessConfirmation}
+                                        onAction={this._navigateToMyResearch}
+                                        onAlternateAction={this._navigateToFixRecord}
+                                        onCancelAction={this._claimAnother}
+                                        showAlternateActionButton={this.props.publicationToClaimFileUploadingError}
+                                    />
+                                    <NavigationDialogBox
+                                        when={this.props.dirty && !this.props.submitSucceeded}
+                                        txt={txt.cancelWorkflowConfirmation}
+                                    />
+                                    {publication.fez_record_search_key_author &&
+                                        publication.fez_record_search_key_author.length > 0 &&
+                                        !authorLinked && (
                                             <Grid item xs={12}>
-                                                <Field
-                                                    component={TextField}
-                                                    disabled={this.props.submitting}
-                                                    name="comments"
-                                                    type="text"
-                                                    fullWidth
-                                                    multiline
-                                                    rows={3}
-                                                    label={txt.comments.fieldLabels.comments}
-                                                />
+                                                <StandardCard
+                                                    title={txt.authorLinking.title}
+                                                    help={txt.authorLinking.help}
+                                                    className="requiredField"
+                                                >
+                                                    <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                                                    <Field
+                                                        name="authorLinking"
+                                                        component={AuthorLinkingField}
+                                                        loggedInAuthor={author}
+                                                        authorList={publication.fez_record_search_key_author}
+                                                        linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                                        disabled={this.props.submitting}
+                                                        className="requiredField"
+                                                        validate={[validation.required, validation.isValidAuthorLink]}
+                                                    />
+                                                </StandardCard>
                                             </Grid>
+                                        )}
+                                    {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
+                                        publication.fez_record_search_key_contributor &&
+                                        publication.fez_record_search_key_contributor.length > 0 &&
+                                        !contributorLinked && (
                                             <Grid item xs={12}>
-                                                <Field
-                                                    component={TextField}
-                                                    disabled={this.props.submitting}
-                                                    name="rek_link"
-                                                    type="text"
-                                                    fullWidth
-                                                    label={txt.comments.fieldLabels.url}
-                                                    validate={[validation.url]}
-                                                />
+                                                <StandardCard
+                                                    title={txt.contributorLinking.title}
+                                                    help={txt.contributorLinking.help}
+                                                    className={contributorClassName}
+                                                >
+                                                    <label htmlFor="contributorLinking">
+                                                        {txt.contributorLinking.text}
+                                                    </label>
+                                                    <Field
+                                                        name="contributorLinking"
+                                                        component={ContributorLinkingField}
+                                                        loggedInAuthor={author}
+                                                        authorList={publication.fez_record_search_key_contributor}
+                                                        linkedAuthorIdList={
+                                                            publication.fez_record_search_key_contributor_id
+                                                        }
+                                                        disabled={this.props.submitting}
+                                                        className={contributorClassName}
+                                                        validate={this._contributorValidation}
+                                                    />
+                                                </StandardCard>
                                             </Grid>
-                                        </Grid>
-                                    </StandardCard>
-                                </Grid>
-                                {showContentIndicatorsField(publication) && (
+                                        )}
                                     <Grid item xs={12}>
-                                        <StandardCard
-                                            title={txt.contentIndicators.title}
-                                            help={txt.contentIndicators.help}
-                                        >
-                                            <Grid container spacing={24}>
+                                        <StandardCard title={txt.comments.title} help={txt.comments.help}>
+                                            <Grid container spacing={2}>
                                                 <Grid item xs={12}>
-                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                    <Field
+                                                        component={TextField}
+                                                        disabled={this.props.submitting}
+                                                        name="comments"
+                                                        type="text"
+                                                        fullWidth
+                                                        multiline
+                                                        rows={3}
+                                                        label={txt.comments.fieldLabels.comments}
+                                                    />
                                                 </Grid>
                                                 <Grid item xs={12}>
                                                     <Field
-                                                        component={ContentIndicatorsField}
+                                                        component={TextField}
                                                         disabled={this.props.submitting}
-                                                        id="content-indicators"
-                                                        name="contentIndicators"
-                                                        label={txt.contentIndicators.label}
-                                                        multiple
+                                                        name="rek_link"
+                                                        type="text"
                                                         fullWidth
+                                                        label={txt.comments.fieldLabels.url}
+                                                        validate={[validation.url]}
                                                     />
                                                 </Grid>
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
-                                )}
+                                    {showContentIndicatorsField(publication) && (
+                                        <Grid item xs={12}>
+                                            <StandardCard
+                                                title={txt.contentIndicators.title}
+                                                help={txt.contentIndicators.help}
+                                            >
+                                                <Grid container spacing={3}>
+                                                    <Grid item xs={12}>
+                                                        <Typography>{txt.contentIndicators.description}</Typography>
+                                                    </Grid>
+                                                    <Grid item xs={12}>
+                                                        <Field
+                                                            component={ContentIndicatorsField}
+                                                            disabled={this.props.submitting}
+                                                            id="content-indicators"
+                                                            name="contentIndicators"
+                                                            label={txt.contentIndicators.label}
+                                                            multiple
+                                                            fullWidth
+                                                        />
+                                                    </Grid>
+                                                </Grid>
+                                            </StandardCard>
+                                        </Grid>
+                                    )}
+                                    <Grid item xs={12}>
+                                        <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                            <Field
+                                                name="files"
+                                                component={FileUploadField}
+                                                disabled={this.props.submitting}
+                                                requireOpenAccessStatus
+                                                validate={[validation.validFileUpload]}
+                                            />
+                                        </StandardCard>
+                                    </Grid>
+                                </React.Fragment>
+                            )}
+                            {alertProps && (
                                 <Grid item xs={12}>
-                                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                        <Field
-                                            name="files"
-                                            component={FileUploadField}
-                                            disabled={this.props.submitting}
-                                            requireOpenAccessStatus
-                                            validate={[validation.validFileUpload]}
-                                        />
-                                    </StandardCard>
+                                    <Alert pushToTop {...alertProps} />
                                 </Grid>
-                            </React.Fragment>
-                        )}
-                        {alertProps && (
-                            <Grid item xs={12}>
-                                <Alert pushToTop {...alertProps} />
-                            </Grid>
-                        )}
-                    </Grid>
-                    <Grid container spacing={24}>
-                        <Hidden xsDown>
-                            <Grid item xs />
-                        </Hidden>
-                        <Grid item xs={12} sm={'auto'}>
-                            <Button
-                                variant={'contained'}
-                                fullWidth
-                                children={txt.cancel}
-                                disabled={this.props.submitting}
-                                onClick={this._cancelClaim}
-                            />
+                            )}
                         </Grid>
-                        {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
-                            !(!publication.rek_pid && this.props.submitFailed) && (
+                        <Grid container spacing={3}>
+                            <Hidden xsDown>
+                                <Grid item xs />
+                            </Hidden>
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
-                                    color={'primary'}
                                     fullWidth
-                                    children={txt.submit}
-                                    onClick={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit}
-                                    id="claimSubmit"
+                                    children={txt.cancel}
+                                    disabled={this.props.submitting}
+                                    onClick={this._cancelClaim}
                                 />
                             </Grid>
-                        )}
-                    </Grid>
-                </form>
+                            {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
+                                !(!publication.rek_pid && this.props.submitFailed) && (
+                                    <Grid item xs={12} sm={'auto'}>
+                                        <Button
+                                            variant={'contained'}
+                                            color={'primary'}
+                                            fullWidth
+                                            children={txt.submit}
+                                            onClick={this.props.handleSubmit}
+                                            disabled={this.props.submitting || this.props.disableSubmit}
+                                            id="claimSubmit"
+                                        />
+                                    </Grid>
+                                )}
+                        </Grid>
+                    </form>
+                </ConfirmDiscardFormChanges>
             </StandardPage>
         );
     }

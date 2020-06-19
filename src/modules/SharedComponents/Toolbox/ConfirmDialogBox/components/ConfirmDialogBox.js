@@ -101,7 +101,7 @@ export class ConfirmDialogBox extends Component {
                     <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>

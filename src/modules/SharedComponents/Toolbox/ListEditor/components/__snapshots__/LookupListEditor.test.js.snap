@@ -13,6 +13,7 @@ exports[`LookupListEditor should render default component 1`] = `
     }
   }
   inputNormalizer={[Function]}
+  listEditorId="lookup-list-editor"
   locale={
     Object {
       "form": Object {

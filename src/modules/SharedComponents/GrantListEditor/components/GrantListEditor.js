@@ -179,7 +179,7 @@ export class GrantListEditor extends PureComponent {
                         : {})}
                 />
                 {grants.length > 0 && (
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <List>
                                 <GrantListEditorHeader
@@ -191,7 +191,10 @@ export class GrantListEditor extends PureComponent {
                             </List>
                         </Grid>
                         <Grid item xs={12} style={{ marginTop: -8 }}>
-                            <List classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}>
+                            <List
+                                classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}
+                                data-testid="rek-grant-list"
+                            >
                                 {renderGrantsRows}
                             </List>
                         </Grid>

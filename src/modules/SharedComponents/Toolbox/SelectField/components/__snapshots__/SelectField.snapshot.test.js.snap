@@ -2,7 +2,7 @@
 
 exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = `
 <Fragment>
-  <WithStyles(FormControl)
+  <WithStyles(ForwardRef(FormControl))
     error={false}
     style={
       Object {
@@ -10,18 +10,30 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       }
     }
   >
-    <WithStyles(WithFormControlContext(InputLabel))
-      id="undefined-label"
+    <WithStyles(ForwardRef(InputLabel))
+      id="test-label"
     />
-    <WithStyles(WithFormControlContext(Select))
+    <WithStyles(ForwardRef(Select))
+      MenuProps={
+        Object {
+          "data-testid": "test-options",
+          "id": "test-options",
+        }
+      }
+      SelectDisplayProps={
+        Object {
+          "data-testid": "test-select",
+          "id": "test-select",
+        }
+      }
       autoWidth={true}
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
-      id="undefined"
       inputProps={
         Object {
-          "aria-labelledby": "undefined-label",
-          "id": undefined,
+          "aria-labelledby": "test-label",
+          "data-testid": "test-input",
+          "id": "test-input",
         }
       }
       name="selectfield"
@@ -29,13 +41,13 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       onChange={[Function]}
       type="text"
     />
-  </WithStyles(FormControl)>
+  </WithStyles(ForwardRef(FormControl))>
 </Fragment>
 `;
 
 exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
 <Fragment>
-  <WithStyles(FormControl)
+  <WithStyles(ForwardRef(FormControl))
     error={true}
     style={
       Object {
@@ -43,19 +55,31 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       }
     }
   >
-    <WithStyles(WithFormControlContext(InputLabel))
-      id="undefined-label"
+    <WithStyles(ForwardRef(InputLabel))
+      id="test-label"
     />
-    <WithStyles(WithFormControlContext(Select))
+    <WithStyles(ForwardRef(Select))
+      MenuProps={
+        Object {
+          "data-testid": "test-options",
+          "id": "test-options",
+        }
+      }
+      SelectDisplayProps={
+        Object {
+          "data-testid": "test-select",
+          "id": "test-select",
+        }
+      }
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
       fullWidth={true}
-      id="undefined"
       inputProps={
         Object {
-          "aria-labelledby": "undefined-label",
-          "id": undefined,
+          "aria-labelledby": "test-label",
+          "data-testid": "test-input",
+          "id": "test-input",
         }
       }
       name="selectfield"
@@ -63,9 +87,9 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       onChange={[Function]}
       type="text"
     />
-    <WithStyles(WithFormControlContext(FormHelperText))>
+    <WithStyles(ForwardRef(FormHelperText))>
       Something bad happened
-    </WithStyles(WithFormControlContext(FormHelperText))>
-  </WithStyles(FormControl)>
+    </WithStyles(ForwardRef(FormHelperText))>
+  </WithStyles(ForwardRef(FormControl))>
 </Fragment>
 `;

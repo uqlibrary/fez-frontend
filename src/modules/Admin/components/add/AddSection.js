@@ -49,16 +49,15 @@ export const AddSection = ({
     return (
         <form>
             <StandardPage title={locale.pages.adminAdd.title}>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard title={locale.pages.adminAdd.step1} help={locale.pages.adminAdd.help}>
-                            <Grid container spacing={24}>
+                            <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CollectionField}
                                         disabled={disabled}
                                         name="adminSection.collections"
-                                        id="adminSectioncollections"
                                         floatingLabelText={
                                             locale.pages.adminAdd.formLabels.ismemberof.floatingLabelText
                                         }
@@ -66,21 +65,20 @@ export const AddSection = ({
                                         required
                                         validate={[validation.requiredList]}
                                         fullwidth
+                                        collectionFieldId="rek-ismemberof"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Field
                                         component={SelectField}
                                         disabled={disabled}
-                                        name="rek_display_type"
-                                        value={selectedPublicationType}
                                         label={locale.pages.adminAdd.formLabels.rek_display_type.inputLabelText}
-                                        required
-                                        validate={[validation.required]}
+                                        name="rek_display_type"
                                         placeholder={locale.pages.adminAdd.formLabels.rek_display_type.hintText}
-                                        SelectDisplayProps={{
-                                            id: 'rek-display-type',
-                                        }}
+                                        required
+                                        selectFieldId="rek-display-type"
+                                        validate={[validation.required]}
+                                        value={selectedPublicationType}
                                     >
                                         {publicationTypeItems}
                                     </Field>
@@ -98,9 +96,7 @@ export const AddSection = ({
                                                 required
                                                 validate={[validation.required]}
                                                 placeholder={locale.pages.adminAdd.formLabels.rek_subtype.hintText}
-                                                SelectDisplayProps={{
-                                                    id: 'rek-subtype',
-                                                }}
+                                                selectFieldId="rek-subtype"
                                             >
                                                 {publicationSubtypeItems}
                                             </Field>
@@ -108,13 +104,14 @@ export const AddSection = ({
                                     )}
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Grid container spacing={8}>
+                                    <Grid container spacing={1}>
                                         <Hidden xsDown>
                                             <Grid item xs />
                                         </Hidden>
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="cancel-work"
+                                                data-testid="cancel-work"
                                                 variant="contained"
                                                 color="secondary"
                                                 fullWidth
@@ -125,6 +122,7 @@ export const AddSection = ({
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="submit-work"
+                                                data-testid="submit-work"
                                                 variant="contained"
                                                 color="primary"
                                                 fullWidth

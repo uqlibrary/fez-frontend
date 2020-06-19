@@ -2,7 +2,9 @@
 
 exports[`Component ContributorRow Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -12,54 +14,49 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -96,379 +93,47 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           "nameAsPublished": "J. Smith",
         }
       }
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="md"
-    />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
-      >
-        <span>
-          <WithStyles(IconButton)
-            aria-label="Remove this record"
-            disabled={false}
-            id="delete-record-0"
-            onClick={[Function]}
-          >
-            <pure(DeleteIcon)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-            />
-          </WithStyles(IconButton)>
-        </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
-</Fragment>
-`;
-
-exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete this record?",
-        "confirmationTitle": "Delete record",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <WithStyles(ListItem)
-    aria-label="Select this record (J. Smith) to assign it to you"
-    classes={
-      Object {
-        "root": "listItem",
-      }
-    }
-    divider={true}
-    id="contributor-editor-row-0"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex={0}
-  >
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
-    >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
-      classes={
-        Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
-        }
-      }
-      contributor={
-        Object {
-          "aut_created_date": "2007-08-09",
-          "aut_description": null,
-          "aut_display_name": "J Researcher",
-          "aut_email": null,
-          "aut_external_id": "0001098586",
-          "aut_fname": "J",
-          "aut_google_scholar_id": "kUemDfMAAAAJ",
-          "aut_homepage_link": null,
-          "aut_id": 410,
-          "aut_lname": "Researcher",
-          "aut_mname": null,
-          "aut_mypub_url": null,
-          "aut_orcid_id": "0000-0001-1111-1111",
-          "aut_org_staff_id": "0000111",
-          "aut_org_student_id": null,
-          "aut_org_username": "uqresearcher",
-          "aut_people_australia_id": null,
-          "aut_position": null,
-          "aut_publons_id": null,
-          "aut_ref_num": null,
-          "aut_researcher_id": null,
-          "aut_rid_last_updated": null,
-          "aut_rid_password": null,
-          "aut_scopus_id": null,
-          "aut_student_username": null,
-          "aut_title": "Professor",
-          "aut_update_date": null,
-          "is_administrator": 0,
-          "is_super_administrator": 0,
-          "nameAsPublished": "J. Smith",
-        }
-      }
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="md"
-    />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
-      >
-        <span>
-          <WithStyles(IconButton)
-            aria-label="Remove this record"
-            disabled={false}
-            id="delete-record-0"
-            onClick={[Function]}
-          >
-            <pure(DeleteIcon)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-            />
-          </WithStyles(IconButton)>
-        </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
-</Fragment>
-`;
-
-exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete this record?",
-        "confirmationTitle": "Delete record",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <WithStyles(ListItem)
-    aria-label="Select this record (A. Smith) to assign it to you"
-    classes={
-      Object {
-        "root": "listItem",
-      }
-    }
-    divider={true}
-    id="contributor-editor-row-0"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex={0}
-  >
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
-    >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
-      classes={
-        Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
-        }
-      }
-      contributor={
-        Object {
-          "nameAsPublished": "A. Smith",
-        }
-      }
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="md"
-    />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
-      >
-        <span>
-          <WithStyles(IconButton)
-            aria-label="Remove this record"
-            disabled={false}
-            id="delete-record-0"
-            onClick={[Function]}
-          >
-            <pure(DeleteIcon)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-            />
-          </WithStyles(IconButton)>
-        </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
-</Fragment>
-`;
-
-exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
-<Fragment>
-  <WithStyles(ConfirmDialogBox)
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete this record?",
-        "confirmationTitle": "Delete record",
-      }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <WithStyles(ListItem)
-    aria-label="Select this record (A. Smith) to assign it to you"
-    classes={
-      Object {
-        "root": "listItem",
-      }
-    }
-    divider={true}
-    id="contributor-editor-row-0"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex={0}
-  >
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
-    >
-      <WithStyles(ListItemIcon)
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
-      classes={
-        Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
-        }
-      }
-      contributor={
-        Object {
-          "nameAsPublished": "A. Smith",
-        }
-      }
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
       suffix=" listed contributor"
       width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
-exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
+exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -478,54 +143,49 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -562,88 +222,422 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           "nameAsPublished": "J. Smith",
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Remove this record"
+            disabled={false}
+            id="test-list-row-delete-0"
+            onClick={[Function]}
+          >
+            <DeleteIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</Fragment>
+`;
+
+exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
+<Fragment>
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
+  />
+  <WithStyles(ForwardRef(ListItem))
+    aria-label="Select this record (A. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+      }
+    }
+    divider={true}
+    id="test-list-row-0"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+    </Hidden>
+    <ContributorRowText
+      canEdit={false}
+      classes={
+        Object {
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
+        }
+      }
+      contributor={
+        Object {
+          "nameAsPublished": "A. Smith",
+        }
+      }
+      contributorRowId="test-list-row-0"
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="xs"
+    />
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Remove this record"
+            disabled={false}
+            id="test-list-row-delete-0"
+            onClick={[Function]}
+          >
+            <DeleteIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</Fragment>
+`;
+
+exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
+<Fragment>
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
+  />
+  <WithStyles(ForwardRef(ListItem))
+    aria-label="Select this record (A. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+      }
+    }
+    divider={true}
+    id="test-list-row-0"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+    </Hidden>
+    <ContributorRowText
+      canEdit={false}
+      classes={
+        Object {
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
+        }
+      }
+      contributor={
+        Object {
+          "nameAsPublished": "A. Smith",
+        }
+      }
+      contributorRowId="test-list-row-0"
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="xs"
+    />
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Remove this record"
+            disabled={false}
+            id="test-list-row-delete-0"
+            onClick={[Function]}
+          >
+            <DeleteIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</Fragment>
+`;
+
+exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
+<Fragment>
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
+  />
+  <WithStyles(ForwardRef(ListItem))
+    aria-label="Select this record (J. Smith) to assign it to you"
+    classes={
+      Object {
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+      }
+    }
+    divider={true}
+    id="test-list-row-0"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+    </Hidden>
+    <ContributorRowText
+      canEdit={false}
+      classes={
+        Object {
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
+        }
+      }
+      contributor={
+        Object {
+          "aut_created_date": "2007-08-09",
+          "aut_description": null,
+          "aut_display_name": "J Researcher",
+          "aut_email": null,
+          "aut_external_id": "0001098586",
+          "aut_fname": "J",
+          "aut_google_scholar_id": "kUemDfMAAAAJ",
+          "aut_homepage_link": null,
+          "aut_id": 410,
+          "aut_lname": "Researcher",
+          "aut_mname": null,
+          "aut_mypub_url": null,
+          "aut_orcid_id": "0000-0001-1111-1111",
+          "aut_org_staff_id": "0000111",
+          "aut_org_student_id": null,
+          "aut_org_username": "uqresearcher",
+          "aut_people_australia_id": null,
+          "aut_position": null,
+          "aut_publons_id": null,
+          "aut_ref_num": null,
+          "aut_researcher_id": null,
+          "aut_rid_last_updated": null,
+          "aut_rid_password": null,
+          "aut_scopus_id": null,
+          "aut_student_username": null,
+          "aut_title": "Professor",
+          "aut_update_date": null,
+          "is_administrator": 0,
+          "is_super_administrator": 0,
+          "nameAsPublished": "J. Smith",
+        }
+      }
+      contributorRowId="test-list-row-0"
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="xs"
+    />
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Move record up the order"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Move record up the order"
             disabled={false}
+            id="test-list-row-move-up-0"
             onClick={[Function]}
           >
-            <pure(KeyboardArrowUpIcon)
+            <KeyboardArrowUpIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-      <WithStyles(Tooltip)
+      </WithStyles(ForwardRef(Tooltip))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Move record down the order"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Move record down the order"
             disabled={false}
+            id="test-list-row-move-down-0"
             onClick={[Function]}
           >
-            <pure(KeyboardArrowDownIcon)
+            <KeyboardArrowDownIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-      <WithStyles(Tooltip)
+      </WithStyles(ForwardRef(Tooltip))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -653,54 +647,49 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
-            "root": "selected",
+            "root": "makeStyles-selected-6",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -709,44 +698,47 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "selected": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
-      selectedClass="selected"
+      selectedClass="makeStyles-selected-6"
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
-                  "root": "selected",
+                  "root": "makeStyles-selected-6",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -756,54 +748,49 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
-            "root": "selected",
+            "root": "makeStyles-selected-6",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -812,44 +799,47 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "selected": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
-      selectedClass="selected"
+      selectedClass="makeStyles-selected-6"
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
-                  "root": "selected",
+                  "root": "makeStyles-selected-6",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details & delete button 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -859,54 +849,49 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -943,44 +928,47 @@ exports[`Component ContributorRow a row with index and contributor with author d
           "nameAsPublished": "J. Smith",
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -990,54 +978,49 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
-            "root": "selected",
+            "root": "makeStyles-selected-6",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1047,44 +1030,47 @@ exports[`Component ContributorRow a row with index and creator with creator role
           "selected": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
-      selectedClass="selected"
+      selectedClass="makeStyles-selected-6"
       showRoleInput={true}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
-                  "root": "selected",
+                  "root": "makeStyles-selected-6",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1094,54 +1080,49 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
-            "root": "selected",
+            "root": "makeStyles-selected-6",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1151,44 +1132,47 @@ exports[`Component ContributorRow a row with index and creator with creator role
           "selected": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
-      selectedClass="selected"
+      selectedClass="makeStyles-selected-6"
       showRoleInput={true}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
-                  "root": "selected",
+                  "root": "makeStyles-selected-6",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow should assign contributor 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1198,54 +1182,49 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (test) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
-            "root": "selected",
+            "root": "makeStyles-selected-6",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1257,44 +1236,47 @@ exports[`Component ContributorRow should assign contributor 1`] = `
           "selected": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
-      selectedClass="selected"
+      selectedClass="makeStyles-selected-6"
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
-                  "root": "selected",
+                  "root": "makeStyles-selected-6",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow should call callback functions on ListItem 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1304,50 +1286,49 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (test) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
-            "root": undefined,
+            "root": "makeStyles-selected-6",
           }
         }
       >
-        <pure(PersonIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "identifierName": "test-class-1",
-          "identifierSubtitle": "test-class-2",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1359,182 +1340,47 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
           "selected": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
+      selectedClass="makeStyles-selected-6"
       showRoleInput={true}
       suffix=" listed contributor"
       width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
-                  "root": "undefined",
+                  "root": "makeStyles-selected-6",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
-exports[`Component ContributorRow should get row icon 1`] = `<pure(HowToRegIcon) />`;
-
-exports[`Component ContributorRow should get row icon 2`] = `<pure(LockIcon) />`;
-
-exports[`Component ContributorRow should have a proper style generator 1`] = `
-Object {
-  "disabledListItem": Object {
-    "&:focus": Object {
-      "outline": "none !important",
-    },
-    "margin": "0",
-    "outline": "none !important",
-    "width": "100%",
-  },
-  "hideIcon": Object {
-    "display": "none",
-  },
-  "highlighted": Object {
-    "borderLeft": "5px solid red",
-  },
-  "identifierName": Object {
-    "fontSize": "test4",
-    "marginTop": 8,
-  },
-  "identifierSubtitle": Object {
-    "fontSize": "test4",
-  },
-  "listContainer": Object {
-    "padding": "0",
-  },
-  "listItem": Object {
-    "borderLeft": "5px solid transparent",
-    "cursor": "pointer",
-    "margin": "0",
-    "width": "100%",
-  },
-  "primary": Object {
-    "fontSize": "test3",
-  },
-  "rowSelected": Object {
-    "backgroundColor": undefined,
-  },
-  "selected": Object {
-    "color": "white !important",
-    "fontWeight": "test2",
-  },
-}
-`;
-
-exports[`Component ContributorRow should have a proper style generator 2`] = `
-Object {
-  "disabledListItem": Object {
-    "&:focus": Object {
-      "outline": "none !important",
-    },
-    "margin": "0",
-    "outline": "none !important",
-    "width": "100%",
-  },
-  "hideIcon": Object {
-    "display": "none",
-  },
-  "highlighted": Object {
-    "borderLeft": "5px solid red",
-  },
-  "identifierName": Object {
-    "fontSize": "test4",
-    "marginTop": 8,
-  },
-  "identifierSubtitle": Object {
-    "fontSize": "test4",
-  },
-  "listContainer": Object {
-    "padding": "0",
-  },
-  "listItem": Object {
-    "borderLeft": "5px solid transparent",
-    "cursor": "pointer",
-    "margin": "0",
-    "width": "100%",
-  },
-  "primary": Object {
-    "fontSize": "test3",
-  },
-  "rowSelected": Object {
-    "backgroundColor": undefined,
-  },
-  "selected": Object {
-    "color": "white !important",
-    "fontWeight": "test2",
-  },
-}
-`;
-
-exports[`Component ContributorRow should have a proper style generator 3`] = `
-Object {
-  "disabledListItem": Object {
-    "&:focus": Object {
-      "outline": "none !important",
-    },
-    "margin": "0",
-    "outline": "none !important",
-    "width": "100%",
-  },
-  "hideIcon": Object {
-    "display": "none",
-  },
-  "highlighted": Object {
-    "borderLeft": "5px solid red",
-  },
-  "identifierName": Object {
-    "fontSize": "test4",
-    "marginTop": 8,
-  },
-  "identifierSubtitle": Object {
-    "fontSize": "test4",
-  },
-  "listContainer": Object {
-    "padding": "0",
-  },
-  "listItem": Object {
-    "borderLeft": "5px solid transparent",
-    "cursor": "pointer",
-    "margin": "0",
-    "width": "100%",
-  },
-  "primary": Object {
-    "fontSize": "test3",
-  },
-  "rowSelected": Object {
-    "backgroundColor": undefined,
-  },
-  "selected": Object {
-    "color": "white !important",
-    "fontWeight": "test2",
-  },
-}
-`;
-
-exports[`Component ContributorRow should render a row with a disabled contributor 1`] = `
+exports[`Component ContributorRow should handle edits 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1544,58 +1390,176 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
-    aria-label="Select this record (undefined) to assign it to you"
+  <WithStyles(ForwardRef(ListItem))
+    aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-2"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <WithStyles(Tooltip)
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+    </Hidden>
+    <ContributorRowText
+      canEdit={true}
+      classes={
+        Object {
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
+        }
+      }
+      contributor={
+        Object {
+          "nameAsPublished": "A. Smith",
+        }
+      }
+      contributorRowId="test-list-row-2"
+      index={2}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="xs"
+    />
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Edit this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Edit this record"
+            disabled={false}
+            id="test-list-row-edit-2"
+            onClick={[Function]}
+          >
+            <EditIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Remove this record"
+            disabled={false}
+            id="test-list-row-delete-2"
+            onClick={[Function]}
+          >
+            <DeleteIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</Fragment>
+`;
+
+exports[`Component ContributorRow should render a row with a disabled contributor 1`] = `
+<Fragment>
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
+  />
+  <WithStyles(ForwardRef(ListItem))
+    aria-label="Select this record (undefined) to assign it to you"
+    classes={
+      Object {
+        "root": "makeStyles-listItem-2",
+      }
+    }
+    divider={true}
+    id="test-list-row-0"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={-1}
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <WithStyles(ForwardRef(Tooltip))
           title="You are not able to edit this row"
         >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
-      </WithStyles(ListItemIcon)>
+          <LockIcon />
+        </WithStyles(ForwardRef(Tooltip))>
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1603,44 +1567,47 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           "disabled": true,
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow should render row as required 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1650,49 +1617,49 @@ exports[`Component ContributorRow should render row as required 1`] = `
       }
     }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (Test) to assign it to you"
     classes={
       Object {
-        "root": "highlighted",
+        "root": "makeStyles-listItem-2 makeStyles-highlighted-4  makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "highlighted": "highlighted",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1703,93 +1670,100 @@ exports[`Component ContributorRow should render row as required 1`] = `
           "orgtype": "NGO",
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
       suffix=" listed contributor"
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove this record"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             disabled={false}
-            id="delete-record-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmationBox
+    hideCancelButton={false}
+    isOpen={false}
+    locale={
+      Object {
+        "alternateActionButtonLabel": "Cancel",
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure?",
+        "confirmationTitle": "Confirmation",
+      }
+    }
     onAction={[Function]}
-    onRef={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     aria-label=""
     classes={
       Object {
-        "root": "listItem",
+        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
       }
     }
     divider={true}
-    id="contributor-editor-row-0"
+    id="test-list-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)
+      <WithStyles(ForwardRef(ListItemIcon))
         classes={
           Object {
             "root": "",
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
-      </WithStyles(ListItemIcon)>
+        <PersonOutlinedIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
       canEdit={false}
       classes={
         Object {
-          "hideIcon": "hideIcon",
-          "identifierName": "identifierName",
-          "identifierSubtitle": "identifierSubtitle",
-          "listItem": "listItem",
-          "primary": "primary",
-          "selected": "selected",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
         }
       }
       contributor={
@@ -1797,36 +1771,35 @@ exports[`Component ContributorRow should render with missing aria label if selec
           "nameAsPublished": "A. Smith",
         }
       }
+      contributorRowId="test-list-row-0"
       index={0}
       selectedClass=""
       showRoleInput={false}
-      width="md"
+      width="xs"
     />
-    <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             disabled={false}
-            id="function deleteButtonId() {
-          return 'delete-record-0';
-        }-0"
+            id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <pure(DeleteIcon)
+            <DeleteIcon
               classes={
                 Object {
                   "root": "",
                 }
               }
             />
-          </WithStyles(IconButton)>
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;

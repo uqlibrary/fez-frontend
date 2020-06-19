@@ -5,7 +5,7 @@ exports[`Component WhatIsEspace with different locale should render external lin
   primaryHeader={true}
   title="what is espace title"
 >
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     variant="body2"
   >
     what is espace intro
@@ -16,6 +16,6 @@ exports[`Component WhatIsEspace with different locale should render external lin
     >
       click me to learn more
     </WithStyles(ExternalLink)>
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </StandardCard>
 `;

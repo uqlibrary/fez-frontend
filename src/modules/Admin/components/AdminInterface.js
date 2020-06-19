@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
@@ -61,6 +62,7 @@ export const AdminInterface = ({
     classes,
     createMode,
     destroy,
+    dirty,
     disableSubmit,
     formErrors,
     handleSubmit,
@@ -182,8 +184,8 @@ export const AdminInterface = ({
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
                             {!createMode
                                 ? ReactHtmlParser(
-                                    `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
-                                )
+                                      `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+                                  )
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
@@ -213,8 +215,8 @@ export const AdminInterface = ({
                                         value={currentTabValue}
                                         variant="fullWidth"
                                         style={{
-                                            marginRight: -56,
-                                            marginLeft: -56,
+                                            marginRight: -40,
+                                            marginLeft: -40,
                                         }}
                                         classes={{
                                             indicator: classes.tabIndicator,
@@ -252,79 +254,89 @@ export const AdminInterface = ({
                         </Grid>
                     </Hidden>
                 </Grid>
-                <form>
-                    <Grid container spacing={0}>
-                        {!tabbed
-                            ? Object.keys(tabs)
-                                .filter(tab => tabs[tab].activated)
-                                .map(renderTabContainer)
-                            : renderTabContainer(currentTabValue)}
-                    </Grid>
-                    <Grid container spacing={8}>
-                        {alertProps.current && (
-                            <Grid item xs={12}>
-                                <div style={{ height: 16 }} />
-                                <Alert {...alertProps.current} />
-                            </Grid>
-                        )}
-                        <Grid item xs={12}>
-                            <Grid container spacing={8} style={{ marginTop: 8 }}>
-                                <Grid item xs={12} sm={2}>
-                                    <Button
-                                        style={{ whiteSpace: 'nowrap' }}
-                                        variant="contained"
-                                        color="secondary"
-                                        fullWidth
-                                        children="Cancel"
-                                        onClick={handleCancel}
-                                    />
+                <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+                    <form>
+                        <Grid container spacing={0}>
+                            {!tabbed
+                                ? Object.keys(tabs)
+                                      .filter(tab => tabs[tab].activated)
+                                      .map(renderTabContainer)
+                                : renderTabContainer(currentTabValue)}
+                        </Grid>
+                        <Grid container spacing={1}>
+                            {alertProps.current && (
+                                <Grid item xs={12}>
+                                    <div style={{ height: 16 }} />
+                                    <Alert {...alertProps.current} />
                                 </Grid>
-                                {!!record.rek_pid &&
-                                    objectType === RECORD_TYPE_RECORD &&
-                                    record.rek_status !== PUBLISHED && (
-                                    <Grid item xs={12} sm={3}>
+                            )}
+                            <Grid item xs={12}>
+                                <Grid container spacing={1} style={{ marginTop: 8 }}>
+                                    <Grid item xs={12} sm={2}>
                                         <Button
-                                            id="admin-work-publish"
-                                            disabled={submitting || disableSubmit}
+                                            id="admin-work-cancel"
+                                            style={{ whiteSpace: 'nowrap' }}
                                             variant="contained"
                                             color="secondary"
                                             fullWidth
-                                            children="Publish"
-                                            onClick={setPublicationStatusAndSubmit(PUBLISHED)}
+                                            children="Cancel"
+                                            onClick={handleCancel}
                                         />
                                     </Grid>
-                                )}
-                                {!!record.rek_pid &&
-                                    objectType === RECORD_TYPE_RECORD &&
-                                    record.rek_status === PUBLISHED && (
-                                    <Grid item xs={12} sm={3}>
+                                    {!!record.rek_pid &&
+                                        objectType === RECORD_TYPE_RECORD &&
+                                        record.rek_status !== PUBLISHED && (
+                                            <Grid item xs={12} sm={3}>
+                                                <Button
+                                                    id="admin-work-publish"
+                                                    data-testid="publish-admin"
+                                                    disabled={submitting || disableSubmit}
+                                                    variant="contained"
+                                                    color="secondary"
+                                                    fullWidth
+                                                    children="Publish"
+                                                    onClick={setPublicationStatusAndSubmit(PUBLISHED)}
+                                                />
+                                            </Grid>
+                                        )}
+                                    {!!record.rek_pid &&
+                                        objectType === RECORD_TYPE_RECORD &&
+                                        record.rek_status === PUBLISHED && (
+                                            <Grid item xs={12} sm={3}>
+                                                <Button
+                                                    id="admin-work-unpublish"
+                                                    data-testid="unpublish-admin"
+                                                    disabled={submitting || disableSubmit}
+                                                    variant="contained"
+                                                    color="secondary"
+                                                    fullWidth
+                                                    children="Unpublish"
+                                                    onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
+                                                />
+                                            </Grid>
+                                        )}
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD ? 7 : 10}
+                                    >
                                         <Button
-                                            id="admin-work-unpublish"
+                                            id="admin-work-submit"
+                                            data-testid="submit-admin"
+                                            style={{ whiteSpace: 'nowrap' }}
                                             disabled={submitting || disableSubmit}
                                             variant="contained"
-                                            color="secondary"
+                                            color="primary"
                                             fullWidth
-                                            children="Unpublish"
-                                            onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
+                                            children="Save"
+                                            onClick={handleSubmit}
                                         />
                                     </Grid>
-                                )}
-                                <Grid item xs={12} sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD ? 7 : 10}>
-                                    <Button
-                                        id="admin-work-submit"
-                                        style={{ whiteSpace: 'nowrap' }}
-                                        disabled={submitting || disableSubmit}
-                                        variant="contained"
-                                        color="primary"
-                                        fullWidth
-                                        children="Save"
-                                        onClick={handleSubmit}
-                                    />
                                 </Grid>
                             </Grid>
                         </Grid>
-                    </Grid>
-                </form>
+                    </form>
+                </ConfirmDiscardFormChanges>
             </React.Fragment>
         </StandardPage>
     );
@@ -335,6 +347,7 @@ AdminInterface.propTypes = {
     classes: PropTypes.object,
     createMode: PropTypes.bool,
     destroy: PropTypes.func,
+    dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,

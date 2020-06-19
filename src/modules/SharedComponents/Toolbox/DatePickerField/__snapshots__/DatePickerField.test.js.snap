@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DatePickerField snapshots tests renders component 1`] = `
-<ForwardRef
+<Component
   allowKeyboardControl={true}
   autoOk={true}
   error={true}
@@ -14,31 +14,31 @@ exports[`DatePickerField snapshots tests renders component 1`] = `
     }
   }
   keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  keyboardIcon={<Memo(EventIcon) />}
+  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   meta={
     Object {
       "error": "error text",
     }
   }
   onChange={[MockFunction]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={null}
 />
 `;
 
 exports[`DatePickerField snapshots tests renders onchange when input not supplied 1`] = `
-<ForwardRef
+<Component
   allowKeyboardControl={true}
   autoOk={true}
   error={false}
   format="DD/MM/YYYY"
   helperText=""
   keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  keyboardIcon={<Memo(EventIcon) />}
+  leftArrowIcon={<Memo(KeyboardArrowLeftIcon) />}
   onChange={[MockFunction]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  rightArrowIcon={<Memo(KeyboardArrowRightIcon) />}
   value={null}
 />
 `;

@@ -9,11 +9,11 @@ export default {
                 ['rek_title'],
                 ...(isLote
                     ? [
-                        ['languageOfTitle'],
-                        ['fez_record_search_key_native_script_title'],
-                        ['fez_record_search_key_roman_script_title'],
-                        ['fez_record_search_key_translated_title'],
-                    ]
+                          ['languageOfTitle'],
+                          ['fez_record_search_key_native_script_title'],
+                          ['fez_record_search_key_roman_script_title'],
+                          ['fez_record_search_key_translated_title'],
+                      ]
                     : []),
             ],
         },
@@ -27,10 +27,10 @@ export default {
                 ['fez_record_search_key_conference_name'],
                 ...(isLote
                     ? [
-                        ['fez_record_search_key_native_script_conference_name'],
-                        ['fez_record_search_key_roman_script_conference_name'],
-                        ['fez_record_search_key_translated_conference_name'],
-                    ]
+                          ['fez_record_search_key_native_script_conference_name'],
+                          ['fez_record_search_key_roman_script_conference_name'],
+                          ['fez_record_search_key_translated_conference_name'],
+                      ]
                     : []),
             ],
         },
@@ -44,11 +44,11 @@ export default {
                 ['fez_record_search_key_proceedings_title'],
                 ...(isLote
                     ? [
-                        ['languageOfProceedingsTitle'],
-                        ['fez_record_search_key_native_script_proceedings_title'],
-                        ['fez_record_search_key_roman_script_proceedings_title'],
-                        ['fez_record_search_key_translated_proceedings_title'],
-                    ]
+                          ['languageOfProceedingsTitle'],
+                          ['fez_record_search_key_native_script_proceedings_title'],
+                          ['fez_record_search_key_roman_script_proceedings_title'],
+                          ['fez_record_search_key_translated_proceedings_title'],
+                      ]
                     : []),
             ],
         },
@@ -59,11 +59,11 @@ export default {
                 ['fez_record_search_key_series'],
                 ...(isLote
                     ? [
-                        ['languageOfJournalName'],
-                        ['fez_record_search_key_native_script_journal_name'],
-                        ['fez_record_search_key_translated_journal_name'],
-                        ['fez_record_search_key_roman_script_journal_name'],
-                    ]
+                          ['languageOfJournalName'],
+                          ['fez_record_search_key_native_script_journal_name'],
+                          ['fez_record_search_key_translated_journal_name'],
+                          ['fez_record_search_key_roman_script_journal_name'],
+                      ]
                     : []),
             ],
         },

@@ -22,10 +22,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ClaimPublicationContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(PossiblyMyRecords);
+let ClaimPublicationContainer = connect(mapStateToProps, mapDispatchToProps)(PossiblyMyRecords);
 ClaimPublicationContainer = withRouter(ClaimPublicationContainer);
 
 export default ClaimPublicationContainer;

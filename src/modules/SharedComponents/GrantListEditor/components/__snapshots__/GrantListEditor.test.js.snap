@@ -9,23 +9,23 @@ exports[`GrantListEditor should add grant to the list 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -34,14 +34,15 @@ exports[`GrantListEditor should add grant to the list 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -59,9 +60,9 @@ exports[`GrantListEditor should add grant to the list 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -74,23 +75,23 @@ exports[`GrantListEditor should delete all grants 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -99,14 +100,15 @@ exports[`GrantListEditor should delete all grants 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -124,7 +126,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -142,9 +144,9 @@ exports[`GrantListEditor should delete all grants 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -169,23 +171,23 @@ exports[`GrantListEditor should delete grant 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -194,14 +196,15 @@ exports[`GrantListEditor should delete grant 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -219,7 +222,7 @@ exports[`GrantListEditor should delete grant 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -237,9 +240,9 @@ exports[`GrantListEditor should delete grant 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -252,23 +255,23 @@ exports[`GrantListEditor should delete grant 2`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -277,14 +280,15 @@ exports[`GrantListEditor should delete grant 2`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -302,9 +306,9 @@ exports[`GrantListEditor should delete grant 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -330,23 +334,23 @@ exports[`GrantListEditor should move the grant down 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -355,14 +359,15 @@ exports[`GrantListEditor should move the grant down 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -380,7 +385,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -398,9 +403,9 @@ exports[`GrantListEditor should move the grant down 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -413,23 +418,23 @@ exports[`GrantListEditor should move the grant down 2`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -438,14 +443,15 @@ exports[`GrantListEditor should move the grant down 2`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -463,7 +469,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -481,9 +487,9 @@ exports[`GrantListEditor should move the grant down 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -496,23 +502,23 @@ exports[`GrantListEditor should move the grant down 3`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -521,14 +527,15 @@ exports[`GrantListEditor should move the grant down 3`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -546,7 +553,7 @@ exports[`GrantListEditor should move the grant down 3`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -564,9 +571,9 @@ exports[`GrantListEditor should move the grant down 3`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -579,23 +586,23 @@ exports[`GrantListEditor should move the grant up 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -604,14 +611,15 @@ exports[`GrantListEditor should move the grant up 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -629,7 +637,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -647,9 +655,9 @@ exports[`GrantListEditor should move the grant up 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -662,23 +670,23 @@ exports[`GrantListEditor should move the grant up 2`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -687,14 +695,15 @@ exports[`GrantListEditor should move the grant up 2`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -712,7 +721,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -730,9 +739,9 @@ exports[`GrantListEditor should move the grant up 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -745,23 +754,23 @@ exports[`GrantListEditor should move the grant up 3`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -770,14 +779,15 @@ exports[`GrantListEditor should move the grant up 3`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -795,7 +805,7 @@ exports[`GrantListEditor should move the grant up 3`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -813,9 +823,9 @@ exports[`GrantListEditor should move the grant up 3`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -828,23 +838,23 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -853,14 +863,15 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -878,9 +889,9 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -893,23 +904,23 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -918,14 +929,15 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -943,9 +955,9 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -958,23 +970,23 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -983,14 +995,15 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -1010,7 +1023,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -1028,9 +1041,9 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1043,23 +1056,23 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -1068,14 +1081,15 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -1095,7 +1109,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -1113,9 +1127,9 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1140,12 +1154,12 @@ exports[`GrantListEditor should render error from props 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     color="error"
     variant="caption"
   >
     Some error
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </div>
 `;
 
@@ -1158,7 +1172,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     color="error"
     variant="caption"
   >
@@ -1172,7 +1186,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
     >
       Test error 2
     </span>
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </div>
 `;
 
@@ -1185,23 +1199,23 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -1210,14 +1224,15 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined scroll-class",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
@@ -1235,7 +1250,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -1253,7 +1268,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
@@ -1271,7 +1286,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
@@ -1289,9 +1304,9 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1304,12 +1319,12 @@ exports[`GrantListEditor should render string error from props 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     color="error"
     variant="caption"
   >
     Test error
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </div>
 `;
 
@@ -1322,23 +1337,23 @@ exports[`GrantListEditor should render with default given value 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -1347,14 +1362,15 @@ exports[`GrantListEditor should render with default given value 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -1372,9 +1388,9 @@ exports[`GrantListEditor should render with default given value 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1387,23 +1403,23 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -1412,14 +1428,15 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -1437,9 +1454,9 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1452,23 +1469,23 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
     onAdd={[Function]}
     required={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={8}
+    spacing={1}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
-        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+      <WithStyles(ForwardRef(List))>
+        <WithStyles(WithWidth(GrantListEditorHeader))
           disabled={false}
           hideType={false}
           onDeleteAll={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -1477,14 +1494,15 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
       }
       xs={12}
     >
-      <WithStyles(List)
+      <WithStyles(ForwardRef(List))
         classes={
           Object {
             "root": "undefined ",
           }
         }
+        data-testid="rek-grant-list"
       >
-        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+        <WithStyles(WithWidth(GrantListEditorRow))
           canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
@@ -1502,9 +1520,9 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(List))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1522,8 +1540,11 @@ exports[`GrantListEditor should update with error message 1`] = `
 
 exports[`GrantListEditor should update with error message 2`] = `
 <div>
-  <WithStyles(Alert)
+  <Alert
+    allowDismiss={false}
+    dismissTitle="Click to dismiss this alert"
     message="Test error message from state"
+    showLoader={false}
     type="warning"
   />
   <GrantListEditorForm

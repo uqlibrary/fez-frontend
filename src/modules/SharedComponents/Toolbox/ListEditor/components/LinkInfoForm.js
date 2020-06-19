@@ -63,12 +63,13 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
     } = locale;
 
     return (
-        <Grid container spacing={16} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
                 <TextField
                     fullWidth
                     name="key"
                     id="link-info-link"
+                    textFieldId="rek-link"
                     label={linkInputFieldLabel}
                     placeholder={linkInputFieldHint}
                     onChange={handleChange}
@@ -87,6 +88,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                     fullWidth
                     name="value"
                     id="link-info-description"
+                    textFieldId="rek-link-description"
                     label={descriptionInputFieldLabel}
                     placeholder={descriptionInputFieldHint}
                     onChange={handleChange}
@@ -102,6 +104,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                 <Button
                     fullWidth
                     id="add-items"
+                    data-testid="rek-link-add"
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}

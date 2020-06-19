@@ -51,7 +51,7 @@ export class HelpDrawer extends Component {
         }
         return (
             <Drawer classes={{ paper: classes.paper }} open={open} anchor="right" onClose={hide}>
-                <Grid container spacing={40}>
+                <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography key={'title'} component={'span'} variant={'h6'} className={classes.title}>
                             {title}

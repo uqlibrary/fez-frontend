@@ -6,7 +6,6 @@ import * as actions from 'actions';
 import { createNewRecord } from 'actions';
 import AddDataCollection from '../components/AddDataCollection';
 import { withRouter } from 'react-router-dom';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { NEW_DATASET_DEFAULT_VALUES } from 'config/general';
 import { locale } from 'locale';
 import moment from 'moment';
@@ -71,7 +70,7 @@ const AddDataCollectionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
     validate,
-})(confirmDiscardFormChanges(AddDataCollection, FORM_NAME));
+})(AddDataCollection);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -95,10 +94,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let AddDataCollectionForm = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AddDataCollectionContainer);
+let AddDataCollectionForm = connect(mapStateToProps, mapDispatchToProps)(AddDataCollectionContainer);
 AddDataCollectionForm = withRouter(AddDataCollectionForm);
 
 export default AddDataCollectionForm;

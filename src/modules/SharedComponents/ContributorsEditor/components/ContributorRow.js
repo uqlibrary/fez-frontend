@@ -1,9 +1,8 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/global';
 
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
+import { makeStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
@@ -18,10 +17,11 @@ import Edit from '@material-ui/icons/Edit';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
-import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ContributorRowText } from './ContributorRowText';
+import { useWidth, useConfirmationState } from 'hooks';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
-export const styles = theme => ({
+export const useStyles = makeStyles(theme => ({
     listContainer: {
         padding: '0',
     },
@@ -43,7 +43,7 @@ export const styles = theme => ({
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).main,
+        backgroundColor: (theme.palette.accent || {}).main,
     },
     selected: {
         color: 'white !important',
@@ -62,117 +62,86 @@ export const styles = theme => ({
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
     },
-});
+}));
 
-export class ContributorRow extends PureComponent {
-    static propTypes = {
-        canEdit: PropTypes.bool,
-        canMoveDown: PropTypes.bool,
-        canMoveUp: PropTypes.bool,
-        classes: PropTypes.object,
-        contributor: PropTypes.object.isRequired,
-        disabled: PropTypes.bool,
-        hideDelete: PropTypes.bool,
-        hideReorder: PropTypes.bool,
-        index: PropTypes.number.isRequired,
-        locale: PropTypes.object,
-        onSelect: PropTypes.func,
-        onDelete: PropTypes.func,
-        onEdit: PropTypes.func,
-        onMoveDown: PropTypes.func,
-        onMoveUp: PropTypes.func,
-        width: PropTypes.string,
-        required: PropTypes.bool,
-        enableSelect: PropTypes.bool,
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
-    };
+export const ContributorRow = ({
+    canEdit,
+    canMoveDown,
+    canMoveUp,
+    contributor,
+    contributorRowId,
+    disabled,
+    hideDelete,
+    hideReorder,
+    index,
+    locale: {
+        deleteRecordConfirmation,
+        moveUpHint,
+        moveDownHint,
+        deleteHint,
+        editHint,
+        selectHint,
+        lockedTooltip,
+        suffix,
+    },
+    onSelect,
+    onDelete,
+    onEdit,
+    onMoveDown,
+    onMoveUp,
+    required,
+    enableSelect,
+    showRoleInput,
+}) => {
+    const classes = useStyles();
+    const width = useWidth();
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-    static defaultProps = {
-        canEdit: false,
-        locale: {
-            suffix: ' listed contributor',
-            moveUpHint: 'Move record up the order',
-            moveDownHint: 'Move record down the order',
-            deleteHint: 'Remove this record',
-            editHint: 'Edit this record',
-            selectHint: 'Select this record ([name]) to assign it to you',
-            lockedTooltip: 'You are not able to edit this row',
-            deleteRecordConfirmation: {
-                confirmationTitle: 'Delete record',
-                confirmationMessage: 'Are you sure you want to delete this record?',
-                cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes',
-            },
-            deleteButtonId: 'delete-record',
-            editButtonId: 'edit-record',
-        },
-        hideReorder: false,
-        hideDelete: false,
-        required: false,
-        enableSelect: false,
-    };
-
-    constructor(props) {
-        super(props);
-    }
-
-    _showConfirmation = () => {
-        this.confirmationBox.showConfirmation();
-    };
-
-    _onDelete = () => {
-        if (!this.props.disabled && this.props.onDelete) {
-            this.props.onDelete(this.props.contributor, this.props.index);
+    const _onDelete = () => {
+        if (!disabled && onDelete) {
+            onDelete(contributor, index);
         }
     };
 
-    _onMoveUp = () => {
-        if (!this.props.disabled && this.props.onMoveUp) {
-            this.props.onMoveUp(this.props.contributor, this.props.index);
+    const _onMoveUp = () => {
+        if (!disabled && onMoveUp) {
+            onMoveUp(contributor, index);
         }
     };
 
-    _onMoveDown = () => {
-        if (!this.props.disabled && this.props.onMoveDown) {
-            this.props.onMoveDown(this.props.contributor, this.props.index);
+    const _onMoveDown = () => {
+        if (!disabled && onMoveDown) {
+            onMoveDown(contributor, index);
         }
     };
 
-    _onSelectKeyboard = event => {
-        if (event.key === 'Enter') {
-            this._select();
-        }
-    };
-
-    _onSelect = event => {
-        this._select();
-        event && event.currentTarget.blur();
-    };
-
-    _select = () => {
-        const { disabled, onSelect, index, enableSelect } = this.props;
+    const _select = () => {
         if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
     };
 
-    _handleEdit = () => {
-        const { canEdit, index } = this.props;
-        canEdit && !!this.props.onEdit && this.props.onEdit(index);
+    const _onSelectKeyboard = event => {
+        if (event.key === 'Enter') {
+            _select();
+        }
     };
 
-    getRowIcon() {
-        const {
-            contributor,
-            disabled,
-            locale: { lockedTooltip },
-        } = this.props;
+    const _onSelect = event => {
+        _select();
+        event && event.currentTarget.blur();
+    };
+
+    const _handleEdit = () => {
+        canEdit && !!onEdit && onEdit(index);
+    };
+
+    const getRowIcon = () => {
         if (parseInt(contributor.uqIdentifier, 10)) {
             return <HowToRegIcon />;
         } else if (contributor.selected) {
             return <Person />;
-        } else if ((disabled || contributor.disabled) && !this.props.enableSelect) {
+        } else if ((disabled || contributor.disabled) && !enableSelect) {
             return lockedTooltip ? (
                 <Tooltip title={lockedTooltip}>
                     <Lock />
@@ -183,152 +152,173 @@ export class ContributorRow extends PureComponent {
         } else {
             return <PersonOutlined />;
         }
-    }
+    };
 
-    render() {
-        const {
-            contributor,
-            canEdit,
-            canMoveDown,
-            canMoveUp,
-            disabled,
-            classes,
-            hideReorder,
-            hideDelete,
-            required,
-            index,
-            locale: {
-                deleteRecordConfirmation,
-                moveUpHint,
-                moveDownHint,
-                deleteHint,
-                editHint,
-                selectHint,
-                deleteButtonId,
-                editButtonId,
-            },
-        } = this.props;
+    const selectedClass = contributor.selected ? classes.selected : '';
 
-        const selectedClass = contributor.selected ? classes.selected : '';
+    const ariaLabel =
+        (!disabled &&
+            `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||
+                ''}`.trim()) ||
+        '';
 
-        const ariaLabel =
-            (!disabled &&
-                `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||
-                    ''}`.trim()) ||
-            '';
-
-        return (
-            <Fragment>
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._onDelete}
-                    locale={deleteRecordConfirmation}
+    return (
+        <Fragment>
+            <ConfirmationBox
+                onAction={_onDelete}
+                onClose={hideConfirmation}
+                isOpen={isOpen}
+                locale={deleteRecordConfirmation}
+            />
+            <ListItem
+                divider
+                classes={{
+                    root: `${classes.listItem} ${(required && classes.highlighted) || ''} ${(contributor.selected &&
+                        classes.rowSelected) ||
+                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''}`.trim(),
+                }}
+                onClick={_onSelect}
+                tabIndex={contributor.disabled || disabled ? -1 : 0}
+                onKeyDown={!contributor.disabled ? _onSelectKeyboard : () => {}}
+                aria-label={ariaLabel}
+                id={`${contributorRowId}-${index}`}
+            >
+                <Hidden xsDown>
+                    <ListItemIcon classes={{ root: selectedClass }}>{getRowIcon()}</ListItemIcon>
+                </Hidden>
+                <ContributorRowText
+                    index={index}
+                    canEdit={canEdit}
+                    contributor={contributor}
+                    classes={classes}
+                    width={width}
+                    showRoleInput={showRoleInput}
+                    selectedClass={selectedClass}
+                    suffix={suffix}
+                    contributorRowId={`${contributorRowId}-${index}`}
                 />
-                <ListItem
-                    divider
-                    classes={{
-                        root: `${classes.listItem || ''} ${(required && classes.highlighted) ||
-                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!contributor.disabled &&
-                            classes.disabledListItem) ||
-                            ''}`.trim(),
-                    }}
-                    onClick={this._onSelect}
-                    tabIndex={contributor.disabled || this.props.disabled ? -1 : 0}
-                    onKeyDown={contributor.disabled ? this._onSelectKeyboard : () => {}}
-                    aria-label={ariaLabel}
-                    id={`contributor-editor-row-${this.props.index}`}
-                >
-                    <Hidden xsDown>
-                        <ListItemIcon classes={{ root: selectedClass }}>{this.getRowIcon()}</ListItemIcon>
-                    </Hidden>
-                    <ContributorRowText
-                        index={this.props.index}
-                        canEdit={this.props.canEdit}
-                        contributor={this.props.contributor}
-                        classes={this.props.classes}
-                        width={this.props.width}
-                        showRoleInput={this.props.showRoleInput}
-                        selectedClass={selectedClass}
-                        suffix={this.props.locale.suffix}
-                    />
-                    <ListItemSecondaryAction>
-                        {canMoveUp && (
-                            <Tooltip
-                                title={moveUpHint}
-                                disableFocusListener={disabled || hideReorder}
-                                disableHoverListener={disabled || hideReorder}
-                                disableTouchListener={disabled || hideReorder}
-                            >
-                                <span>
-                                    <IconButton
-                                        onClick={this._onMoveUp}
-                                        disabled={disabled || hideReorder}
-                                        aria-label={moveUpHint}
-                                    >
-                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
-                                    </IconButton>
-                                </span>
-                            </Tooltip>
-                        )}
-                        {canMoveDown && (
-                            <Tooltip
-                                title={moveDownHint}
-                                disableFocusListener={disabled || hideReorder}
-                                disableHoverListener={disabled || hideReorder}
-                                disableTouchListener={disabled || hideReorder}
-                            >
-                                <span>
-                                    <IconButton
-                                        onClick={this._onMoveDown}
-                                        disabled={disabled || hideReorder}
-                                        aria-label={moveDownHint}
-                                    >
-                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
-                                    </IconButton>
-                                </span>
-                            </Tooltip>
-                        )}
-                        {canEdit && (
-                            <Tooltip
-                                title={editHint}
-                                disableFocusListener={disabled || !!contributor.disabled}
-                                disableHoverListener={disabled || !!contributor.disabled}
-                                disableTouchListener={disabled || !!contributor.disabled}
-                            >
-                                <span>
-                                    <IconButton
-                                        aria-label={editHint}
-                                        onClick={this._handleEdit}
-                                        disabled={disabled || !!contributor.disabled}
-                                        id={`${editButtonId}-${index}`}
-                                    >
-                                        <Edit classes={{ root: `${selectedClass}` }} />
-                                    </IconButton>
-                                </span>
-                            </Tooltip>
-                        )}
+                <ListItemSecondaryAction>
+                    {canMoveUp && (
                         <Tooltip
-                            title={deleteHint}
-                            disableFocusListener={disabled || hideDelete}
-                            disableHoverListener={disabled || hideDelete}
-                            disableTouchListener={disabled || hideDelete}
+                            title={moveUpHint}
+                            disableFocusListener={disabled || hideReorder}
+                            disableHoverListener={disabled || hideReorder}
+                            disableTouchListener={disabled || hideReorder}
                         >
                             <span>
                                 <IconButton
-                                    aria-label={deleteHint}
-                                    onClick={this._showConfirmation}
-                                    disabled={disabled || hideDelete}
-                                    id={`${deleteButtonId}-${index}`}
+                                    id={`${contributorRowId}-move-up-${index}`}
+                                    onClick={_onMoveUp}
+                                    disabled={disabled || hideReorder}
+                                    aria-label={moveUpHint}
                                 >
-                                    <Delete classes={{ root: `${selectedClass}` }} />
+                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
                             </span>
                         </Tooltip>
-                    </ListItemSecondaryAction>
-                </ListItem>
-            </Fragment>
-        );
-    }
-}
+                    )}
+                    {canMoveDown && (
+                        <Tooltip
+                            title={moveDownHint}
+                            disableFocusListener={disabled || hideReorder}
+                            disableHoverListener={disabled || hideReorder}
+                            disableTouchListener={disabled || hideReorder}
+                        >
+                            <span>
+                                <IconButton
+                                    id={`${contributorRowId}-move-down-${index}`}
+                                    onClick={_onMoveDown}
+                                    disabled={disabled || hideReorder}
+                                    aria-label={moveDownHint}
+                                >
+                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                </IconButton>
+                            </span>
+                        </Tooltip>
+                    )}
+                    {canEdit && (
+                        <Tooltip
+                            title={editHint}
+                            disableFocusListener={disabled || !!contributor.disabled}
+                            disableHoverListener={disabled || !!contributor.disabled}
+                            disableTouchListener={disabled || !!contributor.disabled}
+                        >
+                            <span>
+                                <IconButton
+                                    aria-label={editHint}
+                                    onClick={_handleEdit}
+                                    disabled={disabled || !!contributor.disabled}
+                                    id={`${contributorRowId}-edit-${index}`}
+                                >
+                                    <Edit classes={{ root: `${selectedClass}` }} />
+                                </IconButton>
+                            </span>
+                        </Tooltip>
+                    )}
+                    <Tooltip
+                        title={deleteHint}
+                        disableFocusListener={disabled || hideDelete}
+                        disableHoverListener={disabled || hideDelete}
+                        disableTouchListener={disabled || hideDelete}
+                    >
+                        <span>
+                            <IconButton
+                                aria-label={deleteHint}
+                                onClick={showConfirmation}
+                                disabled={disabled || hideDelete}
+                                id={`${contributorRowId}-delete-${index}`}
+                            >
+                                <Delete classes={{ root: `${selectedClass}` }} />
+                            </IconButton>
+                        </span>
+                    </Tooltip>
+                </ListItemSecondaryAction>
+            </ListItem>
+        </Fragment>
+    );
+};
 
-export default withStyles(styles)(withWidth()(ContributorRow));
+ContributorRow.propTypes = {
+    canEdit: PropTypes.bool,
+    canMoveDown: PropTypes.bool,
+    canMoveUp: PropTypes.bool,
+    contributor: PropTypes.object.isRequired,
+    contributorRowId: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
+    hideDelete: PropTypes.bool,
+    hideReorder: PropTypes.bool,
+    index: PropTypes.number.isRequired,
+    locale: PropTypes.object,
+    onSelect: PropTypes.func,
+    onDelete: PropTypes.func,
+    onEdit: PropTypes.func,
+    onMoveDown: PropTypes.func,
+    onMoveUp: PropTypes.func,
+    required: PropTypes.bool,
+    enableSelect: PropTypes.bool,
+    showRoleInput: PropTypes.bool,
+};
+
+ContributorRow.defaultProps = {
+    canEdit: false,
+    locale: {
+        suffix: ' listed contributor',
+        moveUpHint: 'Move record up the order',
+        moveDownHint: 'Move record down the order',
+        deleteHint: 'Remove this record',
+        editHint: 'Edit this record',
+        selectHint: 'Select this record ([name]) to assign it to you',
+        lockedTooltip: 'You are not able to edit this row',
+        deleteRecordConfirmation: {
+            confirmationTitle: 'Delete record',
+            confirmationMessage: 'Are you sure you want to delete this record?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+    },
+    hideReorder: false,
+    hideDelete: false,
+    required: false,
+    enableSelect: false,
+};
+export default React.memo(ContributorRow);

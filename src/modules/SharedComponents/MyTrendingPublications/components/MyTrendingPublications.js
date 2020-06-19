@@ -57,11 +57,11 @@ export class MyTrendingPublications extends PureComponent {
             return <div className="empty" />;
         }
         return (
-            <Grid container spacing={24} id={'myTrendingPublications'}>
+            <Grid container spacing={3} id={'myTrendingPublications'}>
                 <Grid item xs={12}>
                     {this.props.trendingPublicationsList.map(({ key, values }, metricIndex) => {
                         return (
-                            <Grid container key={metricIndex} spacing={24}>
+                            <Grid container key={metricIndex} spacing={3}>
                                 <Grid item xs>
                                     <Typography variant={'h6'}>
                                         <div className={`fez-icon ${key} xxlarge`} />

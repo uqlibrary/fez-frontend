@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
             return { text: dompurify.sanitize(item.rek_title, noHtmlConfig), value: item.rek_pid, index: index + 1 };
         });
     return {
-        selectedValue: props.input.value || [],
+        value: props.input.value || '',
         itemsList: translatedItemList || [],
         itemsLoading: (state.get('communitiesReducer') && state.get('communitiesReducer').itemsLoading) || false,
         itemsLoadingError:
@@ -28,18 +28,17 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const CommunitiesList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+const CommunitiesList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 export default function CommunitiesSelectField(fieldProps) {
+    const { communitiesSelectFieldId } = fieldProps;
     return (
         <CommunitiesList
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
             id="rek_ismemberof"
+            genericSelectFieldId={communitiesSelectFieldId}
             {...fieldProps}
         />
     );

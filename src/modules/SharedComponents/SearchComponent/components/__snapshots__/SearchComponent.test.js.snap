@@ -48,7 +48,8 @@ Object {
 
 exports[`SearchComponent should add one row for advanced search 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -73,9 +74,10 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -91,7 +93,8 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
 
 exports[`SearchComponent should add one row for advanced search 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -120,9 +123,10 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -150,7 +154,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -178,7 +182,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -206,7 +210,7 @@ exports[`SearchComponent should handle simple search text change 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -222,7 +226,8 @@ exports[`SearchComponent should handle simple search text change 1`] = `
 
 exports[`SearchComponent should remove one row from advanced search 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -257,9 +262,10 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -275,7 +281,8 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
 
 exports[`SearchComponent should remove one row from advanced search 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -305,9 +312,10 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -335,7 +343,7 @@ exports[`SearchComponent should render default view 1`] = `
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -351,7 +359,8 @@ exports[`SearchComponent should render default view 1`] = `
 
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -376,9 +385,10 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -406,7 +416,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -434,7 +444,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -450,7 +460,8 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
 
 exports[`SearchComponent should reset advanced search 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -480,9 +491,10 @@ exports[`SearchComponent should reset advanced search 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -498,7 +510,8 @@ exports[`SearchComponent should reset advanced search 1`] = `
 
 exports[`SearchComponent should reset advanced search 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -508,6 +521,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
         },
       ]
     }
+    isMinimised={false}
     isOpenAccess={false}
     onAdvancedSearchReset={[Function]}
     onAdvancedSearchRowAdd={[Function]}
@@ -521,6 +535,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={
       Object {
         "from": 0,
@@ -528,7 +543,7 @@ exports[`SearchComponent should reset advanced search 2`] = `
       }
     }
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -544,7 +559,8 @@ exports[`SearchComponent should reset advanced search 2`] = `
 
 exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -569,9 +585,10 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -587,7 +604,8 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 
 exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -612,9 +630,10 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -630,7 +649,8 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
 
 exports[`SearchComponent should toggle open access for advanced search 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -655,9 +675,10 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -673,7 +694,8 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
 
 exports[`SearchComponent should toggle open access for advanced search 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -698,9 +720,10 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -728,7 +751,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     showPrefixIcon={false}
     showSearchButton={false}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -744,7 +767,8 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 
 exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -769,6 +793,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={
       Object {
         "from": undefined,
@@ -776,7 +801,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
       }
     }
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -792,7 +817,8 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 
 exports[`SearchComponent should update advanced search row on search text changed 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -817,9 +843,10 @@ exports[`SearchComponent should update advanced search row on search text change
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -835,7 +862,8 @@ exports[`SearchComponent should update advanced search row on search text change
 
 exports[`SearchComponent should update advanced search row on search text changed 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -860,9 +888,10 @@ exports[`SearchComponent should update advanced search row on search text change
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -878,7 +907,8 @@ exports[`SearchComponent should update advanced search row on search text change
 
 exports[`SearchComponent should update date range filter 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -903,9 +933,10 @@ exports[`SearchComponent should update date range filter 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -921,7 +952,8 @@ exports[`SearchComponent should update date range filter 1`] = `
 
 exports[`SearchComponent should update date range filter 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -951,9 +983,10 @@ exports[`SearchComponent should update date range filter 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -969,7 +1002,8 @@ exports[`SearchComponent should update date range filter 2`] = `
 
 exports[`SearchComponent should update date range filter 3`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -999,9 +1033,10 @@ exports[`SearchComponent should update date range filter 3`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1017,7 +1052,8 @@ exports[`SearchComponent should update date range filter 3`] = `
 
 exports[`SearchComponent should update doc type values 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -1042,9 +1078,10 @@ exports[`SearchComponent should update doc type values 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1060,7 +1097,8 @@ exports[`SearchComponent should update doc type values 1`] = `
 
 exports[`SearchComponent should update doc type values 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={
       Array [
         317,
@@ -1090,9 +1128,10 @@ exports[`SearchComponent should update doc type values 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1108,7 +1147,8 @@ exports[`SearchComponent should update doc type values 2`] = `
 
 exports[`SearchComponent should update year range filter 1`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -1133,9 +1173,10 @@ exports[`SearchComponent should update year range filter 1`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={Object {}}
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",
@@ -1151,7 +1192,8 @@ exports[`SearchComponent should update year range filter 1`] = `
 
 exports[`SearchComponent should update year range filter 2`] = `
 <Fragment>
-  <WithStyles(AdvancedSearchComponent)
+  <AdvancedSearchComponent
+    createdRange={Object {}}
     docTypes={Array []}
     fieldRows={
       Array [
@@ -1176,6 +1218,7 @@ exports[`SearchComponent should update year range filter 2`] = `
     updateDateRange={[Function]}
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
     yearFilter={
       Object {
         "from": "2000",
@@ -1184,7 +1227,7 @@ exports[`SearchComponent should update year range filter 2`] = `
       }
     }
   />
-  <WithStyles(Snackbar)
+  <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={
       Object {
         "horizontal": "left",

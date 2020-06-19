@@ -54,7 +54,7 @@ describe('SbsSubmission test', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(12);
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 
     it('should render sbs thesis submission form', () => {
@@ -162,13 +162,12 @@ describe('SbsSubmission test', () => {
     });
 
     it('should reload when told to', () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { reload: jest.fn() };
+        delete global.window.location;
+        const reloadFn = jest.fn();
+        global.window.location = { reload: reloadFn };
         const wrapper = setup({ initialValues: {} });
         wrapper.instance().afterFailedSubmit();
-        expect(window.location.reload).toHaveBeenCalled();
-        window.location = location;
+        expect(reloadFn).toBeCalled();
     });
 
     it('should render sbs thesis submission form', () => {

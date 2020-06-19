@@ -7,7 +7,7 @@ import InlineLoader from './InlineLoader';
 export default function ContentLoader({ message }) {
     return (
         <StandardPage>
-            <Grid container={16}>
+            <Grid container>
                 <Grid item xs={12}>
                     <InlineLoader message={message} />
                 </Grid>

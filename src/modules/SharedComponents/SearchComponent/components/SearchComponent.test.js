@@ -200,7 +200,7 @@ describe('SearchComponent', () => {
         wrapper.setState({
             isAdvancedSearch: true,
         });
-        expect(wrapper.find('WithStyles(AdvancedSearchComponent)').props().showUnpublishedFields).toBe(true);
+        expect(wrapper.find('AdvancedSearchComponent').props().showUnpublishedFields).toBe(true);
     });
 
     it('should not search is searchQuery is empty', () => {
@@ -751,7 +751,7 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper
-            .find('WithStyles(AdvancedSearchComponent)')
+            .find('AdvancedSearchComponent')
             .props()
             .updateDocTypeValues([317, 123]);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -779,7 +779,7 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper
-            .find('WithStyles(AdvancedSearchComponent)')
+            .find('AdvancedSearchComponent')
             .props()
             .updateYearRangeFilter({
                 from: '2000',
@@ -815,7 +815,7 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper
-            .find('WithStyles(AdvancedSearchComponent)')
+            .find('AdvancedSearchComponent')
             .props()
             .updateDateRange('rek_created_date', '[2000 - 2001]');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -841,7 +841,7 @@ describe('SearchComponent', () => {
         });
 
         wrapper
-            .find('WithStyles(AdvancedSearchComponent)')
+            .find('AdvancedSearchComponent')
             .props()
             .updateDateRange('rek_created_date', '[2000 - 2005]');
         expect(toJson(wrapper)).toMatchSnapshot();

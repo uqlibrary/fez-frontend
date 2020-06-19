@@ -192,7 +192,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(4);
+        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(4);
         expect(wrapper.find('TabContainer')).toHaveLength(1);
     });
 
@@ -259,7 +259,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(5);
+        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(5);
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
     });
 
@@ -343,7 +343,7 @@ describe('AdminInterface component', () => {
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
 
         wrapper
-            .find('WithStyles(Tabs)')
+            .find('WithStyles(ForwardRef(Tabs))')
             .props()
             .onChange({}, 'files');
 
@@ -520,7 +520,7 @@ describe('AdminInterface component', () => {
             },
         });
         wrapper
-            .find('WithStyles(Button)')
+            .find('WithStyles(ForwardRef(Button))')
             .get(0)
             .props.onClick({
                 preventDefault: jest.fn(),
@@ -541,7 +541,7 @@ describe('AdminInterface component', () => {
             },
         });
         wrapper2
-            .find('WithStyles(Button)')
+            .find('WithStyles(ForwardRef(Button))')
             .get(0)
             .props.onClick({
                 preventDefault: jest.fn(),

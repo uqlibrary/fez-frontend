@@ -45,11 +45,13 @@ export class GenericSelectFieldClass extends Component {
         menuItemClassName: PropTypes.string,
         meta: PropTypes.object,
         multiple: PropTypes.bool,
+        name: PropTypes.string,
         onChange: PropTypes.func,
         parentItemsId: PropTypes.number,
         required: PropTypes.bool,
-        selectedValue: PropTypes.any,
+        value: PropTypes.any,
         style: PropTypes.object,
+        genericSelectFieldId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
@@ -94,24 +96,15 @@ export class GenericSelectFieldClass extends Component {
     newValue = () => {
         if (this.props.multiple) {
             if (this.props.hideLabel) {
-                return (
-                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || [
-                        -1,
-                    ]
-                );
+                return (this.props.value && this.props.value.length > 0 && this.props.value) || [-1];
             } else {
-                return (
-                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || []
-                );
+                return (this.props.value && this.props.value.length > 0 && this.props.value) || [];
             }
         } else {
             if (this.props.hideLabel) {
-                return (
-                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) ||
-                    '-1'
-                );
+                return (this.props.value && this.props.value.length > 0 && this.props.value) || '-1';
             } else {
-                return this.props.selectedValue || '';
+                return this.props.value || '';
             }
         }
     };
@@ -131,9 +124,7 @@ export class GenericSelectFieldClass extends Component {
                     <MenuItem
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
-                        selected={
-                            (this.props.multiple && this.props.selectedValue.includes(item.value || item)) || undefined
-                        }
+                        selected={(this.props.multiple && this.props.value.includes(item.value || item)) || undefined}
                         value={item.value || item}
                         key={index + 1}
                         disabled={item && ((!this.props.canUnselect && !item.value) || !!item.disabled)}
@@ -149,19 +140,28 @@ export class GenericSelectFieldClass extends Component {
     render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
-                <InputLabel hidden={this.props.hideLabel} id={`${this.props.label}-label`}>
+                <InputLabel hidden={this.props.hideLabel} id={`${this.props.genericSelectFieldId}-label`}>
                     {this.props.label}
                 </InputLabel>
                 <Select
                     autoWidth={this.props.autoWidth}
                     disabled={this.props.disabled || !!this.props.itemsLoading}
                     displayEmpty={this.props.displayEmpty}
-                    inputProps={{ 'aria-labelledby': `${this.props.locale.label}-label` }}
+                    inputProps={{
+                        'aria-labelledby': `${this.props.genericSelectFieldId}-label`,
+                        'data-testid': `${this.props.genericSelectFieldId}-input`,
+                        id: `${this.props.genericSelectFieldId}-input`,
+                    }}
                     multiple={this.props.multiple}
+                    MenuProps={{
+                        id: `${this.props.genericSelectFieldId}-options`,
+                        'data-testid': `${this.props.genericSelectFieldId}-options`,
+                    }}
                     onChange={this._itemSelected}
                     style={this.props.style}
                     SelectDisplayProps={{
-                        id: this.props.id,
+                        id: `${this.props.genericSelectFieldId}-select`,
+                        'data-testid': `${this.props.genericSelectFieldId}-select`,
                     }}
                     value={this.newValue()}
                 >

@@ -8,33 +8,23 @@ exports[`Component InlineLoader should render as expected 1`] = `
     }
   }
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     alignContent="center"
     alignItems="center"
     container={true}
     direction="row"
     justify="center"
-    spacing={8}
+    spacing={1}
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
       smUp={true}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -43,13 +33,13 @@ exports[`Component InlineLoader should render as expected 1`] = `
       }
       xs="auto"
     >
-      <WithStyles(CircularProgress)
+      <WithStyles(ForwardRef(CircularProgress))
         color="primary"
         size={18}
         thickness={2}
       />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       style={
         Object {
@@ -58,7 +48,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
       }
       xs="auto"
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         color="primary"
         component="span"
         style={
@@ -69,26 +59,16 @@ exports[`Component InlineLoader should render as expected 1`] = `
         variant="h5"
       >
         This is a tst
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
       smUp={true}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       />
     </Hidden>
-  </WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

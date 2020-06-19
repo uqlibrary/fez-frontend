@@ -36,7 +36,7 @@ export class NtroDetailsClass extends PureComponent {
 
     ViewNtroRow = ({ heading, subheading, className, data }) => (
         <div style={{ padding: 8 }}>
-            <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
                         {heading}
@@ -79,7 +79,10 @@ export class NtroDetailsClass extends PureComponent {
                                     <this.ViewNtroRow
                                         key={index}
                                         heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                        subheading={`(${publication.fez_record_search_key_author[item.rek_significance_order - 1].rek_author})`}
+                                        subheading={`(${
+                                            publication.fez_record_search_key_author[item.rek_significance_order - 1]
+                                                .rek_author
+                                        })`}
                                         data={
                                             (item.rek_significance !== 0 &&
                                                 item.rek_significance !== '0' &&
@@ -99,11 +102,11 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
                             if (
                                 (this.props.account && this.props.account.canMasquerade) ||
-                                ((item.rek_creator_contribution_statement &&
-                                    (item.rek_creator_contribution_statement !== '' &&
-                                        item.rek_creator_contribution_statement.length > 0 &&
-                                        item.rek_creator_contribution_statement.trim().length !== 0)) ||
-                                    item.rek_creator_contribution_statement === null)
+                                (item.rek_creator_contribution_statement &&
+                                    item.rek_creator_contribution_statement !== '' &&
+                                    item.rek_creator_contribution_statement.length > 0 &&
+                                    item.rek_creator_contribution_statement.trim().length !== 0) ||
+                                item.rek_creator_contribution_statement === null
                             ) {
                                 return (
                                     <this.ViewNtroRow
@@ -114,7 +117,11 @@ export class NtroDetailsClass extends PureComponent {
                                             publication.fez_record_search_key_author[
                                                 item.rek_creator_contribution_statement_order - 1
                                             ].rek_author
-                                                ? `(${publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author})`
+                                                ? `(${
+                                                      publication.fez_record_search_key_author[
+                                                          item.rek_creator_contribution_statement_order - 1
+                                                      ].rek_author
+                                                  })`
                                                 : ''
                                         }
                                         data={
@@ -177,106 +184,107 @@ export class NtroDetailsClass extends PureComponent {
                         subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         publication.fez_record_search_key_volume_number &&
                         publication.fez_record_search_key_volume_number.rek_volume_number && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_volume_number}
-                            data={publication.fez_record_search_key_volume_number.rek_volume_number}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_volume_number}
+                                data={publication.fez_record_search_key_volume_number.rek_volume_number}
+                            />
+                        )}
                     {/* Issue number */}
                     {docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE &&
                         subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         publication.fez_record_search_key_issue_number &&
                         publication.fez_record_search_key_issue_number.rek_issue_number && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_issue_number}
-                            data={publication.fez_record_search_key_issue_number.rek_issue_number}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_issue_number}
+                                data={publication.fez_record_search_key_issue_number.rek_issue_number}
+                            />
+                        )}
                     {/* Start page */}
                     {docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE &&
                         subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
                         publication.fez_record_search_key_start_page &&
                         publication.fez_record_search_key_start_page.rek_start_page && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_start_page}
-                            data={publication.fez_record_search_key_start_page.rek_start_page}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_start_page}
+                                data={publication.fez_record_search_key_start_page.rek_start_page}
+                            />
+                        )}
                     {/* End page */}
                     {docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE &&
                         subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
                         publication.fez_record_search_key_end_page &&
                         publication.fez_record_search_key_end_page.rek_end_page && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_end_page}
-                            data={publication.fez_record_search_key_end_page.rek_end_page}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_end_page}
+                                data={publication.fez_record_search_key_end_page.rek_end_page}
+                            />
+                        )}
                     {/* Total pages */}
                     {docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
-                        (docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) &&
+                        docType !== DOCUMENT_TYPE_BOOK &&
+                        subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
                         docType !== DOCUMENT_TYPE_RESEARCH_REPORT &&
                         publication.fez_record_search_key_total_pages &&
                         publication.fez_record_search_key_total_pages.rek_total_pages && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_total_pages}
-                            data={publication.fez_record_search_key_total_pages.rek_total_pages}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_total_pages}
+                                data={publication.fez_record_search_key_total_pages.rek_total_pages}
+                            />
+                        )}
 
                     {/* Language */}
                     {publication.fez_record_search_key_language &&
                         publication.fez_record_search_key_language.length > 0 && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_language}
-                            data={publication.fez_record_search_key_language.map((item, index) => {
-                                return (
-                                    <span key={index}>
-                                        {general.LANGUAGE.filter(language => {
-                                            return item.rek_language === language.value;
-                                        }).map(language => {
-                                            return language.text;
-                                        })}
-                                        {publication.fez_record_search_key_language.length > 1 &&
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_language}
+                                data={publication.fez_record_search_key_language.map((item, index) => {
+                                    return (
+                                        <span key={index}>
+                                            {general.LANGUAGE.filter(language => {
+                                                return item.rek_language === language.value;
+                                            }).map(language => {
+                                                return language.text;
+                                            })}
+                                            {publication.fez_record_search_key_language.length > 1 &&
                                                 index < publication.fez_record_search_key_language.length - 1 &&
                                                 ', '}
-                                    </span>
-                                );
-                            })}
-                        />
-                    )}
+                                        </span>
+                                    );
+                                })}
+                            />
+                        )}
 
                     {/* Original format */}
                     {publication.fez_record_search_key_original_format &&
                         publication.fez_record_search_key_original_format.rek_original_format && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_original_format}
-                            data={publication.fez_record_search_key_original_format.rek_original_format}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_original_format}
+                                data={publication.fez_record_search_key_original_format.rek_original_format}
+                            />
+                        )}
                     {/* Audience size */}
                     {publication.fez_record_search_key_audience_size &&
                         publication.fez_record_search_key_audience_size.rek_audience_size && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.rek_audience_size}
-                            data={
-                                publication.fez_record_search_key_audience_size.rek_audience_size_lookup ||
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.rek_audience_size}
+                                data={
+                                    publication.fez_record_search_key_audience_size.rek_audience_size_lookup ||
                                     'Not set'
-                            }
-                        />
-                    )}
+                                }
+                            />
+                        )}
                     {/* Quality indicators */}
                     {publication.fez_record_search_key_quality_indicator &&
                         publication.fez_record_search_key_quality_indicator.length > 0 && (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.qualityIndicators}
-                            data={publication.fez_record_search_key_quality_indicator
-                                .map(item => item.rek_quality_indicator_lookup || 'Not set')
-                                .join(', ')}
-                        />
-                    )}
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.qualityIndicators}
+                                data={publication.fez_record_search_key_quality_indicator
+                                    .map(item => item.rek_quality_indicator_lookup || 'Not set')
+                                    .join(', ')}
+                            />
+                        )}
                 </StandardCard>
             </Grid>
         );

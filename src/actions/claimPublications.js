@@ -246,37 +246,37 @@ export function claimPublication(data) {
         // claim record from external source
         const createRecordRequest = !data.publication.rek_pid
             ? {
-                ...NEW_RECORD_DEFAULT_VALUES,
-                ...data.publication,
-                // remove any other Collection eg WOS Import in favour of Unprocessed Record
-                ...UNPROCESSED_RECORDS_COLLECTION,
-                ...transformers.getRecordLinkSearchKey(data),
-                ...transformers.getRecordFileAttachmentSearchKey(
-                    data.files ? data.files.queue : [],
-                    data.publication,
-                ),
-                ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
-                ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
-                ...recordAuthorsIdSearchKeys,
-                ...recordContributorsIdSearchKeys,
-            }
+                  ...NEW_RECORD_DEFAULT_VALUES,
+                  ...data.publication,
+                  // remove any other Collection eg WOS Import in favour of Unprocessed Record
+                  ...UNPROCESSED_RECORDS_COLLECTION,
+                  ...transformers.getRecordLinkSearchKey(data),
+                  ...transformers.getRecordFileAttachmentSearchKey(
+                      data.files ? data.files.queue : [],
+                      data.publication,
+                  ),
+                  ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
+                  ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
+                  ...recordAuthorsIdSearchKeys,
+                  ...recordContributorsIdSearchKeys,
+              }
             : null;
 
         // update record with author/contributor id, link, content indicators
         const patchRecordRequest = data.publication.rek_pid
             ? {
-                ...transformers.getRecordLinkSearchKey(data),
-                ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
-                ...recordAuthorsIdSearchKeys,
-                ...recordContributorsIdSearchKeys,
-            }
+                  ...transformers.getRecordLinkSearchKey(data),
+                  ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
+                  ...recordAuthorsIdSearchKeys,
+                  ...recordContributorsIdSearchKeys,
+              }
             : null;
 
         // update record with files
         const patchFilesRecordRequest = hasFilesToUpload
             ? {
-                ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
-            }
+                  ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
+              }
             : null;
 
         // track success of either save or patch request

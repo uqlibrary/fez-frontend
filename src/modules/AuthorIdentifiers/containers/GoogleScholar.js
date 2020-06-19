@@ -38,10 +38,7 @@ let GoogleScholarContainer = reduxForm({
     onSubmit,
 })(GoogleScholar);
 
-GoogleScholarContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GoogleScholarContainer);
+GoogleScholarContainer = connect(mapStateToProps, mapDispatchToProps)(GoogleScholarContainer);
 GoogleScholarContainer = withRouter(GoogleScholarContainer);
 
 export default GoogleScholarContainer;

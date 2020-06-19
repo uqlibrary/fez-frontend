@@ -19,7 +19,7 @@ export const SelectedSecurityPolicyDescription = ({ title, selectedPolicyKey }) 
         <Typography variant="h6" style={{ marginTop: -8 }}>
             {title}
         </Typography>
-        <Grid container spacing={8} style={{ marginTop: 8 }}>
+        <Grid container spacing={1} style={{ marginTop: 8 }}>
             <Grid item xs={2}>
                 <b>Name (ID):</b>
             </Grid>

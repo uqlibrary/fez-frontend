@@ -25,8 +25,8 @@ export const calculateOpenAccess = record => {
         embargoDate =
             !embargoDate && embargoDays
                 ? moment(publishedDate)
-                    .add(embargoDays, 'days')
-                    .format()
+                      .add(embargoDays, 'days')
+                      .format()
                 : embargoDate;
         const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
         const displayEmbargoDate =
@@ -49,20 +49,20 @@ export const calculateOpenAccess = record => {
         const allFiles =
             (record.fez_datastream_info || []).length > 0
                 ? record.fez_datastream_info.filter(
-                    item => !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) && isAdded(item),
-                )
+                      item => !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) && isAdded(item),
+                  )
                 : [];
         const hasFiles = allFiles.length > 0;
         const allEmbargoFiles = hasFiles
             ? record.fez_datastream_info
-                .filter(
-                    item =>
-                        !!item.dsi_embargo_date &&
+                  .filter(
+                      item =>
+                          !!item.dsi_embargo_date &&
                           moment(item.dsi_embargo_date).isAfter(moment()) &&
                           !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
                           isAdded(item),
-                )
-                .sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
+                  )
+                  .sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];
         // OA with a possible file embargo date
         // OA with a possible file embargo date

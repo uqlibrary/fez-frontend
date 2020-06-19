@@ -37,7 +37,4 @@ export const mapDispatchToProps = dispatch => ({
     onDeleteAttachedFile: file => dispatch(deleteAttachedFile(file)),
 });
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(React.memo(FilesSectionContainer));
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(FilesSectionContainer));

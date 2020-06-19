@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
-import { default as globalLocale } from 'locale/global';
+import locale from 'locale/global';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -55,7 +55,7 @@ const authorsGetValue = record => {
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
         affiliation:
-            (authorAffiliationNames[order] || {}).rek_author_affiliation_name === globalLocale.global.orgTitle
+            (authorAffiliationNames[order] || {}).rek_author_affiliation_name === locale.global.orgTitle
                 ? AFFILIATION_TYPE_UQ
                 : AFFILIATION_TYPE_NOT_UQ,
         aut_org_username: ((authorIds[order] || {}).author || {}).aut_org_username || '',
@@ -247,39 +247,19 @@ export default {
     },
     issnField: {
         getValue: record => {
-            const returnValue = (record.fez_record_search_key_issn || []).map(issn => {
-                const ulrichsLink =
-                    (!!issn.fez_ulrichs &&
-                        !!issn.fez_ulrichs.ulr_title_id &&
-                        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', issn.fez_ulrichs.ulr_title_id)) ||
-                    '';
-                const ulrichsLinkText =
-                    (!!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title && issn.fez_ulrichs.ulr_title) || '';
-                const sherpaRomeoLink =
-                    (!!issn.fez_sherpa_romeo &&
-                        !!issn.fez_sherpa_romeo.srm_issn &&
-                        issn.fez_sherpa_romeo.srm_journal_name !== 'Not found in Sherpa Romeo' &&
-                        !!issn.fez_sherpa_romeo.srm_journal_link &&
-                        issn.fez_sherpa_romeo.srm_journal_link) ||
-                    '';
-                return {
-                    rek_order: issn.rek_issn_order,
-                    rek_value: {
-                        key: issn.rek_issn,
-                        value: {
-                            ulrichs: {
-                                link: ulrichsLink,
-                                linkText: ulrichsLinkText,
-                                title: ulrichsLinkText,
-                            },
-                            sherpaRomeo: {
-                                link: sherpaRomeoLink,
-                            },
-                        },
+            const returnValue = (record.fez_record_search_key_issn || []).map(issn => ({
+                rek_order: issn.rek_issn_order,
+                rek_value: {
+                    key: issn.rek_issn,
+                    value: {
+                        fez_sherpa_romeo: issn.fez_sherpa_romeo,
+                        fez_ulrichs: issn.fez_ulrichs,
                     },
-                };
-            });
-            // delete record.fez_record_search_key_issn;
+                    hasPreload: true,
+                },
+            }));
+
+            delete record.fez_record_search_key_issn;
             return returnValue;
         },
     },
@@ -574,11 +554,11 @@ export default {
         getValue: record => {
             const returnValue = record.fez_record_search_key_date_available &&
                 record.fez_record_search_key_date_available.rek_date_available && {
-                ...record.fez_record_search_key_date_available,
-                rek_date_available: moment(record.fez_record_search_key_date_available.rek_date_available).format(
-                    'YYYY',
-                ),
-            };
+                    ...record.fez_record_search_key_date_available,
+                    rek_date_available: moment(record.fez_record_search_key_date_available.rek_date_available).format(
+                        'YYYY',
+                    ),
+                };
             delete record.fez_record_search_key_date_available;
             return returnValue;
         },
@@ -603,10 +583,10 @@ export default {
         getValue: record =>
             getValueSearchKeyRekValueList(record, 'fez_record_search_key_alternate_genre.rek_alternate_genre'),
     },
-    fez_record_search_key_location_biblio: {
+    fez_record_search_key_location: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
-    fez_record_search_key_location_identifiers: {
+    locations: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_location'),
     },
     fez_record_search_key_identifier: {
@@ -627,10 +607,7 @@ export default {
     fez_record_search_key_length: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_length'),
     },
-    fez_record_search_key_license_biblio: {
-        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_license'),
-    },
-    fez_record_search_key_license_additional: {
+    fez_record_search_key_license: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_license'),
     },
     fez_record_search_key_original_format: {
@@ -749,10 +726,7 @@ export default {
     fez_record_search_key_start_date: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_start_date'),
     },
-    fez_record_search_key_end_date_admin: {
-        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_end_date'),
-    },
-    fez_record_search_key_end_date_biblio: {
+    fez_record_search_key_end_date: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_end_date'),
     },
     fez_record_search_key_time_period_start_date: {

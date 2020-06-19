@@ -111,6 +111,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                         value={embargoDate}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
+                                        minDate={new Date()}
                                     />
                                 )}
                             </ListItemText>

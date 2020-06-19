@@ -10,6 +10,7 @@ function setup(testProps = {}, args = {}) {
             list: 'list',
             scroll: 'scroll',
         },
+        contributorEditorId: 'test',
         ...testProps,
     };
     return getElement(ContributorsEditor, props, args);
@@ -183,7 +184,7 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state()).toMatchSnapshot();
     });
 
-    it('assigns a contributor to current author', async() => {
+    it('assigns a contributor to current author', async () => {
         const wrapper = setup({
             author: {
                 aut_id: 101,
@@ -439,9 +440,9 @@ describe('ContributorsEditor', () => {
             contributors: [{ nameAsPublished: 1 }, { nameAsPublished: 2 }, { nameAsPublished: 3 }],
         });
         wrapper.update();
-        expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(3);
-        expect(wrapper.find('Infinite').length).toEqual(0);
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Memo(ContributorRow)').length).toEqual(3);
+        expect(wrapper.find('Infinite').length).toEqual(0);
     });
 
     it('renders 4 contributor rows wrapped in an infinite scroll', () => {
@@ -449,7 +450,7 @@ describe('ContributorsEditor', () => {
         wrapper.setState({
             contributors: [{ displayName: 1 }, { displayName: 2 }, { displayName: 3 }, { displayName: 4 }],
         });
-        expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(4);
+        expect(wrapper.find('Memo(ContributorRow)').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -459,7 +460,7 @@ describe('ContributorsEditor', () => {
             meta: { error: 'This is a test error' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(Typography)').length).toEqual(1);
+        expect(wrapper.find('WithStyles(ForwardRef(Typography))').length).toEqual(1);
     });
 
     it('should update component', () => {

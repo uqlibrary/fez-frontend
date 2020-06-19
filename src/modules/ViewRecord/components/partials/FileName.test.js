@@ -49,7 +49,7 @@ describe('File Name Component ', () => {
             { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('FileName audio').length).toEqual(1);
+        expect(wrapper.find('FileName').length).toEqual(1);
     });
 
     it('should return canShowPreview as true for image/video files', () => {

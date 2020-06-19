@@ -75,7 +75,7 @@ export default class NewRecord extends PureComponent {
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     {this.props.newRecordFileUploadingOrIssueError && (
                         <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />

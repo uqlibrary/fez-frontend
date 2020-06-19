@@ -2,30 +2,30 @@
 
 exports[`ScaleOfSignificanceTemplate component should render default view 1`] = `
 <Fragment>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         variant="body2"
       >
         Missing
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       xs={12}
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         component="span"
         variant="body2"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;

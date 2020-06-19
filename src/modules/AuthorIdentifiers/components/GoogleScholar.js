@@ -84,11 +84,11 @@ export default class GoogleScholar extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={cardLocale.title} help={txt.help}>
                                 {cardLocale.description}
-                                <Grid container spacing={16}>
+                                <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={TextField}
@@ -110,7 +110,7 @@ export default class GoogleScholar extends PureComponent {
                             </Grid>
                         }
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={2}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>

@@ -1,56 +1,50 @@
-import React from 'react';
-import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
+import matchSorter from 'match-sorter';
+import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const mapStateToProps = (state, props) => {
-    const category = 'author';
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') && state.get('searchKeysReducer').author) || {
+        itemsList: [],
+        itemsLoading: false,
+    };
     return {
-        category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
-                : [],
-        onChange: item => {
-            if (!!item && !item.id && !!props.input) {
-                props.input.onChange(null);
-            } else if ((!!item && !item.id) || (!!item && isNaN(parseInt(item.id, 10)))) {
-                !!props.input
-                    ? props.input.onChange({
-                        ...item,
-                        id: isNaN(parseInt(item.value, 10)) ? undefined : `${parseInt(item.value, 10)}`,
-                    })
-                    : props.onChange({ ...item, id: isNaN(item.value) ? undefined : `${parseInt(item.value, 10)}` });
-            } else {
-                props && !!props.input ? props.input.onChange(item) : props.onChange(item);
-            }
-        },
-        onClear: () => props.input.onChange(null),
-        allowFreeText: true,
-        async: true,
-        selectedValue:
-            (!props.input &&
-                ((!!props.label && { value: props.label }) || (!!props.value && { value: props.value }))) ||
-            (!!props.input &&
-                !!props.input.value &&
-                (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
-            null,
-        itemToString: item => (!!item && String(`${item.id} (${item.value})`)) || '',
-        maxResults: 50,
-        error: (!!props.meta && !!props.meta.error) || props.error,
-        errorText: (!!props.meta && !!props.meta.error && props.meta.error) || (props.error && props.errorText) || '',
+        id: props.id,
+        autoCompleteAsynchronousFieldId: props.authorIdFieldId,
+        itemsList: itemsList.filter(item => !!item.id && item.id !== 0),
+        itemsLoading,
+        getOptionLabel: item => (!!item && !!item.id && String(`${item.id} (${item.value})`)) || '',
+        filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['id', 'value'] }),
+        OptionTemplate: GenericOptionTemplate,
+        ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
+            ? {
+                  defaultValue:
+                      (!!props.input.value &&
+                          (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
+                      null,
+                  error: !!props.meta.error,
+                  errorText: props.meta.error || '',
+              }
+            : {
+                  defaultValue: props.value || null,
+                  error: props.error,
+                  errorText: props.errorText || '',
+              }),
     };
 };
 
-const mapDispatchToProps = dispatch => ({
-    loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+const mapDispatchToProps = (dispatch, props) => ({
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList('author', searchQuery)),
+    ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
+        ? {
+              onChange: item => props.input.onChange(item),
+              onClear: () => props.input.onChange(null),
+          }
+        : {
+              onChange: item => props.onChange(item),
+              onClear: () => props.onChange(null),
+          }),
 });
 
-const AuthorIdAutoComplete = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsyncField);
-
-export function AuthorIdField(fieldProps) {
-    return <AuthorIdAutoComplete {...fieldProps} />;
-}
+export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

@@ -49,6 +49,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] =
   }
   name="partialDate"
   onChange={[Function]}
+  partialDateFieldId="test"
 />
 `;
 
@@ -101,6 +102,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`]
   }
   name="partialDate"
   onChange={[Function]}
+  partialDateFieldId="test"
 />
 `;
 
@@ -153,5 +155,6 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`]
   }
   name="partialDate"
   onChange={[Function]}
+  partialDateFieldId="test"
 />
 `;

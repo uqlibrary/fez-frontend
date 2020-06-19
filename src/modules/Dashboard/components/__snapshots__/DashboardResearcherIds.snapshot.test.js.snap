@@ -7,7 +7,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="publons"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="You are not linked to Publons - Click for more information"
     >
       <div
@@ -20,7 +20,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -32,7 +32,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -45,7 +45,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -57,7 +57,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -70,7 +70,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -82,7 +82,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -95,7 +95,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -107,7 +107,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="orcid"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
     >
       <div
@@ -120,7 +120,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -132,7 +132,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
     id="publons"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="You are not linked to Publons - Click for more information"
     >
       <div
@@ -145,7 +145,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -157,7 +157,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -170,7 +170,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -182,7 +182,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -195,7 +195,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -207,7 +207,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -220,7 +220,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -249,7 +249,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
     id="publons"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="You are not linked to Publons - Click for more information"
     >
       <div
@@ -262,7 +262,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -274,7 +274,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -287,7 +287,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -299,7 +299,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -312,7 +312,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -324,7 +324,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -337,7 +337,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -349,7 +349,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 5`] = `
     id="orcid"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
     >
       <div
@@ -362,7 +362,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 5`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -374,7 +374,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
     id="publons"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="You are not linked to Publons - Click for more information"
     >
       <div
@@ -387,7 +387,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -399,7 +399,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -412,7 +412,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -424,7 +424,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -437,7 +437,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -449,7 +449,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(Tooltip)
+    <WithStyles(ForwardRef(Tooltip))
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -462,7 +462,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `
           }
         }
       />
-    </WithStyles(Tooltip)>
+    </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ExternalLink)>
 </Fragment>
 `;
@@ -514,14 +514,14 @@ Object {
 exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-align-items-xs-center-9"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-item-2"
+      class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-98"
+        class=" ExternalLink-externalLink-104"
         href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
         id="publons"
         rel="noopener noreferrer"
@@ -537,10 +537,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-item-2"
+      class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-98"
+        class=" ExternalLink-externalLink-104"
         href="http://www.researcherid.com/rid/A-1137-2007"
         id="researcher"
         rel="noopener noreferrer"
@@ -556,10 +556,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-item-2"
+      class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-98"
+        class=" ExternalLink-externalLink-104"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
         id="scopus"
         rel="noopener noreferrer"
@@ -575,10 +575,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-item-2"
+      class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-98"
+        class=" ExternalLink-externalLink-104"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
         id="google_scholar"
         rel="noopener noreferrer"
@@ -594,10 +594,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-item-2"
+      class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-98"
+        class=" ExternalLink-externalLink-104"
         href="https://orcid.org/0000-0001-1111-1111"
         id="orcid"
         rel="noopener noreferrer"
@@ -614,39 +614,38 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       <span>
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
-          class="MuiButtonBase-root-115 MuiIconButton-root-109"
+          class="MuiButtonBase-root MuiIconButton-root"
+          id="help-icon"
           tabindex="0"
           title="Information about uploading your eSpace works to ORCID"
           type="button"
         >
           <span
-            class="MuiIconButton-label-114"
+            class="MuiIconButton-label"
           >
             <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root-118 HelpIcon-helpIcon-108"
+              class="MuiSvgIcon-root makeStyles-helpIcon-117"
               focusable="false"
-              role="presentation"
+              role="img"
               size="20"
               viewBox="0 0 24 24"
             >
               <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-              <path
                 d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
               />
+              <title>
+                Information about uploading your eSpace works to ORCID
+              </title>
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root-163"
+            class="MuiTouchRipple-root"
           />
         </button>
       </span>
     </div>
     <div
-      class="MuiGrid-item-2"
+      class="MuiGrid-root MuiGrid-item"
     >
       <a
         aria-label="Click to visit your ORCID profile"
@@ -657,7 +656,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root-127 MuiTypography-caption-137"
+          class="MuiTypography-root MuiTypography-caption"
         >
            orcid.org/0000-0001-1111-1111
         </span>

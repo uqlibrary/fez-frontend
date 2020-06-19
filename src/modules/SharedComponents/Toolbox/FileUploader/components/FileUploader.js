@@ -294,7 +294,7 @@ export class FileUploader extends PureComponent {
         });
 
         return (
-            <Grid container spacing={16}>
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Typography variant="body2" gutterBottom>
                         {instructionsDisplay}
@@ -373,7 +373,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(FileUploader);
+export default connect(mapStateToProps, mapDispatchToProps)(FileUploader);

@@ -14,7 +14,7 @@ afterEach(() => {
 });
 
 describe('incompleteRecords actions', () => {
-    it('should call fixing/fixed actions on successful save', async() => {
+    it('should call fixing/fixed actions on successful save', async () => {
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:692945' }).apiUrl)
             .reply(200, { data: incompleteNTROrecord })
@@ -49,7 +49,7 @@ describe('incompleteRecords actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call fixing/fix_failed actions on failed load', async() => {
+    it('should call fixing/fix_failed actions on failed load', async () => {
         mockApi.onAny().reply(404);
 
         try {
@@ -117,7 +117,7 @@ describe('incompleteRecords actions', () => {
 describe('updateIncompleteRecord actions', () => {
     const testPid = 'UQ:41878';
 
-    it('should dispatch processing/success actions on successful load', async() => {
+    it('should dispatch processing/success actions on successful load', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -146,7 +146,7 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch failed action on incomplete data', async() => {
+    it('should dispatch failed action on incomplete data', async () => {
         const expectedActions = [actions.FIX_RECORD_FAILED];
 
         try {
@@ -156,7 +156,7 @@ describe('updateIncompleteRecord actions', () => {
         }
     });
 
-    it('should handle plain text impactStatement', async() => {
+    it('should handle plain text impactStatement', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -180,7 +180,7 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should handle significance', async() => {
+    it('should handle significance', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -202,7 +202,7 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch failed action on bad author', async() => {
+    it('should dispatch failed action on bad author', async () => {
         const testInput = {
             author: {
                 aut_id: 1,
@@ -218,7 +218,7 @@ describe('updateIncompleteRecord actions', () => {
         }
     });
 
-    it('dispatches updated contributor id', async() => {
+    it('dispatches updated contributor id', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -249,7 +249,7 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches failure where Current author is not linked to this record', async() => {
+    it('dispatches failure where Current author is not linked to this record', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -274,7 +274,7 @@ describe('updateIncompleteRecord actions', () => {
         }
     });
 
-    it('dispatches expected actions for successful file upload', async() => {
+    it('dispatches expected actions for successful file upload', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -329,7 +329,7 @@ describe('updateIncompleteRecord actions', () => {
         }
     });
 
-    it('dispatches failure on api error', async() => {
+    it('dispatches failure on api error', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,
@@ -360,7 +360,7 @@ describe('updateIncompleteRecord actions', () => {
         }
     });
 
-    it('see what happens when the author isnt on the list', async() => {
+    it('see what happens when the author isnt on the list', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix,

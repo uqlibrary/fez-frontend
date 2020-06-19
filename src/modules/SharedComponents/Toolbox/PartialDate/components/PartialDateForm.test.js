@@ -3,6 +3,7 @@ import { PartialDateForm } from './PartialDateForm';
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
+        partialDateFormId: 'test',
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
@@ -83,45 +84,45 @@ describe('PartialDateForm component', () => {
 
         it('should display an error on clearing one partial date field', () => {
             // delete date and check for an error
-            wrapper.find('#day').simulate('change', { target: { value: '' } });
+            wrapper.find('#test-day').simulate('change', { target: { value: '' } });
             wrapper.update();
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
         it('should not display an error on clearing whole partial date field', () => {
             // clear whole date and check for not an error
-            wrapper.find('#day').simulate('change', { target: { value: '' } });
-            wrapper.find('#year').simulate('change', { target: { value: '' } });
-            wrapper.find('#month').simulate('change', { target: { value: -1 } });
+            wrapper.find('#test-day').simulate('change', { target: { value: '' } });
+            wrapper.find('#test-year').simulate('change', { target: { value: '' } });
+            wrapper.find('#test-month').simulate('change', { target: { value: -1 } });
             wrapper.update();
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
         it('should not display an error on entering valid date', () => {
             // enter valid date and check for not an error
-            wrapper.find('#day').simulate('change', { target: { value: '12' } });
-            wrapper.find('#year').simulate('change', { target: { value: '1990' } });
-            wrapper.find('#month').simulate('change', { target: { value: 3 } });
+            wrapper.find('#test-day').simulate('change', { target: { value: '12' } });
+            wrapper.find('#test-year').simulate('change', { target: { value: '1990' } });
+            wrapper.find('#test-month').simulate('change', { target: { value: 3 } });
             wrapper.update();
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
         it('should display an error on entering future date', () => {
             // enter future date and check for an error
-            wrapper.find('#year').simulate('change', { target: { value: '2010' } });
+            wrapper.find('#test-year').simulate('change', { target: { value: '2010' } });
             wrapper.update();
             expect(toJson(wrapper)).toMatchSnapshot();
 
             // enter invalid date and check for an error
-            wrapper.find('#month').simulate('change', { target: { value: 1 } });
-            wrapper.find('#day').simulate('change', { target: { value: '29' } });
+            wrapper.find('#test-month').simulate('change', { target: { value: 1 } });
+            wrapper.find('#test-day').simulate('change', { target: { value: '29' } });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
         it('should display an error on entering invalid date', () => {
             // enter invalid date and check for an error
-            wrapper.find('#month').simulate('change', { target: { value: 1 } });
-            wrapper.find('#day').simulate('change', { target: { value: '29' } });
+            wrapper.find('#test-month').simulate('change', { target: { value: 1 } });
+            wrapper.find('#test-day').simulate('change', { target: { value: '29' } });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
     });

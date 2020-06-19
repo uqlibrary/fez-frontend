@@ -23,10 +23,10 @@ const DataStreamSecurityItem = ({
             value === initialDataStream.dsi_security_policy
                 ? initialDataStream
                 : {
-                    ...dataStream,
-                    dsi_security_inherited: 0,
-                    dsi_security_policy: value,
-                },
+                      ...dataStream,
+                      dsi_security_inherited: 0,
+                      dsi_security_policy: value,
+                  },
         );
     };
 
@@ -51,6 +51,7 @@ const DataStreamSecurityItem = ({
                         },
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
+                    policyDropdownId={`dsi-security-policy-${index}`}
                 />
             </Grid>
         </React.Fragment>

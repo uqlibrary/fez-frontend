@@ -61,7 +61,7 @@ describe('Component ViewRecord ', () => {
                 is_super_administrator: 0,
             },
         });
-        expect(wrapper.find('WithStyles(Chip)').props().label).toEqual('Unpublished');
+        expect(wrapper.find('WithStyles(ForwardRef(Chip))').props().label).toEqual('Unpublished');
     });
 
     it('should not render components for empty record', () => {

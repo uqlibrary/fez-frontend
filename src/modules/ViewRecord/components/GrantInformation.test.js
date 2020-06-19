@@ -1,5 +1,5 @@
 import { journalArticle } from 'mock/data/testing/records';
-import { GrantInformationClass } from './GrantInformation';
+// import { GrantInformationClass } from './GrantInformation';
 import GrantInformation from './GrantInformation';
 
 function setup(testProps = {}, args = { isShallow: true }) {
@@ -10,7 +10,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         classes: {},
         ...testProps,
     };
-    return getElement(GrantInformationClass, props, args);
+    return getElement(GrantInformation, props, args);
 }
 
 describe('Grant Information Component ', () => {
@@ -49,39 +49,31 @@ describe('Grant Information Component ', () => {
     it('should not render empty grant ids', () => {
         const publication = Object.assign({}, journalArticle);
         publication.fez_record_search_key_grant_id[0].rek_grant_id = '';
+        publication.fez_record_search_key_grant_text = [
+            { rek_grant_text: 'testing rek_grant_text', rek_grant_text_order: 1 },
+        ];
+
         const wrapper = setup({ publication: publication });
 
-        expect(
-            wrapper
-                .find('.header')
-                .at(0)
-                .props().grantAgencyName,
-        ).toEqual('Grant agency');
-        expect(
-            wrapper
-                .find('.header')
-                .at(0)
-                .props().grantId,
-        ).toBeFalsy();
-        expect(
-            wrapper
-                .find('.header')
-                .at(1)
-                .props().grantAgencyName,
-        ).toEqual('Grant agency');
-        expect(
-            wrapper
-                .find('.header')
-                .at(1)
-                .props().grantId,
-        ).toEqual('Grant ID');
+        const grantDetail = wrapper
+            .find('GrantDetails')
+            .first()
+            .shallow()
+            .find('GrantInformationCell')
+            .first()
+            .shallow();
 
-        // expect(wrapper.find('.data').at(1).props().grantAgencyName).toEqual(
-        //     'National Health and Medical Research Council'
-        // );
-        // expect(wrapper.find('.data').at(1).props().grantId).toBeFalsy();
-        // expect(wrapper.find('.data').at(3).props().grantAgencyName).toEqual('Cancer Council Queensland');
-        // expect(wrapper.find('.data').at(3).props().grantId).toEqual('1042819');
+        expect(grantDetail.find('WithStyles(ForwardRef(Typography))').length).toEqual(1);
+        expect(grantDetail.find('WithStyles(ForwardRef(Typography))').text()).toBe('Grant agency');
+
+        const grantDetail2 = wrapper
+            .find('GrantDetails')
+            .at(0)
+            .shallow()
+            .find('WithStyles(ForwardRef(Typography))')
+            .shallow();
+
+        expect(grantDetail2.find('ForwardRef(Typography)').text()).toBe('testing rek_grant_text');
     });
 
     it('should not break if grant text is not in the record', () => {
@@ -105,21 +97,5 @@ describe('Grant Information Component ', () => {
 
         const wrapper = setup({ publication: newJournalArticle });
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('renderGrantDetail()', () => {
-        const wrapper = setup({
-            publication: {
-                ...journalArticle,
-            },
-        });
-        expect(wrapper.instance().renderGrantDetail('Name', 'ID', 'Text', '1', 0)).toMatchSnapshot();
-    });
-
-    it('renderGrants() 1', () => {
-        const wrapper = setup({
-            fez_record_search_key_grant_text: [{ rek_grant_text: 'Test' }],
-        });
-        expect(toJson(wrapper.instance().renderGrants(journalArticle, true))).toMatchSnapshot();
     });
 });

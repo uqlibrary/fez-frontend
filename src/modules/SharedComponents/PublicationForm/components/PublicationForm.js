@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
 import MenuItem from '@material-ui/core/MenuItem';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -103,140 +104,141 @@ export default class PublicationForm extends Component {
     render() {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
-            <form onSubmit={this._handleDefaultSubmit}>
-                <Grid container spacing={24}>
-                    <NavigationDialogBox
-                        when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={txt.cancelWorkflowConfirmation}
-                    />
-                    <Grid item xs={12}>
-                        <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
-                            <Grid container spacing={8}>
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={SelectField}
-                                        disabled={this.props.submitting}
-                                        name="rek_display_type"
-                                        id="rek_display_type"
-                                        value={this.props.formValues.get('rek_display_type')}
-                                        label={txt.publicationType.inputLabelText}
-                                        required
-                                        placeholder={txt.publicationType.hintText}
-                                        SelectDisplayProps={{
-                                            id: 'rek-display-type',
-                                        }}
-                                    >
-                                        {this.publicationTypeItems}
-                                    </Field>
-                                </Grid>
-                                {(this.props.hasSubtypes || this.props.hasDefaultDocTypeSubType) && (
+            <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
+                <form onSubmit={this._handleDefaultSubmit}>
+                    <Grid container spacing={3}>
+                        <NavigationDialogBox
+                            when={this.props.dirty && !this.props.submitSucceeded}
+                            txt={txt.cancelWorkflowConfirmation}
+                        />
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
+                                <Grid container spacing={1}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={SelectField}
                                             disabled={this.props.submitting}
-                                            id="rek-subtype"
-                                            name="rek_subtype"
-                                            value={this.props.formValues.get('rek_subtype')}
-                                            label={txt.publicationSubtype.inputLabelText}
+                                            name="rek_display_type"
+                                            id="rek-display-type"
+                                            value={this.props.formValues.get('rek_display_type')}
+                                            label={txt.publicationType.inputLabelText}
                                             required
-                                            placeholder={txt.publicationSubtype.hintText}
-                                            SelectDisplayProps={{
-                                                id: 'rek-subtype',
-                                            }}
+                                            placeholder={txt.publicationType.hintText}
+                                            selectFieldId="rek-display-type"
                                         >
-                                            {this.publicationSubtypeItems}
+                                            {this.publicationTypeItems}
                                         </Field>
                                     </Grid>
-                                )}
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                    {!!this.props.formComponent && (
-                        <React.Fragment>
-                            {!!this.props.isNtro && <NtroHeader />}
-                            <Grid item xs={12}>
-                                <this.props.formComponent
-                                    formValues={this.props.formValues}
-                                    subtype={this.props.subtype}
-                                    isNtro={this.props.isNtro}
-                                    isAuthorSelected={this.props.isAuthorSelected}
-                                    submitting={this.props.submitting}
-                                />
-                            </Grid>
-                            {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
-                                <Grid item xs={12}>
-                                    <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
-                                        <Grid container spacing={24}>
-                                            <Grid item xs={12}>
-                                                <Typography>{txt.contentIndicators.description}</Typography>
-                                                <Field
-                                                    component={ContentIndicatorsField}
-                                                    disabled={this.props.submitting}
-                                                    id="content-indicators"
-                                                    name="contentIndicators"
-                                                    label={txt.contentIndicators.fieldLabels.label}
-                                                    multiple
-                                                    fullWidth
-                                                />
-                                            </Grid>
+                                    {(this.props.hasSubtypes || this.props.hasDefaultDocTypeSubType) && (
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={SelectField}
+                                                disabled={this.props.submitting}
+                                                id="rek-subtype"
+                                                name="rek_subtype"
+                                                value={this.props.formValues.get('rek_subtype')}
+                                                label={txt.publicationSubtype.inputLabelText}
+                                                required
+                                                placeholder={txt.publicationSubtype.hintText}
+                                                selectFieldId="rek-subtype"
+                                            >
+                                                {this.publicationSubtypeItems}
+                                            </Field>
                                         </Grid>
+                                    )}
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                        {!!this.props.formComponent && (
+                            <React.Fragment>
+                                {!!this.props.isNtro && <NtroHeader />}
+                                <Grid item xs={12}>
+                                    <this.props.formComponent
+                                        formValues={this.props.formValues}
+                                        subtype={this.props.subtype}
+                                        isNtro={this.props.isNtro}
+                                        isAuthorSelected={this.props.isAuthorSelected}
+                                        submitting={this.props.submitting}
+                                    />
+                                </Grid>
+                                {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
+                                    <Grid item xs={12}>
+                                        <StandardCard
+                                            title={txt.contentIndicators.title}
+                                            help={txt.contentIndicators.help}
+                                        >
+                                            <Grid container spacing={3}>
+                                                <Grid item xs={12}>
+                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                    <Field
+                                                        component={ContentIndicatorsField}
+                                                        disabled={this.props.submitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txt.contentIndicators.fieldLabels.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                )}
+                                <Grid item xs={12}>
+                                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                        <Field
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={this.props.submitting}
+                                            requireOpenAccessStatus
+                                            validate={
+                                                this.props.isNtro
+                                                    ? [validation.fileUploadRequired, validation.validFileUpload]
+                                                    : [validation.validFileUpload]
+                                            }
+                                            isNtro={this.props.isNtro}
+                                        />
                                     </StandardCard>
                                 </Grid>
-                            )}
+                            </React.Fragment>
+                        )}
+                        {!!this.props.formComponent && alertProps && (
                             <Grid item xs={12}>
-                                <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                    <Field
-                                        name="files"
-                                        component={FileUploadField}
-                                        disabled={this.props.submitting}
-                                        requireOpenAccessStatus
-                                        validate={
-                                            this.props.isNtro
-                                                ? [validation.fileUploadRequired, validation.validFileUpload]
-                                                : [validation.validFileUpload]
-                                        }
-                                        isNtro={this.props.isNtro}
-                                    />
-                                </StandardCard>
+                                <Alert pushToTop {...alertProps} />
                             </Grid>
-                        </React.Fragment>
-                    )}
-                    {!!this.props.formComponent && alertProps && (
-                        <Grid item xs={12}>
-                            <Alert pushToTop {...alertProps} />
-                        </Grid>
-                    )}
-                </Grid>
-                <Grid container spacing={24}>
-                    <Grid item xs />
-                    <Grid item xs={12} sm="auto">
-                        <Button
-                            color="secondary"
-                            fullWidth
-                            children={txt.cancel}
-                            disabled={this.props.submitting}
-                            onClick={this.props.onFormCancel}
-                        />
+                        )}
                     </Grid>
-                    {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
-                        (this.props.hasSubtypes &&
-                            this.props.formValues.get('rek_subtype') &&
-                            this.props.formValues.get('rek_subtype').length > 0)) && (
+                    <Grid container spacing={3}>
+                        <Grid item xs />
                         <Grid item xs={12} sm="auto">
                             <Button
-                                style={{ whiteSpace: 'nowrap' }}
-                                id="submit-work"
-                                variant="contained"
-                                color="primary"
+                                color="secondary"
                                 fullWidth
-                                children={txt.submit}
-                                onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit}
+                                children={txt.cancel}
+                                disabled={this.props.submitting}
+                                onClick={this.props.onFormCancel}
                             />
                         </Grid>
-                    )}
-                </Grid>
-            </form>
+                        {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
+                            (this.props.hasSubtypes &&
+                                this.props.formValues.get('rek_subtype') &&
+                                this.props.formValues.get('rek_subtype').length > 0)) && (
+                            <Grid item xs={12} sm="auto">
+                                <Button
+                                    style={{ whiteSpace: 'nowrap' }}
+                                    id="submit-work"
+                                    variant="contained"
+                                    color="primary"
+                                    fullWidth
+                                    children={txt.submit}
+                                    onClick={this.props.handleSubmit}
+                                    disabled={this.props.submitting || this.props.disableSubmit}
+                                />
+                            </Grid>
+                        )}
+                    </Grid>
+                </form>
+            </ConfirmDiscardFormChanges>
         );
     }
 }

@@ -4,6 +4,7 @@ exports[`AccessSelectorField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-access-conditions"
   hideLabel={false}
   input={
     Object {
@@ -30,7 +31,7 @@ exports[`AccessSelectorField component should render default view 1`] = `
     }
   }
   onChange={[MockFunction]}
-  selectedValue={8}
+  value={8}
 />
 `;
 
@@ -38,6 +39,7 @@ exports[`AccessSelectorField component should render error and error message 1`]
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-access-conditions"
   hideLabel={false}
   input={
     Object {
@@ -69,6 +71,6 @@ exports[`AccessSelectorField component should render error and error message 1`]
     }
   }
   onChange={[MockFunction]}
-  selectedValue={8}
+  value={8}
 />
 `;

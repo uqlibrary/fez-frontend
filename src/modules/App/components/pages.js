@@ -1,39 +1,25 @@
 import React from 'react';
-import Async from 'modules/SharedComponents/Async';
 
 // lazy loaded components
-export const FixRecord = () => <Async load={import('modules/FixRecord/containers/FixRecord')} />;
-export const ClaimRecord = () => <Async load={import('modules/ClaimRecord/containers/ClaimRecord')} />;
-export const DeleteRecord = () => <Async load={import('modules/DeleteRecord/containers/DeleteRecord')} />;
-export const PossiblyMyRecords = () => (
-    <Async load={import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')} />
+export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
+export const ClaimRecord = React.lazy(() => import('modules/ClaimRecord/containers/ClaimRecord'));
+export const DeleteRecord = React.lazy(() => import('modules/DeleteRecord/containers/DeleteRecord'));
+export const PossiblyMyRecords = React.lazy(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords'));
+export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
+export const Dashboard = React.lazy(() => import('modules/Dashboard/containers/Dashboard'));
+export const Orcid = React.lazy(() => import('modules/AuthorIdentifiers/containers/Orcid'));
+export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
+export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmission/containers/ThesisSubmission'));
+export const SbsSubmission = React.lazy(() => import('modules/SbsSubmission/containers/SbsSubmission'));
+export const ViewRecord = React.lazy(() => import('modules/ViewRecord/containers/ViewRecord'));
+export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
+export const CollectionForm = React.lazy(() => import('modules/Admin/CollectionForm/containers/CollectionForm'));
+export const CommunityForm = React.lazy(() => import('modules/Admin/CommunityForm/containers/CommunityForm'));
+export const ThirdPartyLookupTool = React.lazy(() =>
+    import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool'),
 );
-export const MyIncompleteRecord = componentProps => (
-    <Async load={import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')} componentProps={componentProps} />
-);
-export const Dashboard = () => <Async load={import('modules/Dashboard/containers/Dashboard')} />;
-export const Orcid = () => <Async load={import('modules/AuthorIdentifiers/containers/Orcid')} />;
-export const GoogleScholar = () => <Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />;
-export const ThesisSubmission = componentProps => (
-    <Async load={import('modules/ThesisSubmission/containers/ThesisSubmission')} componentProps={componentProps} />
-);
-export const SbsSubmission = componentProps => (
-    <Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />
-);
-export const ViewRecord = () => <Async load={import('modules/ViewRecord/containers/ViewRecord')} />;
-export const AddDataCollection = () => (
-    <Async load={import('modules/AddDataCollection/containers/AddDataCollection')} />
-);
-export const CollectionForm = () => <Async load={import('modules/Admin/CollectionForm/containers/CollectionForm')} />;
-export const CommunityForm = () => <Async load={import('modules/Admin/CommunityForm/containers/CommunityForm')} />;
-export const ThirdPartyLookupTool = () => (
-    <Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />
-);
-export const BatchImport = () => <Async load={import('modules/BatchImport/containers/BatchImport')} />;
-export const Prototype = () => <Async load={import('modules/Admin/containers/Admin')} />;
-export const Admin = componentProps => (
-    <Async load={import('modules/Admin/containers/Admin')} componentProps={componentProps} />
-);
+export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
+export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';

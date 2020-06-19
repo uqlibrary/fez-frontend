@@ -158,26 +158,26 @@ export default class MyRecords extends PureComponent {
         const actionProps =
             (this.props.publicationsListCustomActions || []).length > 0
                 ? {
-                    customActions: this.props.publicationsListCustomActions,
-                }
+                      customActions: this.props.publicationsListCustomActions,
+                  }
                 : {
-                    showDefaultActions: true,
-                };
+                      showDefaultActions: true,
+                  };
         const isAdmin =
             this.props.authorDetails &&
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage title={txt.pageTitle}>
-                <Grid container spacing={16}>
+                <Grid container spacing={2}>
                     {// first time loading my publications - account hasn't been
                     // loaded or any my publications haven't been loaded
-                        !this.state.hasPublications && this.props.loadingPublicationsList && (
-                            <Grid item xs={12}>
-                                <InlineLoader message={txt.loadingMessage} />
-                            </Grid>
-                        )}
+                    !this.state.hasPublications && this.props.loadingPublicationsList && (
+                        <Grid item xs={12}>
+                            <InlineLoader message={txt.loadingMessage} />
+                        </Grid>
+                    )}
                     {// no results to display
-                        !this.props.loadingPublicationsList &&
+                    !this.props.loadingPublicationsList &&
                         this.props.publicationsList &&
                         this.props.publicationsList.length === 0 && (
                             <Grid item xs={12}>
@@ -185,7 +185,7 @@ export default class MyRecords extends PureComponent {
                             </Grid>
                         )}
                     {// results to display or loading if user is filtering/paging
-                        this.state.hasPublications &&
+                    this.state.hasPublications &&
                         (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
                             <Grid item xs={12} md={9}>
                                 <StandardCard noHeader>
@@ -197,7 +197,7 @@ export default class MyRecords extends PureComponent {
                                                 .replace('[recordsTo]', pagingData.to)}
                                         </span>
                                     )}
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {txt.text}
                                         </Grid>
@@ -239,12 +239,12 @@ export default class MyRecords extends PureComponent {
                                                 !this.props.loadingPublicationsList &&
                                                 this.props.publicationsList &&
                                                 this.props.publicationsList.length > 0 && (
-                                                <PublicationsList
-                                                    publicationsList={this.props.publicationsList}
-                                                    {...actionProps}
-                                                    showAdminActions={isAdmin}
-                                                />
-                                            )}
+                                                    <PublicationsList
+                                                        publicationsList={this.props.publicationsList}
+                                                        {...actionProps}
+                                                        showAdminActions={isAdmin}
+                                                    />
+                                                )}
                                         </Grid>
                                         <Grid item xs={12}>
                                             <PublicationsListPaging
@@ -260,7 +260,7 @@ export default class MyRecords extends PureComponent {
                         )}
                     {// show available filters or selected filters (even if there are no results)
                     /* prettier-ignore */
-                        ((
+                    ((
                             this.props.publicationsListFacets &&
                             Object.keys(this.props.publicationsListFacets).length > 0
                         ) ||

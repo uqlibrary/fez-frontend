@@ -15,7 +15,8 @@ function setup(testProps = {}) {
                 pid: 'UQ:111111',
             },
         },
-        actions: {},
+        loadRecordToFix: jest.fn(),
+        clearFixRecord: jest.fn(),
         ...testProps,
     };
     return getElement(MyIncompleteRecordContainer, props);
@@ -41,9 +42,7 @@ describe('MyIncompleteRecord Container', () => {
     it('should run componentDidMount() life cycle method to load record to fix', () => {
         const loadRecordToFix = jest.fn();
         const wrapper = setup({
-            actions: {
-                loadRecordToFix,
-            },
+            loadRecordToFix,
             match: {
                 params: {
                     pid: 'UQ:123456',
@@ -473,9 +472,7 @@ describe('MyIncompleteRecord Container', () => {
     it('should unmount and clear fix record reducer', () => {
         const clearFixRecord = jest.fn();
         const wrapper = setup({
-            actions: {
-                clearFixRecord,
-            },
+            clearFixRecord,
         });
         const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
         wrapper.unmount();

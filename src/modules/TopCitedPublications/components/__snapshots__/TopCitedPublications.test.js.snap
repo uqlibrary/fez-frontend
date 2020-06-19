@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component TopCitedPublications should render loading indicator 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={true}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
     <WithStyles(InlineLoader)
       message="Loading trending publications"
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={true}
   />
-</WithStyles(Grid)>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component TopCitedPublications should render tabs with xs width properly 1`] = `
@@ -27,7 +27,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
   <StandardCard
     noHeader={true}
   >
-    <WithStyles(Tabs)
+    <WithStyles(ForwardRef(Tabs))
       centered={true}
       classes={
         Object {
@@ -38,23 +38,23 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
       value="altmetric"
       variant="fullWidth"
     >
-      <WithStyles(Tab)
+      <WithStyles(ForwardRef(Tab))
         key="altmetric"
         label="Trending"
         value="altmetric"
       />
-      <WithStyles(Tab)
+      <WithStyles(ForwardRef(Tab))
         key="scopus"
         label="Scopus"
         value="scopus"
       />
-      <WithStyles(Tab)
+      <WithStyles(ForwardRef(Tab))
         key="thomson"
         label="WOS"
         value="thomson"
       />
-    </WithStyles(Tabs)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Tabs))>
+    <WithStyles(ForwardRef(Grid))
       alignContent="flex-start"
       alignItems="flex-start"
       container={true}
@@ -65,11 +65,11 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           color="primary"
           key="altmetric"
           variant="h6"
@@ -79,9 +79,9 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
             key="altmetric"
           />
           Altmetric score
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -90,7 +90,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
         }
         xs="auto"
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>
@@ -122,8 +122,8 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
           }
           title="About these metrics"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         id="topCitedPublications"
         item={true}
         style={
@@ -753,8 +753,8 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
           showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </StandardCard>
 </Fragment>
 `;
@@ -764,7 +764,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
   <StandardCard
     noHeader={true}
   >
-    <WithStyles(Tabs)
+    <WithStyles(ForwardRef(Tabs))
       centered={true}
       classes={
         Object {
@@ -775,7 +775,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
       value="altmetric"
       variant="fullWidth"
     >
-      <WithStyles(Tab)
+      <WithStyles(ForwardRef(Tab))
         key="altmetric"
         label={
           <span>
@@ -784,7 +784,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         value="altmetric"
       />
-      <WithStyles(Tab)
+      <WithStyles(ForwardRef(Tab))
         key="scopus"
         label={
           <span>
@@ -793,7 +793,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         value="scopus"
       />
-      <WithStyles(Tab)
+      <WithStyles(ForwardRef(Tab))
         key="thomson"
         label={
           <span>
@@ -802,8 +802,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         value="thomson"
       />
-    </WithStyles(Tabs)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(Tabs))>
+    <WithStyles(ForwardRef(Grid))
       alignContent="flex-start"
       alignItems="flex-start"
       container={true}
@@ -814,11 +814,11 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
       }
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         xs={true}
       >
-        <WithStyles(Typography)
+        <WithStyles(ForwardRef(Typography))
           color="primary"
           key="altmetric"
           variant="h6"
@@ -828,9 +828,9 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
             key="altmetric"
           />
           Altmetric score
-        </WithStyles(Typography)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         style={
           Object {
@@ -839,7 +839,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         xs="auto"
       >
-        <Connect(WithStyles(HelpIcon))
+        <Connect(HelpIcon)
           buttonLabel="CLOSE"
           text={
             <React.Fragment>
@@ -871,8 +871,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
           }
           title="About these metrics"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         id="topCitedPublications"
         item={true}
         style={
@@ -1502,16 +1502,19 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
           showUnpublishedBufferFields={false}
           subsetCustomActions={Array []}
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </StandardCard>
 </Fragment>
 `;
 
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
 <Fragment>
-  <WithStyles(Alert)
+  <Alert
+    allowDismiss={false}
+    dismissTitle="Click to dismiss this alert"
     message="Trending publications are temporarily unavailable"
+    showLoader={false}
     title="There has been an error"
     type="error"
   />

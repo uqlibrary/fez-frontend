@@ -1,35 +1,26 @@
-import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { AutoCompleteSelectField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
-import * as actions from 'actions/actionTypes';
 import { DATA_COLLECTION_CREATOR_ROLES } from 'config/general';
 
 const mapStateToProps = (state, props) => {
-    const category = 'role';
     return {
-        category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList
-                : [],
+        autoCompleteSelectFieldId: 'rek-author-role',
+        itemsList: DATA_COLLECTION_CREATOR_ROLES,
         allowFreeText: true,
-        onChange: item => props.onChange(item.value),
+        clearOnSelect: props.clearInput,
         errorText: null,
         error: props.error,
-        itemToString: item => (!!item && String(item.value)) || '',
-        selectedValue: (!!props.value && { value: props.value }) || null,
+        getOptionLabel: item => (!!item && String(item.value)) || '',
+        defaultValue: (!!props.value && { value: props.value }) || null,
         openOnFocus: true,
-        filter: () => true,
-        clearInput: props.clearInput,
-        required: props.required,
+        // required: props.required,
+        disabled: props.disabled,
     };
 };
 
-const mapDispatchToProps = dispatch => ({
-    loadSuggestions: searchKey =>
-        dispatch({ type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: DATA_COLLECTION_CREATOR_ROLES }),
+const mapDispatchToProps = (dispatch, props) => ({
+    loadSuggestions: () => {},
+    onChange: item => props.onChange(item.value),
 });
 
-export const RoleField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsyncField);
+export const RoleField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteSelectField);

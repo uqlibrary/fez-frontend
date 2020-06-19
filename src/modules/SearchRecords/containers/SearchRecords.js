@@ -23,10 +23,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let SearchRecordsContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(SearchRecords);
+let SearchRecordsContainer = connect(mapStateToProps, mapDispatchToProps)(SearchRecords);
 SearchRecordsContainer = withRouter(SearchRecordsContainer);
 
 export default SearchRecordsContainer;

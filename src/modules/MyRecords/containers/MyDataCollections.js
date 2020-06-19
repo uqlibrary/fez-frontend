@@ -29,9 +29,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ResearchContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(MyRecords);
+let ResearchContainer = connect(mapStateToProps, mapDispatchToProps)(MyRecords);
 ResearchContainer = withRouter(ResearchContainer);
 export default ResearchContainer;

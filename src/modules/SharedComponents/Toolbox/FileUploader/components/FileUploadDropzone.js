@@ -249,15 +249,18 @@ export class FileUploadDropzone extends PureComponent {
                 fileUploadLimit - filesInQueue.length,
             );
 
-            this.props.onDrop(limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })), {
-                tooBigFiles: rejectedFiles.map(file => file.name),
-                notFiles: notFiles,
-                invalidFileNames: invalidFileNames,
-                invalidMimeTypeFiles: invalidMimeTypeFiles,
-                duplicateFiles: duplicateFiles,
-                tooManyFiles: tooManyFiles,
-                sameFileNameWithDifferentExt: sameFileNameWithDifferentExt,
-            });
+            this.props.onDrop(
+                limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })),
+                {
+                    tooBigFiles: rejectedFiles.map(file => file.name),
+                    notFiles: notFiles,
+                    invalidFileNames: invalidFileNames,
+                    invalidMimeTypeFiles: invalidMimeTypeFiles,
+                    duplicateFiles: duplicateFiles,
+                    tooManyFiles: tooManyFiles,
+                    sameFileNameWithDifferentExt: sameFileNameWithDifferentExt,
+                },
+            );
         });
     };
 

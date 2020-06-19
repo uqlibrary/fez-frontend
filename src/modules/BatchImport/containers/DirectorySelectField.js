@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) => {
             .batchImportDirectoryList.map((item, index) => ({ text: item, value: item, index: index + 1 }));
     return {
         label: (props.locale && props.locale.label) || props.label || '',
-        selectedValue: props.input.value || [],
+        value: props.input.value || '',
         itemsList: translatedItemList || [],
     };
 };
@@ -22,10 +22,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const DirectoryList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+const DirectoryList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 export default function DirectorySelectField(fieldProps) {
     return (
@@ -33,6 +30,7 @@ export default function DirectorySelectField(fieldProps) {
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
+            genericSelectFieldId="directory"
             {...fieldProps}
         />
     );
