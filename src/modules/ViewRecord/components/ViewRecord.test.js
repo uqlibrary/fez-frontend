@@ -48,6 +48,11 @@ describe('Component ViewRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render deleted record view', () => {
+        const wrapper = setup({ recordToView: mockRecordToFix, isDeleted: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should have status prop in the header for admins', () => {
         const wrapper = setup({
             recordToView: { ...mockRecordToFix, rek_status: 1, rek_status_lookup: 'Unpublished' },

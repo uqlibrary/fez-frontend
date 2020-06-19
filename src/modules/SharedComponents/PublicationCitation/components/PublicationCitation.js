@@ -92,6 +92,7 @@ export class PublicationCitation extends PureComponent {
         location: PropTypes.object,
         publication: PropTypes.object.isRequired,
         publicationsLoading: PropTypes.bool,
+        isPublicationDeleted: PropTypes.bool,
         showAdminActions: PropTypes.bool,
         showDefaultActions: PropTypes.bool,
         showMetrics: PropTypes.bool,
@@ -116,6 +117,7 @@ export class PublicationCitation extends PureComponent {
         showSources: false,
         showUnpublishedBufferFields: false,
         userHasNewAdminEdit: false,
+        isPublicationDeleted: false,
     };
 
     constructor(props) {
@@ -300,6 +302,7 @@ export class PublicationCitation extends PureComponent {
             showSources,
             showUnpublishedBufferFields,
             userHasNewAdminEdit,
+            isPublicationDeleted,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
@@ -402,6 +405,7 @@ export class PublicationCitation extends PureComponent {
                                                             publication.rek_object_type_lookup.toLowerCase()) ||
                                                         ''
                                                     }
+                                                    isRecordDeleted={isPublicationDeleted}
                                                     {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>

@@ -16,15 +16,24 @@ export function loadRecordToView(pid) {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
                     payload: response.data,
+                    isDeleted: false,
                 });
 
                 return Promise.resolve(response.data);
             })
             .catch(error => {
-                dispatch({
-                    type: actions.VIEW_RECORD_LOAD_FAILED,
-                    payload: error.message,
-                });
+                if (error.response && error.response.status === 410 && error.response.data) {
+                    dispatch({
+                        type: actions.VIEW_RECORD_LOADED,
+                        payload: error.response.data.data,
+                        isDeleted: true,
+                    });
+                } else {
+                    dispatch({
+                        type: actions.VIEW_RECORD_LOAD_FAILED,
+                        payload: error.message,
+                    });
+                }
             });
     };
 }

@@ -505,6 +505,11 @@ export default {
         viewRecord: {
             loadingMessage: 'Loading record',
             thumbnailTitle: 'Click to open a preview of [image]',
+            deletedAlert: {
+                type: 'info_outline',
+                title: '',
+                message: 'This record has been deleted.',
+            },
         },
         searchRecords: {
             title: 'eSpace search',

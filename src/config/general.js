@@ -1101,6 +1101,7 @@ export const RECORD_ACTION_URLS = [
         label: 'Edit selected record',
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}`,
         inApp: true,
+        showInDeleted: true,
         options: null,
     },
     {
@@ -1108,11 +1109,13 @@ export const RECORD_ACTION_URLS = [
         url: pid =>
             `${APP_URL}${PATH_PREFIX}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
         inApp: true,
+        showInDeleted: false,
         options: null,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
+        showInDeleted: false,
         options: null,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
     },
@@ -1120,18 +1123,21 @@ export const RECORD_ACTION_URLS = [
         label: 'Delete selected record',
         url: pid => `${APP_URL}${PATH_PREFIX}admin/delete/${pid}`,
         inApp: true,
+        showInDeleted: false,
         options: null,
     },
     {
         label: 'Detailed history',
         url: pid => `${APP_URL}${PATH_PREFIX}history.php?pid=${pid}`,
         inApp: false,
+        showInDeleted: true,
         options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
     },
     {
         label: 'More options',
         url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
+        showInDeleted: true,
         options: null,
     },
 ];
