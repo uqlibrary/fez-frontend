@@ -63,11 +63,12 @@ export const AdminContainer = ({
     history,
     loadingRecordToView,
     loadRecordToView,
+    locked,
     match,
     recordToView,
     submitSucceeded,
     submitting,
-    locked,
+    unlockRecord,
 }) => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
@@ -160,6 +161,7 @@ export const AdminContainer = ({
                             destroy={destroy}
                             locked={locked}
                             disabled
+                            unlockRecord={unlockRecord}
                             tabs={{
                                 identifiers: {
                                     component: IdentifiersSection,
@@ -226,12 +228,13 @@ AdminContainer.propTypes = {
     history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
+    locked: PropTypes.bool,
     match: PropTypes.object,
     recordToView: PropTypes.object,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
-    locked: PropTypes.bool,
     submitting: PropTypes.any,
+    unlockRecord: PropTypes.func,
 };
 
 export function isSame(prevProps, nextProps) {

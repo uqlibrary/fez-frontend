@@ -68,10 +68,11 @@ export const AdminInterface = ({
     handleSubmit,
     history,
     location,
+    locked,
     submitSucceeded,
     submitting,
     tabs,
-    locked,
+    unlockRecord,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -111,8 +112,9 @@ export const AdminInterface = ({
     const handleCancel = event => {
         event.preventDefault();
         if (!!record.rek_pid) {
-            // Editing a record, so navigate to the view page for this PID
-            history.push(routes.pathConfig.records.view(record.rek_pid));
+            !!locked
+                ? unlockRecord(record.rek_pid, () => history.push(routes.pathConfig.records.view(record.rek_pid)))
+                : history.push(routes.pathConfig.records.view(record.rek_pid));
         } else {
             // Else this is a new record, so just go to the homepage
             history.push(routes.pathConfig.index);
@@ -357,10 +359,11 @@ AdminInterface.propTypes = {
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     location: PropTypes.object,
+    locked: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
-    locked: PropTypes.bool,
     tabs: PropTypes.object,
+    unlockRecord: PropTypes.func,
 };
 
 export default React.memo(AdminInterface);

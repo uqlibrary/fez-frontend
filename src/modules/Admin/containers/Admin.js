@@ -155,10 +155,11 @@ const mapStateToProps = (state, props) => {
 };
 
 function mapDispatchToProps(dispatch) {
-    const { loadRecordToView, clearRecordToView } = bindActionCreators(actions, dispatch);
+    const { loadRecordToView, clearRecordToView, unlockRecord } = bindActionCreators(actions, dispatch);
     return {
         loadRecordToView,
         clearRecordToView,
+        unlockRecord,
         destroy,
     };
 }

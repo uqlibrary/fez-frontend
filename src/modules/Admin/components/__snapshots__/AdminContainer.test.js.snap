@@ -461,6 +461,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 "calls": Array [
                   Array [
                     "UQ:111111",
+                    true,
                   ],
                 ],
                 "results": Array [
@@ -3822,7 +3823,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 "type": [Function],
                                                                               }
                                                                             }
-                                                                            disabled={true}
                                                                             name="identifiersSection"
                                                                           />
                                                                         </div>
@@ -4553,7 +4553,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     "type": [Function],
                                                                                   }
                                                                                 }
-                                                                                disabled={true}
                                                                                 name="bibliographicSection"
                                                                               />
                                                                             </div>
@@ -5284,7 +5283,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 "type": [Function],
                                                                               }
                                                                             }
-                                                                            disabled={true}
                                                                             name="authorDetailsSection"
                                                                           />
                                                                         </div>
@@ -6013,7 +6011,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 "type": [Function],
                                                                               }
                                                                             }
-                                                                            disabled={true}
                                                                             name="adminSection"
                                                                           />
                                                                         </div>
@@ -6742,7 +6739,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 "type": [Function],
                                                                               }
                                                                             }
-                                                                            disabled={true}
                                                                             name="grantInformationSection"
                                                                           />
                                                                         </div>
@@ -7471,7 +7467,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 "type": [Function],
                                                                               }
                                                                             }
-                                                                            disabled={true}
                                                                             name="filesSection"
                                                                           />
                                                                         </div>
@@ -8200,7 +8195,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 "type": [Function],
                                                                               }
                                                                             }
-                                                                            disabled={true}
                                                                             name="securitySection"
                                                                           />
                                                                         </div>
@@ -8993,7 +8987,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
                                                               data-testid="unpublish-admin"
-                                                              disabled={1}
+                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="admin-work-unpublish"
                                                               variant="contained"
@@ -9034,23 +9028,23 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="secondary"
                                                                 data-testid="unpublish-admin"
-                                                                disabled={1}
+                                                                disabled={false}
                                                                 fullWidth={true}
                                                                 id="admin-work-unpublish"
                                                                 variant="contained"
                                                               >
                                                                 <WithStyles(ForwardRef(ButtonBase))
-                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedSecondary Mui-disabled MuiButton-fullWidth"
+                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                   component="button"
                                                                   data-testid="unpublish-admin"
-                                                                  disabled={1}
+                                                                  disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
                                                                   id="admin-work-unpublish"
                                                                   type="button"
                                                                 >
                                                                   <ForwardRef(ButtonBase)
-                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedSecondary Mui-disabled MuiButton-fullWidth"
+                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                     classes={
                                                                       Object {
                                                                         "disabled": "Mui-disabled",
@@ -9060,16 +9054,16 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                     component="button"
                                                                     data-testid="unpublish-admin"
-                                                                    disabled={1}
+                                                                    disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
                                                                     id="admin-work-unpublish"
                                                                     type="button"
                                                                   >
                                                                     <button
-                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary Mui-disabled MuiButton-fullWidth Mui-disabled"
+                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                       data-testid="unpublish-admin"
-                                                                      disabled={1}
+                                                                      disabled={false}
                                                                       id="admin-work-unpublish"
                                                                       onBlur={[Function]}
                                                                       onDragLeave={[Function]}
@@ -9082,7 +9076,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       onTouchEnd={[Function]}
                                                                       onTouchMove={[Function]}
                                                                       onTouchStart={[Function]}
-                                                                      tabIndex={-1}
+                                                                      tabIndex={0}
                                                                       type="button"
                                                                     >
                                                                       <span
@@ -9090,6 +9084,34 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       >
                                                                         Unpublish
                                                                       </span>
+                                                                      <WithStyles(memo)
+                                                                        center={false}
+                                                                      >
+                                                                        <ForwardRef(TouchRipple)
+                                                                          center={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "child": "MuiTouchRipple-child",
+                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                              "ripple": "MuiTouchRipple-ripple",
+                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                              "root": "MuiTouchRipple-root",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <span
+                                                                            className="MuiTouchRipple-root"
+                                                                          >
+                                                                            <TransitionGroup
+                                                                              childFactory={[Function]}
+                                                                              component={null}
+                                                                              exit={true}
+                                                                            />
+                                                                          </span>
+                                                                        </ForwardRef(TouchRipple)>
+                                                                      </WithStyles(memo)>
                                                                     </button>
                                                                   </ForwardRef(ButtonBase)>
                                                                 </WithStyles(ForwardRef(ButtonBase))>
@@ -9221,7 +9243,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="primary"
                                                               data-testid="submit-admin"
-                                                              disabled={1}
+                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="admin-work-submit"
                                                               onClick={
@@ -9282,7 +9304,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="primary"
                                                                 data-testid="submit-admin"
-                                                                disabled={1}
+                                                                disabled={false}
                                                                 fullWidth={true}
                                                                 id="admin-work-submit"
                                                                 onClick={
@@ -9308,10 +9330,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 variant="contained"
                                                               >
                                                                 <WithStyles(ForwardRef(ButtonBase))
-                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
                                                                   component="button"
                                                                   data-testid="submit-admin"
-                                                                  disabled={1}
+                                                                  disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
                                                                   id="admin-work-submit"
@@ -9338,7 +9360,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   type="button"
                                                                 >
                                                                   <ForwardRef(ButtonBase)
-                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
                                                                     classes={
                                                                       Object {
                                                                         "disabled": "Mui-disabled",
@@ -9348,7 +9370,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                     component="button"
                                                                     data-testid="submit-admin"
-                                                                    disabled={1}
+                                                                    disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
                                                                     id="admin-work-submit"
@@ -9375,9 +9397,9 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     type="button"
                                                                   >
                                                                     <button
-                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
                                                                       data-testid="submit-admin"
-                                                                      disabled={1}
+                                                                      disabled={false}
                                                                       id="admin-work-submit"
                                                                       onBlur={[Function]}
                                                                       onClick={
@@ -9410,7 +9432,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "whiteSpace": "nowrap",
                                                                         }
                                                                       }
-                                                                      tabIndex={-1}
+                                                                      tabIndex={0}
                                                                       type="button"
                                                                     >
                                                                       <span
@@ -9418,6 +9440,34 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       >
                                                                         Save
                                                                       </span>
+                                                                      <WithStyles(memo)
+                                                                        center={false}
+                                                                      >
+                                                                        <ForwardRef(TouchRipple)
+                                                                          center={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "child": "MuiTouchRipple-child",
+                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                              "ripple": "MuiTouchRipple-ripple",
+                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                              "root": "MuiTouchRipple-root",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <span
+                                                                            className="MuiTouchRipple-root"
+                                                                          >
+                                                                            <TransitionGroup
+                                                                              childFactory={[Function]}
+                                                                              component={null}
+                                                                              exit={true}
+                                                                            />
+                                                                          </span>
+                                                                        </ForwardRef(TouchRipple)>
+                                                                      </WithStyles(memo)>
                                                                     </button>
                                                                   </ForwardRef(ButtonBase)>
                                                                 </WithStyles(ForwardRef(ButtonBase))>
