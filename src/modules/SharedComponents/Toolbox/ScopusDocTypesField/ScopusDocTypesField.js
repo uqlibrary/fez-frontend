@@ -13,7 +13,7 @@ export default function ScopusDocTypesField(fieldProps) {
             value={
                 input instanceof Immutable.List
                     ? input.toJS()
-                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || null
+                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []
             }
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}

@@ -159,7 +159,7 @@ exports[`WoSDocTypesField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={null}
+  value={Array []}
 />
 `;
 
