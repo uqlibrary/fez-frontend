@@ -120,7 +120,9 @@ export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
-export const EXISTING_RECORD_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
+    apiUrl: `records/${pid}${isEdit ? '?from=admin-form' : ''}`,
+});
 
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 

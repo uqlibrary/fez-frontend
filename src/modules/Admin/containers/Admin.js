@@ -126,8 +126,11 @@ const mapStateToProps = (state, props) => {
             },
         };
     } else {
-        locked = true;
         recordToView = state.get('viewRecordReducer').recordToView;
+        locked =
+            !!recordToView &&
+            recordToView.rek_editing_user !== state.get('accountReducer').account.id &&
+            state.get('viewRecordReducer').isRecordLocked;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =
             (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
-import LockIcon from '@material-ui/icons/Lock';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
@@ -21,6 +20,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import ScrollToSection from './ScrollToSection';
+import LockedAlert from './LockedAlert';
 import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
@@ -210,22 +210,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && (
-                        <Grid container style={{ marginTop: 12, marginBottom: 12 }}>
-                            <Grid item xs={12}>
-                                <Alert
-                                    title={'THIS RECORD IS LOCKED'}
-                                    message={'This record is currently being edited by uqklane1'}
-                                    type={'custom'}
-                                    customIcon={<LockIcon id="locked-icon" className="icon" />}
-                                    customType={'error'}
-                                    action={() => null}
-                                    actionButtonLabel={'OVERRIDE LOCK'}
-                                    wiggle
-                                />
-                            </Grid>
-                        </Grid>
-                    )}
+                    {!!locked && <LockedAlert />}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
@@ -325,7 +310,7 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-unpublish"
                                                     data-testid="unpublish-admin"
-                                                    disabled={!!submitting || !!disableSubmit | !!locked}
+                                                    disabled={!!submitting || !!disableSubmit || !!locked}
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -343,7 +328,7 @@ export const AdminInterface = ({
                                             id="admin-work-submit"
                                             data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
-                                            disabled={!!submitting || !!disableSubmit | !!locked}
+                                            disabled={!!submitting || !!disableSubmit || !!locked}
                                             variant="contained"
                                             color="primary"
                                             fullWidth

@@ -107,7 +107,7 @@ export const AdminContainer = ({
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     React.useEffect(() => {
-        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid);
+        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid, true);
         return () => {
             clearRecordToView();
         };
@@ -244,7 +244,8 @@ export function isSame(prevProps, nextProps) {
         (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
         prevProps.showAddForm === nextProps.showAddForm &&
-        prevProps.formErrors === nextProps.formErrors
+        prevProps.formErrors === nextProps.formErrors &&
+        prevProps.locked === nextProps.locked
     );
 }
 
