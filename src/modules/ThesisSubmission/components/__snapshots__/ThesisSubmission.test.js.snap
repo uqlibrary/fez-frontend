@@ -139,6 +139,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
         when={true}
       />
       <WithStyles(ConfirmDialogBox)
+        confirmDialogBoxId="deposit-thesis"
         locale={
           Object {
             "cancelButtonLabel": "No, continue editing",
@@ -690,6 +691,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
         when={true}
       />
       <WithStyles(ConfirmDialogBox)
+        confirmDialogBoxId="deposit-thesis"
         locale={
           Object {
             "cancelButtonLabel": "No, continue editing",

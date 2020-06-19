@@ -154,6 +154,7 @@ export default class ThesisSubmission extends Component {
                         />
 
                         <ConfirmDialogBox
+                            confirmDialogBoxId="deposit-thesis"
                             onRef={this.setDepositConfirmation}
                             onAction={this.props.handleSubmit}
                             locale={formLocale.thesisSubmission.depositConfirmation}

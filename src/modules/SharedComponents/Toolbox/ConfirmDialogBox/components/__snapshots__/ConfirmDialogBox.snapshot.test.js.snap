@@ -38,6 +38,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
         <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="dialog-box-confirm"
           fullWidth={true}
           onClick={[Function]}
         >
@@ -50,6 +51,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
         xs={12}
       >
         <WithStyles(ForwardRef(Button))
+          data-testid="dialog-box-alternate-action"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
@@ -64,6 +66,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="dialog-box-cancel"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
@@ -114,6 +117,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
         <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="dialog-box-confirm"
           fullWidth={true}
           onClick={[Function]}
         >
@@ -163,6 +167,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
         <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="dialog-box-confirm"
           fullWidth={true}
           onClick={[Function]}
         >
@@ -176,6 +181,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="dialog-box-cancel"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
@@ -226,6 +232,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
         <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="dialog-box-confirm"
           fullWidth={true}
           onClick={[Function]}
         >
@@ -238,6 +245,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
         xs={12}
       >
         <WithStyles(ForwardRef(Button))
+          data-testid="dialog-box-alternate-action"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
@@ -252,6 +260,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="dialog-box-cancel"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
@@ -338,6 +347,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
         <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="dialog-box-confirm"
           fullWidth={true}
           onClick={[Function]}
         >
@@ -351,6 +361,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="dialog-box-cancel"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
@@ -401,6 +412,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
         <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="dialog-box-confirm"
           fullWidth={true}
           onClick={[Function]}
         >
@@ -414,6 +426,7 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="dialog-box-cancel"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
