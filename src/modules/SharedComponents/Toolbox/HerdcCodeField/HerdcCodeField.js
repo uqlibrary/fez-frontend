@@ -36,7 +36,7 @@ export default function HerdcCodeField(fieldProps) {
             value={
                 preselected instanceof Immutable.List
                     ? preselected.toJS()
-                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || preselected || null
+                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || preselected || []
             }
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}

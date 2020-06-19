@@ -56,7 +56,7 @@ exports[`QualityIndicatorField component should render default view 1`] = `
       "placeholder": undefined,
     }
   }
-  value={null}
+  value={Array []}
 />
 `;
 
