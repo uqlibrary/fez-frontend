@@ -154,6 +154,7 @@ export default class ThesisSubmission extends Component {
                         />
 
                         <ConfirmDialogBox
+                            confirmDialogBoxId="deposit-thesis"
                             onRef={this.setDepositConfirmation}
                             onAction={this.props.handleSubmit}
                             locale={formLocale.thesisSubmission.depositConfirmation}
@@ -309,6 +310,7 @@ export default class ThesisSubmission extends Component {
                                 <Button
                                     variant="contained"
                                     id="submit-thesis"
+                                    data-testid="deposit-thesis"
                                     color="primary"
                                     fullWidth
                                     children={formLocale.thesisSubmission.submit}

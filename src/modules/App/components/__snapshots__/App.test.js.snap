@@ -19539,6 +19539,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-251",
                               }
                             }
+                            confirmDialogBoxId="dialog-box"
                             hideCancelButton={true}
                             locale={
                               Object {
