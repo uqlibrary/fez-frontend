@@ -3,6 +3,7 @@ import React from 'react';
 // lazy loaded components
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
 export const ClaimRecord = React.lazy(() => import('modules/ClaimRecord/containers/ClaimRecord'));
+export const DeleteRecord = React.lazy(() => import('modules/DeleteRecord/containers/DeleteRecord'));
 export const PossiblyMyRecords = React.lazy(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
 export const Dashboard = React.lazy(() => import('modules/Dashboard/containers/Dashboard'));

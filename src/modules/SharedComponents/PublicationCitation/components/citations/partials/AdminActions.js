@@ -51,6 +51,7 @@ export const AdminActions = ({
     navigatedFrom = '',
     userHasNewAdminEdit = false,
     recordType,
+    isRecordDeleted = false,
     adminActions = [...defaultActions],
 }) => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -65,7 +66,8 @@ export const AdminActions = ({
         setAnchorEl(null);
     };
 
-    const menuOptions = adminActions.map((action, index) => {
+    let menuOptions = isRecordDeleted ? adminActions.filter(action => action.showInDeleted) : adminActions;
+    menuOptions = menuOptions.map((action, index) => {
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const isEditUrl = index === 0;
@@ -79,7 +81,6 @@ export const AdminActions = ({
             clickHandler,
         };
     });
-
     return (
         <React.Fragment>
             <IconButton id="admin-actions-button" aria-label="More" aria-haspopup="true" onClick={handleClick}>
@@ -102,6 +103,7 @@ AdminActions.propTypes = {
     adminActions: PropTypes.array,
     userHasNewAdminEdit: PropTypes.bool,
     recordType: PropTypes.string,
+    isRecordDeleted: PropTypes.bool,
 };
 
 export default React.memo(AdminActions);

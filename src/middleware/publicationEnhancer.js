@@ -129,7 +129,7 @@ const publicationEnhancer = () => next => action => {
         return next(enhancedAction);
     } else if (loadPublicationActions.test(action.type)) {
         const enhancedAction = {
-            type: action.type,
+            ...action,
             payload: {
                 ...enhancePublication(action.payload),
             },
