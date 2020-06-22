@@ -5,7 +5,6 @@ import Immutable from 'immutable';
 import DeleteRecord from '../components/DeleteRecord';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import { confirmDiscardFormChanges } from '../../SharedComponents/ConfirmDiscardFormChanges';
 const FORM_NAME = 'DeleteRecord';
 
 const onSubmit = (values, dispatch) => {
@@ -18,7 +17,7 @@ let DeleteRecordContainer = reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
     onSubmit,
-})(confirmDiscardFormChanges(DeleteRecord), DeleteRecord);
+})(DeleteRecord);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
