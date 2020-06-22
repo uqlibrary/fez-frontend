@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useRecordContext } from 'context';
 import Grid from '@material-ui/core/Grid';
@@ -11,7 +11,7 @@ export const LockedAlert = () => {
     const dispatch = useDispatch();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleAction = useCallback(() => dispatch(unlockRecordToView()), []);
+    const handleAction = React.useCallback(() => dispatch(unlockRecordToView()), []);
 
     return (
         <Grid container style={{ marginTop: 12, marginBottom: 12 }}>

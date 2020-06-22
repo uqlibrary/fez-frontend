@@ -112,6 +112,7 @@ export const AdminInterface = ({
     const handleCancel = event => {
         event.preventDefault();
         if (!!record.rek_pid) {
+            /* istanbul ignore coverage */
             !!locked
                 ? unlockRecord(record.rek_pid, () => history.push(routes.pathConfig.records.view(record.rek_pid)))
                 : history.push(routes.pathConfig.records.view(record.rek_pid));

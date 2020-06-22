@@ -588,7 +588,7 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
                 });
                 return Promise.resolve(true);
             })
-            .then(() => unlockRecordCallback())
+            .then(unlockRecordCallback)
             .catch(() => {
                 dispatch({
                     type: actions.UNLOCK_RECORD_FAILED,
