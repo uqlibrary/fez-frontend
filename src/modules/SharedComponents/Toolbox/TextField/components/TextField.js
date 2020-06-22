@@ -23,6 +23,7 @@ export const TextFieldWrapper = props => {
                     label: filteredProps.label,
                     'aria-label': filteredProps.label,
                     'aria-labelledby': `${props.textFieldId}-label`,
+                    ...filteredProps.inputProps,
                 }}
                 InputLabelProps={{
                     shrink: filteredProps.floatinglabelfixed ? true : undefined,
