@@ -3,6 +3,7 @@
 exports[`Component ContributorRow Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -110,6 +111,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -132,6 +134,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
 exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -239,6 +242,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -261,6 +265,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -339,6 +344,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -361,6 +367,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -439,6 +446,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -461,6 +469,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -568,6 +577,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Move record up the order"
+            data-testid="test-list-row-0-move-up"
             disabled={false}
             id="test-list-row-move-up-0"
             onClick={[Function]}
@@ -591,6 +601,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Move record down the order"
+            data-testid="test-list-row-0-move-down"
             disabled={false}
             id="test-list-row-move-down-0"
             onClick={[Function]}
@@ -614,6 +625,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -636,6 +648,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -715,6 +728,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -737,6 +751,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -816,6 +831,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -838,6 +854,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details & delete button 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -945,6 +962,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -967,6 +985,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1047,6 +1066,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -1069,6 +1089,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1149,6 +1170,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -1171,6 +1193,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 exports[`Component ContributorRow should assign contributor 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1253,6 +1276,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -1275,6 +1299,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
 exports[`Component ContributorRow should call callback functions on ListItem 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1357,6 +1382,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -1379,6 +1405,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
 exports[`Component ContributorRow should handle edits 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-2-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1457,6 +1484,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Edit this record"
+            data-testid="test-list-row-2-edit"
             disabled={false}
             id="test-list-row-edit-2"
             onClick={[Function]}
@@ -1480,6 +1508,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-2-delete"
             disabled={false}
             id="test-list-row-delete-2"
             onClick={[Function]}
@@ -1502,6 +1531,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
 exports[`Component ContributorRow should render a row with a disabled contributor 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1584,6 +1614,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -1606,6 +1637,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
 exports[`Component ContributorRow should render row as required 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1687,6 +1719,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
         <span>
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}
@@ -1709,6 +1742,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
   <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
     hideCancelButton={false}
     isOpen={false}
     locale={
@@ -1785,6 +1819,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
       >
         <span>
           <WithStyles(ForwardRef(IconButton))
+            data-testid="test-list-row-0-delete"
             disabled={false}
             id="test-list-row-delete-0"
             onClick={[Function]}

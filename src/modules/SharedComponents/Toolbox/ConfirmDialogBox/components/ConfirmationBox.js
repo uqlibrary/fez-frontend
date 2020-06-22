@@ -21,6 +21,7 @@ export const useStyles = makeStyles(theme => ({
 }));
 
 export const ConfirmationBox = ({
+    confirmationBoxId,
     hideCancelButton,
     isOpen,
     locale,
@@ -66,6 +67,7 @@ export const ConfirmationBox = ({
                             fullWidth
                             onClick={_onAction}
                             id="confirm-action"
+                            data-testid={`confirm-${confirmationBoxId}`}
                         />
                     </Grid>
                     {showAlternateActionButton && (
@@ -78,6 +80,7 @@ export const ConfirmationBox = ({
                                 fullWidth
                                 onClick={_onAlternateAction}
                                 id="confirm-alternate-action"
+                                data-testid={`confirm-alternate-${confirmationBoxId}`}
                             />
                         </Grid>
                     )}
@@ -90,6 +93,7 @@ export const ConfirmationBox = ({
                                 fullWidth
                                 onClick={_onCancelAction}
                                 id="confirm-cancel-action"
+                                data-testid={`cancel-${confirmationBoxId}`}
                             />
                         </Grid>
                     )}
@@ -100,6 +104,7 @@ export const ConfirmationBox = ({
 };
 
 ConfirmationBox.propTypes = {
+    confirmationBoxId: PropTypes.string.isRequired,
     hideCancelButton: PropTypes.bool,
     isOpen: PropTypes.bool,
     locale: PropTypes.object,

@@ -31,6 +31,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                 onClose={hideConfirmation}
                 isOpen={isOpen}
                 locale={deleteAllFilesConfirmation}
+                confirmationBoxId="delete-all-files"
             />
             <div style={{ flexGrow: 1, padding: 4 }}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.header} gutter={8}>

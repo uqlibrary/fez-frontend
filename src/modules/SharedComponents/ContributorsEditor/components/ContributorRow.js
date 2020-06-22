@@ -169,6 +169,7 @@ export const ContributorRow = ({
                 onClose={hideConfirmation}
                 isOpen={isOpen}
                 locale={deleteRecordConfirmation}
+                confirmationBoxId={`${contributorRowId}-${index}-delete`}
             />
             <ListItem
                 divider
@@ -208,6 +209,7 @@ export const ContributorRow = ({
                             <span>
                                 <IconButton
                                     id={`${contributorRowId}-move-up-${index}`}
+                                    data-testid={`${contributorRowId}-${index}-move-up`}
                                     onClick={_onMoveUp}
                                     disabled={disabled || hideReorder}
                                     aria-label={moveUpHint}
@@ -227,6 +229,7 @@ export const ContributorRow = ({
                             <span>
                                 <IconButton
                                     id={`${contributorRowId}-move-down-${index}`}
+                                    data-testid={`${contributorRowId}-${index}-move-down`}
                                     onClick={_onMoveDown}
                                     disabled={disabled || hideReorder}
                                     aria-label={moveDownHint}
@@ -249,6 +252,7 @@ export const ContributorRow = ({
                                     onClick={_handleEdit}
                                     disabled={disabled || !!contributor.disabled}
                                     id={`${contributorRowId}-edit-${index}`}
+                                    data-testid={`${contributorRowId}-${index}-edit`}
                                 >
                                     <Edit classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
@@ -267,6 +271,7 @@ export const ContributorRow = ({
                                 onClick={showConfirmation}
                                 disabled={disabled || hideDelete}
                                 id={`${contributorRowId}-delete-${index}`}
+                                data-testid={`${contributorRowId}-${index}-delete`}
                             >
                                 <Delete classes={{ root: `${selectedClass}` }} />
                             </IconButton>
