@@ -33,6 +33,7 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, list
                 onClose={hideConfirmation}
                 isOpen={isOpen}
                 locale={deleteAllConfirmation}
+                confirmationBoxId={`${listEditorId}-delete-all`}
             />
             <Grid container alignItems="center" spacing={2} className={classes.header}>
                 <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>

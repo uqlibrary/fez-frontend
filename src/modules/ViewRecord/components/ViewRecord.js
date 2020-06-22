@@ -31,6 +31,7 @@ export default class ViewRecord extends PureComponent {
         account: PropTypes.object,
         author: PropTypes.object,
         authorDetails: PropTypes.object,
+        isDeleted: PropTypes.bool,
     };
 
     componentDidMount() {
@@ -52,7 +53,7 @@ export default class ViewRecord extends PureComponent {
 
     render() {
         const txt = locale.pages.viewRecord;
-        const { loadingRecordToView, recordToViewError, recordToView } = this.props;
+        const { loadingRecordToView, recordToViewError, recordToView, isDeleted } = this.props;
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
         if (loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage} />;
@@ -83,9 +84,15 @@ export default class ViewRecord extends PureComponent {
                             hideTitle
                             hideContentIndicators
                             showAdminActions={isAdmin}
+                            isPublicationDeleted={isDeleted}
                         />
                     </Grid>
-                    {!!this.props.recordToView && (
+                    {!!isDeleted && (
+                        <Grid item xs={12} style={{ marginBottom: 24 }}>
+                            <Alert {...txt.deletedAlert} />
+                        </Grid>
+                    )}
+                    {!isDeleted && !!this.props.recordToView && (
                         <Grid item xs={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
                                 <Grid item xs>
@@ -114,21 +121,31 @@ export default class ViewRecord extends PureComponent {
                     )}
                 </Grid>
                 <Grid container spacing={3}>
-                    <Files
-                        author={this.props.author}
-                        publication={recordToView}
-                        hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
-                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
-                        isAdmin={!!isAdmin}
-                        isAuthor={!!isAuthor}
-                    />
-                    <Links publication={recordToView} />
-                    <RelatedPublications publication={recordToView} />
-                    <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
-                    {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
-                    <GrantInformation publication={recordToView} />
+                    {!isDeleted && (
+                        <React.Fragment>
+                            <Files
+                                author={this.props.author}
+                                publication={recordToView}
+                                hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
+                                setHideCulturalSensitivityStatement={
+                                    this.props.actions.setHideCulturalSensitivityStatement
+                                }
+                                isAdmin={!!isAdmin}
+                                isAuthor={!!isAuthor}
+                            />
+                            <Links publication={recordToView} />
+                            <RelatedPublications publication={recordToView} />
+                            <AdditionalInformation
+                                publication={recordToView}
+                                account={this.props.account}
+                                isNtro={isNtro}
+                            />
+                            {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
+                            <GrantInformation publication={recordToView} />
+                        </React.Fragment>
+                    )}
                     <PublicationDetails publication={recordToView} />
-                    <AvailableVersions publication={recordToView} />
+                    {!isDeleted && <AvailableVersions publication={recordToView} />}
                 </Grid>
             </StandardPage>
         );

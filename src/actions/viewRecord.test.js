@@ -49,7 +49,22 @@ describe('View record actions', () => {
             });
         });
 
-        it('dispatches expected actions when loading a record to view from API for anon user', async () => {
+        it('dispatches expected actions when loading a deleted record to view', async() => {
+            mockApi
+                .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(410, { data: { ...mockData.record } });
+
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOADED];
+
+            try {
+                await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions when loading a record to view from API for anon user', async() => {
             mockApi.onAny().reply(403);
 
             const expectedActions = [

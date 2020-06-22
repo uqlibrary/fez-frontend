@@ -505,6 +505,11 @@ export default {
         viewRecord: {
             loadingMessage: 'Loading record',
             thumbnailTitle: 'Click to open a preview of [image]',
+            deletedAlert: {
+                type: 'info_outline',
+                title: '',
+                message: 'This record has been deleted.',
+            },
         },
         searchRecords: {
             title: 'eSpace search',
@@ -934,6 +939,13 @@ export default {
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
                 },
             },
+        },
+        deleteRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Delete record',
+            subTitle: 'Work to be deleted',
+            cancel: 'Cancel',
+            submit: 'Delete',
         },
         adminAdd: {
             title: 'Add a new record',

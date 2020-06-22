@@ -17,6 +17,7 @@ const handlers = {
         ...initialState,
         loadingRecordToView: false,
         recordToView: action.payload,
+        isDeleted: action.isDeleted,
         hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
     }),
 

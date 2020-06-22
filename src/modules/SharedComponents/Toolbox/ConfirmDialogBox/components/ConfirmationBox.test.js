@@ -18,6 +18,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         onCancelAction: jest.fn(),
         onClose: jest.fn(),
         showAlternateActionButton: false,
+        confirmationBoxId: 'confirmation-box',
         ...testProps,
     };
 

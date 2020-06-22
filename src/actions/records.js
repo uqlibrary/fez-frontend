@@ -148,6 +148,7 @@ const prepareThesisSubmission = data => {
         rek_formatted_title: data.thesisTitle.htmlText,
         rek_description: data.thesisAbstract.plainText,
         rek_formatted_abstract: data.thesisAbstract.htmlText,
+        rek_subtype: data.rek_genre_type,
     };
 
     // delete extra form values from request object

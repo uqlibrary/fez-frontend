@@ -70,6 +70,7 @@ export const ListRow = ({
                 onClose={hideConfirmation}
                 isOpen={isOpen}
                 locale={deleteRecordConfirmation}
+                confirmationBoxId={`${listRowId}-delete`}
             />
             <Grid container alignItems="center" spacing={1} className={classes.row}>
                 <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6} md={hideReorder ? 11 : 9}>
