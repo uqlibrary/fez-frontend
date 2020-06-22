@@ -67,7 +67,7 @@ describe('Component DeleteRecord', () => {
     it('should display alert and disable delete button on records with UQ DOIs', () => {
         const wrapper = setup({ recordToDelete: { ...mockRecordToDelete, fez_record_search_key_doi: { rek_doi: `${UQDOIPrefix}12345` } } });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('#deleteSubmit').props().disabled).toEqual(true);
+        expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
         expect(wrapper.find('Field').length).toEqual(0);
     });
 

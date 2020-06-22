@@ -16,9 +16,10 @@ import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { routes, validation } from 'config';
 import { UQDOIPrefix } from 'config/general';
-import { Alert } from '../../SharedComponents/Toolbox/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 export default class DeleteRecord extends PureComponent {
     static propTypes = {
@@ -101,80 +102,86 @@ export default class DeleteRecord extends PureComponent {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txtDeleteForm });
         return (
             <StandardPage title={txt.title}>
-                <form onSubmit={this._handleDefaultSubmit}>
-                    <Grid container spacing={24}>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.subTitle} help={txt.help}>
-                                <PublicationCitation publication={this.props.recordToDelete} />
-                            </StandardCard>
-                        </Grid>
-                        {!hasUQDOI && (
-                            <React.Fragment>
-                                <NavigationDialogBox
-                                    when={this.props.dirty && !this.props.submitSucceeded}
-                                    txt={txtDeleteForm.cancelWorkflowConfirmation}
-                                />
-                                <ConfirmDialogBox
-                                    onRef={this._setSuccessConfirmation}
-                                    onAction={this._navigateToViewPage}
-                                    onCancelAction={this._navigateToSearchPage}
-                                    locale={saveConfirmationLocale}
-                                />
-                                <Grid item xs={12}>
-                                    <StandardCard title={txtDeleteForm.reason.title}>
-                                        <Grid container spacing={8}>
-                                            <Grid item xs={12}>
-                                                <Field
-                                                    component={TextField}
-                                                    disabled={this.props.submitting}
-                                                    name="reason"
-                                                    type="text"
-                                                    fullWidth
-                                                    multiline
-                                                    rows={3}
-                                                    label={txtDeleteForm.reason.fieldLabels.reason}
-                                                />
+                <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
+                    <form onSubmit={this._handleDefaultSubmit}>
+                        <Grid container spacing={3}>
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.subTitle} help={txt.help}>
+                                    <PublicationCitation publication={this.props.recordToDelete} />
+                                </StandardCard>
+                            </Grid>
+                            {!hasUQDOI && (
+                                <React.Fragment>
+                                    <NavigationDialogBox
+                                        when={this.props.dirty && !this.props.submitSucceeded}
+                                        txt={txtDeleteForm.cancelWorkflowConfirmation}
+                                    />
+                                    <ConfirmDialogBox
+                                        onRef={this._setSuccessConfirmation}
+                                        onAction={this._navigateToViewPage}
+                                        onCancelAction={this._navigateToSearchPage}
+                                        locale={saveConfirmationLocale}
+                                    />
+                                    <Grid item xs={12}>
+                                        <StandardCard title={txtDeleteForm.reason.title}>
+                                            <Grid container spacing={2}>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={TextField}
+                                                        textFieldId="reason"
+                                                        disabled={this.props.submitting}
+                                                        name="reason"
+                                                        type="text"
+                                                        fullWidth
+                                                        multiline
+                                                        rows={3}
+                                                        label={txtDeleteForm.reason.fieldLabels.reason}
+                                                    />
+                                                </Grid>
                                             </Grid>
-                                        </Grid>
-                                    </StandardCard>
+                                        </StandardCard>
+                                    </Grid>
+                                </React.Fragment>
+                            )}
+                            {alertProps && (
+                                <Grid item xs={12}>
+                                    <Alert pushToTop {...alertProps} />
                                 </Grid>
-                            </React.Fragment>
-                        )}
-                        {alertProps && (
-                            <Grid item xs={12}>
-                                <Alert pushToTop {...alertProps} />
-                            </Grid>
-                        )}
-                        {hasUQDOI && (
-                            <Grid item xs={12}>
-                                <Alert message={txtDeleteForm.uqDoiAlert.message(this.props.recordToDelete.rek_pid)} />
-                            </Grid>
-                        )}
-                    </Grid>
-                    <Grid container spacing={24}>
-                        <Grid item xs />
-                        <Grid item>
-                            <Button
-                                variant={'contained'}
-                                fullWidth
-                                children={txt.cancel}
-                                disabled={this.props.submitting}
-                                onClick={this._cancel}
-                            />
+                            )}
+                            {hasUQDOI && (
+                                <Grid item xs={12}>
+                                    <Alert
+                                        message={txtDeleteForm.uqDoiAlert.message(this.props.recordToDelete.rek_pid)}
+                                    />
+                                </Grid>
+                            )}
                         </Grid>
-                        <Grid item>
-                            <Button
-                                variant={'contained'}
-                                color={'primary'}
-                                fullWidth
-                                children={txt.submit}
-                                onClick={this.props.handleSubmit}
-                                disabled={hasUQDOI || this.props.submitting || this.props.disableSubmit}
-                                id="deleteSubmit"
-                            />
+                        <Grid container spacing={3}>
+                            <Grid item xs />
+                            <Grid item>
+                                <Button
+                                    variant={'contained'}
+                                    fullWidth
+                                    children={txt.cancel}
+                                    disabled={this.props.submitting}
+                                    onClick={this._cancel}
+                                    id="cancel-delete-record"
+                                />
+                            </Grid>
+                            <Grid item>
+                                <Button
+                                    variant={'contained'}
+                                    color={'primary'}
+                                    fullWidth
+                                    children={txt.submit}
+                                    onClick={this.props.handleSubmit}
+                                    disabled={hasUQDOI || this.props.submitting || this.props.disableSubmit}
+                                    id="submit-delete-record"
+                                />
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </form>
+                    </form>
+                </ConfirmDiscardFormChanges>
             </StandardPage>
         );
     }
