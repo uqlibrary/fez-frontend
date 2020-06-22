@@ -35,7 +35,7 @@ context('Audio admin edit', () => {
                     },
                 ];
                 links.forEach((link, index) => {
-                    cy.get(`#link-info-list-row-${index}`)
+                    cy.get(`[data-testid=rek-link-list-row-${index}]`)
                         .find('p')
                         .should('have.text', `Link: ${link.url}`)
                         .siblings('span')

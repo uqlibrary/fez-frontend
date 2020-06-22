@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from '@material-ui/core/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { url } from 'config/validation';
@@ -68,14 +68,13 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                 <TextField
                     fullWidth
                     name="key"
-                    id="link-info-link"
                     textFieldId="rek-link"
                     label={linkInputFieldLabel}
                     placeholder={linkInputFieldHint}
                     onChange={handleChange}
                     onKeyDown={addItem}
                     error={!!errorText}
-                    helperText={errorText}
+                    errorText={errorText}
                     disabled={disabled}
                     inputProps={{
                         ref: linkInput,
@@ -87,7 +86,6 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                 <TextField
                     fullWidth
                     name="value"
-                    id="link-info-description"
                     textFieldId="rek-link-description"
                     label={descriptionInputFieldLabel}
                     placeholder={descriptionInputFieldHint}
