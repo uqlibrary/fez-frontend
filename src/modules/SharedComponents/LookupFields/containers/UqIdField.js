@@ -41,6 +41,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
+    clearSuggestions: () => dispatch(actions.clearAuthorsSuggestions()),
     onChange: props.onChange,
     onClear: props.onClear,
 });

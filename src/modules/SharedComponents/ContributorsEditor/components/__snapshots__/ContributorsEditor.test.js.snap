@@ -2762,6 +2762,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               }
                                             }
                                             autoCompleteAsynchronousFieldId="test-aut-id"
+                                            clearSuggestions={[Function]}
                                             defaultValue=""
                                             disabled={false}
                                             filterOptions={[Function]}
@@ -7071,6 +7072,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               }
                                             }
                                             autoCompleteAsynchronousFieldId="test-aut-id"
+                                            clearSuggestions={[Function]}
                                             defaultValue=""
                                             disabled={true}
                                             filterOptions={[Function]}
