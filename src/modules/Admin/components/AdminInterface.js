@@ -111,11 +111,10 @@ export const AdminInterface = ({
 
     const handleCancel = event => {
         event.preventDefault();
+        const pushToHistory = () => history.push(routes.pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
-            /* istanbul ignore coverage */
-            !!locked
-                ? unlockRecord(record.rek_pid, () => history.push(routes.pathConfig.records.view(record.rek_pid)))
-                : history.push(routes.pathConfig.records.view(record.rek_pid));
+            /* istanbul ignore next */
+            !!locked ? unlockRecord(record.rek_pid, pushToHistory) : pushToHistory();
         } else {
             // Else this is a new record, so just go to the homepage
             history.push(routes.pathConfig.index);
@@ -174,7 +173,6 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
-    console.log('locked', locked);
     return (
         <StandardPage>
             <React.Fragment>
