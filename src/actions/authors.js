@@ -119,3 +119,7 @@ export function resetSavingAuthorState() {
         dispatch({ type: actions.CURRENT_AUTHOR_SAVE_RESET });
     };
 }
+
+export const clearAuthorsSuggestions = () => ({
+    type: actions.CLEAR_AUTHORS_LIST,
+});

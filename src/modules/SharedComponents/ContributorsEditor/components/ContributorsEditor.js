@@ -246,7 +246,11 @@ export class ContributorsEditor extends PureComponent {
 
         return (
             <ContributorForm
-                key={this.state.contributorIndexSelectedToEdit}
+                key={
+                    this.state.contributorIndexSelectedToEdit !== null && this.state.contributorIndexSelectedToEdit >= 0
+                        ? `contributor-form-edit-${this.state.contributorIndexSelectedToEdit}`
+                        : 'contributor-form-add'
+                }
                 onSubmit={this.addContributor}
                 contributorFormId={this.props.contributorEditorId}
                 {...formProps}

@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
     autoCompleteAsynchronousFieldId,
+    clearSuggestions,
     defaultValue,
     disabled,
     error,
@@ -57,7 +58,9 @@ export const AutoCompleteAsynchronousField = ({
         (event, newValue) => {
             setValue(newValue);
             !!newValue && onChange(newValue);
+            !!clearSuggestions && clearSuggestions();
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [onChange],
     );
 
@@ -145,6 +148,7 @@ export const AutoCompleteAsynchronousField = ({
 AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
     autoCompleteAsynchronousFieldId: PropTypes.string.isRequired,
+    clearSuggestions: PropTypes.func,
     defaultValue: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,

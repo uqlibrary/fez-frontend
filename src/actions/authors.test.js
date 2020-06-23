@@ -219,4 +219,11 @@ describe('Action creators for authors', () => {
         await mockActionsStore.dispatch(authorsActions.resetSavingAuthorState());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
+
+    it('dispatches expected actions to clear authors list', async () => {
+        const expectedActions = [actions.CLEAR_AUTHORS_LIST];
+
+        await mockActionsStore.dispatch(authorsActions.clearAuthorsSuggestions());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
 });
