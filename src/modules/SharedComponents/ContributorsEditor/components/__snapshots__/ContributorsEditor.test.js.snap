@@ -348,7 +348,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
           hideReorder={false}
           isContributorAssigned={true}
           isNtro={false}
-          key="1"
+          key="contributor-form-edit-1"
           locale={
             Object {
               "addButton": "Add author",
@@ -669,7 +669,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           hideReorder={false}
           isContributorAssigned={true}
           isNtro={false}
-          key="1"
+          key="contributor-form-edit-1"
           locale={
             Object {
               "addButton": "Add author",
@@ -759,7 +759,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         hideReorder={false}
         isContributorAssigned={true}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -957,7 +957,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         hideReorder={false}
         isContributorAssigned={true}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -1957,7 +1957,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             hideReorder={false}
                             isContributorAssigned={false}
                             isNtro={false}
-                            key="null"
+                            key="contributor-form-add"
                             locale={
                               Object {
                                 "addButton": "Add author",
@@ -5169,7 +5169,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             hideReorder={false}
                             isContributorAssigned={false}
                             isNtro={true}
-                            key="null"
+                            key="contributor-form-add"
                             locale={
                               Object {
                                 "addButton": "Add author",
@@ -8294,7 +8294,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -8382,7 +8382,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -8470,7 +8470,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -8559,7 +8559,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -8801,7 +8801,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         }
         isContributorAssigned={true}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -8987,7 +8987,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         }
         isContributorAssigned={true}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -9175,7 +9175,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -9263,7 +9263,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -9370,7 +9370,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
@@ -9472,7 +9472,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
-        key="null"
+        key="contributor-form-add"
         locale={
           Object {
             "addButton": "Add author",
