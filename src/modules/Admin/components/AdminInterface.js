@@ -61,6 +61,7 @@ export const AdminInterface = ({
     authorDetails,
     classes,
     createMode,
+    isDeleted,
     destroy,
     dirty,
     disableSubmit,
@@ -165,6 +166,10 @@ export const AdminInterface = ({
         ? txt.current.successAddWorkflowConfirmation
         : txt.current.successWorkflowConfirmation;
 
+    const pageTitlePrefix = !isDeleted ? 'Edit' : 'Undelete';
+
+    const submitButtonTxt = !isDeleted ? 'Save' : 'Undelete';
+
     const setPublicationStatusAndSubmit = status =>
         handleSubmit((values, dispatch, props) =>
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
@@ -184,7 +189,7 @@ export const AdminInterface = ({
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
                             {!createMode
                                 ? ReactHtmlParser(
-                                      `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+                                      `${pageTitlePrefix} ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
                                   )
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
@@ -285,7 +290,8 @@ export const AdminInterface = ({
                                     </Grid>
                                     {!!record.rek_pid &&
                                         objectType === RECORD_TYPE_RECORD &&
-                                        record.rek_status !== PUBLISHED && (
+                                        record.rek_status !== PUBLISHED &&
+                                        !isDeleted && (
                                             <Grid item xs={12} sm={3}>
                                                 <Button
                                                     id="admin-work-publish"
@@ -301,7 +307,8 @@ export const AdminInterface = ({
                                         )}
                                     {!!record.rek_pid &&
                                         objectType === RECORD_TYPE_RECORD &&
-                                        record.rek_status === PUBLISHED && (
+                                        record.rek_status === PUBLISHED &&
+                                        !isDeleted && (
                                             <Grid item xs={12} sm={3}>
                                                 <Button
                                                     id="admin-work-unpublish"
@@ -318,7 +325,9 @@ export const AdminInterface = ({
                                     <Grid
                                         item
                                         xs={12}
-                                        sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD ? 7 : 10}
+                                        sm={
+                                            !!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted ? 7 : 10
+                                        }
                                     >
                                         <Button
                                             id="admin-work-submit"
@@ -328,7 +337,7 @@ export const AdminInterface = ({
                                             variant="contained"
                                             color="primary"
                                             fullWidth
-                                            children="Save"
+                                            children={submitButtonTxt}
                                             onClick={handleSubmit}
                                         />
                                     </Grid>
@@ -346,6 +355,7 @@ AdminInterface.propTypes = {
     authorDetails: PropTypes.object,
     classes: PropTypes.object,
     createMode: PropTypes.bool,
+    isDeleted: PropTypes.bool,
     destroy: PropTypes.func,
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,

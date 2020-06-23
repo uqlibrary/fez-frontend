@@ -120,6 +120,28 @@ describe('AdminInterface component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render undelete title and button', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            isDeleted: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render default view as a full form view', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 

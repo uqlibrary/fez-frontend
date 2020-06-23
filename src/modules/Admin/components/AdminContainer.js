@@ -65,6 +65,7 @@ export const AdminContainer = ({
     loadRecordToView,
     match,
     recordToView,
+    isDeleted,
     submitSucceeded,
     submitting,
 }) => {
@@ -155,6 +156,7 @@ export const AdminContainer = ({
                             history={history}
                             location={location}
                             createMode={createMode}
+                            isDeleted={isDeleted}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
                             tabs={{
@@ -225,6 +227,7 @@ AdminContainer.propTypes = {
     loadRecordToView: PropTypes.func,
     match: PropTypes.object,
     recordToView: PropTypes.object,
+    isDeleted: PropTypes.bool,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
