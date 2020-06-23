@@ -542,6 +542,12 @@ describe('Backend routes method', () => {
         expect(routes.EXISTING_RECORD_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001' });
     });
 
+    it('should construct url for EXISTING_RECORD_API for admin edit to get lock info', () => {
+        expect(routes.EXISTING_RECORD_API({ pid: 'UQ:1001', isEdit: true })).toEqual({
+            apiUrl: 'records/UQ:1001?from=admin-form',
+        });
+    });
+
     it('should construct url for RECORDS_ISSUES_API', () => {
         expect(routes.RECORDS_ISSUES_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001/issues' });
     });

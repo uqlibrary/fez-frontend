@@ -1071,4 +1071,36 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
+
+    describe('unlockRecord()', () => {
+        it('dispatches expected actions on success', async () => {
+            const pid = 'UQ:123456';
+
+            mockApi.onPatch(repositories.routes.UNLOCK_RECORD_API({ pid }).apiUrl).reply(200, {});
+            const expectedActions = [actions.UNLOCK_RECORD_INPROGRESS, actions.UNLOCK_RECORD_SUCCESS];
+            const testCallback = jest.fn();
+
+            await mockActionsStore.dispatch(recordActions.unlockRecord('UQ:123456', testCallback));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(testCallback).toBeCalled();
+        });
+
+        it('dispatches expected actions on failure', async () => {
+            const pid = 'UQ:123456';
+            mockApi.onPatch(repositories.routes.UNLOCK_RECORD_API({ pid }).apiUrl).reply(500);
+            const expectedActions = [
+                actions.UNLOCK_RECORD_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.UNLOCK_RECORD_FAILED,
+            ];
+            const testCallback = jest.fn();
+
+            try {
+                await mockActionsStore.dispatch(recordActions.unlockRecord('UQ:123456', testCallback));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                expect(testCallback).not.toBeCalled();
+            }
+        });
+    });
 });

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
-
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
@@ -21,6 +20,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import ScrollToSection from './ScrollToSection';
+import LockedAlert from './LockedAlert';
 import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
@@ -68,9 +68,11 @@ export const AdminInterface = ({
     handleSubmit,
     history,
     location,
+    locked,
     submitSucceeded,
     submitting,
     tabs,
+    unlockRecord,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -109,9 +111,10 @@ export const AdminInterface = ({
 
     const handleCancel = event => {
         event.preventDefault();
+        const pushToHistory = () => history.push(routes.pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
-            // Editing a record, so navigate to the view page for this PID
-            history.push(routes.pathConfig.records.view(record.rek_pid));
+            /* istanbul ignore next */
+            !!locked ? unlockRecord(record.rek_pid, pushToHistory) : pushToHistory();
         } else {
             // Else this is a new record, so just go to the homepage
             history.push(routes.pathConfig.index);
@@ -155,7 +158,7 @@ export const AdminInterface = ({
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <ScrollToSection scrollToSection={!tabbed && tab === currentTabValue}>
                 <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                    <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
+                    <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
                 </StandardCard>
             </ScrollToSection>
         </TabContainer>
@@ -207,6 +210,8 @@ export const AdminInterface = ({
                             </Grid>
                         </Grid>
                     )}
+                    {/* Admin lock alert */}
+                    {!!locked && <LockedAlert />}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
@@ -290,7 +295,7 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-publish"
                                                     data-testid="publish-admin"
-                                                    disabled={submitting || disableSubmit}
+                                                    disabled={!!submitting || !!disableSubmit || !!locked}
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -306,7 +311,7 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-unpublish"
                                                     data-testid="unpublish-admin"
-                                                    disabled={submitting || disableSubmit}
+                                                    disabled={!!submitting || !!disableSubmit || !!locked}
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -324,7 +329,7 @@ export const AdminInterface = ({
                                             id="admin-work-submit"
                                             data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
-                                            disabled={submitting || disableSubmit}
+                                            disabled={!!submitting || !!disableSubmit || !!locked}
                                             variant="contained"
                                             color="primary"
                                             fullWidth
@@ -353,9 +358,11 @@ AdminInterface.propTypes = {
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     location: PropTypes.object,
+    locked: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
     tabs: PropTypes.object,
+    unlockRecord: PropTypes.func,
 };
 
 export default React.memo(AdminInterface);

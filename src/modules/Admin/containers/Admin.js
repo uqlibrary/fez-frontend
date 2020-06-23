@@ -103,6 +103,7 @@ const mapStateToProps = (state, props) => {
     const newRecord = state.get('createAdminRecordReducer') && state.get('createAdminRecordReducer').newRecord;
     let initialFormValues = {};
     let recordToView = {};
+    let locked = false;
 
     if (props.createMode) {
         const displayType = formValues && formValues.get('rek_display_type');
@@ -126,6 +127,10 @@ const mapStateToProps = (state, props) => {
         };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;
+        locked =
+            !!recordToView &&
+            recordToView.rek_editing_user !== state.get('accountReducer').account.id &&
+            state.get('viewRecordReducer').isRecordLocked;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =
             (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
@@ -145,14 +150,16 @@ const mapStateToProps = (state, props) => {
         author: state.get('accountReducer').author,
         recordToView,
         ...initialFormValues,
+        locked,
     };
 };
 
 function mapDispatchToProps(dispatch) {
-    const { loadRecordToView, clearRecordToView } = bindActionCreators(actions, dispatch);
+    const { loadRecordToView, clearRecordToView, unlockRecord } = bindActionCreators(actions, dispatch);
     return {
         loadRecordToView,
         clearRecordToView,
+        unlockRecord,
         destroy,
     };
 }

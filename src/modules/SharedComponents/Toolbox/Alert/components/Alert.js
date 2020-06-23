@@ -25,6 +25,16 @@ const useStyles = makeStyles(
             borderRadius: 5,
             boxShadow: theme.shadows[1],
         },
+        '@keyframes wiggle': {
+            from: { transform: 'rotate(-10deg)', transformOrigin: '40% 50%' },
+            to: { transform: 'rotate(10deg)', transformOrigin: '40% 50%' },
+        },
+        wriggler: {
+            animationName: '$wiggle',
+            animationDuration: '0.05s',
+            animationIterationCount: 50,
+            animationDirection: 'alternate',
+        },
         icon: {
             '& .icon': {
                 fontSize: 48,
@@ -247,10 +257,15 @@ export const Alert = ({
     dismissAction,
     dismissTitle,
     showLoader,
+    customIcon,
+    customType,
+    wiggle,
 }) => {
     const classes = useStyles();
     const renderIcon = type => {
         switch (type) {
+            case 'custom':
+                return customIcon;
             case 'error':
                 return <Error id="error-icon" className="icon" />;
             case 'error_outline':
@@ -277,14 +292,19 @@ export const Alert = ({
             <Grid
                 container
                 spacing={3}
-                className={classNames(classes[type], classes.common)}
+                className={classNames(classes[!!customIcon ? customType : type], classes.common)}
                 justify="center"
                 alignItems="flex-start"
                 alignContent="center"
             >
                 <Grid item xs={12} sm className={action && classes.linked}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
-                        <Grid item className={`${classes.icon} alert-icon`} onClick={action} onKeyDown={action}>
+                        <Grid
+                            item
+                            className={`${classes.icon} alert-icon ${wiggle ? classes.wriggler : ''}`}
+                            onClick={action}
+                            onKeyDown={action}
+                        >
                             {showLoader ? (
                                 <CircularProgress id="spinner" className="spinner" size={38} thickness={3} />
                             ) : (
@@ -354,13 +374,28 @@ Alert.propTypes = {
         'help',
         'help_outline',
         'done',
+        'custom',
     ]),
     action: PropTypes.func,
     actionButtonLabel: PropTypes.string,
     allowDismiss: PropTypes.bool,
+    wiggle: PropTypes.bool,
     dismissAction: PropTypes.func,
     dismissTitle: PropTypes.string,
     showLoader: PropTypes.bool,
+    customIcon: PropTypes.any,
+    customType: PropTypes.oneOf([
+        null,
+        'error',
+        'error_outline',
+        'warning',
+        'info',
+        'info_outline',
+        'help',
+        'help_outline',
+        'done',
+        'custom',
+    ]),
 };
 
 Alert.defaultProps = {
@@ -369,6 +404,9 @@ Alert.defaultProps = {
     allowDismiss: false,
     dismissTitle: 'Click to dismiss this alert',
     showLoader: false,
+    customIcon: null,
+    customType: null,
+    wiggle: null,
 };
 
 export default Alert;

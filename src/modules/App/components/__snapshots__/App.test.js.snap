@@ -312,11 +312,14 @@ exports[`Application component Should display mobile correctly 1`] = `
           action={[Function]}
           actionButtonLabel="Click to login"
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Login to UQ eSpace for full search results and more services."
           showLoader={false}
           title="You are not logged in"
           type="info_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -901,11 +904,14 @@ exports[`Application component should determine if it has incomplete works from 
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1724,11 +1730,14 @@ exports[`Application component should determine if it has incomplete works from 
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -2742,11 +2751,14 @@ exports[`Application component should redirect to login page with correct return
           action={[Function]}
           actionButtonLabel="Click to login"
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Login to UQ eSpace for full search results and more services."
           showLoader={false}
           title="You are not logged in"
           type="info_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -3327,11 +3339,14 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
           title="You are not registered in UQ eSpace as an author"
           type="info_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -4862,11 +4877,14 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       >
         <Alert
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
           showLoader={false}
           title="ORCID ID REQUIRED"
           type="error_outline"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -5520,11 +5538,14 @@ exports[`Application component should render app for account with author account
           action={[Function]}
           actionButtonLabel="Click here to link or register"
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
           type="warning"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -8459,11 +8480,14 @@ exports[`Application component should render app for account with fez author wit
           action={[Function]}
           actionButtonLabel="Click here to link or register"
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
           type="warning"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -9502,11 +9526,14 @@ exports[`Application component should render app for account with fez author wit
           action={[Function]}
           actionButtonLabel="Click here to link or register"
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
           type="warning"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -11950,11 +11977,14 @@ exports[`Application component should render app for account with fez author wit
           action={[Function]}
           actionButtonLabel="Click here to link or register"
           allowDismiss={false}
+          customIcon={null}
+          customType={null}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
           title="ORCID ID REQUIRED"
           type="warning"
+          wiggle={null}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -17844,6 +17874,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "showAppAlert": [Function],
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
+                                                            "unlockRecord": [Function],
+                                                            "unlockRecordToView": [Function],
                                                             "updateCollection": [Function],
                                                             "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
@@ -20148,6 +20180,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "showAppAlert": [Function],
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
+                                "unlockRecord": [Function],
+                                "unlockRecordToView": [Function],
                                 "updateCollection": [Function],
                                 "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
@@ -21760,6 +21794,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "showAppAlert": [Function],
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
+                                                                            "unlockRecord": [Function],
+                                                                            "unlockRecordToView": [Function],
                                                                             "updateCollection": [Function],
                                                                             "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
@@ -21888,6 +21924,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "showAppAlert": [Function],
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
+                                                                              "unlockRecord": [Function],
+                                                                              "unlockRecordToView": [Function],
                                                                               "updateCollection": [Function],
                                                                               "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
@@ -23132,6 +23170,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "showAppAlert": [Function],
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
+                                                                                      "unlockRecord": [Function],
+                                                                                      "unlockRecordToView": [Function],
                                                                                       "updateCollection": [Function],
                                                                                       "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
@@ -23214,6 +23254,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "showAppAlert": [Function],
                                                                                         "submitThesis": [Function],
                                                                                         "unclaimRecord": [Function],
+                                                                                        "unlockRecord": [Function],
+                                                                                        "unlockRecordToView": [Function],
                                                                                         "updateCollection": [Function],
                                                                                         "updateCommunity": [Function],
                                                                                         "updateCurrentAuthor": [Function],

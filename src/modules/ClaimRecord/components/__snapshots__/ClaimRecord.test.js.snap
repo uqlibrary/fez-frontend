@@ -10642,6 +10642,8 @@ exports[`Component ClaimRecord  should render publication citation, error messag
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
@@ -10657,6 +10659,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             showLoader={false}
             title="Error"
             type="error"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -11715,12 +11718,15 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   >
                     <Alert
                       allowDismiss={false}
+                      customIcon={null}
+                      customType={null}
                       dismissTitle="Click to dismiss this alert"
                       message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                       pushToTop={true}
                       showLoader={false}
                       title="File upload and/or edits/changes/comments post failed"
                       type="warning"
+                      wiggle={null}
                     />
                   </WithStyles(ForwardRef(Grid))>
                 </WithStyles(ForwardRef(Grid))>
@@ -14811,12 +14817,15 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="Claim publication is being processed."
             pushToTop={true}
             showLoader={true}
             title="Saving"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -16207,12 +16216,15 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="Publication claim has been submitted successfully."
             pushToTop={true}
             showLoader={false}
             title="Success"
             type="done"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -17602,6 +17614,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
             message="Error has occurred during request and request cannot be processed. This is an errorPlease contact eSpace administrators or try again later."
@@ -17609,6 +17623,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             showLoader={false}
             title="Error"
             type="error_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -18998,6 +19013,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
@@ -19016,6 +19033,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             showLoader={false}
             title="Validation"
             type="warning"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -19282,6 +19300,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
             message="Error has occurred during request and request cannot be processed. The given data was invalid.Please contact eSpace administrators or try again later."
@@ -19289,6 +19309,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             showLoader={false}
             title="Error"
             type="error_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -19551,6 +19572,8 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
             message="Error has occurred during request and request cannot be processed. The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.Please contact eSpace administrators or try again later."
@@ -19558,6 +19581,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             showLoader={false}
             title="Error"
             type="error_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -20614,6 +20638,8 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
@@ -20629,6 +20655,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
             showLoader={false}
             title="Error"
             type="error"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
