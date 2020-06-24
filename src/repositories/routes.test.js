@@ -552,10 +552,6 @@ describe('Backend routes method', () => {
         expect(routes.RECORDS_ISSUES_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001/issues' });
     });
 
-    it('should construct url for DOI_API', () => {
-        expect(routes.DOI_API({ pid: 'UQ:1234567' })).toEqual({ apiUrl: 'records/UQ:1234567/doi' });
-    });
-
     it('should construct url for NEW_COLLECTION_API', () => {
         expect(routes.NEW_COLLECTION_API()).toEqual({ apiUrl: 'collections' });
     });
@@ -806,6 +802,13 @@ describe('Backend routes method', () => {
     it('should construct url for ORCID_SYNC_API', () => {
         expect(routes.ORCID_SYNC_API()).toEqual({
             apiUrl: 'external/orcid/jobs/sync',
+        });
+    });
+
+    it('should construct url for UNLOCK_RECORD_API', () => {
+        const pid = 'UQ:123456';
+        expect(routes.UNLOCK_RECORD_API({ pid })).toEqual({
+            apiUrl: `records/${pid}/unlock`,
         });
     });
 });

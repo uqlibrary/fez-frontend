@@ -1,19 +1,24 @@
 import * as actions from './actionTypes';
-import { get } from 'repositories/generic';
+import { put } from 'repositories/generic';
 
-import { DOI_API } from 'repositories/routes';
+import { EXISTING_RECORD_API } from 'repositories/routes';
 
-export function updateDoi(pid) {
+export function updateDoi(record) {
     return dispatch => {
         dispatch({ type: actions.RECORD_DOI_UPDATE_REQUESTING });
-        return get(DOI_API({ pid })).then(
+        return put(EXISTING_RECORD_API({ pid: record.pid }), record).then(
             response => {
-                dispatch({ type: actions.RECORD_DOI_UPDATE_SUCCEEDED });
+                dispatch({
+                    type: actions.RECORD_DOI_UPDATE_SUCCEEDED,
+                    payload: {
+                        pid: response.data,
+                    },
+                });
                 return Promise.resolve(response);
             },
             error => {
                 dispatch({ type: actions.RECORD_DOI_UPDATE_FAILED, payload: error.message });
-                return Promise.reject(new Error(error.message));
+                return Promise.reject(error);
             },
         );
     };

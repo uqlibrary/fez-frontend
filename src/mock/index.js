@@ -296,9 +296,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, { message: ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"] })
     .onGet(routes.ORCID_SYNC_API().apiUrl)
-    .reply(200, mockData.orcidSyncStatus)
-    .onGet(new RegExp(escapeRegExp(routes.DOI_API({ pid: '.*' }).apiUrl)))
-    .reply(200, mockData.record);
+    .reply(200, mockData.orcidSyncStatus);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
 // .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
