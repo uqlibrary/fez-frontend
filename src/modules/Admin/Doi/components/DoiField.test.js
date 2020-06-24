@@ -31,7 +31,7 @@ describe('DoiField', () => {
     });
 
     it('should render known fields', () => {
-        const knowns = [
+        const knownFieldsForResearchReport = [
             // Special cases
             {
                 key: 'fez_record_search_key_author',
@@ -72,11 +72,43 @@ describe('DoiField', () => {
                 },
             },
         ];
-        knowns.map(known => {
+        knownFieldsForResearchReport.map(known => {
             const field = known.key;
             const wrapper = setup({ field, data: record[field], heading: field });
             known.test(wrapper);
         });
+
+        const confWrapper = setup({
+            field: 'fez_record_search_key_conference_location',
+            data: {
+                rek_conference_location: 'test location',
+            },
+            heading: 'Conference location',
+        });
+        expect(confWrapper.find('[data-testid="fez_record_search_key_conference_location-value"]').text()).toBe(
+            'test location',
+        );
+        expect(confWrapper.find('[data-testid="fez_record_search_key_conference_location-heading"]').text()).toBe(
+            'Conference location',
+        );
+
+        const authorWithOrcidWrapper = setup({
+            field: 'fez_record_search_key_author',
+            data: [
+                {
+                    rek_author_id: 10101,
+                    rek_author: 'First Last',
+                    aut_orcid_id: '101010-1010101',
+                },
+            ],
+            heading: 'Author(s)',
+        });
+        expect(authorWithOrcidWrapper.find('[data-testid="author-0"]').text()).toBe(
+            'First Last (ORCID: 101010-1010101)',
+        );
+        expect(authorWithOrcidWrapper.find('[data-testid="author-0-orcid-link"]').props().href).toBe(
+            'https://orcid.org/101010-1010101',
+        );
 
         // Custom entries
 
