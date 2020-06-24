@@ -44,7 +44,7 @@ describe('GenericSelectField', () => {
     });
 
     describe('Lifecycle methods', () => {
-        it('componentWillReceiveProps should call method', () => {
+        it('UNSAFE_componentWillReceiveProps should call method', () => {
             const testFn = jest.fn();
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
@@ -58,7 +58,7 @@ describe('GenericSelectField', () => {
             expect(testFn).toHaveBeenCalled();
         });
 
-        it('componentWillReceiveProps should not call method', () => {
+        it('UNSAFE_componentWillReceiveProps should not call method', () => {
             const testFn = jest.fn();
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],

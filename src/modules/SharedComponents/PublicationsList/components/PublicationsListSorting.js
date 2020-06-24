@@ -43,7 +43,8 @@ export class PublicationsListSorting extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.setState({
             sortBy: nextProps.sortBy,
             sortDirection: nextProps.sortDirection,

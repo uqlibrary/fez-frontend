@@ -297,6 +297,7 @@ describe('ContributorRowText', () => {
                 selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
+                contributorRowId="test-list-row"
             />,
         );
 

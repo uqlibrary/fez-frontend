@@ -88,7 +88,8 @@ export default class SearchComponent extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (
             Object.keys(nextProps.searchQueryParams).length !== Object.keys(this.props.searchQueryParams).length ||
             nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised

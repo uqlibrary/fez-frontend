@@ -75,7 +75,8 @@ export default class Orcid extends Component {
         };
     }
 
-    componentWillMount() {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillMount() {
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
         if (!this.props.accountAuthorLoading && (!this.props.author || this.props.author.aut_orcid_id)) {
@@ -102,7 +103,8 @@ export default class Orcid extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // wait for user account to get loaded and set state if props were not available in constructor
         if (
             nextProps.account !== this.props.account &&

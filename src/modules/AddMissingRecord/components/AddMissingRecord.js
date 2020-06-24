@@ -22,7 +22,8 @@ export default class AddMissingRecord extends PureComponent {
         super(props);
     }
 
-    componentWillMount() {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillMount() {
         if (!this.props.rawSearchQuery && this.props.match.path === pathConfig.records.add.results) {
             this.props.history.replace(pathConfig.records.add.find);
         }

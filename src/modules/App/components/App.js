@@ -146,8 +146,8 @@ export class AppClass extends PureComponent {
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
-
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }

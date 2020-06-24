@@ -263,7 +263,7 @@ describe('Component AdvancedSearchCaption', () => {
             className: 'search-body',
             isLoading: false,
         };
-        wrapper.instance().componentWillReceiveProps({ ...newProps });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({ ...newProps });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

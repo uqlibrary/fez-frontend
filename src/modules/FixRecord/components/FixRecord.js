@@ -66,7 +66,8 @@ export default class FixRecord extends PureComponent {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox &&
                 this.successConfirmationBox.showConfirmation &&

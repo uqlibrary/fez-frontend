@@ -64,10 +64,10 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle search to minimised view of advanced search', () => {
-        // componentWillReceiveProps
+        // UNSAFE_componentWillReceiveProps
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             searchQueryParams: {
                 all: 'i feel very lucky',
             },
@@ -96,10 +96,10 @@ describe('SearchComponent', () => {
     });
 
     it('should display simple search with query string', () => {
-        // componentWillReceiveProps
+        // UNSAFE_componentWillReceiveProps
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             searchQueryParams: {
                 all: 'i feel very lucky',
             },

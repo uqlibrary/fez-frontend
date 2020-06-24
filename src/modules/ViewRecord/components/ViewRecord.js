@@ -40,7 +40,8 @@ export default class ViewRecord extends PureComponent {
         }
     }
 
-    componentWillReceiveProps(newProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(newProps) {
         if (this.props.match.params.pid !== newProps.match.params.pid) {
             this.props.actions.loadRecordToView(newProps.match.params.pid);
         }

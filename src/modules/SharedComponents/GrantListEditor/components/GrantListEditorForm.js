@@ -66,7 +66,8 @@ export class GrantListEditorFormClass extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         !!nextProps.grantSelectedToEdit && this.setState({ ...nextProps.grantSelectedToEdit });
     }
 

@@ -49,7 +49,8 @@ export class FileUploader extends PureComponent {
         };
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         !!this.props.onChange &&
             this.props.onChange({
                 queue: nextState.filesInQueue,

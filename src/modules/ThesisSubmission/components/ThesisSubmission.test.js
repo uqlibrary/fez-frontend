@@ -118,7 +118,7 @@ describe('ThesisSubmission', () => {
     it('should trigger openDepositConfirmation() when conditions are met', () => {
         const wrapper = setup({});
         wrapper.instance().openDepositConfirmation = jest.fn();
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             isSessionValid: true,
             submitting: false,
         });

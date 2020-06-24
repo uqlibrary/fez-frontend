@@ -74,7 +74,8 @@ export class GenericSelectFieldClass extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (this.props.parentItemsId !== nextProps.parentItemsId) {
             this.props.loadItemsList(nextProps.parentItemsId);
         }

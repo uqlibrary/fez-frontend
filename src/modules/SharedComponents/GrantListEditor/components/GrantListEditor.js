@@ -41,7 +41,7 @@ export class GrantListEditor extends PureComponent {
         };
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
         if (nextState.grantFormPopulated && this.props.onChange) {
             this.props.onChange(nextState.grantFormPopulated);

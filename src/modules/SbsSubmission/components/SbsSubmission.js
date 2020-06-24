@@ -48,7 +48,8 @@ export default class SbsSubmission extends Component {
         selectFieldMobileOverrides: PropTypes.object,
     };
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.isSessionValid && !nextProps.submitting) {
             this.openDepositConfirmation();
         }

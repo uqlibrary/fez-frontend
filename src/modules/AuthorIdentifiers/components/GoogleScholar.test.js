@@ -122,13 +122,13 @@ describe('Component GoogleScholar ', () => {
 
     it('should redirect to dashboard if user is not an author', () => {
         const wrapper = setup();
-        wrapper.instance().componentWillMount();
+        wrapper.instance().UNSAFE_componentWillMount();
         expect(wrapper.instance().props.history.push).toHaveBeenCalled();
     });
 
     it('should not redirect to dashboard if submit success state has not changed', () => {
         const wrapper = setup();
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             submitSucceeded: wrapper.instance().props.submitSucceeded,
         });
         const testFn = jest.spyOn(wrapper.instance(), '_navigateToDashboard');

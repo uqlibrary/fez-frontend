@@ -51,7 +51,8 @@ export default class RichEditor extends PureComponent {
         this.props.instanceRef.current = this.editorInstance;
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.disabled !== this.props.disabled && this.editorInstance !== null) {
             this.editorInstance.setReadOnly(!!nextProps.disabled);
         }

@@ -46,15 +46,15 @@ describe('Component NtroFields', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should call componentWillReceiveProps', () => {
+    it('should call UNSAFE_componentWillReceiveProps', () => {
         const wrapper = setup({});
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         wrapper.setProps({
             hideVolume: true,
             hideStartPage: true,
             hideAudienceSize: true,
         });
-        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(UNSAFE_componentWillReceiveProps).toHaveBeenCalled();
     });
 
     it('should normalize ISRC value', () => {

@@ -57,7 +57,7 @@ describe('MyIncompleteRecord Container', () => {
     it('should display form once record and author loaded', () => {
         const wrapper = setup();
 
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         const getInitialValues = jest.spyOn(wrapper.instance(), 'getInitialValues');
         const getNtroFieldFlags = jest.spyOn(wrapper.instance(), 'getNtroFieldFlags');
 
@@ -128,7 +128,7 @@ describe('MyIncompleteRecord Container', () => {
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(componentWillReceiveProps).toHaveBeenCalledTimes(1);
+        expect(UNSAFE_componentWillReceiveProps).toHaveBeenCalledTimes(1);
         expect(getInitialValues).toHaveBeenCalledTimes(1);
         expect(getNtroFieldFlags).toHaveBeenCalledTimes(1);
 
@@ -217,7 +217,7 @@ describe('MyIncompleteRecord Container', () => {
             },
         });
 
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         const getInitialValues = jest.spyOn(wrapper.instance(), 'getInitialValues');
         const getNtroFieldFlags = jest.spyOn(wrapper.instance(), 'getNtroFieldFlags');
 
@@ -266,7 +266,7 @@ describe('MyIncompleteRecord Container', () => {
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(componentWillReceiveProps).toHaveBeenCalledTimes(1);
+        expect(UNSAFE_componentWillReceiveProps).toHaveBeenCalledTimes(1);
         expect(getInitialValues).toHaveBeenCalledTimes(1);
         expect(getNtroFieldFlags).toHaveBeenCalledTimes(1);
 
@@ -376,7 +376,7 @@ describe('MyIncompleteRecord Container', () => {
             },
         });
 
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         const getInitialValues = jest.spyOn(wrapper.instance(), 'getInitialValues');
         const getNtroFieldFlags = jest.spyOn(wrapper.instance(), 'getNtroFieldFlags');
 
@@ -403,7 +403,7 @@ describe('MyIncompleteRecord Container', () => {
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(componentWillReceiveProps).toHaveBeenCalledTimes(1);
+        expect(UNSAFE_componentWillReceiveProps).toHaveBeenCalledTimes(1);
         expect(getInitialValues).toHaveBeenCalledTimes(1);
         expect(getNtroFieldFlags).toHaveBeenCalledTimes(1);
 

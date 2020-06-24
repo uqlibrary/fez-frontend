@@ -54,7 +54,8 @@ export class AdvancedSearchCaption extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.setState({
             captionData: this.updateStateData(nextProps),
         });

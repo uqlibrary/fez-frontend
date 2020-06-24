@@ -169,7 +169,8 @@ export default class NtroFields extends React.PureComponent {
         this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.row3Width = this.getWidth([
             nextProps.hideVolume,
             nextProps.hideIssue,

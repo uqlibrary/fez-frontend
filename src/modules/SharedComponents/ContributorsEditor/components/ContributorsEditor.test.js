@@ -472,6 +472,8 @@ describe('ContributorsEditor', () => {
             contributors: [{ displayName: 'test 1' }, { displayName: 'test 2' }],
         });
 
+        wrapper.update();
+
         expect(onChangeFn).toHaveBeenCalledWith([{ displayName: 'test 1' }, { displayName: 'test 2' }]);
     });
 
