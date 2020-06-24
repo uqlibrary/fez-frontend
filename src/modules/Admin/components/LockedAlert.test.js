@@ -20,6 +20,7 @@ describe('LockedAlert', () => {
                 rek_display_type_lookup: 'Journal Article',
                 rek_display_type: 179,
                 rek_editing_user: 'uqtest',
+                rek_editing_user_lookup: 'UQ',
             },
         }));
 
@@ -28,7 +29,11 @@ describe('LockedAlert', () => {
 
     it('should render alert as expected', () => {
         const { getByText } = setup();
-        expect(getByText(/This record is currently being edited by uqtest/)).toBeInTheDocument();
+        expect(
+            getByText(
+                'This record is currently being edited by UQ (uqtest). Make sure that you confirm with this user before ignoring the record lock as it may cause record overwrite issues.',
+            ),
+        ).toBeInTheDocument();
     });
 
     it('should call alert action to unlock record', () => {

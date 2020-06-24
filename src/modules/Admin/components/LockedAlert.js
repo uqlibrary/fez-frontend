@@ -19,10 +19,9 @@ export const LockedAlert = () => {
                 <Alert
                     {...pageLocale.pages.edit.alerts.lockedAlert}
                     action={handleAction}
-                    message={pageLocale.pages.edit.alerts.lockedAlert.message.replace(
-                        '[username]',
-                        record.rek_editing_user,
-                    )}
+                    message={pageLocale.pages.edit.alerts.lockedAlert.message
+                        .replace('[username]', record.rek_editing_user)
+                        .replace('[name]', record.rek_editing_user_lookup)}
                     wiggle
                 />
             </Grid>

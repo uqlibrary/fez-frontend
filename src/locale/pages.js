@@ -942,8 +942,9 @@ export default {
                 lockedAlert: {
                     type: 'custom',
                     title: 'THIS RECORD IS LOCKED',
-                    message: 'This record is currently being edited by [username]',
-                    actionButtonLabel: 'OVERRIDE LOCK',
+                    message:
+                        'This record is currently being edited by [name] ([username]). Make sure that you confirm with this user before ignoring the record lock as it may cause record overwrite issues.',
+                    actionButtonLabel: 'IGNORE LOCK',
                     customIcon: <LockIcon id="locked-icon" className="icon" />,
                     customType: 'error',
                 },
