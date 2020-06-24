@@ -66,6 +66,7 @@ export const AdminContainer = ({
     locked,
     match,
     recordToView,
+    isDeleted,
     submitSucceeded,
     submitting,
     unlockRecord,
@@ -157,6 +158,7 @@ export const AdminContainer = ({
                             history={history}
                             location={location}
                             createMode={createMode}
+                            isDeleted={isDeleted}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
                             locked={locked}
@@ -231,6 +233,7 @@ AdminContainer.propTypes = {
     locked: PropTypes.bool,
     match: PropTypes.object,
     recordToView: PropTypes.object,
+    isDeleted: PropTypes.bool,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
