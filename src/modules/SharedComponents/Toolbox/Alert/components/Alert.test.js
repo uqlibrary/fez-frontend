@@ -59,7 +59,7 @@ describe('Alert', () => {
             message: 'This is a custom message',
             customIcon: 'test',
             customType: 'error',
-            wriggle: true,
+            wiggle: true,
         });
 
         expect(getByText(/This is a custom title*/)).toBeInTheDocument();
