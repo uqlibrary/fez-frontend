@@ -21,7 +21,7 @@ context('Thesis admin edit', () => {
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        cy.log('Bibliographic tab');
+        cy.log('----------------Bibliographic tab----------------');
         cy.get('.StandardPage form .StandardCard')
             .eq(1)
             .within(() => {
@@ -120,7 +120,7 @@ context('Thesis admin edit', () => {
             });
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        cy.log('Author Details tab');
+        cy.log('----------------Author Details tab----------------');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -165,7 +165,7 @@ context('Thesis admin edit', () => {
             });
 
         // ----------------------------------------------- ADMIN TAB -------------------------------------------------
-        cy.log('Admin tab');
+        cy.log('----------------Admin tab----------------');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -205,7 +205,7 @@ context('Thesis admin edit', () => {
             });
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        cy.log('Files tab');
+        cy.log('----------------Files tab----------------');
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
             .within(() => {
@@ -235,7 +235,7 @@ context('Thesis admin edit', () => {
             });
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
-        cy.log('Security tab');
+        cy.log('----------------Security tab----------------');
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .within(() => {
@@ -280,7 +280,7 @@ context('Thesis admin edit', () => {
                     cy.get('h6')
                         .eq(5)
                         .should('have.text', 'Override datastream security policy details');
-                    cy.get('a').should('have.length', 11); // only non-derivatives are displayed
+                    cy.get('a').should('have.length', 9); // only non-derivatives are displayed
                 });
             });
     });
