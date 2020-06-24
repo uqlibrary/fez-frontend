@@ -39,12 +39,15 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
     >
       <Alert
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
         pushToTop={true}
         showLoader={false}
         title="Error"
         type="error_outline"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

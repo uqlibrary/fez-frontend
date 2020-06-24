@@ -1208,6 +1208,8 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
     >
       <Alert
         allowDismiss={false}
+        customIcon={null}
+        customType={null}
         dismissTitle="Click to dismiss this alert"
         message={
           Array [
@@ -1223,6 +1225,7 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
         showLoader={false}
         title="FILE UPLOAD ERROR"
         type="error"
+        wiggle={null}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

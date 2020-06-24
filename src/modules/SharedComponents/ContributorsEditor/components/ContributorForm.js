@@ -48,6 +48,7 @@ export const ContributorForm = ({
     const [clearRoleInput, setClearRoleInput] = useState(true);
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
     const [uqIdentifierUpdatedFlag, setUqIdentifierUpdatedFlag] = useState(false);
+    const [isEditFormClean, setIsEditFormClean] = useState(!!initialContributor.nameAsPublished);
 
     const resetInternalState = useCallback(() => {
         setContributor(initialContributor);
@@ -103,6 +104,7 @@ export const ContributorForm = ({
     const _onRoleChanged = value => {
         setContributor({ ...contributor, creatorRole: value });
         setClearRoleInput(DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value));
+        setIsEditFormClean(false);
     };
 
     const _onUQIdentifierSelected = selectedItem => {
@@ -123,6 +125,7 @@ export const ContributorForm = ({
             ...selectedItem,
         });
         setUqIdentifierUpdatedFlag(true);
+        setIsEditFormClean(false);
     };
 
     const _onUQIdentifierCleared = () => {
@@ -136,6 +139,7 @@ export const ContributorForm = ({
             affiliation: '',
         });
         setUqIdentifierUpdatedFlag(true);
+        setIsEditFormClean(false);
     };
 
     const handleAffiliationChange = event => {
@@ -183,13 +187,14 @@ export const ContributorForm = ({
 
     useEffect(() => {
         if (
+            !isEditFormClean &&
             contributor.nameAsPublished.trim().length !== 0 &&
             contributor.creatorRole !== '' &&
             DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === contributor.creatorRole)
         ) {
             _onSubmit();
         }
-    }, [_onSubmit, contributor.creatorRole, contributor.nameAsPublished]);
+    }, [_onSubmit, contributor.creatorRole, contributor.nameAsPublished, isEditFormClean]);
 
     const renderUqIdField = () => {
         const prefilledSearch = !!contributor && contributor.uqIdentifier === '0';
@@ -202,7 +207,7 @@ export const ContributorForm = ({
                 floatingLabelText="UQ Author ID"
                 hintText="Type UQ author name to search"
                 uqIdFieldId={`${contributorFormId}-aut-id`}
-                key={!!contributor.uqIdentifier ? contributor.uqIdentifier : 'aut-id'}
+                key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
                 onChange={_onUQIdentifierSelected}
                 onClear={_onUQIdentifierCleared}
                 value={contributor.uqUsername || contributor.uqIdentifier || ''}

@@ -142,6 +142,36 @@ describe('AdminInterface component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render locked alert in edit mode', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            locked: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+            },
+        });
+        expect(wrapper.find('LockedAlert').length).toEqual(1);
+    });
+
     it('should render default view as a full form view', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 

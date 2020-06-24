@@ -36,6 +36,7 @@ describe('Alert', () => {
         expect(getByText(/Title*/)).toBeInTheDocument();
         expect(getByText('Message')).toBeInTheDocument();
         expect(getByTestId('warning-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render error type of alert', () => {
@@ -48,6 +49,22 @@ describe('Alert', () => {
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
         expect(getByTestId('error-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
+    });
+
+    it('should render custom alert', () => {
+        const { getByText } = setup({
+            title: 'This is a custom title',
+            type: 'custom',
+            message: 'This is a custom message',
+            customIcon: 'test',
+            customType: 'error',
+            wriggle: true,
+        });
+
+        expect(getByText(/This is a custom title*/)).toBeInTheDocument();
+        expect(getByText('This is a custom message')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render error outline type of alert', () => {
@@ -60,6 +77,7 @@ describe('Alert', () => {
         expect(getByText(/This is an error outline title*/)).toBeInTheDocument();
         expect(getByText('This is an error outline message')).toBeInTheDocument();
         expect(getByTestId('error-outline-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render info type of alert', () => {
@@ -72,6 +90,7 @@ describe('Alert', () => {
         expect(getByText(/This is an info title*/)).toBeInTheDocument();
         expect(getByText('This is an info message')).toBeInTheDocument();
         expect(getByTestId('info-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render info outline type of alert', () => {
@@ -84,6 +103,7 @@ describe('Alert', () => {
         expect(getByText(/This is an info outline title*/)).toBeInTheDocument();
         expect(getByText('This is an info outline message')).toBeInTheDocument();
         expect(getByTestId('info-outline-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render help type of alert', () => {
@@ -96,6 +116,7 @@ describe('Alert', () => {
         expect(getByText(/This is an help title*/)).toBeInTheDocument();
         expect(getByText('This is an help message')).toBeInTheDocument();
         expect(getByTestId('help-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
     it('should render help outline type of alert', () => {
         const { getByText, getByTestId } = setup({
@@ -107,6 +128,7 @@ describe('Alert', () => {
         expect(getByText(/This is an help outline title*/)).toBeInTheDocument();
         expect(getByText('This is an help outline message')).toBeInTheDocument();
         expect(getByTestId('help-outline-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render done type of alert', () => {
@@ -119,6 +141,7 @@ describe('Alert', () => {
         expect(getByText(/This is an done title*/)).toBeInTheDocument();
         expect(getByText('This is an done message')).toBeInTheDocument();
         expect(getByTestId('done-icon')).toBeInTheDocument();
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should render clickable action button', () => {
@@ -138,6 +161,7 @@ describe('Alert', () => {
 
         fireEvent.click(getByTestId('action-button'));
         expect(actionFn).toHaveBeenCalledTimes(1);
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should dismiss alert', () => {
@@ -149,12 +173,14 @@ describe('Alert', () => {
 
         fireEvent.click(getByTestId('dismiss'));
         expect(dismissfn).toHaveBeenCalledTimes(1);
+        expect(toJson(getByTestId)).toMatchSnapshot();
     });
 
     it('should display dismiss button for smaller screen size', () => {
         window.matchMedia = createMatchMedia(256);
         const { getByTestId } = setup();
         expect(getByTestId('dismiss-mobile')).toBeInTheDocument();
+        expect(toJson(getByTestId)).toMatchSnapshot();
     });
 
     it('should display loader', () => {
@@ -163,6 +189,7 @@ describe('Alert', () => {
         });
 
         expect(getByTestId('spinner')).toBeInTheDocument();
+        expect(toJson(getByTestId)).toMatchSnapshot();
     });
 
     it('should fire an action when user clicks on the message text', () => {
@@ -174,6 +201,7 @@ describe('Alert', () => {
 
         fireEvent.click(getByText(/Click me/));
         expect(actionFn).toHaveBeenCalledTimes(1);
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 
     it('should not fire an action when user clicks on the message text and no action is assigned', () => {
@@ -185,5 +213,6 @@ describe('Alert', () => {
 
         fireEvent.click(getByText(/Click me/));
         expect(actionFn).toHaveBeenCalledTimes(0);
+        expect(toJson(getByText)).toMatchSnapshot();
     });
 });

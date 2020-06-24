@@ -13,6 +13,7 @@ describe('viewRecord reducer', () => {
         const testState = viewRecordReducer(initialState, { type: actions.VIEW_RECORD_LOADING });
         const expectedState = {
             loadingRecordToView: true,
+            isRecordLocked: false,
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: false,
@@ -26,6 +27,7 @@ describe('viewRecord reducer', () => {
         });
         const expectedState = {
             loadingRecordToView: true,
+            isRecordLocked: false,
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: true,
@@ -68,5 +70,35 @@ describe('viewRecord reducer', () => {
     it('should return unchanged state if action is invalid', () => {
         const test = viewRecordReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
         expect(test).toEqual(initialState);
+    });
+
+    it('should set isRecordUnlock flag to true', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.VIEW_RECORD_LOADED,
+            payload: {
+                rek_pid: 'UQ:1234',
+                rek_title: 'This is a title',
+                rek_description: 'This is a description.',
+                rek_editing_user: 'uqtest',
+            },
+        });
+        expect(test).toEqual({
+            ...initialState,
+            isRecordLocked: true,
+            loadingRecordToView: false,
+            recordToView: {
+                rek_pid: 'UQ:1234',
+                rek_title: 'This is a title',
+                rek_description: 'This is a description.',
+                rek_editing_user: 'uqtest',
+            },
+        });
+    });
+
+    it('should set isRecordUnlock flag to false on unlocking the record', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.VIEW_RECORD_UNLOCK,
+        });
+        expect(test).toEqual({ ...initialState, isRecordLocked: false });
     });
 });

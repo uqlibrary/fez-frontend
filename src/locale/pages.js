@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import LockIcon from '@material-ui/icons/Lock';
 import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
 /*
@@ -937,6 +938,14 @@ export default {
                     type: 'warning',
                     title: 'Validation',
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+                },
+                lockedAlert: {
+                    type: 'custom',
+                    title: 'THIS RECORD IS LOCKED',
+                    message: 'This record is currently being edited by [username]',
+                    actionButtonLabel: 'OVERRIDE LOCK',
+                    customIcon: <LockIcon id="locked-icon" className="icon" />,
+                    customType: 'error',
                 },
             },
         },

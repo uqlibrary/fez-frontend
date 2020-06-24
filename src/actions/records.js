@@ -7,6 +7,7 @@ import {
     EXISTING_COLLECTION_API,
     NEW_COMMUNITY_API,
     EXISTING_COMMUNITY_API,
+    UNLOCK_RECORD_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
@@ -149,6 +150,7 @@ const prepareThesisSubmission = data => {
         rek_description: data.thesisAbstract.plainText,
         rek_formatted_abstract: data.thesisAbstract.htmlText,
         rek_subtype: data.rek_genre_type,
+        rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
     };
 
     // delete extra form values from request object
@@ -573,5 +575,27 @@ export const deleteAttachedFile = file => {
             type: actions.ADMIN_DELETE_ATTACHED_FILE,
             payload: file,
         });
+    };
+};
+
+export const unlockRecord = (pid, unlockRecordCallback) => {
+    return dispatch => {
+        dispatch({
+            type: actions.UNLOCK_RECORD_INPROGRESS,
+        });
+        return patch(UNLOCK_RECORD_API({ pid }))
+            .then(() => {
+                dispatch({
+                    type: actions.UNLOCK_RECORD_SUCCESS,
+                });
+                return Promise.resolve(true);
+            })
+            .then(unlockRecordCallback)
+            .catch(() => {
+                dispatch({
+                    type: actions.UNLOCK_RECORD_FAILED,
+                });
+                return Promise.reject(false);
+            });
     };
 };
