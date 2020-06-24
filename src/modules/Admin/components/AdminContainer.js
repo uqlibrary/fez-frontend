@@ -129,7 +129,6 @@ export const AdminContainer = ({
         return false;
     };
 
-    console.log(loadingRecordToView);
     return (
         <React.Fragment>
             {createMode && showAddForm && (
