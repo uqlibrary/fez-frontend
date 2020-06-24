@@ -54,11 +54,9 @@ export const getStandardSearchParams = ({
     };
 };
 
-export const getOpenAccessSearchParams = ({ facets = {} }) => {
-    return {
-        ...(!!facets.showOpenAccessOnly ? { rek_oa_status: openAccessConfig.openAccessIds } : {}),
-    };
-};
+export const getOpenAccessSearchParams = ({ facets = {} }) => ({
+    ...(!!facets.showOpenAccessOnly ? { rek_oa_status: openAccessConfig.openAccessIds } : {}),
+});
 
 /**
  * getSearchType - based on data provided returns query string attribute
@@ -89,11 +87,9 @@ export const AUTHORS_SEARCH_API = ({ query }) => ({
 });
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
 export const AUTHOR_API = ({ authorId }) => ({ apiUrl: `fez-authors/${authorId}` });
-export const AUTHOR_DETAILS_API = ({ userId }) => {
-    return {
-        apiUrl: `authors/details/${userId}`,
-    };
-};
+export const AUTHOR_DETAILS_API = ({ userId }) => ({
+    apiUrl: `authors/details/${userId}`,
+});
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
     apiUrl: `orcid/${userId}/request`,
     options: { params: { ...params } },
@@ -120,7 +116,9 @@ export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
-export const EXISTING_RECORD_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
+    apiUrl: `records/${pid}${isEdit ? '?from=admin-form' : ''}`,
+});
 
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
@@ -154,18 +152,16 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => ({
     },
 });
 
-export const INCOMPLETE_RECORDS_API = values => {
-    return {
-        apiUrl: 'records/search',
-        options: {
-            params: {
-                rule: 'incomplete',
-                ...getStandardSearchParams(values),
-                ...getOpenAccessSearchParams(values),
-            },
+export const INCOMPLETE_RECORDS_API = values => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            rule: 'incomplete',
+            ...getStandardSearchParams(values),
+            ...getOpenAccessSearchParams(values),
         },
-    };
-};
+    },
+});
 
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = values => ({
     apiUrl: 'records/search',
@@ -303,24 +299,22 @@ export const COLLECTIONS_BY_COMMUNITY_LOOKUP_API = ({ communityPid }) => ({
     apiUrl: `communities/${communityPid}/collections`,
 });
 
-export const BATCH_IMPORT_DIRECTORIES_API = () => {
-    return {
-        apiUrl: 'external/records/batch-import/directories',
-    };
-};
+export const BATCH_IMPORT_DIRECTORIES_API = () => ({
+    apiUrl: 'external/records/batch-import/directories',
+});
 
-export const BATCH_IMPORT_API = () => {
-    return {
-        apiUrl: 'external/records/batch-import',
-    };
-};
+export const BATCH_IMPORT_API = () => ({
+    apiUrl: 'external/records/batch-import',
+});
 
 export const ISSN_LINKS_API = ({ type, issn }) => ({
     apiUrl: `tool/lookup/local/${type}/${issn}`,
 });
 
-export const ORCID_SYNC_API = () => {
-    return {
-        apiUrl: 'external/orcid/jobs/sync',
-    };
-};
+export const ORCID_SYNC_API = () => ({
+    apiUrl: 'external/orcid/jobs/sync',
+});
+
+export const UNLOCK_RECORD_API = ({ pid }) => ({
+    apiUrl: `records/${pid}/unlock`,
+});

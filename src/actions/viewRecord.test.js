@@ -114,4 +114,17 @@ describe('View record actions', () => {
             }
         });
     });
+
+    describe('unlock record to view action', () => {
+        it('dispatches expected actions when unlocking a loaded record to view', async () => {
+            const expectedActions = [actions.VIEW_RECORD_UNLOCK];
+
+            try {
+                await mockActionsStore.dispatch(viewRecordActions.unlockRecordToView());
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
 });

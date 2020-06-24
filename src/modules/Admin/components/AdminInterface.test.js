@@ -21,6 +21,7 @@ function setup(testProps = {}) {
         authorDetails: {
             is_administrator: 1,
             is_super_administrator: 1,
+            username: 'test',
         },
         classes: {
             tabIndicator: 'tabindicator',
@@ -40,6 +41,7 @@ function setup(testProps = {}) {
             },
         },
         destroy: jest.fn(),
+        unlockRecord: jest.fn(),
         ...testProps,
     };
 
@@ -118,6 +120,58 @@ describe('AdminInterface component', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render undelete title and button', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            isDeleted: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render locked alert in edit mode', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            locked: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+            },
+        });
+        expect(wrapper.find('LockedAlert').length).toEqual(1);
     });
 
     it('should render default view as a full form view', () => {
@@ -510,6 +564,7 @@ describe('AdminInterface component', () => {
             record: {
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_editing_user: 'noone',
             },
         }));
         const push = jest.fn();
@@ -533,6 +588,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_pid: 'UQ:111111',
+                rek_editing_user: 'noone',
             },
         }));
         const wrapper2 = setup({

@@ -461,6 +461,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 "calls": Array [
                   Array [
                     "UQ:111111",
+                    true,
                   ],
                 ],
                 "results": Array [
@@ -1340,6 +1341,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                   "tabIndicator": "makeStyles-tabIndicator-5",
                 }
               }
+              disabled={true}
               handleSubmit={
                 [MockFunction] {
                   "calls": Array [
@@ -8986,6 +8988,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
                                                               data-testid="unpublish-admin"
+                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="admin-work-unpublish"
                                                               variant="contained"
@@ -9026,6 +9029,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="secondary"
                                                                 data-testid="unpublish-admin"
+                                                                disabled={false}
                                                                 fullWidth={true}
                                                                 id="admin-work-unpublish"
                                                                 variant="contained"
@@ -9240,6 +9244,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="primary"
                                                               data-testid="submit-admin"
+                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="admin-work-submit"
                                                               onClick={
@@ -9300,6 +9305,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="primary"
                                                                 data-testid="submit-admin"
+                                                                disabled={false}
                                                                 fullWidth={true}
                                                                 id="admin-work-submit"
                                                                 onClick={
@@ -9531,6 +9537,7 @@ exports[`AdminContainer component should not render non-security errors for comm
             "tabIndicator": "makeStyles-tabIndicator-2",
           }
         }
+        disabled={true}
         formErrors={false}
         handleSubmit={[MockFunction]}
         location={
@@ -10551,6 +10558,7 @@ exports[`AdminContainer component should render default view 1`] = `
             "tabIndicator": "makeStyles-tabIndicator-2",
           }
         }
+        disabled={true}
         handleSubmit={[MockFunction]}
         location={
           Location {
@@ -11576,6 +11584,7 @@ exports[`AdminContainer component should render memoized component with styles 1
             "tabIndicator": "makeStyles-tabIndicator-2",
           }
         }
+        disabled={true}
         location={
           Location {
             "assign": [Function],
@@ -12588,6 +12597,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
             "tabIndicator": "makeStyles-tabIndicator-2",
           }
         }
+        disabled={true}
         handleSubmit={[MockFunction]}
         location={
           Location {

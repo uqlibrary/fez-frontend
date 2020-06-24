@@ -1084,11 +1084,14 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
   >
     <Alert
       allowDismiss={true}
+      customIcon={null}
+      customType={null}
       dismissAction={[MockFunction]}
       dismissTitle="Click to dismiss this alert"
       message=""
       showLoader={false}
       type="info"
+      wiggle={null}
     />
     <div
       style={
@@ -9339,11 +9342,14 @@ exports[`Files Component  should render cultural message 1`] = `
   >
     <Alert
       allowDismiss={true}
+      customIcon={null}
+      customType={null}
       dismissAction={[MockFunction]}
       dismissTitle="Click to dismiss this alert"
       message="hello"
       showLoader={false}
       type="info"
+      wiggle={null}
     />
     <div
       style={
@@ -11698,11 +11704,14 @@ exports[`Files Component  should set image error flag 1`] = `
   >
     <Alert
       allowDismiss={false}
+      customIcon={null}
+      customType={null}
       dismissTitle="Click to dismiss this alert"
       message="You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format."
       showLoader={false}
       title="IMAGE FAILED TO LOAD"
       type="error"
+      wiggle={null}
     />
   </div>
   <Hidden

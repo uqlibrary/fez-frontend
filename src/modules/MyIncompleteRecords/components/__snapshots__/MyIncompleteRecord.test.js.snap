@@ -483,11 +483,14 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -1406,11 +1409,14 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -1803,12 +1809,15 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="New information has been saved successfully."
             pushToTop={true}
             showLoader={false}
             title="Success"
             type="done"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -2343,11 +2352,14 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -3350,11 +3362,14 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -4273,11 +4288,14 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -5196,11 +5214,14 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -6119,11 +6140,14 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -7042,11 +7066,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -7944,11 +7971,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             "confirmationMessage": <React.Fragment>
               <Alert
                 allowDismiss={false}
+                customIcon={null}
+                customType={null}
                 dismissTitle="Click to dismiss this alert"
                 message="File upload and/or notes post failed"
                 showLoader={false}
                 title="UPLOAD FAILED"
                 type="warning"
+                wiggle={null}
               />
             </React.Fragment>,
             "confirmationTitle": "Your work has been updated",
@@ -7974,11 +8004,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -8897,11 +8930,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -9820,11 +9856,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <Alert
             allowDismiss={false}
+            customIcon={null}
+            customType={null}
             dismissTitle="Click to dismiss this alert"
             message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
             showLoader={false}
             title="Missing data"
             type="info_outline"
+            wiggle={null}
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))

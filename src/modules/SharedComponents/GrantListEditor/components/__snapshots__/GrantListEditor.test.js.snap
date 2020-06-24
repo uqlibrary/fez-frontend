@@ -1542,10 +1542,13 @@ exports[`GrantListEditor should update with error message 2`] = `
 <div>
   <Alert
     allowDismiss={false}
+    customIcon={null}
+    customType={null}
     dismissTitle="Click to dismiss this alert"
     message="Test error message from state"
     showLoader={false}
     type="warning"
+    wiggle={null}
   />
   <GrantListEditorForm
     disabled={false}

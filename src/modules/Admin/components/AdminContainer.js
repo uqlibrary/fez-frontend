@@ -63,10 +63,13 @@ export const AdminContainer = ({
     history,
     loadingRecordToView,
     loadRecordToView,
+    locked,
     match,
     recordToView,
+    isDeleted,
     submitSucceeded,
     submitting,
+    unlockRecord,
 }) => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
@@ -106,7 +109,7 @@ export const AdminContainer = ({
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     React.useEffect(() => {
-        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid);
+        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid, true);
         return () => {
             clearRecordToView();
         };
@@ -155,8 +158,12 @@ export const AdminContainer = ({
                             history={history}
                             location={location}
                             createMode={createMode}
+                            isDeleted={isDeleted}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
+                            locked={locked}
+                            disabled
+                            unlockRecord={unlockRecord}
                             tabs={{
                                 identifiers: {
                                     component: IdentifiersSection,
@@ -223,11 +230,14 @@ AdminContainer.propTypes = {
     history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
+    locked: PropTypes.bool,
     match: PropTypes.object,
     recordToView: PropTypes.object,
+    isDeleted: PropTypes.bool,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
+    unlockRecord: PropTypes.func,
 };
 
 export function isSame(prevProps, nextProps) {
@@ -240,7 +250,8 @@ export function isSame(prevProps, nextProps) {
         (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
         prevProps.showAddForm === nextProps.showAddForm &&
-        prevProps.formErrors === nextProps.formErrors
+        prevProps.formErrors === nextProps.formErrors &&
+        prevProps.locked === nextProps.locked
     );
 }
 

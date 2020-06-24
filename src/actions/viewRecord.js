@@ -7,11 +7,11 @@ import { EXISTING_RECORD_API } from 'repositories/routes';
  * @param {object}
  * @returns {action}
  */
-export function loadRecordToView(pid) {
+export function loadRecordToView(pid, isEdit = false) {
     return dispatch => {
         dispatch({ type: actions.VIEW_RECORD_LOADING });
 
-        return get(EXISTING_RECORD_API({ pid: pid }))
+        return get(EXISTING_RECORD_API({ pid: pid, isEdit }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
@@ -57,5 +57,11 @@ export function clearRecordToView() {
 export function setHideCulturalSensitivityStatement() {
     return {
         type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+    };
+}
+
+export function unlockRecordToView() {
+    return {
+        type: actions.VIEW_RECORD_UNLOCK,
     };
 }

@@ -7,6 +7,8 @@ exports[`Component NtroHeader should render default view 1`] = `
 >
   <Alert
     allowDismiss={false}
+    customIcon={null}
+    customType={null}
     dismissTitle="Click to dismiss this alert"
     message={
       <React.Fragment>
@@ -38,6 +40,7 @@ exports[`Component NtroHeader should render default view 1`] = `
     showLoader={false}
     title="Non-traditional research output (NTRO) requirements"
     type="info_outline"
+    wiggle={null}
   />
 </WithStyles(ForwardRef(Grid))>
 `;
