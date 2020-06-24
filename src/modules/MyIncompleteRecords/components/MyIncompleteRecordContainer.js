@@ -56,7 +56,8 @@ export default class MyIncompleteRecordContainer extends React.Component {
             this.props.loadRecordToFix(this.props.match.params.pid);
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const { recordToFix, author } = nextProps;
         nextProps.recordToFix !== this.props.recordToFix &&
             this.setState({

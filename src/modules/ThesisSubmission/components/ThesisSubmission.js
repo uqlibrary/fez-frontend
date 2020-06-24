@@ -44,7 +44,8 @@ export default class ThesisSubmission extends Component {
         super(props);
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.isSessionValid && !nextProps.submitting) {
             this.openDepositConfirmation();
         }

@@ -59,7 +59,8 @@ export class ContributorsEditor extends PureComponent {
         };
     }
 
-    componentWillUpdate = (nextProps, nextState) => {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate = (nextProps, nextState) => {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (this.props.onChange) {
             this.props.onChange(nextState.contributors);

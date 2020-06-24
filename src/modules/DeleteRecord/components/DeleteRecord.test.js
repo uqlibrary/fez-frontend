@@ -65,7 +65,9 @@ describe('Component DeleteRecord', () => {
     });
 
     it('should display alert and disable delete button on records with UQ DOIs', () => {
-        const wrapper = setup({ recordToDelete: { ...mockRecordToDelete, fez_record_search_key_doi: { rek_doi: `${UQDOIPrefix}12345` } } });
+        const wrapper = setup({
+            recordToDelete: { ...mockRecordToDelete, fez_record_search_key_doi: { rek_doi: `${UQDOIPrefix}12345` } },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
         expect(wrapper.find('Field').length).toEqual(0);
@@ -116,7 +118,7 @@ describe('Component DeleteRecord', () => {
         const testMethod = jest.fn();
         const wrapper = setup({ recordToDelete: mockRecordToDelete });
         wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
-        wrapper.instance().componentWillReceiveProps({ submitSucceeded: true });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -134,13 +136,13 @@ describe('Component DeleteRecord', () => {
         expect(testFN).toHaveBeenCalled();
     });
 
-    it('componentWillReceiveProps()', () => {
+    it('UNSAFE_componentWillReceiveProps()', () => {
         const wrapper = setup({
             submitSucceeded: true,
             recordToDelete: mockRecordToDelete,
         });
         const nextProps = { submitSucceeded: true };
-        wrapper.instance().componentWillReceiveProps(nextProps);
+        wrapper.instance().UNSAFE_componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

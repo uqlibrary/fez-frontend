@@ -216,7 +216,7 @@ describe('ListEditor tests', () => {
             onChange: null,
         });
         const test = jest.spyOn(wrapper.instance(), 'transformOutput');
-        wrapper.instance().componentWillUpdate({}, {});
+        wrapper.instance().UNSAFE_componentWillUpdate({}, {});
         expect(test).not.toBeCalled();
     });
 

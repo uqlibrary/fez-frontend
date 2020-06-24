@@ -22,14 +22,16 @@ export default class GoogleScholar extends PureComponent {
         actions: PropTypes.object.isRequired,
     };
 
-    componentWillMount() {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillMount() {
         // user should have a fez-author record to proceed
         if (!this.props.accountAuthorLoading && !this.props.author) {
             this._navigateToDashboard();
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             // show app level alert on success
             this.props.actions.showAppAlert({

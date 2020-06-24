@@ -114,7 +114,8 @@ export class PartialDateForm extends Component {
         this.errors = { day: '', month: '', year: '' };
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange) {
             this.props.onChange(this._setDate(nextState));
         }

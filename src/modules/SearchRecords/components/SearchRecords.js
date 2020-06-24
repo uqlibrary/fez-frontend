@@ -77,7 +77,8 @@ class SearchRecords extends PureComponent {
         }
     }
 
-    componentWillReceiveProps(newProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(newProps) {
         // handle browser back button - set state from location/dispatch action for this state
         if (
             this.props.location !== newProps.location &&

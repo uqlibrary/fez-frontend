@@ -124,7 +124,8 @@ const PublicationMap = compose(
         trimCoordinates(value, precision = 6) {
             return value.toFixed(precision).replace(/[\.]?0+$/, '');
         },
-        componentWillMount() {
+        // eslint-disable-next-line camelcase
+        UNSAFE_componentWillMount() {
             const refs = {};
             const geoCoords =
                 (!!this.props.coordinates &&
@@ -218,7 +219,8 @@ const PublicationMap = compose(
                 },
             });
         },
-        componentWillUpdate(nextProps, nextState) {
+        // eslint-disable-next-line camelcase
+        UNSAFE_componentWillUpdate(nextProps, nextState) {
             if (!!this.props.onChange) {
                 this.props.onChange(
                     nextState.geoCoords

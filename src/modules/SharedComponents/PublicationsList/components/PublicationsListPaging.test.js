@@ -189,10 +189,10 @@ describe('PublicationsListPaging renders ', () => {
         };
         const testFunction = jest.fn();
         const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
-        wrapper.instance().componentWillReceiveProps({ pagingData: nextData });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({ pagingData: nextData });
         expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
 
-        wrapper.instance().componentWillReceiveProps({ pagingData: {}, disabled: true });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({ pagingData: {}, disabled: true });
         expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
     });
 
