@@ -1790,7 +1790,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             >
               <Field
                 component={[Function]}
-                disabled={false}
                 name="bibliographicSection"
               />
             </StandardCard>
@@ -1842,6 +1841,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               <WithStyles(ForwardRef(Button))
                 color="primary"
                 data-testid="submit-admin"
+                disabled={false}
                 fullWidth={true}
                 id="admin-work-submit"
                 onClick={[MockFunction]}
