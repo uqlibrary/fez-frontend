@@ -114,7 +114,10 @@ export const AdminInterface = ({
         const pushToHistory = () => history.push(routes.pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
             /* istanbul ignore next */
-            !!locked ? unlockRecord(record.rek_pid, pushToHistory) : pushToHistory();
+            // eslint-disable-next-line max-len
+            !!locked && record.rek_editing_user === authorDetails.username
+                ? unlockRecord(record.rek_pid, pushToHistory)
+                : pushToHistory();
         } else {
             // Else this is a new record, so just go to the homepage
             history.push(routes.pathConfig.index);
