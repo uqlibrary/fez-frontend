@@ -115,8 +115,7 @@ export const AdminInterface = ({
         const pushToHistory = () => history.push(routes.pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
             /* istanbul ignore next */
-            // eslint-disable-next-line max-len
-            !!locked && record.rek_editing_user === authorDetails.username
+            record.rek_editing_user === authorDetails.username
                 ? unlockRecord(record.rek_pid, pushToHistory)
                 : pushToHistory();
         } else {

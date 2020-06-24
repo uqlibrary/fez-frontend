@@ -21,6 +21,7 @@ function setup(testProps = {}) {
         authorDetails: {
             is_administrator: 1,
             is_super_administrator: 1,
+            username: 'test',
         },
         classes: {
             tabIndicator: 'tabindicator',
@@ -40,6 +41,7 @@ function setup(testProps = {}) {
             },
         },
         destroy: jest.fn(),
+        unlockRecord: jest.fn(),
         ...testProps,
     };
 
@@ -562,6 +564,7 @@ describe('AdminInterface component', () => {
             record: {
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_editing_user: 'noone',
             },
         }));
         const push = jest.fn();
@@ -585,6 +588,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_pid: 'UQ:111111',
+                rek_editing_user: 'noone',
             },
         }));
         const wrapper2 = setup({
