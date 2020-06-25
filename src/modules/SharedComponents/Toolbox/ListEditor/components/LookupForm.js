@@ -28,7 +28,8 @@ export default class LookupForm extends Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         nextProps.itemSelectedToEdit && this.setState({ defaultValue: nextProps.itemSelectedToEdit.value });
     }
 

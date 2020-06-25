@@ -30,10 +30,10 @@ export default class WorkingPaperForm extends Component {
     render() {
         const txt = formLocale.workingPaper;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -95,6 +95,7 @@ export default class WorkingPaperForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -125,6 +126,7 @@ export default class WorkingPaperForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}
                             showContributorAssignment
@@ -136,7 +138,7 @@ export default class WorkingPaperForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -150,7 +152,7 @@ export default class WorkingPaperForm extends Component {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

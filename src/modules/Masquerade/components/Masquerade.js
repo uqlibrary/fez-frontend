@@ -52,7 +52,7 @@ export default class Masquerade extends PureComponent {
                     ) : (
                         <Typography>{txt.description.full}</Typography>
                     )}
-                    <Grid container spacing={24} alignItems={'flex-end'} style={{ marginTop: 12 }}>
+                    <Grid container spacing={3} alignItems={'flex-end'} style={{ marginTop: 12 }}>
                         <Grid item xs>
                             <TextField
                                 fullWidth

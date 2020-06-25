@@ -1,151 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataStreamSecuritySelector component should change security value for the file 1`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -55,11 +55,12 @@
-              <div
-                class=\\"MuiSelect-root-375\\"
-              >
-                <div
-                  aria-haspopup=\\"true\\"
--                 aria-pressed=\\"false\\"
-+                 aria-owns=\\"menu-test5.txt\\"
-+                 aria-pressed=\\"true\\"
-                  class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test5.txt\\"
-                  role=\\"button\\"
-                  tabindex=\\"0\\"
-                >"
-`;
-
-exports[`DataStreamSecuritySelector component should change security value for the file 2`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -55,25 +55,24 @@
-              <div
-                class=\\"MuiSelect-root-375\\"
-              >
-                <div
-                  aria-haspopup=\\"true\\"
--                 aria-owns=\\"menu-test5.txt\\"
--                 aria-pressed=\\"true\\"
-+                 aria-pressed=\\"false\\"
-                  class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test5.txt\\"
-                  role=\\"button\\"
-                  tabindex=\\"0\\"
-                >
--                 Administrators
-+                 Public
-                </div>
-                <input
-                  aria-labelledby=\\"Record level policy to apply to this PID-label\\"
-                  id=\\"Record level policy to apply to this PID\\"
-                  name=\\"test5.txt\\"
-                  type=\\"hidden\\"
--                 value=\\"1\\"
-+                 value=\\"5\\"
-                />
-                <svg
-                  aria-hidden=\\"true\\"
-                  class=\\"MuiSvgIcon-root-412 MuiSelect-icon-381\\"
-                  focusable=\\"false\\""
-`;
-
 exports[`DataStreamSecuritySelector component should hide derivative datastreams 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root-697 MuiTypography-h6-714"
-  >
-    Override datastream security policy
-  </h6>
+    class="MuiTypography-root MuiTypography-h6"
+  />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid-container-733 MuiGrid-spacing-xs-32-758 MuiGrid-align-items-xs-flex-start-742 MuiGrid-align-content-xs-flex-end-747 DataStreamSecuritySelector-dataStreamFileBlock-695 dataStreamFileBlock"
+      class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileBlock-721 dataStreamFileBlock MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-flex-end"
     >
       <div
-        class="MuiGrid-item-734 MuiGrid-grid-xs-12-773 MuiGrid-grid-sm-6-781 DataStreamSecuritySelector-dataStreamFileName-696 dataStreamFileName"
+        class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileName-722 dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
       >
         <a
-          class="MuiTypography-root-697 MuiTypography-colorPrimary-727 MuiTypography-inline-732 MuiLink-root-830 MuiLink-underlineHover-832"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           title="testA.txt"
         >
           testA.txt
         </a>
         <span
-          class="MuiTypography-root-697 MuiTypography-caption-707"
+          class="MuiTypography-root MuiTypography-caption"
         >
           Overridden
         </span>
       </div>
       <div
-        class="MuiGrid-item-734 MuiGrid-grid-xs-12-773 MuiGrid-grid-sm-6-781"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
       >
         <div
-          class="MuiFormControl-root-835"
+          class="MuiFormControl-root"
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root-850 MuiFormLabel-required-855 MuiInputLabel-required-843 MuiInputLabel-root-839 MuiInputLabel-formControl-844 MuiInputLabel-animated-847"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
             data-shrink="false"
-            id="Record level policy to apply to this PID-label"
+            id="dsi-security-policy-0-label"
           >
-            Record level policy to apply to this PID
+            Override datastream security policy
             <span
-              class="MuiFormLabel-asterisk-856"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
             >
                *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-877 MuiInput-root-864 MuiInput-underline-868 MuiInputBase-formControl-878 MuiInput-formControl-865"
-            label="Record level policy to apply to this PID"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
           >
             <div
-              class="MuiSelect-root-857"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-security-policy-0-select"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
+              role="button"
+              tabindex="0"
             >
-              <div
-                aria-haspopup="true"
-                aria-pressed="false"
-                class="MuiSelect-select-858 MuiSelect-selectMenu-861 MuiInputBase-input-887 MuiInput-input-872"
-                id="select-testA.txt"
-                role="button"
-                tabindex="0"
-              >
-                <span>
-                  ​
-                </span>
-              </div>
-              <input
-                aria-labelledby="Record level policy to apply to this PID-label"
-                id="Record level policy to apply to this PID"
-                name="testA.txt"
-                type="hidden"
-                value=""
-              />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-894 MuiSelect-icon-863"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
+              <span>
+                ​
+              </span>
             </div>
+            <input
+              aria-labelledby="dsi-security-policy-0-label"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
+              name="testA.txt"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -162,90 +99,84 @@ Compared values have no visual difference."
 exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root-3 MuiTypography-h6-20"
-  >
-    Override datastream security policy
-  </h6>
+    class="MuiTypography-root MuiTypography-h6"
+  />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-start-48 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
+      class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-flex-end"
     >
       <div
-        class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName"
+        class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
       >
         <a
-          class="MuiTypography-root-3 MuiTypography-colorPrimary-33 MuiTypography-inline-38 MuiLink-root-136 MuiLink-underlineHover-138"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           title="test4.txt"
         >
           test4.txt
         </a>
         <span
-          class="MuiTypography-root-3 MuiTypography-caption-13"
+          class="MuiTypography-root MuiTypography-caption"
         >
           Overridden
         </span>
       </div>
       <div
-        class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
       >
         <div
-          class="MuiFormControl-root-141"
+          class="MuiFormControl-root"
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root-156 MuiFormLabel-filled-160 MuiFormLabel-required-161 MuiInputLabel-required-149 MuiInputLabel-root-145 MuiInputLabel-formControl-150 MuiInputLabel-animated-153 MuiInputLabel-shrink-152"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
             data-shrink="true"
-            id="Record level policy to apply to this PID-label"
+            id="dsi-security-policy-0-label"
           >
-            Record level policy to apply to this PID
+            Override datastream security policy
             <span
-              class="MuiFormLabel-asterisk-162"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
             >
                *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-183 MuiInput-root-170 MuiInput-underline-174 MuiInputBase-formControl-184 MuiInput-formControl-171"
-            label="Record level policy to apply to this PID"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
           >
             <div
-              class="MuiSelect-root-163"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-security-policy-0-select"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
+              role="button"
+              tabindex="0"
             >
-              <div
-                aria-haspopup="true"
-                aria-pressed="false"
-                class="MuiSelect-select-164 MuiSelect-selectMenu-167 MuiInputBase-input-193 MuiInput-input-178"
-                id="select-test4.txt"
-                role="button"
-                tabindex="0"
-              >
-                Administrators
-              </div>
-              <input
-                aria-labelledby="Record level policy to apply to this PID-label"
-                id="Record level policy to apply to this PID"
-                name="test4.txt"
-                type="hidden"
-                value="1"
-              />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-200 MuiSelect-icon-169"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
+              Administrators
             </div>
+            <input
+              aria-labelledby="dsi-security-policy-0-label"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
+              name="test4.txt"
+              type="hidden"
+              value="1"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -257,92 +188,86 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
 exports[`DataStreamSecuritySelector component should show non-derivative datastreams 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root-909 MuiTypography-h6-926"
-  >
-    Override datastream security policy
-  </h6>
+    class="MuiTypography-root MuiTypography-h6"
+  />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid-container-945 MuiGrid-spacing-xs-32-970 MuiGrid-align-items-xs-flex-start-954 MuiGrid-align-content-xs-flex-end-959 DataStreamSecuritySelector-dataStreamFileBlock-907 dataStreamFileBlock"
+      class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileBlock-941 dataStreamFileBlock MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-flex-end"
     >
       <div
-        class="MuiGrid-item-946 MuiGrid-grid-xs-12-985 MuiGrid-grid-sm-6-993 DataStreamSecuritySelector-dataStreamFileName-908 dataStreamFileName"
+        class="MuiGrid-root DataStreamSecuritySelector-dataStreamFileName-942 dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
       >
         <a
-          class="MuiTypography-root-909 MuiTypography-colorPrimary-939 MuiTypography-inline-944 MuiLink-root-1042 MuiLink-underlineHover-1044"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           title="test9.txt"
         >
           test9.txt
         </a>
         <span
-          class="MuiTypography-root-909 MuiTypography-caption-919"
+          class="MuiTypography-root MuiTypography-caption"
         >
           Overridden
         </span>
       </div>
       <div
-        class="MuiGrid-item-946 MuiGrid-grid-xs-12-985 MuiGrid-grid-sm-6-993"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
       >
         <div
-          class="MuiFormControl-root-1047"
+          class="MuiFormControl-root"
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root-1062 MuiFormLabel-required-1067 MuiInputLabel-required-1055 MuiInputLabel-root-1051 MuiInputLabel-formControl-1056 MuiInputLabel-animated-1059"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
             data-shrink="false"
-            id="Record level policy to apply to this PID-label"
+            id="dsi-security-policy-0-label"
           >
-            Record level policy to apply to this PID
+            Override datastream security policy
             <span
-              class="MuiFormLabel-asterisk-1068"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
             >
                *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-1089 MuiInput-root-1076 MuiInput-underline-1080 MuiInputBase-formControl-1090 MuiInput-formControl-1077"
-            label="Record level policy to apply to this PID"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
           >
             <div
-              class="MuiSelect-root-1069"
+              aria-haspopup="listbox"
+              aria-labelledby="dsi-security-policy-0-select"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              data-testid="dsi-security-policy-0-select"
+              id="dsi-security-policy-0-select"
+              role="button"
+              tabindex="0"
             >
-              <div
-                aria-haspopup="true"
-                aria-pressed="false"
-                class="MuiSelect-select-1070 MuiSelect-selectMenu-1073 MuiInputBase-input-1099 MuiInput-input-1084"
-                id="select-test9.txt"
-                role="button"
-                tabindex="0"
-              >
-                <span>
-                  ​
-                </span>
-              </div>
-              <input
-                aria-labelledby="Record level policy to apply to this PID-label"
-                id="Record level policy to apply to this PID"
-                name="test9.txt"
-                type="hidden"
-                value=""
-              />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-1106 MuiSelect-icon-1075"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7 10l5 5 5-5z"
-                />
-              </svg>
+              <span>
+                ​
+              </span>
             </div>
+            <input
+              aria-labelledby="dsi-security-policy-0-label"
+              data-testid="dsi-security-policy-0-input"
+              id="dsi-security-policy-0-input"
+              name="test9.txt"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
           </div>
         </div>
       </div>

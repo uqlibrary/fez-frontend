@@ -5,6 +5,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -76,7 +77,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
       "label": undefined,
     }
   }
-  selectedValue="999"
+  value="999"
 />
 `;
 
@@ -85,6 +86,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -156,7 +158,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
       "label": undefined,
     }
   }
-  selectedValue="454028"
+  value="454028"
 />
 `;
 
@@ -165,6 +167,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -240,7 +243,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
       "label": undefined,
     }
   }
-  selectedValue="450033"
+  value="450033"
 />
 `;
 
@@ -249,6 +252,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
   canUnselect={true}
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   itemsList={
     Array [
@@ -315,7 +319,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -324,6 +328,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -407,7 +412,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -422,6 +427,7 @@ exports[`HerdcCodeField component should render when given a default value field
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   itemsList={
     Array [
@@ -490,7 +496,7 @@ exports[`HerdcCodeField component should render when given a default value field
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -503,6 +509,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   canUnselect={true}
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-herdc-code"
   hideLabel={false}
   input={
     Object {
@@ -586,7 +593,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

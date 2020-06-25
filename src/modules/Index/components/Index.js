@@ -10,12 +10,12 @@ class IndexComponent extends PureComponent {
     render() {
         return (
             <StandardPage>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12} md={8}>
                         <TopCitedPublications />
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <Grid container spacing={24}>
+                        <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <WhatIsEspace />
                             </Grid>

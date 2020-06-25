@@ -92,6 +92,7 @@ export class PublicationCitation extends PureComponent {
         location: PropTypes.object,
         publication: PropTypes.object.isRequired,
         publicationsLoading: PropTypes.bool,
+        isPublicationDeleted: PropTypes.bool,
         showAdminActions: PropTypes.bool,
         showDefaultActions: PropTypes.bool,
         showMetrics: PropTypes.bool,
@@ -116,6 +117,7 @@ export class PublicationCitation extends PureComponent {
         showSources: false,
         showUnpublishedBufferFields: false,
         userHasNewAdminEdit: false,
+        isPublicationDeleted: false,
     };
 
     constructor(props) {
@@ -198,61 +200,61 @@ export class PublicationCitation extends PureComponent {
         const pid = publication && publication.rek_pid && publication.rek_pid.replace(':', '');
         return actions && actions.length > 0
             ? actions.map((action, index) => {
-                const buttonProps = {
-                    color: 'primary',
-                    fullWidth: true,
-                    disabled: action.disabled,
-                    children: action.label,
-                    className: `publicationAction buttonOrder${index}`,
-                    onClick: () =>
-                        showDefaultActions
-                            ? this._handleDefaultActions(action.key)
-                            : action.handleAction(publication),
-                };
-                return (
-                    <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
-                        {action.primary ? (
-                            <Button
-                                disabled={!!publicationsLoading}
-                                classes={{ label: pid, root: pid }}
-                                variant="contained"
-                                {...buttonProps}
-                            >
-                                {action.label}
-                                {!!publicationsLoading && (
-                                    <CircularProgress
-                                        size={12}
-                                        style={{ marginLeft: 12, marginTop: -2 }}
-                                        thickness={3}
-                                        color={'secondary'}
-                                        variant={'indeterminate'}
-                                        aria-label="Waiting for records to finish loading"
-                                    />
-                                )}
-                            </Button>
-                        ) : (
-                            <Button
-                                disabled={!!publicationsLoading}
-                                classes={{ label: pid, root: pid }}
-                                variant="text"
-                                {...buttonProps}
-                            >
-                                {action.label}
-                                {!!publicationsLoading && (
-                                    <CircularProgress
-                                        size={12}
-                                        style={{ marginLeft: 12, marginTop: -2 }}
-                                        thickness={3}
-                                        color={'secondary'}
-                                        variant={'indeterminate'}
-                                        aria-label="Waiting for records to finish loading"
-                                    />
-                                )}
-                            </Button>
-                        )}
-                    </Grid>
-                );
-            })
+                  const buttonProps = {
+                      color: 'primary',
+                      fullWidth: true,
+                      disabled: action.disabled,
+                      children: action.label,
+                      className: `publicationAction buttonOrder${index}`,
+                      onClick: () =>
+                          showDefaultActions
+                              ? this._handleDefaultActions(action.key)
+                              : action.handleAction(publication),
+                  };
+                  return (
+                      <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
+                          {action.primary ? (
+                              <Button
+                                  disabled={!!publicationsLoading}
+                                  classes={{ label: pid, root: pid }}
+                                  variant="contained"
+                                  {...buttonProps}
+                              >
+                                  {action.label}
+                                  {!!publicationsLoading && (
+                                      <CircularProgress
+                                          size={12}
+                                          style={{ marginLeft: 12, marginTop: -2 }}
+                                          thickness={3}
+                                          color={'secondary'}
+                                          variant={'indeterminate'}
+                                          aria-label="Waiting for records to finish loading"
+                                      />
+                                  )}
+                              </Button>
+                          ) : (
+                              <Button
+                                  disabled={!!publicationsLoading}
+                                  classes={{ label: pid, root: pid }}
+                                  variant="text"
+                                  {...buttonProps}
+                              >
+                                  {action.label}
+                                  {!!publicationsLoading && (
+                                      <CircularProgress
+                                          size={12}
+                                          style={{ marginLeft: 12, marginTop: -2 }}
+                                          thickness={3}
+                                          color={'secondary'}
+                                          variant={'indeterminate'}
+                                          aria-label="Waiting for records to finish loading"
+                                      />
+                                  )}
+                              </Button>
+                          )}
+                      </Grid>
+                  );
+              })
             : null;
     };
 
@@ -300,6 +302,7 @@ export class PublicationCitation extends PureComponent {
             showSources,
             showUnpublishedBufferFields,
             userHasNewAdminEdit,
+            isPublicationDeleted,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
@@ -402,6 +405,7 @@ export class PublicationCitation extends PureComponent {
                                                             publication.rek_object_type_lookup.toLowerCase()) ||
                                                         ''
                                                     }
+                                                    isRecordDeleted={isPublicationDeleted}
                                                     {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>
@@ -420,7 +424,7 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 </Grid>
                 {(showDefaultActions || customActions) && (
-                    <Grid container spacing={8} className={classes.buttonMargin}>
+                    <Grid container spacing={1} className={classes.buttonMargin}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>
@@ -431,17 +435,17 @@ export class PublicationCitation extends PureComponent {
                 {!hideContentIndicators &&
                     publication.fez_record_search_key_content_indicator &&
                     publication.fez_record_search_key_content_indicator.length > 0 && (
-                    <Grid item xs={12}>
-                        <Typography gutterBottom variant="caption">
-                            <span className={classes.contentIndicatorTitle}>
-                                {locale.components.contentIndicators.label}:
-                            </span>
-                            {publication.fez_record_search_key_content_indicator
-                                .map(item => item.rek_content_indicator_lookup)
-                                .join(locale.components.contentIndicators.divider)}
-                        </Typography>
-                    </Grid>
-                )}
+                        <Grid item xs={12}>
+                            <Typography gutterBottom variant="caption">
+                                <span className={classes.contentIndicatorTitle}>
+                                    {locale.components.contentIndicators.label}:
+                                </span>
+                                {publication.fez_record_search_key_content_indicator
+                                    .map(item => item.rek_content_indicator_lookup)
+                                    .join(locale.components.contentIndicators.divider)}
+                            </Typography>
+                        </Grid>
+                    )}
             </div>
         );
     }

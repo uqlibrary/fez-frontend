@@ -22,10 +22,10 @@ export default {
                     'fez_record_search_key_total_pages',
                 ],
                 ['fez_record_search_key_project_name'],
-                ['fez_record_search_key_project_start_date', 'fez_record_search_key_end_date_biblio'],
+                ['fez_record_search_key_project_start_date', 'fez_record_search_key_end_date'],
                 ['rek_description'],
                 ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_location_biblio'],
+                ['fez_record_search_key_location'],
             ],
         },
         {

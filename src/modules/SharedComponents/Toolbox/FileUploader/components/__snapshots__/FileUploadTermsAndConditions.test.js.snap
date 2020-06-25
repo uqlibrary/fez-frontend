@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadTermsAndConditions should render checked if terms and conditions accepted 1`] = `
-<WithStyles(WithFormControlContext(FormControlLabel))
+<WithStyles(ForwardRef(FormControlLabel))
   classes={
     Object {
       "root": undefined,
     }
   }
   control={
-    <WithStyles(Checkbox)
+    <WithStyles(ForwardRef(Checkbox))
       checked={true}
       classes={
         Object {
@@ -21,7 +21,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
   }
   disabled={false}
   label={
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       classes={
         Object {
           "root": "",
@@ -34,14 +34,14 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
 `;
 
 exports[`Component FileUploadTermsAndConditions should render default view 1`] = `
-<WithStyles(WithFormControlContext(FormControlLabel))
+<WithStyles(ForwardRef(FormControlLabel))
   classes={
     Object {
       "root": undefined,
     }
   }
   control={
-    <WithStyles(Checkbox)
+    <WithStyles(ForwardRef(Checkbox))
       checked={false}
       classes={
         Object {
@@ -54,7 +54,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
   }
   disabled={false}
   label={
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       classes={
         Object {
           "root": "",

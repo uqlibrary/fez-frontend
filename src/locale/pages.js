@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import LockIcon from '@material-ui/icons/Lock';
 import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
 /*
@@ -505,6 +506,11 @@ export default {
         viewRecord: {
             loadingMessage: 'Loading record',
             thumbnailTitle: 'Click to open a preview of [image]',
+            deletedAlert: {
+                type: 'info_outline',
+                title: '',
+                message: 'This record has been deleted.',
+            },
         },
         searchRecords: {
             title: 'eSpace search',
@@ -933,7 +939,23 @@ export default {
                     title: 'Validation',
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
                 },
+                lockedAlert: {
+                    type: 'custom',
+                    title: 'THIS RECORD IS LOCKED',
+                    message:
+                        'This record is currently being edited by [name] ([username]). Make sure that you confirm with this user before ignoring the record lock as it may cause record overwrite issues.',
+                    actionButtonLabel: 'IGNORE LOCK',
+                    customIcon: <LockIcon id="locked-icon" className="icon" />,
+                    customType: 'error',
+                },
             },
+        },
+        deleteRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Delete record',
+            subTitle: 'Work to be deleted',
+            cancel: 'Cancel',
+            submit: 'Delete',
         },
         adminAdd: {
             title: 'Add a new record',

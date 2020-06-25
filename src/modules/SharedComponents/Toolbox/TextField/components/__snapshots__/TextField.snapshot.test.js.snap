@@ -2,74 +2,73 @@
 
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 <Fragment>
-  <TextField
+  <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
+        "data-testid": "test-label",
         "hidden": false,
-        "htmlFor": "",
-        "id": "-label",
+        "htmlFor": "test-input",
+        "id": "test-label",
         "shrink": undefined,
       }
     }
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
-    id=""
+    id="test"
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "-label",
-        "id": "",
+        "aria-labelledby": "test-label",
+        "data-testid": "test-input",
+        "id": "test-input",
         "label": undefined,
       }
     }
     name="testField"
-    required={false}
-    select={false}
     type="text"
-    variant="standard"
   />
 </Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
 <Fragment>
-  <TextField
+  <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
+        "data-testid": "test-label",
         "hidden": false,
-        "htmlFor": "",
-        "id": "-label",
+        "htmlFor": "test-input",
+        "id": "test-label",
         "shrink": undefined,
       }
     }
     className="requiredField"
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
-    id=""
+    id="test"
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "-label",
-        "id": "",
+        "aria-labelledby": "test-label",
+        "data-testid": "test-input",
+        "id": "test-input",
         "label": undefined,
       }
     }
     name="testField"
-    required={false}
-    select={false}
     type="text"
-    variant="standard"
   />
 </Fragment>
 `;
 
 exports[`TextFieldWrapper snapshots tests renders TextField component with shrink:true 1`] = `
 <Fragment>
-  <TextField
+  <WithStyles(ForwardRef(TextField))
     InputLabelProps={
       Object {
+        "data-testid": "test-label",
         "hidden": false,
-        "htmlFor": "test",
+        "htmlFor": "test-input",
         "id": "test-label",
         "shrink": true,
       }
@@ -82,16 +81,14 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
       Object {
         "aria-label": "test",
         "aria-labelledby": "test-label",
-        "id": "test",
+        "data-testid": "test-input",
+        "id": "test-input",
         "label": "test",
       }
     }
     label="test"
     name="testField"
-    required={false}
-    select={false}
     type="text"
-    variant="standard"
   />
 </Fragment>
 `;

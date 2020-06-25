@@ -19,11 +19,12 @@ export default function LicenceSelectorField(fieldProps) {
         <GenericSelectField
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={fieldProps.input.value}
+            value={fieldProps.input.value}
             onChange={!!fieldProps.input && fieldProps.input.onChange}
             itemsList={licences}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-license"
             {...fieldProps}
         />
     );

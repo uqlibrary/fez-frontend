@@ -50,10 +50,10 @@ export default class CreativeWorkForm extends Component {
                 ? 'Date range is not valid'
                 : '';
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -116,6 +116,7 @@ export default class CreativeWorkForm extends Component {
                                     floatingTitle={txt.information.fieldLabels.date.title}
                                     floatingTitleRequired
                                     hasError={dateError}
+                                    partialDateFieldId="rek-date"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -126,6 +127,7 @@ export default class CreativeWorkForm extends Component {
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.endDate.title}
                                     hasError={dateError}
+                                    partialDateFieldId="rek-end-date"
                                 />
                             </Grid>
                         </Grid>
@@ -136,6 +138,7 @@ export default class CreativeWorkForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}
                             locale={txt.authors.field}
@@ -160,7 +163,7 @@ export default class CreativeWorkForm extends Component {
                 )}
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

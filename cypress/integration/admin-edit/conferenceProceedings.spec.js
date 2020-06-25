@@ -32,8 +32,7 @@ context('Conference Proceedings admin edit', () => {
             .eq(1)
             .as('biblographicTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Title of proceedings');
+                cy.get('h4').should('contain', 'Title of proceedings');
             });
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
@@ -43,10 +42,8 @@ context('Conference Proceedings admin edit', () => {
             .eq(2)
             .as('authorDetailsTab')
             .within(() => {
-                cy.get('h4')
-                    .should('contain', 'Authors');
-                cy.get('#authors-name-as-published-field')
-                    .type('Author{enter}');
+                cy.get('h4').should('contain', 'Authors');
+                cy.get('[data-testid=rek-author-input]').type('Author{enter}');
             });
         cy.adminEditNoAlerts();
 
@@ -57,21 +54,17 @@ context('Conference Proceedings admin edit', () => {
             .eq(6)
             .as('filesTab')
             .within(() => {
-                cy.get('h4')
-                    .should('have.text', 'Attached files');
+                cy.get('h4').should('have.text', 'Attached files');
 
-                cy.get('[class*=MuiCardContent-root] > div')
-                    .within(() => {
-                        cy.get(`a[title="${visibleFilename}"]`)
-                            .should('have.length', 1);
+                cy.get('[class*=MuiCardContent-root] > div').within(() => {
+                    cy.get(`a[title="${visibleFilename}"]`).should('have.length', 1);
 
-                        // TODO: Write test for file hidden as per new logic
-                        // cy.get(`a[title="${hiddenFilename}"]`)
-                        //     .should('have.length', 0);
+                    // TODO: Write test for file hidden as per new logic
+                    // cy.get(`a[title="${hiddenFilename}"]`)
+                    //     .should('have.length', 0);
 
-                        cy.get('input[name=fileDescription]')
-                            .should('have.value', visibleFileDescription);
-                    });
+                    cy.get('input[name=fileDescription]').should('have.value', visibleFileDescription);
+                });
             });
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------

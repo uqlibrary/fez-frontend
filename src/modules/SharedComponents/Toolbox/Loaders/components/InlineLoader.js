@@ -22,7 +22,7 @@ export class InlineLoader extends React.Component {
                 <Grid
                     container
                     direction={'row'}
-                    spacing={8}
+                    spacing={1}
                     justify="center"
                     alignItems="center"
                     alignContent={'center'}

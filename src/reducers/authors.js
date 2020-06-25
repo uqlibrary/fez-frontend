@@ -24,6 +24,12 @@ const handlers = {
         authorsListLoading: true,
         authorsListLoadingError: false,
     }),
+
+    [actions.CLEAR_AUTHORS_LIST]: () => ({
+        authorsList: [],
+        authorsListLoading: false,
+        authorsListLoadingError: false,
+    }),
 };
 
 export default function authorsReducer(state = initialState, action) {

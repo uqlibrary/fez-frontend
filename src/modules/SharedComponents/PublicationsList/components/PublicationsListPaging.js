@@ -52,7 +52,8 @@ export class PublicationsListPaging extends Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (!nextProps.disabled && JSON.stringify(nextProps.pagingData) !== JSON.stringify(this.state)) {
             this.setState({ ...nextProps.pagingData });
         }

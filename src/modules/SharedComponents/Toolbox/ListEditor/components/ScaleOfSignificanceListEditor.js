@@ -6,6 +6,7 @@ import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 export const ScaleOfSignificanceListEditor = fieldProps => {
     return (
         <ListEditor
+            listEditorId="rek-significance"
             formComponent={ScaleOfSignificanceForm}
             rowItemTemplate={ScaleOfSignificanceTemplate}
             {...fieldProps}

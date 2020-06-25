@@ -1,3 +1,4 @@
+import React from 'react';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
@@ -89,20 +90,20 @@ export const pathConfig = {
             getSearchUrl(
                 authorId
                     ? {
-                        searchQuery: {
-                            rek_author_id: {
-                                value: authorId,
-                                label: `${authorId} (${author})`,
-                            },
-                        },
-                    }
+                          searchQuery: {
+                              rek_author_id: {
+                                  value: authorId,
+                                  label: `${authorId} (${author})`,
+                              },
+                          },
+                      }
                     : {
-                        searchQuery: {
-                            rek_author: {
-                                value: author,
-                            },
-                        },
-                    },
+                          searchQuery: {
+                              rek_author: {
+                                  value: author,
+                              },
+                          },
+                      },
             ),
         journalName: journalName => getSearchUrl({ searchQuery: { rek_journal_name: { value: journalName } } }),
         bookTitle: bookTitle => getSearchUrl({ searchQuery: { rek_book_title: { value: bookTitle } } }),
@@ -137,6 +138,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
+        delete: pid => `/admin/delete/${pid}`,
         add: '/admin/add',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
@@ -174,6 +176,7 @@ const flattedPathConfig = [
     '/admin/unpublished',
     '/admin/add',
     '/admin/edit',
+    '/admin/delete',
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/thirdPartyTools',
@@ -248,33 +251,33 @@ export const getRoutesConfig = ({
         },
         ...(!account
             ? [
-                {
-                    path: pathConfig.dashboard,
-                    component: components.Index,
-                    exact: true,
-                    pageTitle: locale.pages.index.title,
-                },
-            ]
+                  {
+                      path: pathConfig.dashboard,
+                      component: components.Index,
+                      exact: true,
+                      pageTitle: locale.pages.index.title,
+                  },
+              ]
             : []),
     ];
     const thesisSubmissionPages = [
         ...(account
             ? [
-                {
-                    path: pathConfig.hdrSubmission,
-                    render: isHdrStudent
-                        ? () => components.ThesisSubmission({ isHdrThesis: true })
-                        : () => components.StandardPage({ ...locale.pages.thesisSubmissionDenied }),
-                    pageTitle: formLocale.thesisSubmission.hdrTitle,
-                },
-                {
-                    path: pathConfig.sbsSubmission,
-                    render: isHdrStudent
-                        ? () => components.SbsSubmission({ isHdrThesis: false })
-                        : () => components.StandardPage({ ...locale.pages.thesisSubmissionDenied }),
-                    pageTitle: formLocale.thesisSubmission.sbsTitle,
-                },
-            ]
+                  {
+                      path: pathConfig.hdrSubmission,
+                      render: isHdrStudent
+                          ? props => <components.ThesisSubmission isHdrThesis {...props} />
+                          : () => components.StandardPage({ ...locale.pages.thesisSubmissionDenied }),
+                      pageTitle: formLocale.thesisSubmission.hdrTitle,
+                  },
+                  {
+                      path: pathConfig.sbsSubmission,
+                      render: isHdrStudent
+                          ? () => <components.SbsSubmission />
+                          : () => components.StandardPage({ ...locale.pages.thesisSubmissionDenied }),
+                      pageTitle: formLocale.thesisSubmission.sbsTitle,
+                  },
+              ]
             : []),
     ];
 
@@ -293,209 +296,214 @@ export const getRoutesConfig = ({
         ...thesisSubmissionPages,
         ...(account
             ? [
-                {
-                    path: pathConfig.index,
-                    component: components.Index,
-                    exact: true,
-                    pageTitle: locale.pages.index.title,
-                },
-                {
-                    path: pathConfig.dashboard,
-                    component: components.Dashboard,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.dashboard.title,
-                },
-                {
-                    path: pathConfig.records.mine,
-                    component: components.MyRecords,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.myResearch.pageTitle,
-                },
-                {
-                    path: pathConfig.dataset.mine,
-                    component: components.MyDataCollections,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.myDatasets.pageTitle,
-                },
-                {
-                    path: pathConfig.dataset.add,
-                    component: components.AddDataCollection,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.addDataset.pageTitle,
-                },
-                {
-                    path: pathConfig.records.possible,
-                    component: components.PossiblyMyRecords,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.claimPublications.title,
-                },
-                {
-                    path: pathConfig.records.incomplete,
-                    component: components.MyIncompleteRecords,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.incompletePublications.title,
-                },
-                {
-                    path: pathConfig.records.incompleteFix(pid),
-                    render: props =>
-                        components.MyIncompleteRecord({
-                            ...props,
-                            disableInitialGrants: true,
-                            disableDeleteAllGrants: true,
-                        }),
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.incompletePublication.title,
-                },
-                {
-                    path: pathConfig.records.claim,
-                    component: components.ClaimRecord,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.forms.claimPublicationForm.title,
-                },
-                {
-                    path: pathConfig.records.fix(pid),
-                    component: components.FixRecord,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.fixRecord.title,
-                    regExPath: pathConfig.records.fix(`(${pidRegExp})`),
-                },
-                {
-                    path: pathConfig.records.add.find,
-                    render: props => components.AddMissingRecord({ ...props, addRecordStep: components.FindRecords }),
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.addRecord.title,
-                },
-                {
-                    path: pathConfig.records.add.results,
-                    render: props =>
-                        components.AddMissingRecord({
-                            ...props,
-                            addRecordStep: components.RecordsSearchResults,
-                        }),
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.addRecord.title,
-                },
-                {
-                    path: pathConfig.records.add.new,
-                    render: props => components.AddMissingRecord({ ...props, addRecordStep: components.NewRecord }),
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.addRecord.title,
-                },
-                {
-                    path: pathConfig.authorIdentifiers.orcid.link,
-                    component: components.Orcid,
-                    exact: true,
-                    pageTitle: locale.pages.orcidLink.title,
-                },
-                {
-                    path: pathConfig.authorIdentifiers.googleScholar.link,
-                    component: components.GoogleScholar,
-                    access: [roles.researcher, roles.admin],
-                    exact: true,
-                    pageTitle: locale.pages.googleScholarLink.title,
-                },
-            ]
+                  {
+                      path: pathConfig.index,
+                      component: components.Index,
+                      exact: true,
+                      pageTitle: locale.pages.index.title,
+                  },
+                  {
+                      path: pathConfig.dashboard,
+                      component: components.Dashboard,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.dashboard.title,
+                  },
+                  {
+                      path: pathConfig.records.mine,
+                      component: components.MyRecords,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.myResearch.pageTitle,
+                  },
+                  {
+                      path: pathConfig.dataset.mine,
+                      component: components.MyDataCollections,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.myDatasets.pageTitle,
+                  },
+                  {
+                      path: pathConfig.dataset.add,
+                      component: components.AddDataCollection,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.addDataset.pageTitle,
+                  },
+                  {
+                      path: pathConfig.records.possible,
+                      component: components.PossiblyMyRecords,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.claimPublications.title,
+                  },
+                  {
+                      path: pathConfig.records.incomplete,
+                      component: components.MyIncompleteRecords,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.incompletePublications.title,
+                  },
+                  {
+                      path: pathConfig.records.incompleteFix(pid),
+                      render: props => (
+                          <components.MyIncompleteRecord {...props} disableInitialGrants disableDeleteAllGrants />
+                      ),
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.incompletePublication.title,
+                  },
+                  {
+                      path: pathConfig.records.claim,
+                      component: components.ClaimRecord,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.forms.claimPublicationForm.title,
+                  },
+                  {
+                      path: pathConfig.records.fix(pid),
+                      component: components.FixRecord,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.fixRecord.title,
+                      regExPath: pathConfig.records.fix(`(${pidRegExp})`),
+                  },
+                  {
+                      path: pathConfig.records.add.find,
+                      render: props => components.AddMissingRecord({ ...props, addRecordStep: components.FindRecords }),
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.addRecord.title,
+                  },
+                  {
+                      path: pathConfig.records.add.results,
+                      render: props =>
+                          components.AddMissingRecord({
+                              ...props,
+                              addRecordStep: components.RecordsSearchResults,
+                          }),
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.addRecord.title,
+                  },
+                  {
+                      path: pathConfig.records.add.new,
+                      render: props => components.AddMissingRecord({ ...props, addRecordStep: components.NewRecord }),
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.addRecord.title,
+                  },
+                  {
+                      path: pathConfig.authorIdentifiers.orcid.link,
+                      component: components.Orcid,
+                      exact: true,
+                      pageTitle: locale.pages.orcidLink.title,
+                  },
+                  {
+                      path: pathConfig.authorIdentifiers.googleScholar.link,
+                      component: components.GoogleScholar,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.googleScholarLink.title,
+                  },
+              ]
             : []),
         ...(authorDetails && isAdmin(authorDetails)
             ? [
-                {
-                    path: pathConfig.admin.community,
-                    component: components.CommunityForm,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.community.title,
-                },
-                {
-                    path: pathConfig.admin.collection,
-                    component: components.CollectionForm,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.collection.title,
-                },
-                {
-                    path: pathConfig.admin.add,
-                    render: props => components.Admin({ ...props, createMode: true }),
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.adminAdd.title,
-                },
-                {
-                    path: pathConfig.admin.edit(pid),
-                    component: components.Admin,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.edit.record.title,
-                },
-                {
-                    path: pathConfig.admin.editCommunity(pid),
-                    component: components.Admin,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.edit.community.title,
-                },
-                {
-                    path: pathConfig.admin.editCollection(pid),
-                    component: components.Admin,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.edit.collection.title,
-                },
-                {
-                    path: pathConfig.admin.editRecord(pid),
-                    component: components.Admin,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.edit.record.title,
-                },
-            ]
+                  {
+                      path: pathConfig.admin.community,
+                      component: components.CommunityForm,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.community.title,
+                  },
+                  {
+                      path: pathConfig.admin.collection,
+                      component: components.CollectionForm,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.collection.title,
+                  },
+                  {
+                      path: pathConfig.admin.add,
+                      render: props => <components.Admin {...props} createMode />,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.adminAdd.title,
+                  },
+                  {
+                      path: pathConfig.admin.edit(pid),
+                      component: components.Admin,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.delete(pid),
+                      component: components.DeleteRecord,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.deleteRecord.title,
+                      regExPath: pathConfig.admin.delete(`(${pidRegExp})`),
+                  },
+                  {
+                      path: pathConfig.admin.editCommunity(pid),
+                      component: components.Admin,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.community.title,
+                  },
+                  {
+                      path: pathConfig.admin.editCollection(pid),
+                      component: components.Admin,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.collection.title,
+                  },
+                  {
+                      path: pathConfig.admin.editRecord(pid),
+                      component: components.Admin,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
+                  },
+              ]
             : []),
         ...(account && account.canMasquerade
             ? [
-                {
-                    path: pathConfig.admin.masquerade,
-                    component: components.Masquerade,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.masquerade.title,
-                },
-            ]
+                  {
+                      path: pathConfig.admin.masquerade,
+                      component: components.Masquerade,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.masquerade.title,
+                  },
+              ]
             : []),
         ...(authorDetails && isAdmin(authorDetails)
             ? [
-                {
-                    path: pathConfig.admin.unpublished,
-                    render: props => components.SearchRecords({ ...props, isAdvancedSearch: true }),
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.unpublished.title,
-                },
-                {
-                    path: pathConfig.admin.thirdPartyTools,
-                    component: components.ThirdPartyLookupTool,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.components.thirdPartyLookupTools.title,
-                },
-                {
-                    path: pathConfig.digiteam.batchImport,
-                    component: components.BatchImport,
-                    exact: true,
-                    access: [roles.digiteam],
-                    pageTitle: locale.components.digiTeam.batchImport.title,
-                },
-            ]
+                  {
+                      path: pathConfig.admin.unpublished,
+                      render: props => components.SearchRecords({ ...props, isAdvancedSearch: true }),
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.unpublished.title,
+                  },
+                  {
+                      path: pathConfig.admin.thirdPartyTools,
+                      component: components.ThirdPartyLookupTool,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.components.thirdPartyLookupTools.title,
+                  },
+                  {
+                      path: pathConfig.digiteam.batchImport,
+                      component: components.BatchImport,
+                      exact: true,
+                      access: [roles.digiteam],
+                      pageTitle: locale.components.digiTeam.batchImport.title,
+                  },
+              ]
             : []),
         ...publicPages,
         {
@@ -566,16 +574,16 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             ...homePage,
             ...(account && isAuthor
                 ? [
-                    {
-                        linkTo: pathConfig.dashboard,
-                        primaryText: locale.menu.myDashboard.primaryText,
-                        secondaryText: account.mail,
-                    },
-                    {
-                        divider: true,
-                        path: '/234234234242',
-                    },
-                ]
+                      {
+                          linkTo: pathConfig.dashboard,
+                          primaryText: locale.menu.myDashboard.primaryText,
+                          secondaryText: account.mail,
+                      },
+                      {
+                          divider: true,
+                          path: '/234234234242',
+                      },
+                  ]
                 : []),
             ...publicPages,
         ];
@@ -585,97 +593,97 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ...homePage,
         ...(account && isAuthor
             ? [
-                {
-                    linkTo: pathConfig.dashboard,
-                    primaryText: locale.menu.myDashboard.primaryText,
-                    secondaryText: account.mail,
-                },
-                {
-                    linkTo: pathConfig.records.mine,
-                    ...locale.menu.myResearch,
-                },
-                {
-                    linkTo: pathConfig.records.possible,
-                    ...locale.menu.claimPublication,
-                },
-                ...incompletePage,
-                {
-                    linkTo: pathConfig.records.add.find,
-                    ...locale.menu.addMissingRecord,
-                },
-                {
-                    linkTo: pathConfig.dataset.mine,
-                    ...locale.menu.myDatasets,
-                },
-                {
-                    linkTo: pathConfig.dataset.add,
-                    ...locale.menu.addMissingDataset,
-                },
-                {
-                    linkTo: pathConfig.authorStatistics.url(account.id),
-                    ...locale.menu.authorStatistics,
-                },
-                {
-                    divider: true,
-                    path: '/234234234242',
-                },
-            ]
+                  {
+                      linkTo: pathConfig.dashboard,
+                      primaryText: locale.menu.myDashboard.primaryText,
+                      secondaryText: account.mail,
+                  },
+                  {
+                      linkTo: pathConfig.records.mine,
+                      ...locale.menu.myResearch,
+                  },
+                  {
+                      linkTo: pathConfig.records.possible,
+                      ...locale.menu.claimPublication,
+                  },
+                  ...incompletePage,
+                  {
+                      linkTo: pathConfig.records.add.find,
+                      ...locale.menu.addMissingRecord,
+                  },
+                  {
+                      linkTo: pathConfig.dataset.mine,
+                      ...locale.menu.myDatasets,
+                  },
+                  {
+                      linkTo: pathConfig.dataset.add,
+                      ...locale.menu.addMissingDataset,
+                  },
+                  {
+                      linkTo: pathConfig.authorStatistics.url(account.id),
+                      ...locale.menu.authorStatistics,
+                  },
+                  {
+                      divider: true,
+                      path: '/234234234242',
+                  },
+              ]
             : []),
         ...(authorDetails && isAdmin(authorDetails)
             ? [
-                {
-                    linkTo: pathConfig.admin.community,
-                    ...locale.menu.communityForm,
-                },
-                {
-                    linkTo: pathConfig.admin.collection,
-                    ...locale.menu.collectionForm,
-                },
-            ]
+                  {
+                      linkTo: pathConfig.admin.community,
+                      ...locale.menu.communityForm,
+                  },
+                  {
+                      linkTo: pathConfig.admin.collection,
+                      ...locale.menu.collectionForm,
+                  },
+              ]
             : []),
         ...(account && account.canMasquerade
             ? [
-                {
-                    linkTo: pathConfig.admin.masquerade,
-                    ...locale.menu.masquerade,
-                },
-            ]
+                  {
+                      linkTo: pathConfig.admin.masquerade,
+                      ...locale.menu.masquerade,
+                  },
+              ]
             : []),
         ...(authorDetails && isAdmin(authorDetails)
             ? [
-                {
-                    linkTo: pathConfig.admin.add,
-                    ...locale.menu.adminAdd,
-                },
-                {
-                    // maybe this should be in some admin bit? tbd
-                    linkTo: pathConfig.admin.thirdPartyTools,
-                    ...locale.menu.thirdPartyLookupTools,
-                },
-                {
-                    linkTo: getSearchUrl(
-                        { searchQuery: { rek_status: { value: -4 } } },
-                        pathConfig.admin.unpublished,
-                    ),
-                    ...locale.menu.unpublished,
-                },
-                {
-                    linkTo: pathConfig.admin.legacyEspace,
-                    ...locale.menu.legacyEspace,
-                },
-                {
-                    linkTo: pathConfig.digiteam.batchImport,
-                    ...locale.menu.digiteam.batchImport,
-                },
-            ]
+                  {
+                      linkTo: pathConfig.admin.add,
+                      ...locale.menu.adminAdd,
+                  },
+                  {
+                      // maybe this should be in some admin bit? tbd
+                      linkTo: pathConfig.admin.thirdPartyTools,
+                      ...locale.menu.thirdPartyLookupTools,
+                  },
+                  {
+                      linkTo: getSearchUrl(
+                          { searchQuery: { rek_status: { value: -4 } } },
+                          pathConfig.admin.unpublished,
+                      ),
+                      ...locale.menu.unpublished,
+                  },
+                  {
+                      linkTo: pathConfig.admin.legacyEspace,
+                      ...locale.menu.legacyEspace,
+                  },
+                  {
+                      linkTo: pathConfig.digiteam.batchImport,
+                      ...locale.menu.digiteam.batchImport,
+                  },
+              ]
             : []),
         ...((account && account.canMasquerade) || isAdmin(authorDetails)
             ? [
-                {
-                    divider: true,
-                    path: '/234234234242',
-                },
-            ]
+                  {
+                      divider: true,
+                      path: '/234234234242',
+                  },
+              ]
             : []),
         ...publicPages,
     ];

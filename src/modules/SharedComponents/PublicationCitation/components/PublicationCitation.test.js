@@ -136,7 +136,7 @@ describe('PublicationCitation ', () => {
             showDefaultActions: true,
         });
         const test = jest.spyOn(wrapper.instance(), '_handleDefaultActions');
-        wrapper.find('WithStyles(Button).publicationAction').forEach((button, index) => {
+        wrapper.find('WithStyles(ForwardRef(Button)).publicationAction').forEach((button, index) => {
             expect(button.getElement().props.children).toEqual(
                 // wrapper.instance().defaultActions[index].label
                 [wrapper.instance().defaultActions[index].label, false],
@@ -168,6 +168,35 @@ describe('PublicationCitation ', () => {
         });
         wrapper.instance()._handleDefaultActions('shareRecord');
         wrapper.instance()._handleDefaultActions('');
+    });
+
+    it('should handle custom actions', () => {
+        const handleAction = jest.fn();
+        const customActions = [
+            {
+                label: 'Claim now',
+                primary: true,
+                handleAction,
+            },
+            {
+                label: 'Not mine',
+                handleAction,
+            },
+            {
+                label: 'View stats',
+                handleAction,
+            },
+        ];
+        const wrapper = setup({
+            showDefaultActions: false,
+            customActions: customActions,
+        });
+
+        wrapper.find('WithStyles(ForwardRef(Button)).publicationAction').forEach(button => {
+            button.simulate('click');
+        });
+
+        expect(handleAction).toHaveBeenCalledTimes(3);
     });
 
     it('should render publication with citation metric', () => {

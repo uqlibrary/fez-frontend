@@ -4,6 +4,7 @@ exports[`WoSDocTypesField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
+  genericSelectFieldId="rek-wok-doc-type"
   hideLabel={false}
   itemsList={
     Array [
@@ -158,7 +159,7 @@ exports[`WoSDocTypesField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -166,6 +167,7 @@ exports[`WoSDocTypesField component should render immutable list as selected val
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-wok-doc-type"
   hideLabel={false}
   input={
     Object {
@@ -337,7 +339,7 @@ exports[`WoSDocTypesField component should render immutable list as selected val
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -351,6 +353,7 @@ exports[`WoSDocTypesField component should render when given a default value fie
   defaultValue="afr"
   error={false}
   errorText=""
+  genericSelectFieldId="rek-wok-doc-type"
   hideLabel={false}
   itemsList={
     Array [
@@ -507,7 +510,7 @@ exports[`WoSDocTypesField component should render when given a default value fie
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -519,6 +522,7 @@ exports[`WoSDocTypesField component should render with given field props 1`] = `
 <GenericSelectField
   error={true}
   errorText="Test error"
+  genericSelectFieldId="rek-wok-doc-type"
   hideLabel={false}
   input={
     Object {
@@ -690,7 +694,7 @@ exports[`WoSDocTypesField component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

@@ -27,10 +27,10 @@ export default class ConferencePaperForm extends Component {
     render() {
         const txt = formLocale.conferencePaper;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -125,6 +125,7 @@ export default class ConferencePaperForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -143,6 +144,7 @@ export default class ConferencePaperForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}
                             showContributorAssignment
@@ -162,6 +164,7 @@ export default class ConferencePaperForm extends Component {
                             isValid={validation.isValidIsbn}
                             maxCount={5}
                             searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
+                            listEditorId="isbn"
                             locale={locale.components.isbnForm.field}
                             disabled={this.props.submitting}
                         />
@@ -177,6 +180,7 @@ export default class ConferencePaperForm extends Component {
                             name="fez_record_search_key_issn"
                             maxCount={5}
                             locale={locale.components.issnForm.field}
+                            listEditorId="issn"
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             disabled={this.props.submitting}
                         />
@@ -184,7 +188,7 @@ export default class ConferencePaperForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}

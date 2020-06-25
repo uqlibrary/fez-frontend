@@ -10,7 +10,7 @@ export default function QualityIndicatorField(fieldProps) {
             itemsList={QUALITY_INDICATORS}
             hideLabel={false}
             locale={{ label: fieldProps.label, placeholder: fieldProps.placeholder }}
-            selectedValue={
+            value={
                 input instanceof Immutable.List
                     ? input.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []
@@ -18,6 +18,7 @@ export default function QualityIndicatorField(fieldProps) {
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-quality-indicator"
             {...fieldProps}
         />
     );

@@ -85,7 +85,8 @@ export class AuthorLinking extends PureComponent {
         this.authorsToRender = [];
     }
 
-    componentWillMount() {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillMount() {
         this.authorsToRender = this.getAuthorsToRender({ ...this.props }, this.state);
     }
 
@@ -102,7 +103,8 @@ export class AuthorLinking extends PureComponent {
         }
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange !== null && nextState.selectedAuthor !== null) {
             this.props.onChange({
                 authors: this.prepareOutput(nextProps, nextState, this.listToOutput),

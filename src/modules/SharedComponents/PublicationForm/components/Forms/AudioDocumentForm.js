@@ -30,10 +30,10 @@ export default class AudioDocumentForm extends Component {
         const authors = this.props.formValues && this.props.formValues.get('authors');
         const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
         return (
-            <Grid container spacing={16}>
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -70,6 +70,7 @@ export default class AudioDocumentForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -99,6 +100,7 @@ export default class AudioDocumentForm extends Component {
                     <StandardCard title={txt.creator.title} help={txt.creator.help}>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="creators"
                             showContributorAssignment={!editorSelected}
                             required
                             name="authors"
@@ -111,6 +113,7 @@ export default class AudioDocumentForm extends Component {
                     <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="contributors"
                             showContributorAssignment={!authorSelected}
                             name="editors"
                             locale={txt.contributor.field}
@@ -120,7 +123,7 @@ export default class AudioDocumentForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

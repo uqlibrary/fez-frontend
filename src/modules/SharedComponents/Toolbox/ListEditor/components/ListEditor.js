@@ -33,6 +33,7 @@ export default class ListEditor extends Component {
         scrollListHeight: PropTypes.number,
         canEdit: PropTypes.bool,
         getItemSelectedToEdit: PropTypes.func,
+        listEditorId: PropTypes.string.isRequired,
     };
 
     static defaultProps = {
@@ -85,7 +86,8 @@ export default class ListEditor extends Component {
         this.editItem = this.editItem.bind(this);
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(nextState.itemList));
@@ -180,9 +182,9 @@ export default class ListEditor extends Component {
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
                     const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
                         ? {
-                            ...this.state.itemList[this.state.itemIndexSelectedToEdit],
-                            key: item,
-                        }
+                              ...this.state.itemList[this.state.itemIndexSelectedToEdit],
+                              key: item,
+                          }
                         : item;
 
                     this.setState({
@@ -242,24 +244,9 @@ export default class ListEditor extends Component {
         });
     };
     render() {
-        const componentID = (
-            (this.props.locale.form && this.props.locale.form.title) ||
-            (this.props.locale.form && this.props.locale.form.inputFieldLabel) ||
-            (this.props.locale.form &&
-                this.props.locale.form.locale &&
-                this.props.locale.form.locale.inputFieldLabel) ||
-            ''
-        ).replace(/\s+/g, '');
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
-                form={
-                    (this.props.locale &&
-                        this.props.locale.form &&
-                        this.props.locale.form.locale &&
-                        this.props.locale.form.locale.inputFieldLabel) ||
-                    'NoLabel'
-                }
-                key={(!!item && item.key) || index}
+                key={item.key || item.id || item}
                 index={index}
                 item={item}
                 canMoveDown={index !== this.state.itemList.length - 1}
@@ -273,15 +260,16 @@ export default class ListEditor extends Component {
                 disabled={this.props.disabled}
                 itemTemplate={this.props.rowItemTemplate}
                 canEdit={this.props.canEdit}
+                listRowId={`${this.props.listEditorId}-list-row-${index}`}
             />
         ));
         return (
-            <div className={`${this.props.className} ${componentID}`}>
+            <div className={`${this.props.className}`} id={`${this.props.listEditorId}-list-editor`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     key={
-                        (!!this.state.itemIndexSelectedToEdit && this.state.itemIndexSelectedToEdit + 1) ||
-                        'link-info-form'
+                        (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
+                        'list-editor-form'
                     }
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
@@ -301,18 +289,22 @@ export default class ListEditor extends Component {
                         this.state.itemIndexSelectedToEdit,
                     )}
                     itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
+                    listEditorId={this.props.listEditorId}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader
                         onDeleteAll={this.deleteAllItems}
                         hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
                         disabled={this.props.disabled}
+                        listEditorId={this.props.listEditorId}
                         {...((this.props.locale && this.props.locale.header) || {})}
                     />
                 )}
                 {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (
                     <div
                         className={'ListEditor-scrollable-list'}
+                        id={`${this.props.listEditorId}-list`}
+                        data-testid={`${this.props.listEditorId}-list`}
                         style={{
                             width: '100%',
                             height: this.props.scrollListHeight,
@@ -323,7 +315,9 @@ export default class ListEditor extends Component {
                         {renderListsRows}
                     </div>
                 ) : (
-                    renderListsRows
+                    <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
+                        {renderListsRows}
+                    </div>
                 )}
             </div>
         );

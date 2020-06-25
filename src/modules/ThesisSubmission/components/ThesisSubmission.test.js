@@ -54,7 +54,7 @@ describe('ThesisSubmission', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(9);
-        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 
     it('should render hdr thesis submission form', () => {
@@ -118,7 +118,7 @@ describe('ThesisSubmission', () => {
     it('should trigger openDepositConfirmation() when conditions are met', () => {
         const wrapper = setup({});
         wrapper.instance().openDepositConfirmation = jest.fn();
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             isSessionValid: true,
             submitting: false,
         });

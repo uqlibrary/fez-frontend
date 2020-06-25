@@ -22,7 +22,7 @@ describe('DocumentTypeMultipleField component', () => {
     it('should render disabled view', () => {
         const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(WithFormControlContext(Select))').props().disabled).toBeTruthy();
+        expect(wrapper.find('WithStyles(ForwardRef(Select))').props().disabled).toBeTruthy();
     });
 
     it('should render with given document types selected by default', () => {
@@ -32,7 +32,7 @@ describe('DocumentTypeMultipleField component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper
-            .find('WithStyles(MenuItem)')
+            .find('WithStyles(ForwardRef(MenuItem))')
             .map(
                 menuItem =>
                     defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy(),
@@ -45,7 +45,7 @@ describe('DocumentTypeMultipleField component', () => {
             updateDocTypeValues: updateDocTypeValuesFn,
         });
         wrapper
-            .find('WithStyles(WithFormControlContext(Select))')
+            .find('WithStyles(ForwardRef(Select))')
             .props()
             .onChange({ target: { value: 316 } });
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
@@ -79,6 +79,6 @@ describe('DocumentTypeMultipleField component', () => {
         const wrapper = setup({
             docTypes: null,
         });
-        expect(wrapper.find('WithStyles(WithFormControlContext(Select))').prop('value')).toBe('0');
+        expect(wrapper.find('WithStyles(ForwardRef(Select))').prop('value')).toStrictEqual(['0']);
     });
 });

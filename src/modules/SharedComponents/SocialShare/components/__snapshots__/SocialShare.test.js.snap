@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component SocialShare should fire print method on click 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   id="social-share"
   spacing={0}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="0"
     style={
@@ -32,8 +32,8 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="1"
     style={
@@ -59,8 +59,8 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="2"
     style={
@@ -86,8 +86,8 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="3"
     style={
@@ -113,8 +113,8 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="4"
     style={
@@ -140,8 +140,8 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="5"
     style={
@@ -165,8 +165,8 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="6"
     style={
@@ -192,17 +192,17 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Component SocialShare should render component 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
   id="social-share"
   spacing={0}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="0"
     style={
@@ -228,8 +228,8 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="1"
     style={
@@ -255,8 +255,8 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="2"
     style={
@@ -282,8 +282,8 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="3"
     style={
@@ -309,8 +309,8 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="4"
     style={
@@ -336,8 +336,8 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="5"
     style={
@@ -361,8 +361,8 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     key="6"
     style={
@@ -388,6 +388,6 @@ exports[`Component SocialShare should render component 1`] = `
         size={24}
       />
     </WithStyles(ExternalLink)>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

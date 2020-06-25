@@ -5,7 +5,6 @@ import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 const FORM_NAME = 'FixRecord';
 
 const onSubmit = (values, dispatch, props) => {
@@ -46,7 +45,7 @@ let FixRecordContainer = reduxForm({
     enableReinitialize: true,
     validate,
     onSubmit,
-})(confirmDiscardFormChanges(FixRecord, FORM_NAME));
+})(FixRecord);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -74,10 +73,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-FixRecordContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(FixRecordContainer);
+FixRecordContainer = connect(mapStateToProps, mapDispatchToProps)(FixRecordContainer);
 FixRecordContainer = withRouter(FixRecordContainer);
 
 export default FixRecordContainer;

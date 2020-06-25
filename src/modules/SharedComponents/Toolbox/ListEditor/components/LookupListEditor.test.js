@@ -2,6 +2,7 @@ import LookupListEditor from './LookupListEditor';
 
 function setup(testProps = {}) {
     const props = {
+        listEditorId: 'lookup-list-editor',
         ...testProps,
     };
 

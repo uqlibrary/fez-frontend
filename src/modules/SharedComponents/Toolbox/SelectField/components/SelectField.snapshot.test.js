@@ -8,6 +8,7 @@ function setup(testProps, isShallow = true) {
         type: 'text',
         fullWidth: true,
         floatingLabelText: 'test selectfield component',
+        selectFieldId: 'test',
         ...testProps,
     };
     const consolidatedProps = filterProps(props, SelectField.propTypes);
@@ -52,13 +53,13 @@ describe('SelectfieldWrapper snapshots tests', () => {
         });
 
         wrapper
-            .find('WithStyles(WithFormControlContext(Select))')
+            .find('WithStyles(ForwardRef(Select))')
             .props()
             .onChange({ target: { value: 'test' } });
         expect(onChangeFn).toHaveBeenCalledWith('test');
 
         wrapper
-            .find('WithStyles(WithFormControlContext(Select))')
+            .find('WithStyles(ForwardRef(Select))')
             .props()
             .onBlur();
         expect(onBlurFn).toHaveBeenCalledWith('testing');

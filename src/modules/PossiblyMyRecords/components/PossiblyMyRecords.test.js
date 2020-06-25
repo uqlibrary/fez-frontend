@@ -202,7 +202,7 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({ loadingPossiblePublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [1, 2, 3],
             history: {},
@@ -220,7 +220,7 @@ describe('Component PossiblyMyRecords', () => {
             },
         });
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: {
                 action: 'POP',
             },
@@ -252,7 +252,7 @@ describe('Component PossiblyMyRecords', () => {
             },
         });
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.records.possible, state: null },
         });
@@ -319,7 +319,11 @@ describe('Component PossiblyMyRecords', () => {
         wrapper.setState({
             hasPublications: true,
         });
-        expect(wrapper.find('StandardCard WithStyles(Grid) WithStyles(PublicationsListSorting)').length).toBe(1);
-        expect(wrapper.find('StandardCard WithStyles(Grid) WithStyles(PublicationsListPaging)').length).toBe(2);
+        expect(
+            wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListSorting)').length,
+        ).toBe(1);
+        expect(
+            wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListPaging)').length,
+        ).toBe(2);
     });
 });

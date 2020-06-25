@@ -142,7 +142,7 @@ describe('myDatasets test', () => {
         const wrapper = setup({ loadingPublicationsList: true, publicationsList: [] });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             loadingPublicationsList: false,
             publicationsList: [1, 2, 3],
             history: {},
@@ -159,7 +159,7 @@ describe('myDatasets test', () => {
             thisUrl: routes.pathConfig.dataset.mine,
         });
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.dataset.mine, state: { page: 2, hasPublications: true } },
             publicationsListPagingData: {},
@@ -179,7 +179,7 @@ describe('myDatasets test', () => {
             actions: { loadAuthorPublications: testAction },
             thisUrl: routes.pathConfig.dataset.mine,
         });
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.dataset.mine, state: null },
             publicationsListPagingData: {},
@@ -195,7 +195,7 @@ describe('myDatasets test', () => {
         const testAction = jest.fn();
         const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'PUSH' },
             location: { pathname: routes.pathConfig.dataset.mine },
             mine: {},

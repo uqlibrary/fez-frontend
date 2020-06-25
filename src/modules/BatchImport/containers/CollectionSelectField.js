@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) => {
         return { text: `${item.rek_title} (${securityPolicy.label})`, value: item.rek_pid, index: item.rek_pid };
     });
     return {
-        selectedValue: props.input.value || [],
+        value: props.input.value || '',
         itemsList,
         itemsLoadingHint: props.loadingHint || 'Loading..',
     };
@@ -24,5 +24,5 @@ const _onChange = fieldProps => {
 };
 
 export default function CollectionSelectField(fieldProps) {
-    return <CollectionSelect onChange={_onChange(fieldProps)} {...fieldProps} />;
+    return <CollectionSelect onChange={_onChange(fieldProps)} genericSelectFieldId="collection-pid" {...fieldProps} />;
 }

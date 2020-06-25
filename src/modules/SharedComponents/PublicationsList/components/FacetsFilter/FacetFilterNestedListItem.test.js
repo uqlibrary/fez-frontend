@@ -1,50 +1,28 @@
+import React from 'react';
+import { rtlRender } from 'test-utils';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-function setup(testProps = {}, args = {}) {
+function setup(testProps = {}) {
     const props = {
         index: 0,
         primaryText: 'Test facet filter',
         disabled: false,
         isActive: false,
-        classes: {
-            listItemGutters: 'listItemGutters',
-            inset: 'inset',
-            selectedFacet: 'selectedFacet',
-        },
         onFacetClick: jest.fn(),
         ...testProps,
     };
-    return getElement(FacetFilterNestedListItem, props, args);
+    return rtlRender(<FacetFilterNestedListItem {...props} />);
 }
 
 describe('Facet filter nested list item ', () => {
     it('should render default filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByText } = setup({ primaryText: 'Test filter' });
+        expect(getByText('Test filter')).toBeInTheDocument();
     });
 
     it('should render active filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter', isActive: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render disabled filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter', isActive: true, disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render inactive filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter', isActive: false }, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render memoised version of the filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter', isActive: true, disabled: true }, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setProps({
-            inActive: true,
-            disabled: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByText, getByTestId } = setup({ primaryText: 'Test filter', isActive: true });
+        expect(getByText('Test filter')).toBeInTheDocument();
+        expect(getByTestId('clear-facet-filter-nested-item-0')).toBeInTheDocument();
     });
 });

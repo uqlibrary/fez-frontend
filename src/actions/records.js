@@ -7,10 +7,16 @@ import {
     EXISTING_COLLECTION_API,
     NEW_COMMUNITY_API,
     EXISTING_COMMUNITY_API,
+    UNLOCK_RECORD_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
-import { NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES } from 'config/general';
+import {
+    NEW_RECORD_DEFAULT_VALUES,
+    NEW_COLLECTION_DEFAULT_VALUES,
+    NEW_COMMUNITY_DEFAULT_VALUES,
+    DOCUMENT_TYPES_LOOKUP,
+} from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -92,8 +98,8 @@ export function createNewRecord(data) {
             .then(() =>
                 data.comments
                     ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                        issue: 'Notes from creator of the new record: ' + data.comments,
-                    })
+                          issue: `Notes from creator of the new record: ${data.comments}`,
+                      })
                     : newRecord,
             )
             .then(response => {
@@ -143,6 +149,8 @@ const prepareThesisSubmission = data => {
         rek_formatted_title: data.thesisTitle.htmlText,
         rek_description: data.thesisAbstract.plainText,
         rek_formatted_abstract: data.thesisAbstract.htmlText,
+        rek_subtype: data.rek_genre_type,
+        rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
     };
 
     // delete extra form values from request object
@@ -417,6 +425,10 @@ const getAdminRecordRequest = data => {
     return [
         {
             ...data.publication,
+            ...{
+                rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
+                rek_genre_type: data.adminSection.rek_subtype,
+            },
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
@@ -455,9 +467,9 @@ export function adminUpdate(data) {
             .then(() =>
                 hasFilesToUpload
                     ? put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
-                        ...patchRecordRequest,
-                        ...patchFilesRequest,
-                    })
+                          ...patchRecordRequest,
+                          ...patchFilesRequest,
+                      })
                     : put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
             .then(response => {
@@ -563,5 +575,27 @@ export const deleteAttachedFile = file => {
             type: actions.ADMIN_DELETE_ATTACHED_FILE,
             payload: file,
         });
+    };
+};
+
+export const unlockRecord = (pid, unlockRecordCallback) => {
+    return dispatch => {
+        dispatch({
+            type: actions.UNLOCK_RECORD_INPROGRESS,
+        });
+        return patch(UNLOCK_RECORD_API({ pid }))
+            .then(() => {
+                dispatch({
+                    type: actions.UNLOCK_RECORD_SUCCESS,
+                });
+                return Promise.resolve(true);
+            })
+            .then(unlockRecordCallback)
+            .catch(() => {
+                dispatch({
+                    type: actions.UNLOCK_RECORD_FAILED,
+                });
+                return Promise.reject(false);
+            });
     };
 };

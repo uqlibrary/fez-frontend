@@ -49,7 +49,8 @@ export class FileUploader extends PureComponent {
         };
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         !!this.props.onChange &&
             this.props.onChange({
                 queue: nextState.filesInQueue,
@@ -294,7 +295,7 @@ export class FileUploader extends PureComponent {
         });
 
         return (
-            <Grid container spacing={16}>
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Typography variant="body2" gutterBottom>
                         {instructionsDisplay}
@@ -373,7 +374,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(FileUploader);
+export default connect(mapStateToProps, mapDispatchToProps)(FileUploader);

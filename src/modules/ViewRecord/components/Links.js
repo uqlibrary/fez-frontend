@@ -40,7 +40,7 @@ export class LinksClass extends PureComponent {
     LinkRow = ({ link, description, openAccessStatus }) => (
         <Grid
             container
-            spacing={32}
+            spacing={4}
             className={this.props.classes.header}
             alignItems={'center'}
             alignContent={'center'}
@@ -201,7 +201,7 @@ export class LinksClass extends PureComponent {
                             container
                             direction="row"
                             alignItems="center"
-                            spacing={16}
+                            spacing={2}
                             className={this.props.classes.header}
                         >
                             <Grid item sm={6}>
@@ -223,15 +223,15 @@ export class LinksClass extends PureComponent {
                     </Hidden>
                     {// if record has a PubMedCentral Id - display link, should be always OA
                     // prettier-ignore
-                        !!pubmedCentralId &&
+                    !!pubmedCentralId &&
                         <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
                     {// if record has a DOI - display a link, should be OA or OA with a date
-                        !!doi && <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />}
+                    !!doi && <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />}
                     {// record has OA status of "Link (no DOI)" then produce a google
                     // scholar link for the publication title
-                        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI && (
-                            <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
-                        )}
+                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI && (
+                        <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
+                    )}
                     {hasLinks &&
                         record.fez_record_search_key_link.map((item, index) => (
                             <this.LinkRow {...this.getPublicationLink(item, index)} key={index} />

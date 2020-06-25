@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import TextField from '@material-ui/core/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { url } from 'config/validation';
@@ -63,18 +63,18 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
     } = locale;
 
     return (
-        <Grid container spacing={16} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
                 <TextField
                     fullWidth
                     name="key"
-                    id="link-info-link"
+                    textFieldId="rek-link"
                     label={linkInputFieldLabel}
                     placeholder={linkInputFieldHint}
                     onChange={handleChange}
                     onKeyDown={addItem}
                     error={!!errorText}
-                    helperText={errorText}
+                    errorText={errorText}
                     disabled={disabled}
                     inputProps={{
                         ref: linkInput,
@@ -86,7 +86,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                 <TextField
                     fullWidth
                     name="value"
-                    id="link-info-description"
+                    textFieldId="rek-link-description"
                     label={descriptionInputFieldLabel}
                     placeholder={descriptionInputFieldHint}
                     onChange={handleChange}
@@ -102,6 +102,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                 <Button
                     fullWidth
                     id="add-items"
+                    data-testid="rek-link-add"
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}

@@ -51,7 +51,7 @@ export class FileUploadRowDefaultView extends PureComponent {
 
         return (
             <div style={{ flexGrow: 1, padding: 4 }}>
-                <Grid container direction="row" alignItems="center" spacing={8} className={classes.row}>
+                <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
                     <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
                         <Typography variant="body2" gutterBottom noWrap>
                             {name} ({size})
@@ -78,6 +78,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 {accessConditionId === config.OPEN_ACCESS_ID && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
+                                        minDate={new Date()}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
                                     />

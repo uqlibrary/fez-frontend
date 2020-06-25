@@ -16,8 +16,11 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
+        canEdit: PropTypes.bool,
         classes: PropTypes.object,
+        contributorEditorId: PropTypes.string.isRequired,
         disabled: PropTypes.bool,
+        editMode: PropTypes.bool,
         hideDelete: PropTypes.bool,
         hideReorder: PropTypes.bool,
         input: PropTypes.object,
@@ -29,11 +32,11 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        editMode: PropTypes.bool,
-        canEdit: PropTypes.bool,
     };
 
     static defaultProps = {
+        canEdit: false,
+        editMode: false,
         hideDelete: false,
         hideReorder: false,
         isNtro: false,
@@ -44,8 +47,6 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
-        editMode: false,
-        canEdit: false,
     };
 
     constructor(props) {
@@ -58,7 +59,8 @@ export class ContributorsEditor extends PureComponent {
         };
     }
 
-    componentWillUpdate = (nextProps, nextState) => {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate = (nextProps, nextState) => {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (this.props.onChange) {
             this.props.onChange(nextState.contributors);
@@ -190,6 +192,7 @@ export class ContributorsEditor extends PureComponent {
 
     renderContributorRows = () => {
         const {
+            contributorEditorId,
             canEdit,
             disabled,
             hideDelete,
@@ -201,7 +204,6 @@ export class ContributorsEditor extends PureComponent {
         } = this.props;
 
         const { contributors, isCurrentAuthorSelected } = this.state;
-
         return contributors.map((contributor, index) => (
             <ContributorRow
                 {...(locale.row || {})}
@@ -225,26 +227,33 @@ export class ContributorsEditor extends PureComponent {
                 enableSelect={showContributorAssignment && !isCurrentAuthorSelected}
                 showIdentifierLookup={showIdentifierLookup}
                 showRoleInput={showRoleInput}
+                contributorRowId={`${contributorEditorId}-list-row`}
             />
         ));
     };
 
     renderContributorForm = (editProps = {}) => {
         const { contributorIndexSelectedToEdit } = this.state;
+        const contributor = this.state.contributors[contributorIndexSelectedToEdit];
         const formProps = {
             ...this.props,
             ...editProps,
             isContributorAssigned: !!this.state.contributors.length,
             locale: (this.props.locale.form || {}).locale,
-            contributor: this.state.contributors[contributorIndexSelectedToEdit],
+            contributor,
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
         };
 
         return (
             <ContributorForm
-                key={this.state.contributorIndexSelectedToEdit}
+                key={
+                    this.state.contributorIndexSelectedToEdit !== null && this.state.contributorIndexSelectedToEdit >= 0
+                        ? `contributor-form-edit-${this.state.contributorIndexSelectedToEdit}`
+                        : 'contributor-form-add'
+                }
                 onSubmit={this.addContributor}
+                contributorFormId={this.props.contributorEditorId}
                 {...formProps}
             />
         );
@@ -253,6 +262,7 @@ export class ContributorsEditor extends PureComponent {
     render() {
         const {
             classes,
+            contributorEditorId,
             disabled,
             editMode,
             hideDelete,
@@ -275,8 +285,8 @@ export class ContributorsEditor extends PureComponent {
         }
 
         return (
-            <div className={'contributorEditor'}>
-                <Grid container spacing={8}>
+            <div className={'contributorEditor'} id={`${contributorEditorId}-list-editor`}>
+                <Grid container spacing={1}>
                     {errorMessage && (
                         <Grid item xs={12}>
                             <Alert title={this.props.locale.errorTitle} message={errorMessage} type="warning" />
@@ -289,7 +299,7 @@ export class ContributorsEditor extends PureComponent {
                     )}
                 </Grid>
                 {contributors.length > 0 && (
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <List style={{ marginBottom: 0 }}>
                                 <ContributorRowHeader
@@ -305,6 +315,8 @@ export class ContributorsEditor extends PureComponent {
                                 />
                             </List>
                             <List
+                                id={`${contributorEditorId}-list`}
+                                data-testid={`${contributorEditorId}-list`}
                                 classes={{
                                     root: `ContributorList ${classes.list} ${
                                         contributors.length > 3 ? classes.scroll : ''
@@ -334,11 +346,9 @@ export class ContributorsEditor extends PureComponent {
     }
 }
 
-export const mapStateToProps = state => {
-    return {
-        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
-    };
-};
+export const mapStateToProps = state => ({
+    author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
+});
 
 export const styles = () => ({
     list: {

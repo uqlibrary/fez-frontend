@@ -4,11 +4,11 @@ exports[`myDatasets test renders active filters 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={16}
+    spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -38,8 +38,8 @@ exports[`myDatasets test renders active filters 1`] = `
           .
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -47,11 +47,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={16}
+    spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       xs={12}
@@ -62,11 +62,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
-          spacing={16}
+          spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -79,8 +79,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               </a>
               .
             </span>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -102,8 +102,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               sortBy="published_date"
               sortDirection="Desc"
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -119,8 +119,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -142,8 +142,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               showUnpublishedBufferFields={false}
               subsetCustomActions={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -159,11 +159,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -171,11 +171,11 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={16}
+    spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       xs={12}
@@ -186,11 +186,11 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         <span>
           Displaying records 1 to 2 of 2 total records. 
         </span>
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
-          spacing={16}
+          spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -203,8 +203,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               </a>
               .
             </span>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -226,8 +226,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               sortBy="published_date"
               sortDirection="Desc"
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -243,8 +243,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -266,8 +266,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               showUnpublishedBufferFields={false}
               subsetCustomActions={Array []}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -283,31 +283,21 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 }
               }
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
       </StandardCard>
-    </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
       smDown={true}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={false}
-      xsUp={false}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
       >
         <WithStyles(StandardRighthandCard)
           title="Refine results"
         >
-          <FacetsFilter
+          <Memo(FacetsFilter)
             activeFacets={
               Object {
                 "filters": Object {},
@@ -391,9 +381,9 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             showOpenAccessFilter={true}
           />
         </WithStyles(StandardRighthandCard)>
-      </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
     </Hidden>
-  </WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -403,19 +393,19 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
 <StandardPage
   title="My research data"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={16}
+    spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
       <WithStyles(InlineLoader)
         message="Searching for your datasets"
       />
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -423,11 +413,11 @@ exports[`myDatasets test renders loading screen while loading publications while
 <StandardPage
   title="My research data"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={16}
+    spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       md={9}
       xs={12}
@@ -435,11 +425,11 @@ exports[`myDatasets test renders loading screen while loading publications while
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
-          spacing={16}
+          spacing={2}
         >
-          <WithStyles(Grid)
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -452,8 +442,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               </a>
               .
             </span>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -468,8 +458,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               sortBy="published_date"
               sortDirection="Desc"
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -479,8 +469,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               onPageChanged={[Function]}
               pagingData={Object {}}
             />
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -491,8 +481,8 @@ exports[`myDatasets test renders loading screen while loading publications while
                 message="Retrieving your datasets"
               />
             </div>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
             item={true}
             xs={12}
           >
@@ -502,11 +492,11 @@ exports[`myDatasets test renders loading screen while loading publications while
               onPageChanged={[Function]}
               pagingData={Object {}}
             />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
 
@@ -514,11 +504,11 @@ exports[`myDatasets test renders no results 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={16}
+    spacing={2}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={12}
     >
@@ -548,7 +538,7 @@ exports[`myDatasets test renders no results 1`] = `
           .
         </div>
       </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
-<ForwardRef
+<PickerWithState
   InputProps={
     Object {
       "classes": Object {
@@ -14,18 +14,26 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
   autoOk={true}
   clearable={true}
   format="DD/MM/YYYY"
-  keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  invalidDateMessage="Invalid Date Format"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  openTo="date"
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
 />
 `;
 
 exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
-<ForwardRef
+<PickerWithState
   InputProps={
     Object {
       "classes": Object {
@@ -36,21 +44,28 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
   }
   allowKeyboardControl={true}
   autoOk={true}
-  clearable={false}
   disabled={true}
   format="DD/MM/YYYY"
-  keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  invalidDateMessage="Invalid Date Format"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  openTo="date"
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
 />
 `;
 
 exports[`Component FileUploadEmbargoDate should render with default setup 1`] = `
-<ForwardRef
+<PickerWithState
   InputProps={
     Object {
       "classes": Object {
@@ -61,15 +76,22 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
   }
   allowKeyboardControl={true}
   autoOk={true}
-  clearable={false}
   format="DD/MM/YYYY"
-  keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  invalidDateMessage="Invalid Date Format"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  openTo="date"
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
 />
 `;
 
@@ -87,7 +109,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup with s
 `;
 
 exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
-<ForwardRef
+<PickerWithState
   InputProps={
     Object {
       "classes": Object {
@@ -98,20 +120,27 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
   }
   allowKeyboardControl={true}
   autoOk={true}
-  clearable={false}
   format="DD/MM/YYYY"
-  keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  invalidDateMessage="Invalid Date Format"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  openTo="date"
   value={null}
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
 />
 `;
 
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 1`] = `
-<ForwardRef
+<PickerWithState
   InputProps={
     Object {
       "classes": Object {
@@ -122,20 +151,27 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   }
   allowKeyboardControl={true}
   autoOk={true}
-  clearable={false}
   format="DD/MM/YYYY"
-  keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  invalidDateMessage="Invalid Date Format"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  openTo="date"
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
 />
 `;
 
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 2`] = `
-<ForwardRef
+<PickerWithState
   InputProps={
     Object {
       "classes": Object {
@@ -146,14 +182,21 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   }
   allowKeyboardControl={true}
   autoOk={true}
-  clearable={false}
   format="DD/MM/YYYY"
-  keyboard={true}
-  keyboardIcon={<pure(EventIcon) />}
-  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  invalidDateMessage="Invalid Date Format"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
   minDate={2016-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
   onChange={[Function]}
-  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  openTo="date"
   value={2016-01-01T00:00:00.000Z}
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
 />
 `;

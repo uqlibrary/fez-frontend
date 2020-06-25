@@ -5,7 +5,7 @@ exports[`Component WhatIsEspace should render component 1`] = `
   primaryHeader={true}
   title="What is eSpace?"
 >
-  <WithStyles(Typography)
+  <WithStyles(ForwardRef(Typography))
     variant="body2"
   >
     <span>
@@ -16,6 +16,6 @@ exports[`Component WhatIsEspace should render component 1`] = `
     >
        read more
     </Link>
-  </WithStyles(Typography)>
+  </WithStyles(ForwardRef(Typography))>
 </StandardCard>
 `;

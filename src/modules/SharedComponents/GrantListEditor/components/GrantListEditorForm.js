@@ -5,7 +5,7 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
+import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { ORG_AFFILIATION_TYPES } from 'config/general';
@@ -40,7 +40,7 @@ export class GrantListEditorFormClass extends PureComponent {
             grantIdLabel: 'Grant ID',
             grantIdHint: 'Enter grant number for this work, if available',
             grantAgencyTypeLabel: 'Funder/Sponsor type',
-            grantAgencyTypeHint: 'Select Funder/Sponsor type',
+            grantAgencyTypeHint: 'Funder/Sponsor type',
             addButton: 'Add grant',
             editButton: 'Edit grant',
             description:
@@ -66,7 +66,8 @@ export class GrantListEditorFormClass extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         !!nextProps.grantSelectedToEdit && this.setState({ ...nextProps.grantSelectedToEdit });
     }
 
@@ -148,11 +149,12 @@ export class GrantListEditorFormClass extends PureComponent {
         return (
             <React.Fragment>
                 {description}
-                <Grid container spacing={8} style={{ marginTop: 8 }}>
+                <Grid container spacing={1} style={{ marginTop: 8 }}>
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
-                            id="grantAgencyName"
+                            id="grant-agency-name"
+                            textFieldId="rek-grant-agency"
                             label={grantAgencyNameLabel}
                             placeholder={grantAgencyNameHint}
                             value={grantAgencyName}
@@ -167,7 +169,8 @@ export class GrantListEditorFormClass extends PureComponent {
                     <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
                         <TextField
                             fullWidth
-                            id="grantId"
+                            id="grant-id"
+                            textFieldId="rek-grant-id"
                             label={grantIdLabel}
                             placeholder={grantIdHint}
                             value={grantId}
@@ -183,18 +186,31 @@ export class GrantListEditorFormClass extends PureComponent {
                                 required={required || grantAgencyName.trim().length > 0}
                                 error={grantAgencyName.trim().length > 0 && grantAgencyType.trim().length === 0}
                             >
-                                <InputLabel>{grantAgencyTypeLabel}</InputLabel>
+                                <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
+                                    {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;
+                                </Typography>
                                 <Select
                                     SelectDisplayProps={{
-                                        id: 'grantType',
+                                        id: 'grant-type',
+                                        'data-testid': 'rek-grant-type-select',
                                     }}
+                                    MenuProps={{
+                                        id: 'rek-grant-type-options',
+                                        'data-testid': 'rek-grant-type-options',
+                                    }}
+                                    inputProps={{
+                                        id: 'rek-grant-type-input',
+                                        'data-testid': 'rek-grant-type-input',
+                                    }}
+                                    name="grant-type"
                                     label={grantAgencyType}
                                     placeholder={grantAgencyTypeHint}
+                                    displayEmpty
                                     value={grantAgencyType}
                                     onChange={this._onTypeChanged}
                                     disabled={disabled || grantAgencyName.trim().length === 0}
                                 >
-                                    <MenuItem value={''} disabled>
+                                    <MenuItem value="" disabled>
                                         {grantAgencyTypeHint}
                                     </MenuItem>
                                     {ORG_AFFILIATION_TYPES.map((item, index) => {
@@ -213,7 +229,8 @@ export class GrantListEditorFormClass extends PureComponent {
                     )}
                     <Grid item xs={12}>
                         <Button
-                            id="grantAddButton"
+                            id={(!!grantSelectedToEdit && 'edit-grant') || 'add-grant'}
+                            data-testid={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}
                             variant="contained"
                             fullWidth
                             color="primary"

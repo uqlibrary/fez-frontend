@@ -1,41 +1,39 @@
-import React, { PureComponent } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-export default class OpenAccessFilter extends PureComponent {
-    static propTypes = {
-        onChange: PropTypes.func.isRequired,
-        disabled: PropTypes.bool,
-        isActive: PropTypes.bool,
-        open: PropTypes.bool,
-        onToggle: PropTypes.func.isRequired,
-        locale: PropTypes.object,
-    };
+export const OpenAccessFilter = ({ onChange, disabled, isActive, locale }) => {
+    const txt = locale;
 
-    updateFilter = () => {
-        this.props.onChange(!this.props.isActive);
-    };
+    const updateFilter = useCallback(() => {
+        onChange(!isActive);
+    }, [isActive, onChange]);
 
-    render() {
-        const txt = this.props.locale;
-        const isActive = this.props.isActive;
-
-        return (
-            <FacetFilterListItem
-                key="date-range"
-                facetTitle={txt.displayTitle}
-                disabled={this.props.disabled}
-                onToggle={this.props.onToggle}
-                open={this.props.open}
-            >
+    return (
+        <FacetFilterListItem
+            id="facet-category-open-access"
+            key="open-access"
+            title={txt.displayTitle}
+            disabled={disabled}
+            nestedItems={
                 <FacetFilterNestedListItem
-                    onFacetClick={this.updateFilter}
+                    onFacetClick={updateFilter}
                     isActive={isActive}
                     primaryText={txt.activeFilter}
-                    disabled={this.props.disabled}
+                    disabled={disabled}
+                    index="open-access"
                 />
-            </FacetFilterListItem>
-        );
-    }
-}
+            }
+        />
+    );
+};
+
+OpenAccessFilter.propTypes = {
+    onChange: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
+    isActive: PropTypes.bool,
+    locale: PropTypes.object,
+};
+
+export default React.memo(OpenAccessFilter);

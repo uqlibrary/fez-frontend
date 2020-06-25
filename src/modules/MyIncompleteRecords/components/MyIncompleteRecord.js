@@ -1,6 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';
+
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { useConfirmationState } from 'hooks';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -10,7 +14,6 @@ import Typography from '@material-ui/core/Typography';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -26,127 +29,115 @@ import { default as alertLocale } from 'locale/publicationForm';
 
 import { pathConfig } from 'config/routes';
 
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-export const styles = theme => ({
-    GridType: {
-        paddingBottom: 12,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-    GridSubType: {
-        marginTop: 12,
-        paddingBottom: 12,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-});
+export const useStyles = makeStyles(
+    theme => ({
+        GridType: {
+            paddingBottom: 12,
+            borderBottom: `1px solid ${theme.palette.secondary.light}`,
+        },
+        GridSubType: {
+            marginTop: 12,
+            paddingBottom: 12,
+            borderBottom: `1px solid ${theme.palette.secondary.light}`,
+        },
+    }),
+    { withTheme: true },
+);
 
-export class MyIncompleteRecordClass extends PureComponent {
-    static propTypes = {
-        ...propTypes,
-        submitSucceeded: PropTypes.bool,
-        dirty: PropTypes.bool,
-        submitting: PropTypes.bool,
-        handleSubmit: PropTypes.func,
+export const MyIncompleteRecord = props => {
+    const {
+        submitSucceeded,
+        dirty,
+        submitting,
+        handleSubmit,
+        disableSubmit,
+        recordToFix,
+        isNtro,
+        ntroFieldProps,
+        isAuthorLinked,
+        hasAnyFiles,
+        publicationToFixFileUploadingError,
+        disableDeleteAllGrants,
+        history,
+    } = props;
+    const classes = useStyles();
 
-        disableSubmit: PropTypes.bool,
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-        recordToFix: PropTypes.object,
-        isNtro: PropTypes.bool,
-        ntroFieldProps: PropTypes.object,
-        isAuthorLinked: PropTypes.bool,
-        hasAnyFiles: PropTypes.bool,
+    const txt = pagesLocale;
 
-        history: PropTypes.object.isRequired,
+    /* istanbul ignore next */
+    useEffect(() => {
+        if (submitSucceeded) showConfirmation();
+    }, [showConfirmation, submitSucceeded]);
 
-        publicationToFixFileUploadingError: PropTypes.bool,
-        disableDeleteAllGrants: PropTypes.bool,
-
-        classes: PropTypes.object,
-    };
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
-            this.successConfirmationBox.showConfirmation();
-        }
+    // if author is not linked to this record, abandon form
+    if (!isAuthorLinked) {
+        history.go(-1);
+        return <div />;
     }
 
-    _navigateToMyIncomplete = () => {
-        this.props.history.push(routes.pathConfig.records.incomplete);
+    const txtFixForm = formsLocale.forms.fixPublicationForm;
+    const authors = txt.fields.authors;
+
+    const alertProps = validation.getErrorAlertProps({
+        ...props,
+        alertLocale: {
+            ...alertLocale,
+            progressAlert: txt.progressAlert,
+            successAlert: txt.successAlert,
+        },
+    });
+
+    // set confirmation message depending on file upload status
+    const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
+    saveConfirmationLocale.confirmationMessage = (
+        <React.Fragment>
+            {publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+            {saveConfirmationLocale.confirmationMessage}
+        </React.Fragment>
+    );
+
+    const _navigateToMyIncomplete = () => {
+        history.push(routes.pathConfig.records.incomplete);
     };
 
-    _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
+    const _navigateToDashboard = () => {
+        history.push(routes.pathConfig.dashboard);
     };
 
-    _cancelFix = () => {
-        this.props.history.push(pathConfig.records.incomplete);
+    const _cancelFix = () => {
+        history.push(pathConfig.records.incomplete);
     };
 
-    _setSuccessConfirmation = ref => {
-        this.successConfirmationBox = ref;
+    const _handleDefaultSubmit = event => {
+        !!event && event.preventDefault();
     };
 
-    _handleDefaultSubmit = event => {
-        if (event) event.preventDefault();
-    };
-
-    render() {
-        const txt = pagesLocale;
-
-        const { recordToFix, ntroFieldProps, isNtro, hasAnyFiles } = this.props;
-
-        // if author is not linked to this record, abandon form
-        if (!this.props.isAuthorLinked) {
-            this.props.history.go(-1);
-            return <div />;
-        }
-
-        const txtFixForm = formsLocale.forms.fixPublicationForm;
-        const authors = txt.fields.authors;
-
-        const alertProps = validation.getErrorAlertProps({
-            ...this.props,
-            alertLocale: {
-                ...alertLocale,
-                progressAlert: txt.progressAlert,
-                successAlert: txt.successAlert,
-            },
-        });
-
-        // set confirmation message depending on file upload status
-        const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
-        saveConfirmationLocale.confirmationMessage = (
-            <React.Fragment>
-                {this.props.publicationToFixFileUploadingError && (
-                    <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
-                )}
-                {saveConfirmationLocale.confirmationMessage}
-            </React.Fragment>
-        );
-
-        return (
-            <StandardPage title={txt.title} help={txt.help}>
-                <PublicationCitation publication={recordToFix} hideContentIndicators />
-                <form onSubmit={this._handleDefaultSubmit}>
-                    <NavigationDialogBox
-                        when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={txtFixForm.cancelWorkflowConfirmation}
-                    />
-                    <ConfirmDialogBox
-                        onRef={this._setSuccessConfirmation}
-                        onCancelAction={this._navigateToMyIncomplete}
-                        onAction={this._navigateToDashboard}
+    return (
+        <StandardPage title={txt.title} help={txt.help}>
+            <PublicationCitation publication={recordToFix} hideContentIndicators />
+            <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+                <form onSubmit={_handleDefaultSubmit}>
+                    <NavigationDialogBox when={dirty && !submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
+                    <ConfirmationBox
+                        onAction={_navigateToDashboard}
+                        onClose={hideConfirmation}
+                        onCancelAction={_navigateToMyIncomplete}
+                        isOpen={isOpen}
                         locale={saveConfirmationLocale}
                     />
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid container spacing={8} className={this.props.classes.GridType}>
+                                <Grid container spacing={1} className={classes.GridType}>
                                     {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                        <Grid container spacing={16} alignItems="flex-start">
+                                        <Grid container spacing={2} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
                                                 <Typography variant="body2">
                                                     {
@@ -163,9 +154,9 @@ export class MyIncompleteRecordClass extends PureComponent {
                                         </Grid>
                                     )}
                                 </Grid>
-                                <Grid container spacing={8} className={this.props.classes.GridSubType}>
+                                <Grid container spacing={1} className={classes.GridSubType}>
                                     {!!recordToFix && !!recordToFix.rek_subtype && (
-                                        <Grid container spacing={16} alignItems="flex-start">
+                                        <Grid container spacing={2} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
                                                 <Typography variant="body2">
                                                     {
@@ -184,7 +175,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                         </Grid>
                         {isNtro && (
                             <NtroFields
-                                submitting={this.props.submitting}
+                                submitting={submitting}
                                 hideIsmn
                                 hideIsrc
                                 hideVolume
@@ -193,7 +184,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 hideEndPage
                                 hideOriginalFormat
                                 hideSeries
-                                disableDeleteAllGrants={this.props.disableDeleteAllGrants}
+                                disableDeleteAllGrants={disableDeleteAllGrants}
                                 {...ntroFieldProps}
                             />
                         )}
@@ -202,6 +193,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 <Typography>{authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    contributorEditorId="rek-author"
                                     editMode
                                     canEdit
                                     hideDelete
@@ -222,7 +214,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                     component={TextField}
                                     name="comments"
                                     type="text"
-                                    disabled={this.props.submitting}
+                                    disabled={submitting}
                                     fullWidth
                                     multiline
                                     rows={5}
@@ -237,7 +229,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                     <Field
                                         name="files"
                                         component={FileUploadField}
-                                        disabled={this.props.submitting}
+                                        disabled={submitting}
                                         requireOpenAccessStatus
                                         validate={[validation.fileUploadRequired, validation.validFileUpload]}
                                         isNtro
@@ -252,17 +244,18 @@ export class MyIncompleteRecordClass extends PureComponent {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={24}>
+                    <Grid container spacing={3}>
                         <Hidden smDown>
                             <Grid item xs />
                         </Hidden>
                         <Grid item xs={12} md="auto">
                             <Button
+                                id="cancel-fix-work"
                                 variant="contained"
                                 fullWidth
                                 children={txt.cancelButtonLabel}
-                                disabled={this.props.submitting}
-                                onClick={this._cancelFix}
+                                disabled={submitting}
+                                onClick={_cancelFix}
                             />
                         </Grid>
                         <Grid item xs={12} md="auto">
@@ -272,16 +265,35 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 color="primary"
                                 fullWidth
                                 children={txt.submitButtonLabel}
-                                onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit}
+                                onClick={handleSubmit}
+                                disabled={submitting || disableSubmit}
                             />
                         </Grid>
                     </Grid>
                 </form>
-            </StandardPage>
-        );
-    }
-}
+            </ConfirmDiscardFormChanges>
+        </StandardPage>
+    );
+};
 
-const MyIncompleteRecord = withStyles(styles, { withTheme: true })(MyIncompleteRecordClass);
-export default MyIncompleteRecord;
+MyIncompleteRecord.propTypes = {
+    ...propTypes,
+    submitSucceeded: PropTypes.bool,
+    dirty: PropTypes.bool,
+    submitting: PropTypes.bool,
+    handleSubmit: PropTypes.func,
+    history: PropTypes.object,
+
+    disableSubmit: PropTypes.bool,
+
+    recordToFix: PropTypes.object,
+    isNtro: PropTypes.bool,
+    ntroFieldProps: PropTypes.object,
+    isAuthorLinked: PropTypes.bool,
+    hasAnyFiles: PropTypes.bool,
+
+    publicationToFixFileUploadingError: PropTypes.bool,
+    disableDeleteAllGrants: PropTypes.bool,
+};
+
+export default React.memo(MyIncompleteRecord);

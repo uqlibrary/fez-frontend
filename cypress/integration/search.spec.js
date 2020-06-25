@@ -3,8 +3,7 @@
 
 context('Search', () => {
     // const searchLocale = componentsLocale.components.searchComponent;
-    const cleanExtraSpaces = $string => $string.replace(/\s+/g, ' ')
-        .trim();
+    const cleanExtraSpaces = $string => $string.replace(/\s+/g, ' ').trim();
 
     beforeEach(() => {
         cy.visit('/records/search');
@@ -22,40 +21,34 @@ context('Search', () => {
             .closest('[class*="MuiFormControl-root"]')
             // .contains('label', searchLocale.searchBoxPlaceholder);
             .contains('label', 'Search eSpace');
-        cy.get('#simpleSearchField')
-            .type('cats and dogs{enter}');
-        cy.get('.StandardPage > div > div > div:nth-of-type(2) .StandardCard')
-            .should(
-                'contain',
-                'Displaying works 1 to 7 of 7 total records.',
-            );
-        cy.get('.StandardPage > div > div > div:nth-of-type(3) h6')
-            .should('contain', 'Refine results');
+        cy.get('#simpleSearchField').type('cats and dogs{enter}');
+        cy.get('.StandardPage > div > div > div:nth-of-type(2) .StandardCard').should(
+            'contain',
+            'Displaying works 1 to 7 of 7 total records.',
+        );
+        cy.get('.StandardPage > div > div > div:nth-of-type(3) h6').should('contain', 'Refine results');
 
         // Click through to advanced search UI
         cy.get('button#showAdvancedSearchButton')
             .should('contain', 'Advanced search')
             .should('have.attr', 'aria-label', 'Click to switch to Advanced search')
             .click();
-        cy.get('#advancedSearchForm h5')
-            .should('contain', 'Advanced search');
+        cy.get('#advancedSearchForm h5').should('contain', 'Advanced search');
         cy.get('input[name="searchField0"]')
             .should('have.value', 'cats and dogs')
             .type("{home}it's raining ");
-        cy.contains('label', 'Open access')
-            .find('[class*="MuiCheckbox"]')
+        cy.contains('label > span:nth-child(2)', 'Open access')
+            .get('#advanced-search-open-access')
             .should(
                 'have.attr',
                 'aria-label',
                 'Check to search for publications with are only open access / full text',
             );
-        cy.contains('label', 'Open access')
-            .click();
+        cy.contains('label', 'Open access').click();
         cy.contains('button', 'Add another field')
             .should('have.attr', 'aria-label', 'Click to add another advanced search field')
             .click();
-        cy.get('.content-container')
-            .scrollTo('top');
+        cy.get('.content-container').scrollTo('top');
         cy.contains('Select a field')
             .closest('[class*="MuiInput-root"]')
             .should(
@@ -65,44 +58,34 @@ context('Search', () => {
             )
             .siblings('p')
             .contains('Please select a field to search');
-        cy.contains('Select a field')
-            .click();
+        cy.contains('Select a field').click();
         // Select author from the field dropdown
-        cy.contains('#menu- li', 'Author Name')
-            .click();
+        cy.contains('#menu-field-type-selector li', 'Author Name').click();
         cy.get('button#advancedSearchButton')
             .should('be.disabled')
             .should('have.text', 'Search');
-        cy.get('[placeholder="Add an author name"]')
-            .type('Ky Lane{enter}');
-        cy.get('button#advancedSearchButton')
-            .should('not.be.disabled');
+        cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}');
+        cy.get('button#advancedSearchButton').should('not.be.disabled');
         // Add a set of collections to search from
-        cy.contains('button', 'Add another field')
-            .click();
-        cy.contains('Select a field')
-            .click();
-        cy.contains('#menu- li', 'Collection')
-            .click();
-        cy.get('button#advancedSearchButton')
-            .should('be.disabled');
-        cy.contains('Select collections')
-            .click();
-        cy.contains('#menu- li', '5th Australasian Congress on Applied Mechanics')
-            .click();
-        cy.contains('#menu- li', 'Adaptive Interactive Profit Expectations')
-            .click();
-        cy.contains('#menu- li', 'Admin only - CHRC')
-            .click();
-        cy.get('#menu-')
-            .click(10, 10);
-        cy.get('#advancedSearchForm .searchQueryCaption')
-            .should($caption => {
-                expect(cleanExtraSpaces($caption.text())).to.equal(
-                    "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
+        cy.contains('button', 'Add another field').click();
+        cy.contains('Select a field').click();
+        cy.contains('#menu-field-type-selector li', 'Collection').click();
+        cy.get('button#advancedSearchButton').should('be.disabled');
+        cy.get('[data-testid=rek-ismemberof-input]').click();
+        cy.contains(
+            '[data-testid=rek-ismemberof-options] li',
+            '5th Australasian Congress on Applied Mechanics',
+        ).click();
+        cy.get('[data-testid=rek-ismemberof-input]').click();
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'Adaptive Interactive Profit Expectations').click();
+        cy.get('[data-testid=rek-ismemberof-input]').click();
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC').click();
+        cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
+            expect(cleanExtraSpaces($caption.text())).to.equal(
+                "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
                     ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text',
-                );
-            });
+            );
+        });
         cy.get('button#advancedSearchButton')
             .should('not.be.disabled')
             .click();
@@ -114,21 +97,17 @@ context('Search', () => {
     it('should show appropriate form validation for PID field', () => {
         const helpMessage = 'Please provide a valid PID (e.g. UQ:129af6)';
 
-        cy.get('button#showAdvancedSearchButton')
-            .click();
-        cy.contains('Select a field')
-            .click();
-        cy.contains('#menu- li', 'PID')
-            .click();
-        cy.get('#textfield-helper-text')
+        cy.get('button#showAdvancedSearchButton').click();
+        cy.contains('Select a field').click();
+        cy.contains('#menu-field-type-selector li', 'PID').click();
+        cy.get('#rek-pid-helper-text')
             .as('helpText')
             .should('contain', 'This field is required');
         cy.get('button#advancedSearchButton')
             .as('searchButton')
             .should('be.disabled');
 
-        cy.get('[placeholder="Add a PID"]')
-            .as('pidField');
+        cy.get('[placeholder="Add a PID"]').as('pidField');
 
         const invalidPIDs = ['abcd', '_uq:123', 'UQ: 12', 'uq:'];
 
@@ -136,24 +115,19 @@ context('Search', () => {
             cy.get('@pidField')
                 .clear()
                 .type(invalidPID);
-            cy.get('@helpText')
-                .should('contain', helpMessage);
-            cy.get('@searchButton')
-                .should('be.disabled');
+            cy.get('@helpText').should('contain', helpMessage);
+            cy.get('@searchButton').should('be.disabled');
         });
 
         cy.get('@pidField')
             .clear()
             .type('uq:123');
-        cy.get('@searchButton')
-            .should('not.be.disabled');
-        cy.get('@helpText')
-            .should('not.exist');
+        cy.get('@searchButton').should('not.be.disabled');
+        cy.get('@helpText').should('not.exist');
 
-        cy.get('#advancedSearchForm .searchQueryCaption')
-            .should($caption => {
-                expect(cleanExtraSpaces($caption.text())).to.equal('PID is uq:123');
-            });
+        cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
+            expect(cleanExtraSpaces($caption.text())).to.equal('PID is uq:123');
+        });
     });
 
     // context('API call tests', () => {

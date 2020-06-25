@@ -6,8 +6,7 @@ const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > di
 
 Cypress.Commands.add('loadRecordForAdminEdit', pid => {
     cy.visit(`/admin/edit/${pid}?user=uqstaff`);
-    cy.get('h2')
-        .should('contain.text', pid);
+    cy.get('h2').should('contain.text', pid);
 });
 
 Cypress.Commands.add('adminEditCleanup', () => {
@@ -16,16 +15,13 @@ Cypress.Commands.add('adminEditCleanup', () => {
 });
 
 Cypress.Commands.add('adminEditCountCards', count => {
-    cy.get(tabHeadingSelector)
-        .should('have.length', count);
+    cy.get(tabHeadingSelector).should('have.length', count);
 });
 
 Cypress.Commands.add('adminEditNoAlerts', () => {
-    cy.get('.StandardPage form > div:nth-child(2)')
-        .within(() => {
-            cy.get('.Alert')
-                .should('not.exist');
-        });
+    cy.get('.StandardPage form > div:nth-child(2)').within(() => {
+        cy.get('.Alert').should('not.exist');
+    });
 
     cy.get('#admin-work-submit')
         .should('exist')
@@ -33,20 +29,18 @@ Cypress.Commands.add('adminEditNoAlerts', () => {
 });
 
 Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
-    cy.get('.StandardPage form > div:nth-child(2)')
-        .within(() => {
-            cy.get('.Alert')
-                .should('exist')
-                .find('.alert-text')
-                .should('contain', 'Validation -')
-                .find('li')
-                .as('alertMessages')
-                .should('have.length', count);
-            messages.forEach(message => {
-                cy.get('@alertMessages')
-                    .should('contain', message);
-            });
+    cy.get('.StandardPage form > div:nth-child(2)').within(() => {
+        cy.get('.Alert')
+            .should('exist')
+            .find('.alert-text')
+            .should('contain', 'Validation -')
+            .find('li')
+            .as('alertMessages')
+            .should('have.length', count);
+        messages.forEach(message => {
+            cy.get('@alertMessages').should('contain', message);
         });
+    });
 
     cy.get('#admin-work-submit')
         .should('exist')
@@ -59,14 +53,12 @@ Cypress.Commands.add('adminEditTabbedView', (showTabs = true) => {
         .as('tabViewButton')
         .should(showTabs ? 'not.be.checked' : 'be.checked');
     cy.wait(200);
-    cy.get('@tabViewButton')
-        .click();
+    cy.get('@tabViewButton').click();
     cy.waitUntil(() => {
         const tabCount = Cypress.$(tabHeadingSelector).length;
         return (showTabs && tabCount === 1) || (!showTabs && tabCount > 1);
     });
-    cy.get('@tabViewButton')
-        .should(showTabs ? 'be.checked' : 'not.be.checked');
+    cy.get('@tabViewButton').should(showTabs ? 'be.checked' : 'not.be.checked');
 });
 
 Cypress.Commands.add('adminEditCheckDefaultTab', tabTitle => {

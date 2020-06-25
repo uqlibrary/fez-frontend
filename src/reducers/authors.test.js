@@ -36,6 +36,15 @@ describe('Authors reducer', () => {
         });
     });
 
+    it('returns that it has cleared authors list', () => {
+        const test = authorsReducer(initialState, { type: actions.CLEAR_AUTHORS_LIST });
+        expect(test).toEqual({
+            authorsList: [],
+            authorsListLoading: false,
+            authorsListLoadingError: false,
+        });
+    });
+
     it('returns the initialState when supplied an invalid action type', () => {
         const test = authorsReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
         expect(test).toEqual(initialState);

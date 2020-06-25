@@ -16,7 +16,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
   />
   <br />
   Step 2 - Select your name from the list below
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "header",
@@ -24,23 +24,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     }
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)>
-        <pure(PeopleIcon) />
-      </WithStyles(ListItemIcon)>
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <PeopleIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
           "container": undefined,
@@ -48,13 +38,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={5}
         xs={10}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           secondary="Name as published"
           secondaryTypographyProps={
             Object {
@@ -62,26 +52,16 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             }
           }
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={4}
         xs={12}
       >
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
           xsDown={true}
-          xsUp={false}
         >
-          <WithStyles(ListItemText)
+          <WithStyles(ForwardRef(ListItemText))
             secondary="UQ identifier / Organisation"
             secondaryTypographyProps={
               Object {
@@ -90,15 +70,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             }
           />
         </Hidden>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         sm={5}
         xs={12}
       />
-    </WithStyles(Grid)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -106,19 +86,9 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
               "secondary": "right paddingRight24",
@@ -132,32 +102,32 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           }
         />
       </Hidden>
-    </WithStyles(ListItemSecondaryAction)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": "",
         }
       }
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove all records"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
@@ -175,7 +145,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "header",
@@ -183,23 +153,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     }
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)>
-        <pure(PeopleIcon) />
-      </WithStyles(ListItemIcon)>
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <PeopleIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
           "container": undefined,
@@ -207,13 +167,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={5}
         xs={10}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           secondary="Name as published"
           secondaryTypographyProps={
             Object {
@@ -221,15 +181,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             }
           }
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         sm={5}
         xs={12}
       />
-    </WithStyles(Grid)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -237,19 +197,9 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
               "secondary": "right paddingRight24",
@@ -263,32 +213,32 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           }
         />
       </Hidden>
-    </WithStyles(ListItemSecondaryAction)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": "",
         }
       }
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={true}
         disableHoverListener={true}
         disableTouchListener={true}
         title="Remove all records"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove all records"
             disabled={true}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
@@ -306,7 +256,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "header",
@@ -314,23 +264,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     }
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)>
-        <pure(PeopleIcon) />
-      </WithStyles(ListItemIcon)>
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <PeopleIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
           "container": undefined,
@@ -338,13 +278,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={5}
         xs={10}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           secondary="Name as published"
           secondaryTypographyProps={
             Object {
@@ -352,15 +292,15 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             }
           }
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         sm={5}
         xs={12}
       />
-    </WithStyles(Grid)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -368,19 +308,9 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
               "secondary": "right paddingRight24",
@@ -394,32 +324,32 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           }
         />
       </Hidden>
-    </WithStyles(ListItemSecondaryAction)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": "",
         }
       }
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove all records"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
@@ -437,7 +367,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": "header",
@@ -445,23 +375,13 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
     }
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)>
-        <pure(PeopleIcon) />
-      </WithStyles(ListItemIcon)>
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <PeopleIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
           "container": undefined,
@@ -469,13 +389,13 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       }
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={5}
         xs={10}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           secondary="Name as published"
           secondaryTypographyProps={
             Object {
@@ -483,27 +403,17 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             }
           }
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         sm={5}
         xs={12}
       >
         <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
           xsDown={true}
-          xsUp={false}
         >
-          <WithStyles(ListItemText)
+          <WithStyles(ForwardRef(ListItemText))
             secondary="Role"
             secondaryTypographyProps={
               Object {
@@ -512,9 +422,9 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             }
           />
         </Hidden>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(ListItemSecondaryAction)
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -522,19 +432,9 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       }
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
               "secondary": "right paddingRight24",
@@ -548,32 +448,32 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
           }
         />
       </Hidden>
-    </WithStyles(ListItemSecondaryAction)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": "",
         }
       }
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove all records"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 
@@ -591,7 +491,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <WithStyles(ListItem)
+  <WithStyles(ForwardRef(ListItem))
     classes={
       Object {
         "root": undefined,
@@ -599,23 +499,13 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
     }
   >
     <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
       xsDown={true}
-      xsUp={false}
     >
-      <WithStyles(ListItemIcon)>
-        <pure(PeopleIcon) />
-      </WithStyles(ListItemIcon)>
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <PeopleIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
           "container": undefined,
@@ -623,13 +513,13 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       }
       container={true}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={3}
         sm={5}
         xs={10}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           secondary="Name as published"
           secondaryTypographyProps={
             Object {
@@ -637,15 +527,15 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
             }
           }
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         md={4}
         sm={5}
         xs={12}
       />
-    </WithStyles(Grid)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": undefined,
@@ -653,19 +543,9 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       }
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(ListItemText)
+        <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
               "secondary": "undefined test-class-1",
@@ -679,32 +559,32 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
           }
         />
       </Hidden>
-    </WithStyles(ListItemSecondaryAction)>
-    <WithStyles(ListItemSecondaryAction)
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
       classes={
         Object {
           "root": "test-class-2",
         }
       }
     >
-      <WithStyles(Tooltip)
+      <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
         disableTouchListener={false}
         title="Remove all records"
       >
         <span>
-          <WithStyles(IconButton)
+          <WithStyles(ForwardRef(IconButton))
             aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
-            <pure(DeleteForeverIcon) />
-          </WithStyles(IconButton)>
+            <DeleteForeverIcon />
+          </WithStyles(ForwardRef(IconButton))>
         </span>
-      </WithStyles(Tooltip)>
-    </WithStyles(ListItemSecondaryAction)>
-  </WithStyles(ListItem)>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
 

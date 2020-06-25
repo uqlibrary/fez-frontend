@@ -1,63 +1,43 @@
-import { ListRowHeader } from './ListRowHeader';
-import ListRowHeaderWithStyles from './ListRowHeader';
+import React from 'react';
+import ListRowHeader from './ListRowHeader';
+import { rtlRender, fireEvent, queryByText, waitFor } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
         disabled: false,
-        classes: {
-            center: '',
-            header: '',
-        },
+        listEditorId: 'test',
         ...testProps,
     };
-    return getElement(ListRowHeader, props);
+    return rtlRender(<ListRowHeader {...props} />);
 }
 
 describe('ListRowHeader renders ', () => {
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId } = setup();
+        expect(getByTestId('delete-all-test')).toBeInTheDocument();
     });
 
     it('header for contributor editor control with delete all disabled', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should show confirmation box', () => {
-        const showConfirmationFn = jest.fn();
-        const wrapper = setup();
-        wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn,
-        };
-
-        wrapper
-            .find('WithStyles(IconButton)')
-            .props()
-            .onClick();
-        expect(showConfirmationFn).toHaveBeenCalled();
-    });
-
-    it('should render default view with styles', () => {
-        const wrapper = getElement(ListRowHeaderWithStyles, { onDeleteAll: jest.fn() });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should set confirmation ref', () => {
-        const showConfirmationFn = jest.fn();
-        const wrapper = setup();
-        wrapper.instance().setConfirmationRef({
-            showConfirmation: showConfirmationFn,
-        });
-        wrapper.instance().showConfirmation();
-        expect(showConfirmationFn).toHaveBeenCalled();
+        const { getByTestId } = setup({ disabled: true });
+        expect(getByTestId('delete-all-test').disabled).toBeTruthy();
     });
 
     it('should render larger grid item', () => {
-        const wrapper = setup({
+        const { container } = setup({
             hideReorder: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(queryByText(container, 'Reorder items')).toBeNull();
+    });
+
+    it('should show confirmation box', async () => {
+        const onDeleteAllFn = jest.fn();
+        const { getByTestId } = setup({ onDeleteAll: onDeleteAllFn });
+
+        fireEvent.click(getByTestId('delete-all-test'));
+        await waitFor(() => getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        expect(onDeleteAllFn).toHaveBeenCalled();
     });
 });

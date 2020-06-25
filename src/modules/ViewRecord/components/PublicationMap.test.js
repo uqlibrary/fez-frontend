@@ -57,7 +57,10 @@ describe("Publication's map coordinates", () => {
             },
         };
         const wrapper = setup({}, true);
-        const geoCoords = [{ lat: 153.021781, lng: -27.489337 }, { lat: 153.021781, lng: -27.489337 }];
+        const geoCoords = [
+            { lat: 153.021781, lng: -27.489337 },
+            { lat: 153.021781, lng: -27.489337 },
+        ];
         wrapper.setState({ geoCoords });
         expect(wrapper.state().geoCoords).toBe(geoCoords);
     });

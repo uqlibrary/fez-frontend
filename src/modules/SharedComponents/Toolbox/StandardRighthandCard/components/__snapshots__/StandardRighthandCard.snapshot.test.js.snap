@@ -1,105 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title and help button 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={true}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       color="primary"
       variant="h6"
     >
       Title
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <Connect(WithStyles(HelpIcon))
+    <Connect(HelpIcon)
       buttonLabel="OK"
       text="Some help text"
       title="Help text"
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Divider) />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    <WithStyles(ForwardRef(Divider)) />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   />
-</WithStyles(Grid)>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title and help button and some content 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={true}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       color="primary"
       variant="h6"
     >
       Title
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    <Connect(WithStyles(HelpIcon))
+    <Connect(HelpIcon)
       buttonLabel="OK"
       text="Some help text"
       title="Help text"
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Divider) />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    <WithStyles(ForwardRef(Divider)) />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
     Some content
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`Snapshot tests for StandardRighthandCard component renders with title and no help icon 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={true}
   >
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       color="primary"
       variant="h6"
     >
       card title
-    </WithStyles(Typography)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Divider) />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    <WithStyles(ForwardRef(Divider)) />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   />
-</WithStyles(Grid)>
+</WithStyles(ForwardRef(Grid))>
 `;

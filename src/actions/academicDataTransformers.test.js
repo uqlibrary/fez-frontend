@@ -45,7 +45,12 @@ describe('Academic data transformers ', () => {
                     },
                 },
             ];
-            const expected = [['Journal Article', 29], ['Book Chapter', 6], ['Conference Paper', 1], ['Book', 1]];
+            const expected = [
+                ['Journal Article', 29],
+                ['Book Chapter', 6],
+                ['Conference Paper', 1],
+                ['Book', 1],
+            ];
             const result = transformers.getPublicationsPerType(data);
             expect(result).toEqual(expected);
         });
@@ -93,7 +98,11 @@ describe('Academic data transformers ', () => {
                     },
                 },
             ];
-            const expected = [['Journal Article', 29], ['Book Chapter', 6], ['Other', 2, 'Conference Paper, Book']];
+            const expected = [
+                ['Journal Article', 29],
+                ['Book Chapter', 6],
+                ['Other', 2, 'Conference Paper, Book'],
+            ];
             const result = transformers.getPublicationsPerType(data, 2);
             expect(result).toEqual(expected);
         });
@@ -317,7 +326,11 @@ describe('Academic data transformers ', () => {
                     },
                 },
             ];
-            const topPublications = [['Journal Article', 29], ['Book Chapter', 6], ['Other', 2]];
+            const topPublications = [
+                ['Journal Article', 29],
+                ['Book Chapter', 6],
+                ['Other', 2],
+            ];
             const expected = [
                 {
                     name: 'Journal Article',

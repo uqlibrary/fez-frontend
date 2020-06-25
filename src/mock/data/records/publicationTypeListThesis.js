@@ -81,7 +81,6 @@ export default {
             "fez_record_search_key_author_id": [
                 {
                     author: {
-
                         aut_id: 91159,
                         aut_orcid_id: null,
                         aut_org_username: null,
@@ -95,9 +94,7 @@ export default {
                     "rek_author_id_order": 1,
                     "rek_author_id_lookup": "Simon, Bruno"
                 }, {
-
                     author: {
-
                         aut_id: 91159,
                         aut_orcid_id: null,
                         aut_org_username: null,

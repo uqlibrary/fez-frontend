@@ -81,7 +81,7 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should not try to parse empty search location in componentWillReceiveProps lifecycle method', () => {
+    it('should not try to parse empty search location in UNSAFE_componentWillReceiveProps lifecycle method', () => {
         const wrapper = setup();
         const testFn = jest.fn();
         wrapper.instance().parseSearchQueryStringFromUrl = testFn;
@@ -186,7 +186,7 @@ describe('SearchRecords page', () => {
         const testAction = jest.fn();
         const wrapper = setup({ actions: { searchEspacePublications: testAction } });
 
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.records.search, state: { page: 2 } },
         });
@@ -197,7 +197,7 @@ describe('SearchRecords page', () => {
     it('should get publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
         const wrapper = setup({ actions: { searchEspacePublications: testAction } });
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.records.search, state: null },
         });

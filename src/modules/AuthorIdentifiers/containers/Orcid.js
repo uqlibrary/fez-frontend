@@ -13,10 +13,7 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
-let OrcidContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(Orcid);
+let OrcidContainer = connect(mapStateToProps, mapDispatchToProps)(Orcid);
 OrcidContainer = withRouter(OrcidContainer);
 
 export default OrcidContainer;

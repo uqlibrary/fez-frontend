@@ -22,7 +22,7 @@ GroupsWithoutCard.propTypes = {
 export const GroupsWithinCard = React.memo(({ title, groups, disabled }) => (
     <Grid item xs={12} key={title}>
         <AdminCard title={`${title}`} accentHeader>
-            <Grid container spacing={8}>
+            <Grid container spacing={1}>
                 <GroupsWithoutCard groups={groups} disabled={disabled} />
             </Grid>
         </AdminCard>
@@ -36,7 +36,7 @@ GroupsWithinCard.propTypes = {
 };
 
 export const Section = ({ disabled, cards }) => (
-    <Grid container spacing={8}>
+    <Grid container spacing={1}>
         {cards.map((card, index) =>
             !!card.title ? (
                 <GroupsWithinCard key={card.title} title={card.title} groups={card.groups} disabled={disabled} />

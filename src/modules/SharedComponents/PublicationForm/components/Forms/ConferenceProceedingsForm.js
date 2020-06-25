@@ -27,10 +27,10 @@ export default class ConferenceProceedingsForm extends Component {
     render() {
         const txt = formLocale.conferenceProceedings;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -48,7 +48,7 @@ export default class ConferenceProceedingsForm extends Component {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
@@ -88,6 +88,7 @@ export default class ConferenceProceedingsForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -126,6 +127,7 @@ export default class ConferenceProceedingsForm extends Component {
                         <Typography>{txt.editors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}
                             showContributorAssignment
@@ -146,6 +148,7 @@ export default class ConferenceProceedingsForm extends Component {
                             maxCount={5}
                             searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                             locale={locale.components.isbnForm.field}
+                            listEditorId="isbn"
                             disabled={this.props.submitting}
                         />
                     </StandardCard>
@@ -160,6 +163,7 @@ export default class ConferenceProceedingsForm extends Component {
                             name="fez_record_search_key_issn"
                             maxCount={5}
                             locale={locale.components.issnForm.field}
+                            listEditorId="issn"
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             disabled={this.props.submitting}
                         />
@@ -167,7 +171,7 @@ export default class ConferenceProceedingsForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

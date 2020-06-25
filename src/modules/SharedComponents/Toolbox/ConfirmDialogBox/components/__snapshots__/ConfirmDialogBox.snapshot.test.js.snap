@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConfirmDialogBox snapshots tests renders component with customised locale 1`] = `
-<WithStyles(Dialog)
+<WithStyles(ForwardRef(Dialog))
   open={false}
   style={
     Object {
@@ -9,85 +9,78 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
     }
   }
 >
-  <WithStyles(DialogTitle)>
+  <WithStyles(ForwardRef(DialogTitle))>
     ENG: Confirmation
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <WithStyles(DialogContentText)>
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogContentText))>
       ENG: Are you sure?
-    </WithStyles(DialogContentText)>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(DialogContentText))>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
         >
           ENG: Yes
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
+          data-testid="alternate-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           ENG: Maybe
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           ENG: No
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
 `;
 
 exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
-<WithStyles(Dialog)
+<WithStyles(ForwardRef(Dialog))
   open={false}
   style={
     Object {
@@ -95,58 +88,49 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
     }
   }
 >
-  <WithStyles(DialogTitle)>
+  <WithStyles(ForwardRef(DialogTitle))>
     Confirmation
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <WithStyles(DialogContentText)>
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogContentText))>
       Are you sure?
-    </WithStyles(DialogContentText)>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(DialogContentText))>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
         >
           Yes
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
 `;
 
 exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 1`] = `
-<WithStyles(Dialog)
+<WithStyles(ForwardRef(Dialog))
   open={false}
   style={
     Object {
@@ -154,72 +138,64 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
     }
   }
 >
-  <WithStyles(DialogTitle)>
+  <WithStyles(ForwardRef(DialogTitle))>
     Confirmation
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <WithStyles(DialogContentText)>
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogContentText))>
       Are you sure?
-    </WithStyles(DialogContentText)>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(DialogContentText))>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
         >
           Yes
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           No
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
 `;
 
 exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe buttons 1`] = `
-<WithStyles(Dialog)
+<WithStyles(ForwardRef(Dialog))
   open={false}
   style={
     Object {
@@ -227,81 +203,74 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
     }
   }
 >
-  <WithStyles(DialogTitle)>
+  <WithStyles(ForwardRef(DialogTitle))>
     Confirmation
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <WithStyles(DialogContentText)>
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogContentText))>
       Are you sure?
-    </WithStyles(DialogContentText)>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(DialogContentText))>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
         >
           Yes
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
+          data-testid="alternate-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           Maybe
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           No
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
 `;
 
 exports[`ConfirmDialogBox snapshots tests should have a proper style generator 1`] = `
@@ -341,7 +310,7 @@ Object {
 `;
 
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 1`] = `
-<WithStyles(Dialog)
+<WithStyles(ForwardRef(Dialog))
   open={true}
   style={
     Object {
@@ -349,72 +318,64 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
     }
   }
 >
-  <WithStyles(DialogTitle)>
+  <WithStyles(ForwardRef(DialogTitle))>
     Confirmation
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <WithStyles(DialogContentText)>
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogContentText))>
       Are you sure?
-    </WithStyles(DialogContentText)>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(DialogContentText))>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
         >
           Yes
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           No
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
 `;
 
 exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dialog 2`] = `
-<WithStyles(Dialog)
+<WithStyles(ForwardRef(Dialog))
   open={false}
   style={
     Object {
@@ -422,66 +383,58 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
     }
   }
 >
-  <WithStyles(DialogTitle)>
+  <WithStyles(ForwardRef(DialogTitle))>
     Confirmation
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <WithStyles(DialogContentText)>
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogContentText))>
       Are you sure?
-    </WithStyles(DialogContentText)>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Grid)
+    </WithStyles(ForwardRef(DialogContentText))>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Grid))
       container={true}
-      spacing={8}
+      spacing={1}
     >
       <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
         xsDown={true}
-        xsUp={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={true}
         />
       </Hidden>
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           autoFocus={true}
           color="primary"
+          data-testId="confirm-dialog-box"
           fullWidth={true}
           onClick={[Function]}
         >
           Yes
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="cancel-dialog-box"
           fullWidth={true}
           onClick={[Function]}
           variant="contained"
         >
           No
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
 `;

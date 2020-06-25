@@ -7,24 +7,33 @@ import { EXISTING_RECORD_API } from 'repositories/routes';
  * @param {object}
  * @returns {action}
  */
-export function loadRecordToView(pid) {
+export function loadRecordToView(pid, isEdit = false) {
     return dispatch => {
         dispatch({ type: actions.VIEW_RECORD_LOADING });
 
-        return get(EXISTING_RECORD_API({ pid: pid }))
+        return get(EXISTING_RECORD_API({ pid: pid, isEdit }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
                     payload: response.data,
+                    isDeleted: false,
                 });
 
                 return Promise.resolve(response.data);
             })
             .catch(error => {
-                dispatch({
-                    type: actions.VIEW_RECORD_LOAD_FAILED,
-                    payload: error.message,
-                });
+                if (error.response && error.response.status === 410 && error.response.data) {
+                    dispatch({
+                        type: actions.VIEW_RECORD_LOADED,
+                        payload: error.response.data.data,
+                        isDeleted: true,
+                    });
+                } else {
+                    dispatch({
+                        type: actions.VIEW_RECORD_LOAD_FAILED,
+                        payload: error.message,
+                    });
+                }
             });
     };
 }
@@ -48,5 +57,11 @@ export function clearRecordToView() {
 export function setHideCulturalSensitivityStatement() {
     return {
         type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+    };
+}
+
+export function unlockRecordToView() {
+    return {
+        type: actions.VIEW_RECORD_UNLOCK,
     };
 }

@@ -6,9 +6,9 @@ import Immutable from 'immutable';
 import locale from 'locale/pages';
 import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
 
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
@@ -25,50 +25,57 @@ import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY, RECORD_TYPE_RECORD } from 'config/general';
 
-const styles = theme => ({
-    helpIcon: {
-        color: theme.palette.secondary.main,
-        opacity: 0.66,
-        '&:hover': {
-            opacity: 0.87,
+const useStyles = makeStyles(
+    theme => ({
+        helpIcon: {
+            color: theme.palette.secondary.main,
+            opacity: 0.66,
+            '&:hover': {
+                opacity: 0.87,
+            },
         },
-    },
-    tabIndicator: {
-        height: 4,
-        backgroundColor: theme.palette.primary.main,
-    },
-    badgeMargin: {
-        top: 8,
-        left: 28,
-        width: 12,
-        height: 12,
-        fontSize: 10,
-        fontWeight: 'bold',
-        backgroundColor: '#595959',
-    },
-});
+        tabIndicator: {
+            height: 4,
+            backgroundColor: theme.palette.primary.main,
+        },
+        badgeMargin: {
+            top: 8,
+            left: 28,
+            width: 12,
+            height: 12,
+            fontSize: 10,
+            fontWeight: 'bold',
+            backgroundColor: '#595959',
+        },
+    }),
+    { withTheme: true },
+);
 
 export const AdminContainer = ({
     authorDetails,
-    classes,
     clearRecordToView,
     createMode,
     destroy,
+    dirty,
     disableSubmit,
     formErrors,
     handleSubmit,
     history,
     loadingRecordToView,
     loadRecordToView,
+    locked,
     match,
     recordToView,
+    isDeleted,
     submitSucceeded,
     submitting,
+    unlockRecord,
 }) => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
     const [showAddForm, setShowAddForm] = React.useState(!match.params.pid);
+    const classes = useStyles();
     const theme = useTheme();
     const tabErrors = React.useRef(null);
 
@@ -102,7 +109,7 @@ export const AdminContainer = ({
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     React.useEffect(() => {
-        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid);
+        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid, true);
         return () => {
             clearRecordToView();
         };
@@ -122,6 +129,7 @@ export const AdminContainer = ({
         }
         return false;
     };
+
     return (
         <React.Fragment>
             {createMode && showAddForm && (
@@ -145,12 +153,17 @@ export const AdminContainer = ({
                             handleSubmit={handleSubmit}
                             submitting={submitting}
                             submitSucceeded={submitSucceeded}
+                            dirty={dirty}
                             disableSubmit={disableSubmit}
                             history={history}
                             location={location}
                             createMode={createMode}
+                            isDeleted={isDeleted}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
+                            locked={locked}
+                            disabled
+                            unlockRecord={unlockRecord}
                             tabs={{
                                 identifiers: {
                                     component: IdentifiersSection,
@@ -207,32 +220,39 @@ export const AdminContainer = ({
 AdminContainer.propTypes = {
     actions: PropTypes.object,
     authorDetails: PropTypes.object,
-    classes: PropTypes.object,
     clearRecordToView: PropTypes.func,
     createMode: PropTypes.bool,
     destroy: PropTypes.func,
+    dirty: PropTypes.bool,
     disableSubmit: PropTypes.any,
     formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
+    locked: PropTypes.bool,
     match: PropTypes.object,
     recordToView: PropTypes.object,
+    isDeleted: PropTypes.bool,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
+    unlockRecord: PropTypes.func,
 };
 
-export const isSame = (prevProps, nextProps) =>
-    prevProps.disableSubmit === nextProps.disableSubmit &&
-    prevProps.submitting === nextProps.submitting &&
-    prevProps.submitSucceeded === nextProps.submitSucceeded &&
-    (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-    (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
-    (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
-    prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
-    prevProps.showAddForm === nextProps.showAddForm &&
-    prevProps.formErrors === nextProps.formErrors;
+export function isSame(prevProps, nextProps) {
+    return (
+        prevProps.disableSubmit === nextProps.disableSubmit &&
+        prevProps.submitting === nextProps.submitting &&
+        prevProps.submitSucceeded === nextProps.submitSucceeded &&
+        (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
+        (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
+        (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
+        prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
+        prevProps.showAddForm === nextProps.showAddForm &&
+        prevProps.formErrors === nextProps.formErrors &&
+        prevProps.locked === nextProps.locked
+    );
+}
 
-export default React.memo(withStyles(styles, { withTheme: true })(AdminContainer), isSame);
+export default React.memo(AdminContainer, isSame);

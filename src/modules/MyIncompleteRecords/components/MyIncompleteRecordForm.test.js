@@ -64,7 +64,7 @@ describe('MyIncompleteRecordForm', () => {
         expect(dispatch).toHaveBeenCalled();
     });
 
-    it('should reject onSubmit()', async() => {
+    it('should reject onSubmit()', async () => {
         const testValue = new Map({
             significance: '11111',
             impactStatement: {

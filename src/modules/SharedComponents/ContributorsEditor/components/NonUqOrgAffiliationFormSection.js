@@ -17,6 +17,8 @@ export default function NonUqOrgAffiliationFormSection({
     locale,
     disableAffiliationEdit,
     disableOrgTypeEdit,
+    orgAffiliationError,
+    orgAffiliationTypeError,
 }) {
     const options = ORG_AFFILIATION_TYPES.map(option => {
         return option.value !== '454045' ? (
@@ -27,7 +29,7 @@ export default function NonUqOrgAffiliationFormSection({
     });
 
     return (
-        <Grid container spacing={8}>
+        <Grid container spacing={1}>
             <Grid item xs={6}>
                 <TextField
                     required
@@ -37,16 +39,19 @@ export default function NonUqOrgAffiliationFormSection({
                     label={locale.fields.organisation.inputLabel}
                     placeholder={locale.fields.organisation.placeholder}
                     disabled={disableAffiliationEdit}
+                    error={orgAffiliationError}
                     id="org-affiliation-name"
                 />
             </Grid>
             <Grid item xs={6}>
-                <FormControl required fullWidth>
-                    <InputLabel>{locale.fields.organisationType.inputLabel}</InputLabel>
+                <FormControl required fullWidth error={orgAffiliationTypeError}>
+                    <InputLabel id="org-affiliation-type-label">{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select
                         value={orgType}
+                        name="org-affiliation-type"
                         onChange={onOrgTypeChange}
                         disabled={disableOrgTypeEdit}
+                        labelId="org-affiliation-type-label"
                         SelectDisplayProps={{
                             id: 'org-affiliation-type',
                         }}
@@ -68,6 +73,8 @@ NonUqOrgAffiliationFormSection.propTypes = {
     locale: PropTypes.object,
     disableAffiliationEdit: PropTypes.bool,
     disableOrgTypeEdit: PropTypes.bool,
+    orgAffiliationError: PropTypes.bool,
+    orgAffiliationTypeError: PropTypes.bool,
 };
 
 NonUqOrgAffiliationFormSection.defaultProps = {

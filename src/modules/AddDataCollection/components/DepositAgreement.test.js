@@ -1,57 +1,48 @@
-import { DepositAgreement, styles } from './DepositAgreement';
+import React from 'react';
+import DepositAgreement from './DepositAgreement';
+import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps) {
+function setup(testProps = {}) {
     const props = {
         disabled: false,
         isDepositAgreementAccepted: false,
         onChange: jest.fn(),
+        depositAgreementFieldId: 'rek-copyright',
         depositAgreement: 'test deposit agreement',
-        classes: {
-            label: '',
-            error: '',
-            accepted: '',
-        },
         ...testProps,
     };
 
-    return getElement(DepositAgreement, props);
+    return rtlRender(<DepositAgreement {...props} />);
 }
 
 describe('Component DepositAgreement', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId } = setup();
+        expect(getByTestId('rek-copyright-input')).toBeInTheDocument();
+        expect(getByTestId('rek-copyright-input')).not.toHaveAttribute('checked');
     });
 
     it('should render checked if deposit agreement accepted', () => {
-        const wrapper = setup({ isDepositAgreementAccepted: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId } = setup({ isDepositAgreementAccepted: true });
+        expect(getByTestId('rek-copyright-input')).toBeInTheDocument();
+        expect(getByTestId('rek-copyright-input')).toHaveAttribute('checked', '');
     });
 
-    it('should call onChange to handle change', () => {
+    it('should call onChange with "on" to handle change', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn });
-        wrapper.instance()._handleChange({ target: { checked: true } });
+        const { getByTestId } = setup({ onChange: testFn });
+        expect(getByTestId('rek-copyright-input')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-copyright-input'));
         expect(testFn).toHaveBeenCalledWith('on');
-        wrapper.instance()._handleChange({ target: { checked: false } });
-        expect(testFn).toHaveBeenCalledWith('off');
     });
 
-    it('should have a proper style generator', () => {
-        const theme = {
-            status: {
-                danger: 'test1',
-            },
-            palette: {
-                primary: {
-                    main: 'test2',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
+    it('should call onChange with "off" to handle change', () => {
+        const testFn = jest.fn();
+        const { getByTestId } = setup({ onChange: testFn, isDepositAgreementAccepted: true });
+        expect(getByTestId('rek-copyright-input')).toBeInTheDocument();
 
-        delete theme.status;
-        delete theme.palette;
-        expect(styles(theme)).toMatchSnapshot();
+        fireEvent.click(getByTestId('rek-copyright-input'));
+        expect(testFn).toHaveBeenCalledWith('off');
     });
 });

@@ -410,7 +410,9 @@ export default {
                         "srm_id": 75702,
                         "srm_issn": "1431-472X",
                         "srm_journal_name": "Not found in Sherpa Romeo",
-                        "srm_journal_link": "http://example.com"
+                        "srm_colour": "Not found in Sherpa Romeo",
+                        "srm_json": null,
+                        "srm_journal_link": null
                     },
                     "rek_issn_lookup": ""
                 }

@@ -135,13 +135,13 @@ describe('RichEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should call componentWillReceiveProps', () => {
+    it('should call UNSAFE_componentWillReceiveProps', () => {
         const wrapper = setup();
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         wrapper.setProps({
             disabled: true,
         });
-        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(UNSAFE_componentWillReceiveProps).toHaveBeenCalled();
     });
 
     it('should not set editor as read-only if disabled prop is not being changed', () => {
@@ -150,7 +150,7 @@ describe('RichEditor', () => {
         wrapper.instance().editorInstance = {
             setReadOnly: testFn,
         };
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             disabled: wrapper.instance().props.disabled,
         });
         expect(testFn).not.toBeCalled();

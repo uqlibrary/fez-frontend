@@ -15,13 +15,25 @@ const SelectFieldWrapper = props => {
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     delete filteredProps.errorText;
+
     return (
         <React.Fragment>
             <FormControl error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <InputLabel id={`${filteredProps.label}-label`}>{filteredProps.label}</InputLabel>
+                <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>
                 <Select
-                    id={`${filteredProps.label}`}
-                    inputProps={{ 'aria-labelledby': `${filteredProps.label}-label`, id: filteredProps.label }}
+                    inputProps={{
+                        'aria-labelledby': `${props.selectFieldId}-label`,
+                        'data-testid': `${props.selectFieldId}-input`,
+                        id: `${props.selectFieldId}-input`,
+                    }}
+                    SelectDisplayProps={{
+                        id: `${props.selectFieldId}-select`,
+                        'data-testid': `${props.selectFieldId}-select`,
+                    }}
+                    MenuProps={{
+                        id: `${props.selectFieldId}-options`,
+                        'data-testid': `${props.selectFieldId}-options`,
+                    }}
                     {...filteredProps}
                     autoWidth
                 />
@@ -33,6 +45,7 @@ const SelectFieldWrapper = props => {
 
 SelectFieldWrapper.propTypes = {
     ...Select.propTypes,
+    selectFieldId: PropTypes.string.isRequired,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,

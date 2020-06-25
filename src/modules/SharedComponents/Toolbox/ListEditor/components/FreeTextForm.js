@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     MUITextLabel: theme.overrides.MuiFormLabel,
     remindToAdd: {
         marginTop: 8,
         color: '#f06f0d',
     },
-});
+}));
 
 const onItemChangeCallback = (setItem, normalize) => {
     const callback = event => setItem(normalize(event.target.value));
@@ -27,12 +27,13 @@ export const FreeTextForm = ({
     disabled,
     errorText,
     remindToAdd,
-    classes,
     maxInputLength,
     normalize,
     required,
     itemSelectedToEdit,
+    listEditorId,
 }) => {
+    const classes = useStyles();
     const [item, setItem] = useState(itemSelectedToEdit || '');
     const [itemSubmitted, setItemSubmitted] = useState(false);
 
@@ -66,11 +67,12 @@ export const FreeTextForm = ({
     const inputLengthText = item && item.length > maxInputLength && `Limited to ${maxInputLength} characters`;
     const validationErrorText = isValid(item) || errorText;
     return (
-        <Grid container spacing={16} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }}>
                 <TextField
                     fullWidth
                     id={id}
+                    data-testid={`${listEditorId}-input`}
                     inputProps={{
                         ref: textField,
                     }}
@@ -83,8 +85,8 @@ export const FreeTextForm = ({
                     helperText={
                         validationErrorText || inputLengthText
                             ? `${!!validationErrorText ? validationErrorText : ''}${
-                                !!validationErrorText && !!inputLengthText ? ' - ' : ''
-                            }${!!inputLengthText ? inputLengthText : ''}`
+                                  !!validationErrorText && !!inputLengthText ? ' - ' : ''
+                              }${!!inputLengthText ? inputLengthText : ''}`
                             : null
                     }
                     disabled={disabled}
@@ -99,7 +101,8 @@ export const FreeTextForm = ({
             <Grid item xs={12} sm={2}>
                 <Button
                     fullWidth
-                    id="add-items"
+                    id={`add-${listEditorId}`}
+                    data-testid={`${listEditorId}-add`}
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}
@@ -118,11 +121,11 @@ FreeTextForm.propTypes = {
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
     remindToAdd: PropTypes.bool,
-    classes: PropTypes.object,
     maxInputLength: PropTypes.number,
     normalize: PropTypes.func,
     required: PropTypes.bool,
     itemSelectedToEdit: PropTypes.any,
+    listEditorId: PropTypes.string,
 };
 
 FreeTextForm.defaultProps = {
@@ -139,4 +142,4 @@ FreeTextForm.defaultProps = {
     itemSelectedToEdit: '',
 };
 
-export default React.memo(withStyles(styles)(FreeTextForm));
+export default React.memo(FreeTextForm);

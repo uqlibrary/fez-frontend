@@ -9,40 +9,20 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
         "getState": [MockFunction] {
           "calls": Array [
             Array [],
-            Array [],
           ],
           "results": Array [
             Object {
               "type": "return",
               "value": Immutable.Map {},
             },
-            Object {
-              "type": "return",
-              "value": Immutable.Map {},
-            },
           ],
         },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "subscribe": [MockFunction],
       },
       "subscription": Subscription {
         "handleChangeWrapper": [Function],
         "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
           "notify": [Function],
-          "subscribe": [Function],
         },
         "onStateChange": [Function],
         "parentSub": undefined,
@@ -51,6 +31,68 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
           "getState": [MockFunction] {
             "calls": Array [
               Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(Component)
+    allowFreeText={true}
+    authorIdFieldId="rek-author-id"
+    error={true}
+    errorText="This field is required"
+    hideLabel={true}
+    onChange={[Function]}
+    value={
+      Object {
+        "id": null,
+        "value": undefined,
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for AuthorIdLookup for non-numeric value 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
               Array [],
             ],
             "results": Array [
@@ -58,38 +100,28 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
                 "type": "return",
                 "value": Immutable.Map {},
               },
-              Object {
-                "type": "return",
-                "value": Immutable.Map {},
-              },
             ],
           },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
+          "subscribe": [MockFunction],
         },
-        "unsubscribe": undefined,
+        "unsubscribe": null,
       },
     }
   }
 >
-  <AuthorIdField
+  <Connect(Component)
     allowFreeText={true}
+    authorIdFieldId="rek-author-id"
     error={true}
     errorText="This field is required"
     hideLabel={true}
     onChange={[Function]}
-    value={null}
+    value={
+      Object {
+        "id": null,
+        "value": undefined,
+      }
+    }
   />
 </ContextProvider>
 `;
@@ -103,40 +135,20 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
         "getState": [MockFunction] {
           "calls": Array [
             Array [],
-            Array [],
           ],
           "results": Array [
             Object {
               "type": "return",
               "value": Immutable.Map {},
             },
-            Object {
-              "type": "return",
-              "value": Immutable.Map {},
-            },
           ],
         },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "subscribe": [MockFunction],
       },
       "subscription": Subscription {
         "handleChangeWrapper": [Function],
         "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
           "notify": [Function],
-          "subscribe": [Function],
         },
         "onStateChange": [Function],
         "parentSub": undefined,
@@ -145,6 +157,68 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
           "getState": [MockFunction] {
             "calls": Array [
               Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(Component)
+    allowFreeText={true}
+    authorIdFieldId="rek-author-id"
+    error={true}
+    errorText="This field is required"
+    hideLabel={true}
+    onChange={[Function]}
+    value={
+      Object {
+        "id": null,
+        "value": undefined,
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for AuthorIdLookup for numeric value 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
               Array [],
             ],
             "results": Array [
@@ -152,38 +226,28 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
                 "type": "return",
                 "value": Immutable.Map {},
               },
-              Object {
-                "type": "return",
-                "value": Immutable.Map {},
-              },
             ],
           },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
+          "subscribe": [MockFunction],
         },
-        "unsubscribe": undefined,
+        "unsubscribe": null,
       },
     }
   }
 >
-  <AuthorIdField
+  <Connect(Component)
     allowFreeText={true}
+    authorIdFieldId="rek-author-id"
     error={true}
     errorText="This field is required"
     hideLabel={true}
     onChange={[Function]}
-    value={null}
+    value={
+      Object {
+        "id": null,
+        "value": undefined,
+      }
+    }
   />
 </ContextProvider>
 `;
@@ -197,40 +261,20 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Collec
         "getState": [MockFunction] {
           "calls": Array [
             Array [],
-            Array [],
           ],
           "results": Array [
             Object {
               "type": "return",
               "value": Immutable.Map {},
             },
-            Object {
-              "type": "return",
-              "value": Immutable.Map {},
-            },
           ],
         },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "subscribe": [MockFunction],
       },
       "subscription": Subscription {
         "handleChangeWrapper": [Function],
         "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
           "notify": [Function],
-          "subscribe": [Function],
         },
         "onStateChange": [Function],
         "parentSub": undefined,
@@ -239,6 +283,65 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Collec
           "getState": [MockFunction] {
             "calls": Array [
               Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(Component)
+    disableClearable={true}
+    error={false}
+    onChange={[MockFunction]}
+    selectedValue={Array []}
+    style={
+      Object {
+        "marginTop": 0,
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for CollectionsLookup field 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
               Array [],
             ],
             "results": Array [
@@ -246,37 +349,33 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Collec
                 "type": "return",
                 "value": Immutable.Map {},
               },
-              Object {
-                "type": "return",
-                "value": Immutable.Map {},
-              },
             ],
           },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
+          "subscribe": [MockFunction],
         },
-        "unsubscribe": undefined,
+        "unsubscribe": null,
       },
     }
   }
 >
-  <CollectionsSelectField
-    autoWidth={false}
-    displayEmpty={true}
+  <Connect(Component)
+    disableClearable={true}
     error={false}
-    hideLabel={true}
-    onChange={[MockFunction]}
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "Test Value",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     selectedValue={Array []}
     style={
       Object {
@@ -296,40 +395,20 @@ exports[`AdvancedSearchRowInput should call onChange from input props for OrgUni
         "getState": [MockFunction] {
           "calls": Array [
             Array [],
-            Array [],
           ],
           "results": Array [
             Object {
               "type": "return",
               "value": Immutable.Map {},
             },
-            Object {
-              "type": "return",
-              "value": Immutable.Map {},
-            },
           ],
         },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "subscribe": [MockFunction],
       },
       "subscription": Subscription {
         "handleChangeWrapper": [Function],
         "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
           "notify": [Function],
-          "subscribe": [Function],
         },
         "onStateChange": [Function],
         "parentSub": undefined,
@@ -338,6 +417,62 @@ exports[`AdvancedSearchRowInput should call onChange from input props for OrgUni
           "getState": [MockFunction] {
             "calls": Array [
               Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(Component)
+    allowFreeText={true}
+    error={true}
+    errorText="This field is required"
+    hideLabel={true}
+    onChange={[Function]}
+    value={null}
+  />
+</ContextProvider>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for OrgUnitLookup field 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
               Array [],
             ],
             "results": Array [
@@ -345,32 +480,16 @@ exports[`AdvancedSearchRowInput should call onChange from input props for OrgUni
                 "type": "return",
                 "value": Immutable.Map {},
               },
-              Object {
-                "type": "return",
-                "value": Immutable.Map {},
-              },
             ],
           },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
+          "subscribe": [MockFunction],
         },
-        "unsubscribe": undefined,
+        "unsubscribe": null,
       },
     }
   }
 >
-  <OrgUnitNameField
+  <Connect(Component)
     allowFreeText={true}
     error={true}
     errorText="This field is required"
@@ -390,40 +509,20 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
         "getState": [MockFunction] {
           "calls": Array [
             Array [],
-            Array [],
           ],
           "results": Array [
             Object {
               "type": "return",
               "value": Immutable.Map {},
             },
-            Object {
-              "type": "return",
-              "value": Immutable.Map {},
-            },
           ],
         },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "subscribe": [MockFunction],
       },
       "subscription": Subscription {
         "handleChangeWrapper": [Function],
         "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
           "notify": [Function],
-          "subscribe": [Function],
         },
         "onStateChange": [Function],
         "parentSub": undefined,
@@ -432,6 +531,68 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
           "getState": [MockFunction] {
             "calls": Array [
               Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(GenericSelectField)
+    autoWidth={false}
+    displayEmpty={false}
+    error={true}
+    errorText="This field is required"
+    hideLabel={true}
+    onChange={[Function]}
+    selectedValue={null}
+    style={
+      Object {
+        "marginTop": 0,
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for StatusLookup field 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
               Array [],
             ],
             "results": Array [
@@ -439,32 +600,16 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
                 "type": "return",
                 "value": Immutable.Map {},
               },
-              Object {
-                "type": "return",
-                "value": Immutable.Map {},
-              },
             ],
           },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
+          "subscribe": [MockFunction],
         },
-        "unsubscribe": undefined,
+        "unsubscribe": null,
       },
     }
   }
 >
-  <UnpublishedStatusField
+  <Connect(GenericSelectField)
     autoWidth={false}
     displayEmpty={false}
     error={true}
@@ -482,15 +627,63 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
 `;
 
 exports[`AdvancedSearchRowInput should call onChange from input props for TextField 1`] = `
-<TextFieldWrapper
-  autoComplete="search"
-  classes={Object {}}
-  error={true}
-  errorText="This field is required"
-  hideLabel={true}
-  id="textfield"
-  onChange={[Function]}
-/>
+<Fragment>
+  <WithStyles(ForwardRef(TextField))
+    InputLabelProps={
+      Object {
+        "data-testid": "text-field-label",
+        "hidden": true,
+        "htmlFor": "text-field-input",
+        "id": "text-field-label",
+        "shrink": undefined,
+      }
+    }
+    autoComplete="search"
+    error={true}
+    helperText="This field is required"
+    id="text-field"
+    inputProps={
+      Object {
+        "aria-label": undefined,
+        "aria-labelledby": "text-field-label",
+        "data-testid": "text-field-input",
+        "id": "text-field-input",
+        "label": undefined,
+      }
+    }
+    onChange={[Function]}
+  />
+</Fragment>
+`;
+
+exports[`AdvancedSearchRowInput should call onChange from input props for TextField 2`] = `
+<Fragment>
+  <WithStyles(ForwardRef(TextField))
+    InputLabelProps={
+      Object {
+        "data-testid": "text-field-label",
+        "hidden": true,
+        "htmlFor": "text-field-input",
+        "id": "text-field-label",
+        "shrink": undefined,
+      }
+    }
+    autoComplete="search"
+    error={true}
+    helperText="This field is required"
+    id="text-field"
+    inputProps={
+      Object {
+        "aria-label": undefined,
+        "aria-labelledby": "text-field-label",
+        "data-testid": "text-field-input",
+        "id": "text-field-input",
+        "label": undefined,
+      }
+    }
+    onChange={[Function]}
+  />
+</Fragment>
 `;
 
 exports[`AdvancedSearchRowInput should call onChange from input props from ThesisTypeLookup field 1`] = `
@@ -502,40 +695,20 @@ exports[`AdvancedSearchRowInput should call onChange from input props from Thesi
         "getState": [MockFunction] {
           "calls": Array [
             Array [],
-            Array [],
           ],
           "results": Array [
             Object {
               "type": "return",
               "value": Immutable.Map {},
             },
-            Object {
-              "type": "return",
-              "value": Immutable.Map {},
-            },
           ],
         },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        },
+        "subscribe": [MockFunction],
       },
       "subscription": Subscription {
         "handleChangeWrapper": [Function],
         "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
           "notify": [Function],
-          "subscribe": [Function],
         },
         "onStateChange": [Function],
         "parentSub": undefined,
@@ -544,39 +717,22 @@ exports[`AdvancedSearchRowInput should call onChange from input props from Thesi
           "getState": [MockFunction] {
             "calls": Array [
               Array [],
-              Array [],
             ],
             "results": Array [
               Object {
                 "type": "return",
                 "value": Immutable.Map {},
               },
-              Object {
-                "type": "return",
-                "value": Immutable.Map {},
-              },
             ],
           },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
+          "subscribe": [MockFunction],
         },
-        "unsubscribe": undefined,
+        "unsubscribe": null,
       },
     }
   }
 >
-  <ThesisSubtypeField
+  <Connect(GenericSelectField)
     autoWidth={false}
     displayEmpty={true}
     error={false}
@@ -592,6 +748,64 @@ exports[`AdvancedSearchRowInput should call onChange from input props from Thesi
 </ContextProvider>
 `;
 
-exports[`AdvancedSearchRowInput should render default view 1`] = `""`;
-
-exports[`AdvancedSearchRowInput should render given children function 1`] = `"Testing"`;
+exports[`AdvancedSearchRowInput should call onChange from input props from ThesisTypeLookup field 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [MockFunction],
+        "getState": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Immutable.Map {},
+            },
+          ],
+        },
+        "subscribe": [MockFunction],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [MockFunction],
+          "getState": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": Immutable.Map {},
+              },
+            ],
+          },
+          "subscribe": [MockFunction],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(GenericSelectField)
+    autoWidth={false}
+    displayEmpty={true}
+    error={false}
+    hideLabel={true}
+    onChange={[Function]}
+    selectedValue={Array []}
+    style={
+      Object {
+        "marginTop": 0,
+      }
+    }
+  />
+</ContextProvider>
+`;

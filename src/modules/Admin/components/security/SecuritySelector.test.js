@@ -5,6 +5,7 @@ function setup(testProps) {
         classes: {},
         disabled: false,
         selectedPolicyKey: 1,
+        securitySelectorId: 'rek-security',
         text: {
             description: 'test1',
             prompt: 'test2',

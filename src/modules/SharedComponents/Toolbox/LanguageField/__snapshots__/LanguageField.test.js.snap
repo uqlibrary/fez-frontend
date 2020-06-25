@@ -266,7 +266,7 @@ exports[`LanguageField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  selectedValue={Array []}
+  value={Array []}
 />
 `;
 
@@ -553,7 +553,7 @@ exports[`LanguageField component should render immutable list as selected value 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",
@@ -831,7 +831,7 @@ exports[`LanguageField component should render when given a default value field 
     }
   }
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "afr",
     ]
@@ -1122,7 +1122,7 @@ exports[`LanguageField component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  selectedValue={
+  value={
     Array [
       "One",
       "Two",

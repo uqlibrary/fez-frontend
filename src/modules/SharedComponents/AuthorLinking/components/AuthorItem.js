@@ -11,14 +11,14 @@ import Link from '@material-ui/icons/Link';
 
 export const styles = theme => ({
     authorLinkIcon: {
-        marginRight: theme.spacing.unit,
+        marginRight: theme.spacing(),
     },
     buttonBase: {
         justifyContent: 'flex-start',
     },
     authorOrder: {
-        marginLeft: theme.spacing.unit * 6,
-        marginBottom: theme.spacing.unit * 2,
+        marginLeft: theme.spacing(6),
+        marginBottom: theme.spacing(2),
     },
 });
 

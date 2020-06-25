@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
@@ -9,6 +9,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
+import { default as globalLocale } from 'locale/global';
 
 import {
     AFFILIATION_TYPE_NOT_UQ,
@@ -16,386 +17,366 @@ import {
     DATA_COLLECTION_CREATOR_ROLES,
     ORG_TYPE_ID_UNIVERSITY,
 } from 'config/general';
-import locale from 'locale/global';
 
-export class ContributorForm extends PureComponent {
-    static propTypes = {
-        canEdit: PropTypes.bool,
-        contributor: PropTypes.object,
-        disabled: PropTypes.bool,
-        disableNameAsPublished: PropTypes.bool,
-        displayCancel: PropTypes.bool,
-        enableUqIdentifierOnAffiliationChange: PropTypes.bool,
-        errorText: PropTypes.string,
-        isContributorAssigned: PropTypes.bool,
-        isNtro: PropTypes.bool,
-        locale: PropTypes.object,
-        onSubmit: PropTypes.func.isRequired,
-        required: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
-    };
+const initialContributorState = {
+    nameAsPublished: '',
+    creatorRole: '',
+    uqIdentifier: '',
+    orgaff: '',
+    orgtype: '',
+    affiliation: '',
+    uqUsername: '',
+};
 
-    static defaultProps = {
-        canEdit: false,
-        contributor: {},
-        displayCancel: false,
-        disableNameAsPublished: false,
-        enableUqIdentifierOnAffiliationChange: true,
-        locale: {
-            nameAsPublishedLabel: 'Name as published',
-            nameAsPublishedHint: 'Please type the name exactly as published',
-            creatorRoleLabel: 'Creator role',
-            creatorRoleHint: 'Role of the creator in relation to the dataset',
-            identifierLabel: 'UQ identifier (if available)',
-            addButton: 'Add author',
-            descriptionStep1: (
-                <div>
-                    <span className="authorSteps">Step 1 of 2</span>- Please <b>add to a list of contributors below</b>,
-                    in the format and order that they are published.
-                </div>
-            ),
-            descriptionStep1NoStep2: (
-                <div>
-                    Please <b>add to a list of contributors below</b>, in the format and order that they are published.
-                </div>
-            ),
-        },
-        required: false,
-        showIdentifierLookup: false,
-        showRoleInput: false,
-    };
+export const ContributorForm = ({
+    canEdit,
+    contributor: initialContributor,
+    contributorFormId,
+    disabled,
+    disableNameAsPublished,
+    displayCancel,
+    isContributorAssigned,
+    isNtro,
+    locale,
+    onSubmit,
+    required,
+    showContributorAssignment,
+    showIdentifierLookup: initialShowIdentifierLookup,
+    showRoleInput,
+}) => {
+    const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
+    const [clearRoleInput, setClearRoleInput] = useState(true);
+    const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
+    const [uqIdentifierUpdatedFlag, setUqIdentifierUpdatedFlag] = useState(false);
+    const [isEditFormClean, setIsEditFormClean] = useState(!!initialContributor.nameAsPublished);
 
-    constructor(props) {
-        super(props);
+    const resetInternalState = useCallback(() => {
+        setContributor(initialContributor);
+        setClearRoleInput(true);
+        setShowIdentifierLookup(initialShowIdentifierLookup);
+    }, [initialContributor, initialShowIdentifierLookup, setContributor]);
 
-        this.state = this.defaultState(props);
-    }
+    const _onSubmit = useCallback(
+        event => {
+            // add contributor if user hits 'enter' key on input field
+            if (
+                disabled ||
+                (event &&
+                    event.key &&
+                    (event.key !== 'Enter' ||
+                        !contributor.nameAsPublished ||
+                        contributor.nameAsPublished.trim().length === 0 ||
+                        (showRoleInput && contributor.creatorRole.length === 0) ||
+                        (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
+                            contributor.orgaff.trim().length === 0 &&
+                            contributor.orgtype.trim().length === 0)))
+            ) {
+                return;
+            }
 
-    componentWillReceiveProps(nextProps) {
-        this.props.contributor !== nextProps.contributor &&
-            this.setState({
-                ...this.state,
-                contributor: {
-                    ...nextProps.contributor,
-                },
+            // pass on the selected contributor
+            onSubmit({
+                ...contributor,
+                orgtype:
+                    (contributor.affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
+                orgaff:
+                    (contributor.affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
+                    contributor.orgaff,
             });
-    }
 
-    defaultState = props => ({
-        clearRoleInput: true,
-        contributor: {
-            nameAsPublished: '',
-            creatorRole: '',
-            uqIdentifier: '',
-            orgaff: '',
-            orgtype: '',
-            affiliation: '',
-            uqUsername: '',
-            ...props.contributor,
+            // reset internal state
+            resetInternalState();
         },
-        showIdentifierLookup: props.showIdentifierLookup,
-    });
+        [contributor, disabled, onSubmit, resetInternalState, showRoleInput],
+    );
 
-    _onSubmit = event => {
-        const { contributor } = this.state;
-        // add contributor if user hits 'enter' key on input field
-        if (
-            this.props.disabled ||
-            (event &&
-                event.key &&
-                (event.key !== 'Enter' ||
-                    !contributor.nameAsPublished ||
-                    contributor.nameAsPublished.trim().length === 0 ||
-                    (this.props.showRoleInput && contributor.creatorRole.length === 0) ||
-                    (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
-                        contributor.orgaff.trim().length === 0 &&
-                        contributor.orgtype.trim().length === 0)))
-        ) {
-            return;
-        }
-
-        // pass on the selected contributor
-        this.props.onSubmit({
-            ...contributor,
-            orgtype: (contributor.affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
-            orgaff: (contributor.affiliation === AFFILIATION_TYPE_UQ && locale.global.orgTitle) || contributor.orgaff,
-        });
-
-        // reset internal state
-        this.setState(this.defaultState(this.props));
+    const _onCancel = () => {
+        onSubmit({ ...initialContributor });
+        resetInternalState();
     };
 
-    _onCancel = () => {
-        this.props.onSubmit({ ...this.props.contributor });
-        this.setState(this.defaultState(this.props));
-    };
-
-    _onNameChanged = event => {
+    const _onNameChanged = event => {
         const nameAsPublished = event.target.value;
-        this.setState(prevState => ({
-            ...prevState,
-            contributor: {
-                ...prevState.contributor,
-                nameAsPublished,
-            },
-            clearRoleInput: true,
-        }));
+        setContributor({ ...contributor, nameAsPublished });
+        setClearRoleInput(true);
     };
 
-    _onRoleChanged = value => {
-        this.setState(
-            prevState => ({
-                ...prevState,
-                contributor: {
-                    ...prevState.contributor,
-                    creatorRole: value,
-                },
-                clearRoleInput: DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value),
-            }),
-            () => {
-                this.state.contributor.nameAsPublished.trim().length !== 0 &&
-                    DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value) &&
-                    this._onSubmit();
-            },
-        );
+    const _onRoleChanged = value => {
+        setContributor({ ...contributor, creatorRole: value });
+        setClearRoleInput(DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value));
+        setIsEditFormClean(false);
     };
 
-    _onUQIdentifierSelected = selectedItem => {
-        this.setState(
-            prevState => ({
-                ...prevState,
-                contributor: {
-                    ...prevState.contributor,
-                    nameAsPublished:
-                        prevState.contributor.nameAsPublished ||
-                        (selectedItem &&
-                            selectedItem.aut_lname &&
-                            `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`) ||
-                        '',
-                    uqIdentifier: `${selectedItem.aut_id}`,
-                    uqUsername: `${selectedItem.aut_org_username ||
-                        selectedItem.aut_student_username ||
-                        selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
-                    ...selectedItem,
-                },
-            }),
-            () => {
-                (!this.props.canEdit ||
-                    (this.props.canEdit && !this.props.showIdentifierLookup && !this.props.showRoleInput) ||
-                    (this.props.canEdit &&
-                        this.props.showIdentifierLookup &&
-                        this.state.contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ)) &&
-                    this._onSubmit();
-            },
-        );
+    const _onUQIdentifierSelected = selectedItem => {
+        setContributor({
+            ...contributor,
+            nameAsPublished:
+                contributor.nameAsPublished ||
+                (selectedItem && selectedItem.aut_lname && `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
+            uqIdentifier: `${selectedItem.aut_id}`,
+            orgaff:
+                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
+                contributor.orgaff,
+            orgtype:
+                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
+            uqUsername: `${selectedItem.aut_org_username ||
+                selectedItem.aut_student_username ||
+                selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
+            ...selectedItem,
+        });
+        setUqIdentifierUpdatedFlag(true);
+        setIsEditFormClean(false);
     };
 
-    _onUQIdentifierCleared = () => {
-        this.setState(
-            prevState => ({
-                ...prevState,
-                contributor: {
-                    nameAsPublished: prevState.contributor.nameAsPublished,
-                    creatorRole: prevState.contributor.creatorRole,
-                    orgaff: 'Missing',
-                    orgtype: '',
-                    uqIdentifier: '0',
-                    uqUsername: '',
-                    affiliation: '',
-                },
-            }),
-            () => {
-                (!this.props.canEdit || (this.props.canEdit && !this.props.showRoleInput)) && this._onSubmit();
-            },
-        );
+    const _onUQIdentifierCleared = () => {
+        setContributor({
+            nameAsPublished: contributor.nameAsPublished,
+            creatorRole: contributor.creatorRole,
+            orgaff: 'Missing',
+            orgtype: '',
+            uqIdentifier: '0',
+            uqUsername: '',
+            affiliation: '',
+        });
+        setUqIdentifierUpdatedFlag(true);
+        setIsEditFormClean(false);
     };
 
-    handleAffiliationChange = event => {
-        const affiliation = event.target.value;
-        this.setState(prevState => ({
-            ...prevState,
-            contributor: {
-                ...prevState.contributor,
-                affiliation,
-            },
-        }));
+    const handleAffiliationChange = event => {
+        setContributor({
+            ...contributor,
+            affiliation: event.target.value,
+        });
     };
 
-    handleOrgAffliationChange = event => {
-        const orgaff = event.target.value;
-        this.setState(prevState => ({
-            ...prevState,
-            ...{
-                contributor: {
-                    ...prevState.contributor,
-                    orgaff,
-                },
-            },
-        }));
+    const handleOrgAffliationChange = event => {
+        setContributor({
+            ...contributor,
+            orgaff: event.target.value,
+        });
     };
 
-    handleOrgTypeChange = event => {
-        const orgtype = event.target.value;
-        this.setState(prevState => ({
-            ...prevState,
-            contributor: {
-                ...prevState.contributor,
-                orgtype,
-            },
-        }));
+    const handleOrgTypeChange = event => {
+        setContributor({
+            ...contributor,
+            orgtype: event.target.value,
+        });
     };
 
-    render() {
-        const {
-            canEdit,
-            disabled,
-            disableNameAsPublished,
-            displayCancel,
-            isContributorAssigned,
-            isNtro,
-            locale,
-            required,
-            showContributorAssignment,
-            showIdentifierLookup,
-            showRoleInput,
-        } = this.props;
+    const description = showContributorAssignment ? locale.descriptionStep1 : locale.descriptionStep1NoStep2;
+    const buttonDisabled =
+        disabled ||
+        (contributor.nameAsPublished || '').trim().length === 0 ||
+        (showRoleInput && contributor.creatorRole.length === 0) ||
+        (isNtro &&
+            contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
+            (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
+    const addButtonLabel = canEdit && !!initialContributor.nameAsPublished ? 'Change Details' : locale.addButton;
 
-        const { contributor } = this.state;
-        const description = showContributorAssignment ? locale.descriptionStep1 : locale.descriptionStep1NoStep2;
-        const buttonDisabled =
-            disabled ||
-            (contributor.nameAsPublished || '').trim().length === 0 ||
-            (showRoleInput && contributor.creatorRole.length === 0) ||
-            (isNtro &&
-                contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
-                (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
-        const addButtonLabel =
-            canEdit && !!this.props.contributor.nameAsPublished ? 'Change Details' : locale.addButton;
+    useEffect(() => {
+        if (
+            uqIdentifierUpdatedFlag &&
+            (!canEdit ||
+                (canEdit && !isNtro && !showRoleInput) ||
+                (canEdit && isNtro && contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ))
+        ) {
+            _onSubmit();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [canEdit, showRoleInput, uqIdentifierUpdatedFlag]);
 
+    useEffect(() => {
+        if (
+            !isEditFormClean &&
+            contributor.nameAsPublished.trim().length !== 0 &&
+            contributor.creatorRole !== '' &&
+            DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === contributor.creatorRole)
+        ) {
+            _onSubmit();
+        }
+    }, [_onSubmit, contributor.creatorRole, contributor.nameAsPublished, isEditFormClean]);
+
+    const renderUqIdField = () => {
+        const prefilledSearch = !!contributor && contributor.uqIdentifier === '0';
+        if (prefilledSearch) {
+            contributor.uqUsername = contributor.nameAsPublished;
+        }
         return (
-            <React.Fragment>
-                {description}
-                <Grid container spacing={8} style={{ marginTop: 8 }} id="contributorForm">
-                    {isNtro && (
-                        <Grid item xs={12} sm={2}>
-                            <OrgAffiliationTypeSelector
-                                affiliation={contributor.affiliation}
-                                onAffiliationChange={this.handleAffiliationChange}
-                                error={required && !contributor.affiliation && !isContributorAssigned}
-                                disabled={disabled}
-                            />
-                        </Grid>
-                    )}
-                    <Grid item xs={12} sm>
-                        <TextField
+            <UqIdField
+                disabled={disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)}
+                floatingLabelText="UQ Author ID"
+                hintText="Type UQ author name to search"
+                uqIdFieldId={`${contributorFormId}-aut-id`}
+                key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
+                onChange={_onUQIdentifierSelected}
+                onClear={_onUQIdentifierCleared}
+                value={contributor.uqUsername || contributor.uqIdentifier || ''}
+                prefilledSearch={prefilledSearch}
+            />
+        );
+    };
+
+    return (
+        <React.Fragment>
+            {description}
+            <Grid container spacing={1} style={{ marginTop: 8 }} id="contributorForm">
+                {isNtro && (
+                    <Grid item xs={12} sm={2}>
+                        <OrgAffiliationTypeSelector
+                            affiliation={contributor.affiliation}
+                            onAffiliationChange={handleAffiliationChange}
+                            error={required && !contributor.affiliation && !isContributorAssigned}
+                            disabled={disabled}
+                        />
+                    </Grid>
+                )}
+                <Grid item xs={12} sm>
+                    <TextField
+                        fullWidth
+                        id={locale.nameAsPublishedFieldId || 'name-as-published'}
+                        textFieldId={contributorFormId}
+                        label={locale.nameAsPublishedLabel}
+                        placeholder={locale.nameAsPublishedHint}
+                        value={contributor.nameAsPublished}
+                        onChange={_onNameChanged}
+                        onKeyDown={_onSubmit}
+                        disabled={
+                            disabled || disableNameAsPublished || (!canEdit && isNtro && contributor.affiliation === '')
+                        }
+                        required={required}
+                        autoComplete="off"
+                        error={
+                            !isContributorAssigned &&
+                            (contributor.nameAsPublished || '').trim().length === 0 &&
+                            (isNtro ? contributor.affiliation !== '' : !!required)
+                        }
+                    />
+                </Grid>
+                {(((showIdentifierLookup || isNtro) &&
+                    (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
+                    (!isNtro && canEdit) ||
+                    (showIdentifierLookup && canEdit)) && (
+                    <Grid item xs={12} sm={3}>
+                        {renderUqIdField()}
+                    </Grid>
+                )}
+                {showRoleInput && (
+                    <Grid item xs={12} sm={12} md={(showIdentifierLookup && 3) || 5}>
+                        <RoleField
                             fullWidth
-                            id={locale.nameAsPublishedFieldId || 'nameAsPublishedField'}
-                            label={locale.nameAsPublishedLabel}
-                            placeholder={locale.nameAsPublishedHint}
-                            value={contributor.nameAsPublished}
-                            onChange={this._onNameChanged}
-                            onKeyDown={this._onSubmit}
-                            disabled={
-                                disabled ||
-                                disableNameAsPublished ||
-                                (!canEdit && isNtro && contributor.affiliation === '')
-                            }
+                            key={`role-input-${(contributor.nameAsPublished || '').trim().length === 0}`}
+                            id="creator-role-field"
+                            floatingLabelText={locale.creatorRoleLabel}
+                            hintText={locale.creatorRoleHint}
+                            onChange={_onRoleChanged}
+                            disabled={disabled || contributor.nameAsPublished.trim().length === 0}
                             required={required}
                             autoComplete="off"
                             error={
-                                !isContributorAssigned &&
-                                (contributor.nameAsPublished || '').trim().length === 0 &&
-                                (isNtro ? contributor.affiliation !== '' : !!required)
+                                contributor.nameAsPublished.trim().length === 0
+                                    ? false
+                                    : contributor.creatorRole.trim().length === 0
                             }
+                            value={contributor.creatorRole}
+                            clearInput={clearRoleInput}
                         />
                     </Grid>
-                    {(((showIdentifierLookup || isNtro) &&
-                        (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
-                        (!isNtro && canEdit) ||
-                        (showIdentifierLookup && canEdit)) && (
-                        <Grid item xs={12} sm={3}>
-                            <UqIdField
-                                disabled={
-                                    disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)
-                                }
-                                floatingLabelText="UQ Author ID"
-                                hintText="Type UQ author name to search"
-                                id="identifierField"
-                                key={contributor.uqUsername}
-                                onChange={this._onUQIdentifierSelected}
-                                onClear={this._onUQIdentifierCleared}
-                                showClear={!!parseInt(contributor.uqIdentifier, 10)}
-                                value={contributor.uqUsername || ''}
-                            />
-                        </Grid>
-                    )}
-                    {showRoleInput && (
-                        <Grid item xs={12} sm={12} md={(showIdentifierLookup && 3) || 5}>
-                            <RoleField
-                                fullWidth
-                                id="creatorRoleField"
-                                floatingLabelText={locale.creatorRoleLabel}
-                                hintText={locale.creatorRoleHint}
-                                onChange={this._onRoleChanged}
-                                disabled={disabled || contributor.nameAsPublished.trim().length === 0}
-                                required={required}
-                                autoComplete="off"
-                                error={
-                                    contributor.nameAsPublished.trim().length === 0
-                                        ? false
-                                        : contributor.creatorRole.trim().length === 0
-                                }
-                                value={contributor.creatorRole}
-                                clearInput={this.state.clearRoleInput}
-                            />
-                        </Grid>
-                    )}
-                    {isNtro && contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
-                        <Grid item xs={12}>
-                            <NonUqOrgAffiliationFormSection
-                                orgAffiliation={contributor.orgaff || ''}
-                                orgType={contributor.orgtype || ''}
-                                onOrgAffiliationChange={this.handleOrgAffliationChange}
-                                onOrgTypeChange={this.handleOrgTypeChange}
-                                disableAffiliationEdit={disabled}
-                                disableOrgTypeEdit={disabled}
-                            />
-                        </Grid>
-                    )}
+                )}
+                {isNtro && contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
+                    <Grid item xs={12}>
+                        <NonUqOrgAffiliationFormSection
+                            orgAffiliation={contributor.orgaff || ''}
+                            orgType={contributor.orgtype || ''}
+                            onOrgAffiliationChange={handleOrgAffliationChange}
+                            onOrgTypeChange={handleOrgTypeChange}
+                            disableAffiliationEdit={disabled}
+                            disableOrgTypeEdit={disabled}
+                            orgAffiliationError={contributor.orgaff === ''}
+                            orgAffiliationTypeError={contributor.orgtype === ''}
+                        />
+                    </Grid>
+                )}
+            </Grid>
+            <Grid container spacing={1} style={{ marginTop: 8 }}>
+                <Grid item xs={displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
+                    <Button
+                        variant="contained"
+                        fullWidth
+                        color="primary"
+                        disabled={buttonDisabled}
+                        onClick={_onSubmit}
+                        id={`${contributorFormId}-add`}
+                        data-testid={`${contributorFormId}-add`}
+                    >
+                        {addButtonLabel}
+                    </Button>
                 </Grid>
-                <Grid container spacing={8} style={{ marginTop: 8 }}>
-                    <Grid item xs={displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
+                {displayCancel && (
+                    <Grid item xs={6} style={{ marginBottom: 8 }}>
                         <Button
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={buttonDisabled}
-                            onClick={this._onSubmit}
-                            id="submit-author"
+                            disabled={!contributor.nameAsPublished}
+                            onClick={_onCancel}
+                            id={`${contributorFormId}-cancel`}
+                            data-testid={`${contributorFormId}-cancel`}
                         >
-                            {addButtonLabel}
+                            {locale.cancelButton || 'Cancel'}
                         </Button>
                     </Grid>
-                    {displayCancel && (
-                        <Grid item xs={6} style={{ marginBottom: 8 }}>
-                            <Button
-                                variant="contained"
-                                fullWidth
-                                color="primary"
-                                disabled={!this.props.contributor.nameAsPublished}
-                                onClick={this._onCancel}
-                                id="cancel-submit-author"
-                            >
-                                {locale.cancelButton || 'Cancel'}
-                            </Button>
-                        </Grid>
-                    )}
-                </Grid>
-            </React.Fragment>
-        );
-    }
-}
+                )}
+            </Grid>
+        </React.Fragment>
+    );
+};
+
+ContributorForm.propTypes = {
+    canEdit: PropTypes.bool,
+    contributor: PropTypes.object,
+    contributorFormId: PropTypes.string,
+    disabled: PropTypes.bool,
+    disableNameAsPublished: PropTypes.bool,
+    displayCancel: PropTypes.bool,
+    enableUqIdentifierOnAffiliationChange: PropTypes.bool,
+    isContributorAssigned: PropTypes.bool,
+    isNtro: PropTypes.bool,
+    locale: PropTypes.object,
+    onSubmit: PropTypes.func.isRequired,
+    required: PropTypes.bool,
+    showContributorAssignment: PropTypes.bool,
+    showIdentifierLookup: PropTypes.bool,
+    showRoleInput: PropTypes.bool,
+};
+
+ContributorForm.defaultProps = {
+    canEdit: false,
+    contributor: initialContributorState,
+    displayCancel: false,
+    disableNameAsPublished: false,
+    enableUqIdentifierOnAffiliationChange: true,
+    locale: {
+        nameAsPublishedLabel: 'Name as published',
+        nameAsPublishedHint: 'Please type the name exactly as published',
+        creatorRoleLabel: 'Creator role',
+        creatorRoleHint: 'Role of the creator in relation to the dataset',
+        identifierLabel: 'UQ identifier (if available)',
+        addButton: 'Add author',
+        descriptionStep1: (
+            <div>
+                <span className="authorSteps">Step 1 of 2</span>- Please <b>add to a list of contributors below</b>, in
+                the format and order that they are published.
+            </div>
+        ),
+        descriptionStep1NoStep2: (
+            <div>
+                Please <b>add to a list of contributors below</b>, in the format and order that they are published.
+            </div>
+        ),
+    },
+    required: false,
+    showIdentifierLookup: false,
+    showRoleInput: false,
+};
 
 export default ContributorForm;

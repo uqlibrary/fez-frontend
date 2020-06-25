@@ -43,16 +43,17 @@ export default class BookForm extends Component {
         const authors = this.props.formValues && this.props.formValues.get('authors');
         const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     autoFocus={!this.props.isNtro}
                                     disabled={this.props.submitting}
                                     id="rek-title"
+                                    textFieldId="rek-title"
                                     name="rek_title"
                                     required
                                     type="text"
@@ -68,6 +69,7 @@ export default class BookForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     id="rek-place-of-publication"
+                                    textFieldId="rek-place-of-publication"
                                     name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                     type="text"
                                     required
@@ -81,6 +83,7 @@ export default class BookForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     id="rek-publisher"
+                                    textFieldId="rek-publisher"
                                     name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     required
@@ -94,6 +97,7 @@ export default class BookForm extends Component {
                                     <Field
                                         component={TextField}
                                         name="fez_record_search_key_total_pages.rek_total_pages"
+                                        textFieldId="rek-total-pages"
                                         type="text"
                                         fullWidth
                                         disabled={this.props.submitting}
@@ -107,6 +111,7 @@ export default class BookForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_doi.rek_doi"
+                                    textFieldId="rek-doi"
                                     type="text"
                                     fullWidth
                                     validate={[validation.doi]}
@@ -116,6 +121,7 @@ export default class BookForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -134,6 +140,7 @@ export default class BookForm extends Component {
                         <StandardCard title={txt.authors.title} help={txt.authors.help}>
                             <Field
                                 component={ContributorsEditorField}
+                                contributorEditorId="rek-author"
                                 name="authors"
                                 locale={txt.authors.field}
                                 showContributorAssignment={!editorSelected}
@@ -149,6 +156,7 @@ export default class BookForm extends Component {
                         <StandardCard title={txt.editors.title} help={txt.editors.help}>
                             <Field
                                 component={ContributorsEditorField}
+                                contributorEditorId="rek-contributor"
                                 showContributorAssignment={!authorSelected}
                                 id="editors-name-as-published-field"
                                 name="editors"
@@ -183,6 +191,7 @@ export default class BookForm extends Component {
                             isValid={validation.isValidIsbn}
                             maxCount={5}
                             searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
+                            listEditorId="isbn"
                             locale={locale.components.isbnForm.field}
                             disabled={this.props.submitting}
                         />
@@ -198,6 +207,7 @@ export default class BookForm extends Component {
                             name="fez_record_search_key_issn"
                             maxCount={5}
                             locale={locale.components.issnForm.field}
+                            listEditorId="issn"
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             disabled={this.props.submitting}
                         />
@@ -205,11 +215,12 @@ export default class BookForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="comments"
+                                    textFieldId="comments"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth
@@ -221,6 +232,7 @@ export default class BookForm extends Component {
                                 <Field
                                     component={TextField}
                                     name="rek_link"
+                                    textFieldId="rek-link"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth

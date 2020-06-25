@@ -43,7 +43,8 @@ export class PublicationsListSorting extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.setState({
             sortBy: nextProps.sortBy,
             sortDirection: nextProps.sortDirection,
@@ -100,7 +101,7 @@ export class PublicationsListSorting extends PureComponent {
             pageLength.sort((a, b) => a - b);
         }
         return (
-            <Grid container spacing={16}>
+            <Grid container spacing={2}>
                 <Grid item xs={12} sm={6} md={this.props.canUseExport ? 3 : 4}>
                     <FormControl fullWidth>
                         <InputLabel shrink>{txt.sortLabel}</InputLabel>

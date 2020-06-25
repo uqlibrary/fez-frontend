@@ -146,7 +146,7 @@ describe('Component FixRecord', () => {
         const testMethod = jest.fn();
         const wrapper = setup({ recordToFix: mockRecordToFix });
         wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
-        wrapper.instance().componentWillReceiveProps({ submitSucceeded: true });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -176,14 +176,14 @@ describe('Component FixRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('componentWillReceiveProps()', () => {
+    it('UNSAFE_componentWillReceiveProps()', () => {
         const wrapper = setup({
             submitSucceeded: true,
             recordToFix: mockRecordToFix,
             publicationToFixFileUploadingError: false,
         });
         const nextProps = { submitSucceeded: true };
-        wrapper.instance().componentWillReceiveProps(nextProps);
+        wrapper.instance().UNSAFE_componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

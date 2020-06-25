@@ -12,7 +12,7 @@ export const maxLength = max => value =>
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLengthWithWhitespace = max => value =>
-    (value && (value.plainText && value.plainText.length > max)) || (!value.plainText && value.length > max + 7)
+    (value && value.plainText && value.plainText.length > max) || (!value.plainText && value.length > max + 7)
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLength9 = maxLength(9);

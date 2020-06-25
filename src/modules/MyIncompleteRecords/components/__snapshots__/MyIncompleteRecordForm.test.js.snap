@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] = `
-<ReduxForm
+<Hoc
   author={
     Object {
       "aut_id": 411,
     }
   }
   destroyOnUnmount={true}
-  dirty={false}
   enableReinitialize={true}
   forceUnregisterOnUnmount={false}
   form="MyIncompleteRecord"
+  forwardedRef={null}
   getFormState={[Function]}
   hasAnyFiles={true}
   history={
@@ -484,7 +484,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
   shouldValidate={[Function]}
   shouldWarn={[Function]}
   submitAsSideEffect={false}
-  submitSucceeded={false}
   touchOnBlur={true}
   touchOnChange={false}
   updateUnregisteredFields={false}

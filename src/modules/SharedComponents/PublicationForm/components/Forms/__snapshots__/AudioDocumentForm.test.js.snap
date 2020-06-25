@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudioDocumentForm renders  component 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={16}
+  spacing={2}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -32,11 +32,11 @@ exports[`AudioDocumentForm renders  component 1`] = `
       }
       title="Audio document information"
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
-        spacing={16}
+        spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -56,8 +56,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -70,8 +70,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             placeholder="City, Country"
             type="text"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={6}
           xs={12}
@@ -85,8 +85,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             placeholder="Type the name of the publisher or producer of the work."
             type="text"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={6}
           xs={12}
@@ -99,6 +99,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
             floatingTitle="Publication date"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [
@@ -106,8 +107,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -122,11 +123,11 @@ exports[`AudioDocumentForm renders  component 1`] = `
             rows={3}
             type="text"
           />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -135,6 +136,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {
@@ -200,7 +202,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-creator",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -208,7 +209,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-creator",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -225,8 +225,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
         showContributorAssignment={true}
       />
     </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -242,6 +242,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     >
       <Field
         component={[Function]}
+        contributorEditorId="contributors"
         disabled={false}
         locale={
           Object {
@@ -304,7 +305,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-contributor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -312,7 +312,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-contributor",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -328,19 +327,19 @@ exports[`AudioDocumentForm renders  component 1`] = `
         showContributorAssignment={true}
       />
     </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
     <StandardCard
       title="Optional information"
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
-        spacing={16}
+        spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -355,8 +354,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             rows={1}
             type="text"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -374,19 +373,19 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;
 
 exports[`AudioDocumentForm renders  component should render contributor assignment 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={16}
+  spacing={2}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -413,11 +412,11 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
       }
       title="Audio document information"
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
-        spacing={16}
+        spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -437,8 +436,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -451,8 +450,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             placeholder="City, Country"
             type="text"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={6}
           xs={12}
@@ -466,8 +465,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             placeholder="Type the name of the publisher or producer of the work."
             type="text"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           sm={6}
           xs={12}
@@ -480,6 +479,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             floatingTitle="Publication date"
             floatingTitleRequired={true}
             name="rek_date"
+            partialDateFieldId="rek-date"
             required={true}
             validate={
               Array [
@@ -487,8 +487,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -503,11 +503,11 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             rows={3}
             type="text"
           />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -516,6 +516,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     >
       <Field
         component={[Function]}
+        contributorEditorId="creators"
         disabled={false}
         locale={
           Object {
@@ -581,7 +582,6 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-creator",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -589,7 +589,6 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-creator",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -606,8 +605,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
         showContributorAssignment={false}
       />
     </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -623,6 +622,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
     >
       <Field
         component={[Function]}
+        contributorEditorId="contributors"
         disabled={false}
         locale={
           Object {
@@ -685,7 +685,6 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": "delete-contributor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -693,7 +692,6 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
-                "editButtonId": "edit-contributor",
                 "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -709,19 +707,19 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
         showContributorAssignment={false}
       />
     </StandardCard>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
     <StandardCard
       title="Optional information"
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         container={true}
-        spacing={16}
+        spacing={2}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -736,8 +734,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             rows={1}
             type="text"
           />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
         >
@@ -755,9 +753,9 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
     </StandardCard>
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

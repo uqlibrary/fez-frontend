@@ -1,14 +1,11 @@
-import DateRangeFieldWithStyles from './DateRangeField';
-import { DateRangeField } from './DateRangeField';
-import moment from 'moment';
+import React from 'react';
+import DateRangeField from './DateRangeField';
 import { GENERIC_DATE_FORMAT } from 'config/general';
+import { rtlRender, fireEvent, act } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        searchKey: 'test_search_key',
         disabled: false,
-        invalid: false,
-        classes: {},
         locale: {},
         format: GENERIC_DATE_FORMAT,
         from: '',
@@ -18,71 +15,66 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(DateRangeField, props);
+    return rtlRender(<DateRangeField {...props} />);
 }
 
 describe('DateRangeField component', () => {
-    it('should render default view with styles', () => {
-        const wrapper = getElement(DateRangeFieldWithStyles, { onChange: jest.fn() });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should render default view', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId } = setup({ id: 'test-date-range' });
+        expect(getByTestId('test-date-range-from-date')).toBeInTheDocument();
+        expect(getByTestId('test-date-range-to-date')).toBeInTheDocument();
     });
 
     it('should render disabled view', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('TextField').props().disabled).toBeTruthy();
+        const { getByTestId } = setup({ disabled: true, id: 'test-date-range' });
+        expect(getByTestId('test-date-range-from-date').disabled).toBeTruthy();
+        expect(getByTestId('test-date-range-to-date')).toBeTruthy();
     });
 
-    it('should render with future disabled', () => {
-        const wrapper = setup({ disableFuture: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper
-            .find('DatePickerField')
-            .map(datePickerField => expect(datePickerField.props().disableFuture).toBeTruthy());
+    it('should display error for "from" date for invalid date input', () => {
+        const { getByTestId, getByText } = setup({ id: 'test-date-range' });
+        fireEvent.change(getByTestId('test-date-range-from-date'), { target: { value: '10/13/2010' } });
+        expect(getByText('Please provide valid date')).toBeInTheDocument();
     });
 
-    it('should update on receiving new state', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.setState({
-            from: '01/01/1970',
-            to: '01/01/1980',
+    it('should display error for "to" date for invalid date input', () => {
+        const { getByTestId, getByText } = setup({ id: 'test-date-range' });
+        fireEvent.change(getByTestId('test-date-range-to-date'), { target: { value: '10/13/2010' } });
+        expect(getByText('Please provide valid date')).toBeInTheDocument();
+    });
+
+    it('should display error for date range if both dates are valid but invalid range', () => {
+        const { getByTestId, getByText } = setup({ id: 'test-date-range' });
+
+        act(() => {
+            fireEvent.change(getByTestId('test-date-range-from-date'), { target: { value: '10/10/2010' } });
         });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        act(() => {
+            fireEvent.change(getByTestId('test-date-range-to-date'), { target: { value: '10/09/2010' } });
+        });
+
+        expect(getByText('Please provide valid date range')).toBeInTheDocument();
     });
 
-    it('should update date range value', () => {
-        const wrapper = setup();
-        const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
-        wrapper
-            .find('DatePickerField')
-            .get(0)
-            .props.onChange('10/10/2010');
-        wrapper.update();
-        expect(componentWillUpdate).toHaveBeenCalled();
-    });
-
-    it('should update with error if "from" date is after "to" date', () => {
+    it('should not call onChange callback if one of the values (from/to) is missing', () => {
         const onChangeFn = jest.fn();
-        const wrapper = setup({ onChange: onChangeFn });
-        const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
-        wrapper
-            .find('DatePickerField')
-            .get(0)
-            .props.onChange(moment('10/10/2010', 'DD/MM/YYYY'));
-        wrapper
-            .find('DatePickerField')
-            .get(1)
-            .props.onChange(moment('09/10/2010', 'DD/MM/YYYY'));
-        wrapper.update();
-        expect(componentWillUpdate).toHaveBeenCalled();
+        const { getByTestId } = setup({ id: 'test-date-range', onChange: onChangeFn });
+        fireEvent.change(getByTestId('test-date-range-from-date'), { target: { value: '10/10/2010' } });
+        expect(onChangeFn).not.toBeCalled();
+    });
+
+    it('should call onChange once both date are entered in the range', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId } = setup({ id: 'test-date-range', onChange: onChangeFn });
+        act(() => {
+            fireEvent.change(getByTestId('test-date-range-from-date'), { target: { value: '10/10/2010' } });
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('test-date-range-to-date'), { target: { value: '10/11/2010' } });
+        });
+
         expect(onChangeFn).toHaveBeenCalled();
     });
 });

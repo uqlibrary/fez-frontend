@@ -75,7 +75,8 @@ export default class Orcid extends Component {
         };
     }
 
-    componentWillMount() {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillMount() {
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
         if (!this.props.accountAuthorLoading && (!this.props.author || this.props.author.aut_orcid_id)) {
@@ -102,7 +103,8 @@ export default class Orcid extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // wait for user account to get loaded and set state if props were not available in constructor
         if (
             nextProps.account !== this.props.account &&
@@ -189,8 +191,8 @@ export default class Orcid extends Component {
     createOrcidStateId = account => {
         return account
             ? createHash('md5')
-                .update(`${account.id}/${account.mail}/${new Date().setHours(0, 0, 0, 0)}`)
-                .digest('hex')
+                  .update(`${account.id}/${account.mail}/${new Date().setHours(0, 0, 0, 0)}`)
+                  .digest('hex')
             : '';
     };
 
@@ -232,7 +234,7 @@ export default class Orcid extends Component {
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDialogBox onRef={this._setAuthoriseConfirmation} locale={txt.grantAccessConfirmation} />
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12}>
                         {this.getAlert({
                             submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
@@ -248,7 +250,7 @@ export default class Orcid extends Component {
                             <Typography component={'span'} gutterBottom>
                                 {txt.linkOrcid.description}
                             </Typography>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Hidden xsDown>
                                     <Grid item xs />
                                 </Hidden>
@@ -270,7 +272,7 @@ export default class Orcid extends Component {
                             <Typography component={'span'} gutterBottom>
                                 {txt.createOrcid.description}
                             </Typography>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Hidden xsDown>
                                     <Grid item xs />
                                 </Hidden>

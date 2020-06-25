@@ -30,10 +30,10 @@ export default class JournalArticleForm extends Component {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -64,6 +64,7 @@ export default class JournalArticleForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -79,11 +80,12 @@ export default class JournalArticleForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Typography>{txt.authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    contributorEditorId="authors"
                                     showContributorAssignment
                                     name="authors"
                                     locale={txt.authors.field}
@@ -122,13 +124,14 @@ export default class JournalArticleForm extends Component {
                             maxCount={5}
                             locale={locale.components.issnForm.field}
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
+                            listEditorId="issn"
                             disabled={this.props.submitting}
                         />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={6} sm={3}>
                                 <Field
                                     component={TextField}

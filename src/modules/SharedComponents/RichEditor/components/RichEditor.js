@@ -51,7 +51,8 @@ export default class RichEditor extends PureComponent {
         this.props.instanceRef.current = this.editorInstance;
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.disabled !== this.props.disabled && this.editorInstance !== null) {
             this.editorInstance.setReadOnly(!!nextProps.disabled);
         }
@@ -69,12 +70,12 @@ export default class RichEditor extends PureComponent {
         this.props.onChange(
             textValue.length > 0
                 ? {
-                    htmlText: evt.editor.getData(),
-                    plainText: evt.editor.document
-                        .getBody()
-                        .getText()
-                        .trim(),
-                }
+                      htmlText: evt.editor.getData(),
+                      plainText: evt.editor.document
+                          .getBody()
+                          .getText()
+                          .trim(),
+                  }
                 : null,
         );
     };
