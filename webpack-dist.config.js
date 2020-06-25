@@ -131,7 +131,6 @@ const webpackConfig = {
             ),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
-            'process.env.CYPRESS_RETRIES': 5,
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
