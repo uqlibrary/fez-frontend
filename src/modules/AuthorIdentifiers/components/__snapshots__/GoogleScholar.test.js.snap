@@ -320,13 +320,8 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
           Array [],
           Array [],
           Array [],
-          Array [],
         ],
         "results": Array [
-          Object {
-            "type": "return",
-            "value": Immutable.Map {},
-          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -346,15 +341,8 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
           Array [
             [Function],
           ],
-          Array [
-            [Function],
-          ],
         ],
         "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
           Object {
             "type": "return",
             "value": undefined,
@@ -2692,7 +2680,6 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                           }
                                                                         }
                                                                         buttonLabel="CLOSE"
-                                                                        dispatch={[MockFunction]}
                                                                         onClick={[Function]}
                                                                         text={
                                                                           <div>
