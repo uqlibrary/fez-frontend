@@ -14,9 +14,9 @@ const DashboardOrcidSyncMessage = ({
     status,
     statusIconStyle,
 }) => (
-    <Grid container spacing={24} style={{ marginTop: '0' }}>
+    <Grid container spacing={4} style={{ marginTop: '0' }}>
         <Grid item>
-            <Grid container direction="row" alignItems="flex-start" spacing={16}>
+            <Grid container direction="row" alignItems="flex-start" spacing={2}>
                 <Grid item xs={2}>
                     <DoneIcon
                         color="action"
@@ -28,7 +28,7 @@ const DashboardOrcidSyncMessage = ({
                     {lastSyncMessage}
                 </Grid>
             </Grid>
-            <Grid container direction="row" alignItems="flex-start" spacing={16}>
+            <Grid container direction="row" alignItems="flex-start" spacing={2}>
                 <Grid item xs={2}>
                     <StatusIcon size={24} style={statusIconStyle} />
                 </Grid>
@@ -62,7 +62,7 @@ const DashboardOrcidSyncMessage = ({
 );
 
 DashboardOrcidSyncMessage.propTypes = {
-    StatusIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.object]),
+    StatusIcon: PropTypes.any,
     disableRequest: PropTypes.bool,
     lastSyncMessage: PropTypes.string,
     locale: PropTypes.object,

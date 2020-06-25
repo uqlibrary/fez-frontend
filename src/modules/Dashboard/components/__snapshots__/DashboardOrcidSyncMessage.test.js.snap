@@ -3,7 +3,7 @@
 exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={24}
+  spacing={4}
   style={
     Object {
       "marginTop": "0",
@@ -17,7 +17,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
       alignItems="flex-start"
       container={true}
       direction="row"
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -46,7 +46,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
       alignItems="flex-start"
       container={true}
       direction="row"
-      spacing={16}
+      spacing={2}
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
