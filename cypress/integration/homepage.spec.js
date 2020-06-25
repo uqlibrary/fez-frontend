@@ -66,4 +66,16 @@ context('Homepage', () => {
         checkMenuItemCount(13);
         cy.get('#mainMenu .menu-item-container p').contains('uq.masquerader@example.uq.edu.au');
     });
+
+    it('Shows help panel as expected', () => {
+        cy.visit('/?user=uqresearcher');
+        cy.get('button#help-icon').click();
+        cy.get('span#help-drawer-title').should('be.visible');
+        cy.get('span#help-drawer-title').contains('About these metrics');
+        cy.get('div#help-drawer-button')
+            .find('button')
+            .contains('CLOSE')
+            .click();
+        cy.get('span#help-drawer-title').should('not.be.visible');
+    });
 });

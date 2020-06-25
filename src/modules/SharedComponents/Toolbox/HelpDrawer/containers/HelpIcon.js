@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import HelpIcon from '../components/HelpIcon';
 import { show } from '../actions';
 
-const HelpIconContainer = connect(dispatch => {
+const HelpIconContainer = connect(null, dispatch => {
     return {
         onClick: (title, text, buttonLabel) => dispatch(show(title, text, buttonLabel)),
     };

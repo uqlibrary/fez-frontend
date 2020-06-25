@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import locale from 'locale/pages';
 
-const profileFallbackImage = require('../../../../public/images/avatar.svg');
-
 const DashboardAuthorAvatar = ({ values }) => {
     const txt = locale.pages.dashboard.header.dashboardAuthorAvatar;
     return (
         <Avatar
+            src={`https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg`}
             style={{
-                backgroundImage: `url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg"), url(${profileFallbackImage})`,
                 backgroundSize: 'cover, cover',
-                backgroundColor: 'transparent',
+                backgroundColor: 'rgba(0,0,0,0.3)',
                 width: 125,
                 height: 125,
                 margin: 8,

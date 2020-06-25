@@ -17,10 +17,10 @@ describe('deleteRecord reducer', () => {
     });
 
     it('returns a record to be deleted', () => {
-        const test = deleteRecordReducer(
-            initialState,
-            { type: actions.DELETE_RECORD_LOADED, payload: aMockRecordToDelete },
-        );
+        const test = deleteRecordReducer(initialState, {
+            type: actions.DELETE_RECORD_LOADED,
+            payload: aMockRecordToDelete,
+        });
         expect(test.loadingRecordToDelete).toBeFalsy();
         expect(test.recordToDelete).toEqual(aMockRecordToDelete);
         expect(test.recordToDeleteError).toBeNull();
@@ -35,10 +35,10 @@ describe('deleteRecord reducer', () => {
     });
 
     it('returns a record that it been set to delete', () => {
-        const test = deleteRecordReducer(
-            initialState,
-            { type: actions.DELETE_RECORD_SET, payload: aMockRecordToDelete }
-        );
+        const test = deleteRecordReducer(initialState, {
+            type: actions.DELETE_RECORD_SET,
+            payload: aMockRecordToDelete,
+        });
         expect(test.recordToDelete).toEqual(aMockRecordToDelete);
     });
 
