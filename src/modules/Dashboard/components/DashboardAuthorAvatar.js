@@ -10,9 +10,9 @@ const DashboardAuthorAvatar = ({ values }) => {
     return (
         <Avatar
             style={{
-                backgroundImage: `url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg"), url(${profileFallbackImage})`,
+                backgroundImage: `url(${profileFallbackImage}), url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg")})`,
                 backgroundSize: 'cover, cover',
-                backgroundColor: 'transparent',
+                backgroundColor: 'rgba(0,0,0,0.3)',
                 width: 125,
                 height: 125,
                 margin: 8,
