@@ -13,13 +13,12 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-require('cypress-plugin-retries');
-
 // Plugins
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
 import '@cypress/code-coverage/support';
 import 'cypress-wait-until';
+import 'cypress-plugin-retries';
 
 // Custom
 import './adminEdit';

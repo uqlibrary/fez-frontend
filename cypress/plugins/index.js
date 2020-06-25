@@ -14,17 +14,13 @@
 // the project's config changing)
 
 // eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-    require('cypress-plugin-retries/lib/plugin')(on);
-};
 
 module.exports = (on, config) => {
     // `on` is used to hook into various events Cypress emits
     // `config` is the resolved Cypress config
     // initPlugin(on, config);
-
+    require('cypress-plugin-retries/lib/plugin')(on);
     on('task', require('@cypress/code-coverage/task'));
     on('file:preprocessor', require('@cypress/code-coverage/use-browserify-istanbul'));
-
     return config;
 };
