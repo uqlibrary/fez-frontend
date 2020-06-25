@@ -151,6 +151,7 @@ module.exports = {
             'process.env.BRANCH': JSON.stringify('development'),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
+            'process.env.CYPRESS_RETRIES': 5,
         }),
         new Dotenv(),
     ],
