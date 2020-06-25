@@ -10,7 +10,7 @@ context('Add missing record', () => {
     it('should enable the submit button on form render only', () => {
         // Journal article requires subtype selection
         cy.get('[data-testid=rek-display-type-select]')
-            .should('not.exist')
+            .should('exist')
             .click();
         cy.get('#submit-work').should('not.exist');
         cy.get('[data-testid=rek-display-type-options]')
