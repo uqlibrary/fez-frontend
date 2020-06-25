@@ -13,6 +13,8 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+require('cypress-plugin-retries');
+
 // Plugins
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
