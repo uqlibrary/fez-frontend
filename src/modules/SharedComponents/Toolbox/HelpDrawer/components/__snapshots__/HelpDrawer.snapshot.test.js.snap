@@ -13,6 +13,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
+    id="help-drawer"
     spacing={5}
   >
     <WithStyles(ForwardRef(Grid))
@@ -21,6 +22,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
     >
       <WithStyles(ForwardRef(Typography))
         component="span"
+        id="help-drawer-title"
         key="title"
         variant="h6"
       >
@@ -28,6 +30,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
+        id="help-drawer-text-HelpDrawerTitle"
         key="text"
         variant="body2"
       >
@@ -35,6 +38,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
       </WithStyles(ForwardRef(Typography))>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
+      id="help-drawer-button"
       item={true}
       xs={12}
     >
@@ -63,6 +67,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
+    id="help-drawer"
     spacing={5}
   >
     <WithStyles(ForwardRef(Grid))
@@ -71,6 +76,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
     >
       <WithStyles(ForwardRef(Typography))
         component="span"
+        id="help-drawer-title"
         key="title"
         variant="h6"
       >
@@ -78,6 +84,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
+        id="help-drawer-text-HelpDrawertitle"
         key="text"
         variant="body2"
       >
@@ -89,6 +96,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
       </WithStyles(ForwardRef(Typography))>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
+      id="help-drawer-button"
       item={true}
       xs={12}
     >
@@ -117,6 +125,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
+    id="help-drawer"
     spacing={5}
   >
     <WithStyles(ForwardRef(Grid))
@@ -125,6 +134,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
     >
       <WithStyles(ForwardRef(Typography))
         component="span"
+        id="help-drawer-title"
         key="title"
         variant="h6"
       >
@@ -132,6 +142,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
+        id="help-drawer-text-HelpDrawertitle"
         key="text"
         variant="body2"
       >
@@ -139,6 +150,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
       </WithStyles(ForwardRef(Typography))>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
+      id="help-drawer-button"
       item={true}
       xs={12}
     >

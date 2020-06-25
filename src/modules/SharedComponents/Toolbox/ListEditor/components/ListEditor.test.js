@@ -282,7 +282,10 @@ describe('ListEditor tests', () => {
     it('should update an issn with selected index', () => {
         const wrapper = setup();
         wrapper.setState({
-            itemList: [{ key: '1234-1234', value: { ulrichs: {} } }, { key: '1234-1111', value: { ulrichs: {} } }],
+            itemList: [
+                { key: '1234-1234', value: { ulrichs: {} } },
+                { key: '1234-1111', value: { ulrichs: {} } },
+            ],
         });
         wrapper.setState({ itemIndexSelectedToEdit: 1 });
         wrapper.instance().addItem('1234-2222');
@@ -302,7 +305,10 @@ describe('ListEditor tests', () => {
         });
 
         wrapper.setState({
-            itemList: [{ key: '1234-1234', value: { ulrichs: {} } }, { key: '1234-1111', value: { ulrichs: {} } }],
+            itemList: [
+                { key: '1234-1234', value: { ulrichs: {} } },
+                { key: '1234-1111', value: { ulrichs: {} } },
+            ],
         });
 
         wrapper.instance().addItem({ key: '1234-1234', value: { sherpaRomeo: {}, ulrichs: {} } });
@@ -320,7 +326,10 @@ describe('ListEditor tests', () => {
         });
 
         wrapper.setState({
-            itemList: [{ id: 1234, value: 'test' }, { id: 2345, value: 'testing' }],
+            itemList: [
+                { id: 1234, value: 'test' },
+                { id: 2345, value: 'testing' },
+            ],
         });
 
         wrapper.instance().addItem({ id: 1234, value: 'test' });
@@ -356,7 +365,10 @@ describe('ListEditor tests', () => {
         });
 
         wrapper.setState({
-            itemList: [{ id: 1234, value: 'test' }, { id: 2345, value: 'testing' }],
+            itemList: [
+                { id: 1234, value: 'test' },
+                { id: 2345, value: 'testing' },
+            ],
         });
 
         wrapper.instance().addItem({ id: 1234, value: 'test' });
@@ -369,7 +381,10 @@ describe('ListEditor tests', () => {
 
         expect(wrapper.state().itemList.length).toEqual(2);
 
-        expect(wrapper.state().itemList).toEqual([{ id: 1234, value: 'test' }, { id: 2345, value: 'testing testing' }]);
+        expect(wrapper.state().itemList).toEqual([
+            { id: 1234, value: 'test' },
+            { id: 2345, value: 'testing testing' },
+        ]);
     });
 
     it('should add edited item with the same "key" but different "value"', () => {

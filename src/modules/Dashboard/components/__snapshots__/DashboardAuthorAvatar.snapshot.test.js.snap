@@ -3,10 +3,10 @@
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
 <WithStyles(ForwardRef(Avatar))
   aria-label="Photograph of  Professor undefined undefined"
+  src="https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_14.jpg"
   style={
     Object {
-      "backgroundColor": "transparent",
-      "backgroundImage": "url(\\"https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_14.jpg\\"), url()",
+      "backgroundColor": "rgba(0,0,0,0.3)",
       "backgroundSize": "cover, cover",
       "height": 125,
       "margin": 8,
