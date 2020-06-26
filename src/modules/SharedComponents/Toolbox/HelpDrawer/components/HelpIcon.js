@@ -37,13 +37,13 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, tooltip, onClick,
 };
 
 HelpIcon.propTypes = {
-    title: PropTypes.string,
-    text: PropTypes.any.isRequired,
     buttonLabel: PropTypes.string,
-    tooltip: PropTypes.string,
-    onClick: PropTypes.func,
     IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.node, PropTypes.object]),
     iconSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    onClick: PropTypes.func,
+    text: PropTypes.any.isRequired,
+    title: PropTypes.string,
+    tooltip: PropTypes.string,
 };
 
 HelpIcon.defaultProps = {

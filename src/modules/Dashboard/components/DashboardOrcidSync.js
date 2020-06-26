@@ -81,8 +81,8 @@ export const DashboardOrcidSync = props => {
             secondaryClick={openUrl(currentAuthorOrcidLink)}
             {...{
                 disableRequest,
-                primaryClick,
                 lastSyncMessage,
+                primaryClick,
                 status: detailedStatus,
                 StatusIcon: renderBadgeIcon(orjStatus) || DoneIcon,
                 statusIconStyle: {
@@ -93,18 +93,18 @@ export const DashboardOrcidSync = props => {
     );
 
     const helpIconProps = {
-        showLoader: requestingOrcidSync,
         IconComponent: renderBadgeIcon(orjStatus),
-        text: message,
-        title: messageTemplate.title,
-        tooltip: status,
         iconSize: 20,
+        showLoader: requestingOrcidSync,
         style:
             (isInProgress && {
                 marginLeft: '2px',
                 marginBottom: '2px',
             }) ||
             {},
+        text: message,
+        title: messageTemplate.title,
+        tooltip: status,
     };
     return <HelpIcon {...helpIconProps} />;
 };
