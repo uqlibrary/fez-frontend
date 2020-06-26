@@ -24,6 +24,32 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+function afterEachCode() {
+    // custom test code
+    expect('foo').ok
+}
+
+const _it = it;
+
+const makeItFn = it => (name, fn) => {
+    // internal implementation is to use it without a fn for skips
+    if (!fn) {
+        it(name);
+        return;
+    }
+
+    it(name, () => {
+        fn();
+        Cypress.log({ type: 'afterEach' });
+        afterEachCode();
+    });
+};
+
+// eslint-disable-next-line no-global-assign
+it = makeItFn(_it);
+it.only = makeItFn(_it.only);
+it.skip = makeItFn(_it.skip);
+
 Cypress.Commands.add('navToHomeFromMenu', locale => {
     const baseUrl = Cypress.config('baseUrl');
 
