@@ -318,6 +318,7 @@ export class AppClass extends PureComponent {
                                             aria-label={locale.global.mainNavButton.aria}
                                             style={{ marginLeft: '-12px', marginRight: '12px' }}
                                             onClick={this.toggleDrawer}
+                                            id={'main-menu-button'}
                                         >
                                             <Menu style={{ color: 'white' }} />
                                         </IconButton>
