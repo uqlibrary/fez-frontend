@@ -272,6 +272,8 @@ context('Thesis admin edit', () => {
                             .should('not.be.checked');
                     }
                 });
+                // Live debugging to see why this test fails with 9 instead of 11 found
+                cy.viewport(550, 1750);
                 cy.get('div:nth-child(2) > .StandardCard').within(() => {
                     cy.get('h4').should('have.text', `Datastream level security - ${record.rek_pid}`);
                     cy.get('h6')
