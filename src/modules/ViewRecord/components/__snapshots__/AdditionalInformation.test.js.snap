@@ -54473,7 +54473,6 @@ exports[`Additional Information Component  should render component with rek_star
                   "rek_genre_xsdmf_id": 11991,
                   "rek_herdc_notes": null,
                   "rek_herdc_notes_xsdmf_id": null,
-                  "rek_job_number": "test",
                   "rek_object_type": 3,
                   "rek_object_type_xsdmf_id": 3674,
                   "rek_pid": "UQ:177836",
