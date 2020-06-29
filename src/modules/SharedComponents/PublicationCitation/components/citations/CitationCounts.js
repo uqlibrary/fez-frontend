@@ -43,28 +43,28 @@ export class CitationCounts extends PureComponent {
                 <Grid item xs={12} sm={'auto'}>
                     {!!publication.fez_record_search_key_isi_loc &&
                         !!publication.fez_record_search_key_isi_loc.rek_isi_loc && (
-                        <Partials.CitationCountView
-                            source="wos"
-                            count={counts.wos}
-                            link={sources.wos.externalUrl.replace(
-                                '[id]',
-                                publication.fez_record_search_key_isi_loc.rek_isi_loc,
-                            )}
-                            title={this.getTitle(sources.wos.title)}
-                        />
-                    )}
+                            <Partials.CitationCountView
+                                source="wos"
+                                count={counts.wos}
+                                link={sources.wos.externalUrl.replace(
+                                    '[id]',
+                                    publication.fez_record_search_key_isi_loc.rek_isi_loc,
+                                )}
+                                title={this.getTitle(sources.wos.title)}
+                            />
+                        )}
                     {!!publication.fez_record_search_key_scopus_id &&
                         !!publication.fez_record_search_key_scopus_id.rek_scopus_id && (
-                        <Partials.CitationCountView
-                            source="scopus"
-                            count={counts.scopus}
-                            link={sources.scopus.externalUrl.replace(
-                                '[id]',
-                                publication.fez_record_search_key_scopus_id.rek_scopus_id,
-                            )}
-                            title={this.getTitle(sources.scopus.title)}
-                        />
-                    )}
+                            <Partials.CitationCountView
+                                source="scopus"
+                                count={counts.scopus}
+                                link={sources.scopus.externalUrl.replace(
+                                    '[id]',
+                                    publication.fez_record_search_key_scopus_id.rek_scopus_id,
+                                )}
+                                title={this.getTitle(sources.scopus.title)}
+                            />
+                        )}
                     {!!counts.altmetric && counts.altmetric > 0 && !!publication.rek_altmetric_id && (
                         <Partials.CitationCountView
                             source="altmetric"
@@ -91,14 +91,14 @@ export class CitationCounts extends PureComponent {
                     {!!publication.rek_pid &&
                         (counts.wos !== null || counts.scopus !== null) &&
                         !hideViewFullStatisticsLink && (
-                        <ExternalLink
-                            href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}
-                            title={publication.rek_title}
-                            className={classes.statsLink}
-                        >
-                            {txt.statsLabel}
-                        </ExternalLink>
-                    )}
+                            <ExternalLink
+                                href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}
+                                title={publication.rek_title}
+                                className={classes.statsLink}
+                            >
+                                {txt.statsLabel}
+                            </ExternalLink>
+                        )}
                 </Grid>
                 <Hidden xsDown>
                     <Grid item xs />

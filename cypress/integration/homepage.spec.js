@@ -1,7 +1,6 @@
 context('Homepage', () => {
     const checkMenuItemCount = expectedCount => {
-        cy.get('button[aria-label="Click to open the main navigation"]')
-            .click();
+        cy.get('button[aria-label="Click to open the main navigation"]').click();
         cy.get('nav#mainMenu')
             .get('div[role="button"]')
             .should('have.length', expectedCount);
@@ -34,8 +33,7 @@ context('Homepage', () => {
             .should('not.contain', 'Web of Science citation count')
             .should('contain', 'Altmetric score');
 
-        cy.get('.StandardPage > div > div > div:nth-of-type(2) h3')
-            .should('contain', 'What is eSpace?');
+        cy.get('.StandardPage > div > div > div:nth-of-type(2) h3').should('contain', 'What is eSpace?');
     });
 
     it('Has expected menu items for a public user', () => {
@@ -66,7 +64,18 @@ context('Homepage', () => {
     it('Has expected menu items for a Masqueradable staff member', () => {
         cy.visit('/?user=uqmasquerade');
         checkMenuItemCount(13);
-        cy.get('#mainMenu .menu-item-container p')
-            .contains('uq.masquerader@example.uq.edu.au');
+        cy.get('#mainMenu .menu-item-container p').contains('uq.masquerader@example.uq.edu.au');
+    });
+
+    it('Shows help panel as expected', () => {
+        cy.visit('/?user=uqresearcher');
+        cy.get('button#help-icon').click();
+        cy.get('span#help-drawer-title').should('be.visible');
+        cy.get('span#help-drawer-title').contains('About these metrics');
+        cy.get('div#help-drawer-button')
+            .find('button')
+            .contains('CLOSE')
+            .click();
+        cy.get('span#help-drawer-title').should('not.be.visible');
     });
 });

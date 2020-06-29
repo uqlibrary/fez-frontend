@@ -25,6 +25,7 @@ browserUpdate({
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { ScrollTop } from 'modules/SharedComponents/ScrollTop';
+import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -131,10 +132,10 @@ export class AppClass extends PureComponent {
                 fullWidth: this.state.isMobile,
                 menuItemStyle: this.state.isMobile
                     ? {
-                        whiteSpace: 'normal',
-                        lineHeight: '18px',
-                        paddingBottom: '8px',
-                    }
+                          whiteSpace: 'normal',
+                          lineHeight: '18px',
+                          paddingBottom: '8px',
+                      }
                     : {},
             },
         };
@@ -145,8 +146,8 @@ export class AppClass extends PureComponent {
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
-
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
@@ -202,8 +203,8 @@ export class AppClass extends PureComponent {
         const { classes } = this.props;
         if (this.props.accountLoading) {
             return (
-                <Grid container zeroMinWidth className={classes.layoutFill}>
-                    <Grid item xs={12}>
+                <Grid container className={classes.layoutFill}>
+                    <Grid zeroMinWidth item xs={12}>
                         <AppLoader
                             title={locale.global.title}
                             logoImage="largeLogo"
@@ -300,7 +301,7 @@ export class AppClass extends PureComponent {
                     <Toolbar style={{ height: '70px' }}>
                         <Grid
                             container
-                            spacing={8}
+                            spacing={1}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
@@ -317,6 +318,7 @@ export class AppClass extends PureComponent {
                                             aria-label={locale.global.mainNavButton.aria}
                                             style={{ marginLeft: '-12px', marginRight: '12px' }}
                                             onClick={this.toggleDrawer}
+                                            id={'main-menu-button'}
                                         >
                                             <Menu style={{ color: 'white' }} />
                                         </IconButton>
@@ -324,7 +326,7 @@ export class AppClass extends PureComponent {
                                 </Grid>
                             )}
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
+                                <Grid container spacing={2} alignItems="center" justify="flex-start" wrap={'nowrap'}>
                                     {!this.state.docked && !this.state.menuDrawerOpen && (
                                         <Hidden xsDown>
                                             <Grid item>
@@ -426,11 +428,13 @@ export class AppClass extends PureComponent {
                                 account: { ...this.props.account, ...this.props.author, ...this.props.authorDetails },
                             }}
                         >
-                            <Switch>
-                                {routesConfig.map((route, index) => (
-                                    <Route key={`route_${index}`} {...route} />
-                                ))}
-                            </Switch>
+                            <React.Suspense fallback={<ContentLoader message="Loading content" />}>
+                                <Switch>
+                                    {routesConfig.map((route, index) => (
+                                        <Route key={`route_${index}`} {...route} />
+                                    ))}
+                                </Switch>
+                            </React.Suspense>
                         </AccountContext.Provider>
                     )}
                 </div>

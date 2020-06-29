@@ -5,7 +5,6 @@ import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ClaimRecord';
 
@@ -20,7 +19,7 @@ let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
     onSubmit,
-})(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
+})(ClaimRecord);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -54,10 +53,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-ClaimPublicationFormContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ClaimPublicationFormContainer);
+ClaimPublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(ClaimPublicationFormContainer);
 ClaimPublicationFormContainer = withRouter(ClaimPublicationFormContainer);
 
 export default ClaimPublicationFormContainer;

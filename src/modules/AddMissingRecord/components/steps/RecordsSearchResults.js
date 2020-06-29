@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Suspense, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -9,21 +9,13 @@ import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 
 // forms & custom components
-import Async from 'modules/SharedComponents/Async';
-const PublicationsList = componentProps => (
-    <Async
-        load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}
-        componentProps={componentProps}
-    />
+const PublicationsList = React.lazy(() =>
+    import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
 );
 
-const PublicationListLoadingProgress = componentProps => (
-    <Async
-        load={import(
-            'modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'
-        )}
-        componentProps={componentProps}
-    />
+/* istanbul ignore next */
+const PublicationListLoadingProgress = React.lazy(() =>
+    import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
 );
 
 import { pathConfig } from 'config/routes';
@@ -125,13 +117,15 @@ export default class RecordsSearchResults extends PureComponent {
 
         return (
             <React.Fragment>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Hidden smUp>
                         <Grid item xs>
-                            <PublicationListLoadingProgress
-                                mobile
-                                loadingPublicationSources={this.props.loadingPublicationSources}
-                            />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <PublicationListLoadingProgress
+                                    mobile
+                                    loadingPublicationSources={this.props.loadingPublicationSources}
+                                />
+                            </Suspense>
                         </Grid>
                     </Hidden>
                     <Grid item sm={8} md={9}>
@@ -139,7 +133,7 @@ export default class RecordsSearchResults extends PureComponent {
                         {this.props.publicationsList.length > 0 && (
                             <Grid item sm={12}>
                                 <StandardCard {...searchResultsTxt.searchResults}>
-                                    <Grid container spacing={16}>
+                                    <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {searchResultsTxt.searchResults.resultsText
                                                 .replace('[noOfResults]', this.props.publicationsList.length)
@@ -147,14 +141,16 @@ export default class RecordsSearchResults extends PureComponent {
                                             {searchResultsTxt.searchResults.text}
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <PublicationsList
-                                                publicationsLoading={this.props.searchLoading}
-                                                publicationsList={this.props.publicationsList}
-                                                customActions={actions}
-                                                publicationsListSubset={unclaimablePublicationsList}
-                                                subsetCustomActions={unclaimable}
-                                                showSources
-                                            />
+                                            <Suspense fallback={<div>Loading...</div>}>
+                                                <PublicationsList
+                                                    publicationsLoading={this.props.searchLoading}
+                                                    publicationsList={this.props.publicationsList}
+                                                    customActions={actions}
+                                                    publicationsListSubset={unclaimablePublicationsList}
+                                                    subsetCustomActions={unclaimable}
+                                                    showSources
+                                                />
+                                            </Suspense>
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
@@ -169,7 +165,7 @@ export default class RecordsSearchResults extends PureComponent {
                         )}
                         {!this.props.searchLoading && (
                             <Grid item sm={12}>
-                                <Grid container spacing={16} style={{ marginTop: 12 }}>
+                                <Grid container spacing={2} style={{ marginTop: 12 }}>
                                     <Grid item xs />
                                     <Grid item xs={12} sm="auto">
                                         <Button
@@ -198,9 +194,11 @@ export default class RecordsSearchResults extends PureComponent {
                     <Hidden xsDown>
                         <Grid item sm={4} md={3}>
                             <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
-                                <PublicationListLoadingProgress
-                                    loadingPublicationSources={this.props.loadingPublicationSources}
-                                />
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <PublicationListLoadingProgress
+                                        loadingPublicationSources={this.props.loadingPublicationSources}
+                                    />
+                                </Suspense>
                             </StandardRighthandCard>
                         </Grid>
                     </Hidden>

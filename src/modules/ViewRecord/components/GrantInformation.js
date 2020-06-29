@@ -1,83 +1,115 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
 
-const styles = theme => ({
-    gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    },
-});
-export class GrantInformationClass extends PureComponent {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        classes: PropTypes.object,
-    };
+const useStyles = makeStyles(
+    theme => ({
+        gridRow: {
+            borderBottom: `1px solid ${theme.palette.secondary.light}`,
+        },
+        data: {
+            paddingRight: 4,
+        },
+    }),
+    { withTheme: true },
+);
 
-    GrantInformationCell = ({ grantAgencyName, grantId, className }) => {
-        return (
-            <Grid container display="row" alignItems="center">
+const searchByOrder = (grantData, orderSubkey, order) => {
+    return grantData && grantData.filter(grantData => grantData[orderSubkey] === order)[0];
+};
+
+const GrantInformationCell = ({ grantAgencyName, grantId, className }) => {
+    return (
+        <Grid container display="row" alignItems="center">
+            <Grid item>
+                <Typography variant="body2" className={className}>
+                    {grantAgencyName}
+                </Typography>
+            </Grid>
+            {!!grantId && (
                 <Grid item>
                     <Typography variant="body2" className={className}>
-                        {grantAgencyName}
+                        {` (${grantId})`}
                     </Typography>
                 </Grid>
-                {!!grantId && (
-                    <Grid item>
-                        <Typography variant="body2" className={className}>
-                            {` (${grantId})`}
-                        </Typography>
-                    </Grid>
-                )}
-            </Grid>
-        );
-    };
+            )}
+        </Grid>
+    );
+};
 
-    renderGrantDetail = (grantAgencyName, grantId, grantText, order, index) => {
-        const txt = locale.viewRecord.headings.default.grantInformation;
-        return (
-            <div style={{ padding: 8 }} key={index}>
-                <Grid container spacing={16} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
-                    <Grid item xs={12} sm={3}>
-                        <this.GrantInformationCell
-                            grantAgencyName={txt.fez_record_search_key_grant_agency}
-                            grantId={
-                                grantId &&
+GrantInformationCell.propTypes = {
+    grantAgencyName: PropTypes.string,
+    grantId: PropTypes.string,
+    className: PropTypes.string,
+};
+
+const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => {
+    const txt = locale.viewRecord.headings.default.grantInformation;
+    const classes = useStyles();
+    return (
+        <div style={{ padding: 8 }} key={index}>
+            <Grid container spacing={2} key={order} className={classes.gridRow} alignItems="flex-start">
+                <Grid item xs={12} sm={3}>
+                    <GrantInformationCell
+                        grantAgencyName={txt.fez_record_search_key_grant_agency}
+                        grantId={
+                            (grantId &&
                                 !!grantId.rek_grant_id &&
                                 grantId.rek_grant_id.trim().length > 0 &&
-                                txt.fez_record_search_key_grant_id
-                            }
-                            className="header"
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                        <this.GrantInformationCell
-                            grantAgencyName={grantAgencyName.rek_grant_agency}
-                            grantId={
-                                grantId &&
+                                txt.fez_record_search_key_grant_id) ||
+                            ''
+                        }
+                        className="header"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={9}>
+                    <GrantInformationCell
+                        grantAgencyName={grantAgencyName.rek_grant_agency}
+                        grantId={
+                            (grantId &&
                                 !!grantId.rek_grant_id &&
                                 grantId.rek_grant_id.trim().length > 0 &&
                                 grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET] &&
-                                grantId.rek_grant_id
-                            }
-                            className={this.props.classes.data}
-                        />
-                        <Typography variant="body2">{grantText && grantText.rek_grant_text}</Typography>
-                    </Grid>
+                                grantId.rek_grant_id) ||
+                            ''
+                        }
+                        className={classes.data}
+                    />
+                    <Typography variant="body2">{grantText && grantText.rek_grant_text}</Typography>
                 </Grid>
-            </div>
-        );
-    };
+            </Grid>
+        </div>
+    );
+};
 
-    searchByOrder = (grantData, orderSubkey, order) => {
-        return grantData && grantData.filter(grantData => grantData[orderSubkey] === order)[0];
-    };
+GrantDetails.propTypes = {
+    grantAgencyName: PropTypes.object,
+    grantId: PropTypes.object,
+    grantText: PropTypes.string,
+    order: PropTypes.number,
+    index: PropTypes.number,
+};
 
-    renderGrants = (publication, includeFundingText) => {
+export const GrantInformation = ({ publication }) => {
+    if (
+        !publication.fez_record_search_key_grant_agency ||
+        publication.fez_record_search_key_grant_agency.length === 0
+    ) {
+        return null;
+    }
+
+    const fundingText =
+        (publication.fez_record_search_key_grant_text &&
+            publication.fez_record_search_key_grant_text.length === 1 &&
+            publication.fez_record_search_key_grant_text[0].rek_grant_text) ||
+        null;
+
+    const renderGrants = (publication, includeFundingText) => {
         const grantAgencies = publication.fez_record_search_key_grant_agency;
         const grantIds = publication.fez_record_search_key_grant_id;
         const grantTexts = publication.fez_record_search_key_grant_text;
@@ -89,42 +121,28 @@ export class GrantInformationClass extends PureComponent {
             )
             .map((grantAgencyName, index) => {
                 const order = grantAgencyName.rek_grant_agency_order;
-                const grantId = this.searchByOrder(grantIds, 'rek_grant_id_order', order);
-                const grantText = includeFundingText && this.searchByOrder(grantTexts, 'rek_grant_text_order', order);
-                return this.renderGrantDetail(grantAgencyName, grantId, grantText, order, index);
+                const grantId = searchByOrder(grantIds, 'rek_grant_id_order', order);
+                const grantText = includeFundingText && searchByOrder(grantTexts, 'rek_grant_text_order', order);
+                return <GrantDetails key={index} {...{ grantAgencyName, grantId, grantText, order, index }} />;
             });
     };
 
-    render() {
-        if (
-            !this.props.publication.fez_record_search_key_grant_agency ||
-            this.props.publication.fez_record_search_key_grant_agency.length === 0
-        ) {
-            return null;
-        }
+    return (
+        <Grid item xs={12}>
+            <StandardCard title={locale.viewRecord.sections.grantInformation}>
+                {fundingText && (
+                    <Typography id="grantInformation" variant="body2" gutterBottom>
+                        {fundingText}
+                    </Typography>
+                )}
+                {publication.fez_record_search_key_grant_agency && renderGrants(publication, !!fundingText)}
+            </StandardCard>
+        </Grid>
+    );
+};
 
-        const fundingText =
-            (this.props.publication.fez_record_search_key_grant_text &&
-                this.props.publication.fez_record_search_key_grant_text.length === 1 &&
-                this.props.publication.fez_record_search_key_grant_text[0].rek_grant_text) ||
-            null;
+GrantInformation.propTypes = {
+    publication: PropTypes.object,
+};
 
-        return (
-            <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.grantInformation}>
-                    {fundingText && (
-                        <Typography id="grantInformation" variant="body2" gutterBottom>
-                            {fundingText}
-                        </Typography>
-                    )}
-                    {this.props.publication.fez_record_search_key_grant_agency &&
-                        this.renderGrants(this.props.publication, !fundingText)}
-                </StandardCard>
-            </Grid>
-        );
-    }
-}
-
-const StyledGrantInformation = withStyles(styles, { withTheme: true })(GrantInformationClass);
-const GrantInformation = props => <StyledGrantInformation {...props} />;
 export default GrantInformation;

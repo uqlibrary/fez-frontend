@@ -60,8 +60,8 @@ const initialPreviewState = {
 const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = args => {
-        setPreview({ ...args });
+    const showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl) => {
+        setPreview({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl });
     };
 
     const hidePreview = () => {
@@ -181,43 +181,43 @@ const checkForWeb = (filename, dataStreams) => {
 export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
-            const pid = dataStream.dsi_pid;
-            const fileName = dataStream.dsi_dsid;
-            const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+              const pid = dataStream.dsi_pid;
+              const fileName = dataStream.dsi_dsid;
+              const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
 
-            const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-            const previewFileName = checkForPreview(fileName, dataStreams);
-            const webFileName = checkForWeb(fileName, dataStreams);
+              const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+              const previewFileName = checkForPreview(fileName, dataStreams);
+              const webFileName = checkForWeb(fileName, dataStreams);
 
-            const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
-            const securityAccess = getSecurityAccess(dataStream);
+              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
+              const securityAccess = getSecurityAccess(dataStream);
 
-            return {
-                pid,
-                fileName,
-                description: dataStream.dsi_label,
-                mimeType,
-                thumbnailFileName,
-                calculatedSize: formatBytes(dataStream.dsi_size),
-                allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
-                iconProps: {
-                    pid,
-                    mimeType,
-                    fileName,
-                    thumbnailFileName,
-                    previewFileName,
-                    allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
-                    webFileName,
-                    securityAccess,
-                },
-                openAccessStatus,
-                previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
-                webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
-                mediaUrl: getUrl(pid, fileName),
-                securityStatus: getSecurityAccess(dataStream),
-                embargoDate: dataStream.dsi_embargo_date,
-            };
-        })
+              return {
+                  pid,
+                  fileName,
+                  description: dataStream.dsi_label,
+                  mimeType,
+                  thumbnailFileName,
+                  calculatedSize: formatBytes(dataStream.dsi_size),
+                  allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
+                  iconProps: {
+                      pid,
+                      mimeType,
+                      fileName,
+                      thumbnailFileName,
+                      previewFileName,
+                      allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
+                      webFileName,
+                      securityAccess,
+                  },
+                  openAccessStatus,
+                  previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
+                  webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
+                  mediaUrl: getUrl(pid, fileName),
+                  securityStatus: getSecurityAccess(dataStream),
+                  embargoDate: dataStream.dsi_embargo_date,
+              };
+          })
         : [];
 };
 
@@ -284,7 +284,7 @@ export const AttachedFiles = ({
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 <div style={{ padding: 8 }}>
-                    <Grid container direction="row" alignItems="center" spacing={16} className={classes.header}>
+                    <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
                         <Grid item xs={1}>
                             &nbsp;
                         </Grid>
@@ -325,14 +325,18 @@ export const AttachedFiles = ({
                 {fileData.map((item, index) => (
                     <React.Fragment key={index}>
                         <div style={{ padding: 8 }} key={index}>
-                            <Grid container className={classes.header} spacing={24} key={`file-${index}`}>
+                            <Grid container className={classes.header} spacing={3} key={`file-${index}`}>
                                 <Grid item xs={12}>
-                                    <Grid container direction="row" alignItems="center" spacing={16} wrap={'nowrap'}>
+                                    <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                         <Grid item xs={1} className={classes.thumbIconCentered}>
-                                            <FileIcon {...item.iconProps} showPreview={showPreview} />
+                                            <FileIcon
+                                                {...item.iconProps}
+                                                showPreview={showPreview}
+                                                id={`file-icon-${index}`}
+                                            />
                                         </Grid>
                                         <Grid item sm={3} className={classes.dataWrapper}>
-                                            <FileName {...item} onFileSelect={showPreview} />
+                                            <FileName {...item} onFileSelect={showPreview} id={`file-name-${index}`} />
                                         </Grid>
                                         <Hidden xsDown>
                                             <Grid item sm={3} className={classes.dataWrapper}>
@@ -342,6 +346,8 @@ export const AttachedFiles = ({
                                                         onChange={onFileDescriptionChange(index)}
                                                         name="fileDescription"
                                                         defaultValue={item.description}
+                                                        id={`file-description-input-${index}`}
+                                                        textFieldId={`dsi-label-${index}`}
                                                     />
                                                 ) : (
                                                     <Typography variant="body2" noWrap>
@@ -384,7 +390,11 @@ export const AttachedFiles = ({
                                                 </Grid>
                                                 <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
-                                                        <IconButton onClick={onFileDelete(index)} disabled={disabled}>
+                                                        <IconButton
+                                                            id={`delete-file-${index}`}
+                                                            onClick={onFileDelete(index)}
+                                                            disabled={disabled}
+                                                        >
                                                             <Delete />
                                                         </IconButton>
                                                     </Tooltip>
@@ -398,7 +408,7 @@ export const AttachedFiles = ({
                                         <React.Fragment>
                                             <Grid
                                                 container
-                                                spacing={8}
+                                                spacing={1}
                                                 alignContent={'flex-end'}
                                                 alignItems={'flex-end'}
                                                 justify={'flex-end'}
@@ -426,7 +436,9 @@ export const AttachedFiles = ({
                         </div>
                     </React.Fragment>
                 ))}
-                {preview.mediaUrl && preview.mimeType && <MediaPreview {...preview} onClose={hidePreview} />}
+                {preview.mediaUrl && preview.mimeType && (
+                    <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
+                )}
             </StandardCard>
         </Grid>
     );

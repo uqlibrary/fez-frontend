@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import List from '@material-ui/core/List';
@@ -12,329 +12,265 @@ import OpenAccessFilter from './OpenAccessFilter';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-const FacetFilterNestedListItems = ({ facetCategory, disabled, activeFacets, handleFacetClick, isFacetFilterActive }) =>
-    facetCategory.facets.map((item, index) => (
-        <FacetFilterNestedListItem
-            key={index}
-            index={index}
-            onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
-            isActive={isFacetFilterActive(activeFacets, facetCategory.facetTitle, item.key)}
-            primaryText={`${item.title} (${item.count})`}
-            disabled={disabled}
-        />
-    ));
+export const FacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
+    facetCategory,
+    disabled,
+    activeFacets,
+    handleFacetClick,
+    isFacetFilterActive,
+}) {
+    return facetCategory.facets.map((item, index) => {
+        const isActive = isFacetFilterActive(activeFacets.filters, facetCategory.facetTitle, item.key);
+        return (
+            <FacetFilterNestedListItem
+                key={index}
+                index={index}
+                onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
+                isActive={isActive}
+                primaryText={`${item.title} (${item.count})`}
+                disabled={disabled}
+            />
+        );
+    });
+});
 
-FacetFilterNestedListItems.PropTypes = {
-    facetCategory: PropTypes.shape({
-        facets: PropTypes.array,
-        facetTitle: PropTypes.string,
-    }),
+FacetFilterNestedListItemsList.propTypes = {
+    facetCategory: PropTypes.object,
     disabled: PropTypes.bool,
-    activeFacets: PropTypes.array,
+    activeFacets: PropTypes.object,
     handleFacetClick: PropTypes.func,
-    isFacetFilterActive: PropTypes.bool,
+    isFacetFilterActive: PropTypes.func,
 };
 
-export const FacetFilterNestedListItemsList = React.memo(FacetFilterNestedListItems);
+const getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
+    const facetsToDisplay = [];
+    Object.keys(rawFacets).forEach(key => {
+        const rawFacet = rawFacets[key];
+        const rawFacetLookup = rawFacets[`${key} (lookup)`];
 
-export default class FacetsFilter extends PureComponent {
-    static propTypes = {
-        facetsData: PropTypes.object,
-        onFacetsChanged: PropTypes.func,
-        activeFacets: PropTypes.object,
-        initialFacets: PropTypes.object,
-        excludeFacetsList: PropTypes.array,
-        renameFacetsList: PropTypes.object,
-        lookupFacetsList: PropTypes.object,
-        disabled: PropTypes.bool,
-        showOpenAccessFilter: PropTypes.bool,
-    };
-
-    static defaultProps = {
-        excludeFacetsList: [],
-        renameFacetsList: {},
-        lookupFacetsList: {},
-        showOpenAccessFilter: false,
-    };
-
-    constructor(props) {
-        super(props);
-
-        // always keep props/state in sync
-        this.state = {
-            activeFacets: {
-                ...props.activeFacets,
-                ...props.initialFacets,
-            },
-            hasActiveFilters: false,
-            toggledFacets: {},
-        };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            activeFacets: nextProps.activeFacets,
-        });
-    }
-
-    _handleFacetClick = (category, facet) => () => {
-        if (this.props.disabled) {
+        // ignore facet if it has no data or is in exclude list
+        if (
+            key.indexOf('(lookup)') >= 0 ||
+            (excludeFacetsList && excludeFacetsList.indexOf(key) >= 0) ||
+            (rawFacet.buckets && rawFacet.buckets.length === 0)
+        ) {
             return;
         }
 
-        const activeFacets = {
-            filters: { ...this.state.activeFacets.filters },
-            ranges: { ...this.state.activeFacets.ranges },
-            showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly,
+        // construct facet object to display, if facet has a lookup - get display name from lookup,
+        // if facet key has a rename record, then use that
+        const facetToDisplay = {
+            title: renameFacetsList[key] || key,
+            facetTitle: lookupFacetsList[key] || key,
+            facets: rawFacet.buckets.map((item, index) => {
+                if (key === 'Display type') {
+                    return {
+                        title: (publicationTypes()[rawFacet.buckets[index].key] || { name: 'Unknown' }).name,
+                        key: item.key,
+                        count: item.doc_count,
+                    };
+                } else {
+                    const facetValue =
+                        rawFacetLookup && rawFacetLookup.buckets.length > index
+                            ? rawFacetLookup.buckets[index].key
+                            : item.key;
+                    return {
+                        title: facetValue,
+                        key: lookupFacetsList[key] ? facetValue : item.key,
+                        count: item.doc_count,
+                    };
+                }
+            }),
         };
 
-        if (this.isFacetFilterActive(activeFacets, category, facet)) {
-            delete activeFacets.filters[category];
+        facetsToDisplay.push(facetToDisplay);
+    });
+    return facetsToDisplay;
+};
+
+const isFacetFilterActive = (activeFacetsFilters, category, value) => {
+    return activeFacetsFilters.hasOwnProperty(category) && isNaN(activeFacetsFilters[category])
+        ? activeFacetsFilters[category] === value
+        : parseInt(activeFacetsFilters[category], 10) === value;
+};
+
+const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges, showOpenAccessOnly, excludeFacetsList) =>
+    Object.keys(activeFacetsFilters).filter(filter => !excludeFacetsList.includes(filter)).length > 0 ||
+    Object.keys(activeFacetsRanges).length > 0 ||
+    !!showOpenAccessOnly;
+
+export const FacetsFilter = ({
+    facetsData,
+    activeFacets,
+    initialFacets,
+    excludeFacetsList,
+    renameFacetsList,
+    lookupFacetsList,
+    disabled,
+    showOpenAccessFilter,
+    onFacetsChanged,
+}) => {
+    const [activeFacetsFilters, setActiveFacetsFilters] = useState({
+        ...activeFacets.filters,
+        ...((initialFacets || {}).filters || {}),
+    });
+
+    const [activeFacetsRanges, setActiveFacetsRanges] = useState({
+        ...activeFacets.ranges,
+    });
+
+    const [showOpenAccessOnly, setShowOpenAccessOnly] = useState(false);
+
+    const [hasActiveFilters, setHasActiveFilters] = useState(false);
+
+    useEffect(() => {
+        onFacetsChanged({
+            filters: activeFacetsFilters,
+            ranges: activeFacetsRanges,
+            showOpenAccessOnly: showOpenAccessOnly,
+        });
+    }, [activeFacetsFilters, activeFacetsRanges, showOpenAccessOnly, onFacetsChanged]);
+
+    const {
+        yearPublishedCategory,
+        yearPublishedFacet,
+        resetButtonText,
+        openAccessFilter,
+    } = locale.components.facetsFilter;
+
+    const facetsToDisplay = getFacetsToDisplay(facetsData, excludeFacetsList, renameFacetsList, lookupFacetsList);
+
+    const dataRangeValueProps = activeFacetsRanges.hasOwnProperty(yearPublishedCategory)
+        ? {
+              value: activeFacetsRanges[yearPublishedCategory],
+              isActive: true,
+          }
+        : { isActive: false };
+
+    const _handleFacetClick = (category, facet) => () => {
+        const newActiveFacetsFilters = { ...activeFacetsFilters };
+
+        if (isFacetFilterActive(newActiveFacetsFilters, category, facet)) {
+            delete newActiveFacetsFilters[category];
         } else {
-            activeFacets.filters[category] = facet;
+            newActiveFacetsFilters[category] = facet;
         }
 
-        this.setState(
-            {
-                activeFacets: activeFacets,
-                hasActiveFilters: this.hasActiveFilters(activeFacets),
-            },
-            () => {
-                this.props.onFacetsChanged(this.state.activeFacets);
-            },
+        setActiveFacetsFilters(newActiveFacetsFilters);
+        setHasActiveFilters(
+            getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges, showOpenAccessOnly, excludeFacetsList),
         );
     };
 
-    _handleOpenAccessFilter = isActive => {
-        if (this.props.disabled) {
-            return;
-        }
-
-        const activeFacets = {
-            ...this.state.activeFacets,
-            showOpenAccessOnly: isActive,
-        };
-
-        this.setState(
-            {
-                activeFacets,
-                hasActiveFilters: this.hasActiveFilters(activeFacets),
-            },
-            () => {
-                this.props.onFacetsChanged(this.state.activeFacets);
-            },
+    const _handleOpenAccessFilter = isActive => {
+        setShowOpenAccessOnly(!!isActive);
+        setHasActiveFilters(
+            getHasActiveFilters(activeFacetsFilters, activeFacetsRanges, !!isActive, excludeFacetsList),
         );
     };
 
-    _handleYearPublishedRangeFacet = category => range => {
-        if (this.props.disabled) {
-            return;
-        }
+    const _handleYearPublishedRangeFacet = (category, range, isActive) => {
+        const newActiveFacetsRanges = { ...activeFacetsRanges };
 
-        const activeFacets = {
-            filters: { ...this.state.activeFacets.filters },
-            ranges: { ...this.state.activeFacets.ranges },
-            showOpenAccessOnly: !!this.state.activeFacets.showOpenAccessOnly,
-        };
-
-        if (!range.to && !range.from) {
-            delete activeFacets.ranges[category];
+        if (!isActive) {
+            delete newActiveFacetsRanges[category];
         } else {
-            activeFacets.ranges[category] = range;
-        }
-        this.setState(
-            {
-                activeFacets: activeFacets,
-                hasActiveFilters: this.hasActiveFilters(activeFacets),
-            },
-            () => {
-                this.props.onFacetsChanged(this.state.activeFacets);
-            },
-        );
-    };
-
-    _handleResetClick = () => {
-        this.setState(
-            {
-                activeFacets: {
-                    filters: {},
-                    ranges: {},
-                    ...(this.props.initialFacets || {}),
-                },
-            },
-            () => {
-                this.props.onFacetsChanged(this.state.activeFacets);
-            },
-        );
-    };
-
-    isFacetFilterActive = (activeFacets, category, value) => {
-        return activeFacets.filters.hasOwnProperty(category) && isNaN(activeFacets.filters[category])
-            ? activeFacets.filters[category] === value
-            : parseInt(activeFacets.filters[category], 10) === value;
-    };
-
-    getNestedListItems = facetCategory => {
-        return facetCategory.facets.map((item, index) => {
-            const isActive = this.isFacetFilterActive(this.state.activeFacets, facetCategory.facetTitle, item.key);
-            return (
-                <FacetFilterNestedListItem
-                    key={index}
-                    index={index}
-                    onFacetClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
-                    isActive={isActive}
-                    primaryText={`${item.title} (${item.count})`}
-                    disabled={this.props.disabled}
-                />
-            );
-        });
-    };
-
-    getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
-        const facetsToDisplay = [];
-        Object.keys(rawFacets).forEach(key => {
-            const rawFacet = rawFacets[key];
-            const rawFacetLookup = rawFacets[`${key} (lookup)`];
-
-            // ignore facet if it has no data or is in exclude list
-            if (
-                key.indexOf('(lookup)') >= 0 ||
-                (excludeFacetsList && excludeFacetsList.indexOf(key) >= 0) ||
-                (rawFacet.buckets && rawFacet.buckets.length === 0)
-            ) {
-                return;
-            }
-
-            // construct facet object to display, if facet has a lookup - get display name from lookup,
-            // if facet key has a rename record, then use that
-            const facetToDisplay = {
-                title: renameFacetsList[key] || key,
-                facetTitle: lookupFacetsList[key] || key,
-                facets: rawFacet.buckets.map((item, index) => {
-                    if (key === 'Display type') {
-                        return {
-                            title: (publicationTypes()[rawFacet.buckets[index].key] || { name: 'Unknown' }).name,
-                            key: item.key,
-                            count: item.doc_count,
-                        };
-                    } else {
-                        const facetValue =
-                            rawFacetLookup && rawFacetLookup.buckets.length > index
-                                ? rawFacetLookup.buckets[index].key
-                                : item.key;
-                        return {
-                            title: facetValue,
-                            key: lookupFacetsList[key] ? facetValue : item.key,
-                            count: item.doc_count,
-                        };
-                    }
-                }),
-            };
-
-            facetsToDisplay.push(facetToDisplay);
-        });
-        return facetsToDisplay;
-    };
-
-    toggleFacet = item => () => {
-        this.setState({
-            toggledFacets: {
-                ...this.state.toggledFacets,
-                [item]: !this.state.toggledFacets[item],
-            },
-        });
-    };
-
-    hasActiveFilters = activeFacets =>
-        Object.keys(activeFacets.filters).filter(filter => !this.props.excludeFacetsList.includes(filter)).length > 0 ||
-        Object.keys(activeFacets.ranges).length > 0 ||
-        !!activeFacets.showOpenAccessOnly;
-
-    render() {
-        const {
-            yearPublishedCategory,
-            yearPublishedFacet,
-            resetButtonText,
-            openAccessFilter,
-        } = locale.components.facetsFilter;
-        const facetsToDisplay = this.getFacetsToDisplay(
-            this.props.facetsData,
-            this.props.excludeFacetsList,
-            this.props.renameFacetsList,
-            this.props.lookupFacetsList,
-        );
-
-        if (facetsToDisplay.length === 0 && !this.state.hasActiveFilters) {
-            return <span className="facetsFilter empty" />;
+            newActiveFacetsRanges[category] = range;
         }
 
-        const dataRangeValueProps = this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory)
-            ? {
-                value: this.state.activeFacets.ranges[yearPublishedCategory],
-                isActive: true,
-            }
-            : {};
+        setActiveFacetsRanges(newActiveFacetsRanges);
+        setHasActiveFilters(
+            getHasActiveFilters(activeFacetsFilters, newActiveFacetsRanges, !!showOpenAccessOnly, excludeFacetsList),
+        );
+    };
 
-        return (
-            <div className="facetsFilter">
-                <List component="nav" dense>
-                    {facetsToDisplay.map(item => {
-                        // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
-                        return (
-                            <FacetFilterListItem
-                                id={`facet-category-${item.facetTitle.replace(/ /g, '-')}`}
-                                key={`facet-category-${item.facetTitle.replace(/ /g, '-')}`}
-                                facetTitle={item.title}
-                                disabled={this.props.disabled}
-                                onToggle={this.toggleFacet(item.facetTitle)}
-                                open={this.state.toggledFacets[item.facetTitle]}
-                            >
+    const _handleResetClick = () => {
+        setActiveFacetsFilters({
+            ...((initialFacets || {}).filters || {}),
+        });
+        setActiveFacetsRanges({});
+        setShowOpenAccessOnly(false);
+        setHasActiveFilters(false);
+    };
+
+    if (facetsToDisplay.length === 0 && !hasActiveFilters) {
+        return <span id="empty-facet-filters" className="facetsFilter empty" />;
+    }
+    return (
+        <div className="facetsFilter">
+            <List component="nav" dense>
+                {facetsToDisplay.map(item => {
+                    // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
+                    return (
+                        <FacetFilterListItem
+                            id={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
+                            key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
+                            title={item.title}
+                            disabled={disabled}
+                            nestedItems={
                                 <FacetFilterNestedListItemsList
                                     facetCategory={item}
-                                    disabled={this.props.disabled}
-                                    activeFacets={this.state.activeFacets}
-                                    handleFacetClick={this._handleFacetClick}
-                                    isFacetFilterActive={this.isFacetFilterActive}
+                                    disabled={disabled}
+                                    activeFacets={{
+                                        filters: activeFacetsFilters,
+                                        ranges: activeFacetsRanges,
+                                        showOpenAccessOnly,
+                                    }}
+                                    handleFacetClick={_handleFacetClick}
+                                    isFacetFilterActive={isFacetFilterActive}
                                 />
-                            </FacetFilterListItem>
-                        );
-                    })}
-                    {this.props.excludeFacetsList.indexOf('Published year range') === -1 && (
-                        <DateRange
-                            // value={
-                            //     this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory)
-                            //         ? this.state.activeFacets.ranges[yearPublishedCategory]
-                            //         : {}
-                            // }
-                            {...dataRangeValueProps}
-                            disabled={this.props.disabled}
-                            onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
-                            locale={yearPublishedFacet}
-                            onToggle={this.toggleFacet(yearPublishedCategory)}
-                            open={this.state.toggledFacets[yearPublishedCategory]}
+                            }
                         />
-                    )}
-                    {this.props.showOpenAccessFilter && (
-                        <OpenAccessFilter
-                            isActive={this.state.activeFacets.showOpenAccessOnly}
-                            disabled={this.props.disabled}
-                            locale={openAccessFilter}
-                            onChange={this._handleOpenAccessFilter}
-                            onToggle={this.toggleFacet(openAccessFilter.displayTitle)}
-                            open={this.state.toggledFacets[openAccessFilter.displayTitle]}
-                        />
-                    )}
-                </List>
-                {this.state.hasActiveFilters && (
-                    <Grid container justify="flex-end">
-                        <Grid item>
-                            <Button variant="contained" onClick={this._handleResetClick}>
-                                {resetButtonText}
-                            </Button>
-                        </Grid>
-                    </Grid>
+                    );
+                })}
+                {excludeFacetsList.indexOf('Published year range') === -1 && (
+                    <DateRange
+                        {...dataRangeValueProps}
+                        disabled={disabled}
+                        onChange={_handleYearPublishedRangeFacet}
+                        locale={yearPublishedFacet}
+                        category={yearPublishedCategory}
+                    />
                 )}
-            </div>
-        );
-    }
-}
+                {showOpenAccessFilter && (
+                    <OpenAccessFilter
+                        isActive={showOpenAccessOnly}
+                        disabled={disabled}
+                        locale={openAccessFilter}
+                        onChange={_handleOpenAccessFilter}
+                    />
+                )}
+            </List>
+            {hasActiveFilters && (
+                <Grid container justify="flex-end">
+                    <Grid item>
+                        <Button variant="contained" onClick={_handleResetClick}>
+                            {resetButtonText}
+                        </Button>
+                    </Grid>
+                </Grid>
+            )}
+        </div>
+    );
+};
+
+FacetsFilter.propTypes = {
+    facetsData: PropTypes.object,
+    activeFacets: PropTypes.object,
+    initialFacets: PropTypes.object,
+    excludeFacetsList: PropTypes.array,
+    renameFacetsList: PropTypes.object,
+    lookupFacetsList: PropTypes.object,
+    disabled: PropTypes.bool,
+    showOpenAccessFilter: PropTypes.bool,
+    onFacetsChanged: PropTypes.func,
+};
+
+FacetsFilter.defaultProps = {
+    excludeFacetsList: [],
+    renameFacetsList: {},
+    lookupFacetsList: {},
+    showOpenAccessFilter: false,
+};
+
+export default React.memo(FacetsFilter);

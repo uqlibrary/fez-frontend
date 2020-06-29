@@ -542,6 +542,12 @@ describe('Backend routes method', () => {
         expect(routes.EXISTING_RECORD_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001' });
     });
 
+    it('should construct url for EXISTING_RECORD_API for admin edit to get lock info', () => {
+        expect(routes.EXISTING_RECORD_API({ pid: 'UQ:1001', isEdit: true })).toEqual({
+            apiUrl: 'records/UQ:1001?from=admin-form',
+        });
+    });
+
     it('should construct url for RECORDS_ISSUES_API', () => {
         expect(routes.RECORDS_ISSUES_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001/issues' });
     });
@@ -788,8 +794,8 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for ISSN_LINKS_API', () => {
-        expect(routes.ISSN_LINKS_API({ type: 'test' })).toEqual({
-            apiUrl: 'tool/lookup/test',
+        expect(routes.ISSN_LINKS_API({ type: 'test', issn: '1234-1234' })).toEqual({
+            apiUrl: 'tool/lookup/local/test/1234-1234',
         });
     });
 

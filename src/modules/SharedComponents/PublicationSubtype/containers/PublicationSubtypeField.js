@@ -7,8 +7,9 @@ export const PublicationSubtypeField = fieldProps => {
     return (
         <GenericSelectField
             onChange={fieldProps.input.onChange}
-            selectedValue={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value}
+            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value}
             itemsList={['Select a document subtype', ...subtypes.map(type => ({ value: type }))]}
+            genericSelectFieldId="rek-subtype"
             {...fieldProps}
         />
     );

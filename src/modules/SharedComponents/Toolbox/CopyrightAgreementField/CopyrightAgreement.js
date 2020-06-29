@@ -12,6 +12,7 @@ export class CopyrightAgreement extends PureComponent {
         classes: PropTypes.object,
         copyrightAgreement: PropTypes.node,
         disabled: PropTypes.bool,
+        copyrightAgreementFieldId: PropTypes.string.isRequired,
     };
 
     _handleChange = event => {
@@ -29,7 +30,10 @@ export class CopyrightAgreement extends PureComponent {
                 disabled={disabled}
                 control={
                     <Checkbox
-                        id="deposit-agreement"
+                        inputProps={{
+                            'data-testid': `${this.props.copyrightAgreementFieldId}-input`,
+                            id: `${this.props.copyrightAgreementFieldId}-input`,
+                        }}
                         checked={isCopyrightAgreementAccepted}
                         onChange={this._handleChange}
                         classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
@@ -42,6 +46,8 @@ export class CopyrightAgreement extends PureComponent {
                         }}
                         color={!isCopyrightAgreementAccepted ? 'error' : 'secondary'}
                         component="div"
+                        id={`${this.props.copyrightAgreementFieldId}-label`}
+                        data-testid={`${this.props.copyrightAgreementFieldId}-label`}
                     >
                         {copyrightAgreement}
                     </Typography>

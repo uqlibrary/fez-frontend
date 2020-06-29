@@ -14,7 +14,7 @@ describe('Action creators for authors', () => {
         mockApi.reset();
     });
 
-    it('dispatches expected actions while searching for authors', async() => {
+    it('dispatches expected actions while searching for authors', async () => {
         const testParam = 'abc';
         const testRequest = { query: testParam };
 
@@ -26,7 +26,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions while searching for authors with filter', async() => {
+    it('dispatches expected actions while searching for authors with filter', async () => {
         const testParam = 'abc';
         const testFilterParam = item => {
             return !!item.aut_org_username;
@@ -41,7 +41,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions while searching for authors by anon user', async() => {
+    it('dispatches expected actions while searching for authors by anon user', async () => {
         const testParam = 'abc';
 
         mockApi.onAny().reply(403, mockData.authorsSearch);
@@ -56,7 +56,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions while searching for authors with failed API call', async() => {
+    it('dispatches expected actions while searching for authors with failed API call', async () => {
         const testParam = 'abc';
 
         mockApi.onAny().reply(500, mockData.authorsSearch);
@@ -67,7 +67,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should update fez-author record successfully if API call succeeded', async() => {
+    it('should update fez-author record successfully if API call succeeded', async () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
@@ -79,7 +79,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should fail update fez-author record if API call failed', async() => {
+    it('should fail update fez-author record if API call failed', async () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
@@ -99,7 +99,7 @@ describe('Action creators for authors', () => {
         }
     });
 
-    it('should fail update fez-author record for anon user', async() => {
+    it('should fail update fez-author record for anon user', async () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
@@ -119,7 +119,7 @@ describe('Action creators for authors', () => {
         }
     });
 
-    it('should link author to orcid and update fez-author record successfully if API call succeeded', async() => {
+    it('should link author to orcid and update fez-author record successfully if API call succeeded', async () => {
         const userId = 'uqresearcher';
         const authorId = 1234;
         const orcidCode = '123ABC';
@@ -144,7 +144,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions if orcid linking failed', async() => {
+    it('dispatches expected actions if orcid linking failed', async () => {
         const userId = 'uqresearcher';
         const authorId = 1234;
         const orcidCode = '123ABC';
@@ -161,7 +161,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions if orcid linking returned no orcid value', async() => {
+    it('dispatches expected actions if orcid linking returned no orcid value', async () => {
         const userId = 'uqresearcher';
         const authorId = 1234;
         const orcidCode = '123ABC';
@@ -186,7 +186,7 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions if orcid linking author update failed', async() => {
+    it('dispatches expected actions if orcid linking author update failed', async () => {
         const userId = 'uqresearcher';
         const authorId = 1234;
         const orcidCode = '123ABC';
@@ -213,10 +213,17 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions resetting author saving state', async() => {
+    it('dispatches expected actions resetting author saving state', async () => {
         const expectedActions = [actions.CURRENT_AUTHOR_SAVE_RESET];
 
         await mockActionsStore.dispatch(authorsActions.resetSavingAuthorState());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions to clear authors list', async () => {
+        const expectedActions = [actions.CLEAR_AUTHORS_LIST];
+
+        await mockActionsStore.dispatch(authorsActions.clearAuthorsSuggestions());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

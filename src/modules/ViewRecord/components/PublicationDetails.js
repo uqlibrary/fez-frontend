@@ -29,7 +29,7 @@ export class PublicationDetailsClass extends PureComponent {
 
     ViewRecordRow = ({ heading, data }) => (
         <div style={{ padding: 8 }}>
-            <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
                         {heading}
@@ -65,39 +65,39 @@ export class PublicationDetailsClass extends PureComponent {
                     )}
                     {this.props.publication.fez_record_search_key_content_indicator &&
                         this.props.publication.fez_record_search_key_content_indicator.length > 0 && (
-                        <this.ViewRecordRow
-                            heading={componentLocale.components.contentIndicators.label}
-                            data={this.props.publication.fez_record_search_key_content_indicator
-                                .map(item => item.rek_content_indicator_lookup)
-                                .join(componentLocale.components.contentIndicators.divider)}
-                        />
-                    )}
+                            <this.ViewRecordRow
+                                heading={componentLocale.components.contentIndicators.label}
+                                data={this.props.publication.fez_record_search_key_content_indicator
+                                    .map(item => item.rek_content_indicator_lookup)
+                                    .join(componentLocale.components.contentIndicators.divider)}
+                            />
+                        )}
                     {this.props.publication.fez_record_search_key_ismemberof &&
                         this.props.publication.fez_record_search_key_ismemberof.length > 0 && (
-                        <this.ViewRecordRow
-                            heading={headings.fez_record_search_key_ismemberof}
-                            data={
-                                <ul className={this.props.classes.ul}>
-                                    {this.props.publication.fez_record_search_key_ismemberof.map(
-                                        (collection, index) =>
-                                            collection.rek_ismemberof &&
+                            <this.ViewRecordRow
+                                heading={headings.fez_record_search_key_ismemberof}
+                                data={
+                                    <ul className={this.props.classes.ul}>
+                                        {this.props.publication.fez_record_search_key_ismemberof.map(
+                                            (collection, index) =>
+                                                collection.rek_ismemberof &&
                                                 collection.rek_ismemberof_lookup && (
-                                                <li key={`collection-${index}`}>
-                                                    <Link
-                                                        to={pathConfig.list.collection(
-                                                            collection.rek_ismemberof,
-                                                            collection.rek_ismemberof_lookup,
-                                                        )}
-                                                    >
-                                                        {collection.rek_ismemberof_lookup}
-                                                    </Link>
-                                                </li>
-                                            ),
-                                    )}
-                                </ul>
-                            }
-                        />
-                    )}
+                                                    <li key={`collection-${index}`}>
+                                                        <Link
+                                                            to={pathConfig.list.collection(
+                                                                collection.rek_ismemberof,
+                                                                collection.rek_ismemberof_lookup,
+                                                            )}
+                                                        >
+                                                            {collection.rek_ismemberof_lookup}
+                                                        </Link>
+                                                    </li>
+                                                ),
+                                        )}
+                                    </ul>
+                                }
+                            />
+                        )}
                 </StandardCard>
             </Grid>
         );

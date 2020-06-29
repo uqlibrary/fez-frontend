@@ -35,9 +35,9 @@ export default class DateCitationView extends PureComponent {
                 {prefix}
                 {isLocalised
                     ? moment
-                        .utc(date)
-                        .local()
-                        .format(format)
+                          .utc(date)
+                          .local()
+                          .format(format)
                     : moment.utc(date).format(format)}
                 {suffix}
             </span>

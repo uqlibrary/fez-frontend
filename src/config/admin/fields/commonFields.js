@@ -9,11 +9,11 @@ export default {
         },
         ...(displayAdvisoryStatement
             ? [
-                {
-                    title: 'Advisory statement',
-                    groups: [['advisoryStatement']],
-                },
-            ]
+                  {
+                      title: 'Advisory statement',
+                      groups: [['advisoryStatement']],
+                  },
+              ]
             : []),
         {
             title: isDataset ? 'Deposit agreement' : 'Copyright agreement',
@@ -27,10 +27,12 @@ export default {
         },
     ],
     identifiers: (
-        { displayAll, displayIdentifiers, displayLocation } = {
+        { displayAll, displayIdentifiers, displayLocation, displayPubmed, displayPubmedCentral } = {
             displayAll: false,
             displayIdentifiers: false,
             displayLocation: false,
+            displayPubmed: true,
+            displayPubmedCentral: false,
         },
     ) => [
         {
@@ -40,9 +42,10 @@ export default {
                 ...((displayAll && [
                     ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
                     ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
                 ]) ||
                     []),
+                ...((displayPubmed && [['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type']]) || []),
+                ...((displayPubmedCentral && [['fez_record_search_key_pubmed_central_id']]) || []),
             ],
         },
         {
@@ -51,19 +54,19 @@ export default {
         },
         ...(displayIdentifiers
             ? [
-                {
-                    title: 'Identifiers',
-                    groups: [['fez_record_search_key_identifier']],
-                },
-            ]
+                  {
+                      title: 'Identifiers',
+                      groups: [['fez_record_search_key_identifier']],
+                  },
+              ]
             : []),
         ...(displayLocation
             ? [
-                {
-                    title: 'Location',
-                    groups: [['fez_record_search_key_location_identifiers']],
-                },
-            ]
+                  {
+                      title: 'Location',
+                      groups: [['locations']],
+                  },
+              ]
             : []),
     ],
 };

@@ -67,10 +67,10 @@ export default {
             title: 'Additional information',
             groups: [
                 ['fez_record_search_key_access_conditions', 'fez_record_search_key_oa_status'],
-                ['fez_record_search_key_license_additional'],
+                ['fez_record_search_key_license'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_start_date'],
-                ['fez_record_search_key_end_date_admin'],
+                ['fez_record_search_key_end_date'],
                 ['fez_record_search_key_time_period_start_date'],
                 ['fez_record_search_key_time_period_end_date'],
                 ['additionalNotes'],

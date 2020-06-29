@@ -53,7 +53,7 @@ describe('Record action creators', () => {
         };
         const pidRequest = { pid: 'UQ:396321' };
 
-        it('dispatches expected actions on successful save', async() => {
+        it('dispatches expected actions on successful save', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -71,7 +71,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on successful save on alternate data format', async() => {
+        it('dispatches expected actions on successful save on alternate data format', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -89,7 +89,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on successful save with files', async() => {
+        it('dispatches expected actions on successful save with files', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -111,7 +111,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on successful save with files api failure', async() => {
+        it('dispatches expected actions on successful save with files api failure', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -134,7 +134,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions for anon user', async() => {
+        it('dispatches expected actions for anon user', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -155,7 +155,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions if patch record fails', async() => {
+        it('dispatches expected actions if patch record fails', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -180,7 +180,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on issues api posts comments successfully', async() => {
+        it('dispatches expected actions on issues api posts comments successfully', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -205,7 +205,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on issues api failure to post comments', async() => {
+        it('dispatches expected actions on issues api failure to post comments', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -230,7 +230,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('correctly creates a record that needs no data deletions', async() => {
+        it('correctly creates a record that needs no data deletions', async () => {
             const testInput = {
                 rek_title: 'test',
                 rek_display_type: 179,
@@ -262,7 +262,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions when authors list is not provided (just author)', async() => {
+        it('dispatches expected actions when authors list is not provided (just author)', async () => {
             const testInput = {
                 currentAuthor: [
                     {
@@ -302,7 +302,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on successful save of an NTRO record', async() => {
+        it('dispatches expected actions on successful save of an NTRO record', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -343,7 +343,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on successful save of record with various obscure fields', async() => {
+        it('dispatches expected actions on successful save of record with various obscure fields', async () => {
             const testInput1 = {
                 ...testInput,
                 files: [],
@@ -429,7 +429,7 @@ describe('Record action creators', () => {
         };
         const pidRequest = { pid: 'UQ:396321' };
 
-        it('dispatches expected actions on missing pid', async() => {
+        it('dispatches expected actions on missing pid', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record, rek_pid: '' } })
@@ -448,7 +448,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions on failed RHD Thesis save', async() => {
+        it('dispatches expected actions on failed RHD Thesis save', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(500, { rek_pid: pidRequest.pid })
@@ -473,7 +473,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions on failed file upload presigned URL for RHD Thesis', async() => {
+        it('dispatches expected actions on failed file upload presigned URL for RHD Thesis', async () => {
             const testInput1 = {
                 ...testInput,
                 comments: 'Test',
@@ -502,7 +502,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions on failed RHD Thesis file upload', async() => {
+        it('dispatches expected actions on failed RHD Thesis file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -528,7 +528,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions on failed to get a presigned URL file upload', async() => {
+        it('dispatches expected actions on failed to get a presigned URL file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -555,7 +555,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions where are no files to upload', async() => {
+        it('dispatches expected actions where are no files to upload', async () => {
             const testInput1 = {
                 ...testInput,
                 files: {
@@ -580,7 +580,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions with files and comments', async() => {
+        it('dispatches expected actions with files and comments', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -604,7 +604,7 @@ describe('Record action creators', () => {
     });
 
     describe('clearNewRecord()', () => {
-        it('dispatches expected actions', async() => {
+        it('dispatches expected actions', async () => {
             const expectedActions = [actions.CREATE_RECORD_RESET];
 
             await mockActionsStore.dispatch(recordActions.clearNewRecord());
@@ -613,7 +613,7 @@ describe('Record action creators', () => {
     });
 
     describe('adminReset()', () => {
-        it('dispatches expected actions', async() => {
+        it('dispatches expected actions', async () => {
             const expectedActions = [actions.ADMIN_CREATE_RECORD_RESET];
 
             await mockActionsStore.dispatch(recordActions.adminReset());
@@ -625,7 +625,7 @@ describe('Record action creators', () => {
         const testInput = {
             pid: 'UQ:396321',
         };
-        it('dispatches expected actions on successful update', async() => {
+        it('dispatches expected actions on successful update', async () => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
 
             mockApi.onPut(url).reply(200, { data: record });
@@ -634,6 +634,10 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(
                 recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
                     publication: {
                         rek_pid: 'UQ:396321',
                     },
@@ -645,7 +649,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on missing data in response', async() => {
+        it('dispatches expected actions on missing data in response', async () => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
             mockApi.onPut(url).reply(200, {});
 
@@ -653,6 +657,10 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(
                 recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
                     publication: {
                         rek_pid: 'UQ:396321',
                     },
@@ -664,7 +672,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on network failure', async() => {
+        it('dispatches expected actions on network failure', async () => {
             mockApi.onAny().reply(500);
 
             const expectedActions = [
@@ -677,6 +685,10 @@ describe('Record action creators', () => {
             try {
                 await mockActionsStore.dispatch(
                     recordActions.adminUpdate({
+                        rek_display_type: 174,
+                        adminSection: {
+                            rek_subtype: 'Textbook',
+                        },
                         publication: {
                             rek_pid: 'UQ:396321',
                         },
@@ -693,7 +705,7 @@ describe('Record action creators', () => {
             expect(requestFailed).toBe(true);
         });
 
-        it('dispatches expected actions on edit record successfully with file upload', async() => {
+        it('dispatches expected actions on edit record successfully with file upload', async () => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
 
             mockApi
@@ -713,6 +725,10 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(
                 recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
                     publication: {
                         rek_pid: 'UQ:396321',
                     },
@@ -740,6 +756,10 @@ describe('Record action creators', () => {
 
     describe('adminCreate()', () => {
         const testInput = {
+            rek_display_type: 174,
+            adminSection: {
+                rek_subtype: 'Textbook',
+            },
             authorsSection: {
                 authors: [
                     {
@@ -774,7 +794,7 @@ describe('Record action creators', () => {
         };
         const pidRequest = { pid: 'UQ:396321' };
 
-        it('dispatches expected actions on create record successfully', async() => {
+        it('dispatches expected actions on create record successfully', async () => {
             const testInput1 = {
                 ...testInput,
                 filesSection: {},
@@ -793,7 +813,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on create record successfully with file upload', async() => {
+        it('dispatches expected actions on create record successfully with file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -815,7 +835,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on create record successfully with file upload', async() => {
+        it('dispatches expected actions on create record successfully with file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -838,7 +858,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions for anon user', async() => {
+        it('dispatches expected actions for anon user', async () => {
             mockApi.onAny().reply(403, {});
 
             const expectedActions = [
@@ -865,7 +885,7 @@ describe('Record action creators', () => {
                 { rek_keywords: 'test 3', rek_keywords_order: 2 },
             ],
         };
-        it('dispatches expected actions on successful save', async() => {
+        it('dispatches expected actions on successful save', async () => {
             mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
 
             const expectedActions = [actions.CREATE_COLLECTION_SAVING, actions.CREATE_COLLECTION_SUCCESS];
@@ -874,7 +894,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed save', async() => {
+        it('dispatches expected actions on failed save', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
@@ -892,7 +912,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions on successful save with no keywords', async() => {
+        it('dispatches expected actions on successful save with no keywords', async () => {
             const testInput = {
                 rek_title: 'Test',
                 fez_record_search_key_ismemberof: ['UQ:12345'],
@@ -921,7 +941,7 @@ describe('Record action creators', () => {
             },
         };
 
-        it('dispatches expected actions on successful save', async() => {
+        it('dispatches expected actions on successful save', async () => {
             mockApi
                 .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(200, { data: { ...collectionRecord } });
@@ -932,7 +952,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed save', async() => {
+        it('dispatches expected actions on failed save', async () => {
             mockApi
                 .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
@@ -960,7 +980,7 @@ describe('Record action creators', () => {
                 { rek_keywords: 'test 3', rek_keywords_order: 2 },
             ],
         };
-        it('dispatches expected actions on successful save', async() => {
+        it('dispatches expected actions on successful save', async () => {
             mockApi.onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl).reply(200, { data: { ...record } });
 
             const expectedActions = [actions.CREATE_COMMUNITY_SAVING, actions.CREATE_COMMUNITY_SUCCESS];
@@ -969,7 +989,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed save', async() => {
+        it('dispatches expected actions on failed save', async () => {
             mockApi.onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl).reply(500, { error: { message: 'FAILED' } });
 
             const expectedActions = [
@@ -985,7 +1005,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions on successful save with no keywords', async() => {
+        it('dispatches expected actions on successful save with no keywords', async () => {
             const testInput = {
                 rek_title: 'Test',
                 rek_description: 'Test',
@@ -1013,7 +1033,7 @@ describe('Record action creators', () => {
             },
         };
 
-        it('dispatches expected actions on successful save', async() => {
+        it('dispatches expected actions on successful save', async () => {
             mockApi
                 .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
                 .reply(200, { data: { ...communityRecord } });
@@ -1024,7 +1044,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed save', async() => {
+        it('dispatches expected actions on failed save', async () => {
             mockApi
                 .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
@@ -1044,11 +1064,43 @@ describe('Record action creators', () => {
     });
 
     describe('deleteAttachedFile()', () => {
-        it('dispatches expected actions', async() => {
+        it('dispatches expected actions', async () => {
             const expectedActions = [actions.ADMIN_DELETE_ATTACHED_FILE];
 
             await mockActionsStore.dispatch(recordActions.deleteAttachedFile({ dsi_dsid: 'test.jpg' }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('unlockRecord()', () => {
+        it('dispatches expected actions on success', async () => {
+            const pid = 'UQ:123456';
+
+            mockApi.onPatch(repositories.routes.UNLOCK_RECORD_API({ pid }).apiUrl).reply(200, {});
+            const expectedActions = [actions.UNLOCK_RECORD_INPROGRESS, actions.UNLOCK_RECORD_SUCCESS];
+            const testCallback = jest.fn();
+
+            await mockActionsStore.dispatch(recordActions.unlockRecord('UQ:123456', testCallback));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(testCallback).toBeCalled();
+        });
+
+        it('dispatches expected actions on failure', async () => {
+            const pid = 'UQ:123456';
+            mockApi.onPatch(repositories.routes.UNLOCK_RECORD_API({ pid }).apiUrl).reply(500);
+            const expectedActions = [
+                actions.UNLOCK_RECORD_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.UNLOCK_RECORD_FAILED,
+            ];
+            const testCallback = jest.fn();
+
+            try {
+                await mockActionsStore.dispatch(recordActions.unlockRecord('UQ:123456', testCallback));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                expect(testCallback).not.toBeCalled();
+            }
         });
     });
 });

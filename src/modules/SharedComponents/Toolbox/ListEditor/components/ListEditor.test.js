@@ -16,6 +16,7 @@ function setup(testProps = {}, args = {}) {
         errorText: '',
         scrollList: testProps.scrollList || false,
         scrollListHeight: testProps.scrollListHeight || 250,
+        listEditorId: 'test-list-editor',
         ...testProps,
     };
     return getElement(ListEditor, props, args);
@@ -139,6 +140,10 @@ describe('ListEditor tests', () => {
                     },
                 ],
             },
+            searchKey: {
+                order: 'rek_order',
+                value: 'rek_value',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -155,6 +160,10 @@ describe('ListEditor tests', () => {
                         rek_value: 'test 2',
                     },
                 ]),
+            },
+            searchKey: {
+                order: 'rek_order',
+                value: 'rek_value',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -207,7 +216,7 @@ describe('ListEditor tests', () => {
             onChange: null,
         });
         const test = jest.spyOn(wrapper.instance(), 'transformOutput');
-        wrapper.instance().componentWillUpdate({}, {});
+        wrapper.instance().UNSAFE_componentWillUpdate({}, {});
         expect(test).not.toBeCalled();
     });
 
@@ -289,6 +298,7 @@ describe('ListEditor tests', () => {
         wrapper.instance().editItem(1);
         expect(wrapper.state().itemIndexSelectedToEdit).toEqual(1);
     });
+
     it('should not add duplicate item with the same "key" in the list', () => {
         const wrapper = setup({
             distinctOnly: true,

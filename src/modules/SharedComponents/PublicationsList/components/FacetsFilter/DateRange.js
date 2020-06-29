@@ -10,7 +10,7 @@ import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, disabled }) => {
     return (
         <div style={{ padding: 8 }}>
-            <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
+            <Grid container spacing={2} wrap={'nowrap'} alignItems={'flex-end'}>
                 <Grid item xs={4}>
                     <TextField
                         type="number"
@@ -59,8 +59,7 @@ DateRangeForm.propTypes = {
     locale: PropTypes.object,
 };
 
-export const DateRange = ({ disabled, value, open, locale, onChange, onToggle, isActive }) => {
-    const [active, setActive] = useState(isActive);
+export const DateRange = ({ disabled, value, locale, onChange, isActive, category }) => {
     const [range, setRange] = useState(value);
 
     const handleChange = event => {
@@ -73,51 +72,51 @@ export const DateRange = ({ disabled, value, open, locale, onChange, onToggle, i
     };
 
     const setDateRange = () => {
-        setActive(true);
         const isFromYearSet = !isNaN(parseInt(range.from, 10));
         const isToYearSet = !isNaN(parseInt(range.to, 10));
 
-        onChange({ from: isFromYearSet ? range.from : null, to: isToYearSet ? range.to : null });
+        onChange(category, { from: isFromYearSet ? range.from : null, to: isToYearSet ? range.to : null }, true);
     };
 
     const removeDateRange = () => {
-        setActive(false);
         setRange({
             from: null,
             to: null,
         });
 
-        onChange({ from: null, to: null });
+        onChange(category, { from: null, to: null }, false);
     };
 
     const txt = locale;
+
     return (
         <FacetFilterListItem
             key="date-range"
-            facetTitle={txt.displayTitle}
+            id="facet-category-date-range"
+            title={txt.displayTitle}
             disabled={disabled}
-            onToggle={onToggle}
-            open={open}
-        >
-            {!active ? (
-                <DateRangeForm
-                    from={range.from}
-                    to={range.to}
-                    setFrom={handleChange}
-                    setTo={handleChange}
-                    setDateRange={setDateRange}
-                    locale={locale}
-                    disabled={disabled}
-                />
-            ) : (
-                <FacetFilterNestedListItem
-                    onFacetClick={removeDateRange}
-                    isActive={active}
-                    primaryText={`${range.from || '*'} - ${range.to || '*'}`}
-                    disabled={disabled}
-                />
-            )}
-        </FacetFilterListItem>
+            nestedItems={
+                !isActive ? (
+                    <DateRangeForm
+                        from={range.from}
+                        to={range.to}
+                        setFrom={handleChange}
+                        setTo={handleChange}
+                        setDateRange={setDateRange}
+                        locale={locale}
+                        disabled={disabled}
+                    />
+                ) : (
+                    <FacetFilterNestedListItem
+                        onFacetClick={removeDateRange}
+                        isActive={isActive}
+                        primaryText={`${range.from || '*'} - ${range.to || '*'}`}
+                        disabled={disabled}
+                        index="date-range"
+                    />
+                )
+            }
+        />
     );
 };
 
@@ -125,10 +124,9 @@ DateRange.propTypes = {
     onChange: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     value: PropTypes.object,
-    open: PropTypes.bool,
     isActive: PropTypes.bool,
     locale: PropTypes.object,
-    onToggle: PropTypes.func.isRequired,
+    category: PropTypes.string,
 };
 
 DateRange.defaultProps = {

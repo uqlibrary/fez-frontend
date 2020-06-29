@@ -53,6 +53,7 @@ export class PartialDateForm extends Component {
         meta: PropTypes.shape({
             initial: PropTypes.string,
         }),
+        partialDateFormId: PropTypes.string.isRequired,
         clearable: PropTypes.bool,
     };
 
@@ -113,7 +114,8 @@ export class PartialDateForm extends Component {
         this.errors = { day: '', month: '', year: '' };
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange) {
             this.props.onChange(this._setDate(nextState));
         }
@@ -280,18 +282,18 @@ export class PartialDateForm extends Component {
         ));
         const isError = this.errors.date || this.props.hasError || '';
         return (
-            <Grid container spacing={0}>
+            <Grid container spacing={0} id={this.props.partialDateFormId}>
                 <Grid item xs={12}>
-                    <InputLabel error={!!isError} shrink required={this.props.required} style={{ zoom: '0.75' }}>
+                    <InputLabel error={!!isError} shrink required={this.props.required}>
                         {this.props.floatingTitle}
                     </InputLabel>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={16} style={{ marginTop: -12 }}>
+                    <Grid container spacing={2} style={{ marginTop: -12 }}>
                         <Grid item xs={4}>
                             <TextField
                                 name="day"
-                                id="day"
+                                id={`${this.props.partialDateFormId}-day`}
                                 type="text"
                                 fullWidth
                                 disabled={this.props.disabled}
@@ -300,7 +302,12 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('day')}
                                 onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
                                 placeholder={locale.dayLabel}
-                                inputProps={{ label: 'day', maxLength: 2 }}
+                                inputProps={{
+                                    label: 'day',
+                                    maxLength: 2,
+                                    id: `${this.props.partialDateFormId}-day-input`,
+                                    'data-testid': `${this.props.partialDateFormId}-day-input`,
+                                }}
                                 value={this.state.day}
                             />
                             {isError && <FormHelperText error>{isError}</FormHelperText>}
@@ -308,14 +315,27 @@ export class PartialDateForm extends Component {
                         <Grid item xs={4}>
                             <Select
                                 style={{ width: '100%' }}
+                                id={`${this.props.partialDateFormId}-month`}
                                 name="month"
-                                id="month"
                                 error={!!isError}
                                 disabled={this.props.disabled}
                                 value={this.state.month === null ? -1 : this.state.month}
                                 placeholder={locale.monthLabel}
                                 onChange={this._onDateChanged('month')}
-                                inputProps={{ label: 'month', maxLength: 2 }}
+                                inputProps={{
+                                    label: 'month',
+                                    maxLength: 2,
+                                    'data-testid': `${this.props.partialDateFormId}-month-input`,
+                                    id: `${this.props.partialDateFormId}-month-input`,
+                                }}
+                                SelectDisplayProps={{
+                                    id: `${this.props.partialDateFormId}-month-select`,
+                                    'data-testid': `${this.props.partialDateFormId}-month-select`,
+                                }}
+                                MenuProps={{
+                                    id: `${this.props.partialDateFormId}-month-options`,
+                                    'data-testid': `${this.props.partialDateFormId}-month-options`,
+                                }}
                             >
                                 <MenuItem key={-1} value={MONTH_UNSELECTED}>
                                     Month
@@ -326,7 +346,7 @@ export class PartialDateForm extends Component {
                         <Grid item xs={4}>
                             <TextField
                                 name="year"
-                                id="year"
+                                id={`${this.props.partialDateFormId}-year`}
                                 type="text"
                                 fullWidth
                                 disabled={this.props.disabled}
@@ -335,7 +355,12 @@ export class PartialDateForm extends Component {
                                 onKeyPress={this._isNumber}
                                 onChange={this._onDateChanged('year')}
                                 onBlur={this._onDateChanged('year')}
-                                inputProps={{ label: 'year', maxLength: 4 }}
+                                inputProps={{
+                                    label: 'year',
+                                    maxLength: 4,
+                                    id: `${this.props.partialDateFormId}-year-input`,
+                                    'data-testid': `${this.props.partialDateFormId}-year-input`,
+                                }}
                                 value={this.state.year}
                             />
                         </Grid>

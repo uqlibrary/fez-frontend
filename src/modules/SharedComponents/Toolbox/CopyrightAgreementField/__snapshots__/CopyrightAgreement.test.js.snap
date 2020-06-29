@@ -43,14 +43,14 @@ Object {
 `;
 
 exports[`Component CopyrightAgreement should render checked if deposit agreement accepted 1`] = `
-<WithStyles(WithFormControlContext(FormControlLabel))
+<WithStyles(ForwardRef(FormControlLabel))
   classes={
     Object {
       "root": undefined,
     }
   }
   control={
-    <WithStyles(Checkbox)
+    <WithStyles(ForwardRef(Checkbox))
       checked={true}
       classes={
         Object {
@@ -58,13 +58,18 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
           "root": undefined,
         }
       }
-      id="deposit-agreement"
+      inputProps={
+        Object {
+          "data-testid": "test-input",
+          "id": "test-input",
+        }
+      }
       onChange={[Function]}
     />
   }
   disabled={false}
   label={
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       classes={
         Object {
           "root": "",
@@ -72,22 +77,24 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       }
       color="secondary"
       component="div"
+      data-testid="test-label"
+      id="test-label"
     >
       test deposit agreement
-    </WithStyles(Typography)>
+    </WithStyles(ForwardRef(Typography))>
   }
 />
 `;
 
 exports[`Component CopyrightAgreement should render default view 1`] = `
-<WithStyles(WithFormControlContext(FormControlLabel))
+<WithStyles(ForwardRef(FormControlLabel))
   classes={
     Object {
       "root": undefined,
     }
   }
   control={
-    <WithStyles(Checkbox)
+    <WithStyles(ForwardRef(Checkbox))
       checked={false}
       classes={
         Object {
@@ -95,13 +102,18 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
           "root": undefined,
         }
       }
-      id="deposit-agreement"
+      inputProps={
+        Object {
+          "data-testid": "test-input",
+          "id": "test-input",
+        }
+      }
       onChange={[Function]}
     />
   }
   disabled={false}
   label={
-    <WithStyles(Typography)
+    <WithStyles(ForwardRef(Typography))
       classes={
         Object {
           "root": "",
@@ -109,9 +121,11 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       }
       color="error"
       component="div"
+      data-testid="test-label"
+      id="test-label"
     >
       test deposit agreement
-    </WithStyles(Typography)>
+    </WithStyles(ForwardRef(Typography))>
   }
 />
 `;

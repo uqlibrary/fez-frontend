@@ -25,35 +25,36 @@ context('Video admin edit', () => {
         cy.get('.StandardPage form .StandardCard')
             .eq(1)
             .within(() => {
-                cy.get('h3')
-                    .should('have.text', 'Bibliographic');
+                cy.get('h3').should('have.text', 'Bibliographic');
 
                 cy.get('.AdminCard')
                     .eq(4)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Bibliographic');
+                        cy.get('h4').should('contain', 'Bibliographic');
 
                         // Video record includes the owner's Rights
-                        cy.get('#Copyrightnotice')
-                            .should('have.value', record.fez_record_search_key_rights.rek_rights);
+                        cy.get('[data-testid=rek-rights-input]').should(
+                            'have.value',
+                            record.fez_record_search_key_rights.rek_rights,
+                        );
                     });
             });
     });
 
     it('should submit successfully', () => {
         const baseUrl = Cypress.config('baseUrl');
-        cy.get('#admin-work-submit')
-            .click();
+        cy.typeCKEditor('editor2', 'some description'); // description
+        cy.get('#admin-work-submit').click();
+
+        // Confirmation message
         cy.get('[role=dialog]')
             .should('exist')
-            .find('h6')
+            .find('h2')
             .should('contain', 'Work has been updated')
             .parent()
             .siblings('div')
             .contains('button', 'View updated record')
             .click();
-        cy.url()
-            .should('equal', `${baseUrl}/view/${record.rek_pid}`);
+        cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
     });
 });

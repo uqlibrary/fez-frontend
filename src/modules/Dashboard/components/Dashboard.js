@@ -257,10 +257,10 @@ export class DashboardClass extends PureComponent {
             this.props.publicationsStats &&
             (this.props.publicationsStats.thomson_citation_count_i.count > 0 ||
                 this.props.publicationsStats.scopus_citation_count_i.count > 0) ? (
-                    <StandardCard noPadding noHeader fullHeight>
-                        <PublicationStats publicationsStats={this.props.publicationsStats} />
-                    </StandardCard>
-                ) : null;
+                <StandardCard noPadding noHeader fullHeight>
+                    <PublicationStats publicationsStats={this.props.publicationsStats} />
+                </StandardCard>
+            ) : null;
         const pluralTextReplacement =
             this.props.incomplete &&
             this.props.incomplete.publicationsListPagingData &&
@@ -278,7 +278,7 @@ export class DashboardClass extends PureComponent {
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage>
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     {loading && (
                         <React.Fragment>
                             <Grid item xs />
@@ -295,49 +295,49 @@ export class DashboardClass extends PureComponent {
                                 !this.props.incomplete.loadingPublicationsList &&
                                 this.props.incomplete.publicationsListPagingData &&
                                 this.props.incomplete.publicationsListPagingData.total > 0 && (
-                                <Grid item xs={12} style={{ marginTop: -27 }}>
-                                    <Alert
-                                        title={txt.incompleteRecordLure.title}
-                                        message={txt.incompleteRecordLure.message
-                                            .replace(
-                                                '[count]',
-                                                this.props.incomplete.publicationsListPagingData.total,
-                                            )
-                                            .replace('[plural]', pluralTextReplacement)
-                                            .replace('[verbEnding]', verbEndingTextReplacement)}
-                                        type={txt.incompleteRecordLure.type}
-                                        actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
-                                        action={this.redirectToIncompleteRecordlist}
-                                    />
-                                </Grid>
-                            )}
+                                    <Grid item xs={12} style={{ marginTop: -27 }}>
+                                        <Alert
+                                            title={txt.incompleteRecordLure.title}
+                                            message={txt.incompleteRecordLure.message
+                                                .replace(
+                                                    '[count]',
+                                                    this.props.incomplete.publicationsListPagingData.total,
+                                                )
+                                                .replace('[plural]', pluralTextReplacement)
+                                                .replace('[verbEnding]', verbEndingTextReplacement)}
+                                            type={txt.incompleteRecordLure.type}
+                                            actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
+                                            action={this.redirectToIncompleteRecordlist}
+                                        />
+                                    </Grid>
+                                )}
                             {this.renderAuthorProfile()}
                             {!this.props.hidePossiblyYourPublicationsLure &&
                             !this.props.possiblyYourPublicationsCountLoading &&
                             this.props.possiblyYourPublicationsCount > 0 ? (
-                                    <Grid item xs={12} style={{ marginTop: -27 }}>
-                                        <Alert
-                                            title={txt.possiblePublicationsLure.title}
-                                            message={txt.possiblePublicationsLure.message.replace(
-                                                '[count]',
-                                                this.props.possiblyYourPublicationsCount,
-                                            )}
-                                            type={txt.possiblePublicationsLure.type}
-                                            actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
-                                            action={this._claimYourPublications}
-                                            allowDismiss
-                                            dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}
-                                        />
-                                    </Grid>
-                                ) : (
-                                    !this.props.possiblyYourPublicationsCountLoading &&
+                                <Grid item xs={12} style={{ marginTop: -27 }}>
+                                    <Alert
+                                        title={txt.possiblePublicationsLure.title}
+                                        message={txt.possiblePublicationsLure.message.replace(
+                                            '[count]',
+                                            this.props.possiblyYourPublicationsCount,
+                                        )}
+                                        type={txt.possiblePublicationsLure.type}
+                                        actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                        action={this._claimYourPublications}
+                                        allowDismiss
+                                        dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}
+                                    />
+                                </Grid>
+                            ) : (
+                                !this.props.possiblyYourPublicationsCountLoading &&
                                 !this.props.hidePossiblyYourPublicationsLure &&
                                 !this.props.possiblyYourPublicationsCount && (
-                                        <Grid item xs={12} style={{ marginTop: -27 }}>
-                                            <Alert {...txt.nothingToClaimLure} action={this._addPublication} />
-                                        </Grid>
-                                    )
-                                )}
+                                    <Grid item xs={12} style={{ marginTop: -27 }}>
+                                        <Alert {...txt.nothingToClaimLure} action={this._addPublication} />
+                                    </Grid>
+                                )
+                            )}
                         </React.Fragment>
                     )}
                     {/* render charts/stats depending on availability of data */}
@@ -378,56 +378,56 @@ export class DashboardClass extends PureComponent {
                     {!loading &&
                         userHasPublications &&
                         (this.props.showLatestPublicationsTab || this.props.showTrendingPublicationsTab) && (
-                        <Grid item xs={12}>
-                            <StandardCard noHeader>
-                                <Tabs
-                                    className={classes.tabs}
-                                    classes={{ indicator: classes.tabIndicator }}
-                                    value={this.state.dashboardPubsTabs}
-                                    onChange={this.handleTabChange}
-                                    variant="fullWidth"
-                                    centered
-                                >
-                                    {this.props.showLatestPublicationsTab && (
-                                        <Tab
-                                            className={classes.tab}
-                                            key={1}
-                                            label={txt.myLatestPublications.title}
-                                            value={1}
-                                        />
-                                    )}
-                                    {this.props.showTrendingPublicationsTab && (
-                                        <Tab
-                                            className={classes.tab}
-                                            key={2}
-                                            label={txt.myTrendingPublications.title}
-                                            value={2}
-                                        />
-                                    )}
-                                </Tabs>
-                                <Grid container spacing={24} style={{ marginTop: 24 }}>
-                                    {this.props.showLatestPublicationsTab && (
-                                        <Grid
-                                            item
-                                            xs={12}
-                                            style={this.state.dashboardPubsTabs !== 1 ? { display: 'none' } : {}}
-                                        >
-                                            <MyLatestPublications isAdmin={!!isAdmin} />
-                                        </Grid>
-                                    )}
-                                    {this.props.showTrendingPublicationsTab && (
-                                        <Grid
-                                            item
-                                            xs={12}
-                                            style={this.state.dashboardPubsTabs !== 2 ? { display: 'none' } : {}}
-                                        >
-                                            <MyTrendingPublications />
-                                        </Grid>
-                                    )}
-                                </Grid>
-                            </StandardCard>
-                        </Grid>
-                    )}
+                            <Grid item xs={12}>
+                                <StandardCard noHeader>
+                                    <Tabs
+                                        className={classes.tabs}
+                                        classes={{ indicator: classes.tabIndicator }}
+                                        value={this.state.dashboardPubsTabs}
+                                        onChange={this.handleTabChange}
+                                        variant="fullWidth"
+                                        centered
+                                    >
+                                        {this.props.showLatestPublicationsTab && (
+                                            <Tab
+                                                className={classes.tab}
+                                                key={1}
+                                                label={txt.myLatestPublications.title}
+                                                value={1}
+                                            />
+                                        )}
+                                        {this.props.showTrendingPublicationsTab && (
+                                            <Tab
+                                                className={classes.tab}
+                                                key={2}
+                                                label={txt.myTrendingPublications.title}
+                                                value={2}
+                                            />
+                                        )}
+                                    </Tabs>
+                                    <Grid container spacing={3} style={{ marginTop: 24 }}>
+                                        {this.props.showLatestPublicationsTab && (
+                                            <Grid
+                                                item
+                                                xs={12}
+                                                style={this.state.dashboardPubsTabs !== 1 ? { display: 'none' } : {}}
+                                            >
+                                                <MyLatestPublications isAdmin={!!isAdmin} />
+                                            </Grid>
+                                        )}
+                                        {this.props.showTrendingPublicationsTab && (
+                                            <Grid
+                                                item
+                                                xs={12}
+                                                style={this.state.dashboardPubsTabs !== 2 ? { display: 'none' } : {}}
+                                            >
+                                                <MyTrendingPublications />
+                                            </Grid>
+                                        )}
+                                    </Grid>
+                                </StandardCard>
+                            </Grid>
+                        )}
                 </Grid>
             </StandardPage>
         );

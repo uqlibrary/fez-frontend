@@ -1,7 +1,6 @@
 import { reduxForm, SubmissionError, stopSubmit } from 'redux-form/immutable';
 import * as actions from 'actions';
 import MyIncompleteRecord from '../components/MyIncompleteRecord';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { authorAffiliationRequired } from 'config/validation';
 import { locale } from 'locale';
 
@@ -33,11 +32,9 @@ export const validate = (values, props) => {
     return errors;
 };
 
-export default confirmDiscardFormChanges(
-    reduxForm({
-        form: FORM_NAME,
-        enableReinitialize: true,
-        validate,
-        onSubmit,
-    })(MyIncompleteRecord),
-);
+export default reduxForm({
+    form: FORM_NAME,
+    enableReinitialize: true,
+    validate,
+    onSubmit,
+})(MyIncompleteRecord);

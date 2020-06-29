@@ -3,14 +3,12 @@ context('As an admin,', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection
-        cy.get('#Memberofcollections-input')
-            .type('a');
-        cy.clickAutoSuggestion('Memberofcollections', 0);
+        cy.get('[data-testid=rek-ismemberof-input]').type('a');
+        cy.clickAutoSuggestion('rek-ismemberof', 0);
 
         // Choose display type
-        cy.get('#rek-display-type')
-            .click();
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
             .contains('li', 'Video')
             .click();
 
@@ -22,16 +20,11 @@ context('As an admin,', () => {
 
         // Fill required fields
         cy.typeCKEditor('editor1', 'Test title');
-        cy.get('#year')
-            .type('2020');
-        cy.get('#Copyrightnotice')
-            .type('All rights reserved');
-        cy.get('#authors-name-as-published-field')
-            .type('Test author');
-        cy.get('#submit-author')
-            .click();
-        cy.get('#deposit-agreement')
-            .click();
+        cy.get('[data-testid=rek-date-year-input]').type('2020');
+        cy.get('[data-testid=rek-rights-input]').type('All rights reserved');
+        cy.get('[data-testid=rek-author-input]').type('Test author');
+        cy.get('[data-testid=rek-author-add]').click();
+        cy.get('[data-testid=rek-copyright-input]').click();
 
         // Submit form
         cy.get('#admin-work-submit')
@@ -41,7 +34,7 @@ context('As an admin,', () => {
         // Confirmation message
         cy.get('[role=dialog]')
             .should('exist')
-            .find('h6')
+            .find('h2')
             .should('contain', 'Work has been added');
     });
 });

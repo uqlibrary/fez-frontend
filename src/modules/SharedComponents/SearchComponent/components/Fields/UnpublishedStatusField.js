@@ -1,11 +1,10 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { UNPUBLISHED_STATUS } from 'config/general';
 
 export const mapStateToProps = (state, props) => {
     return {
-        selectedValue: props.input ? props.input.value : props.value,
+        value: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || UNPUBLISHED_STATUS,
         itemsLoading: false,
         hideLabel: props.hideLabel || false,
@@ -14,25 +13,14 @@ export const mapStateToProps = (state, props) => {
         required: props.required,
         errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText) || '',
         error: (!!props.meta && !!props.meta.error) || props.error || false,
+        genericSelectFieldId: 'rek-status',
     };
 };
 
-const mapDispatchToProps = () => {
-    return {};
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onChange: (!!props.input && props.input.onChange) || (!!props.onChange && props.onChange),
+    };
 };
 
-const UnpublishedStatusList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
-
-export default function UnpublishedStatusField(fieldProps) {
-    return (
-        <UnpublishedStatusList
-            onChange={
-                (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
-            }
-            {...fieldProps}
-        />
-    );
-}
+export const UnpublishedStatusField = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);

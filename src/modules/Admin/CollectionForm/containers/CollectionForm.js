@@ -4,8 +4,6 @@ import Immutable from 'immutable';
 import CollectionForm from '../components/CollectionForm';
 import { createCollection, checkSession, clearSessionExpiredFlag } from 'actions';
 import { bindActionCreators } from 'redux';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { reloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
 
 const FORM_NAME = 'Collection';
 
@@ -18,10 +16,10 @@ const onSubmit = (values, dispatch, props) => {
     );
 };
 
-let CollectionContainer = reduxForm({
+const CollectionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(CollectionForm, FORM_NAME));
+})(CollectionForm);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -39,9 +37,4 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag }, dispatch),
 });
 
-CollectionContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(CollectionContainer);
-
-export default reloadReducerFromLocalStorage()(CollectionContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CollectionContainer);

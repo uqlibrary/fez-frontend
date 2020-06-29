@@ -1,40 +1,32 @@
-import React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 
-function confirmDiscardFormChanges(WrappedComponent) {
-    class ConfirmDiscardFormChanges extends React.Component {
-        static propTypes = {
-            dirty: PropTypes.bool,
-            submitSucceeded: PropTypes.bool,
+export const ConfirmDiscardFormChanges = props => {
+    const { dirty, submitSucceeded, children } = props;
+    const getDiscardFormChangesConfirmationLocale = () => {
+        return locale.global.discardFormChangesConfirmation.confirmationMessage;
+    };
+    useEffect(() => {
+        const promptDiscardFormChanges = () => {
+            window.onbeforeunload = getDiscardFormChangesConfirmationLocale;
         };
+        dirty && !submitSucceeded && promptDiscardFormChanges();
 
-        static defaultProps = {
-            dirty: false,
-            submitSucceeded: false,
-        };
-
-        componentDidUpdate() {
-            this.promptDiscardFormChanges(this.props.dirty && !this.props.submitSucceeded);
-        }
-
-        componentWillUnmount() {
+        return () => {
             window.onbeforeunload = null;
-        }
+        };
+    }, [dirty, submitSucceeded]);
 
-        getDiscardFormChangesConfirmationLocale = () =>
-            locale.global.discardFormChangesConfirmation.confirmationMessage;
+    return [children];
+};
 
-        promptDiscardFormChanges(isDirty = false) {
-            window.onbeforeunload = isDirty && this.getDiscardFormChangesConfirmationLocale;
-        }
+ConfirmDiscardFormChanges.propTypes = {
+    dirty: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+};
 
-        render() {
-            return <WrappedComponent {...this.props} />;
-        }
-    }
-
-    return ConfirmDiscardFormChanges;
-}
-
-export default confirmDiscardFormChanges;
+ConfirmDiscardFormChanges.defaultProps = {
+    dirty: false,
+    submitSucceeded: false,
+};

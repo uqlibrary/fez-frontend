@@ -24,7 +24,7 @@ We are now using [MUIv1 Grid](https://material-ui.com/layout/grid/) component fo
 We use 16 unit spacing for forms
 
 ```jsx
-<Grid container spacing={16}>
+<Grid container spacing={2}>
   <Grid item xs={12}>
     Form component here
   </Grid>
@@ -42,7 +42,7 @@ This would produce a 2 row grid with a full width top row and 2 colum 2nd row sp
 To push items right
 
 ```jsx
-<Grid container spacing={16}>
+<Grid container spacing={2}>
   <Grid item xs />
   <Grid item xs={'auto'}>
     This will display to the right and be as wide as the contents
@@ -53,7 +53,7 @@ To push items right
 To center items,
 
 ```jsx
-<Grid container spacing={16}>
+<Grid container spacing={2}>
   <Grid item xs />
   <Grid item xs={'auto'}>
     This will in the center of the row and be only as wide as the contents

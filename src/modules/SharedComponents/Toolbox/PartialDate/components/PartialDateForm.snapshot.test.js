@@ -1,7 +1,7 @@
 import PartialDateForm from './PartialDateForm';
 
 function setup(testProps, isShallow = true) {
-    const props = { ...testProps };
+    const props = { partialDateFieldId: 'test', ...testProps };
     return getElement(PartialDateForm, props, isShallow);
 }
 

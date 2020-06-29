@@ -169,7 +169,8 @@ export default class NtroFields extends React.PureComponent {
         this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.row3Width = this.getWidth([
             nextProps.hideVolume,
             nextProps.hideIssue,
@@ -216,34 +217,32 @@ export default class NtroFields extends React.PureComponent {
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
                     <Grid item xs={12}>
                         <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
-                            <Grid container spacing={8}>
+                            <Grid container spacing={1}>
                                 {// In theory, we should show them separately.
                                 // In practice, they are always incomplete together
-                                    (this.props.showContributionStatement || this.props.showSignificance) && (
-                                        <Grid item xs={12}>
-                                            { /* prettier-ignore */ }
-                                            <Typography>
+                                (this.props.showContributionStatement || this.props.showSignificance) && (
+                                    <Grid item xs={12}>
+                                        { /* prettier-ignore */ }
+                                        <Typography>
 	                                            {contributionStatement.fields.scaleOfWork.description}
 	                                        </Typography>
-                                            <Field
-                                                component={SelectField}
-                                                disabled={this.props.submitting}
-                                                name="significance"
-                                                label={contributionStatement.fields.scaleOfWork.label}
-                                                required
-                                                validate={[validation.required]}
-                                                SelectDisplayProps={{
-                                                    id: 'significance',
-                                                }}
-                                            >
-                                                {SIGNIFICANCE.map(item => (
-                                                    <MenuItem key={item.value} value={item.value}>
-                                                        {item.text}
-                                                    </MenuItem>
-                                                ))}
-                                            </Field>
-                                        </Grid>
-                                    )}
+                                        <Field
+                                            component={SelectField}
+                                            disabled={this.props.submitting}
+                                            name="significance"
+                                            label={contributionStatement.fields.scaleOfWork.label}
+                                            required
+                                            validate={[validation.required]}
+                                            selectFieldId="rek-significance"
+                                        >
+                                            {SIGNIFICANCE.map(item => (
+                                                <MenuItem key={item.value} value={item.value}>
+                                                    {item.text}
+                                                </MenuItem>
+                                            ))}
+                                        </Field>
+                                    </Grid>
+                                )}
                                 {this.props.showContributionStatement && (
                                     <Grid item xs={12} style={{ marginTop: 24 }}>
                                         <Field
@@ -278,7 +277,7 @@ export default class NtroFields extends React.PureComponent {
                     !this.props.hideIsmn) && (
                     <Grid item xs={12}>
                         <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
-                            <Grid container spacing={16}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     {!this.props.hideAbstract && (
                                         <Field
@@ -302,6 +301,7 @@ export default class NtroFields extends React.PureComponent {
                                             isValid={validation.isValidIsmn}
                                             maxCount={5}
                                             locale={{ ...componentLocale.components.ismnForm.field }}
+                                            listEditorId="ismn"
                                             searchKey={{ value: 'rek_ismn', order: 'rek_ismn_order' }}
                                             disabled={this.props.submitting}
                                             transformFunction={this.transformIsmn}
@@ -318,6 +318,7 @@ export default class NtroFields extends React.PureComponent {
                                             maxCount={5}
                                             searchKey={{ value: 'rek_isrc', order: 'rek_isrc_order' }}
                                             locale={{ ...componentLocale.components.isrcForm.field }}
+                                            listEditorId="isrc"
                                             disabled={this.props.submitting}
                                             inputNormalizer={this.normalizeIsrc}
                                             transformFunction={this.transformIsrc}
@@ -339,6 +340,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_volume_number.rek_volume_number"
+                                            textFieldId="rek-volume-number"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -351,6 +353,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_issue_number.rek_issue_number"
+                                            textFieldId="rek-issue-number"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -363,6 +366,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_start_page.rek_start_page"
+                                            textFieldId="rek-start-page"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -375,6 +379,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_end_page.rek_end_page"
+                                            textFieldId="rek-end-page"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -388,6 +393,7 @@ export default class NtroFields extends React.PureComponent {
                                             component={TextField}
                                             id="rek-total-pages"
                                             name="fez_record_search_key_total_pages.rek_total_pages"
+                                            textFieldId="rek-total-pages"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -403,6 +409,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={TextField}
                                             name="fez_record_search_key_original_format.rek_original_format"
+                                            textFieldId="rek-original-format"
                                             type="text"
                                             fullWidth
                                             disabled={this.props.submitting}
@@ -419,9 +426,7 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.audienceSize.label}
                                             required
                                             validate={[validation.required]}
-                                            SelectDisplayProps={{
-                                                id: 'rek-audience-size',
-                                            }}
+                                            selectFieldId="rek-audience-size"
                                         >
                                             {AUDIENCE_SIZE.map(item => (
                                                 <MenuItem key={item.value} value={item.value}>
@@ -449,7 +454,7 @@ export default class NtroFields extends React.PureComponent {
                                             component={QualityIndicatorField}
                                             disabled={this.props.submitting}
                                             id="quality-indicators"
-                                            name="qualityIndicators"
+                                            name="quality-indicators"
                                             label={metadata.fields.peerReviewActivity.label}
                                             placeholder={metadata.fields.peerReviewActivity.label}
                                             required

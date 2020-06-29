@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import { get, patch } from 'repositories/generic';
-import { AUTHORS_SEARCH_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API } from 'repositories/routes';
+import { SEARCH_AUTHOR_LOOKUP_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API } from 'repositories/routes';
 import { pathConfig } from 'config/routes';
 import { getAuthorIdentifierOrcidPatchRequest } from './transformers';
 
@@ -14,7 +14,7 @@ export function searchAuthors(query) {
     return dispatch => {
         dispatch({ type: actions.AUTHORS_LOADING });
 
-        return get(AUTHORS_SEARCH_API({ query: query }))
+        return get(SEARCH_AUTHOR_LOOKUP_API({ searchQuery: query }))
             .then(response => {
                 dispatch({
                     type: actions.AUTHORS_LOADED,
@@ -119,3 +119,7 @@ export function resetSavingAuthorState() {
         dispatch({ type: actions.CURRENT_AUTHOR_SAVE_RESET });
     };
 }
+
+export const clearAuthorsSuggestions = () => ({
+    type: actions.CLEAR_AUTHORS_LIST,
+});

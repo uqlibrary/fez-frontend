@@ -154,8 +154,12 @@ export class MenuDrawer extends Component {
             menuItem.divider ? (
                 <Divider key={`menu_item_${index}`} />
             ) : (
-                <span className="menu-item-container" key={`menu_item_${index}`}>
-                    <ListItem button onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}>
+                <span className="menu-item-container" key={`menu-item-${index}`}>
+                    <ListItem
+                        button
+                        onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
+                        id={`menu-item-${index}`}
+                    >
                         <ListItemText
                             classes={{
                                 primary: this.props.classes.ListItemTextPrimary,
@@ -227,26 +231,26 @@ export class MenuDrawer extends Component {
                                 </Hidden>
                             </Grid>
                             {// Skip nav section
-                                docked && (
-                                    <div
-                                        type="button"
-                                        className={classes.skipNav}
-                                        id="skipNav"
+                            docked && (
+                                <div
+                                    type="button"
+                                    className={classes.skipNav}
+                                    id="skipNav"
+                                    onClick={this.skipMenuItems}
+                                    onKeyPress={this.skipMenuItems}
+                                    tabIndex={1}
+                                    aria-label={locale.skipNavAriaLabel}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
                                         onClick={this.skipMenuItems}
-                                        onKeyPress={this.skipMenuItems}
-                                        tabIndex={1}
-                                        aria-label={locale.skipNavAriaLabel}
-                                    >
-                                        <Button
-                                            variant="contained"
-                                            color="primary"
-                                            onClick={this.skipMenuItems}
-                                            className="skipNavButton"
-                                            children={locale.skipNavTitle}
-                                            tabIndex={-1}
-                                        />
-                                    </div>
-                                )}
+                                        className="skipNavButton"
+                                        children={locale.skipNavTitle}
+                                        tabIndex={-1}
+                                    />
+                                </div>
+                            )}
                             {this.renderMenuItems(menuItems)}
                         </List>
                         <div id="afterMenuDrawer" tabIndex={-1} />

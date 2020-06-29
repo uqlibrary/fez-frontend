@@ -34,10 +34,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let DashboardContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(Dashboard);
+let DashboardContainer = connect(mapStateToProps, mapDispatchToProps)(Dashboard);
 DashboardContainer = withRouter(DashboardContainer);
 
 export default DashboardContainer;

@@ -77,7 +77,8 @@ class SearchRecords extends PureComponent {
         }
     }
 
-    componentWillReceiveProps(newProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(newProps) {
         // handle browser back button - set state from location/dispatch action for this state
         if (
             this.props.location !== newProps.location &&
@@ -244,7 +245,7 @@ class SearchRecords extends PureComponent {
         };
         return (
             <StandardPage className="page-search-records">
-                <Grid container spacing={24}>
+                <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard className="searchComponent" noHeader>
                             <SearchComponent
@@ -262,18 +263,18 @@ class SearchRecords extends PureComponent {
                         </StandardCard>
                     </Grid>
                     {// first time loading search results
-                        !hasSearchParams && this.props.searchLoading && (
-                            <Grid item xs={12}>
-                                <InlineLoader message={txt.loadingMessage} />
-                            </Grid>
-                        )}
+                    !hasSearchParams && this.props.searchLoading && (
+                        <Grid item xs={12}>
+                            <InlineLoader message={txt.loadingMessage} />
+                        </Grid>
+                    )}
                     {this.props.searchLoadingError && (
                         <Grid item xs={12}>
                             <Alert pushToTop {...alertProps} />
                         </Grid>
                     )}
                     {// no results to display
-                        hasSearchParams &&
+                    hasSearchParams &&
                         !this.props.searchLoading &&
                         this.props.publicationsList &&
                         this.props.publicationsList.length === 0 && (
@@ -282,59 +283,59 @@ class SearchRecords extends PureComponent {
                             </Grid>
                         )}
                     {// results to display or loading if user is filtering/paging
-                        ((hasSearchParams && this.props.searchLoading) ||
+                    ((hasSearchParams && this.props.searchLoading) ||
                         (!!this.props.publicationsList && this.props.publicationsList.length > 0)) && (
-                            <Grid item xs sm md={9}>
-                                <StandardCard noHeader>
-                                    <Grid container spacing={16}>
-                                        <Grid item xs={12}>
-                                            {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
-                                                <span>
-                                                    {txt.recordCount
-                                                        .replace('[recordsTotal]', pagingData.total)
-                                                        .replace('[recordsFrom]', pagingData.from)
-                                                        .replace('[recordsTo]', pagingData.to)}
-                                                </span>
-                                            ) : (
-                                                <span>{txt.loadingPagingMessage}</span>
-                                            )}
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListSorting
-                                                sortBy={this.state.sortBy}
-                                                sortDirection={this.state.sortDirection}
-                                                pageSize={this.state.pageSize}
-                                                pagingData={pagingData}
-                                                canUseExport={this.props.canUseExport}
-                                                onSortByChanged={this.sortByChanged}
-                                                onPageSizeChanged={this.pageSizeChanged}
-                                                onExportPublications={this.handleExportPublications}
-                                                disabled={isLoadingOrExporting}
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListPaging
-                                                loading={isLoadingOrExporting}
-                                                pagingData={pagingData}
-                                                onPageChanged={this.pageChanged}
-                                                disabled={isLoadingOrExporting}
+                        <Grid item xs sm md={9}>
+                            <StandardCard noHeader>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
+                                            <span>
+                                                {txt.recordCount
+                                                    .replace('[recordsTotal]', pagingData.total)
+                                                    .replace('[recordsFrom]', pagingData.from)
+                                                    .replace('[recordsTo]', pagingData.to)}
+                                            </span>
+                                        ) : (
+                                            <span>{txt.loadingPagingMessage}</span>
+                                        )}
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListSorting
+                                            sortBy={this.state.sortBy}
+                                            sortDirection={this.state.sortDirection}
+                                            pageSize={this.state.pageSize}
+                                            pagingData={pagingData}
+                                            canUseExport={this.props.canUseExport}
+                                            onSortByChanged={this.sortByChanged}
+                                            onPageSizeChanged={this.pageSizeChanged}
+                                            onExportPublications={this.handleExportPublications}
+                                            disabled={isLoadingOrExporting}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListPaging
+                                            loading={isLoadingOrExporting}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={isLoadingOrExporting}
+                                        />
+                                    </Grid>
+                                </Grid>
+                                {isLoadingOrExporting && (
+                                    <Grid container justify={'center'}>
+                                        <Grid item>
+                                            <InlineLoader
+                                                message={
+                                                    this.props.searchLoading
+                                                        ? txt.loadingPagingMessage
+                                                        : txt.exportPublicationsLoadingMessage
+                                                }
                                             />
                                         </Grid>
                                     </Grid>
-                                    {isLoadingOrExporting && (
-                                        <Grid container justify={'center'}>
-                                            <Grid item>
-                                                <InlineLoader
-                                                    message={
-                                                        this.props.searchLoading
-                                                            ? txt.loadingPagingMessage
-                                                            : txt.exportPublicationsLoadingMessage
-                                                    }
-                                                />
-                                            </Grid>
-                                        </Grid>
-                                    )}
-                                    {!isLoadingOrExporting &&
+                                )}
+                                {!isLoadingOrExporting &&
                                     this.props.publicationsList &&
                                     this.props.publicationsList.length > 0 && (
                                         <div style={{ marginTop: 16 }}>
@@ -347,17 +348,17 @@ class SearchRecords extends PureComponent {
                                             />
                                         </div>
                                     )}
-                                    <PublicationsListPaging
-                                        loading={isLoadingOrExporting}
-                                        pagingData={pagingData}
-                                        onPageChanged={this.pageChanged}
-                                        disabled={isLoadingOrExporting}
-                                    />
-                                </StandardCard>
-                            </Grid>
-                        )}
+                                <PublicationsListPaging
+                                    loading={isLoadingOrExporting}
+                                    pagingData={pagingData}
+                                    onPageChanged={this.pageChanged}
+                                    disabled={isLoadingOrExporting}
+                                />
+                            </StandardCard>
+                        </Grid>
+                    )}
                     {// prettier-ignore
-                        this.props.publicationsListFacets &&
+                    this.props.publicationsListFacets &&
                         Object.keys(this.props.publicationsListFacets).length !== 0 && (
                             <Hidden smDown>
                                 <Grid item md={3}>

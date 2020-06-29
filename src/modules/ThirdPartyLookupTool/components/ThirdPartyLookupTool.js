@@ -56,35 +56,35 @@ export class ThirdPartyLookupTool extends PureComponent {
                 {this.props.loadingResults && <InlineLoader message={localeContent.loadingMessage} />}
                 {// this still needs work because we have to pass the specific form details for display
                 // pass through with the results? or via sendInputsToResultComponent ?
-                    !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length > 0 && (
-                        <ThirdPartyLookupFormResult
-                            lookupResults={this.props.lookupResults}
-                            actions={this.props.actions}
-                            formDisplay={this.state.formDisplay}
-                            primaryValue={this.state.primaryValue}
-                            secondaryValue={this.state.secondaryValue}
-                            locale={localeContent}
-                        />
-                    )}
+                !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length > 0 && (
+                    <ThirdPartyLookupFormResult
+                        lookupResults={this.props.lookupResults}
+                        actions={this.props.actions}
+                        formDisplay={this.state.formDisplay}
+                        primaryValue={this.state.primaryValue}
+                        secondaryValue={this.state.secondaryValue}
+                        locale={localeContent}
+                    />
+                )}
 
                 {!this.props.loadingResults &&
                     !!this.props.lookupResults &&
                     this.props.lookupResults.length === 0 &&
                     !!locale.components.thirdPartyLookupTools.forms &&
                     locale.components.thirdPartyLookupTools.forms.length > 0 && (
-                    <Fragment>
-                        {locale.components.thirdPartyLookupTools.forms.map(form => (
-                            <ThirdPartyLookupForm
-                                key={form.apiType}
-                                locale={localeContent}
-                                localeform={form}
-                                actions={this.props.actions}
-                                sendInputsToResultComponent={this.recordInputs} // function
-                                isMinimised={!!form.isMinimised}
-                            />
-                        ))}
-                    </Fragment>
-                )}
+                        <Fragment>
+                            {locale.components.thirdPartyLookupTools.forms.map(form => (
+                                <ThirdPartyLookupForm
+                                    key={form.apiType}
+                                    locale={localeContent}
+                                    localeform={form}
+                                    actions={this.props.actions}
+                                    sendInputsToResultComponent={this.recordInputs} // function
+                                    isMinimised={!!form.isMinimised}
+                                />
+                            ))}
+                        </Fragment>
+                    )}
             </StandardPage>
         );
     }

@@ -51,16 +51,27 @@ export class HelpDrawer extends Component {
         }
         return (
             <Drawer classes={{ paper: classes.paper }} open={open} anchor="right" onClose={hide}>
-                <Grid container spacing={40}>
+                <Grid container spacing={5} id="help-drawer">
                     <Grid item xs={12}>
-                        <Typography key={'title'} component={'span'} variant={'h6'} className={classes.title}>
+                        <Typography
+                            key={'title'}
+                            component={'span'}
+                            variant={'h6'}
+                            className={classes.title}
+                            id="help-drawer-title"
+                        >
                             {title}
                         </Typography>
-                        <Typography key={'text'} component={'span'} variant="body2">
+                        <Typography
+                            key={'text'}
+                            component={'span'}
+                            variant="body2"
+                            id={`help-drawer-text-${title.replace(/\s/g, '')}`}
+                        >
                             {indexedText || text}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} id="help-drawer-button">
                         <Button
                             variant="contained"
                             color="primary"

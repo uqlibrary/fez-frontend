@@ -1,18 +1,20 @@
-import { PublicationYearRangeField, styles } from './PublicationYearRangeField';
+import React from 'react';
+import { rtlRender, fireEvent } from 'test-utils';
+import PublicationYearRangeField from './PublicationYearRangeField';
 
 function setup(testProps = {}) {
-    // build full props list required by the component
     const props = {
         updateYearRangeFilter: jest.fn(),
         classes: {},
         ...testProps,
     };
-    return getElement(PublicationYearRangeField, props);
+
+    return rtlRender(<PublicationYearRangeField {...props} />);
 }
 
 describe('Component PublicationYearRangeField', () => {
     it('should render as expected', () => {
-        const props = {
+        const { getByTestId } = setup({
             className: 'advancedSearchYearFilter',
             yearFilter: {
                 from: 1999,
@@ -20,83 +22,60 @@ describe('Component PublicationYearRangeField', () => {
                 to: 2001,
             },
             disabled: false,
-        };
-        const wrapper = setup({ ...props });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        });
+        expect(getByTestId('from')).toBeInTheDocument();
+        expect(getByTestId('to')).toBeInTheDocument();
+        expect(getByTestId('from').value).toEqual('1999');
+        expect(getByTestId('to').value).toEqual('2001');
     });
 
     it('should render help text when needed', () => {
-        const wrapper = setup({
+        const { getByText } = setup({
             invalid: true,
         });
-        expect(
-            wrapper
-                .find('TextField')
-                .first()
-                .prop('helperText'),
-        ).toMatchSnapshot();
+        expect(getByText('Invalid year range')).toBeInTheDocument();
     });
 
     it('should return values as expect for a valid setValue', () => {
-        const setValueMock = jest.fn();
         const updateMock = jest.fn();
-        const props = {
+        const { getByTestId } = setup({
             updateYearRangeFilter: updateMock,
             className: 'advancedSearchYearFilter',
             yearFilter: { from: 1999, invalid: false, to: 2001 },
             disabled: false,
-        };
-        const wrapper = setup({ ...props });
-        wrapper.instance().setValue = setValueMock;
-        expect(wrapper.instance().props.yearFilter.from).toEqual(1999);
-        wrapper.find('#from').simulate('change', { target: { value: 1000 } });
+        });
+        fireEvent.change(getByTestId('from'), { target: { value: 1000 } });
         expect(updateMock).toBeCalledWith({ from: 1000, invalid: false, to: 2001 });
     });
 
-    it('should return values as expect for an invalid setValue', () => {
-        const setValueMock = jest.fn();
+    it('should return values as expected for an invalid setValue', () => {
         const updateMock = jest.fn();
-        const props = {
+        const { getByTestId } = setup({
             updateYearRangeFilter: updateMock,
             className: 'advancedSearchYearFilter',
             yearFilter: { from: 1999, invalid: false, to: 2001 },
             disabled: false,
-        };
-        const wrapper = setup({ ...props });
-        wrapper.instance().setValue = setValueMock;
-        expect(wrapper.instance().props.yearFilter.from).toEqual(1999);
+        });
 
-        wrapper.find('#from').simulate('change', { target: { value: 'hello100' } });
+        fireEvent.change(getByTestId('from'), { target: { value: 'hello100' } });
         expect(updateMock).toBeCalledWith({ from: 100, invalid: false, to: 2001 });
 
-        wrapper.find('#from').simulate('change', { target: { value: '100hello' } });
+        fireEvent.change(getByTestId('from'), { target: { value: '100hello' } });
         expect(updateMock).toBeCalledWith({ from: 100, invalid: false, to: 2001 });
 
-        wrapper.find('#from').simulate('change', { target: { value: '1100' } });
+        fireEvent.change(getByTestId('from'), { target: { value: '1100' } });
         expect(updateMock).toBeCalledWith({ from: 1100, invalid: false, to: 2001 });
 
-        wrapper.find('#from').simulate('change', { target: { value: '' } });
+        fireEvent.change(getByTestId('from'), { target: { value: '' } });
         expect(updateMock).toBeCalledWith({ from: 100, invalid: false, to: 2001 });
-    });
 
-    it('should test invalid year properly', () => {
-        const wrapper = setup();
-        const test = wrapper.instance().isInvalidYear;
-        expect(test({ from: 1, to: 0 })).toBe(true);
-        expect(test({ from: 10000, to: 10001 })).toBe(true);
-        expect(test({ from: 1, to: 10000 })).toBe(true);
-        expect(test({ from: 1, to: 2 })).toBe(false);
-    });
+        fireEvent.change(getByTestId('from'), { target: { value: '10001' } });
+        expect(updateMock).toBeCalledWith({ from: 10001, invalid: true, to: 2001 });
 
-    it('should have a proper style generator', () => {
-        const theme = {
-            typography: {
-                caption: {
-                    test1: 'test1',
-                    test2: 'test2',
-                },
-            },
-        };
-        expect(styles(theme)).toMatchSnapshot();
+        fireEvent.change(getByTestId('to'), { target: { value: '1990' } });
+        expect(updateMock).toBeCalledWith({ from: 1999, invalid: true, to: 1990 });
+
+        fireEvent.change(getByTestId('to'), { target: { value: '10001' } });
+        expect(updateMock).toBeCalledWith({ from: 1999, invalid: true, to: 10001 });
     });
 });

@@ -47,6 +47,7 @@ export {
     recordWithDatastreams,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    unpublishedSearchList,
     UQ716942uqagrinb,
 } from './records';
 
@@ -59,3 +60,4 @@ export { newsFeed } from './newsFeed';
 export { batchImportDirectories } from './batchImportDirectories';
 export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
+export { mockRecordToFix } from './testing/records';

@@ -3921,28 +3921,28 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
     showUnpublishedBufferFields={false}
     subsetCustomActions={Array []}
   />
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       xs={true}
     />
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       item={true}
       sm="auto"
       xs={12}
     >
-      <WithStyles(Button)
+      <WithStyles(ForwardRef(Button))
         className="blueButton"
         color="secondary"
         onClick={[Function]}
         variant="contained"
       >
         View all (137)
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </Fragment>
 `;
 

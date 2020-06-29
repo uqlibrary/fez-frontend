@@ -58,6 +58,7 @@ export class FilesClass extends Component {
                 previewMediaUrl: null,
                 mimeType: null,
                 checksums: {},
+                videoLoading: true,
             },
         };
     }
@@ -125,6 +126,8 @@ export class FilesClass extends Component {
                     mimeType,
                     securityStatus,
                     checksums,
+                    videoLoading: true,
+                    imageError: false,
                 },
             });
         }
@@ -278,51 +281,51 @@ export class FilesClass extends Component {
         const dataStreams = publication.fez_datastream_info;
         return this.isViewableByUser(publication, dataStreams)
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
-                const pid = publication.rek_pid;
-                const fileName = dataStream.dsi_dsid;
-                const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                const thumbnailFileName = this.checkForThumbnail(fileName);
-                const previewFileName = this.checkForPreview(fileName);
-                const webFileName = this.checkForWeb(fileName);
-                const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
-                const securityAccess = this.getSecurityAccess(dataStream);
-                const checksums = this.getChecksums(
-                    dataStream,
-                    thumbnailFileName,
-                    previewFileName,
-                    webFileName,
-                    dataStreams,
-                );
+                  const pid = publication.rek_pid;
+                  const fileName = dataStream.dsi_dsid;
+                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                  const thumbnailFileName = this.checkForThumbnail(fileName);
+                  const previewFileName = this.checkForPreview(fileName);
+                  const webFileName = this.checkForWeb(fileName);
+                  const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
+                  const securityAccess = this.getSecurityAccess(dataStream);
+                  const checksums = this.getChecksums(
+                      dataStream,
+                      thumbnailFileName,
+                      previewFileName,
+                      webFileName,
+                      dataStreams,
+                  );
 
-                return {
-                    pid: pid,
-                    fileName: fileName,
-                    description: dataStream.dsi_label,
-                    mimeType: mimeType,
-                    calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload: !openAccessStatus.embargoDate,
-                    icon: this.renderFileIcon(
-                        pid,
-                        mimeType,
-                        fileName,
-                        thumbnailFileName,
-                        previewFileName,
-                        webFileName,
-                        securityAccess,
-                        checksums,
-                    ),
-                    openAccessStatus: openAccessStatus,
-                    previewMediaUrl: this.getUrl(
-                        pid,
-                        previewFileName ? previewFileName : fileName,
-                        checksums && checksums.preview,
-                    ),
-                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
-                    mediaUrl: this.getUrl(pid, fileName, checksums.media),
-                    securityStatus: this.getSecurityAccess(dataStream),
-                    checksums: checksums,
-                };
-            })
+                  return {
+                      pid: pid,
+                      fileName: fileName,
+                      description: dataStream.dsi_label,
+                      mimeType: mimeType,
+                      calculatedSize: this.formatBytes(dataStream.dsi_size),
+                      allowDownload: !openAccessStatus.embargoDate,
+                      icon: this.renderFileIcon(
+                          pid,
+                          mimeType,
+                          fileName,
+                          thumbnailFileName,
+                          previewFileName,
+                          webFileName,
+                          securityAccess,
+                          checksums,
+                      ),
+                      openAccessStatus: openAccessStatus,
+                      previewMediaUrl: this.getUrl(
+                          pid,
+                          previewFileName ? previewFileName : fileName,
+                          checksums && checksums.preview,
+                      ),
+                      webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                      mediaUrl: this.getUrl(pid, fileName, checksums.media),
+                      securityStatus: this.getSecurityAccess(dataStream),
+                      checksums: checksums,
+                  };
+              })
             : [];
     };
 
@@ -335,6 +338,37 @@ export class FilesClass extends Component {
         return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
     };
 
+    handleImageFailed = () => {
+        this.setState(state => ({
+            ...state,
+            preview: {
+                ...state.preview,
+                imageError: true,
+            },
+        }));
+    };
+
+    handleVideoFailed = event => {
+        this.setState(state => ({
+            ...state,
+            preview: {
+                ...state.preview,
+                videoErrorCode: event.code,
+                videoErrorMsg: event.message,
+            },
+        }));
+    };
+
+    handleVideoLoad = () => {
+        this.setState(state => ({
+            ...state,
+            preview: {
+                ...state.preview,
+                videoLoading: false,
+            },
+        }));
+    };
+
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
@@ -344,21 +378,21 @@ export class FilesClass extends Component {
                 <StandardCard title={locale.viewRecord.sections.files.title}>
                     {!!publication.fez_record_search_key_advisory_statement &&
                         !this.props.hideCulturalSensitivityStatement && (
-                        <Alert
-                            allowDismiss
-                            type={'info'}
-                            message={stripHtml(
-                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
-                            )}
-                            dismissAction={this.props.setHideCulturalSensitivityStatement}
-                        />
-                    )}
+                            <Alert
+                                allowDismiss
+                                type={'info'}
+                                message={stripHtml(
+                                    publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                                )}
+                                dismissAction={this.props.setHideCulturalSensitivityStatement}
+                            />
+                        )}
                     <div style={{ padding: 8 }}>
                         <Grid
                             container
                             direction="row"
                             alignItems="center"
-                            spacing={16}
+                            spacing={2}
                             className={this.props.classes.header}
                         >
                             <Grid item xs={1}>
@@ -395,7 +429,7 @@ export class FilesClass extends Component {
                                 direction="row"
                                 alignItems="center"
                                 key={`file-${index}`}
-                                spacing={16}
+                                spacing={2}
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >
@@ -441,7 +475,14 @@ export class FilesClass extends Component {
                             webMediaUrl={this.state.preview.webMediaUrl}
                             previewMediaUrl={this.state.preview.previewMediaUrl}
                             mimeType={this.state.preview.mimeType}
+                            videoErrorMsg={this.state.preview.videoErrorMsg}
+                            videoErrorCode={this.state.preview.videoErrorCode}
+                            videoLoading={this.state.preview.videoLoading}
+                            imageError={this.state.preview.imageError}
                             onClose={this.hidePreview}
+                            onVideoFailed={this.handleVideoFailed}
+                            onImageFailed={this.handleImageFailed}
+                            onVideoLoad={this.handleVideoLoad}
                         />
                     )}
                 </StandardCard>

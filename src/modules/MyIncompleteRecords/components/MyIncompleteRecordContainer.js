@@ -36,7 +36,8 @@ export default class MyIncompleteRecordContainer extends React.Component {
                 pid: PropTypes.string.isRequired,
             }),
         }),
-        actions: PropTypes.object.isRequired,
+        loadRecordToFix: PropTypes.func.isRequired,
+        clearFixRecord: PropTypes.func.isRequired,
     };
 
     constructor(props) {
@@ -50,12 +51,13 @@ export default class MyIncompleteRecordContainer extends React.Component {
     }
 
     componentDidMount() {
-        if (!this.props.recordToFix && !!this.props.actions.loadRecordToFix) {
-            this.props.actions.loadRecordToFix(this.props.match.params.pid);
-        }
+        !this.props.recordToFix &&
+            !!this.props.loadRecordToFix &&
+            this.props.loadRecordToFix(this.props.match.params.pid);
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const { recordToFix, author } = nextProps;
         nextProps.recordToFix !== this.props.recordToFix &&
             this.setState({
@@ -69,7 +71,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
 
     componentWillUnmount() {
         // clear previously selected recordToFix for a fix
-        this.props.actions.clearFixRecord();
+        this.props.clearFixRecord();
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {

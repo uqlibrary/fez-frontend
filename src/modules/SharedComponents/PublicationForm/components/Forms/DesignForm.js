@@ -45,10 +45,10 @@ export default class DesignForm extends Component {
                 : '';
 
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -109,6 +109,7 @@ export default class DesignForm extends Component {
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-project-start-date"
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_project_start_date.rek_project_start_date"
                                     allowPartial
@@ -128,6 +129,7 @@ export default class DesignForm extends Component {
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.endDate.title}
                                     hasError={dateError}
+                                    partialDateFieldId="rek-end-date"
                                 />
                             </Grid>
                         </Grid>
@@ -138,6 +140,7 @@ export default class DesignForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="authors"
                             showContributorAssignment
                             required
                             name="authors"
@@ -163,7 +166,7 @@ export default class DesignForm extends Component {
                 )}
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

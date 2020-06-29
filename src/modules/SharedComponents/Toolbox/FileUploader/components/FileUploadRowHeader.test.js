@@ -1,79 +1,59 @@
-import { FileUploadRowHeader } from './FileUploadRowHeader';
-import FileUploadRowHeaderWithStyles from './FileUploadRowHeader';
+import React from 'react';
+import FileUploadRowHeader from './FileUploadRowHeader';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
+import mediaQuery from 'css-mediaquery';
 
-const locale = {
-    filenameColumn: 'Filename',
-    fileAccessColumn: 'Access conditions',
-    embargoDateColumn: 'Embargo release date',
-    deleteAllFiles: 'Remove all files from the upload queue',
-    deleteAllFilesConfirmation: {
-        confirmationTitle: 'Delete all',
-        confirmationMessage: 'Are you sure you want to delete all files?',
-        cancelButtonLabel: 'No',
-        confirmButtonLabel: 'Yes',
-    },
-};
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
 
-const getProps = (testProps = {}) => ({
-    onDeleteAll: testProps.onDeleteAll || jest.fn(),
-    classes: {
-        icon: '',
-    },
-    ...testProps,
-});
-
-function setup(testProps = {}, args = {}) {
-    return getElement(FileUploadRowHeader, getProps(testProps), args);
+function setup(testProps = {}) {
+    const props = {
+        onDeleteAll: jest.fn(),
+        requireOpenAccessStatus: false,
+        ...testProps,
+    };
+    return rtlRender(<FileUploadRowHeader {...props} />);
 }
 
 describe('Component FileUploadRowHeader', () => {
-    it('should render with default setup', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+    beforeEach(() => {
+        window.matchMedia = createMatchMedia(window.innerWidth);
     });
 
-    it('should render with default setup with styles', () => {
-        const wrapper = getElement(FileUploadRowHeaderWithStyles, getProps());
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should render with default setup', () => {
+        const { getByText, getByTitle, queryByText } = setup();
+        expect(getByText('File name')).toBeInTheDocument();
+        expect(queryByText('Access conditions')).toBeNull();
+        expect(queryByText('Embargo release date')).toBeNull();
+        expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
     });
 
     it('should render with access condition and embargo date column', () => {
-        const props = {
-            requireOpenAccessStatus: true,
-            onDeleteAll: jest.fn(),
-            locale: locale,
-        };
-
-        const wrapper = setup({ ...props });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByText, getByTitle } = setup({ requireOpenAccessStatus: true });
+        expect(getByText('File name')).toBeInTheDocument();
+        expect(getByText('Access conditions')).toBeInTheDocument();
+        expect(getByText('Embargo release date')).toBeInTheDocument();
+        expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
     });
 
-    it(
-        'should render without access condition even if requireAccessCondition ' +
-            'true but default access condition is provided',
-        () => {
-            const props = {
-                requireOpenAccessStatus: true,
-                onDeleteAll: jest.fn(),
-                locale: locale,
-            };
+    it('should render in disabled state', () => {
+        const { getByTestId } = setup({ disabled: true });
+        expect(getByTestId('delete-all-files').disabled).toBeTruthy();
+    });
 
-            const wrapper = setup({ ...props });
-            expect(toJson(wrapper)).toMatchSnapshot();
-        },
-    );
+    it('should render confirmation on delete all', async () => {
+        const onDeleteAllFn = jest.fn();
+        const { getByTestId } = setup({ requireOpenAccessStatus: true, onDeleteAll: onDeleteAllFn });
 
-    it('should render confirmation on delete all', () => {
-        const props = {
-            requireOpenAccessStatus: true,
-            onDeleteAll: jest.fn(),
-            locale: locale,
-        };
+        fireEvent.click(getByTestId('delete-all-files'));
+        await waitFor(() => getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-action'));
 
-        const wrapper = setup({ ...props }, { isShallow: false });
-        const tightWrapper = wrapper.find('FileUploadRowHeader');
-        tightWrapper.instance()._showConfirmation();
-        wrapper.update();
-        expect(JSON.stringify(tightWrapper)).toMatchSnapshot();
+        expect(onDeleteAllFn).toHaveBeenCalled();
     });
 });

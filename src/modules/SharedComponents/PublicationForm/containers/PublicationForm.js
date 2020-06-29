@@ -14,7 +14,6 @@ import PublicationForm from '../components/PublicationForm';
 import { createNewRecord } from 'actions';
 import { general, publicationTypes } from 'config';
 import { locale } from 'locale';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {
     DOCTYPE_SUBTYPE_MAPPING,
     NEW_DOCTYPES_OPTIONS,
@@ -123,7 +122,7 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit,
-})(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
+})(PublicationForm);
 
 const selector = formValueSelector(FORM_NAME);
 
@@ -198,9 +197,6 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-PublicationFormContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(PublicationFormContainer);
+PublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationFormContainer);
 
 export default PublicationFormContainer;

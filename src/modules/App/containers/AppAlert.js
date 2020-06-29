@@ -32,9 +32,6 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
-const AppAlertContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AppAlert);
+const AppAlertContainer = connect(mapStateToProps, mapDispatchToProps)(AppAlert);
 
 export default AppAlertContainer;

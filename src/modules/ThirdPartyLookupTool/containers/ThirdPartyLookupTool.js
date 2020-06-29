@@ -17,10 +17,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ThirdPartyLookupContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ThirdPartyLookupTool);
+let ThirdPartyLookupContainer = connect(mapStateToProps, mapDispatchToProps)(ThirdPartyLookupTool);
 ThirdPartyLookupContainer = withRouter(ThirdPartyLookupContainer);
 
 export default ThirdPartyLookupContainer;

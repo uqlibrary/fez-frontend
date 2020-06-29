@@ -1,24 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MyIncompleteRecord Container should display form once record and author loaded 1`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": false,
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 410,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -28,27 +48,42 @@ exports[`MyIncompleteRecord Container should display form once record and author
     }
   }
   ntroFieldProps={Object {}}
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={null}
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;
 
 exports[`MyIncompleteRecord Container should display form once record and author loaded 2`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": false,
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 410,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   hasAnyFiles={true}
   initialValues={
     Object {
@@ -117,6 +152,22 @@ exports[`MyIncompleteRecord Container should display form once record and author
   }
   isAuthorLinked={false}
   isNtro={true}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -136,6 +187,9 @@ exports[`MyIncompleteRecord Container should display form once record and author
       "showSignificance": true,
     }
   }
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={
     Object {
       "fez_datastream_info": Array [
@@ -631,7 +685,15 @@ exports[`MyIncompleteRecord Container should display form once record and author
       "rek_updated_date_xsdmf_id": 3678,
     }
   }
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;
 
@@ -640,24 +702,44 @@ exports[`MyIncompleteRecord Container should display loading screen on author lo
 exports[`MyIncompleteRecord Container should display loading screen on record loading 1`] = `<WithStyles(InlineLoader) />`;
 
 exports[`MyIncompleteRecord Container should load all contribution statements and significance for linked admin author 1`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": true,
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -667,27 +749,42 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
     }
   }
   ntroFieldProps={Object {}}
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={null}
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;
 
 exports[`MyIncompleteRecord Container should load all contribution statements and significance for linked admin author 2`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": true,
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   hasAnyFiles={true}
   initialValues={
     Object {
@@ -777,6 +874,22 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
   }
   isAuthorLinked={true}
   isNtro={true}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -796,6 +909,9 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
       "showSignificance": true,
     }
   }
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={
     Object {
       "fez_datastream_info": Array [
@@ -1272,29 +1388,57 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
       "rek_updated_date_xsdmf_id": 3678,
     }
   }
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;
 
 exports[`MyIncompleteRecord Container should load initial values for admin author and if search key is not there then it should get default 1`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": true,
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -1304,27 +1448,42 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
     }
   }
   ntroFieldProps={Object {}}
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={null}
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;
 
 exports[`MyIncompleteRecord Container should load initial values for admin author and if search key is not there then it should get default 2`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": true,
     }
   }
   accountAuthorLoading={false}
-  actions={Object {}}
   author={
     Object {
       "aut_id": 79324,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   hasAnyFiles={true}
   initialValues={
     Object {
@@ -1380,6 +1539,22 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
   }
   isAuthorLinked={true}
   isNtro={true}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:111111",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -1399,6 +1574,9 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
       "showSignificance": true,
     }
   }
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={
     Object {
       "fez_datastream_info": Array [
@@ -1619,45 +1797,57 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
       "rek_updated_date_xsdmf_id": 3678,
     }
   }
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;
 
 exports[`MyIncompleteRecord Container should run componentDidMount() life cycle method to load record to fix 1`] = `
-<ConfirmDiscardFormChanges
+<ReduxForm
   account={
     Object {
       "canMasquerade": false,
     }
   }
   accountAuthorLoading={false}
-  actions={
-    Object {
-      "loadRecordToFix": [MockFunction] {
-        "calls": Array [
-          Array [
-            "UQ:123456",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-    }
-  }
   author={
     Object {
       "aut_id": 410,
     }
   }
-  dirty={false}
+  clearFixRecord={[MockFunction]}
+  destroyOnUnmount={true}
   disableInitialGrants={true}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   initialValues={Object {}}
   isAuthorLinked={true}
   isNtro={false}
+  keepDirtyOnReinitialize={false}
+  loadRecordToFix={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "UQ:123456",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   loadingRecordToFix={false}
   match={
     Object {
@@ -1667,7 +1857,18 @@ exports[`MyIncompleteRecord Container should run componentDidMount() life cycle 
     }
   }
   ntroFieldProps={Object {}}
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={null}
-  submitSucceeded={false}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;

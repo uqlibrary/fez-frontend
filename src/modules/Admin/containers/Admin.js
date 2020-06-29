@@ -3,56 +3,27 @@ import { connect } from 'react-redux';
 import { destroy, reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
 import { adminInterfaceConfig, valueExtractor, validate } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import {
     DOCUMENT_TYPES_LOOKUP,
-    PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_SEMINAR_PAPER,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
-    PUBLICATION_TYPE_BOOK,
-    PUBLICATION_TYPE_BOOK_CHAPTER,
-    PUBLICATION_TYPE_CONFERENCE_PAPER,
-    PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
-    PUBLICATION_TYPE_JOURNAL,
-    PUBLICATION_TYPE_JOURNAL_ARTICLE,
-    PUBLICATION_TYPE_REFERENCE_ENTRY,
-    PUBLICATION_TYPE_RESEARCH_REPORT,
-    PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 import { onSubmit } from '../submitHandler';
+import { identifiersParams } from 'modules/Admin/helpers';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&
     (record.fez_record_search_key_language.length > 1 ||
         (record.fez_record_search_key_language.length === 1 &&
             record.fez_record_search_key_language[0].rek_language !== 'eng'));
-
-export const identifiersParams = record => ({
-    displayAll: [
-        PUBLICATION_TYPE_BOOK,
-        PUBLICATION_TYPE_BOOK_CHAPTER,
-        PUBLICATION_TYPE_CONFERENCE_PAPER,
-        PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
-        PUBLICATION_TYPE_JOURNAL,
-        PUBLICATION_TYPE_JOURNAL_ARTICLE,
-        PUBLICATION_TYPE_REFERENCE_ENTRY,
-        PUBLICATION_TYPE_RESEARCH_REPORT,
-        PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
-    ].includes(record.rek_display_type),
-    displayLocation: [PUBLICATION_TYPE_AUDIO_DOCUMENT, PUBLICATION_TYPE_SEMINAR_PAPER].includes(
-        record.rek_display_type,
-    ),
-    displayIdentifiers: PUBLICATION_TYPE_AUDIO_DOCUMENT === record.rek_display_type,
-});
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
@@ -94,14 +65,14 @@ const getInitialFormValues = (recordToView, recordType) => {
                 rek_security_policy: recordToView.rek_security_policy,
                 ...(recordType === RECORD_TYPE_COLLECTION
                     ? {
-                        rek_datastream_policy: recordToView.rek_datastream_policy,
-                    }
+                          rek_datastream_policy: recordToView.rek_datastream_policy,
+                      }
                     : {}),
                 ...(recordType === RECORD_TYPE_RECORD
                     ? {
-                        rek_security_inherited: recordToView.rek_security_inherited,
-                        dataStreams: validDataStreams,
-                    }
+                          rek_security_inherited: recordToView.rek_security_inherited,
+                          dataStreams: validDataStreams,
+                      }
                     : []),
             },
             bibliographicSection:
@@ -124,7 +95,7 @@ const PrototypeContainer = reduxForm({
     onSubmit,
     validate,
     destroyOnUnmount: false,
-})(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
+})(AdminContainer);
 
 const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -132,6 +103,7 @@ const mapStateToProps = (state, props) => {
     const newRecord = state.get('createAdminRecordReducer') && state.get('createAdminRecordReducer').newRecord;
     let initialFormValues = {};
     let recordToView = {};
+    let locked = false;
 
     if (props.createMode) {
         const displayType = formValues && formValues.get('rek_display_type');
@@ -155,6 +127,10 @@ const mapStateToProps = (state, props) => {
         };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;
+        locked =
+            !!recordToView &&
+            recordToView.rek_editing_user !== state.get('accountReducer').account.id &&
+            state.get('viewRecordReducer').isRecordLocked;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =
             (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
@@ -173,22 +149,22 @@ const mapStateToProps = (state, props) => {
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
         recordToView,
+        isDeleted: state.get('viewRecordReducer').isDeleted,
         ...initialFormValues,
+        locked,
     };
 };
 
 function mapDispatchToProps(dispatch) {
-    const { loadRecordToView, clearRecordToView } = bindActionCreators(actions, dispatch);
+    const { loadRecordToView, clearRecordToView, unlockRecord } = bindActionCreators(actions, dispatch);
     return {
         loadRecordToView,
         clearRecordToView,
+        unlockRecord,
         destroy,
     };
 }
 
-const AdminReduxFormContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(PrototypeContainer);
+const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
 
 export default withRouter(AdminReduxFormContainer);

@@ -54,7 +54,8 @@ export class AdvancedSearchCaption extends PureComponent {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.setState({
             captionData: this.updateStateData(nextProps),
         });
@@ -113,10 +114,10 @@ export class AdvancedSearchCaption extends PureComponent {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         return yearFilter.from && yearFilter.to
             ? {
-                title: txt.facet_year_range.captionTitle,
-                combiner: txt.facet_year_range.combiner,
-                value: `${yearFilter.from} to ${yearFilter.to}`,
-            }
+                  title: txt.facet_year_range.captionTitle,
+                  combiner: txt.facet_year_range.combiner,
+                  value: `${yearFilter.from} to ${yearFilter.to}`,
+              }
             : null;
     };
 

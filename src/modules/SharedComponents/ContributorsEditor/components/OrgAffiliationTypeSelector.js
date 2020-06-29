@@ -8,16 +8,22 @@ import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ } from 'config/general';
 
 export default function OrgAffilicationTypeSelector({ affiliation, onAffiliationChange, locale, error, disabled }) {
     return (
-        <FormControl fullWidth>
-            <InputLabel>{locale.inputLabel}</InputLabel>
+        <FormControl fullWidth error={error}>
+            <InputLabel id="org-affiliation-label">{locale.inputLabel}</InputLabel>
             <Select
                 value={affiliation}
+                name="org-affiliation"
                 onChange={onAffiliationChange}
-                error={error}
                 required
                 disabled={disabled}
+                labelId="org-affiliation-label"
                 SelectDisplayProps={{
-                    id: 'org-affiliation-selector',
+                    id: 'org-affiliation-select',
+                    'data-testid': 'org-affiliation-select',
+                }}
+                MenuProps={{
+                    id: 'org-affiliation-options',
+                    'data-testid': 'org-affiliation-options',
                 }}
             >
                 <MenuItem value="" disabled>
@@ -47,7 +53,10 @@ OrgAffilicationTypeSelector.defaultProps = {
     locale: {
         inputLabel: 'Org affiliation',
         placeholder: 'Organisational affiliation at time of publication',
-        options: [{ key: AFFILIATION_TYPE_UQ, value: 'UQ' }, { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' }],
+        options: [
+            { key: AFFILIATION_TYPE_UQ, value: 'UQ' },
+            { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' },
+        ],
     },
     error: false,
     helperText: undefined,

@@ -48,6 +48,22 @@ describe('Component ViewRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render deleted record view', () => {
+        const wrapper = setup({ recordToView: mockRecordToFix, isDeleted: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have status prop in the header for admins', () => {
+        const wrapper = setup({
+            recordToView: { ...mockRecordToFix, rek_status: 1, rek_status_lookup: 'Unpublished' },
+            authorDetails: {
+                is_administrator: 1,
+                is_super_administrator: 0,
+            },
+        });
+        expect(wrapper.find('WithStyles(ForwardRef(Chip))').props().label).toEqual('Unpublished');
+    });
+
     it('should not render components for empty record', () => {
         const wrapper = setup({ recordToView: {} });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -73,7 +89,7 @@ describe('Component ViewRecord ', () => {
         expect(wrapper.instance().props.actions.clearRecordToView).toHaveBeenCalled();
     });
 
-    it('should have componentWillReceiveProps load updated pid', () => {
+    it('should have UNSAFE_componentWillReceiveProps load updated pid', () => {
         const wrapper = setup({});
         const test = jest.spyOn(wrapper.instance().props.actions, 'loadRecordToView');
         const newProps = {
@@ -83,12 +99,12 @@ describe('Component ViewRecord ', () => {
                 },
             },
         };
-        wrapper.instance().componentWillReceiveProps(newProps);
+        wrapper.instance().UNSAFE_componentWillReceiveProps(newProps);
         expect(test).toBeCalledWith(newProps.match.params.pid);
 
         // test else branch
         test.mockClear(); // Reset the called counter from earlier tests
-        wrapper.instance().componentWillReceiveProps(wrapper.instance().props);
+        wrapper.instance().UNSAFE_componentWillReceiveProps(wrapper.instance().props);
         expect(test).not.toBeCalled();
     });
 

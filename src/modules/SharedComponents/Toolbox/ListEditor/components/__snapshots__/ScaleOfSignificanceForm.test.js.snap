@@ -1,19 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScaleOfSignificanceForm component should render the default view 1`] = `
-<WithStyles(Grid)
+<WithStyles(ForwardRef(Grid))
   alignItems="center"
   container={true}
   display="row"
-  spacing={16}
+  spacing={2}
 >
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Alert) />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+    <Alert
+      allowDismiss={false}
+      customIcon={null}
+      customType={null}
+      dismissTitle="Click to dismiss this alert"
+      message="Unexpected error"
+      showLoader={false}
+      type="error"
+      wiggle={null}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     style={
       Object {
@@ -23,13 +32,9 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     xs={12}
   >
     <GenericSelectField
-      SelectDisplayProps={
-        Object {
-          "id": "scaleOfSignificance",
-        }
-      }
       error={false}
       fullWidth={true}
+      genericSelectFieldId="rek-significance"
       itemsList={
         Array [
           Object {
@@ -44,10 +49,10 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       name="key"
       onChange={[Function]}
-      selectedValue={null}
+      value={null}
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
@@ -83,18 +88,19 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       value=""
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
     item={true}
     xs={12}
   >
-    <WithStyles(Button)
+    <WithStyles(ForwardRef(Button))
       color="primary"
+      data-testid="rek-significance-add"
       fullWidth={true}
       id="add-items"
       onClick={[Function]}
       variant="contained"
     />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

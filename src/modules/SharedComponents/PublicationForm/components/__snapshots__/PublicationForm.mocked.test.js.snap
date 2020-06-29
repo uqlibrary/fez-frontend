@@ -1,285 +1,286 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component PublicationForm should render properly with non-matching doctype data arrays 1`] = `
-<form
-  onSubmit={[Function]}
+<ConfirmDiscardFormChanges
+  dirty={true}
+  submitSucceeded={false}
 >
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
+  <form
+    onSubmit={[Function]}
   >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to abandon workflow?",
-          "confirmationTitle": "Abandon workflow",
-        }
-      }
-      when={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={3}
     >
-      <StandardCard
-        help={
+      <NavigationDialogBox
+        txt={
           Object {
-            "buttonLabel": "Close",
-            "text": <p>
-              For more information about each type, click
-               
-              <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
-                rel="noreferrer"
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-                target="_blank"
-              >
-                here
-              </a>
-            </p>,
-            "title": "Non-traditional research output types",
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to abandon workflow?",
+            "confirmationTitle": "Abandon workflow",
           }
         }
-        title="Work type"
+        when={true}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          container={true}
-          spacing={8}
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "Close",
+              "text": <p>
+                For more information about each type, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Non-traditional research output types",
+            }
+          }
+          title="Work type"
         >
-          <WithStyles(Grid)
-            item={true}
-            xs={12}
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
           >
-            <Field
-              SelectDisplayProps={
-                Object {
-                  "id": "rek-display-type",
-                }
-              }
-              component={[Function]}
-              disabled={false}
-              id="rek_display_type"
-              label="Work type"
-              name="rek_display_type"
-              placeholder="Select a Work type from the dropdown list"
-              required={true}
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              xs={12}
             >
-              <WithStyles(MenuItem)
+              <Field
+                component={[Function]}
                 disabled={false}
-                key="fav_0"
-                value={130}
+                id="rek-display-type"
+                label="Work type"
+                name="rek_display_type"
+                placeholder="Select a Work type from the dropdown list"
+                required={true}
+                selectFieldId="rek-display-type"
               >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_1"
-                value={174}
-              >
-                Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_2"
-                value={177}
-              >
-                Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="fav_3"
-                value={179}
-              >
-                Journal Article
-              </WithStyles(MenuItem)>
-              <WithStyles(Divider)
-                key="div_0"
-              />
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="0"
-                value={130}
-              >
-                Conference Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="1"
-                value={174}
-              >
-                Book
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="2"
-                value={177}
-              >
-                Book Chapter
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="3"
-                value={179}
-              >
-                Journal Article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="4"
-                value={181}
-              >
-                Department Technical Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="5"
-                value={183}
-              >
-                Working Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="6"
-                value={185}
-              >
-                Patent
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="7"
-                value={187}
-              >
-                Thesis
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="8"
-                value={189}
-              >
-                Seminar Paper
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="9"
-                value={191}
-              >
-                Newspaper Article
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="10"
-                value={197}
-              >
-                Conference Proceedings
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="11"
-                value={202}
-              >
-                Generic Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="12"
-                value={204}
-              >
-                Preprint
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="13"
-                value={238}
-              >
-                Image
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="14"
-                value={263}
-              >
-                Audio Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="15"
-                value={275}
-              >
-                Research Report
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="16"
-                value={310}
-              >
-                Video Document
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="17"
-                value={313}
-              >
-                Creative Work
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                disabled={false}
-                key="18"
-                value={316}
-              >
-                Design
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-0"
-                value={1}
-              >
-                test1Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-1"
-                value={2}
-              >
-                test2Name
-              </WithStyles(MenuItem)>
-              <WithStyles(MenuItem)
-                key="ntro-2"
-                value={3}
-              >
-                3
-              </WithStyles(MenuItem)>
-            </Field>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </StandardCard>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    container={true}
-    spacing={24}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={true}
-    />
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="fav_0"
+                  value={130}
+                >
+                  Conference Paper
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="fav_1"
+                  value={174}
+                >
+                  Book
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="fav_2"
+                  value={177}
+                >
+                  Book Chapter
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="fav_3"
+                  value={179}
+                >
+                  Journal Article
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(Divider))
+                  key="div_0"
+                />
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="0"
+                  value={130}
+                >
+                  Conference Paper
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="1"
+                  value={174}
+                >
+                  Book
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="2"
+                  value={177}
+                >
+                  Book Chapter
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="3"
+                  value={179}
+                >
+                  Journal Article
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="4"
+                  value={181}
+                >
+                  Department Technical Report
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="5"
+                  value={183}
+                >
+                  Working Paper
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="6"
+                  value={185}
+                >
+                  Patent
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="7"
+                  value={187}
+                >
+                  Thesis
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="8"
+                  value={189}
+                >
+                  Seminar Paper
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="9"
+                  value={191}
+                >
+                  Newspaper Article
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="10"
+                  value={197}
+                >
+                  Conference Proceedings
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="11"
+                  value={202}
+                >
+                  Generic Document
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="12"
+                  value={204}
+                >
+                  Preprint
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="13"
+                  value={238}
+                >
+                  Image
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="14"
+                  value={263}
+                >
+                  Audio Document
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="15"
+                  value={275}
+                >
+                  Research Report
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="16"
+                  value={310}
+                >
+                  Video Document
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="17"
+                  value={313}
+                >
+                  Creative Work
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  disabled={false}
+                  key="18"
+                  value={316}
+                >
+                  Design
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  key="ntro-0"
+                  value={1}
+                >
+                  test1Name
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  key="ntro-1"
+                  value={2}
+                >
+                  test2Name
+                </WithStyles(ForwardRef(MenuItem))>
+                <WithStyles(ForwardRef(MenuItem))
+                  key="ntro-2"
+                  value={3}
+                >
+                  3
+                </WithStyles(ForwardRef(MenuItem))>
+              </Field>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </StandardCard>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={3}
     >
-      <WithStyles(Button)
-        color="secondary"
-        disabled={false}
-        fullWidth={true}
-        onClick={[MockFunction]}
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={true}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        sm="auto"
+        xs={12}
       >
-        Abandon and search again
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</form>
+        <WithStyles(ForwardRef(Button))
+          color="secondary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[MockFunction]}
+        >
+          Abandon and search again
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </form>
+</ConfirmDiscardFormChanges>
 `;

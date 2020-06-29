@@ -13,7 +13,7 @@ const documentTypeList = () => {
 };
 const mapStateToProps = (state, props) => {
     return {
-        selectedValue: props.input.value || [],
+        value: props.input.value || '',
         itemsList: documentTypeList() || [],
         itemsLoadingHint: props.loadingHint || 'Loading..',
     };
@@ -23,10 +23,7 @@ function mapDispatchToProps() {
     return {};
 }
 
-const SingleDocumentTypeList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
+const SingleDocumentTypeList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
 
 const _onChange = fieldProps => {
     return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
@@ -40,5 +37,7 @@ const _onChange = fieldProps => {
  * @constructor
  */
 export default function DocumentTypeSingleField(fieldProps) {
-    return <SingleDocumentTypeList onChange={_onChange(fieldProps)} {...fieldProps} />;
+    return (
+        <SingleDocumentTypeList onChange={_onChange(fieldProps)} genericSelectFieldId="doc-type-id" {...fieldProps} />
+    );
 }

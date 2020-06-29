@@ -28,6 +28,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -50,6 +51,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -66,6 +68,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
+                    aut_id: 123,
                     aut_title: 'Mr.',
                     aut_display_name: 'Test, Testing',
                     aut_org_username: null,
@@ -77,6 +80,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -94,6 +98,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
+                    aut_id: 123,
                     aut_title: 'Mr.',
                     aut_display_name: 'Test, Testing',
                     aut_org_username: 'uqttesting',
@@ -105,6 +110,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -113,7 +119,7 @@ describe('ContributorRowText', () => {
         expect(contributorRow.children.length).toBe(2);
     });
 
-    it('should render two columns for researcher while adding new NTRO work (NonUQ affiliation)', () => {
+    it('should render two columns for researcher while adding new NTRO work (NotUQ affiliation)', () => {
         userIsAdmin.mockImplementation(() => false);
 
         const { getByTestId } = rtlRender(
@@ -122,7 +128,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                     orgtype: '453989',
                 }}
@@ -131,6 +137,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -139,7 +146,7 @@ describe('ContributorRowText', () => {
         expect(contributorRow.children.length).toBe(2);
     });
 
-    it('should render two columns for researcher while adding new NTRO work (NonUQ affiliation) for smaller screen size', () => {
+    it('should render two columns for researcher while adding new NTRO work (NotUQ affiliation) for smaller screen size', () => {
         userIsAdmin.mockImplementation(() => false);
 
         const { getByTestId } = rtlRender(
@@ -148,7 +155,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                 }}
                 index={0}
@@ -156,6 +163,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -180,6 +188,7 @@ describe('ContributorRowText', () => {
                 showRoleInput
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -204,6 +213,7 @@ describe('ContributorRowText', () => {
                 showRoleInput
                 suffix={null}
                 width="xs"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -221,7 +231,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                     orgtype: '453989',
                 }}
@@ -230,6 +240,7 @@ describe('ContributorRowText', () => {
                 showRoleInput={false}
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
@@ -247,7 +258,7 @@ describe('ContributorRowText', () => {
                 classes={classes}
                 contributor={{
                     nameAsPublished: 'Test, Testing',
-                    affiliation: 'NonUQ',
+                    affiliation: 'NotUQ',
                     orgaff: 'Some institution',
                     orgtype: '453989',
                     creatorRole: 'Some creator role',
@@ -257,11 +268,41 @@ describe('ContributorRowText', () => {
                 showRoleInput
                 suffix={null}
                 width="md"
+                contributorRowId="test-list-row"
             />,
         );
 
         const contributorRow = getByTestId('contributor-row');
         expect(contributorRow.children.length).not.toBe(1);
         expect(contributorRow.children.length).toBe(3);
+    });
+
+    it('should render two columns for admin while adding new NTRO work (NotUQ affiliation) linking author', () => {
+        userIsAdmin.mockImplementation(() => false);
+
+        const { getByTestId } = rtlRender(
+            <ContributorRowText
+                canEdit={false}
+                classes={classes}
+                contributor={{
+                    nameAsPublished: 'Test, Testing',
+                    aut_id: 123,
+                    aut_title: 'Mr.',
+                    aut_display_name: 'Test, Testing',
+                    aut_ref_num: 123456,
+                    affiliation: 'NotUQ',
+                    uqUsername: 'uqtest',
+                }}
+                index={0}
+                selectedClass="test"
+                showRoleInput={false}
+                suffix={null}
+                contributorRowId="test-list-row"
+            />,
+        );
+
+        const contributorRow = getByTestId('contributor-row');
+        expect(contributorRow.children.length).not.toBe(1);
+        expect(contributorRow.children.length).toBe(2);
     });
 });

@@ -221,7 +221,7 @@ describe('Component FileUploadDropzone', () => {
         expect(tooManyFiles.length).toEqual(0);
     });
 
-    it('should filter folders out from the file list in removeDroppedFolders', async() => {
+    it('should filter folders out from the file list in removeDroppedFolders', async () => {
         const wrapper = setup();
 
         const fileA = getMockFile('a.txt');
@@ -241,7 +241,7 @@ describe('Component FileUploadDropzone', () => {
         await expect(wrapper.instance().removeDroppedFolders(accepted, errors)).resolves.toEqual([fileA, false, fileC]);
     });
 
-    it('should set all error messages', async() => {
+    it('should set all error messages', async () => {
         const fileA = getMockFile('a.txt');
         const fileADoc = getMockFile('a.doc');
         const fileB = getMockFile('b.txt');
@@ -281,7 +281,7 @@ describe('Component FileUploadDropzone', () => {
         expect(onDropTestFn).toHaveBeenCalledWith(expectedFiles, expectedError);
     });
 
-    it('should set all correct error messages for filenames with comma', async() => {
+    it('should set all correct error messages for filenames with comma', async () => {
         const fileG = getMockFile('g.txt');
         const fileA = getMockFile('i,am.txt');
         const fileH = getMockFile('excel,txt');
@@ -339,7 +339,11 @@ describe('Component FileUploadDropzone', () => {
 
     it('should call onerror if fail on read file', () => {
         const wrapper = setup();
-        const result = wrapper.instance().onReadFileError({ name: 'test' }, [], jest.fn(result => result))();
+        const result = wrapper.instance().onReadFileError(
+            { name: 'test' },
+            [],
+            jest.fn(result => result),
+        )();
         expect(result).toBeFalsy();
 
         const file = wrapper.instance().onReadFileLoad({ name: 'test' }, jest.fn())();

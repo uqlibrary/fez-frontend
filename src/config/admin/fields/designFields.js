@@ -22,18 +22,11 @@ export default {
                     'fez_record_search_key_total_pages',
                 ],
                 ['fez_record_search_key_project_name'],
-                ['fez_record_search_key_project_start_date', 'fez_record_search_key_end_date_biblio'],
+                ['fez_record_search_key_project_start_date', 'fez_record_search_key_end_date'],
                 ['rek_description'],
                 ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_source'],
-                ['fez_record_search_key_rights'],
-                ['fez_record_search_key_acknowledgements'],
-                ['fez_record_search_key_scale', 'fez_record_search_key_job_number'],
+                ['fez_record_search_key_location'],
             ],
-        },
-        {
-            title: 'Geographic area',
-            groups: [['geoCoordinates']],
         },
         {
             title: 'Keyword(s)',
@@ -42,6 +35,10 @@ export default {
         {
             title: 'Subject',
             groups: [['subjects']],
+        },
+        {
+            title: 'Related publications',
+            groups: [['fez_record_search_key_isderivationof']],
         },
     ],
     authors: () => [
@@ -98,12 +95,6 @@ export const validateDesign = (
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
-        ...((!((bs || {}).fez_record_search_key_rights || {}).rek_rights && {
-            fez_record_search_key_rights: {
-                rek_rights: summary.rek_rights,
-            },
-        }) ||
-            {}),
         ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
             fez_record_search_key_publisher: {
                 rek_publisher: summary.rek_publisher,

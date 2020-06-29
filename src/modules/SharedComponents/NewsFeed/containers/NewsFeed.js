@@ -15,8 +15,5 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const NewsFeedContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(NewsFeed);
+const NewsFeedContainer = connect(mapStateToProps, mapDispatchToProps)(NewsFeed);
 export default NewsFeedContainer;

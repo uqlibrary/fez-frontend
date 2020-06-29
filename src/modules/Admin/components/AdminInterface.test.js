@@ -21,6 +21,7 @@ function setup(testProps = {}) {
         authorDetails: {
             is_administrator: 1,
             is_super_administrator: 1,
+            username: 'test',
         },
         classes: {
             tabIndicator: 'tabindicator',
@@ -40,6 +41,7 @@ function setup(testProps = {}) {
             },
         },
         destroy: jest.fn(),
+        unlockRecord: jest.fn(),
         ...testProps,
     };
 
@@ -120,6 +122,58 @@ describe('AdminInterface component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render undelete title and button', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            isDeleted: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render locked alert in edit mode', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            locked: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+            },
+        });
+        expect(wrapper.find('LockedAlert').length).toEqual(1);
+    });
+
     it('should render default view as a full form view', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
@@ -192,7 +246,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(4);
+        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(4);
         expect(wrapper.find('TabContainer')).toHaveLength(1);
     });
 
@@ -259,7 +313,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(5);
+        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(5);
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
     });
 
@@ -343,7 +397,7 @@ describe('AdminInterface component', () => {
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
 
         wrapper
-            .find('WithStyles(Tabs)')
+            .find('WithStyles(ForwardRef(Tabs))')
             .props()
             .onChange({}, 'files');
 
@@ -510,6 +564,7 @@ describe('AdminInterface component', () => {
             record: {
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_editing_user: 'noone',
             },
         }));
         const push = jest.fn();
@@ -520,7 +575,7 @@ describe('AdminInterface component', () => {
             },
         });
         wrapper
-            .find('WithStyles(Button)')
+            .find('WithStyles(ForwardRef(Button))')
             .get(0)
             .props.onClick({
                 preventDefault: jest.fn(),
@@ -533,6 +588,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 187,
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_pid: 'UQ:111111',
+                rek_editing_user: 'noone',
             },
         }));
         const wrapper2 = setup({
@@ -541,7 +597,7 @@ describe('AdminInterface component', () => {
             },
         });
         wrapper2
-            .find('WithStyles(Button)')
+            .find('WithStyles(ForwardRef(Button))')
             .get(0)
             .props.onClick({
                 preventDefault: jest.fn(),
@@ -621,25 +677,34 @@ describe('AdminInterface component', () => {
     });
 
     it('should render publish button for unpublished record', () => {
+        const record = {
+            rek_pid: 'UQ:123456',
+            rek_status: 1,
+            rek_title: 'This is test record',
+            rek_object_type_lookup: 'Record',
+            rek_display_type_lookup: 'Journal Article',
+            rek_display_type: 179,
+        };
+        const tabs = {
+            bibliographic: {
+                activated: true,
+                component: () => 'BibliographySectionComponent',
+            },
+        };
+
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({ record }));
+        const wrapper = setup({ tabs });
+        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
+        useRecordContext.mockReset();
+
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:123456',
-                rek_status: 1,
-                rek_title: 'This is test record',
-                rek_object_type_lookup: 'Record',
-                rek_display_type_lookup: 'Journal Article',
-                rek_display_type: 179,
+                ...record,
+                rek_status: 3,
             },
         }));
-        const wrapper = setup({
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
-                },
-            },
-        });
-        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
+        const wrapper2 = setup({ tabs });
+        expect(wrapper2.find('#admin-work-publish').length).toEqual(1);
     });
 });

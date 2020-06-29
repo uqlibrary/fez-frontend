@@ -66,7 +66,7 @@ describe('AuthorLinking', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should call componentWillUpdate life cycle method on author selected', () => {
+    it('should call UNSAFE_componentWillUpdate life cycle method on author selected', () => {
         const onChange = jest.fn();
         const props = {
             searchKey: searchKey,

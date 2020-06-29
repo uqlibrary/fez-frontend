@@ -16,10 +16,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let TopCitedPublicationsContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(TopCitedPublications);
+let TopCitedPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(TopCitedPublications);
 TopCitedPublicationsContainer = withRouter(TopCitedPublicationsContainer);
 
 export default TopCitedPublicationsContainer;

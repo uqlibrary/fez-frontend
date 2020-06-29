@@ -28,28 +28,27 @@ context('Digilib Image admin edit', () => {
             .eq(1)
             .as('bibliographicTab')
             .within(() => {
-                cy.get('h3')
-                    .should('have.text', 'Bibliographic');
+                cy.get('h3').should('have.text', 'Bibliographic');
 
-                cy.get('h4')
-                    .should('contain', 'Bibliographic');
+                cy.get('h4').should('contain', 'Bibliographic');
 
-                cy.get('#Copyrightnotice')
-                    .should('have.value', record.fez_record_search_key_rights.rek_rights);
+                cy.get('[data-testid=rek-rights-input]').should(
+                    'have.value',
+                    record.fez_record_search_key_rights.rek_rights,
+                );
 
-                cy.get('[placeholder="Construction date"]')
-                    .should(
-                        'have.value',
-                        record.fez_record_search_key_construction_date.rek_construction_date,
-                    );
+                cy.get('[data-testid=rek-construction-date-input]').should(
+                    'have.value',
+                    record.fez_record_search_key_construction_date.rek_construction_date,
+                );
 
                 cy.checkPartialDateFromRecordValue(
-                    'Date photo taken',
+                    'rek-date-photo-taken',
                     record.fez_record_search_key_date_photo_taken.rek_date_photo_taken,
                 );
 
                 cy.checkPartialDateFromRecordValue(
-                    'Date photo scanned',
+                    'rek-date-scanned',
                     record.fez_record_search_key_date_scanned.rek_date_scanned,
                 );
 
@@ -57,8 +56,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(2)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Related publications');
+                        cy.get('h4').should('contain', 'Related publications');
                         const relatedPubs = record.fez_record_search_key_isderivationof.map(
                             item => item.rek_isderivationof_lookup,
                         );
@@ -73,8 +71,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(3)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Period(s)');
+                        cy.get('h4').should('contain', 'Period(s)');
                         const pubs = record.fez_record_search_key_period.map(pub => pub.rek_period);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -87,8 +84,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(4)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Structural system(s)');
+                        cy.get('h4').should('contain', 'Structural system(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_structural_systems.map(
                             pub => pub.rek_structural_systems
@@ -104,8 +100,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(5)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Style');
+                        cy.get('h4').should('contain', 'Style');
                         const pubs = record.fez_record_search_key_style.map(pub => pub.rek_style);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -118,8 +113,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(6)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Subcategory(ies)');
+                        cy.get('h4').should('contain', 'Subcategory(ies)');
                         const pubs = record.fez_record_search_key_subcategory.map(pub => pub.rek_subcategory);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -132,8 +126,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(7)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Surrounding feature(s)');
+                        cy.get('h4').should('contain', 'Surrounding feature(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_surrounding_features.map(
                             pub => pub.rek_surrounding_features
@@ -149,8 +142,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(8)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Interior feature(s)');
+                        cy.get('h4').should('contain', 'Interior feature(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_interior_features.map(
                             pub => pub.rek_interior_features
@@ -166,8 +158,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(9)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Building material(s)');
+                        cy.get('h4').should('contain', 'Building material(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_building_materials.map(
                             pub => pub.rek_building_materials
@@ -183,8 +174,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(10)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Category(ies)');
+                        cy.get('h4').should('contain', 'Category(ies)');
                         const pubs = record.fez_record_search_key_category.map(pub => pub.rek_category);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -197,8 +187,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(11)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Condition(s)');
+                        cy.get('h4').should('contain', 'Condition(s)');
                         const pubs = record.fez_record_search_key_condition.map(pub => pub.rek_condition);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -211,8 +200,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(12)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Alternative title(s)');
+                        cy.get('h4').should('contain', 'Alternative title(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_alternative_title.map(
                             pub => pub.rek_alternative_title
@@ -228,8 +216,7 @@ context('Digilib Image admin edit', () => {
                     .get('.AdminCard')
                     .eq(13)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Architectural feature(s)');
+                        cy.get('h4').should('contain', 'Architectural feature(s)');
                         const pubs = record.fez_record_search_key_architectural_features.map(
                             pub => pub.rek_architectural_features,
                         );
@@ -248,15 +235,13 @@ context('Digilib Image admin edit', () => {
             .eq(2)
             .as('authorDetailsTab')
             .within(() => {
-                cy.get('h3')
-                    .should('have.text', 'Author details');
+                cy.get('h3').should('have.text', 'Author details');
 
                 cy.get('.AdminCard')
                     .as('cards')
                     .eq(0)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Architects');
+                        cy.get('h4').should('contain', 'Architects');
                         // prettier-ignore
                         const architects = record.fez_record_search_key_architect_name.map(
                             item => item.rek_architect_name
@@ -271,8 +256,7 @@ context('Digilib Image admin edit', () => {
                 cy.get('@cards')
                     .eq(1)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Photographers');
+                        cy.get('h4').should('contain', 'Photographers');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
                         authors.forEach((author, index) => {
                             cy.get('p')
@@ -284,8 +268,7 @@ context('Digilib Image admin edit', () => {
                 cy.get('@cards')
                     .eq(2)
                     .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Other contributors');
+                        cy.get('h4').should('contain', 'Other contributors');
                         const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
                         contributors.forEach((contributor, index) => {
                             cy.get('p')

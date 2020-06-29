@@ -58,6 +58,28 @@ describe('AdminActions component', () => {
         });
     });
 
+    it('should handle deleted record admin actions menu', () => {
+        const { getByTestId, queryByText } = setup({
+            navigatedFrom: 'test',
+            isRecordDeleted: true,
+            adminActions: [
+                {
+                    label: 'Show in deleted records',
+                    showInDeleted: true,
+                },
+                {
+                    label: 'Dont show in deleted records',
+                    showInDeleted: false,
+                },
+            ],
+        });
+
+        fireEvent.click(getByTestId('admin-actions-button'));
+        const menu = getByTestId('admin-actions-menu');
+        expect(queryByText('Show in deleted records', menu)).not.toBeNull();
+        expect(queryByText('Dont show in deleted records', menu)).toBeNull();
+    });
+
     it('should handle admin actions in a new window ', () => {
         const { getByTestId, getByText } = setup({
             adminActions: [

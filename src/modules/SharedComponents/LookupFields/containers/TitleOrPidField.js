@@ -1,42 +1,35 @@
-import React from 'react';
-import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
+import matchSorter from 'match-sorter';
+import { TitleOrPidOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
+const category = 'publication';
 const mapStateToProps = (state, props) => {
-    const category = 'publication';
+    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
+        state.get('searchKeysReducer').publication) || {
+        itemsList: [],
+        itemsLoading: false,
+    };
     return {
-        category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList.map(publication => ({
-                    id: publication.rek_pid,
-                    value: publication.rek_title,
-                    publication: publication,
-                }))
-                : [],
-        onChange: item => props.input.onChange(item),
-        async: true,
-        errorText: props.meta ? props.meta.error : null,
+        autoCompleteAsynchronousFieldId: props.titleOrPidFieldId || 'rek-isdatasetof',
+        itemsList: itemsList.map(item => ({ id: item.rek_pid, value: item.rek_title, ...item })),
+        itemsLoading,
+        getOptionLabel: item => (!!item.rek_title ? '' : item),
+        filterOptions: (options, { inputValue }) =>
+            matchSorter(options, inputValue, { keys: ['rek_pid', 'rek_title'] }),
+        OptionTemplate: TitleOrPidOptionTemplate,
+        defaultValue:
+            (!!props.input.value && (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) || null,
         error: !!props.meta && !!props.meta.error,
-        itemToString: item => (!!item && String(item.value)) || '',
-        selectedValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
-        maxResults: 20,
-        MenuItemComponent: item => (
-            <PublicationCitation publication={item.suggestion.publication} hideCitationCounts hideLinks />
-        ),
+        errorText: (!!props.meta && props.meta.error) || null,
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        loadSuggestions: (searchKey, searchQuery = ' ') =>
-            dispatch(actions.loadPublicationList(searchKey, searchQuery)),
-    };
-};
+const mapDispatchToProps = (dispatch, props) => ({
+    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadPublicationList(category, searchQuery)),
+    onChange: item => props.input.onChange(item),
+    onClear: () => props.input.onChange(null),
+});
 
-export const TitleOrPidField = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(AutoCompleteAsyncField);
+export const TitleOrPidField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

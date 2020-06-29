@@ -33,7 +33,7 @@ export class Cards extends Component {
             <Grid container spacing={0} className={`${classes.card} AdminCard`}>
                 <Grid item xs={12}>
                     <Grid item xs={12}>
-                        <Grid container spacing={8}>
+                        <Grid container spacing={1}>
                             <Grid item xs>
                                 <hr className={classes.divider} />
                             </Grid>

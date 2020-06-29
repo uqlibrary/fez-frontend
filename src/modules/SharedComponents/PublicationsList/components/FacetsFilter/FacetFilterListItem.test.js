@@ -1,39 +1,38 @@
+import React from 'react';
+import { rtlRender, fireEvent } from 'test-utils';
 import FacetFilterListItem from './FacetFilterListItem';
 
 function setup(testProps = {}) {
     const props = {
-        key: '0',
-        facetTitle: 'Test title',
+        id: 'test',
+        title: 'Test title',
         disabled: false,
-        open: false,
-        classes: { listItemGutters: 'listItemGutters' },
-        nestedItems: [],
-        onToggle: jest.fn(),
+        nestedItems: jest.fn(),
         ...testProps,
     };
-    return getElement(FacetFilterListItem, props);
+    return rtlRender(<FacetFilterListItem {...props} />);
 }
 
 describe('Facet filter list item ', () => {
     it('should render empty component', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render collapsed filter', () => {
-        const wrapper = setup({ open: true, nestedItems: 'Test filter' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId, getByText } = setup();
+        expect(getByTestId('clickable-test')).toBeInTheDocument();
+        expect(getByTestId('expand-more-test')).toBeInTheDocument();
+        expect(getByText('Test title')).toBeInTheDocument();
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId } = setup({ disabled: true });
+        expect(getByTestId('clickable-test')).toHaveAttribute('aria-disabled', 'true');
     });
 
     it('should toggle nested items on click', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ onToggle: testFn });
-        wrapper.props().onToggle();
-        expect(testFn).toBeCalled();
+        const nestedItems = 'Testing';
+        const { getByTestId, getByText } = setup({ nestedItems });
+        expect(getByTestId('expand-more-test')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('clickable-test'));
+        expect(getByTestId('expand-less-test')).toBeInTheDocument();
+        expect(getByText('Testing')).toBeInTheDocument();
     });
 });

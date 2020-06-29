@@ -33,7 +33,7 @@ export default function HerdcCodeField(fieldProps) {
             itemsList={[..._herdcCodes(preselected)]}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={
+            value={
                 preselected instanceof Immutable.List
                     ? preselected.toJS()
                     : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || preselected || []
@@ -41,6 +41,7 @@ export default function HerdcCodeField(fieldProps) {
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            genericSelectFieldId="rek-herdc-code"
             {...fieldProps}
         />
     );

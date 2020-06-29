@@ -155,7 +155,7 @@ describe('Component Orcid ', () => {
         expect(wrapper.state().existingOrcidRequest).toEqual(expectedBeforeState);
 
         // account has been loaded
-        wrapper.instance().componentWillReceiveProps({ account: accounts.uqresearcher });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({ account: accounts.uqresearcher });
 
         // orcid state should be updated
         expect(wrapper.state().orcidRequest.state).toBeTruthy();
@@ -169,7 +169,7 @@ describe('Component Orcid ', () => {
         const wrapper = setup();
 
         // account/author has been loaded
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             account: accounts.uqresearcher,
             author: currentAuthor.uqresearcher.data,
         });
@@ -184,7 +184,7 @@ describe('Component Orcid ', () => {
         });
 
         // account/author has been loaded
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             account: accounts.uqresearcher,
             author: currentAuthor.uqresearcher.data,
         });
@@ -211,7 +211,7 @@ describe('Component Orcid ', () => {
         });
 
         // account/author has been loaded
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             account: accounts.uqresearcher,
             author: currentAuthor.uqnoauthid.data,
         });
@@ -240,7 +240,7 @@ describe('Component Orcid ', () => {
             });
 
             // account/author has been loaded
-            wrapper.instance().componentWillReceiveProps({
+            wrapper.instance().UNSAFE_componentWillReceiveProps({
                 account: accounts.uqresearcher,
                 author: currentAuthor.uqnoauthid.data,
             });
@@ -348,13 +348,13 @@ describe('Component Orcid ', () => {
             },
             author,
         });
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         wrapper.setProps({
             account: {
                 id: 2323,
             },
             author,
         });
-        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(UNSAFE_componentWillReceiveProps).toHaveBeenCalled();
     });
 });

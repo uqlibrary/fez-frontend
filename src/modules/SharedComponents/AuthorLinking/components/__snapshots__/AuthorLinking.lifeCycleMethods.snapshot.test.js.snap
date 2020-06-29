@@ -2,10 +2,10 @@
 
 exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -23,7 +23,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -61,19 +61,19 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`AuthorLinking should call componentDidMount life cycle method with authorList only 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -91,7 +91,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -129,19 +129,19 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`AuthorLinking should maintain question if onchange prop is missing 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -159,7 +159,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 1`] 
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -197,19 +197,19 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 1`] 
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
 exports[`AuthorLinking should maintain question if onchange prop is missing 2`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -227,7 +227,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -265,18 +265,18 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-  <WithStyles(WithFormControlContext(FormControlLabel))
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(FormControlLabel))
     classes={
       Object {
         "root": undefined,
       }
     }
     control={
-      <WithStyles(Checkbox)
+      <WithStyles(ForwardRef(Checkbox))
         checked={false}
         classes={
           Object {
@@ -290,7 +290,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
     }
     disabled={false}
     label={
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         classes={
           Object {
             "root": undefined,
@@ -299,7 +299,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
         color="error"
       >
         I confirm and understand that I am claiming this work under the above name, and confirm this is me
-      </WithStyles(Typography)>
+      </WithStyles(ForwardRef(Typography))>
     }
   />
 </div>
@@ -307,10 +307,10 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
 
 exports[`AuthorLinking should render component if authorList has more authors than linkedAuthorIdList 1`] = `
 <div>
-  <WithStyles(Grid)
+  <WithStyles(ForwardRef(Grid))
     container={true}
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       className="infiniteContainer"
       item={true}
     >
@@ -328,7 +328,7 @@ exports[`AuthorLinking should render component if authorList has more authors th
         timeScrollStateLastsForAfterUserScrolls={150}
         useWindowAsScrollContainer={false}
       >
-        <WithStyles(Grid)
+        <WithStyles(ForwardRef(Grid))
           container={true}
           key="0"
         >
@@ -366,9 +366,9 @@ exports[`AuthorLinking should render component if authorList has more authors th
             selected={null}
             type="author"
           />
-        </WithStyles(Grid)>
+        </WithStyles(ForwardRef(Grid))>
       </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;

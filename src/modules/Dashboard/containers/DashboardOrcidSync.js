@@ -13,9 +13,6 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-const DashboardOrcidSyncContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(DashboardOrcidSync);
+const DashboardOrcidSyncContainer = connect(mapStateToProps, mapDispatchToProps)(DashboardOrcidSync);
 
 export default DashboardOrcidSyncContainer;

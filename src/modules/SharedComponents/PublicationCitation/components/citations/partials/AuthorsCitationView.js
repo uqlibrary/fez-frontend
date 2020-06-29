@@ -69,12 +69,12 @@ export class AuthorsCitationView extends PureComponent {
             authors:
                 publicationAuthors && Array.isArray(publicationAuthors)
                     ? publicationAuthors
-                        .sort((author1, author2) => author1[order] - author2[order])
-                        .map(author => ({
-                            id: this.getAuthorId(author[order]),
-                            value: author[subkey],
-                            order: author[order],
-                        }))
+                          .sort((author1, author2) => author1[order] - author2[order])
+                          .map(author => ({
+                              id: this.getAuthorId(author[order]),
+                              value: author[subkey],
+                              order: author[order],
+                          }))
                     : [],
         };
     }
@@ -171,17 +171,17 @@ export class AuthorsCitationView extends PureComponent {
                             title={
                                 toggleShowMoreLink
                                     ? showMoreTitle.replace(
-                                        '[numberOfAuthors]',
-                                        `${authors.length - initialNumberOfAuthors}`,
-                                    )
+                                          '[numberOfAuthors]',
+                                          `${authors.length - initialNumberOfAuthors}`,
+                                      )
                                     : showLessTitle
                             }
                         >
                             {toggleShowMoreLink
                                 ? showMoreLabel.replace(
-                                    '[numberOfAuthors]',
-                                    `${authors.length - initialNumberOfAuthors}`,
-                                )
+                                      '[numberOfAuthors]',
+                                      `${authors.length - initialNumberOfAuthors}`,
+                                  )
                                 : showLessLabel}
                         </a>
                     </span>

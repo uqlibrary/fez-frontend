@@ -1,5 +1,4 @@
 import React from 'react';
-import { Field } from 'redux-form/immutable';
 
 import MenuItem from '@material-ui/core/MenuItem';
 
@@ -11,14 +10,11 @@ import { default as componentsLocale } from 'locale/components';
 const AudienceSizeField = fieldProps => {
     const fieldLocale = componentsLocale.components.audienceSizeField;
     return (
-        <Field
-            component={SelectField}
+        <SelectField
             disabled={fieldProps.submitting}
             label={fieldLocale.label}
             name={'audienceSize'}
-            SelectDisplayProps={{
-                id: 'audienceSize',
-            }}
+            selectFieldId="rek-audience-size"
             {...fieldProps}
         >
             {AUDIENCE_SIZE.map(item => (
@@ -26,7 +22,7 @@ const AudienceSizeField = fieldProps => {
                     {item.text}
                 </MenuItem>
             ))}
-        </Field>
+        </SelectField>
     );
 };
 

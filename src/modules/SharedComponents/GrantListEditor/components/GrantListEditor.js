@@ -41,7 +41,8 @@ export class GrantListEditor extends PureComponent {
         };
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
         if (nextState.grantFormPopulated && this.props.onChange) {
             this.props.onChange(nextState.grantFormPopulated);
@@ -173,24 +174,28 @@ export class GrantListEditor extends PureComponent {
                     required={required}
                     disabled={disabled}
                     hideType={this.props.hideType}
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    {...((this.props.locale && this.props.locale.form) || {})}
                     {...(grantIndexSelectedToEdit !== null && grantIndexSelectedToEdit > -1
                         ? { grantSelectedToEdit: grantSelectedToEdit }
                         : {})}
                 />
                 {grants.length > 0 && (
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Grid item xs={12}>
                             <List>
                                 <GrantListEditorHeader
                                     onDeleteAll={this.deleteAllGrants}
                                     disabled={disabled || disableDeleteAllGrants}
                                     hideType={this.props.hideType}
+                                    {...((this.props.locale && this.props.locale.header) || {})}
                                 />
                             </List>
                         </Grid>
                         <Grid item xs={12} style={{ marginTop: -8 }}>
-                            <List classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}>
+                            <List
+                                classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}
+                                data-testid="rek-grant-list"
+                            >
                                 {renderGrantsRows}
                             </List>
                         </Grid>

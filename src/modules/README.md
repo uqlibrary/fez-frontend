@@ -47,7 +47,7 @@ describe('Component [COMPONENT_NAME]', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         // test methods by accessing them via .instance() method
-        wrapper.instance().componentWillReceiveProps({
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
             author: newData
         });
 

@@ -24,6 +24,7 @@ export class ConfirmDialogBox extends Component {
     static propTypes = {
         className: PropTypes.string,
         classes: PropTypes.object,
+        confirmDialogBoxId: PropTypes.string,
         hideCancelButton: PropTypes.bool,
         locale: PropTypes.object,
         onAction: PropTypes.func,
@@ -42,6 +43,7 @@ export class ConfirmDialogBox extends Component {
             confirmButtonLabel: 'Yes',
         },
         showAlternateActionButton: false,
+        confirmDialogBoxId: 'dialog-box',
     };
 
     constructor(props) {
@@ -101,7 +103,7 @@ export class ConfirmDialogBox extends Component {
                     <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Grid container spacing={8}>
+                    <Grid container spacing={1}>
                         <Hidden xsDown>
                             <Grid item xs />
                         </Hidden>
@@ -112,6 +114,7 @@ export class ConfirmDialogBox extends Component {
                                 color={'primary'}
                                 fullWidth
                                 onClick={this._onAction}
+                                data-testId={`confirm-${this.props.confirmDialogBoxId}`}
                             />
                         </Grid>
                         {this.props.showAlternateActionButton && (
@@ -119,6 +122,7 @@ export class ConfirmDialogBox extends Component {
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
+                                    data-testid={`alternate-${this.props.confirmDialogBoxId}`}
                                     className={classes.alternateActionButtonClass}
                                     children={this.props.locale.alternateActionButtonLabel}
                                     fullWidth
@@ -131,6 +135,7 @@ export class ConfirmDialogBox extends Component {
                                 <Button
                                     variant={'contained'}
                                     color={'primary'}
+                                    data-testid={`cancel-${this.props.confirmDialogBoxId}`}
                                     children={this.props.locale.cancelButtonLabel}
                                     fullWidth
                                     onClick={this._onCancelAction}

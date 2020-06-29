@@ -57,9 +57,7 @@ describe('AuthorItem renders ', () => {
 
     it('should have a proper style generator', () => {
         const theme = {
-            spacing: {
-                unit: 10,
-            },
+            spacing: n => n * 8 || 8,
         };
         expect(styles(theme)).toMatchSnapshot();
     });

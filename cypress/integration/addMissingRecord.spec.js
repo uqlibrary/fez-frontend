@@ -9,22 +9,20 @@ context('Add missing record', () => {
 
     it('should enable the submit button on form render only', () => {
         // Journal article requires subtype selection
-        cy.get('#rek-display-type')
+        cy.get('[data-testid=rek-display-type-select]')
             .should('exist')
             .click();
-        cy.get('#submit-work')
-            .should('not.exist');
-        cy.get('#menu-rek_display_type')
+        cy.get('#submit-work').should('not.exist');
+        cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Journal Article')
             .click();
-        cy.get('#submit-work')
-            .should('not.exist');
+        cy.get('#submit-work').should('not.exist');
 
-        cy.get('#rek-subtype')
+        cy.get('[data-testid=rek-subtype-select]')
             .should('exist')
             .click();
-        cy.get('#menu-rek_subtype')
+        cy.get('[data-testid=rek-subtype-options]')
             .find('li[role=option]')
             .contains('Editorial')
             .click();
@@ -37,9 +35,8 @@ context('Add missing record', () => {
         cy.reload();
 
         // Dept. Tech. report has no subtypes
-        cy.get('#rek-display-type')
-            .click();
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Department Technical Report')
             .click();
@@ -50,16 +47,14 @@ context('Add missing record', () => {
 
     it('should validate form as expected', () => {
         // Choose Book > Textbook
-        cy.get('#rek-display-type')
-            .click();
-        cy.get('#menu-rek_display_type')
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Book')
             .eq(0)
             .click();
-        cy.get('#rek-subtype')
-            .click();
-        cy.get('#menu-rek_subtype')
+        cy.get('[data-testid=rek-subtype-select]').click();
+        cy.get('[data-testid=rek-subtype-options]')
             .find('li[role=option]')
             .contains('Textbook')
             .click();
@@ -83,8 +78,7 @@ context('Add missing record', () => {
         });
 
         // Submit button
-        cy.get('#submit-work')
-            .should('be.disabled');
+        cy.get('#submit-work').should('be.disabled');
 
         // Validation errors
         const invalidFieldNames = [
@@ -99,47 +93,30 @@ context('Add missing record', () => {
             .as('validationErrors')
             .should('have.length', invalidFieldNames.length);
         invalidFieldNames.forEach(invalidFieldName => {
-            cy.get('@validationErrors')
-                .contains(invalidFieldName);
+            cy.get('@validationErrors').contains(invalidFieldName);
         });
 
-        cy.get('#rek-title')
-            .type('book title');
-        cy.get('#rek-place-of-publication')
-            .type('test place of publication');
-        cy.get('#rek-publisher')
-            .type('test publisher');
-        cy.get('#year')
-            .type('2020');
-        cy.get('@validationErrors')
-            .should('have.length', 2);
+        cy.get('[data-testid=rek-title-input]').type('book title');
+        cy.get('[data-testid=rek-place-of-publication-input]').type('test place of publication');
+        cy.get('[data-testid=rek-publisher-input]').type('test publisher');
+        cy.get('[data-testid=rek-date-year-input]').type('2020');
+        cy.get('@validationErrors').should('have.length', 2);
 
-        cy.get('#authors-name-as-published-field')
-            .type('New Author');
-        cy.get('#submit-author:enabled')
-            .click();
-        cy.contains('New Author')
-            .click();
-        cy.get('#submit-work')
-            .should('be.enabled');
+        cy.get('[data-testid=rek-author-input]').type('New Author');
+        cy.get('[data-testid=rek-author-add]').click();
+        cy.contains('New Author').click();
+        cy.get('#submit-work').should('be.enabled');
 
-        cy.get('#delete-author-0')
-            .click();
+        cy.get('#rek-author-list-row-delete-0').click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('#submit-work')
-            .should('be.disabled');
-        cy.get('@validationErrors')
-            .should('have.length', 2);
+        cy.get('#submit-work').should('be.disabled');
+        cy.get('@validationErrors').should('have.length', 2);
 
-        cy.get('#editors-name-as-published-field')
-            .type('New Editor');
-        cy.get('#submit-author:enabled')
-            .click();
-        cy.contains('New Editor')
-            .click();
-        cy.get('#submit-work')
-            .should('be.enabled');
+        cy.get('#rek-contributor-input').type('New Editor');
+        cy.get('[data-testid=rek-contributor-add]').click();
+        cy.contains('New Editor').click();
+        cy.get('#submit-work').should('be.enabled');
     });
 });

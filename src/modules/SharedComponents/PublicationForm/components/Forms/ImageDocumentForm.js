@@ -29,10 +29,10 @@ export default class ImageDocumentForm extends Component {
         const txt = formLocale.imageDocument;
 
         return (
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -47,10 +47,11 @@ export default class ImageDocumentForm extends Component {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
                                     name="rek_date"
                                     allowPartial
@@ -62,7 +63,7 @@ export default class ImageDocumentForm extends Component {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
@@ -83,6 +84,7 @@ export default class ImageDocumentForm extends Component {
                         <Typography>{txt.creator.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            contributorEditorId="creators"
                             showContributorAssignment
                             required
                             name="authors"
@@ -94,7 +96,7 @@ export default class ImageDocumentForm extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={16}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}

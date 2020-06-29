@@ -15,6 +15,7 @@ import Links from './Links';
 import NtroDetails from './NtroDetails';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
+import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 import { general } from 'config';
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
@@ -30,6 +31,7 @@ export default class ViewRecord extends PureComponent {
         account: PropTypes.object,
         author: PropTypes.object,
         authorDetails: PropTypes.object,
+        isDeleted: PropTypes.bool,
     };
 
     componentDidMount() {
@@ -38,7 +40,8 @@ export default class ViewRecord extends PureComponent {
         }
     }
 
-    componentWillReceiveProps(newProps) {
+    // eslint-disable-next-line camelcase
+    UNSAFE_componentWillReceiveProps(newProps) {
         if (this.props.match.params.pid !== newProps.match.params.pid) {
             this.props.actions.loadRecordToView(newProps.match.params.pid);
         }
@@ -51,7 +54,7 @@ export default class ViewRecord extends PureComponent {
 
     render() {
         const txt = locale.pages.viewRecord;
-        const { loadingRecordToView, recordToViewError, recordToView } = this.props;
+        const { loadingRecordToView, recordToViewError, recordToView, isDeleted } = this.props;
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
         if (loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage} />;
@@ -82,12 +85,22 @@ export default class ViewRecord extends PureComponent {
                             hideTitle
                             hideContentIndicators
                             showAdminActions={isAdmin}
+                            isPublicationDeleted={isDeleted}
                         />
                     </Grid>
-                    {!!this.props.recordToView && (
+                    {!!isDeleted && (
+                        <Grid item xs={12} style={{ marginBottom: 24 }}>
+                            <Alert {...txt.deletedAlert} />
+                        </Grid>
+                    )}
+                    {!isDeleted && !!this.props.recordToView && (
                         <Grid item xs={12}>
-                            <Grid container spacing={16} style={{ marginBottom: 4 }}>
-                                <Grid item xs />
+                            <Grid container spacing={2} style={{ marginBottom: 4 }}>
+                                <Grid item xs>
+                                    {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
+                                        <Chip label={recordToView.rek_status_lookup} variant="outlined" />
+                                    )}
+                                </Grid>
                                 <Grid item>
                                     <SocialShare
                                         publication={this.props.recordToView}
@@ -108,22 +121,32 @@ export default class ViewRecord extends PureComponent {
                         </Grid>
                     )}
                 </Grid>
-                <Grid container spacing={24}>
-                    <Files
-                        author={this.props.author}
-                        publication={recordToView}
-                        hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
-                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
-                        isAdmin={!!isAdmin}
-                        isAuthor={!!isAuthor}
-                    />
-                    <Links publication={recordToView} />
-                    <RelatedPublications publication={recordToView} />
-                    <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
-                    {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
-                    <GrantInformation publication={recordToView} />
+                <Grid container spacing={3}>
+                    {!isDeleted && (
+                        <React.Fragment>
+                            <Files
+                                author={this.props.author}
+                                publication={recordToView}
+                                hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
+                                setHideCulturalSensitivityStatement={
+                                    this.props.actions.setHideCulturalSensitivityStatement
+                                }
+                                isAdmin={!!isAdmin}
+                                isAuthor={!!isAuthor}
+                            />
+                            <Links publication={recordToView} />
+                            <RelatedPublications publication={recordToView} />
+                            <AdditionalInformation
+                                publication={recordToView}
+                                account={this.props.account}
+                                isNtro={isNtro}
+                            />
+                            {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
+                            <GrantInformation publication={recordToView} />
+                        </React.Fragment>
+                    )}
                     <PublicationDetails publication={recordToView} />
-                    <AvailableVersions publication={recordToView} />
+                    {!isDeleted && <AvailableVersions publication={recordToView} />}
                 </Grid>
             </StandardPage>
         );

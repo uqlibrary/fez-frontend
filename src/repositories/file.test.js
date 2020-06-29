@@ -13,7 +13,7 @@ describe('File repository tests ', () => {
         mockActionsStore.clearActions();
     });
 
-    it('uploading a file', async() => {
+    it('uploading a file', async () => {
         mockApi
             .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
             .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
@@ -25,7 +25,7 @@ describe('File repository tests ', () => {
         );
     });
 
-    it('dispatches an upload failed action for uploading a file', async() => {
+    it('dispatches an upload failed action for uploading a file', async () => {
         mockApi
             .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
             .reply(200, ['s3-ap-southeast-2.amazonaws.com'])

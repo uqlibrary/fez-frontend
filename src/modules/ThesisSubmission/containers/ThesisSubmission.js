@@ -1,3 +1,4 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, getFormValues, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
 import Immutable from 'immutable';
@@ -7,8 +8,8 @@ import { general } from 'config';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 
-import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { reloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
+import { ReloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
+import { LocallyStoredReducerContext } from 'context';
 
 const FORM_NAME = 'ThesisSubmission';
 
@@ -21,7 +22,7 @@ const onSubmit = (values, dispatch) => {
 let ThesisSubmissionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
+})(ThesisSubmission);
 
 const mapStateToProps = (state, props) => {
     //  Get any initial values set during redux store initialisation
@@ -77,8 +78,16 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag, ...actions }, dispatch),
 });
 
-ThesisSubmissionContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ThesisSubmissionContainer);
-export default reloadReducerFromLocalStorage()(ThesisSubmissionContainer);
+ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
+
+const ThesisSubmissionContainerWithReducer = props => (
+    <ReloadReducerFromLocalStorage>
+        <LocallyStoredReducerContext.Consumer>
+            {({ locallyStoredReducer }) => (
+                <ThesisSubmissionContainer {...props} locallyStoredReducer={locallyStoredReducer} />
+            )}
+        </LocallyStoredReducerContext.Consumer>
+    </ReloadReducerFromLocalStorage>
+);
+
+export default ThesisSubmissionContainerWithReducer;
