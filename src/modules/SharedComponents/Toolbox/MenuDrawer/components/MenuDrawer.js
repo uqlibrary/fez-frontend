@@ -154,8 +154,12 @@ export class MenuDrawer extends Component {
             menuItem.divider ? (
                 <Divider key={`menu_item_${index}`} />
             ) : (
-                <span className="menu-item-container" key={`menu_item_${index}`}>
-                    <ListItem button onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}>
+                <span className="menu-item-container" key={`menu-item-${index}`}>
+                    <ListItem
+                        button
+                        onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
+                        id={`menu-item-${index}`}
+                    >
                         <ListItemText
                             classes={{
                                 primary: this.props.classes.ListItemTextPrimary,

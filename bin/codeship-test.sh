@@ -42,7 +42,7 @@ case "$PIPE_NUM" in
     # Second runner for e2e. The first one is in the other pipeline.
     if [[ $BRANCH_RUNS_E2E == true ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
-        npm run test:e2e:dashboard
+        CYPRESS_RETRIES=5 npm run test:e2e:dashboard
     fi
 
 ;;
@@ -85,7 +85,7 @@ case "$PIPE_NUM" in
         # npm run test:e2e
 
         # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-        npm run test:e2e:dashboard
+        CYPRESS_RETRIES=5 npm run test:e2e:dashboard
     fi
 ;;
 *)
@@ -94,7 +94,7 @@ case "$PIPE_NUM" in
     # Additional dynamic pipelines for e2e tests
     if [[ $BRANCH_RUNS_E2E == true ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
-        npm run test:e2e:dashboard
+        CYPRESS_RETRIES=5 npm run test:e2e:dashboard
     fi
 ;;
 esac

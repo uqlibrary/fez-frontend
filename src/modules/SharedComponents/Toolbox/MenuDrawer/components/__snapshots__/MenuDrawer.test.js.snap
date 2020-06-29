@@ -95,10 +95,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
     </WithStyles(ForwardRef(Grid))>
     <span
       className="menu-item-container"
-      key="menu_item_0"
+      key="menu-item-0"
     >
       <WithStyles(ForwardRef(ListItem))
         button={true}
+        id="menu-item-0"
         onClick={[Function]}
       >
         <WithStyles(ForwardRef(ListItemText))
@@ -118,10 +119,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
     />
     <span
       className="menu-item-container"
-      key="menu_item_2"
+      key="menu-item-2"
     >
       <WithStyles(ForwardRef(ListItem))
         button={true}
+        id="menu-item-2"
         onClick={[Function]}
       >
         <WithStyles(ForwardRef(ListItemText))
@@ -248,10 +250,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
     </div>
     <span
       className="menu-item-container"
-      key="menu_item_0"
+      key="menu-item-0"
     >
       <WithStyles(ForwardRef(ListItem))
         button={true}
+        id="menu-item-0"
         onClick={[Function]}
       >
         <WithStyles(ForwardRef(ListItemText))
@@ -271,10 +274,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
     />
     <span
       className="menu-item-container"
-      key="menu_item_2"
+      key="menu-item-2"
     >
       <WithStyles(ForwardRef(ListItem))
         button={true}
+        id="menu-item-2"
         onClick={[Function]}
       >
         <WithStyles(ForwardRef(ListItemText))
@@ -401,10 +405,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
     </div>
     <span
       className="menu-item-container"
-      key="menu_item_0"
+      key="menu-item-0"
     >
       <WithStyles(ForwardRef(ListItem))
         button={true}
+        id="menu-item-0"
         onClick={[Function]}
       >
         <WithStyles(ForwardRef(ListItemText))
@@ -424,10 +429,11 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
     />
     <span
       className="menu-item-container"
-      key="menu_item_2"
+      key="menu-item-2"
     >
       <WithStyles(ForwardRef(ListItem))
         button={true}
+        id="menu-item-2"
         onClick={[Function]}
       >
         <WithStyles(ForwardRef(ListItemText))
