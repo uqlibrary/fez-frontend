@@ -71,10 +71,12 @@ context('Batch import', () => {
             cy.waitUntil(() =>
                 cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
+            cy.wait(1000);
             cy.get(`[data-testid=${item}-select]`).click();
             cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
+            cy.wait(1000);
         });
         cy.get('.content-container form .Alert').should('not.exist');
         cy.get('#submitBatchImport').should('not.be.disabled');
@@ -88,9 +90,11 @@ context('Batch import', () => {
                 cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
             cy.get(`[data-testid=${item}-select]`).click();
+            cy.wait(1000);
             cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
+            cy.wait(1000);
         });
         // click submit button
         cy.get('#submitBatchImport')
