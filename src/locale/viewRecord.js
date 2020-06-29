@@ -1358,10 +1358,10 @@ export default {
                     field: 'fez_record_search_key_location',
                     order: 15,
                 },
-                {
-                    field: 'rek_genre',
-                    order: 16,
-                },
+                // {
+                //     field: 'rek_genre',
+                //     order: 16,
+                // },
                 {
                     field: 'fez_record_search_key_contributor',
                     order: 17,
