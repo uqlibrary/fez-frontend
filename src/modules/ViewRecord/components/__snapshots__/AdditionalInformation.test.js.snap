@@ -35888,7 +35888,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -35979,57 +35979,6 @@ exports[`Additional Information Component  should render component with design d
                 </Link>
               </li>
             </ul>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="22"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Job number"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            variant="body2"
-          >
-            Job number
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <Link
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=UQFL158%2C+job+no.+1006-2"
-            >
-              UQFL158, job no. 1006-2
-            </Link>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -54524,6 +54473,7 @@ exports[`Additional Information Component  should render component with rek_star
                   "rek_genre_xsdmf_id": 11991,
                   "rek_herdc_notes": null,
                   "rek_herdc_notes_xsdmf_id": null,
+                  "rek_job_number": "test",
                   "rek_object_type": 3,
                   "rek_object_type_xsdmf_id": 3674,
                   "rek_pid": "UQ:177836",
