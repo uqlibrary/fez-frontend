@@ -818,6 +818,7 @@ export default {
                 label: locale.components.contentIndicators.label,
                 multiple: true,
                 fullWidth: true,
+                unselectable: true,
             },
         },
         fez_record_search_key_herdc_code: {
