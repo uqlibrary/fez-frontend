@@ -20,6 +20,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
         >
           testA.txt
         </a>
+        <br />
         <span
           class="MuiTypography-root MuiTypography-caption"
         >
@@ -116,6 +117,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
         >
           test4.txt
         </a>
+        <br />
         <span
           class="MuiTypography-root MuiTypography-caption"
         >
@@ -205,6 +207,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
         >
           test9.txt
         </a>
+        <br />
         <span
           class="MuiTypography-root MuiTypography-caption"
         >

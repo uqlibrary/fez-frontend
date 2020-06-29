@@ -11,6 +11,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
     >
       test.jpg
     </a>
+    <br />
     <span
       class="MuiTypography-root MuiTypography-caption"
     >
@@ -89,6 +90,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
     >
       test.jpg
     </a>
+    <br />
     <span
       class="MuiTypography-root MuiTypography-caption"
     >
@@ -167,6 +169,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
     >
       test.jpg
     </a>
+    <br />
     <span
       class="MuiTypography-root MuiTypography-caption"
     >
