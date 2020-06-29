@@ -880,10 +880,14 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
-        ...(!!description && description.hasOwnProperty('plainText') ? { rek_description: description.plainText } : {}),
-        ...(!!description && description.hasOwnProperty('htmlText')
-            ? { rek_formatted_abstract: description.htmlText }
-            : {}),
+        ...{
+            rek_description:
+                (!!description && description.hasOwnProperty('plainText') && description.plainText) || null,
+        },
+        ...{
+            rek_formatted_abstract:
+                (!!description && description.hasOwnProperty('htmlText') && description.htmlText) || null,
+        },
         ...(!!languageOfTitle
             ? {
                   fez_record_search_key_language_of_title: languageOfTitle.map((lang, index) => ({

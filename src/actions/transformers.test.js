@@ -2738,6 +2738,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2755,6 +2757,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2773,6 +2777,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2792,6 +2798,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2811,6 +2819,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -3003,6 +3013,8 @@ describe('getBibliographicSectionSearchKeys', () => {
         it('should use default parameter value', () => {
             expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3034,6 +3046,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3082,6 +3096,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3127,6 +3143,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3159,6 +3177,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3179,6 +3199,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_license: { rek_license: 123 },
                 fez_record_search_key_language: [
                     {
@@ -3191,6 +3213,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             data = {};
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3212,6 +3236,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
             expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3226,6 +3252,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3238,6 +3266,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             const dataEmpty = {};
             expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3254,6 +3284,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3271,6 +3303,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3295,6 +3329,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3338,6 +3374,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3552,6 +3590,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3587,6 +3627,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3612,6 +3654,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
