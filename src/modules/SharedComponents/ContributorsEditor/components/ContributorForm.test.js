@@ -656,9 +656,29 @@ describe('Component ContributorForm', () => {
                 orgaff: '',
                 orgtype: '',
                 creatorRole: '',
+                uqUsername: 'uqtest',
             },
         });
         fireEvent.click(getByTitle('Clear'));
         expect(testFn).toBeCalled();
+    });
+
+    it('should not clear and submit blank contributor', () => {
+        const testFn = jest.fn();
+        const { getByTitle } = setup({
+            canEdit: true,
+            onSubmit: testFn,
+            showRoleInput: false,
+            showIdentifierLookup: false,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+        });
+        fireEvent.click(getByTitle('Clear'));
+        expect(testFn).not.toBeCalled();
     });
 });
