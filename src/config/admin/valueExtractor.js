@@ -128,16 +128,16 @@ export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSe
             plainText: ((record || {})[primaryKey] || {})[subKey],
             htmlText: ((record || {})[primaryHtmlKey] || {})[subHtmlKey] || ((record || {})[primaryKey] || {})[subKey],
         };
-        deleteKey(primaryKey);
-        deleteKey(primaryHtmlKey);
+        deleteKey(record, primaryKey);
+        deleteKey(record, primaryHtmlKey);
     } else {
         returnValue = {
             plainText: (record || {})[plainTextSearchKey],
             htmlText: (record || {})[htmlTextSearchKey] || (record || {})[plainTextSearchKey],
         };
 
-        deleteKey(plainTextSearchKey);
-        deleteKey(htmlTextSearchKey);
+        deleteKey(record, plainTextSearchKey);
+        deleteKey(record, htmlTextSearchKey);
     }
 
     return returnValue;
@@ -145,7 +145,7 @@ export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSe
 
 export const getValueFromRekKey = (record, rekKey) => {
     const returnValue = record[rekKey];
-    deleteKey(rekKey);
+    deleteKey(record, rekKey);
     return returnValue;
 };
 
@@ -156,7 +156,7 @@ export const getValueSearchKeyRekValueList = (record, searchKey) => {
         const [primaryKey, subKey] = searchKey.split('.');
 
         returnValue = (record[primaryKey] || []).map(item => item[subKey]);
-        deleteKey(primaryKey);
+        deleteKey(record, primaryKey);
     }
 
     return returnValue;
