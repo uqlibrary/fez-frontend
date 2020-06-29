@@ -178,6 +178,7 @@ export default class DeleteRecord extends PureComponent {
                                     onClick={this.props.handleSubmit}
                                     disabled={hasUQDOI || this.props.submitting || this.props.disableSubmit}
                                     id="submit-delete-record"
+                                    data-testid="delete-admin"
                                 />
                             </Grid>
                         </Grid>
