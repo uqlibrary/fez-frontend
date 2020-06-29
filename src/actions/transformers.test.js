@@ -2277,7 +2277,7 @@ describe('getAdminSectionSearchKeys', () => {
     });
 
     it('should get search key for any internal notes entered', () => {
-        expect(transformers.getAdminSectionSearchKeys()).toEqual({});
+        expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_internal_notes: null });
     });
 
     it('should transform all search keys for additional information section', () => {
@@ -2320,6 +2320,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2422,6 +2423,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2521,6 +2523,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2573,6 +2576,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2592,7 +2596,7 @@ describe('getAdminSectionSearchKeys', () => {
             contentIndicators: [],
         };
 
-        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({});
+        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({ fez_internal_notes: null });
     });
 });
 
