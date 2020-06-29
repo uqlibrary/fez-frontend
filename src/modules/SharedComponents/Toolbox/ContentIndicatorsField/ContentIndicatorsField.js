@@ -35,6 +35,7 @@ export const getContentIndicators = props =>
     CONTENT_INDICATORS.map(item => ({
         ...item,
         disabled:
+            !props.unselectable &&
             !!props.meta &&
             !!props.meta.initial &&
             !!props.meta.initial.toJS &&
@@ -67,6 +68,7 @@ ContentIndicatorsField.propTypes = {
     meta: PropTypes.object,
     label: PropTypes.string,
     disabled: PropTypes.bool,
+    unselectable: PropTypes.bool,
 };
 
 export default ContentIndicatorsField;
