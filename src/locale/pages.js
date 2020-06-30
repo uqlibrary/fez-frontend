@@ -4,6 +4,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import LockIcon from '@material-ui/icons/Lock';
 import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
+import { DOI_ORG_PREFIX } from 'config/doi';
 /*
 
 NOTE:
@@ -832,6 +833,53 @@ export default {
         },
         prototype: {
             title: 'Admin prototype',
+        },
+        doi: {
+            loadingMessage: 'Loading record',
+            pageTitle: ({ doi, displayTypeLookup, title, pid }) =>
+                `${!!doi ? 'Update' : 'Create'} DOI for ${displayTypeLookup} - ${title}: ${pid}`,
+            cardTitles: {
+                doi: 'DOI',
+                depositor: 'Depositor Information',
+                work: 'Work details',
+            },
+            doiHeading: hasDoi => (hasDoi ? 'DOI (Existing)' : 'DOI (Preview)'),
+            doiTemplate: pid => `${DOI_ORG_PREFIX}/${pid.slice(3)}`,
+            depositorNameTitle: 'Name',
+            depositorEmailTitle: 'Email',
+            warningMessages: {
+                title: 'Please note:',
+                uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
+                noOADatastreams: 'No open access datastreams are attached; DOI will be for metadata only.',
+            },
+            unsupportedMessage: displayTypeLookup => `Sorry, type ${displayTypeLookup} is not currently supported.`,
+            cancelButtonLabel: 'Cancel',
+            confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
+            alertProps: {
+                progressAlert: {
+                    type: 'info_outline',
+                    title: 'Requesting',
+                    message: 'Upload to CrossRef is being queued.',
+                    showLoader: true,
+                },
+                successAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'Upload to CrossRef has been queued successfully.',
+                },
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message:
+                        'An error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                },
+            },
+            successConfirmation: {
+                confirmationTitle: 'Request successful',
+                confirmationMessage:
+                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                confirmButtonLabel: 'View record',
+            },
         },
         edit: {
             sections: {

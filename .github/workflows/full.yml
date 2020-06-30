@@ -3,7 +3,7 @@ name: GitHub CI
 on:
   push:
     branches:
-      - feature-author-id-autofill-rebased-172492898
+      - feature-admin-doi-put-173391105
 
     paths-ignore:
       - '**.md'

@@ -5,6 +5,7 @@ export * from './authors';
 export * from './batchImport';
 export * from './claimPublications';
 export * from './controlledVocabularies';
+export * from './doi';
 export * from './exportPublications';
 export * from './fixRecord';
 export * from './incompleteRecords';

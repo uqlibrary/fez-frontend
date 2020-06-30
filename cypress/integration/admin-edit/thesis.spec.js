@@ -281,7 +281,7 @@ context('Thesis admin edit', () => {
                     cy.get('h6')
                         .eq(5)
                         .should('have.text', 'Override datastream security policy details');
-                    cy.get('a').should('have.length', 9); // only non-derivatives are displayed
+                    cy.get('a').should('have.length', 11); // only non-derivatives are displayed
                 });
             });
     });
