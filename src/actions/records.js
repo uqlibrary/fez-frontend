@@ -437,9 +437,11 @@ const getAdminRecordRequest = data => {
             ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             ...transformers.getNtroSectionSearchKeys(data.ntroSection),
             ...transformers.getFilesSectionSearchKeys(restFilesSection),
-            ...transformers.getSecuritySectionSearchKeys(
-                data.securitySection,
+            ...transformers.getSecuritySectionSearchKeys(data.securitySection),
+            ...transformers.getDatastreamInfo(
+                (data.publication || {}).fez_datastream_info || [],
                 (data.filesSection || {}).fez_datastream_info || [],
+                (data.securitySection || {}).dataStreams || [],
             ),
         },
         hasFilesToUpload,
