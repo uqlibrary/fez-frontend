@@ -55,6 +55,6 @@ PolicyDropdown.propTypes = {
 PolicyDropdown.defaultProps = {
     displayPrompt: false,
     policyList: TOP_LEVEL_SECURITY_POLICIES,
-    fieldLabel: 'Record level policy to apply to this PID',
+    fieldLabel: 'Work level policy to apply to this PID',
     inheritedSecurity: MAXIMUM_SECURITY_PUBLIC,
 };
