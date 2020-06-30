@@ -34,6 +34,7 @@ const DataStreamSecurityItem = ({
         <React.Fragment key={dataStream.dsi_dsid}>
             <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
                 <Link title={dataStream.dsi_dsid}>{dataStream.dsi_dsid}</Link>
+                <br />
                 <Typography variant="caption">
                     {dataStream.dsi_security_inherited ? 'Inherited' : 'Overridden'}
                 </Typography>

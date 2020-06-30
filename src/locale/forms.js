@@ -268,7 +268,7 @@ export default {
                 confirmButtonLabel: 'Yes',
             },
             successWorkflowConfirmation: {
-                confirmationTitle: 'Record has been deleted',
+                confirmationTitle: 'Work has been deleted',
                 confirmationMessage: <span style={{ display: 'block', margin: '1em 0' }} />,
                 cancelButtonLabel: 'Go to search page',
                 confirmButtonLabel: 'Go back to view page',
@@ -292,7 +292,7 @@ export default {
             successAlert: {
                 type: 'done',
                 title: 'Success',
-                message: 'Record has been deleted',
+                message: 'Work has been deleted',
             },
         },
     },
