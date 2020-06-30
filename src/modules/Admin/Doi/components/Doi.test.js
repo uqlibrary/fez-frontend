@@ -175,4 +175,24 @@ describe('DOI component', () => {
 
         window.location = location;
     });
+
+    it('should display confirmation message on successful submission', () => {
+        const mockUseRef = jest.spyOn(React, 'useRef');
+        const testFn = jest.fn();
+        mockUseRef.mockImplementation(() => ({
+            current: {
+                showConfirmation: testFn,
+            },
+        }));
+        const mockUseCallback = jest.spyOn(React, 'useCallback');
+        mockUseCallback.mockImplementationOnce(f => f());
+        setup({
+            submitSucceeded: true,
+        });
+        expect(testFn).toHaveBeenCalledTimes(1);
+        expect(mockUseCallback).toHaveBeenCalledTimes(1);
+
+        mockUseRef.mockRestore();
+        mockUseCallback.mockRestore();
+    });
 });
