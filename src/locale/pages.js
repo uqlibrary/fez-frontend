@@ -855,6 +855,31 @@ export default {
             unsupportedMessage: displayTypeLookup => `Sorry, type ${displayTypeLookup} is not currently supported.`,
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
+            alertProps: {
+                progressAlert: {
+                    type: 'info_outline',
+                    title: 'Requesting',
+                    message: 'Upload to CrossRef is being queued.',
+                    showLoader: true,
+                },
+                successAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'Upload to CrossRef has been queued successfully.',
+                },
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message:
+                        'An error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                },
+            },
+            successConfirmation: {
+                confirmationTitle: 'Request successful',
+                confirmationMessage:
+                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                confirmButtonLabel: 'View record',
+            },
         },
         edit: {
             sections: {

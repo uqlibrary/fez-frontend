@@ -10,8 +10,10 @@ import locale from 'locale/pages';
 import { ORG_NAME_MATCH_TEXT, RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { pathConfig } from 'config/routes';
 import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
+import { validation } from 'config';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -79,11 +81,14 @@ export const Doi = ({
     author,
     clearRecordToView,
     disableSubmit,
+    error,
+    formErrors,
     handleSubmit,
     loadingRecordToView,
     loadRecordToView,
     match,
     record,
+    submitSucceeded,
     submitting,
 }) => {
     React.useEffect(() => {
@@ -94,6 +99,17 @@ export const Doi = ({
             clearRecordToView();
         };
     }, [clearRecordToView, loadRecordToView, match.params.pid]);
+
+    const successConfirmationRef = React.useRef();
+    React.useEffect(() => {
+        if (!submitting && submitSucceeded && successConfirmationRef.current) {
+            successConfirmationRef.current.showConfirmation();
+        }
+    }, [submitting, submitSucceeded]);
+
+    const setSuccessConfirmationRef = React.useCallback(node => {
+        successConfirmationRef.current = node;
+    }, []);
 
     // Get subkeys where present
     const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
@@ -122,7 +138,15 @@ export const Doi = ({
 
     const warningMessage = getWarningMessage(record);
 
-    const cancelSubmit = () => window.location.assign(pathConfig.records.view(pid, true));
+    const navigateToViewPage = () => window.location.assign(pathConfig.records.view(pid, true));
+
+    const alertProps = validation.getErrorAlertProps({
+        alertLocale: txt.alertProps,
+        error,
+        formErrors,
+        submitSucceeded,
+        submitting,
+    });
 
     return (
         <StandardPage>
@@ -141,8 +165,19 @@ export const Doi = ({
                         )}
                     </Grid>
                     <Grid item xs={12}>
+                        <ConfirmDialogBox
+                            onRef={setSuccessConfirmationRef}
+                            onAction={navigateToViewPage}
+                            locale={txt.successConfirmation}
+                            hideCancelButton
+                        />
                         <DoiPreview author={author} publication={record} />
                     </Grid>
+                    {alertProps && (
+                        <Grid item xs={12}>
+                            <Alert {...alertProps} />
+                        </Grid>
+                    )}
                     <Grid item xs={12}>
                         <Grid container spacing={2}>
                             <Grid item xs={false} sm />
@@ -153,7 +188,7 @@ export const Doi = ({
                                     variant="contained"
                                     fullWidth
                                     disabled={submitting}
-                                    onClick={cancelSubmit}
+                                    onClick={navigateToViewPage}
                                 >
                                     {txt.cancelButtonLabel}
                                 </Button>
@@ -186,11 +221,14 @@ Doi.propTypes = {
     author: PropTypes.object,
     clearRecordToView: PropTypes.func,
     disableSubmit: PropTypes.bool,
+    error: PropTypes.object,
+    formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     match: PropTypes.object,
     record: PropTypes.object,
+    submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
 };
 

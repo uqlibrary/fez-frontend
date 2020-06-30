@@ -6,7 +6,7 @@ import { EXISTING_RECORD_API } from 'repositories/routes';
 export function updateDoi(record) {
     return dispatch => {
         dispatch({ type: actions.RECORD_DOI_UPDATE_REQUESTING });
-        return put(EXISTING_RECORD_API({ pid: record.pid }), record).then(
+        return put(EXISTING_RECORD_API({ pid: record.rek_pid }), record).then(
             response => {
                 dispatch({
                     type: actions.RECORD_DOI_UPDATE_SUCCEEDED,
