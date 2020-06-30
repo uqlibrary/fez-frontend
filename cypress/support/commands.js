@@ -28,22 +28,22 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
     const baseUrl = Cypress.config('baseUrl');
 
     // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
-    cy.get('button[title="Main navigation"]')
+    cy.get('button#main-menu-button')
         .should('not.be.empty')
         .click();
-    cy.get('#mainMenu .menu-item-container')
-        .should('not.be.empty')
-        .contains('Home')
-        .click();
+    cy.wait(1000);
+    cy.get('#menu-item-0').click();
     // Say yes to 'Are you sure' if it does trigger
-    cy.url().then($url => {
-        if ($url !== `${baseUrl}/`) {
-            cy.contains(locale.confirmationTitle)
-                .closest('[role="dialog"]')
-                .contains(locale.confirmButtonLabel)
-                .click();
-        }
-    });
+    if (!!locale) {
+        cy.url().then($url => {
+            if ($url !== `${baseUrl}/`) {
+                cy.contains(locale.confirmationTitle)
+                    .closest('[role="dialog"]')
+                    .contains(locale.confirmButtonLabel)
+                    .click();
+            }
+        });
+    }
 });
 
 Cypress.Commands.add('killWindowUnloadHandler', () => {

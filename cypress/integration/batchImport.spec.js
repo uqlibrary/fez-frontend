@@ -12,10 +12,6 @@ context('Batch import', () => {
         cy.visit('/batch-import?user=digiteamMember');
     });
 
-    afterEach(() => {
-        cy.navToHomeFromMenu();
-    });
-
     it('should have expected elements', () => {
         cy.get('h2')
             .should('have.length', 1)
@@ -48,6 +44,7 @@ context('Batch import', () => {
             .contains(locale.formLabels.submitButtonLabel)
             .parent()
             .should('be.disabled');
+        cy.navToHomeFromMenu();
     });
 
     it('should show collections filtered by selected community', () => {
@@ -64,6 +61,7 @@ context('Batch import', () => {
             .find('.Alert')
             .should('not.contain', validationErrors.communityID)
             .should('contain', validationErrors.collection_pid);
+        cy.navToHomeFromMenu();
     });
 
     it('should have enabled form submit button once all fields have been filled', () => {
@@ -73,13 +71,16 @@ context('Batch import', () => {
             cy.waitUntil(() =>
                 cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
+            cy.wait(1000);
             cy.get(`[data-testid=${item}-select]`).click();
             cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
+            cy.wait(1000);
         });
         cy.get('.content-container form .Alert').should('not.exist');
         cy.get('#submitBatchImport').should('not.be.disabled');
+        cy.navToHomeFromMenu();
     });
 
     it('should be able to reset the form on successful form submission', () => {
@@ -89,9 +90,11 @@ context('Batch import', () => {
                 cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
             cy.get(`[data-testid=${item}-select]`).click();
+            cy.wait(1000);
             cy.get(`[data-testid=${item}-options]`)
                 .should('exist')
                 .click();
+            cy.wait(1000);
         });
         // click submit button
         cy.get('#submitBatchImport')
@@ -112,7 +115,7 @@ context('Batch import', () => {
             .should('contain', validationErrors.directory)
             .find('li')
             .should('have.length', 3);
-
         cy.get('#submitBatchImport').should('be.disabled');
+        cy.navToHomeFromMenu();
     });
 });

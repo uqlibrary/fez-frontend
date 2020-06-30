@@ -272,6 +272,7 @@ context('Thesis admin edit', () => {
                             .should('not.be.checked');
                     }
                 });
+                cy.viewport(1024, 2000);
                 cy.get('div:nth-child(2) > .StandardCard').within(() => {
                     cy.get('h4').should('have.text', `Datastream level security - ${record.rek_pid}`);
                     cy.get('h6')
@@ -280,7 +281,7 @@ context('Thesis admin edit', () => {
                     cy.get('h6')
                         .eq(5)
                         .should('have.text', 'Override datastream security policy details');
-                    cy.get('a').should('have.length', 11); // only non-derivatives are displayed
+                    cy.get('a').should('have.length', 9); // only non-derivatives are displayed
                 });
             });
     });

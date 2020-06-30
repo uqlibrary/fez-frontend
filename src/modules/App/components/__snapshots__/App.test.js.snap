@@ -104,6 +104,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -698,6 +699,7 @@ exports[`Application component should determine if it has incomplete works from 
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -1524,6 +1526,7 @@ exports[`Application component should determine if it has incomplete works from 
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -2168,6 +2171,7 @@ exports[`Application component should not show orcid alert for a student without
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -2543,6 +2547,7 @@ exports[`Application component should redirect to login page with correct return
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -3133,6 +3138,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -3963,6 +3969,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -4638,6 +4645,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -5297,6 +5305,7 @@ exports[`Application component should render app for account with author account
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -6198,6 +6207,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -7176,6 +7186,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -8239,6 +8250,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -9252,6 +9264,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -10495,6 +10508,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -11703,6 +11717,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -13500,6 +13515,7 @@ exports[`Application component should render application with routing for the us
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -13798,6 +13814,7 @@ exports[`Application component should render for anon user 1`] = `
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -14506,6 +14523,7 @@ exports[`Application component should show orcid alert for a student without an 
           >
             <WithStyles(ForwardRef(IconButton))
               aria-label="Click to open the main navigation"
+              id="main-menu-button"
               onClick={[Function]}
               style={
                 Object {
@@ -16871,6 +16889,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                         aria-describedby={null}
                                                         aria-label="Click to open the main navigation"
                                                         className=""
+                                                        id="main-menu-button"
                                                         onBlur={[Function]}
                                                         onClick={[Function]}
                                                         onFocus={[Function]}
@@ -16903,6 +16922,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "sizeSmall": "MuiIconButton-sizeSmall",
                                                             }
                                                           }
+                                                          id="main-menu-button"
                                                           onBlur={[Function]}
                                                           onClick={[Function]}
                                                           onFocus={[Function]}
@@ -16925,6 +16945,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             className="MuiIconButton-root"
                                                             disabled={false}
                                                             focusRipple={true}
+                                                            id="main-menu-button"
                                                             onBlur={[Function]}
                                                             onClick={[Function]}
                                                             onFocus={[Function]}
@@ -16954,6 +16975,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               }
                                                               disabled={false}
                                                               focusRipple={true}
+                                                              id="main-menu-button"
                                                               onBlur={[Function]}
                                                               onClick={[Function]}
                                                               onFocus={[Function]}
@@ -16974,6 +16996,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 aria-label="Click to open the main navigation"
                                                                 className="MuiButtonBase-root MuiIconButton-root"
                                                                 disabled={false}
+                                                                id="main-menu-button"
                                                                 onBlur={[Function]}
                                                                 onClick={[Function]}
                                                                 onDragLeave={[Function]}
@@ -17091,6 +17114,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           <button
                                                             aria-label="Click to open the main navigation"
                                                             class="MuiButtonBase-root MuiIconButton-root"
+                                                            id="main-menu-button"
                                                             style="margin-left: -12px; margin-right: 12px;"
                                                             tabindex="0"
                                                             title="Main navigation"
