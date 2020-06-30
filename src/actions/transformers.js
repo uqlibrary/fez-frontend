@@ -1150,9 +1150,32 @@ export const getFilesSectionSearchKeys = data => {
           };
 };
 
-export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
-    const { dataStreams, ...rest } = data;
-    const dataStreamsMap = (dataStreams || []).reduce(
+export const getSecuritySectionSearchKeys = (data = {}) => {
+    return {
+        ...(!!data.hasOwnProperty('rek_security_policy') ? { rek_security_policy: data.rek_security_policy } : {}),
+        ...(!!data.hasOwnProperty('rek_security_inherited')
+            ? { rek_security_inherited: data.rek_security_inherited }
+            : {}),
+    };
+};
+
+export const getDatastreamInfo = (
+    originalDatastreams = [],
+    dataStreamsFromFileSection = [],
+    dataStreamsFromSecuritySection = [],
+) => {
+    const dataStreamsLabelMap = dataStreamsFromFileSection.reduce(
+        (map, ds) => ({
+            ...map,
+            [ds.dsi_dsid]: {
+                dsi_label: ds.dsi_label,
+                dsi_embargo_date: ds.dsi_embargo_date,
+            },
+        }),
+        {},
+    );
+
+    const dataStreamsSecurityMap = dataStreamsFromSecuritySection.reduce(
         (map, ds) => ({
             ...map,
             [ds.dsi_dsid]: {
@@ -1162,15 +1185,18 @@ export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSecti
         }),
         {},
     );
+
     return {
-        ...cleanBlankEntries(rest),
-        ...(!!dataStreams
-            ? {
-                  fez_datastream_info: dataStreamsFromFileSection.map(dataStream => ({
-                      ...dataStream,
-                      ...dataStreamsMap[dataStream.dsi_dsid],
-                  })),
-              }
-            : {}),
+        ...{
+            fez_datastream_info: originalDatastreams.map(dataStream => ({
+                ...dataStream,
+                ...(dataStreamsLabelMap.hasOwnProperty(dataStream.dsi_dsid)
+                    ? { ...dataStreamsLabelMap[dataStream.dsi_dsid] }
+                    : { dsi_state: 'D' }),
+                ...(dataStreamsSecurityMap.hasOwnProperty(dataStream.dsi_dsid)
+                    ? { ...dataStreamsSecurityMap[dataStream.dsi_dsid] }
+                    : {}),
+            })),
+        },
     };
 };
