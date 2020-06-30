@@ -16,12 +16,13 @@ export const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const renderAuthors = authors => {
+export const renderAuthors = (authors, field) => {
+    const subKey = field.replace('fez_record_search_key', 'rek');
     return (
         <Grid container spacing={2}>
             {authors.map((author, index) => (
-                <Grid item xs={12} key={author.rek_author_id} data-testid={`author-${index}`}>
-                    {author.rek_author}
+                <Grid item xs={12} key={author[`${subKey}_id`]} data-testid={`author-${index}`}>
+                    {author[subKey]}
                     {!!author.aut_orcid_id && (
                         <React.Fragment>
                             {' (ORCID: '}
@@ -47,7 +48,8 @@ export const DoiField = ({ data, field, heading }) => {
     let value = '';
     switch (field) {
         case 'fez_record_search_key_author':
-            value = renderAuthors(data);
+        case 'fez_record_search_key_contributor':
+            value = (!!data && data.length && renderAuthors(data, field)) || '';
             break;
 
         case 'rek_title':
@@ -70,6 +72,7 @@ export const DoiField = ({ data, field, heading }) => {
         case 'fez_record_search_key_conference_location':
         case 'fez_record_search_key_conference_name':
         case 'fez_record_search_key_end_page':
+        case 'fez_record_search_key_issue_number':
         case 'fez_record_search_key_org_name':
         case 'fez_record_search_key_org_unit_name':
         case 'fez_record_search_key_place_of_publication':
@@ -78,6 +81,7 @@ export const DoiField = ({ data, field, heading }) => {
         case 'fez_record_search_key_report_number':
         case 'fez_record_search_key_series':
         case 'fez_record_search_key_start_page':
+        case 'fez_record_search_key_volume_number':
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
             break;
 

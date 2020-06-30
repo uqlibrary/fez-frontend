@@ -110,6 +110,13 @@ describe('DoiField', () => {
             'https://orcid.org/101010-1010101',
         );
 
+        const zeroContribsWrapper = setup({
+            field: 'fez_record_search_key_contributor',
+            data: [],
+            heading: 'Editor(s)',
+        });
+        expect(toJson(zeroContribsWrapper)).toBe('');
+
         // Custom entries
 
         const doiWrapper = setup({ field: 'doi', data: 'test', heading: 'DOI (Existing)' });
