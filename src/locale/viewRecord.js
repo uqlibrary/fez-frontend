@@ -1358,10 +1358,10 @@ export default {
                     field: 'fez_record_search_key_location',
                     order: 15,
                 },
-                {
-                    field: 'rek_genre',
-                    order: 16,
-                },
+                // {
+                //     field: 'rek_genre',
+                //     order: 16,
+                // },
                 {
                     field: 'fez_record_search_key_contributor',
                     order: 17,
@@ -1374,10 +1374,10 @@ export default {
                     field: 'fez_record_search_key_subject',
                     order: 18,
                 },
-                {
-                    field: 'fez_record_search_key_rights',
-                    order: 19,
-                },
+                // {
+                //     field: 'fez_record_search_key_rights',
+                //     order: 19,
+                // },
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 20,
@@ -1386,34 +1386,34 @@ export default {
                     field: 'fez_record_search_key_series',
                     order: 21,
                 },
-                {
-                    field: 'fez_record_search_key_job_number',
-                    order: 22,
-                },
-                {
-                    field: 'fez_record_search_key_source',
-                    order: 23,
-                },
+                // {
+                //     field: 'fez_record_search_key_job_number',
+                //     order: 22,
+                // },
+                // {
+                //     field: 'fez_record_search_key_source',
+                //     order: 23,
+                // },
                 {
                     field: 'fez_record_search_key_original_format',
                     order: 24,
                 },
-                {
-                    field: 'fez_record_search_key_scale',
-                    order: 25,
-                },
+                // {
+                //     field: 'fez_record_search_key_scale',
+                //     order: 25,
+                // },
                 {
                     field: 'fez_record_search_key_creator_name',
                     order: 26,
                 },
-                {
-                    field: 'fez_record_search_key_geographic_area',
-                    order: 27,
-                },
-                {
-                    field: 'fez_record_search_key_acknowledgements',
-                    order: 28,
-                },
+                // {
+                //     field: 'fez_record_search_key_geographic_area',
+                //     order: 27,
+                // },
+                // {
+                //     field: 'fez_record_search_key_acknowledgements',
+                //     order: 28,
+                // },
             ],
             'Digilib Image': [
                 {
