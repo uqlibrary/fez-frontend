@@ -114,7 +114,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={false}
+            scrollToSection={true}
           >
             <StandardCard
               primaryHeader={true}
@@ -391,7 +391,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={false}
+            scrollToSection={true}
           >
             <StandardCard
               primaryHeader={true}
@@ -641,7 +641,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={false}
+            scrollToSection={true}
           >
             <StandardCard
               primaryHeader={true}
@@ -872,7 +872,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={true}
+            scrollToSection={false}
           >
             <StandardCard
               primaryHeader={true}
@@ -1070,7 +1070,7 @@ exports[`AdminInterface component should render default view as a full form view
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={true}
+            scrollToSection={false}
           >
             <StandardCard
               primaryHeader={true}
@@ -1346,7 +1346,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={false}
+            scrollToSection={true}
           >
             <StandardCard
               primaryHeader={true}
@@ -1583,7 +1583,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={false}
+            scrollToSection={true}
           >
             <StandardCard
               primaryHeader={true}
@@ -1780,7 +1780,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
           value="bibliographic"
         >
           <ScrollToSection
-            scrollToSection={false}
+            scrollToSection={true}
           >
             <StandardCard
               primaryHeader={true}

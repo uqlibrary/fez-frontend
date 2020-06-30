@@ -2,7 +2,7 @@
 
 exports[`PolicyDropdown component should hide policies that the user cant select 1`] = `
 <SelectFieldWrapper
-  label="Record level policy to apply to this PID"
+  label="Work level policy to apply to this PID"
   name="test"
   required={true}
   selectFieldId="test-policy"
@@ -52,7 +52,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
 
 exports[`PolicyDropdown component should render properly 1`] = `
 <SelectFieldWrapper
-  label="Record level policy to apply to this PID"
+  label="Work level policy to apply to this PID"
   name="test"
   required={true}
   selectFieldId="test-policy"
