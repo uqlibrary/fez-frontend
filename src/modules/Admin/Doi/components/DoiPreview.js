@@ -30,6 +30,7 @@ export const DoiPreview = ({ author, publication }) => {
                 data = data.map((author, index) => ({
                     ...author,
                     aut_orcid_id:
+                        publication.fez_record_search_key_author_id[index] &&
                         publication.fez_record_search_key_author_id[index].author &&
                         publication.fez_record_search_key_author_id[index].author.aut_orcid_id,
                 }));
