@@ -49,7 +49,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
-    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true));
+    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
 
     return {
         initialValues: {
