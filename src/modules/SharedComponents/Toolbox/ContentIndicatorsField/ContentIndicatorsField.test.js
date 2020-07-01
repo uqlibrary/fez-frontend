@@ -53,11 +53,37 @@ describe('ContentIndicatorsField component', () => {
         expect(getContentIndicators(input)).toEqual(expected);
     });
 
+    it('should not mark existing indicators as disabled for admins', () => {
+        const input = {
+            unselectable: true,
+            meta: {
+                initial: Immutable.List([CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value]),
+            },
+        };
+        const expected = CONTENT_INDICATORS.map(item => ({
+            ...item,
+            disabled: false,
+        }));
+        expected[1].disabled = false;
+        expected[2].disabled = false;
+        expect(getContentIndicators(input)).toEqual(expected);
+    });
+
     it('should mark dropdown as disabled when all indicators have been selected', () => {
         const wrapper = setup({
             meta: {
                 initial: Immutable.List(CONTENT_INDICATORS),
             },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {
+        const wrapper = setup({
+            meta: {
+                initial: Immutable.List(CONTENT_INDICATORS),
+            },
+            unselectable: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
