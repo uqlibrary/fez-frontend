@@ -43,7 +43,7 @@ context('Working paper admin edit', () => {
                     });
 
                 cy.get('@cards')
-                    .eq(2)
+                    .eq(4)
                     .within(() => {
                         cy.get('h4').should('contain', 'Bibliographic');
                         cy.get('[data-testid=rek-report-number-input]').should(

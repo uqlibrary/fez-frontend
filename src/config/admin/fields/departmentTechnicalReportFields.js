@@ -12,6 +12,14 @@ export default {
             groups: [['languages']],
         },
         {
+            title: 'ISBN',
+            groups: [['fez_record_search_key_isbn']],
+        },
+        {
+            title: 'ISSN',
+            groups: [['issnField']],
+        },
+        {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_publisher'],
