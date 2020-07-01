@@ -54,15 +54,15 @@ export const DoiPreview = ({ author, publication }) => {
                 <StandardCard title={txt.cardTitles.doi}>
                     <DoiField
                         heading={txt.doiHeading(!!doi)}
-                        field="doi"
+                        field="rek-doi"
                         data={doi || txt.doiTemplate(publication.rek_pid)}
                     />
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.depositor}>
-                    <DoiField heading={txt.depositorNameTitle} field="depositorName" data={author.aut_display_name} />
-                    <DoiField heading={txt.depositorEmailTitle} field="depositorEmail" data={author.aut_email} />
+                    <DoiField heading={txt.depositorNameTitle} field="rek-author-name" data={author.aut_display_name} />
+                    <DoiField heading={txt.depositorEmailTitle} field="rek-author-email" data={author.aut_email} />
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>

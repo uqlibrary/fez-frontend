@@ -18,17 +18,18 @@ export const useStyles = makeStyles(theme => ({
 
 export const renderAuthors = (authors, field) => {
     const subKey = field.replace('fez_record_search_key', 'rek');
+    const testId = subKey.replace('_', '-');
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} data-testid={`${testId}-list`}>
             {authors.map((author, index) => (
-                <Grid item xs={12} key={author[`${subKey}_id`]} data-testid={`author-${index}`}>
+                <Grid item xs={12} key={author[`${subKey}_id`]} data-testid={`${testId}-${index}`}>
                     {author[subKey]}
                     {!!author.aut_orcid_id && (
                         <React.Fragment>
                             {' (ORCID: '}
                             <ExternalLink
-                                id={`author-${index}-orcid-link`}
-                                data-testid={`author-${index}-orcid-link`}
+                                id={`${testId}-${index}-orcid-link`}
+                                data-testid={`${testId}-${index}-orcid-link`}
                                 href={`https://orcid.org/${author.aut_orcid_id}`}
                             >
                                 {author.aut_orcid_id}
@@ -85,13 +86,13 @@ export const DoiField = ({ data, field, heading }) => {
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
             break;
 
-        case 'doi':
-        case 'depositorName':
+        case 'rek-doi':
+        case 'rek-author-name':
         case 'rek_genre_type':
             value = data;
             break;
 
-        case 'depositorEmail':
+        case 'rek-author-email':
             value = <a href={`mailto:${data}`}>{data}</a>;
             break;
 
@@ -104,15 +105,17 @@ export const DoiField = ({ data, field, heading }) => {
         return '';
     }
 
+    const testId = field.replace('fez_record_search_key', 'rek').replace(/_/g, '-');
+
     return (
         <Grid container key={field} spacing={2} classes={{ root: classes.gridRow }}>
             <Grid item xs={12} sm={3}>
-                <Typography variant="body2" component={'span'} data-testid={`${field}-heading`}>
+                <Typography variant="body2" component={'span'} data-testid={`${testId}-heading`}>
                     {heading}
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={9}>
-                <Typography variant="body2" component={'span'} data-testid={`${field}-value`}>
+                <Typography variant="body2" component={'span'} data-testid={`${testId}`}>
                     {value}
                 </Typography>
             </Grid>

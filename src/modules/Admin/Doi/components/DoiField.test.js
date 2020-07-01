@@ -26,8 +26,8 @@ describe('DoiField', () => {
     });
 
     it('should render unknown field value in readable format', () => {
-        const wrapper = setup({ data: 'testing' });
-        expect(wrapper.find('pre').text()).toBe('"testing"');
+        const wrapper = setup({ field: 'abc123', heading: 'Unknown', data: 'testing' });
+        expect(wrapper.find('[data-testid="abc123"]').text()).toBe('"testing"');
     });
 
     it('should render known fields', () => {
@@ -36,7 +36,7 @@ describe('DoiField', () => {
             {
                 key: 'fez_record_search_key_author',
                 test: wrapper => {
-                    expect(wrapper.find('[data-testid="author-0"]').text()).toBe(
+                    expect(wrapper.find('[data-testid="rek-author-0"]').text()).toBe(
                         record.fez_record_search_key_author[0].rek_author,
                     );
                 },
@@ -57,7 +57,7 @@ describe('DoiField', () => {
             {
                 key: 'fez_record_search_key_isbn',
                 test: wrapper => {
-                    expect(wrapper.find('[data-testid="fez_record_search_key_isbn-value"]').text()).toBe(
+                    expect(wrapper.find('[data-testid="rek-isbn"]').text()).toBe(
                         record.fez_record_search_key_isbn[0].rek_isbn,
                     );
                 },
@@ -66,7 +66,7 @@ describe('DoiField', () => {
             {
                 key: 'fez_record_search_key_publisher',
                 test: wrapper => {
-                    expect(wrapper.find('[data-testid="fez_record_search_key_publisher-value"]').text()).toBe(
+                    expect(wrapper.find('[data-testid="rek-publisher"]').text()).toBe(
                         record.fez_record_search_key_publisher.rek_publisher,
                     );
                 },
@@ -85,12 +85,8 @@ describe('DoiField', () => {
             },
             heading: 'Conference location',
         });
-        expect(confWrapper.find('[data-testid="fez_record_search_key_conference_location-value"]').text()).toBe(
-            'test location',
-        );
-        expect(confWrapper.find('[data-testid="fez_record_search_key_conference_location-heading"]').text()).toBe(
-            'Conference location',
-        );
+        expect(confWrapper.find('[data-testid="rek-conference-location"]').text()).toBe('test location');
+        expect(confWrapper.find('[data-testid="rek-conference-location-heading"]').text()).toBe('Conference location');
 
         const authorWithOrcidWrapper = setup({
             field: 'fez_record_search_key_author',
@@ -103,10 +99,10 @@ describe('DoiField', () => {
             ],
             heading: 'Author(s)',
         });
-        expect(authorWithOrcidWrapper.find('[data-testid="author-0"]').text()).toBe(
+        expect(authorWithOrcidWrapper.find('[data-testid="rek-author-0"]').text()).toBe(
             'First Last (ORCID: 101010-1010101)',
         );
-        expect(authorWithOrcidWrapper.find('[data-testid="author-0-orcid-link"]').props().href).toBe(
+        expect(authorWithOrcidWrapper.find('[data-testid="rek-author-0-orcid-link"]').props().href).toBe(
             'https://orcid.org/101010-1010101',
         );
 
@@ -119,14 +115,18 @@ describe('DoiField', () => {
 
         // Custom entries
 
-        const doiWrapper = setup({ field: 'doi', data: 'test', heading: 'DOI (Existing)' });
-        expect(doiWrapper.find('[data-testid="doi-value"]').text()).toBe('test');
+        const doiWrapper = setup({ field: 'rek-doi', data: 'test', heading: 'DOI (Existing)' });
+        expect(doiWrapper.find('[data-testid="rek-doi"]').text()).toBe('test');
 
-        const nameWrapper = setup({ field: 'depositorName', data: 'Test Depositor', heading: 'Depositor name' });
-        expect(nameWrapper.find('[data-testid="depositorName-value"]').text()).toBe('Test Depositor');
+        const nameWrapper = setup({ field: 'rek-author-name', data: 'Test Depositor', heading: 'Depositor name' });
+        expect(nameWrapper.find('[data-testid="rek-author-name"]').text()).toBe('Test Depositor');
 
-        const emailWrapper = setup({ field: 'depositorEmail', data: 'example@uq.edu.au', heading: 'Depositor email' });
-        const entry = emailWrapper.find('[data-testid="depositorEmail-value"]');
+        const emailWrapper = setup({
+            field: 'rek-author-email',
+            data: 'example@uq.edu.au',
+            heading: 'Depositor email',
+        });
+        const entry = emailWrapper.find('[data-testid="rek-author-email"]');
         expect(entry.text()).toBe('example@uq.edu.au');
         const renderedEmail = shallow(entry.props().children);
         expect(renderedEmail.props().href).toBe('mailto:example@uq.edu.au');

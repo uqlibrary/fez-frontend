@@ -41,7 +41,7 @@ describe('DoiPreview', () => {
         };
         const wrapper = setup({ publication });
         expect(wrapper.find('DoiField[field="rek_title"]').props().data).toBe(publication.rek_title);
-        expect(wrapper.find('DoiField[field="doi"]').props().heading).toBe('DOI (Existing)');
+        expect(wrapper.find('DoiField[field="rek-doi"]').props().heading).toBe('DOI (Existing)');
         expect(wrapper.find('DoiField[field="fez_record_search_key_author"]').props().data).toEqual([
             {
                 aut_orcid_id: '10010101-101101',
