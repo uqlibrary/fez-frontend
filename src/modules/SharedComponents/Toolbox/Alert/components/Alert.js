@@ -257,6 +257,7 @@ export const Alert = ({
     dismissTitle,
     message,
     showLoader,
+    testId,
     title,
     type,
     wiggle,
@@ -296,6 +297,7 @@ export const Alert = ({
                 justify="center"
                 alignItems="flex-start"
                 alignContent="center"
+                data-testid={testId}
             >
                 <Grid item xs={12} sm className={action && classes.linked}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
@@ -383,6 +385,7 @@ Alert.propTypes = {
     dismissTitle: PropTypes.string,
     message: PropTypes.any.isRequired,
     showLoader: PropTypes.bool,
+    testId: PropTypes.string,
     title: PropTypes.string,
     type: PropTypes.oneOf([
         'error',

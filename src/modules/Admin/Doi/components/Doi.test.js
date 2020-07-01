@@ -192,23 +192,10 @@ describe('DOI component', () => {
         expect(testFn).toHaveBeenCalledWith(record);
     });
 
-    it('should display confirmation message on successful submission', () => {
-        const mockUseRef = jest.spyOn(React, 'useRef');
-        const testFn = jest.fn();
-        mockUseRef.mockImplementation(() => ({
-            current: {
-                showConfirmation: testFn,
-            },
-        }));
-        const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementationOnce(f => f());
-        setup({
-            doiUpdated: true,
+    it('should show request progress dialogue', () => {
+        const wrapper = setup({
+            doiRequesting: true,
         });
-        expect(testFn).toHaveBeenCalledTimes(1);
-        expect(mockUseCallback).toHaveBeenCalledTimes(1);
-
-        mockUseRef.mockRestore();
-        mockUseCallback.mockRestore();
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
     });
 });

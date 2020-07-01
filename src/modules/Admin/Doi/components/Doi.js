@@ -12,8 +12,10 @@ import { pathConfig } from 'config/routes';
 import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
 import { validation } from 'config';
 
+import { useConfirmationState } from 'hooks';
+
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -98,16 +100,13 @@ export const Doi = ({
         };
     }, [clearRecordToView, loadRecordToView, match.params.pid]);
 
-    const successConfirmationRef = React.useRef();
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    /* istanbul ignore next */
     React.useEffect(() => {
-        if (!doiRequesting && doiUpdated && successConfirmationRef.current) {
-            successConfirmationRef.current.showConfirmation();
+        if (doiUpdated) {
+            showConfirmation();
         }
-    }, [doiRequesting, doiUpdated]);
-
-    const setSuccessConfirmationRef = React.useCallback(node => {
-        successConfirmationRef.current = node;
-    }, []);
+    }, [showConfirmation, doiUpdated]);
 
     // Get subkeys where present
     const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
@@ -162,17 +161,19 @@ export const Doi = ({
                         )}
                     </Grid>
                     <Grid item xs={12}>
-                        <ConfirmDialogBox
-                            onRef={setSuccessConfirmationRef}
-                            onAction={navigateToViewPage}
-                            locale={txt.successConfirmation}
+                        <ConfirmationBox
+                            confirmationBoxId="rek-doi"
                             hideCancelButton
+                            isOpen={isOpen}
+                            locale={txt.successConfirmation}
+                            onAction={navigateToViewPage}
+                            onClose={hideConfirmation}
                         />
                         <DoiPreview author={author} publication={record} />
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
-                            <Alert {...alertProps} />
+                            <Alert testId="rek-doi-submit-status" {...alertProps} />
                         </Grid>
                     )}
                     <Grid item xs={12}>
