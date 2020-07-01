@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import locale from 'locale/pages';
-import { ORG_NAME_MATCH_TEXT, RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
+import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { pathConfig } from 'config/routes';
 import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
 import { validation } from 'config';
@@ -24,47 +24,37 @@ import DoiPreview from './DoiPreview';
 
 const txt = locale.pages.doi;
 
-const renderWarningItem = (item, index) => {
-    const id = `doi-warning-${index}`;
-    return (
-        <li data-testid={id} key={id}>
-            {item}
-        </li>
-    );
-};
+const renderAlertText = (title, message) => (
+    <span>
+        <Typography variant="h3" style={{ fontSize: 20, marginTop: 6 }}>
+            {title}
+        </Typography>
+        <Typography variant="body2">{message}</Typography>
+    </span>
+);
 
 export const getWarningMessage = record => {
-    // Collect warnings
-    const warnings = [];
-
-    // Need to show a warning if publisher is not UQ
-    if (
-        !record.fez_record_search_key_org_name ||
-        !(typeof record.fez_record_search_key_org_name.rek_org_name === 'string') ||
-        !record.fez_record_search_key_org_name.rek_org_name.includes(ORG_NAME_MATCH_TEXT)
-    ) {
-        warnings.push(txt.warningMessages.uqIsNotPublisher);
-    }
-
+    const title = txt.alertMessages.warningTitle;
     // Need to show a warning if record doesn't have open-access datastreams
-    const dataStreamIsOpenAccess = datastream =>
+    const datastreamIsOpenAccess = datastream =>
         getFileOpenAccessStatus(record, datastream, { isAdmin: true }).isOpenAccess;
-    if (!record.fez_datastream_info || record.fez_datastream_info.filter(dataStreamIsOpenAccess).length === 0) {
-        warnings.push(txt.warningMessages.noOADatastreams);
+    const hasOADatastreams =
+        !record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0;
+
+    return hasOADatastreams ? renderAlertText(title, txt.alertMessages.noOADatastreams) : '';
+};
+
+export const getErrorMessage = ({ displayTypeLookup, doi, isRecord, recordType, unsupportedType }) => {
+    const title = txt.alertMessages.errorTitle;
+
+    if (!isRecord || unsupportedType) {
+        return renderAlertText(title, txt.alertMessages.unsupportedMessage(displayTypeLookup || recordType));
     }
 
-    if (warnings.length === 0) {
-        return '';
-    }
+    // Should not allow updates of existing Non-UQ DOIs
+    const hasNonUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0;
 
-    return (
-        <span>
-            <Typography variant="h3" style={{ fontSize: 20, marginTop: 6 }}>
-                {txt.warningMessages.title}
-            </Typography>
-            <ul>{warnings && warnings.length > 0 && warnings.map(renderWarningItem)}</ul>
-        </span>
-    );
+    return hasNonUQDoi ? renderAlertText(title, txt.alertMessages.uqIsNotPublisher) : '';
 };
 
 const renderTitle = titlePieces => {
@@ -108,32 +98,38 @@ export const Doi = ({
         }
     }, [showConfirmation, doiUpdated]);
 
-    // Get subkeys where present
-    const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
-    const recordType = (!!record && record.rek_object_type_lookup) || '';
-    const displayType = !!record && record.rek_display_type;
-    const displayTypeLookup = !!record && record.rek_display_type_lookup;
-    const title = !!record && !!record.rek_title && record.rek_title;
-    const pid = !!record && record.rek_pid;
-
-    // Need to filter out community and collection pids
-    const isRecord = ![RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(recordType.toLowerCase());
-
-    // Need to avoid unsupported display types
-    const unsupportedType = !!displayType && !doiFields[displayType];
-
-    // Should not allow updates of existing Non-UQ DOIs
-    const hasNonUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0;
-
     if (!!match.params.pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     }
 
+    // Record not found
+    const pid = !!record && record.rek_pid;
     if (!!match.params.pid && !pid) {
         return <div className="empty" />;
     }
 
+    // Get subkeys where present
+    const displayType = !!record && record.rek_display_type;
+    const displayTypeLookup = !!record && record.rek_display_type_lookup;
+    const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
+    const recordType = (!!record && record.rek_object_type_lookup) || '';
+    const title = !!record && !!record.rek_title && record.rek_title;
+
+    // Need to avoid unsupported display types
+    const unsupportedType = !!displayType && !doiFields[displayType];
+
+    // Need to filter out community and collection pids
+    const isRecord = ![RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(recordType.toLowerCase());
+
+    // Look for possible issues
     const warningMessage = getWarningMessage(record);
+    const errorMessage = getErrorMessage({
+        displayTypeLookup,
+        doi,
+        isRecord,
+        recordType,
+        unsupportedType,
+    });
 
     const navigateToViewPage = () => window.location.assign(pathConfig.records.view(pid, true));
 
@@ -153,12 +149,12 @@ export const Doi = ({
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid item xs={12}>
-                        {isRecord && !unsupportedType && !!warningMessage && (
-                            <Alert message={warningMessage} type="warning" />
-                        )}
-                        {(unsupportedType || !isRecord) && (
-                            <Alert message={txt.unsupportedMessage(displayTypeLookup || recordType)} type="error" />
-                        )}
+                        {(!!errorMessage && (
+                            <Alert message={errorMessage} type="error" data-testid="rek-doi-error" />
+                        )) ||
+                            (!!warningMessage && (
+                                <Alert message={warningMessage} type="warning" data-testid="rek-doi-warning" />
+                            ))}
                     </Grid>
                     <Grid item xs={12}>
                         <ConfirmationBox
@@ -169,7 +165,7 @@ export const Doi = ({
                             onAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />
-                        <DoiPreview author={author} publication={record} />
+                        {!unsupportedType && <DoiPreview author={author} publication={record} />}
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
@@ -200,7 +196,7 @@ export const Doi = ({
                                     color="primary"
                                     fullWidth
                                     onClick={() => handleSubmit(record)}
-                                    disabled={doiRequesting || !isRecord || unsupportedType || hasNonUQDoi}
+                                    disabled={doiRequesting || !!errorMessage}
                                 >
                                     {txt.confirmButtonLabel(!!doi)}
                                 </Button>

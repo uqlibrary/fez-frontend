@@ -847,12 +847,13 @@ export default {
             doiTemplate: pid => `${DOI_ORG_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
             depositorEmailTitle: 'Email',
-            warningMessages: {
-                title: 'Please note:',
-                uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
+            alertMessages: {
+                errorTitle: 'Error:',
                 noOADatastreams: 'No open access datastreams are attached; DOI will be for metadata only.',
+                unsupportedMessage: displayTypeLookup => `Sorry, type ${displayTypeLookup} is not currently supported.`,
+                uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
+                warningTitle: 'Please note:',
             },
-            unsupportedMessage: displayTypeLookup => `Sorry, type ${displayTypeLookup} is not currently supported.`,
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
             alertProps: {

@@ -96,11 +96,8 @@ describe('DOI component', () => {
             },
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.find('[data-testid="doi-warning-0"]').text()).toBe(
-            'This work does not appear to be published by The University of Queensland.',
-        );
-        expect(renderedWarningMessage.find('[data-testid="doi-warning-1"]').text()).toBe(
-            'No open access datastreams are attached; DOI will be for metadata only.',
+        expect(renderedWarningMessage.text()).toBe(
+            'Please note:No open access datastreams are attached; DOI will be for metadata only.',
         );
     });
 
@@ -127,14 +124,17 @@ describe('DOI component', () => {
         const wrapper1 = setup({
             record: publicationTypeListJournalArticle.data[0],
         });
-        expect(wrapper1.find('Alert').props().message).toBe('Sorry, type Journal Article is not currently supported.');
+        const renderedWarningMessage1 = shallow(wrapper1.find('Alert').props().message);
+        expect(renderedWarningMessage1.text()).toBe('Error:Sorry, type Journal Article is not currently supported.');
+
         const wrapper2 = setup({
             record: {
                 ...collectionRecord,
                 rek_display_type_lookup: null,
             },
         });
-        expect(wrapper2.find('Alert').props().message).toBe('Sorry, type Collection is not currently supported.');
+        const renderedWarningMessage2 = shallow(wrapper2.find('Alert').props().message);
+        expect(renderedWarningMessage2.text()).toBe('Error:Sorry, type Collection is not currently supported.');
     });
 
     it('should disable submit button for existing non-UQ DOI', () => {
