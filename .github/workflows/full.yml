@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feature-admin-doi-preview-173145406
+      - feature-admin-doi-put-173391105
 
     paths-ignore:
       - '**.md'

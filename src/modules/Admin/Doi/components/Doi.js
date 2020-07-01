@@ -71,7 +71,6 @@ const renderTitle = titlePieces => {
 
 export const Doi = ({
     author,
-    clearRecordToView,
     doiRequesting,
     doiUpdated,
     doiFailed,
@@ -83,12 +82,11 @@ export const Doi = ({
 }) => {
     React.useEffect(() => {
         // Load record if it hasn't
-        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid);
-        return () => {
-            // Clear current record on unload
-            clearRecordToView();
-        };
-    }, [clearRecordToView, loadRecordToView, match.params.pid]);
+        !!match.params.pid &&
+            (!record || record.rek_pid !== match.params.pid) &&
+            !!loadRecordToView &&
+            loadRecordToView(match.params.pid);
+    }, [loadRecordToView, match.params.pid, record]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     /* istanbul ignore next */
@@ -131,7 +129,9 @@ export const Doi = ({
         unsupportedType,
     });
 
-    const navigateToViewPage = () => window.location.assign(pathConfig.records.view(pid, true));
+    const navigateToViewPage = () => {
+        window.location.assign(pathConfig.records.view(pid, true));
+    };
 
     const alertProps = validation.getErrorAlertProps({
         alertLocale: txt.alertProps,
@@ -211,7 +211,6 @@ export const Doi = ({
 
 Doi.propTypes = {
     author: PropTypes.object,
-    clearRecordToView: PropTypes.func,
     doiFailed: PropTypes.bool,
     doiRequesting: PropTypes.bool,
     doiUpdated: PropTypes.bool,

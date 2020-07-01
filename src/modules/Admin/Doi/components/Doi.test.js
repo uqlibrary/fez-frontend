@@ -59,30 +59,15 @@ describe('DOI component', () => {
 
     it('should show empty div and call loader if record is not found', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
-        const cleanupFns = [];
-
-        mockUseEffect.mockImplementation(f => {
-            const hookReturn = f();
-            if (typeof hookReturn === 'function') {
-                cleanupFns.push(hookReturn);
-            }
-        });
+        mockUseEffect.mockImplementation(f => f());
 
         const testFn1 = jest.fn();
-        const testFn2 = jest.fn();
         const wrapper = setup({
             record: {},
             loadRecordToView: testFn1,
-            clearRecordToView: testFn2,
         });
         expect(wrapper.find('div').props().className).toBe('empty');
         expect(testFn1).toHaveBeenCalledWith(record.rek_pid);
-
-        while (cleanupFns.length > 0) {
-            cleanupFns.pop()();
-        }
-
-        expect(testFn2).toHaveBeenCalledTimes(1);
     });
 
     it('should render warnings when required', () => {
