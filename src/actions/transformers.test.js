@@ -2185,71 +2185,143 @@ describe('getSecuritySectionSearchKeys', () => {
     it('should return formatted search keys with datastreams for admin update', () => {
         const expected = {
             rek_security_policy: 1,
-            fez_datastream_info: [
-                {
-                    dsi_dsid: 'test.png',
-                    dsi_label: 'test.png new label',
-                    dsi_security_policy: 2,
-                    dsi_security_inherited: 1,
-                },
-                {
-                    dsi_dsid: 'test1.txt',
-                    dsi_label: 'test.txt new label',
-                    dsi_security_policy: 3,
-                    dsi_security_inherited: 0,
-                },
-            ],
         };
         expect(
-            transformers.getSecuritySectionSearchKeys(
-                {
-                    dataStreams: [
-                        {
-                            dsi_dsid: 'test.png',
-                            dsi_label: 'test.png old label',
-                            dsi_security_policy: 2,
-                            dsi_security_inherited: 1,
-                        },
-                        {
-                            dsi_dsid: 'test1.txt',
-                            dsi_label: 'test.txt old label',
-                            dsi_security_policy: 3,
-                            dsi_security_inherited: 0,
-                        },
-                    ],
-                    rek_security_policy: 1,
-                },
-                [
+            transformers.getSecuritySectionSearchKeys({
+                dataStreams: [
                     {
                         dsi_dsid: 'test.png',
-                        dsi_label: 'test.png new label',
+                        dsi_label: 'test.png old label',
                         dsi_security_policy: 2,
                         dsi_security_inherited: 1,
                     },
                     {
                         dsi_dsid: 'test1.txt',
-                        dsi_label: 'test.txt new label',
-                        dsi_security_policy: 1,
-                        dsi_security_inherited: 1,
+                        dsi_label: 'test.txt old label',
+                        dsi_security_policy: 3,
+                        dsi_security_inherited: 0,
                     },
                 ],
-            ),
+                rek_security_policy: 1,
+            }),
         ).toEqual(expected);
     });
 
     it('should return formatted search keys without for admin update', () => {
         const expected = {
             rek_security_policy: 1,
+            rek_security_inherited: 1,
         };
         expect(
             transformers.getSecuritySectionSearchKeys({
                 rek_security_policy: 1,
+                rek_security_inherited: 1,
             }),
         ).toEqual(expected);
     });
 
     it('should return empty object', () => {
         expect(transformers.getSecuritySectionSearchKeys()).toEqual({});
+    });
+});
+
+describe('getDatastreamInfo', () => {
+    it('should return formatted search keys with datastreams for admin update', () => {
+        const expected = {
+            fez_datastream_info: [
+                {
+                    dsi_dsid: 'test.png',
+                    dsi_label: 'test.png new label',
+                    dsi_embargo_date: null,
+                    dsi_state: 'A',
+                    dsi_security_policy: 2,
+                    dsi_security_inherited: 0,
+                },
+                {
+                    dsi_dsid: 'test1.txt',
+                    dsi_label: 'test1.txt new label',
+                    dsi_embargo_date: '2020-11-01',
+                    dsi_state: 'A',
+                    dsi_security_policy: 2,
+                    dsi_security_inherited: 0,
+                },
+                {
+                    dsi_dsid: 'test_delete.txt',
+                    dsi_label: 'test_delete.txt old label',
+                    dsi_embargo_date: '2020-12-31',
+                    dsi_state: 'D',
+                    dsi_security_policy: 1,
+                    dsi_security_inherited: 1,
+                },
+            ],
+        };
+        expect(
+            transformers.getDatastreamInfo(
+                [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_label: 'test.png old label',
+                        dsi_embargo_date: null,
+                        dsi_state: 'A',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_label: 'test1.txt old label',
+                        dsi_embargo_date: '2020-12-31',
+                        dsi_state: 'A',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test_delete.txt',
+                        dsi_label: 'test_delete.txt old label',
+                        dsi_embargo_date: '2020-12-31',
+                        dsi_state: 'A',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                ],
+                [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_label: 'test.png new label',
+                        dsi_embargo_date: null,
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_label: 'test1.txt new label',
+                        dsi_embargo_date: '2020-11-01',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                ],
+                [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_label: 'test.png old label',
+                        dsi_security_policy: 2,
+                        dsi_security_inherited: 0,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_label: 'test1.txt old label',
+                        dsi_security_policy: 2,
+                        dsi_security_inherited: 0,
+                    },
+                ],
+            ),
+        ).toEqual(expected);
+    });
+
+    it('should return return empty object', () => {
+        const expected = {
+            fez_datastream_info: [],
+        };
+        expect(transformers.getDatastreamInfo()).toEqual(expected);
     });
 });
 
@@ -2277,7 +2349,7 @@ describe('getAdminSectionSearchKeys', () => {
     });
 
     it('should get search key for any internal notes entered', () => {
-        expect(transformers.getAdminSectionSearchKeys()).toEqual({});
+        expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_internal_notes: null });
     });
 
     it('should transform all search keys for additional information section', () => {
@@ -2320,6 +2392,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2422,6 +2495,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2521,6 +2595,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2573,6 +2648,7 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
+            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2592,7 +2668,7 @@ describe('getAdminSectionSearchKeys', () => {
             contentIndicators: [],
         };
 
-        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({});
+        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({ fez_internal_notes: null });
     });
 });
 
@@ -2734,6 +2810,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2751,6 +2829,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2769,6 +2849,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2788,6 +2870,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2807,6 +2891,8 @@ describe('Sanitising empty data', () => {
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
             rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
             fez_record_search_key_language: [
                 {
                     rek_language: 'eng',
@@ -2999,6 +3085,8 @@ describe('getBibliographicSectionSearchKeys', () => {
         it('should use default parameter value', () => {
             expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3030,6 +3118,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3078,6 +3168,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3123,6 +3215,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3155,6 +3249,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3175,6 +3271,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_license: { rek_license: 123 },
                 fez_record_search_key_language: [
                     {
@@ -3187,6 +3285,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             data = {};
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3208,6 +3308,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
             expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3222,6 +3324,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3234,6 +3338,8 @@ describe('getBibliographicSectionSearchKeys', () => {
             const dataEmpty = {};
             expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3250,6 +3356,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3267,6 +3375,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3291,6 +3401,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3334,6 +3446,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3548,6 +3662,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3583,6 +3699,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3608,6 +3726,8 @@ describe('getBibliographicSectionSearchKeys', () => {
 
             expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
                 rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',

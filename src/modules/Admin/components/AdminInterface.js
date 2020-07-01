@@ -19,7 +19,6 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
-import ScrollToSection from './ScrollToSection';
 import LockedAlert from './LockedAlert';
 import { useTabbedContext, useRecordContext } from 'context';
 
@@ -159,11 +158,9 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <ScrollToSection scrollToSection={!tabbed && tab === currentTabValue}>
-                <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                    <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
-                </StandardCard>
-            </ScrollToSection>
+            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
+                <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
+            </StandardCard>
         </TabContainer>
     );
 

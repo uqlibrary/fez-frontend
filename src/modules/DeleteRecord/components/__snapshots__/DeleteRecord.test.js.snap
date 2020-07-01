@@ -460,7 +460,7 @@ exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
                   }
                 }
               />,
-              "confirmationTitle": "Record has been deleted",
+              "confirmationTitle": "Work has been deleted",
             }
           }
           onAction={[Function]}
@@ -506,7 +506,7 @@ exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
             customIcon={null}
             customType={null}
             dismissTitle="Click to dismiss this alert"
-            message="Record has been deleted"
+            message="Work has been deleted"
             pushToTop={true}
             showLoader={false}
             title="Success"
@@ -541,6 +541,7 @@ exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="primary"
+            data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
             onClick={[MockFunction]}
@@ -1035,6 +1036,7 @@ exports[`Component DeleteRecord should display alert and disable delete button o
         >
           <WithStyles(ForwardRef(Button))
             color="primary"
+            data-testid="delete-admin"
             disabled={true}
             fullWidth={true}
             id="submit-delete-record"
@@ -1510,7 +1512,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
                   }
                 }
               />,
-              "confirmationTitle": "Record has been deleted",
+              "confirmationTitle": "Work has been deleted",
             }
           }
           onAction={[Function]}
@@ -1574,6 +1576,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
         >
           <WithStyles(ForwardRef(Button))
             color="primary"
+            data-testid="delete-admin"
             fullWidth={true}
             id="submit-delete-record"
             onClick={[MockFunction]}

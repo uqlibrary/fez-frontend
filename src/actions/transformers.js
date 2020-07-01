@@ -880,10 +880,14 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
-        ...(!!description && description.hasOwnProperty('plainText') ? { rek_description: description.plainText } : {}),
-        ...(!!description && description.hasOwnProperty('htmlText')
-            ? { rek_formatted_abstract: description.htmlText }
-            : {}),
+        ...{
+            rek_description:
+                (!!description && description.hasOwnProperty('plainText') && description.plainText) || null,
+        },
+        ...{
+            rek_formatted_abstract:
+                (!!description && description.hasOwnProperty('htmlText') && description.htmlText) || null,
+        },
         ...(!!languageOfTitle
             ? {
                   fez_record_search_key_language_of_title: languageOfTitle.map((lang, index) => ({
@@ -1127,10 +1131,10 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
-            : {}),
+            : { fez_internal_notes: null }),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
-        ...cleanBlankEntries(rest),
+        ...rest,
     };
 };
 
@@ -1146,9 +1150,32 @@ export const getFilesSectionSearchKeys = data => {
           };
 };
 
-export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
-    const { dataStreams, ...rest } = data;
-    const dataStreamsMap = (dataStreams || []).reduce(
+export const getSecuritySectionSearchKeys = (data = {}) => {
+    return {
+        ...(!!data.hasOwnProperty('rek_security_policy') ? { rek_security_policy: data.rek_security_policy } : {}),
+        ...(!!data.hasOwnProperty('rek_security_inherited')
+            ? { rek_security_inherited: data.rek_security_inherited }
+            : {}),
+    };
+};
+
+export const getDatastreamInfo = (
+    originalDatastreams = [],
+    dataStreamsFromFileSection = [],
+    dataStreamsFromSecuritySection = [],
+) => {
+    const dataStreamsLabelMap = dataStreamsFromFileSection.reduce(
+        (map, ds) => ({
+            ...map,
+            [ds.dsi_dsid]: {
+                dsi_label: ds.dsi_label,
+                dsi_embargo_date: ds.dsi_embargo_date,
+            },
+        }),
+        {},
+    );
+
+    const dataStreamsSecurityMap = dataStreamsFromSecuritySection.reduce(
         (map, ds) => ({
             ...map,
             [ds.dsi_dsid]: {
@@ -1158,15 +1185,18 @@ export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSecti
         }),
         {},
     );
+
     return {
-        ...cleanBlankEntries(rest),
-        ...(!!dataStreams
-            ? {
-                  fez_datastream_info: dataStreamsFromFileSection.map(dataStream => ({
-                      ...dataStream,
-                      ...dataStreamsMap[dataStream.dsi_dsid],
-                  })),
-              }
-            : {}),
+        ...{
+            fez_datastream_info: originalDatastreams.map(dataStream => ({
+                ...dataStream,
+                ...(dataStreamsLabelMap.hasOwnProperty(dataStream.dsi_dsid)
+                    ? { ...dataStreamsLabelMap[dataStream.dsi_dsid] }
+                    : { dsi_state: 'D' }),
+                ...(dataStreamsSecurityMap.hasOwnProperty(dataStream.dsi_dsid)
+                    ? { ...dataStreamsSecurityMap[dataStream.dsi_dsid] }
+                    : {}),
+            })),
+        },
     };
 };
