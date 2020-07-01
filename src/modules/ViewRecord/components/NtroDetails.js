@@ -137,18 +137,19 @@ export class NtroDetailsClass extends PureComponent {
                             }
                         })}
                     {/* NTRO Abstract */}
-                    {publication.rek_formatted_abstract ? (
-                        <this.ViewNtroRow
-                            className={this.props.classes.richTextParagraphFix}
-                            heading={locale.viewRecord.headings.NTRO.ntroAbstract}
-                            data={ReactHtmlParser(publication.rek_formatted_abstract)}
-                        />
-                    ) : (
-                        <this.ViewNtroRow
-                            heading={locale.viewRecord.headings.NTRO.ntroAbstract}
-                            data={publication.rek_description}
-                        />
-                    )}
+                    {(!!publication.rek_formatted_abstract || !!publication.rek_description) &&
+                        (!!publication.rek_formatted_abstract ? (
+                            <this.ViewNtroRow
+                                className={this.props.classes.richTextParagraphFix}
+                                heading={locale.viewRecord.headings.NTRO.ntroAbstract}
+                                data={ReactHtmlParser(publication.rek_formatted_abstract)}
+                            />
+                        ) : (
+                            <this.ViewNtroRow
+                                heading={locale.viewRecord.headings.NTRO.ntroAbstract}
+                                data={publication.rek_description}
+                            />
+                        ))}
                     {/* ISMN */}
                     {publication.fez_record_search_key_ismn && publication.fez_record_search_key_ismn.length > 0 && (
                         <this.ViewNtroRow

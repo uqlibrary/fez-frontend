@@ -53,6 +53,60 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
 />
 `;
 
+exports[`ContentIndicatorsField component should not mark dropdown as disabled when all indicators have been selected for admins 1`] = `
+<GenericSelectField
+  disabled={false}
+  error={false}
+  errorText=""
+  genericSelectFieldId="rek-content-indicator"
+  hideLabel={false}
+  itemsList={
+    Array [
+      Object {
+        "disabled": false,
+        "text": "Scholarship of Teaching and Learning",
+        "value": 454079,
+      },
+      Object {
+        "disabled": false,
+        "text": "Protocol",
+        "value": 454080,
+      },
+      Object {
+        "disabled": false,
+        "text": "Case Study",
+        "value": 454081,
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  meta={
+    Object {
+      "initial": Immutable.List [
+        Object {
+          "text": "Scholarship of Teaching and Learning",
+          "value": 454079,
+        },
+        Object {
+          "text": "Protocol",
+          "value": 454080,
+        },
+        Object {
+          "text": "Case Study",
+          "value": 454081,
+        },
+      ],
+    }
+  }
+  unselectable={true}
+  value={Array []}
+/>
+`;
+
 exports[`ContentIndicatorsField component should render default view 1`] = `
 <GenericSelectField
   disabled={false}
