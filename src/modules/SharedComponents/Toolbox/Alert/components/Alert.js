@@ -29,7 +29,7 @@ const useStyles = makeStyles(
             from: { transform: 'rotate(-30deg)', transformOrigin: '40% 50%' },
             to: { transform: 'rotate(15deg)', transformOrigin: '40% 50%' },
         },
-        wriggler: {
+        wiggler: {
             animationName: '$wiggle',
             animationDuration: '0.3s',
             animationIterationCount: 20,
@@ -249,19 +249,19 @@ const useStyles = makeStyles(
 );
 
 export const Alert = ({
-    message,
-    title,
-    type,
     action,
     actionButtonLabel,
     allowDismiss,
-    dismissAction,
-    dismissTitle,
-    showLoader,
     customIcon,
     customType,
-    wiggle,
     disableAlertClick,
+    dismissAction,
+    dismissTitle,
+    message,
+    showLoader,
+    title,
+    type,
+    wiggle,
 }) => {
     const classes = useStyles();
     const renderIcon = type => {
@@ -303,7 +303,7 @@ export const Alert = ({
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
                         <Grid
                             item
-                            className={`${classes.icon} alert-icon ${wiggle ? classes.wriggler : ''}`}
+                            className={`${classes.icon} alert-icon ${wiggle ? classes.wiggler : ''}`}
                             onClick={!disableAlertClick && action}
                             onKeyDown={!disableAlertClick && action}
                         >
@@ -371,27 +371,9 @@ export const Alert = ({
 };
 
 Alert.propTypes = {
-    message: PropTypes.any.isRequired,
-    title: PropTypes.string,
-    type: PropTypes.oneOf([
-        'error',
-        'error_outline',
-        'warning',
-        'info',
-        'info_outline',
-        'help',
-        'help_outline',
-        'done',
-        'custom',
-    ]),
     action: PropTypes.func,
     actionButtonLabel: PropTypes.string,
     allowDismiss: PropTypes.bool,
-    wiggle: PropTypes.bool,
-    disableAlertClick: PropTypes.bool,
-    dismissAction: PropTypes.func,
-    dismissTitle: PropTypes.string,
-    showLoader: PropTypes.bool,
     customIcon: PropTypes.any,
     customType: PropTypes.oneOf([
         null,
@@ -405,18 +387,36 @@ Alert.propTypes = {
         'done',
         'custom',
     ]),
+    disableAlertClick: PropTypes.bool,
+    dismissAction: PropTypes.func,
+    dismissTitle: PropTypes.string,
+    message: PropTypes.any.isRequired,
+    showLoader: PropTypes.bool,
+    title: PropTypes.string,
+    type: PropTypes.oneOf([
+        'error',
+        'error_outline',
+        'warning',
+        'info',
+        'info_outline',
+        'help',
+        'help_outline',
+        'done',
+        'custom',
+    ]),
+    wiggle: PropTypes.bool,
 };
 
 Alert.defaultProps = {
-    message: 'Unexpected error',
-    type: 'error',
     allowDismiss: false,
-    dismissTitle: 'Click to dismiss this alert',
-    showLoader: false,
     customIcon: null,
     customType: null,
-    wiggle: null,
     disableAlertClick: false,
+    dismissTitle: 'Click to dismiss this alert',
+    message: 'Unexpected error',
+    showLoader: false,
+    type: 'error',
+    wiggle: null,
 };
 
 export default Alert;
