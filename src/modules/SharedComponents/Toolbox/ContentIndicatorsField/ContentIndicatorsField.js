@@ -54,7 +54,8 @@ export const ContentIndicatorsField = props => (
         {...props}
         disabled={
             props.disabled ||
-            (!!props.meta &&
+            (!props.unselectable &&
+                !!props.meta &&
                 !!props.meta.initial &&
                 !!props.meta.initial.toJS &&
                 props.meta.initial.toJS().length === CONTENT_INDICATORS.length)
