@@ -80,16 +80,14 @@ const renderTitle = titlePieces => {
 export const Doi = ({
     author,
     clearRecordToView,
-    disableSubmit,
-    error,
-    formErrors,
+    doiRequesting,
+    doiUpdated,
+    doiFailed,
     handleSubmit,
     loadingRecordToView,
     loadRecordToView,
     match,
     record,
-    submitSucceeded,
-    submitting,
 }) => {
     React.useEffect(() => {
         // Load record if it hasn't
@@ -102,10 +100,10 @@ export const Doi = ({
 
     const successConfirmationRef = React.useRef();
     React.useEffect(() => {
-        if (!submitting && submitSucceeded && successConfirmationRef.current) {
+        if (!doiRequesting && doiUpdated && successConfirmationRef.current) {
             successConfirmationRef.current.showConfirmation();
         }
-    }, [submitting, submitSucceeded]);
+    }, [doiRequesting, doiUpdated]);
 
     const setSuccessConfirmationRef = React.useCallback(node => {
         successConfirmationRef.current = node;
@@ -142,10 +140,9 @@ export const Doi = ({
 
     const alertProps = validation.getErrorAlertProps({
         alertLocale: txt.alertProps,
-        error,
-        formErrors,
-        submitSucceeded,
-        submitting,
+        error: doiFailed,
+        submitSucceeded: doiUpdated,
+        submitting: doiRequesting,
     });
 
     return (
@@ -183,11 +180,11 @@ export const Doi = ({
                             <Grid item xs={false} sm />
                             <Grid item xs={12} sm="auto">
                                 <Button
-                                    id="cancel-doi"
-                                    data-testid="cancel-doi"
+                                    id="rek-doi-cancel"
+                                    data-testid="rek-doi-cancel"
                                     variant="contained"
                                     fullWidth
-                                    disabled={submitting}
+                                    disabled={doiRequesting}
                                     onClick={navigateToViewPage}
                                 >
                                     {txt.cancelButtonLabel}
@@ -196,15 +193,13 @@ export const Doi = ({
 
                             <Grid item xs={12} sm="auto">
                                 <Button
-                                    id="submit-doi"
-                                    data-testid="submit-doi"
+                                    id="rek-doi-submit"
+                                    data-testid="rek-doi-submit"
                                     variant="contained"
                                     color="primary"
                                     fullWidth
-                                    onClick={handleSubmit}
-                                    disabled={
-                                        submitting || disableSubmit || !isRecord || unsupportedType || hasNonUQDoi
-                                    }
+                                    onClick={() => handleSubmit(record)}
+                                    disabled={doiRequesting || !isRecord || unsupportedType || hasNonUQDoi}
                                 >
                                     {txt.confirmButtonLabel(!!doi)}
                                 </Button>
@@ -220,16 +215,14 @@ export const Doi = ({
 Doi.propTypes = {
     author: PropTypes.object,
     clearRecordToView: PropTypes.func,
-    disableSubmit: PropTypes.bool,
-    error: PropTypes.object,
-    formErrors: PropTypes.object,
+    doiFailed: PropTypes.bool,
+    doiRequesting: PropTypes.bool,
+    doiUpdated: PropTypes.bool,
     handleSubmit: PropTypes.func,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     match: PropTypes.object,
     record: PropTypes.object,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
 };
 
 export default Doi;

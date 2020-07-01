@@ -46,7 +46,7 @@ describe('DOI component', () => {
         expect(wrapper.find('[data-testid="page-title"]').text()).toBe(
             `Create DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
         );
-        expect(wrapper.find('#submit-doi').props().disabled).toBe(false);
+        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
     });
 
     it('should show loading message when record is loading', () => {
@@ -146,7 +146,7 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('#submit-doi').props().disabled).toBe(true);
+        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(true);
     });
 
     it('should enable submit button for existing UQ DOI', () => {
@@ -158,7 +158,7 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('#submit-doi').props().disabled).toBe(false);
+        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
     });
 
     it('should redirect to view page on form cancel', () => {
@@ -168,12 +168,28 @@ describe('DOI component', () => {
 
         const wrapper = setup({});
         wrapper
-            .find('#cancel-doi')
+            .find('#rek-doi-cancel')
             .props()
             .onClick();
         expect(window.location.assign).toBeCalledWith(`http://localhost/view/${record.rek_pid}`);
 
         window.location = location;
+    });
+
+    it('should call handleSubmit on form submit', () => {
+        const testFn = jest.fn();
+        const record = {
+            rek_pid: 'UQ:1234567',
+        };
+        const wrapper = setup({
+            handleSubmit: testFn,
+            record,
+        });
+        wrapper
+            .find('#rek-doi-submit')
+            .props()
+            .onClick();
+        expect(testFn).toHaveBeenCalledWith(record);
     });
 
     it('should display confirmation message on successful submission', () => {
@@ -187,7 +203,7 @@ describe('DOI component', () => {
         const mockUseCallback = jest.spyOn(React, 'useCallback');
         mockUseCallback.mockImplementationOnce(f => f());
         setup({
-            submitSucceeded: true,
+            doiUpdated: true,
         });
         expect(testFn).toHaveBeenCalledTimes(1);
         expect(mockUseCallback).toHaveBeenCalledTimes(1);

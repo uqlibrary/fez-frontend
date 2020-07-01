@@ -1,12 +1,13 @@
 import * as actions from 'actions/actionTypes';
 import doiReducer from './doi';
 
-describe('batchImportDirectories reducer', () => {
+describe('DOI reducer', () => {
     const initialState = {
         doiRequesting: false,
-        doiUpdated: null,
+        doiUpdated: false,
+        doiFailed: false,
     };
-    it('should run reducer for loading state', () => {
+    it('should set loading state', () => {
         const test = doiReducer(initialState, {
             type: actions.RECORD_DOI_UPDATE_REQUESTING,
         });
@@ -16,7 +17,7 @@ describe('batchImportDirectories reducer', () => {
         };
         expect(test).toEqual(expected);
     });
-    it('should run reducer for loading state', () => {
+    it('should set succeeded state', () => {
         const test = doiReducer(initialState, {
             type: actions.RECORD_DOI_UPDATE_SUCCEEDED,
         });
@@ -26,13 +27,13 @@ describe('batchImportDirectories reducer', () => {
         };
         expect(test).toEqual(expected);
     });
-    it('should run reducer for loading failed state', () => {
+    it('should set failed state', () => {
         const test = doiReducer(initialState, {
             type: actions.RECORD_DOI_UPDATE_FAILED,
         });
         const expected = {
             ...initialState,
-            doiUpdated: false,
+            doiFailed: true,
         };
         expect(test).toEqual(expected);
     });
