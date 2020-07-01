@@ -324,10 +324,10 @@ export const getErrorAlertProps = ({
     return alertProps;
 };
 
-export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream => {
+export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEdit = false) => dataStream => {
     const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
     const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
-    return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || isAdmin;
+    return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
 };
 
 export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
