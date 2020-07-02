@@ -58708,7 +58708,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="23"
       style={
         Object {
           "padding": 8,

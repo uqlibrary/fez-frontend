@@ -228,7 +228,194 @@ export default {
             },
             "fez_record_search_key_translated_title": null,
             "fez_record_search_key_wok_doc_types": [],
-            "fez_record_search_key_issn": [],
+            fez_record_search_key_isbn: [
+                {
+                    rek_isbn_id: 1115631,
+                    rek_isbn_pid: 'UQ:333631',
+                    rek_isbn_xsdmf_id: null,
+                    rek_isbn: '9783319715797',
+                    rek_isbn_order: 1
+                },
+                {
+                    rek_isbn_id: 1115632,
+                    rek_isbn_pid: 'UQ:333631',
+                    rek_isbn_xsdmf_id: null,
+                    rek_isbn: '9783319715803',
+                    rek_isbn_order: 2
+                }
+            ],
+            "fez_record_search_key_issn": [
+                {
+                    "rek_issn_id": 5479768,
+                    "rek_issn_pid": "UQ:333631",
+                    "rek_issn_xsdmf_id": null,
+                    "rek_issn": "1365-246X",
+                    "rek_issn_order": 1,
+                    "fez_journal_issns": [
+                        {
+                            "jni_id": 9726,
+                            "jni_jnl_id": 5619,
+                            "jni_issn": "1365-246X",
+                            "jni_issn_order": 2,
+                            "fez_journal": {
+                                "jnl_id": 5619,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2010,
+                                "jnl_created_date": "2010-11-19 00:00:00",
+                                "jnl_updated_date": "2010-11-19 00:00:00",
+                                "jnl_rank": "A",
+                                "jnl_foreign_name": null
+                            }
+                        },
+                        {
+                            "jni_id": 36308,
+                            "jni_jnl_id": 21985,
+                            "jni_issn": "1365-246X",
+                            "jni_issn_order": 2,
+                            "fez_journal": {
+                                "jnl_id": 21985,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2012,
+                                "jnl_created_date": "2011-10-28 00:00:00",
+                                "jnl_updated_date": "2011-10-28 00:00:00",
+                                "jnl_rank": null,
+                                "jnl_foreign_name": ""
+                            }
+                        },
+                        {
+                            "jni_id": 82733,
+                            "jni_jnl_id": 50296,
+                            "jni_issn": "1365-246X",
+                            "jni_issn_order": 2,
+                            "fez_journal": {
+                                "jnl_id": 50296,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2015,
+                                "jnl_created_date": "2014-07-16 00:00:00",
+                                "jnl_updated_date": "2014-07-16 00:00:00",
+                                "jnl_rank": null,
+                                "jnl_foreign_name": ""
+                            }
+                        },
+                        {
+                            "jni_id": 151896,
+                            "jni_jnl_id": 92437,
+                            "jni_issn": "1365-246X",
+                            "jni_issn_order": 2,
+                            "fez_journal": {
+                                "jnl_id": 92437,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2018,
+                                "jnl_created_date": "2017-09-06 00:00:00",
+                                "jnl_updated_date": "2017-09-06 00:00:00",
+                                "jnl_rank": null,
+                                "jnl_foreign_name": ""
+                            }
+                        }
+                    ],
+                    "fez_sherpa_romeo": {
+                        "srm_id": 10422,
+                        "srm_issn": "1365-246X",
+                        "srm_journal_name": "Geophysical Journal International",
+                        "srm_colour": "green"
+                    },
+                    "fez_ulrichs": {
+                        "ulr_issn": "1365-246X",
+                        "ulr_title_id": "175012",
+                        "ulr_title": "Geophysical Journal International"
+                    },
+                    "rek_issn_lookup": "green"
+                },
+                {
+                    "rek_issn_id": 5479769,
+                    "rek_issn_pid": "UQ:c6cf5db",
+                    "rek_issn_xsdmf_id": null,
+                    "rek_issn": "0956-540X",
+                    "rek_issn_order": 2,
+                    "fez_journal_issns": [
+                        {
+                            "jni_id": 9725,
+                            "jni_jnl_id": 5619,
+                            "jni_issn": "0956-540X",
+                            "jni_issn_order": 1,
+                            "fez_journal": {
+                                "jnl_id": 5619,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2010,
+                                "jnl_created_date": "2010-11-19 00:00:00",
+                                "jnl_updated_date": "2010-11-19 00:00:00",
+                                "jnl_rank": "A",
+                                "jnl_foreign_name": null
+                            }
+                        },
+                        {
+                            "jni_id": 36307,
+                            "jni_jnl_id": 21985,
+                            "jni_issn": "0956-540X",
+                            "jni_issn_order": 1,
+                            "fez_journal": {
+                                "jnl_id": 21985,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2012,
+                                "jnl_created_date": "2011-10-28 00:00:00",
+                                "jnl_updated_date": "2011-10-28 00:00:00",
+                                "jnl_rank": null,
+                                "jnl_foreign_name": ""
+                            }
+                        },
+                        {
+                            "jni_id": 82732,
+                            "jni_jnl_id": 50296,
+                            "jni_issn": "0956-540X",
+                            "jni_issn_order": 1,
+                            "fez_journal": {
+                                "jnl_id": 50296,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2015,
+                                "jnl_created_date": "2014-07-16 00:00:00",
+                                "jnl_updated_date": "2014-07-16 00:00:00",
+                                "jnl_rank": null,
+                                "jnl_foreign_name": ""
+                            }
+                        },
+                        {
+                            "jni_id": 151895,
+                            "jni_jnl_id": 92437,
+                            "jni_issn": "0956-540X",
+                            "jni_issn_order": 1,
+                            "fez_journal": {
+                                "jnl_id": 92437,
+                                "jnl_journal_name": "Geophysical Journal International",
+                                "jnl_era_id": 1872,
+                                "jnl_era_year": 2018,
+                                "jnl_created_date": "2017-09-06 00:00:00",
+                                "jnl_updated_date": "2017-09-06 00:00:00",
+                                "jnl_rank": null,
+                                "jnl_foreign_name": ""
+                            }
+                        }
+                    ],
+                    "fez_sherpa_romeo": {
+                        "srm_id": 10421,
+                        "srm_issn": "0956-540X",
+                        "srm_journal_name": "Geophysical Journal International",
+                        "srm_colour": "green"
+                    },
+                    "fez_ulrichs": {
+                        "ulr_issn": "0956-540X",
+                        "ulr_title_id": "175011",
+                        "ulr_title": "Geophysical Journal International"
+                    },
+                    "rek_issn_lookup": "green"
+                }
+            ],
             "fez_datastream_info": [],
             "fez_matched_journals": [],
             "rek_display_type_lookup": "Working Paper",
