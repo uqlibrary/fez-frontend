@@ -56,7 +56,7 @@ context('Batch import', () => {
             .first()
             .click();
 
-        cy.get('[data-testid=collection-pid-select]').should('exist');
+        cy.waitUntil(() => Cypress.$('[data-testid=collection-pid-select]').length === 1);
         cy.get('.content-container form > div > div:nth-of-type(2)')
             .find('.Alert')
             .should('not.contain', validationErrors.communityID)
@@ -68,6 +68,7 @@ context('Batch import', () => {
         allFieldIDs.forEach(item => {
             cy.get('.content-container form .Alert .alert-text li').should('exist');
 
+            cy.waitUntil(() => Cypress.$(`[data-testid=${item}-select]`).length === 1);
             cy.waitUntil(() =>
                 cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
@@ -86,6 +87,7 @@ context('Batch import', () => {
     it('should be able to reset the form on successful form submission', () => {
         // select the first entry from each of the 4 drop downs
         allFieldIDs.forEach(item => {
+            cy.waitUntil(() => Cypress.$(`[data-testid=${item}-select]`).length === 1);
             cy.waitUntil(() =>
                 cy.get(`[data-testid=${item}-select]`).then($el => $el.attr('class').indexOf('-disabled') === -1),
             );
