@@ -706,7 +706,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                               title={
                                 <span>
                                   <strong>
-                                    Record
+                                    Work
                                   </strong>
                                    level security - 
                                   UQ:123457
@@ -719,7 +719,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                 title={
                                   <span>
                                     <strong>
-                                      Record
+                                      Work
                                     </strong>
                                      level security - 
                                     UQ:123457
@@ -1090,7 +1090,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                   title={
                                     <span>
                                       <strong>
-                                        Record
+                                        Work
                                       </strong>
                                        level security - 
                                       UQ:123457
@@ -1167,7 +1167,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                               title={
                                                 <span>
                                                   <strong>
-                                                    Record
+                                                    Work
                                                   </strong>
                                                    level security - 
                                                   UQ:123457
@@ -1197,7 +1197,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                 title={
                                                   <span>
                                                     <strong>
-                                                      Record
+                                                      Work
                                                     </strong>
                                                      level security - 
                                                     UQ:123457
@@ -1271,7 +1271,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                         >
                                                           <span>
                                                             <strong>
-                                                              Record
+                                                              Work
                                                             </strong>
                                                              level security - 
                                                             UQ:123457
@@ -2533,6 +2533,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                                 label="Override inherited security (detailed below)"
                                                                 name="securitySection.rek_security_inherited"
                                                                 normalize={[Function]}
+                                                                overrideSecurityId="rek-security-inherited"
                                                               />
                                                             </div>
                                                           </ForwardRef(Grid)>
@@ -6762,7 +6763,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                               title={
                                 <span>
                                   <strong>
-                                    Record
+                                    Work
                                   </strong>
                                    level security - 
                                   UQ:123456
@@ -6775,7 +6776,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                 title={
                                   <span>
                                     <strong>
-                                      Record
+                                      Work
                                     </strong>
                                      level security - 
                                     UQ:123456
@@ -7146,7 +7147,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                   title={
                                     <span>
                                       <strong>
-                                        Record
+                                        Work
                                       </strong>
                                        level security - 
                                       UQ:123456
@@ -7223,7 +7224,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               title={
                                                 <span>
                                                   <strong>
-                                                    Record
+                                                    Work
                                                   </strong>
                                                    level security - 
                                                   UQ:123456
@@ -7253,7 +7254,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 title={
                                                   <span>
                                                     <strong>
-                                                      Record
+                                                      Work
                                                     </strong>
                                                      level security - 
                                                     UQ:123456
@@ -7327,7 +7328,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                         >
                                                           <span>
                                                             <strong>
-                                                              Record
+                                                              Work
                                                             </strong>
                                                              level security - 
                                                             UQ:123456
@@ -8589,6 +8590,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                                 label="Override inherited security (detailed below)"
                                                                 name="securitySection.rek_security_inherited"
                                                                 normalize={[Function]}
+                                                                overrideSecurityId="rek-security-inherited"
                                                               />
                                                             </div>
                                                           </ForwardRef(Grid)>

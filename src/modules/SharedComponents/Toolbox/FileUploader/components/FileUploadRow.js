@@ -78,6 +78,7 @@ export class FileUploadRow extends PureComponent {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteFile}
                     locale={deleteRecordConfirmation}
+                    confirmDialogBoxId="dsi-dsid-delete"
                 />
                 <FileUploadRowView
                     index={index}

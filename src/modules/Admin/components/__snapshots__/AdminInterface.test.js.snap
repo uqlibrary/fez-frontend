@@ -1445,7 +1445,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
         Object {
           "cancelButtonLabel": "View new record",
           "confirmButtonLabel": "Add another work",
-          "confirmationMessage": "Your new record has been added to eSpace.",
+          "confirmationMessage": "Your new work has been added to eSpace.",
           "confirmationTitle": "Work has been added",
         }
       }
