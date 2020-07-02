@@ -8,6 +8,16 @@ export COMMIT_INFO_AUTHOR=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:
 export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%ae")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 
+echo
+echo "Commit Info:"
+git show ${CI_COMMIT_ID} --no-patch
+echo
+echo
+
+echo "COMMIT_INFO vars:"
+set |grep COMMIT_INFO
+echo
+
 if [[ -z $CI_BUILD_NUMBER ]]; then
   printf "(CI_BUILD_NUMBER is not defined. Build stopped.)\n"
   exit 1
