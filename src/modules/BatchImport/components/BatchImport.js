@@ -153,7 +153,7 @@ export const BatchImport = ({
                             // Branch tested in cypress
                             /* istanbul ignore next */
                             <Grid item xs={12}>
-                                <Alert {...validationErrors} />
+                                <Alert {...validationErrors} testId="batch-import-validation" />
                             </Grid>
                         )}
 
@@ -162,6 +162,7 @@ export const BatchImport = ({
                             <Button
                                 aria-label={batchImportTxt.formLabels.cancelButtonLabel}
                                 children={batchImportTxt.formLabels.cancelButtonLabel}
+                                data-testid="batch-import-cancel"
                                 disabled={submitting}
                                 fullWidth
                                 id="cancelBatchImport"
@@ -174,6 +175,7 @@ export const BatchImport = ({
                                 aria-label={batchImportTxt.formLabels.submitButtonLabel}
                                 children={batchImportTxt.formLabels.submitButtonLabel}
                                 color="primary"
+                                data-testid="batch-import-submit"
                                 disabled={submitting || submitSucceeded || disableSubmit}
                                 fullWidth
                                 id="submitBatchImport"
