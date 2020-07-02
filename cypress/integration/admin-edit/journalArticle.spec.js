@@ -21,9 +21,10 @@ context('Journal Article admin edit', () => {
 
     it('should render the different sections as expected', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
+        cy.viewport(1000, 1000);
+
         // ---------------------------------------------- ADMIN TAB --------------------------------------------------
         cy.log('Admin tab');
-        cy.viewport(1000, 1000);
         cy.get('.StandardPage form >div >div')
             .get('.StandardCard')
             .eq(3)
@@ -419,7 +420,7 @@ context('Journal Article admin edit', () => {
         cy.log('Security tab');
         cy.get('.StandardPage form >div >div')
             .get('.StandardCard')
-            .eq(7)
+            .eq(6)
             .within(() => {
                 cy.root()
                     .children('div')
@@ -477,16 +478,16 @@ context('Journal Article admin edit', () => {
                         ) / 100;
                         cy.get('h4').should('have.text', 'Attached files');
                         cy.get('p')
-                            .eq(1)
+                            .eq(0)
                             .should('have.text', record.fez_datastream_info[1].dsi_dsid);
                         cy.get('input')
-                            .eq(1)
+                            .eq(0)
                             .should('have.value', record.fez_datastream_info[1].dsi_label);
                         cy.get('p')
-                            .eq(2)
+                            .eq(1)
                             .should('have.text', `${fileSizeInMB} MB`);
                         cy.get('input')
-                            .eq(2)
+                            .eq(1)
                             .should(
                                 'have.value',
                                 Cypress.moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'),
