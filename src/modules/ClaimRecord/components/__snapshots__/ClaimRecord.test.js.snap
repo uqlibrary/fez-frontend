@@ -10647,7 +10647,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
-                This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+                This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
                 <a
                   href="mailto:espace@library.uq.edu.au"
                 >
@@ -20643,7 +20643,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
-                This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+                This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
                 <a
                   href="mailto:espace@library.uq.edu.au"
                 >
@@ -20701,7 +20701,7 @@ exports[`Component ClaimRecord  should show the loader 1`] = `
       xs={12}
     >
       <WithStyles(InlineLoader)
-        message="Loading record to claim"
+        message="Loading work to claim"
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

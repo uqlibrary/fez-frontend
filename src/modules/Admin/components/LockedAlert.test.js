@@ -31,7 +31,7 @@ describe('LockedAlert', () => {
         const { getByText } = setup();
         expect(
             getByText(
-                'This record is currently being edited by UQ (uqtest). Make sure that you confirm with this user before ignoring the record lock as it may cause record overwrite issues.',
+                'This work is currently being edited by UQ (uqtest). Make sure that you confirm with this user before ignoring the record lock as it may cause record overwrite issues.',
             ),
         ).toBeInTheDocument();
     });

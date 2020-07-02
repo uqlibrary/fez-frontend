@@ -62,6 +62,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                         label="Override inherited security (detailed below)"
                                         normalize={overrideSecurityValueNormalizer}
                                         disabled={disabled}
+                                        overrideSecurityId="rek-security-inherited"
                                     />
                                 </Grid>
                             </React.Fragment>
