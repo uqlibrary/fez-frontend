@@ -3,6 +3,10 @@
 #export CI_BRANCH="$CODEBUILD_SOURCE_VERSION"
 #export CI_COMMIT_ID="$CODEBUILD_RESOLVED_SOURCE_VERSION"
 #export CI_BUILD_NUMBER="$CODEBUILD_BUILD_ID"
+export CI_NAME=CodeBuild
+export COMMIT_INFO_AUTHOR=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%an")
+export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%ae")
+export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 
 if [[ -z $CI_BUILD_NUMBER ]]; then
   printf "(CI_BUILD_NUMBER is not defined. Build stopped.)\n"
