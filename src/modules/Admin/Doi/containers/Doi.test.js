@@ -1,24 +1,37 @@
-import { Map } from 'immutable';
-import { SubmissionError } from 'redux-form';
 import { onSubmit } from './Doi';
-import Immutable from 'immutable';
 
 jest.mock('actions', () => ({
-    updateDoi: () => Promise.reject(),
+    updateDoi: jest.fn(() => Promise.resolve({})),
 }));
 
-describe('Doi container', () => {
-    it('should throw SubmissionError on submission failure', async () => {
-        const testValue = new Map({});
-        const dispatch = jest.fn(promise => promise);
-        const props = {
-            initialValues: Immutable.Map({
-                record: {
-                    rek_pid: 'UQ:123456',
-                },
-            }),
-        };
+import * as actions from 'actions';
 
-        await expect(onSubmit(testValue, dispatch, props)).rejects.toThrow(new SubmissionError());
+describe('Doi container', () => {
+    it('should call action on submit', async () => {
+        const record = {
+            rek_pid: 'UQ:123456',
+            fez_record_search_key_doi: {
+                rek_doi: 'testing',
+            },
+        };
+        const dispatch = jest.fn(() => Promise.resolve({}));
+        await onSubmit(record, dispatch);
+        const updatedRecord = {
+            ...record,
+            _source: 'doi_preview',
+        };
+        expect(actions.updateDoi).toHaveBeenCalledWith(updatedRecord);
+    });
+
+    it('should log error on submission failure', async () => {
+        const record = {
+            rek_pid: 'UQ:123456',
+        };
+        const failureMessage = 'Error: DOI update failed';
+        const dispatch = jest.fn(() => Promise.reject(failureMessage));
+        const test = jest.spyOn(console, 'log').mockImplementation(() => {});
+
+        await onSubmit(record, dispatch);
+        expect(test).toHaveBeenCalledWith(failureMessage);
     });
 });

@@ -1437,7 +1437,6 @@ export const OA_STATUS = [
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 
-export const ORG_NAME_MATCH_TEXT = 'University of Queensland';
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
 

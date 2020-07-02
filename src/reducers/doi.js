@@ -2,7 +2,8 @@ import * as actions from 'actions/actionTypes';
 
 const initialState = {
     doiRequesting: false,
-    doiUpdated: null,
+    doiUpdated: false,
+    doiFailed: false,
 };
 
 const handlers = {
@@ -20,7 +21,7 @@ const handlers = {
     [actions.RECORD_DOI_UPDATE_FAILED]: () => ({
         ...initialState,
         doiRequesting: false,
-        doiUpdated: false,
+        doiFailed: true,
     }),
 };
 

@@ -36,17 +36,17 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('[data-testid="page-title"]').text()).toBe(
+        expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
             `Update DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
         );
     });
 
     it('should render title and enable submit button without DOI', () => {
         const wrapper = setup({});
-        expect(wrapper.find('[data-testid="page-title"]').text()).toBe(
+        expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
             `Create DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
         );
-        expect(wrapper.find('#submit-doi').props().disabled).toBe(false);
+        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
     });
 
     it('should show loading message when record is loading', () => {
@@ -59,30 +59,15 @@ describe('DOI component', () => {
 
     it('should show empty div and call loader if record is not found', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
-        const cleanupFns = [];
-
-        mockUseEffect.mockImplementation(f => {
-            const hookReturn = f();
-            if (typeof hookReturn === 'function') {
-                cleanupFns.push(hookReturn);
-            }
-        });
+        mockUseEffect.mockImplementation(f => f());
 
         const testFn1 = jest.fn();
-        const testFn2 = jest.fn();
         const wrapper = setup({
             record: {},
             loadRecordToView: testFn1,
-            clearRecordToView: testFn2,
         });
         expect(wrapper.find('div').props().className).toBe('empty');
         expect(testFn1).toHaveBeenCalledWith(record.rek_pid);
-
-        while (cleanupFns.length > 0) {
-            cleanupFns.pop()();
-        }
-
-        expect(testFn2).toHaveBeenCalledTimes(1);
     });
 
     it('should render warnings when required', () => {
@@ -96,11 +81,8 @@ describe('DOI component', () => {
             },
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.find('[data-testid="doi-warning-0"]').text()).toBe(
-            'This work does not appear to be published by The University of Queensland.',
-        );
-        expect(renderedWarningMessage.find('[data-testid="doi-warning-1"]').text()).toBe(
-            'No open access datastreams are attached; DOI will be for metadata only.',
+        expect(renderedWarningMessage.text()).toBe(
+            'Please note:No open access datastreams are attached; DOI will be for metadata only.',
         );
     });
 
@@ -127,14 +109,17 @@ describe('DOI component', () => {
         const wrapper1 = setup({
             record: publicationTypeListJournalArticle.data[0],
         });
-        expect(wrapper1.find('Alert').props().message).toBe('Sorry, type Journal Article is not currently supported.');
+        const renderedWarningMessage1 = shallow(wrapper1.find('Alert').props().message);
+        expect(renderedWarningMessage1.text()).toBe('Error:Sorry, type Journal Article is not currently supported.');
+
         const wrapper2 = setup({
             record: {
                 ...collectionRecord,
                 rek_display_type_lookup: null,
             },
         });
-        expect(wrapper2.find('Alert').props().message).toBe('Sorry, type Collection is not currently supported.');
+        const renderedWarningMessage2 = shallow(wrapper2.find('Alert').props().message);
+        expect(renderedWarningMessage2.text()).toBe('Error:Sorry, type Collection is not currently supported.');
     });
 
     it('should disable submit button for existing non-UQ DOI', () => {
@@ -146,7 +131,7 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('#submit-doi').props().disabled).toBe(true);
+        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(true);
     });
 
     it('should enable submit button for existing UQ DOI', () => {
@@ -158,7 +143,7 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('#submit-doi').props().disabled).toBe(false);
+        expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
     });
 
     it('should redirect to view page on form cancel', () => {
@@ -168,7 +153,7 @@ describe('DOI component', () => {
 
         const wrapper = setup({});
         wrapper
-            .find('#cancel-doi')
+            .find('#rek-doi-cancel')
             .props()
             .onClick();
         expect(window.location.assign).toBeCalledWith(`http://localhost/view/${record.rek_pid}`);
@@ -176,23 +161,26 @@ describe('DOI component', () => {
         window.location = location;
     });
 
-    it('should display confirmation message on successful submission', () => {
-        const mockUseRef = jest.spyOn(React, 'useRef');
+    it('should call handleSubmit on form submit', () => {
         const testFn = jest.fn();
-        mockUseRef.mockImplementation(() => ({
-            current: {
-                showConfirmation: testFn,
-            },
-        }));
-        const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementationOnce(f => f());
-        setup({
-            submitSucceeded: true,
+        const record = {
+            rek_pid: 'UQ:1234567',
+        };
+        const wrapper = setup({
+            handleSubmit: testFn,
+            record,
         });
-        expect(testFn).toHaveBeenCalledTimes(1);
-        expect(mockUseCallback).toHaveBeenCalledTimes(1);
+        wrapper
+            .find('#rek-doi-submit')
+            .props()
+            .onClick();
+        expect(testFn).toHaveBeenCalledWith(record);
+    });
 
-        mockUseRef.mockRestore();
-        mockUseCallback.mockRestore();
+    it('should show request progress dialogue', () => {
+        const wrapper = setup({
+            doiRequesting: true,
+        });
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
     });
 });
