@@ -227,11 +227,13 @@ export class LinksClass extends PureComponent {
                         <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
                     {// if record has a DOI - display a link, should be OA or OA with a date
                     !!doi && <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />}
-                    {// record has OA status of "Link (no DOI)" then produce a google
-                    // scholar link for the publication title
-                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI && (
-                        <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
-                    )}
+                    {// record has OA status of "Link (no DOI)" and has no actual links of its own
+                    // then produce a google scholar link for the publication title
+                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+                        record.fez_record_search_key_link &&
+                        record.fez_record_search_key_link.length === 0 && (
+                            <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
+                        )}
                     {hasLinks &&
                         record.fez_record_search_key_link.map((item, index) => (
                             <this.LinkRow {...this.getPublicationLink(item, index)} key={index} />
