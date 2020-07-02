@@ -1,22 +1,19 @@
 import formsLocale from '../../src/locale/forms';
-// import pagesLocale from '../../src/locale/pages';
 import fileUploaderLocale from '../../src/modules/SharedComponents/Toolbox/FileUploader/locale';
 
 context('Claim possible work', () => {
     const baseUrl = Cypress.config('baseUrl');
     const claimFormLocale = formsLocale.forms.claimPublicationForm;
-    // const possibleClaimsLocale = pagesLocale.pages.claimPublications;
-
-    beforeEach(() => {
-        cy.visit('/records/possible');
-    });
 
     const navToFirstClaim = () => {
-        cy.waitUntil(() => {
-            cy.get('.StandardCard button.publicationAction')
-                .first()
-                .click();
-            return cy.url().should('equal', `${baseUrl}/records/claim`);
+        cy.visit('/records/possible').then(() => {
+            cy.waitUntil(() => {
+                cy.get('.StandardCard button.publicationAction')
+                    .first()
+                    .click();
+                return Cypress.$('.StandardCard button.publicationAction').length === 0;
+            });
+            cy.url().should('equal', `${baseUrl}/records/claim`);
         });
     };
 
@@ -25,23 +22,17 @@ context('Claim possible work', () => {
     });
 
     it('renders a list of possible works with filters', () => {
-        cy.get('h2')
-            .should('have.length', 1)
-            // .should('contain', possibleClaimsLocale.title);
-            .should('contain', 'Claim possible works');
+        cy.visit('/records/possible').then(() => {
+            cy.get('h2')
+                .should('have.length', 1)
+                .should('contain', 'Claim possible works');
 
-        // This causes flake since the mock returns data too quickly.
-        // Need to mock network layer in Cypress to resolve.
-
-        // cy.get('h2 + div')
-        //     .should('have.length', 1)
-        //     .should('contain', 'Searching for possibly your works');
-
-        cy.get('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a').should('have.length', 8);
-        cy.get('[class*="MuiGrid-grid-sm-3"] h6')
-            .should('have.length', 1)
-            .should('contain', 'Refine results');
-        cy.get('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root-"]').should('have.length', 6);
+            cy.get('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a').should('have.length', 8);
+            cy.get('[class*="MuiGrid-grid-sm-3"] h6')
+                .should('have.length', 1)
+                .should('contain', 'Refine results');
+            cy.get('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root-"]').should('have.length', 6);
+        });
     });
 
     it('can navigate to a claim page with specific elements', () => {
@@ -172,36 +163,38 @@ context('Claim possible work', () => {
     });
 
     it('can choose editor, then submit the claim.', () => {
-        cy.waitUntil(() => {
-            cy.contains('.publicationCitation', 'Book with editors')
-                .find('button.publicationAction')
+        cy.visit('/records/possible').then(() => {
+            cy.waitUntil(() => {
+                cy.contains('.publicationCitation', 'Book with editors')
+                    .find('button.publicationAction')
+                    .first()
+                    .click();
+                return cy.url().should('equal', `${baseUrl}/records/claim`);
+            });
+
+            cy.url().should('equal', `${baseUrl}/records/claim`);
+            cy.contains('.StandardCard', claimFormLocale.contributorLinking.title)
+                .find('button')
                 .first()
                 .click();
-            return cy.url().should('equal', `${baseUrl}/records/claim`);
+            cy.contains('I confirm and understand').click();
+            cy.contains('button', claimFormLocale.submit)
+                .should('not.be.disabled')
+                .click();
+            // Testing of the alerts are too time sensitive
+            // cy.get('[class*="Alert-info"] .alert-text')
+            //     .should('contain', claimFormLocale.progressAlert.title)
+            //     .should('contain', claimFormLocale.progressAlert.message);
+            // cy.get('[class*="Alert-done"] .alert-text')
+            //     .should('contain', claimFormLocale.successAlert.title)
+            //     .should('contain', claimFormLocale.successAlert.message);
+            cy.get('div[role="dialog"]')
+                .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
+                .should('have.length', 1);
+            cy.get('div[role="dialog"]')
+                .contains('button', claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
+                .click();
+            cy.url().should('contain', `${baseUrl}/records/possible`);
         });
-
-        cy.url().should('equal', `${baseUrl}/records/claim`);
-        cy.contains('.StandardCard', claimFormLocale.contributorLinking.title)
-            .find('button')
-            .first()
-            .click();
-        cy.contains('I confirm and understand').click();
-        cy.contains('button', claimFormLocale.submit)
-            .should('not.be.disabled')
-            .click();
-        // Testing of the alerts are too time sensitive
-        // cy.get('[class*="Alert-info"] .alert-text')
-        //     .should('contain', claimFormLocale.progressAlert.title)
-        //     .should('contain', claimFormLocale.progressAlert.message);
-        // cy.get('[class*="Alert-done"] .alert-text')
-        //     .should('contain', claimFormLocale.successAlert.title)
-        //     .should('contain', claimFormLocale.successAlert.message);
-        cy.get('div[role="dialog"]')
-            .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
-            .should('have.length', 1);
-        cy.get('div[role="dialog"]')
-            .contains('button', claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
-            .click();
-        cy.url().should('contain', `${baseUrl}/records/possible`);
     });
 });
