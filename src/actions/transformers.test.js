@@ -2185,71 +2185,143 @@ describe('getSecuritySectionSearchKeys', () => {
     it('should return formatted search keys with datastreams for admin update', () => {
         const expected = {
             rek_security_policy: 1,
-            fez_datastream_info: [
-                {
-                    dsi_dsid: 'test.png',
-                    dsi_label: 'test.png new label',
-                    dsi_security_policy: 2,
-                    dsi_security_inherited: 1,
-                },
-                {
-                    dsi_dsid: 'test1.txt',
-                    dsi_label: 'test.txt new label',
-                    dsi_security_policy: 3,
-                    dsi_security_inherited: 0,
-                },
-            ],
         };
         expect(
-            transformers.getSecuritySectionSearchKeys(
-                {
-                    dataStreams: [
-                        {
-                            dsi_dsid: 'test.png',
-                            dsi_label: 'test.png old label',
-                            dsi_security_policy: 2,
-                            dsi_security_inherited: 1,
-                        },
-                        {
-                            dsi_dsid: 'test1.txt',
-                            dsi_label: 'test.txt old label',
-                            dsi_security_policy: 3,
-                            dsi_security_inherited: 0,
-                        },
-                    ],
-                    rek_security_policy: 1,
-                },
-                [
+            transformers.getSecuritySectionSearchKeys({
+                dataStreams: [
                     {
                         dsi_dsid: 'test.png',
-                        dsi_label: 'test.png new label',
+                        dsi_label: 'test.png old label',
                         dsi_security_policy: 2,
                         dsi_security_inherited: 1,
                     },
                     {
                         dsi_dsid: 'test1.txt',
-                        dsi_label: 'test.txt new label',
-                        dsi_security_policy: 1,
-                        dsi_security_inherited: 1,
+                        dsi_label: 'test.txt old label',
+                        dsi_security_policy: 3,
+                        dsi_security_inherited: 0,
                     },
                 ],
-            ),
+                rek_security_policy: 1,
+            }),
         ).toEqual(expected);
     });
 
     it('should return formatted search keys without for admin update', () => {
         const expected = {
             rek_security_policy: 1,
+            rek_security_inherited: 1,
         };
         expect(
             transformers.getSecuritySectionSearchKeys({
                 rek_security_policy: 1,
+                rek_security_inherited: 1,
             }),
         ).toEqual(expected);
     });
 
     it('should return empty object', () => {
         expect(transformers.getSecuritySectionSearchKeys()).toEqual({});
+    });
+});
+
+describe('getDatastreamInfo', () => {
+    it('should return formatted search keys with datastreams for admin update', () => {
+        const expected = {
+            fez_datastream_info: [
+                {
+                    dsi_dsid: 'test.png',
+                    dsi_label: 'test.png new label',
+                    dsi_embargo_date: null,
+                    dsi_state: 'A',
+                    dsi_security_policy: 2,
+                    dsi_security_inherited: 0,
+                },
+                {
+                    dsi_dsid: 'test1.txt',
+                    dsi_label: 'test1.txt new label',
+                    dsi_embargo_date: '2020-11-01',
+                    dsi_state: 'A',
+                    dsi_security_policy: 2,
+                    dsi_security_inherited: 0,
+                },
+                {
+                    dsi_dsid: 'test_delete.txt',
+                    dsi_label: 'test_delete.txt old label',
+                    dsi_embargo_date: '2020-12-31',
+                    dsi_state: 'D',
+                    dsi_security_policy: 1,
+                    dsi_security_inherited: 1,
+                },
+            ],
+        };
+        expect(
+            transformers.getDatastreamInfo(
+                [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_label: 'test.png old label',
+                        dsi_embargo_date: null,
+                        dsi_state: 'A',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_label: 'test1.txt old label',
+                        dsi_embargo_date: '2020-12-31',
+                        dsi_state: 'A',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test_delete.txt',
+                        dsi_label: 'test_delete.txt old label',
+                        dsi_embargo_date: '2020-12-31',
+                        dsi_state: 'A',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                ],
+                [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_label: 'test.png new label',
+                        dsi_embargo_date: null,
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_label: 'test1.txt new label',
+                        dsi_embargo_date: '2020-11-01',
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
+                    },
+                ],
+                [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_label: 'test.png old label',
+                        dsi_security_policy: 2,
+                        dsi_security_inherited: 0,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_label: 'test1.txt old label',
+                        dsi_security_policy: 2,
+                        dsi_security_inherited: 0,
+                    },
+                ],
+            ),
+        ).toEqual(expected);
+    });
+
+    it('should return return empty object', () => {
+        const expected = {
+            fez_datastream_info: [],
+        };
+        expect(transformers.getDatastreamInfo()).toEqual(expected);
     });
 });
 
@@ -3226,7 +3298,6 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should only save the supplied key for a many-to-one search key', () => {
             const dataMany = {
-                // prettier-ignore
                 issnField: [
                     { rek_value: '1212-1212', rek_order: 1 },
                     { rek_value: '2323-2323', rek_order: 2 },
@@ -3322,7 +3393,6 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfTitle: ['eng', 'pol'],
                 languageOfBookTitle: ['eng', 'fre'],
-                // prettier-ignore
                 issnField: [
                     { rek_value: '1212-1212', rek_order: 1 },
                     { rek_value: '2323-2323', rek_order: 2 },

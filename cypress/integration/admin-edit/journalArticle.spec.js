@@ -21,9 +21,10 @@ context('Journal Article admin edit', () => {
 
     it('should render the different sections as expected', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
+        cy.viewport(1000, 1000);
+
         // ---------------------------------------------- ADMIN TAB --------------------------------------------------
         cy.log('Admin tab');
-        cy.viewport(1000, 1000);
         cy.get('.StandardPage form >div >div')
             .get('.StandardCard')
             .eq(3)

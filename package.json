@@ -218,7 +218,7 @@
         "start": "webpack-dev-server",
         "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config --disable-host-check",
         "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config",
-        "start:mock": "cross-env USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
+        "start:mock": "cross-env USE_MOCK=true FULL_PATH=http://localhost:3000 NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs -s",
