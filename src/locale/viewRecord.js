@@ -1292,6 +1292,14 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 17,
                 },
+                {
+                    field: 'fez_record_search_key_isbn',
+                    order: 18,
+                },
+                {
+                    field: 'fez_record_search_key_issn',
+                    order: 19,
+                },
             ],
             Design: [
                 {
@@ -2567,6 +2575,14 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_isbn',
+                    order: 20,
+                },
+                {
+                    field: 'fez_record_search_key_issn',
+                    order: 21,
                 },
             ],
             footer: [
