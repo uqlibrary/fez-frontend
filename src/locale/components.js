@@ -1838,7 +1838,7 @@ export default {
                         title: 'Author ID',
                         combiner: 'is',
                         type: 'AuthorIdLookup',
-                        hint: 'Add an author id',
+                        hint: 'Type an author name to search',
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list',
                     },

@@ -100,6 +100,8 @@ const getInputProps = (inputField, value, onChange, label) => {
                 ...lookupDefaultProps,
                 value: { id: value, value: label },
                 label: label,
+                hideLabel: true,
+                placeholder: inputField.hint,
                 authorIdFieldId: 'rek-author-id',
                 onChange: item => {
                     if (!!item && !!item.id && parseInt(item.id, 10) > 0) {

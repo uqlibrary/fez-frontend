@@ -1,7 +1,7 @@
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-import matchSorter from 'match-sorter';
+import Fuse from 'fuse.js';
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const mapStateToProps = (state, props) => {
@@ -9,13 +9,35 @@ const mapStateToProps = (state, props) => {
         itemsList: [],
         itemsLoading: false,
     };
+    const fuseOptions = {
+        useExtendedSearch: true,
+        ignoreLocation: false,
+        ignoreFieldNorm: false,
+        keys: ['id', 'value'],
+    };
     return {
         id: props.id,
         autoCompleteAsynchronousFieldId: props.authorIdFieldId,
         itemsList: itemsList.filter(item => !!item.id && item.id !== 0),
         itemsLoading,
+        hideLabel: props.hideLabel || false,
+        placeholder: props.placeholder || null,
         getOptionLabel: item => (!!item && !!item.id && String(`${item.id} (${item.value})`)) || '',
-        filterOptions: (options, { inputValue }) => matchSorter(options, inputValue, { keys: ['id', 'value'] }),
+        filterOptions: (options, { inputValue }) => {
+            const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
+            return fuseAutocompleteOptions.search(inputValue).map(item => {
+                return {
+                    aut_display_name: item.item.aut_display_name,
+                    aut_fname: item.item.aut_ref_num,
+                    aut_id: item.item.aut_id,
+                    aut_lname: item.item.aut_lname,
+                    aut_title: item.item.aut_title,
+                    id: item.item.id,
+                    value: item.item.value,
+                    refIndex: item.refIndex,
+                };
+            });
+        },
         OptionTemplate: GenericOptionTemplate,
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
             ? {
