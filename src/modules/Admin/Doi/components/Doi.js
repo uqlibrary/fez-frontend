@@ -24,44 +24,48 @@ import DoiPreview from './DoiPreview';
 
 const txt = locale.pages.doi;
 
-const renderAlertText = (title, message) => (
+const renderAlertText = (title, message, type) => (
     <span>
         <Typography variant="h3" style={{ fontSize: 20, marginTop: 6 }}>
             {title}
         </Typography>
-        <Typography variant="body2">{message}</Typography>
+        <Typography variant="body2" data-testid={`rek-doi-${type}-0`}>
+            {message}
+        </Typography>
     </span>
 );
 
 export const getWarningMessage = record => {
     const title = txt.alertMessages.warningTitle;
+    const alertType = 'warning';
     // Need to show a warning if record doesn't have open-access datastreams
     const datastreamIsOpenAccess = datastream =>
         getFileOpenAccessStatus(record, datastream, { isAdmin: true }).isOpenAccess;
     const hasOADatastreams =
         !record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0;
 
-    return hasOADatastreams ? renderAlertText(title, txt.alertMessages.noOADatastreams) : '';
+    return hasOADatastreams ? renderAlertText(title, txt.alertMessages.noOADatastreams, alertType) : '';
 };
 
 export const getErrorMessage = ({ displayTypeLookup, doi, isRecord, recordType, unsupportedType }) => {
     const title = txt.alertMessages.errorTitle;
+    const alertType = 'error';
 
     if (!isRecord || unsupportedType) {
-        return renderAlertText(title, txt.alertMessages.unsupportedMessage(displayTypeLookup || recordType));
+        return renderAlertText(title, txt.alertMessages.unsupportedMessage(displayTypeLookup || recordType), alertType);
     }
 
     // Should not allow updates of existing Non-UQ DOIs
     const hasNonUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0;
 
-    return hasNonUQDoi ? renderAlertText(title, txt.alertMessages.uqIsNotPublisher) : '';
+    return hasNonUQDoi ? renderAlertText(title, txt.alertMessages.uqIsNotPublisher, alertType) : '';
 };
 
 const renderTitle = titlePieces => {
     const titleTemplate = txt.pageTitle({ ...titlePieces, title: '%TITLE%' });
     const pieces = titleTemplate.split('%TITLE%');
     return (
-        <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="page-title">
+        <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="doi-page-title">
             {pieces[0]}
             {ReactHtmlParser(titlePieces.title)}
             {pieces[1]}

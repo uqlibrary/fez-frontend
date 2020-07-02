@@ -36,7 +36,7 @@ export const DoiPreview = ({ author, publication }) => {
                 }));
             }
             const componentProps = {
-                heading: displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field],
+                label: displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field],
                 field,
                 data,
                 key: field,
@@ -53,16 +53,16 @@ export const DoiPreview = ({ author, publication }) => {
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.doi}>
                     <DoiField
-                        heading={txt.doiHeading(!!doi)}
-                        field="rek-doi"
+                        label={txt.doiLabel(!!doi)}
+                        field="rek_doi"
                         data={doi || txt.doiTemplate(publication.rek_pid)}
                     />
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.depositor}>
-                    <DoiField heading={txt.depositorNameTitle} field="rek-author-name" data={author.aut_display_name} />
-                    <DoiField heading={txt.depositorEmailTitle} field="rek-author-email" data={author.aut_email} />
+                    <DoiField label={txt.depositorNameTitle} field="rek_author-name" data={author.aut_display_name} />
+                    <DoiField label={txt.depositorEmailTitle} field="rek_author-email" data={author.aut_email} />
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>

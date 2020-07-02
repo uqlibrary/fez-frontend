@@ -36,14 +36,14 @@ describe('DOI component', () => {
                 },
             },
         });
-        expect(wrapper.find('[data-testid="page-title"]').text()).toBe(
+        expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
             `Update DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
         );
     });
 
     it('should render title and enable submit button without DOI', () => {
         const wrapper = setup({});
-        expect(wrapper.find('[data-testid="page-title"]').text()).toBe(
+        expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
             `Create DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
         );
         expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);

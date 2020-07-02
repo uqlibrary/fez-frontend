@@ -843,7 +843,7 @@ export default {
                 depositor: 'Depositor Information',
                 work: 'Work details',
             },
-            doiHeading: hasDoi => (hasDoi ? 'DOI (Existing)' : 'DOI (Preview)'),
+            doiLabel: hasDoi => (hasDoi ? 'DOI (Existing)' : 'DOI (Preview)'),
             doiTemplate: pid => `${DOI_ORG_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
             depositorEmailTitle: 'Email',
