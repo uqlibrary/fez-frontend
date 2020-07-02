@@ -1408,6 +1408,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Upload files",
+                                                  "data-testid": "fez-datastream-info-input",
                                                   "id": "Uploader",
                                                 }
                                               }
@@ -2483,6 +2484,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                 <input
                                                   aria-label="Upload files"
                                                   autoComplete="off"
+                                                  data-testid="fez-datastream-info-input"
                                                   disabled={false}
                                                   id="Uploader"
                                                   multiple={true}
@@ -3948,6 +3950,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                               inputProps={
                                                 Object {
                                                   "aria-label": "Upload files",
+                                                  "data-testid": "fez-datastream-info-input",
                                                   "id": "Uploader",
                                                 }
                                               }
@@ -5023,6 +5026,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                 <input
                                                   aria-label="Upload files"
                                                   autoComplete="off"
+                                                  data-testid="fez-datastream-info-input"
                                                   disabled={false}
                                                   id="Uploader"
                                                   multiple={true}
@@ -5763,11 +5767,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -5818,6 +5824,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     />
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"
@@ -6076,11 +6083,13 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="b.txt"
@@ -6666,12 +6675,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       defaultAccessCondition={3}
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -6724,6 +6735,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     <WithWidth(FileUploadRow)
       defaultAccessCondition={3}
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"
@@ -7147,11 +7159,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -7202,6 +7216,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"
@@ -7461,11 +7476,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -7518,6 +7535,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"
@@ -7777,11 +7795,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -7834,6 +7854,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"
@@ -8103,11 +8124,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -8160,6 +8183,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     />
     <WithWidth(FileUploadRow)
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"
@@ -8592,12 +8616,14 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
     item={true}
     xs={12}
   >
     <WithWidth(FileUploadRow)
       defaultAccessCondition={3}
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
       key="a.txt"
@@ -8650,6 +8676,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     <WithWidth(FileUploadRow)
       defaultAccessCondition={3}
       fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
       key="b.txt"

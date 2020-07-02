@@ -10,15 +10,16 @@ import FileUploadRowMobileView from './FileUploadRowMobileView';
 
 export class FileUploadRow extends PureComponent {
     static propTypes = {
-        index: PropTypes.number.isRequired,
-        uploadedFile: PropTypes.object.isRequired,
-        locale: PropTypes.object,
-        requireOpenAccessStatus: PropTypes.bool.isRequired,
         disabled: PropTypes.bool,
+        fileUploadRowId: PropTypes.string,
         focusOnIndex: PropTypes.number,
+        index: PropTypes.number.isRequired,
+        locale: PropTypes.object,
         onDelete: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func,
         onEmbargoDateChange: PropTypes.func,
+        requireOpenAccessStatus: PropTypes.bool.isRequired,
+        uploadedFile: PropTypes.object.isRequired,
         width: PropTypes.string,
     };
 
@@ -92,6 +93,7 @@ export class FileUploadRow extends PureComponent {
                     focusOnIndex={focusOnIndex}
                     locale={fileUploadRowLocale}
                     accessConditionLocale={this.props.locale.fileUploadRowAccessSelector}
+                    fileUploadRowViewId={this.props.fileUploadRowId}
                 />
             </Fragment>
         );

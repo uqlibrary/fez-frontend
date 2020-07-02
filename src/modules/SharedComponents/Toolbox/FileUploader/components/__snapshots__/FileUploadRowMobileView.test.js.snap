@@ -19,6 +19,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
       <AttachmentIcon />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
+      data-testid="dsi-dsid-0"
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -56,6 +57,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       <AttachmentIcon />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
+      data-testid="dsi-dsid-0"
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -92,6 +94,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
         value={8}
       />
@@ -121,6 +124,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
       }
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
@@ -136,6 +140,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     >
       <Connect(FileUploadRowStatus)
         disabled={false}
+        fileUploadRowStatusId="dsi-dsid-0"
         name="test.pdf"
         onDelete={[MockFunction]}
       />
@@ -163,6 +168,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       <AttachmentIcon />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
+      data-testid="dsi-dsid-0"
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -199,6 +205,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
         value={null}
       />
@@ -228,6 +235,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
       }
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-embargo-date-0"
         gutterBottom={true}
         variant="body2"
       >
@@ -243,6 +251,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     >
       <Connect(FileUploadRowStatus)
         disabled={false}
+        fileUploadRowStatusId="dsi-dsid-0"
         name="test.pdf"
         onDelete={[MockFunction]}
       />
@@ -300,6 +309,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       <AttachmentIcon />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
+      data-testid="dsi-dsid-0"
       primary="test.pdf (100 MB)"
       primaryTypographyProps={
         Object {
@@ -336,6 +346,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
       <WithStyles(FileUploadAccessSelector)
         autoFocus={false}
         disabled={false}
+        fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
         value={9}
       />
@@ -366,6 +377,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     >
       <WithStyles(FileUploadEmbargoDate)
         disabled={false}
+        fileUploadEmbargoDateId="dsi-embargo-date-0"
         minDate={2017-06-29T14:00:00.000Z}
         onChange={[MockFunction]}
         value="01/01/2017"
@@ -380,6 +392,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     >
       <Connect(FileUploadRowStatus)
         disabled={false}
+        fileUploadRowStatusId="dsi-dsid-0"
         name="test.pdf"
         onDelete={[MockFunction]}
       />
