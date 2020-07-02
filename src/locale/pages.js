@@ -818,7 +818,7 @@ export default {
                 type: 'done',
                 title: 'ORCID linked',
                 message:
-                    'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and CrossRef will be synced to your eSpace profile within the next 7 days.',
+                    'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and Crossref will be synced to your eSpace profile within the next 7 days.',
                 allowDismiss: true,
             },
             progressAlert: {
@@ -860,13 +860,13 @@ export default {
                 progressAlert: {
                     type: 'info_outline',
                     title: 'Requesting',
-                    message: 'Upload to CrossRef is being queued.',
+                    message: 'Upload to Crossref is being queued.',
                     showLoader: true,
                 },
                 successAlert: {
                     type: 'done',
                     title: 'Success',
-                    message: 'Upload to CrossRef has been queued successfully.',
+                    message: 'Upload to Crossref has been queued successfully.',
                 },
                 errorAlert: {
                     type: 'error_outline',

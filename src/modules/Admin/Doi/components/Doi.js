@@ -153,11 +153,9 @@ export const Doi = ({
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid item xs={12}>
-                        {(!!errorMessage && (
-                            <Alert message={errorMessage} type="error" data-testid="rek-doi-error" />
-                        )) ||
+                        {(!!errorMessage && <Alert message={errorMessage} type="error" testId="rek-doi-error" />) ||
                             (!!warningMessage && (
-                                <Alert message={warningMessage} type="warning" data-testid="rek-doi-warning" />
+                                <Alert message={warningMessage} type="warning" testId="rek-doi-warning" />
                             ))}
                     </Grid>
                     <Grid item xs={12}>
