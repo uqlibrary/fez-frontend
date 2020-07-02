@@ -804,4 +804,11 @@ describe('Backend routes method', () => {
             apiUrl: 'external/orcid/jobs/sync',
         });
     });
+
+    it('should construct url for UNLOCK_RECORD_API', () => {
+        const pid = 'UQ:123456';
+        expect(routes.UNLOCK_RECORD_API({ pid })).toEqual({
+            apiUrl: `records/${pid}/unlock`,
+        });
+    });
 });

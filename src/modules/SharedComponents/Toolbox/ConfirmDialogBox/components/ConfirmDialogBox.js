@@ -114,7 +114,7 @@ export class ConfirmDialogBox extends Component {
                                 color={'primary'}
                                 fullWidth
                                 onClick={this._onAction}
-                                data-testId={`confirm-${this.props.confirmDialogBoxId}`}
+                                data-testid={`confirm-${this.props.confirmDialogBoxId}`}
                             />
                         </Grid>
                         {this.props.showAlternateActionButton && (
