@@ -259,7 +259,7 @@ export const Alert = ({
     dismissTitle,
     message,
     showLoader,
-    testId,
+    alertId,
     title,
     type,
     wiggle,
@@ -299,7 +299,7 @@ export const Alert = ({
                 justify="center"
                 alignItems="flex-start"
                 alignContent="center"
-                data-testid={testId}
+                data-testid={alertId}
             >
                 <Grid item xs={12} sm className={action && !disableAlertClick && classes.linked}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
@@ -394,7 +394,7 @@ Alert.propTypes = {
     dismissTitle: PropTypes.string,
     message: PropTypes.any.isRequired,
     showLoader: PropTypes.bool,
-    testId: PropTypes.string,
+    alertId: PropTypes.string,
     title: PropTypes.string,
     type: PropTypes.oneOf([
         'error',

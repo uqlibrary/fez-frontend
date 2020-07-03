@@ -153,7 +153,7 @@ export const BatchImport = ({
                             // Branch tested in cypress
                             /* istanbul ignore next */
                             <Grid item xs={12}>
-                                <Alert {...validationErrors} testId="batch-import-validation" />
+                                <Alert {...validationErrors} alertId="batch-import-validation" />
                             </Grid>
                         )}
 
