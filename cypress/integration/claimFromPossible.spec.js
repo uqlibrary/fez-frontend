@@ -11,6 +11,15 @@ context('Claim possible work', () => {
         cy.visit('/records/possible');
     });
 
+    const navToFirstClaim = () => {
+        cy.waitUntil(() => {
+            cy.get('.StandardCard button.publicationAction')
+                .first()
+                .click();
+            return cy.url().should('equal', `${baseUrl}/records/claim`);
+        });
+    };
+
     afterEach(() => {
         cy.navToHomeFromMenu(claimFormLocale.cancelWorkflowConfirmation);
     });
@@ -36,10 +45,7 @@ context('Claim possible work', () => {
     });
 
     it('can navigate to a claim page with specific elements', () => {
-        cy.get('.StandardCard button.publicationAction')
-            .first()
-            .click();
-        cy.url().should('equal', `${baseUrl}/records/claim`);
+        navToFirstClaim();
         cy.get('h2')
             .should('have.length', 1)
             .should('contain', claimFormLocale.title);
@@ -58,10 +64,7 @@ context('Claim possible work', () => {
     });
 
     it('can cancel a claim after filling the form', () => {
-        cy.get('.StandardCard button.publicationAction')
-            .first()
-            .click();
-        cy.url().should('equal', `${baseUrl}/records/claim`);
+        navToFirstClaim();
         cy.contains('.StandardCard', claimFormLocale.comments.title)
             .find('textarea')
             .type('Test comment');
@@ -73,10 +76,7 @@ context('Claim possible work', () => {
     });
 
     it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
-        cy.get('.StandardCard button.publicationAction')
-            .first()
-            .click();
-        cy.url().should('equal', `${baseUrl}/records/claim`);
+        navToFirstClaim();
         cy.contains(claimFormLocale.contentIndicators.title).scrollIntoView();
         cy.get('[data-testid=rek-content-indicator-select]').click();
         // Click new item in multiselect modal
@@ -99,10 +99,7 @@ context('Claim possible work', () => {
     });
 
     it('will detect and prevent submission of invalid URLs', () => {
-        cy.get('.StandardCard button.publicationAction')
-            .first()
-            .click();
-        cy.url().should('equal', `${baseUrl}/records/claim`);
+        navToFirstClaim();
         // Make form valid otherwise
         cy.contains('.StandardCard', claimFormLocale.authorLinking.title)
             .find('button')
@@ -130,10 +127,7 @@ context('Claim possible work', () => {
     });
 
     it('will allow upload of files', () => {
-        cy.get('.StandardCard button.publicationAction')
-            .first()
-            .click();
-        cy.url().should('equal', `${baseUrl}/records/claim`);
+        navToFirstClaim();
         const fileName = 'test.jpg';
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
@@ -150,10 +144,7 @@ context('Claim possible work', () => {
     });
 
     it('can choose author, then submit the claim.', () => {
-        cy.get('.StandardCard button.publicationAction')
-            .first()
-            .click();
-        cy.url().should('equal', `${baseUrl}/records/claim`);
+        navToFirstClaim();
         cy.contains('.StandardCard', claimFormLocale.authorLinking.title)
             .find('button')
             .first()
@@ -179,10 +170,14 @@ context('Claim possible work', () => {
     });
 
     it('can choose editor, then submit the claim.', () => {
-        cy.contains('.publicationCitation', 'Book with editors')
-            .find('button.publicationAction')
-            .first()
-            .click();
+        cy.waitUntil(() => {
+            cy.contains('.publicationCitation', 'Book with editors')
+                .find('button.publicationAction')
+                .first()
+                .click();
+            return cy.url().should('equal', `${baseUrl}/records/claim`);
+        });
+
         cy.url().should('equal', `${baseUrl}/records/claim`);
         cy.contains('.StandardCard', claimFormLocale.contributorLinking.title)
             .find('button')
