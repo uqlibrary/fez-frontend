@@ -145,7 +145,9 @@ context('Claim possible work', () => {
             .should('contain', fileUploaderLocale.successMessage.replace('[numberOfFiles]', '1'))
             .contains(fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.initialValue)
             .click();
-        cy.contains('#menu-accessCondition li', 'Open Access').click();
+        cy.get('[data-testid=dsi-open-access-0-options]')
+            .contains('Open Access')
+            .click();
         cy.get('[class*="FileUploadTermsAndConditions-root"]').click();
     });
 
