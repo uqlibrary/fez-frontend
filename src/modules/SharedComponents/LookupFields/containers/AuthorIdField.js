@@ -25,18 +25,7 @@ const mapStateToProps = (state, props) => {
         getOptionLabel: item => (!!item && !!item.id && String(`${item.id} (${item.value})`)) || '',
         filterOptions: (options, { inputValue }) => {
             const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
-            return fuseAutocompleteOptions.search(inputValue).map(item => {
-                return {
-                    aut_display_name: item.item.aut_display_name,
-                    aut_fname: item.item.aut_ref_num,
-                    aut_id: item.item.aut_id,
-                    aut_lname: item.item.aut_lname,
-                    aut_title: item.item.aut_title,
-                    id: item.item.id,
-                    value: item.item.value,
-                    refIndex: item.refIndex,
-                };
-            });
+            return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
         },
         OptionTemplate: GenericOptionTemplate,
         ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
