@@ -91,7 +91,7 @@ context('Search', () => {
             .click();
         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
             .should('contain', 'Searching for works')
-            .contains('Displaying works 1 to 7 of 7 total records.');
+            .contains('Displaying works 1 to 7 of 7 total works.');
     });
 
     it('should show appropriate form validation for PID field', () => {
