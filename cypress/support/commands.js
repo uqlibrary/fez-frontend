@@ -38,7 +38,7 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
         cy.url().then($url => {
             if ($url !== `${baseUrl}/`) {
                 cy.contains(locale.confirmationTitle)
-                    .closest('[role="dialog"]')
+                    .closest('[role="presentation"]')
                     .contains(locale.confirmButtonLabel)
                     .click();
             }
