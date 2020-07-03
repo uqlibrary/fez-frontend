@@ -158,7 +158,13 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
+            <StandardCard
+                standardCardId={`${txt.current.sections[tab].title.toLowerCase()}-section`}
+                title={txt.current.sections[tab].title}
+                primaryHeader
+                squareTop
+                smallTitle
+            >
                 <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
