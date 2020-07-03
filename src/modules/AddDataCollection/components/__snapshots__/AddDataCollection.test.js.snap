@@ -477,7 +477,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           <StandardCard
             help={
               Object {
-                "text": <p>
+                "text": <div>
                   <h3>
                     Access conditions
                   </h3>
@@ -492,8 +492,24 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   <h3>
                     Licence
                   </h3>
+                  <h4>
+                    UQ General Usage Terms and Conditions for data publishing in eSpace
+                  </h4>
                   <p>
-                    View
+                    University of Queensland provides standard licence agreements for researchers publishing their datasets in eSpace. The license agreements ensure that downloads and reuse of your data will be properly acknowledged.
+                  </p>
+                  <h4>
+                    Current types of licences
+                  </h4>
+                  <div
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
+                      }
+                    }
+                  />
+                  <p>
+                    View more on
                      
                     <a
                       href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -502,7 +518,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       UQ Terms & Conditions
                     </a>
                   </p>
-                </p>,
+                </div>,
                 "title": "Access and licence",
               }
             }
@@ -1312,6 +1328,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
 </StandardPage>
 `;
 
+exports[`AddDataCollection test should not generate an error when licence locale is missing 1`] = `undefined`;
+
+exports[`AddDataCollection test should not generate an error when licence locale is missing 2`] = `undefined`;
+
 exports[`AddDataCollection test should render component with a valid collection date range 1`] = `
 <StandardPage
   title="Add data collection"
@@ -1777,7 +1797,7 @@ exports[`AddDataCollection test should render component with a valid collection 
           <StandardCard
             help={
               Object {
-                "text": <p>
+                "text": <div>
                   <h3>
                     Access conditions
                   </h3>
@@ -1792,8 +1812,24 @@ exports[`AddDataCollection test should render component with a valid collection 
                   <h3>
                     Licence
                   </h3>
+                  <h4>
+                    UQ General Usage Terms and Conditions for data publishing in eSpace
+                  </h4>
                   <p>
-                    View
+                    University of Queensland provides standard licence agreements for researchers publishing their datasets in eSpace. The license agreements ensure that downloads and reuse of your data will be properly acknowledged.
+                  </p>
+                  <h4>
+                    Current types of licences
+                  </h4>
+                  <div
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
+                      }
+                    }
+                  />
+                  <p>
+                    View more on
                      
                     <a
                       href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -1802,7 +1838,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       UQ Terms & Conditions
                     </a>
                   </p>
-                </p>,
+                </div>,
                 "title": "Access and licence",
               }
             }
@@ -3077,7 +3113,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
           <StandardCard
             help={
               Object {
-                "text": <p>
+                "text": <div>
                   <h3>
                     Access conditions
                   </h3>
@@ -3092,8 +3128,24 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   <h3>
                     Licence
                   </h3>
+                  <h4>
+                    UQ General Usage Terms and Conditions for data publishing in eSpace
+                  </h4>
                   <p>
-                    View
+                    University of Queensland provides standard licence agreements for researchers publishing their datasets in eSpace. The license agreements ensure that downloads and reuse of your data will be properly acknowledged.
+                  </p>
+                  <h4>
+                    Current types of licences
+                  </h4>
+                  <div
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
+                      }
+                    }
+                  />
+                  <p>
+                    View more on
                      
                     <a
                       href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -3102,7 +3154,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       UQ Terms & Conditions
                     </a>
                   </p>
-                </p>,
+                </div>,
                 "title": "Access and licence",
               }
             }
@@ -4377,7 +4429,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           <StandardCard
             help={
               Object {
-                "text": <p>
+                "text": <div>
                   <h3>
                     Access conditions
                   </h3>
@@ -4392,8 +4444,24 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   <h3>
                     Licence
                   </h3>
+                  <h4>
+                    UQ General Usage Terms and Conditions for data publishing in eSpace
+                  </h4>
                   <p>
-                    View
+                    University of Queensland provides standard licence agreements for researchers publishing their datasets in eSpace. The license agreements ensure that downloads and reuse of your data will be properly acknowledged.
+                  </p>
+                  <h4>
+                    Current types of licences
+                  </h4>
+                  <div
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
+                      }
+                    }
+                  />
+                  <p>
+                    View more on
                      
                     <a
                       href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -4402,7 +4470,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       UQ Terms & Conditions
                     </a>
                   </p>
-                </p>,
+                </div>,
                 "title": "Access and licence",
               }
             }
