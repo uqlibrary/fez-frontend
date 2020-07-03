@@ -702,6 +702,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                           >
                             <StandardCard
                               accentHeader={true}
+                              standardCardId="record-security-card"
                               subCard={true}
                               title={
                                 <span>
@@ -715,6 +716,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                standardCardId="record-security-card"
                                 subCard={true}
                                 title={
                                   <span>
@@ -737,6 +739,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                       "fullHeight": "Cards-fullHeight-108",
                                     }
                                   }
+                                  standardCardId="record-security-card"
                                   subCard={true}
                                   theme={
                                     Object {
@@ -1099,6 +1102,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                 >
                                   <WithStyles(ForwardRef(Card))
                                     className="Cards-card-104 StandardCard"
+                                    data-testid="record-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
@@ -1108,10 +1112,12 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                           "root": "MuiCard-root",
                                         }
                                       }
+                                      data-testid="record-security-card"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
                                         className="MuiCard-root Cards-card-104 StandardCard"
+                                        data-testid="record-security-card"
                                         elevation={1}
                                         style={Object {}}
                                       >
@@ -1149,11 +1155,13 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                               "rounded": "MuiPaper-rounded",
                                             }
                                           }
+                                          data-testid="record-security-card"
                                           elevation={1}
                                           style={Object {}}
                                         >
                                           <div
                                             className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            data-testid="record-security-card"
                                             style={Object {}}
                                           >
                                             <WithStyles(ForwardRef(CardHeader))
@@ -1177,6 +1185,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                 Object {
                                                   "color": "inherit",
                                                   "component": "h4",
+                                                  "data-testid": "record-security-card-header",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -1207,6 +1216,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                   Object {
                                                     "color": "inherit",
                                                     "component": "h4",
+                                                    "data-testid": "record-security-card-header",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -1222,6 +1232,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                       className="MuiCardHeader-title"
                                                       color="inherit"
                                                       component="h4"
+                                                      data-testid="record-security-card-header"
                                                       display="block"
                                                       variant="h5"
                                                     >
@@ -1263,11 +1274,13 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                         }
                                                         color="inherit"
                                                         component="h4"
+                                                        data-testid="record-security-card-header"
                                                         display="block"
                                                         variant="h5"
                                                       >
                                                         <h4
                                                           className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                          data-testid="record-security-card-header"
                                                         >
                                                           <span>
                                                             <strong>
@@ -1285,6 +1298,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                             </WithStyles(ForwardRef(CardHeader))>
                                             <WithStyles(ForwardRef(CardContent))
                                               className=""
+                                              data-testid="record-security-card-content"
                                             >
                                               <ForwardRef(CardContent)
                                                 className=""
@@ -1293,9 +1307,11 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                     "root": "MuiCardContent-root",
                                                   }
                                                 }
+                                                data-testid="record-security-card-content"
                                               >
                                                 <div
                                                   className="MuiCardContent-root"
+                                                  data-testid="record-security-card-content"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     container={true}
@@ -3286,6 +3302,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                           >
                             <StandardCard
                               accentHeader={true}
+                              standardCardId="record-security-card"
                               subCard={true}
                               title={
                                 <span>
@@ -3299,6 +3316,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                standardCardId="record-security-card"
                                 subCard={true}
                                 title={
                                   <span>
@@ -3321,6 +3339,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                       "fullHeight": "Cards-fullHeight-108",
                                     }
                                   }
+                                  standardCardId="record-security-card"
                                   subCard={true}
                                   theme={
                                     Object {
@@ -3683,6 +3702,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                 >
                                   <WithStyles(ForwardRef(Card))
                                     className="Cards-card-104 StandardCard"
+                                    data-testid="record-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
@@ -3692,10 +3712,12 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                           "root": "MuiCard-root",
                                         }
                                       }
+                                      data-testid="record-security-card"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
                                         className="MuiCard-root Cards-card-104 StandardCard"
+                                        data-testid="record-security-card"
                                         elevation={1}
                                         style={Object {}}
                                       >
@@ -3733,11 +3755,13 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                               "rounded": "MuiPaper-rounded",
                                             }
                                           }
+                                          data-testid="record-security-card"
                                           elevation={1}
                                           style={Object {}}
                                         >
                                           <div
                                             className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            data-testid="record-security-card"
                                             style={Object {}}
                                           >
                                             <WithStyles(ForwardRef(CardHeader))
@@ -3761,6 +3785,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                 Object {
                                                   "color": "inherit",
                                                   "component": "h4",
+                                                  "data-testid": "record-security-card-header",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -3791,6 +3816,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                   Object {
                                                     "color": "inherit",
                                                     "component": "h4",
+                                                    "data-testid": "record-security-card-header",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -3806,6 +3832,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                       className="MuiCardHeader-title"
                                                       color="inherit"
                                                       component="h4"
+                                                      data-testid="record-security-card-header"
                                                       display="block"
                                                       variant="h5"
                                                     >
@@ -3847,11 +3874,13 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                         }
                                                         color="inherit"
                                                         component="h4"
+                                                        data-testid="record-security-card-header"
                                                         display="block"
                                                         variant="h5"
                                                       >
                                                         <h4
                                                           className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                          data-testid="record-security-card-header"
                                                         >
                                                           <span>
                                                             <strong>
@@ -3869,6 +3898,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                             </WithStyles(ForwardRef(CardHeader))>
                                             <WithStyles(ForwardRef(CardContent))
                                               className=""
+                                              data-testid="record-security-card-content"
                                             >
                                               <ForwardRef(CardContent)
                                                 className=""
@@ -3877,9 +3907,11 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                     "root": "MuiCardContent-root",
                                                   }
                                                 }
+                                                data-testid="record-security-card-content"
                                               >
                                                 <div
                                                   className="MuiCardContent-root"
+                                                  data-testid="record-security-card-content"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     container={true}
@@ -6759,6 +6791,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                           >
                             <StandardCard
                               accentHeader={true}
+                              standardCardId="record-security-card"
                               subCard={true}
                               title={
                                 <span>
@@ -6772,6 +6805,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                standardCardId="record-security-card"
                                 subCard={true}
                                 title={
                                   <span>
@@ -6794,6 +6828,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                       "fullHeight": "Cards-fullHeight-108",
                                     }
                                   }
+                                  standardCardId="record-security-card"
                                   subCard={true}
                                   theme={
                                     Object {
@@ -7156,6 +7191,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                 >
                                   <WithStyles(ForwardRef(Card))
                                     className="Cards-card-104 StandardCard"
+                                    data-testid="record-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
@@ -7165,10 +7201,12 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                           "root": "MuiCard-root",
                                         }
                                       }
+                                      data-testid="record-security-card"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
                                         className="MuiCard-root Cards-card-104 StandardCard"
+                                        data-testid="record-security-card"
                                         elevation={1}
                                         style={Object {}}
                                       >
@@ -7206,11 +7244,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               "rounded": "MuiPaper-rounded",
                                             }
                                           }
+                                          data-testid="record-security-card"
                                           elevation={1}
                                           style={Object {}}
                                         >
                                           <div
                                             className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            data-testid="record-security-card"
                                             style={Object {}}
                                           >
                                             <WithStyles(ForwardRef(CardHeader))
@@ -7234,6 +7274,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 Object {
                                                   "color": "inherit",
                                                   "component": "h4",
+                                                  "data-testid": "record-security-card-header",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -7264,6 +7305,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                   Object {
                                                     "color": "inherit",
                                                     "component": "h4",
+                                                    "data-testid": "record-security-card-header",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -7279,6 +7321,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                       className="MuiCardHeader-title"
                                                       color="inherit"
                                                       component="h4"
+                                                      data-testid="record-security-card-header"
                                                       display="block"
                                                       variant="h5"
                                                     >
@@ -7320,11 +7363,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                         }
                                                         color="inherit"
                                                         component="h4"
+                                                        data-testid="record-security-card-header"
                                                         display="block"
                                                         variant="h5"
                                                       >
                                                         <h4
                                                           className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                          data-testid="record-security-card-header"
                                                         >
                                                           <span>
                                                             <strong>
@@ -7342,6 +7387,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                             </WithStyles(ForwardRef(CardHeader))>
                                             <WithStyles(ForwardRef(CardContent))
                                               className=""
+                                              data-testid="record-security-card-content"
                                             >
                                               <ForwardRef(CardContent)
                                                 className=""
@@ -7350,9 +7396,11 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     "root": "MuiCardContent-root",
                                                   }
                                                 }
+                                                data-testid="record-security-card-content"
                                               >
                                                 <div
                                                   className="MuiCardContent-root"
+                                                  data-testid="record-security-card-content"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     container={true}
@@ -8732,6 +8780,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                           >
                             <StandardCard
                               accentHeader={true}
+                              standardCardId="datastream-security-card"
                               subCard={true}
                               title={
                                 <span>
@@ -8745,6 +8794,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                standardCardId="datastream-security-card"
                                 subCard={true}
                                 title={
                                   <span>
@@ -8767,6 +8817,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                       "fullHeight": "Cards-fullHeight-108",
                                     }
                                   }
+                                  standardCardId="datastream-security-card"
                                   subCard={true}
                                   theme={
                                     Object {
@@ -9129,6 +9180,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                 >
                                   <WithStyles(ForwardRef(Card))
                                     className="Cards-card-104 StandardCard"
+                                    data-testid="datastream-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
@@ -9138,10 +9190,12 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                           "root": "MuiCard-root",
                                         }
                                       }
+                                      data-testid="datastream-security-card"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
                                         className="MuiCard-root Cards-card-104 StandardCard"
+                                        data-testid="datastream-security-card"
                                         elevation={1}
                                         style={Object {}}
                                       >
@@ -9179,11 +9233,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               "rounded": "MuiPaper-rounded",
                                             }
                                           }
+                                          data-testid="datastream-security-card"
                                           elevation={1}
                                           style={Object {}}
                                         >
                                           <div
                                             className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            data-testid="datastream-security-card"
                                             style={Object {}}
                                           >
                                             <WithStyles(ForwardRef(CardHeader))
@@ -9207,6 +9263,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 Object {
                                                   "color": "inherit",
                                                   "component": "h4",
+                                                  "data-testid": "datastream-security-card-header",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -9237,6 +9294,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                   Object {
                                                     "color": "inherit",
                                                     "component": "h4",
+                                                    "data-testid": "datastream-security-card-header",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -9252,6 +9310,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                       className="MuiCardHeader-title"
                                                       color="inherit"
                                                       component="h4"
+                                                      data-testid="datastream-security-card-header"
                                                       display="block"
                                                       variant="h5"
                                                     >
@@ -9293,11 +9352,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                         }
                                                         color="inherit"
                                                         component="h4"
+                                                        data-testid="datastream-security-card-header"
                                                         display="block"
                                                         variant="h5"
                                                       >
                                                         <h4
                                                           className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                          data-testid="datastream-security-card-header"
                                                         >
                                                           <span>
                                                             <strong>
@@ -9315,6 +9376,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                             </WithStyles(ForwardRef(CardHeader))>
                                             <WithStyles(ForwardRef(CardContent))
                                               className=""
+                                              data-testid="datastream-security-card-content"
                                             >
                                               <ForwardRef(CardContent)
                                                 className=""
@@ -9323,9 +9385,11 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     "root": "MuiCardContent-root",
                                                   }
                                                 }
+                                                data-testid="datastream-security-card-content"
                                               >
                                                 <div
                                                   className="MuiCardContent-root"
+                                                  data-testid="datastream-security-card-content"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     container={true}

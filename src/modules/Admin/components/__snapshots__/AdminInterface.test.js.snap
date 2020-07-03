@@ -117,6 +117,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -390,6 +391,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -636,6 +638,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -863,6 +866,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1057,6 +1061,7 @@ exports[`AdminInterface component should render default view as a full form view
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1075,6 +1080,7 @@ exports[`AdminInterface component should render default view as a full form view
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="files-section"
             title="Files"
           >
             <Field
@@ -1093,6 +1099,7 @@ exports[`AdminInterface component should render default view as a full form view
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="security-section"
             title="Security"
           >
             <Field
@@ -1321,6 +1328,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1554,6 +1562,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1747,6 +1756,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
