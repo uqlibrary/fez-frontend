@@ -2220,6 +2220,19 @@ describe('getSecuritySectionSearchKeys', () => {
         ).toEqual(expected);
     });
 
+    it('should return formatted search keys with datastream policy for collection update', () => {
+        const expected = {
+            rek_security_policy: 1,
+            rek_datastream_policy: 5,
+        };
+        expect(
+            transformers.getSecuritySectionSearchKeys({
+                rek_security_policy: 1,
+                rek_datastream_policy: 5,
+            }),
+        ).toEqual(expected);
+    });
+
     it('should return empty object', () => {
         expect(transformers.getSecuritySectionSearchKeys()).toEqual({});
     });
