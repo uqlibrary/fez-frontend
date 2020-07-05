@@ -1,5 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Cards component renders given ID for standar card 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="testClass StandardCard"
+  data-testid="test-card"
+  style={Object {}}
+>
+  <WithStyles(ForwardRef(CardHeader))
+    action={false}
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    style={Object {}}
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h3",
+        "data-testid": "test-card-header",
+        "variant": "h5",
+      }
+    }
+  />
+  <WithStyles(ForwardRef(CardContent))
+    className=""
+    data-testid="test-card-content"
+  />
+</WithStyles(ForwardRef(Card))>
+`;
+
 exports[`Cards component renders with custom colours and full height 1`] = `
 <WithStyles(ForwardRef(Card))
   className="undefined StandardCard"
