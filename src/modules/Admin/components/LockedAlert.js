@@ -23,6 +23,7 @@ export const LockedAlert = () => {
                         .replace('[username]', record.rek_editing_user)
                         .replace('[name]', record.rek_editing_user_lookup)}
                     wiggle
+                    disableAlertClick
                 />
             </Grid>
         </Grid>
