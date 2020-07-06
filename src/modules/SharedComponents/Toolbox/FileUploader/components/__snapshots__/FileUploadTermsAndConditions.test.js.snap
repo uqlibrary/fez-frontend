@@ -16,6 +16,12 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
           "root": undefined,
         }
       }
+      inputProps={
+        Object {
+          "data-testid": "terms-and-conditions-input",
+          "id": "terms-and-conditions-input",
+        }
+      }
       onChange={[Function]}
     />
   }
@@ -47,6 +53,12 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
         Object {
           "checked": undefined,
           "root": undefined,
+        }
+      }
+      inputProps={
+        Object {
+          "data-testid": "terms-and-conditions-input",
+          "id": "terms-and-conditions-input",
         }
       }
       onChange={[Function]}
