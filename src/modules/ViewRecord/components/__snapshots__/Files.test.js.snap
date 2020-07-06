@@ -29,6 +29,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -43,6 +44,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -58,6 +60,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -97,6 +100,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -113,6 +117,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -162,6 +167,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -177,6 +183,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -192,6 +199,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -243,6 +251,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -257,6 +266,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -272,6 +282,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -311,6 +322,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -319,6 +331,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -360,6 +373,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -375,6 +389,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -390,6 +405,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -445,6 +461,7 @@ exports[`Files Component  should not render cultural message 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -459,6 +476,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -474,6 +492,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -513,6 +532,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -529,6 +549,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -578,6 +599,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -593,6 +615,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -608,6 +631,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -644,6 +668,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -652,6 +677,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -693,6 +719,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -708,6 +735,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -723,6 +751,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -774,6 +803,7 @@ exports[`Files Component  should not render cultural message 2`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -788,6 +818,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -803,6 +834,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -842,6 +874,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -858,6 +891,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -907,6 +941,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -922,6 +957,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -937,6 +973,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -973,6 +1010,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -981,6 +1019,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -1022,6 +1061,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -1037,6 +1077,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -1052,6 +1093,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -1115,6 +1157,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1129,6 +1172,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1144,6 +1188,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -1183,6 +1228,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -1199,6 +1245,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -1248,6 +1295,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -1263,6 +1311,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -1278,6 +1327,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -1314,6 +1364,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -1322,6 +1373,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -1363,6 +1415,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -1378,6 +1431,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -1393,6 +1447,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -1444,6 +1499,7 @@ exports[`Files Component  should render an image as the original filename with n
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1458,6 +1514,7 @@ exports[`Files Component  should render an image as the original filename with n
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1473,6 +1530,7 @@ exports[`Files Component  should render an image as the original filename with n
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -1512,6 +1570,7 @@ exports[`Files Component  should render an image as the original filename with n
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -1520,6 +1579,7 @@ exports[`Files Component  should render an image as the original filename with n
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -1561,6 +1621,7 @@ exports[`Files Component  should render an image as the original filename with n
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -1576,6 +1637,7 @@ exports[`Files Component  should render an image as the original filename with n
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -1591,6 +1653,7 @@ exports[`Files Component  should render an image as the original filename with n
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -1642,6 +1705,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1656,6 +1720,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1671,6 +1736,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -1710,6 +1776,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -1718,6 +1785,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -1759,6 +1827,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -1774,6 +1843,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -1789,6 +1859,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -1825,6 +1896,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -1833,6 +1905,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -1874,6 +1947,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -1889,6 +1963,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -1904,6 +1979,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -1955,6 +2031,7 @@ exports[`Files Component  should render component 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1969,6 +2046,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1984,6 +2062,7 @@ exports[`Files Component  should render component 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -2023,6 +2102,7 @@ exports[`Files Component  should render component 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -2039,6 +2119,7 @@ exports[`Files Component  should render component 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -2088,6 +2169,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -2103,6 +2185,7 @@ exports[`Files Component  should render component 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -2118,6 +2201,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -2154,6 +2238,7 @@ exports[`Files Component  should render component 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -2162,6 +2247,7 @@ exports[`Files Component  should render component 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -2203,6 +2289,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -2218,6 +2305,7 @@ exports[`Files Component  should render component 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -2233,6 +2321,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -6604,6 +6693,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="dsi-dsid-label"
                                                       item={true}
                                                       sm={4}
                                                     >
@@ -6715,11 +6805,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-dsid-label"
                                                         item={true}
                                                         sm={4}
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4"
+                                                          data-testid="dsi-dsid-label"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             gutterBottom={true}
@@ -6962,6 +7054,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-thumbIconCentered-4"
+                                                      data-testid="dsi-mimetype-0"
                                                       item={true}
                                                       xs={1}
                                                     >
@@ -7074,11 +7167,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-mimetype-0"
                                                         item={true}
                                                         xs={1}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-thumbIconCentered-4 MuiGrid-item MuiGrid-grid-xs-1"
+                                                          data-testid="dsi-mimetype-0"
                                                         >
                                                           <WithStyles(Thumbnail)
                                                             fileName="image.jpg"
@@ -7190,6 +7285,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-dataWrapper-2"
+                                                      data-testid="dsi-dsid-0"
                                                       item={true}
                                                       sm={4}
                                                     >
@@ -7302,11 +7398,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-dsid-0"
                                                         item={true}
                                                         sm={4}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-dataWrapper-2 MuiGrid-item MuiGrid-grid-sm-4"
+                                                          data-testid="dsi-dsid-0"
                                                         >
                                                           <WithStyles(FileName)
                                                             allowDownload={true}
@@ -8251,6 +8349,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-thumbIconCentered-4"
+                                                      data-testid="dsi-mimetype-1"
                                                       item={true}
                                                       xs={1}
                                                     >
@@ -8363,11 +8462,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-mimetype-1"
                                                         item={true}
                                                         xs={1}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-thumbIconCentered-4 MuiGrid-item MuiGrid-grid-xs-1"
+                                                          data-testid="dsi-mimetype-1"
                                                         >
                                                           <ForwardRef
                                                             className="FilesClass-fileIcon-3"
@@ -8412,6 +8513,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-dataWrapper-2"
+                                                      data-testid="dsi-dsid-1"
                                                       item={true}
                                                       sm={4}
                                                     >
@@ -8524,11 +8626,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-dsid-1"
                                                         item={true}
                                                         sm={4}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-dataWrapper-2 MuiGrid-item MuiGrid-grid-sm-4"
+                                                          data-testid="dsi-dsid-1"
                                                         >
                                                           <WithStyles(FileName)
                                                             allowDownload={true}
@@ -9387,6 +9491,7 @@ exports[`Files Component  should render cultural message 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -9401,6 +9506,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -9416,6 +9522,7 @@ exports[`Files Component  should render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -9455,6 +9562,7 @@ exports[`Files Component  should render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -9471,6 +9579,7 @@ exports[`Files Component  should render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -9520,6 +9629,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -9535,6 +9645,7 @@ exports[`Files Component  should render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -9550,6 +9661,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -9586,6 +9698,7 @@ exports[`Files Component  should render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -9594,6 +9707,7 @@ exports[`Files Component  should render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -9635,6 +9749,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -9650,6 +9765,7 @@ exports[`Files Component  should render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -9665,6 +9781,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -9716,6 +9833,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -9730,6 +9848,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -9745,6 +9864,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -9784,6 +9904,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -9800,6 +9921,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -9849,6 +9971,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -9864,6 +9987,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -9879,6 +10003,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -9915,6 +10040,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -9923,6 +10049,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -9964,6 +10091,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -9979,6 +10107,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -9994,6 +10123,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10045,6 +10175,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -10059,6 +10190,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -10074,6 +10206,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -10113,6 +10246,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -10129,6 +10263,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -10178,6 +10313,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -10193,6 +10329,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -10208,6 +10345,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -10244,6 +10382,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -10252,6 +10391,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -10293,6 +10433,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -10308,6 +10449,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -10323,6 +10465,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10374,6 +10517,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -10388,6 +10532,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -10403,6 +10548,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -10442,6 +10588,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -10458,6 +10605,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -10507,6 +10655,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -10522,6 +10671,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -10537,6 +10687,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -10573,6 +10724,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -10581,6 +10733,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -10622,6 +10775,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -10637,6 +10791,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -10652,6 +10807,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10703,6 +10859,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -10717,6 +10874,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -10732,6 +10890,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -10771,6 +10930,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -10787,6 +10947,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -10836,6 +10997,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -10851,6 +11013,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -10866,6 +11029,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -10902,6 +11066,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -10910,6 +11075,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -10951,6 +11117,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -10966,6 +11133,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -10981,6 +11149,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -11032,6 +11201,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11046,6 +11216,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -11061,6 +11232,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -11100,6 +11272,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -11116,6 +11289,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -11165,6 +11339,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -11180,6 +11355,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -11195,6 +11371,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -11231,6 +11408,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -11239,6 +11417,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -11280,6 +11459,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -11295,6 +11475,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -11310,6 +11491,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -11361,6 +11543,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11375,6 +11558,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -11390,6 +11574,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -11429,6 +11614,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -11445,6 +11631,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -11494,6 +11681,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -11509,6 +11697,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -11524,6 +11713,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -11560,6 +11750,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -11568,6 +11759,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -11609,6 +11801,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -11624,6 +11817,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -11639,6 +11833,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -11780,6 +11975,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11794,6 +11990,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -11809,6 +12006,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -11848,6 +12046,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -11856,6 +12055,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -11897,6 +12097,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -11912,6 +12113,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -11927,6 +12129,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -11978,6 +12181,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11992,6 +12196,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -12007,6 +12212,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -12046,6 +12252,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -12062,6 +12269,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -12112,6 +12320,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -12127,6 +12336,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -12142,6 +12352,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -12178,6 +12389,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -12186,6 +12398,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -12227,6 +12440,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -12242,6 +12456,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -12257,6 +12472,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={

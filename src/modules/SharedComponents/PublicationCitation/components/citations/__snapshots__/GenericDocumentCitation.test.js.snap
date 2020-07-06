@@ -2225,6 +2225,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -2233,6 +2234,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Louise Olsen-Kettle
                       </span>
@@ -4514,6 +4516,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -4522,6 +4525,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Louise Olsen-Kettle
                       </span>
@@ -6813,6 +6817,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -6821,6 +6826,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Louise Olsen-Kettle
                       </span>

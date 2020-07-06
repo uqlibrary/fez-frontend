@@ -398,20 +398,20 @@ export class FilesClass extends Component {
                             <Grid item xs={1}>
                                 &nbsp;
                             </Grid>
-                            <Grid item sm={4}>
+                            <Grid item sm={4} data-testid="dsi-dsid-label">
                                 <Typography variant="caption" gutterBottom>
                                     {locale.viewRecord.sections.files.fileName}
                                 </Typography>
                             </Grid>
                             <Hidden xsDown>
-                                <Grid item sm={4}>
+                                <Grid item sm={4} data-testid="dsi-label-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.description}
                                     </Typography>
                                 </Grid>
                             </Hidden>
                             <Hidden smDown>
-                                <Grid item md={2}>
+                                <Grid item md={2} data-testid="dsi-size-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.size}
                                     </Typography>
@@ -433,28 +433,48 @@ export class FilesClass extends Component {
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >
-                                <Grid item xs={1} className={this.props.classes.thumbIconCentered}>
+                                <Grid
+                                    item
+                                    xs={1}
+                                    className={this.props.classes.thumbIconCentered}
+                                    data-testid={`dsi-mimetype-${index}`}
+                                >
                                     {item.icon}
                                 </Grid>
-                                <Grid item sm={4} className={this.props.classes.dataWrapper}>
+                                <Grid
+                                    item
+                                    sm={4}
+                                    className={this.props.classes.dataWrapper}
+                                    data-testid={`dsi-dsid-${index}`}
+                                >
                                     <FileName {...item} onFileSelect={this.showPreview} />
                                 </Grid>
                                 <Hidden xsDown>
-                                    <Grid item sm={4} className={this.props.classes.dataWrapper}>
+                                    <Grid
+                                        item
+                                        sm={4}
+                                        className={this.props.classes.dataWrapper}
+                                        data-testid={`dsi-label-${index}`}
+                                    >
                                         <Typography variant="body2" noWrap>
                                             {item.description}
                                         </Typography>
                                     </Grid>
                                 </Hidden>
                                 <Hidden smDown>
-                                    <Grid item sm={2} className={this.props.classes.dataWrapper}>
+                                    <Grid
+                                        item
+                                        sm={2}
+                                        className={this.props.classes.dataWrapper}
+                                        data-testid={`dsi-size-${index}`}
+                                    >
                                         <Typography variant="body2" noWrap>
                                             {item.calculatedSize}
                                         </Typography>
                                     </Grid>
                                 </Hidden>
                                 <Hidden xsDown>
-                                    <Grid item sm style={{ textAlign: 'right' }}>
+                                    <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
                                         <OpenAccessIcon
                                             {...item.openAccessStatus}
                                             securityStatus={item.securityStatus}

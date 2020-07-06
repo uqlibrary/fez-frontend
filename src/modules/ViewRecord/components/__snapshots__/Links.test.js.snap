@@ -3988,6 +3988,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   pubmedCentralId="PMC12345678"
                                                 />
                                               }
+                                              linkId="rek-pubmed-central-id"
                                               openAccessStatus={
                                                 Object {
                                                   "embargoDate": null,
@@ -4123,6 +4124,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     className="MuiGrid-root LinksClass-header-1 MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-pubmed-central-id-link"
                                                       item={true}
                                                       sm={6}
                                                       xs={12}
@@ -4235,12 +4237,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-pubmed-central-id-link"
                                                         item={true}
                                                         sm={6}
                                                         xs={12}
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                          data-testid="rek-pubmed-central-id-link"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -5064,6 +5068,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="LinksClass-description-2"
+                                                      data-testid="rek-pubmed-central-id-description"
                                                       item={true}
                                                       sm={4}
                                                       xs={10}
@@ -5177,12 +5182,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-pubmed-central-id-description"
                                                         item={true}
                                                         sm={4}
                                                         xs={10}
                                                       >
                                                         <div
                                                           className="MuiGrid-root LinksClass-description-2 MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                          data-testid="rek-pubmed-central-id-description"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -5235,6 +5242,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-pubmed-central-id-oa-status"
                                                       item={true}
                                                       sm={2}
                                                       style={
@@ -5352,6 +5360,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-pubmed-central-id-oa-status"
                                                         item={true}
                                                         sm={2}
                                                         style={
@@ -5363,6 +5372,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                          data-testid="rek-pubmed-central-id-oa-status"
                                                           style={
                                                             Object {
                                                               "textAlign": "right",
@@ -5495,6 +5505,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   doi="10.1093/hmg/ddw177"
                                                 />
                                               }
+                                              linkId="rek-doi"
                                               openAccessStatus={Object {}}
                                             >
                                               <WithStyles(ForwardRef(Grid))
@@ -5624,6 +5635,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     className="MuiGrid-root LinksClass-header-1 MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-doi-link"
                                                       item={true}
                                                       sm={6}
                                                       xs={12}
@@ -5736,12 +5748,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-doi-link"
                                                         item={true}
                                                         sm={6}
                                                         xs={12}
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                          data-testid="rek-doi-link"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -6565,6 +6579,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="LinksClass-description-2"
+                                                      data-testid="rek-doi-description"
                                                       item={true}
                                                       sm={4}
                                                       xs={10}
@@ -6678,12 +6693,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-doi-description"
                                                         item={true}
                                                         sm={4}
                                                         xs={10}
                                                       >
                                                         <div
                                                           className="MuiGrid-root LinksClass-description-2 MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                          data-testid="rek-doi-description"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -6736,6 +6753,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-doi-oa-status"
                                                       item={true}
                                                       sm={2}
                                                       style={
@@ -6853,6 +6871,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-doi-oa-status"
                                                         item={true}
                                                         sm={2}
                                                         style={
@@ -6864,6 +6883,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                          data-testid="rek-doi-oa-status"
                                                           style={
                                                             Object {
                                                               "textAlign": "right",
@@ -6907,6 +6927,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   http://www.thisisatest.com
                                                 </WithStyles(ExternalLink)>
                                               }
+                                              linkId="rek-link-0"
                                               openAccessStatus={Object {}}
                                             >
                                               <WithStyles(ForwardRef(Grid))
@@ -7036,6 +7057,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     className="MuiGrid-root LinksClass-header-1 MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-link-0-link"
                                                       item={true}
                                                       sm={6}
                                                       xs={12}
@@ -7148,12 +7170,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-link-0-link"
                                                         item={true}
                                                         sm={6}
                                                         xs={12}
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                          data-testid="rek-link-0-link"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -7969,6 +7993,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="LinksClass-description-2"
+                                                      data-testid="rek-link-0-description"
                                                       item={true}
                                                       sm={4}
                                                       xs={10}
@@ -8082,12 +8107,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-link-0-description"
                                                         item={true}
                                                         sm={4}
                                                         xs={10}
                                                       >
                                                         <div
                                                           className="MuiGrid-root LinksClass-description-2 MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                          data-testid="rek-link-0-description"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -8140,6 +8167,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-link-0-oa-status"
                                                       item={true}
                                                       sm={2}
                                                       style={
@@ -8257,6 +8285,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-link-0-oa-status"
                                                         item={true}
                                                         sm={2}
                                                         style={
@@ -8268,6 +8297,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                          data-testid="rek-link-0-oa-status"
                                                           style={
                                                             Object {
                                                               "textAlign": "right",
@@ -8311,6 +8341,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                   http://www.thisisanothertest.com
                                                 </WithStyles(ExternalLink)>
                                               }
+                                              linkId="rek-link-1"
                                               openAccessStatus={Object {}}
                                             >
                                               <WithStyles(ForwardRef(Grid))
@@ -8440,6 +8471,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     className="MuiGrid-root LinksClass-header-1 MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-link-1-link"
                                                       item={true}
                                                       sm={6}
                                                       xs={12}
@@ -8552,12 +8584,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-link-1-link"
                                                         item={true}
                                                         sm={6}
                                                         xs={12}
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                          data-testid="rek-link-1-link"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -9373,6 +9407,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="LinksClass-description-2"
+                                                      data-testid="rek-link-1-description"
                                                       item={true}
                                                       sm={4}
                                                       xs={10}
@@ -9486,12 +9521,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-link-1-description"
                                                         item={true}
                                                         sm={4}
                                                         xs={10}
                                                       >
                                                         <div
                                                           className="MuiGrid-root LinksClass-description-2 MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                          data-testid="rek-link-1-description"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             variant="body2"
@@ -9544,6 +9581,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="rek-link-1-oa-status"
                                                       item={true}
                                                       sm={2}
                                                       style={
@@ -9661,6 +9699,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="rek-link-1-oa-status"
                                                         item={true}
                                                         sm={2}
                                                         style={
@@ -9672,6 +9711,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                          data-testid="rek-link-1-oa-status"
                                                           style={
                                                             Object {
                                                               "textAlign": "right",
@@ -9746,6 +9786,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -9757,6 +9798,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -9768,6 +9810,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -9788,6 +9831,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           doi="12345"
         />
       }
+      linkId="rek-doi"
       openAccessStatus={Object {}}
     />
   </StandardCard>
@@ -9813,6 +9857,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -9824,6 +9869,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -9835,6 +9881,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -9855,6 +9902,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
           pubmedCentralId="12345"
         />
       }
+      linkId="rek-pubmed-central-id"
       openAccessStatus={
         Object {
           "embargoDate": null,
@@ -9892,6 +9940,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -9903,6 +9952,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -9914,6 +9964,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -9938,6 +9989,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           http://www.thisisatest.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-0"
       openAccessStatus={Object {}}
     />
     <Component
@@ -9952,6 +10004,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           http://www.thisisanothertest.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-1"
       openAccessStatus={Object {}}
     />
     <Component
@@ -9966,6 +10019,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           http://www.nodescription.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-2"
       openAccessStatus={Object {}}
     />
   </StandardCard>
@@ -11186,6 +11240,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               pubmedCentralId="PMC5179926"
                                             />
                                           }
+                                          linkId="rek-pubmed-central-id"
                                           openAccessStatus={
                                             Object {
                                               "embargoDate": null,
@@ -11321,6 +11376,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -11433,12 +11489,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-pubmed-central-id-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -12261,6 +12319,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -12373,12 +12432,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-pubmed-central-id-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -12431,6 +12492,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -12548,6 +12610,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -12559,6 +12622,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-pubmed-central-id-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -12691,6 +12755,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               doi="10.1016/j.pnsc.2012.12.004"
                                             />
                                           }
+                                          linkId="rek-doi"
                                           openAccessStatus={
                                             Object {
                                               "embargoDate": null,
@@ -12826,6 +12891,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -12938,12 +13004,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-doi-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -13766,6 +13834,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -13878,12 +13947,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-doi-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -13936,6 +14007,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -14053,6 +14125,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -14064,6 +14137,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-doi-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -14200,6 +14274,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               http://www.thisisatest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-0"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -14329,6 +14404,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -14441,12 +14517,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-0-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -15261,6 +15339,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -15373,12 +15452,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-0-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -15431,6 +15512,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -15548,6 +15630,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -15559,6 +15642,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-0-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -15602,6 +15686,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               http://www.thisisanothertest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-1"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -15731,6 +15816,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -15843,12 +15929,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-1-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -16663,6 +16751,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -16775,12 +16864,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-1-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -16833,6 +16924,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -16950,6 +17042,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -16961,6 +17054,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-1-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -17004,6 +17098,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               http://www.nodescription.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-2"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -17133,6 +17228,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -17245,12 +17341,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-2-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -18065,6 +18163,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -18177,12 +18276,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-2-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -18235,6 +18336,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -18352,6 +18454,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -18363,6 +18466,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-2-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -18435,6 +18539,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -18446,6 +18551,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -18457,6 +18563,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -18477,6 +18584,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           pubmedCentralId="PMC5179926"
         />
       }
+      linkId="rek-pubmed-central-id"
       openAccessStatus={
         Object {
           "embargoDate": null,
@@ -18493,6 +18601,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           doi="10.1016/j.pnsc.2012.12.004"
         />
       }
+      linkId="rek-doi"
       openAccessStatus={Object {}}
     />
     <Component
@@ -18507,6 +18616,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           http://www.thisisatest.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-0"
       openAccessStatus={Object {}}
     />
     <Component
@@ -18521,6 +18631,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           http://www.thisisanothertest.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-1"
       openAccessStatus={Object {}}
     />
     <Component
@@ -18535,6 +18646,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           http://www.nodescription.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-2"
       openAccessStatus={Object {}}
     />
   </StandardCard>
@@ -19749,6 +19861,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               pubmedCentralId="PMC5179926"
                                             />
                                           }
+                                          linkId="rek-pubmed-central-id"
                                           openAccessStatus={
                                             Object {
                                               "embargoDate": null,
@@ -19884,6 +19997,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -19996,12 +20110,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-pubmed-central-id-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -20824,6 +20940,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -20936,12 +21053,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-pubmed-central-id-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -20994,6 +21113,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -21111,6 +21231,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -21122,6 +21243,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-pubmed-central-id-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -21258,6 +21380,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               http://www.thisisatest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-0"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -21387,6 +21510,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -21499,12 +21623,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-0-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -22319,6 +22445,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -22431,12 +22558,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-0-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -22489,6 +22618,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -22606,6 +22736,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -22617,6 +22748,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-0-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -22660,6 +22792,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               http://www.thisisanothertest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-1"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -22789,6 +22922,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -22901,12 +23035,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-1-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -23721,6 +23857,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -23833,12 +23970,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-1-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -23891,6 +24030,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -24008,6 +24148,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -24019,6 +24160,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-1-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -24062,6 +24204,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               http://www.nodescription.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-2"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -24191,6 +24334,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -24303,12 +24447,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-2-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -25123,6 +25269,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -25235,12 +25382,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-2-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -25293,6 +25442,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -25410,6 +25560,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -25421,6 +25572,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-2-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -26688,6 +26840,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               pubmedCentralId="PMC5179926"
                                             />
                                           }
+                                          linkId="rek-pubmed-central-id"
                                           openAccessStatus={
                                             Object {
                                               "embargoDate": null,
@@ -26823,6 +26976,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -26935,12 +27089,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-pubmed-central-id-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -27763,6 +27919,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -27875,12 +28032,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-pubmed-central-id-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -27933,6 +28092,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-pubmed-central-id-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -28050,6 +28210,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-pubmed-central-id-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -28061,6 +28222,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-pubmed-central-id-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -28193,6 +28355,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               doi="10.1016/j.pnsc.2012.12.004"
                                             />
                                           }
+                                          linkId="rek-doi"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -28322,6 +28485,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -28434,12 +28598,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-doi-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -29262,6 +29428,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -29374,12 +29541,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-doi-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -29432,6 +29601,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -29549,6 +29719,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -29560,6 +29731,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-doi-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -29603,6 +29775,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               http://www.thisisatest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-0"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -29732,6 +29905,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -29844,12 +30018,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-0-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -30664,6 +30840,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -30776,12 +30953,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-0-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -30834,6 +31013,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -30951,6 +31131,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -30962,6 +31143,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-0-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -31005,6 +31187,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               http://www.thisisanothertest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-1"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -31134,6 +31317,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -31246,12 +31430,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-1-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -32066,6 +32252,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -32178,12 +32365,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-1-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -32236,6 +32425,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -32353,6 +32543,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -32364,6 +32555,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-1-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -32407,6 +32599,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               http://www.nodescription.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-2"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -32536,6 +32729,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -32648,12 +32842,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-2-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -33468,6 +33664,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -33580,12 +33777,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-2-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -33638,6 +33837,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -33755,6 +33955,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -33766,6 +33967,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-2-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -35027,6 +35229,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               doi="10.1016/j.pnsc.2012.12.004"
                                             />
                                           }
+                                          linkId="rek-doi"
                                           openAccessStatus={
                                             Object {
                                               "embargoDate": "24th December 2020",
@@ -35162,6 +35365,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -35274,12 +35478,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-doi-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -36102,6 +36308,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -36214,12 +36421,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-doi-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -36272,6 +36481,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-doi-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -36389,6 +36599,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-doi-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -36400,6 +36611,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-doi-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -36622,6 +36834,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               http://www.thisisatest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-0"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -36751,6 +36964,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -36863,12 +37077,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-0-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -37683,6 +37899,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -37795,12 +38012,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-0-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -37853,6 +38072,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-0-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -37970,6 +38190,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-0-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -37981,6 +38202,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-0-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -38024,6 +38246,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               http://www.thisisanothertest.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-1"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -38153,6 +38376,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -38265,12 +38489,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-1-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -39085,6 +39311,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -39197,12 +39424,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-1-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -39255,6 +39484,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-1-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -39372,6 +39602,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-1-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -39383,6 +39614,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-1-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -39426,6 +39658,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               http://www.nodescription.com
                                             </WithStyles(ExternalLink)>
                                           }
+                                          linkId="rek-link-2"
                                           openAccessStatus={Object {}}
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -39555,6 +39788,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                 className="MuiGrid-root header MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                               >
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-link"
                                                   item={true}
                                                   sm={6}
                                                   xs={12}
@@ -39667,12 +39901,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-link"
                                                     item={true}
                                                     sm={6}
                                                     xs={12}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                                                      data-testid="rek-link-2-link"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -40487,6 +40723,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-description"
                                                   item={true}
                                                   sm={4}
                                                   xs={10}
@@ -40599,12 +40836,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-description"
                                                     item={true}
                                                     sm={4}
                                                     xs={10}
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-4"
+                                                      data-testid="rek-link-2-description"
                                                     >
                                                       <WithStyles(ForwardRef(Typography))
                                                         variant="body2"
@@ -40657,6 +40896,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   </ForwardRef(Grid)>
                                                 </WithStyles(ForwardRef(Grid))>
                                                 <WithStyles(ForwardRef(Grid))
+                                                  data-testid="rek-link-2-oa-status"
                                                   item={true}
                                                   sm={2}
                                                   style={
@@ -40774,6 +41014,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                       }
                                                     }
+                                                    data-testid="rek-link-2-oa-status"
                                                     item={true}
                                                     sm={2}
                                                     style={
@@ -40785,6 +41026,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                   >
                                                     <div
                                                       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-2"
+                                                      data-testid="rek-link-2-oa-status"
                                                       style={
                                                         Object {
                                                           "textAlign": "right",
@@ -40933,6 +41175,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -40944,6 +41187,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -40955,6 +41199,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -40978,6 +41223,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           https://scholar.google.com/scholar?q=intitle:"undefined%22
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-title"
       openAccessStatus={
         Object {
           "embargoDate": null,

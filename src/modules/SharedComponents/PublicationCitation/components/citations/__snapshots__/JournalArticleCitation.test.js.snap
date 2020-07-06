@@ -3761,6 +3761,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -3769,12 +3770,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Azimi, Iman
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -3783,12 +3786,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Milevskiy, Michael J. G.
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -3797,12 +3802,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Kaemmerer, Elke
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -3811,12 +3818,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         Turner, Dane
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=""
@@ -3825,12 +3834,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
                         Yapa, Kunsala T. D. S.
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-5"
                       className="citationAuthor"
                       key="citationAuthor_6"
                       prefix=""
@@ -3839,12 +3850,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-5"
                       >
                         Brown, Melissa A.
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-6"
                       className="citationAuthor"
                       key="citationAuthor_7"
                       prefix=""
@@ -3853,12 +3866,14 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-6"
                       >
                         Thompson, Erik W.
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-7"
                       className="citationAuthor"
                       key="citationAuthor_8"
                       prefix=""
@@ -3867,11 +3882,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-7"
                       >
                         Roberts-Thomson, Sarah J.
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-8"
                       className="citationAuthor"
                       key="citationAuthor_9"
                       prefix=" and "
@@ -3880,6 +3897,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-8"
                       >
                          and 
                         Monteith, Gregory R.
