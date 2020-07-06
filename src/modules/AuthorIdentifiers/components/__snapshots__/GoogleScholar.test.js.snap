@@ -99,6 +99,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Error has occurred during request and request cannot be processed. failed! Please contact eSpace administrators or try again later."
           showLoader={false}
@@ -254,6 +255,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Request is being processed."
           showLoader={true}

@@ -315,6 +315,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Login to UQ eSpace for full search results and more services."
           showLoader={false}
@@ -908,6 +909,7 @@ exports[`Application component should determine if it has incomplete works from 
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
@@ -1735,6 +1737,7 @@ exports[`Application component should determine if it has incomplete works from 
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
@@ -2758,6 +2761,7 @@ exports[`Application component should redirect to login page with correct return
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Login to UQ eSpace for full search results and more services."
           showLoader={false}
@@ -3347,6 +3351,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Please contact the UQ eSpace administrator to resolve this."
           showLoader={false}
@@ -4887,6 +4892,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID."
           showLoader={false}
@@ -5549,6 +5555,7 @@ exports[`Application component should render app for account with author account
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
@@ -8494,6 +8501,7 @@ exports[`Application component should render app for account with fez author wit
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
@@ -9541,6 +9549,7 @@ exports[`Application component should render app for account with fez author wit
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
@@ -11994,6 +12003,7 @@ exports[`Application component should render app for account with fez author wit
           allowDismiss={false}
           customIcon={null}
           customType={null}
+          disableAlertClick={false}
           dismissTitle="Click to dismiss this alert"
           message="You do not have an ORCID ID linked to your UQ eSpace."
           showLoader={false}
