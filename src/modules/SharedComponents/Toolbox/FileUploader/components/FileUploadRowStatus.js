@@ -17,6 +17,7 @@ export class FileUploadRowStatus extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         locale: PropTypes.object,
         name: PropTypes.string,
+        fileUploadRowStatusId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -35,7 +36,11 @@ export class FileUploadRowStatus extends PureComponent {
             <Fragment>
                 {!isUploadInProgress && (
                     <Tooltip title={deleteHint}>
-                        <IconButton onClick={this.props.onDelete} disabled={disabled}>
+                        <IconButton
+                            onClick={this.props.onDelete}
+                            disabled={disabled}
+                            data-testid={`${this.props.fileUploadRowStatusId}-delete`}
+                        >
                             <Delete />
                         </IconButton>
                     </Tooltip>

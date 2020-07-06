@@ -34,6 +34,7 @@ export class FileUploadRowMobileView extends PureComponent {
         onAccessConditionChange: PropTypes.func.isRequired,
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
+        fileUploadRowViewId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -60,7 +61,7 @@ export class FileUploadRowMobileView extends PureComponent {
         } = this.props;
 
         return (
-            <List classes={{ root: classes.root }}>
+            <List classes={{ root: classes.root }} data-testid={this.props.fileUploadRowViewId}>
                 <ListItem classes={{ root: classes.listItem }}>
                     <ListItemIcon>
                         <Attachment />
@@ -70,6 +71,7 @@ export class FileUploadRowMobileView extends PureComponent {
                         secondary={filenameColumn}
                         primaryTypographyProps={{ variant: 'body1', noWrap: true }}
                         secondaryTypographyProps={{ variant: 'caption' }}
+                        data-testid={`dsi-dsid-${index}`}
                     />
                 </ListItem>
                 {requireOpenAccessStatus && (
@@ -89,6 +91,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
+                                    fileUploadAccessSelectorId={`dsi-open-access-${index}`}
                                 />
                             </ListItemText>
                         </ListItem>
@@ -102,7 +105,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
                                 {requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID && (
-                                    <Typography variant="body2" gutterBottom>
+                                    <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
@@ -112,6 +115,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
                                         minDate={new Date()}
+                                        fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
                                     />
                                 )}
                             </ListItemText>
@@ -120,6 +124,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                     disabled={this.props.disabled}
                                     onDelete={this.props.onDelete}
                                     name={name}
+                                    fileUploadRowStatusId={`dsi-dsid-${index}`}
                                 />
                             </ListItemSecondaryAction>
                         </ListItem>

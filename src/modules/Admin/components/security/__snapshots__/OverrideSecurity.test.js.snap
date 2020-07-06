@@ -5,6 +5,12 @@ exports[`OverrideSecurity component should render properly 1`] = `
   control={
     <WithStyles(ForwardRef(Checkbox))
       checked={false}
+      inputProps={
+        Object {
+          "data-testid": "test-input",
+          "id": "test-input",
+        }
+      }
       onChange={[MockFunction]}
     />
   }

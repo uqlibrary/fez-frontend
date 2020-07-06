@@ -16,6 +16,7 @@ export class FileUploadAccessSelector extends PureComponent {
         value: PropTypes.any,
         classes: PropTypes.object,
         autoFocus: PropTypes.bool,
+        fileUploadAccessSelectorId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -60,6 +61,18 @@ export class FileUploadAccessSelector extends PureComponent {
                             classes={{ root: !!value ? classes.selected : classes.placeholder }}
                         />
                     }
+                    SelectDisplayProps={{
+                        id: `${this.props.fileUploadAccessSelectorId}-select`,
+                        'data-testid': `${this.props.fileUploadAccessSelectorId}-select`,
+                    }}
+                    MenuProps={{
+                        id: `${this.props.fileUploadAccessSelectorId}-options`,
+                        'data-testid': `${this.props.fileUploadAccessSelectorId}-options`,
+                    }}
+                    inputProps={{
+                        id: `${this.props.fileUploadAccessSelectorId}-input`,
+                        'data-testid': `${this.props.fileUploadAccessSelectorId}-input`,
+                    }}
                 >
                     <MenuItem value="" disabled>
                         {initialValue}

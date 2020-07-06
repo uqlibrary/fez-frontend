@@ -3775,6 +3775,7 @@ exports[`Component Links  Full mount render 1`] = `
                           >
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-107 StandardCard"
+                              data-testid="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -3784,10 +3785,12 @@ exports[`Component Links  Full mount render 1`] = `
                                     "root": "MuiCard-root",
                                   }
                                 }
+                                data-testid="standard-card-links"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-107 StandardCard"
+                                  data-testid="standard-card-links"
                                   elevation={1}
                                   style={Object {}}
                                 >
@@ -3825,11 +3828,13 @@ exports[`Component Links  Full mount render 1`] = `
                                         "rounded": "MuiPaper-rounded",
                                       }
                                     }
+                                    data-testid="standard-card-links"
                                     elevation={1}
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      data-testid="standard-card-links"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -3845,6 +3850,7 @@ exports[`Component Links  Full mount render 1`] = `
                                           Object {
                                             "color": "inherit",
                                             "component": "h3",
+                                            "data-testid": "standard-card-links-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -3867,6 +3873,7 @@ exports[`Component Links  Full mount render 1`] = `
                                             Object {
                                               "color": "inherit",
                                               "component": "h3",
+                                              "data-testid": "standard-card-links-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -3882,6 +3889,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                 className="MuiCardHeader-title"
                                                 color="inherit"
                                                 component="h3"
+                                                data-testid="standard-card-links-header"
                                                 display="block"
                                                 variant="h5"
                                               >
@@ -3923,11 +3931,13 @@ exports[`Component Links  Full mount render 1`] = `
                                                   }
                                                   color="inherit"
                                                   component="h3"
+                                                  data-testid="standard-card-links-header"
                                                   display="block"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                    data-testid="standard-card-links-header"
                                                   >
                                                     Links
                                                   </h3>
@@ -3939,6 +3949,7 @@ exports[`Component Links  Full mount render 1`] = `
                                       </WithStyles(ForwardRef(CardHeader))>
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
+                                        data-testid="standard-card-links-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -3947,9 +3958,11 @@ exports[`Component Links  Full mount render 1`] = `
                                               "root": "MuiCardContent-root",
                                             }
                                           }
+                                          data-testid="standard-card-links-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
+                                            data-testid="standard-card-links-content"
                                           >
                                             <Hidden
                                               xsDown={true}
@@ -12363,6 +12376,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                       >
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
+                          data-testid="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -12372,10 +12386,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                 "root": "MuiCard-root",
                               }
                             }
+                            data-testid="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
+                              data-testid="standard-card-links"
                               elevation={1}
                               style={Object {}}
                             >
@@ -12413,11 +12429,13 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                     "rounded": "MuiPaper-rounded",
                                   }
                                 }
+                                data-testid="standard-card-links"
                                 elevation={1}
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  data-testid="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -12433,6 +12451,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                       Object {
                                         "color": "inherit",
                                         "component": "h3",
+                                        "data-testid": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -12455,6 +12474,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         Object {
                                           "color": "inherit",
                                           "component": "h3",
+                                          "data-testid": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -12470,6 +12490,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             className="MuiCardHeader-title"
                                             color="inherit"
                                             component="h3"
+                                            data-testid="standard-card-links-header"
                                             display="block"
                                             variant="h5"
                                           >
@@ -12511,11 +12532,13 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               }
                                               color="inherit"
                                               component="h3"
+                                              data-testid="standard-card-links-header"
                                               display="block"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                data-testid="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -12527,6 +12550,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                   </WithStyles(ForwardRef(CardHeader))>
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
+                                    data-testid="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -12535,9 +12559,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           "root": "MuiCardContent-root",
                                         }
                                       }
+                                      data-testid="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
+                                        data-testid="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
@@ -21031,6 +21057,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                       >
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
+                          data-testid="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -21040,10 +21067,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                 "root": "MuiCard-root",
                               }
                             }
+                            data-testid="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
+                              data-testid="standard-card-links"
                               elevation={1}
                               style={Object {}}
                             >
@@ -21081,11 +21110,13 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                     "rounded": "MuiPaper-rounded",
                                   }
                                 }
+                                data-testid="standard-card-links"
                                 elevation={1}
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  data-testid="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -21101,6 +21132,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                       Object {
                                         "color": "inherit",
                                         "component": "h3",
+                                        "data-testid": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -21123,6 +21155,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         Object {
                                           "color": "inherit",
                                           "component": "h3",
+                                          "data-testid": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -21138,6 +21171,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             className="MuiCardHeader-title"
                                             color="inherit"
                                             component="h3"
+                                            data-testid="standard-card-links-header"
                                             display="block"
                                             variant="h5"
                                           >
@@ -21179,11 +21213,13 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               }
                                               color="inherit"
                                               component="h3"
+                                              data-testid="standard-card-links-header"
                                               display="block"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                data-testid="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -21195,6 +21231,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                   </WithStyles(ForwardRef(CardHeader))>
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
+                                    data-testid="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -21203,9 +21240,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           "root": "MuiCardContent-root",
                                         }
                                       }
+                                      data-testid="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
+                                        data-testid="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
@@ -27957,6 +27996,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                       >
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
+                          data-testid="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -27966,10 +28006,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                 "root": "MuiCard-root",
                               }
                             }
+                            data-testid="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
+                              data-testid="standard-card-links"
                               elevation={1}
                               style={Object {}}
                             >
@@ -28007,11 +28049,13 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                     "rounded": "MuiPaper-rounded",
                                   }
                                 }
+                                data-testid="standard-card-links"
                                 elevation={1}
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  data-testid="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -28027,6 +28071,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                       Object {
                                         "color": "inherit",
                                         "component": "h3",
+                                        "data-testid": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -28049,6 +28094,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         Object {
                                           "color": "inherit",
                                           "component": "h3",
+                                          "data-testid": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -28064,6 +28110,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             className="MuiCardHeader-title"
                                             color="inherit"
                                             component="h3"
+                                            data-testid="standard-card-links-header"
                                             display="block"
                                             variant="h5"
                                           >
@@ -28105,11 +28152,13 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               }
                                               color="inherit"
                                               component="h3"
+                                              data-testid="standard-card-links-header"
                                               display="block"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                data-testid="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -28121,6 +28170,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                   </WithStyles(ForwardRef(CardHeader))>
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
+                                    data-testid="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -28129,9 +28179,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           "root": "MuiCardContent-root",
                                         }
                                       }
+                                      data-testid="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
+                                        data-testid="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
@@ -36283,6 +36335,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                       >
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
+                          data-testid="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -36292,10 +36345,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                 "root": "MuiCard-root",
                               }
                             }
+                            data-testid="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
+                              data-testid="standard-card-links"
                               elevation={1}
                               style={Object {}}
                             >
@@ -36333,11 +36388,13 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                     "rounded": "MuiPaper-rounded",
                                   }
                                 }
+                                data-testid="standard-card-links"
                                 elevation={1}
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  data-testid="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -36353,6 +36410,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                       Object {
                                         "color": "inherit",
                                         "component": "h3",
+                                        "data-testid": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -36375,6 +36433,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         Object {
                                           "color": "inherit",
                                           "component": "h3",
+                                          "data-testid": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -36390,6 +36449,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             className="MuiCardHeader-title"
                                             color="inherit"
                                             component="h3"
+                                            data-testid="standard-card-links-header"
                                             display="block"
                                             variant="h5"
                                           >
@@ -36431,11 +36491,13 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               }
                                               color="inherit"
                                               component="h3"
+                                              data-testid="standard-card-links-header"
                                               display="block"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                data-testid="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -36447,6 +36509,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                   </WithStyles(ForwardRef(CardHeader))>
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
+                                    data-testid="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -36455,9 +36518,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           "root": "MuiCardContent-root",
                                         }
                                       }
+                                      data-testid="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
+                                        data-testid="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
