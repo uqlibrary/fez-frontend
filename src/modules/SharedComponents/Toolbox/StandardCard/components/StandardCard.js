@@ -49,6 +49,7 @@ export class Cards extends Component {
         customTitleBgColor: PropTypes.any,
         squareTop: PropTypes.bool,
         smallTitle: PropTypes.bool,
+        standardCardId: PropTypes.string,
         subCard: PropTypes.bool,
     };
 
@@ -72,8 +73,15 @@ export class Cards extends Component {
         const customTitle = !!this.props.customTitleColor ? { color: this.props.customTitleColor } : null;
         const fullHeight = !!this.props.fullHeight ? { height: '100%' } : null;
         const squareTop = !!this.props.squareTop ? { borderTopLeftRadius: 0, borderTopRightRadius: 0 } : null;
+        const standardCardId = !!this.props.standardCardId
+            ? this.props.standardCardId
+            : `standard-card${typeof title === 'string' ? '-' + title.replace(/ /g, '-').toLowerCase() : ''}`;
         return (
-            <Card className={`${classes.card} StandardCard`} style={{ ...customBG, ...customTitle, ...fullHeight }}>
+            <Card
+                data-testid={standardCardId}
+                className={`${classes.card} StandardCard`}
+                style={{ ...customBG, ...customTitle, ...fullHeight }}
+            >
                 {!this.props.noHeader && (
                     <CardHeader
                         style={{ ...squareTop, ...customTitleBG }}
@@ -82,6 +90,7 @@ export class Cards extends Component {
                             variant: smallTitle ? 'h6' : 'h5',
                             component: subCard ? 'h4' : 'h3',
                             color: 'inherit',
+                            'data-testid': `${standardCardId}-header`,
                         }}
                         action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
@@ -91,7 +100,10 @@ export class Cards extends Component {
                         }}
                     />
                 )}
-                <CardContent className={(this.props.noPadding && classes.cardContentNoPadding) || ''}>
+                <CardContent
+                    data-testid={`${standardCardId}-content`}
+                    className={(this.props.noPadding && classes.cardContentNoPadding) || ''}
+                >
                     {children}
                 </CardContent>
             </Card>

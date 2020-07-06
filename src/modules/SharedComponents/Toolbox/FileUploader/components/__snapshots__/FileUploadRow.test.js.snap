@@ -3,6 +3,7 @@
 exports[`FileUploadRow renders with uploaded file 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    confirmDialogBoxId="dsi-dsid-delete"
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -29,6 +30,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
 exports[`FileUploadRow should show confirmation and delete file 1`] = `
 <Fragment>
   <WithStyles(ConfirmDialogBox)
+    confirmDialogBoxId="dsi-dsid-delete"
     locale={
       Object {
         "cancelButtonLabel": "No",

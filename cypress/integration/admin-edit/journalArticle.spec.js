@@ -21,9 +21,10 @@ context('Journal Article admin edit', () => {
 
     it('should render the different sections as expected', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
+        cy.viewport(1000, 1000);
+
         // ---------------------------------------------- ADMIN TAB --------------------------------------------------
         cy.log('Admin tab');
-        cy.viewport(1000, 1000);
         cy.get('.StandardPage form >div >div')
             .get('.StandardCard')
             .eq(3)
@@ -417,43 +418,34 @@ context('Journal Article admin edit', () => {
 
         // ---------------------------------------------- SECURITY TAB -----------------------------------------------
         cy.log('Security tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(7)
-            .within(() => {
-                cy.root()
-                    .children('div')
-                    .children('div')
-                    .children('h3')
-                    .should('have.text', 'Security');
-
-                cy.get('.StandardCard').within(() => {
-                    cy.get('h4')
-                        .eq(0)
-                        .should('have.text', `${record.rek_object_type_lookup} level security - ${record.rek_pid}`);
-                    cy.get('h6')
-                        .eq(0)
-                        .should('have.text', 'Inherited security policy details');
-                    record.fez_record_search_key_ismemberof.forEach((collection, index) => {
-                        cy.get('h6')
-                            .eq(2 * index + 1)
-                            .should('have.text', collection.rek_ismemberof);
-                        cy.get('h6')
-                            .eq(2 * index + 2)
-                            .should('have.text', collection.rek_ismemberof_lookup);
-                        cy.get('p')
-                            .eq(index)
-                            .should('have.text', `Public (${collection.parent.rek_security_policy})`);
-                    });
-                    if (record.rek_security_inherited) {
-                        cy.get('label')
-                            .contains('Override inherited security (detailed below)')
-                            .parent()
-                            .find('input')
-                            .should('not.be.checked');
-                    }
-                });
+        cy.get('[data-testid=security-section-header]').should('have.text', 'Security');
+        cy.get('[data-testid=record-security-card-header]').should(
+            'have.text',
+            `Work level security - ${record.rek_pid}`,
+        );
+        cy.get('[data-testid=record-security-card-content]').within(() => {
+            cy.get('h6')
+                .eq(0)
+                .should('have.text', 'Inherited security policy details');
+            record.fez_record_search_key_ismemberof.forEach((collection, index) => {
+                cy.get('h6')
+                    .eq(2 * index + 1)
+                    .should('have.text', collection.rek_ismemberof);
+                cy.get('h6')
+                    .eq(2 * index + 2)
+                    .should('have.text', collection.rek_ismemberof_lookup);
+                cy.get('p')
+                    .eq(index)
+                    .should('have.text', `Public (${collection.parent.rek_security_policy})`);
             });
+            if (record.rek_security_inherited) {
+                cy.get('label')
+                    .contains('Override inherited security (detailed below)')
+                    .parent()
+                    .find('input')
+                    .should('not.be.checked');
+            }
+        });
         cy.adminEditCleanup();
     });
 
@@ -464,54 +456,43 @@ context('Journal Article admin edit', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
 
         cy.log('Files Tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(5)
-            .within(() => {
-                cy.get('.StandardCard')
-                    .eq(0)
-                    .within(() => {
-                        // prettier-ignore
-                        const fileSizeInMB = Math.round(
+        cy.get('[data-testid=files-section-header]').should('have.text', 'Files');
+        cy.get('[data-testid=files-section-content]').within(() => {
+            // prettier-ignore
+            const fileSizeInMB = Math.round(
                             record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
                         ) / 100;
-                        cy.get('h4').should('have.text', 'Attached files');
-                        cy.get('p')
-                            .eq(1)
-                            .should('have.text', record.fez_datastream_info[1].dsi_dsid);
-                        cy.get('input')
-                            .eq(1)
-                            .should('have.value', record.fez_datastream_info[1].dsi_label);
-                        cy.get('p')
-                            .eq(2)
-                            .should('have.text', `${fileSizeInMB} MB`);
-                        cy.get('input')
-                            .eq(2)
-                            .should(
-                                'have.value',
-                                Cypress.moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'),
-                            );
-                    });
-
-                cy.get('.AdminCard')
-                    .as('cards')
-                    .eq(0)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Files');
-                    });
+            cy.get('h4')
+                .eq(0)
+                .should('have.text', 'Attached files');
+            cy.get('p')
+                .eq(0)
+                .should('have.text', record.fez_datastream_info[1].dsi_dsid);
+            cy.get('input')
+                .eq(0)
+                .should('have.value', record.fez_datastream_info[1].dsi_label);
+            cy.get('p')
+                .eq(1)
+                .should('have.text', `${fileSizeInMB} MB`);
+            cy.get('input')
+                .eq(1)
+                .should(
+                    'have.value',
+                    Cypress.moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'),
+                );
+        });
+        cy.get('[data-testid=files-section-content]').within(() => {
+            cy.get('h4')
+                .eq(2)
+                .should('contain', 'Copyright agreement');
+            cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
+                if (record.rek_copyright === 'on') {
+                    expect($checkbox).to.be.checked;
+                } else {
+                    expect($checkbox).not.to.be.checked;
+                }
             });
-        cy.get('@cards')
-            .eq(1)
-            .within(() => {
-                cy.get('h4').should('contain', 'Copyright agreement');
-                cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
-                    if (record.rek_copyright === 'on') {
-                        expect($checkbox).to.be.checked;
-                    } else {
-                        expect($checkbox).not.to.be.checked;
-                    }
-                });
-            });
+        });
         cy.get('[data-testid=rek-copyright-input]').click();
 
         cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);

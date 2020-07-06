@@ -1544,6 +1544,7 @@ exports[`GrantListEditor should update with error message 2`] = `
     allowDismiss={false}
     customIcon={null}
     customType={null}
+    disableAlertClick={false}
     dismissTitle="Click to dismiss this alert"
     message="Test error message from state"
     showLoader={false}

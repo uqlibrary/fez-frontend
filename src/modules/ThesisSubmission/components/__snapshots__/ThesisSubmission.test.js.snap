@@ -1210,6 +1210,7 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
         allowDismiss={false}
         customIcon={null}
         customType={null}
+        disableAlertClick={false}
         dismissTitle="Click to dismiss this alert"
         message={
           Array [

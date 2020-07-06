@@ -26,6 +26,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   allowDismiss={false}
                   customIcon={null}
                   customType={null}
+                  disableAlertClick={false}
                   dismissTitle="Click to dismiss this alert"
                   message="lorem ipsum"
                   showLoader={false}

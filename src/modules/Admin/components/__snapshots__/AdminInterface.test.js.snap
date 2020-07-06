@@ -117,6 +117,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -146,6 +147,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="Request is being processed."
             showLoader={true}
@@ -260,6 +262,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
         allowDismiss={false}
         customIcon={null}
         customType={null}
+        disableAlertClick={false}
         dismissTitle="Click to dismiss this alert"
         message="Editing of record is not yet supported."
         showLoader={false}
@@ -390,6 +393,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -418,6 +422,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             allowDismiss={true}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="Work has been saved successfully"
             showLoader={false}
@@ -636,6 +641,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -664,6 +670,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             allowDismiss={true}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="Work has been saved successfully"
             showLoader={false}
@@ -863,6 +870,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1057,6 +1065,7 @@ exports[`AdminInterface component should render default view as a full form view
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1075,6 +1084,7 @@ exports[`AdminInterface component should render default view as a full form view
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="files-section"
             title="Files"
           >
             <Field
@@ -1093,6 +1103,7 @@ exports[`AdminInterface component should render default view as a full form view
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="security-section"
             title="Security"
           >
             <Field
@@ -1321,6 +1332,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1445,7 +1457,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
         Object {
           "cancelButtonLabel": "View new record",
           "confirmButtonLabel": "Add another work",
-          "confirmationMessage": "Your new record has been added to eSpace.",
+          "confirmationMessage": "Your new work has been added to eSpace.",
           "confirmationTitle": "Work has been added",
         }
       }
@@ -1554,6 +1566,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field
@@ -1747,6 +1760,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             primaryHeader={true}
             smallTitle={true}
             squareTop={true}
+            standardCardId="bibliographic-section"
             title="Bibliographic"
           >
             <Field

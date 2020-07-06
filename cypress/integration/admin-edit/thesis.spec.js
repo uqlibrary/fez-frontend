@@ -246,10 +246,7 @@ context('Thesis admin edit', () => {
                     .should('have.text', 'Security');
 
                 cy.get('div:nth-child(1) > .StandardCard').within(() => {
-                    cy.get('h4').should(
-                        'have.text',
-                        `${record.rek_object_type_lookup} level security - ${record.rek_pid}`,
-                    );
+                    cy.get('h4').should('have.text', `Work level security - ${record.rek_pid}`);
                     cy.get('h6')
                         .eq(0)
                         .should('have.text', 'Inherited security policy details');

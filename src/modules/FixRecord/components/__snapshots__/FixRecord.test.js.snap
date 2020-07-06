@@ -961,8 +961,9 @@ exports[`Component FixRecord UNSAFE_componentWillReceiveProps() 1`] = `
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
-            message="Fix record request has been submitted successfully."
+            message="Fix work request has been submitted successfully."
             pushToTop={true}
             showLoader={false}
             title="Success"
@@ -1519,7 +1520,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
-                  label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                  label="Describe the problem with this record, eg work is a duplicate, or suggested changes"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -2658,6 +2659,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   allowDismiss={false}
                   customIcon={null}
                   customType={null}
+                  disableAlertClick={false}
                   dismissTitle="Click to dismiss this alert"
                   message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                   showLoader={false}
@@ -2707,7 +2709,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
-                  label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                  label="Describe the problem with this record, eg work is a duplicate, or suggested changes"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -3378,7 +3380,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
-                  label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                  label="Describe the problem with this record, eg work is a duplicate, or suggested changes"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -3995,12 +3997,13 @@ exports[`Component FixRecord should render unclaim form 1`] = `
           xs={12}
         >
           <StandardCard
-            title="Remove this record from my profile"
+            title="Remove this work from my profile"
           >
             <Alert
               allowDismiss={false}
               customIcon={null}
               customType={null}
+              disableAlertClick={false}
               dismissTitle="Click to dismiss this alert"
               message="You are about to remove this publication from your eSpace profile."
               showLoader={false}
@@ -4013,7 +4016,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 Object {
                   "cancelButtonLabel": "Go to my dashboard",
                   "confirmButtonLabel": "Go to my research",
-                  "confirmationMessage": "You have unclaimed this record successfully",
+                  "confirmationMessage": "You have unclaimed this work successfully",
                   "confirmationTitle": "Unclaim a record",
                 }
               }

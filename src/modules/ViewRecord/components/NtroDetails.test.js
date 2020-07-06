@@ -519,6 +519,18 @@ describe('NtroDetails ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('does not render the abstract at all', () => {
+        const wrapper = setup({
+            account: { canMasquerade: true },
+            publication: {
+                ...ntro,
+                rek_formatted_abstract: null,
+                rek_description: null,
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders ISMN correctly', () => {
         const wrapper = setup({
             account: { canMasquerade: true },
