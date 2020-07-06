@@ -221,7 +221,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert />}
+                    {!!locked && <LockedAlert handleCancel={handleCancel} />}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (

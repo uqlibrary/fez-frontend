@@ -29,6 +29,10 @@ export class FileUploadTermsAndConditions extends PureComponent {
                 disabled={disabled}
                 control={
                     <Checkbox
+                        inputProps={{
+                            'data-testid': 'terms-and-conditions-input',
+                            id: 'terms-and-conditions-input',
+                        }}
                         checked={isTermsAndConditionsAccepted}
                         onChange={this._handleChange}
                         classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
