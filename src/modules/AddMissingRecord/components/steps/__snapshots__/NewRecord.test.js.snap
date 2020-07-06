@@ -22,6 +22,7 @@ exports[`Add new record should render alert about file uploading or issue error 
               allowDismiss={false}
               customIcon={null}
               customType={null}
+              disableAlertClick={false}
               dismissTitle="Click to dismiss this alert"
               message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
               showLoader={false}

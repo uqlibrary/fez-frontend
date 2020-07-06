@@ -505,6 +505,7 @@ exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="Work has been deleted"
             pushToTop={true}
@@ -1002,6 +1003,7 @@ exports[`Component DeleteRecord should display alert and disable delete button o
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="This pid UQ:41878 cannot be deleted because it has a UQ DOI attached. Remove the DOI from this work first before deleting. If this work is the original source of the DOI, it must also be be de-activated on Crossref."
             showLoader={false}

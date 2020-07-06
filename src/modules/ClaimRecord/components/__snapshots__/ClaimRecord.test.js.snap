@@ -10644,6 +10644,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
@@ -11720,6 +11721,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       allowDismiss={false}
                       customIcon={null}
                       customType={null}
+                      disableAlertClick={false}
                       dismissTitle="Click to dismiss this alert"
                       message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                       pushToTop={true}
@@ -14819,6 +14821,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="Claim publication is being processed."
             pushToTop={true}
@@ -16218,6 +16221,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message="Publication claim has been submitted successfully."
             pushToTop={true}
@@ -17616,6 +17620,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
             message="Error has occurred during request and request cannot be processed. This is an errorPlease contact eSpace administrators or try again later."
@@ -19015,6 +19020,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
@@ -19302,6 +19308,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
             message="Error has occurred during request and request cannot be processed. The given data was invalid.Please contact eSpace administrators or try again later."
@@ -19574,6 +19581,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
             message="Error has occurred during request and request cannot be processed. The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.Please contact eSpace administrators or try again later."
@@ -20640,6 +20648,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
             allowDismiss={false}
             customIcon={null}
             customType={null}
+            disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message={
               <span>
