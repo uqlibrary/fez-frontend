@@ -2168,6 +2168,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                       >
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-104 StandardCard"
+                          data-testid="standard-card-grant-information"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -2177,10 +2178,12 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                 "root": "MuiCard-root",
                               }
                             }
+                            data-testid="standard-card-grant-information"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-104 StandardCard"
+                              data-testid="standard-card-grant-information"
                               elevation={1}
                               style={Object {}}
                             >
@@ -2218,11 +2221,13 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                     "rounded": "MuiPaper-rounded",
                                   }
                                 }
+                                data-testid="standard-card-grant-information"
                                 elevation={1}
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  data-testid="standard-card-grant-information"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -2238,6 +2243,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                       Object {
                                         "color": "inherit",
                                         "component": "h3",
+                                        "data-testid": "standard-card-grant-information-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -2260,6 +2266,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                         Object {
                                           "color": "inherit",
                                           "component": "h3",
+                                          "data-testid": "standard-card-grant-information-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -2275,6 +2282,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                             className="MuiCardHeader-title"
                                             color="inherit"
                                             component="h3"
+                                            data-testid="standard-card-grant-information-header"
                                             display="block"
                                             variant="h5"
                                           >
@@ -2316,11 +2324,13 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                               }
                                               color="inherit"
                                               component="h3"
+                                              data-testid="standard-card-grant-information-header"
                                               display="block"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                data-testid="standard-card-grant-information-header"
                                               >
                                                 Grant information
                                               </h3>
@@ -2332,6 +2342,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                   </WithStyles(ForwardRef(CardHeader))>
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
+                                    data-testid="standard-card-grant-information-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -2340,9 +2351,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           "root": "MuiCardContent-root",
                                         }
                                       }
+                                      data-testid="standard-card-grant-information-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
+                                        data-testid="standard-card-grant-information-content"
                                       >
                                         <WithStyles(ForwardRef(Typography))
                                           gutterBottom={true}

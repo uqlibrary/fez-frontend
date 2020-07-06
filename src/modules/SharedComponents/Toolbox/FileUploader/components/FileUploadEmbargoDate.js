@@ -12,6 +12,7 @@ export class FileUploadEmbargoDate extends PureComponent {
         minDate: PropTypes.instanceOf(Date),
         onChange: PropTypes.func,
         value: PropTypes.string,
+        fileUploadEmbargoDateId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -43,6 +44,7 @@ export class FileUploadEmbargoDate extends PureComponent {
                 InputProps={inputProps}
                 allowKeyboardControl
                 autoOk
+                data-testid={`${this.props.fileUploadEmbargoDateId}-input`}
                 {...(this.props.canBeCleared ? { clearable: true } : {})}
             />
         );

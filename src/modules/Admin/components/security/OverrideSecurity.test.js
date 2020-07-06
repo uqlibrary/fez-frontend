@@ -3,6 +3,7 @@ import OverrideSecurity from './OverrideSecurity';
 const setup = testProps => {
     const props = {
         label: 'test',
+        overrideSecurityId: 'test',
         input: {
             onChange: jest.fn(),
         },

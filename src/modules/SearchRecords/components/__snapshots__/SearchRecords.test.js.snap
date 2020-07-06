@@ -540,7 +540,7 @@ exports[`SearchRecords page should render when paging 1`] = `
             xs={12}
           >
             <span>
-              Displaying works 10 to 20 of 100 total records. 
+              Displaying works 10 to 20 of 100 total works. 
             </span>
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))

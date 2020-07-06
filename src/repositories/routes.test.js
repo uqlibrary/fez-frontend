@@ -735,14 +735,14 @@ describe('Backend routes method', () => {
     it('should construct url for SEARCH_AUTHOR_LOOKUP_API', () => {
         expect(
             routes.SEARCH_AUTHOR_LOOKUP_API({
-                searchQuery: 'a,b',
+                searchQuery: 'a,b-c!?     %',
             }),
         ).toEqual({
             apiUrl: 'fez-authors/search',
             options: {
                 params: {
                     rule: 'lookup',
-                    query: 'ab',
+                    query: 'a b c ',
                 },
             },
         });

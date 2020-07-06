@@ -11,11 +11,12 @@ exports[`SecurityCard component should not render data stream security selector 
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="record-security-card"
       subCard={true}
       title={
         <span>
           <strong>
-            Record
+            Work
           </strong>
            level security - 
           UQ:123456
@@ -62,6 +63,7 @@ exports[`SecurityCard component should not render data stream security selector 
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
+            overrideSecurityId="rek-security-inherited"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -81,6 +83,7 @@ exports[`SecurityCard component should render security card correctly for collec
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="record-security-card"
       subCard={true}
       title={
         <span>
@@ -179,6 +182,7 @@ exports[`SecurityCard component should render security card correctly for commun
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="record-security-card"
       subCard={true}
       title={
         <span>
@@ -232,11 +236,12 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="record-security-card"
       subCard={true}
       title={
         <span>
           <strong>
-            Record
+            Work
           </strong>
            level security - 
           UQ:123456
@@ -283,6 +288,7 @@ exports[`SecurityCard component should render security card correctly for record
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
+            overrideSecurityId="rek-security-inherited"
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -294,6 +300,7 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="datastream-security-card"
       subCard={true}
       title={
         <span>
@@ -690,11 +697,12 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="record-security-card"
       subCard={true}
       title={
         <span>
           <strong>
-            Record
+            Work
           </strong>
            level security - 
           UQ:123456
@@ -741,6 +749,7 @@ exports[`SecurityCard component should render security card correctly for record
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
+            overrideSecurityId="rek-security-inherited"
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -762,10 +771,10 @@ exports[`SecurityCard component should render security card correctly for record
                   "overridePolicyPrompt": "Security policy for this file to override inheritance",
                   "overridePrompt": "Override datastream security policy details",
                 },
-                "dataStreamFieldLabel": "Override record level policy to apply to this PID",
-                "dataStreamSelectedTitle": "Selected record level datastream security policy details",
+                "dataStreamFieldLabel": "Override work level policy to apply to this PID",
+                "dataStreamSelectedTitle": "Selected work level datastream security policy details",
                 "description": "",
-                "fieldLabel": "Override record",
+                "fieldLabel": "Override work",
                 "inheritedPolicy": Object {
                   "dataStream": Object {
                     "title": "Inherited datastream security policy details",
@@ -775,7 +784,7 @@ exports[`SecurityCard component should render security card correctly for record
                   },
                 },
                 "prompt": "Select a security policy to apply",
-                "selectedTitle": "Selected record level security policy details",
+                "selectedTitle": "Selected work level security policy details",
               }
             }
           />
@@ -789,6 +798,7 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="datastream-security-card"
       subCard={true}
       title={
         <span>
@@ -1185,11 +1195,12 @@ exports[`SecurityCard component should render security card with disabled inputs
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="record-security-card"
       subCard={true}
       title={
         <span>
           <strong>
-            Record
+            Work
           </strong>
            level security - 
           UQ:123456
@@ -1236,6 +1247,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
+            overrideSecurityId="rek-security-inherited"
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -1257,10 +1269,10 @@ exports[`SecurityCard component should render security card with disabled inputs
                   "overridePolicyPrompt": "Security policy for this file to override inheritance",
                   "overridePrompt": "Override datastream security policy details",
                 },
-                "dataStreamFieldLabel": "Override record level policy to apply to this PID",
-                "dataStreamSelectedTitle": "Selected record level datastream security policy details",
+                "dataStreamFieldLabel": "Override work level policy to apply to this PID",
+                "dataStreamSelectedTitle": "Selected work level datastream security policy details",
                 "description": "",
-                "fieldLabel": "Override record",
+                "fieldLabel": "Override work",
                 "inheritedPolicy": Object {
                   "dataStream": Object {
                     "title": "Inherited datastream security policy details",
@@ -1270,7 +1282,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   },
                 },
                 "prompt": "Select a security policy to apply",
-                "selectedTitle": "Selected record level security policy details",
+                "selectedTitle": "Selected work level security policy details",
               }
             }
           />
@@ -1284,6 +1296,7 @@ exports[`SecurityCard component should render security card with disabled inputs
   >
     <StandardCard
       accentHeader={true}
+      standardCardId="datastream-security-card"
       subCard={true}
       title={
         <span>

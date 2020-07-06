@@ -474,6 +474,18 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   className="MuiFormControl-root MuiFormControl-fullWidth"
                 >
                   <WithStyles(ForwardRef(Select))
+                    MenuProps={
+                      Object {
+                        "data-testid": "undefined-options",
+                        "id": "undefined-options",
+                      }
+                    }
+                    SelectDisplayProps={
+                      Object {
+                        "data-testid": "undefined-select",
+                        "id": "undefined-select",
+                      }
+                    }
                     className=""
                     disabled={true}
                     displayEmpty={true}
@@ -489,10 +501,28 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         name="accessCondition"
                       />
                     }
+                    inputProps={
+                      Object {
+                        "data-testid": "undefined-input",
+                        "id": "undefined-input",
+                      }
+                    }
                     onChange={[Function]}
                     value=""
                   >
                     <ForwardRef(Select)
+                      MenuProps={
+                        Object {
+                          "data-testid": "undefined-options",
+                          "id": "undefined-options",
+                        }
+                      }
+                      SelectDisplayProps={
+                        Object {
+                          "data-testid": "undefined-select",
+                          "id": "undefined-select",
+                        }
+                      }
                       className=""
                       classes={
                         Object {
@@ -521,6 +551,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           id="access-condition"
                           name="accessCondition"
                         />
+                      }
+                      inputProps={
+                        Object {
+                          "data-testid": "undefined-input",
+                          "id": "undefined-input",
+                        }
                       }
                       onChange={[Function]}
                       value=""
@@ -584,9 +620,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "render": [Function],
                               },
                             },
-                            "MenuProps": undefined,
+                            "MenuProps": Object {
+                              "data-testid": "undefined-options",
+                              "id": "undefined-options",
+                            },
                             "SelectDisplayProps": Object {
-                              "id": undefined,
+                              "data-testid": "undefined-select",
+                              "id": "undefined-select",
                             },
                             "autoWidth": false,
                             "children": Array [
@@ -621,7 +661,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               "select": "MuiSelect-select",
                               "selectMenu": "MuiSelect-selectMenu",
                             },
+                            "data-testid": "undefined-input",
                             "displayEmpty": true,
+                            "id": "undefined-input",
                             "labelId": undefined,
                             "multiple": false,
                             "onClose": undefined,
@@ -708,9 +750,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "render": [Function],
                                 },
                               },
-                              "MenuProps": undefined,
+                              "MenuProps": Object {
+                                "data-testid": "undefined-options",
+                                "id": "undefined-options",
+                              },
                               "SelectDisplayProps": Object {
-                                "id": undefined,
+                                "data-testid": "undefined-select",
+                                "id": "undefined-select",
                               },
                               "autoWidth": false,
                               "children": Array [
@@ -745,7 +791,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "select": "MuiSelect-select",
                                 "selectMenu": "MuiSelect-selectMenu",
                               },
+                              "data-testid": "undefined-input",
                               "displayEmpty": true,
+                              "id": "undefined-input",
                               "labelId": undefined,
                               "multiple": false,
                               "onClose": undefined,
@@ -832,9 +880,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "render": [Function],
                                   },
                                 },
-                                "MenuProps": undefined,
+                                "MenuProps": Object {
+                                  "data-testid": "undefined-options",
+                                  "id": "undefined-options",
+                                },
                                 "SelectDisplayProps": Object {
-                                  "id": undefined,
+                                  "data-testid": "undefined-select",
+                                  "id": "undefined-select",
                                 },
                                 "autoWidth": false,
                                 "children": Array [
@@ -869,7 +921,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "select": "MuiSelect-select",
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
+                                "data-testid": "undefined-input",
                                 "displayEmpty": true,
+                                "id": "undefined-input",
                                 "labelId": undefined,
                                 "multiple": false,
                                 "onClose": undefined,
@@ -962,9 +1016,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "undefined-options",
+                                    "id": "undefined-options",
+                                  },
                                   "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                    "data-testid": "undefined-select",
+                                    "id": "undefined-select",
                                   },
                                   "autoWidth": false,
                                   "children": Array [
@@ -999,7 +1057,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "undefined-input",
                                   "displayEmpty": true,
+                                  "id": "undefined-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -1033,9 +1093,16 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       },
                                     }
                                   }
+                                  MenuProps={
+                                    Object {
+                                      "data-testid": "undefined-options",
+                                      "id": "undefined-options",
+                                    }
+                                  }
                                   SelectDisplayProps={
                                     Object {
-                                      "id": undefined,
+                                      "data-testid": "undefined-select",
+                                      "id": "undefined-select",
                                     }
                                   }
                                   aria-invalid={true}
@@ -1055,9 +1122,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "selectMenu": "MuiSelect-selectMenu",
                                     }
                                   }
+                                  data-testid="undefined-input"
                                   disabled={true}
                                   displayEmpty={true}
-                                  id="access-condition"
+                                  id="undefined-input"
                                   inputRef={[Function]}
                                   multiple={false}
                                   name="accessCondition"
@@ -1072,9 +1140,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   <div
                                     aria-disabled="true"
                                     aria-haspopup="listbox"
-                                    aria-labelledby="mui-component-select-accessCondition"
+                                    aria-labelledby="undefined-select"
                                     className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                    id="mui-component-select-accessCondition"
+                                    data-testid="undefined-select"
+                                    id="undefined-select"
                                     onBlur={[Function]}
                                     onFocus={[Function]}
                                     onKeyDown={[Function]}
@@ -1085,7 +1154,8 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     Select access conditions
                                   </div>
                                   <input
-                                    id="access-condition"
+                                    data-testid="undefined-input"
+                                    id="undefined-input"
                                     name="accessCondition"
                                     onAnimationStart={[Function]}
                                     type="hidden"
@@ -1145,15 +1215,17 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       <div
                                         aria-disabled="true"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="mui-component-select-accessCondition"
+                                        aria-labelledby="undefined-select"
                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                        id="mui-component-select-accessCondition"
+                                        data-testid="undefined-select"
+                                        id="undefined-select"
                                         role="button"
                                       >
                                         Select access conditions
                                       </div>
                                     }
-                                    id="menu-accessCondition"
+                                    data-testid="undefined-options"
+                                    id="undefined-options"
                                     onClose={[Function]}
                                     open={false}
                                   >
@@ -1176,9 +1248,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                         <div
                                           aria-disabled="true"
                                           aria-haspopup="listbox"
-                                          aria-labelledby="mui-component-select-accessCondition"
+                                          aria-labelledby="undefined-select"
                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                          id="mui-component-select-accessCondition"
+                                          data-testid="undefined-select"
+                                          id="undefined-select"
                                           role="button"
                                         >
                                           Select access conditions
@@ -1190,7 +1263,8 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           "paper": "MuiMenu-paper",
                                         }
                                       }
-                                      id="menu-accessCondition"
+                                      data-testid="undefined-options"
+                                      id="undefined-options"
                                       onClose={[Function]}
                                       open={false}
                                     >
@@ -1209,9 +1283,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           <div
                                             aria-disabled="true"
                                             aria-haspopup="listbox"
-                                            aria-labelledby="mui-component-select-accessCondition"
+                                            aria-labelledby="undefined-select"
                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                            id="mui-component-select-accessCondition"
+                                            data-testid="undefined-select"
+                                            id="undefined-select"
                                             role="button"
                                           >
                                             Select access conditions
@@ -1223,8 +1298,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             "vertical": "top",
                                           }
                                         }
+                                        data-testid="undefined-options"
                                         getContentAnchorEl={[Function]}
-                                        id="menu-accessCondition"
+                                        id="undefined-options"
                                         onClose={[Function]}
                                         onEntering={[Function]}
                                         open={false}
@@ -1251,9 +1327,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             <div
                                               aria-disabled="true"
                                               aria-haspopup="listbox"
-                                              aria-labelledby="mui-component-select-accessCondition"
+                                              aria-labelledby="undefined-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                              id="mui-component-select-accessCondition"
+                                              data-testid="undefined-select"
+                                              id="undefined-select"
                                               role="button"
                                             >
                                               Select access conditions
@@ -1271,8 +1348,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                               "root": "MuiPopover-root",
                                             }
                                           }
+                                          data-testid="undefined-options"
                                           getContentAnchorEl={[Function]}
-                                          id="menu-accessCondition"
+                                          id="undefined-options"
                                           onClose={[Function]}
                                           onEntering={[Function]}
                                           open={false}
@@ -1292,7 +1370,8 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             }
                                             className="MuiPopover-root"
                                             container={<body />}
-                                            id="menu-accessCondition"
+                                            data-testid="undefined-options"
+                                            id="undefined-options"
                                             onClose={[Function]}
                                             open={false}
                                           />
@@ -1813,6 +1892,18 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   className="MuiFormControl-root MuiFormControl-fullWidth"
                 >
                   <WithStyles(ForwardRef(Select))
+                    MenuProps={
+                      Object {
+                        "data-testid": "undefined-options",
+                        "id": "undefined-options",
+                      }
+                    }
+                    SelectDisplayProps={
+                      Object {
+                        "data-testid": "undefined-select",
+                        "id": "undefined-select",
+                      }
+                    }
                     className=""
                     disabled={true}
                     displayEmpty={true}
@@ -1828,10 +1919,28 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         name="accessCondition"
                       />
                     }
+                    inputProps={
+                      Object {
+                        "data-testid": "undefined-input",
+                        "id": "undefined-input",
+                      }
+                    }
                     onChange={[Function]}
                     value={8}
                   >
                     <ForwardRef(Select)
+                      MenuProps={
+                        Object {
+                          "data-testid": "undefined-options",
+                          "id": "undefined-options",
+                        }
+                      }
+                      SelectDisplayProps={
+                        Object {
+                          "data-testid": "undefined-select",
+                          "id": "undefined-select",
+                        }
+                      }
                       className=""
                       classes={
                         Object {
@@ -1860,6 +1969,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           id="access-condition"
                           name="accessCondition"
                         />
+                      }
+                      inputProps={
+                        Object {
+                          "data-testid": "undefined-input",
+                          "id": "undefined-input",
+                        }
                       }
                       onChange={[Function]}
                       value={8}
@@ -1923,9 +2038,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "render": [Function],
                               },
                             },
-                            "MenuProps": undefined,
+                            "MenuProps": Object {
+                              "data-testid": "undefined-options",
+                              "id": "undefined-options",
+                            },
                             "SelectDisplayProps": Object {
-                              "id": undefined,
+                              "data-testid": "undefined-select",
+                              "id": "undefined-select",
                             },
                             "autoWidth": false,
                             "children": Array [
@@ -1960,7 +2079,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               "select": "MuiSelect-select",
                               "selectMenu": "MuiSelect-selectMenu",
                             },
+                            "data-testid": "undefined-input",
                             "displayEmpty": true,
+                            "id": "undefined-input",
                             "labelId": undefined,
                             "multiple": false,
                             "onClose": undefined,
@@ -2047,9 +2168,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "render": [Function],
                                 },
                               },
-                              "MenuProps": undefined,
+                              "MenuProps": Object {
+                                "data-testid": "undefined-options",
+                                "id": "undefined-options",
+                              },
                               "SelectDisplayProps": Object {
-                                "id": undefined,
+                                "data-testid": "undefined-select",
+                                "id": "undefined-select",
                               },
                               "autoWidth": false,
                               "children": Array [
@@ -2084,7 +2209,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "select": "MuiSelect-select",
                                 "selectMenu": "MuiSelect-selectMenu",
                               },
+                              "data-testid": "undefined-input",
                               "displayEmpty": true,
+                              "id": "undefined-input",
                               "labelId": undefined,
                               "multiple": false,
                               "onClose": undefined,
@@ -2171,9 +2298,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "render": [Function],
                                   },
                                 },
-                                "MenuProps": undefined,
+                                "MenuProps": Object {
+                                  "data-testid": "undefined-options",
+                                  "id": "undefined-options",
+                                },
                                 "SelectDisplayProps": Object {
-                                  "id": undefined,
+                                  "data-testid": "undefined-select",
+                                  "id": "undefined-select",
                                 },
                                 "autoWidth": false,
                                 "children": Array [
@@ -2208,7 +2339,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "select": "MuiSelect-select",
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
+                                "data-testid": "undefined-input",
                                 "displayEmpty": true,
+                                "id": "undefined-input",
                                 "labelId": undefined,
                                 "multiple": false,
                                 "onClose": undefined,
@@ -2301,9 +2434,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "render": [Function],
                                     },
                                   },
-                                  "MenuProps": undefined,
+                                  "MenuProps": Object {
+                                    "data-testid": "undefined-options",
+                                    "id": "undefined-options",
+                                  },
                                   "SelectDisplayProps": Object {
-                                    "id": undefined,
+                                    "data-testid": "undefined-select",
+                                    "id": "undefined-select",
                                   },
                                   "autoWidth": false,
                                   "children": Array [
@@ -2338,7 +2475,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "select": "MuiSelect-select",
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
+                                  "data-testid": "undefined-input",
                                   "displayEmpty": true,
+                                  "id": "undefined-input",
                                   "labelId": undefined,
                                   "multiple": false,
                                   "onClose": undefined,
@@ -2372,9 +2511,16 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       },
                                     }
                                   }
+                                  MenuProps={
+                                    Object {
+                                      "data-testid": "undefined-options",
+                                      "id": "undefined-options",
+                                    }
+                                  }
                                   SelectDisplayProps={
                                     Object {
-                                      "id": undefined,
+                                      "data-testid": "undefined-select",
+                                      "id": "undefined-select",
                                     }
                                   }
                                   aria-invalid={false}
@@ -2394,9 +2540,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "selectMenu": "MuiSelect-selectMenu",
                                     }
                                   }
+                                  data-testid="undefined-input"
                                   disabled={true}
                                   displayEmpty={true}
-                                  id="access-condition"
+                                  id="undefined-input"
                                   inputRef={[Function]}
                                   multiple={false}
                                   name="accessCondition"
@@ -2411,9 +2558,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   <div
                                     aria-disabled="true"
                                     aria-haspopup="listbox"
-                                    aria-labelledby="mui-component-select-accessCondition"
+                                    aria-labelledby="undefined-select"
                                     className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                    id="mui-component-select-accessCondition"
+                                    data-testid="undefined-select"
+                                    id="undefined-select"
                                     onBlur={[Function]}
                                     onFocus={[Function]}
                                     onKeyDown={[Function]}
@@ -2424,7 +2572,8 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     Closed Access
                                   </div>
                                   <input
-                                    id="access-condition"
+                                    data-testid="undefined-input"
+                                    id="undefined-input"
                                     name="accessCondition"
                                     onAnimationStart={[Function]}
                                     type="hidden"
@@ -2484,15 +2633,17 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       <div
                                         aria-disabled="true"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="mui-component-select-accessCondition"
+                                        aria-labelledby="undefined-select"
                                         class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                        id="mui-component-select-accessCondition"
+                                        data-testid="undefined-select"
+                                        id="undefined-select"
                                         role="button"
                                       >
                                         Closed Access
                                       </div>
                                     }
-                                    id="menu-accessCondition"
+                                    data-testid="undefined-options"
+                                    id="undefined-options"
                                     onClose={[Function]}
                                     open={false}
                                   >
@@ -2515,9 +2666,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                         <div
                                           aria-disabled="true"
                                           aria-haspopup="listbox"
-                                          aria-labelledby="mui-component-select-accessCondition"
+                                          aria-labelledby="undefined-select"
                                           class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                          id="mui-component-select-accessCondition"
+                                          data-testid="undefined-select"
+                                          id="undefined-select"
                                           role="button"
                                         >
                                           Closed Access
@@ -2529,7 +2681,8 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           "paper": "MuiMenu-paper",
                                         }
                                       }
-                                      id="menu-accessCondition"
+                                      data-testid="undefined-options"
+                                      id="undefined-options"
                                       onClose={[Function]}
                                       open={false}
                                     >
@@ -2548,9 +2701,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           <div
                                             aria-disabled="true"
                                             aria-haspopup="listbox"
-                                            aria-labelledby="mui-component-select-accessCondition"
+                                            aria-labelledby="undefined-select"
                                             class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                            id="mui-component-select-accessCondition"
+                                            data-testid="undefined-select"
+                                            id="undefined-select"
                                             role="button"
                                           >
                                             Closed Access
@@ -2562,8 +2716,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             "vertical": "top",
                                           }
                                         }
+                                        data-testid="undefined-options"
                                         getContentAnchorEl={[Function]}
-                                        id="menu-accessCondition"
+                                        id="undefined-options"
                                         onClose={[Function]}
                                         onEntering={[Function]}
                                         open={false}
@@ -2590,9 +2745,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             <div
                                               aria-disabled="true"
                                               aria-haspopup="listbox"
-                                              aria-labelledby="mui-component-select-accessCondition"
+                                              aria-labelledby="undefined-select"
                                               class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                              id="mui-component-select-accessCondition"
+                                              data-testid="undefined-select"
+                                              id="undefined-select"
                                               role="button"
                                             >
                                               Closed Access
@@ -2610,8 +2766,9 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                               "root": "MuiPopover-root",
                                             }
                                           }
+                                          data-testid="undefined-options"
                                           getContentAnchorEl={[Function]}
-                                          id="menu-accessCondition"
+                                          id="undefined-options"
                                           onClose={[Function]}
                                           onEntering={[Function]}
                                           open={false}
@@ -2631,7 +2788,8 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             }
                                             className="MuiPopover-root"
                                             container={<body />}
-                                            id="menu-accessCondition"
+                                            data-testid="undefined-options"
+                                            id="undefined-options"
                                             onClose={[Function]}
                                             open={false}
                                           />
@@ -2665,6 +2823,18 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
   required={true}
 >
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "undefined-options",
+        "id": "undefined-options",
+      }
+    }
+    SelectDisplayProps={
+      Object {
+        "data-testid": "undefined-select",
+        "id": "undefined-select",
+      }
+    }
     className=""
     displayEmpty={true}
     input={
@@ -2678,6 +2848,12 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
         id="access-condition"
         name="accessCondition"
       />
+    }
+    inputProps={
+      Object {
+        "data-testid": "undefined-input",
+        "id": "undefined-input",
+      }
     }
     onChange={[Function]}
     value=""
@@ -2737,6 +2913,18 @@ exports[`Component FileUploadAccessSelector should render with value 1`] = `
   required={true}
 >
   <WithStyles(ForwardRef(Select))
+    MenuProps={
+      Object {
+        "data-testid": "undefined-options",
+        "id": "undefined-options",
+      }
+    }
+    SelectDisplayProps={
+      Object {
+        "data-testid": "undefined-select",
+        "id": "undefined-select",
+      }
+    }
     className=""
     displayEmpty={true}
     input={
@@ -2750,6 +2938,12 @@ exports[`Component FileUploadAccessSelector should render with value 1`] = `
         id="access-condition"
         name="accessCondition"
       />
+    }
+    inputProps={
+      Object {
+        "data-testid": "undefined-input",
+        "id": "undefined-input",
+      }
     }
     onChange={[Function]}
     value={9}

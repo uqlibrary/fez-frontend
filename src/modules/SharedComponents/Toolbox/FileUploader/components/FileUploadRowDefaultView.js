@@ -27,6 +27,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         onAccessConditionChange: PropTypes.func.isRequired,
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
+        fileUploadRowViewId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -50,10 +51,10 @@ export class FileUploadRowDefaultView extends PureComponent {
         } = this.props;
 
         return (
-            <div style={{ flexGrow: 1, padding: 4 }}>
+            <div style={{ flexGrow: 1, padding: 4 }} data-testid={this.props.fileUploadRowViewId}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
                     <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
-                        <Typography variant="body2" gutterBottom noWrap>
+                        <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
                         </Typography>
                     </Grid>
@@ -67,11 +68,12 @@ export class FileUploadRowDefaultView extends PureComponent {
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
+                                    fileUploadAccessSelectorId={`dsi-open-access-${index}`}
                                 />
                             </Grid>
                             <Grid item md={2} sm={2}>
                                 {accessConditionId !== config.OPEN_ACCESS_ID && (
-                                    <Typography variant="body2" gutterBottom>
+                                    <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
@@ -81,13 +83,19 @@ export class FileUploadRowDefaultView extends PureComponent {
                                         minDate={new Date()}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
+                                        fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
                                     />
                                 )}
                             </Grid>
                         </Fragment>
                     )}
                     <Grid item xs={1} className={classes.icon}>
-                        <FileUploadRowStatus disabled={disabled} onDelete={this.props.onDelete} name={name} />
+                        <FileUploadRowStatus
+                            disabled={disabled}
+                            onDelete={this.props.onDelete}
+                            name={name}
+                            fileUploadRowStatusId={`dsi-dsid-${index}`}
+                        />
                     </Grid>
                 </Grid>
             </div>
