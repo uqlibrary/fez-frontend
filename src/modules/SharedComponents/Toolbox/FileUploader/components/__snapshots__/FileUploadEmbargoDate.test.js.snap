@@ -13,6 +13,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
   allowKeyboardControl={true}
   autoOk={true}
   clearable={true}
+  data-testid="undefined-input"
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
   maxDate={2100-01-01T00:00:00.000Z}
@@ -44,6 +45,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
   }
   allowKeyboardControl={true}
   autoOk={true}
+  data-testid="undefined-input"
   disabled={true}
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
@@ -76,6 +78,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
   }
   allowKeyboardControl={true}
   autoOk={true}
+  data-testid="undefined-input"
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
   maxDate={2100-01-01T00:00:00.000Z}
@@ -120,6 +123,7 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
   }
   allowKeyboardControl={true}
   autoOk={true}
+  data-testid="undefined-input"
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
   maxDate={2100-01-01T00:00:00.000Z}
@@ -151,6 +155,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   }
   allowKeyboardControl={true}
   autoOk={true}
+  data-testid="undefined-input"
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
   maxDate={2100-01-01T00:00:00.000Z}
@@ -182,6 +187,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   }
   allowKeyboardControl={true}
   autoOk={true}
+  data-testid="undefined-input"
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
   maxDate={2100-01-01T00:00:00.000Z}

@@ -2232,6 +2232,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                           >
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-106 StandardCard"
+                              data-testid="standard-card-non-traditional-research-output-metadata"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -2241,10 +2242,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                     "root": "MuiCard-root",
                                   }
                                 }
+                                data-testid="standard-card-non-traditional-research-output-metadata"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-106 StandardCard"
+                                  data-testid="standard-card-non-traditional-research-output-metadata"
                                   elevation={1}
                                   style={Object {}}
                                 >
@@ -2282,11 +2285,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                         "rounded": "MuiPaper-rounded",
                                       }
                                     }
+                                    data-testid="standard-card-non-traditional-research-output-metadata"
                                     elevation={1}
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-106 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      data-testid="standard-card-non-traditional-research-output-metadata"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -2302,6 +2307,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           Object {
                                             "color": "inherit",
                                             "component": "h3",
+                                            "data-testid": "standard-card-non-traditional-research-output-metadata-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -2324,6 +2330,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             Object {
                                               "color": "inherit",
                                               "component": "h3",
+                                              "data-testid": "standard-card-non-traditional-research-output-metadata-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -2339,6 +2346,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                 className="MuiCardHeader-title"
                                                 color="inherit"
                                                 component="h3"
+                                                data-testid="standard-card-non-traditional-research-output-metadata-header"
                                                 display="block"
                                                 variant="h5"
                                               >
@@ -2380,11 +2388,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   }
                                                   color="inherit"
                                                   component="h3"
+                                                  data-testid="standard-card-non-traditional-research-output-metadata-header"
                                                   display="block"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                    data-testid="standard-card-non-traditional-research-output-metadata-header"
                                                   >
                                                     Non-traditional research output metadata
                                                   </h3>
@@ -2396,6 +2406,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                       </WithStyles(ForwardRef(CardHeader))>
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
+                                        data-testid="standard-card-non-traditional-research-output-metadata-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -2404,9 +2415,11 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               "root": "MuiCardContent-root",
                                             }
                                           }
+                                          data-testid="standard-card-non-traditional-research-output-metadata-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
+                                            data-testid="standard-card-non-traditional-research-output-metadata-content"
                                           >
                                             <Component
                                               data="Major"

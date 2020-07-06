@@ -1,8 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Cards component renders given ID for standar card 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="testClass StandardCard"
+  data-testid="test-card"
+  style={Object {}}
+>
+  <WithStyles(ForwardRef(CardHeader))
+    action={false}
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    style={Object {}}
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h3",
+        "data-testid": "test-card-header",
+        "variant": "h5",
+      }
+    }
+  />
+  <WithStyles(ForwardRef(CardContent))
+    className=""
+    data-testid="test-card-content"
+  />
+</WithStyles(ForwardRef(Card))>
+`;
+
 exports[`Cards component renders with custom colours and full height 1`] = `
 <WithStyles(ForwardRef(Card))
   className="undefined StandardCard"
+  data-testid="standard-card-card-title"
   style={
     Object {
       "backgroundColor": "#fcc",
@@ -28,12 +60,14 @@ exports[`Cards component renders with custom colours and full height 1`] = `
       Object {
         "color": "inherit",
         "component": "h3",
+        "data-testid": "standard-card-card-title-header",
         "variant": "h5",
       }
     }
   />
   <WithStyles(ForwardRef(CardContent))
     className="no-padding"
+    data-testid="standard-card-card-title-content"
   />
 </WithStyles(ForwardRef(Card))>
 `;
@@ -41,6 +75,7 @@ exports[`Cards component renders with custom colours and full height 1`] = `
 exports[`Cards component renders with small title and as a subcard 1`] = `
 <WithStyles(ForwardRef(Card))
   className="testClass StandardCard"
+  data-testid="standard-card-card-title"
   style={Object {}}
 >
   <WithStyles(ForwardRef(CardHeader))
@@ -56,12 +91,14 @@ exports[`Cards component renders with small title and as a subcard 1`] = `
       Object {
         "color": "inherit",
         "component": "h4",
+        "data-testid": "standard-card-card-title-header",
         "variant": "h6",
       }
     }
   />
   <WithStyles(ForwardRef(CardContent))
     className=""
+    data-testid="standard-card-card-title-content"
   />
 </WithStyles(ForwardRef(Card))>
 `;
@@ -69,6 +106,7 @@ exports[`Cards component renders with small title and as a subcard 1`] = `
 exports[`Cards component renders with square top and accent header 1`] = `
 <WithStyles(ForwardRef(Card))
   className="undefined StandardCard"
+  data-testid="standard-card-card-title"
   style={Object {}}
 >
   <WithStyles(ForwardRef(CardHeader))
@@ -89,12 +127,14 @@ exports[`Cards component renders with square top and accent header 1`] = `
       Object {
         "color": "inherit",
         "component": "h3",
+        "data-testid": "standard-card-card-title-header",
         "variant": "h5",
       }
     }
   />
   <WithStyles(ForwardRef(CardContent))
     className=""
+    data-testid="standard-card-card-title-content"
   />
 </WithStyles(ForwardRef(Card))>
 `;
@@ -102,6 +142,7 @@ exports[`Cards component renders with square top and accent header 1`] = `
 exports[`Cards component renders with title and help button 1`] = `
 <WithStyles(ForwardRef(Card))
   className="testClass StandardCard"
+  data-testid="standard-card-card-title"
   style={Object {}}
 >
   <WithStyles(ForwardRef(CardHeader))
@@ -123,12 +164,14 @@ exports[`Cards component renders with title and help button 1`] = `
       Object {
         "color": "inherit",
         "component": "h3",
+        "data-testid": "standard-card-card-title-header",
         "variant": "h5",
       }
     }
   />
   <WithStyles(ForwardRef(CardContent))
     className=""
+    data-testid="standard-card-card-title-content"
   />
 </WithStyles(ForwardRef(Card))>
 `;
@@ -136,6 +179,7 @@ exports[`Cards component renders with title and help button 1`] = `
 exports[`Cards component renders with title and no help icon 1`] = `
 <WithStyles(ForwardRef(Card))
   className="testClass StandardCard"
+  data-testid="standard-card-card-title"
   style={Object {}}
 >
   <WithStyles(ForwardRef(CardHeader))
@@ -151,12 +195,14 @@ exports[`Cards component renders with title and no help icon 1`] = `
       Object {
         "color": "inherit",
         "component": "h3",
+        "data-testid": "standard-card-card-title-header",
         "variant": "h5",
       }
     }
   />
   <WithStyles(ForwardRef(CardContent))
     className=""
+    data-testid="standard-card-card-title-content"
   />
 </WithStyles(ForwardRef(Card))>
 `;

@@ -2096,6 +2096,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                   >
                                     <WithStyles(ForwardRef(Card))
                                       className="Cards-card-104 StandardCard"
+                                      data-testid="standard-card-possible-matches-found"
                                       style={Object {}}
                                     >
                                       <ForwardRef(Card)
@@ -2105,10 +2106,12 @@ exports[`Search record results should render a single unclaimable item with no a
                                             "root": "MuiCard-root",
                                           }
                                         }
+                                        data-testid="standard-card-possible-matches-found"
                                         style={Object {}}
                                       >
                                         <WithStyles(ForwardRef(Paper))
                                           className="MuiCard-root Cards-card-104 StandardCard"
+                                          data-testid="standard-card-possible-matches-found"
                                           elevation={1}
                                           style={Object {}}
                                         >
@@ -2146,11 +2149,13 @@ exports[`Search record results should render a single unclaimable item with no a
                                                 "rounded": "MuiPaper-rounded",
                                               }
                                             }
+                                            data-testid="standard-card-possible-matches-found"
                                             elevation={1}
                                             style={Object {}}
                                           >
                                             <div
                                               className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                              data-testid="standard-card-possible-matches-found"
                                               style={Object {}}
                                             >
                                               <WithStyles(ForwardRef(CardHeader))
@@ -2166,6 +2171,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   Object {
                                                     "color": "inherit",
                                                     "component": "h3",
+                                                    "data-testid": "standard-card-possible-matches-found-header",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -2188,6 +2194,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     Object {
                                                       "color": "inherit",
                                                       "component": "h3",
+                                                      "data-testid": "standard-card-possible-matches-found-header",
                                                       "variant": "h5",
                                                     }
                                                   }
@@ -2203,6 +2210,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                         className="MuiCardHeader-title"
                                                         color="inherit"
                                                         component="h3"
+                                                        data-testid="standard-card-possible-matches-found-header"
                                                         display="block"
                                                         variant="h5"
                                                       >
@@ -2244,11 +2252,13 @@ exports[`Search record results should render a single unclaimable item with no a
                                                           }
                                                           color="inherit"
                                                           component="h3"
+                                                          data-testid="standard-card-possible-matches-found-header"
                                                           display="block"
                                                           variant="h5"
                                                         >
                                                           <h3
                                                             className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                            data-testid="standard-card-possible-matches-found-header"
                                                           >
                                                             Possible matches found
                                                           </h3>
@@ -2260,6 +2270,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                               </WithStyles(ForwardRef(CardHeader))>
                                               <WithStyles(ForwardRef(CardContent))
                                                 className=""
+                                                data-testid="standard-card-possible-matches-found-content"
                                               >
                                                 <ForwardRef(CardContent)
                                                   className=""
@@ -2268,9 +2279,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                                       "root": "MuiCardContent-root",
                                                     }
                                                   }
+                                                  data-testid="standard-card-possible-matches-found-content"
                                                 >
                                                   <div
                                                     className="MuiCardContent-root"
+                                                    data-testid="standard-card-possible-matches-found-content"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       container={true}

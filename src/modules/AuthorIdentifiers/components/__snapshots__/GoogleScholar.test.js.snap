@@ -2418,6 +2418,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                 >
                                                   <WithStyles(ForwardRef(Card))
                                                     className="Cards-card-137 StandardCard"
+                                                    data-testid="standard-card-add-your-google-scholar-identifier"
                                                     style={Object {}}
                                                   >
                                                     <ForwardRef(Card)
@@ -2427,10 +2428,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                           "root": "MuiCard-root",
                                                         }
                                                       }
+                                                      data-testid="standard-card-add-your-google-scholar-identifier"
                                                       style={Object {}}
                                                     >
                                                       <WithStyles(ForwardRef(Paper))
                                                         className="MuiCard-root Cards-card-137 StandardCard"
+                                                        data-testid="standard-card-add-your-google-scholar-identifier"
                                                         elevation={1}
                                                         style={Object {}}
                                                       >
@@ -2468,11 +2471,13 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                               "rounded": "MuiPaper-rounded",
                                                             }
                                                           }
+                                                          data-testid="standard-card-add-your-google-scholar-identifier"
                                                           elevation={1}
                                                           style={Object {}}
                                                         >
                                                           <div
                                                             className="MuiPaper-root MuiCard-root Cards-card-137 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                            data-testid="standard-card-add-your-google-scholar-identifier"
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(CardHeader))
@@ -2517,6 +2522,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                 Object {
                                                                   "color": "inherit",
                                                                   "component": "h3",
+                                                                  "data-testid": "standard-card-add-your-google-scholar-identifier-header",
                                                                   "variant": "h5",
                                                                 }
                                                               }
@@ -2568,6 +2574,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                   Object {
                                                                     "color": "inherit",
                                                                     "component": "h3",
+                                                                    "data-testid": "standard-card-add-your-google-scholar-identifier-header",
                                                                     "variant": "h5",
                                                                   }
                                                                 }
@@ -2583,6 +2590,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                       className="MuiCardHeader-title"
                                                                       color="inherit"
                                                                       component="h3"
+                                                                      data-testid="standard-card-add-your-google-scholar-identifier-header"
                                                                       display="block"
                                                                       variant="h5"
                                                                     >
@@ -2624,11 +2632,13 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                         }
                                                                         color="inherit"
                                                                         component="h3"
+                                                                        data-testid="standard-card-add-your-google-scholar-identifier-header"
                                                                         display="block"
                                                                         variant="h5"
                                                                       >
                                                                         <h3
                                                                           className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                                          data-testid="standard-card-add-your-google-scholar-identifier-header"
                                                                         >
                                                                           Add your Google Scholar identifier
                                                                         </h3>
@@ -3000,6 +3010,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                             </WithStyles(ForwardRef(CardHeader))>
                                                             <WithStyles(ForwardRef(CardContent))
                                                               className=""
+                                                              data-testid="standard-card-add-your-google-scholar-identifier-content"
                                                             >
                                                               <ForwardRef(CardContent)
                                                                 className=""
@@ -3008,9 +3019,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                     "root": "MuiCardContent-root",
                                                                   }
                                                                 }
+                                                                data-testid="standard-card-add-your-google-scholar-identifier-content"
                                                               >
                                                                 <div
                                                                   className="MuiCardContent-root"
+                                                                  data-testid="standard-card-add-your-google-scholar-identifier-content"
                                                                 >
                                                                   <div>
                                                                     <p>
