@@ -9068,7 +9068,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
                                                               data-testid="unpublish-admin"
-                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="admin-work-unpublish"
                                                               variant="contained"
@@ -9109,7 +9108,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="secondary"
                                                                 data-testid="unpublish-admin"
-                                                                disabled={false}
                                                                 fullWidth={true}
                                                                 id="admin-work-unpublish"
                                                                 variant="contained"
@@ -9324,7 +9322,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="primary"
                                                               data-testid="submit-admin"
-                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="admin-work-submit"
                                                               onClick={
@@ -9385,7 +9382,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="primary"
                                                                 data-testid="submit-admin"
-                                                                disabled={false}
                                                                 fullWidth={true}
                                                                 id="admin-work-submit"
                                                                 onClick={
