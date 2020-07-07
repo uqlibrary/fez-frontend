@@ -165,7 +165,11 @@ export const AdminInterface = ({
                 squareTop
                 smallTitle
             >
-                <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
+                <Field
+                    component={tabs[tab].component}
+                    disabled={submitting || (locked && record.rek_editing_user !== authorDetails.username)}
+                    name={`${tab}Section`}
+                />
             </StandardCard>
         </TabContainer>
     );
@@ -221,7 +225,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert />}
+                    {!!locked && <LockedAlert handleCancel={handleCancel} />}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
