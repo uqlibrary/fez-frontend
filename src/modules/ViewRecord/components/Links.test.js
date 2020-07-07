@@ -137,7 +137,10 @@ describe('Component Links ', () => {
     it('Rendering due to being open access link no doi', () => {
         const wrapper = setup({
             publication: {
-                fez_record_search_key_oa_status: { rek_oa_status: 'Link (no DOI)' },
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
+                    rek_oa_status_lookup: 'Link (no DOI)',
+                },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -225,32 +228,52 @@ describe('Component Links ', () => {
         expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 
-    it(
-        'should render 3 not OA links and DOI not OA and PMC ' +
-            'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
-        () => {
-            const pmcProps = {
-                ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),
-                fez_record_search_key_pubmed_central_id: {
-                    rek_pubmed_central_id_id: 12345678901,
-                    rek_pubmed_central_id_pid: 'UQ:1234',
-                    rek_pubmed_central_id_xsdmf_id: 1234,
-                    rek_pubmed_central_id: 'PMC5179926',
-                },
-                fez_record_search_key_doi: {
-                    rek_doi_id: 1706266,
-                    rek_doi_pid: 'UQ:795721',
-                    rek_doi_xsdmf_id: 16514,
-                    rek_doi: '10.1016/j.pnsc.2012.12.004',
-                },
-            };
+    // prettier-ignore
+    it('should render 3 not OA links and DOI not OA and PMC always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT', () => {
+        const pmcProps = {
+            ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),
+            fez_record_search_key_pubmed_central_id: {
+                rek_pubmed_central_id_id: 12345678901,
+                rek_pubmed_central_id_pid: 'UQ:1234',
+                rek_pubmed_central_id_xsdmf_id: 1234,
+                rek_pubmed_central_id: 'PMC5179926',
+            },
+            fez_record_search_key_doi: {
+                rek_doi_id: 1706266,
+                rek_doi_pid: 'UQ:795721',
+                rek_doi_xsdmf_id: 16514,
+                rek_doi: '10.1016/j.pnsc.2012.12.004',
+            },
+        };
 
-            const wrapper = setup({ publication: pmcProps });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            // expect(wrapper.find('.noOaIcon').length).toEqual(4);
-            // expect(wrapper.find('.openAccess').length).toEqual(1);
-        },
-    );
+        const wrapper = setup({ publication: pmcProps });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(wrapper.find('.noOaIcon').length).toEqual(4);
+        // expect(wrapper.find('.openAccess').length).toEqual(1);
+    });
+
+    it('should render something something for OPEN_ACCESS_ID_PREPRINT', () => {
+        const pmcProps = {
+            ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_PREPRINT),
+            fez_record_search_key_pubmed_central_id: {
+                rek_pubmed_central_id_id: 12345678901,
+                rek_pubmed_central_id_pid: 'UQ:1234',
+                rek_pubmed_central_id_xsdmf_id: 1234,
+                rek_pubmed_central_id: 'PMC5179926',
+            },
+            fez_record_search_key_doi: {
+                rek_doi_id: 1706266,
+                rek_doi_pid: 'UQ:795721',
+                rek_doi_xsdmf_id: 16514,
+                rek_doi: '10.1016/j.pnsc.2012.12.004',
+            },
+        };
+
+        const wrapper = setup({ publication: pmcProps });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(wrapper.find('.noOaIcon').length).toEqual(4);
+        // expect(wrapper.find('.openAccess').length).toEqual(1);
+    });
 
     it('should use special default description if the link has the RDM hostname', () => {
         const wrapper = setup({
