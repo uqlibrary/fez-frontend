@@ -17,7 +17,7 @@ import { locale } from 'locale';
 import {
     DOCTYPE_SUBTYPE_MAPPING,
     NEW_DOCTYPES_OPTIONS,
-    NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     PUBLICATION_TYPE_DESIGN,
 } from 'config/general';
 import moment from 'moment';
@@ -144,8 +144,8 @@ const mapStateToProps = (state, props) => {
         hasDefaultDocTypeSubType = true;
         docTypeSubTypeCombo = {
             docTypeId: PUBLICATION_TYPE_DESIGN,
-            subtype: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
-            name: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            name: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         };
     }
 
