@@ -29,7 +29,7 @@ const useStyles = makeStyles(
             from: { transform: 'rotate(-30deg)', transformOrigin: '40% 50%' },
             to: { transform: 'rotate(15deg)', transformOrigin: '40% 50%' },
         },
-        wriggler: {
+        wiggler: {
             animationName: '$wiggle',
             animationDuration: '0.3s',
             animationIterationCount: 20,
@@ -254,15 +254,15 @@ export const Alert = ({
     allowDismiss,
     customIcon,
     customType,
+    disableAlertClick,
     dismissAction,
     dismissTitle,
     message,
     showLoader,
-    testId,
+    alertId,
     title,
     type,
     wiggle,
-    disableAlertClick,
 }) => {
     const classes = useStyles();
     const renderIcon = type => {
@@ -299,13 +299,13 @@ export const Alert = ({
                 justify="center"
                 alignItems="flex-start"
                 alignContent="center"
-                data-testid={testId}
+                data-testid={alertId}
             >
                 <Grid item xs={12} sm className={action && !disableAlertClick && classes.linked}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
                         <Grid
                             item
-                            className={`${classes.icon} alert-icon ${wiggle ? classes.wriggler : ''}`}
+                            className={`${classes.icon} alert-icon ${wiggle ? classes.wiggler : ''}`}
                             onClick={!disableAlertClick && action}
                             onKeyDown={!disableAlertClick && action}
                         >
@@ -394,7 +394,7 @@ Alert.propTypes = {
     dismissTitle: PropTypes.string,
     message: PropTypes.any.isRequired,
     showLoader: PropTypes.bool,
-    testId: PropTypes.string,
+    alertId: PropTypes.string,
     title: PropTypes.string,
     type: PropTypes.oneOf([
         'error',
@@ -414,12 +414,12 @@ Alert.defaultProps = {
     allowDismiss: false,
     customIcon: null,
     customType: null,
+    disableAlertClick: false,
     dismissTitle: 'Click to dismiss this alert',
     message: 'Unexpected error',
     showLoader: false,
     type: 'error',
     wiggle: null,
-    disableAlertClick: false,
 };
 
 export default Alert;

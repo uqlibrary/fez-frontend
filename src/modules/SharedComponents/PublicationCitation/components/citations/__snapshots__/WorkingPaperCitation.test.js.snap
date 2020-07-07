@@ -1817,6 +1817,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1825,11 +1826,13 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Laselle, Laurence
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=" and "
@@ -1838,6 +1841,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                          and 
                         Tisdell, Clem
@@ -4524,6 +4528,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -4532,11 +4537,13 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Laselle, Laurence
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=" and "
@@ -4545,6 +4552,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                          and 
                         Tisdell, Clem

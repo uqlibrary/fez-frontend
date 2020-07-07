@@ -954,6 +954,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           }
         }
         color="primary"
+        data-testid="publication-action-UQ41878-primary"
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
@@ -989,6 +990,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           }
         }
         color="primary"
+        data-testid="publication-action-UQ41878-secondary"
         fullWidth={true}
         onClick={[Function]}
         variant="text"
@@ -1024,6 +1026,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           }
         }
         color="primary"
+        data-testid="publication-action-UQ41878-secondary"
         fullWidth={true}
         onClick={[Function]}
         variant="text"
@@ -2892,6 +2895,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           }
         }
         color="primary"
+        data-testid="publication-action-UQ41878-secondary"
         fullWidth={true}
         onClick={[Function]}
         variant="text"
@@ -8431,6 +8435,7 @@ Array [
         }
       }
       color="primary"
+      data-testid="publication-action-UQ41878-primary"
       fullWidth={true}
       onClick={[Function]}
       variant="contained"

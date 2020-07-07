@@ -93,7 +93,11 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
                     const Icon = locale[item].icon;
                     return (
                         <Grid item id={item.id} key={index} style={{ marginRight: spaceBetween }}>
-                            <ExternalLink {...locale[item].link} id={locale[item].id}>
+                            <ExternalLink
+                                {...locale[item].link}
+                                id={locale[item].id}
+                                data-testid={`social-share-${locale[item].id}-link`}
+                            >
                                 <Icon size={size} round={round} />
                             </ExternalLink>
                         </Grid>

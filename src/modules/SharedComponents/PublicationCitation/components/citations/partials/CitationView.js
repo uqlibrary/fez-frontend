@@ -7,6 +7,7 @@ export default class CitationView extends PureComponent {
         suffix: PropTypes.string,
         className: PropTypes.string,
         value: PropTypes.string,
+        citationId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -19,12 +20,12 @@ export default class CitationView extends PureComponent {
     }
 
     render() {
-        const { value, className, prefix, suffix } = this.props;
+        const { value, className, prefix, suffix, citationId } = this.props;
         if (!value) {
-            return <span className={`${className || ''} empty`} />;
+            return <span className={`${className || ''} empty`} data-testid={citationId} />;
         }
         return (
-            <span className={className || ''}>
+            <span className={className || ''} data-testid={citationId}>
                 {prefix}
                 {value}
                 {suffix === value.slice(-1) ? '' : suffix}
