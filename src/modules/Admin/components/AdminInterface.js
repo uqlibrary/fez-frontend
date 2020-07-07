@@ -310,7 +310,11 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-publish"
                                                     data-testid="publish-admin"
-                                                    disabled={!!submitting || !!disableSubmit || !!locked}
+                                                    disabled={
+                                                        !!submitting ||
+                                                        !!disableSubmit ||
+                                                        (locked && record.rek_editing_user !== authorDetails.username)
+                                                    }
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -327,7 +331,11 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-unpublish"
                                                     data-testid="unpublish-admin"
-                                                    disabled={!!submitting || !!disableSubmit || !!locked}
+                                                    disabled={
+                                                        !!submitting ||
+                                                        !!disableSubmit ||
+                                                        (locked && record.rek_editing_user !== authorDetails.username)
+                                                    }
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -347,7 +355,11 @@ export const AdminInterface = ({
                                             id="admin-work-submit"
                                             data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
-                                            disabled={!!submitting || !!disableSubmit || !!locked}
+                                            disabled={
+                                                !!submitting ||
+                                                !!disableSubmit ||
+                                                (locked && record.rek_editing_user !== authorDetails.username)
+                                            }
                                             variant="contained"
                                             color="primary"
                                             fullWidth
