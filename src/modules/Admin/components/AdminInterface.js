@@ -165,7 +165,11 @@ export const AdminInterface = ({
                 squareTop
                 smallTitle
             >
-                <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
+                <Field
+                    component={tabs[tab].component}
+                    disabled={submitting || (locked && record.rek_editing_user !== authorDetails.username)}
+                    name={`${tab}Section`}
+                />
             </StandardCard>
         </TabContainer>
     );
