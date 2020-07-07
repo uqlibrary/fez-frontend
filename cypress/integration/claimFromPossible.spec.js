@@ -7,12 +7,8 @@ context('Claim possible work', () => {
 
     const navToFirstClaim = () => {
         cy.visit('/records/possible').then(() => {
-            cy.waitUntil(() => {
-                cy.get('.StandardCard button.publicationAction')
-                    .first()
-                    .click();
-                return Cypress.$('.StandardCard button.publicationAction').length === 0;
-            });
+            cy.get('[data-testid*="publication-action-"]').should('have.length', 16);
+            cy.get('[data-testid=publication-action-UQ641272-primary]').click();
             cy.url().should('equal', `${baseUrl}/records/claim`);
         });
     };
