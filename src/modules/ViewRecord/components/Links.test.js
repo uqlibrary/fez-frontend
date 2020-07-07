@@ -252,9 +252,9 @@ describe('Component Links ', () => {
         // expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 
-    it('should render something something for OPEN_ACCESS_ID_PREPRINT', () => {
+    it('should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRINT', () => {
         const pmcProps = {
-            ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_PREPRINT),
+            ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_PREPRINT),
             fez_record_search_key_pubmed_central_id: {
                 rek_pubmed_central_id_id: 12345678901,
                 rek_pubmed_central_id_pid: 'UQ:1234',
@@ -271,8 +271,6 @@ describe('Component Links ', () => {
 
         const wrapper = setup({ publication: pmcProps });
         expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('.noOaIcon').length).toEqual(4);
-        // expect(wrapper.find('.openAccess').length).toEqual(1);
     });
 
     it('should use special default description if the link has the RDM hostname', () => {
