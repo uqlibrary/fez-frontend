@@ -62,7 +62,7 @@ export default {
             title: 'Additional information',
             groups: [
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_refereed_source'],
-                ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status'],
+                ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
                 ['additionalNotes'],
             ],
