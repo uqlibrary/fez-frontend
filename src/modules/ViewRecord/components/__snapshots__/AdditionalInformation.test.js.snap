@@ -1295,9 +1295,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                   "rek_oa_status_pid": "UQ:676287",
                 },
                 "fez_record_search_key_oa_status_type": Object {
-                  "rek_oa_status_type": 454120,
+                  "rek_oa_status_type": 454123,
                   "rek_oa_status_type_id": null,
-                  "rek_oa_status_type_lookup": "Green",
+                  "rek_oa_status_type_lookup": "Bronze",
                   "rek_oa_status_type_pid": "UQ:676287",
                 },
                 "fez_record_search_key_org_name": null,
@@ -2289,9 +2289,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                     "rek_oa_status_pid": "UQ:676287",
                   },
                   "fez_record_search_key_oa_status_type": Object {
-                    "rek_oa_status_type": 454120,
+                    "rek_oa_status_type": 454123,
                     "rek_oa_status_type_id": null,
-                    "rek_oa_status_type_lookup": "Green",
+                    "rek_oa_status_type_lookup": "Bronze",
                     "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
@@ -3289,9 +3289,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                       "rek_oa_status_pid": "UQ:676287",
                     },
                     "fez_record_search_key_oa_status_type": Object {
-                      "rek_oa_status_type": 454120,
+                      "rek_oa_status_type": 454123,
                       "rek_oa_status_type_id": null,
-                      "rek_oa_status_type_lookup": "Green",
+                      "rek_oa_status_type_lookup": "Bronze",
                       "rek_oa_status_type_pid": "UQ:676287",
                     },
                     "fez_record_search_key_org_name": null,
@@ -5779,9 +5779,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         "rek_oa_status_pid": "UQ:676287",
                                                                       },
                                                                       "fez_record_search_key_oa_status_type": Object {
-                                                                        "rek_oa_status_type": 454120,
+                                                                        "rek_oa_status_type": 454123,
                                                                         "rek_oa_status_type_id": null,
-                                                                        "rek_oa_status_type_lookup": "Green",
+                                                                        "rek_oa_status_type_lookup": "Bronze",
                                                                         "rek_oa_status_type_pid": "UQ:676287",
                                                                       },
                                                                       "fez_record_search_key_org_name": null,
@@ -6787,9 +6787,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                           "rek_oa_status_pid": "UQ:676287",
                                                                         },
                                                                         "fez_record_search_key_oa_status_type": Object {
-                                                                          "rek_oa_status_type": 454120,
+                                                                          "rek_oa_status_type": 454123,
                                                                           "rek_oa_status_type_id": null,
-                                                                          "rek_oa_status_type_lookup": "Green",
+                                                                          "rek_oa_status_type_lookup": "Bronze",
                                                                           "rek_oa_status_type_pid": "UQ:676287",
                                                                         },
                                                                         "fez_record_search_key_org_name": null,
@@ -9880,9 +9880,9 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         "rek_oa_status_pid": "UQ:676287",
                                                                       },
                                                                       "fez_record_search_key_oa_status_type": Object {
-                                                                        "rek_oa_status_type": 454120,
+                                                                        "rek_oa_status_type": 454123,
                                                                         "rek_oa_status_type_id": null,
-                                                                        "rek_oa_status_type_lookup": "Green",
+                                                                        "rek_oa_status_type_lookup": "Bronze",
                                                                         "rek_oa_status_type_pid": "UQ:676287",
                                                                       },
                                                                       "fez_record_search_key_org_name": null,
@@ -14514,7 +14514,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                               <span
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
-                                                                Green
+                                                                Bronze
                                                               </span>
                                                             </ForwardRef(Typography)>
                                                           </WithStyles(ForwardRef(Typography))>
@@ -40998,9 +40998,9 @@ exports[`Additional Information Component  should render component with journal 
                     "rek_oa_status_pid": "UQ:676287",
                   },
                   "fez_record_search_key_oa_status_type": Object {
-                    "rek_oa_status_type": 454120,
+                    "rek_oa_status_type": 454123,
                     "rek_oa_status_type_id": null,
-                    "rek_oa_status_type_lookup": "Green",
+                    "rek_oa_status_type_lookup": "Bronze",
                     "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
@@ -42130,9 +42130,9 @@ exports[`Additional Information Component  should render component with journal 
                     "rek_oa_status_pid": "UQ:676287",
                   },
                   "fez_record_search_key_oa_status_type": Object {
-                    "rek_oa_status_type": 454120,
+                    "rek_oa_status_type": 454123,
                     "rek_oa_status_type_id": null,
-                    "rek_oa_status_type_lookup": "Green",
+                    "rek_oa_status_type_lookup": "Bronze",
                     "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
@@ -42569,7 +42569,7 @@ exports[`Additional Information Component  should render component with journal 
             component="span"
             variant="body2"
           >
-            Green
+            Bronze
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -52553,9 +52553,9 @@ exports[`Additional Information Component  should render component with rek_herd
                     "rek_oa_status_pid": "UQ:676287",
                   },
                   "fez_record_search_key_oa_status_type": Object {
-                    "rek_oa_status_type": 454120,
+                    "rek_oa_status_type": 454123,
                     "rek_oa_status_type_id": null,
-                    "rek_oa_status_type_lookup": "Green",
+                    "rek_oa_status_type_lookup": "Bronze",
                     "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
@@ -53685,9 +53685,9 @@ exports[`Additional Information Component  should render component with rek_herd
                     "rek_oa_status_pid": "UQ:676287",
                   },
                   "fez_record_search_key_oa_status_type": Object {
-                    "rek_oa_status_type": 454120,
+                    "rek_oa_status_type": 454123,
                     "rek_oa_status_type_id": null,
-                    "rek_oa_status_type_lookup": "Green",
+                    "rek_oa_status_type_lookup": "Bronze",
                     "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
@@ -54124,7 +54124,7 @@ exports[`Additional Information Component  should render component with rek_herd
             component="span"
             variant="body2"
           >
-            Green
+            Bronze
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>

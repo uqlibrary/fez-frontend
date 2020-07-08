@@ -4197,8 +4197,8 @@ export const journalArticle = {
     "fez_record_search_key_oa_status_type": {
         "rek_oa_status_type_id": null,
         "rek_oa_status_type_pid": "UQ:676287",
-        "rek_oa_status_type": 454120,
-        "rek_oa_status_type_lookup": "Green",
+        "rek_oa_status_type": 454123,
+        "rek_oa_status_type_lookup": "Bronze",
     },
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
