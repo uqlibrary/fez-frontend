@@ -93,6 +93,9 @@ export const DoiField = ({ data, field, label }) => {
         case 'fez_record_search_key_start_page':
         case 'fez_record_search_key_volume_number':
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
+            if (field === 'fez_record_search_key_series' && !!value) {
+                value = value.split(';')[0].split(': no')[0];
+            }
             break;
 
         case 'rek_author-name':

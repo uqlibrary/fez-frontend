@@ -31,31 +31,42 @@ describe('DoiField', () => {
     });
 
     it('should render known fields', () => {
-        const knownFieldsForResearchReport = [
-            // Special cases
+        const testFn = ({ field, data, label, test }) => {
+            const wrapper = setup({
+                field,
+                data: data || record[field],
+                label: label || field,
+            });
+            test(wrapper);
+        };
+
+        const knownFields = [
+            // Author
             {
-                key: 'fez_record_search_key_author',
+                field: 'fez_record_search_key_author',
                 test: wrapper => {
                     expect(wrapper.find('[data-testid="rek-author-0"]').text()).toBe(
                         record.fez_record_search_key_author[0].rek_author,
                     );
                 },
             },
+            // HTML
             {
-                key: 'rek_description',
+                field: 'rek_description',
                 test: () => {
                     expect(ReactHtmlParser).toHaveBeenCalledWith(record.rek_description);
                 },
             },
+            // Date
             {
-                key: 'rek_date',
+                field: 'rek_date',
                 test: () => {
                     expect(formatPublicationDate).toHaveBeenCalledWith(record.rek_date);
                 },
             },
             // Example of list keys
             {
-                key: 'fez_record_search_key_isbn',
+                field: 'fez_record_search_key_isbn',
                 test: wrapper => {
                     expect(wrapper.find('[data-testid="rek-isbn"]').text()).toBe(
                         record.fez_record_search_key_isbn[0].rek_isbn,
@@ -64,69 +75,103 @@ describe('DoiField', () => {
             },
             // Example of single entry keys
             {
-                key: 'fez_record_search_key_publisher',
+                field: 'fez_record_search_key_publisher',
                 test: wrapper => {
                     expect(wrapper.find('[data-testid="rek-publisher"]').text()).toBe(
                         record.fez_record_search_key_publisher.rek_publisher,
                     );
                 },
             },
-        ];
-        knownFieldsForResearchReport.map(known => {
-            const field = known.key;
-            const wrapper = setup({ field, data: record[field], label: field });
-            known.test(wrapper);
-        });
-
-        const confWrapper = setup({
-            field: 'fez_record_search_key_conference_location',
-            data: {
-                rek_conference_location: 'test location',
-            },
-            label: 'Conference location',
-        });
-        expect(confWrapper.find('[data-testid="rek-conference-location"]').text()).toBe('test location');
-        expect(confWrapper.find('[data-testid="rek-conference-location-label"]').text()).toBe('Conference location');
-
-        const authorWithOrcidWrapper = setup({
-            field: 'fez_record_search_key_author',
-            data: [
-                {
-                    rek_author_id: 10101,
-                    rek_author: 'First Last',
-                    aut_orcid_id: '101010-1010101',
+            // Example of generic entry with label
+            {
+                field: 'fez_record_search_key_conference_location',
+                data: {
+                    rek_conference_location: 'test location',
                 },
-            ],
-            label: 'Author(s)',
-        });
-        expect(authorWithOrcidWrapper.find('[data-testid="rek-author-0"]').text()).toBe('First Last');
-        expect(authorWithOrcidWrapper.find('[data-testid="rek-author-0-orcid-link"]').props().href).toBe(
-            'https://orcid.org/101010-1010101',
-        );
+                label: 'Conference location',
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-conference-location"]').text()).toBe('test location');
+                    expect(wrapper.find('[data-testid="rek-conference-location-label"]').text()).toBe(
+                        'Conference location',
+                    );
+                },
+            },
 
-        const zeroContribsWrapper = setup({
-            field: 'fez_record_search_key_contributor',
-            data: [],
-            label: 'Editor(s)',
-        });
-        expect(toJson(zeroContribsWrapper)).toBe('');
+            /* Special Cases */
 
-        // Custom entries
+            // Author with ORCID
+            {
+                field: 'fez_record_search_key_author',
+                data: [
+                    {
+                        rek_author_id: 10101,
+                        rek_author: 'First Last',
+                        aut_orcid_id: '101010-1010101',
+                    },
+                ],
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-author-0"]').text()).toBe('First Last');
+                    expect(wrapper.find('[data-testid="rek-author-0-orcid-link"]').props().href).toBe(
+                        'https://orcid.org/101010-1010101',
+                    );
+                },
+            },
+            // Empty contributors list
+            {
+                field: 'fez_record_search_key_contributor',
+                data: [],
+                test: wrapper => {
+                    expect(toJson(wrapper)).toBe('');
+                },
+            },
+            {
+                field: 'rek_doi',
+                data: 'test',
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-doi"]').text()).toBe('test');
+                },
+            },
+            // Depositor name
+            {
+                field: 'rek_author-name',
+                data: 'Test Depositor',
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-author-name"]').text()).toBe('Test Depositor');
+                },
+            },
+            // Depositor email
+            {
+                field: 'rek_author-email',
+                data: 'example@uq.edu.au',
+                test: wrapper => {
+                    const entry = wrapper.find('[data-testid="rek-author-email"]');
+                    expect(entry.text()).toBe('example@uq.edu.au');
+                    const renderedEmail = shallow(entry.props().children);
+                    expect(renderedEmail.props().href).toBe('mailto:example@uq.edu.au');
+                },
+            },
+            // Series with ": no"
+            {
+                field: 'fez_record_search_key_series',
+                data: {
+                    rek_series: 'Book series: no.1',
+                },
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-series"]').text()).toBe('Book series');
+                },
+            },
+            // Series with ";"
+            {
+                field: 'fez_record_search_key_series',
+                data: {
+                    rek_series: 'Book series 1; Book series 2',
+                },
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-series"]').text()).toBe('Book series 1');
+                },
+            },
+        ];
 
-        const doiWrapper = setup({ field: 'rek_doi', data: 'test', label: 'DOI (Existing)' });
-        expect(doiWrapper.find('[data-testid="rek-doi"]').text()).toBe('test');
-
-        const nameWrapper = setup({ field: 'rek_author-name', data: 'Test Depositor', label: 'Depositor name' });
-        expect(nameWrapper.find('[data-testid="rek-author-name"]').text()).toBe('Test Depositor');
-
-        const emailWrapper = setup({
-            field: 'rek_author-email',
-            data: 'example@uq.edu.au',
-            label: 'Depositor email',
-        });
-        const entry = emailWrapper.find('[data-testid="rek-author-email"]');
-        expect(entry.text()).toBe('example@uq.edu.au');
-        const renderedEmail = shallow(entry.props().children);
-        expect(renderedEmail.props().href).toBe('mailto:example@uq.edu.au');
+        knownFields.map(testFn);
     });
 });
