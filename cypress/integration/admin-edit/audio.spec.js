@@ -64,11 +64,6 @@ context('Audio admin edit', () => {
                     record.fez_record_search_key_length.rek_length,
                 );
                 cy.get('[data-testid=rek-genre-input]').should('have.value', record.rek_genre);
-                cy.get('[data-testid=rek-license-input]')
-                    .should('have.value', record.fez_record_search_key_license.rek_license.toString())
-                    .siblings('[role=button]')
-                    .invoke('text')
-                    .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
                 cy.get('[data-testid=rek-source-input]').should(
                     'have.text',
                     record.fez_record_search_key_source.rek_source,
@@ -77,7 +72,7 @@ context('Audio admin edit', () => {
                     'have.text',
                     record.fez_record_search_key_rights.rek_rights,
                 );
-                cy.get('div:nth-child(15) span span')
+                cy.get('div:nth-child(14) span span')
                     .eq(0)
                     .should('have.text', 'Transcript');
                 cy.get('#cke_editor3').should('exist');

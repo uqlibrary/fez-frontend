@@ -377,6 +377,7 @@ context('Journal Article admin edit', () => {
                             .get('[data-testid=rek-oa-status-select]')
                             .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
                         // No content indicators selected in mock
+                        // No licence selected in mock
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Additional notes');

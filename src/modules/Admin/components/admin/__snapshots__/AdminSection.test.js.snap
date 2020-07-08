@@ -28,6 +28,9 @@ exports[`AdminSection component should render default view 1`] = `
             "contentIndicators",
           ],
           Array [
+            "fez_record_search_key_license",
+          ],
+          Array [
             "additionalNotes",
           ],
         ],
@@ -78,6 +81,9 @@ exports[`AdminSection component should render design form fields 1`] = `
             "contentIndicators",
           ],
           Array [
+            "fez_record_search_key_license",
+          ],
+          Array [
             "additionalNotes",
           ],
         ],
@@ -126,6 +132,9 @@ exports[`AdminSection component should render disabled view 1`] = `
             "fez_record_search_key_refereed_source",
             "fez_record_search_key_oa_status",
             "contentIndicators",
+          ],
+          Array [
+            "fez_record_search_key_license",
           ],
           Array [
             "additionalNotes",

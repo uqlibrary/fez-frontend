@@ -512,6 +512,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                     "rek_language_xsdmf_id": 10772,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -729,6 +730,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         "rek_language_xsdmf_id": 10772,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -958,6 +960,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                           "rek_language_xsdmf_id": 10772,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -2088,6 +2091,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                     "rek_language_xsdmf_id": 10772,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -2310,6 +2314,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         "rek_language_xsdmf_id": 10772,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -2544,6 +2549,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                           "rek_language_xsdmf_id": 10772,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",

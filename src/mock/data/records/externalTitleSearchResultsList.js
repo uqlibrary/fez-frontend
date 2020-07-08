@@ -22,6 +22,7 @@ export default {
                 "fez_record_search_key_end_page": {"rek_end_page": "2088"},
                 "fez_record_search_key_total_pages": {"rek_total_pages": 13},
                 "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_author": [
                     {
                         "rek_author": "Cicero, Arrigo F G",
@@ -90,6 +91,7 @@ export default {
                 "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28488685"},
                 "rek_date": "2017-05-10 00:00:00",
                 "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_author": [{"rek_author": "Dias, C B", "rek_author_order": 1}, {
                     "rek_author": "Amigo, N",
                     "rek_author_order": 2
@@ -139,6 +141,7 @@ export default {
                 "fez_record_search_key_end_page": {"rek_end_page": "225"},
                 "fez_record_search_key_total_pages": {"rek_total_pages": 7},
                 "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_author": [{
                     "rek_author": "Johnston, T P",
                     "rek_author_order": 1
@@ -189,6 +192,7 @@ export default {
                 "fez_record_search_key_grant_acronym": [{"rek_grant_acronym": "HD", "rek_grant_acronym_order": 1}],
                 "fez_record_search_key_grant_id": [{"rek_grant_id": "U54 HD061939", "rek_grant_id_order": 1}],
                 "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_author": [{
                     "rek_author": "Othman, Rgia A",
                     "rek_author_order": 1
@@ -247,6 +251,7 @@ export default {
                 "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28317482"},
                 "rek_date": "2017-03-17 00:00:00",
                 "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_author": [{
                     "rek_author": "Patti, Angelo Maria",
                     "rek_author_order": 1

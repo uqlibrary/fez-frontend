@@ -193,6 +193,7 @@ export default {
             "rek_language": "eng",
             "rek_language_order": 1
         }],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_notes": null,

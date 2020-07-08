@@ -413,6 +413,13 @@ export default {
                 "rek_language": "eng",
                 "rek_language_order": 1
             }],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28911,
+                "rek_license_pid": "UQ:284280",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 453701,
+                "rek_license_lookup": "Permitted Re-use with Acknowledgement"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": {
@@ -782,6 +789,13 @@ export default {
                 "rek_language": "eng",
                 "rek_language_order": 1
             }],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:152994",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [{
                 "rek_link_id": 3211733,
                 "rek_link_pid": "UQ:152994",
