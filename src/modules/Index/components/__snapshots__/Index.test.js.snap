@@ -1916,6 +1916,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "updateCollection": [Function],
                                                         "updateCommunity": [Function],
                                                         "updateCurrentAuthor": [Function],
+                                                        "updateDoi": [Function],
                                                         "updateIncompleteRecord": [Function],
                                                       }
                                                     }
@@ -2046,6 +2047,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "updateCollection": [Function],
                                                           "updateCommunity": [Function],
                                                           "updateCurrentAuthor": [Function],
+                                                          "updateDoi": [Function],
                                                           "updateIncompleteRecord": [Function],
                                                         }
                                                       }
@@ -3305,6 +3307,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "updateCollection": [Function],
                                                                   "updateCommunity": [Function],
                                                                   "updateCurrentAuthor": [Function],
+                                                                  "updateDoi": [Function],
                                                                   "updateIncompleteRecord": [Function],
                                                                 }
                                                               }
@@ -3389,6 +3392,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "updateCollection": [Function],
                                                                     "updateCommunity": [Function],
                                                                     "updateCurrentAuthor": [Function],
+                                                                    "updateDoi": [Function],
                                                                     "updateIncompleteRecord": [Function],
                                                                   }
                                                                 }

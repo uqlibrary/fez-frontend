@@ -136,6 +136,7 @@ export const pathConfig = {
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
+        doi: pid => `/admin/doi/${pid}`,
         edit: pid => `/admin/edit/${pid}`,
         editCollection: pid => `/collections/${pid}/edit`,
         editCommunity: pid => `/communities/${pid}/edit`,
@@ -167,13 +168,14 @@ export const pathConfig = {
     },
 };
 
-// a duplicate list of routes for
+// a duplicate list of routes for checking valid routes
 const flattedPathConfig = [
     '/',
     '/admin/add',
     '/admin/collection',
     '/admin/community',
     '/admin/delete',
+    '/admin/doi',
     '/admin/edit',
     '/admin/masquerade',
     '/admin/thirdPartyTools',
@@ -460,6 +462,13 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.admin.editRecord(pid),
                       component: components.Admin,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.doi(pid),
+                      component: components.Doi,
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,

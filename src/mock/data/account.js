@@ -733,7 +733,7 @@ export const currentAuthor = {
             'aut_org_username': 'uqstaff',
             'aut_org_staff_id': null,
             'aut_org_student_id': null,
-            'aut_email': null,
+            'aut_email': 'uq.staff@author.example.uq.edu.au',
             'aut_display_name': 'Staff Member',
             'aut_fname': 'Staff',
             'aut_mname': null,

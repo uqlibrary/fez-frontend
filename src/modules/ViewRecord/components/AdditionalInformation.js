@@ -31,6 +31,28 @@ const styles = theme => ({
     },
 });
 
+export const renderAuthors = (publication, props = {}) => {
+    const componentProps = {
+        key: 'additional-information-authors',
+        publication,
+        prefix: '',
+        suffix: '',
+        separator: ', ',
+        initialNumberOfAuthors: publication.fez_record_search_key_author.length,
+        showLink: true,
+        ...props,
+    };
+    return <AuthorsCitationView {...componentProps} />;
+};
+
+export const formatDate = (date, format = 'YYYY-MM-DD') => {
+    return <DateCitationView format={format} date={date} prefix={''} suffix={''} />;
+};
+
+export const formatPublicationDate = (publicationDate, displayTypeLookup) => {
+    return formatDate(publicationDate, viewRecordsConfig.publicationDateFormat[displayTypeLookup]);
+};
+
 export class AdditionalInformationClass extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
@@ -94,7 +116,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderObjectList = (objects, subkey) => {
         switch (subkey) {
             case 'rek_author':
-                return this.renderAuthors(this.props.publication);
+                return renderAuthors(this.props.publication);
             case 'rek_contributor':
                 return this.renderContributors(this.props.publication);
             case 'rek_keywords':
@@ -118,7 +140,7 @@ export class AdditionalInformationClass extends PureComponent {
 
         // date fields
         if (viewRecordsConfig.dateFields.includes(subkey)) {
-            return this.formatDate(data, viewRecordsConfig.dateFieldFormat[subkey]);
+            return formatDate(data, viewRecordsConfig.dateFieldFormat[subkey]);
         }
 
         // html fields
@@ -168,9 +190,11 @@ export class AdditionalInformationClass extends PureComponent {
             case 'rek_title':
                 return this.renderTitle();
             case 'rek_date':
-                return this.formatPublicationDate(value);
-            // case 'rek_start_date': return this.formatPublicationDate(value);
-            // case 'rek_end_date': return this.formatPublicationDate(value);
+                return formatPublicationDate(value, this.props.publication.rek_display_type_lookup);
+            // case 'rek_start_date':
+            //     return formatPublicationDate(value, this.props.publication.rek_display_type_lookup);
+            // case 'rek_end_date':
+            //     return formatPublicationDate(value, this.props.publication.rek_display_type_lookup);
             case 'rek_description':
                 return this.renderHTML(value);
             default:
@@ -225,20 +249,6 @@ export class AdditionalInformationClass extends PureComponent {
         );
     };
 
-    renderAuthors = publication => {
-        return (
-            <AuthorsCitationView
-                key="additional-information-authors"
-                publication={publication}
-                prefix={''}
-                suffix={''}
-                separator={', '}
-                initialNumberOfAuthors={publication.fez_record_search_key_author.length}
-                showLink
-            />
-        );
-    };
-
     renderMap = coordinatesList => {
         if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
             return <span />;
@@ -284,17 +294,6 @@ export class AdditionalInformationClass extends PureComponent {
     // TODO: display original contact email for admin users
     renderContactEmail = () => {
         return <a href={`mailto:${viewRecordsConfig.genericDataEmail}`}>{viewRecordsConfig.genericDataEmail}</a>;
-    };
-
-    formatPublicationDate = publicationDate => {
-        return this.formatDate(
-            publicationDate,
-            viewRecordsConfig.publicationDateFormat[this.props.publication.rek_display_type_lookup],
-        );
-    };
-
-    formatDate = (date, format = 'YYYY-MM-DD') => {
-        return <DateCitationView format={format} date={date} prefix={''} suffix={''} />;
     };
 
     transformFieldNameToSubkey = field => {
