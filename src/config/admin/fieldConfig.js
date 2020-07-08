@@ -1059,7 +1059,7 @@ export default {
         fez_record_search_key_license: {
             component: LicenceSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+                name: 'adminSection.fez_record_search_key_license.rek_license',
                 label: 'Licence',
                 isAdmin: true,
             },

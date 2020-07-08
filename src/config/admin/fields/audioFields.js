@@ -31,7 +31,6 @@ export default {
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_length', 'rek_genre'],
                 ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_license'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
@@ -75,6 +74,7 @@ export default {
             groups: [
                 ['fez_record_search_key_institutional_status'],
                 ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                ['fez_record_search_key_license'],
                 ['additionalNotes'],
             ],
         },

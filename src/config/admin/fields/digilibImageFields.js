@@ -95,6 +95,7 @@ export default {
                     'fez_record_search_key_refereed_source',
                     'fez_record_search_key_oa_status',
                 ],
+                ['fez_record_search_key_license'],
                 ['additionalNotes'],
             ],
         },
