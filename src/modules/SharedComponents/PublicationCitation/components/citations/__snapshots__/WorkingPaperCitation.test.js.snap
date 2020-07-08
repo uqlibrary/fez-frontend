@@ -615,6 +615,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     "rek_language_xsdmf_id": 10742,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -952,6 +953,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                         "rek_language_xsdmf_id": 10742,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -1301,6 +1303,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                           "rek_language_xsdmf_id": 10742,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -3326,6 +3329,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                     "rek_language_xsdmf_id": 10742,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -3661,6 +3665,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                         "rek_language_xsdmf_id": 10742,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -4008,6 +4013,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                           "rek_language_xsdmf_id": 10742,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",

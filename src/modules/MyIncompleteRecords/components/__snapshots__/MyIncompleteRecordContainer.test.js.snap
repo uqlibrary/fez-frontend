@@ -654,6 +654,7 @@ exports[`MyIncompleteRecord Container should display form once record and author
           "rek_language_xsdmf_id": 11997,
         },
       ],
+      "fez_record_search_key_license": null,
       "fez_record_search_key_series": Object {
         "rek_series": "Queensland Music Festival",
         "rek_series_id": 218537,
@@ -1340,6 +1341,7 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
           "rek_language_xsdmf_id": 11997,
         },
       ],
+      "fez_record_search_key_license": null,
       "fez_record_search_key_series": Object {
         "rek_series": "Queensland Music Festival",
         "rek_series_id": 218537,
@@ -1774,6 +1776,7 @@ exports[`MyIncompleteRecord Container should load initial values for admin autho
       "fez_record_search_key_grant_id": Array [],
       "fez_record_search_key_grant_text": Array [],
       "fez_record_search_key_grant_type": Array [],
+      "fez_record_search_key_license": null,
       "fez_record_search_key_series": Object {
         "rek_series": "Queensland Music Festival",
         "rek_series_id": 218537,

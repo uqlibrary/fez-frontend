@@ -363,11 +363,18 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:327650",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1189823,
-                "rek_notes_pid": "UQ:03b77a1",
+                "rek_notes_pid": "UQ:327650",
                 "rek_notes_xsdmf_id": 12516,
                 "rek_notes": "Restricted thesis"
             },
