@@ -10,13 +10,23 @@ import {
     PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CPEE_FESTIVAL,
+    NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    NTRO_SUBTYPE_CPEE_OTHER,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_LP_MUSIC,
+    NTRO_SUBTYPE_LP_DANCE,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    NTRO_SUBTYPE_LP_INTERARTS,
+    NTRO_SUBTYPE_LP_OTHER,
     NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
     NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
     NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
     NTRO_SUBTYPE_RRW_INTERARTS,
     NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
     NTRO_SUBTYPE_RRW_OTHER,
-    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
 } from 'config/general';
 
 export const identifiersParams = record => ({
@@ -54,4 +64,24 @@ export const identifiersParams = record => ({
         NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
         NTRO_SUBTYPE_RRW_OTHER,
     ].includes(record.rek_subtype),
+});
+
+export const bibliographicParams = record => ({
+    isLote:
+        record.fez_record_search_key_language &&
+        (record.fez_record_search_key_language.length > 1 ||
+            (record.fez_record_search_key_language.length === 1 &&
+                record.fez_record_search_key_language[0].rek_language !== 'eng')),
+    displayEndDate: [
+        NTRO_SUBTYPE_LP_MUSIC,
+        NTRO_SUBTYPE_LP_DANCE,
+        NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+        NTRO_SUBTYPE_LP_INTERARTS,
+        NTRO_SUBTYPE_LP_OTHER,
+        NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+        NTRO_SUBTYPE_CPEE_FESTIVAL,
+        NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+        NTRO_SUBTYPE_CPEE_OTHER,
+    ].includes(record.rek_subtype),
+    isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
 });

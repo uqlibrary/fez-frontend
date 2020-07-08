@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
+import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 // import {
 //     PUBLICATION_TYPE_CREATIVE_WORK,
 //     PUBLICATION_TYPE_DESIGN,
@@ -22,7 +23,11 @@ export const AdminSection = ({ disabled = false }) => {
     //     record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
     //         ? PUBLICATION_TYPE_DESIGN
     //         : record.rek_display_type;
-    const cards = useRef(adminInterfaceConfig[record.rek_display_type].admin());
+    const cards = useRef(
+        adminInterfaceConfig[record.rek_display_type].admin(
+            record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+        ),
+    );
 
     return <Section cards={cards.current} disabled={disabled} />;
 };

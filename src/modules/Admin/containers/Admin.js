@@ -17,13 +17,7 @@ import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 import { onSubmit } from '../submitHandler';
-import { identifiersParams } from 'modules/Admin/helpers';
-
-export const bibliographicParams = record =>
-    record.fez_record_search_key_language &&
-    (record.fez_record_search_key_language.length > 1 ||
-        (record.fez_record_search_key_language.length === 1 &&
-            record.fez_record_search_key_language[0].rek_language !== 'eng'));
+import { identifiersParams, bibliographicParams } from 'modules/Admin/helpers';
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,

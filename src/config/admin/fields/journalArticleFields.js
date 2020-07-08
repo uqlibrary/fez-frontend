@@ -2,7 +2,7 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    bibliographic: (isLote = false) => [
+    bibliographic: ({ isLote = false }) => [
         {
             title: 'Title',
             groups: [

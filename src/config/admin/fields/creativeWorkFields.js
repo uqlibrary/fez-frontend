@@ -47,7 +47,7 @@ export default {
               ]
             : []),
     ],
-    bibliographic: (isLote = false, displayEndDate = false) => [
+    bibliographic: ({ isLote = false, displayEndDate = false }) => [
         {
             title: 'Title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
