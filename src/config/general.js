@@ -1415,6 +1415,13 @@ export const OA_STATUS = [
     { value: '454116', text: 'RDM open' },
 ];
 
+export const OA_STATUS_TYPE = [
+    { value: 454120, text: 'Green' },
+    { value: 454121, text: 'Gold' },
+    { value: 454122, text: 'Hybrid' },
+    { value: 454123, text: 'Bronze' },
+];
+
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 

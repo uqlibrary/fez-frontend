@@ -4,7 +4,7 @@ export default {
     'per_page': 999,
     'current_page': 1,
     'from': 1,
-    'to': 2,
+    'to': 3,
     'data': [
         {
             'rek_pid': 'UQ:288291',
@@ -526,6 +526,7 @@ export default {
                 'rek_oa_status': 453692,
                 'rek_oa_status_lookup': 'Not yet assessed',
             },
+            'fez_record_search_key_oa_status_type': null,
             'fez_record_search_key_place_of_publication': {
                 'rek_place_of_publication_id': 4116664,
                 'rek_place_of_publication_pid': 'UQ:288291',
@@ -1523,6 +1524,13 @@ export default {
                 'rek_oa_status': 453696,
                 'rek_oa_status_lookup': 'File (Author Post-print)',
             },
+            'fez_record_search_key_oa_status_type': {
+                'rek_oa_status_type_id': 592002,
+                'rek_oa_status_type_pid': 'UQ:696826',
+                'rek_oa_status_type_xsdmf_id': null,
+                'rek_oa_status_type': 454120,
+                'rek_oa_status_type_lookup': 'Green',
+            },
             'fez_record_search_key_place_of_publication': {
                 'rek_place_of_publication_id': 4396365,
                 'rek_place_of_publication_pid': 'UQ:696826',
@@ -1852,5 +1860,825 @@ export default {
                 },
             ],
         },
+        {
+            'rek_pid': 'UQ:00013d2',
+            'rek_title_xsdmf_id': null,
+            'rek_title': 'Crop-season and residual effects of sequentially applied mineral enhanced biochar and N fertiliser on crop yield, soil chemistry and microbial communities',
+            'rek_description_xsdmf_id': null,
+            'rek_description': 'The use of biochar in agricultural soils has received increasing attention over the last decade and enhancing biochar through chemical modification offers a strategy to reduce the amount of biochar required for improving soil productivity. However there is limited knowledge on how mineral enhanced biochars alone, or in combination with conventional fertilisers impact on microbial processes and edaphic parameters of soil or the root, and how this influences agricultural yield in the long-term. To investigate this we assessed crop yield, edaphic parameters and microbial communities within the bulk soil and on roots at the end of the third crop-cycle from a long-term agricultural trial where pre-existing enhanced biochar applications (from previous crop-cycles) totalled between 0 and 5.5 t ha and were then supplemented with fresh enhanced biochar (0.1 t ha) and traditional N fertiliser (50 kg ha) in a crossed design. We found an array of effects associated with existing and new enhanced biochar applications in conjunction with N fertiliser on plant yield, soil nutrients and microbial communities. Yield decreased up to 27% with any soil amendment and was greatest in the unamended control. Soil nitrate increased from 30.4 to 59.6 mg kg due to N fertiliser with little effect of the enhanced biochar. Soil pH increased from 4.59 to 4.86 due to previously applied enhanced biochar and was associated with applications of at least 1 t ha. There were differing responses in the microbial communities between bulk soil (294 taxa changes) and roots (383 taxa changes) to the fertilisation regimes, which were unrelated to the nitrate content in the soil and appeared to be driven by pH changes, especially for communities associated with plant roots. This has important implications on which soil compartments should be investigated in future studies of microbial communities. The short- and long-term effects of enhanced biochar observed here question the relevance of studies examining once-off applications of biochar and their extrapolation to real world scenarios i.e. where sequential application of biochar might occur. It is likely that responses of agricultural systems may depend on the historical use of biochar.',
+            'rek_display_type_xsdmf_id': null,
+            'rek_display_type': 179,
+            'rek_status_xsdmf_id': null,
+            'rek_status': 2,
+            'rek_date_xsdmf_id': null,
+            'rek_date': '2018-03-01T00:00:00Z',
+            'rek_object_type_xsdmf_id': null,
+            'rek_object_type': 3,
+            'rek_depositor_xsdmf_id': null,
+            'rek_depositor': null,
+            'rek_created_date_xsdmf_id': null,
+            'rek_created_date': '2018-05-25T14:13:48Z',
+            'rek_updated_date_xsdmf_id': 3678,
+            'rek_updated_date': '2020-06-10T22:37:29Z',
+            'rek_file_downloads': 0,
+            'rek_citation': '<a class=\'citation_author_name\' title=\'Browse by Author Name for Nielsen, Shaun\' href=\'\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Nielsen%2C+Shaun&searchQueryParams%5Brek_author%5D%5Blabel%5D=Nielsen%2C+Shaun&searchMode=advanced\'>Nielsen, Shaun<\/a>, <a class=\'citation_author_name\' title=\'Browse by Author Name for Joseph, Stephen\' href=\'\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Joseph%2C+Stephen&searchQueryParams%5Brek_author%5D%5Blabel%5D=Joseph%2C+Stephen&searchMode=advanced\'>Joseph, Stephen<\/a>, <a class=\'author_id_link\' title=\'Browse by Author ID for Ye, Jun\' href=\'\/records\/search?searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3131041&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=Ye%2C+Jun&searchMode=advanced\'>Ye, Jun<\/a>, <a class=\'citation_author_name\' title=\'Browse by Author Name for Chia, Chee\' href=\'\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Chia%2C+Chee&searchQueryParams%5Brek_author%5D%5Blabel%5D=Chia%2C+Chee&searchMode=advanced\'>Chia, Chee<\/a>, <a class=\'citation_author_name\' title=\'Browse by Author Name for Munroe, Paul\' href=\'\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Munroe%2C+Paul&searchQueryParams%5Brek_author%5D%5Blabel%5D=Munroe%2C+Paul&searchMode=advanced\'>Munroe, Paul<\/a>, <a class=\'citation_author_name\' title=\'Browse by Author Name for Zwieten, Lukas van\' href=\'\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Zwieten%2C+Lukas+van&searchQueryParams%5Brek_author%5D%5Blabel%5D=Zwieten%2C+Lukas+van&searchMode=advanced\'>Zwieten, Lukas van<\/a> and <a class=\'citation_author_name\' title=\'Browse by Author Name for Thomas, Torsten\' href=\'\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thomas%2C+Torsten&searchQueryParams%5Brek_author%5D%5Blabel%5D=Thomas%2C+Torsten&searchMode=advanced\'>Thomas, Torsten<\/a> (<span class=\'citation_date\'>2018<\/span>). <a class=\'citation_title\' title=\'Click to view Journal Article: Crop-season and residual effects of sequentially applied mineral enhanced biochar and N fertiliser on crop yield, soil chemistry and microbial communities\' href=\'\/view\/UQ:00013d2\'>Crop-season and residual effects of sequentially applied mineral enhanced biochar and N fertiliser on crop yield, soil chemistry and microbial communities<\/a>. <i><span class=\'citation_journal_name\'>Agriculture, Ecosystems and Environment<\/span><\/i>, <span class=\'citation_volume_number\'>255<\/span><span class=\'citation_start_page\'>52<\/span>-<span class=\'citation_end_page\'>61<\/span> doi:<span class=\'citation_doi\'>10.1016\/j.agee.2017.12.020<\/span>',
+            'rek_genre_xsdmf_id': null,
+            'rek_genre': 'Journal Article',
+            'rek_genre_type_xsdmf_id': null,
+            'rek_genre_type': 'Article (original research)',
+            'rek_formatted_title_xsdmf_id': null,
+            'rek_formatted_title': null,
+            'rek_formatted_abstract_xsdmf_id': null,
+            'rek_formatted_abstract': null,
+            'rek_depositor_affiliation_xsdmf_id': 11881,
+            'rek_depositor_affiliation': 881,
+            'rek_thomson_citation_count': 5,
+            'rek_thomson_citation_count_xsdmf_id': null,
+            'rek_subtype_xsdmf_id': null,
+            'rek_subtype': 'Article (original research)',
+            'rek_scopus_citation_count': 9,
+            'rek_herdc_notes_xsdmf_id': null,
+            'rek_scopus_doc_type_xsdmf_id': null,
+            'rek_scopus_doc_type': 'ar',
+            'rek_wok_doc_type_xsdmf_id': null,
+            'rek_wok_doc_type': '@',
+            'rek_pubmed_doc_type_xsdmf_id': null,
+            'rek_pubmed_doc_type': null,
+            'rek_security_inherited': 1,
+            'rek_altmetric_score': 3,
+            'rek_altmetric_score_xsdmf_id': null,
+            'rek_altmetric_id': 30994295,
+            'rek_altmetric_id_xsdmf_id': null,
+            'rek_copyright_xsdmf_id': 3679,
+            'rek_copyright': 'on',
+            'rek_security_policy': 1,
+            'rek_datastream_policy': null,
+            'fez_record_search_key_advisory_statement': null,
+            'fez_record_search_key_article_number': null,
+            'fez_record_search_key_assigned_group_id': [],
+            'fez_record_search_key_assigned_user_id': [],
+            'fez_record_search_key_author': [{
+                'rek_author_id': 30696934,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Nielsen, Shaun',
+                'rek_author_order': 1
+            }, {
+                'rek_author_id': 30696937,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Joseph, Stephen',
+                'rek_author_order': 2
+            }, {
+                'rek_author_id': 30696935,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Ye, Jun',
+                'rek_author_order': 3
+            }, {
+                'rek_author_id': 30696938,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Chia, Chee',
+                'rek_author_order': 4
+            }, {
+                'rek_author_id': 30696939,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Munroe, Paul',
+                'rek_author_order': 5
+            }, {
+                'rek_author_id': 30696940,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Zwieten, Lukas van',
+                'rek_author_order': 6
+            }, {
+                'rek_author_id': 30696936,
+                'rek_author_pid': 'UQ:00013d2',
+                'rek_author_xsdmf_id': null,
+                'rek_author': 'Thomas, Torsten',
+                'rek_author_order': 7
+            }],
+            'fez_record_search_key_author_id': [{
+                'rek_author_id_id': 29998237,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 0,
+                'rek_author_id_order': 1,
+                'author': null
+            }, {
+                'rek_author_id_id': 29998240,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 0,
+                'rek_author_id_order': 2,
+                'author': null
+            }, {
+                'rek_author_id_id': 29998238,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 3131041,
+                'rek_author_id_order': 3,
+                'author': {
+                    'aut_org_username': 'uqjye1',
+                    'aut_student_username': null,
+                    'aut_id': 3131041,
+                    'aut_orcid_id': '0000-0002-6476-6406',
+                    'aut_title': 'Dr'
+                },
+                'rek_author_id_lookup': 'Jun Ye'
+            }, {
+                'rek_author_id_id': 29998241,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 0,
+                'rek_author_id_order': 4,
+                'author': null
+            }, {
+                'rek_author_id_id': 29998242,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 0,
+                'rek_author_id_order': 5,
+                'author': null
+            }, {
+                'rek_author_id_id': 29998243,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 0,
+                'rek_author_id_order': 6,
+                'author': null
+            }, {
+                'rek_author_id_id': 29998239,
+                'rek_author_id_pid': 'UQ:00013d2',
+                'rek_author_id_xsdmf_id': null,
+                'rek_author_id': 0,
+                'rek_author_id_order': 7,
+                'author': null
+            }],
+            'fez_record_search_key_author_crossref_authenticated': [],
+            'fez_record_search_key_author_crossref_orcid': [],
+            'fez_record_search_key_biosis_id': null,
+            'fez_record_search_key_contributor': [],
+            'fez_record_search_key_contributor_id': [],
+            'fez_record_search_key_corresponding_country': [{
+                'rek_corresponding_country_id': 376846,
+                'rek_corresponding_country_pid': 'UQ:00013d2',
+                'rek_corresponding_country_xsdmf_id': 0,
+                'rek_corresponding_country': 'aus',
+                'rek_corresponding_country_order': 1
+            }],
+            'fez_record_search_key_corresponding_email': [{
+                'rek_corresponding_email_id': 102479,
+                'rek_corresponding_email_pid': 'UQ:00013d2',
+                'rek_corresponding_email_xsdmf_id': 0,
+                'rek_corresponding_email': 't.thomas@unsw.edu.au',
+                'rek_corresponding_email_order': 1
+            }],
+            'fez_record_search_key_corresponding_name': [{
+                'rek_corresponding_name_id': 106541,
+                'rek_corresponding_name_pid': 'UQ:00013d2',
+                'rek_corresponding_name_xsdmf_id': 0,
+                'rek_corresponding_name': 'Thomas T.',
+                'rek_corresponding_name_order': 1
+            }],
+            'fez_record_search_key_corresponding_organisation': [],
+            'fez_record_search_key_datastream_policy': null,
+            'fez_record_search_key_date_available': null,
+            'fez_record_search_key_doi': {
+                'rek_doi_id': 1739789,
+                'rek_doi_pid': 'UQ:00013d2',
+                'rek_doi_xsdmf_id': null,
+                'rek_doi': '10.1016\/j.agee.2017.12.020',
+                'fez_altmetric': {
+                    'as_id': 102496,
+                    'as_amid': 30994295,
+                    'as_doi': '10.1016\/j.agee.2017.12.020',
+                    'as_score': 3,
+                    'as_created': '1527537333',
+                    'as_last_checked': '1579325831',
+                    'as_1d': 0,
+                    'as_2d': 0,
+                    'as_3d': 0,
+                    'as_4d': 0,
+                    'as_5d': 0,
+                    'as_6d': 0,
+                    'as_1w': 0,
+                    'as_1m': 0,
+                    'as_3m': 0,
+                    'as_6m': 0,
+                    'as_1y': 0,
+                    'as_total_posts_count': 3,
+                    'as_facebook_posts_count': 0,
+                    'as_policy_posts_count': 0,
+                    'as_blogs_posts_count': 0,
+                    'as_googleplus_posts_count': 0,
+                    'as_news_posts_count': 0,
+                    'as_reddit_posts_count': 0,
+                    'as_twitter_posts_count': 3,
+                    'as_syllabi_posts_count': 0,
+                    'as_video_posts_count': 0,
+                    'as_weibo_posts_count': 0,
+                    'as_qa_posts_count': 0,
+                    'as_f1000_posts_count': 0,
+                    'as_wikipedia_posts_count': 0,
+                    'as_pinterest_posts_count': 0,
+                    'as_linkedin_posts_count': 0,
+                    'as_peer_reviews_posts_count': 0,
+                    'as_citation_url': 'http:\/\/www.altmetric.com\/details.php?citation_id=30994295'
+                }
+            },
+            'fez_record_search_key_end_page': {
+                'rek_end_page_id': 5770173,
+                'rek_end_page_pid': 'UQ:00013d2',
+                'rek_end_page_xsdmf_id': null,
+                'rek_end_page': '61'
+            },
+            'fez_record_search_key_file_attachment_access_condition': [],
+            'fez_record_search_key_file_attachment_embargo_date': [],
+            'fez_record_search_key_file_attachment_name': [],
+            'fez_record_search_key_grant_acronym': [],
+            'fez_record_search_key_grant_agency': [{
+                'rek_grant_agency_id': 136078,
+                'rek_grant_agency_pid': 'UQ:00013d2',
+                'rek_grant_agency_xsdmf_id': 0,
+                'rek_grant_agency': 'Australian Research Council and Renewed Carbon Pty Ltd',
+                'rek_grant_agency_order': 1
+            }],
+            'fez_record_search_key_grant_agency_id': [{
+                'rek_grant_agency_id_id': 17442,
+                'rek_grant_agency_id_pid': 'UQ:00013d2',
+                'rek_grant_agency_id_xsdmf_id': 0,
+                'rek_grant_agency_id': '10.13039\/501100000923',
+                'rek_grant_agency_id_order': 1
+            }],
+            'fez_record_search_key_grant_id': [{
+                'rek_grant_id_id': 73453,
+                'rek_grant_id_pid': 'UQ:00013d2',
+                'rek_grant_id_xsdmf_id': 0,
+                'rek_grant_id': null,
+                'rek_grant_id_order': 1
+            }],
+            'fez_record_search_key_grant_text': [],
+            'fez_record_search_key_herdc_code': {
+                'rek_herdc_code_id': 4963148,
+                'rek_herdc_code_pid': 'UQ:00013d2',
+                'rek_herdc_code_xsdmf_id': null,
+                'rek_herdc_code': 450009,
+                'rek_herdc_code_lookup': 'C1'
+            },
+            'fez_record_search_key_herdc_status': {
+                'rek_herdc_status_id': 3825736,
+                'rek_herdc_status_pid': 'UQ:00013d2',
+                'rek_herdc_status_xsdmf_id': null,
+                'rek_herdc_status': 453220,
+                'rek_herdc_status_lookup': 'Provisional Code'
+            },
+            'fez_record_search_key_institutional_status': {
+                'rek_institutional_status_id': 3500702,
+                'rek_institutional_status_pid': 'UQ:00013d2',
+                'rek_institutional_status_xsdmf_id': null,
+                'rek_institutional_status': 453224,
+                'rek_institutional_status_lookup': 'Non-UQ'
+            },
+            'fez_record_search_key_isbn': [],
+            'fez_record_search_key_isderivationof': [],
+            'fez_record_search_key_isi_loc': {
+                'rek_isi_loc_id': 4069591,
+                'rek_isi_loc_pid': 'UQ:00013d2',
+                'rek_isi_loc_xsdmf_id': null,
+                'rek_isi_loc': '000425578600007',
+                'fez_thomson_citations': null
+            },
+            'fez_record_search_key_ismemberof': [{
+                'rek_ismemberof_id': 12349320,
+                'rek_ismemberof_pid': 'UQ:00013d2',
+                'rek_ismemberof_xsdmf_id': null,
+                'rek_ismemberof': 'UQ:3825',
+                'rek_ismemberof_order': 1,
+                'parent': {
+                    'rek_pid': 'UQ:3825',
+                    'rek_security_policy': 5,
+                    'rek_datastream_policy': 5
+                },
+                'rek_ismemberof_lookup': 'School of Chemistry and Molecular Biosciences'
+            }, {
+                'rek_ismemberof_id': 12349321,
+                'rek_ismemberof_pid': 'UQ:00013d2',
+                'rek_ismemberof_xsdmf_id': null,
+                'rek_ismemberof': 'UQ:218311',
+                'rek_ismemberof_order': 2,
+                'parent': {
+                    'rek_pid': 'UQ:218311',
+                    'rek_security_policy': 5,
+                    'rek_datastream_policy': 5
+                },
+                'rek_ismemberof_lookup': 'HERDC Pre-Audit'
+            }],
+            'fez_record_search_key_ismn': [],
+            'fez_record_search_key_issn': [{
+                'rek_issn_id': 5452220,
+                'rek_issn_pid': 'UQ:00013d2',
+                'rek_issn_xsdmf_id': null,
+                'rek_issn': '0167-8809',
+                'rek_issn_order': 1,
+                'fez_journal_issns': [{
+                    'jni_id': 21318,
+                    'jni_jnl_id': 12655,
+                    'jni_issn': '0167-8809',
+                    'jni_issn_order': 1,
+                    'fez_journal': {
+                        'jnl_id': 12655,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2010,
+                        'jnl_created_date': '2010-11-19 00:00:00',
+                        'jnl_updated_date': '2010-11-19 00:00:00',
+                        'jnl_rank': 'A',
+                        'jnl_foreign_name': null
+                    }
+                }, {
+                    'jni_id': 63084,
+                    'jni_jnl_id': 38109,
+                    'jni_issn': '0167-8809',
+                    'jni_issn_order': 1,
+                    'fez_journal': {
+                        'jnl_id': 38109,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2012,
+                        'jnl_created_date': '2011-10-28 00:00:00',
+                        'jnl_updated_date': '2011-10-28 00:00:00',
+                        'jnl_rank': null,
+                        'jnl_foreign_name': ''
+                    }
+                }, {
+                    'jni_id': 97011,
+                    'jni_jnl_id': 58972,
+                    'jni_issn': '0167-8809',
+                    'jni_issn_order': 1,
+                    'fez_journal': {
+                        'jnl_id': 58972,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2015,
+                        'jnl_created_date': '2014-07-16 00:00:00',
+                        'jnl_updated_date': '2014-07-16 00:00:00',
+                        'jnl_rank': null,
+                        'jnl_foreign_name': ''
+                    }
+                }, {
+                    'jni_id': 178346,
+                    'jni_jnl_id': 108080,
+                    'jni_issn': '0167-8809',
+                    'jni_issn_order': 1,
+                    'fez_journal': {
+                        'jnl_id': 108080,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2018,
+                        'jnl_created_date': '2017-09-06 00:00:00',
+                        'jnl_updated_date': '2017-09-06 00:00:00',
+                        'jnl_rank': null,
+                        'jnl_foreign_name': ''
+                    }
+                }],
+                'fez_sherpa_romeo': {
+                    'srm_id': 22011,
+                    'srm_issn': '0167-8809',
+                    'srm_journal_name': 'Agriculture, Ecosystems and Environment',
+                    'srm_colour': 'green',
+                    'srm_journal_link': 'http:\/\/v2.sherpa.ac.uk\/id\/publication\/10544'
+                },
+                'fez_ulrichs': {
+                    'ulr_issn': '0167-8809',
+                    'ulr_title_id': '63048',
+                    'ulr_title': 'Agriculture, Ecosystems & Environment'
+                },
+                'rek_issn_lookup': ''
+            }, {
+                'rek_issn_id': 5452221,
+                'rek_issn_pid': 'UQ:00013d2',
+                'rek_issn_xsdmf_id': null,
+                'rek_issn': '1873-2305',
+                'rek_issn_order': 2,
+                'fez_journal_issns': [{
+                    'jni_id': 21319,
+                    'jni_jnl_id': 12655,
+                    'jni_issn': '1873-2305',
+                    'jni_issn_order': 2,
+                    'fez_journal': {
+                        'jnl_id': 12655,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2010,
+                        'jnl_created_date': '2010-11-19 00:00:00',
+                        'jnl_updated_date': '2010-11-19 00:00:00',
+                        'jnl_rank': 'A',
+                        'jnl_foreign_name': null
+                    }
+                }, {
+                    'jni_id': 63085,
+                    'jni_jnl_id': 38109,
+                    'jni_issn': '1873-2305',
+                    'jni_issn_order': 2,
+                    'fez_journal': {
+                        'jnl_id': 38109,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2012,
+                        'jnl_created_date': '2011-10-28 00:00:00',
+                        'jnl_updated_date': '2011-10-28 00:00:00',
+                        'jnl_rank': null,
+                        'jnl_foreign_name': ''
+                    }
+                }, {
+                    'jni_id': 97012,
+                    'jni_jnl_id': 58972,
+                    'jni_issn': '1873-2305',
+                    'jni_issn_order': 2,
+                    'fez_journal': {
+                        'jnl_id': 58972,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2015,
+                        'jnl_created_date': '2014-07-16 00:00:00',
+                        'jnl_updated_date': '2014-07-16 00:00:00',
+                        'jnl_rank': null,
+                        'jnl_foreign_name': ''
+                    }
+                }, {
+                    'jni_id': 178347,
+                    'jni_jnl_id': 108080,
+                    'jni_issn': '1873-2305',
+                    'jni_issn_order': 2,
+                    'fez_journal': {
+                        'jnl_id': 108080,
+                        'jnl_journal_name': 'Agriculture, Ecosystems and Environment',
+                        'jnl_era_id': 36361,
+                        'jnl_era_year': 2018,
+                        'jnl_created_date': '2017-09-06 00:00:00',
+                        'jnl_updated_date': '2017-09-06 00:00:00',
+                        'jnl_rank': null,
+                        'jnl_foreign_name': ''
+                    }
+                }],
+                'fez_sherpa_romeo': {
+                    'srm_id': 22012,
+                    'srm_issn': '1873-2305',
+                    'srm_journal_name': 'Not found in Sherpa Romeo',
+                    'srm_colour': 'Not found in Sherpa Romeo',
+                    'srm_journal_link': null
+                },
+                'fez_ulrichs': {
+                    'ulr_issn': '1873-2305',
+                    'ulr_title_id': '63049',
+                    'ulr_title': 'Agriculture, Ecosystems & Environment'
+                },
+                'rek_issn_lookup': ''
+            }],
+            'fez_record_search_key_issue_number': null,
+            'fez_record_search_key_journal_name': {
+                'rek_journal_name_id': 5306119,
+                'rek_journal_name_pid': 'UQ:00013d2',
+                'rek_journal_name_xsdmf_id': null,
+                'rek_journal_name': 'Agriculture, Ecosystems and Environment'
+            },
+            'fez_record_search_key_keywords': [{
+                'rek_keywords_id': 30645896,
+                'rek_keywords_pid': 'UQ:00013d2',
+                'rek_keywords_xsdmf_id': null,
+                'rek_keywords': 'Barley',
+                'rek_keywords_order': 1
+            }, {
+                'rek_keywords_id': 30645897,
+                'rek_keywords_pid': 'UQ:00013d2',
+                'rek_keywords_xsdmf_id': null,
+                'rek_keywords': 'Biochar',
+                'rek_keywords_order': 2
+            }, {
+                'rek_keywords_id': 30645898,
+                'rek_keywords_pid': 'UQ:00013d2',
+                'rek_keywords_xsdmf_id': null,
+                'rek_keywords': 'Long-term',
+                'rek_keywords_order': 3
+            }, {
+                'rek_keywords_id': 30645899,
+                'rek_keywords_pid': 'UQ:00013d2',
+                'rek_keywords_xsdmf_id': null,
+                'rek_keywords': 'Microbial communities',
+                'rek_keywords_order': 4
+            }, {
+                'rek_keywords_id': 30645900,
+                'rek_keywords_pid': 'UQ:00013d2',
+                'rek_keywords_xsdmf_id': null,
+                'rek_keywords': 'Short-term',
+                'rek_keywords_order': 5
+            }],
+            'fez_record_search_key_language': [{
+                'rek_language_id': 5568944,
+                'rek_language_pid': 'UQ:00013d2',
+                'rek_language_xsdmf_id': null,
+                'rek_language': 'eng',
+                'rek_language_order': 1
+            }],
+            'fez_record_search_key_language_of_journal_name': [],
+            'fez_record_search_key_language_of_title': [],
+            'fez_record_search_key_link': [],
+            'fez_record_search_key_link_description': [],
+            'fez_record_search_key_native_script_journal_name': null,
+            'fez_record_search_key_native_script_title': null,
+            'fez_record_search_key_notes': null,
+            'fez_record_search_key_oa_embargo_days': null,
+            'fez_record_search_key_oa_notes': null,
+            'fez_record_search_key_oa_status': {
+                'rek_oa_status_id': 591090,
+                'rek_oa_status_pid': 'UQ:00013d2',
+                'rek_oa_status_xsdmf_id': null,
+                'rek_oa_status': 453692,
+                'rek_oa_status_lookup': 'Not yet assessed'
+            },
+            'fez_record_search_key_place_of_publication': {
+                'rek_place_of_publication_id': 4405139,
+                'rek_place_of_publication_pid': 'UQ:00013d2',
+                'rek_place_of_publication_xsdmf_id': null,
+                'rek_place_of_publication': 'Amsterdam, Netherlands'
+            },
+            'fez_record_search_key_possible_author_id': [],
+            'fez_record_search_key_publisher': {
+                'rek_publisher_id': 4711671,
+                'rek_publisher_pid': 'UQ:00013d2',
+                'rek_publisher_xsdmf_id': null,
+                'rek_publisher': 'Elsevier'
+            },
+            'fez_record_search_key_pubmed_id': null,
+            'fez_record_search_key_pubmed_central_id': null,
+            'fez_record_search_key_refereed': {
+                'rek_refereed_id': 2788464,
+                'rek_refereed_pid': 'UQ:00013d2',
+                'rek_refereed_xsdmf_id': null,
+                'rek_refereed': 1
+            },
+            'fez_record_search_key_refereed_source': {
+                'rek_refereed_source_id': 1510069,
+                'rek_refereed_source_pid': 'UQ:00013d2',
+                'rek_refereed_source_xsdmf_id': null,
+                'rek_refereed_source': 453635,
+                'rek_refereed_source_lookup': 'Ulrichs'
+            },
+            'fez_record_search_key_retracted': {
+                'rek_retracted_id': 472029,
+                'rek_retracted_pid': 'UQ:00013d2',
+                'rek_retracted_xsdmf_id': null,
+                'rek_retracted': 0
+            },
+            'fez_record_search_key_roman_script_journal_name': null,
+            'fez_record_search_key_roman_script_title': null,
+            'fez_record_search_key_scopus_id': {
+                'rek_scopus_id_id': 2582903,
+                'rek_scopus_id_pid': 'UQ:00013d2',
+                'rek_scopus_id_xsdmf_id': null,
+                'rek_scopus_id': '2-s2.0-85040637333',
+                'fez_scopus_citations': {
+                    'sc_eid': '2-s2.0-85040637333',
+                    'sc_created': '1586321053',
+                    'sc_last_checked': '1586321053',
+                    'sc_count': 9,
+                    'sc_1d': 0,
+                    'sc_2d': 0,
+                    'sc_3d': 0,
+                    'sc_4d': 0,
+                    'sc_5d': 0,
+                    'sc_6d': 0,
+                    'sc_1w': 0,
+                    'sc_1m': 0,
+                    'sc_3m': 0,
+                    'sc_6m': 3,
+                    'sc_1y': 5,
+                    'sc_citation_url': 'http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/www.scopus.com\/results\/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-85040637333'
+                }
+            },
+            'fez_record_search_key_security_policy': [{
+                'rek_security_policy_id': 376620,
+                'rek_security_policy_pid': 'UQ:00013d2',
+                'rek_security_policy': 5,
+                'rek_security_policy_order': 1
+            }],
+            'fez_record_search_key_start_page': {
+                'rek_start_page_id': 5846273,
+                'rek_start_page_pid': 'UQ:00013d2',
+                'rek_start_page_xsdmf_id': null,
+                'rek_start_page': '52'
+            },
+            'fez_record_search_key_subject': [{
+                'rek_subject_id': 9727261,
+                'rek_subject_pid': 'UQ:00013d2',
+                'rek_subject_xsdmf_id': null,
+                'rek_subject': 453382,
+                'rek_subject_order': 1,
+                'rek_subject_lookup': '2303 Ecology'
+            }, {
+                'rek_subject_id': 9727262,
+                'rek_subject_pid': 'UQ:00013d2',
+                'rek_subject_xsdmf_id': null,
+                'rek_subject': 453265,
+                'rek_subject_order': 2,
+                'rek_subject_lookup': '1103 Animal Science and Zoology'
+            }, {
+                'rek_subject_id': 9727263,
+                'rek_subject_pid': 'UQ:00013d2',
+                'rek_subject_xsdmf_id': null,
+                'rek_subject': 453264,
+                'rek_subject_order': 3,
+                'rek_subject_lookup': '1102 Agronomy and Crop Science'
+            }],
+            'fez_record_search_key_total_pages': {
+                'rek_total_pages_id': 5815233,
+                'rek_total_pages_pid': 'UQ:00013d2',
+                'rek_total_pages_xsdmf_id': null,
+                'rek_total_pages': '10'
+            },
+            'fez_record_search_key_translated_journal_name': null,
+            'fez_record_search_key_translated_title': null,
+            'fez_record_search_key_volume_number': {
+                'rek_volume_number_id': 5355312,
+                'rek_volume_number_pid': 'UQ:00013d2',
+                'rek_volume_number_xsdmf_id': null,
+                'rek_volume_number': '255'
+            },
+            'fez_record_search_key_wok_doc_types': [],
+            'fez_record_search_key_zoorec_id': null,
+            'fez_record_search_key_isdatasetof': [],
+            'fez_datastream_info': [],
+            'fez_matched_journals': [{
+                'mtj_pid': 'UQ:00013d2',
+                'mtj_jnl_id': 12655,
+                'mtj_status': 'A'
+            }, {
+                'mtj_pid': 'UQ:00013d2',
+                'mtj_jnl_id': 38109,
+                'mtj_status': 'A'
+            }, {
+                'mtj_pid': 'UQ:00013d2',
+                'mtj_jnl_id': 58972,
+                'mtj_status': 'A'
+            }, {
+                'mtj_pid': 'UQ:00013d2',
+                'mtj_jnl_id': 108080,
+                'mtj_status': 'A'
+            }],
+            'fez_record_search_key_has_related_datasets': [],
+            'fez_record_search_key_has_derivations': [],
+            'rek_display_type_lookup': 'Journal Article',
+            'rek_pubmed_doc_type_lookup': null,
+            'rek_object_type_lookup': 'Record',
+            'rek_scopus_doc_type_lookup': null,
+            'rek_status_lookup': 'Published',
+            'rek_wok_doc_type_lookup': null,
+            'rek_herdc_notes': null,
+            'rek_editing_user': null,
+            'rek_editing_user_lookup': null,
+            'rek_editing_start_date': null,
+            'fez_internal_notes': null,
+            'fez_record_search_key_audience_size': null,
+            'fez_record_search_key_author_affiliation_id': [],
+            'fez_record_search_key_author_affiliation_country': [{
+                'rek_author_affiliation_country_id': 1126664,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 1
+            }, {
+                'rek_author_affiliation_country_id': 1126665,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 2
+            }, {
+                'rek_author_affiliation_country_id': 1126666,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 3
+            }, {
+                'rek_author_affiliation_country_id': 1126667,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 4
+            }, {
+                'rek_author_affiliation_country_id': 1126668,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 5
+            }, {
+                'rek_author_affiliation_country_id': 1126669,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 6
+            }, {
+                'rek_author_affiliation_country_id': 1126670,
+                'rek_author_affiliation_country_pid': 'UQ:00013d2',
+                'rek_author_affiliation_country_xsdmf_id': 0,
+                'rek_author_affiliation_country': 'aus',
+                'rek_author_affiliation_country_order': 7
+            }],
+            'fez_record_search_key_author_affiliation_full_address': [{
+                'rek_author_affiliation_full_address_id': 1201775,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'NSW',
+                'rek_author_affiliation_full_address_order': 1
+            }, {
+                'rek_author_affiliation_full_address_id': 1201776,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'NSW',
+                'rek_author_affiliation_full_address_order': 2
+            }, {
+                'rek_author_affiliation_full_address_id': 1201777,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'NSW',
+                'rek_author_affiliation_full_address_order': 3
+            }, {
+                'rek_author_affiliation_full_address_id': 1201778,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'NSW',
+                'rek_author_affiliation_full_address_order': 4
+            }, {
+                'rek_author_affiliation_full_address_id': 1201779,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'NSW',
+                'rek_author_affiliation_full_address_order': 5
+            }, {
+                'rek_author_affiliation_full_address_id': 1201780,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'Wollongbar,NSW',
+                'rek_author_affiliation_full_address_order': 6
+            }, {
+                'rek_author_affiliation_full_address_id': 1201781,
+                'rek_author_affiliation_full_address_pid': 'UQ:00013d2',
+                'rek_author_affiliation_full_address_xsdmf_id': 0,
+                'rek_author_affiliation_full_address': 'NSW',
+                'rek_author_affiliation_full_address_order': 7
+            }],
+            'fez_record_search_key_author_affiliation_name': [{
+                'rek_author_affiliation_name_id': 1127062,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'Centre for Marine Bio-Innovation,University of New South Wales',
+                'rek_author_affiliation_name_order': 1
+            }, {
+                'rek_author_affiliation_name_id': 1127063,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'School of Materials Science and Engineering,University of New South Wales',
+                'rek_author_affiliation_name_order': 2
+            }, {
+                'rek_author_affiliation_name_id': 1127064,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'Centre for Marine Bio-Innovation,University of New South Wales',
+                'rek_author_affiliation_name_order': 3
+            }, {
+                'rek_author_affiliation_name_id': 1127065,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'School of Materials Science and Engineering,University of New South Wales',
+                'rek_author_affiliation_name_order': 4
+            }, {
+                'rek_author_affiliation_name_id': 1127066,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'School of Materials Science and Engineering,University of New South Wales',
+                'rek_author_affiliation_name_order': 5
+            }, {
+                'rek_author_affiliation_name_id': 1127067,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'New South Wales Department of Primary Industries',
+                'rek_author_affiliation_name_order': 6
+            }, {
+                'rek_author_affiliation_name_id': 1127068,
+                'rek_author_affiliation_name_pid': 'UQ:00013d2',
+                'rek_author_affiliation_name_xsdmf_id': 0,
+                'rek_author_affiliation_name': 'Centre for Marine Bio-Innovation,University of New South Wales',
+                'rek_author_affiliation_name_order': 7
+            }],
+            'fez_record_search_key_author_affiliation_type': [],
+            'fez_record_search_key_content_indicator': [],
+            'fez_record_search_key_creator_contribution_statement': [],
+            'fez_record_search_key_grant_type': [],
+            'fez_record_search_key_grant_agency_type': [],
+            'fez_record_search_key_quality_indicator': [],
+            'fez_record_search_key_significance': []
+        }
     ],
 };

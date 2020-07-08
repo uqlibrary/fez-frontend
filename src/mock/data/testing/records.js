@@ -4183,7 +4183,14 @@ export const journalArticle = {
     "fez_record_search_key_oa_status": {
         "rek_oa_status_id": null,
         "rek_oa_status_pid": "UQ:676287",
-        "rek_oa_status": 453695
+        "rek_oa_status": 453693,
+        "rek_oa_status_lookup": "DOI",
+    },
+    "fez_record_search_key_oa_status_type": {
+        "rek_oa_status_type_id": null,
+        "rek_oa_status_type_pid": "UQ:676287",
+        "rek_oa_status_type": 454120,
+        "rek_oa_status_type_lookup": "Green",
     },
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
@@ -4876,7 +4883,18 @@ export const book = {
     "fez_record_search_key_notes": null,
     "fez_record_search_key_oa_embargo_days": null,
     "fez_record_search_key_oa_notes": null,
-    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": null,
+        "rek_oa_status_pid": "UQ:376215",
+        "rek_oa_status": 454118,
+        "rek_oa_status_lookup": 453698
+    },
+    "fez_record_search_key_oa_status_type": {
+        "rek_oa_status_type_id": null,
+        "rek_oa_status_type_pid": "UQ:376215",
+        "rek_oa_status_type": 454122,
+        "rek_oa_status_type_lookup": "Hybrid",
+    },
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -5995,6 +6013,7 @@ export const generic = {
         "rek_oa_status_xsdmf_id": 16984,
         "rek_oa_status": 453697
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -16844,21 +16863,21 @@ export const recordWithRelatedItems = {
         "rek_language": "eng",
         "rek_language_order": 1
     }],
-        "fez_record_search_key_language_of_journal_name": [],
-        "fez_record_search_key_language_of_title": [],
-        "fez_record_search_key_link": [],
-        "fez_record_search_key_link_description": [],
-        "fez_record_search_key_native_script_journal_name": null,
-        "fez_record_search_key_native_script_title": null,
-        "fez_record_search_key_notes": null,
-        "fez_record_search_key_oa_embargo_days": null,
-        "fez_record_search_key_oa_notes": null,
-        "fez_record_search_key_oa_status": {
-        "rek_oa_status_id": 692848,
-            "rek_oa_status_pid": "UQ:76a9027",
-            "rek_oa_status_xsdmf_id": null,
-            "rek_oa_status": 453698,
-            "rek_oa_status_lookup": "Not Open Access"
+    "fez_record_search_key_language_of_journal_name": [],
+    "fez_record_search_key_language_of_title": [],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_native_script_journal_name": null,
+    "fez_record_search_key_native_script_title": null,
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_embargo_days": null,
+    "fez_record_search_key_oa_notes": null,
+    "fez_record_search_key_oa_status": {
+    "rek_oa_status_id": 692848,
+        "rek_oa_status_pid": "UQ:76a9027",
+        "rek_oa_status_xsdmf_id": null,
+        "rek_oa_status": 453698,
+        "rek_oa_status_lookup": "Not Open Access"
     },
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4436642,

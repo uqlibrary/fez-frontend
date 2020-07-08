@@ -15,7 +15,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { GOOGLE_MAPS_API_URL, GOOGLE_MAPS_API_CHINA_URL } from 'config/general';
+import { GOOGLE_MAPS_API_CHINA_URL, GOOGLE_MAPS_API_URL } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
