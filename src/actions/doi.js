@@ -23,3 +23,7 @@ export function updateDoi(record) {
         );
     };
 }
+
+export function resetDoi() {
+    return dispatch => dispatch({ type: actions.RECORD_DOI_RESET });
+}

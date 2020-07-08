@@ -7,6 +7,7 @@ describe('DOI reducer', () => {
         doiUpdated: false,
         doiFailed: false,
     };
+
     it('should set loading state', () => {
         const test = doiReducer(initialState, {
             type: actions.RECORD_DOI_UPDATE_REQUESTING,
@@ -17,6 +18,7 @@ describe('DOI reducer', () => {
         };
         expect(test).toEqual(expected);
     });
+
     it('should set succeeded state', () => {
         const test = doiReducer(initialState, {
             type: actions.RECORD_DOI_UPDATE_SUCCEEDED,
@@ -27,6 +29,7 @@ describe('DOI reducer', () => {
         };
         expect(test).toEqual(expected);
     });
+
     it('should set failed state', () => {
         const test = doiReducer(initialState, {
             type: actions.RECORD_DOI_UPDATE_FAILED,
@@ -35,6 +38,14 @@ describe('DOI reducer', () => {
             ...initialState,
             doiFailed: true,
         };
+        expect(test).toEqual(expected);
+    });
+
+    it('should reset state', () => {
+        const test = doiReducer(initialState, {
+            type: actions.RECORD_DOI_RESET,
+        });
+        const expected = { ...initialState };
         expect(test).toEqual(expected);
     });
 });

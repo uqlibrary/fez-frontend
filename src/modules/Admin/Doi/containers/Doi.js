@@ -41,8 +41,8 @@ const mapStateToProps = state => {
 
 /* istanbul ignore next */
 const mapDispatchToProps = dispatch => {
-    const { loadRecordToView } = bindActionCreators(actions, dispatch);
-    return { loadRecordToView, handleSubmit: record => onSubmit(record, dispatch) };
+    const { loadRecordToView, resetDoi } = bindActionCreators(actions, dispatch);
+    return { handleSubmit: record => onSubmit(record, dispatch), loadRecordToView, resetDoi };
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Doi));

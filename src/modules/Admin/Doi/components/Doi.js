@@ -83,6 +83,7 @@ export const Doi = ({
     loadRecordToView,
     match,
     record,
+    resetDoi,
 }) => {
     React.useEffect(() => {
         // Load record if it hasn't
@@ -90,7 +91,11 @@ export const Doi = ({
             (!record || record.rek_pid !== match.params.pid) &&
             !!loadRecordToView &&
             loadRecordToView(match.params.pid);
-    }, [loadRecordToView, match.params.pid, record]);
+        return () => {
+            // Clear form status
+            resetDoi();
+        };
+    }, [loadRecordToView, match.params.pid, record, resetDoi]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     /* istanbul ignore next */
@@ -221,6 +226,7 @@ Doi.propTypes = {
     loadRecordToView: PropTypes.func,
     match: PropTypes.object,
     record: PropTypes.object,
+    resetDoi: PropTypes.func,
 };
 
 export default Doi;
