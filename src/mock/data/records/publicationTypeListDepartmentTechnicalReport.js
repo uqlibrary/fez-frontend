@@ -206,6 +206,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_name": {
                 "rek_org_name_id": 349427,
                 "rek_org_name_pid": "UQ:217609",
@@ -747,6 +748,7 @@ export default {
                 "rek_notes": "ISBN 9780909756888"
             },
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_name": {
                 "rek_org_name_id": 352212,
                 "rek_org_name_pid": "UQ:193000",

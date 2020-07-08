@@ -20911,6 +20911,7 @@ exports[`Additional Information Component  should render component with audio do
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": null,
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
                   "fez_record_search_key_original_format": null,
@@ -23240,6 +23241,7 @@ exports[`Additional Information Component  should render component with book cha
                     "rek_oa_status_id": null,
                     "rek_oa_status_pid": "UQ:376215",
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
                   "fez_record_search_key_original_format": null,
@@ -24265,6 +24267,7 @@ exports[`Additional Information Component  should render component with book cha
                     "rek_oa_status_id": null,
                     "rek_oa_status_pid": "UQ:376215",
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
                   "fez_record_search_key_original_format": null,
@@ -25303,6 +25306,7 @@ exports[`Additional Information Component  should render component with conferen
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": null,
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
                   "fez_record_search_key_original_format": null,
@@ -26045,6 +26049,7 @@ exports[`Additional Information Component  should render component with conferen
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": null,
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
                   "fez_record_search_key_original_format": null,
@@ -27155,6 +27160,7 @@ exports[`Additional Information Component  should render component with conferen
                     "rek_notes_xsdmf_id": 12436,
                   },
                   "fez_record_search_key_oa_status": null,
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_place_of_publication": Object {
                     "rek_place_of_publication": "Brisbane, Australia",
                     "rek_place_of_publication_id": 4191351,
@@ -28569,6 +28575,7 @@ exports[`Additional Information Component  should render component with creative
                     "rek_oa_status_pid": "UQ:177836",
                     "rek_oa_status_xsdmf_id": 16975,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_place_of_publication": Object {
                     "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                     "rek_place_of_publication_id": 4167616,
@@ -35315,6 +35322,7 @@ exports[`Additional Information Component  should render component with design d
                   ],
                   "fez_record_search_key_notes": null,
                   "fez_record_search_key_oa_status": null,
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_original_format": null,
                   "fez_record_search_key_place_of_publication": Object {
                     "rek_place_of_publication": "Riga, Latvia",
@@ -36288,6 +36296,7 @@ exports[`Additional Information Component  should render component with design d
                   ],
                   "fez_record_search_key_notes": null,
                   "fez_record_search_key_oa_status": null,
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_original_format": null,
                   "fez_record_search_key_place_of_publication": Object {
                     "rek_place_of_publication": "Riga, Latvia",
@@ -37043,6 +37052,7 @@ exports[`Additional Information Component  should render component with digilib 
                     "rek_oa_status_pid": "UQ:151598",
                     "rek_oa_status_xsdmf_id": 17013,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_period": Array [],
                   "fez_record_search_key_publisher": Object {
                     "rek_publisher": "The University of Queensland Library",
@@ -45091,6 +45101,7 @@ exports[`Additional Information Component  should render component with newspape
                     "rek_oa_status_pid": "UQ:184230",
                     "rek_oa_status_xsdmf_id": 16992,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_place_of_publication": null,
                   "fez_record_search_key_publisher": Object {
                     "rek_publisher": "Australian Chinese Daily News",
@@ -45855,6 +45866,7 @@ exports[`Additional Information Component  should render component with newspape
                     "rek_oa_status_pid": "UQ:184230",
                     "rek_oa_status_xsdmf_id": 16992,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_place_of_publication": null,
                   "fez_record_search_key_publisher": Object {
                     "rek_publisher": "Australian Chinese Daily News",
@@ -47691,6 +47703,7 @@ exports[`Additional Information Component  should render component with preprint
                     "rek_oa_status_pid": "UQ:10457",
                     "rek_oa_status_xsdmf_id": 16967,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_publisher": null,
                   "fez_record_search_key_refereed": null,
                   "fez_record_search_key_refereed_source": Object {
@@ -56754,6 +56767,7 @@ exports[`Additional Information Component  should render component with thesis 1
                     "rek_oa_status_pid": "UQ:170415",
                     "rek_oa_status_xsdmf_id": 17004,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": Object {
                     "rek_org_name": "The University of Queensland",
                     "rek_org_name_id": 400082,
@@ -58528,6 +58542,7 @@ exports[`Additional Information Component  should render component with working 
                     "rek_oa_status_pid": "UQ:176145",
                     "rek_oa_status_xsdmf_id": 17007,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": Object {
                     "rek_org_name": "The University of Queensland",
                     "rek_org_name_id": 349870,
@@ -59751,6 +59766,7 @@ exports[`Additional Information Component  should render oa status value link in
                     "rek_oa_status_pid": "UQ:170415",
                     "rek_oa_status_xsdmf_id": 17004,
                   },
+                  "fez_record_search_key_oa_status_type": null,
                   "fez_record_search_key_org_name": Object {
                     "rek_org_name": "The University of Queensland",
                     "rek_org_name_id": 400082,

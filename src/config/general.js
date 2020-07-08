@@ -1416,6 +1416,7 @@ export const OA_STATUS = [
 ];
 
 export const OA_STATUS_TYPE = [
+    { value: null, text: 'Please choose an option' },
     { value: 454120, text: 'Green' },
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },

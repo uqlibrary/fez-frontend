@@ -551,6 +551,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                   "rek_oa_status_pid": "UQ:330391",
                   "rek_oa_status_xsdmf_id": null,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Bethesda, MD, United States",
                   "rek_place_of_publication_id": 4161211,
@@ -1362,6 +1363,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                   "rek_oa_status_pid": "UQ:103860",
                   "rek_oa_status_xsdmf_id": null,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Oxford",
                   "rek_place_of_publication_id": 4307254,
@@ -2040,6 +2042,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                   "rek_oa_status_pid": "UQ:330391",
                   "rek_oa_status_xsdmf_id": null,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Bethesda, MD, United States",
                   "rek_place_of_publication_id": 4161211,
