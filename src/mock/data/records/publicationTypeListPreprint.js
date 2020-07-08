@@ -242,6 +242,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4433447,
@@ -503,6 +504,7 @@ export default {
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4471270,

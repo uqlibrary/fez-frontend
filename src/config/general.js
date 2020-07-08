@@ -1432,6 +1432,15 @@ export const OA_STATUS = [
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
+    { value: '454118', text: 'Not yet assessed (Unpaywall)' },
+];
+
+export const OA_STATUS_TYPE = [
+    { value: null, text: 'Please choose an option' },
+    { value: 454120, text: 'Green' },
+    { value: 454121, text: 'Gold' },
+    { value: 454122, text: 'Hybrid' },
+    { value: 454123, text: 'Bronze' },
 ];
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;

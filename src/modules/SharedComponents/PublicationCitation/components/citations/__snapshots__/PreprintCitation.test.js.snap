@@ -679,6 +679,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                   "rek_oa_status_pid": "UQ:10457",
                   "rek_oa_status_xsdmf_id": 16967,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_publisher": null,
                 "fez_record_search_key_refereed": null,
                 "fez_record_search_key_refereed_source": Object {
@@ -1014,6 +1015,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                       "rek_oa_status_pid": "UQ:10457",
                       "rek_oa_status_xsdmf_id": 16967,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_publisher": null,
                     "fez_record_search_key_refereed": null,
                     "fez_record_search_key_refereed_source": Object {
@@ -1361,6 +1363,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                         "rek_oa_status_pid": "UQ:10457",
                         "rek_oa_status_xsdmf_id": 16967,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_publisher": null,
                       "fez_record_search_key_refereed": null,
                       "fez_record_search_key_refereed_source": Object {

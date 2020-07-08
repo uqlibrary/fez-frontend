@@ -263,6 +263,7 @@ export default {
             },
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_parent_publication": {
                 "rek_parent_publication_id": 6303,
                 "rek_parent_publication_pid": "UQ:191549",

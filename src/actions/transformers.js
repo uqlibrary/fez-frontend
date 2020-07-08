@@ -1066,6 +1066,21 @@ export const getHerdcStatusSearchKey = record => {
     };
 };
 
+export const getOpenAccessStatusTypeSearchKey = record => {
+    // return empty object if all parameters are null
+    if (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null) {
+        return {
+            fez_record_search_key_oa_status_type: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_oa_status_type: {
+            rek_oa_status_type: record.rek_oa_status_type,
+        },
+    };
+};
+
 export const getInstitutionalStatusSearchKey = record => {
     // return empty object if all parameters are null
     if (!!record.rek_institutional_status && record.rek_institutional_status.value === null) {
@@ -1085,9 +1100,7 @@ export const getOpenAccessStatusSearchKey = record => {
     // return empty object if all parameters are null
     if (!!record.rek_oa_status && record.rek_oa_status.value === null) {
         return {
-            fez_record_search_key_oa_status: {
-                rek_oa_status: null,
-            },
+            fez_record_search_key_oa_status: {},
         };
     }
 
@@ -1111,6 +1124,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
+        fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
         rek_herdc_notes: herdcNotes,
@@ -1130,6 +1144,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
+        ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
         ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }

@@ -176,6 +176,7 @@ export default {
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_patent_number": {
                 "rek_patent_number_id": 2616,
                 "rek_patent_number_pid": "UQ:324188",

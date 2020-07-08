@@ -717,6 +717,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
                 ],
                 "fez_record_search_key_notes": null,
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_original_format": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Riga, Latvia",
@@ -1135,6 +1136,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
                     ],
                     "fez_record_search_key_notes": null,
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_original_format": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "Riga, Latvia",
@@ -1565,6 +1567,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
                       ],
                       "fez_record_search_key_notes": null,
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_original_format": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "Riga, Latvia",
@@ -2860,6 +2863,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
                 ],
                 "fez_record_search_key_notes": null,
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_original_format": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Riga, Latvia",
@@ -3280,6 +3284,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
                     ],
                     "fez_record_search_key_notes": null,
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_original_format": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "Riga, Latvia",
@@ -3712,6 +3717,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
                       ],
                       "fez_record_search_key_notes": null,
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_original_format": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "Riga, Latvia",

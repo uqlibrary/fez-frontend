@@ -164,6 +164,7 @@ export default {
         "rek_oa_status": 453697,
         "rek_oa_status_lookup": "Other"
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_refereed_source": {
         "rek_refereed_source_id": 1398448,
         "rek_refereed_source_pid": "UQ:290371",

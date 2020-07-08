@@ -153,8 +153,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -210,8 +210,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -359,8 +359,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -416,8 +416,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -585,8 +585,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -642,8 +642,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -705,8 +705,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -762,8 +762,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -927,8 +927,8 @@ exports[`Files Component  should not render cultural message 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -984,8 +984,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1047,8 +1047,8 @@ exports[`Files Component  should not render cultural message 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1104,8 +1104,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1281,8 +1281,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1338,8 +1338,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1401,8 +1401,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1458,8 +1458,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1607,8 +1607,8 @@ exports[`Files Component  should render an image as the original filename with n
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1664,8 +1664,8 @@ exports[`Files Component  should render an image as the original filename with n
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1813,8 +1813,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1870,8 +1870,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1933,8 +1933,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1990,8 +1990,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -2155,8 +2155,8 @@ exports[`Files Component  should render component 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -2212,8 +2212,8 @@ exports[`Files Component  should render component 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -2275,8 +2275,8 @@ exports[`Files Component  should render component 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -2332,8 +2332,8 @@ exports[`Files Component  should render component 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -3637,9 +3637,16 @@ exports[`Files Component  should render component full mount 1`] = `
                 "fez_record_search_key_oa_embargo_days": null,
                 "fez_record_search_key_oa_notes": null,
                 "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453695,
+                  "rek_oa_status": 453693,
                   "rek_oa_status_id": null,
+                  "rek_oa_status_lookup": "DOI",
                   "rek_oa_status_pid": "UQ:676287",
+                },
+                "fez_record_search_key_oa_status_type": Object {
+                  "rek_oa_status_type": 454123,
+                  "rek_oa_status_type_id": null,
+                  "rek_oa_status_type_lookup": "Bronze",
+                  "rek_oa_status_type_pid": "UQ:676287",
                 },
                 "fez_record_search_key_org_name": null,
                 "fez_record_search_key_org_unit_name": null,
@@ -4630,9 +4637,16 @@ exports[`Files Component  should render component full mount 1`] = `
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -5630,9 +5644,16 @@ exports[`Files Component  should render component full mount 1`] = `
                     "fez_record_search_key_oa_embargo_days": null,
                     "fez_record_search_key_oa_notes": null,
                     "fez_record_search_key_oa_status": Object {
-                      "rek_oa_status": 453695,
+                      "rek_oa_status": 453693,
                       "rek_oa_status_id": null,
+                      "rek_oa_status_lookup": "DOI",
                       "rek_oa_status_pid": "UQ:676287",
+                    },
+                    "fez_record_search_key_oa_status_type": Object {
+                      "rek_oa_status_type": 454123,
+                      "rek_oa_status_type_id": null,
+                      "rek_oa_status_type_lookup": "Bronze",
+                      "rek_oa_status_type_pid": "UQ:676287",
                     },
                     "fez_record_search_key_org_name": null,
                     "fez_record_search_key_org_unit_name": null,
@@ -7438,8 +7459,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             openAccessStatus={
                                                               Object {
                                                                 "embargoDate": null,
-                                                                "isOpenAccess": true,
-                                                                "openAccessStatusId": 453695,
+                                                                "isOpenAccess": false,
+                                                                "openAccessStatusId": 453693,
                                                               }
                                                             }
                                                             pid="UQ:676287"
@@ -7484,8 +7505,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               openAccessStatus={
                                                                 Object {
                                                                   "embargoDate": null,
-                                                                  "isOpenAccess": true,
-                                                                  "openAccessStatusId": 453695,
+                                                                  "isOpenAccess": false,
+                                                                  "openAccessStatusId": 453693,
                                                                 }
                                                               }
                                                               pid="UQ:676287"
@@ -8659,8 +8680,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             openAccessStatus={
                                                               Object {
                                                                 "embargoDate": null,
-                                                                "isOpenAccess": true,
-                                                                "openAccessStatusId": 453695,
+                                                                "isOpenAccess": false,
+                                                                "openAccessStatusId": 453693,
                                                               }
                                                             }
                                                             pid="UQ:676287"
@@ -8698,8 +8719,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               openAccessStatus={
                                                                 Object {
                                                                   "embargoDate": null,
-                                                                  "isOpenAccess": true,
-                                                                  "openAccessStatusId": 453695,
+                                                                  "isOpenAccess": false,
+                                                                  "openAccessStatusId": 453693,
                                                                 }
                                                               }
                                                               pid="UQ:676287"
@@ -9615,8 +9636,8 @@ exports[`Files Component  should render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -9672,8 +9693,8 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -9735,8 +9756,8 @@ exports[`Files Component  should render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -9792,8 +9813,8 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -9957,8 +9978,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10014,8 +10035,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10077,8 +10098,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10134,8 +10155,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10299,8 +10320,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10356,8 +10377,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10419,8 +10440,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10476,8 +10497,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10641,8 +10662,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10698,8 +10719,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10761,8 +10782,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10818,8 +10839,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10983,8 +11004,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11040,8 +11061,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11103,8 +11124,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11160,8 +11181,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11325,8 +11346,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11382,8 +11403,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11445,8 +11466,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11502,8 +11523,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11667,8 +11688,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11724,8 +11745,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11787,8 +11808,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11844,8 +11865,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -12083,8 +12104,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -12140,8 +12161,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -12274,7 +12295,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           sm={4}
         >
           <WithStyles(FileName)
-            allowDownload={false}
+            allowDownload={true}
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -12304,10 +12325,9 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             onFileSelect={[Function]}
             openAccessStatus={
               Object {
-                "embargoDate": "1st December 2050",
+                "embargoDate": null,
                 "isOpenAccess": false,
-                "openAccessStatusId": 453695,
-                "securityStatus": true,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -12362,9 +12382,9 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             }
           >
             <WithStyles(OpenAccessIcon)
-              embargoDate="1st December 2050"
+              embargoDate={null}
               isOpenAccess={false}
-              openAccessStatusId={453695}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -12426,8 +12446,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -12483,8 +12503,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>

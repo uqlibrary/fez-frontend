@@ -435,6 +435,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_parent_publication": {
                 "rek_parent_publication_id": 5325,
                 "rek_parent_publication_pid": "UQ:284280",
@@ -830,6 +831,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_parent_publication": {
                 "rek_parent_publication_id": 6329,
                 "rek_parent_publication_pid": "UQ:152994",

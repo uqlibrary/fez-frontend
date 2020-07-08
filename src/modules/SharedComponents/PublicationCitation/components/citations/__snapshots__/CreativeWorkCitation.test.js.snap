@@ -736,6 +736,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                   "rek_oa_status_pid": "UQ:177836",
                   "rek_oa_status_xsdmf_id": 16975,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                   "rek_place_of_publication_id": 4167616,
@@ -1142,6 +1143,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       "rek_oa_status_pid": "UQ:177836",
                       "rek_oa_status_xsdmf_id": 16975,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                       "rek_place_of_publication_id": 4167616,
@@ -1560,6 +1562,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                         "rek_oa_status_pid": "UQ:177836",
                         "rek_oa_status_xsdmf_id": 16975,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                         "rek_place_of_publication_id": 4167616,

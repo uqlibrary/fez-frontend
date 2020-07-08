@@ -724,6 +724,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                   "rek_notes_xsdmf_id": 12436,
                 },
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Brisbane, Australia",
                   "rek_place_of_publication_id": 4191351,
@@ -1139,6 +1140,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       "rek_notes_xsdmf_id": 12436,
                     },
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "Brisbane, Australia",
                       "rek_place_of_publication_id": 4191351,
@@ -1562,6 +1564,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "rek_notes_xsdmf_id": 12436,
                       },
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "Brisbane, Australia",
                         "rek_place_of_publication_id": 4191351,
@@ -1999,6 +2002,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "rek_notes_xsdmf_id": 12436,
                         },
                         "fez_record_search_key_oa_status": null,
+                        "fez_record_search_key_oa_status_type": null,
                         "fez_record_search_key_place_of_publication": Object {
                           "rek_place_of_publication": "Brisbane, Australia",
                           "rek_place_of_publication_id": 4191351,
@@ -3361,6 +3365,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                   "rek_notes_xsdmf_id": 12436,
                 },
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Brisbane, Australia",
                   "rek_place_of_publication_id": 4191351,
@@ -3779,6 +3784,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       "rek_notes_xsdmf_id": 12436,
                     },
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "Brisbane, Australia",
                       "rek_place_of_publication_id": 4191351,
@@ -4205,6 +4211,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "rek_notes_xsdmf_id": 12436,
                       },
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "Brisbane, Australia",
                         "rek_place_of_publication_id": 4191351,
@@ -4645,6 +4652,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "rek_notes_xsdmf_id": 12436,
                         },
                         "fez_record_search_key_oa_status": null,
+                        "fez_record_search_key_oa_status_type": null,
                         "fez_record_search_key_place_of_publication": Object {
                           "rek_place_of_publication": "Brisbane, Australia",
                           "rek_place_of_publication_id": 4191351,

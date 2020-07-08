@@ -514,6 +514,7 @@ export default {
                 "rek_oa_status": 453696,
                 "rek_oa_status_lookup": "File (Author Post-print)"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4166288,
                 "rek_place_of_publication_pid": "UQ:228367",

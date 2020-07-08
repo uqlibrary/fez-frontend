@@ -347,6 +347,7 @@ export default {
             "fez_record_search_key_oa_embargo_days": null,
             "fez_record_search_key_oa_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4227054,
                 "rek_place_of_publication_pid": "UQ:173575",
@@ -846,6 +847,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4448182,
                 "rek_place_of_publication_pid": "UQ:0048ce9",
@@ -1323,6 +1325,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4225617,
                 "rek_place_of_publication_pid": "UQ:278002",
