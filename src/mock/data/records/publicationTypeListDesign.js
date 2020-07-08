@@ -298,6 +298,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 9791,
                 "rek_original_format_pid": "UQ:367344",
@@ -706,6 +707,7 @@ export default {
                 "rek_oa_status": 453695,
                 "rek_oa_status_lookup": "File (Publisher version)"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 30523,
                 "rek_original_format_pid": "UQ:00222bb",
