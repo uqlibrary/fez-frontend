@@ -502,13 +502,39 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   <h4>
                     Current types of licences
                   </h4>
-                  <div
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
-                      }
-                    }
-                  />
+                  <h5>
+                    Permitted Re-use with Acknowledgement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Commercial Use Restriction
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Share Alike Requirement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -1822,13 +1848,39 @@ exports[`AddDataCollection test should render component with a valid collection 
                   <h4>
                     Current types of licences
                   </h4>
-                  <div
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
-                      }
-                    }
-                  />
+                  <h5>
+                    Permitted Re-use with Acknowledgement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Commercial Use Restriction
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Share Alike Requirement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -3138,13 +3190,39 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   <h4>
                     Current types of licences
                   </h4>
-                  <div
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
-                      }
-                    }
-                  />
+                  <h5>
+                    Permitted Re-use with Acknowledgement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Commercial Use Restriction
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Share Alike Requirement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -4454,13 +4532,39 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   <h4>
                     Current types of licences
                   </h4>
-                  <div
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<h5>Permitted Re-use with Acknowledgement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.</p><h5>Permitted Re-Use with Commercial Use Restriction</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p><h5>Permitted Re-Use with Share Alike Requirement</h5><p>I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.</p><p>I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.</p><p>The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.</p>",
-                      }
-                    }
-                  />
+                  <h5>
+                    Permitted Re-use with Acknowledgement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Commercial Use Restriction
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
+                  <h5>
+                    Permitted Re-Use with Share Alike Requirement
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
