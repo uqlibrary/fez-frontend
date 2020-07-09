@@ -54,7 +54,7 @@ describe('View record actions', () => {
                 .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
                 .reply(410, { data: { ...mockData.record } });
 
-            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOADED];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOAD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
@@ -81,6 +81,20 @@ describe('View record actions', () => {
             });
         });
 
+        it('dispatches expected actions when loading a deleted record', async () => {
+            mockApi.onAny().reply(404, 'The requested page could not be found.');
+
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOAD_FAILED];
+
+            await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(mockActionsStore.getActions()).toContainEqual({
+                isDeleted: true,
+                payload: { message: 'The requested page could not be found.', status: 404 },
+                type: 'VIEW_RECORD_LOAD_FAILED',
+            });
+        });
+
         it('dispatches expected actions when loading a non-exist record to view from API', async () => {
             mockApi.onAny().reply(404);
 
@@ -88,10 +102,6 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[404].message,
-            });
         });
 
         it('dispatch expected actions on hiding cultural sensitivity statement', () => {

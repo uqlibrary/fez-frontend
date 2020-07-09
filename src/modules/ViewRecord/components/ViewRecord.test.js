@@ -33,6 +33,11 @@ describe('Component ViewRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render missing record message', () => {
+        const wrapper = setup({ isDeleted: true, recordToViewError: { message: 'test', status: 404 } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render loader', () => {
         const wrapper = setup({ loadingRecordToView: true });
         expect(toJson(wrapper)).toMatchSnapshot();

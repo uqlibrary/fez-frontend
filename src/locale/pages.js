@@ -511,6 +511,18 @@ export default {
                 title: '',
                 message: 'This record has been deleted.',
             },
+            notFound: {
+                title: 'Record not found',
+                message: (
+                    <div>
+                        <p>The record you are attempting to access appears to have been removed from our system.</p>
+                        <p>
+                            If you believe this is in error, please
+                            <a href="mailto:espace@library.uq.edu.au"> contact the eSpace team.</a>
+                        </p>
+                    </div>
+                ),
+            },
         },
         searchRecords: {
             title: 'eSpace search',
