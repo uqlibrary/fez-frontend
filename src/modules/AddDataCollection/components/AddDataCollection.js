@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
+import moment from 'moment';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -19,8 +21,11 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import DepositAgreementField from './DepositAgreementField';
 
 import { routes, validation } from 'config';
+import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
@@ -28,10 +33,6 @@ import { locale } from 'locale';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import DepositAgreementField from './DepositAgreementField';
-import moment from 'moment';
-import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { CURRENT_LICENCES } from 'config/general';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -143,7 +144,7 @@ export default class AddDataCollection extends Component {
                         properly acknowledged.
                     </p>
                     <h4>Current types of licences</h4>
-                    <div dangerouslySetInnerHTML={{ __html: licenseText(CURRENT_LICENCES) }} />
+                    {ReactHtmlParser(licenseText(CURRENT_LICENCES))}
                     <p>
                         View more on{' '}
                         <a
