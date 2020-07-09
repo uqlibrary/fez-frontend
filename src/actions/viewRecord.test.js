@@ -88,11 +88,6 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({
-                isDeleted: true,
-                payload: { message: 'The requested page could not be found.', status: 404 },
-                type: 'VIEW_RECORD_LOAD_FAILED',
-            });
         });
 
         it('dispatches expected actions when loading a non-exist record to view from API', async () => {
