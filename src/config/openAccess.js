@@ -50,7 +50,7 @@ export const labels = {
     [OPEN_ACCESS_ID_NOT_OPEN_ACCESS]: 'Not Open Access',
     [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
     [OPEN_ACCESS_ID_PMC]: 'PMC',
-    [OPEN_ACCESS_ID_FILE_AUTHOR_PREPRINT]: 'File (Author pre-print)',
+    [OPEN_ACCESS_ID_FILE_AUTHOR_PREPRINT]: 'File (Author Pre-print)',
     [OPEN_ACCESS_ID_RDM]: 'RDM open',
     [DATASET_OPEN_ACCESS_ID]: 'Open Access',
     [DATASET_MEDIATED_ACCESS_ID]: 'Mediated Access',
