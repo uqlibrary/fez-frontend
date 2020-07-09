@@ -5,6 +5,7 @@ import {
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_JOURNAL,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_REFERENCE_ENTRY,
@@ -55,15 +56,17 @@ export const identifiersParams = record => ({
         PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
     ].includes(record.rek_display_type),
     displayPubmedCentral: record.rek_display_type === PUBLICATION_TYPE_JOURNAL_ARTICLE,
-    displayIsmn: [NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION].includes(record.rek_subtype),
-    displayIsrc: [
-        NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
-        NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
-        NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
-        NTRO_SUBTYPE_RRW_INTERARTS,
-        NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
-        NTRO_SUBTYPE_RRW_OTHER,
-    ].includes(record.rek_subtype),
+    displayIsmn: record.rek_subtype === NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    displayIsrc:
+        record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
+        [
+            NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+            NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+            NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+            NTRO_SUBTYPE_RRW_INTERARTS,
+            NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+            NTRO_SUBTYPE_RRW_OTHER,
+        ].includes(record.rek_subtype),
 });
 
 export const bibliographicParams = record => ({

@@ -116,10 +116,6 @@ export default {
             groups: [['significanceAndContributionStatement']],
         },
         {
-            title: 'ISMN',
-            groups: [['fez_record_search_key_ismn']],
-        },
-        {
             title: 'Quality indicators',
             groups: [['qualityIndicators']],
         },
