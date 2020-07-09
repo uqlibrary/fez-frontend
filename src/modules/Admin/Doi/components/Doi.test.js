@@ -6,10 +6,15 @@ import { Doi, getWarningMessage } from './Doi';
 import { DOI_ORG_PREFIX } from 'config/doi';
 import { openAccessFiles } from 'config/openAccess';
 
-import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
+import publicationTypeListBook from 'mock/data/records/publicationTypeListBook';
+import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
+import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 import collectionRecord from 'mock/data/records/collectionRecord';
 
+const bookRecord = publicationTypeListBook.data[0];
+const confPaperRecord = publicationTypeListConferencePaper.data[0];
+const journalArticleRecord = publicationTypeListJournalArticle.data[0];
 const record = publicationTypeListResearchReport.data[0];
 
 const setup = (testProps = {}, args = { isShallow: true }) => {
@@ -85,13 +90,10 @@ describe('DOI component', () => {
         expect(testFn2).toHaveBeenCalledTimes(1);
     });
 
-    it('should render warnings when required', () => {
+    it('should render warning for missing OA datastreams', () => {
         const wrapper = setup({
             record: {
                 ...record,
-                fez_record_search_key_org_name: {
-                    rek_org_name: 'Organisation',
-                },
                 fez_datastream_info: [],
             },
         });
@@ -99,6 +101,35 @@ describe('DOI component', () => {
         expect(renderedWarningMessage.text()).toBe(
             'Please note:No open access datastreams are attached; DOI will be for metadata only.',
         );
+    });
+
+    it('should render error for unsupported subtype', () => {
+        const wrapper = setup({
+            record: {
+                ...confPaperRecord,
+                rek_subtype: 'Published abstract',
+                fez_record_search_key_doi: {
+                    rek_doi: DOI_ORG_PREFIX,
+                },
+            },
+        });
+        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
+        expect(renderedWarningMessage.text()).toBe(
+            'Error:Sorry, only the following subytypes are supported for Conference Paper: Fully published paper',
+        );
+    });
+
+    it('should render error for invalid preview field', () => {
+        const wrapper = setup({
+            record: {
+                ...bookRecord,
+                fez_record_search_key_edition: {
+                    rek_edition: '3rd',
+                },
+            },
+        });
+        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
+        expect(renderedWarningMessage.text()).toBe('Error:Required field Edition is either missing or invalid.');
     });
 
     it('should not generate unnecessary warnings', () => {
@@ -122,7 +153,7 @@ describe('DOI component', () => {
 
     it('should render error for unsupported types', () => {
         const wrapper1 = setup({
-            record: publicationTypeListJournalArticle.data[0],
+            record: journalArticleRecord,
         });
         const renderedWarningMessage1 = shallow(wrapper1.find('Alert').props().message);
         expect(renderedWarningMessage1.text()).toBe('Error:Sorry, type Journal Article is not currently supported.');
@@ -140,7 +171,7 @@ describe('DOI component', () => {
     it('should disable submit button for existing non-UQ DOI', () => {
         const wrapper = setup({
             record: {
-                ...record,
+                ...confPaperRecord,
                 fez_record_search_key_doi: {
                     rek_doi: 'something',
                 },
@@ -180,6 +211,7 @@ describe('DOI component', () => {
         const testFn = jest.fn();
         const record = {
             rek_pid: 'UQ:1234567',
+            rek_display_type: 174,
         };
         const wrapper = setup({
             handleSubmit: testFn,

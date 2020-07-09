@@ -53,7 +53,7 @@ export const DoiPreview = ({ author, publication }) => {
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.doi}>
                     <DoiField
-                        label={txt.doiLabel(!!doi)}
+                        label={!!doi ? txt.doiLabel.hasDoi : txt.doiLabel.noDoi}
                         field="rek_doi"
                         data={doi || txt.doiTemplate(publication.rek_pid)}
                     />

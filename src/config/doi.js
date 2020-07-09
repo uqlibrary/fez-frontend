@@ -30,6 +30,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 6,
+                isRequired: true,
             },
             {
                 field: 'rek_date',
@@ -59,6 +60,7 @@ export const doiFields = {
     },
 
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
+        subtypes: ['Fully published paper'],
         fields: [
             {
                 field: 'fez_record_search_key_author',
@@ -71,6 +73,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_conference_name',
                 order: 5,
+                isRequired: true,
             },
             {
                 field: 'fez_record_search_key_conference_location',
@@ -79,10 +82,12 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_proceedings_title',
                 order: 10,
+                isRequired: true,
             },
             {
                 field: 'fez_record_search_key_publisher',
                 order: 18,
+                isRequired: true,
             },
             {
                 field: 'rek_date',
@@ -187,6 +192,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_issn',
                 order: 9,
+                isRequired: true,
             },
             {
                 field: 'fez_record_search_key_author',

@@ -81,6 +81,7 @@ export const DoiField = ({ data, field, label }) => {
         // Single values
         case 'fez_record_search_key_conference_location':
         case 'fez_record_search_key_conference_name':
+        case 'fez_record_search_key_edition':
         case 'fez_record_search_key_end_page':
         case 'fez_record_search_key_issue_number':
         case 'fez_record_search_key_org_name':
