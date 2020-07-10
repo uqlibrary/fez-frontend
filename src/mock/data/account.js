@@ -945,10 +945,12 @@ export const authorDetails = {
         },
     },
     uqstaff: {
+        email: 'uq.staff@author.example.uq.edu.au',
         espace_id: 12345678,
         staff_id: '0123456',
         given_name: 'Staff',
         family_name: 'Member',
+        full_name: 'Staff Member',
         title: 'Ms',
         scopus_id: null,
         google_scholar_id: null,
