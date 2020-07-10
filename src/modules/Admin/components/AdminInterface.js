@@ -159,7 +159,7 @@ export const AdminInterface = ({
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <StandardCard
-                standardCardId={`${txt.current.sections[tab].title.toLowerCase()}-section`}
+                standardCardId={`${txt.current.sections[tab].title.toLowerCase().replace(/ /g, '-')}-section`}
                 title={txt.current.sections[tab].title}
                 primaryHeader
                 squareTop

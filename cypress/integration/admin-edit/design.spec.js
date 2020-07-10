@@ -13,90 +13,52 @@ context('Design admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.adminEditCountCards(7);
-        cy.adminEditVerifyAlerts(3, ['Publisher is required', 'Work subtype is required']);
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1, '1');
-        cy.adminEditCheckTabErrorBadge(3, '1');
+        cy.adminEditCheckTabErrorBadge(5, '1');
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(1)
-            .as('bibliographicCard')
-            .within(() => {
-                cy.get('h4').should('contain', 'Bibliographic');
-                cy.get('[data-testid=rek-project-name-input]').should(
-                    'have.value',
-                    record.fez_record_search_key_project_name.rek_project_name,
-                );
-                cy.checkPartialDateFromRecordValue(
-                    'rek-project-start-date',
-                    record.fez_record_search_key_project_start_date.rek_project_start_date,
-                );
-                cy.checkPartialDateFromRecordValue('rek-end-date', record.fez_record_search_key_end_date.rek_end_date);
-            });
-
-        cy.get('@bibliographicCard')
-            .find('[data-testid=rek-publisher-input]')
-            .type('Publisher')
-            .parent()
-            .parent()
-            .children('p')
-            .should('not.exist');
-
-        cy.get('.StandardPage form > div:nth-child(2)').within(() => {
-            cy.get('.Alert ul')
-                .as('errorList')
-                .find('li')
-                .should('have.length', 2);
-        });
+        cy.get('[data-testid=bibliographic-section-header]').should('contain', 'Bibliographic');
+        cy.get('[data-testid=rek-job-number-input]').should(
+            'have.value',
+            record.fez_record_search_key_job_number.rek_job_number,
+        );
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(2)
-            .as('authorDetailsTab')
-            .within(() => {
-                cy.get('h4').should('contain', 'Designers');
-                const designers = record.fez_record_search_key_author.map(item => item.rek_author);
-                designers.forEach((designer, index) => {
-                    cy.get('p')
-                        .eq(index)
-                        .should('have.text', designer);
-                });
+        cy.get('[data-testid=author-details-section-header]').contains('Author details');
+        cy.get('[data-testid=author-details-section-content]').within(() => {
+            cy.get('h4')
+                .eq(0)
+                .should('contain', 'Designers');
+            const designers = record.fez_record_search_key_author.map(item => item.rek_author);
+            designers.forEach((designer, index) => {
+                cy.get(`[id=rek-author-list-row-${index}-name-as-published]`).should('contain', designer);
             });
-        cy.get('@authorDetailsTab').within(() => {
-            cy.get('.AdminCard')
-                .eq(1)
-                .within(() => {
-                    cy.get('h4').should('contain', 'Consultants');
-                    const consultants = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
-                    consultants.forEach((consultant, index) => {
-                        cy.get('p')
-                            .eq(index)
-                            .should('have.text', consultant);
-                    });
-                });
         });
 
-        cy.get('@authorDetailsTab').within(() => {
-            cy.get('.AdminCard')
+        cy.get('[data-testid=author-details-section-content]').within(() => {
+            cy.get('h4')
+                .eq(1)
+                .should('contain', 'Contributors');
+            const consultants = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
+            consultants.forEach((consultant, index) => {
+                cy.get(`[id=rek-contributor-list-row-${index}-name-as-published]`).should('contain', consultant);
+            });
+        });
+
+        cy.get('[data-testid=author-details-section-content]').within(() => {
+            cy.get('h4')
                 .eq(2)
-                .within(() => {
-                    cy.get('h4').should('contain', 'Creators');
-                    const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
-                    creators.forEach((creator, index) => {
-                        cy.get('p')
-                            .eq(index)
-                            .should('have.text', creator);
-                    });
-                });
+                .should('contain', 'Creators');
+            const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
+            creators.forEach((creator, index) => {
+                cy.get(`[id=rek-creator-name-list-row-${index}-name-as-published]`).should('contain', creator);
+            });
         });
     });
 });

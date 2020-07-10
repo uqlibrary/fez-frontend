@@ -32,6 +32,7 @@ export default {
                       ['fez_record_search_key_series'],
                       ['rek_date'],
                       ['fez_record_search_key_date_available'],
+                      ['fez_record_search_key_job_number'],
                       ['rek_description'],
                       ['fez_record_search_key_acknowledgements'],
                       ['fez_record_search_key_original_format'],
@@ -121,17 +122,19 @@ export const validateDesign = (
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
-        ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
-            fez_record_search_key_publisher: {
-                rek_publisher: summary.rek_publisher,
-            },
-        }) ||
+        ...((bs.hasOwnProperty('fez_record_search_key_publisher') &&
+            !((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
+                fez_record_search_key_publisher: {
+                    rek_publisher: summary.rek_publisher,
+                },
+            }) ||
             {}),
-        ...((!((bs || {}).fez_record_search_key_project_start_date || {}).rek_project_start_date && {
-            fez_record_search_key_project_start_date: {
-                rek_project_start_date: summary.rek_project_start_date,
-            },
-        }) ||
+        ...((bs.hasOwnProperty('fez_record_search_key_project_start_date') &&
+            !((bs || {}).fez_record_search_key_project_start_date || {}).rek_project_start_date && {
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: summary.rek_project_start_date,
+                },
+            }) ||
             {}),
     },
     authorsSection: {

@@ -34,7 +34,7 @@ export default {
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['rek_date', displayEndDate && 'fez_record_search_key_end_date_biblio'].filter(Boolean),
+                ['rek_date', ...(displayEndDate ? ['fez_record_search_key_end_date'] : [])],
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['fez_record_search_key_original_format'],
