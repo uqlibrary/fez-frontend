@@ -13,16 +13,16 @@ import { doiFields } from 'config/doi';
 export const DoiPreview = ({ author, publication }) => {
     const displayType = publication.rek_display_type;
     const displayTypeLookup = publication.rek_display_type_lookup;
-    const fields = displayType && doiFields[displayType] && doiFields[displayType].fields;
+    const fieldConfig = displayType && doiFields[displayType] && doiFields[displayType].fields;
 
-    if (!fields) {
+    if (!fieldConfig) {
         return '';
     }
 
     const headings = locale.viewRecord.headings;
     const displayTypeHeadings = displayTypeLookup && headings[displayTypeLookup] ? headings[displayTypeLookup] : [];
 
-    const recordFields = fields
+    const previewFields = fieldConfig
         .sort((field1, field2) => field1.order - field2.order)
         .map(({ field }) => {
             let data = publication[field];
@@ -36,10 +36,11 @@ export const DoiPreview = ({ author, publication }) => {
                 }));
             }
             const componentProps = {
-                label: displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field],
-                field,
                 data,
+                displayTypeLookup,
+                field,
                 key: field,
+                label: displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field],
             };
             return <DoiField {...componentProps} />;
         });
@@ -66,7 +67,7 @@ export const DoiPreview = ({ author, publication }) => {
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>
-                <StandardCard title={txt.cardTitles.work}>{recordFields}</StandardCard>
+                <StandardCard title={txt.cardTitles.work}>{previewFields}</StandardCard>
             </Grid>
         </Grid>
     );

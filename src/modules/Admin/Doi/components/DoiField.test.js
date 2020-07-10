@@ -31,10 +31,11 @@ describe('DoiField', () => {
     });
 
     it('should render known fields', () => {
-        const testFn = ({ field, data, label, test }) => {
+        const testFn = ({ data, displayTypeLookup, field, label, test }) => {
             const wrapper = setup({
-                field,
                 data: data || record[field],
+                displayTypeLookup,
+                field,
                 label: label || field,
             });
             test(wrapper);
@@ -61,7 +62,7 @@ describe('DoiField', () => {
             {
                 field: 'rek_date',
                 test: () => {
-                    expect(formatPublicationDate).toHaveBeenCalledWith(record.rek_date);
+                    expect(formatPublicationDate).toHaveBeenCalledWith(record.rek_date, undefined);
                 },
             },
             // Example of list keys
@@ -124,11 +125,12 @@ describe('DoiField', () => {
                     expect(toJson(wrapper)).toBe('');
                 },
             },
+            // Date with custom format
             {
-                field: 'rek_doi',
-                data: 'test',
-                test: wrapper => {
-                    expect(wrapper.find('[data-testid="rek-doi"]').text()).toBe('test');
+                field: 'rek_date',
+                displayTypeLookup: 'YYYY',
+                test: () => {
+                    expect(formatPublicationDate).toHaveBeenCalledWith(record.rek_date, 'YYYY');
                 },
             },
             // Depositor name

@@ -43,7 +43,7 @@ export const renderAuthors = (authors, field) => {
     );
 };
 
-export const DoiField = ({ data, field, label }) => {
+export const DoiField = ({ data, field, label, displayTypeLookup }) => {
     const classes = useStyles();
 
     let value = '';
@@ -59,7 +59,7 @@ export const DoiField = ({ data, field, label }) => {
             break;
 
         case 'rek_date':
-            value = formatPublicationDate(data);
+            value = formatPublicationDate(data, displayTypeLookup);
             break;
 
         // Arrays
@@ -139,6 +139,7 @@ export const DoiField = ({ data, field, label }) => {
 DoiField.propTypes = {
     classes: PropTypes.object,
     data: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
+    displayTypeLookup: PropTypes.string,
     field: PropTypes.string,
     label: PropTypes.string,
 };
