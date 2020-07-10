@@ -43,7 +43,7 @@ export const renderAuthors = (authors, field) => {
     );
 };
 
-export const DoiField = ({ data, field, label }) => {
+export const DoiField = ({ data, field, label, displayTypeLookup }) => {
     const classes = useStyles();
 
     let value = '';
@@ -59,7 +59,7 @@ export const DoiField = ({ data, field, label }) => {
             break;
 
         case 'rek_date':
-            value = formatPublicationDate(data);
+            value = formatPublicationDate(data, displayTypeLookup);
             break;
 
         // Arrays
@@ -93,6 +93,16 @@ export const DoiField = ({ data, field, label }) => {
         case 'fez_record_search_key_start_page':
         case 'fez_record_search_key_volume_number':
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
+            if (field === 'fez_record_search_key_series' && !!value) {
+                value = value.split(';')[0].split(': no')[0];
+            }
+            break;
+
+        case 'fez_record_search_key_edition':
+            value = !!data && data[field.replace('fez_record_search_key', 'rek')];
+            if (!!value && !/^\d+$/.test(value.trim())) {
+                value = '';
+            }
             break;
 
         case 'rek_author-name':
@@ -135,6 +145,7 @@ export const DoiField = ({ data, field, label }) => {
 DoiField.propTypes = {
     classes: PropTypes.object,
     data: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
+    displayTypeLookup: PropTypes.string,
     field: PropTypes.string,
     label: PropTypes.string,
 };

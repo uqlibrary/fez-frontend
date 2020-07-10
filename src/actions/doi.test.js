@@ -1,10 +1,11 @@
 import {
     APP_ALERT_SHOW,
+    RECORD_DOI_RESET,
+    RECORD_DOI_UPDATE_FAILED,
     RECORD_DOI_UPDATE_REQUESTING,
     RECORD_DOI_UPDATE_SUCCEEDED,
-    RECORD_DOI_UPDATE_FAILED,
 } from './actionTypes';
-import { updateDoi } from 'actions/doi';
+import { updateDoi, resetDoi } from 'actions/doi';
 import { EXISTING_RECORD_API } from 'repositories/routes';
 
 describe('DOI actions', () => {
@@ -41,5 +42,11 @@ describe('DOI actions', () => {
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
+    });
+
+    it('should dispatch actions for form reset', () => {
+        const expectedActions = [RECORD_DOI_RESET];
+        mockActionsStore.dispatch(resetDoi());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

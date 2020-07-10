@@ -6,7 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import locale from 'locale/pages';
+import pagesLocale from 'locale/pages';
+import viewRecordLocale from 'locale/viewRecord';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { pathConfig } from 'config/routes';
 import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
@@ -22,43 +23,170 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { getFileOpenAccessStatus } from 'modules/ViewRecord/components/Files';
 import DoiPreview from './DoiPreview';
 
-const txt = locale.pages.doi;
+const txt = {
+    ...pagesLocale.pages.doi,
+    headings: viewRecordLocale.viewRecord.headings,
+};
 
-const renderAlertText = (title, message, type) => (
+const renderAlertText = (title, messages, type) => (
     <span>
         <Typography variant="h3" style={{ fontSize: 20, marginTop: 6 }}>
             {title}
         </Typography>
-        <Typography variant="body2" data-testid={`rek-doi-${type}-0`}>
-            {message}
-        </Typography>
+        {
+            <ul>
+                {messages.map((message, index) => (
+                    <li key={index}>
+                        <Typography variant="body2" data-testid={`rek-doi-${type}-${index}`}>
+                            {message}
+                        </Typography>
+                    </li>
+                ))}
+            </ul>
+        }
     </span>
 );
 
 export const getWarningMessage = record => {
-    const title = txt.alertMessages.warningTitle;
+    const alertTitle = txt.alertMessages.warningTitle;
     const alertType = 'warning';
-    // Need to show a warning if record doesn't have open-access datastreams
+    const warningMessages = [];
+
+    // Warn if record doesn't have open-access datastreams
     const datastreamIsOpenAccess = datastream =>
         getFileOpenAccessStatus(record, datastream, { isAdmin: true }).isOpenAccess;
-    const hasOADatastreams =
-        !record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0;
-
-    return hasOADatastreams ? renderAlertText(title, txt.alertMessages.noOADatastreams, alertType) : '';
-};
-
-export const getErrorMessage = ({ displayTypeLookup, doi, isRecord, recordType, unsupportedType }) => {
-    const title = txt.alertMessages.errorTitle;
-    const alertType = 'error';
-
-    if (!isRecord || unsupportedType) {
-        return renderAlertText(title, txt.alertMessages.unsupportedMessage(displayTypeLookup || recordType), alertType);
+    if (!record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0) {
+        warningMessages.push(txt.alertMessages.noOADatastreams);
     }
 
-    // Should not allow updates of existing Non-UQ DOIs
-    const hasNonUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0;
+    // Warn if Edition is not purely numeric
+    const editionValue = !!record.fez_record_search_key_edition && record.fez_record_search_key_edition.rek_edition;
+    if (!!editionValue && !/^\d+$/.test(editionValue.trim())) {
+        warningMessages.push(
+            txt.alertMessages.invalidOptionalField.replace(
+                '%FIELDNAME%',
+                txt.headings.default.fez_record_search_key_edition,
+            ),
+        );
+    }
 
-    return hasNonUQDoi ? renderAlertText(title, txt.alertMessages.uqIsNotPublisher, alertType) : '';
+    return warningMessages.length ? renderAlertText(alertTitle, warningMessages, alertType) : '';
+};
+
+export const isArrayValid = (record, fieldConfig, testFunction) => {
+    let isValid = true;
+    const searchKeyValue = record[fieldConfig.field];
+    const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek');
+
+    if (!!searchKeyValue && Array.isArray(searchKeyValue) && searchKeyValue.length > 0) {
+        isValid = searchKeyValue.reduce(
+            (valid, entry) => !!valid && !!entry[subKey] && testFunction(entry[subKey]),
+            true,
+        );
+    } else {
+        isValid = !fieldConfig.required;
+    }
+
+    return isValid;
+};
+
+export const getInvalidPreviewFields = record => {
+    const displayType = !!record && record.rek_display_type;
+    const previewFields = !!displayType && !!doiFields[displayType] && doiFields[displayType].fields;
+    const invalidPreviewFields = [];
+
+    previewFields.map(fieldConfig => {
+        const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek');
+
+        let isValid = true;
+        switch (fieldConfig.field) {
+            case 'fez_record_search_key_issn':
+                isValid = isArrayValid(record, fieldConfig, value => validation.isValidIssn(value) === '');
+                break;
+
+            case 'fez_record_search_key_isbn':
+                isValid = isArrayValid(record, fieldConfig, value => validation.isValidIsbn(value) === '');
+                break;
+
+            default:
+                const value =
+                    !!record[fieldConfig.field] &&
+                    typeof record[fieldConfig.field] === 'object' &&
+                    !Array.isArray(record[fieldConfig.field])
+                        ? record[fieldConfig.field][subKey]
+                        : record[fieldConfig.field];
+                isValid = !fieldConfig.isRequired || !!value;
+                break;
+        }
+        if (!isValid) {
+            invalidPreviewFields.push(fieldConfig.field);
+        }
+    });
+    return invalidPreviewFields;
+};
+
+export const getErrorMessage = record => {
+    const alertTitle = txt.alertMessages.errorTitle;
+    const alertType = 'error';
+
+    const displayType = !!record && record.rek_display_type;
+    const displayTypeLookup = !!record && record.rek_display_type_lookup;
+    const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
+    const recordType = (!!record && record.rek_object_type_lookup) || '';
+
+    const errorMessages = [];
+    let unsupportedType = false;
+
+    // Need to filter out community and collection record types
+    const isRecord = ![RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(recordType.toLowerCase());
+
+    // Need to avoid unsupported display types
+    const unsupportedDisplayType = !!displayType && !doiFields[displayType];
+
+    if (!isRecord || unsupportedDisplayType) {
+        unsupportedType = true;
+
+        const type = displayTypeLookup || recordType;
+        errorMessages.push(txt.alertMessages.unsupportedMessage.replace('%TYPE%', type));
+    } else {
+        // Subtype restrictions
+        const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
+        if (!!supportedSubtypes) {
+            const subtype = !!record && record.rek_subtype;
+            if (supportedSubtypes.indexOf(subtype) === -1) {
+                errorMessages.push(
+                    txt.alertMessages.wrongSubtype
+                        .replace('%TYPE%', displayTypeLookup)
+                        .replace('%SUBTYPES%', supportedSubtypes.join(', ')),
+                );
+            }
+        }
+
+        // Should not allow updates of existing Non-UQ DOIs
+        if (!!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0) {
+            errorMessages.push(txt.alertMessages.uqIsNotPublisher);
+        }
+
+        // Preview fields
+        const invalidPreviewFields = !unsupportedDisplayType && getInvalidPreviewFields(record);
+        if (invalidPreviewFields.length) {
+            // None of the fields with conditions have a type-specific heading, so commenting out that code path.
+            // const displayTypeHeadings =
+            //     displayTypeLookup && txt.headings[displayTypeLookup] ? txt.headings[displayTypeLookup] : [];
+
+            invalidPreviewFields.forEach(field => {
+                // const fieldName = displayTypeHeadings[field]
+                // ? displayTypeHeadings[field] : txt.headings.default[field];
+                const fieldName = txt.headings.default[field];
+                errorMessages.push(txt.alertMessages.missingRequiredField.replace('%FIELDNAME%', fieldName));
+            });
+        }
+    }
+
+    return {
+        errorMessage: errorMessages.length ? renderAlertText(alertTitle, errorMessages, alertType) : '',
+        unsupportedType,
+    };
 };
 
 const renderTitle = titlePieces => {
@@ -74,7 +202,7 @@ const renderTitle = titlePieces => {
 };
 
 export const Doi = ({
-    author,
+    authorDetails,
     doiRequesting,
     doiUpdated,
     doiFailed,
@@ -83,6 +211,7 @@ export const Doi = ({
     loadRecordToView,
     match,
     record,
+    resetDoi,
 }) => {
     React.useEffect(() => {
         // Load record if it hasn't
@@ -90,7 +219,11 @@ export const Doi = ({
             (!record || record.rek_pid !== match.params.pid) &&
             !!loadRecordToView &&
             loadRecordToView(match.params.pid);
-    }, [loadRecordToView, match.params.pid, record]);
+        return () => {
+            // Clear form status
+            resetDoi();
+        };
+    }, [loadRecordToView, match.params.pid, record, resetDoi]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     /* istanbul ignore next */
@@ -111,27 +244,13 @@ export const Doi = ({
     }
 
     // Get subkeys where present
-    const displayType = !!record && record.rek_display_type;
     const displayTypeLookup = !!record && record.rek_display_type_lookup;
     const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
-    const recordType = (!!record && record.rek_object_type_lookup) || '';
     const title = !!record && !!record.rek_title && record.rek_title;
-
-    // Need to avoid unsupported display types
-    const unsupportedType = !!displayType && !doiFields[displayType];
-
-    // Need to filter out community and collection pids
-    const isRecord = ![RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(recordType.toLowerCase());
 
     // Look for possible issues
     const warningMessage = getWarningMessage(record);
-    const errorMessage = getErrorMessage({
-        displayTypeLookup,
-        doi,
-        isRecord,
-        recordType,
-        unsupportedType,
-    });
+    const { errorMessage, unsupportedType } = getErrorMessage(record);
 
     const navigateToViewPage = () => {
         window.location.assign(pathConfig.records.view(pid, true));
@@ -167,7 +286,7 @@ export const Doi = ({
                             onAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />
-                        {!unsupportedType && <DoiPreview author={author} publication={record} />}
+                        {!unsupportedType && <DoiPreview authorDetails={authorDetails} publication={record} />}
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
@@ -212,7 +331,7 @@ export const Doi = ({
 };
 
 Doi.propTypes = {
-    author: PropTypes.object,
+    authorDetails: PropTypes.object,
     doiFailed: PropTypes.bool,
     doiRequesting: PropTypes.bool,
     doiUpdated: PropTypes.bool,
@@ -221,6 +340,7 @@ Doi.propTypes = {
     loadRecordToView: PropTypes.func,
     match: PropTypes.object,
     record: PropTypes.object,
+    resetDoi: PropTypes.func,
 };
 
 export default Doi;

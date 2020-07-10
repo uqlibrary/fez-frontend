@@ -31,7 +31,7 @@ const styles = theme => ({
     },
 });
 
-export const renderAuthors = ({ publication, props = {} }) => {
+export const renderAuthors = (publication, props = {}) => {
     const componentProps = {
         key: 'additional-information-authors',
         publication,
@@ -43,11 +43,6 @@ export const renderAuthors = ({ publication, props = {} }) => {
         ...props,
     };
     return <AuthorsCitationView {...componentProps} />;
-};
-
-renderAuthors.propTypes = {
-    publication: PropTypes.object,
-    props: PropTypes.object,
 };
 
 export const formatDate = (date, format = 'YYYY-MM-DD') => {
@@ -132,7 +127,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderObjectList = (objects, subkey) => {
         switch (subkey) {
             case 'rek_author':
-                return renderAuthors({ publication: this.props.publication });
+                return renderAuthors(this.props.publication);
             case 'rek_contributor':
                 return this.renderContributors(this.props.publication);
             case 'rek_keywords':

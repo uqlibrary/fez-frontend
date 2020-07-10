@@ -23,6 +23,8 @@ const handlers = {
         doiRequesting: false,
         doiFailed: true,
     }),
+
+    [actions.RECORD_DOI_RESET]: () => initialState,
 };
 
 export default function doiReducer(state = initialState, action) {

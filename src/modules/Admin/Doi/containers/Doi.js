@@ -30,9 +30,9 @@ export const onSubmit = (record, dispatch) => {
 /* istanbul ignore next */
 const mapStateToProps = state => {
     const { recordToView: record, loadingRecordToView } = state.get('viewRecordReducer') || {};
-    const { author } = state.get('accountReducer') || {};
+    const { authorDetails } = state.get('accountReducer') || {};
     return {
-        author,
+        authorDetails,
         loadingRecordToView,
         record,
         ...state.get('doiReducer'),
@@ -41,8 +41,8 @@ const mapStateToProps = state => {
 
 /* istanbul ignore next */
 const mapDispatchToProps = dispatch => {
-    const { loadRecordToView } = bindActionCreators(actions, dispatch);
-    return { loadRecordToView, handleSubmit: record => onSubmit(record, dispatch) };
+    const { loadRecordToView, resetDoi } = bindActionCreators(actions, dispatch);
+    return { handleSubmit: record => onSubmit(record, dispatch), loadRecordToView, resetDoi };
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Doi));

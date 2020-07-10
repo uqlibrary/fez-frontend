@@ -10,19 +10,19 @@ import locale from 'locale/viewRecord';
 import pagesLocale from 'locale/pages';
 import { doiFields } from 'config/doi';
 
-export const DoiPreview = ({ author, publication }) => {
+export const DoiPreview = ({ authorDetails, publication }) => {
     const displayType = publication.rek_display_type;
     const displayTypeLookup = publication.rek_display_type_lookup;
-    const fields = displayType && doiFields[displayType] && doiFields[displayType].fields;
+    const fieldConfig = displayType && doiFields[displayType] && doiFields[displayType].fields;
 
-    if (!fields) {
+    if (!fieldConfig) {
         return '';
     }
 
     const headings = locale.viewRecord.headings;
     const displayTypeHeadings = displayTypeLookup && headings[displayTypeLookup] ? headings[displayTypeLookup] : [];
 
-    const recordFields = fields
+    const previewFields = fieldConfig
         .sort((field1, field2) => field1.order - field2.order)
         .map(({ field }) => {
             let data = publication[field];
@@ -36,10 +36,11 @@ export const DoiPreview = ({ author, publication }) => {
                 }));
             }
             const componentProps = {
-                label: displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field],
-                field,
                 data,
+                displayTypeLookup,
+                field,
                 key: field,
+                label: displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field],
             };
             return <DoiField {...componentProps} />;
         });
@@ -53,7 +54,7 @@ export const DoiPreview = ({ author, publication }) => {
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.doi}>
                     <DoiField
-                        label={txt.doiLabel(!!doi)}
+                        label={!!doi ? txt.doiLabel.hasDoi : txt.doiLabel.noDoi}
                         field="rek_doi"
                         data={doi || txt.doiTemplate(publication.rek_pid)}
                     />
@@ -61,19 +62,19 @@ export const DoiPreview = ({ author, publication }) => {
             </Grid>
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.depositor}>
-                    <DoiField label={txt.depositorNameTitle} field="rek_author-name" data={author.aut_display_name} />
-                    <DoiField label={txt.depositorEmailTitle} field="rek_author-email" data={author.aut_email} />
+                    <DoiField label={txt.depositorNameTitle} field="rek_author-name" data={authorDetails.full_name} />
+                    <DoiField label={txt.depositorEmailTitle} field="rek_author-email" data={authorDetails.email} />
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>
-                <StandardCard title={txt.cardTitles.work}>{recordFields}</StandardCard>
+                <StandardCard title={txt.cardTitles.work}>{previewFields}</StandardCard>
             </Grid>
         </Grid>
     );
 };
 
 DoiPreview.propTypes = {
-    author: PropTypes.object,
+    authorDetails: PropTypes.object,
     publication: PropTypes.object,
 };
 
