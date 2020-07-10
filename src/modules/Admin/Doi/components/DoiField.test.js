@@ -65,6 +65,16 @@ describe('DoiField', () => {
                     expect(formatPublicationDate).toHaveBeenCalledWith(record.rek_date, undefined);
                 },
             },
+            // Edition
+            {
+                field: 'fez_record_search_key_edition',
+                data: {
+                    rek_edition: '1',
+                },
+                test: wrapper => {
+                    expect(wrapper.find('[data-testid="rek-edition"]').text()).toBe('1');
+                },
+            },
             // Example of list keys
             {
                 field: 'fez_record_search_key_isbn',
@@ -170,6 +180,16 @@ describe('DoiField', () => {
                 },
                 test: wrapper => {
                     expect(wrapper.find('[data-testid="rek-series"]').text()).toBe('Book series 1');
+                },
+            },
+            // Non-numeric Edition
+            {
+                field: 'fez_record_search_key_edition',
+                data: {
+                    rek_edition: '15th',
+                },
+                test: wrapper => {
+                    expect(toJson(wrapper.find('[data-testid="rek-edition"]'))).toBe(null);
                 },
             },
         ];

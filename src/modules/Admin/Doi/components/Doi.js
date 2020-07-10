@@ -50,19 +50,34 @@ const renderAlertText = (title, messages, type) => (
 export const getWarningMessage = record => {
     const alertTitle = txt.alertMessages.warningTitle;
     const alertType = 'warning';
-    // Need to show a warning if record doesn't have open-access datastreams
+    const warningMessages = [];
+
+    // Warn if record doesn't have open-access datastreams
     const datastreamIsOpenAccess = datastream =>
         getFileOpenAccessStatus(record, datastream, { isAdmin: true }).isOpenAccess;
-    const hasOADatastreams =
-        !record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0;
+    if (!record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0) {
+        warningMessages.push(txt.alertMessages.noOADatastreams);
+    }
 
-    return hasOADatastreams ? renderAlertText(alertTitle, [txt.alertMessages.noOADatastreams], alertType) : '';
+    // Warn if Edition is not purely numeric
+    const editionValue = !!record.fez_record_search_key_edition && record.fez_record_search_key_edition.rek_edition;
+    if (!!editionValue && !/^\d+$/.test(editionValue.trim())) {
+        warningMessages.push(
+            txt.alertMessages.invalidOptionalField.replace(
+                '%FIELDNAME%',
+                txt.headings.default.fez_record_search_key_edition,
+            ),
+        );
+    }
+
+    return warningMessages.length ? renderAlertText(alertTitle, warningMessages, alertType) : '';
 };
 
 export const isArrayValid = (record, fieldConfig, testFunction) => {
     let isValid = true;
     const searchKeyValue = record[fieldConfig.field];
     const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek');
+
     if (!!searchKeyValue && Array.isArray(searchKeyValue) && searchKeyValue.length > 0) {
         isValid = searchKeyValue.reduce(
             (valid, entry) => !!valid && !!entry[subKey] && testFunction(entry[subKey]),
@@ -71,6 +86,7 @@ export const isArrayValid = (record, fieldConfig, testFunction) => {
     } else {
         isValid = !fieldConfig.required;
     }
+
     return isValid;
 };
 
@@ -90,12 +106,6 @@ export const getInvalidPreviewFields = record => {
 
             case 'fez_record_search_key_isbn':
                 isValid = isArrayValid(record, fieldConfig, value => validation.isValidIsbn(value) === '');
-                break;
-
-            case 'fez_record_search_key_edition':
-                isValid =
-                    (!fieldConfig.required && !record[fieldConfig.field]) ||
-                    /^\d+$/.test(record[fieldConfig.field][subKey]);
                 break;
 
             default:

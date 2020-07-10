@@ -81,7 +81,6 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         // Single values
         case 'fez_record_search_key_conference_location':
         case 'fez_record_search_key_conference_name':
-        case 'fez_record_search_key_edition':
         case 'fez_record_search_key_end_page':
         case 'fez_record_search_key_issue_number':
         case 'fez_record_search_key_org_name':
@@ -96,6 +95,13 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
             if (field === 'fez_record_search_key_series' && !!value) {
                 value = value.split(';')[0].split(': no')[0];
+            }
+            break;
+
+        case 'fez_record_search_key_edition':
+            value = !!data && data[field.replace('fez_record_search_key', 'rek')];
+            if (!!value && !/^\d+$/.test(value.trim())) {
+                value = '';
             }
             break;
 

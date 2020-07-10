@@ -6,13 +6,11 @@ import { Doi, getWarningMessage } from './Doi';
 import { DOI_ORG_PREFIX } from 'config/doi';
 import { openAccessFiles } from 'config/openAccess';
 
-import publicationTypeListBook from 'mock/data/records/publicationTypeListBook';
 import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 import collectionRecord from 'mock/data/records/collectionRecord';
 
-const bookRecord = publicationTypeListBook.data[0];
 const confPaperRecord = publicationTypeListConferencePaper.data[0];
 const journalArticleRecord = publicationTypeListJournalArticle.data[0];
 const record = publicationTypeListResearchReport.data[0];
@@ -119,25 +117,33 @@ describe('DOI component', () => {
         );
     });
 
-    it('should render error for invalid preview field', () => {
+    it('should render warning for invalid preview field', () => {
         const wrapper = setup({
             record: {
-                ...bookRecord,
+                ...record,
+                fez_datastream_info: [
+                    {
+                        dsi_open_access: 1,
+                        dsi_embargo_date: '2017-01-01',
+                    },
+                ],
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: openAccessFiles[0],
+                },
                 fez_record_search_key_edition: {
                     rek_edition: '3rd',
                 },
             },
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe('Error:Required field Edition is either missing or invalid.');
+        expect(renderedWarningMessage.text()).toBe(
+            'Please note:Field Edition has an invalid value; it will be omitted from submission.',
+        );
     });
 
     it('should not generate unnecessary warnings', () => {
         const testRecord = {
             ...record,
-            fez_record_search_key_org_name: {
-                rek_org_name: 'The University of Queensland',
-            },
             fez_record_search_key_oa_status: {
                 rek_oa_status: openAccessFiles[0],
             },

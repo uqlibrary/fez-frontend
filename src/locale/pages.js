@@ -852,6 +852,7 @@ export default {
             depositorEmailTitle: 'Email',
             alertMessages: {
                 errorTitle: 'Error:',
+                invalidOptionalField: 'Field %FIELDNAME% has an invalid value; it will be omitted from submission.',
                 missingRequiredField: 'Required field %FIELDNAME% is either missing or invalid.',
                 noOADatastreams: 'No open access datastreams are attached; DOI will be for metadata only.',
                 unsupportedMessage: 'Sorry, type %TYPE% is not currently supported.',
