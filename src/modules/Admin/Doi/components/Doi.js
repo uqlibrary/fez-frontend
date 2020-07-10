@@ -202,7 +202,7 @@ const renderTitle = titlePieces => {
 };
 
 export const Doi = ({
-    author,
+    authorDetails,
     doiRequesting,
     doiUpdated,
     doiFailed,
@@ -286,7 +286,7 @@ export const Doi = ({
                             onAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />
-                        {!unsupportedType && <DoiPreview author={author} publication={record} />}
+                        {!unsupportedType && <DoiPreview authorDetails={authorDetails} publication={record} />}
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
@@ -331,7 +331,7 @@ export const Doi = ({
 };
 
 Doi.propTypes = {
-    author: PropTypes.object,
+    authorDetails: PropTypes.object,
     doiFailed: PropTypes.bool,
     doiRequesting: PropTypes.bool,
     doiUpdated: PropTypes.bool,

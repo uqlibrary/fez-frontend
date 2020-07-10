@@ -3,7 +3,7 @@ name: GitHub CI
 on:
   push:
     branches:
-      - feature-cypress-fixes
+      - feature-example
 
     paths-ignore:
       - '**.md'

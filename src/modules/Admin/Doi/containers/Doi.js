@@ -30,9 +30,9 @@ export const onSubmit = (record, dispatch) => {
 /* istanbul ignore next */
 const mapStateToProps = state => {
     const { recordToView: record, loadingRecordToView } = state.get('viewRecordReducer') || {};
-    const { author } = state.get('accountReducer') || {};
+    const { authorDetails } = state.get('accountReducer') || {};
     return {
-        author,
+        authorDetails,
         loadingRecordToView,
         record,
         ...state.get('doiReducer'),
