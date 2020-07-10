@@ -18,10 +18,9 @@ context('Conference Proceedings admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.adminEditCountCards(7);
-        cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
+        cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(2);
     });
 
     it('should render the different sections as expected', () => {
@@ -40,10 +39,10 @@ context('Conference Proceedings admin edit', () => {
         cy.get('.StandardPage form > div > div')
             .get('.StandardCard')
             .eq(2)
-            .as('authorDetailsTab')
+            .as('editorDetailsTab')
             .within(() => {
-                cy.get('h4').should('contain', 'Authors');
-                cy.get('[data-testid=rek-author-input]').type('Author{enter}');
+                cy.get('h4').should('contain', 'Editors');
+                cy.get('[data-testid=rek-contributor-input]').type('Editor{enter}');
             });
         cy.adminEditNoAlerts();
 

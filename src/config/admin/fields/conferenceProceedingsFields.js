@@ -60,10 +60,6 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Authors',
-            groups: [['authors']],
-        },
-        {
             title: 'Editors',
             groups: [['editors']],
         },
@@ -101,7 +97,7 @@ export default {
 };
 
 export const validateConferenceProceedings = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, filesSection: fs },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -127,11 +123,6 @@ export const validateConferenceProceedings = (
     filesSection: {
         ...((fs || {}).rek_copyright !== 'on' && {
             rek_copyright: summary.rek_copyright,
-        }),
-    },
-    authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
-            authors: summary.authors,
         }),
     },
 });

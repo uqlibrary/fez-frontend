@@ -26995,7 +26995,7 @@ exports[`Additional Information Component  should render component with conferen
     title="Additional information"
   >
     <div
-      key="1"
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -27047,7 +27047,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="2"
+      key="1"
       style={
         Object {
           "padding": 8,
@@ -27099,7 +27099,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="5"
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -27564,7 +27564,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="6"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -27616,7 +27616,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -27664,7 +27664,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -27712,7 +27712,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -27760,7 +27760,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -27818,7 +27818,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -27866,7 +27866,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -27918,7 +27918,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -27978,7 +27978,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -28034,7 +28034,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -28082,7 +28082,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="30"
       style={
         Object {
           "padding": 8,
@@ -28130,7 +28130,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="32"
+      key="31"
       style={
         Object {
           "padding": 8,
@@ -28178,7 +28178,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="35"
+      key="32"
       style={
         Object {
           "padding": 8,
@@ -28236,7 +28236,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="36"
+      key="33"
       style={
         Object {
           "padding": 8,
@@ -28312,7 +28312,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="37"
+      key="34"
       style={
         Object {
           "padding": 8,
@@ -28484,7 +28484,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="39"
+      key="35"
       style={
         Object {
           "padding": 8,
@@ -31545,7 +31545,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Figure S3.
               </strong>
-               Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. 
+               Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model.
               <br
                 key="28"
               />
@@ -31555,9 +31555,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="30"
               >
-                Supplemental Figure S4. 
+                Supplemental Figure S4.
               </strong>
-              Maximum-likelihood genome tree inferred from 5656 reference genomes. 
+              Maximum-likelihood genome tree inferred from 5656 reference genomes.
               <br
                 key="32"
               />
@@ -31567,7 +31567,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="34"
               >
-                Supplemental Figure S5. 
+                Supplemental Figure S5.
               </strong>
               Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.
               <br
@@ -31579,9 +31579,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="38"
               >
-                Supplemental Figure S6. 
+                Supplemental Figure S6.
               </strong>
-              Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. 
+              Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model.
               <br
                 key="40"
               />
@@ -31591,7 +31591,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="42"
               >
-                Supplemental Figure S7. 
+                Supplemental Figure S7.
               </strong>
               Error in completeness and contamination estimates on simulated genomes from different phyla.
               <br
@@ -31603,9 +31603,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="46"
               >
-                Supplemental Figure S8. 
+                Supplemental Figure S8.
               </strong>
-              Bias in completeness and contamination estimates when modelled as a binomial distribution. 
+              Bias in completeness and contamination estimates when modelled as a binomial distribution.
               <br
                 key="48"
               />
@@ -31615,7 +31615,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="50"
               >
-                Supplemental Figure S9. 
+                Supplemental Figure S9.
               </strong>
               GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.
               <br
@@ -31627,7 +31627,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="54"
               >
-                Supplemental Figure S10. 
+                Supplemental Figure S10.
               </strong>
               Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.
               <br
@@ -31651,7 +31651,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="62"
               >
-                Supplemental Figure S12. 
+                Supplemental Figure S12.
               </strong>
               Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.
               <br
@@ -31677,7 +31677,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Figure S14.
               </strong>
-               Refining a marker set for lineage-specific gene loss and duplication. 
+               Refining a marker set for lineage-specific gene loss and duplication.
               <br
                 key="72"
               />
@@ -31703,9 +31703,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="78"
               >
-                Supplemental Table S2. 
+                Supplemental Table S2.
               </strong>
-              Number of marker genes and marker sets for taxonomic groups with ≥ 20 reference genomes. 
+              Number of marker genes and marker sets for taxonomic groups with ≥ 20 reference genomes.
               <br
                 key="80"
               />
@@ -31715,9 +31715,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="82"
               >
-                Supplemental Table S3. 
+                Supplemental Table S3.
               </strong>
-              Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). 
+              Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
               <br
                 key="84"
               />
@@ -31730,7 +31730,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="87"
               >
-                Supplemental Table S4. 
+                Supplemental Table S4.
               </strong>
               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
               <br
@@ -31744,7 +31744,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Table S5.
               </strong>
-               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). 
+               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
               <br
                 key="93"
               />
@@ -31754,9 +31754,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="95"
               >
-                Supplemental Table S6. 
+                Supplemental Table S6.
               </strong>
-              Phylogenetically informative marker genes used to infer the reference genome tree 
+              Phylogenetically informative marker genes used to infer the reference genome tree
               <br
                 key="97"
               />
@@ -31770,7 +31770,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="101"
               >
-                Supplemental Table S7. 
+                Supplemental Table S7.
               </strong>
               Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.
               <br
@@ -31782,7 +31782,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="105"
               >
-                Supplemental Table S8. 
+                Supplemental Table S8.
               </strong>
               Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
               <br
@@ -31796,7 +31796,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Table S9.
               </strong>
-               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). 
+               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
               <br
                 key="111"
               />
@@ -31806,7 +31806,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="113"
               >
-                Supplemental Table S10. 
+                Supplemental Table S10.
               </strong>
               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
               <br
@@ -31821,9 +31821,9 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="118"
               >
-                Supplemental Table S11. 
+                Supplemental Table S11.
               </strong>
-              Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). 
+              Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms).
               <br
                 key="120"
               />
@@ -31835,7 +31835,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Table S12.
               </strong>
-               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). 
+               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).
               <br
                 key="124"
               />
@@ -31862,7 +31862,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Table S14. T
               </strong>
-              axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. 
+              axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty.
               <br
                 key="133"
               />
@@ -31872,7 +31872,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="135"
               >
-                Supplemental Table S15. 
+                Supplemental Table S15.
               </strong>
               Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.
               <br
@@ -31884,7 +31884,7 @@ exports[`Additional Information Component  should render component with data col
               <strong
                 key="139"
               >
-                Supplemental Table S16. 
+                Supplemental Table S16.
               </strong>
               Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.
               <br
@@ -31914,7 +31914,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 Supplemental Table S18
               </strong>
-              . Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. 
+              . Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background.
               <br
                 key="151"
               />
@@ -44316,7 +44316,7 @@ exports[`Additional Information Component  should render component with manuscri
             <span
               data-testid="rek-description"
             >
-              Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia. 
+              Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia.
               <br
                 key="1"
               />
@@ -45972,7 +45972,7 @@ exports[`Additional Information Component  should render component with newspape
             <span
               data-testid="rek-description"
             >
-              It is undeniable that a good doctor-patient communication is essential and critical in providing an effective treatment to the patient. Many patients have difficulty in finding relevant words to communicate with their doctors especially if there is a language barrier. If patients use an English-Chinese medical dictionary, they have to search the dictionary multiple times to find the relevant words and yet they still cannot find all the needed words and sentences to communicate with their doctors. Dictionary does not tell readers what the relevant and important points are and how to express them to their doctors. 
+              It is undeniable that a good doctor-patient communication is essential and critical in providing an effective treatment to the patient. Many patients have difficulty in finding relevant words to communicate with their doctors especially if there is a language barrier. If patients use an English-Chinese medical dictionary, they have to search the dictionary multiple times to find the relevant words and yet they still cannot find all the needed words and sentences to communicate with their doctors. Dictionary does not tell readers what the relevant and important points are and how to express them to their doctors.
               <br
                 key="1"
               />
@@ -57183,7 +57183,7 @@ exports[`Additional Information Component  should render component with research
             <span
               data-testid="rek-description"
             >
-              asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f 
+              asdf asdj ajsdflj lkjsdf;asdfklajds djfkahsdfhdskfhkadgssdy98yfasd  isudyfiuysdfkjhsdjkfh euwyf f
             </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>

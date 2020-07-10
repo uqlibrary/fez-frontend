@@ -884,16 +884,12 @@ export default {
             ],
             'Conference Proceedings': [
                 {
-                    field: 'fez_record_search_key_author',
+                    field: 'rek_title',
                     order: 1,
                 },
                 {
-                    field: 'rek_title',
-                    order: 2,
-                },
-                {
                     field: 'rek_description',
-                    order: 2.5,
+                    order: 2,
                 },
                 {
                     field: 'fez_record_search_key_language_of_title',
