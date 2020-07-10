@@ -1237,6 +1237,10 @@ export default {
                     order: 3,
                 },
                 {
+                    field: 'fez_record_search_key_parent_publication',
+                    order: 3.5,
+                },
+                {
                     field: 'fez_record_search_key_org_unit_name',
                     order: 4,
                 },
@@ -2515,6 +2519,10 @@ export default {
                 {
                     field: 'fez_record_search_key_language_of_title',
                     order: 4,
+                },
+                {
+                    field: 'fez_record_search_key_parent_publication',
+                    order: 4.5,
                 },
                 {
                     field: 'fez_record_search_key_org_unit_name',
