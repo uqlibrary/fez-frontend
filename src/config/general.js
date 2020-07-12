@@ -172,6 +172,7 @@ export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
+export const SUBTYPE_NON_NTRO = 'Non-NTRO';
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
@@ -347,7 +348,7 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.DesignForm : null,
         hasFormComponent: true,
         subtypes: isAdmin
-            ? ['Non-NTRO', NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK]
+            ? [SUBTYPE_NON_NTRO, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK]
             : [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK],
     },
     [PUBLICATION_TYPE_DIGILIB_IMAGE]: {

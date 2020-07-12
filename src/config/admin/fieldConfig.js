@@ -1962,8 +1962,11 @@ export default {
             }),
         },
         [PUBLICATION_TYPE_DESIGN]: {
-            fez_record_search_key_original_format: () => ({
-                label: 'Physical description',
+            fez_record_search_key_original_format: ({ isNonNtro = false }) => ({
+                label: isNonNtro ? 'Original format' : 'Physical description',
+            }),
+            fez_record_search_key_rights: ({ isNonNtro = false }) => ({
+                label: isNonNtro ? 'Rights' : 'Copyright notice',
             }),
             fez_record_search_key_project_name: () => ({
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
