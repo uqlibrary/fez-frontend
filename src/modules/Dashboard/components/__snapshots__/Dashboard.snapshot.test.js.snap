@@ -912,6 +912,11 @@ exports[`Dashboard test Should only render barChart 1`] = `
           }
           authorDetails={
             Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
               "is_administrator": 0,
               "is_super_administrator": 0,
             }
@@ -3689,6 +3694,11 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
           }
           authorDetails={
             Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
               "is_administrator": 0,
               "is_super_administrator": 0,
             }
@@ -4168,6 +4178,11 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
           }
           authorDetails={
             Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
               "is_administrator": 0,
               "is_super_administrator": 0,
             }
@@ -4322,6 +4337,11 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
           }
           authorDetails={
             Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
               "is_administrator": 0,
               "is_super_administrator": 0,
             }
@@ -4476,6 +4496,11 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
           }
           authorDetails={
             Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
               "is_administrator": 0,
               "is_super_administrator": 0,
             }
@@ -4926,6 +4951,11 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
       }
       authorDetails={
         Object {
+          "espace": Object {
+            "doc_count": 32,
+            "first_year": "1998",
+            "last_year": "2000",
+          },
           "is_administrator": 0,
           "is_super_administrator": 0,
         }
@@ -5414,6 +5444,15 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   "calls": Array [
                     Array [
                       "uqresearcher",
+                      Object {
+                        "espace": Object {
+                          "doc_count": 32,
+                          "first_year": "1998",
+                          "last_year": "2000",
+                        },
+                        "is_administrator": 0,
+                        "is_super_administrator": 0,
+                      },
                     ],
                   ],
                   "results": Array [
@@ -5478,6 +5517,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
             }
             authorDetails={
               Object {
+                "espace": Object {
+                  "doc_count": 32,
+                  "first_year": "1998",
+                  "last_year": "2000",
+                },
                 "is_administrator": 0,
                 "is_super_administrator": 0,
               }
@@ -6523,6 +6567,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                             }
                                             authorDetails={
                                               Object {
+                                                "espace": Object {
+                                                  "doc_count": 32,
+                                                  "first_year": "1998",
+                                                  "last_year": "2000",
+                                                },
                                                 "is_administrator": 0,
                                                 "is_super_administrator": 0,
                                               }
@@ -6568,6 +6617,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                               }
                                               authorDetails={
                                                 Object {
+                                                  "espace": Object {
+                                                    "doc_count": 32,
+                                                    "first_year": "1998",
+                                                    "last_year": "2000",
+                                                  },
                                                   "is_administrator": 0,
                                                   "is_super_administrator": 0,
                                                 }

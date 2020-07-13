@@ -126,11 +126,11 @@ export function getPublicationsStats(years, data) {
     };
 }
 
-export function getAuthorArticleCount(total, data) {
+export function getAuthorArticleCount(total, authorDetails) {
     return {
         articleCount: (!!total && total) || null,
-        articleFirstYear: (!!data && !!data.min_date_year_t && data.min_date_year_t.value_as_string) || null,
-        articleLastYear: (!!data && !!data.max_date_year_t && data.max_date_year_t.value_as_string) || null,
+        articleFirstYear: (!!authorDetails && !!authorDetails.espace && authorDetails.espace.first_year) || null,
+        articleLastYear: (!!authorDetails && !!authorDetails.espace && authorDetails.espace.last_year) || null,
     };
 }
 
