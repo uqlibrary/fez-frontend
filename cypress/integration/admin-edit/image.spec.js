@@ -53,5 +53,19 @@ context('Image admin edit', () => {
                             .contains(record.fez_record_search_key_license.rek_license_lookup);
                     });
             });
+
+        // ---------------------------------------------- ADMIN TAB --------------------------------------------------
+        cy.log('Admin tab');
+        cy.get('.StandardPage form >div >div')
+            .get('.StandardCard')
+            .eq(3)
+            .as('adminTab')
+            .within(() => {
+                cy.get('h3').should('have.text', 'Admin');
+                cy.get('[data-testid=rek-oa-status-input]')
+                    .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
+                    .get('[data-testid=rek-oa-status-select]')
+                    .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
+            });
     });
 });
