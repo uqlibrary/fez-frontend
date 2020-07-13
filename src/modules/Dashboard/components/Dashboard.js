@@ -120,7 +120,7 @@ export class DashboardClass extends PureComponent {
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
-            this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+            this.props.actions.loadAuthorPublicationsStats(this.props.account.id, this.props.authorDetails);
             !this.props.incomplete.publicationsList.length &&
                 this.props.actions.searchAuthorPublications({}, 'incomplete');
             this._loadOrcidSync();
