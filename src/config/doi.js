@@ -326,6 +326,10 @@ export const doiFields = {
                 field: 'fez_record_search_key_end_page',
                 order: 15,
             },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 21,
+            },
         ],
     },
 };
