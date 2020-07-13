@@ -84,7 +84,7 @@ export const isArrayValid = (record, fieldConfig, testFunction) => {
             true,
         );
     } else {
-        isValid = !fieldConfig.required;
+        isValid = !fieldConfig.isRequired;
     }
 
     return isValid;

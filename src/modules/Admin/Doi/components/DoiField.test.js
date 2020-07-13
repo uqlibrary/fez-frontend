@@ -135,6 +135,14 @@ describe('DoiField', () => {
                     expect(toJson(wrapper)).toBe('');
                 },
             },
+            // Empty list item
+            {
+                field: 'fez_record_search_key_isbn',
+                data: [],
+                test: wrapper => {
+                    expect(toJson(wrapper)).toBe('');
+                },
+            },
             // Date with custom format
             {
                 field: 'rek_date',

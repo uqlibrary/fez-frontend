@@ -65,6 +65,9 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         // Arrays
         case 'fez_record_search_key_isbn':
         case 'fez_record_search_key_issn':
+            if (!!data && data.length === 0) {
+                break;
+            }
             const subKey = field.replace('fez_record_search_key', 'rek');
             const testId = subKey.replace('_', '-');
             value = (
