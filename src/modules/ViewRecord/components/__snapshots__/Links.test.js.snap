@@ -9934,6 +9934,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -9945,6 +9946,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -9956,6 +9958,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -34095,6 +34098,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="link-label"
           item={true}
           sm={6}
         >
@@ -34106,6 +34110,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="description-label"
           item={true}
           sm={4}
         >
@@ -34117,6 +34122,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="oa-status-label"
           item={true}
           sm={2}
         >
@@ -34137,6 +34143,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           pubmedCentralId="PMC5179926"
         />
       }
+      linkId="rek-pubmed-central-id"
       openAccessStatus={
         Object {
           "embargoDate": null,
@@ -34153,6 +34160,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           doi="10.1016/j.pnsc.2012.12.004"
         />
       }
+      linkId="rek-doi"
       openAccessStatus={Object {}}
     />
     <Component
@@ -34167,6 +34175,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           http://www.thisisatest.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-0"
       openAccessStatus={Object {}}
     />
     <Component
@@ -34181,6 +34190,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           http://www.thisisanothertest.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-1"
       openAccessStatus={Object {}}
     />
     <Component
@@ -34195,6 +34205,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           http://www.nodescription.com
         </WithStyles(ExternalLink)>
       }
+      linkId="rek-link-2"
       openAccessStatus={Object {}}
     />
   </StandardCard>
