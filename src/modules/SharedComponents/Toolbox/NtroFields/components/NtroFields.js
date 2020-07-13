@@ -454,7 +454,7 @@ export default class NtroFields extends React.PureComponent {
                                             component={QualityIndicatorField}
                                             disabled={this.props.submitting}
                                             id="quality-indicators"
-                                            name="quality-indicators"
+                                            name="qualityIndicators"
                                             label={metadata.fields.peerReviewActivity.label}
                                             placeholder={metadata.fields.peerReviewActivity.label}
                                             required

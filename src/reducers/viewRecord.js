@@ -28,6 +28,7 @@ const handlers = {
         loadingRecordToView: false,
         recordToViewError: action.payload,
         hideCulturalSensitivityStatement: true,
+        isDeleted: action.isDeleted,
     }),
 
     [actions.VIEW_RECORD_CLEAR]: state => ({
