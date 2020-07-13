@@ -19,12 +19,13 @@ import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 import { general } from 'config';
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
+import Typography from '@material-ui/core/Typography';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
         recordToView: PropTypes.object,
         loadingRecordToView: PropTypes.bool,
-        recordToViewError: PropTypes.string,
+        recordToViewError: PropTypes.object,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
@@ -32,6 +33,7 @@ export default class ViewRecord extends PureComponent {
         author: PropTypes.object,
         authorDetails: PropTypes.object,
         isDeleted: PropTypes.bool,
+        history: PropTypes.any,
     };
 
     componentDidMount() {
@@ -56,6 +58,22 @@ export default class ViewRecord extends PureComponent {
         const txt = locale.pages.viewRecord;
         const { loadingRecordToView, recordToViewError, recordToView, isDeleted } = this.props;
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
+        if (isDeleted) {
+            return (
+                <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
+                    <Grid container style={{ marginTop: -24 }}>
+                        <Grid item xs={12}>
+                            {locale.pages.viewRecord.notFound.message}
+                        </Grid>
+                    </Grid>
+                    {recordToViewError && (
+                        <Typography variant={'caption'} style={{ opacity: 0.5 }}>
+                            {`(${recordToViewError.status} - ${recordToViewError.message})`}
+                        </Typography>
+                    )}
+                </StandardPage>
+            );
+        }
         if (loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage} />;
         } else if (recordToViewError) {
@@ -88,11 +106,6 @@ export default class ViewRecord extends PureComponent {
                             isPublicationDeleted={isDeleted}
                         />
                     </Grid>
-                    {!!isDeleted && (
-                        <Grid item xs={12} style={{ marginBottom: 24 }}>
-                            <Alert {...txt.deletedAlert} />
-                        </Grid>
-                    )}
                     {!isDeleted && !!this.props.recordToView && (
                         <Grid item xs={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
