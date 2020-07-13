@@ -44,6 +44,7 @@ export const calculateOpenAccess = record => {
     if (
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION ||
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT ||
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_PREPRINT ||
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_OTHER
     ) {
         const allFiles =
