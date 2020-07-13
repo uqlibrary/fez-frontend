@@ -282,7 +282,7 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({ searchQuery }) => ({
     options: {
         params: {
             rule: 'lookup',
-            query: searchQuery.replace(/,/g, ''),
+            query: searchQuery.replace(/[.,\/?#!$%\^&\*;:{}=\-_`~()]/g, ' ').replace(/ +(?= )/g, ''),
         },
     },
 });

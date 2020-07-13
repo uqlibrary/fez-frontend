@@ -9,6 +9,7 @@ exports[`Component NtroHeader should render default view 1`] = `
     allowDismiss={false}
     customIcon={null}
     customType={null}
+    disableAlertClick={false}
     dismissTitle="Click to dismiss this alert"
     message={
       <React.Fragment>

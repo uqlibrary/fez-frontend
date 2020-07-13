@@ -15,6 +15,7 @@ export const AutoCompleteAsynchronousField = ({
     errorText,
     filterOptions,
     floatingLabelText,
+    hideLabel,
     getOptionLabel,
     itemsList,
     itemsLoading,
@@ -24,6 +25,7 @@ export const AutoCompleteAsynchronousField = ({
     OptionTemplate,
     prefilledSearch,
     required,
+    placeholder,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -85,7 +87,6 @@ export const AutoCompleteAsynchronousField = ({
             setOptions([]);
         }
     }, [open]);
-
     return (
         <Autocomplete
             id={autoCompleteAsynchronousFieldId}
@@ -111,9 +112,10 @@ export const AutoCompleteAsynchronousField = ({
                 <TextField
                     {...params}
                     error={error}
+                    placeholder={placeholder}
                     helperText={(error && errorText) || ''}
                     fullWidth
-                    label={floatingLabelText}
+                    label={!hideLabel && floatingLabelText}
                     InputProps={{
                         ...params.InputProps,
                         endAdornment: (
@@ -155,6 +157,7 @@ AutoCompleteAsynchronousField.propTypes = {
     errorText: PropTypes.string,
     filterOptions: PropTypes.func.isRequired,
     floatingLabelText: PropTypes.string,
+    placeholder: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
     itemsList: PropTypes.array,
     itemsLoading: PropTypes.bool,
@@ -164,6 +167,7 @@ AutoCompleteAsynchronousField.propTypes = {
     OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     prefilledSearch: PropTypes.bool,
     required: PropTypes.bool,
+    hideLabel: PropTypes.bool,
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

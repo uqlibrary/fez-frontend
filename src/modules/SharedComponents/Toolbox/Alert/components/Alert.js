@@ -26,14 +26,15 @@ const useStyles = makeStyles(
             boxShadow: theme.shadows[1],
         },
         '@keyframes wiggle': {
-            from: { transform: 'rotate(-10deg)', transformOrigin: '40% 50%' },
-            to: { transform: 'rotate(10deg)', transformOrigin: '40% 50%' },
+            from: { transform: 'rotate(-30deg)', transformOrigin: '40% 50%' },
+            to: { transform: 'rotate(15deg)', transformOrigin: '40% 50%' },
         },
         wriggler: {
             animationName: '$wiggle',
-            animationDuration: '0.05s',
-            animationIterationCount: 50,
+            animationDuration: '0.3s',
+            animationIterationCount: 20,
             animationDirection: 'alternate',
+            animationTimingFunction: 'ease-in-out',
         },
         icon: {
             '& .icon': {
@@ -260,6 +261,7 @@ export const Alert = ({
     customIcon,
     customType,
     wiggle,
+    disableAlertClick,
 }) => {
     const classes = useStyles();
     const renderIcon = type => {
@@ -297,13 +299,13 @@ export const Alert = ({
                 alignItems="flex-start"
                 alignContent="center"
             >
-                <Grid item xs={12} sm className={action && classes.linked}>
+                <Grid item xs={12} sm className={action && !disableAlertClick && classes.linked}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
                         <Grid
                             item
                             className={`${classes.icon} alert-icon ${wiggle ? classes.wriggler : ''}`}
-                            onClick={action}
-                            onKeyDown={action}
+                            onClick={!disableAlertClick && action}
+                            onKeyDown={!disableAlertClick && action}
                         >
                             {showLoader ? (
                                 <CircularProgress id="spinner" className="spinner" size={38} thickness={3} />
@@ -311,7 +313,13 @@ export const Alert = ({
                                 renderIcon(type)
                             )}
                         </Grid>
-                        <Grid item xs className={`${classes.text} alert-text`} onClick={action} onKeyDown={action}>
+                        <Grid
+                            item
+                            xs
+                            className={`${classes.text} alert-text`}
+                            onClick={!disableAlertClick && action}
+                            onKeyDown={!disableAlertClick && action}
+                        >
                             <b>{title && `${title} - `}</b>
                             {message}
                         </Grid>
@@ -380,6 +388,7 @@ Alert.propTypes = {
     actionButtonLabel: PropTypes.string,
     allowDismiss: PropTypes.bool,
     wiggle: PropTypes.bool,
+    disableAlertClick: PropTypes.bool,
     dismissAction: PropTypes.func,
     dismissTitle: PropTypes.string,
     showLoader: PropTypes.bool,
@@ -407,6 +416,7 @@ Alert.defaultProps = {
     customIcon: null,
     customType: null,
     wiggle: null,
+    disableAlertClick: false,
 };
 
 export default Alert;

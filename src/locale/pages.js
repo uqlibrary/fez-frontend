@@ -60,7 +60,7 @@ export default {
                             publication metrics
                         </li>
                         <li>
-                            Maintaining a complete and accurate record of all UQ research publications and research data
+                            Maintaining a complete and accurate work of all UQ research publications and research data
                             sets that feeds into central UQ systems including UQ Researchers and the Academic Portal
                         </li>
                         <li>
@@ -391,7 +391,7 @@ export default {
             step1: {
                 title: 'Search for your works',
                 text:
-                    'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the record is already in eSpace or is available from another source.',
+                    'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.',
                 // help: {
                 //     title: 'Search for your publication',
                 //     text: 'Help about search....',
@@ -504,12 +504,12 @@ export default {
             submit: 'Submit',
         },
         viewRecord: {
-            loadingMessage: 'Loading record',
+            loadingMessage: 'Loading work',
             thumbnailTitle: 'Click to open a preview of [image]',
             deletedAlert: {
                 type: 'info_outline',
                 title: '',
-                message: 'This record has been deleted.',
+                message: 'This work has been deleted.',
             },
             notFound: {
                 title: 'Record not found',
@@ -527,7 +527,7 @@ export default {
         searchRecords: {
             title: 'eSpace search',
             loadingMessage: 'Searching for works',
-            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
@@ -768,7 +768,7 @@ export default {
                             .
                         </p>
                         <h3>Peer review acknowledgement in ORCID</h3>
-                        <p>Your ORCID record can acknowledge peer review assignments that you undertake.</p>
+                        <p>Your ORCID work can acknowledge peer review assignments that you undertake.</p>
                         <p>
                             Simply provide your ORCID iD when accepting a peer review assignment and upon completion the
                             organisation* you have done the peer review for will post an acknowledgement of this
@@ -788,8 +788,8 @@ export default {
                         </p>
                         <p>
                             Because ORCID identifiers are designed to be persistent, obsolete iDs will be deprecated,
-                            not deleted. The record associated with a deprecated iD will contain a pointer to the
-                            primary record
+                            not deleted. The work associated with a deprecated iD will contain a pointer to the primary
+                            record
                         </p>
                     </div>
                 ),
@@ -923,7 +923,7 @@ export default {
             },
             successAddWorkflowConfirmation: {
                 confirmationTitle: 'Work has been added',
-                confirmationMessage: 'Your new record has been added to eSpace.',
+                confirmationMessage: 'Your new work has been added to eSpace.',
                 cancelButtonLabel: 'View new record',
                 confirmButtonLabel: 'Add another work',
             },
@@ -951,11 +951,20 @@ export default {
                     title: 'Validation',
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
                 },
+                selfLockedAlert: {
+                    type: 'custom',
+                    title: 'THIS WORK IS LOCKED',
+                    message:
+                        'You currently have this work locked ([username]). Complete your changes and submit, or cancel your changes so others may access this work.',
+                    actionButtonLabel: 'UNLOCK WORK',
+                    customIcon: <LockIcon id="locked-icon" className="icon" />,
+                    customType: 'info',
+                },
                 lockedAlert: {
                     type: 'custom',
-                    title: 'THIS RECORD IS LOCKED',
+                    title: 'THIS WORK IS LOCKED',
                     message:
-                        'This record is currently being edited by [name] ([username]). Make sure that you confirm with this user before ignoring the record lock as it may cause record overwrite issues.',
+                        'This work is currently being edited by [name] ([username]). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.',
                     actionButtonLabel: 'IGNORE LOCK',
                     customIcon: <LockIcon id="locked-icon" className="icon" />,
                     customType: 'error',
@@ -978,7 +987,7 @@ export default {
             formLabels: {
                 ismemberof: {
                     floatingLabelText: 'Member of collections',
-                    hintText: 'Begin typing to select and add record to a list of collection(s)',
+                    hintText: 'Begin typing to select and add work to a list of collection(s)',
                 },
                 rek_display_type: {
                     inputLabelText: 'Work type',

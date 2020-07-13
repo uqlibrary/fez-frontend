@@ -44,7 +44,12 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader subCard>
+                <StandardCard
+                    standardCardId="record-security-card"
+                    title={text.cardTitle(record.rek_pid)}
+                    accentHeader
+                    subCard
+                >
                     <Grid container spacing={2}>
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
@@ -62,6 +67,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                         label="Override inherited security (detailed below)"
                                         normalize={overrideSecurityValueNormalizer}
                                         disabled={disabled}
+                                        overrideSecurityId="rek-security-inherited"
                                     />
                                 </Grid>
                             </React.Fragment>
@@ -102,7 +108,12 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
             {!!dataStreams && dataStreams.length > 0 && (
                 <React.Fragment>
                     <Grid item xs={12}>
-                        <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader subCard>
+                        <StandardCard
+                            standardCardId="datastream-security-card"
+                            title={text.dataStream.cardTitle(record.rek_pid)}
+                            accentHeader
+                            subCard
+                        >
                             <Grid container spacing={1}>
                                 <Grid item xs={12}>
                                     <InheritedSecurityDetails

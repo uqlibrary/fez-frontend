@@ -15,6 +15,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       allowDismiss={false}
       customIcon={null}
       customType={null}
+      disableAlertClick={false}
       dismissTitle="Click to dismiss this alert"
       message="Unexpected error"
       showLoader={false}

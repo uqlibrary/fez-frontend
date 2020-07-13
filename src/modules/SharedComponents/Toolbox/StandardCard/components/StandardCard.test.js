@@ -64,6 +64,11 @@ describe('Cards component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('renders given ID for standar card', () => {
+        const wrapper = setup({ standardCardId: 'test-card' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('StandardCard component', () => {

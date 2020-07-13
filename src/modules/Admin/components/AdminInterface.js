@@ -158,8 +158,18 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
+            <StandardCard
+                standardCardId={`${txt.current.sections[tab].title.toLowerCase()}-section`}
+                title={txt.current.sections[tab].title}
+                primaryHeader
+                squareTop
+                smallTitle
+            >
+                <Field
+                    component={tabs[tab].component}
+                    disabled={submitting || (locked && record.rek_editing_user !== authorDetails.username)}
+                    name={`${tab}Section`}
+                />
             </StandardCard>
         </TabContainer>
     );
@@ -215,7 +225,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert />}
+                    {!!locked && <LockedAlert handleCancel={handleCancel} />}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
@@ -300,7 +310,11 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-publish"
                                                     data-testid="publish-admin"
-                                                    disabled={!!submitting || !!disableSubmit || !!locked}
+                                                    disabled={
+                                                        !!submitting ||
+                                                        !!disableSubmit ||
+                                                        (locked && record.rek_editing_user !== authorDetails.username)
+                                                    }
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -317,7 +331,11 @@ export const AdminInterface = ({
                                                 <Button
                                                     id="admin-work-unpublish"
                                                     data-testid="unpublish-admin"
-                                                    disabled={!!submitting || !!disableSubmit || !!locked}
+                                                    disabled={
+                                                        !!submitting ||
+                                                        !!disableSubmit ||
+                                                        (locked && record.rek_editing_user !== authorDetails.username)
+                                                    }
                                                     variant="contained"
                                                     color="secondary"
                                                     fullWidth
@@ -337,7 +355,11 @@ export const AdminInterface = ({
                                             id="admin-work-submit"
                                             data-testid="submit-admin"
                                             style={{ whiteSpace: 'nowrap' }}
-                                            disabled={!!submitting || !!disableSubmit || !!locked}
+                                            disabled={
+                                                !!submitting ||
+                                                !!disableSubmit ||
+                                                (locked && record.rek_editing_user !== authorDetails.username)
+                                            }
                                             variant="contained"
                                             color="primary"
                                             fullWidth
