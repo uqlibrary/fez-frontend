@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Doi, getWarningMessage } from './Doi';
+import { Doi, getWarningMessage, isArrayValid } from './Doi';
 
 import { DOI_ORG_PREFIX } from 'config/doi';
 import { openAccessFiles } from 'config/openAccess';
@@ -115,6 +115,17 @@ describe('DOI component', () => {
         expect(renderedWarningMessage.text()).toBe(
             'Error:Sorry, only the following subytypes are supported for Conference Paper: Fully published paper',
         );
+    });
+
+    it('should flag required field with empty array', () => {
+        const record = {
+            fez_record_search_key_issn: [],
+        };
+        const fieldConfig = {
+            field: 'fez_record_search_key_issn',
+            isRequired: true,
+        };
+        expect(isArrayValid(record, fieldConfig, () => {})).toBe(false);
     });
 
     it('should render warning for invalid preview field', () => {
