@@ -434,6 +434,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
           utils={[Function]}
         >
           <AdminContainer
+            authorDetails={
+              Object {
+                "username": "uqstaff",
+              }
+            }
             classes={
               Object {
                 "badgeMargin": "badgemargin",
@@ -1334,6 +1339,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
             }
           >
             <Memo(AdminInterface)
+              authorDetails={
+                Object {
+                  "username": "uqstaff",
+                }
+              }
               classes={
                 Object {
                   "badgeMargin": "makeStyles-badgeMargin-6",
@@ -9606,6 +9616,11 @@ exports[`AdminContainer component should not render non-security errors for comm
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -10627,6 +10642,11 @@ exports[`AdminContainer component should render default view 1`] = `
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -11653,6 +11673,11 @@ exports[`AdminContainer component should render memoized component with styles 1
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -12666,6 +12691,11 @@ exports[`AdminContainer component should render mobile view 1`] = `
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
