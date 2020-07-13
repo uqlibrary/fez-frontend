@@ -1198,6 +1198,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 3`] = `
         allowDismiss={false}
         customIcon={null}
         customType={null}
+        disableAlertClick={false}
         dismissTitle="Click to dismiss this alert"
         message="There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button."
         showLoader={false}

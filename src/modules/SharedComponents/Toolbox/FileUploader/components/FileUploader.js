@@ -279,6 +279,7 @@ export class FileUploader extends PureComponent {
             return (
                 <FileUploadRow
                     key={file.name}
+                    fileUploadRowId={`fez-datastream-info-list-row-${index}`}
                     index={index}
                     uploadedFile={file}
                     fileSizeUnit={fileSizeUnit}
@@ -344,7 +345,7 @@ export class FileUploader extends PureComponent {
                                 disabled={disabled}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} data-testid="fez-datastream-info-list">
                             {filesInQueueRow}
                         </Grid>
                         {requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) && (

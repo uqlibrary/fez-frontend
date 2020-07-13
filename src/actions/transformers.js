@@ -1153,6 +1153,9 @@ export const getFilesSectionSearchKeys = data => {
 export const getSecuritySectionSearchKeys = (data = {}) => {
     return {
         ...(!!data.hasOwnProperty('rek_security_policy') ? { rek_security_policy: data.rek_security_policy } : {}),
+        ...(!!data.hasOwnProperty('rek_datastream_policy')
+            ? { rek_datastream_policy: data.rek_datastream_policy }
+            : {}),
         ...(!!data.hasOwnProperty('rek_security_inherited')
             ? { rek_security_inherited: data.rek_security_inherited }
             : {}),

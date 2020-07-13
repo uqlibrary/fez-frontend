@@ -1838,7 +1838,7 @@ export default {
                         title: 'Author ID',
                         combiner: 'is',
                         type: 'AuthorIdLookup',
-                        hint: 'Add an author id',
+                        hint: 'Type an author name to search',
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list',
                     },
@@ -2030,14 +2030,14 @@ export default {
             record: {
                 cardTitle: pid => (
                     <span>
-                        <strong>Record</strong> level security - {pid}
+                        <strong>Work</strong> level security - {pid}
                     </span>
                 ),
                 prompt: 'Select a security policy to apply',
-                fieldLabel: 'Override record',
-                dataStreamFieldLabel: 'Override record level policy to apply to this PID',
-                selectedTitle: 'Selected record level security policy details',
-                dataStreamSelectedTitle: 'Selected record level datastream security policy details',
+                fieldLabel: 'Override work',
+                dataStreamFieldLabel: 'Override work level policy to apply to this PID',
+                selectedTitle: 'Selected work level security policy details',
+                dataStreamSelectedTitle: 'Selected work level datastream security policy details',
                 description: '',
                 dataStream: {
                     cardTitle: pid => (

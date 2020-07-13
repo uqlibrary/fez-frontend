@@ -491,6 +491,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                   <WithStyles(ForwardRef(IconButton))
                     aria-describedby={null}
                     className=""
+                    data-testid="undefined-delete"
                     onBlur={[Function]}
                     onClick={[MockFunction]}
                     onFocus={[Function]}
@@ -516,6 +517,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                           "sizeSmall": "MuiIconButton-sizeSmall",
                         }
                       }
+                      data-testid="undefined-delete"
                       onBlur={[Function]}
                       onClick={[MockFunction]}
                       onFocus={[Function]}
@@ -529,6 +531,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                         aria-describedby={null}
                         centerRipple={true}
                         className="MuiIconButton-root"
+                        data-testid="undefined-delete"
                         disabled={false}
                         focusRipple={true}
                         onBlur={[Function]}
@@ -551,6 +554,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                               "root": "MuiButtonBase-root",
                             }
                           }
+                          data-testid="undefined-delete"
                           disabled={false}
                           focusRipple={true}
                           onBlur={[Function]}
@@ -565,6 +569,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                           <button
                             aria-describedby={null}
                             className="MuiButtonBase-root MuiIconButton-root"
+                            data-testid="undefined-delete"
                             disabled={false}
                             onBlur={[Function]}
                             onClick={[MockFunction]}
@@ -654,6 +659,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                     anchorEl={
                       <button
                         class="MuiButtonBase-root MuiIconButton-root"
+                        data-testid="undefined-delete"
                         tabindex="0"
                         title="Remove this file"
                         type="button"
@@ -727,6 +733,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
     title="Remove this file"
   >
     <WithStyles(ForwardRef(IconButton))
+      data-testid="undefined-delete"
       onClick={[MockFunction]}
     >
       <DeleteIcon />
@@ -741,6 +748,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
     title="Remove this file"
   >
     <WithStyles(ForwardRef(IconButton))
+      data-testid="undefined-delete"
       disabled={true}
       onClick={[MockFunction]}
     >
@@ -779,6 +787,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
     title="Remove this file"
   >
     <WithStyles(ForwardRef(IconButton))
+      data-testid="undefined-delete"
       onClick={[MockFunction]}
     >
       <DeleteIcon />

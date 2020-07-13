@@ -1,8 +1,9 @@
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-import matchSorter from 'match-sorter';
+// import matchSorter from 'match-sorter';
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
+import Fuse from 'fuse.js';
 
 const mapStateToProps = (state, props) => {
     const getUqUsername = item => {
@@ -10,6 +11,12 @@ const mapStateToProps = (state, props) => {
         else if (item.aut_student_username) return ` (${item.aut_student_username})`;
         else if (item.aut_ref_num) return ` (${item.aut_ref_num})`;
         else return '';
+    };
+    const fuseOptions = {
+        useExtendedSearch: true,
+        ignoreLocation: false,
+        ignoreFieldNorm: false,
+        keys: ['aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
     };
     return {
         autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
@@ -28,10 +35,10 @@ const mapStateToProps = (state, props) => {
         itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         defaultValue: (!!props.value && { value: props.value }) || '',
         getOptionLabel: option => option.value || '',
-        filterOptions: (options, { inputValue }) =>
-            matchSorter(options, inputValue, {
-                keys: ['aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
-            }),
+        filterOptions: (options, { inputValue }) => {
+            const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
+            return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
+        },
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
         hintText: props.hintText || 'Enter a value to search',
         OptionTemplate: GenericOptionTemplate,

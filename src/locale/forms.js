@@ -6,7 +6,7 @@ export default {
             title: 'Claim a work',
             cancel: 'Cancel this claim',
             submit: 'Claim this work',
-            publicationLoading: 'Loading record to claim',
+            publicationLoading: 'Loading work to claim',
             claimingInformation: {
                 title: 'You are claiming to be an author for the following work:',
                 // help: {
@@ -137,14 +137,14 @@ export default {
                 title: 'Error',
                 message: (
                     <span>
-                        This record has been assigned to you already. If you feel this is incorrect, please notify the
+                        This work has been assigned to you already. If you feel this is incorrect, please notify the
                         eSpace admin team at <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
                     </span>
                 ),
             },
         },
         unclaimPublicationForm: {
-            title: 'Remove this record from my profile',
+            title: 'Remove this work from my profile',
             description: '',
             // help: {
             //     title: 'Unclaim a record',
@@ -153,7 +153,7 @@ export default {
             // },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Unclaim a record',
-                confirmationMessage: 'You have unclaimed this record successfully',
+                confirmationMessage: 'You have unclaimed this work successfully',
                 cancelButtonLabel: 'Go to my dashboard',
                 confirmButtonLabel: 'Go to my research',
             },
@@ -197,7 +197,7 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
-                    comments: 'Describe the problem with this record, eg record is a duplicate, or suggested changes',
+                    comments: 'Describe the problem with this record, eg work is a duplicate, or suggested changes',
                     url: 'Link (URL)',
                 },
             },
@@ -251,7 +251,7 @@ export default {
             successAlert: {
                 type: 'done',
                 title: 'Success',
-                message: 'Fix record request has been submitted successfully.',
+                message: 'Fix work request has been submitted successfully.',
             },
         },
         deleteRecordForm: {
@@ -275,7 +275,7 @@ export default {
             },
             uqDoiAlert: {
                 message: pid =>
-                    `This pid ${pid} cannot be deleted because it has a UQ DOI attached. Remove the DOI from this record first before deleting. If this record is the original source of the DOI, it must also be be de-activated on Crossref.`,
+                    `This pid ${pid} cannot be deleted because it has a UQ DOI attached. Remove the DOI from this work first before deleting. If this work is the original source of the DOI, it must also be be de-activated on Crossref.`,
             },
             errorAlert: {
                 type: 'error_outline',

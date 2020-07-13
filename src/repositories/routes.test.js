@@ -735,14 +735,14 @@ describe('Backend routes method', () => {
     it('should construct url for SEARCH_AUTHOR_LOOKUP_API', () => {
         expect(
             routes.SEARCH_AUTHOR_LOOKUP_API({
-                searchQuery: 'a,b',
+                searchQuery: 'a,b-c!?     %',
             }),
         ).toEqual({
             apiUrl: 'fez-authors/search',
             options: {
                 params: {
                     rule: 'lookup',
-                    query: 'ab',
+                    query: 'a b c ',
                 },
             },
         });
@@ -802,6 +802,13 @@ describe('Backend routes method', () => {
     it('should construct url for ORCID_SYNC_API', () => {
         expect(routes.ORCID_SYNC_API()).toEqual({
             apiUrl: 'external/orcid/jobs/sync',
+        });
+    });
+
+    it('should construct url for UNLOCK_RECORD_API', () => {
+        const pid = 'UQ:123456';
+        expect(routes.UNLOCK_RECORD_API({ pid })).toEqual({
+            apiUrl: `records/${pid}/unlock`,
         });
     });
 });
