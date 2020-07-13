@@ -60,10 +60,6 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Authors',
-            groups: [['authors']],
-        },
-        {
             title: 'Editors',
             groups: [['editors']],
         },
@@ -128,8 +124,8 @@ export const validateConferenceProceedings = (
         }),
     },
     authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
-            authors: summary.authors,
+        ...(((as || {}).editors || []).length === 0 && {
+            editors: summary.editors,
         }),
     },
 });
