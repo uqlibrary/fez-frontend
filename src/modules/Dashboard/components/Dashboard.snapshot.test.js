@@ -25,6 +25,11 @@ function setup(testProps = {}, args = {}) {
         authorDetails: {
             is_administrator: 0,
             is_super_administrator: 0,
+            espace: {
+                first_year: '1998',
+                last_year: '2000',
+                doc_count: 32,
+            },
         },
         accountAuthorDetailsLoading: false,
         publicationTotalCount: null,
