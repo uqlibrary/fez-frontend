@@ -49,7 +49,7 @@ export function getPublicationsPerYearCategories(data) {
     const rawData = [...data];
     // extract years and parse year value into int
     const categories = rawData.map(yearData => {
-        return parseInt(yearData.key, 10);
+        return yearData.key === '1000' ? 'N/A' : parseInt(yearData.key, 10);
     });
 
     // sort years in ascending order
