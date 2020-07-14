@@ -512,6 +512,18 @@ export default {
                 title: '',
                 message: 'This work has been deleted.',
             },
+            notFound: {
+                title: 'Record not found',
+                message: (
+                    <div>
+                        <p>The record you are attempting to access does not appear in our system.</p>
+                        <p>
+                            If you believe this is in error, please
+                            <a href="mailto:espace@library.uq.edu.au"> contact the eSpace team.</a>
+                        </p>
+                    </div>
+                ),
+            },
         },
         searchRecords: {
             title: 'eSpace search',
@@ -555,7 +567,7 @@ export default {
             title: 'Masquerade',
             help: {
                 title: 'Masquerade',
-                text: <div>Masquerade as another user...</div>,
+                text: <p>Masquerade as another user...</p>,
                 buttonLabel: 'CLOSE',
             },
             description: {
