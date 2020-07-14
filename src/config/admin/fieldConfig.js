@@ -10,6 +10,7 @@ import {
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
     PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DESIGN,
@@ -534,7 +535,7 @@ export default {
                 locale: locale.components.issnForm.field,
                 inputNormalizer: value => {
                     const newValue = value.replace('-', '');
-                    return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
+                    return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
                 canEdit: true,
                 rowItemTemplate: IssnRowItemTemplate,
@@ -1624,6 +1625,12 @@ export default {
     override: {
         [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
             fez_record_search_key_journal_name: () => ({
+                required: false,
+                validate: null,
+            }),
+        },
+        [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
+            fez_record_search_key_contributors: () => ({
                 required: false,
                 validate: null,
             }),

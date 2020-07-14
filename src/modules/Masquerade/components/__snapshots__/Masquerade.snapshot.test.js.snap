@@ -6,9 +6,9 @@ exports[`Component Masquerade Should render form as expected 1`] = `
     help={
       Object {
         "buttonLabel": "CLOSE",
-        "text": <div>
+        "text": <p>
           Masquerade as another user...
-        </div>,
+        </p>,
         "title": "Masquerade",
       }
     }
@@ -72,9 +72,9 @@ exports[`Component Masquerade Should render readonly description 1`] = `
     help={
       Object {
         "buttonLabel": "CLOSE",
-        "text": <div>
+        "text": <p>
           Masquerade as another user...
-        </div>,
+        </p>,
         "title": "Masquerade",
       }
     }
