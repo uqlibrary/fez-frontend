@@ -90,7 +90,7 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
 GrantDetails.propTypes = {
     grantAgencyName: PropTypes.object,
     grantId: PropTypes.object,
-    grantText: PropTypes.string,
+    grantText: PropTypes.object,
     order: PropTypes.number,
     index: PropTypes.number,
 };
@@ -122,7 +122,8 @@ export const GrantInformation = ({ publication }) => {
             .map((grantAgencyName, index) => {
                 const order = grantAgencyName.rek_grant_agency_order;
                 const grantId = searchByOrder(grantIds, 'rek_grant_id_order', order);
-                const grantText = includeFundingText && searchByOrder(grantTexts, 'rek_grant_text_order', order);
+                const grantText =
+                    (includeFundingText && searchByOrder(grantTexts, 'rek_grant_text_order', order)) || {};
                 return <GrantDetails key={index} {...{ grantAgencyName, grantId, grantText, order, index }} />;
             });
     };
@@ -131,7 +132,7 @@ export const GrantInformation = ({ publication }) => {
         <Grid item xs={12}>
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
                 {fundingText && (
-                    <Typography id="grantInformation" variant="body2" gutterBottom>
+                    <Typography id="grantInformation" variant="body2" gutterBottom data-testid="rek-grant-text">
                         {fundingText}
                     </Typography>
                 )}
