@@ -61,4 +61,46 @@ describe('DoiPreview', () => {
         const wrapper = setup({ publication });
         expect(wrapper.find('DoiField[field="rek_title"]').props().label).toBe('Title');
     });
+
+    it('should or should not display rek_parent_publication depending on whether start page is > 1', () => {
+        const publication = {
+            rek_display_type: PUBLICATION_TYPE_RESEARCH_REPORT,
+            rek_display_type_lookup: DOCUMENT_TYPE_RESEARCH_REPORT,
+            rek_pid: 'UQ:1234567',
+            fez_record_search_key_author: [
+                {
+                    rek_author: 'test',
+                },
+            ],
+            fez_record_search_key_author_id: [],
+            fez_record_search_key_parent_publication: {
+                rek_parent_publication: 'Test publication',
+            },
+            fez_record_search_key_start_page: {
+                rek_start_page: '1',
+            },
+        };
+        const wrapper = setup({ publication });
+        expect(wrapper.find('DoiField[field="fez_record_search_key_parent_publication"]')).toEqual({});
+
+        const publication2 = {
+            ...publication,
+            fez_record_search_key_start_page: {
+                rek_start_page: '1st',
+            },
+        };
+        const wrapper2 = setup({ publication: publication2 });
+        expect(wrapper2.find('DoiField[field="fez_record_search_key_parent_publication"]')).toEqual({});
+
+        const publication3 = {
+            ...publication,
+            fez_record_search_key_start_page: {
+                rek_start_page: '2',
+            },
+        };
+        const wrapper3 = setup({ publication: publication3 });
+        expect(wrapper3.find('DoiField[field="fez_record_search_key_parent_publication"]').props().data).toBe(
+            publication3.fez_record_search_key_parent_publication,
+        );
+    });
 });
