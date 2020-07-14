@@ -1427,6 +1427,7 @@ export const OA_STATUS = [
     { value: '453694', text: 'Link (no DOI)' },
     { value: '453695', text: 'File (Publisher version)' },
     { value: '453696', text: 'File (Author Post-print)' },
+    { value: '454127', text: 'File (Author Pre-print)' },
     { value: '453697', text: 'Other' },
     { value: '453698', text: 'Not Open Access' },
     { value: '453700', text: 'Mediated Access' },

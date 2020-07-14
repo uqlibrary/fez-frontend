@@ -567,7 +567,7 @@ export default {
             title: 'Masquerade',
             help: {
                 title: 'Masquerade',
-                text: <div>Masquerade as another user...</div>,
+                text: <p>Masquerade as another user...</p>,
                 buttonLabel: 'CLOSE',
             },
             description: {

@@ -18,9 +18,10 @@ context('Conference Proceedings admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.adminEditCountCards(7);
-        cy.adminEditNoAlerts();
+        cy.adminEditVerifyAlerts(1, ['Editor/contributor names are required']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCheckTabErrorBadge(2);
     });
 
     it('should render the different sections as expected', () => {
