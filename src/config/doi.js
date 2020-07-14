@@ -145,6 +145,10 @@ export const doiFields = {
                 order: 2,
             },
             {
+                field: 'fez_record_search_key_parent_publication',
+                order: 3.5,
+            },
+            {
                 field: 'fez_record_search_key_report_number',
                 order: 7,
             },
@@ -218,6 +222,10 @@ export const doiFields = {
             {
                 field: 'rek_title',
                 order: 2,
+            },
+            {
+                field: 'fez_record_search_key_parent_publication',
+                order: 4,
             },
             {
                 field: 'rek_date',
@@ -299,6 +307,10 @@ export const doiFields = {
                 order: 2,
             },
             {
+                field: 'fez_record_search_key_parent_publication',
+                order: 4.5,
+            },
+            {
                 field: 'fez_record_search_key_org_unit_name',
                 order: 5,
             },
@@ -309,6 +321,10 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_series',
                 order: 8,
+            },
+            {
+                field: 'fez_record_search_key_report_number',
+                order: 9,
             },
             {
                 field: 'rek_date',

@@ -26,6 +26,14 @@ export const DoiPreview = ({ authorDetails, publication }) => {
         .sort((field1, field2) => field1.order - field2.order)
         .map(({ field }) => {
             let data = publication[field];
+            if (field === 'fez_record_search_key_parent_publication' && !!data) {
+                const startPage =
+                    !!publication.fez_record_search_key_start_page &&
+                    publication.fez_record_search_key_start_page.rek_start_page;
+                if (!/^\d+$/.test(startPage) || parseInt(startPage, 10) <= 1) {
+                    return '';
+                }
+            }
             if (field === 'fez_record_search_key_author') {
                 data = data.map((author, index) => ({
                     ...author,
