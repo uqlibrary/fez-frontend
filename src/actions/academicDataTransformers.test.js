@@ -209,6 +209,54 @@ describe('Academic data transformers ', () => {
             const result = transformers.getPublicationsPerYearCategories(data);
             expect(result).toEqual(expected);
         });
+
+        it('should correct an ancient date category', () => {
+            const data = [
+                {
+                    doc_count: 22,
+                    key: '1000',
+                    stats_display_type_i_lookup_exact: {
+                        buckets: [
+                            {
+                                doc_count: 19,
+                                key: 'Journal Article',
+                            },
+                            {
+                                doc_count: 2,
+                                key: 'Book Chapter',
+                            },
+                            {
+                                doc_count: 1,
+                                key: 'Conference Paper',
+                            },
+                        ],
+                    },
+                },
+                {
+                    doc_count: 15,
+                    key: '1999',
+                    stats_display_type_i_lookup_exact: {
+                        buckets: [
+                            {
+                                doc_count: 10,
+                                key: 'Journal Article',
+                            },
+                            {
+                                doc_count: 4,
+                                key: 'Book Chapter',
+                            },
+                            {
+                                doc_count: 1,
+                                key: 'Book',
+                            },
+                        ],
+                    },
+                },
+            ];
+            const expected = ['N/A', 1999];
+            const result = transformers.getPublicationsPerYearCategories(data);
+            expect(result).toEqual(expected);
+        });
     });
 
     describe('getPublicationsPerYearSeries test', () => {
