@@ -1861,30 +1861,36 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
             }
           >
             <span>
-              <Link
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-              >
-                <LinkAnchor
-                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                  navigate={[Function]}
-                >
-                  <a
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                    onClick={[Function]}
-                  >
-                    <span>
-                      Journal of Cell Science
-                    </span>
-                  </a>
-                </LinkAnchor>
-              </Link>
               <span
-                className="eraYearListed"
+                data-testid="rek-journal-name"
               >
-                 
-                (ERA 2010 Journal(s) Listed)
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                >
+                  <LinkAnchor
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Journal of Cell Science
+                      </span>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+                <span
+                  className="eraYearListed"
+                >
+                   
+                  (ERA 2010 Journal(s) Listed)
+                </span>
               </span>
-              <span>
+              <span
+                data-testid="rek-journal-name-sherpa-link"
+              >
                  
                 <WithStyles(ExternalLink)
                   aria-label="Check publisher's OA archiving policy in a new window"
@@ -3709,24 +3715,30 @@ exports[`Journal Name Component test  should render without era journal listed 1
             }
           >
             <span>
-              <Link
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+              <span
+                data-testid="rek-journal-name"
               >
-                <LinkAnchor
-                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                  navigate={[Function]}
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
                 >
-                  <a
+                  <LinkAnchor
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                    onClick={[Function]}
+                    navigate={[Function]}
                   >
-                    <span>
-                      Journal of Cell Science
-                    </span>
-                  </a>
-                </LinkAnchor>
-              </Link>
-              <span>
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Journal of Cell Science
+                      </span>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </span>
+              <span
+                data-testid="rek-journal-name-sherpa-link"
+              >
                  
                 <WithStyles(ExternalLink)
                   aria-label="Check publisher's OA archiving policy in a new window"
@@ -5560,28 +5572,32 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
             }
           >
             <span>
-              <Link
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-              >
-                <LinkAnchor
-                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                  navigate={[Function]}
-                >
-                  <a
-                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
-                    onClick={[Function]}
-                  >
-                    <span>
-                      Journal of Cell Science
-                    </span>
-                  </a>
-                </LinkAnchor>
-              </Link>
               <span
-                className="eraYearListed"
+                data-testid="rek-journal-name"
               >
-                 
-                (ERA 2010 Journal(s) Listed)
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                >
+                  <LinkAnchor
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Journal of Cell Science
+                      </span>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+                <span
+                  className="eraYearListed"
+                >
+                   
+                  (ERA 2010 Journal(s) Listed)
+                </span>
               </span>
               <span />
             </span>
