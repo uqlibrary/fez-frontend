@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -26,7 +26,7 @@ import RelatedPublications from './RelatedPublications';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { general } from 'config';
 import locale from 'locale/pages';
-import { loadRecordToView, clearRecordToView, setHideCulturalSensitivityStatement } from 'actions';
+import * as actions from 'actions';
 
 export const NewViewRecord = ({
     account,
@@ -46,17 +46,17 @@ export const NewViewRecord = ({
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
 
     const handleSetHideCulturalSensitivityStatement = React.useCallback(
-        () => dispatch(setHideCulturalSensitivityStatement()),
+        () => dispatch(actions.setHideCulturalSensitivityStatement()),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
 
     React.useEffect(() => {
         if (!!pid) {
-            dispatch(loadRecordToView(pid));
+            dispatch(actions.loadRecordToView(pid));
         }
 
-        return () => dispatch(clearRecordToView());
+        return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pid]);
 
@@ -157,7 +157,7 @@ NewViewRecord.propTypes = {
     isDeleted: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,
     recordToView: PropTypes.object,
-    recordToViewError: PropTypes.object,
+    recordToViewError: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
 export default React.memo(
