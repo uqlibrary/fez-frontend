@@ -31579,6 +31579,16 @@ exports[`Additional Information Component  should render component with data col
               >
                 453701
               </Link>
+              <p
+                key="license_description_line-0"
+              >
+                I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+              </p>
+              <p
+                key="license_description_line-1"
+              >
+                The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
+              </p>
               <div
                 data-testid="rek-license-link"
               >
