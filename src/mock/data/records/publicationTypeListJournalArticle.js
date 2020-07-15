@@ -507,6 +507,7 @@ export default {
             ],
             'fez_record_search_key_language_of_journal_name': [],
             'fez_record_search_key_language_of_title': [],
+            "fez_record_search_key_license": null,
             'fez_record_search_key_link': [],
             'fez_record_search_key_link_description': [],
             'fez_record_search_key_native_script_journal_name': null,
@@ -1516,6 +1517,13 @@ export default {
             ],
             'fez_record_search_key_language_of_journal_name': [],
             'fez_record_search_key_language_of_title': [],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:696826",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             'fez_record_search_key_link': [],
             'fez_record_search_key_link_description': [],
             'fez_record_search_key_native_script_journal_name': null,

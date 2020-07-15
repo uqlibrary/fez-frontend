@@ -928,6 +928,7 @@
     ],
     "fez_record_search_key_language_of_journal_name": [],
     "fez_record_search_key_language_of_title": [],
+     "fez_record_search_key_license": null,
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3240198,

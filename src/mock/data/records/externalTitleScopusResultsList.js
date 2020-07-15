@@ -156,6 +156,7 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status": "453224"
             },
@@ -495,6 +496,7 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status": "453224"
             },
@@ -790,6 +792,7 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_article_number": {
                 "rek_article_number": "8975"
             },
@@ -986,6 +989,7 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_article_number": {
                 "rek_article_number": "178"
             },

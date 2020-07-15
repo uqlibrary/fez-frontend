@@ -714,6 +714,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                     "rek_language_xsdmf_id": 10636,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": Object {
@@ -1129,6 +1130,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "rek_language_xsdmf_id": 10636,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": Object {
@@ -1552,6 +1554,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "rek_language_xsdmf_id": 10636,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": Object {
@@ -1989,6 +1992,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                             "rek_language_xsdmf_id": 10636,
                           },
                         ],
+                        "fez_record_search_key_license": null,
                         "fez_record_search_key_link": Array [],
                         "fez_record_search_key_link_description": Array [],
                         "fez_record_search_key_notes": Object {
@@ -3347,6 +3351,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                     "rek_language_xsdmf_id": 10636,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": Object {
@@ -3765,6 +3770,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "rek_language_xsdmf_id": 10636,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": Object {
@@ -4191,6 +4197,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "rek_language_xsdmf_id": 10636,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": Object {
@@ -4631,6 +4638,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                             "rek_language_xsdmf_id": 10636,
                           },
                         ],
+                        "fez_record_search_key_license": null,
                         "fez_record_search_key_link": Array [],
                         "fez_record_search_key_link_description": Array [],
                         "fez_record_search_key_notes": Object {

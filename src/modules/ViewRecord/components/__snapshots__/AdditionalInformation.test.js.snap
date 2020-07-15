@@ -14526,7 +14526,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="15"
+                                              key="16"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -15010,7 +15010,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="16"
+                                              key="17"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -15494,7 +15494,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="17"
+                                              key="18"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -15978,7 +15978,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="18"
+                                              key="19"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -16462,7 +16462,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="19"
+                                              key="20"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -16946,7 +16946,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="20"
+                                              key="21"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -17430,7 +17430,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="22"
+                                              key="23"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -17914,7 +17914,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="23"
+                                              key="24"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -18412,7 +18412,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="25"
+                                              key="26"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -19033,7 +19033,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="26"
+                                              key="27"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -19531,7 +19531,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="27"
+                                              key="28"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -20029,7 +20029,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="28"
+                                              key="29"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -22329,7 +22329,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -22376,7 +22376,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -22427,7 +22427,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -22493,7 +22493,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -22856,7 +22856,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -23778,7 +23778,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -23829,7 +23829,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -23885,7 +23885,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -23941,7 +23941,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -24412,7 +24412,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -24459,7 +24459,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -24506,7 +24506,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -24553,7 +24553,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -24600,7 +24600,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="25"
       style={
         Object {
           "padding": 8,
@@ -24647,7 +24647,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -24694,7 +24694,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
       style={
         Object {
           "padding": 8,
@@ -24755,7 +24755,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -26368,7 +26368,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -26429,7 +26429,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -26476,7 +26476,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -26523,7 +26523,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
       style={
         Object {
           "padding": 8,
@@ -26570,7 +26570,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
       style={
         Object {
           "padding": 8,
@@ -26617,7 +26617,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
       style={
         Object {
           "padding": 8,
@@ -26664,7 +26664,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="34"
+      key="35"
       style={
         Object {
           "padding": 8,
@@ -27151,6 +27151,7 @@ exports[`Additional Information Component  should render component with conferen
                       "rek_language_xsdmf_id": 10636,
                     },
                   ],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_notes": Object {
@@ -27743,7 +27744,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -27790,7 +27791,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
       style={
         Object {
           "padding": 8,
@@ -27837,7 +27838,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
       style={
         Object {
           "padding": 8,
@@ -27884,7 +27885,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="33"
+      key="34"
       style={
         Object {
           "padding": 8,
@@ -27940,7 +27941,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="34"
+      key="35"
       style={
         Object {
           "padding": 8,
@@ -28011,7 +28012,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="35"
+      key="36"
       style={
         Object {
           "padding": 8,
@@ -28170,7 +28171,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="37"
+      key="38"
       style={
         Object {
           "padding": 8,
@@ -28566,6 +28567,7 @@ exports[`Additional Information Component  should render component with creative
                       "rek_language_xsdmf_id": 11997,
                     },
                   ],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_notes": null,
@@ -28909,7 +28911,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -28960,7 +28962,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -29014,7 +29016,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -29075,7 +29077,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -35319,6 +35321,7 @@ exports[`Additional Information Component  should render component with design d
                     },
                   ],
                   "fez_record_search_key_language": Array [],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_location": Array [
@@ -35869,7 +35872,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -35923,7 +35926,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -35979,7 +35982,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -36293,6 +36296,7 @@ exports[`Additional Information Component  should render component with design d
                     },
                   ],
                   "fez_record_search_key_language": Array [],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_location": Array [
@@ -36446,7 +36450,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -36517,7 +36521,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -37274,7 +37278,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -37335,7 +37339,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -37396,7 +37400,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -37452,7 +37456,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -37508,7 +37512,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -37569,7 +37573,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -39816,7 +39820,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -39863,7 +39867,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -39914,7 +39918,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -39970,7 +39974,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -40026,7 +40030,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -42585,7 +42589,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -42632,7 +42636,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -42679,7 +42683,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -42726,7 +42730,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -42773,7 +42777,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -42820,7 +42824,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -42867,7 +42871,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -42914,7 +42918,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -42965,7 +42969,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -43749,7 +43753,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -43803,7 +43807,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -43857,7 +43861,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -44366,7 +44370,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -44417,7 +44421,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -44464,7 +44468,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -44511,7 +44515,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -44558,7 +44562,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -44614,7 +44618,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -44661,7 +44665,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -44757,7 +44761,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -45091,6 +45095,7 @@ exports[`Additional Information Component  should render component with newspape
                       "rek_language_xsdmf_id": 10720,
                     },
                   ],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_newspaper": Object {
@@ -45856,6 +45861,7 @@ exports[`Additional Information Component  should render component with newspape
                       "rek_language_xsdmf_id": 10720,
                     },
                   ],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_newspaper": Object {
@@ -46295,7 +46301,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -46780,7 +46786,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -46831,7 +46837,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -46878,7 +46884,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -46925,7 +46931,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -46981,7 +46987,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -49897,7 +49903,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -49958,7 +49964,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -50005,7 +50011,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -50052,7 +50058,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
       style={
         Object {
           "padding": 8,
@@ -50099,7 +50105,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
       style={
         Object {
           "padding": 8,
@@ -50146,7 +50152,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
       style={
         Object {
           "padding": 8,
@@ -50193,7 +50199,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="34"
+      key="35"
       style={
         Object {
           "padding": 8,
@@ -50249,7 +50255,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="36"
+      key="37"
       style={
         Object {
           "padding": 8,
@@ -54140,7 +54146,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -54187,7 +54193,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -54234,7 +54240,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -54281,7 +54287,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -54328,7 +54334,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -54375,7 +54381,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -54422,7 +54428,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -54469,7 +54475,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -54520,7 +54526,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -54634,7 +54640,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
       style={
         Object {
           "padding": 8,
@@ -54685,7 +54691,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -54736,7 +54742,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -55492,7 +55498,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -55543,7 +55549,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -55597,7 +55603,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -55651,7 +55657,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -55705,7 +55711,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -55766,7 +55772,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -56375,7 +56381,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -56426,7 +56432,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -56473,7 +56479,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -56520,7 +56526,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -56763,6 +56769,7 @@ exports[`Additional Information Component  should render component with thesis 1
                     },
                   ],
                   "fez_record_search_key_language": Array [],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_notes": Object {
@@ -57249,7 +57256,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -57315,7 +57322,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -57371,7 +57378,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -57431,7 +57438,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -58522,6 +58529,7 @@ exports[`Additional Information Component  should render component with working 
                       "rek_language_xsdmf_id": 10742,
                     },
                   ],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [
                     Object {
                       "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -58920,7 +58928,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -58971,7 +58979,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -59018,7 +59026,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -59072,7 +59080,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -59122,7 +59130,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -59173,7 +59181,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -59220,7 +59228,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -59267,7 +59275,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -59314,7 +59322,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -59370,7 +59378,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -59431,7 +59439,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -59518,7 +59526,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="25"
       style={
         Object {
           "padding": 8,
@@ -59761,6 +59769,7 @@ exports[`Additional Information Component  should render oa status value link in
                     },
                   ],
                   "fez_record_search_key_language": Array [],
+                  "fez_record_search_key_license": null,
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
                   "fez_record_search_key_notes": Object {
@@ -60250,7 +60259,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -60316,7 +60325,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -60372,7 +60381,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -60432,7 +60441,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,

@@ -199,6 +199,7 @@ export default {
                 "rek_language_of_title": "spa",
                 "rek_language_of_title_order": 1
             }],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_title": {
@@ -686,6 +687,13 @@ export default {
             "fez_record_search_key_keywords": [],
             "fez_record_search_key_language": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": {
+                "rek_license_id": 24759,
+                "rek_license_pid": "UQ:2d7b8a8",
+                "rek_license_xsdmf_id": 16636,
+                "rek_license": 453608,
+                "rek_license_lookup": "Creative Commons Attribution (only)"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_title": null,
