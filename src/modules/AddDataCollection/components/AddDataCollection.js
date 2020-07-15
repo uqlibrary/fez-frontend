@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
+import moment from 'moment';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -19,8 +21,11 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
+import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import DepositAgreementField from './DepositAgreementField';
 
 import { routes, validation } from 'config';
+import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
@@ -28,9 +33,25 @@ import { locale } from 'locale';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import DepositAgreementField from './DepositAgreementField';
-import moment from 'moment';
-import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+
+/*
+ * given an array of licenses containing a heading and an array of description lines,
+ * construct the html to display the licences
+ */
+export const licenseText = licenses => {
+    // export for test coverage
+    return (licenses || [])
+        .map(license => {
+            const flattenedDescripton = (license.description || [])
+                .map(description => {
+                    return `<p>${description}</p>`;
+                })
+                .join('');
+            const licenseTitle = (!!license.text && `<h5>${license.text}</h5>`) || '';
+            return licenseTitle.concat(flattenedDescripton);
+        })
+        .join('');
+};
 
 export default class AddDataCollection extends Component {
     static propTypes = {
@@ -106,6 +127,37 @@ export default class AddDataCollection extends Component {
                 </Grid>
             </Grid>
         );
+        const getLicenceHelp = template => {
+            // text is here as only way to combine with centralised CURRENT_LICENCES. No user-supplied data used
+            template.text = (
+                <div>
+                    <h3>Access conditions</h3>
+                    <ul>
+                        <li>Open Access (upload your data, or link to the data)</li>
+                        <li>Meditated Access</li>
+                    </ul>
+                    <h3>Licence</h3>
+                    <h4>UQ General Usage Terms and Conditions for data publishing in eSpace</h4>
+                    <p>
+                        University of Queensland provides standard licence agreements for researchers publishing their
+                        datasets in eSpace. The license agreements ensure that downloads and reuse of your data will be
+                        properly acknowledged.
+                    </p>
+                    <h4>Current types of licences</h4>
+                    {ReactHtmlParser(licenseText(CURRENT_LICENCES))}
+                    <p>
+                        View more on{' '}
+                        <a
+                            href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                            target="_blank"
+                        >
+                            UQ Terms & Conditions
+                        </a>
+                    </p>
+                </div>
+            );
+            return template;
+        };
         return (
             <StandardPage title={txt.pageTitle}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
@@ -277,7 +329,7 @@ export default class AddDataCollection extends Component {
                             <Grid item xs={12}>
                                 <StandardCard
                                     title={txt.information.accessAndLicensing.title}
-                                    help={txt.information.accessAndLicensing.help}
+                                    help={getLicenceHelp(txt.information.accessAndLicensing.help)}
                                 >
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} sm={12} md={4}>
