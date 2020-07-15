@@ -31,14 +31,6 @@ exports[`AdminSection component should render default view 1`] = `
             "fez_record_search_key_oa_status_type",
           ],
           Array [
-            "fez_record_search_key_institutional_status",
-            "fez_record_search_key_refereed_source",
-          ],
-          Array [
-            "fez_record_search_key_oa_status",
-            "fez_record_search_key_oa_status_type",
-          ],
-          Array [
             "additionalNotes",
           ],
         ],
@@ -148,12 +140,7 @@ exports[`AdminSection component should render disabled view 1`] = `
             "fez_record_search_key_oa_status_type",
           ],
           Array [
-            "fez_record_search_key_institutional_status",
-            "fez_record_search_key_refereed_source",
-          ],
-          Array [
-            "fez_record_search_key_oa_status",
-            "fez_record_search_key_oa_status_type",
+            "fez_record_search_key_license",
           ],
           Array [
             "additionalNotes",
