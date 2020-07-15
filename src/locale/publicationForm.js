@@ -517,6 +517,9 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
+            actionButtonLabel: 'Visit now',
+            message: "Theses are not submitted as 'Add a missing work' - use the official submission link",
+            alertTitle: 'Redirect',
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',
@@ -527,41 +530,41 @@ export default {
                     label: 'Title',
                     placeholder: 'Thesis title',
                 },
-                orgName: {
-                    floatingLabelText: 'Institution name',
-                    hintText: '',
-                },
-                orgUnitName: {
-                    floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business',
-                },
+                // orgName: {
+                //     floatingLabelText: 'Institution name',
+                //     hintText: '',
+                // },
+                // orgUnitName: {
+                //     floatingLabelText: 'Enrolling unit',
+                //     hintText: 'Enrolling unit, eg. School of Business',
+                // },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
                     year: 'Year',
                 },
-                thesisType: {
-                    label: 'Thesis type',
-                },
-                author: {
-                    label: 'Author name',
-                    placeholder: '',
-                },
+                // thesisType: {
+                //     label: 'Thesis type',
+                // },
+                // author: {
+                //     label: 'Author name',
+                //     placeholder: '',
+                // },
             },
         },
-        supervisors: {
-            ...txt.components.supervisors,
-        },
-        fieldOfResearch: {
-            title: 'Field of research',
-            // help: {
-            //     title: 'Field of research help',
-            //     text: 'Some help',
-            //     buttonLabel: 'Close'
-            // },
-            description: 'Select up to 3 Field of Research (FoR) codes',
-        },
+        // supervisors: {
+        //     ...txt.components.supervisors,
+        // },
+        // fieldOfResearch: {
+        //     title: 'Field of research',
+        //     // help: {
+        //     //     title: 'Field of research help',
+        //     //     text: 'Some help',
+        //     //     buttonLabel: 'Close'
+        //     // },
+        //     description: 'Select up to 3 Field of Research (FoR) codes',
+        // },
         keywords: {
             title: 'Keywords',
             // help: {
@@ -573,29 +576,29 @@ export default {
                 'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
         },
         optional: {
-            title: 'Optional information',
-            // help: {
-            //     title: 'Optional information help',
-            //     text: 'Some help',
-            //     buttonLabel: 'Close'
-            // },
+            // title: 'Optional information',
+            // // help: {
+            // //     title: 'Optional information help',
+            // //     text: 'Some help',
+            // //     buttonLabel: 'Close'
+            // // },
             fieldLabels: {
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
-                },
-                totalPages: {
-                    label: 'Total pages',
-                    placeholder: '',
-                },
+                // doi: {
+                //     label: 'DOI',
+                //     placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                // },
+                // totalPages: {
+                //     label: 'Total pages',
+                //     placeholder: '',
+                // },
                 abstract: {
                     label: 'Abstract',
                     placeholder: 'Provide an abstract or summary of the work',
                 },
                 notes: {
                     title: 'Additional notes',
-                    label: 'Notes (not publicly viewable)',
-                    placeholder: 'Provide any additional information',
+                    // label: 'Notes (not publicly viewable)',
+                    // placeholder: 'Provide any additional information',
                 },
             },
         },

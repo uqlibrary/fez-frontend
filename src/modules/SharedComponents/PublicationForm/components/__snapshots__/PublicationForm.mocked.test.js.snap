@@ -258,29 +258,6 @@ exports[`Component PublicationForm should render properly with non-matching doct
         </StandardCard>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      spacing={3}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={true}
-      />
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm="auto"
-        xs={12}
-      >
-        <WithStyles(ForwardRef(Button))
-          color="secondary"
-          disabled={false}
-          fullWidth={true}
-          onClick={[MockFunction]}
-        >
-          Abandon and search again
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
   </form>
 </ConfirmDiscardFormChanges>
 `;
