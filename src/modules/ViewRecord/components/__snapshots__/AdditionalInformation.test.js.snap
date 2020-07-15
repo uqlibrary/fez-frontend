@@ -26083,7 +26083,7 @@ exports[`Additional Information Component  should render component with conferen
     title="Additional information"
   >
     <div
-      key="1"
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -26130,7 +26130,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="2"
+      key="1"
       style={
         Object {
           "padding": 8,
@@ -26177,7 +26177,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="5"
+      key="4"
       style={
         Object {
           "padding": 8,
@@ -26639,7 +26639,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="6"
+      key="5"
       style={
         Object {
           "padding": 8,
@@ -26690,7 +26690,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -26737,7 +26737,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -26784,7 +26784,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -26831,7 +26831,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -26887,7 +26887,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -26934,7 +26934,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -26985,7 +26985,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -27039,7 +27039,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -27093,7 +27093,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="27"
       style={
         Object {
           "padding": 8,
@@ -27140,7 +27140,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="28"
       style={
         Object {
           "padding": 8,
@@ -27187,7 +27187,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="29"
       style={
         Object {
           "padding": 8,
@@ -27234,7 +27234,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="33"
+      key="32"
       style={
         Object {
           "padding": 8,
@@ -27290,7 +27290,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="34"
+      key="33"
       style={
         Object {
           "padding": 8,
@@ -27361,7 +27361,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="35"
+      key="34"
       style={
         Object {
           "padding": 8,
@@ -27520,7 +27520,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="37"
+      key="36"
       style={
         Object {
           "padding": 8,

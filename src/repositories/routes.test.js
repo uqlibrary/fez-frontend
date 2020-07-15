@@ -463,7 +463,7 @@ describe('Backend routes method', () => {
                     facets: { showOpenAccessOnly: true, filters: { one: 'one facet' } },
                 },
                 expected: {
-                    rek_oa_status: [453693, 453694, 453695, 453696, 453697, 453954, 454116],
+                    rek_oa_status: [453693, 453694, 453695, 453696, 453697, 453954, 454127, 454116],
                 },
             },
         ];

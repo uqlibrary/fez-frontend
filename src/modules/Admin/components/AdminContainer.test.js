@@ -71,6 +71,16 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render record not found view', () => {
+        const wrapper = setup({
+            recordToView: null,
+            loadingRecordToView: false,
+            isDeleted: true,
+            recordToViewError: { message: 'test', status: 404 },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with tabbed interface', () => {
         Cookies.mockImplementation(() => ({ get: jest.fn(() => 'tabbed') }));
 

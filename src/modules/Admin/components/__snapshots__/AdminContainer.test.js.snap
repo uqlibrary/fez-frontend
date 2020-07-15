@@ -12818,6 +12818,51 @@ exports[`AdminContainer component should render mobile view 1`] = `
 </Fragment>
 `;
 
+exports[`AdminContainer component should render record not found view 1`] = `
+<StandardPage
+  className="viewRecord"
+  title="Record not found"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <div>
+        <p>
+          The record you are attempting to access does not appear in our system.
+        </p>
+        <p>
+          If you believe this is in error, please
+          <a
+            href="mailto:espace@library.uq.edu.au"
+          >
+             contact the eSpace team.
+          </a>
+        </p>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Typography))
+    style={
+      Object {
+        "opacity": 0.5,
+      }
+    }
+    variant="caption"
+  >
+    (404 - test)
+  </WithStyles(ForwardRef(Typography))>
+</StandardPage>
+`;
+
 exports[`AdminContainer component should show Add form 1`] = `
 <Fragment>
   <Connect(Component)
