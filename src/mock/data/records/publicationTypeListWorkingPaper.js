@@ -179,6 +179,7 @@ export default {
                 "rek_org_name_xsdmf_id": 6613,
                 "rek_org_name": "The University of Queensland"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_unit_name": {
                 "rek_org_unit_name_id": 341470,
                 "rek_org_unit_name_pid": "UQ:333631",

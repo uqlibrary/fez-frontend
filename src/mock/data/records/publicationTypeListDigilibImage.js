@@ -362,6 +362,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_period": [{
@@ -841,6 +842,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_period": [{

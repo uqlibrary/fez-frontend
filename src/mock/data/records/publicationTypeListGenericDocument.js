@@ -98,6 +98,7 @@ export default {
                 "rek_oa_status": 453698,
                 "rek_oa_status_lookup": "Not Open Access"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1185841,
                 "rek_notes_pid": "UQ:692945",

@@ -684,6 +684,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                   "rek_oa_status_pid": "UQ:184230",
                   "rek_oa_status_xsdmf_id": 16992,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": null,
                 "fez_record_search_key_publisher": Object {
                   "rek_publisher": "Australian Chinese Daily News",
@@ -1034,6 +1035,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       "rek_oa_status_pid": "UQ:184230",
                       "rek_oa_status_xsdmf_id": 16992,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": null,
                     "fez_record_search_key_publisher": Object {
                       "rek_publisher": "Australian Chinese Daily News",
@@ -1396,6 +1398,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         "rek_oa_status_pid": "UQ:184230",
                         "rek_oa_status_xsdmf_id": 16992,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": null,
                       "fez_record_search_key_publisher": Object {
                         "rek_publisher": "Australian Chinese Daily News",
@@ -2689,6 +2692,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                   "rek_oa_status_pid": "UQ:184230",
                   "rek_oa_status_xsdmf_id": 16992,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": null,
                 "fez_record_search_key_publisher": Object {
                   "rek_publisher": "Australian Chinese Daily News",
@@ -3041,6 +3045,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       "rek_oa_status_pid": "UQ:184230",
                       "rek_oa_status_xsdmf_id": 16992,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": null,
                     "fez_record_search_key_publisher": Object {
                       "rek_publisher": "Australian Chinese Daily News",
@@ -3405,6 +3410,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         "rek_oa_status_pid": "UQ:184230",
                         "rek_oa_status_xsdmf_id": 16992,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": null,
                       "fez_record_search_key_publisher": Object {
                         "rek_publisher": "Australian Chinese Daily News",

@@ -380,6 +380,7 @@ export default {
                 "rek_org_name_xsdmf_id": 6956,
                 "rek_org_name": "UDAL, BDA, GU, AIA, UQ, QUT, Architectus"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_unit_name": {
                 "rek_org_unit_name_id": 337902,
                 "rek_org_unit_name_pid": "UQ:311752",
