@@ -159,39 +159,44 @@ export class AdditionalInformationClass extends PureComponent {
             return this.renderHTML(data);
         }
 
+        const testId = subkey.replace(/_/g, '-');
+
         switch (subkey) {
             case 'rek_doi':
                 return this.renderDoi(data);
             case 'rek_journal_name':
                 return this.renderJournalName();
             case 'rek_publisher':
-                return this.renderLink(routes.pathConfig.list.publisher(data), data);
+                return this.renderLink(routes.pathConfig.list.publisher(data), data, testId);
             case 'rek_herdc_code':
-                return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data, testId);
             case 'rek_herdc_status':
-                return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
+                return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data, testId);
             case 'rek_ands_collection_type':
-                return !!data && data;
             case 'rek_access_conditions':
-                return !!data && data;
+                return !!data && <span data-testid={testId}>{data}</span>;
             case 'rek_series':
-                return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
+                return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
             case 'rek_org_unit_name':
-                return this.renderLink(routes.pathConfig.list.orgUnitName(data), data);
+                return this.renderLink(routes.pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
-                return this.renderLink(routes.pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]), data);
+                return this.renderLink(
+                    routes.pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]),
+                    data,
+                    testId,
+                );
             case 'rek_book_title':
-                return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data, testId);
             // case 'rek_job_number':
             //     return this.renderLink(routes.pathConfig.list.jobNumber(object[subkey]), data);
             case 'rek_conference_name':
-                return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data, testId);
             case 'rek_proceedings_title':
-                return this.renderLink(routes.pathConfig.list.proceedingsTitle(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.proceedingsTitle(object[subkey]), data, testId);
             default:
-                return data;
+                return <span data-testid={testId}>{data}</span>;
         }
     };
 
@@ -228,7 +233,7 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup);
+        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup, 'rek-license-lookup');
         const licenseLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqLicenseLinkText =
             licenseLink && licenseLink.className.indexOf('uq') === 0
@@ -239,7 +244,7 @@ export class AdditionalInformationClass extends PureComponent {
             <span>
                 {licenseLookup}
                 {licenseLink && (
-                    <div>
+                    <div data-testid="rek-license-link">
                         <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
                             {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
                         </ExternalLink>
