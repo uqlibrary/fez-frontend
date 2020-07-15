@@ -16,7 +16,7 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { publicationTypes, validation } from 'config';
 import { default as txt } from 'locale/publicationForm';
 import * as recordForms from './Forms';
-import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
+import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING, PUBLICATION_TYPE_THESIS } from 'config/general';
 import Typography from '@material-ui/core/Typography';
 import {
     ContentIndicatorsField,
@@ -102,6 +102,12 @@ export default class PublicationForm extends Component {
         !!event && event.preventDefault();
     };
 
+    // will the form display the Add a missing work form, or does it offer a different function?
+    // (if true, display uploader and submission buttons)
+    isAddWorkUsed() {
+        return this.props.formValues.get('rek_display_type') !== PUBLICATION_TYPE_THESIS;
+    }
+
     render() {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
@@ -185,22 +191,24 @@ export default class PublicationForm extends Component {
                                         </StandardCard>
                                     </Grid>
                                 )}
-                                <Grid item xs={12}>
-                                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                        <Field
-                                            name="files"
-                                            component={FileUploadField}
-                                            disabled={this.props.submitting}
-                                            requireOpenAccessStatus
-                                            validate={
-                                                this.props.isNtro
-                                                    ? [validation.fileUploadRequired, validation.validFileUpload]
-                                                    : [validation.validFileUpload]
-                                            }
-                                            isNtro={this.props.isNtro}
-                                        />
-                                    </StandardCard>
-                                </Grid>
+                                {this.isAddWorkUsed() && (
+                                    <Grid item xs={12}>
+                                        <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                            <Field
+                                                name="files"
+                                                component={FileUploadField}
+                                                disabled={this.props.submitting}
+                                                requireOpenAccessStatus
+                                                validate={
+                                                    this.props.isNtro
+                                                        ? [validation.fileUploadRequired, validation.validFileUpload]
+                                                        : [validation.validFileUpload]
+                                                }
+                                                isNtro={this.props.isNtro}
+                                            />
+                                        </StandardCard>
+                                    </Grid>
+                                )}
                             </React.Fragment>
                         )}
                         {!!this.props.formComponent && alertProps && (
@@ -209,35 +217,37 @@ export default class PublicationForm extends Component {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={3}>
-                        <Grid item xs />
-                        <Grid item xs={12} sm="auto">
-                            <Button
-                                color="secondary"
-                                fullWidth
-                                children={txt.cancel}
-                                disabled={this.props.submitting}
-                                onClick={this.props.onFormCancel}
-                            />
-                        </Grid>
-                        {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
-                            (this.props.hasSubtypes &&
-                                this.props.formValues.get('rek_subtype') &&
-                                this.props.formValues.get('rek_subtype').length > 0)) && (
+                    {this.props.formValues.get('rek_display_type') !== PUBLICATION_TYPE_THESIS && (
+                        <Grid container spacing={3}>
+                            <Grid item xs />
                             <Grid item xs={12} sm="auto">
                                 <Button
-                                    style={{ whiteSpace: 'nowrap' }}
-                                    id="submit-work"
-                                    variant="contained"
-                                    color="primary"
+                                    color="secondary"
                                     fullWidth
-                                    children={txt.submit}
-                                    onClick={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit}
+                                    children={txt.cancel}
+                                    disabled={this.props.submitting}
+                                    onClick={this.props.onFormCancel}
                                 />
                             </Grid>
-                        )}
-                    </Grid>
+                            {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
+                                (this.props.hasSubtypes &&
+                                    this.props.formValues.get('rek_subtype') &&
+                                    this.props.formValues.get('rek_subtype').length > 0)) && (
+                                <Grid item xs={12} sm="auto">
+                                    <Button
+                                        style={{ whiteSpace: 'nowrap' }}
+                                        id="submit-work"
+                                        variant="contained"
+                                        color="primary"
+                                        fullWidth
+                                        children={txt.submit}
+                                        onClick={this.props.handleSubmit}
+                                        disabled={this.props.submitting || this.props.disableSubmit}
+                                    />
+                                </Grid>
+                            )}
+                        </Grid>
+                    )}
                 </form>
             </ConfirmDiscardFormChanges>
         );
