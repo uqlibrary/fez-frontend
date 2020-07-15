@@ -39,6 +39,10 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
     }
 }
 
+function removeAncientDate(data) {
+    return data.filter(yearData => yearData.key !== '1000');
+}
+
 /**
  * getCategories - transforms raw academic publication years data into categories, eg years
  * eg [1977, 1980, 1982]
@@ -46,10 +50,10 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
  * @returns {Array}
  */
 export function getPublicationsPerYearCategories(data) {
-    const rawData = [...data];
+    const rawData = removeAncientDate(data);
     // extract years and parse year value into int
     const categories = rawData.map(yearData => {
-        return yearData.key === '1000' ? 'N/A' : parseInt(yearData.key, 10);
+        return parseInt(yearData.key, 10);
     });
 
     // sort years in ascending order
@@ -68,7 +72,7 @@ export function getPublicationsPerYearCategories(data) {
  * @returns {Array}
  */
 export function getPublicationsPerYearSeries(data, topPublicationTypes) {
-    const rawData = [...data];
+    const rawData = removeAncientDate(data);
     // initialise data structure
     const initialValues = new Array(rawData.length).fill(0);
 
