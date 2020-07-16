@@ -63,10 +63,9 @@ export const getWarningMessage = record => {
     const editionValue = !!record.fez_record_search_key_edition && record.fez_record_search_key_edition.rek_edition;
     if (!!editionValue && !/^\d+$/.test(editionValue.trim())) {
         warningMessages.push(
-            txt.alertMessages.invalidOptionalField.replace(
-                '%FIELDNAME%',
-                txt.headings.default.fez_record_search_key_edition,
-            ),
+            txt.alertMessages.invalidOptionalField
+                .replace('%FIELDNAME%', txt.headings.default.fez_record_search_key_edition)
+                .replace('%REASON%', txt.alertMessages.fieldValidationDetail.edition),
         );
     }
 
