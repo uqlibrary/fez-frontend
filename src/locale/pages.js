@@ -512,10 +512,10 @@ export default {
                 message: 'This work has been deleted.',
             },
             notFound: {
-                title: 'Record not found',
+                title: 'Work not found',
                 message: (
                     <div>
-                        <p>The record you are attempting to access does not appear in our system.</p>
+                        <p>The work you are attempting to access does not appear in our system.</p>
                         <p>
                             If you believe this is in error, please
                             <a href="mailto:espace@library.uq.edu.au"> contact the eSpace team.</a>
