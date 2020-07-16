@@ -36,6 +36,7 @@ export default class PublicationForm extends Component {
         changeDisplayType: PropTypes.func,
         changeFormType: PropTypes.func,
         isNtro: PropTypes.bool,
+        isHdrStudent: PropTypes.bool,
         hasDefaultDocTypeSubType: PropTypes.bool,
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
