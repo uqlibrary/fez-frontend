@@ -86,8 +86,8 @@ describe('NewViewRecord', () => {
 
     it('should render missing record message', () => {
         const { getByText } = setup({ isDeleted: true, recordToViewError: { message: 'test', status: 404 } });
-        expect(getByText('Record not found')).toBeInTheDocument();
-        expect(getByText('The record you are attempting to access does not appear in our system.')).toBeInTheDocument();
+        expect(getByText('Work not found')).toBeInTheDocument();
+        expect(getByText('The work you are attempting to access does not appear in our system.')).toBeInTheDocument();
     });
 
     it('should render loader', () => {
