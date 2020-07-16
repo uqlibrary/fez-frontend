@@ -17,9 +17,17 @@ describe('ThesisForm ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render component with 0 input fields', () => {
+    it('should normalize total pages field', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(0);
+        expect(wrapper.instance().getNumbersOnly('Four')).toBe('');
+        expect(wrapper.instance().getNumbersOnly('12Three')).toBe('12');
+        expect(wrapper.instance().getNumbersOnly('  01Three')).toBe('01');
+        expect(wrapper.instance().getNumbersOnly('124')).toBe('124');
+    });
+
+    it('should render component with 12 input fields', () => {
+        const wrapper = setup();
+        expect(wrapper.find('Field').length).toEqual(12);
     });
 
     it('should render component with all fields disabled', () => {

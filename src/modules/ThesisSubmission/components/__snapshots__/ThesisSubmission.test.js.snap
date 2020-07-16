@@ -193,7 +193,9 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
+                  label="Author name"
                   name="currentAuthor.0.nameAsPublished"
+                  placeholder=""
                   required={true}
                   rows={1}
                   textFieldId="rek-author"
@@ -242,6 +244,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                       },
                     ]
                   }
+                  label="Thesis type"
                   name="rek_genre_type"
                   required={true}
                   validate={
@@ -270,6 +273,8 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     }
                   }
                   disabled={false}
+                  floatingLabelText="Enrolling unit"
+                  hintText="Enrolling unit, eg. School of Business"
                   name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                   required={true}
                   validate={
@@ -740,7 +745,9 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
+                  label="Author name"
                   name="currentAuthor.0.nameAsPublished"
+                  placeholder=""
                   required={true}
                   rows={1}
                   textFieldId="rek-author"
@@ -789,6 +796,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                       },
                     ]
                   }
+                  label="Thesis type"
                   name="rek_genre_type"
                   required={true}
                   validate={
@@ -817,6 +825,8 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     }
                   }
                   disabled={false}
+                  floatingLabelText="Enrolling unit"
+                  hintText="Enrolling unit, eg. School of Business"
                   name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                   required={true}
                   validate={

@@ -16,20 +16,398 @@ exports[`ThesisForm  should render component 1`] = `
         container={true}
         spacing={2}
       >
-        <Alert
-          action={[Function]}
-          actionButtonLabel="Visit now"
-          allowDismiss={false}
-          customIcon={null}
-          customType={null}
-          disableAlertClick={false}
-          dismissTitle="Click to dismiss this alert"
-          message="Theses are not submitted as 'Add a missing work' - use the official submission link"
-          showLoader={false}
-          title="Redirect"
-          type="info"
-          wiggle={null}
-        />
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            autoFocus={true}
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Title"
+            multiline={true}
+            name="rek_title"
+            placeholder="Thesis title"
+            required={true}
+            rows={1}
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": null,
+                  "type": [Function],
+                },
+                "compare": null,
+                "displayName": "Connect(Component)",
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            floatingLabelText="Enrolling unit"
+            hintText="Enrolling unit, eg. School of Business"
+            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": null,
+                  "type": [Function],
+                },
+                "compare": null,
+                "displayName": "Connect(Component)",
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            floatingLabelText="Institution name"
+            hintText=""
+            name="fez_record_search_key_org_name.rek_org_name"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(GenericSelectField)",
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            locale={
+              Object {
+                "label": "Thesis type",
+              }
+            }
+            name="rek_genre_type"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            allowPartial={true}
+            className="requiredHintField"
+            component={[Function]}
+            disabled={false}
+            floatingTitle="Publication date"
+            floatingTitleRequired={true}
+            name="rek_date"
+            partialDateFieldId="rek-date"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Author name"
+            name="currentAuthor.0.nameAsPublished"
+            placeholder=""
+            required={true}
+            rows={1}
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </StandardCard>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Supervisors"
+    >
+      <Field
+        component={[Function]}
+        contributorEditorId="supervisors"
+        disabled={false}
+        locale={
+          Object {
+            "form": Object {
+              "locale": Object {
+                "addButton": "Add supervisor",
+                "descriptionStep1": <div>
+                  <span
+                    className="authorSteps"
+                  >
+                    Step 1 of 2
+                  </span>
+                   
+                  - Please 
+                  <b>
+                    add to a list of supervisors below
+                  </b>
+                  , in the format and order that they are published.
+                </div>,
+                "descriptionStep1NoStep2": <div>
+                  Please 
+                  <b>
+                    add to a list of supervisors below
+                  </b>
+                  , in the format and order that they are published.
+                </div>,
+                "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "supervisors-name-as-published-field",
+                "nameAsPublishedHint": "",
+                "nameAsPublishedLabel": "Enter each supervisor's name as published (eg. Smith, John)",
+              },
+            },
+            "header": Object {
+              "locale": Object {
+                "contributorAssignmentColumn": "Select your name",
+                "deleteAll": "Remove all items",
+                "deleteAllConfirmation": Object {
+                  "cancelButtonLabel": "No",
+                  "confirmButtonLabel": "Yes",
+                  "confirmationMessage": "Are you sure you want to delete all items?",
+                  "confirmationTitle": "Delete all",
+                },
+                "descriptionStep2": <div>
+                  <span
+                    className="authorSteps"
+                  >
+                    Step 2 of 2
+                  </span>
+                   
+                  - Please 
+                  <b>
+                    select your name
+                  </b>
+                   from the list below (if applicable).
+                </div>,
+                "identifierColumn": "UQ identifier",
+                "nameColumn": "Supervisor's name as published",
+                "reorderColumn": "Reorder items",
+              },
+            },
+            "row": Object {
+              "locale": Object {
+                "deleteHint": "Remove this item",
+                "deleteRecordConfirmation": Object {
+                  "cancelButtonLabel": "No",
+                  "confirmButtonLabel": "Yes",
+                  "confirmationMessage": "Are you sure you want to delete this item?",
+                  "confirmationTitle": "Delete item",
+                },
+                "editHint": "Edit this item",
+                "moveDownHint": "Move item down the order",
+                "moveUpHint": "Move item up the order",
+                "selectHint": "Select this supervisor ([name]) to assign it as you",
+                "selectedHint": "This is you",
+                "suffix": " listed supervisor",
+                "unselectedHint": "Select this to confirm this supervisor is you",
+              },
+            },
+          }
+        }
+        name="supervisors"
+        required={true}
+        validate={
+          Array [
+            [Function],
+          ]
+        }
+      />
+    </StandardCard>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Field of research"
+    >
+      <WithStyles(ForwardRef(Typography))>
+        Select up to 3 Field of Research (FoR) codes
+      </WithStyles(ForwardRef(Typography))>
+      <Field
+        component={[Function]}
+        disabled={false}
+        distinctOnly={true}
+        hideReorder={true}
+        locale={
+          Object {
+            "form": Object {
+              "locale": Object {
+                "inputFieldHint": "Start typing code or field name and select from list",
+                "inputFieldLabel": "Field of research",
+              },
+            },
+            "header": Object {
+              "locale": Object {
+                "deleteAll": "Remove all items",
+                "deleteAllConfirmation": Object {
+                  "cancelButtonLabel": "No",
+                  "confirmButtonLabel": "Yes",
+                  "confirmationMessage": "Are you sure you want to delete all items?",
+                  "confirmationTitle": "Delete all",
+                },
+                "nameColumn": "Field of research",
+              },
+            },
+            "row": Object {
+              "locale": Object {
+                "deleteHint": "Remove this item",
+                "deleteRecordConfirmation": Object {
+                  "cancelButtonLabel": "No",
+                  "confirmButtonLabel": "Yes",
+                  "confirmationMessage": "Are you sure you want to delete this item?",
+                  "confirmationTitle": "Delete item",
+                },
+              },
+            },
+          }
+        }
+        maxCount={3}
+        name="fieldOfResearch"
+      />
+    </StandardCard>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Optional information"
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="DOI"
+            name="fez_record_search_key_doi.rek_doi"
+            placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Total pages"
+            name="fez_record_search_key_total_pages.rek_total_pages"
+            normalize={[Function]}
+            placeholder=""
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Abstract"
+            multiline={true}
+            name="fez_record_search_key_description.rek_description"
+            placeholder="Provide an abstract or summary of the work"
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes (not publicly viewable)"
+            multiline={true}
+            name="comments"
+            placeholder="Provide any additional information"
+            title="Additional notes"
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
