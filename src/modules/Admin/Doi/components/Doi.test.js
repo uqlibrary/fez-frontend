@@ -148,7 +148,7 @@ describe('DOI component', () => {
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
         expect(renderedWarningMessage.text()).toBe(
-            'Please note:Field Edition has an invalid value; it will be omitted from submission.',
+            'Please note:Field Edition has an invalid value, e.g. 3rd or 3rd edn instead of 3; it will be omitted from submission.',
         );
     });
 
