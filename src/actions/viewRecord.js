@@ -24,13 +24,13 @@ export function loadRecordToView(pid, isEdit = false) {
             .catch(error => {
                 if (
                     !!(error.status || (error.response || {}).status) &&
-                    (error.status === 404 || error.response.status === 410) &&
+                    (error.status === 404 || (error.response || {}).status === 410) &&
                     error.message
                 ) {
                     dispatch({
                         type: actions.VIEW_RECORD_LOAD_FAILED,
                         payload: {
-                            status: error.status || error.response.status,
+                            status: error.status || (error.response || {}).status,
                             message: error.message,
                         },
                         isDeleted: true,
