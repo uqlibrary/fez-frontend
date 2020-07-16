@@ -281,6 +281,7 @@ export default {
         "rek_oa_status": 453692,
         "rek_oa_status_lookup": "Not yet assessed"
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_parent_publication": null,
     "fez_record_search_key_place_of_publication": {

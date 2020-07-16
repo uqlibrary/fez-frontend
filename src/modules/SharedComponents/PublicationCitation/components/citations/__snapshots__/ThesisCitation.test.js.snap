@@ -587,6 +587,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                   "rek_oa_status_pid": "UQ:170415",
                   "rek_oa_status_xsdmf_id": 17004,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": Object {
                   "rek_org_name": "The University of Queensland",
                   "rek_org_name_id": 400082,
@@ -869,6 +870,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                       "rek_oa_status_pid": "UQ:170415",
                       "rek_oa_status_xsdmf_id": 17004,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": Object {
                       "rek_org_name": "The University of Queensland",
                       "rek_org_name_id": 400082,
@@ -1163,6 +1165,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                         "rek_oa_status_pid": "UQ:170415",
                         "rek_oa_status_xsdmf_id": 17004,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": Object {
                         "rek_org_name": "The University of Queensland",
                         "rek_org_name_id": 400082,
@@ -2345,6 +2348,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                   "rek_oa_status_pid": "UQ:170415",
                   "rek_oa_status_xsdmf_id": 17004,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": Object {
                   "rek_org_name": "The University of Queensland",
                   "rek_org_name_id": 400082,
@@ -2629,6 +2633,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                       "rek_oa_status_pid": "UQ:170415",
                       "rek_oa_status_xsdmf_id": 17004,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": Object {
                       "rek_org_name": "The University of Queensland",
                       "rek_org_name_id": 400082,
@@ -2925,6 +2930,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                         "rek_oa_status_pid": "UQ:170415",
                         "rek_oa_status_xsdmf_id": 17004,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": Object {
                         "rek_org_name": "The University of Queensland",
                         "rek_org_name_id": 400082,
