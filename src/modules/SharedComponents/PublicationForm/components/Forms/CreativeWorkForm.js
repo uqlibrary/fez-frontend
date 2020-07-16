@@ -55,7 +55,7 @@ export default class CreativeWorkForm extends Component {
             ...CPEE_NTRO_SUBTYPES,
             NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
         ].includes(this.props.subtype);
-        console.log(displayEndDate);
+
         return (
             <Grid container spacing={3}>
                 <Grid item xs={12}>
