@@ -22,7 +22,7 @@ export function loadRecordToView(pid, isEdit = false) {
                 return Promise.resolve(response.data);
             })
             .catch(error => {
-                if (error.status && (error.status === 410 || error.status === 404) && error.message) {
+                if (error.status === 410 || error.status === 404) {
                     dispatch({
                         type: actions.VIEW_RECORD_LOAD_FAILED,
                         payload: error,
