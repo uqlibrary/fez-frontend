@@ -67,6 +67,7 @@ exports[`Add new record should render alert about file uploading or issue error 
             "nameAsPublished": "",
           },
         ],
+        "isHdrStudent": false,
         "rek_title": "",
       }
     }
@@ -128,6 +129,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
             "nameAsPublished": "Fred",
           },
         ],
+        "isHdrStudent": false,
         "rek_title": "",
       }
     }
