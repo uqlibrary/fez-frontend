@@ -34,21 +34,31 @@ export class NtroDetailsClass extends PureComponent {
         account: PropTypes.object,
     };
 
-    ViewNtroRow = ({ heading, subheading, className, data }) => (
+    ViewNtroRow = ({ heading, subheading, className, data, rowId }) => (
         <div style={{ padding: 8 }}>
             <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
-                <Grid item xs={12} sm={3}>
-                    <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
+                <Grid item xs={12} sm={3} data-testid={`${rowId}-label`}>
+                    <Typography
+                        variant="body2"
+                        component={'span'}
+                        classes={{ root: this.props.classes.header }}
+                        data-testid={`${rowId}-label-0`}
+                    >
                         {heading}
                     </Typography>
                     {!!subheading && (
-                        <Typography variant="caption" component={'span'} classes={{ root: this.props.classes.header }}>
+                        <Typography
+                            variant="caption"
+                            component={'span'}
+                            classes={{ root: this.props.classes.header }}
+                            data-testid={`${rowId}-label-1`}
+                        >
                             {subheading}
                         </Typography>
                     )}
                 </Grid>
                 <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                    <Typography variant="body2" component={'span'} className={className}>
+                    <Typography variant="body2" component={'span'} className={className} data-testid={rowId}>
                         {data}
                     </Typography>
                 </Grid>
@@ -90,6 +100,7 @@ export class NtroDetailsClass extends PureComponent {
                                                 item.rek_significance_lookup) ||
                                             global.global.defaultAuthorDataPlaceholder
                                         }
+                                        rowId={`rek-significance-${index}`}
                                     />
                                 );
                             } else {
@@ -130,6 +141,7 @@ export class NtroDetailsClass extends PureComponent {
                                                 ReactHtmlParser(item.rek_creator_contribution_statement)) ||
                                             global.global.defaultAuthorDataPlaceholder
                                         }
+                                        rowId={`rek-creator-contribution-statement-${index}`}
                                     />
                                 );
                             } else {
@@ -143,11 +155,13 @@ export class NtroDetailsClass extends PureComponent {
                                 className={this.props.classes.richTextParagraphFix}
                                 heading={locale.viewRecord.headings.NTRO.ntroAbstract}
                                 data={ReactHtmlParser(publication.rek_formatted_abstract)}
+                                rowId="rek-formatted-abstract"
                             />
                         ) : (
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.ntroAbstract}
                                 data={publication.rek_description}
+                                rowId="rek-description"
                             />
                         ))}
                     {/* ISMN */}
@@ -156,13 +170,14 @@ export class NtroDetailsClass extends PureComponent {
                             heading={locale.viewRecord.headings.NTRO.fez_record_search_key_ismn}
                             data={publication.fez_record_search_key_ismn.map((item, index) => {
                                 return (
-                                    <span key={index}>
+                                    <span key={index} data-testid={`rek-ismn-${index}`}>
                                         {item.rek_ismn}
                                         {publication.fez_record_search_key_ismn.length > 1 &&
                                             index < publication.fez_record_search_key_ismn.length - 1 && <br />}
                                     </span>
                                 );
                             })}
+                            rowId="rek-ismn"
                         />
                     )}
                     {/* ISRC */}
@@ -171,13 +186,14 @@ export class NtroDetailsClass extends PureComponent {
                             heading={locale.viewRecord.headings.NTRO.fez_record_search_key_isrc}
                             data={publication.fez_record_search_key_isrc.map((item, index) => {
                                 return (
-                                    <span key={index}>
+                                    <span key={index} data-testid={`rek-isrc-${index}`}>
                                         {item.rek_isrc}
                                         {publication.fez_record_search_key_isrc.length > 1 &&
                                             index < publication.fez_record_search_key_isrc.length - 1 && <br />}
                                     </span>
                                 );
                             })}
+                            rowId="rek-isrc"
                         />
                     )}
                     {/* Volume number */}
@@ -188,6 +204,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.rek_volume_number}
                                 data={publication.fez_record_search_key_volume_number.rek_volume_number}
+                                rowId="rek-description"
                             />
                         )}
                     {/* Issue number */}
@@ -198,6 +215,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.rek_issue_number}
                                 data={publication.fez_record_search_key_issue_number.rek_issue_number}
+                                rowId="rek-issue-number"
                             />
                         )}
                     {/* Start page */}
@@ -209,6 +227,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.rek_start_page}
                                 data={publication.fez_record_search_key_start_page.rek_start_page}
+                                rowId="rek-start-page"
                             />
                         )}
                     {/* End page */}
@@ -220,6 +239,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.rek_end_page}
                                 data={publication.fez_record_search_key_end_page.rek_end_page}
+                                rowId="rek-end-page"
                             />
                         )}
                     {/* Total pages */}
@@ -232,6 +252,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.rek_total_pages}
                                 data={publication.fez_record_search_key_total_pages.rek_total_pages}
+                                rowId="rek-total-pages"
                             />
                         )}
 
@@ -242,7 +263,7 @@ export class NtroDetailsClass extends PureComponent {
                                 heading={locale.viewRecord.headings.NTRO.rek_language}
                                 data={publication.fez_record_search_key_language.map((item, index) => {
                                     return (
-                                        <span key={index}>
+                                        <span key={index} data-testid={`rek-language-${index}`}>
                                             {general.LANGUAGE.filter(language => {
                                                 return item.rek_language === language.value;
                                             }).map(language => {
@@ -254,6 +275,7 @@ export class NtroDetailsClass extends PureComponent {
                                         </span>
                                     );
                                 })}
+                                rowId="rek-language"
                             />
                         )}
 
@@ -263,6 +285,7 @@ export class NtroDetailsClass extends PureComponent {
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.rek_original_format}
                                 data={publication.fez_record_search_key_original_format.rek_original_format}
+                                rowId="rek-original-format"
                             />
                         )}
                     {/* Audience size */}
@@ -274,6 +297,7 @@ export class NtroDetailsClass extends PureComponent {
                                     publication.fez_record_search_key_audience_size.rek_audience_size_lookup ||
                                     'Not set'
                                 }
+                                rowId="rek-audience-size"
                             />
                         )}
                     {/* Quality indicators */}
@@ -281,9 +305,17 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_quality_indicator.length > 0 && (
                             <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.qualityIndicators}
-                                data={publication.fez_record_search_key_quality_indicator
-                                    .map(item => item.rek_quality_indicator_lookup || 'Not set')
-                                    .join(', ')}
+                                data={publication.fez_record_search_key_quality_indicator.map(
+                                    (item, index, fsrkqiArray) => (
+                                        <React.Fragment key={index}>
+                                            <span data-testid={`rek-content-indicator-${index}`}>
+                                                {item.rek_quality_indicator_lookup || 'Not set'}
+                                            </span>
+                                            {index < fsrkqiArray.length - 1 && ', '}
+                                        </React.Fragment>
+                                    ),
+                                )}
+                                rowId="rek-quality-indicator"
                             />
                         )}
                 </StandardCard>
