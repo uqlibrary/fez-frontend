@@ -292,7 +292,7 @@ export default {
                 fez_record_search_key_end_date: 'End date',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
-                fez_record_search_key_contributor: 'Consultant(s)',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_original_format: 'Physical description',
                 fez_record_search_key_rights: 'Rights',
             },
