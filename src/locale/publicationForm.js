@@ -517,6 +517,10 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
+            hdrRedirectActionButtonLabel: 'Visit now',
+            hdrRedirectMessage:
+                "HDR theses cannot be submitted via 'Add a missing work' - use the official submission link to upload your thesis",
+            hdrRedirectAlertTitle: 'Redirect',
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',

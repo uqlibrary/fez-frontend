@@ -1,6 +1,6 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
-import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
+import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm, ThesisHdrRedirect } from './Forms';
 import { validation } from 'config';
 
 function setup(testProps = {}) {
@@ -217,6 +217,7 @@ describe('Component PublicationForm', () => {
             changeDisplayType: changeDisplayType,
             changeFormType: changeFormType,
         });
+        // eslint-disable-next-line camelcase
         const UNSAFE_componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'UNSAFE_componentWillReceiveProps');
         wrapper.setProps({
             submitSucceeded: true,
@@ -278,5 +279,18 @@ describe('Component PublicationForm', () => {
             validation.fileUploadRequired,
             validation.validFileUpload,
         ]);
+    });
+
+    it('should render component with HDR Thesis', () => {
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 187,
+            },
+            isHdrStudent: true,
+            hasSubtypes: true,
+            subtypeVocabId: 2222,
+            formComponentAlternate: ThesisHdrRedirect,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

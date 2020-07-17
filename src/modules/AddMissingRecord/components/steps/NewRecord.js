@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 
 export default class NewRecord extends PureComponent {
     static propTypes = {
+        account: PropTypes.object,
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         rawSearchQuery: PropTypes.string,
@@ -63,6 +64,11 @@ export default class NewRecord extends PureComponent {
                 },
             ],
             rek_title: rawSearchQuery || '',
+            isHdrStudent:
+                !!this.props.account &&
+                this.props.account.class &&
+                this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
+                this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0,
         };
 
         const isPID = /UQ:(.*)/;

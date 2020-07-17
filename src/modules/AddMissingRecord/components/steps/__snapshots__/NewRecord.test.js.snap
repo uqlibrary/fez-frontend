@@ -67,6 +67,7 @@ exports[`Add new record should render alert about file uploading or issue error 
             "nameAsPublished": "",
           },
         ],
+        "isHdrStudent": false,
         "rek_title": "",
       }
     }
@@ -128,6 +129,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
             "nameAsPublished": "Fred",
           },
         ],
+        "isHdrStudent": false,
         "rek_title": "",
       }
     }
@@ -646,4 +648,79 @@ exports[`Add new record should render the confirm dialog without an alert for a 
   onCancelAction={[Function]}
   onRef={[Function]}
 />
+`;
+
+exports[`Add new record should render thesis as alert if HDR student 1`] = `
+<Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "alternateActionButtonLabel": "Fix record",
+        "cancelButtonLabel": "Add another missing work",
+        "confirmButtonLabel": "Go to my research",
+        "confirmationMessage": <WithStyles(ForwardRef(Grid))
+          container={true}
+          spacing={3}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <Alert
+              allowDismiss={false}
+              customIcon={null}
+              customType={null}
+              disableAlertClick={false}
+              dismissTitle="Click to dismiss this alert"
+              message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
+              showLoader={false}
+              title="File upload and/or notes post failed"
+              type="warning"
+              wiggle={null}
+            />
+            <p>
+              Your work has been saved.
+              <br />
+              <br />
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+            </p>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>,
+        "confirmationTitle": "Your work has been submitted",
+        "fileFailConfirmationAlert": Object {
+          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+          "title": "File upload and/or notes post failed",
+          "type": "warning",
+        },
+        "recordSuccessConfirmationMessage": <p>
+          Your work has been saved.
+          <br />
+          <br />
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+        </p>,
+      }
+    }
+    onAction={[Function]}
+    onAlternateAction={[Function]}
+    onCancelAction={[Function]}
+    onRef={[Function]}
+    showAlternateActionButton={true}
+  />
+  <Connect(ReduxForm)
+    initialValues={
+      Object {
+        "currentAuthor": Array [
+          Object {
+            "authorId": 44,
+            "nameAsPublished": "Test",
+          },
+        ],
+        "isHdrStudent": true,
+        "rek_title": "",
+      }
+    }
+    onFormCancel={[Function]}
+    onFormSubmitSuccess={[Function]}
+  />
+</Fragment>
 `;
