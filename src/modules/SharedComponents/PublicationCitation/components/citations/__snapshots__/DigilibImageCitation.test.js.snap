@@ -620,6 +620,7 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                   "rek_oa_status_pid": "UQ:151598",
                   "rek_oa_status_xsdmf_id": 17013,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_period": Array [],
                 "fez_record_search_key_publisher": Object {
                   "rek_publisher": "The University of Queensland Library",
@@ -907,6 +908,7 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                       "rek_oa_status_pid": "UQ:151598",
                       "rek_oa_status_xsdmf_id": 17013,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_period": Array [],
                     "fez_record_search_key_publisher": Object {
                       "rek_publisher": "The University of Queensland Library",
@@ -1206,6 +1208,7 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                         "rek_oa_status_pid": "UQ:151598",
                         "rek_oa_status_xsdmf_id": 17013,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_period": Array [],
                       "fez_record_search_key_publisher": Object {
                         "rek_publisher": "The University of Queensland Library",

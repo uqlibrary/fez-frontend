@@ -965,6 +965,7 @@
         "rek_oa_status": 453697,
         "rek_oa_status_lookup": "DOI"
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4125279,
         "rek_place_of_publication_pid": "UQ:396321",

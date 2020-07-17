@@ -60,10 +60,6 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Authors',
-            groups: [['authors']],
-        },
-        {
             title: 'Editors',
             groups: [['editors']],
         },
@@ -81,7 +77,8 @@ export default {
                     'fez_record_search_key_herdc_status',
                     'fez_record_search_key_institutional_status',
                 ],
-                ['fez_record_search_key_refereed_source', 'fez_record_search_key_oa_status', 'contentIndicators'],
+                ['fez_record_search_key_refereed_source', 'contentIndicators'],
+                ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['additionalNotes'],
             ],
         },
@@ -128,8 +125,8 @@ export const validateConferenceProceedings = (
         }),
     },
     authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
-            authors: summary.authors,
+        ...(((as || {}).editors || []).length === 0 && {
+            editors: summary.editors,
         }),
     },
 });

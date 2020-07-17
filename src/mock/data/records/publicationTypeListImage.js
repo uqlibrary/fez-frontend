@@ -184,7 +184,14 @@ export default {
                 "rek_link_description_order": 2
             }],
             "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 271220,
+                "rek_oa_status_pid": "UQ:134700",
+                "rek_oa_status_xsdmf_id": 17010,
+                "rek_oa_status": 454127,
+                "rek_oa_status_lookup": "File (Author Pre-print)"
+            },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 7396,
                 "rek_original_format_pid": "UQ:134700",
@@ -521,6 +528,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 7396,
                 "rek_original_format_pid": "UQ:367646",

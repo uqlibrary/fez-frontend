@@ -149,11 +149,17 @@ describe('AdminInterface component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_display_type: 187,
+                rek_pid: 'UQ:123456',
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_subtype: undefined,
+                rek_editing_user: 'uqtest',
+                rek_status: 2,
             },
         }));
         const wrapper = setup({
+            authorDetails: {
+                username: 'uqstaff',
+            },
             createMode: false,
             locked: true,
             tabs: {
@@ -172,6 +178,44 @@ describe('AdminInterface component', () => {
             },
         });
         expect(wrapper.find('LockedAlert').length).toEqual(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render locked info alert', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_pid: 'UQ:123456',
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_subtype: undefined,
+                rek_editing_user: 'uqstaff',
+                rek_status: 3,
+            },
+        }));
+        const wrapper = setup({
+            createMode: false,
+            locked: true,
+            authorDetails: {
+                username: 'uqstaff',
+            },
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+            },
+        });
+        expect(wrapper.find('LockedAlert').length).toEqual(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render default view as a full form view', () => {
