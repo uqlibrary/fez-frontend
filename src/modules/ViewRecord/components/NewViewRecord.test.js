@@ -84,10 +84,12 @@ describe('NewViewRecord', () => {
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
-    it('should render missing record message', () => {
-        const { getByText } = setup({ isDeleted: true, recordToViewError: { message: 'test', status: 404 } });
-        expect(getByText('Work not found')).toBeInTheDocument();
-        expect(getByText('The work you are attempting to access does not appear in our system.')).toBeInTheDocument();
+    it('should render deleted record correctly', () => {
+        const { getByText } = setup({ isDeleted: true, recordToView: record });
+        expect(getByText('This work has been deleted.')).toBeInTheDocument();
+        expect(
+            getByText('Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer'),
+        ).toBeInTheDocument();
     });
 
     it('should render loader', () => {
@@ -96,8 +98,8 @@ describe('NewViewRecord', () => {
     });
 
     it('should render error', () => {
-        const { getByText } = setup({ recordToViewError: 'PID not found' });
-        expect(getByText('PID not found')).toBeInTheDocument();
+        const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 403 } });
+        expect(getByText('(403 - PID not found)')).toBeInTheDocument();
     });
 
     it('should have status prop in the header for admins', () => {
