@@ -134,6 +134,12 @@ api.interceptors.response.use(
                 }
             } else if (!!error.response && !!error.response.status) {
                 errorMessage = locale.global.errorMessages[error.response.status];
+                if (error.response.status === 410) {
+                    errorMessage = {
+                        ...errorMessage,
+                        ...error.response.data,
+                    };
+                }
             }
         }
 
