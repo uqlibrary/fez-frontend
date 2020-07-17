@@ -60,7 +60,9 @@ export const NewViewRecord = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pid]);
 
-    if (isDeleted) {
+    if (loadingRecordToView) {
+        return <InlineLoader message={txt.loadingMessage} />;
+    } else if (recordToViewError) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -73,16 +75,6 @@ export const NewViewRecord = ({
                         {`(${recordToViewError.status} - ${recordToViewError.message})`}
                     </Typography>
                 )}
-            </StandardPage>
-        );
-    }
-
-    if (loadingRecordToView) {
-        return <InlineLoader message={txt.loadingMessage} />;
-    } else if (recordToViewError) {
-        return (
-            <StandardPage>
-                <Alert message={recordToViewError} />
             </StandardPage>
         );
     } else if (!recordToView || !recordToView.rek_pid) {
@@ -101,50 +93,59 @@ export const NewViewRecord = ({
                         isPublicationDeleted={isDeleted}
                     />
                 </Grid>
-                <Grid item xs={12}>
-                    <Grid container spacing={2} style={{ marginBottom: 4 }}>
-                        <Grid item xs>
-                            {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
-                                <Chip label={recordToView.rek_status_lookup} variant="outlined" />
-                            )}
-                        </Grid>
-                        <Grid item>
-                            <SocialShare
-                                publication={recordToView}
-                                services={[
-                                    'facebook',
-                                    'twitter',
-                                    'linkedin',
-                                    'researchgate',
-                                    'mendeley',
-                                    'email',
-                                    'print',
-                                ]}
-                                spaceBetween={4}
-                                round
-                            />
+                {!isDeleted && !!recordToView && (
+                    <Grid item xs={12}>
+                        <Grid container spacing={2} style={{ marginBottom: 4 }}>
+                            <Grid item xs>
+                                {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
+                                    <Chip label={recordToView.rek_status_lookup} variant="outlined" />
+                                )}
+                            </Grid>
+                            <Grid item>
+                                <SocialShare
+                                    publication={recordToView}
+                                    services={[
+                                        'facebook',
+                                        'twitter',
+                                        'linkedin',
+                                        'researchgate',
+                                        'mendeley',
+                                        'email',
+                                        'print',
+                                    ]}
+                                    spaceBetween={4}
+                                    round
+                                />
+                            </Grid>
                         </Grid>
                     </Grid>
-                </Grid>
+                )}
             </Grid>
+            {isDeleted && (
+                <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Alert {...txt.deletedAlert} />
+                </Grid>
+            )}
             <Grid container spacing={3}>
-                <React.Fragment>
-                    <Files
-                        author={author}
-                        publication={recordToView}
-                        hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
-                        setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
-                        isAdmin={!!isAdmin}
-                        isAuthor={!!isAuthor}
-                    />
-                    <Links publication={recordToView} />
-                    <RelatedPublications publication={recordToView} />
-                    <AdditionalInformation publication={recordToView} account={account} isNtro={isNtro} />
-                    {isNtro && <NtroDetails publication={recordToView} account={account} />}
-                    <GrantInformation publication={recordToView} />
-                </React.Fragment>
+                {!isDeleted && (
+                    <React.Fragment>
+                        <Files
+                            author={author}
+                            publication={recordToView}
+                            hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
+                            setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
+                            isAdmin={!!isAdmin}
+                            isAuthor={!!isAuthor}
+                        />
+                        <Links publication={recordToView} />
+                        <RelatedPublications publication={recordToView} />
+                        <AdditionalInformation publication={recordToView} account={account} isNtro={isNtro} />
+                        {isNtro && <NtroDetails publication={recordToView} account={account} />}
+                        <GrantInformation publication={recordToView} />
+                    </React.Fragment>
+                )}
                 <PublicationDetails publication={recordToView} />
-                <AvailableVersions publication={recordToView} />
+                {!isDeleted && <AvailableVersions publication={recordToView} />}
             </Grid>
         </StandardPage>
     );
