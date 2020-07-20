@@ -376,6 +376,13 @@ context('Journal Article admin edit', () => {
                             .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
                             .get('[data-testid=rek-oa-status-select]')
                             .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
+                        cy.get('[data-testid=rek-oa-status-type-input]')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_oa_status_type.rek_oa_status_type.toString(),
+                            )
+                            .get('[data-testid=rek-oa-status-type-select]')
+                            .should('have.text', record.fez_record_search_key_oa_status_type.rek_oa_status_type_lookup);
                         // No content indicators selected in mock
                         cy.get('span span')
                             .eq(0)

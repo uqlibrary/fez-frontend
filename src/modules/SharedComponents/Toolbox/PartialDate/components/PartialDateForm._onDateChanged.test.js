@@ -28,6 +28,7 @@ describe('PartialDateForm unit tests', () => {
             return expectToBe;
         };
         const props = {
+            partialDateFieldId: 'test',
             allowPartial: true,
             onChange: () => expectToBe,
         };
@@ -53,6 +54,7 @@ describe('PartialDateForm unit tests', () => {
             allowPartial: false,
             dateFormat: 'DD/MM/YYYY',
             onChange: () => expectToBe,
+            partialDateFieldId: 'test',
         };
 
         const form = setup(props);
