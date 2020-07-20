@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from '@testing-library/react';
@@ -41,12 +42,22 @@ export const renderWithRouter = (
     ui,
     { route = '/', history = createMemoryHistory({ initialEntries: [route] }) } = {},
 ) => {
-    return {
-        ...rtlRender(<Router history={history}>{ui}</Router>),
-        history,
-    };
+    return render(
+        <AllTheProviders>
+            <Router history={history}>{ui}</Router>
+        </AllTheProviders>,
+    );
 };
 
+export const RenderWithRouter = ({
+    children,
+    route = '/',
+    history = createMemoryHistory({ initialEntries: [route] }),
+}) => (
+    <AllTheProviders>
+        <Router history={history}>{children}</Router>
+    </AllTheProviders>
+);
 export const renderWithRedux = ({ initialState }) => render => {
     return {
         ...render,
@@ -70,6 +81,11 @@ export const withRedux = (initialState = Immutable.Map()) => WrappedComponent =>
     return <Provider store={getStore(initialState)}>{WrappedComponent}</Provider>;
 };
 
+// eslint-disable-next-line react/prop-types
+export const WithRedux = ({ initialState = Immutable.Map(), children }) => (
+    <Provider store={getStore(initialState)}>{children}</Provider>
+);
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -78,4 +94,6 @@ module.exports = {
     renderWithRedux,
     withRedux,
     withRouter,
+    WithRedux,
+    RenderWithRouter,
 };

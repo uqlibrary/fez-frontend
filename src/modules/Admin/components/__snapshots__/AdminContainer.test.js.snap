@@ -12825,7 +12825,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 exports[`AdminContainer component should render record not found view 1`] = `
 <StandardPage
   className="viewRecord"
-  title="Record not found"
+  title="Work not found"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -12841,7 +12841,7 @@ exports[`AdminContainer component should render record not found view 1`] = `
     >
       <div>
         <p>
-          The record you are attempting to access does not appear in our system.
+          The work you are attempting to access does not appear in our system.
         </p>
         <p>
           If you believe this is in error, please

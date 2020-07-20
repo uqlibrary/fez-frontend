@@ -231,14 +231,14 @@ export const getRoutesConfig = ({
         },
         {
             path: pathConfig.records.view(pid),
-            component: components.ViewRecord,
+            component: components.NewViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`),
         },
         {
             path: pathConfig.records.view_new(pid),
-            component: components.ViewRecord,
+            component: components.NewViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view_new(`(${pidRegExp})`),
