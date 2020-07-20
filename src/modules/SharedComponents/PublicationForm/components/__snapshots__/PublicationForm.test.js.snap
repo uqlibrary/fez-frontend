@@ -5711,7 +5711,13 @@ exports[`Component PublicationForm should render component with HDR Thesis 1`] =
         item={true}
         xs={12}
       >
-        <ThesisHdrRedirect />
+        <ThesisHdrRedirect
+          history={
+            Object {
+              "push": [MockFunction],
+            }
+          }
+        />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
   </form>

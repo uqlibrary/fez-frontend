@@ -58,7 +58,7 @@ exports[`Add new record should render alert about file uploading or issue error 
     onRef={[Function]}
     showAlternateActionButton={true}
   />
-  <Connect(ReduxForm)
+  <withRouter(Connect(ReduxForm))
     initialValues={
       Object {
         "currentAuthor": Array [
@@ -120,7 +120,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <Connect(ReduxForm)
+  <withRouter(Connect(ReduxForm))
     initialValues={
       Object {
         "currentAuthor": Array [
@@ -706,7 +706,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
     onRef={[Function]}
     showAlternateActionButton={true}
   />
-  <Connect(ReduxForm)
+  <withRouter(Connect(ReduxForm))
     initialValues={
       Object {
         "currentAuthor": Array [

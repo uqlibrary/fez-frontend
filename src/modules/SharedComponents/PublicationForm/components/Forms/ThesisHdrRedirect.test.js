@@ -5,9 +5,11 @@ import { routes } from 'config';
 
 function setup(testProps = {}) {
     const props = {
+        history: {
+            push: jest.fn(),
+            go: jest.fn(),
+        },
         ...testProps,
-        submitting: testProps.submitting || false, // : PropTypes.bool,
-        vocabId: testProps.vocabId || 0, // : PropTypes.number
     };
     return getElement(ThesisHdrRedirect, props);
 }
@@ -24,13 +26,15 @@ describe('ThesisHdrRedirect ', () => {
     });
 
     it('should redirect to Thesis submission page', () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { assign: jest.fn() };
-        setup({})
-            .instance()
-            ._handleAction();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(routes.pathConfig.hdrSubmission));
-        window.location = location;
+        const pushFn = jest.fn();
+        const wrapper = setup({
+            history: {
+                push: pushFn,
+            },
+        });
+
+        wrapper.instance()._handleAction();
+
+        expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
     });
 });

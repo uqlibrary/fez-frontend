@@ -41,6 +41,7 @@ export default class PublicationForm extends Component {
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
         initialValues: PropTypes.object,
+        history: PropTypes.object,
     };
 
     constructor(props) {
@@ -160,7 +161,9 @@ export default class PublicationForm extends Component {
                         </Grid>
                         {!this._shouldDisplayAddWork(this.props.formValues.get('rek_display_type')) && (
                             <Grid item xs={12}>
-                                {!!this.props.formComponentAlternate && <this.props.formComponentAlternate />}
+                                {!!this.props.formComponentAlternate && (
+                                    <this.props.formComponentAlternate history={this.props.history} />
+                                )}
                             </Grid>
                         )}
                         {this._shouldDisplayAddWork(this.props.formValues.get('rek_display_type')) &&

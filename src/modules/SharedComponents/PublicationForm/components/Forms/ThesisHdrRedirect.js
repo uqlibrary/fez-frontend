@@ -5,21 +5,21 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { default as formLocale } from 'locale/publicationForm';
-import { routes } from 'config';
+import { pathConfig } from 'config/routes';
 
 import Grid from '@material-ui/core/Grid';
 
 export default class ThesisHdrRedirect extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
+        history: PropTypes.object,
     };
     constructor(props) {
         super(props);
     }
 
     _handleAction = () => {
-        window.location.assign(routes.pathConfig.hdrSubmission);
-        // this.props.history.replace(routes.pathConfig.hdrSubmission);
+        this.props.history.push(pathConfig.hdrSubmission);
     };
 
     render() {
