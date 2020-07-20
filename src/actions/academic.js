@@ -3,7 +3,7 @@ import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import { ACADEMIC_STATS_PUBLICATION_HINDEX_API, AUTHOR_PUBLICATIONS_STATS_ONLY_API } from 'repositories/routes';
 
-export function loadAuthorPublicationsStats(userName) {
+export function loadAuthorPublicationsStats(userName, authorDetails) {
     return dispatch => {
         dispatch({ type: actions.AUTHOR_PUBLICATIONS_STATS_LOADING });
         let statsData = null;
@@ -22,7 +22,7 @@ export function loadAuthorPublicationsStats(userName) {
                     years = transformer.getPublicationsPerYearCategories(data);
                     statsData = response !== null && transformer.getPublicationsStats(years, response.filters.facets);
                     publicationTotalCount =
-                        response !== null && transformer.getAuthorArticleCount(response.total, response.filters.facets);
+                        response !== null && transformer.getAuthorArticleCount(response.total, authorDetails);
                 }
 
                 dispatch({
