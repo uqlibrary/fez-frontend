@@ -518,6 +518,7 @@ export default {
         information: {
             title: 'Thesis information',
             hdrRedirectActionButtonLabel: 'Visit now',
+            nonHdrWarningMessage: 'If you are trying to submit your UQ HDR thesis, please use the HDR submission page',
             hdrRedirectMessage:
                 "HDR theses cannot be submitted via 'Add a missing work' - use the official submission link to upload your thesis",
             hdrRedirectAlertTitle: 'Redirect',

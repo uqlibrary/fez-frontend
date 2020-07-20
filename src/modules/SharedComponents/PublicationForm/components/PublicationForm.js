@@ -2,26 +2,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
-import MenuItem from '@material-ui/core/MenuItem';
+
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import { publicationTypes, validation } from 'config';
-import { default as txt } from 'locale/publicationForm';
-import * as recordForms from './Forms';
-import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS, PUBLICATION_TYPE_THESIS } from 'config/general';
-import Typography from '@material-ui/core/Typography';
 import {
     ContentIndicatorsField,
     showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
+import MenuItem from '@material-ui/core/MenuItem';
+import Typography from '@material-ui/core/Typography';
+
+import * as recordForms from './Forms';
+import { publicationTypes, validation } from 'config';
+import { default as txt } from 'locale/publicationForm';
+import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS, PUBLICATION_TYPE_THESIS } from 'config/general';
+import { pathConfig } from 'config/routes';
 
 export default class PublicationForm extends Component {
     static propTypes = {
@@ -41,6 +45,7 @@ export default class PublicationForm extends Component {
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
         initialValues: PropTypes.object,
+        history: PropTypes.object,
     };
 
     constructor(props) {
@@ -103,11 +108,14 @@ export default class PublicationForm extends Component {
         !!event && event.preventDefault();
     };
 
-    // whether the form should display the Add a missing work form, or offer a different function
-    // (if true, display the Add a missing work form)
-    _shouldDisplayAddWork = displayType => {
+    // a HDR student who tries to use this form to submit their thesis should be diverted to the correct page
+    _alertHDRStudentOnThesisSubmission = displayType => {
         const isThesis = displayType === PUBLICATION_TYPE_THESIS;
-        return !(isThesis && this.props.isHdrStudent);
+        return isThesis && this.props.isHdrStudent;
+    };
+
+    _visitHdrSubmissionPage = () => {
+        this.props.history.push(pathConfig.hdrSubmission);
     };
 
     render() {
@@ -158,12 +166,20 @@ export default class PublicationForm extends Component {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        {!this._shouldDisplayAddWork(this.props.formValues.get('rek_display_type')) && (
+                        {this._alertHDRStudentOnThesisSubmission(this.props.formValues.get('rek_display_type')) && (
                             <Grid item xs={12}>
-                                {!!this.props.formComponentAlternate && <this.props.formComponentAlternate />}
+                                <StandardCard title={txt.thesis.information.title} help={txt.thesis.information.help}>
+                                    <Alert
+                                        action={this._visitHdrSubmissionPage}
+                                        actionButtonLabel={txt.thesis.information.hdrRedirectActionButtonLabel}
+                                        message={txt.thesis.information.hdrRedirectMessage}
+                                        title={txt.thesis.information.hdrRedirectAlertTitle}
+                                        type="info"
+                                    />
+                                </StandardCard>
                             </Grid>
                         )}
-                        {this._shouldDisplayAddWork(this.props.formValues.get('rek_display_type')) &&
+                        {!this._alertHDRStudentOnThesisSubmission(this.props.formValues.get('rek_display_type')) &&
                             !!this.props.formComponent && (
                                 <React.Fragment>
                                     {!!this.props.isNtro && <NtroHeader />}
@@ -174,6 +190,7 @@ export default class PublicationForm extends Component {
                                             isNtro={this.props.isNtro}
                                             isAuthorSelected={this.props.isAuthorSelected}
                                             submitting={this.props.submitting}
+                                            history={this.props.history}
                                         />
                                     </Grid>
                                     {showContentIndicatorsField(
@@ -201,27 +218,22 @@ export default class PublicationForm extends Component {
                                             </StandardCard>
                                         </Grid>
                                     )}
-                                    {this._shouldDisplayAddWork(this.props.formValues.get('rek_display_type')) && (
-                                        <Grid item xs={12}>
-                                            <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                                <Field
-                                                    name="files"
-                                                    component={FileUploadField}
-                                                    disabled={this.props.submitting}
-                                                    requireOpenAccessStatus
-                                                    validate={
-                                                        this.props.isNtro
-                                                            ? [
-                                                                  validation.fileUploadRequired,
-                                                                  validation.validFileUpload,
-                                                              ]
-                                                            : [validation.validFileUpload]
-                                                    }
-                                                    isNtro={this.props.isNtro}
-                                                />
-                                            </StandardCard>
-                                        </Grid>
-                                    )}
+                                    <Grid item xs={12}>
+                                        <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                            <Field
+                                                name="files"
+                                                component={FileUploadField}
+                                                disabled={this.props.submitting}
+                                                requireOpenAccessStatus
+                                                validate={
+                                                    this.props.isNtro
+                                                        ? [validation.fileUploadRequired, validation.validFileUpload]
+                                                        : [validation.validFileUpload]
+                                                }
+                                                isNtro={this.props.isNtro}
+                                            />
+                                        </StandardCard>
+                                    </Grid>
                                 </React.Fragment>
                             )}
                         {!!this.props.formComponent && alertProps && (
@@ -230,7 +242,7 @@ export default class PublicationForm extends Component {
                             </Grid>
                         )}
                     </Grid>
-                    {this._shouldDisplayAddWork(this.props.formValues.get('rek_display_type')) && (
+                    {!this._alertHDRStudentOnThesisSubmission(this.props.formValues.get('rek_display_type')) && (
                         <Grid container spacing={3}>
                             <Grid item xs />
                             <Grid item xs={12} sm="auto">

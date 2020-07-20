@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import {
     reduxForm,
     getFormValues,
@@ -183,7 +184,6 @@ const mapStateToProps = (state, props) => {
             rek_title: props.initialValues.rek_title || '',
         },
         isHdrStudent: props.initialValues.isHdrStudent,
-        formComponentAlternate: (selectedPublicationType || {}).formComponentAlternate || null,
     };
 };
 
@@ -201,4 +201,4 @@ const mapDispatchToProps = dispatch => {
 
 PublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationFormContainer);
 
-export default PublicationFormContainer;
+export default withRouter(PublicationFormContainer);

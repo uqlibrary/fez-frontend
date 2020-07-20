@@ -20,6 +20,29 @@ exports[`ThesisForm  should render component 1`] = `
           item={true}
           xs={12}
         >
+          <Alert
+            action={[Function]}
+            actionButtonLabel="Visit now"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="If you are trying to submit your UQ HDR thesis, please use the HDR submission page"
+            showLoader={false}
+            type="warning"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <Field
             autoFocus={true}
             component={[Function]}
