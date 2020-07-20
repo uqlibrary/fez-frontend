@@ -119,13 +119,20 @@ export default {
                 "rek_institutional_status": 453223,
                 "rek_institutional_status_lookup": "UQ"
             },
-            "fez_record_search_key_isbn": [
+            fez_record_search_key_isbn: [
                 {
-                    "rek_isbn_id": 1137598,
-                    "rek_isbn_pid": "UQ:333631",
-                    "rek_isbn_xsdmf_id": null,
-                    "rek_isbn": "9783319715797",
-                    "rek_isbn_order": 1
+                    rek_isbn_id: 1115631,
+                    rek_isbn_pid: 'UQ:333631',
+                    rek_isbn_xsdmf_id: null,
+                    rek_isbn: '9783319715797',
+                    rek_isbn_order: 1
+                },
+                {
+                    rek_isbn_id: 1115632,
+                    rek_isbn_pid: 'UQ:333631',
+                    rek_isbn_xsdmf_id: null,
+                    rek_isbn: '9783319715803',
+                    rek_isbn_order: 2
                 }
             ],
             "fez_record_search_key_isderivationof": [],
@@ -145,6 +152,13 @@ export default {
                     "rek_ismemberof_lookup": "School of Economics Publications"
                 }
             ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:333631",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_issn": [
                 {
                     "rek_issn_id": 5553083,

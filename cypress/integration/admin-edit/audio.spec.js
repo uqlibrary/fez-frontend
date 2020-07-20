@@ -72,7 +72,7 @@ context('Audio admin edit', () => {
                     'have.text',
                     record.fez_record_search_key_rights.rek_rights,
                 );
-                cy.get('div:nth-child(15) span span')
+                cy.get('div:nth-child(14) span span')
                     .eq(0)
                     .should('have.text', 'Transcript');
                 cy.get('#cke_editor3').should('exist');
