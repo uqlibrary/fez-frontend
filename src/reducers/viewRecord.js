@@ -6,6 +6,7 @@ export const initialState = {
     recordToViewError: null,
     hideCulturalSensitivityStatement: false,
     isRecordLocked: false,
+    isDeleted: false,
 };
 
 const handlers = {
@@ -18,7 +19,6 @@ const handlers = {
         ...initialState,
         loadingRecordToView: false,
         recordToView: action.payload,
-        isDeleted: action.isDeleted,
         hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
         isRecordLocked: !!action.payload.rek_editing_user,
     }),
@@ -28,7 +28,14 @@ const handlers = {
         loadingRecordToView: false,
         recordToViewError: action.payload,
         hideCulturalSensitivityStatement: true,
-        isDeleted: action.isDeleted,
+    }),
+
+    [actions.VIEW_RECORD_DELETED]: (state, action) => ({
+        ...initialState,
+        loadingRecordToView: false,
+        recordToView: action.payload,
+        hideCulturalSensitivityStatement: true,
+        isDeleted: true,
     }),
 
     [actions.VIEW_RECORD_CLEAR]: state => ({
