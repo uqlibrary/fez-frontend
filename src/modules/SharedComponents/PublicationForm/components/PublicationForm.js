@@ -2,26 +2,29 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
-import MenuItem from '@material-ui/core/MenuItem';
+
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import { publicationTypes, validation } from 'config';
-import { default as txt } from 'locale/publicationForm';
-import * as recordForms from './Forms';
-import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS, PUBLICATION_TYPE_THESIS } from 'config/general';
-import Typography from '@material-ui/core/Typography';
 import {
     ContentIndicatorsField,
     showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
+import MenuItem from '@material-ui/core/MenuItem';
+import Typography from '@material-ui/core/Typography';
+
+import * as recordForms from './Forms';
+import { publicationTypes, validation } from 'config';
+import { default as txt } from 'locale/publicationForm';
+import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS, PUBLICATION_TYPE_THESIS } from 'config/general';
 import { pathConfig } from 'config/routes';
 
 export default class PublicationForm extends Component {
