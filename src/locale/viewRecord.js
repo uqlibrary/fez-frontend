@@ -550,6 +550,10 @@ export default {
                     order: 9.5,
                 },
                 {
+                    field: 'fez_record_search_key_license',
+                    order: 9.6,
+                },
+                {
                     field: 'fez_record_search_key_volume_number',
                     order: 10,
                 },
@@ -658,6 +662,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 12.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 12.6,
                 },
                 {
                     field: 'fez_record_search_key_date_available',
@@ -818,6 +826,10 @@ export default {
                     order: 22.5,
                 },
                 {
+                    field: 'fez_record_search_key_license',
+                    order: 22.6,
+                },
+                {
                     field: 'fez_record_search_key_isbn',
                     order: 23,
                 },
@@ -976,6 +988,10 @@ export default {
                     order: 25.5,
                 },
                 {
+                    field: 'fez_record_search_key_license',
+                    order: 25.6,
+                },
+                {
                     field: 'fez_record_search_key_volume_number',
                     order: 26,
                 },
@@ -1048,6 +1064,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 6.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 6.6,
                 },
                 {
                     field: 'fez_record_search_key_publisher',
@@ -1329,6 +1349,10 @@ export default {
                     field: 'fez_record_search_key_issn',
                     order: 19,
                 },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 20,
+                },
             ],
             Design: [
                 {
@@ -1390,6 +1414,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 13.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 13.6,
                 },
                 {
                     field: 'rek_date',
@@ -1514,6 +1542,10 @@ export default {
                     order: 12.5,
                 },
                 {
+                    field: 'fez_record_search_key_license',
+                    order: 12.6,
+                },
+                {
                     field: 'fez_record_search_key_category',
                     order: 13,
                 },
@@ -1601,7 +1633,11 @@ export default {
                 },
                 {
                     field: 'fez_record_search_key_oa_status_type',
-                    order: 9.5,
+                    order: 10,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 11,
                 },
             ],
             Image: [
@@ -1752,6 +1788,10 @@ export default {
                     order: 11.5,
                 },
                 {
+                    field: 'fez_record_search_key_license',
+                    order: 11.6,
+                },
+                {
                     field: 'fez_record_search_key_end_page',
                     order: 12,
                 },
@@ -1846,6 +1886,10 @@ export default {
                     order: 13.5,
                 },
                 {
+                    field: 'fez_record_search_key_license',
+                    order: 13.6,
+                },
+                {
                     field: 'fez_record_search_key_volume_number',
                     order: 14,
                 },
@@ -1918,6 +1962,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 4.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 4.6,
                 },
                 {
                     field: 'rek_date',
@@ -2061,6 +2109,10 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
                 },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 20,
+                },
             ],
             'Reference Entry': [
                 {
@@ -2143,6 +2195,10 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
                 },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 20,
+                },
             ],
             'Research Report': [
                 {
@@ -2192,6 +2248,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 10.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 10.6,
                 },
                 {
                     field: 'fez_record_search_key_publisher',
@@ -2266,6 +2326,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 6.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 6.6,
                 },
                 {
                     field: 'fez_record_search_key_publisher',
@@ -2353,6 +2417,10 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 12,
                 },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 13,
+                },
             ],
             'Seminar Paper': [
                 {
@@ -2427,6 +2495,10 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 16,
                 },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 17,
+                },
             ],
             Thesis: [
                 {
@@ -2472,6 +2544,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 9.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 9.6,
                 },
                 {
                     field: 'fez_record_search_key_supervisor',
@@ -2579,6 +2655,10 @@ export default {
                     field: 'fez_record_search_key_keywords',
                     order: 18,
                 },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 19,
+                },
             ],
             'Working Paper': [
                 {
@@ -2616,6 +2696,10 @@ export default {
                 {
                     field: 'fez_record_search_key_oa_status_type',
                     order: 7.5,
+                },
+                {
+                    field: 'fez_record_search_key_license',
+                    order: 7.6,
                 },
                 {
                     field: 'fez_record_search_key_series',

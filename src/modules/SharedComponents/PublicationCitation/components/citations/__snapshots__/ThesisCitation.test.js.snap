@@ -573,6 +573,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                   },
                 ],
                 "fez_record_search_key_language": Array [],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": Object {
@@ -856,6 +857,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                       },
                     ],
                     "fez_record_search_key_language": Array [],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": Object {
@@ -1151,6 +1153,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                         },
                       ],
                       "fez_record_search_key_language": Array [],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": Object {
@@ -2334,6 +2337,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                   },
                 ],
                 "fez_record_search_key_language": Array [],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": Object {
@@ -2619,6 +2623,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                       },
                     ],
                     "fez_record_search_key_language": Array [],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": Object {
@@ -2916,6 +2921,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                         },
                       ],
                       "fez_record_search_key_language": Array [],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": Object {

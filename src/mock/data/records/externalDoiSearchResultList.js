@@ -13,6 +13,7 @@ export default {
             "fez_record_search_key_end_page": {"rek_end_page": "15"},
             "fez_record_search_key_total_pages": {"rek_total_pages": -186},
             "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_author": [{
                 "rek_author": "Badimon, Lina",
                 "rek_author_order": 1

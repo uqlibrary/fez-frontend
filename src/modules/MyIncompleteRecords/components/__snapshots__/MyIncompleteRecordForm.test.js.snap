@@ -448,6 +448,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
           "rek_language_xsdmf_id": 11997,
         },
       ],
+      "fez_record_search_key_license": null,
       "fez_record_search_key_series": Object {
         "rek_series": "Queensland Music Festival",
         "rek_series_id": 218537,

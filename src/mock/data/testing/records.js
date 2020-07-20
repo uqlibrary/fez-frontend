@@ -1044,6 +1044,7 @@ export const newspaperArticle = {
             "rek_language_order": 2
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_newspaper": {
@@ -1252,6 +1253,7 @@ export const thesis = {
         }
     ],
     "fez_record_search_key_language": [],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_notes": {
@@ -1670,6 +1672,7 @@ export const conferenceProceedings = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_notes": {
@@ -2268,6 +2271,7 @@ export const workingPaper = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3191760,
@@ -2717,6 +2721,7 @@ export const design = {
         }
     ],
     "fez_record_search_key_language": [],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_location": [
@@ -3013,6 +3018,7 @@ export const creativeWork = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_notes": null,
@@ -3344,6 +3350,7 @@ export const departmentTechnicalReport = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3201460,

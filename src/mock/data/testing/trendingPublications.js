@@ -457,6 +457,7 @@ export const trendingPublications = {
             ],
             "fez_record_search_key_language_of_journal_name": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_journal_name": null,
@@ -1173,6 +1174,7 @@ export const trendingPublications = {
             ],
             "fez_record_search_key_language_of_journal_name": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [
                 {
                     "rek_link_id": 3238543,
@@ -1784,6 +1786,7 @@ export const trendingPublicationsWithNoSources = {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,

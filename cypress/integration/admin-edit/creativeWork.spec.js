@@ -46,6 +46,11 @@ context('Creative Work admin edit', () => {
             .as('additionalInformationTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Additional information');
+                cy.get('[data-testid=rek-license-input]')
+                    .should('have.value', record.fez_record_search_key_license.rek_license.toString())
+                    .siblings('[role=button]')
+                    .invoke('text')
+                    .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
                 cy.get('[data-testid="rek-content-indicator-select"]').should(
                     'have.text',
                     'Scholarship of Teaching and Learning',

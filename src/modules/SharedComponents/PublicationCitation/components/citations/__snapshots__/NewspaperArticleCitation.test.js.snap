@@ -664,6 +664,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     "rek_language_xsdmf_id": 10720,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_newspaper": Object {
@@ -1015,6 +1016,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         "rek_language_xsdmf_id": 10720,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_newspaper": Object {
@@ -1378,6 +1380,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "rek_language_xsdmf_id": 10720,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_newspaper": Object {
@@ -2672,6 +2675,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     "rek_language_xsdmf_id": 10720,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_newspaper": Object {
@@ -3025,6 +3029,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         "rek_language_xsdmf_id": 10720,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_newspaper": Object {
@@ -3390,6 +3395,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "rek_language_xsdmf_id": 10720,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_newspaper": Object {
