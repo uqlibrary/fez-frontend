@@ -184,7 +184,6 @@ const mapStateToProps = (state, props) => {
             rek_title: props.initialValues.rek_title || '',
         },
         isHdrStudent: props.initialValues.isHdrStudent,
-        formComponentAlternate: (selectedPublicationType || {}).formComponentAlternate || null,
     };
 };
 
