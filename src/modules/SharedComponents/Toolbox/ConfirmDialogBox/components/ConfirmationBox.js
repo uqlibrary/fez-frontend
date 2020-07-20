@@ -50,9 +50,9 @@ export const ConfirmationBox = ({
 
     return (
         <Dialog style={{ padding: 6 }} open={isOpen}>
-            <DialogTitle>{locale.confirmationTitle}</DialogTitle>
+            <DialogTitle data-testid="message-title">{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
-                <DialogContentText>{locale.confirmationMessage}</DialogContentText>
+                <DialogContentText data-testid="message-content">{locale.confirmationMessage}</DialogContentText>
             </DialogContent>
             <DialogActions>
                 <Grid container spacing={1}>
