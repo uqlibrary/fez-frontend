@@ -177,6 +177,7 @@ export default class PublicationForm extends Component {
                                             isNtro={this.props.isNtro}
                                             isAuthorSelected={this.props.isAuthorSelected}
                                             submitting={this.props.submitting}
+                                            history={this.props.history}
                                         />
                                     </Grid>
                                     {showContentIndicatorsField(

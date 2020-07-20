@@ -5,12 +5,14 @@ import { Field } from 'redux-form/immutable';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
 import { validation } from 'config';
+import { pathConfig } from 'config/routes';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 
@@ -20,6 +22,7 @@ import Typography from '@material-ui/core/Typography';
 export default class ThesisForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
+        history: PropTypes.object,
     };
     constructor(props) {
         super(props);
@@ -29,12 +32,27 @@ export default class ThesisForm extends Component {
         return value.replace(/[^\d]/g, '');
     };
 
+    _handleAction = () => {
+        this.props.history.push(pathConfig.hdrSubmission);
+    };
+
     render() {
         const txt = formLocale.thesis;
         return (
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                                <Alert
+                                    action={this._handleAction}
+                                    actionButtonLabel={txt.information.hdrRedirectActionButtonLabel}
+                                    message={txt.information.nonHdrWarningMessage}
+                                    // title={txt.information.hdrRedirectAlertTitle}
+                                    type="warning"
+                                />
+                            </Grid>
+                        </Grid>
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Field
