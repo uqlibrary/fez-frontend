@@ -16391,7 +16391,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="21"
+                                              key="22"
                                               style={
                                                 Object {
                                                   "padding": 8,
@@ -17373,7 +17373,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               </WithStyles(ForwardRef(Grid))>
                                             </div>
                                             <div
-                                              key="24"
+                                              key="25"
                                               style={
                                                 Object {
                                                   "padding": 8,
