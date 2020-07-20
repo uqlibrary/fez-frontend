@@ -1,7 +1,8 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
-import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm, ThesisHdrRedirect } from './Forms';
+import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
 import { validation } from 'config';
+import { routes } from 'config';
 
 function setup(testProps = {}) {
     const props = {
@@ -289,8 +290,20 @@ describe('Component PublicationForm', () => {
             isHdrStudent: true,
             hasSubtypes: true,
             subtypeVocabId: 2222,
-            formComponentAlternate: ThesisHdrRedirect,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should redirect to Thesis submission page for HDR student', () => {
+        const pushFn = jest.fn();
+        const wrapper = setup({
+            history: {
+                push: pushFn,
+            },
+        });
+
+        wrapper.instance()._visitHdrSubmissionPage();
+
+        expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
     });
 });

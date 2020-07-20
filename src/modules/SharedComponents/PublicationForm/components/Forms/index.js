@@ -15,6 +15,5 @@ export { default as PreprintForm } from './PreprintForm';
 export { default as ResearchReportForm } from './ResearchReportForm';
 export { default as SeminarPaperForm } from './SeminarPaperForm';
 export { default as ThesisForm } from './ThesisForm';
-export { default as ThesisHdrRedirect } from './ThesisHdrRedirect';
 export { default as VideoDocumentForm } from './VideoDocumentForm';
 export { default as WorkingPaperForm } from './WorkingPaperForm';

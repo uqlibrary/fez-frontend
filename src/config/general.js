@@ -454,7 +454,6 @@ export const publicationTypes = components => ({
         formComponent: components ? components.ThesisForm : null,
         citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true,
-        formComponentAlternate: components ? components.ThesisHdrRedirect : null,
     },
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,

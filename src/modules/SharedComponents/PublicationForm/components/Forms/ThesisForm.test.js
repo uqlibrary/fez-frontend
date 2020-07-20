@@ -50,7 +50,7 @@ describe('ThesisForm ', () => {
             },
         });
 
-        wrapper.instance()._handleAction();
+        wrapper.instance()._visitHdrSubmissionPage();
 
         expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
     });

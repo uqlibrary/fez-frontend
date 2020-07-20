@@ -5731,13 +5731,24 @@ exports[`Component PublicationForm should render component with HDR Thesis 1`] =
         item={true}
         xs={12}
       >
-        <ThesisHdrRedirect
-          history={
-            Object {
-              "push": [MockFunction],
-            }
-          }
-        />
+        <StandardCard
+          title="Thesis information"
+        >
+          <Alert
+            action={[Function]}
+            actionButtonLabel="Visit now"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="HDR theses cannot be submitted via 'Add a missing work' - use the official submission link to upload your thesis"
+            showLoader={false}
+            title="Redirect"
+            type="info"
+            wiggle={null}
+          />
+        </StandardCard>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
   </form>

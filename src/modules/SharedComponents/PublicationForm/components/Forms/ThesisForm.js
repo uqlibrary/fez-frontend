@@ -32,7 +32,7 @@ export default class ThesisForm extends Component {
         return value.replace(/[^\d]/g, '');
     };
 
-    _handleAction = () => {
+    _visitHdrSubmissionPage = () => {
         this.props.history.push(pathConfig.hdrSubmission);
     };
 
@@ -45,7 +45,7 @@ export default class ThesisForm extends Component {
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Alert
-                                    action={this._handleAction}
+                                    action={this._visitHdrSubmissionPage}
                                     actionButtonLabel={txt.information.hdrRedirectActionButtonLabel}
                                     message={txt.information.nonHdrWarningMessage}
                                     // title={txt.information.hdrRedirectAlertTitle}
