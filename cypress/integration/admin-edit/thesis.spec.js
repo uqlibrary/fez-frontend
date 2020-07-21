@@ -201,6 +201,11 @@ context('Thesis admin edit', () => {
                         cy.readCKEditor('editor3').should(text => {
                             expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                         });
+                        cy.get('[data-testid=rek-license-input]')
+                            .should('have.value', record.fez_record_search_key_license.rek_license.toString())
+                            .siblings('[role=button]')
+                            .invoke('text')
+                            .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
                     });
             });
 

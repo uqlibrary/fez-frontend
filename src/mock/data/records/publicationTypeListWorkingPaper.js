@@ -148,6 +148,13 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:333631",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [
                 {
                     "rek_link_id": 3199085,
