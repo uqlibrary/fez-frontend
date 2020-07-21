@@ -56,6 +56,7 @@ export class HelpDrawer extends Component {
                         <Typography
                             className={classes.title}
                             component={'span'}
+                            data-testid="help-drawer-title"
                             id="help-drawer-title"
                             key={'title'}
                             variant={'h6'}
@@ -64,6 +65,7 @@ export class HelpDrawer extends Component {
                         </Typography>
                         <Typography
                             component={'span'}
+                            data-testid="help-drawer-message"
                             id={`help-drawer-text-${title.replace(/\s/g, '')}`}
                             key={'text'}
                             variant="body2"
@@ -76,6 +78,7 @@ export class HelpDrawer extends Component {
                             children={buttonLabel}
                             className={classes.button}
                             color="primary"
+                            data-testid="help-drawer-close"
                             onClick={hide}
                             variant="contained"
                         />
