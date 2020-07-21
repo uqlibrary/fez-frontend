@@ -166,10 +166,22 @@ describe('NewViewRecord', () => {
     });
 
     it('redirects user to login if not Authorized', () => {
+        const { location } = window;
+        delete window.location;
+
+        const assignFn = jest.fn();
+        window.location = {
+            assign: assignFn,
+        };
+
         const { getByTestId } = setup({
             recordToViewError: { message: 'Your session has expired', status: 403 },
         });
 
         fireEvent.click(getByTestId('action-button'));
+
+        expect(assignFn).toHaveBeenCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
+
+        window.location = location;
     });
 });
