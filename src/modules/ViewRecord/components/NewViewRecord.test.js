@@ -1,6 +1,7 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { render, RenderWithRouter, WithRedux } from 'test-utils';
+import * as NewViewRecordModule from './NewViewRecord';
+import { render, RenderWithRouter, WithRedux, fireEvent } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -8,7 +9,6 @@ import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
-import { fireEvent } from '@testing-library/dom';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -103,6 +103,12 @@ describe('NewViewRecord', () => {
         expect(getByText('Login to UQ eSpace for full search results and more services.')).toBeInTheDocument();
     });
 
+    it('should render human readable message record not found', () => {
+        const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 404 } });
+        expect(getByText('Work not found')).toBeInTheDocument();
+        expect(getByText('(404 - PID not found)')).toBeInTheDocument();
+    });
+
     it('should have status prop in the header for admins', () => {
         userIsAdmin.mockImplementation(() => true);
         const { getByText } = setup({
@@ -158,5 +164,13 @@ describe('NewViewRecord', () => {
 
         setup({ loadingRecordToView: false, recordToView: record }, rerender);
         expect(queryByText('Loading work')).not.toBeInTheDocument();
+    });
+
+    it('redirects user to login if not Authorized', () => {
+        const { getByTestId, debug } = setup({
+            recordToViewError: { message: 'Your session has expired', status: 403 },
+        });
+
+        fireEvent.click(getByTestId('action-button'));
     });
 });

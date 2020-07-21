@@ -24,10 +24,14 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
 import { userIsAdmin, userIsAuthor } from 'hooks';
-import { general, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
+import { general, AUTH_URL_LOGIN } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
+
+export function redirectUserToLogin() {
+    window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+}
 
 export const NewViewRecord = ({
     account,
@@ -52,12 +56,6 @@ export const NewViewRecord = ({
         [],
     );
 
-    const redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
-        const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
-        window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
-    };
-
     React.useEffect(() => {
         if (!!pid) {
             dispatch(actions.loadRecordToView(pid));
@@ -69,7 +67,7 @@ export const NewViewRecord = ({
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (recordToViewError && recordToViewError.status === 410) {
+    } else if (recordToViewError && recordToViewError.status === 404) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -87,7 +85,7 @@ export const NewViewRecord = ({
     } else if (recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
-                <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin()} />
+                <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin} />
             </StandardPage>
         );
     } else if (!recordToView || !recordToView.rek_pid) {
