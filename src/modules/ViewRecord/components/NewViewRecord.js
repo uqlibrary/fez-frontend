@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { AppAlert } from 'modules/App';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
@@ -89,7 +88,6 @@ export const NewViewRecord = ({
         return (
             <StandardPage>
                 <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin()} />
-                <AppAlert />
             </StandardPage>
         );
     } else if (!recordToView || !recordToView.rek_pid) {
