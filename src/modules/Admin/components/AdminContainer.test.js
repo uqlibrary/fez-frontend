@@ -24,6 +24,9 @@ jest.mock('@material-ui/styles/useTheme', () => () => ({
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
+        authorDetails: {
+            username: 'uqstaff',
+        },
         classes: {
             helpIcon: 'helpicon',
             tabIndicator: 'tabindicator',
@@ -144,6 +147,9 @@ describe('AdminContainer component', () => {
                 helpIcon: 'helpicon',
                 tabIndicator: 'tabindicator',
                 badgeMargin: 'badgemargin',
+            },
+            authorDetails: {
+                username: 'uqstaff',
             },
             match: {
                 params: {
