@@ -772,6 +772,7 @@ export default {
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_unit_name": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_project_description": {

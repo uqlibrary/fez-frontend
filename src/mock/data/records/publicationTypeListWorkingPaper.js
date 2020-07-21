@@ -145,6 +145,120 @@ export default {
                     "rek_ismemberof_lookup": "School of Economics Publications"
                 }
             ],
+            "fez_record_search_key_keywords": [],
+            "fez_record_search_key_language": [
+                {
+                    "rek_language_id": 5266188,
+                    "rek_language_pid": "UQ:333631",
+                    "rek_language_xsdmf_id": 10742,
+                    "rek_language": "eng",
+                    "rek_language_order": 1
+                }
+            ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:333631",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
+            "fez_record_search_key_link": [
+                {
+                    "rek_link_id": 3199085,
+                    "rek_link_pid": "UQ:333631",
+                    "rek_link_xsdmf_id": 6685,
+                    "rek_link": "http://ageconsearch.umn.edu/handle/174091",
+                    "rek_link_order": 1
+                }
+            ],
+            "fez_record_search_key_link_description": [
+                {
+                    "rek_link_description_id": 3199054,
+                    "rek_link_description_pid": "UQ:333631",
+                    "rek_link_description_xsdmf_id": 6684,
+                    "rek_link_description": "Fulltext (open access)",
+                    "rek_link_description_order": 1
+                }
+            ],
+            "fez_record_search_key_notes": {
+                "rek_notes_id": 1122188,
+                "rek_notes_pid": "UQ:333631",
+                "rek_notes_xsdmf_id": 12526,
+                "rek_notes": "ISSN 1444-8890. The first draft of a background paper for a guest presentation at the “Symposium on Broadband Enabled Communities and Regional Economic Development” to be held at the University of Southern Queensland, 10-11 November, 2014 in Toowoomba. This Symposium is supported through the Australian Government’s Collaboration Research Networks (CRN) programme’s ‘Digital Futures’ theme."
+            },
+            "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_org_name": {
+                "rek_org_name_id": 351888,
+                "rek_org_name_pid": "UQ:333631",
+                "rek_org_name_xsdmf_id": 6613,
+                "rek_org_name": "The University of Queensland"
+            },
+            "fez_record_search_key_oa_status_type": null,
+            "fez_record_search_key_org_unit_name": {
+                "rek_org_unit_name_id": 341470,
+                "rek_org_unit_name_pid": "UQ:333631",
+                "rek_org_unit_name_xsdmf_id": 6610,
+                "rek_org_unit_name": "School of Economics"
+            },
+            "fez_record_search_key_possible_author_id": [],
+            "fez_record_search_key_publisher": {
+                "rek_publisher_id": 4469839,
+                "rek_publisher_pid": "UQ:333631",
+                "rek_publisher_xsdmf_id": 6621,
+                "rek_publisher": "School of Economics, The University of Queensland"
+            },
+            "fez_record_search_key_refereed": null,
+            "fez_record_search_key_refereed_source": {
+                "rek_refereed_source_id": 1225812,
+                "rek_refereed_source_pid": "UQ:333631",
+                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source": "453638",
+                "rek_refereed_source_lookup": "Not yet assessed"
+            },
+            "fez_record_search_key_report_number": {
+                "rek_report_number_id": 16533,
+                "rek_report_number_pid": "UQ:333631",
+                "rek_report_number_xsdmf_id": 6619,
+                "rek_report_number": "67"
+            },
+            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_series": {
+                "rek_series_id": 197447,
+                "rek_series_pid": "UQ:333631",
+                "rek_series_xsdmf_id": 6608,
+                "rek_series": "Economic Theory, Applications and Issues Working Paper Series"
+            },
+            "fez_record_search_key_start_page": {
+                "rek_start_page_id": 5608032,
+                "rek_start_page_pid": "UQ:333631",
+                "rek_start_page_xsdmf_id": 10745,
+                "rek_start_page": "1"
+            },
+            "fez_record_search_key_subject": [],
+            "fez_record_search_key_total_pages": {
+                "rek_total_pages_id": 5521534,
+                "rek_total_pages_pid": "UQ:333631",
+                "rek_total_pages_xsdmf_id": 10747,
+                "rek_total_pages": "21"
+            },
+            "fez_record_search_key_translated_title": null,
+            "fez_record_search_key_wok_doc_types": [],
+            fez_record_search_key_isbn: [
+                {
+                    rek_isbn_id: 1115631,
+                    rek_isbn_pid: 'UQ:333631',
+                    rek_isbn_xsdmf_id: null,
+                    rek_isbn: '9783319715797',
+                    rek_isbn_order: 1
+                },
+                {
+                    rek_isbn_id: 1115632,
+                    rek_isbn_pid: 'UQ:333631',
+                    rek_isbn_xsdmf_id: null,
+                    rek_isbn: '9783319715803',
+                    rek_isbn_order: 2
+                }
+            ],
             "fez_record_search_key_issn": [
                 {
                     "rek_issn_id": 5553083,

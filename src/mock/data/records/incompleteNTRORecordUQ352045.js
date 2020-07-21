@@ -207,6 +207,7 @@ export default {
         "rek_language": "eng",
         "rek_language_order": 1
     }],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_series": {
         "rek_series_id": 218537,
         "rek_series_pid": "UQ:352045",

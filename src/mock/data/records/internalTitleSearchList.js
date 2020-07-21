@@ -206,6 +206,7 @@ export default {
                 rek_oa_status: 453694,
                 rek_oa_status_lookup: 'link (no DOI)'
             },
+            fez_record_search_key_oa_status_type: null,
             rek_altmetric_score_xsdmf_id: null,
             fez_record_search_key_org_name: null,
             fez_record_search_key_corresponding_organisation: [],
@@ -562,6 +563,7 @@ export default {
                 rek_oa_status_xsdmf_id: null,
                 rek_oa_status: 453698
             },
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_org_name: null,
             fez_record_search_key_org_unit_name: null,
             fez_record_search_key_original_format: null,
@@ -820,10 +822,12 @@ export default {
                     rek_language_order: 1
                 }
             ],
+            fez_record_search_key_license: null,
             fez_record_search_key_link: [],
             fez_record_search_key_link_description: [],
             fez_record_search_key_notes: null,
             fez_record_search_key_oa_status: null,
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_patent_number: {
                 rek_patent_number_id: 2696,
                 rek_patent_number_pid: 'UQ:288545',
@@ -1116,6 +1120,7 @@ export default {
             fez_record_search_key_oa_embargo_days: null,
             fez_record_search_key_oa_notes: null,
             fez_record_search_key_oa_status: null,
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_org_name: null,
             fez_record_search_key_org_unit_name: null,
             fez_record_search_key_original_format: null,
@@ -1455,6 +1460,7 @@ export default {
                 rek_oa_status_xsdmf_id: null,
                 rek_oa_status: 453698
             },
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_org_name: null,
             fez_record_search_key_org_unit_name: null,
             fez_record_search_key_original_format: null,
@@ -1811,6 +1817,7 @@ export default {
                 rek_oa_status_xsdmf_id: null,
                 rek_oa_status: 453698
             },
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_org_name: null,
             fez_record_search_key_org_unit_name: null,
             fez_record_search_key_original_format: null,
@@ -2220,6 +2227,7 @@ export default {
                 rek_oa_status_xsdmf_id: null,
                 rek_oa_status: 453698
             },
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_org_name: null,
             fez_record_search_key_org_unit_name: null,
             fez_record_search_key_original_format: null,

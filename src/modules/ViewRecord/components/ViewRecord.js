@@ -58,9 +58,13 @@ export default class ViewRecord extends PureComponent {
         const txt = locale.pages.viewRecord;
         const { loadingRecordToView, recordToViewError, recordToView, isDeleted } = this.props;
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
-        if (isDeleted) {
+
+        if (loadingRecordToView) {
+            return <InlineLoader message={txt.loadingMessage} />;
+        } else if (recordToViewError) {
             return (
-                <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
+                <StandardPage>
+                    <Alert message={recordToViewError} />
                     <Grid container style={{ marginTop: -24 }}>
                         <Grid item xs={12}>
                             {locale.pages.viewRecord.notFound.message}
@@ -71,15 +75,6 @@ export default class ViewRecord extends PureComponent {
                             {`(${recordToViewError.status} - ${recordToViewError.message})`}
                         </Typography>
                     )}
-                </StandardPage>
-            );
-        }
-        if (loadingRecordToView) {
-            return <InlineLoader message={txt.loadingMessage} />;
-        } else if (recordToViewError) {
-            return (
-                <StandardPage>
-                    <Alert message={recordToViewError} />
                 </StandardPage>
             );
         } else if (!recordToView || !recordToView.rek_pid) {
@@ -134,6 +129,11 @@ export default class ViewRecord extends PureComponent {
                         </Grid>
                     )}
                 </Grid>
+                {isDeleted && (
+                    <Grid item xs={12} style={{ marginBottom: 24 }}>
+                        <Alert {...txt.deletedAlert} />
+                    </Grid>
+                )}
                 <Grid container spacing={3}>
                     {!isDeleted && (
                         <React.Fragment>

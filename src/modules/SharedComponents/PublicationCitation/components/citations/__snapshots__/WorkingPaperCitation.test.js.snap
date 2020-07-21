@@ -615,6 +615,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                     "rek_language_xsdmf_id": 10742,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -645,6 +646,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                   "rek_oa_status_pid": "UQ:176145",
                   "rek_oa_status_xsdmf_id": 17007,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": Object {
                   "rek_org_name": "The University of Queensland",
                   "rek_org_name_id": 349870,
@@ -952,6 +954,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                         "rek_language_xsdmf_id": 10742,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -982,6 +985,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                       "rek_oa_status_pid": "UQ:176145",
                       "rek_oa_status_xsdmf_id": 17007,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": Object {
                       "rek_org_name": "The University of Queensland",
                       "rek_org_name_id": 349870,
@@ -1301,6 +1305,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                           "rek_language_xsdmf_id": 10742,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -1331,6 +1336,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                         "rek_oa_status_pid": "UQ:176145",
                         "rek_oa_status_xsdmf_id": 17007,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": Object {
                         "rek_org_name": "The University of Queensland",
                         "rek_org_name_id": 349870,
@@ -3326,6 +3332,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                     "rek_language_xsdmf_id": 10742,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -3356,6 +3363,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                   "rek_oa_status_pid": "UQ:176145",
                   "rek_oa_status_xsdmf_id": 17007,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": Object {
                   "rek_org_name": "The University of Queensland",
                   "rek_org_name_id": 349870,
@@ -3661,6 +3669,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                         "rek_language_xsdmf_id": 10742,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -3691,6 +3700,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                       "rek_oa_status_pid": "UQ:176145",
                       "rek_oa_status_xsdmf_id": 17007,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": Object {
                       "rek_org_name": "The University of Queensland",
                       "rek_org_name_id": 349870,
@@ -4008,6 +4018,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                           "rek_language_xsdmf_id": 10742,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
@@ -4038,6 +4049,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                         "rek_oa_status_pid": "UQ:176145",
                         "rek_oa_status_xsdmf_id": 17007,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": Object {
                         "rek_org_name": "The University of Queensland",
                         "rek_org_name_id": 349870,

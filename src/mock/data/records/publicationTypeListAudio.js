@@ -308,6 +308,7 @@ export default {
                 "rek_oa_status": 453696,
                 "rek_oa_status_lookup": "File (Author Post-print)"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
@@ -677,6 +678,7 @@ export default {
             "fez_record_search_key_location": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 26908,
                 "rek_original_format_pid": "UQ:048b923",

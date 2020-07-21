@@ -13,6 +13,7 @@ export const Doi = React.lazy(() => import('modules/Admin/Doi/containers/Doi'));
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
 export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
+export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));
 export const Orcid = React.lazy(() => import('modules/AuthorIdentifiers/containers/Orcid'));
 export const PossiblyMyRecords = React.lazy(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords'));
 export const SbsSubmission = React.lazy(() => import('modules/SbsSubmission/containers/SbsSubmission'));
