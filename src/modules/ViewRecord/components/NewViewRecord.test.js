@@ -99,7 +99,8 @@ describe('NewViewRecord', () => {
 
     it('should render error', () => {
         const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 403 } });
-        expect(getByText('(403 - PID not found)')).toBeInTheDocument();
+        expect(getByText('You are not logged in -')).toBeInTheDocument();
+        expect(getByText('Login to UQ eSpace for full search results and more services.')).toBeInTheDocument();
     });
 
     it('should have status prop in the header for admins', () => {

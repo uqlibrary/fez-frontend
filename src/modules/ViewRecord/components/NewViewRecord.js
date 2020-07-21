@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { AppAlert } from 'modules/App';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
@@ -24,8 +25,9 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
 import { userIsAdmin, userIsAuthor } from 'hooks';
-import { general } from 'config';
+import { general, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 import locale from 'locale/pages';
+import globalLocale from 'locale/global';
 import * as actions from 'actions';
 
 export const NewViewRecord = ({
@@ -51,6 +53,12 @@ export const NewViewRecord = ({
         [],
     );
 
+    const redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
+        const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
+        const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
+        window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
+    };
+
     React.useEffect(() => {
         if (!!pid) {
             dispatch(actions.loadRecordToView(pid));
@@ -62,7 +70,7 @@ export const NewViewRecord = ({
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (recordToViewError) {
+    } else if (recordToViewError && recordToViewError.status === 410) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -75,6 +83,13 @@ export const NewViewRecord = ({
                         {`(${recordToViewError.status} - ${recordToViewError.message})`}
                     </Typography>
                 )}
+            </StandardPage>
+        );
+    } else if (recordToViewError && recordToViewError.status === 403) {
+        return (
+            <StandardPage>
+                <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin()} />
+                <AppAlert />
             </StandardPage>
         );
     } else if (!recordToView || !recordToView.rek_pid) {
