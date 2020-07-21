@@ -1,9 +1,14 @@
 jest.dontMock('./ThesisForm');
 
 import ThesisForm from './ThesisForm';
+import { routes } from 'config';
 
 function setup(testProps = {}) {
     const props = {
+        history: {
+            push: jest.fn(),
+            go: jest.fn(),
+        },
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
         vocabId: testProps.vocabId || 0, // : PropTypes.number
@@ -35,5 +40,18 @@ describe('ThesisForm ', () => {
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         });
+    });
+
+    it('should redirect to Thesis submission page on click', () => {
+        const pushFn = jest.fn();
+        const wrapper = setup({
+            history: {
+                push: pushFn,
+            },
+        });
+
+        wrapper.instance()._visitHdrSubmissionPage();
+
+        expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
     });
 });
