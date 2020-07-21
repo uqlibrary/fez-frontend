@@ -1,6 +1,5 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import * as NewViewRecordModule from './NewViewRecord';
 import { render, RenderWithRouter, WithRedux, fireEvent } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
@@ -167,7 +166,7 @@ describe('NewViewRecord', () => {
     });
 
     it('redirects user to login if not Authorized', () => {
-        const { getByTestId, debug } = setup({
+        const { getByTestId } = setup({
             recordToViewError: { message: 'Your session has expired', status: 403 },
         });
 
