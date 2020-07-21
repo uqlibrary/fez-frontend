@@ -41,8 +41,16 @@ export const doiFields = {
                 order: 11,
             },
             {
+                field: 'fez_record_search_key_series',
+                order: 12,
+            },
+            {
                 field: 'fez_record_search_key_isbn',
                 order: 13,
+            },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 14,
             },
             {
                 field: 'fez_record_search_key_contributor',
@@ -127,6 +135,11 @@ export const doiFields = {
                 order: 7.5,
             },
             {
+                // Manually added (not found in locale file mentioned above)
+                field: 'fez_record_search_key_org_name',
+                order: 7.7,
+            },
+            {
                 field: 'rek_date',
                 order: 27,
                 format: 'YYYY',
@@ -147,6 +160,15 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_parent_publication',
                 order: 3.5,
+            },
+            {
+                // Manually added (not found in locale file mentioned above)
+                field: 'fez_record_search_key_org_name',
+                order: 3.7,
+            },
+            {
+                field: 'fez_record_search_key_org_unit_name',
+                order: 4,
             },
             {
                 field: 'fez_record_search_key_report_number',
@@ -171,6 +193,19 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 13,
+            },
+            {
+                // Manually added (not found in locale file mentioned above)
+                field: 'fez_record_search_key_place_of_publication',
+                order: 13.5,
+            },
+            {
+                field: 'fez_record_search_key_isbn',
+                order: 18,
+            },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 19,
             },
         ],
     },
@@ -199,7 +234,7 @@ export const doiFields = {
                 isRequired: true,
             },
             {
-                field: 'fez_record_search_key_author',
+                field: 'fez_record_search_key_contributor',
                 order: 14,
             },
             {
@@ -228,6 +263,11 @@ export const doiFields = {
                 order: 4,
             },
             {
+                // Manually added (not found in locale file mentioned above)
+                field: 'fez_record_search_key_org_unit_name',
+                order: 4.5,
+            },
+            {
                 field: 'rek_date',
                 order: 6,
             },
@@ -240,17 +280,21 @@ export const doiFields = {
                 order: 8,
             },
             {
-                // Manually added (not found in locale file mentioned above)
-                field: 'fez_record_search_key_org_name',
-                order: 10.5,
-            },
-            {
                 field: 'fez_record_search_key_publisher',
                 order: 11,
             },
             {
+                field: 'fez_record_search_key_series',
+                order: 12,
+            },
+            {
                 field: 'fez_record_search_key_place_of_publication',
                 order: 13,
+            },
+            {
+                // Manually added (not found in locale file mentioned above)
+                field: 'fez_record_search_key_org_name',
+                order: 13.5,
             },
             {
                 field: 'fez_record_search_key_start_page',
