@@ -724,16 +724,30 @@ export const CURRENT_LICENCES = [
         value: 453701,
         text: 'Permitted Re-use with Acknowledgement',
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.',
+        ],
     },
     {
         value: 454104,
         text: 'Permitted Re-Use with Commercial Use Restriction',
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.',
+            'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
+        ],
     },
     {
         value: 454105,
         text: 'Permitted Re-Use with Share Alike Requirement',
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.',
+            'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
+        ],
     },
 ];
 export const DEPRECATED_LICENCES = [
@@ -1414,6 +1428,15 @@ export const OA_STATUS = [
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
+    { value: '454118', text: 'Not yet assessed (Unpaywall)' },
+];
+
+export const OA_STATUS_TYPE = [
+    { value: null, text: 'Please choose an option' },
+    { value: 454120, text: 'Green' },
+    { value: 454121, text: 'Gold' },
+    { value: 454122, text: 'Hybrid' },
+    { value: 454123, text: 'Bronze' },
 ];
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;

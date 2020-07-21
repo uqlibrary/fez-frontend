@@ -1593,6 +1593,7 @@ export const trendingPublications = {
             "rek_language": "eng",
             "rek_language_order": 1
         }],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
         "fez_record_search_key_link": [],
@@ -1609,6 +1610,7 @@ export const trendingPublications = {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4369458,
             "rek_place_of_publication_pid": "UQ:6781f9d",
@@ -2867,6 +2869,7 @@ export const trendingPublications = {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -2881,6 +2884,7 @@ export const trendingPublications = {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": null,
         "fez_record_search_key_publisher": {
             "rek_publisher_id": 4679988,
@@ -4241,6 +4245,7 @@ export const trendingPublications = {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -4255,6 +4260,7 @@ export const trendingPublications = {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4367987,
             "rek_place_of_publication_pid": "UQ:794951",
@@ -6964,6 +6970,7 @@ export const trendingPublications = {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4369506,
             "rek_place_of_publication_pid": "UQ:e3c3a60",
@@ -7460,6 +7467,7 @@ export const trendingPublications = {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4369504,
             "rek_place_of_publication_pid": "UQ:0801489",
@@ -8106,6 +8114,7 @@ export const trendingPublications = {
             "rek_oa_status": 453693,
             "rek_oa_status_lookup": "DOI"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4162264,
             "rek_place_of_publication_pid": "UQ:319092",
@@ -8669,6 +8678,7 @@ export const trendingPublications = {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4115509,
             "rek_place_of_publication_pid": "UQ:404005",
@@ -9230,6 +9240,7 @@ export const trendingPublicationsWithNoSources = {
             "rek_oa_status": 453693,
             "rek_oa_status_lookup": "DOI"
         },
+        "fez_record_search_key_oa_status_type": null,
         "fez_record_search_key_place_of_publication": {
             "rek_place_of_publication_id": 4438909,
             "rek_place_of_publication_pid": "UQ:d8ece17",

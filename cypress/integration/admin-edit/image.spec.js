@@ -46,11 +46,6 @@ context('Image admin edit', () => {
                             'have.value',
                             record.fez_record_search_key_rights.rek_rights,
                         );
-
-                        cy.get('[data-testid=rek-license-input]')
-                            .should('have.value', record.fez_record_search_key_license.rek_license)
-                            .get('[data-testid=rek-license-select]')
-                            .contains(record.fez_record_search_key_license.rek_license_lookup);
                     });
             });
 

@@ -82,6 +82,10 @@ export default {
                 message: 'The requested page could not be found.',
                 status: 404,
             },
+            410: {
+                message: 'This work has been deleted.',
+                status: 410,
+            },
             422: {
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact ' +

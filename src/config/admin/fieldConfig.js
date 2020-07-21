@@ -59,6 +59,7 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
+import { OAStatusTypeField } from 'modules/SharedComponents/Toolbox/OAStatusTypeField';
 import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -843,6 +844,13 @@ export default {
                 label: 'Institutional status',
             },
         },
+        fez_record_search_key_oa_status_type: {
+            component: OAStatusTypeField,
+            componentProps: {
+                name: 'adminSection.fez_record_search_key_oa_status_type.rek_oa_status_type',
+                label: 'OA status type',
+            },
+        },
         fez_record_search_key_oa_status: {
             component: OAStatusField,
             componentProps: {
@@ -1060,9 +1068,9 @@ export default {
         fez_record_search_key_license: {
             component: LicenceSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+                name: 'adminSection.fez_record_search_key_license.rek_license',
                 label: 'Licence',
-                isAdmin: true,
+                isAdmin: true, // show the extra info that is only visible to admins
             },
         },
         fez_record_search_key_original_format: {

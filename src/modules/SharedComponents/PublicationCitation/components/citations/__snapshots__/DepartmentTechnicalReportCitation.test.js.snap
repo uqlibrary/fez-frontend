@@ -512,6 +512,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                     "rek_language_xsdmf_id": 10772,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -537,6 +538,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                   "rek_notes_xsdmf_id": 12446,
                 },
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": Object {
                   "rek_org_name": "South African Medical Research Council",
                   "rek_org_name_id": 352116,
@@ -729,6 +731,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         "rek_language_xsdmf_id": 10772,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -754,6 +757,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                       "rek_notes_xsdmf_id": 12446,
                     },
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": Object {
                       "rek_org_name": "South African Medical Research Council",
                       "rek_org_name_id": 352116,
@@ -958,6 +962,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                           "rek_language_xsdmf_id": 10772,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -983,6 +988,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         "rek_notes_xsdmf_id": 12446,
                       },
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": Object {
                         "rek_org_name": "South African Medical Research Council",
                         "rek_org_name_id": 352116,
@@ -2086,6 +2092,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                     "rek_language_xsdmf_id": 10772,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [
                   Object {
                     "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -2111,6 +2118,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                   "rek_notes_xsdmf_id": 12446,
                 },
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": Object {
                   "rek_org_name": "South African Medical Research Council",
                   "rek_org_name_id": 352116,
@@ -2308,6 +2316,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         "rek_language_xsdmf_id": 10772,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [
                       Object {
                         "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -2333,6 +2342,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                       "rek_notes_xsdmf_id": 12446,
                     },
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": Object {
                       "rek_org_name": "South African Medical Research Council",
                       "rek_org_name_id": 352116,
@@ -2542,6 +2552,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                           "rek_language_xsdmf_id": 10772,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [
                         Object {
                           "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
@@ -2567,6 +2578,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         "rek_notes_xsdmf_id": 12446,
                       },
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": Object {
                         "rek_org_name": "South African Medical Research Council",
                         "rek_org_name_id": 352116,

@@ -170,6 +170,7 @@ export default {
                 "rek_language": "eng",
                 "rek_language_order": 1
             }],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_newspaper": {
@@ -186,6 +187,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4152811,
                 "rek_place_of_publication_pid": "UQ:294443",
@@ -442,6 +444,13 @@ export default {
             }],
             "fez_record_search_key_keywords": [],
             "fez_record_search_key_language": [],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:234742",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_newspaper": {
@@ -455,8 +464,15 @@ export default {
                 "rek_oa_status_id": 698548,
                 "rek_oa_status_pid": "UQ:234742",
                 "rek_oa_status_xsdmf_id": null,
-                "rek_oa_status": 453692,
-                "rek_oa_status_lookup": "Not yet assessed"
+                "rek_oa_status": 454118,
+                "rek_oa_status_lookup": "Not yet assessed (Unpaywall)"
+            },
+            "fez_record_search_key_oa_status_type": {
+                "rek_oa_status_type_id": 592002,
+                "rek_oa_status_type_pid": 'UQ:288291',
+                "rek_oa_status_type_xsdmf_id": null,
+                "rek_oa_status_type": 454121,
+                "rek_oa_status_type_lookup": 'Gold',
             },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4205971,

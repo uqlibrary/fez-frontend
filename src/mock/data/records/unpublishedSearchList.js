@@ -417,6 +417,7 @@ export default {
             ],
             "fez_record_search_key_language_of_journal_name": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_journal_name": null,
@@ -431,6 +432,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
@@ -926,6 +928,7 @@ export default {
             ],
             "fez_record_search_key_language_of_journal_name": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_journal_name": null,
@@ -940,6 +943,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
@@ -1372,6 +1376,7 @@ export default {
             ],
             "fez_record_search_key_language_of_journal_name": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_journal_name": null,
@@ -1385,6 +1390,7 @@ export default {
                 "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": null
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
@@ -1861,6 +1867,7 @@ export default {
             ],
             "fez_record_search_key_language_of_journal_name": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_journal_name": null,
@@ -1875,6 +1882,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {

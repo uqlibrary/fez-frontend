@@ -20,6 +20,7 @@ import {
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     NTRO_SUBTYPE_CW_OTHER,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
     RRW_NTRO_SUBTYPES,
 } from 'config/general';
 import moment from 'moment';
@@ -49,6 +50,12 @@ export default class CreativeWorkForm extends Component {
             !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
                 ? 'Date range is not valid'
                 : '';
+        const displayEndDate = [
+            ...LP_NTRO_SUBTYPES,
+            ...CPEE_NTRO_SUBTYPES,
+            NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+        ].includes(this.props.subtype);
+
         return (
             <Grid container spacing={3}>
                 <Grid item xs={12}>
@@ -119,17 +126,19 @@ export default class CreativeWorkForm extends Component {
                                     partialDateFieldId="rek-date"
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PartialDateField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_end_date.rek_end_date"
-                                    allowPartial
-                                    floatingTitle={txt.information.fieldLabels.endDate.title}
-                                    hasError={dateError}
-                                    partialDateFieldId="rek-end-date"
-                                />
-                            </Grid>
+                            {displayEndDate && (
+                                <Grid item xs={12} sm={6}>
+                                    <Field
+                                        component={PartialDateField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_end_date.rek_end_date"
+                                        allowPartial
+                                        floatingTitle={txt.information.fieldLabels.endDate.title}
+                                        hasError={dateError}
+                                        partialDateFieldId="rek-end-date"
+                                    />
+                                </Grid>
+                            )}
                         </Grid>
                     </StandardCard>
                 </Grid>

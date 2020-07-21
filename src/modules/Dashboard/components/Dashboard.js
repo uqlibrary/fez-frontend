@@ -120,7 +120,7 @@ export class DashboardClass extends PureComponent {
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
-            this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+            this.props.actions.loadAuthorPublicationsStats(this.props.account.id, this.props.authorDetails);
             !this.props.incomplete.publicationsList.length &&
                 this.props.actions.searchAuthorPublications({}, 'incomplete');
             this._loadOrcidSync();
@@ -204,6 +204,13 @@ export class DashboardClass extends PureComponent {
         </Grid>
     );
 
+    getActualLowestYear = (citationCount, authorDetails) => {
+        return citationCount.replace(
+            '1000',
+            !!authorDetails.espace && !!authorDetails.espace.first_year ? authorDetails.espace.first_year : 'N/A',
+        );
+    };
+
     render() {
         const { classes } = this.props;
         const txt = locale.pages.dashboard;
@@ -252,13 +259,42 @@ export class DashboardClass extends PureComponent {
                 </StandardCard>
             ) : null;
 
+        /**
+         * where the 1000-01-01 date is provided as the lowest date, we replace it with the authorDetails date
+         */
+        const cleanPublicationsStats = publicationsStats => {
+            const authorDetails = (!!this.props.authorDetails && this.props.authorDetails) || {};
+
+            if (
+                !!publicationsStats.scopus_citation_count_i &&
+                !!publicationsStats.scopus_citation_count_i.years &&
+                publicationsStats.scopus_citation_count_i.years.substring(0, 4) === '1000'
+            ) {
+                publicationsStats.scopus_citation_count_i.years = this.getActualLowestYear(
+                    publicationsStats.scopus_citation_count_i.years,
+                    authorDetails,
+                );
+            }
+            if (
+                !!publicationsStats.thomson_citation_count_i &&
+                !!publicationsStats.thomson_citation_count_i.years &&
+                publicationsStats.thomson_citation_count_i.years.substring(0, 4) === '1000'
+            ) {
+                publicationsStats.thomson_citation_count_i.years = this.getActualLowestYear(
+                    publicationsStats.thomson_citation_count_i.years,
+                    authorDetails,
+                );
+            }
+            return publicationsStats;
+        };
+
         const publicationStats =
             !loading &&
             this.props.publicationsStats &&
             (this.props.publicationsStats.thomson_citation_count_i.count > 0 ||
                 this.props.publicationsStats.scopus_citation_count_i.count > 0) ? (
                 <StandardCard noPadding noHeader fullHeight>
-                    <PublicationStats publicationsStats={this.props.publicationsStats} />
+                    <PublicationStats publicationsStats={cleanPublicationsStats(this.props.publicationsStats)} />
                 </StandardCard>
             ) : null;
         const pluralTextReplacement =

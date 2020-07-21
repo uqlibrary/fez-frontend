@@ -148,6 +148,13 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:333631",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [
                 {
                     "rek_link_id": 3199085,
@@ -179,6 +186,7 @@ export default {
                 "rek_org_name_xsdmf_id": 6613,
                 "rek_org_name": "The University of Queensland"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_unit_name": {
                 "rek_org_unit_name_id": 341470,
                 "rek_org_unit_name_pid": "UQ:333631",

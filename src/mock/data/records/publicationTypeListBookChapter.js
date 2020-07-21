@@ -322,6 +322,13 @@ export default {
                 }
             ],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": {
+                "rek_license_id": 24759,
+                "rek_license_pid": "UQ:173575",
+                "rek_license_xsdmf_id": 16636,
+                "rek_license": 453609,
+                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_book_title": {
@@ -340,6 +347,7 @@ export default {
             "fez_record_search_key_oa_embargo_days": null,
             "fez_record_search_key_oa_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4227054,
                 "rek_place_of_publication_pid": "UQ:173575",
@@ -824,6 +832,7 @@ export default {
             ],
             "fez_record_search_key_language_of_book_title": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_book_title": null,
@@ -838,6 +847,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4448182,
                 "rek_place_of_publication_pid": "UQ:0048ce9",
@@ -1295,6 +1305,7 @@ export default {
             ],
             "fez_record_search_key_language_of_book_title": [],
             "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_book_title": null,
@@ -1314,6 +1325,7 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4225617,
                 "rek_place_of_publication_pid": "UQ:278002",

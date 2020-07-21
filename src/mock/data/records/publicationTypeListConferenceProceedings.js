@@ -166,10 +166,18 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 24759,
+                "rek_license_pid": "UQ:242447",
+                "rek_license_xsdmf_id": 16636,
+                "rek_license": 453609,
+                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": null,
