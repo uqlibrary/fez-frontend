@@ -10,7 +10,7 @@ fi
 
 # Not running code coverage check for feature branches.
 BRANCH_INCLUDES_CC=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "feature-ux-wcag") ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_COMMIT_MESSAGE == *"[cypress]"*) ]]; then
     BRANCH_INCLUDES_CC=true
 fi
 
@@ -19,7 +19,7 @@ export TZ='Australia/Brisbane'
 # Run e2e tests if in master branch, or if the branch name includes 'cypress'
 # Putting * around the test-string gives a test for inclusion of the substring rather than exact match
 BRANCH_RUNS_E2E=false
-if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == *"cypress"* || $CI_BRANCH == "feature-ux-wcag" ]]; then
+if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == *"cypress"* || $CI_COMMIT_MESSAGE == *"[cypress]"* ]]; then
     BRANCH_RUNS_E2E=true
 fi
 
