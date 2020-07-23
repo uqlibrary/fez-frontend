@@ -123,6 +123,7 @@ export const MyIncompleteRecord = props => {
                 <form onSubmit={_handleDefaultSubmit}>
                     <NavigationDialogBox when={dirty && !submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
                     <ConfirmationBox
+                        confirmationBoxId="submit-succeeded"
                         onAction={_navigateToDashboard}
                         onClose={hideConfirmation}
                         onCancelAction={_navigateToMyIncomplete}

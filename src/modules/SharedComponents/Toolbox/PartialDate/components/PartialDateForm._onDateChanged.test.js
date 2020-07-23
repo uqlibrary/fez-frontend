@@ -2,7 +2,7 @@ import { PartialDateForm } from './PartialDateForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        partialDateFieldId: 'test',
+        partialDateFormId: 'test',
         classes: {
             fakeTitle: {},
         },

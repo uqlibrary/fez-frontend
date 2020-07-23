@@ -5479,6 +5479,988 @@ exports[`Dashboard test renders dashboard header only 1`] = `
           authorDetails={
             Object {
               "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
+              "is_administrator": 0,
+              "is_super_administrator": 0,
+            }
+          }
+          history={Object {}}
+        />
+      </ContextProvider>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <Alert
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        allowDismiss={false}
+        customIcon={null}
+        customType={null}
+        disableAlertClick={false}
+        dismissTitle="Click to dismiss this alert"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        showLoader={false}
+        title="Add your work to eSpace"
+        type="info_outline"
+        wiggle={null}
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="barChart"
+        customBackgroundColor="#1e7d94"
+        customTitleColor="#FFFFFF"
+        title="eSpace works per year"
+      >
+        <AuthorsPublicationsPerYearChart
+          categories={
+            Array [
+              1977,
+              1980,
+              1982,
+              1983,
+              1984,
+              1985,
+              1986,
+              1987,
+              1988,
+              1989,
+              1990,
+              1991,
+              1992,
+              1993,
+              1994,
+              1995,
+              1996,
+              1997,
+              1998,
+              1999,
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+            ]
+          }
+          className="barChart"
+          series={
+            Array [
+              Object {
+                "data": Array [
+                  1,
+                  1,
+                  3,
+                  5,
+                  5,
+                  8,
+                  8,
+                  2,
+                  5,
+                  3,
+                  6,
+                  4,
+                  4,
+                  7,
+                  8,
+                  8,
+                  6,
+                  4,
+                  10,
+                  10,
+                  8,
+                  10,
+                  12,
+                  7,
+                  19,
+                  11,
+                  11,
+                  12,
+                  6,
+                  8,
+                  15,
+                  10,
+                  9,
+                  3,
+                  13,
+                  6,
+                  5,
+                  5,
+                ],
+                "name": "Journal Article",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  1,
+                  4,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  3,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  5,
+                  0,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  9,
+                  0,
+                ],
+                "name": "Conference Paper",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Book Chapter",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Book",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Other",
+              },
+            ]
+          }
+          yAxisTitle="Total publications"
+        />
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={4}
+      xs={12}
+    >
+      <StandardCard
+        className="donutChart"
+        customBackgroundColor="#d72865"
+        customTitleColor="#FFFFFF"
+        fullHeight={true}
+        noPadding={true}
+        title="Work types overview"
+      >
+        <AuthorsPublicationTypesCountChart
+          className="donutChart"
+          series={
+            Array [
+              Object {
+                "data": Array [
+                  Array [
+                    "Journal Article",
+                    278,
+                  ],
+                  Array [
+                    "Conference Paper",
+                    42,
+                  ],
+                  Array [
+                    "Book Chapter",
+                    12,
+                  ],
+                  Array [
+                    "Book",
+                    1,
+                  ],
+                  Array [
+                    "Other",
+                    1,
+                  ],
+                ],
+                "name": "Work types overview",
+              },
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={8}
+      xs={12}
+    >
+      <StandardCard
+        fullHeight={true}
+        noHeader={true}
+        noPadding={true}
+      >
+        <WithStyles(PublicationStats)
+          publicationsStats={
+            Object {
+              "scopus_citation_count_i": Object {
+                "count": 10,
+                "years": "1998 - 2019",
+              },
+              "thomson_citation_count_i": Object {
+                "count": 10,
+                "years": "1998 - 2019",
+              },
+            }
+          }
+        />
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</StandardPage>
+`;
+
+exports[`Dashboard test publicationStats should render stats with ancient date without author data 1`] = `
+<StandardPage>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="barChart"
+        customBackgroundColor="#1e7d94"
+        customTitleColor="#FFFFFF"
+        title="eSpace works per year"
+      >
+        <AuthorsPublicationsPerYearChart
+          categories={
+            Array [
+              1977,
+              1980,
+              1982,
+              1983,
+              1984,
+              1985,
+              1986,
+              1987,
+              1988,
+              1989,
+              1990,
+              1991,
+              1992,
+              1993,
+              1994,
+              1995,
+              1996,
+              1997,
+              1998,
+              1999,
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+            ]
+          }
+          className="barChart"
+          series={
+            Array [
+              Object {
+                "data": Array [
+                  1,
+                  1,
+                  3,
+                  5,
+                  5,
+                  8,
+                  8,
+                  2,
+                  5,
+                  3,
+                  6,
+                  4,
+                  4,
+                  7,
+                  8,
+                  8,
+                  6,
+                  4,
+                  10,
+                  10,
+                  8,
+                  10,
+                  12,
+                  7,
+                  19,
+                  11,
+                  11,
+                  12,
+                  6,
+                  8,
+                  15,
+                  10,
+                  9,
+                  3,
+                  13,
+                  6,
+                  5,
+                  5,
+                ],
+                "name": "Journal Article",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  1,
+                  4,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  4,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  3,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  5,
+                  0,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  9,
+                  0,
+                ],
+                "name": "Conference Paper",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Book Chapter",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Book",
+              },
+              Object {
+                "data": Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                ],
+                "name": "Other",
+              },
+            ]
+          }
+          yAxisTitle="Total publications"
+        />
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={4}
+      xs={12}
+    >
+      <StandardCard
+        className="donutChart"
+        customBackgroundColor="#d72865"
+        customTitleColor="#FFFFFF"
+        fullHeight={true}
+        noPadding={true}
+        title="Work types overview"
+      >
+        <AuthorsPublicationTypesCountChart
+          className="donutChart"
+          series={
+            Array [
+              Object {
+                "data": Array [
+                  Array [
+                    "Journal Article",
+                    278,
+                  ],
+                  Array [
+                    "Conference Paper",
+                    42,
+                  ],
+                  Array [
+                    "Book Chapter",
+                    12,
+                  ],
+                  Array [
+                    "Book",
+                    1,
+                  ],
+                  Array [
+                    "Other",
+                    1,
+                  ],
+                ],
+                "name": "Work types overview",
+              },
+            ]
+          }
+        />
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={8}
+      xs={12}
+    >
+      <StandardCard
+        fullHeight={true}
+        noHeader={true}
+        noPadding={true}
+      >
+        <WithStyles(PublicationStats)
+          publicationsStats={
+            Object {
+              "scopus_citation_count_i": Object {
+                "count": 10,
+                "years": "N/A - 2019",
+              },
+              "thomson_citation_count_i": Object {
+                "count": 10,
+                "years": "N/A - 2019",
+              },
+            }
+          }
+        />
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</StandardPage>
+`;
+
+exports[`Dashboard test renders alert for non-authors 1`] = `
+<StandardPage>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <ContextProvider
+        value={
+          Object {
+            "orcidSyncProps": Object {
+              "author": Object {
+                "data": Object {
+                  "aut_created_date": null,
+                  "aut_description": "",
+                  "aut_display_name": "Researcher, J",
+                  "aut_email": "",
+                  "aut_external_id": "0000040357",
+                  "aut_fname": "J",
+                  "aut_google_scholar_id": "kUemDfMAAAAJ",
+                  "aut_homepage_link": "",
+                  "aut_id": 410,
+                  "aut_is_orcid_sync_enabled": 1,
+                  "aut_is_scopus_id_authenticated": 1,
+                  "aut_lname": "Researcher",
+                  "aut_mname": "",
+                  "aut_mypub_url": "",
+                  "aut_orcid_id": "0000-0001-1111-1111",
+                  "aut_org_staff_id": "0001952",
+                  "aut_org_student_id": null,
+                  "aut_org_username": "uqresearcher",
+                  "aut_people_australia_id": "",
+                  "aut_position": "",
+                  "aut_publons_id": null,
+                  "aut_ref_num": "",
+                  "aut_researcher_id": "A-1137-2007",
+                  "aut_rid_last_updated": "2013-05-17",
+                  "aut_rid_password": "",
+                  "aut_scopus_id": "35478294000",
+                  "aut_student_username": null,
+                  "aut_title": "Professor",
+                  "aut_update_date": "2017-07-23",
+                  "pol_id": 3,
+                },
+              },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "data": Object {
+                "aut_created_date": null,
+                "aut_description": "",
+                "aut_display_name": "Researcher, J",
+                "aut_email": "",
+                "aut_external_id": "0000040357",
+                "aut_fname": "J",
+                "aut_google_scholar_id": "kUemDfMAAAAJ",
+                "aut_homepage_link": "",
+                "aut_id": 410,
+                "aut_is_orcid_sync_enabled": 1,
+                "aut_is_scopus_id_authenticated": 1,
+                "aut_lname": "Researcher",
+                "aut_mname": "",
+                "aut_mypub_url": "",
+                "aut_orcid_id": "0000-0001-1111-1111",
+                "aut_org_staff_id": "0001952",
+                "aut_org_student_id": null,
+                "aut_org_username": "uqresearcher",
+                "aut_people_australia_id": "",
+                "aut_position": "",
+                "aut_publons_id": null,
+                "aut_ref_num": "",
+                "aut_researcher_id": "A-1137-2007",
+                "aut_rid_last_updated": "2013-05-17",
+                "aut_rid_password": "",
+                "aut_scopus_id": "35478294000",
+                "aut_student_username": null,
+                "aut_title": "Professor",
+                "aut_update_date": "2017-07-23",
+                "pol_id": 3,
+              },
+            }
+          }
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
+              "is_administrator": 0,
+              "is_super_administrator": 0,
+            }
+          }
+          history={Object {}}
+        />
+      </ContextProvider>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <Alert
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        allowDismiss={false}
+        customIcon={null}
+        customType={null}
+        disableAlertClick={false}
+        dismissTitle="Click to dismiss this alert"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        showLoader={false}
+        title="Add your work to eSpace"
+        type="info_outline"
+        wiggle={null}
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</StandardPage>
+`;
+
+exports[`Dashboard test renders dashboard header only 1`] = `
+<StandardPage>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <ContextProvider
+        value={
+          Object {
+            "orcidSyncProps": Object {
+              "author": Object {
+                "data": Object {
+                  "aut_created_date": null,
+                  "aut_description": "",
+                  "aut_display_name": "Researcher, J",
+                  "aut_email": "",
+                  "aut_external_id": "0000040357",
+                  "aut_fname": "J",
+                  "aut_google_scholar_id": "kUemDfMAAAAJ",
+                  "aut_homepage_link": "",
+                  "aut_id": 410,
+                  "aut_is_orcid_sync_enabled": 1,
+                  "aut_is_scopus_id_authenticated": 1,
+                  "aut_lname": "Researcher",
+                  "aut_mname": "",
+                  "aut_mypub_url": "",
+                  "aut_orcid_id": "0000-0001-1111-1111",
+                  "aut_org_staff_id": "0001952",
+                  "aut_org_student_id": null,
+                  "aut_org_username": "uqresearcher",
+                  "aut_people_australia_id": "",
+                  "aut_position": "",
+                  "aut_publons_id": null,
+                  "aut_ref_num": "",
+                  "aut_researcher_id": "A-1137-2007",
+                  "aut_rid_last_updated": "2013-05-17",
+                  "aut_rid_password": "",
+                  "aut_scopus_id": "35478294000",
+                  "aut_student_username": null,
+                  "aut_title": "Professor",
+                  "aut_update_date": "2017-07-23",
+                  "pol_id": 3,
+                },
+              },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "data": Object {
+                "aut_created_date": null,
+                "aut_description": "",
+                "aut_display_name": "Researcher, J",
+                "aut_email": "",
+                "aut_external_id": "0000040357",
+                "aut_fname": "J",
+                "aut_google_scholar_id": "kUemDfMAAAAJ",
+                "aut_homepage_link": "",
+                "aut_id": 410,
+                "aut_is_orcid_sync_enabled": 1,
+                "aut_is_scopus_id_authenticated": 1,
+                "aut_lname": "Researcher",
+                "aut_mname": "",
+                "aut_mypub_url": "",
+                "aut_orcid_id": "0000-0001-1111-1111",
+                "aut_org_staff_id": "0001952",
+                "aut_org_student_id": null,
+                "aut_org_username": "uqresearcher",
+                "aut_people_australia_id": "",
+                "aut_position": "",
+                "aut_publons_id": null,
+                "aut_ref_num": "",
+                "aut_researcher_id": "A-1137-2007",
+                "aut_rid_last_updated": "2013-05-17",
+                "aut_rid_password": "",
+                "aut_scopus_id": "35478294000",
+                "aut_student_username": null,
+                "aut_title": "Professor",
+                "aut_update_date": "2017-07-23",
+                "pol_id": 3,
+              },
+            }
+          }
+          authorDetails={
+            Object {
+              "espace": Object {
                 "doc_count": 357,
                 "first_year": 1975,
                 "last_year": 2018,
