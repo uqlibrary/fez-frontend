@@ -80,6 +80,7 @@
         "css-loader": "^2.1.1",
         "css-mediaquery": "^0.1.2",
         "cypress": "^4.11.0",
+        "cypress-attest": "git+https://github.com/joshuamcclure/cypress-attest.git",
         "cypress-axe": "^0.8.1",
         "cypress-file-upload": "^3.5.3",
         "cypress-plugin-retries": "^1.5.2",

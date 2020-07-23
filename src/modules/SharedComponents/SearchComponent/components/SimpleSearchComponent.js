@@ -190,7 +190,6 @@ export class SimpleSearchComponent extends PureComponent {
                                     <Grid item xs>
                                         <TextField
                                             type="search"
-                                            autoComplete={'search'}
                                             fullWidth
                                             id="simpleSearchField"
                                             autoFocus={this.props.autoFocus}
