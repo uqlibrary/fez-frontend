@@ -64,8 +64,8 @@ export const getWarningMessage = record => {
     if (!!editionValue && !/^\d+$/.test(editionValue.trim())) {
         warningMessages.push(
             txt.alertMessages.invalidOptionalField
-                .replace('%FIELDNAME%', txt.headings.default.fez_record_search_key_edition)
-                .replace('%REASON%', txt.alertMessages.fieldValidationDetail.edition),
+                .replace('[FIELDNAME]', txt.headings.default.fez_record_search_key_edition)
+                .replace('[REASON]', txt.alertMessages.fieldValidationDetail.edition),
         );
     }
 
@@ -146,7 +146,7 @@ export const getErrorMessage = record => {
         unsupportedType = true;
 
         const type = displayTypeLookup || recordType;
-        errorMessages.push(txt.alertMessages.unsupportedMessage.replace('%TYPE%', type));
+        errorMessages.push(txt.alertMessages.unsupportedMessage.replace('[TYPE]', type));
     } else {
         // Subtype restrictions
         const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
@@ -155,8 +155,8 @@ export const getErrorMessage = record => {
             if (supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
                     txt.alertMessages.wrongSubtype
-                        .replace('%TYPE%', displayTypeLookup)
-                        .replace('%SUBTYPES%', supportedSubtypes.join(', ')),
+                        .replace('[TYPE]', displayTypeLookup)
+                        .replace('[SUBTYPES]', supportedSubtypes.join(', ')),
                 );
             }
         }
@@ -177,7 +177,7 @@ export const getErrorMessage = record => {
                 // const fieldName = displayTypeHeadings[field]
                 // ? displayTypeHeadings[field] : txt.headings.default[field];
                 const fieldName = txt.headings.default[field];
-                errorMessages.push(txt.alertMessages.missingRequiredField.replace('%FIELDNAME%', fieldName));
+                errorMessages.push(txt.alertMessages.missingRequiredField.replace('[FIELDNAME]', fieldName));
             });
         }
     }
@@ -189,8 +189,8 @@ export const getErrorMessage = record => {
 };
 
 const renderTitle = titlePieces => {
-    const titleTemplate = txt.pageTitle({ ...titlePieces, title: '%TITLE%' });
-    const pieces = titleTemplate.split('%TITLE%');
+    const titleTemplate = txt.pageTitle({ ...titlePieces, title: '[TITLE]' });
+    const pieces = titleTemplate.split('[TITLE]');
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="doi-page-title">
             {pieces[0]}

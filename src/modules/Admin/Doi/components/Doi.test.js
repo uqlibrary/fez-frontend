@@ -57,7 +57,7 @@ describe('DOI component', () => {
             loadingRecordToView: true,
             record: null,
         });
-        expect(wrapper.find('WithStyles(InlineLoader)').props().message).toBe('Loading record');
+        expect(wrapper.find('WithStyles(InlineLoader)').props().message).toBe('Loading work');
     });
 
     it('should show empty div and call loader if record is not found', () => {

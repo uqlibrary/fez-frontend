@@ -847,7 +847,7 @@ export default {
             title: 'Admin prototype',
         },
         doi: {
-            loadingMessage: 'Loading record',
+            loadingMessage: 'Loading work',
             pageTitle: ({ doi, displayTypeLookup, title, pid }) =>
                 `${!!doi ? 'Update' : 'Create'} DOI for ${displayTypeLookup} - ${title}: ${pid}`,
             cardTitles: {
@@ -865,16 +865,16 @@ export default {
             alertMessages: {
                 errorTitle: 'Error:',
                 invalidOptionalField:
-                    'Field %FIELDNAME% has an invalid value%REASON%; it will be omitted from submission.',
+                    'Field [FIELDNAME] has an invalid value[REASON]; it will be omitted from submission.',
                 fieldValidationDetail: {
                     edition: ', e.g. 3rd or 3rd edn instead of 3',
                 },
-                missingRequiredField: 'Required field %FIELDNAME% is either missing or invalid.',
+                missingRequiredField: 'Required field [FIELDNAME] is either missing or invalid.',
                 noOADatastreams: 'No open access datastreams are attached; DOI will be for metadata only.',
-                unsupportedMessage: 'Sorry, type %TYPE% is not currently supported.',
+                unsupportedMessage: 'Sorry, type [TYPE] is not currently supported.',
                 uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
                 warningTitle: 'Please note:',
-                wrongSubtype: 'Sorry, only the following subytypes are supported for %TYPE%: %SUBTYPES%',
+                wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
             },
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
@@ -901,7 +901,7 @@ export default {
                 confirmationTitle: 'Request successful',
                 confirmationMessage:
                     'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
-                confirmButtonLabel: 'View record',
+                confirmButtonLabel: 'View work',
             },
         },
         edit: {
