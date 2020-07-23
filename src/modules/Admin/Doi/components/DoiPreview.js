@@ -10,7 +10,10 @@ import locale from 'locale/viewRecord';
 import pagesLocale from 'locale/pages';
 import { doiFields } from 'config/doi';
 
-export const DoiPreview = ({ authorDetails, publication }) => {
+import { useAccountContext } from 'context';
+
+export const DoiPreview = ({ publication }) => {
+    const { account } = useAccountContext();
     const displayType = publication.rek_display_type;
     const displayTypeLookup = publication.rek_display_type_lookup;
     const fieldConfig = displayType && doiFields[displayType] && doiFields[displayType].fields;
@@ -70,8 +73,8 @@ export const DoiPreview = ({ authorDetails, publication }) => {
             </Grid>
             <Grid item xs={12}>
                 <StandardCard title={txt.cardTitles.depositor}>
-                    <DoiField label={txt.depositorNameTitle} field="rek_author-name" data={authorDetails.full_name} />
-                    <DoiField label={txt.depositorEmailTitle} field="rek_author-email" data={authorDetails.email} />
+                    <DoiField label={txt.depositorNameTitle} field="rek_author-name" data={account.full_name} />
+                    <DoiField label={txt.depositorEmailTitle} field="rek_author-email" data={account.email} />
                 </StandardCard>
             </Grid>
             <Grid item xs={12}>

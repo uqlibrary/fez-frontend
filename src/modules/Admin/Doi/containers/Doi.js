@@ -1,6 +1,5 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 import Doi from '../components/Doi';
 
@@ -30,9 +29,7 @@ export const onSubmit = (record, dispatch) => {
 /* istanbul ignore next */
 const mapStateToProps = state => {
     const { recordToView: record, loadingRecordToView } = state.get('viewRecordReducer') || {};
-    const { authorDetails } = state.get('accountReducer') || {};
     return {
-        authorDetails,
         loadingRecordToView,
         record,
         ...state.get('doiReducer'),
@@ -45,4 +42,4 @@ const mapDispatchToProps = dispatch => {
     return { handleSubmit: record => onSubmit(record, dispatch), loadRecordToView, resetDoi };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Doi));
+export default connect(mapStateToProps, mapDispatchToProps)(Doi);
