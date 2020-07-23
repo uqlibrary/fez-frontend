@@ -1,3 +1,4 @@
+import React from 'react';
 import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 
 import { locale as pagesLocale } from 'locale';
@@ -13,6 +14,7 @@ const setup = (testProps = {}, args = {}) => {
 describe('DashboardOrcidSyncMessage', () => {
     it('should render as expected', () => {
         const wrapper = setup({
+            StatusIcon: () => <div />,
             status: 'test1',
             lastSyncMessage: 'test2',
         });
