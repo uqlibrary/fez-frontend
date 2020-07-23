@@ -52,9 +52,7 @@ export const NewViewRecord = ({
     );
 
     React.useEffect(() => {
-        if (!!pid) {
-            dispatch(actions.loadRecordToView(pid));
-        }
+        !!pid && dispatch(actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
