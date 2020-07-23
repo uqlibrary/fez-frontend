@@ -222,7 +222,7 @@ export default {
             ],
             "fez_record_search_key_language": [
                 {
-                    "rek_language_id": 5640981,
+                    "rek_language_id": 5223535,
                     "rek_language_pid": "UQ:217609",
                     "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
@@ -667,12 +667,26 @@ export default {
                     "rek_keywords_order": 2
                 },
                 {
+                    "rek_keywords_id": 29313312,
+                    "rek_keywords_pid": "UQ:193000",
+                    "rek_keywords_xsdmf_id": 7952,
+                    "rek_keywords": "Geriatric nursing - Australia",
+                    "rek_keywords_order": 1
+                }, 
+                {
+                    "rek_keywords_id": 29313313,
+                    "rek_keywords_pid": "UQ:193000",
+                    "rek_keywords_xsdmf_id": 7952,
+                    "rek_keywords": "Practicums - Australia",
+                    "rek_keywords_order": 2
+                }, 
+                {
                     "rek_keywords_id": 29313314,
                     "rek_keywords_pid": "UQ:193000",
                     "rek_keywords_xsdmf_id": 7952,
                     "rek_keywords": "Nursing students - Australia",
                     "rek_keywords_order": 3
-                },
+                }, 
                 {
                     "rek_keywords_id": 29313315,
                     "rek_keywords_pid": "UQ:193000",
@@ -690,14 +704,13 @@ export default {
                     "rek_language_order": 1
                 }
             ],
-            "fez_record_search_key_license": [{
+            "fez_record_search_key_license": {
                 "rek_license_id": 28752,
-                    "rek_license_pid": "UQ:193000",
-                    "rek_license_xsdmf_id": 16246,
-                    "rek_license": 454104,
-                    "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
-                },
-            ],
+                "rek_license_pid": "UQ:193000",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": {

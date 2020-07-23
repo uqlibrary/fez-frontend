@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import { useParams } from 'react-router';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -64,8 +65,8 @@ export const getWarningMessage = record => {
     if (!!editionValue && !/^\d+$/.test(editionValue.trim())) {
         warningMessages.push(
             txt.alertMessages.invalidOptionalField
-                .replace('%FIELDNAME%', txt.headings.default.fez_record_search_key_edition)
-                .replace('%REASON%', txt.alertMessages.fieldValidationDetail.edition),
+                .replace('[FIELDNAME]', txt.headings.default.fez_record_search_key_edition)
+                .replace('[REASON]', txt.alertMessages.fieldValidationDetail.edition),
         );
     }
 
@@ -146,7 +147,7 @@ export const getErrorMessage = record => {
         unsupportedType = true;
 
         const type = displayTypeLookup || recordType;
-        errorMessages.push(txt.alertMessages.unsupportedMessage.replace('%TYPE%', type));
+        errorMessages.push(txt.alertMessages.unsupportedMessage.replace('[TYPE]', type));
     } else {
         // Subtype restrictions
         const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
@@ -155,8 +156,8 @@ export const getErrorMessage = record => {
             if (supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
                     txt.alertMessages.wrongSubtype
-                        .replace('%TYPE%', displayTypeLookup)
-                        .replace('%SUBTYPES%', supportedSubtypes.join(', ')),
+                        .replace('[TYPE]', displayTypeLookup)
+                        .replace('[SUBTYPES]', supportedSubtypes.join(', ')),
                 );
             }
         }
@@ -177,7 +178,7 @@ export const getErrorMessage = record => {
                 // const fieldName = displayTypeHeadings[field]
                 // ? displayTypeHeadings[field] : txt.headings.default[field];
                 const fieldName = txt.headings.default[field];
-                errorMessages.push(txt.alertMessages.missingRequiredField.replace('%FIELDNAME%', fieldName));
+                errorMessages.push(txt.alertMessages.missingRequiredField.replace('[FIELDNAME]', fieldName));
             });
         }
     }
@@ -189,8 +190,8 @@ export const getErrorMessage = record => {
 };
 
 const renderTitle = titlePieces => {
-    const titleTemplate = txt.pageTitle({ ...titlePieces, title: '%TITLE%' });
-    const pieces = titleTemplate.split('%TITLE%');
+    const titleTemplate = txt.pageTitle({ ...titlePieces, title: '[TITLE]' });
+    const pieces = titleTemplate.split('[TITLE]');
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="doi-page-title">
             {pieces[0]}
@@ -201,28 +202,24 @@ const renderTitle = titlePieces => {
 };
 
 export const Doi = ({
-    authorDetails,
     doiRequesting,
     doiUpdated,
     doiFailed,
     handleSubmit,
     loadingRecordToView,
     loadRecordToView,
-    match,
     record,
     resetDoi,
 }) => {
+    const { pid: pidParam } = useParams();
     React.useEffect(() => {
         // Load record if it hasn't
-        !!match.params.pid &&
-            (!record || record.rek_pid !== match.params.pid) &&
-            !!loadRecordToView &&
-            loadRecordToView(match.params.pid);
+        !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
         return () => {
             // Clear form status
             resetDoi();
         };
-    }, [loadRecordToView, match.params.pid, record, resetDoi]);
+    }, [loadRecordToView, pidParam, record, resetDoi]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     /* istanbul ignore next */
@@ -232,13 +229,13 @@ export const Doi = ({
         }
     }, [showConfirmation, doiUpdated]);
 
-    if (!!match.params.pid && loadingRecordToView) {
+    if (!!pidParam && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     }
 
     // Record not found
     const pid = !!record && record.rek_pid;
-    if (!!match.params.pid && !pid) {
+    if (!!pidParam && !pid) {
         return <div className="empty" />;
     }
 
@@ -285,7 +282,7 @@ export const Doi = ({
                             onAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />
-                        {!unsupportedType && <DoiPreview authorDetails={authorDetails} publication={record} />}
+                        {!unsupportedType && <DoiPreview publication={record} />}
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
@@ -330,14 +327,12 @@ export const Doi = ({
 };
 
 Doi.propTypes = {
-    authorDetails: PropTypes.object,
     doiFailed: PropTypes.bool,
     doiRequesting: PropTypes.bool,
     doiUpdated: PropTypes.bool,
     handleSubmit: PropTypes.func,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
-    match: PropTypes.object,
     record: PropTypes.object,
     resetDoi: PropTypes.func,
 };

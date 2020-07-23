@@ -13,16 +13,15 @@ import collectionRecord from 'mock/data/records/collectionRecord';
 
 const confPaperRecord = publicationTypeListConferencePaper.data[0];
 const journalArticleRecord = publicationTypeListJournalArticle.data[0];
-const record = publicationTypeListResearchReport.data[0];
+const mockRecord = publicationTypeListResearchReport.data[0];
+
+jest.mock('react-router', () => ({
+    useParams: jest.fn(() => ({ pid: mockRecord.rek_pid })),
+}));
 
 const setup = (testProps = {}, args = { isShallow: true }) => {
     const props = {
-        match: {
-            params: {
-                pid: record.rek_pid,
-            },
-        },
-        record,
+        record: mockRecord,
         ...testProps,
     };
 
@@ -33,21 +32,21 @@ describe('DOI component', () => {
     it('should render title with DOI', () => {
         const wrapper = setup({
             record: {
-                ...record,
+                ...mockRecord,
                 fez_record_search_key_doi: {
                     rek_doi: 'Testing',
                 },
             },
         });
         expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
-            `Update DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+            `Update DOI for ${mockRecord.rek_display_type_lookup} - ${mockRecord.rek_title}: ${mockRecord.rek_pid}`,
         );
     });
 
     it('should render title and enable submit button without DOI', () => {
         const wrapper = setup({});
         expect(wrapper.find('[data-testid="doi-page-title"]').text()).toBe(
-            `Create DOI for ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+            `Create DOI for ${mockRecord.rek_display_type_lookup} - ${mockRecord.rek_title}: ${mockRecord.rek_pid}`,
         );
         expect(wrapper.find('#rek-doi-submit').props().disabled).toBe(false);
     });
@@ -57,7 +56,7 @@ describe('DOI component', () => {
             loadingRecordToView: true,
             record: null,
         });
-        expect(wrapper.find('WithStyles(InlineLoader)').props().message).toBe('Loading record');
+        expect(wrapper.find('WithStyles(InlineLoader)').props().message).toBe('Loading work');
     });
 
     it('should show empty div and call loader if record is not found', () => {
@@ -79,7 +78,7 @@ describe('DOI component', () => {
             resetDoi: testFn2,
         });
         expect(wrapper.find('div').props().className).toBe('empty');
-        expect(testFn1).toHaveBeenCalledWith(record.rek_pid);
+        expect(testFn1).toHaveBeenCalledWith(mockRecord.rek_pid);
 
         while (cleanupFns.length > 0) {
             cleanupFns.pop()();
@@ -91,7 +90,7 @@ describe('DOI component', () => {
     it('should render warning for missing OA datastreams', () => {
         const wrapper = setup({
             record: {
-                ...record,
+                ...mockRecord,
                 fez_datastream_info: [],
             },
         });
@@ -131,7 +130,7 @@ describe('DOI component', () => {
     it('should render warning for invalid preview field', () => {
         const wrapper = setup({
             record: {
-                ...record,
+                ...mockRecord,
                 fez_datastream_info: [
                     {
                         dsi_open_access: 1,
@@ -154,7 +153,7 @@ describe('DOI component', () => {
 
     it('should not generate unnecessary warnings', () => {
         const testRecord = {
-            ...record,
+            ...mockRecord,
             fez_record_search_key_oa_status: {
                 rek_oa_status: openAccessFiles[0],
             },
@@ -200,7 +199,7 @@ describe('DOI component', () => {
     it('should enable submit button for existing UQ DOI', () => {
         const wrapper = setup({
             record: {
-                ...record,
+                ...mockRecord,
                 fez_record_search_key_doi: {
                     rek_doi: `${DOI_ORG_PREFIX}/uql.2004.1`,
                 },
@@ -219,7 +218,7 @@ describe('DOI component', () => {
             .find('#rek-doi-cancel')
             .props()
             .onClick();
-        expect(window.location.assign).toBeCalledWith(`http://localhost/view/${record.rek_pid}`);
+        expect(window.location.assign).toBeCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
 
         window.location = location;
     });

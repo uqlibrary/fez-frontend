@@ -3,7 +3,6 @@ import { PUBLICATION_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_RESEARCH_REPORT } from 
 
 const setup = (testProps = {}, args = { isShallow: true }) => {
     const props = {
-        authorDetails: {},
         publication: {},
         ...testProps,
     };
