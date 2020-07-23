@@ -124,7 +124,7 @@ to keep initial load to a minimum following optimisation has been added to the p
   components, implement PureComponent or shouldComponentUpdate()
 - Locale package is split into smaller chunks to avoid loading it all at once:
   - publicationForm.js locale is loaded only when PublicationForm component is loaded
-  - Other locale files are not too big, all bundled into one for now
+  - Other locale files are not too big, all bundled into one for now.
 
 ### Webpack
 
