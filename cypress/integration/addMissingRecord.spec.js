@@ -120,3 +120,71 @@ context('Add missing record', () => {
         cy.get('#submit-work').should('be.enabled');
     });
 });
+
+// a rhd student cannot submit their thesis via Add a Missing Work
+context('RHD adding a Thesis', () => {
+    const baseUrl = Cypress.config('baseUrl');
+    beforeEach(() => {
+        cy.visit('http://localhost:3000/records/add/new?user=s2222222');
+        cy.wait(2000);
+    });
+
+    afterEach(() => {
+        cy.killWindowUnloadHandler();
+    });
+
+    it('gets a redirect on selection of Thesis', () => {
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
+            .find('li[role=option]')
+            .contains('Thesis')
+            .eq(0)
+            .click();
+        cy.get('#submit-work').should('not.exist');
+        // we see the amber warning bar
+        cy.get('[data-testid=standard-card-thesis-information-content]').get('#info-icon');
+        cy.get('[data-testid=standard-card-thesis-information-content]')
+            .contains('Visit now')
+            .get('#action-button')
+            .should('be.enabled')
+            .click();
+        cy.get('[data-testid=confirm-dialog-box]').click();
+        cy.url().should('equal', `${baseUrl}/rhdsubmission`);
+        // and they are on the correct form to submit their thesis
+        cy.contains('Higher degree by research thesis deposit');
+    });
+});
+
+// a NON RHD student is prompted in case they have a student account
+context('Non RHD adding a Thesis', () => {
+    const baseUrl = Cypress.config('baseUrl');
+    beforeEach(() => {
+        cy.visit('http://localhost:3000/records/add/new?user=uqstaff');
+        cy.wait(2000);
+    });
+
+    afterEach(() => {
+        cy.killWindowUnloadHandler();
+    });
+
+    it('is prompted that theses could be added elsewhere', () => {
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
+            .find('li[role=option]')
+            .contains('Thesis')
+            .eq(0)
+            .click();
+        cy.get('#submit-work').should('be.disabled');
+        // we see the blue info bar
+        cy.get('[data-testid=standard-card-thesis-information-content]').get('#warning-icon');
+        cy.get('[data-testid=standard-card-thesis-information-content]')
+            .contains('Visit now')
+            .get('#action-button')
+            .should('be.enabled')
+            .click();
+        cy.get('[data-testid=confirm-dialog-box]').click();
+        cy.url().should('equal', `${baseUrl}/rhdsubmission`);
+        // but it turns out they logged in with their staff account
+        cy.contains('Thesis deposit access denied');
+    });
+});
