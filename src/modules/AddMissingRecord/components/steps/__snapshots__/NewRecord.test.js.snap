@@ -673,6 +673,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
             xs={12}
           >
             <Alert
+              alertId="alert-warning"
               allowDismiss={false}
               customIcon={null}
               customType={null}
@@ -694,6 +695,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
         </WithStyles(ForwardRef(Grid))>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
+          "alertId": "alert-warning",
           "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
