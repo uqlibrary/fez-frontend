@@ -145,6 +145,7 @@ export default {
             loading: 'Loading trending publications',
             notAvailableAlert: {
                 type: 'error',
+                alertId: 'alert-error',
                 title: 'There has been an error',
                 message: 'Trending publications are temporarily unavailable',
             },
@@ -819,6 +820,7 @@ export default {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
                             type: 'info',
+                            alertId: 'alert-info',
                         },
                     },
                 },
@@ -2110,16 +2112,19 @@ export default {
                 },
                 submitProgressAlert: {
                     type: 'info',
+                    alertId: 'alert-info',
                     title: 'Requesting CSV ingest',
                     message: 'Waiting for response...',
                 },
                 submitSuccessAlert: {
                     type: 'done',
+                    alertId: 'alert-done',
                     title: 'Success',
                     message: 'The request to batch-import has been submitted successfully.',
                 },
                 submitFailureAlert: {
                     type: 'error',
+                    alertId: 'alert-error',
                     title: 'Error',
                     message: 'The batch-import request could not be submitted.',
                 },

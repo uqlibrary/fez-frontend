@@ -331,6 +331,7 @@ export default {
                     title: 'File upload and/or notes post failed',
                     message: 'lorem ipsum',
                     type: 'warning',
+                    alertId: 'alert-warning',
                 },
                 cancelButtonLabel: 'Add another missing dataset',
                 confirmButtonLabel: 'Go to my datasets',
@@ -376,6 +377,7 @@ export default {
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
                 type: 'error',
+                alertId: 'alert-error',
             },
             hideAllPublicationsConfirmation: {
                 confirmationTitle: 'Hide works',
@@ -475,6 +477,7 @@ export default {
                     title: 'File upload and/or notes post failed',
                     message: 'Retry via "Fix record" screen or contact eSpace administrators.',
                     type: 'warning',
+                    alertId: 'alert-warning',
                 },
                 cancelButtonLabel: 'Add another missing work',
                 confirmButtonLabel: 'Go to my research',
@@ -510,6 +513,7 @@ export default {
                 type: 'info_outline',
                 title: '',
                 message: 'This work has been deleted.',
+                alertId: 'alert-info',
             },
             notFound: {
                 title: 'Work not found',
@@ -542,6 +546,7 @@ export default {
                 type: 'error_outline',
                 title: 'Error',
                 message: message => message,
+                alertId: 'alert-error',
             },
         },
         collection: {
@@ -666,18 +671,21 @@ export default {
             },
             errorAlert: {
                 type: 'error_outline',
+                alertId: 'alert-error',
                 title: 'Error',
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
             },
             progressAlert: {
                 type: 'info_outline',
+                alertId: 'alert-info',
                 title: 'Saving',
                 message: 'Request is being processed.',
                 showLoader: true,
             },
             successAlert: {
                 type: 'done',
+                alertId: 'alert-done',
                 title: 'Google Scholar ID updated',
                 message: 'Your Google Scholar ID has been updated in your eSpace profile.',
                 allowDismiss: true,
@@ -820,6 +828,7 @@ export default {
             },
             errorAlert: {
                 type: 'error_outline',
+                alertId: 'alert-error',
                 title: 'Error',
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
@@ -827,6 +836,7 @@ export default {
             },
             successAlert: {
                 type: 'done',
+                alertId: 'alert-done',
                 title: 'ORCID linked',
                 message:
                     'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and CrossRef will be synced to your eSpace profile within the next 7 days.',
@@ -834,6 +844,7 @@ export default {
             },
             progressAlert: {
                 type: 'info_outline',
+                alertId: 'alert-info',
                 title: 'Linking ORCID',
                 message: 'Request is being processed.',
                 showLoader: true,
@@ -930,24 +941,28 @@ export default {
             alerts: {
                 errorAlert: {
                     type: 'error_outline',
+                    alertId: 'alert-error',
                     title: 'Error',
                     message: message =>
                         `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
                 },
                 successAlert: {
                     type: 'done',
+                    alertId: 'alert-done',
                     title: 'Success',
                     message: 'Work has been saved successfully',
                     allowDismiss: true,
                 },
                 progressAlert: {
                     type: 'info_outline',
+                    alertId: 'alert-info',
                     title: 'Saving',
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
                 validationAlert: {
                     type: 'warning',
+                    alertId: 'alert-warning',
                     title: 'Validation',
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
                 },
@@ -959,6 +974,7 @@ export default {
                     actionButtonLabel: 'UNLOCK WORK',
                     customIcon: <LockIcon id="locked-icon" className="icon" />,
                     customType: 'info',
+                    alertId: 'alert-info',
                 },
                 lockedAlert: {
                     type: 'custom',
@@ -968,6 +984,7 @@ export default {
                     actionButtonLabel: 'IGNORE LOCK',
                     customIcon: <LockIcon id="locked-icon" className="icon" />,
                     customType: 'error',
+                    alertId: 'alert-error',
                 },
             },
         },

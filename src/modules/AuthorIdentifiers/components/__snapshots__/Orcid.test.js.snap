@@ -31,6 +31,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
       xs={12}
     >
       <Alert
+        alertId="alert-error"
         allowDismiss={false}
         customIcon={null}
         customType={null}
@@ -170,6 +171,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
       xs={12}
     >
       <Alert
+        alertId="alert-error"
         allowDismiss={false}
         customIcon={null}
         customType={null}
