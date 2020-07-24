@@ -222,7 +222,7 @@ context('Thesis', () => {
                 { subjectType: 'drag-n-drop' },
             );
         });
-        cy.get('button[title="Remove all files from the upload queue"]').click();
+        cy.get('[id="delete-all-files"]').click();
         cy.get('button')
             .contains('Yes')
             .click();
