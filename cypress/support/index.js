@@ -20,10 +20,7 @@ import '@cypress/code-coverage/support';
 import 'cypress-wait-until';
 import 'cypress-plugin-retries';
 import 'cypress-axe';
-<<<<<<< HEAD
-=======
 // import 'cypress-attest';
->>>>>>> 71547ac3577c28c91d6f8ee83f63b9de70e6ea3e
 
 // Custom
 import './adminEdit';
