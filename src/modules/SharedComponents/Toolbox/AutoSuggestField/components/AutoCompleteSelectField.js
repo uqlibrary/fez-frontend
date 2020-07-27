@@ -103,11 +103,8 @@ AutoCompleteSelectField.propTypes = {
     errorText: PropTypes.string,
     floatingLabelText: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
-    id: PropTypes.string.isRequired,
     itemsList: PropTypes.array,
-    loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,
-    onClear: PropTypes.func,
     required: PropTypes.bool,
 };
 

@@ -11,7 +11,6 @@ export const Orcid = React.lazy(() => import('modules/AuthorIdentifiers/containe
 export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
 export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmission/containers/ThesisSubmission'));
 export const SbsSubmission = React.lazy(() => import('modules/SbsSubmission/containers/SbsSubmission'));
-export const ViewRecord = React.lazy(() => import('modules/ViewRecord/containers/ViewRecord'));
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const CollectionForm = React.lazy(() => import('modules/Admin/CollectionForm/containers/CollectionForm'));
 export const CommunityForm = React.lazy(() => import('modules/Admin/CommunityForm/containers/CommunityForm'));

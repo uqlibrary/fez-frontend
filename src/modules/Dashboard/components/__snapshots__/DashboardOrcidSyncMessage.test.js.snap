@@ -52,7 +52,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
         item={true}
         xs={2}
       >
-        <Component
+        <StatusIcon
           size={24}
         />
       </WithStyles(ForwardRef(Grid))>

@@ -62,7 +62,7 @@ const DashboardOrcidSyncMessage = ({
 );
 
 DashboardOrcidSyncMessage.propTypes = {
-    StatusIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
+    StatusIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.object]),
     disableRequest: PropTypes.bool,
     lastSyncMessage: PropTypes.string,
     locale: PropTypes.object,

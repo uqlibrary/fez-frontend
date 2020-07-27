@@ -52,9 +52,11 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     </Grid>
                     <Grid item xs={1} className={classes.icon}>
                         <Tooltip title={deleteAllFiles}>
-                            <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-files">
-                                <DeleteForeverIcon />
-                            </IconButton>
+                            <span>
+                                <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-files">
+                                    <DeleteForeverIcon />
+                                </IconButton>
+                            </span>
                         </Tooltip>
                     </Grid>
                 </Grid>
