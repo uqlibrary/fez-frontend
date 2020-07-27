@@ -6,7 +6,7 @@ fi
 
 # Not running code coverage check for feature branches.
 BRANCH_INCLUDES_CC=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_COMMIT_MESSAGE == *"[cypress]"*) ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
     BRANCH_INCLUDES_CC=true
 fi
 
