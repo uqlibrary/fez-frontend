@@ -67,16 +67,16 @@ case "$PIPE_NUM" in
     # Setting this after codestyle checks so that script doesn't exist before list of failures can be printed above.
     set -e
 
-#    printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
-#    printf "Jest v"; jest --version
+    printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
+    printf "Jest v"; jest --version
 
-#    if [[ $BRANCH_INCLUDES_CC == true ]]; then
-#        printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-#        npm run test:unit:ci2
-#    else
-#        printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
-#        npm run test:unit:ci2:skipcoverage
-#    fi
+    if [[ $BRANCH_INCLUDES_CC == true ]]; then
+        printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
+        npm run test:unit:ci2
+    else
+        printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
+        npm run test:unit:ci2:skipcoverage
+    fi
 
     if [[ $BRANCH_RUNS_E2E == true ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
