@@ -61,3 +61,6 @@ export { batchImportDirectories } from './batchImportDirectories';
 export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
+
+// Favourite search mock data
+export { default as favouriteSearchList } from './expertSearch/expertSearchList';

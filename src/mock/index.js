@@ -302,7 +302,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
     .onGet(routes.ORCID_SYNC_API().apiUrl)
-    .reply(200, mockData.orcidSyncStatus);
+    .reply(200, mockData.orcidSyncStatus)
+    .onGet(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)
+    .reply(200, mockData.favouriteSearchList);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
 // .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
