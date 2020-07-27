@@ -2487,6 +2487,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
@@ -2495,11 +2496,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Frédérique Larrarte
                         </span>
                       </CitationView>
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
                         prefix=" and "
@@ -2508,6 +2511,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-1"
                         >
                            and 
                           Hubert Chanson
@@ -5133,6 +5137,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
@@ -5141,11 +5146,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Frédérique Larrarte
                         </span>
                       </CitationView>
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
                         prefix=" and "
@@ -5154,6 +5161,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-1"
                         >
                            and 
                           Hubert Chanson

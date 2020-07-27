@@ -1937,6 +1937,7 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1945,12 +1946,14 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Shutter, Leigh
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -1959,12 +1962,14 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Arthurs, Andy
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -1973,12 +1978,14 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Bamford, Greg
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -1987,11 +1994,13 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         McColl, Mary Rose
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=" and "
@@ -2000,6 +2009,7 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
                          and 
                         Skinner, Peter R.
@@ -4015,6 +4025,7 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -4023,12 +4034,14 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Shutter, Leigh
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -4037,12 +4050,14 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Arthurs, Andy
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -4051,12 +4066,14 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Bamford, Greg
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -4065,11 +4082,13 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         McColl, Mary Rose
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=" and "
@@ -4078,6 +4097,7 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
                          and 
                         Skinner, Peter R.
