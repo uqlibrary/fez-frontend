@@ -199,13 +199,17 @@ context('Thesis', () => {
             .should('have.length', 4);
 
         // Files?
-        const fileName = 'test.jpg';
-        cy.fixture(fileName).then(fileContent => {
-            cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
-            );
-        });
+        const uploadFile = fileName => {
+            cy.fixture(fileName).then(fileContent => {
+                cy.get('div#FileUploadDropZone').upload(
+                    { fileContent, fileName, mimeType: 'image/jpg' },
+                    { subjectType: 'drag-n-drop' },
+                );
+            });
+        };
+
+        uploadFile('test.jpg');
+
         cy.get('button[title="Remove this file"]').click();
         cy.get('button')
             .contains('Yes')
@@ -215,13 +219,8 @@ context('Thesis', () => {
             .children()
             .should('have.length', 1);
 
-        const fileNameTwo = 'test_two.jpg';
-        cy.fixture(fileNameTwo).then(fileContent => {
-            cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
-            );
-        });
+        uploadFile('test_two.jpg');
+
         cy.get('button[title="Remove all files from the upload queue"]').click();
         cy.get('button')
             .contains('Yes')
@@ -231,26 +230,13 @@ context('Thesis', () => {
             .children()
             .should('have.length', 1);
 
-        const fileNameThree = 'test three.jpg';
-        cy.fixture(fileNameThree).then(fileContent => {
-            cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileNameThree, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
-            );
-        });
+        uploadFile('test three.jpg');
+
         cy.get('div.Alert').should('have.length', 2);
-        cy.fixture(fileName).then(fileContent => {
-            cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
-            );
-        });
-        cy.fixture(fileNameTwo).then(fileContent => {
-            cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
-            );
-        });
+
+        uploadFile('test.jpg');
+        uploadFile('test_two.jpg');
+
         // Ready to submit
         cy.get('button#submit-thesis').should('not.have.attr', 'disabled');
     });
